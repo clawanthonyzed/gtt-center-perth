@@ -9,11 +9,11 @@
 ### Revenue Assumptions
 | Parameter | Value | Basis |
 |---|---|---|
-| Morning GTT package avg | A$225 | Blended: Essential A$195 (40%), Premium A$295 (45%), Luxury A$395 (15%) |
+| Morning GTT package avg | A$225 | Blended: Essential A$80 (15%), Relax A$195 (35%), Restore A$285 (28%), Glow A$345 (15%), Complete A$395 (7%) = A$230 blended. Rounded to A$225 conservative. |
 | Afternoon wellness avg | A$175 | Blended: Single service A$120–165 (70%), multi-service A$200–250 (30%) |
-| Morning GTT wave capacity | 3 patients/wave × 3 waves = 9 max | 2 phlebotomists, staggered starts |
-| Afternoon capacity | 8 visits/afternoon | Massage (3), nails (3), brows (2) |
-| Operating days/month | 22 days (Mon–Sat, 4.4 weeks) | Closed Sundays |
+| Morning GTT wave capacity | 5 patients/day (1 phlebotomist) | 1 phlebotomist max 5 staggered clients safely. 6+ requires second phlebotomist (see review-audit.md CF-02) |
+| Afternoon capacity | 6–8 visits/afternoon | Requires full-time staff (see review-audit.md CF-01) |
+| Operating days/month | 22 days (Mon–Fri, 4.4 weeks) | Closed Sat–Sun. Saturday requires penalty rates — not in current model. |
 | Subtenant income (Bloom Baby scan) | A$1,500/month | 3 days/week × A$500/day |
 | Subtenant income (dietitian) | A$665/month | 2.5 days/week × A$266/half-day |
 | Total subtenant income | A$2,165/month | Fixed from Month 3 (operational) |

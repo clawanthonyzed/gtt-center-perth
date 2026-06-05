@@ -115,21 +115,22 @@ GTT Center Perth is a purpose-built venue where:
 
 | Wave | GTT Starts | Patients per wave | T=120 done |
 |---|---|---|---|
-| Wave 1 | 7:30am, 8:00am | 2–3 | 9:30–10:15am |
-| Wave 2 | 8:30am, 9:00am | 2–3 | 10:30–11:15am |
-| Wave 3 | 9:30am, 10:00am | 2–3 | 11:30am–12:15pm |
-| **Total morning** | | **6–9 GTT patients** | |
+| Wave 1 | 7:30am, 8:00am | 2 | 9:30–10:15am |
+| Wave 2 | 8:30am, 9:00am | 2 | 10:30–11:15am |
+| Wave 3 | 9:30am, 10:00am | 1 | 11:30am–12:15pm |
+| **Total morning** | | **5 GTT patients max (1 phlebotomist)** | |
 
 GTT must start ≤10:00am (ADIPS 2014 guideline — circadian glucose tolerance constraint).
+**Capacity note:** 5 is the safe maximum with 1 phlebotomist due to draw overlap at 9:30am. Second phlebotomist (Month 2–3) unlocks 8 patients/morning.
 
 #### Afternoon Shift (Wellness Only)
 12:00pm–5:00pm. No testing. Same staff continue.
 - 6–8 wellness appointments (massage, nails, brows, scan, dietitian)
 
 #### Daily Capacity
-- Morning GTT: 6–9 patients
-- Afternoon wellness: 6–8 patients
-- **Total: 12–17 visits/day**
+- Morning GTT: 5 patients (1 phlebotomist) / 8 patients (2 phlebotomists from Month 2–3)
+- Afternoon wellness: 6–8 patients (requires full-time staff — see staff-plan.md)
+- **Total: 11–16 visits/day**
 
 ### Staffing (Employed)
 | Role | Hours | Days |
