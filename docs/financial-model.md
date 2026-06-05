@@ -1,7 +1,7 @@
 # GTT Center Perth — Financial Model
 
-**Version:** 1.2 | **Date:** 2026-06-05 | **Author:** Idea Lobster  
-**Status:** Both models fully costed. Decision required — see §2 and §6.
+**Version:** 1.3 | **Date:** 2026-06-05 | **Author:** Idea Lobster  
+**Status:** DECISION MADE — Wage model confirmed. In-house GTT confirmed. See §16 for current model.
 
 ---
 
@@ -447,6 +447,93 @@ This is not a choice — the question is only how to optimise within the trust.
 | Trust structure 2026 | Trust direct vs add operating PTY LTD | **Trust direct** — review 2027 |
 | Imara salary vs distribution | Wages vs beneficiary distribution | **Accountant brief Week 1** — must be confirmed before revenue |
 | GST registration | Required immediately | Register before first booking |
+
+---
+
+## 16. CONFIRMED MODEL — WAGE EMPLOYMENT + IN-HOUSE GTT
+
+**Decided 2026-06-05 by Anthony.** Sections §2–15 retain the analysis. This section documents the confirmed model.
+
+### Confirmed Decisions
+- **Staff model:** All service delivery staff employed directly by YETI Holding Trust (not sublet)
+- **GTT model:** In-house phlebotomist employed by GTT Center Perth; operates under WDP/PathWest NATA accreditation umbrella
+- **Commercial model:** Full package sales (Option B) — GTT Center Perth prices and collects all revenue
+- **Packages:** Relax A$145, Restore A$240, Glow A$310, Complete A$360, blended avg A$225
+
+### Employed Staff Cost (Monthly)
+
+| Role | Monthly cost (incl. super + leave provisions) |
+|---|---|
+| Imara — Managing Director | A$6,737 |
+| Phlebotomist (part-time 25hrs/wk) | A$3,589 |
+| Pregnancy massage therapist (part-time 25hrs/wk) | A$3,529 |
+| Nail technician (part-time 25hrs/wk) | A$3,119 |
+| Beauty therapist/brows (casual 3 days initially) | A$2,127 |
+| Receptionist (part-time 25hrs/wk) | A$3,474 |
+| Workers compensation (~5% excl. MD) | A$800 |
+| **Total staff cost** | **A$23,375/month** |
+| **Total excl. Imara** | **A$16,638/month** |
+
+### Full Monthly P&L (Confirmed Model)
+
+**Revenue streams:**
+- Package sales (full package price collected by GTT Center Perth)
+- Scan room sublet (A$1,299/month — keepsake operator, own machine)
+- Dietitian sublet (A$866/month — APD, own billing)
+- Retail + TENS hire (A$600/month)
+
+| Scenario | Visits/month | Package rev | Sublet + other | **Total revenue** | **Total costs** | **Profit** |
+|---|---|---|---|---|---|---|
+| Ramp Month 1 | 30 | A$6,750 | A$2,765 | A$9,515 | A$26,500 | −A$16,985 |
+| Ramp Month 2 | 50 | A$11,250 | A$2,765 | A$14,015 | A$26,500 | −A$12,485 |
+| Ramp Month 3 | 75 | A$16,875 | A$2,765 | A$19,640 | A$26,500 | −A$6,860 |
+| Break-even | 108 | A$24,300 | A$2,765 | A$27,065 | A$26,500 | **+A$565** |
+| Base (5 months) | 120 | A$27,000 | A$2,765 | A$29,765 | A$27,000 | **+A$2,765** |
+| Strong (6 months) | 140 | A$31,500 | A$2,765 | A$34,265 | A$27,500 | **+A$6,765** |
+| Capacity | 160 | A$36,000 | A$2,765 | A$38,765 | A$28,000 | **+A$10,765** |
+
+**Monthly fixed costs (excl. staff variable items):**
+
+| Cost | Monthly |
+|---|---|
+| Venue rent (Osborne Park target) | A$3,500 |
+| Fit-out amortised (A$150K / 48 months) | A$3,125 |
+| All employed staff (excl. Imara) | A$16,638 |
+| Insurance (public liability + employer's) | A$600 |
+| Booking system (Fresha Team) | A$45 |
+| Marketing | A$500 |
+| Accounting + payroll (Xero + accountant) | A$600 |
+| Utilities | A$400 |
+| Consumables + professional products | A$1,200 |
+| Sundries | A$400 |
+| **Total excl. Imara salary** | **A$27,008** |
+
+*Imara salary modelled separately — accountant to advise salary vs trust distribution split.*
+
+### Break-Even: 108 visits/month = 5 visits/day
+
+**Critical implication of wage model:**
+- Fixed staff costs exist regardless of patient volume
+- During ramp-up (Months 1–3): losses of A$7,000–17,000/month expected
+- Additional working capital buffer required: minimum A$50,000 above previous estimates
+- **Revised total startup capital: A$190K–360K** (mid-estimate A$250K)
+
+### Startup Capital Revised
+
+| Item | Low | High |
+|---|---|---|
+| Legal + professional | A$3,000 | A$6,000 |
+| Venue deposit + first month | A$7,000 | A$15,000 |
+| Fit-out (3 treatment rooms, collection room, lounge, reception) | A$100,000 | A$200,000 |
+| FF&E (tables, nail station + LEV, scan room, lounge, reception desk) | A$20,000 | A$50,000 |
+| Website + booking system setup | A$2,000 | A$5,000 |
+| Opening stock (snacks, products, pathology supplies, TENS units) | A$7,000 | A$12,000 |
+| Marketing pre-launch + launch | A$3,000 | A$6,000 |
+| Insurance (first year) | A$5,000 | A$7,000 |
+| **Ramp-up losses buffer (4 months × A$12,000 avg)** | **A$40,000** | **A$60,000** |
+| **Total** | **A$187,000** | **A$361,000** |
+
+**Confirm available capital with Anthony before signing any lease.**
 
 ---
 
