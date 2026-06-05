@@ -1,93 +1,105 @@
 # GTT Center Perth — Unit Economics
 
-**Status:** Estimates only — validate before lease signing
+**Status:** Based on Option A (venue fee + room rent model) — see financial-model.md for full P&L  
+**Date:** 2026-06-05
 
 ---
 
-## Revenue Per Visit (Customer)
+## Revenue Per Visit
 
-| Package | Price | Frequency Assumption |
-|---|---|---|
-| Relax (1 service) | A$130 | 30% of bookings |
-| Restore (2 services) | A$200 | 40% of bookings |
-| Glow (3 services) | A$260 | 20% of bookings |
-| Complete (all + scan) | A$330 | 10% of bookings |
+GTT Center Perth charges a single **experience/coordination fee** per visit.  
+Subtenants price and collect their own service fees directly from customers.
 
-**Blended average revenue per customer visit:** ~A$196
+| Metric | Value |
+|---|---|
+| GTT Center Perth experience fee | A$120/visit |
+| Avg customer total spend (fee + services) | A$270–350 |
+| GTT Center Perth revenue per visit | **A$120** |
 
 ---
 
-## Subtenant Rental Income (Weekly)
+## Subtenant Room Rent Income (Weekly)
 
-| Position | Rate/Week | # Positions |
+| Subtenant | Rate/Week | Monthly (× 4.33 weeks) |
 |---|---|---|
-| Massage room | A$250 | 1 |
-| Nails chair | A$200 | 1–2 |
-| Hair chair | A$200 | 1 |
-| Scan room (keepsake) | A$300 | 1 |
+| Massage therapist | A$250 | A$1,083 |
+| Nail technician | A$200 | A$866 |
+| Brows artist | A$175 | A$758 |
+| Scan room operator | A$300 | A$1,299 |
+| **Total** | **A$925/week** | **A$4,006/month** |
 
-**Total weekly subtenant income:** ~A$950–1,150 (~A$4,100–5,000/month)
+*Dietitian room rent (A$200–300/wk) added once APD subtenant confirmed.*
 
 ---
 
 ## Capacity
 
-- Operating hours: Mon–Fri 8:30am–4:30pm (GTT appointment window)
-- GTT duration: 2–2.5 hrs per patient
-- Bookings per day: 6–8 slots (staggered start times)
-- Bookings per week (5 days): 30–40
-- Bookings per month: 120–160
+| Parameter | Value |
+|---|---|
+| Operating hours | Mon–Fri 7:30am–12:30pm |
+| GTT start slots | 8:00 / 8:30 / 9:00 / 9:30am |
+| Bookings/day (launch) | 4 |
+| Bookings/day (capacity) | 8 |
+| Bookings/week at launch | 20 |
+| Bookings/week at capacity | 40 |
+| Bookings/month at capacity | ~160 |
 
 ---
 
 ## Revenue Scenarios
 
-| Scenario | Bookings/Month | Avg Ticket | Booking Rev | Subtenant Rev | Total Monthly |
+| Scenario | Visits/Month | Experience Fee Rev | Room Rent | Other (Retail/TENS) | **Total Monthly** |
 |---|---|---|---|---|---|
-| Conservative (40% capacity) | 64 | A$180 | A$11,520 | A$4,100 | **A$15,620** |
-| Base (60% capacity) | 96 | A$196 | A$18,816 | A$4,600 | **A$23,416** |
-| Strong (80% capacity) | 128 | A$210 | A$26,880 | A$5,000 | **A$31,880** |
+| Conservative (40%) | 64 | A$7,680 | A$4,006 | A$400 | **A$12,086** |
+| Base (60%) | 96 | A$11,520 | A$4,006 | A$700 | **A$16,226** |
+| Strong (80%) | 128 | A$15,360 | A$4,600 | A$900 | **A$20,860** |
 
 ---
 
-## Cost Estimates (Monthly)
+## Cost Summary (Monthly, Stable State Month 6)
 
-| Cost | Conservative | Base | Notes |
-|---|---|---|---|
-| Rent | A$4,000 | A$6,000 | Perth commercial — TBD by location |
-| Fit-out amortised (over 36 months) | A$1,500 | A$1,500 | Assumes A$54K fit-out |
-| Founders (Anthony + Imara) | TBD | TBD | Sweat equity phase initially |
-| Booking system + software | A$200 | A$300 | |
-| Insurance | A$350 | A$350 | |
-| Marketing | A$600 | A$800 | |
-| Consumables + sundries | A$400 | A$600 | |
-| **Total Costs** | **~A$7,050** | **~A$9,550** | |
-
----
-
-## Break-Even Analysis
-
-| Scenario | Monthly Revenue | Monthly Costs | Profit |
-|---|---|---|---|
-| Conservative | A$15,620 | A$7,050 | **+A$8,570** |
-| Base | A$23,416 | A$9,550 | **+A$13,866** |
-
-**Break-even bookings/month (base costs):** ~46 bookings at A$196 avg = ~12 bookings/week
-
-This is achievable in Month 1 with a solid referral network pre-launch.
+| Category | Monthly |
+|---|---|
+| Venue rent (Osborne Park ~120 sqm) | A$3,500 |
+| Fit-out amortised (A$120K / 48 months) | A$2,500 |
+| Reception wages (20 hrs/wk, Clerks L1) | A$2,271 |
+| Insurance (A$20M public liability) | A$350 |
+| Booking system (Fresha Team, 3 users) | A$45 |
+| Marketing | A$500 |
+| Accounting | A$300 |
+| Utilities | A$400 |
+| Consumables (snacks, lounge amenities) | A$600 |
+| Sundries | A$350 |
+| **Total** | **A$10,816** |
 
 ---
 
-## Key Assumptions to Validate
+## Break-Even
 
-1. Perth commercial rent for ~100–150 sqm wellness space
-2. Actual fit-out cost (reception, 3 treatment rooms, scan room, waiting area)
-3. Pathology partner model — do they charge the venue a fee, or is it neutral?
-4. Whether bulk-billing the GP consult (like MIWM) is viable — adds value, may require GP partnership
-5. Subtenant market rates (survey Perth wellness studios)
+| Metric | Value |
+|---|---|
+| Fixed monthly costs | A$10,816 |
+| Room rent contribution (certain) | A$4,006 |
+| Remaining to cover from experience fees | A$6,810 |
+| Experience fee per visit | A$120 |
+| **Break-even visits/month** | **57 (13/week, ~3/day)** |
+
+**3 visits/day breaks even.** Achievable from Week 1 with midwife referrals.
 
 ---
 
-## Sensitivity: Subtenant Income as Floor
+## Sensitivity: Room Rent as Floor
 
-Even at zero customer bookings, subtenant income alone (~A$4,100–5,000/month) nearly covers base costs (~A$7,050/month conservatively). Risk profile is low once subtenants are contracted.
+Room rent alone covers **37% of monthly fixed costs** regardless of customer volume.  
+If all customer bookings fail entirely: shortfall is A$6,810/month, covered by working capital for 3+ months.  
+Subtenants contracted before opening = immediate income floor on Day 1.
+
+---
+
+## Key Assumptions to Validate Before Lease Signing
+
+1. Perth commercial rent for 110–140 sqm wellness/health space (target Osborne Park or Subiaco)
+2. Actual fit-out cost — get 3 Perth commercial fit-out quotes
+3. WDP pathology partnership model — does WDP charge the venue a fee? (Likely neutral or minor setup cost)
+4. Subtenant market rate confirmation — survey Perth wellness studios
+5. A$120 experience fee market acceptance — validate with 10 target customers before launch
