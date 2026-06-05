@@ -1,7 +1,7 @@
 # GTT Center Perth — Financial Model
 
-**Version:** 1.1 | **Date:** 2026-06-05 | **Author:** Idea Lobster  
-**Status:** For Anthony/Imara decision — one commercial model question blocks everything else
+**Version:** 1.2 | **Date:** 2026-06-05 | **Author:** Idea Lobster  
+**Status:** Both models fully costed. Decision required — see §2 and §6.
 
 ---
 
@@ -278,20 +278,182 @@ Profitable from Month 3. At 6 months: A$5,000+/month. At Month 12: A$8,400+/mont
 
 ---
 
-## 12. THE ONE DECISION NEEDED
+## 12. OPTION B — FULL PACKAGE MODEL (GTT Center Perth sells everything, employs casual staff)
 
-Before any outreach, lease negotiation, or fit-out planning begins:
+### How it works
+GTT Center Perth sells complete experience packages. Customers pay one price, one checkout.  
+Beauty practitioners are employed casually (paid per appointment block, not salaried).  
+Scan room stays as sublease — scan operator brings own machine, own accreditation.
 
-> **Does GTT Center Perth charge a venue/experience fee (A$120) and let subtenants charge customers separately — OR does GTT Center Perth sell the complete packages (A$200–360) and manage service revenue splits?**
+### Package Pricing
 
-**Recommendation:** Venue fee model (Option A, A$120). Profitable, clean, low risk, fast to launch.
+| Package | Inclusions | Price |
+|---|---|---|
+| Relax | 60-min massage OR nails | A$130–150 |
+| Restore | 60-min massage + nails | A$230–250 |
+| Glow | Massage + nails + brows | A$290–310 |
+| Complete | Massage + nails + 3D keepsake scan | A$330–360 |
+| **Blended average** | Realistic mix of packages | **A$225** |
 
-If Option B (full packages): requires employment lawyer sign-off on contractor arrangements, more complex BAS and accounting, per-session invoicing from subtenants. Consider for Year 2 once volume proven.
+### Staff Cost Per Service (Hair & Beauty Award MA000005 — Casual)
+
+Casual rate = base rate × 1.25 (casual loading) + 11.5% superannuation
+
+| Role | Award Level | Base/hr | Casual rate | + Super | **All-in/hr** |
+|---|---|---|---|---|---|
+| Pregnancy massage | Level 5 (Cert IV + specialisation) | A$26.56 | A$33.20 | A$3.82 | **A$37.02** |
+| Nail technician | Level 3 (Cert III Nail Technology) | A$23.49 | A$29.36 | A$3.38 | **A$32.74** |
+| Brows/beauty therapist | Level 3 (Cert III Beauty Therapy) | A$23.49 | A$29.36 | A$3.38 | **A$32.74** |
+
+### Staff Cost Per Appointment (treatment + room turnaround)
+
+| Service | Time inc. turnaround | Staff cost |
+|---|---|---|
+| Massage 60 min | 1.25 hrs | A$37.02 × 1.25 = **A$46.28** |
+| Nails (mani or pedi) | 1.0 hr | A$32.74 × 1.0 = **A$32.74** |
+| Brows | 0.67 hr | A$32.74 × 0.67 = **A$21.94** |
+
+### Package Margin Per Visit (Revenue − Staff Cost)
+
+| Package | Price | Staff cost | **GTT Center Perth margin** |
+|---|---|---|---|
+| Relax (massage only) | A$145 | A$46.28 | **A$98.72** |
+| Relax (nails only) | A$130 | A$32.74 | **A$97.26** |
+| Restore (massage + nails) | A$240 | A$79.02 | **A$160.98** |
+| Glow (massage + nails + brows) | A$305 | A$100.96 | **A$204.04** |
+| Complete (massage + nails + scan) | A$350 | A$79.02 + ~A$15 scan | **A$255.98** |
+| **Blended avg (realistic mix)** | **A$225** | **A$71** | **A$154/visit** |
+
+*Blended mix assumption: 30% Relax, 35% Restore, 20% Glow, 15% Complete*
+
+### Option B Monthly Costs (Stable State, Month 6)
+
+| Cost | Monthly | Notes |
+|---|---|---|
+| Venue rent | A$3,500 | Same as Option A |
+| Fit-out amortised | A$2,500 | Same |
+| Staff wages (variable — paid per appt) | See P&L | No staff cost when no bookings |
+| Reception wages | A$2,271 | Same |
+| Employer's liability insurance | A$500 | Higher than Option A (employer) |
+| Booking system | A$45 | Same |
+| Marketing | A$500 | Same |
+| Accounting (payroll adds complexity) | A$450 | A$150 more than Option A |
+| Utilities | A$400 | Same |
+| Consumables + professional products | A$1,000 | Higher — includes treatment supplies |
+| Workers compensation (all staff) | A$650 | Covers reception + casual practitioners |
+| Sundries | A$350 | Same |
+| Scan room rent income | −A$1,299 | Revenue offset (scan stays sublet) |
+| **Fixed base costs (excl. staff wages)** | **A$11,867** | |
+
+---
+
+## 13. SIDE-BY-SIDE COMPARISON — OPTION A vs OPTION B
+
+| | **Option A** | **Option B** |
+|---|---|---|
+| Revenue per visit | A$120 (venue fee only) | A$225 (full package) |
+| Revenue source 2 | Room rent ~A$4,006/mo | Scan room rent A$1,299/mo |
+| Variable cost per visit | ~A$5 consumables | ~A$71 staff wages |
+| **Contribution per visit** | **A$115** | **A$154** |
+| Fixed monthly costs | A$10,816 | A$11,867 |
+| Break-even (visits/month) | 57 | 70 |
+| Break-even (visits/day) | ~3 | ~3.5 |
+
+### P&L Comparison at All Volumes
+
+| Visits/month | **Option A profit** | **Option B profit** | Difference |
+|---|---|---|---|
+| 57 | A$0 | −A$2,087 | A wins |
+| 64 (conservative) | +A$1,270 | −A$759 | A wins |
+| 70 (B break-even) | +A$1,960 | A$0 | A wins |
+| 96 (base) | +A$5,410 | +A$4,897 | A wins (A$513) |
+| 104 (crossover) | +A$6,330 | +A$6,169 | ~Equal |
+| 128 (strong) | +A$9,360 | +A$10,870 | **B wins (A$1,510)** |
+| 160 (capacity) | +A$12,840 | +A$16,873 | **B wins (A$4,033)** |
+
+### Critical Finding
+
+**Option B generates more profit at >104 visits/month. Option A is safer below that.**
+
+104 visits/month = 24 visits/week = ~5 visits/day (65% of 8-slot daily capacity).
+
+- **Months 1–3 (ramp-up):** Option A significantly safer. Room rent income covers 37% of costs from Day 1.
+- **Months 4+ (stable):** Once at 100+ visits/month, Option B produces A$1,500–4,000/month more profit.
+- **Year 2 at capacity (160 visits):** Option B generates A$4,000/month more = A$48,000/year more than Option A.
+
+### Recommendation: Stage the Model
+
+| Phase | Model | Trigger to switch |
+|---|---|---|
+| Launch (Months 1–3) | **Option A** — room rental, venue fee | Open doors |
+| Growth (Month 4+) | **Review: switch to Option B** | Once consistently ≥104 visits/month for 4 weeks |
+
+Switching from Option A to Option B requires: hire 3 casual staff, update Room Licence Agreements to terminate room rental arrangements, update booking system packages, update marketing with full package pricing.
+
+This is a one-time operational change, not a rebuild.
+
+---
+
+## 14. TRUST STRUCTURE — IS IT SMART AT THESE REVENUE PROJECTIONS?
+
+### TPI Protection (Non-Negotiable)
+Anthony cannot receive this income personally — TPI pension compliance requires it.  
+Trust structure is **mandatory regardless of tax efficiency.**  
+This is not a choice — the question is only how to optimise within the trust.
+
+### Tax Comparison at Option A Year 2 (A$57K net profit)
+
+| Structure | Tax | After-tax |
+|---|---|---|
+| Trust → distribute to Imara (sole income) | ~A$10,200 (her marginal rate ~18% avg) | A$46,800 |
+| PTY LTD company (25% base rate) | A$14,250 | A$42,750 |
+| Trust → distribute to Imara (earns A$60K salary too) | A$21,000+ (marginal ~37%) | A$36,000 |
+
+### Tax Comparison at Option B Year 2 (A$120K net profit)
+
+| Structure | Tax | After-tax |
+|---|---|---|
+| Trust → distribute to Imara (sole income, no salary) | ~A$31,000 (avg ~26%) | A$89,000 |
+| PTY LTD company (25%) | A$30,000 | A$90,000 |
+| Trust → split between Imara + one other low-income beneficiary | ~A$18,000–22,000 | A$98,000–102,000 |
+| Trust → distribute to Imara (earns A$60K salary from trust) | ~A$41,000 on distribution alone | A$79,000 |
+
+### Findings
+
+1. **If Imara earns no salary from the business** and profit is distributed to her as trust beneficiary: trust wins at low profit, is roughly equal to company at A$120K+ profit.
+
+2. **If Imara earns a market salary** (~A$60-70K) from the venture for running it: the trust distribution on top pushes her into high marginal rates. Adding an operating PTY LTD under the trust (company 25% retention) becomes worth the extra accounting cost (~A$2-3K/year) once profit exceeds ~A$80K.
+
+3. **Income splitting** to multiple low-income beneficiaries (e.g., family members) maximises trust efficiency — but the 2028 minimum trust tax may close this. Accountant must advise.
+
+4. **2028 structural risk:** If proposed minimum 30% trust distribution tax passes, Option 2 (operating PTY LTD under trust) becomes clearly preferable for any profit above A$45K. Build for this now.
+
+### Structure Recommendation
+
+**Now (2026–2028):** YETI Trust trades directly. Distribute to Imara (and/or other family beneficiaries at accountant's advice). Tax-efficient at current projected profit levels.
+
+**By 2027:** Accountant models Option B volumes (A$120K+/year profit). If Imara draws a salary, add an operating PTY LTD under the trust before 2028 rule changes.
+
+**Imara's salary vs distribution:** Accountant must model the split. A reasonable salary for an owner-operator of a wellness venue is A$55–75K. Everything above that can stay in trust or company.
+
+---
+
+## 15. DECISION CHECKLIST — REQUIRED BEFORE ANY OUTREACH
+
+| Decision | Options | Recommendation |
+|---|---|---|
+| Commercial model at launch | A (venue fee) vs B (full packages) | **Option A** — lower risk, switch to B at 100+ visits/month |
+| Package pricing | A: A$120 fee / B: A$150–350 packages | Follow recommendation above |
+| Trust structure 2026 | Trust direct vs add operating PTY LTD | **Trust direct** — review 2027 |
+| Imara salary vs distribution | Wages vs beneficiary distribution | **Accountant brief Week 1** — must be confirmed before revenue |
+| GST registration | Required immediately | Register before first booking |
 
 ---
 
 ## Sources
+- [Fair Work Commission — Hair & Beauty Award MA000005](https://www.fairwork.gov.au/employment-conditions/awards/awards-summary/ma000005-summary)
 - [Fair Work Commission — Clerks Award MA000002](https://www.fairwork.gov.au/employment-conditions/awards/awards-summary/ma000002-summary)
 - [ATO — Trust taxation](https://www.ato.gov.au/individuals-and-families/investments-and-assets/trusts)
+- [ATO — Company tax rates](https://www.ato.gov.au/businesses-and-organisations/corporate-tax-concessions-and-incentives/lower-tax-rate-for-small-companies)
 - [ASIC — Business name registration](https://asic.gov.au/for-business/registering-a-business-name/)
 - Commercial rent estimates: Perth metro, wellness/health use, 100–140 sqm
