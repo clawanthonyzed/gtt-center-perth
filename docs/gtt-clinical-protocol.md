@@ -37,7 +37,7 @@ GTT Center Perth (venue + phlebotomist employer)
 The Oral Glucose Tolerance Test (OGTT / GTT) screens for Gestational Diabetes Mellitus (GDM).
 
 **Indication:** Offered to all pregnant women at 24–28 weeks gestation (Australian standard).  
-**Standard:** ADIPS 2014 Consensus Guidelines / FIGO 2015 (75g glucose, 2-hour test).  
+**Standard:** ADIPS 2025 Consensus Recommendations (75g glucose, 2-hour test). Thresholds: fasting ≥5.3, 1hr ≥10.6, 2hr ≥9.0 mmol/L. Supersedes ADIPS 2014.  
 **Note:** GTT Center Perth does not make clinical judgements. All clinical decisions are made by the referring doctor or midwife. GTT Center Perth facilitates the collection only.
 
 ### GTT Timeline

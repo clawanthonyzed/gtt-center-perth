@@ -15,7 +15,7 @@ The **Oral Glucose Tolerance Test (OGTT)**, commonly called the GTT, is the gold
 | Full name | 75g Oral Glucose Tolerance Test (OGTT) |
 | Common names | GTT, GDM test, gestational diabetes test, glucose tolerance test |
 | Standard body | Australasian Diabetes in Pregnancy Society (ADIPS) |
-| Current guideline | ADIPS 2014 Consensus Guidelines for GDM (endorsed by RANZCOG) |
+| Current guideline | ADIPS 2025 Consensus Recommendations (supersedes ADIPS 2014 — endorsed by AACB, RCPA, RANZCOG, ADS, ACM) |
 | Glucose load | 75 grams |
 | Duration on-site | 2–2.5 hours |
 | Blood draws | 3 (fasting, 1-hour, 2-hour) |
@@ -69,12 +69,12 @@ High-risk women may present as early as 10–16 weeks. The same test procedure a
 
 ### Start time requirement — CRITICAL OPERATIONAL CONSTRAINT
 
-> **ADIPS 2014 Guideline:** The OGTT should commence between **8:00am and 10:00am**.
+> **ADIPS 2025 Guideline:** The OGTT should commence between **8:00am and 10:00am**.
 
 **Why this constraint exists:**
 - Glucose tolerance has a circadian (time-of-day) rhythm regulated by cortisol and other hormones
 - Morning cortisol rises, affecting insulin sensitivity in a predictable pattern
-- The ADIPS 2014 diagnostic thresholds (fasting ≥5.1, 1hr ≥10.0, 2hr ≥8.5) were established using tests that started before 10am
+- The ADIPS 2025 diagnostic thresholds (fasting ≥5.3, 1hr ≥10.6, 2hr ≥9.0) were established using tests that started before 10am
 - An afternoon test may produce different results that cannot be accurately compared to these reference ranges
 - Clinicians and pathology labs require the test to start ≤10am for results to be diagnostically valid
 
@@ -179,17 +179,19 @@ Patient may NOT:
 
 ---
 
-## 5. DIAGNOSTIC THRESHOLDS (ADIPS 2014 CONSENSUS)
+## 5. DIAGNOSTIC THRESHOLDS (ADIPS 2025 CONSENSUS)
+
+> **Updated:** ADIPS 2025 supersedes ADIPS 2014. Thresholds have changed. All GTT Center Perth clinical materials use ADIPS 2025 values only.
 
 GDM is diagnosed if **ANY ONE** of the following values is met or exceeded:
 
-| Time point | Plasma glucose threshold |
-|---|---|
-| Fasting | ≥ 5.1 mmol/L |
-| 1 hour | ≥ 10.0 mmol/L |
-| 2 hours | ≥ 8.5 mmol/L |
+| Time point | **ADIPS 2025 threshold** | ADIPS 2014 (superseded) |
+|---|---|---|
+| Fasting | **≥ 5.3 mmol/L** | ~~≥ 5.1 mmol/L~~ |
+| 1 hour | **≥ 10.6 mmol/L** | ~~≥ 10.0 mmol/L~~ |
+| 2 hours | **≥ 9.0 mmol/L** | ~~≥ 8.5 mmol/L~~ |
 
-**Impaired fasting glucose (IFG):** Fasting 5.1–6.9 mmol/L (GDM if ≥5.1 by ADIPS — note: some older guidelines use ≥5.6, but ADIPS 2014 uses 5.1)
+**Impaired fasting glucose (IFG):** Fasting 5.3–6.9 mmol/L — GDM threshold is ≥5.3 by ADIPS 2025.
 
 **Pre-existing diabetes (not GDM):**
 - Fasting ≥7.0 mmol/L or 2hr ≥11.1 mmol/L → likely pre-existing T2DM — refer urgently
