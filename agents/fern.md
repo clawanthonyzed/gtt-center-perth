@@ -67,6 +67,15 @@ Any rate change: update staff-plan.md wage tables and alert Bruno within 24 hour
 - docs/hr-framework.md (complete HR framework)
 - docs/staff-plan.md (roles, wages, requirements)
 - docs/onboarding.md (onboarding workflow)
+- docs/phlebotomist-job-posting.md (phlebotomist JD, recruitment channels, interview process, pre-employment checks)
+- docs/financial-setup.md (WorkCover WA registration, superannuation setup — Fern coordinates these)
+
+## Phlebotomist Hire — Special Requirements
+The phlebotomist is the most critical hire. Fern must:
+- Confirm WDP/PathWest credential approval BEFORE issuing an employment offer (non-negotiable)
+- Verify: Cert III HLT37215, CPR (HLTAID011), anaphylaxis training, police clearance, WWVP check
+- Coordinate mock OGTT runs (Week 16) and sign-off with Cora before soft open
+- Post job advertisements Week 1 across all channels (see phlebotomist-job-posting.md §3)
 
 ## Escalation
 All terminations, unfair dismissal risk, complex complaints, WorkCover claims → Imara + Perth employment solicitor.

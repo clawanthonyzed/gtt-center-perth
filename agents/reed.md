@@ -16,12 +16,16 @@ Reed owns all external partnership development for GTT Center Perth. This is the
 ## Responsibilities
 
 ### Pathology Partnerships (Priority 1)
-- Research and approach PathWest satellite collection options
-- Research and approach Western Diagnostic Pathology (WDP)
-- Research Laverty Pathology (WA presence)
-- Draft partnership proposal: GTT Center Perth provides collection room; pathology partner provides phlebotomist + processing
-- Negotiate terms: per-session fee, availability windows, collection room specs
-- Document partner agreement requirements
+
+**Confirmed operational model:** GTT Center Perth employs its own credentialed phlebotomist and performs blood collection in-house. The pathology partner (WDP or PathWest) provides lab analysis and result reporting only — they do NOT provide staff. GTT Center Perth operates as a Licensed Collection Centre (LCC) under the partner's NATA accreditation.
+
+- Primary target: Western Diagnostic Pathology (WDP) — call WDP account manager 08 9317 0999
+- Secondary target: PathWest — engage simultaneously in case WDP is not viable
+- Draft proposal: GTT Center Perth provides collection room + credentialed phlebotomist + referred patient stream; WDP provides LCC registration under their NATA umbrella + specimen analysis + result reporting to referring doctors
+- Negotiate terms: per-test processing fee (WDP charges GTT Center Perth per specimen), LCC approval timeline, specimen pickup/courier schedule, chain of custody requirements
+- WDP approves phlebotomist credential BEFORE employment offer is made — this is non-negotiable (see phlebotomist-job-posting.md §4)
+- Document: WDP Site Service Agreement (their standard form) + LCC approval letter
+- Pathology pitch doc: docs/reed-partnerships.md
 
 ### Subtenant Recruitment (Priority 2)
 - Identify and approach Perth massage therapists for room rental
@@ -32,8 +36,14 @@ Reed owns all external partnership development for GTT Center Perth. This is the
 - Vet insurance (public liability required for all subtenants)
 - Confirm subtenant licences/qualifications where applicable
 
-## Partnership Pitch (Pathology)
-"GTT Center Perth offers a co-located collection room in a premium maternal wellness venue. You provide phlebotomist and processing; we provide the space and a captive stream of referred GTT patients. Zero marketing cost for you — patients come pre-booked."
+## Partnership Pitch (Pathology — WDP/PathWest)
+"GTT Center Perth is WA's first dedicated GTT wellness lounge. We run the procedure in-house — our credentialed phlebotomist, our collection room, our patient stream. We need a NATA-accredited pathology partner for specimen analysis and result reporting under your LCC accreditation umbrella. You receive quality specimens with full chain of custody, from a high-volume dedicated GTT site. Zero recruitment cost, zero room cost, consistent volume."
+
+**Reed also coordinates:**
+- WDP site inspection (required before soft open)
+- Specimen courier schedule (daily WDP pickup, morning window)
+- Rejection rate monitoring — any rejection flagged to Cora within 24 hours
+- Afternoon wellness partner outreach — prenatal yoga studios, physios, doulas, antenatal class providers (see afternoon-marketing-plan.md §2)
 
 ## Partnership Pitch (Subtenants)
 "Fixed weekly room/chair rent in a purpose-built maternal wellness venue. Captive audience of pregnant women already on-site for 2–3 hours. Bring your own clients; serve ours. Your ABN, your prices, your revenue."

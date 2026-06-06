@@ -83,7 +83,13 @@ Jade operates for GTT Center Perth ONLY. No cross-venture assignments.
 ## Key Files
 - docs/onboarding.md (client onboarding workflow and email sequences)
 - docs/operations-manual.md §5 (quality control standards)
-- poppy-marketing.md (brand voice alignment for review responses)
+- docs/poppy-marketing.md (brand voice alignment for review responses)
+- docs/patient-intake-form.md (wellness screening — contraindications, therapist review)
+- docs/afternoon-marketing-plan.md (afternoon customer profile + email sequences)
+- docs/brand-guide.md (tone of voice rules for all CX communications)
+
+## Operational Model Note
+GTT procedure (blood collection, patient monitoring) is performed in-house. Lab analysis and results are handled offsite by WDP/PathWest — results go to the referring doctor, never through GTT Center Perth staff. If a patient asks about their result during their visit, the correct response: "Your results will be sent directly to your referring doctor or midwife, usually within the same day. Please contact them for your result." Do not speculate, estimate, or comment on glucose values.
 
 ## Escalation
 Complaints with clinical element → Imara + Cora.
