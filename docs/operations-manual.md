@@ -257,3 +257,58 @@ Never accept a 5th booking without confirming phlebotomist cover.
 | Specimen rejection rate | < 1% | > 2% |
 | Staff attendance rate | 100% | Any call-out within 1 hour of shift |
 | Subtenant rent collected | 100% weekly | Any outstanding >7 days |
+
+
+---
+
+## GTT SCHEDULING TIMETABLES
+
+### Key Rules
+- Customers arrive 10-15 min before their appointment time
+- Customer finishes glucose drink in the LOUNGE (not collection room) -- frees collection room for next customer
+- Services do NOT get interrupted for the 1-hour blood draw -- EXCEPT hairdressing
+- Phlebotomist times the draw around service completion, within T+60-90 window
+- Services must finish 5 min before scheduled draw
+- 90 usable minutes of services per GTT client (2 x 45-min windows)
+
+### Scenario B -- 20-Minute Intervals (LAUNCH MODEL, 8 clients)
+
+Recommended at launch. Peak concurrent: 7 clients. Last client leaves 11:30.
+
+| Client | Appt | Arrive | Service 1 | 1-hr Draw | Service 2 | Final Draw | Leave |
+|--------|------|--------|-----------|-----------|-----------|------------|-------|
+| 1 | 07:20 | 07:05 | 07:20-08:05 | 08:10 | 08:15-09:00 | 09:05 | 09:10 |
+| 2 | 07:40 | 07:25 | 07:40-08:25 | 08:30 | 08:35-09:20 | 09:25 | 09:30 |
+| 3 | 08:00 | 07:45 | 08:00-08:45 | 08:50 | 08:55-09:40 | 09:45 | 09:50 |
+| 4 | 08:20 | 08:05 | 08:20-09:05 | 09:10 | 09:15-10:00 | 10:05 | 10:10 |
+| 5 | 08:40 | 08:25 | 08:40-09:25 | 09:30 | 09:35-10:20 | 10:25 | 10:30 |
+| 6 | 09:00 | 08:45 | 09:00-09:45 | 09:50 | 09:55-10:40 | 10:45 | 10:50 |
+| 7 | 09:20 | 09:05 | 09:20-10:05 | 10:10 | 10:15-11:00 | 11:05 | 11:10 |
+| 8 | 09:40 | 09:25 | 09:40-10:25 | 10:30 | 10:35-11:20 | 11:25 | 11:30 |
+
+### Scenario A -- 15-Minute Intervals (GROWTH MODEL, 10 clients)
+
+Use when Scenario B is consistently >80% booked. Peak concurrent: 9 clients. Last client leaves 11:35.
+
+| Client | Appt | Arrive | Service 1 | 1-hr Draw | Service 2 | Final Draw | Leave |
+|--------|------|--------|-----------|-----------|-----------|------------|-------|
+| 1 | 07:30 | 07:15 | 07:30-08:15 | 08:20 | 08:25-09:10 | 09:15 | 09:20 |
+| 2 | 07:45 | 07:30 | 07:45-08:30 | 08:35 | 08:40-09:25 | 09:30 | 09:35 |
+| 3 | 08:00 | 07:45 | 08:00-08:45 | 08:50 | 08:55-09:40 | 09:45 | 09:50 |
+| 4 | 08:15 | 08:00 | 08:15-09:00 | 09:05 | 09:10-09:55 | 10:00 | 10:05 |
+| 5 | 08:30 | 08:15 | 08:30-09:15 | 09:20 | 09:25-10:10 | 10:15 | 10:20 |
+| 6 | 08:45 | 08:30 | 08:45-09:30 | 09:35 | 09:40-10:25 | 10:30 | 10:35 |
+| 7 | 09:00 | 08:45 | 09:00-09:45 | 09:50 | 09:55-10:40 | 10:45 | 10:50 |
+| 8 | 09:15 | 09:00 | 09:15-10:00 | 10:05 | 10:10-10:55 | 11:00 | 11:05 |
+| 9 | 09:30 | 09:15 | 09:30-10:15 | 10:20 | 10:25-11:10 | 11:15 | 11:20 |
+| 10 | 09:45 | 09:30 | 09:45-10:30 | 10:35 | 10:40-11:25 | 11:30 | 11:35 |
+
+### Phlebotomist Draw Tracking (Scenario B)
+
+Whiteboard format -- update in real time:
+
+| Patient | Arrive | 1-hr Draw Due | Status | 2-hr Draw Due | Status |
+|---------|--------|--------------|--------|--------------|--------|
+| [Name] | [time] | [time] | [ ] | [time] | [ ] |
+
+Draw alert: set phone timer 5 min before each draw window. If client is mid-service (non-hair), wait for service to end (within T+60-90 window tolerance). For hair services: interrupt and return immediately after draw.
