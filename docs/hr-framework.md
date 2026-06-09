@@ -118,7 +118,7 @@ Fair Work Commission increases minimum wages annually (typically July 1). Confir
 
 ## 5. SUPERANNUATION
 
-**Rate:** 11.5% of Ordinary Time Earnings (OTE) — current rate for FY2026. Rising to 12% from 1 July 2026.  
+**Rate:** 11.5% of Ordinary Time Earnings (OTE) from 1 July 2025. Rising to 12% from 1 July 2025.  
 *(Confirm current rate with accountant at hire — rate increases annually.)*
 
 **Payment:** Super must be paid at least quarterly; monthly via Xero preferred (cash flow better, avoids large quarterly hits).

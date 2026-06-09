@@ -454,13 +454,11 @@ This is not a choice — the question is only how to optimise within the trust.
 
 **Decided 2026-06-05 by Anthony.** Sections §2–15 retain the analysis. This section documents the confirmed model.
 
-> **⚠️ DEPRECATION NOTICE (audit 2026-06-05):** The ramp-up table below (30/50/75 visits) reflects an early conservative model. The authoritative ramp model is in **docs/cash-flow.md** (Month 1 = 176 visits with 300+ waitlist pre-launch). The startup capital below (A$187K–$361K) is also superseded by cash-flow.md (A$209K–$431K, includes morning+afternoon staffing). Do not use §16 financials as standalone figures — use cash-flow.md.
-
 ### Confirmed Decisions
 - **Staff model:** All service delivery staff employed directly by YETI Holding Trust (not sublet)
 - **GTT model:** In-house phlebotomist employed by GTT Center Perth; operates under WDP/PathWest NATA accreditation umbrella
 - **Commercial model:** Full package sales (Option B) — GTT Center Perth prices and collects all revenue
-- **Packages:** Essential A$80, Relax A$195, Restore A$285, Glow A$345, Complete A$395 — blended avg A$225 (see business-plan.md §6 for canonical package list)
+- **Packages:** Relax A$145, Restore A$240, Glow A$310, Complete A$360, blended avg A$225
 
 ### Employed Staff Cost (Monthly)
 
