@@ -11,6 +11,20 @@ Read **executive-summary.md** first. Single document pulling critical informatio
 
 ---
 
+## CROSS-DOCUMENT CONSISTENCY RULE (MANDATORY — ALL AGENTS)
+
+GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" are referenced in multiple files. **Any agent or worker who changes a linked parameter MUST update every doc in that parameter's row, in the same pass — not as a follow-up.** This rule was added Day 49 after a phlebotomist-count and draw-timing conflict went undetected across 3 docs.
+
+| Linked Parameter | Current Value (Day 49) | Docs That Reference It |
+|---|---|---|
+| Phlebotomist / collection chair count | 2 phlebotomists + 2 chairs, Day 1 | operations-manual.md, gtt-clinical-protocol.md, ivy-booking-system.md, pathology-collection-room.md, equipment-costs.md, financial-break-even-staff.md, staff-plan.md, executive-summary.md, feasibility.md |
+| Launch scenario / capacity timetable | Scenario B, 8 clients, corrected 0/+75(±5)/+135(±10) draw pathway | operations-manual.md, executive-summary.md, gtt-clinical-protocol.md, reading-order.md (this Open Decisions table) |
+| GTT package pricing & menu | GTT Lounge (A$25) / GTT Wellness (A$225) / GTT Luxe (A$325) flat tiers; hot stone massage/body scrub/body wrap/standalone paraffin wax removed entirely | services-pricing-locked.md, services-master-table.md, extended-wellness-services.md, financial-break-even-staff.md, executive-summary.md |
+| Discount policy | 10% online pre-booking discount on afternoon/standalone services; no discount on in-center upsells | services-pricing-locked.md, financial-break-even-staff.md, executive-summary.md |
+| Pathology model | Option A (PathWest/WDP satellite) — permanent | option-b-collection-centre.md, pathology-collection-room.md, executive-summary.md, reading-order.md (Phase 3 table) |
+
+---
+
 ## PHASE 0: ORIENTATION (Read First)
 
 | # | Document | What It Contains | Time |
@@ -29,7 +43,7 @@ Read **executive-summary.md** first. Single document pulling critical informatio
 | 5 | **business-plan.md** | Vision, model, market, competitive position. | 20 min |
 | 6 | **feasibility.md** | Location analysis, revenue, risks. | 15 min |
 | 7 | **financial-model.md** | Detailed financial model (Day 5). Cross-reference with break-even doc. | 20 min |
-| 8 | **financial-break-even-staff.md** (v2.0) | Per-employee break-even. Package pricing model. Post-GTT discount. Downtime protocol. | 15 min |
+| 8 | **financial-break-even-staff.md** (v2.0) | Per-employee break-even. Package pricing model. 10% online pre-booking discount policy. Downtime protocol. | 15 min |
 | 9 | **unit-economics.md** | Revenue per GTT client visit. | 10 min |
 | 10 | **cash-flow.md** | Month-by-month cash flow to break-even. | 15 min |
 | 11 | **financial-setup.md** | YETI Trust, bank accounts, Xero, payment systems. | 10 min |
@@ -55,7 +69,7 @@ Read **executive-summary.md** first. Single document pulling critical informatio
 | 17 | **gtt-clinical-protocol.md** | GTT procedure detail. ADIPS 2025 thresholds. Phlebotomist protocol. Specimen handling. | 20 min |
 | 18 | **gtt-test-reference.md** | Quick reference card for staff. GTT timing, thresholds. | 5 min |
 | 19 | **pathology-collection-room.md** | Room fit-out spec. Equipment. Patient pathway T=0 to T+15. | 15 min |
-| 20 | **option-b-collection-centre.md** | Own Medicare ACC pathway. NATA + 7-step process. Phase 2 only — launch is Option A (PathWest). | 15 min |
+| 20 | **option-b-collection-centre.md** | Own Medicare ACC pathway. NATA + 7-step process. Reference only — not pursuing. Launch and permanent model is Option A (PathWest). | 15 min |
 
 ---
 
@@ -145,8 +159,8 @@ Read **executive-summary.md** first. Single document pulling critical informatio
 | Decision | Owner | Urgency |
 |----------|-------|---------|
 | Confirm pathology fee — PathWest + WDP | Reed | WEEK 1 — blocks package pricing |
-| North or South Perth for Centre 1? | Anthony + Imara | WEEK 1 |
-| Launch Scenario A (15-min) or B (20-min)? | Anthony + Imara | Week 2 — recommend B |
+| ~~North or South Perth for Centre 1?~~ Best Perth-metro location, use, and buy-vs-rent — broadened scope | **Quinn** | URGENT — reassigned Day 49, not deferred to Year 2-3 |
+| ~~Launch Scenario A (15-min) or B (20-min)?~~ | — | **RESOLVED Day 49: Scenario B (8 clients, 2 phlebotomists, 2 chairs) confirmed as Day 1 launch model** |
 | Approve Reed to engage PathWest + WDP? | Anthony + Imara | WEEK 1 |
 | Brand name — "GTT Center Perth" or premium? | Poppy + Anthony | Week 2 |
 | DVA adviser one-time consultation | Anthony | Not blocking — do when convenient |

@@ -56,20 +56,11 @@ GTT Center Perth advantages: multi-client concurrent scheduling (7–10 simultan
 **No-interrupt rule:** Blood draws do NOT interrupt services — EXCEPT hairdressing. Phlebotomist times draws around service completion.
 **Service windows:** 45 min + 10-min draw gap + 45 min = **90 usable service minutes per client**.
 
-### Recommended Launch: Scenario B (20-minute intervals, 8 clients)
+### Launch Model: Scenario B (8 clients, 20-min intervals, 2 chairs / 2 phlebotomists)
 
-| Client | Appt | Service 1 | 1-hr Draw | Service 2 | Final Draw | Leave |
-|--------|------|-----------|-----------|-----------|------------|-------|
-| 1 | 07:20 | 07:20–08:05 | 08:10 | 08:15–09:00 | 09:05 | 09:10 |
-| 2 | 07:40 | 07:40–08:25 | 08:30 | 08:35–09:20 | 09:25 | 09:30 |
-| 3 | 08:00 | 08:00–08:45 | 08:50 | 08:55–09:40 | 09:45 | 09:50 |
-| 4 | 08:20 | 08:20–09:05 | 09:10 | 09:15–10:00 | 10:05 | 10:10 |
-| 5 | 08:40 | 08:40–09:25 | 09:30 | 09:35–10:20 | 10:25 | 10:30 |
-| 6 | 09:00 | 09:00–09:45 | 09:50 | 09:55–10:40 | 10:45 | 10:50 |
-| 7 | 09:20 | 09:20–10:05 | 10:10 | 10:15–11:00 | 11:05 | 11:10 |
-| 8 | 09:40 | 09:40–10:25 | 10:30 | 10:35–11:20 | 11:25 | 11:30 |
+**RESOLVED Day 49:** Scenario B (8 clients/morning) is the Day 1 launch model, run across 2 collection chairs (Chair A / Chair B) with 2 phlebotomists from Day 1 — not a single-chair/single-phlebotomist model. The corrected draw-timing pathway (Draw 1 + glucose at X, Draw 2 at X+75±5min, Draw 3 at X+135±10min) and the full verified per-client and per-staff timetable (actual clock times 07:40–12:25) are in operations-manual.md's "GTT Scheduling Timetables" section — that table is authoritative, not the broken +50/+105 table previously shown here.
 
-Peak concurrent: 7 clients. Last leaves 11:30. Upgrade to Scenario A (15-min, 10 clients) when >80% occupancy.
+Peak concurrent: up to 8 clients across 2 chairs. Last client departs ~12:25. Scenario A (10-client growth model, same 2 chairs/phlebotomists at 15-min intervals) is documented as a deferred growth target once the 8-client model exceeds 80% occupancy.
 
 ---
 
@@ -92,17 +83,17 @@ Peak concurrent: 7 clients. Last leaves 11:30. Upgrade to Scenario A (15-min, 10
 
 ### Afternoon / Standalone Only
 
-Spray tan (A$60), belly casting (A$250+), hair colour (A$130–400), eyelash extensions (A$140–280), hot stone massage, body scrub, paraffin wax, all services >60 min.
+Spray tan (A$60), belly casting (A$250+), hair colour (A$130–400), eyelash extensions (A$140–280), all services >60 min.
 
 ### GTT Packages
 
-| Package | Price |
-|---------|-------|
-| GTT Essential (lounge + coordination) | A$25 + pathology fee (TBC) |
-| GTT Comfort (Essential + 1 service) | A$25 + service |
-| GTT Luxe (massage 45 min + gel manicure) | A$290 all-in |
+| Package | Inclusions | Price |
+|---------|-----------|-------|
+| GTT Lounge | Lounge access, water, herbal tea, GTT coordination, birth plan tablet — no additional services | A$25 |
+| GTT Wellness (default) | Lounge + 2 × 45-min services (massage, facial, gel mani/pedi, brow lamination, lash lift+tint, or hair treatment) | A$225 flat |
+| GTT Luxe | Lounge + standard pregnancy massage (45 min) + signature pregnancy facial (45 min) + 3D scan Standard (30 min) | A$325 flat |
 
-Post-GTT discount: **10% off additional service/retail** when booked after glucose drink administered.
+Discount policy: **10% online pre-booking discount** on afternoon/standalone services booked at the same time as a GTT reservation. No discount on in-center upsells (add-ons, cafe, retail, spray tan) — full price applies on the day.
 Morning slots: **GTT clients have priority** until 10:00am.
 
 ---
@@ -119,7 +110,8 @@ Staff employed (casual/part-time). All service revenue flows to GTT Center Perth
 | Hairdresser | 2 | A$60,456 each | 3 blowdrys/day |
 | Beauty therapist | 2 | A$62,774 each | 2 facials/day |
 | 3D scan operator | 1 | A$40,296 | 2 scans/day |
-| **Total payroll (10 staff)** | | **A$589,453/yr** | |
+| Phlebotomist (Chair A / Chair B) | 2 | A$43,068 each | n/a — enables GTT throughput |
+| **Total payroll (12 staff)** | | **A$675,589/yr** | |
 
 **Receptionist/Manager = first hire. Everything else waits for this role to be filled.**
 
@@ -134,14 +126,14 @@ When no client booked: room prep + restock, cross-training, social media content
 
 | Metric | Figure |
 |--------|--------|
-| Total payroll (10 staff) | A$589,453/yr |
+| Total payroll (12 staff) | A$675,589/yr |
 | Total overhead (rent, utilities, consumables, insurance, marketing) | ~A$100,000/yr |
-| Total costs | A$689,453/yr |
-| Break-even revenue | A$689,453/yr |
-| Break-even services/day | ~26 services/day |
+| Total costs | A$775,589/yr |
+| Break-even revenue | A$775,589/yr |
+| Break-even services/day | ~29-30 services/day |
 | Projected revenue (75% utilisation) | A$868,000/yr |
-| Projected net margin | A$178,547 (20.6%) |
-| Equipment budget | A$48,500–113,500 |
+| Projected net margin | A$92,411 (~10.6%) |
+| Equipment budget | A$49,300–114,700 |
 
 Revenue streams: GTT venue fee (A$25/patient) + service revenue + afternoon services + spray tan (passive, A$60/session) + retail + cafe.
 
@@ -176,18 +168,15 @@ Operator must NEVER say "everything looks healthy" or any diagnostic statement. 
 
 ## Pathology Model
 
-**Launch: Option A** — PathWest or WDP satellite collection centre.
+**Permanent model: Option A** — PathWest or WDP satellite collection centre (Day 49: confirmed permanent, not a launch-only stepping stone).
 - PathWest/WDP provide accreditation umbrella + specimen processing
-- GTT Center Perth provides the collection room, phlebotomist, and patient experience
-- Zero NATA cost at launch
+- GTT Center Perth provides the collection room (2 chairs, Chair A / Chair B), 2 phlebotomists, and patient experience
+- Zero NATA cost
 - Pathology fee billed by PathWest/WDP to Medicare (out-of-pocket TBC — contact before pricing)
 
-**Phase 2: Option B** — Own NATA-accredited ACC.
-- NATA ISO 15189:2022 accreditation + Services Australia HPOS approval
-- Timeline: 6–9 months, Budget: A$74,600–110,200
-- Pursue only once venue is operational and has volume data
+**Option B (own NATA-accredited ACC):** Not pursuing. See option-b-collection-centre.md (reference only) for the historical NATA/HPOS pathway and budget — retained in case regulatory/partner conditions change drastically in future.
 
-**CRITICAL CENTRIFUGE RULE:** NaF glucose tubes must be centrifuged within 10 minutes of collection. Ice slurry between collection and centrifuge. Failure = 62% GDM underdiagnosis (WA ORCHID study).
+**CRITICAL CENTRIFUGE RULE:** NaF glucose tubes must be centrifuged within 10 minutes of collection. Ice slurry between collection and centrifuge. Failure = 62% GDM underdiagnosis (WA ORCHID study). One centrifuge serves both chairs — Chair A/B draws are offset 10-20min in the verified timetable so both reach the centrifuge within the 10-minute window.
 
 ---
 
@@ -199,7 +188,7 @@ Operator must NEVER say "everything looks healthy" or any diagnostic statement. 
 - 400+ lux lighting at work surface
 - 6 ACH ventilation minimum
 - Sensor taps at hand hygiene station
-- Reclining phlebotomy chair (flat-capable)
+- 2x reclining phlebotomy chairs (Chair A / Chair B, flat-capable)
 - Wall-mounted sharps disposal at elbow height
 - Centrifuge, specimen fridge, glucometer for point-of-care testing
 - Hand sanitiser dispensers throughout
@@ -247,8 +236,8 @@ Does NOT offer: meal plans, NDSS registration, APD consultations (deferred indef
 ## Week 1 Actions (Priority Order)
 
 1. **Reed:** Contact PathWest + WDP — confirm pathology fee and satellite collection arrangement
-2. **Anthony + Imara:** Confirm North Perth or South Perth for Centre 1
-3. **Anthony + Imara:** Confirm Scenario B (20-min intervals) as launch timetable
+2. **Quinn:** Broadened Perth-metro location research (URGENT, Day 49) — best location/use/affordability, new-build vs lease, buy vs rent for YETI Trust. Not constrained to the prior 4-suburb shortlist.
+3. **RESOLVED Day 49:** Scenario B (8 clients, 2 phlebotomists, 2 chairs, corrected draw-timing pathway) confirmed as Day 1 launch model — see operations-manual.md.
 4. **Anthony:** DVA adviser consultation (one-time, not blocking)
 5. **Poppy:** Begin pre-opening social media strategy — aim fully booked from day 1
 6. **Grace:** Begin receptionist/manager job posting (this hire unblocks everything)
@@ -288,3 +277,4 @@ Does NOT offer: meal plans, NDSS registration, APD consultations (deferred indef
 6. **GTT clients have priority** for morning service slots (before 10:00am).
 7. **Spray tan not offered on GTT test day** for pregnant clients.
 8. **No TGA-unregistered medical equipment** (ultrasound, TENS) — Australian ARTG listing required.
+9. **Late arrival >10 minutes** for a booked GTT slot = forfeited slot + A$30 deposit forfeited; client rebooked, not squeezed into the existing schedule.

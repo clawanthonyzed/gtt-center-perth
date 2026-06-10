@@ -15,7 +15,7 @@
 - Add-ons visible at booking stage in booking system
 - Morning sessions: GTT clients get priority. General public fill remaining gaps.
 - Venue fee embedded in GTT packages — inclusions appear free to client
-- Post-GTT discount offered to clients who book a service/add-on after glucose drink is administered
+- Discount policy: 10% online pre-booking discount on afternoon/standalone services booked at the same time as a GTT reservation. No discount on in-center upsells (add-ons, cafe, retail, spray tan) — full price applies on the day.
 
 ---
 
@@ -25,15 +25,16 @@ The pathology fee (PathWest/WDP) is billed separately to Medicare. The venue pac
 
 > **Note on pathology fee:** Contact PathWest (08 6383 4234) and Western Diagnostics Pathology for exact out-of-pocket and collection fee structure before finalising package pricing. Amounts below are estimates pending confirmation.
 
-| Package | Inclusions | Venue Fee |
-|---------|-----------|-----------|
-| GTT Essential | Lounge access, water, herbal tea, GTT coordination, birth plan tablet | A$25 |
-| GTT Comfort | Essential + 1 × service of choice (30–45 min) | A$25 + service price |
-| GTT Day | Essential + 2 × services | A$25 + service prices |
-| GTT Luxe | Essential + pregnancy massage (45 min) + gel manicure | A$290 all-in |
+The verified capacity timetable (operations-manual.md) gives every GTT client two 45-min service slots (Service 1 and Service 2) by default. Packages below reflect this as the standard offer, with a no-service option retained for clients who decline.
 
-*Inclusions appear free (lounge, tea, birth plan tablet) — bundled into venue fee.*
-*Post-GTT discount: 10% off any additional service booked after glucose drink administered.*
+| Package | Inclusions | Price |
+|---------|-----------|-------|
+| GTT Lounge | Lounge access, water, herbal tea, GTT coordination, birth plan tablet — no additional services | A$25 |
+| GTT Wellness (default) | Lounge + 2 × 45-min services, choice of one per slot from: standard pregnancy massage, signature pregnancy facial, gel mani/pedi (45–55 min), brow lamination, lash lift + tint, or hair treatment (blowdry/hair mask, 45 min) | A$225 flat |
+| GTT Luxe | Lounge + standard pregnancy massage (45 min) + signature pregnancy facial (45 min) + 3D scan Standard (30 min, scheduled around services) | A$325 flat |
+
+*Inclusions appear free (lounge, tea, birth plan tablet) — bundled into package price.*
+*GTT Wellness service choices are capacity-balanced: each option is staffed by Massage, Beauty, Nails, or Hair across the 2 service slots, matching the verified per-staff timetable.*
 
 ---
 
@@ -175,6 +176,8 @@ The pathology fee (PathWest/WDP) is billed separately to Medicare. The venue pac
 
 *Not available during GTT window. Bookable as separate sessions or afternoon slots.*
 
+*10% online pre-booking discount applies when booked at the same time as a GTT reservation. Full price applies for in-center/same-day upsells.*
+
 ---
 
 ### 7. SPRAY TAN (AUTOMATED BOOTH)
@@ -246,20 +249,7 @@ All colour services take 60 min minimum — **afternoon/standalone only.**
 
 ---
 
-### 11. BODY TREATMENTS
-
-**Staff:** Massage therapist or beauty therapist
-
-| Service | Duration | Price |
-|---------|----------|-------|
-| Hot stone massage | 60–75 min | A$130 |
-| Pregnancy body wrap | 60 min | A$120 |
-| Full body scrub | 45–60 min | A$110 |
-| Paraffin wax hands + feet (standalone) | 45 min | A$65 |
-
----
-
-## PART C: SELF-SERVICE / TABLET-BASED (FREE — INCLUDED IN LOUNGE)
+### PART C: SELF-SERVICE / TABLET-BASED (FREE — INCLUDED IN LOUNGE)
 
 ### 12. BIRTH PLAN CREATION
 

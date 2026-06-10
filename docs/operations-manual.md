@@ -50,7 +50,7 @@
 7. Manage all escort transitions throughout the morning
 
 ### 9:00am–11:00am — Peak Operations
-- All 4 slots potentially active simultaneously
+- Multiple GTT clients active simultaneously across both chairs (up to 8) — see GTT Scheduling Timetables for the verified per-client/per-staff schedule
 - Receptionist tracks all T=60 and T=120 draw times on a physical whiteboard (as backup to Fresha)
 - Draw alert system: set phone reminders for each patient's T=60 and T=120 (5 minutes before)
 - If any service runs over time: communicate immediately to phlebotomist, never miss a draw window
@@ -136,10 +136,14 @@ Services display only for the window available after the selected GTT start time
 4. No-show → full session charged (Fresha card-on-file charge)
 5. Waitlist: if cancellation occurs, immediately notify first person on waitlist (Fresha automated + personal call)
 
+### Late Arrival Policy
+- Patients must arrive 10-15 min before their GTT slot (X) for fasting/Medicare check-in and Draw 1
+- **>10 minutes late:** GTT slot forfeited. A$30 deposit forfeited (same mechanism as <24hr cancellation). Patient is rebooked for the next available slot — NOT squeezed into the existing schedule (would breach the next client's draw-timing tolerances on the same chair)
+- Receptionist calls any patient who has not arrived by 5 minutes before X to confirm status before the 10-minute cutoff
+
 ### Overbooking Rule
-Maximum 4 GTT patients per day with 1 phlebotomist.  
-When 2nd phlebotomist hired: maximum 8 per day.  
-Never accept a 5th booking without confirming phlebotomist cover.
+Maximum 8 GTT patients per day from Day 1 — 2 phlebotomists, 2 collection chairs (Chair A / Chair B), alternating-client assignment (Chair A: clients 1/3/5/7, Chair B: clients 2/4/6/8). See GTT Scheduling Timetables below for the verified per-client and per-staff schedule.  
+Never accept a 9th booking without confirming chair/staff cover via the Scenario A growth model (see below).
 
 ---
 
@@ -263,52 +267,75 @@ Never accept a 5th booking without confirming phlebotomist cover.
 
 ## GTT SCHEDULING TIMETABLES
 
-### Key Rules
-- Customers arrive 10-15 min before their appointment time
-- Customer finishes glucose drink in the LOUNGE (not collection room) -- frees collection room for next customer
-- Services do NOT get interrupted for the 1-hour blood draw -- EXCEPT hairdressing
-- Phlebotomist times the draw around service completion, within T+60-90 window
-- Services must finish 5 min before scheduled draw
-- 90 usable minutes of services per GTT client (2 x 45-min windows)
+### Key Rules (corrected Day 49 — replaces prior +50/+105 pattern)
 
-### Scenario B -- 20-Minute Intervals (LAUNCH MODEL, 8 clients)
+Relative to each client's booked GTT start time (X):
 
-Recommended at launch. Peak concurrent: 7 clients. Last client leaves 11:30.
+| Step | Time (relative to X) | Duration |
+|---|---|---|
+| Draw 1 (fasting) + 75g glucose drink | X to X+15 | 15 min (in chair) |
+| Service 1 | X+15 to X+60 | 45 min |
+| Transition buffer | X+60 to X+70 | 10 min |
+| **Draw 2** (target X+75, tolerance ±5min) | X+70-X+80 | 5 min (in chair) |
+| Service 2 | X+80 to X+125 | 45 min |
+| **Draw 3** (target X+135, tolerance ±10min) | X+125-X+145 | 5 min (in chair) |
+| Departure | ~X+145-150 | — |
 
-| Client | Appt | Arrive | Service 1 | 1-hr Draw | Service 2 | Final Draw | Leave |
-|--------|------|--------|-----------|-----------|-----------|------------|-------|
-| 1 | 07:20 | 07:05 | 07:20-08:05 | 08:10 | 08:15-09:00 | 09:05 | 09:10 |
-| 2 | 07:40 | 07:25 | 07:40-08:25 | 08:30 | 08:35-09:20 | 09:25 | 09:30 |
-| 3 | 08:00 | 07:45 | 08:00-08:45 | 08:50 | 08:55-09:40 | 09:45 | 09:50 |
-| 4 | 08:20 | 08:05 | 08:20-09:05 | 09:10 | 09:15-10:00 | 10:05 | 10:10 |
-| 5 | 08:40 | 08:25 | 08:40-09:25 | 09:30 | 09:35-10:20 | 10:25 | 10:30 |
-| 6 | 09:00 | 08:45 | 09:00-09:45 | 09:50 | 09:55-10:40 | 10:45 | 10:50 |
-| 7 | 09:20 | 09:05 | 09:20-10:05 | 10:10 | 10:15-11:00 | 11:05 | 11:10 |
-| 8 | 09:40 | 09:25 | 09:40-10:25 | 10:30 | 10:35-11:20 | 11:25 | 11:30 |
+- Customers arrive 10-15 min before X for fasting/Medicare check-in
+- Glucose drink is completed in the collection room (per pathology-collection-room.md Patient Pathway); patient exits to lounge/treatment area at X+15
+- Services do NOT get interrupted for blood draws -- EXCEPT hairdressing (draw can interrupt hair services; resume immediately after)
+- 2 collection chairs (Chair A / Chair B) + 2 phlebotomists from Day 1. Chair A takes odd-numbered clients (1/3/5/7), Chair B takes even-numbered (2/4/6/8). Each chair handles 4 clients at 40-min spacing.
+- This pathway matches gtt-clinical-protocol.md's T+60(±5)/T+120(±10) clinical rule and pathology-collection-room.md's Patient Pathway (T+75/T+135 from arrival).
 
-### Scenario A -- 15-Minute Intervals (GROWTH MODEL, 10 clients)
+### Scenario B -- 8-Client Launch Timetable (LAUNCH MODEL, 20-min arrival intervals)
 
-Use when Scenario B is consistently >80% booked. Peak concurrent: 9 clients. Last client leaves 11:35.
+2 chairs / 2 phlebotomists / 9 service staff (2x Massage, 2x Beauty, 2x Nails, 2x Hair, 1x 3D Scan). Verified Day 49 -- no staff double-booked. One real-time adjustment: Client 1's Draw 2 shifted from its 08:55 target to 08:50 (within ±5min tolerance) to avoid colliding with Client 5's Draw 1 at 09:00 on Chair A.
 
-| Client | Appt | Arrive | Service 1 | 1-hr Draw | Service 2 | Final Draw | Leave |
-|--------|------|--------|-----------|-----------|-----------|------------|-------|
-| 1 | 07:30 | 07:15 | 07:30-08:15 | 08:20 | 08:25-09:10 | 09:15 | 09:20 |
-| 2 | 07:45 | 07:30 | 07:45-08:30 | 08:35 | 08:40-09:25 | 09:30 | 09:35 |
-| 3 | 08:00 | 07:45 | 08:00-08:45 | 08:50 | 08:55-09:40 | 09:45 | 09:50 |
-| 4 | 08:15 | 08:00 | 08:15-09:00 | 09:05 | 09:10-09:55 | 10:00 | 10:05 |
-| 5 | 08:30 | 08:15 | 08:30-09:15 | 09:20 | 09:25-10:10 | 10:15 | 10:20 |
-| 6 | 08:45 | 08:30 | 08:45-09:30 | 09:35 | 09:40-10:25 | 10:30 | 10:35 |
-| 7 | 09:00 | 08:45 | 09:00-09:45 | 09:50 | 09:55-10:40 | 10:45 | 10:50 |
-| 8 | 09:15 | 09:00 | 09:15-10:00 | 10:05 | 10:10-10:55 | 11:00 | 11:05 |
-| 9 | 09:30 | 09:15 | 09:30-10:15 | 10:20 | 10:25-11:10 | 11:15 | 11:20 |
-| 10 | 09:45 | 09:30 | 09:45-10:30 | 10:35 | 10:40-11:25 | 11:30 | 11:35 |
+**Per-client view (actual clock times):**
+
+| Client | Chair | Draw 1 | Service 1 (staff) | Draw 2 | Service 2 (staff) | Draw 3 | Depart |
+|---|---|---|---|---|---|---|---|
+| 1 | A | 07:40-07:55 | 07:55-08:40 -- Massage (M1) | 08:50-08:55 | 09:00-09:45 -- Nails (N2) | 09:55-10:00 | ~10:05 |
+| 2 | B | 08:00-08:15 | 08:15-09:00 -- Beauty (B1) | 09:15-09:20 | 09:20-10:05 -- Hair (H2) | 10:15-10:20 | ~10:25 |
+| 3 | A | 08:20-08:35 | 08:35-09:20 -- Nails (N1) | 09:35-09:40 | 09:40-10:25 -- Massage (M1) | 10:35-10:40 | ~10:45 |
+| 4 | B | 08:40-08:55 | 08:55-09:40 -- Hair (H1) | 09:55-10:00 | 10:00-10:45 -- Beauty (B1) | 10:55-11:00 | ~11:05 |
+| 5 | A | 09:00-09:15 | 09:15-10:00 -- Massage (M2) | 10:15-10:20 | 10:20-11:05 -- 3D Scan (SC1) | 11:15-11:20 | ~11:25 |
+| 6 | B | 09:20-09:35 | 09:35-10:20 -- Beauty (B2) | 10:35-10:40 | 10:40-11:25 -- Hair (H2) | 11:35-11:40 | ~11:45 |
+| 7 | A | 09:40-09:55 | 09:55-10:40 -- Hair (H1) | 10:55-11:00 | 11:00-11:45 -- Massage (M2) | 11:55-12:00 | ~12:05 |
+| 8 | B | 10:00-10:15 | 10:15-11:00 -- Nails (N1) | 11:15-11:20 | 11:20-12:05 -- Beauty (B2) | 12:15-12:20 | ~12:25 |
+
+**Per-staff view (whole morning, actual clock times):**
+
+| Staff | Bookings | Free / downtime |
+|---|---|---|
+| Phlebotomist A (Chair A) | 12 draws across clients 1/3/5/7 at 07:40, 08:20, 08:50, 09:00, 09:35, 09:40, 09:55, 09:55, 10:15, 10:35, 10:55, 11:15, 11:55 | Gaps of 10-20min between draws -- used for labelling/centrifuge/courier prep |
+| Phlebotomist B (Chair B) | 12 draws across clients 2/4/6/8 at 08:00, 08:40, 09:15, 09:20, 09:55, 10:00, 10:15, 10:15, 10:35, 10:55, 11:15, 11:35, 12:15 | Same as above |
+| Massage 1 (M1) | 07:55-08:40 (C1), 09:40-10:25 (C3) | Free 08:40-09:40, free 10:25-end |
+| Massage 2 (M2) | 09:15-10:00 (C5), 11:00-11:45 (C7) | Free 07:40-09:15, free 10:00-11:00, free 11:45-end |
+| Beauty 1 (B1) | 08:15-09:00 (C2), 10:00-10:45 (C4) | Free 09:00-10:00, free 10:45-end |
+| Beauty 2 (B2) | 09:35-10:20 (C6), 11:20-12:05 (C8) | Free 07:40-09:35, free 10:20-11:20 |
+| Nail Tech 1 (N1) | 08:35-09:20 (C3), 10:15-11:00 (C8) | Free 09:20-10:15, free 11:00-end |
+| Nail Tech 2 (N2) | 09:00-09:45 (C1) | Free rest of morning -- available for general-public/walk-in fill |
+| Hairdresser 1 (H1) | 08:55-09:40 (C4), 09:55-10:40 (C7) | Free 09:40-09:55, free 10:40-end |
+| Hairdresser 2 (H2) | 09:20-10:05 (C2), 10:40-11:25 (C6) | Free 10:05-10:40, free 11:25-end |
+| 3D Scan (SC1, subtenant) | 10:20-11:05 (C5) | Free rest of morning -- available for general-public bookings |
+| Receptionist | Continuous 07:25-12:30 | Greets arrivals, runs Draw 2/Draw 3 recall, checkout, payments |
+
+**Notes:**
+- Chair utilization ~30% per chair (40min busy / ~270min window) -- comfortable headroom for ±5/±10min real-time tolerance shifts
+- Every service staff member does 1-2 bookings across the ~4.5hr morning (45-90min busy / ~270min = 17-33% utilization). N2 and SC1 have the most slack -- naturally available for general-public/walk-in fill, consistent with services-pricing-locked.md's "GTT clients priority, general public fill remaining gaps" model
+- No staff member is double-booked
+
+### Scenario A -- 10-Client Growth Model (DEFERRED)
+
+Use only once the 8-client Scenario B model above is consistently >80% booked. Same 2-chair structure, 5 clients/chair at 30-min spacing -> ~67-74% chair utilization. Workable but tight. A full verified per-client/per-staff timetable for Scenario A has not yet been built -- build and verify it (same method as Scenario B above, checking for staff double-booking) before activating, to avoid reintroducing draw-timing conflicts.
 
 ### Phlebotomist Draw Tracking (Scenario B)
 
 Whiteboard format -- update in real time:
 
-| Patient | Arrive | 1-hr Draw Due | Status | 2-hr Draw Due | Status |
+| Patient | Arrive | Draw 2 Due (X+75 ±5min) | Status | Draw 3 Due (X+135 ±10min) | Status |
 |---------|--------|--------------|--------|--------------|--------|
 | [Name] | [time] | [time] | [ ] | [time] | [ ] |
 
-Draw alert: set phone timer 5 min before each draw window. If client is mid-service (non-hair), wait for service to end (within T+60-90 window tolerance). For hair services: interrupt and return immediately after draw.
+Draw alert: set phone timer 5 min before each draw window. If client is mid-service (non-hair), wait for service to end (within tolerance window). For hair services: interrupt and return immediately after draw.

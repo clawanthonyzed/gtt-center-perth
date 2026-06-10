@@ -161,6 +161,8 @@ Medicare rebatable if IBCLC is also an endorsed midwife (within 7 weeks post-bir
 
 GTT Center Perth is a full day spa. The following services expand the menu beyond the GTT-window core offering. These are primarily afternoon/standalone bookings.
 
+**Day 49:** Hot stone massage, full body scrub, and pregnancy body wrap removed from the menu entirely (not offered at all) — see services-pricing-locked.md and services-master-table.md. Paraffin wax remains available as a nail add-on only (see Additional Nail Services below).
+
 ### Eyelash Services
 
 | Service | Duration | Price | GTT Window? |
@@ -192,21 +194,6 @@ All colour services are **afternoon-only** (too long for GTT window).
 | Colour + blowdry (single process) | 2–3 hr | A$200–280 | No |
 
 **Pregnancy safety:** Chemical colour services are generally considered safe from second trimester. Informed consent required. Adequate ventilation mandatory. Offer alternatives (ammonia-free, organic colour).
-
-### Body Treatments
-
-| Service | Duration | Price | GTT Window? |
-|---------|----------|-------|-------------|
-| Hot stone massage | 60–75 min | A$130 | No — afternoon only |
-| Body scrub (full body) | 45–60 min | A$110 | No — afternoon only |
-| Paraffin wax (hands) | 20 min | A$35 | Yes (as add-on) |
-| Paraffin wax (feet) | 25 min | A$40 | Yes (as add-on) |
-| Pregnancy body wrap | 60 min | A$120 | No — afternoon only |
-
-**Pregnancy safety notes for body treatments:**
-- Hot stone massage: avoid stones directly on abdomen; deep heat contraindicated in first trimester
-- Body scrub: avoid strong essential oils; no scrub on abdomen in third trimester
-- Paraffin wax: safe throughout pregnancy; check for wax allergy
 
 ### Additional Nail Services
 

@@ -13,7 +13,7 @@ GTT Center Perth employs its own phlebotomist(s) and manages the full GTT appoin
 ```
 GTT Center Perth (venue + phlebotomist employer)
         │
-        ├── Employs: Phlebotomist (Cert III HLT37215+)
+        ├── Employs: 2x Phlebotomist (Cert III HLT37215+) — Chair A / Chair B, 2 collection chairs from Day 1
         ├── Provides: ACSQHC-compliant collection room
         ├── Manages: Patient scheduling and experience
         │
@@ -70,6 +70,8 @@ T=120+30 (10:30am)
 
 ### GTT Start Times (Staggered)
 
+> **Superseded by operations-manual.md (Day 49):** the 4-slot table below predates the verified 2-chair capacity model. operations-manual.md's GTT Scheduling Timetables section is authoritative for actual launch slot times, draw timing, and staffing.
+
 | Slot | Fasting draw | 1-hour draw | 2-hour draw | Latest depart |
 |---|---|---|---|---|
 | Slot A | 7:30am | 8:30am | 9:30am | 9:45am |
@@ -77,7 +79,7 @@ T=120+30 (10:30am)
 | Slot C | 8:30am | 9:30am | 10:30am | 10:45am |
 | Slot D | 9:00am | 10:00am | 11:00am | 11:15am |
 
-Maximum 4 concurrent GTT patients per day at launch (one phlebotomist managing staggered draws). Expand to 8 slots per day when second phlebotomist hired.
+8 GTT patients per day from Day 1 (2 phlebotomists + 2 collection chairs, alternating-client assignment — Chair A/Phlebotomist A takes odd-numbered clients, Chair B/Phlebotomist B takes even-numbered). See operations-manual.md for the verified per-client and per-staff timetable.
 
 ---
 
@@ -161,7 +163,7 @@ Communicated via:
 
 **Room size:** Minimum 10 sqm (10–12 sqm recommended)  
 **Layout:**
-- Patient chair: adjustable, with armrest support
+- Patient chairs (x2 — Chair A / Chair B): adjustable, with armrest support
 - Phlebotomist workspace: bench, good lighting (natural or 4000K+)
 - Hand hygiene station: soap, paper towel, ABHR (alcohol-based hand rub)
 - Sharps disposal: approved sharps container (Daniels Healthcare UltiMed or equivalent)

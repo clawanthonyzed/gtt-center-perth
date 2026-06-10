@@ -25,7 +25,7 @@ Every service booking MUST be linked to a confirmed GTT appointment time. No pla
 - Revenue model: 20% commission only on **new clients** who book via Fresha marketplace — existing clients and direct bookings are commission-free
 - **$14.95/user/month Team plan** eliminates all marketplace fees
 - **Unlimited free SMS notifications** — huge advantage for high-reminder-volume GTT bookings
-- Multi-practitioner calendar: yes
+- Multi-practitioner calendar: yes — confirmed sufficient for the verified 2-chair/12-staff capacity model (see operations-manual.md per-staff timetable). Each phlebotomist/chair and each service-category staff member needs their own Fresha calendar resource so the 8-client/morning schedule can be built without double-booking.
 - Online payment: yes (Fresha Pay — card processing)
 - Retail/product sales: yes
 - **Weakness:** Not designed for medical/clinical workflows; GTT slot pairing needs workaround
@@ -164,6 +164,10 @@ STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 - Cancel within 24 hours: A$30 deposit forfeited
 - No-show: full session charged (deposit + balance)
 - Practitioner cancels: full refund + priority rebooking
+
+### Late Arrival Policy
+- >10 minutes late for booked GTT slot: GTT slot forfeited, A$30 deposit forfeited (same as <24hr cancellation), client rebooked for next available slot — not squeezed into the existing schedule (would breach draw-timing tolerances for other clients on the same chair)
+- See operations-manual.md Late Arrival Policy for full detail
 
 ### Waitlist
 - Customer joins waitlist for fully booked GTT slot

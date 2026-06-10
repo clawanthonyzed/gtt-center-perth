@@ -96,9 +96,6 @@ Complete reference for all services and add-ons. Staff, duration, price, and GTT
 | Service | Staff Required | Qualification | Duration | Price | GTT Window | Notes |
 |---------|---------------|---------------|----------|-------|-----------|-------|
 | Full pregnancy massage (60 min) | Massage therapist | Cert IV + pregnancy spec | 60 min | A$145 | No | Afternoon only |
-| Hot stone massage | Massage therapist | Cert IV + stone massage training | 60–75 min | A$130 | No | Avoid abdomen; T2+ |
-| Pregnancy body wrap | Beauty therapist | Diploma Beauty Therapy | 60 min | A$120 | No | |
-| Full body scrub | Beauty therapist | Diploma Beauty Therapy | 45–60 min | A$110 | No | |
 | Hydration facial (60 min) | Beauty therapist | Diploma Beauty Therapy | 60 min | A$145 | No | |
 | Signature facial (75 min) | Beauty therapist | Diploma Beauty Therapy | 75 min | A$175 | No | |
 | Mani + pedi combo (gel) | Nail technician | Cert III SHB30321 | 80 min | A$140 | No | Too long for GTT window |
@@ -121,7 +118,6 @@ Complete reference for all services and add-ons. Staff, duration, price, and GTT
 | Belly casting (white) | Trained staff | 1-day training | 60 min | A$250 | No | 32–36 wks optimal |
 | Belly casting + painted | Trained staff | 1-day training | 75 min | A$310 | No | |
 | Belly + breast cast | Trained staff | 1-day training | 75 min | A$330 | No | |
-| Paraffin wax hands + feet (standalone) | Nail technician | Cert III SHB30321 | 45 min | A$65 | No | |
 
 ---
 
@@ -141,8 +137,8 @@ Complete reference for all services and add-ons. Staff, duration, price, and GTT
 
 | Staff Role | Can Deliver |
 |-----------|------------|
-| Massage therapist | Pregnancy massage (all), hot stone, body wrap, body scrub, scalp massage add-on, hand/arm massage add-on |
-| Beauty therapist | All facials + all facial add-ons, brow wax/tint/lamination, lash tint, belly casting (once trained), body wrap, body scrub |
+| Massage therapist | Pregnancy massage (all), scalp massage add-on, hand/arm massage add-on |
+| Beauty therapist | All facials + all facial add-ons, brow wax/tint/lamination, lash tint, belly casting (once trained) |
 | Nail technician | All nail services + nail add-ons, paraffin wax |
 | Hairdresser | All hair services (GTT window + afternoon colour), braiding, scalp treatment |
 | Lash tech | Classic/hybrid/volume lash extensions and infills, lash lift + tint |

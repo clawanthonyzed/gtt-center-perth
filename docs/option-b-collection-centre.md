@@ -1,8 +1,10 @@
 # GTT Center Perth — Option B: Own Approved Collection Centre
 
-**Version:** 1.0 | **Date:** 2026-06-09 | **Status:** Planning Phase
+**Version:** 1.0 | **Date:** 2026-06-09 | **Status:** Not Pursuing — Reference Only
 
 ---
+
+> **Decision (Day 49):** Option A (PathWest/WDP satellite collection) is the PERMANENT pathology model — not a launch-only stepping stone. Option B is not being pursued. This document is retained for historical reference only. The 2-collection-chair / 2-phlebotomist Day 1 model (see operations-manual.md, pathology-collection-room.md) is unrelated to this decision — it is a staffing/equipment change fully compatible with Option A.
 
 ## Overview
 
@@ -14,6 +16,8 @@ Option B means GTT Center Perth operates its own Medicare-approved pathology col
 
 ## Why Pursue Option B
 
+> Retained for historical reference only — not an active comparison. Option A is the permanent model (see decision note above).
+
 | Factor | Option A (Partner) | Option B (Own ACC) |
 |--------|-------------------|-------------------|
 | Control | Low — pathology provider dictates hours, staff, room access | Full control of hours, staffing, room design |
@@ -23,7 +27,7 @@ Option B means GTT Center Perth operates its own Medicare-approved pathology col
 | Cost | Near-zero operational cost | Ongoing compliance, staff, accreditation costs |
 | Timeline | Fast (weeks) | 6-9 months minimum |
 
-**Recommendation:** Launch with Option A (fastest to market), run in parallel with Option B accreditation application, switch to Option B at month 6-9.
+**Recommendation (superseded Day 49):** Option A is the permanent model — no parallel Option B accreditation application, no switch planned.
 
 ---
 

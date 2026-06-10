@@ -5,6 +5,10 @@
 
 ---
 
+> **SUPERSEDED (Day 49):** Anthony's approved plan locks Scenario B (8 GTT clients/morning, 2 collection chairs) as the Day 1 launch model, which requires 2x staff in each service category (massage, nails, beauty, hairdresser) plus 2x phlebotomist from Day 1 — not the 1x-per-category + 3-day-casual-beauty launch model below. **financial-break-even-staff.md v2.0 is now the canonical payroll/break-even model (12 roles, ~A$675,589/yr).** This document's per-role descriptions, qualifications, and hiring requirements remain valid reference material. The org chart, role detail, and Section 7 hiring timeline below have been updated to reflect 2x phlebotomist; Sections 4 and 6 (cost summary, break-even) describe the superseded smaller model and should not be used for current financial planning.
+
+---
+
 ## 1. EMPLOYMENT MODEL — CONFIRMED
 
 All service delivery staff are **employed** by GTT Center Perth (YETI Holding Trust).  
@@ -31,7 +35,7 @@ YETI Holding Trust (Anthony Zed — Trustee)
             └── Managing Director / Venue Manager: Imara
                     │
                     ├── Clinical Coordinator (reports to Imara)
-                    │       └── Phlebotomist(s)
+                    │       └── 2x Phlebotomist (Chair A / Chair B)
                     │
                     ├── Service Manager (Imara directly at launch)
                     │       ├── Pregnancy Massage Therapist
@@ -67,8 +71,8 @@ YETI Holding Trust (Anthony Zed — Trustee)
 
 ---
 
-### Phlebotomist
-**Status:** Permanent part-time  
+### Phlebotomist (x2 — Chair A and Chair B)
+**Status:** Permanent part-time, 2 positions  
 **Award:** Health Professionals and Support Services Award MA000027 (HPSS)  
 **Classification:** Health Professional Level 2 (Cert III HLT37215 — Pathology Collection)  
 **Base rate:** A$27.00/hr (indicative HPSS HP Level 2, 2026 — confirm against current award)  
@@ -96,7 +100,7 @@ YETI Holding Trust (Anthony Zed — Trustee)
 - Fasting and adverse event monitoring (patient feels unwell during fast)
 - First point of contact for clinical questions during GTT window
 
-**Expansion:** When volume exceeds 6 daily GTT slots, second phlebotomist added (or sessional cover).
+**Day 1 model:** 2 phlebotomists employed from launch, each running one collection chair (Chair A handles odd-numbered clients, Chair B even-numbered) — see operations-manual.md for the verified per-client and per-staff timetable. Not a later-stage expansion.
 
 ---
 
@@ -219,17 +223,20 @@ YETI Holding Trust (Anthony Zed — Trustee)
 
 ## 4. TOTAL MONTHLY STAFF COST SUMMARY
 
+> **SUPERSEDED** — this table reflects the 1x-per-category + casual-beauty launch model, not the approved 2x-per-category Day 1 model. See financial-break-even-staff.md v2.0 for current payroll. Retained below for historical reference only.
+
 | Role | Monthly cost |
 |---|---|
 | Imara (Managing Director) | A$6,737 |
-| Phlebotomist | A$3,589 |
+| Phlebotomist (Chair A) | A$3,589 |
+| Phlebotomist (Chair B) | A$3,589 |
 | Pregnancy massage therapist | A$3,529 |
 | Nail technician | A$3,119 |
 | Beauty therapist/brows (3-day casual launch) | A$2,127 |
 | Receptionist | A$3,474 |
-| Workers compensation premium (~5% of wages excl. MD) | A$800 |
-| **Total (all staff)** | **A$23,375/month** |
-| **Total (excl. Imara — ops cost only)** | **A$16,638/month** |
+| Workers compensation premium (~5% of wages excl. MD) | A$971 |
+| **Total (all staff)** | **A$27,135/month** |
+| **Total (excl. Imara — ops cost only)** | **A$20,398/month** |
 
 *Imara's remuneration structure (salary vs trust distribution) — accountant brief required before first pay run.*
 
@@ -249,6 +256,8 @@ These roles remain on Room Licence Agreements — not employees.
 
 ## 6. BREAK-EVEN WITH EMPLOYED MODEL
 
+> **SUPERSEDED** — see financial-break-even-staff.md v2.0 for the current 12-role break-even (~A$775,589/yr, ~29-30 services/day). Retained below for historical reference only.
+
 **Fixed monthly costs (all staff + operations):** ~A$26,500  
 **Less sublet income:** −A$2,165  
 **Net to cover from package revenue:** A$24,335  
@@ -263,7 +272,7 @@ These roles remain on Room Licence Agreements — not employees.
 
 | Role | Hire by | Notes |
 |---|---|---|
-| Phlebotomist | Week 7 | Must be credentialed by WDP/PathWest before venue opens |
+| Phlebotomist (x2 — Chair A and Chair B) | Week 7 | Both must be credentialed by WDP/PathWest before venue opens |
 | Receptionist | Week 12 | Train 3 weeks before soft open |
 | Pregnancy massage therapist | Week 12 | Trial run during test operations week |
 | Nail technician | Week 12 | Trial run during test operations week |

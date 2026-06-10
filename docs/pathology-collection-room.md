@@ -78,7 +78,7 @@ This document details exactly how to design, fit out, equip, and maintain the pa
 - Wide seat (bariatric options available — relevant in pregnancy context)
 - **Perth suppliers:** Sunflower Medical, Alphatec Australia, Ultramedic
 - **Cost:** A$600-1,500 per chair
-- **Quantity:** 1 minimum; 2 if pursuing Option B with concurrent GTT patients
+- **Quantity:** 2, independent of Option A/B — required to meet the 8-client/morning capacity model (2 chairs, 2 phlebotomists, alternating-client assignment: Chair A takes odd-numbered clients, Chair B takes even-numbered). See operations-manual.md for the verified per-client and per-staff timetable.
 
 ### Tabletop Centrifuge
 - **Critical for GDM accuracy:** NaF/fluoride-oxalate tubes MUST be centrifuged within 10 minutes of draw to prevent glycolysis (false low glucose reading — causes 62% GDM underdiagnosis per WA ORCHID study)
@@ -89,7 +89,7 @@ This document details exactly how to design, fit out, equip, and maintain the pa
   - Thermo Scientific CL10 (A$2,000-3,000)
   - Chinese equivalent (Hunan Xiangyi, REMI) — A$400-800 direct, verify NATA acceptance before purchasing
 - **Cost:** A$1,800-5,000
-- **Quantity:** 1 (maintain backup ice slurry protocol in QMS if centrifuge fails)
+- **Quantity:** 1 (maintain backup ice slurry protocol in QMS if centrifuge fails) — serves both chairs. Chair A and Chair B draws are offset by 10-20min in the verified timetable, so both chairs' specimens reach the centrifuge within the 10-minute window without contention.
 
 ### Sharps Containers
 - Must comply with **AS/NZS 23907:2023** (puncture-resistant, leak-proof, biohazard labelled)
@@ -218,7 +218,7 @@ T+135: Patient returns for 2-hour draw (5 minutes) — FINAL DRAW
 
 [ROOM INTERIOR — 12 sqm approx 3.5m x 3.5m]
   
-  [North wall]       Phlebotomy chair (centre, angled for arm access)
+  [North wall]       Phlebotomy chairs A and B (side by side, each angled for arm access)
   [East wall]        Documentation desk/bench
                      Sharps container (wall-mounted, elbow height)
                      Biohazard waste bin

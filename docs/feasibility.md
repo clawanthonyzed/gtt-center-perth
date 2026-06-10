@@ -184,14 +184,14 @@ Wellness services have minimal regulatory barriers. Standard fair work employmen
 
 | Role | Award | Weekly Hours | Supply in Perth Market | Risk |
 |---|---|---|---|---|
-| Phlebotomist (Cert III HLT) | MA000027 | 38 | Moderate supply | Medium — advertise via AIMS, hospital networks |
+| Phlebotomist (Cert III HLT) — x2, Chair A/Chair B (Day 1) | MA000027 | 25 each (50 total) | Moderate supply | Medium — advertise via AIMS, hospital networks; 2 hires required before open |
 | Pregnancy massage therapist | MA000005 | 38 | Good supply | Low |
 | Nail tech | MA000005 | 38 | Good supply | Low |
 | Brows/beauty | MA000005 | 22.5 (casual) | Good supply | Low |
 | Receptionist | MA000002 | 38 | Good supply | Low |
 | MD (Imara — operations manager) | Management salary | Full time | N/A — Imara | N/A |
 
-**Phlebotomist is the highest-risk hire.** Start recruitment 12 weeks before open. Use AIMS (Australian Institute of Medical Scientists) job board and approach WDP/PathWest for referrals.
+**Phlebotomists (x2) are the highest-risk hire.** Start recruitment 12 weeks before open — both must be credentialed by WDP/PathWest before venue opens (see operations-manual.md, gtt-clinical-protocol.md). Use AIMS (Australian Institute of Medical Scientists) job board and approach WDP/PathWest for referrals.
 
 ### 4.2 Physical Space Feasibility
 
@@ -209,7 +209,9 @@ Wellness services have minimal regulatory barriers. Standard fair work employmen
 | Circulation / corridor | 15 sqm | |
 | **TOTAL** | **~162 sqm** | Budget for 175–200 sqm for comfort |
 
-**Perth commercial property — target suburbs:**
+> **Location research reassigned to Quinn (Day 49) — URGENT.** The 4-suburb shortlist below is retained as initial reference only. Quinn's mandate is broadened Perth-metro research: best location/use/affordability across a wider catchment, new-build vs existing-lease options, and buy vs rent for YETI Trust. This is a blocking Week 1 priority, not a Year 2-3 decision. See reading-order.md Open Decisions.
+
+**Perth commercial property — initial shortlist (reference only, pending Quinn's research):**
 | Suburb | Why | Est. Rent/sqm/month |
 |---|---|---|
 | Subiaco | Wealthy inner suburb, OB/GYN clinics nearby, high foot traffic | A$38–50 |
@@ -217,7 +219,7 @@ Wellness services have minimal regulatory barriers. Standard fair work employmen
 | Osborne Park | Lower rent, accessible, growing | A$22–30 |
 | West Perth | Professional, accessible, lower rent than Subiaco | A$28–38 |
 
-**Recommendation:** Subiaco or Nedlands for maximum proximity to target demographic. Osborne Park as cost-saving fallback.
+**Recommendation (superseded — pending Quinn's broadened research):** Subiaco or Nedlands were the prior shortlist leaders, with Osborne Park as cost-saving fallback. Final location decision now awaits Quinn's broadened Perth-metro research (Day 49).
 
 ### 4.3 Technology & Systems Feasibility
 
@@ -283,7 +285,7 @@ Wellness services have minimal regulatory barriers. Standard fair work employmen
 
 | Pathway | Timeline | Revenue Uplift |
 |---|---|---|
-| Second phlebotomist hire → 12+ GTT patients/morning | Month 6–12 | +A$15K–20K/month |
+| Scenario A growth (10 GTT clients/morning, same 2 chairs/2 phlebotomists, 15-min intervals) | Once 8-client model >80% occupancy | Incremental GTT + service revenue — see operations-manual.md Scenario A (deferred) |
 | Property acquisition in trust → rental income | Year 2–3 | +A$7K–12K/month (offsetting rent) |
 | Second location (Joondalup or Fremantle) | Year 3–4 | +A$50K–80K/month |
 | GTT Center brand franchise to east coast operators | Year 4–5 | Franchise income |

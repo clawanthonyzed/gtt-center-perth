@@ -28,8 +28,10 @@ GTT Center Perth employs all practitioners directly. Venue sets pricing, hours, 
 | Hairdresser | MA000005 | Level 3 | $28.50 | $35.63/hr | A$60,456 incl. super |
 | Massage therapist | MA000005 | Level 4 | $29.60 | $37.00/hr | A$62,774 incl. super |
 | 3D scan operator | MA000005 | Level 3 | $28.50 | $35.63/hr | A$40,296 (20hr/wk) |
+| Phlebotomist (x2 — Chair A / Chair B) | Health Professionals MA000027 | Pathology Collector, Cert III/IV | $24.50 | $30.63/hr | A$43,068 (25hr/wk each) |
 
 *Super: 12% on ordinary time earnings. Penalty rates: Saturday 1.33x; Sunday 2.0x; Public Holiday 2.5x.*
+*2 phlebotomists employed from Day 1 — 1 per collection chair (Chair A / Chair B), Mon-Fri 7:30am-12:30pm. See operations-manual.md and staff-plan.md.*
 
 ---
 
@@ -142,7 +144,8 @@ Gross margin above wages: **A$89,704/year**
 | Hairdresser | 2 | A$60,456 | A$120,912 |
 | Beauty therapist | 2 | A$62,774 | A$125,548 |
 | 3D scan operator | 1 | A$40,296 | A$40,296 |
-| **TOTAL PAYROLL (10 staff)** | **10** | — | **A$589,453** |
+| Phlebotomist | 2 | A$43,068 | A$86,136 |
+| **TOTAL PAYROLL (12 staff)** | **12** | — | **A$675,589** |
 
 ---
 
@@ -158,8 +161,8 @@ Gross margin above wages: **A$89,704/year**
 
 Overhead estimate (rent ~A$60K, utilities A$12K, consumables A$15K, insurance A$5K, marketing A$8K):
 - Total overhead (excl. payroll): **~A$100,000/year**
-- **Total break-even revenue: A$689,453/year**
-- At A$105 avg: **6,566 services/year = 26 services/day**
+- **Total break-even revenue: A$775,589/year**
+- At A$105 avg: **~7,387 services/year = ~29-30 services/day**
 
 ### Revenue Model
 
@@ -172,9 +175,9 @@ Overhead estimate (rent ~A$60K, utilities A$12K, consumables A$15K, insurance A$
 | Retail (CGM sensors, snacks, products) | — | A$25,000 |
 | Cafe | — | A$15,000 |
 | **Total revenue** | | **A$868,000** |
-| Total costs | | A$689,453 |
-| **Net margin** | | **A$178,547** |
-| **Net margin %** | | **20.6%** |
+| Total costs | | A$775,589 |
+| **Net margin** | | **A$92,411** |
+| **Net margin %** | | **~10.6%** |
 
 *Projections at ~75% utilisation. Launch ramp: 30% month 1, 60% by month 3, 80% by month 6.*
 
@@ -182,16 +185,17 @@ Overhead estimate (rent ~A$60K, utilities A$12K, consumables A$15K, insurance A$
 
 ## Package Pricing Model
 
-**Philosophy:** Set packages. GTT Center Perth controls price. Client gets flexibility within the package. Venue fee is embedded — inclusions appear free.
+**Philosophy:** Set packages. GTT Center Perth controls price. Client gets flexibility within the package. Venue fee is embedded — inclusions appear free. Every GTT client gets two 45-min service slots by default (per the verified capacity timetable in operations-manual.md).
 
-| Package | All-In Price | What Client Sees |
-|---------|-------------|-----------------|
-| GTT Essential (lounge only) | A$25 | "Lounge access, herbal tea, birth plan tablet — included" |
-| GTT Comfort (1 service) | A$25 + service | Client picks any service |
-| GTT Day (2 services) | A$25 + 2 services | Client picks two |
-| GTT Luxe (massage + nails) | A$290 | "Pregnancy massage + gel manicure — everything included" |
+| Package | Inclusions | Price |
+|---------|-----------|-------|
+| GTT Lounge | Lounge access, water, herbal tea, GTT coordination, birth plan tablet — no additional services | A$25 |
+| GTT Wellness (default) | Lounge + 2 × 45-min services, choice of one per slot from: standard pregnancy massage, signature pregnancy facial, gel mani/pedi (45-55 min), brow lamination, lash lift + tint, or hair treatment (blowdry/hair mask, 45 min) | A$225 flat |
+| GTT Luxe | Lounge + standard pregnancy massage (45 min) + signature pregnancy facial (45 min) + 3D scan Standard (30 min, scheduled around services) | A$325 flat |
 
-**Post-GTT discount:** 10% off any additional service or retail item booked AFTER glucose drink administered (T+15). Triggers upsell conversation at the moment clients are seated and relaxed.
+See services-pricing-locked.md for the full package definitions.
+
+**Discount policy:** 10% online pre-booking discount on afternoon/standalone services booked at the same time as a GTT reservation. No discount on in-center upsells (add-ons, cafe, retail, spray tan) — full price applies on the day.
 
 **Morning priority:** GTT client slots locked until 10:00am. General public can book afternoon slots and any unfilled morning gaps released at 10:00am on the day.
 

@@ -9,7 +9,7 @@
 
 | Category | Low Estimate | High Estimate |
 |----------|-------------|--------------|
-| Pathology collection room | A$7,000 | A$12,000 |
+| Pathology collection room | A$7,800 | A$13,200 |
 | Spray tan booth | A$2,500 | A$6,000 |
 | 3D keepsake scan (Phase 2 — see note) | A$0 | A$0 (Bloom Baby subtenant at launch) |
 | Nail station | A$5,000 | A$14,000 |
@@ -22,7 +22,7 @@
 | China sourced branded wellness items (stock) | A$5,000 | A$10,000 |
 | Emergency + safety equipment | A$1,000 | A$2,500 |
 | Consumables (opening stock) | A$3,000 | A$6,000 |
-| **TOTAL EQUIPMENT** | **A$48,500** | **A$113,500** |
+| **TOTAL EQUIPMENT** | **A$49,300** | **A$114,700** |
 | Fit-out (construction, NOT equipment) | A$150,000 | A$280,000 |
 | 3D scanner (if purchased, Phase 2) | A$12,000 | A$25,000 |
 
@@ -32,7 +32,7 @@
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
-| Phlebotomy chair (reclining, vinyl, wipe-clean) | 1 | A$800-1,200 | A$800-1,200 |
+| Phlebotomy chair (reclining, vinyl, wipe-clean) — Chair A + Chair B | 2 | A$800-1,200 | A$1,600-2,400 |
 | Tabletop centrifuge (refrigerated, Hettich Universal 320R or equiv) | 1 | A$3,500-5,000 | A$3,500-5,000 |
 | Sharps containers (1.4L bench + 5L room) | 4 | A$8-15 | A$32-60 |
 | Biohazard waste bins (yellow, lidded) | 2 | A$35-60 | A$70-120 |
@@ -45,7 +45,7 @@
 | Patient documentation drawer/lockable | 1 | A$100-200 | A$100-200 |
 | Thermal label printer (Zebra ZD420) | 1 | A$350 | A$350 |
 | Medical waste disposal contract (annual, not one-off) | 1 | A$600-1,200/yr | A$600-1,200/yr |
-| **Pathology room TOTAL** | | | **A$5,030-8,140** |
+| **Pathology room TOTAL** | | | **A$5,830-9,340** |
 | + Medical waste contract (ongoing) | | | + A$600-1,200/yr |
 
 **Note on centrifuge:** The centrifuge is the most critical piece of equipment in the venue. GDM underdiagnosis risk without centrifugation within 10 minutes (ORCHID study). Do not compromise on quality.
