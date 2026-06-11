@@ -17,7 +17,7 @@
 **Hours:** Monday–Friday, 7:15am–12:30pm  
 **Award:** Health Professionals and Support Services Award MA000027  
 **Classification:** Support Level 2–3 (depending on experience and qualifications)  
-**Remuneration:** A$30–34/hour (above award, based on experience) + 11.5% superannuation  
+**Remuneration:** A$30–34/hour (above award, based on experience) + 12% superannuation  
 **Start date:** [Target Week 7 — approximately August 2026]
 
 ---

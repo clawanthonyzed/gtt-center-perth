@@ -85,9 +85,9 @@ GTT Center Perth is a purpose-built venue where:
 
 ### Addressable Market
 - 215 GTT tests/week in Perth metro
-- GTT Center Perth capacity: up to 45 GTT patients/week (3 waves × 3 patients × 5 days) — see §5
-- **Week 1 addressable share: 21% of Perth's weekly GTT tests**
-- Full capacity represents ~21% market penetration — leaves large expansion headroom
+- GTT Center Perth capacity: up to 40 GTT patients/week (8/day × 5 days, 2 phlebotomists/2 chairs from Day 1) — see §5 and operations-manual.md
+- **Week 1 addressable share: ~19% of Perth's weekly GTT tests**
+- Full capacity represents ~19% market penetration — leaves large expansion headroom
 
 ### Secondary Market — Afternoon Wellness
 - All pregnant women 20–36 weeks in Perth metro (not just GTT week)
@@ -111,26 +111,20 @@ GTT Center Perth is a purpose-built venue where:
 ### Shift Structure
 
 #### Morning Shift (GTT + Services)
-3 patient waves, staggered 30-minute start slots:
 
-| Wave | GTT Starts | Patients per wave | T=120 done |
-|---|---|---|---|
-| Wave 1 | 7:30am, 8:00am | 2 | 9:30–10:15am |
-| Wave 2 | 8:30am, 9:00am | 2 | 10:30–11:15am |
-| Wave 3 | 9:30am, 10:00am | 1 | 11:30am–12:15pm |
-| **Total morning** | | **5 GTT patients max (1 phlebotomist)** | |
+**RESOLVED Day 49:** 8 GTT clients/morning, 20-min arrival intervals (07:40am–10:00am), run across 2 collection chairs (Chair A / Chair B) with 2 phlebotomists from Day 1 — not a phased 5-then-8 ramp. Chair A takes odd-numbered clients (1/3/5/7), Chair B takes even-numbered clients (2/4/6/8), each chair handling 4 clients spaced 40min apart. The corrected draw-timing pathway (Draw 1 + glucose at arrival X, Draw 2 at X+75min ±5min, Draw 3 at X+135min ±10min) and the full verified per-client/per-staff timetable (actual clock times 07:40–12:25, no double-booking) are in operations-manual.md's "GTT Scheduling Timetables" section — that table is authoritative.
 
 GTT must start ≤10:00am (ADIPS 2014 guideline — circadian glucose tolerance constraint).
-**Capacity note:** 5 is the safe maximum with 1 phlebotomist due to draw overlap at 9:30am. Second phlebotomist (Month 2–3) unlocks 8 patients/morning.
 
 #### Afternoon Shift (Wellness Only)
 12:00pm–5:00pm. No testing. Same staff continue.
 - 6–8 wellness appointments (massage, nails, brows, scan, dietitian)
 
 #### Daily Capacity
-- Morning GTT: 5 patients (1 phlebotomist) / 8 patients (2 phlebotomists from Month 2–3)
+- Morning GTT: 8 patients (2 phlebotomists, 2 chairs, Day 1 — see operations-manual.md)
 - Afternoon wellness: 6–8 patients (requires full-time staff — see staff-plan.md)
-- **Total: 11–16 visits/day**
+- **Total: 14–16 visits/day**
+- Scenario A (10 GTT clients/morning, 15-min intervals, same 2 chairs/phlebotomists) is the documented growth target once the 8-client model exceeds 80% occupancy — see operations-manual.md
 
 ### Staffing (Employed)
 | Role | Hours | Days |
@@ -176,26 +170,17 @@ GTT must start ≤10:00am (ADIPS 2014 guideline — circadian glucose tolerance 
 
 ### Pricing
 
-**Morning GTT Packages:**
+**GTT Packages (per `financial-break-even-staff.md` v2.0 Package Pricing Model — Day 49, locked):**
+
 | Package | Inclusions | Price |
 |---|---|---|
-| Essential | GTT + lounge + snacks only | A$80 |
-| Relax | Essential + 60-min massage | A$195 |
-| Restore | Essential + massage + nails | A$285 |
-| Glow | Essential + massage + nails + brows | A$345 |
-| Complete | Essential + massage + nails + 3D scan | A$395 |
-| **Blended avg** | Realistic mix | **A$230** |
+| GTT Lounge | Lounge access, water, herbal tea, GTT coordination, birth plan tablet — no additional services | A$25 |
+| GTT Wellness (default) | Lounge + 2 × 45-min services (massage, facial, gel mani/pedi, brow lamination, lash lift+tint, or hair treatment) | A$225 flat |
+| GTT Luxe | Lounge + pregnancy massage + signature facial + 3D scan Standard | A$325 flat |
 
-*GTT-only (Essential) for patients who want the experience without extra services — still drives sublet income from scan/dietitian if applicable.*
+**Blended avg (10% Lounge / 70% Wellness / 20% Luxe): A$225.**
 
-**Afternoon Wellness (no GTT):**
-| Package | Inclusions | Price |
-|---|---|---|
-| Relax | 60-min pregnancy massage | A$120 |
-| Restore | Massage + nails | A$195 |
-| Glow | Massage + nails + brows | A$250 |
-| Standalone | Any single service | Service rate |
-| **Blended avg** | | **A$175** |
+**Afternoon/standalone services:** see `extended-wellness-services.md` Day Spa Expansion (lash, hair colour, nail extras — afternoon only) and `services-pricing-locked.md` for full standalone menu. 10% online pre-booking discount applies to afternoon/standalone bookings made alongside a GTT reservation.
 
 ---
 
@@ -251,6 +236,8 @@ GTT must start ≤10:00am (ADIPS 2014 guideline — circadian glucose tolerance 
 ---
 
 ## 9. FINANCIAL OVERVIEW
+
+Figures below are an early estimate (Day 5). Canonical financial model: `cash-flow.md` v1.0 (18-month month-by-month, reconciled Day 50) and `financial-break-even-staff.md` v2.0 (staffing/break-even). See `financial-model.md` for the full superseded analysis (IC-01/IC-06/IC-07).
 
 ### Startup Capital Required
 | Category | Low | High |

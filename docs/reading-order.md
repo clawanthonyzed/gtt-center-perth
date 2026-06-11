@@ -1,6 +1,6 @@
 # GTT Center Perth — Document Index & Reading Order
 
-**Last updated:** 2026-06-09 (Day 48 review complete)
+**Last updated:** 2026-06-10 (Day 50 financial reconciliation, afternoon session, partnerships, audit cleanup)
 **Total documents:** 45
 
 ---
@@ -15,13 +15,15 @@ Read **executive-summary.md** first. Single document pulling critical informatio
 
 GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" are referenced in multiple files. **Any agent or worker who changes a linked parameter MUST update every doc in that parameter's row, in the same pass — not as a follow-up.** This rule was added Day 49 after a phlebotomist-count and draw-timing conflict went undetected across 3 docs.
 
-| Linked Parameter | Current Value (Day 49) | Docs That Reference It |
+| Linked Parameter | Current Value (Day 49–50) | Docs That Reference It |
 |---|---|---|
-| Phlebotomist / collection chair count | 2 phlebotomists + 2 chairs, Day 1 | operations-manual.md, gtt-clinical-protocol.md, ivy-booking-system.md, pathology-collection-room.md, equipment-costs.md, financial-break-even-staff.md, staff-plan.md, executive-summary.md, feasibility.md |
-| Launch scenario / capacity timetable | Scenario B, 8 clients, corrected 0/+75(±5)/+135(±10) draw pathway | operations-manual.md, executive-summary.md, gtt-clinical-protocol.md, reading-order.md (this Open Decisions table) |
-| GTT package pricing & menu | GTT Lounge (A$25) / GTT Wellness (A$225) / GTT Luxe (A$325) flat tiers; hot stone massage/body scrub/body wrap/standalone paraffin wax removed entirely | services-pricing-locked.md, services-master-table.md, extended-wellness-services.md, financial-break-even-staff.md, executive-summary.md |
+| Phlebotomist / collection chair count | 2 phlebotomists + 2 chairs, Day 1 | operations-manual.md, gtt-clinical-protocol.md, ivy-booking-system.md, pathology-collection-room.md, equipment-costs.md, financial-break-even-staff.md, staff-plan.md, executive-summary.md, feasibility.md, business-plan.md, gtt-test-reference.md, cash-flow.md |
+| Launch scenario / capacity timetable | Scenario B, 8 clients, corrected 0/+75(±5)/+135(±10) draw pathway | operations-manual.md, executive-summary.md, gtt-clinical-protocol.md, business-plan.md, gtt-test-reference.md, cash-flow.md, reading-order.md (this Open Decisions table); review-audit.md CF-02/IC-05/IM-10 marked RESOLVED Day 49 (historical audit trail retained) |
+| GTT package pricing & menu | GTT Lounge (A$25) / GTT Wellness (A$225) / GTT Luxe (A$325) flat tiers; hot stone massage/body scrub/body wrap/standalone paraffin wax removed entirely | services-pricing-locked.md, services-master-table.md, extended-wellness-services.md, financial-break-even-staff.md, executive-summary.md, business-plan.md, cash-flow.md (Day 50) |
 | Discount policy | 10% online pre-booking discount on afternoon/standalone services; no discount on in-center upsells | services-pricing-locked.md, financial-break-even-staff.md, executive-summary.md |
-| Pathology model | Option A (PathWest/WDP satellite) — permanent | option-b-collection-centre.md, pathology-collection-room.md, executive-summary.md, reading-order.md (Phase 3 table) |
+| Pathology model | Option A (PathWest/WDP satellite) — permanent; Clinipath added Day 50 as tertiary/contingency only | option-b-collection-centre.md, pathology-collection-room.md, executive-summary.md, reading-order.md (Phase 3 table), reed-partnerships.md |
+| Fixed monthly cost base (Day 50) | A$71,236/mo (A$854,832/yr) — 12-staff payroll @ 12% super (A$56,299/mo) + workers comp (A$957/mo) + A$13,980/mo non-wage overhead | cash-flow.md, financial-break-even-staff.md, feasibility.md (line 110) |
+| Afternoon/ancillary revenue (Day 50) | +A$8,167/mo at stable ops (spray tan A$4,833 + retail A$2,083 + cafe A$1,250), unlocked by AM/PM shift split (CF-01), ramps M1-M18 | cash-flow.md, financial-break-even-staff.md |
 
 ---
 
@@ -158,9 +160,9 @@ GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" a
 
 | Decision | Owner | Urgency |
 |----------|-------|---------|
-| Confirm pathology fee — PathWest + WDP | Reed | WEEK 1 — blocks package pricing |
-| ~~North or South Perth for Centre 1?~~ Best Perth-metro location, use, and buy-vs-rent — broadened scope | **Quinn** | URGENT — reassigned Day 49, not deferred to Year 2-3 |
+| Confirm pathology fee — PathWest + WDP (Clinipath contingency) | Reed | WEEK 1 — blocks package pricing. CF-03 added Clinipath as fallback (Day 50) — doesn't change urgency. |
+| ~~North or South Perth for Centre 1?~~ ~~Best Perth-metro location, use, and buy-vs-rent — broadened scope (Day 49)~~ Narrowed Day 50: **Subiaco (primary — antenatal demographic, KEMH/SJOG proximity) / Nedlands (secondary — strong medical-consulting zoning, 40+ listings)**. Both have active commercial listings (commercialrealestate.com.au, REIWA). Next step: shortlist 3-5 specific properties (100-150sqm) and arrange inspections. | **Quinn** | URGENT — narrowed, not resolved. Needs physical inspection. |
 | ~~Launch Scenario A (15-min) or B (20-min)?~~ | — | **RESOLVED Day 49: Scenario B (8 clients, 2 phlebotomists, 2 chairs) confirmed as Day 1 launch model** |
-| Approve Reed to engage PathWest + WDP? | Anthony + Imara | WEEK 1 |
-| Brand name — "GTT Center Perth" or premium? | Poppy + Anthony | Week 2 |
-| DVA adviser one-time consultation | Anthony | Not blocking — do when convenient |
+| Approve Reed to engage WDP/PathWest (+Clinipath contingency)? | Anthony + Imara | WEEK 1 |
+| Brand name — "GTT Center Perth" or premium? | Poppy + Anthony | Week 2 — still open, needs Anthony's input |
+| DVA adviser one-time consultation | Anthony | Not blocking — **CF-07 deferred Day 50, do alongside this when convenient** |

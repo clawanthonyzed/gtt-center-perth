@@ -149,6 +149,21 @@ Gross margin above wages: **A$89,704/year**
 
 ---
 
+## Shift Structure (CF-01)
+
+**Anthony's question answered: same 12 staff, split into AM/PM cohorts — no new hires.**
+
+- **Phlebotomists ×2, 3D Scan Operator:** AM only (GTT window, 07:30-12:30, per the Day-49 capacity timetable in operations-manual.md). The 3D Scan Operator's remaining hours (20hr/wk = 4hr/day) are used for afternoon general-public/Bloom Baby keepsake scan bookings.
+- **Receptionist/Manager ×1:** full operating day (07:00-18:00), bridges AM/PM shifts.
+- **Massage ×2, Nail ×2, Hairdresser ×2, Beauty ×2:** one of each pair works AM (07:00-13:00, serves GTT clients' Service 1/Service 2 slots per the Day-49 timetable — each only 45-90min busy, rest is downtime-protocol), the other works PM (12:00-18:00, serves standalone afternoon/day-spa bookings). 1-hour overlap (12:00-13:00) for handover and GTT-running-late buffer.
+- **Net payroll: unchanged at A$675,589/yr** — this is a scheduling change, not a headcount change.
+
+### Afternoon Menu (PM cohort)
+
+The PM cohort serves: standalone GTT-Wellness-equivalent bookings (massage/facial/nails/hair, full price or 10%-online-discounted alongside a GTT reservation) PLUS `extended-wellness-services.md` "Day Spa Expansion Services" (lash A$140-280, hair colour A$130-200, nail extras A$60-120 — "afternoon only", too long for the GTT window) PLUS spray tan, retail, and cafe (see Revenue Model below — these three streams are unlocked by this shift design).
+
+---
+
 ## Revenue Break-Even
 
 ### Assumptions
@@ -159,10 +174,10 @@ Gross margin above wages: **A$89,704/year**
 
 ### Full Break-Even (Payroll + Overhead)
 
-Overhead estimate (rent ~A$60K, utilities A$12K, consumables A$15K, insurance A$5K, marketing A$8K):
-- Total overhead (excl. payroll): **~A$100,000/year**
-- **Total break-even revenue: A$775,589/year**
-- At A$105 avg: **~7,387 services/year = ~29-30 services/day**
+Overhead: superseded Day 50 by `cash-flow.md`'s granular non-wage overhead, **A$167,760/yr** (A$13,980/mo) — see its Cost Assumptions table (rent, utilities, internet, Fresha, Resend, ads, GTT supplies, laundry, cleaning, insurance, accounting, consumables, misc).
+- Total overhead (excl. payroll): **A$167,760/year**
+- **Total break-even revenue: A$675,589 + A$167,760 = A$843,349/year**
+- At A$105 avg: **~8,032 services/year = ~32 services/day**
 
 ### Revenue Model
 
@@ -175,11 +190,13 @@ Overhead estimate (rent ~A$60K, utilities A$12K, consumables A$15K, insurance A$
 | Retail (CGM sensors, snacks, products) | — | A$25,000 |
 | Cafe | — | A$15,000 |
 | **Total revenue** | | **A$868,000** |
-| Total costs | | A$775,589 |
-| **Net margin** | | **A$92,411** |
-| **Net margin %** | | **~10.6%** |
+| Total costs | | A$843,349 |
+| **Net margin** | | **A$24,651** |
+| **Net margin %** | | **~2.8%** |
 
 *Projections at ~75% utilisation. Launch ramp: 30% month 1, 60% by month 3, 80% by month 6.*
+
+**Note:** `cash-flow.md` v1.0 is the canonical month-by-month model — its stable-state Net P&L (A$5,646/mo = A$67,752/yr) differs from this annual snapshot because `cash-flow.md` also includes workers comp and uses slightly different revenue-stream phasing. Both confirm the venture is profitable but with thin (~3-8%) margins.
 
 ---
 

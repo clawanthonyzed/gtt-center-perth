@@ -5,6 +5,10 @@
 
 ---
 
+> **⚠ SUPERSEDED Day 50 (review-audit.md IC-01/IC-06/IC-07).** This document (v1.3, 2026-06-05) predates the Day-49 12-staff wage model and the Day-50 cost-base reconciliation. Canonical financial docs: `cash-flow.md` v1.0 (18-month P&L) and `financial-break-even-staff.md` v2.0 (staffing, break-even, package pricing). Retained in full below for audit trail — the commercial-model analysis (§2, Option A vs B) and award-rate research remain useful background even though the headline figures (§16) are out of date.
+
+---
+
 ## 1. BUSINESS STRUCTURE
 
 **Operating entity:** YETI Holding Trust (discretionary trust)  

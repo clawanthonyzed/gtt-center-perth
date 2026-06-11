@@ -1,6 +1,6 @@
 # GTT Center Perth — Executive Summary
 
-**Version:** 1.0 | **Date:** 2026-06-09 (Day 48)
+**Version:** 1.1 | **Date:** 2026-06-10 (Day 50 financial reconciliation — see Financial Summary, Staffing Model, Pathology Model)
 **Read this first. Contains the critical information from all 45 documents.**
 
 ---
@@ -120,22 +120,29 @@ The receptionist role covers: reception, sales, barista, food service, clinic as
 ### Staff Downtime
 When no client booked: room prep + restock, cross-training, social media content, product training, assist reception. No unstructured downtime.
 
+### Shift Structure (CF-01, Day 50)
+Same 12 staff, split into AM/PM cohorts — no new hires, payroll unchanged at A$675,589/yr. Phlebotomists ×2 + 3D scan operator: AM (GTT window). Receptionist/Manager: full day, bridges AM/PM. Massage/Nail/Hairdresser/Beauty (2 each): one of each pair works AM (serves GTT clients), the other PM (serves standalone afternoon/day-spa bookings), with a 1-hour overlap for handover. This AM/PM split is what unlocks the afternoon/ancillary revenue in the Financial Summary above. See `financial-break-even-staff.md` v2.0 §Shift Structure and `staff-plan.md` §2A AM/PM Shift Roster.
+
 ---
 
 ## Financial Summary
 
+> **⚠ Day 50 Reconciliation:** the figures below replace the Day-48 estimates. The old fixed-cost base (A$39,523/mo, from `financial-model.md`) didn't match the actual 12-staff payroll (A$56,299/mo @ 12% super) — true monthly fixed costs are **A$71,236** (A$854,832/yr). New ancillary revenue (spray tan/retail/cafe, +A$8,167/mo, unlocked by the AM/PM shift split — see Staffing Model below) partly offsets this. Net effect: stable-month profit falls from the old +A$29,192/mo estimate to **+A$5,646/mo** (`cash-flow.md` v1.0), and annual net margin falls from ~10.6% to ~2.8%. The venture remains profitable but the margin for error is thin. `cash-flow.md` v1.0 and `financial-break-even-staff.md` v2.0 are canonical; `financial-model.md` is superseded.
+
 | Metric | Figure |
 |--------|--------|
 | Total payroll (12 staff) | A$675,589/yr |
-| Total overhead (rent, utilities, consumables, insurance, marketing) | ~A$100,000/yr |
-| Total costs | A$775,589/yr |
-| Break-even revenue | A$775,589/yr |
-| Break-even services/day | ~29-30 services/day |
-| Projected revenue (75% utilisation) | A$868,000/yr |
-| Projected net margin | A$92,411 (~10.6%) |
+| Total overhead (rent, utilities, consumables, insurance, marketing, workers comp) | A$167,760/yr (A$13,980/mo non-wage + A$957/mo workers comp) |
+| Total costs | A$843,349/yr |
+| Break-even revenue | A$843,349/yr |
+| Break-even services/day | ~32 services/day |
+| Projected revenue (incl. afternoon/ancillary) | A$868,000/yr |
+| Projected net margin | A$24,651/yr (~2.8%) |
 | Equipment budget | A$49,300–114,700 |
 
-Revenue streams: GTT venue fee (A$25/patient) + service revenue + afternoon services + spray tan (passive, A$60/session) + retail + cafe.
+Revenue streams: GTT venue fee (A$25/patient) + service revenue + afternoon services (AM/PM shift split, no new hires — see Staffing Model) + spray tan (A$4,833/mo) + retail (A$2,083/mo) + cafe (A$1,250/mo).
+
+`cash-flow.md` v1.0's month-by-month model differs slightly (stable Net P&L A$5,646/mo = A$67,752/yr) due to workers comp and revenue-stream phasing — both confirm a profitable but thin (~3-8%) margin.
 
 ---
 
@@ -150,6 +157,8 @@ Revenue streams: GTT venue fee (A$25/patient) + service revenue + afternoon serv
 **YETI Trust structure is safe. No DVA risk. Proceed.**
 
 One-time DVA adviser consult recommended but NOT a blocking gate. Business planning and lease signing can proceed.
+
+**CF-07 (Day 50): deferred, not blocking at this stage.** Salary vs trust-distribution split for Imara/Anthony not reviewed this pass — revisit alongside the DVA adviser consult above (see `reading-order.md` Open Decisions).
 
 ---
 
@@ -175,6 +184,8 @@ Operator must NEVER say "everything looks healthy" or any diagnostic statement. 
 - Pathology fee billed by PathWest/WDP to Medicare (out-of-pocket TBC — contact before pricing)
 
 **Option B (own NATA-accredited ACC):** Not pursuing. See option-b-collection-centre.md (reference only) for the historical NATA/HPOS pathway and budget — retained in case regulatory/partner conditions change drastically in future.
+
+**Contingency (CF-03, Day 50):** Clinipath Pathology added as a tertiary/contingency option if both PathWest and WDP decline or terms are unfavourable. Approach order: **WDP (Priority 1) → PathWest (Secondary) → Clinipath (contingency)**. See `reed-partnerships.md`.
 
 **CRITICAL CENTRIFUGE RULE:** NaF glucose tubes must be centrifuged within 10 minutes of collection. Ice slurry between collection and centrifuge. Failure = 62% GDM underdiagnosis (WA ORCHID study). One centrifuge serves both chairs — Chair A/B draws are offset 10-20min in the verified timetable so both reach the centrifuge within the 10-minute window.
 
@@ -235,8 +246,8 @@ Does NOT offer: meal plans, NDSS registration, APD consultations (deferred indef
 
 ## Week 1 Actions (Priority Order)
 
-1. **Reed:** Contact PathWest + WDP — confirm pathology fee and satellite collection arrangement
-2. **Quinn:** Broadened Perth-metro location research (URGENT, Day 49) — best location/use/affordability, new-build vs lease, buy vs rent for YETI Trust. Not constrained to the prior 4-suburb shortlist.
+1. **Reed:** Contact PathWest + WDP — confirm pathology fee and satellite collection arrangement (Clinipath added Day 50 as tertiary contingency if both decline)
+2. **Quinn:** Location narrowed Day 50 to **Subiaco (primary) / Nedlands (secondary)** — next step: shortlist 3-5 specific properties (100-150sqm) and arrange inspections. See `reading-order.md` Open Decisions.
 3. **RESOLVED Day 49:** Scenario B (8 clients, 2 phlebotomists, 2 chairs, corrected draw-timing pathway) confirmed as Day 1 launch model — see operations-manual.md.
 4. **Anthony:** DVA adviser consultation (one-time, not blocking)
 5. **Poppy:** Begin pre-opening social media strategy — aim fully booked from day 1

@@ -298,68 +298,43 @@ No formal annual renewal for Cert III, BUT phlebotomists must maintain:
 | Nail technician | 45-min mani or pedi | 60 min (inc. setup/clean) |
 | Beauty therapist | 30-min brows | 40 min (inc. setup/clean) |
 
-**Key insight: 1 phlebotomist can serve up to 4 GTT clients simultaneously** because blood draws are staggered. The phlebotomist is NOT occupied for the full 2.5 hours per client — only during the 10-min draw windows.
+**Key insight: each phlebotomist can serve up to 4 GTT clients per chair simultaneously** because blood draws are staggered — the phlebotomist is NOT occupied for the full 2.5 hours per client, only during the short draw windows. With 2 phlebotomists/2 chairs from Day 1 (RESOLVED Day 49), this scales to 8 GTT clients/morning. See operations-manual.md for the verified per-staff timetable.
 
 **Service staff capacity per shift:**
 - 1 massage therapist (60-min treatment + 15 min turnaround = 75 min/patient): 3–4 patients per morning shift
 - 1 nail tech (45 min + 15 min = 60 min/patient): 4–5 patients per morning shift
 - 1 beauty therapist (30 min + 10 min = 40 min/patient): 6–7 patients per morning shift
 
-### Staff required for 5 GTT clients (morning) + 6 wellness clients (afternoon)
+### Staff required for 8 GTT clients (morning) + 6 wellness clients (afternoon)
+
+**RESOLVED Day 49:** 2 phlebotomists / 2 chairs from Day 1 (not a Month 2-3 add). See financial-break-even-staff.md for the full 12-staff payroll.
 
 | Role | Morning | Afternoon | Total |
 |---|---|---|---|
-| Phlebotomist | 1 (25hrs/wk) | 0 | 1 |
-| Massage therapist | 1 | 1 (or 1 working split) | 2 (or 1 FT) |
-| Nail technician | 1 | 1 (or 1 working split) | 2 (or 1 FT) |
-| Beauty therapist | 1 | 1 (same person split shift) | 1 FT |
-| Receptionist | 1 | 1 (or 1 FT working full day) | 1–2 |
-| Imara (Manager) | 1 | 1 | 1 |
-
-**Practical approach:** Massage and nail therapists work full-time (7:30am–4:30pm) and serve both shifts. This eliminates the need for 2 × massage therapists and 2 × nail techs, keeping labour costs manageable.
+| Phlebotomist (Chair A / Chair B) | 2 (25hrs/wk each) | 0 | 2 |
+| Massage therapist | 2 | 1 (or 1 working split) | 2 |
+| Nail technician | 2 | 1 (or 1 working split) | 2 |
+| Beauty therapist | 2 | 1 (same person split shift) | 2 |
+| Hairdresser | 2 | — | 2 |
+| 3D Scan operator | 1 | 1 (sublet) | 1 |
+| Receptionist/Manager | 1 | 1 | 1 |
 
 ### Summary ratio
 
 | Scenario | Clients | Staff | Ratio |
 |---|---|---|---|
-| Morning only (4 GTT clients) | 4 | 5 (phlebotomist + massage + nails + brows + reception) | 1.25 staff:client |
-| Full day (5 GTT + 6 wellness) | 11 | 6 (same staff, phlebotomist morning only) | 0.55 staff:client |
+| Morning only (8 GTT clients) | 8 | 12 (2 phlebotomists + 2 massage + 2 nails + 2 beauty + 2 hair + 1 scan + 1 reception) | 1.5 staff:client |
+| Full day (8 GTT + 6 wellness) | 14 | 12 (same staff, phlebotomists morning only) | 0.86 staff:client |
 
-**Conclusion:** A full-time staff of 6 (Imara + phlebotomist + 2 therapists + 1 nail + 1 reception) comfortably serves 10–12 clients per day across morning and afternoon without any additional hires.
+**Conclusion:** The 12-staff team (per financial-break-even-staff.md) comfortably serves 14-16 clients/day across morning and afternoon without any additional hires.
 
 ---
 
-## 9. SCHEDULING LOGIC FOR 10+ VISITS/DAY
+## 9. SCHEDULING LOGIC — MORNING GTT (8 CLIENTS, 2 PHLEBOTOMISTS, 2 CHAIRS)
 
-### Morning GTT Slots (8:00am–10:00am STARTS — mandatory)
+**RESOLVED Day 49:** 8 GTT clients/morning, 20-min arrival intervals (07:40am–10:00am), 2 collection chairs (Chair A / Chair B) + 2 phlebotomists from Day 1. Corrected draw-timing pathway: Draw 1 + glucose drink at arrival (X), Draw 2 at X+75min (±5min), Draw 3 at X+135min (±10min). The full verified per-client and per-staff timetable (actual clock times 07:40–12:25, no double-booking) is in operations-manual.md's "GTT Scheduling Timetables" section — that table is authoritative for staff rostering and client scheduling.
 
-| Slot | GTT Start | T=60 | T=120 | Patient Departs | Service Window |
-|---|---|---|---|---|---|
-| A | 7:30am | 8:30am | 9:30am | 9:45am | 7:35–9:30am (115 min) |
-| B | 8:00am | 9:00am | 10:00am | 10:15am | 8:05–10:00am (115 min) |
-| C | 8:30am | 9:30am | 10:30am | 10:45am | 8:35–10:30am (115 min) |
-| D | 9:00am | 10:00am | 11:00am | 11:15am | 9:05–11:00am (115 min) |
-| E (stretch) | 9:30am | 10:30am | 11:30am | 11:45am | 9:35–11:30am (115 min) |
-
-**5 GTT slots per day = 5 morning GTT clients**  
-Phlebotomist manages all 5 (staggered draws — see below for overlap management)
-
-**Draw overlap management (5 clients, 1 phlebotomist):**
-With 30-minute staggered starts, the T=60 draw for Client A overlaps with the T=0 draw for Client C.
-
-Example (Slots A–E starting 7:30, 8:00, 8:30, 9:00, 9:30):
-- 7:30am: Client A T=0 draw
-- 8:00am: Client B T=0 draw
-- 8:30am: Client A T=60 AND Client C T=0 (phlebotomist does A T=60 first, then C T=0 — within ±5 min tolerance)
-- 9:00am: Client B T=60 AND Client D T=0
-- 9:30am: Client A T=120 AND Client C T=60 AND Client E T=0 (busiest moment — 3 draws)
-
-**At 9:30am: 3 draws required within a short window.**
-- Client A T=120: ±10 min tolerance → can do at 9:25am
-- Client C T=60: ±5 min tolerance → must do 9:25–9:35am
-- Client E T=0: this is arrival, T=0 can wait until after C T=60
-
-With careful scheduling, 1 phlebotomist can manage 5 clients. 6+ clients requires a second phlebotomist.
+Chair A (Phlebotomist A) takes odd-numbered clients (1/3/5/7), Chair B (Phlebotomist B) takes even-numbered clients (2/4/6/8) — each chair handles 4 clients spaced 40min apart. Each phlebotomist performs 12 draws across the morning (4 clients × 3 draws).
 
 ### Afternoon Wellness Slots (12:00pm–4:30pm)
 
@@ -371,22 +346,11 @@ No GTT constraint. Standard beauty/wellness bookings.
 
 **6–8 afternoon clients is achievable with existing staff working through to 5:00pm.**
 
-### Full Day Capacity (10+ visits)
+### Full Day Capacity
 
-| Time | Activity |
-|---|---|
-| 7:30am | GTT Client A arrives, T=0 draw, glucose drink, service starts |
-| 8:00am | GTT Client B arrives |
-| 8:30am | GTT Client C arrives |
-| 9:00am | GTT Client D arrives |
-| 9:30am | GTT Client E arrives / Client A T=120 draw |
-| 10:00am–11:30am | Final GTT clients complete T=120 draws, depart |
-| 11:30am–12:00pm | Staff reset, lunch |
-| 12:00pm | Afternoon wellness begins |
-| 4:30pm | Last afternoon client served |
-| 5:00pm | Close |
+**Daily capacity: 8 GTT (morning, see operations-manual.md) + 6–8 wellness (afternoon) = 14–16 clients/day**
 
-**Daily capacity: 5 GTT (morning) + 6–8 wellness (afternoon) = 11–13 clients/day**
+Last GTT client (Client 8) departs ~12:25pm. Staff reset/lunch 12:25pm–1:00pm before afternoon wellness begins.
 
 ---
 

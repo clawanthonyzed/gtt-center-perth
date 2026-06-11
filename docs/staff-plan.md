@@ -7,6 +7,8 @@
 
 > **SUPERSEDED (Day 49):** Anthony's approved plan locks Scenario B (8 GTT clients/morning, 2 collection chairs) as the Day 1 launch model, which requires 2x staff in each service category (massage, nails, beauty, hairdresser) plus 2x phlebotomist from Day 1 — not the 1x-per-category + 3-day-casual-beauty launch model below. **financial-break-even-staff.md v2.0 is now the canonical payroll/break-even model (12 roles, ~A$675,589/yr).** This document's per-role descriptions, qualifications, and hiring requirements remain valid reference material. The org chart, role detail, and Section 7 hiring timeline below have been updated to reflect 2x phlebotomist; Sections 4 and 6 (cost summary, break-even) describe the superseded smaller model and should not be used for current financial planning.
 
+> **⚠ SUPERSEDED further (Day 50):** Canonical shift structure (AM/PM cohorts, CF-01) is now defined in `financial-break-even-staff.md` v2.0 §Shift Structure (CF-01) — see also the AM/PM Shift Roster table below (§2A). Superannuation rate corrected to 12% throughout this document (IC-08 — 12% effective 1 July 2025, the final scheduled SG increase, and the current rate for FY2026).
+
 ---
 
 ## 1. EMPLOYMENT MODEL — CONFIRMED
@@ -51,13 +53,31 @@ YETI Holding Trust (Anthony Zed — Trustee)
 
 ---
 
+## 2A. AM/PM SHIFT ROSTER (CF-01)
+
+Same 12 staff, split into AM/PM cohorts — no new hires. Canonical detail: `financial-break-even-staff.md` v2.0 §Shift Structure (CF-01).
+
+| Role | Qty | AM Cohort (07:00/07:30–13:00) | PM Cohort (12:00–18:00) |
+|---|---|---|---|
+| Receptionist/Manager | 1 | Full day 07:00–18:00 — bridges AM/PM | (same person) |
+| Phlebotomist | 2 | Both — GTT window 07:30–12:30 | — |
+| 3D Scan Operator | 1 | GTT-window scans | Remaining hours (20hr/wk total) — general public/Bloom Baby keepsake scans |
+| Pregnancy Massage Therapist | 2 | 1× — GTT clients (07:00–13:00) | 1× — standalone/day-spa bookings (12:00–18:00) |
+| Nail Technician | 2 | 1× — GTT clients (07:00–13:00) | 1× — standalone/day-spa bookings (12:00–18:00) |
+| Hairdresser | 2 | 1× — GTT clients (07:00–13:00) | 1× — standalone/day-spa bookings (12:00–18:00) |
+| Beauty Therapist/Brows | 2 | 1× — GTT clients (07:00–13:00) | 1× — standalone/day-spa bookings (12:00–18:00) |
+
+1-hour overlap (12:00–13:00) for handover and GTT-running-late buffer. PM cohort serves the afternoon menu (standalone GTT-Wellness-equivalent bookings + `extended-wellness-services.md` Day Spa Expansion + spray tan/retail/cafe). Net payroll unchanged at A$675,589/yr — pure scheduling change.
+
+---
+
 ## 3. ROLES — FULL DETAIL
 
 ### Managing Director / Venue Manager
 **Name:** Imara (co-founder)  
 **Status:** Full-time salaried  
 **Employment type:** Employee or trust beneficiary distribution (accountant to advise — see financial-model.md §14)  
-**Rate:** A$72,500/year salary equivalent + 11.5% super = **A$80,838/year | A$6,737/month**  
+**Rate:** A$72,500/year salary equivalent + 12% super = **A$81,200/year | A$6,767/month** *(super rate corrected Day 50, IC-08)*  
 **Hours:** Mon–Fri 7:00am–3:00pm (opens early, closes after morning session wind-down)  
 **Responsibilities:**
 - Venue operations: opening/closing procedures, daily checklist
@@ -79,7 +99,7 @@ YETI Holding Trust (Anthony Zed — Trustee)
 **Hours:** Mon–Fri 7:30am–12:30pm (25hrs/week)  
 **Monthly cost:**
 - Base wages: 25hrs × 4.33wks × A$27.00 = A$2,927
-- Superannuation (11.5%): A$336
+- Superannuation (12%): A$351
 - Leave provisions (10% — annual + sick): A$326
 - **Total: ~A$3,589/month**
 
@@ -112,7 +132,7 @@ YETI Holding Trust (Anthony Zed — Trustee)
 **Hours:** Mon–Fri 8:00am–1:00pm (25hrs/week — within GTT window)  
 **Monthly cost:**
 - Base wages: 25 × 4.33 × A$26.56 = A$2,877
-- Superannuation (11.5%): A$331
+- Superannuation (12%): A$346
 - Leave provisions (10%): A$321
 - **Total: ~A$3,529/month**
 
@@ -142,7 +162,7 @@ YETI Holding Trust (Anthony Zed — Trustee)
 **Hours:** Mon–Fri 8:00am–1:00pm (25hrs/week)  
 **Monthly cost:**
 - Base wages: 25 × 4.33 × A$23.49 = A$2,543
-- Superannuation (11.5%): A$292
+- Superannuation (12%): A$305
 - Leave provisions (10%): A$284
 - **Total: ~A$3,119/month**
 
@@ -170,7 +190,7 @@ YETI Holding Trust (Anthony Zed — Trustee)
 **Hours (initial):** Mon/Wed/Fri 8:00am–1:00pm (15hrs/week casual) → expand to 5 days when demand proven  
 **Monthly cost (3-day casual):**
 - Casual wages: 15 × 4.33 × A$29.36 = A$1,908
-- Superannuation (11.5%): A$219
+- Superannuation (12%): A$229
 - **Total: ~A$2,127/month**
 - *At full 5-day permanent part-time:* ~A$3,119/month (same as nail tech)
 
@@ -196,7 +216,7 @@ YETI Holding Trust (Anthony Zed — Trustee)
 **Hours:** Mon–Fri 7:15am–12:15pm (25hrs/week — earlier start to cover opening + pre-appointment check-ins)  
 **Monthly cost:**
 - Base wages: 25 × 4.33 × A$26.17 = A$2,832
-- Superannuation (11.5%): A$326
+- Superannuation (12%): A$340
 - Leave provisions (10%): A$316
 - **Total: ~A$3,474/month**
 
@@ -223,7 +243,7 @@ YETI Holding Trust (Anthony Zed — Trustee)
 
 ## 4. TOTAL MONTHLY STAFF COST SUMMARY
 
-> **SUPERSEDED** — this table reflects the 1x-per-category + casual-beauty launch model, not the approved 2x-per-category Day 1 model. See financial-break-even-staff.md v2.0 for current payroll. Retained below for historical reference only.
+> **SUPERSEDED** — this table reflects the 1x-per-category + casual-beauty launch model, not the approved 2x-per-category Day 1 model. See financial-break-even-staff.md v2.0 for current payroll. Retained below for historical reference only. Superseded by `financial-break-even-staff.md` v2.0 — see banner above.
 
 | Role | Monthly cost |
 |---|---|
@@ -256,7 +276,7 @@ These roles remain on Room Licence Agreements — not employees.
 
 ## 6. BREAK-EVEN WITH EMPLOYED MODEL
 
-> **SUPERSEDED** — see financial-break-even-staff.md v2.0 for the current 12-role break-even (~A$775,589/yr, ~29-30 services/day). Retained below for historical reference only.
+> **SUPERSEDED** — see financial-break-even-staff.md v2.0 for the current 12-role break-even (A$843,349/yr, ~32 services/day, post-Day-50 overhead reconciliation). Retained below for historical reference only. Superseded by `financial-break-even-staff.md` v2.0 — see banner above.
 
 **Fixed monthly costs (all staff + operations):** ~A$26,500  
 **Less sublet income:** −A$2,165  

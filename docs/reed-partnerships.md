@@ -47,6 +47,22 @@ PathWest is less likely to have a simple commercial partnership pathway. Approac
 
 ---
 
+### Clinipath Pathology — TERTIARY / CONTINGENCY
+
+Part of Sonic Healthcare (ASX top-40). Central lab Osborne Park + 260+ collection centres across WA.
+
+| Detail | Info |
+|---|---|
+| **Business development contact** | businessdevelopment@clinipath.net |
+| **Phone** | (08) 9371 4200 |
+| **Sources** | clinipathpathology.com.au/about-us/partner-with-us/, /our-locations/, /contact-us/ |
+
+No published satellite-collection-centre partnership program found (unlike WDP's documented Licensed Collection Centre program) — approach via general business-development inquiry only if WDP and PathWest both decline or terms are unfavourable.
+
+**Approach order: 1. WDP (documented LCC program) → 2. PathWest (government, backup) → 3. Clinipath (contingency, no documented program — general BD inquiry only).**
+
+---
+
 ## 2. KEEPSAKE ULTRASOUND SUBTENANTS
 
 Approach in priority order. Offer: permanent scan room, fixed weekly rent A$250–350/week, captive pregnant audience 20–25 customers/week.
@@ -155,7 +171,9 @@ Approach in priority order. Offer: permanent scan room, fixed weekly rent A$250�
 
 ## 7. OUTREACH EMAIL TEMPLATES
 
-### Template A — WDP/PathWest Partnership
+### Template A — WDP/PathWest/Clinipath Partnership
+
+*For Clinipath, lead with a general partnership inquiry rather than referencing a specific program — Clinipath has no documented Licensed Collection Centre equivalent.*
 
 **Subject:** Partnership Enquiry — GTT Collection at Maternal Wellness Venue, Perth
 

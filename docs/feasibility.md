@@ -107,11 +107,13 @@ This is ambitious but achievable with strong midwife referral network (Reed's ma
 | Variable cost per wellness visit (consumables) | A$8–12 |
 | Contribution margin per GTT visit | A$221–223 |
 | Contribution margin per wellness visit | A$163–167 |
-| Monthly fixed costs (stable operations) | A$39,523 |
-| Break-even visits/month | **108 visits** |
-| Break-even visits/day (22 operating days) | **4.9 visits/day** |
+| Monthly fixed costs (stable operations) | A$71,236 *(Day 50 reconciliation — 12-staff payroll @ 12% super + workers comp + non-wage overhead, see `cash-flow.md` Cost Assumptions)* |
+| Break-even visits/month | **280 visits** *(recomputed Day 50: (A$71,236 − A$8,167 ancillary) ÷ A$225 avg, see `cash-flow.md` Break-Even Visits)* |
+| Break-even visits/day (22 operating days) | **12.7 visits/day** |
 
 ### 2.2 Return on Investment
+
+> **⚠ Cross-ref (Day 50):** the figures below predate the Day-50 cost-base reconciliation (see `cash-flow.md` Day 50 Reconciliation note and §2.1's updated A$71,236/mo fixed-cost figure above). `cash-flow.md` v1.0 is the canonical month-by-month model: stable Net P&L is now A$5,646/mo (Month 4 operational break-even), and capital recovery (against A$209K-A$431K startup capital above) is ~Month 27/34/44 (Low/Mid/High), not Month 7-14. Retained below for historical reference.
 
 | Metric | Low | Mid | High |
 |---|---|---|---|

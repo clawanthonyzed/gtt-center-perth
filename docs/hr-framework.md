@@ -118,7 +118,7 @@ Fair Work Commission increases minimum wages annually (typically July 1). Confir
 
 ## 5. SUPERANNUATION
 
-**Rate:** 11.5% of Ordinary Time Earnings (OTE) from 1 July 2025. Rising to 12% from 1 July 2025.  
+**Rate:** 12% of Ordinary Time Earnings (OTE), effective 1 July 2025 — the final scheduled Superannuation Guarantee increase. This is the current rate (FY2026).  
 *(Confirm current rate with accountant at hire — rate increases annually.)*
 
 **Payment:** Super must be paid at least quarterly; monthly via Xero preferred (cash flow better, avoids large quarterly hits).
