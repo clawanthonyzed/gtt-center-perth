@@ -1,15 +1,17 @@
 # GTT Center Perth — Services Master Table
 
-**Version:** 1.0 | **Date:** 2026-06-09
+**Version:** 1.1 | **Date:** 2026-06-11
 
 Complete reference for all services and add-ons. Staff, duration, price, and GTT window compatibility.
+
+> **Day 51 update.** No-interrupt rule now applies to ALL services with no exceptions (including hairdressing) — see `services-pricing-locked.md` Part A. 3D scan removed from scope entirely. Cut+blowdry and Scalp treatment+blowdry (exceed 45-min GTT cap) moved to Part D (Afternoon/Standalone).
 
 ---
 
 ## How to Read This Table
 
 - **GTT Window:** Can this service be delivered during the 2-hour GTT wait? (T+15 to T+115)
-- **Interruptible:** Can the 1-hour blood draw interrupt this service? Only hair services = Yes.
+- **Interruptible:** No-interrupt rule applies to ALL services, no exceptions — bloods, Service 1, bloods, Service 2, bloods. This column is retained for completeness; every value is "No" (`services-pricing-locked.md` Part A).
 - All non-GTT-window services are afternoon/standalone bookings.
 
 ---
@@ -36,16 +38,11 @@ Complete reference for all services and add-ons. Staff, duration, price, and GTT
 | Lash tint | Beauty therapist | Private cert recommended | 20 min | A$30 | Yes | No | PPD-free for pregnant |
 | Brow + lash tint combo | Beauty therapist | Private cert recommended | 35 min | A$80 | Yes | No | |
 | Lash lift + tint | Beauty therapist / Lash tech | SHBBMUP008 | 45 min | A$95 | Yes | No | Tight in GTT window |
-| Blowdry (short–medium) | Hairdresser | Cert III SHB30116 | 30 min | A$65 | Yes | **YES** | Blood draw can interrupt |
-| Blowdry (long hair) | Hairdresser | Cert III SHB30116 | 45 min | A$80 | Yes | **YES** | |
-| Haircut (excl. colour) | Hairdresser | Cert III SHB30116 | 30–45 min | A$60–85 | Yes | **YES** | |
-| Cut + blowdry | Hairdresser | Cert III SHB30116 | 60 min | A$95 | Yes | **YES** | |
-| Scalp treatment + blowdry | Hairdresser | Cert III SHB30116 | 50 min | A$90 | Yes | **YES** | |
-| Hair mask + blowdry | Hairdresser | Cert III SHB30116 | 45 min | A$85 | Yes | **YES** | |
-| Braiding / hair up | Hairdresser | Cert III SHB30116 | 30–45 min | A$60–75 | Yes | **YES** | |
-| 3D scan — Peek | Scan operator | 50–200 supervised scans | 20 min | A$49 | Yes | No | 28–32 wks optimal |
-| 3D scan — Standard | Scan operator | 50–200 supervised scans | 30 min | A$89 | Yes | No | |
-| 3D scan — Deluxe | Scan operator | 50–200 supervised scans | 45 min | A$129 | Yes | No | |
+| Blowdry (short–medium) | Hairdresser | Cert III SHB30116 | 30 min | A$65 | Yes | No | |
+| Blowdry (long hair) | Hairdresser | Cert III SHB30116 | 45 min | A$80 | Yes | No | |
+| Haircut (excl. colour) | Hairdresser | Cert III SHB30116 | 30–45 min | A$60–85 | Yes | No | |
+| Hair mask + blowdry | Hairdresser | Cert III SHB30116 | 45 min | A$85 | Yes | No | |
+| Braiding / hair up | Hairdresser | Cert III SHB30116 | 30–45 min | A$60–75 | Yes | No | |
 
 ---
 
@@ -82,19 +79,12 @@ Complete reference for all services and add-ons. Staff, duration, price, and GTT
 
 ---
 
-## PART D: 3D SCAN ADD-ONS
-
-| Add-On | Duration | Price |
-|--------|----------|-------|
-| USB keepsake (images + video) | — | +A$25 |
-| Print pack (4 × 6 photos, printed) | — | +A$20 |
-
----
-
-## PART E: AFTERNOON / STANDALONE SERVICES
+## PART D: AFTERNOON / STANDALONE SERVICES
 
 | Service | Staff Required | Qualification | Duration | Price | GTT Window | Notes |
 |---------|---------------|---------------|----------|-------|-----------|-------|
+| Cut + blowdry | Hairdresser | Cert III SHB30116 | 60 min | A$95 | No | Exceeds 45-min GTT cap |
+| Scalp treatment + blowdry | Hairdresser | Cert III SHB30116 | 50 min | A$90 | No | Exceeds 45-min GTT cap |
 | Full pregnancy massage (60 min) | Massage therapist | Cert IV + pregnancy spec | 60 min | A$145 | No | Afternoon only |
 | Hydration facial (60 min) | Beauty therapist | Diploma Beauty Therapy | 60 min | A$145 | No | |
 | Signature facial (75 min) | Beauty therapist | Diploma Beauty Therapy | 75 min | A$175 | No | |
@@ -121,7 +111,7 @@ Complete reference for all services and add-ons. Staff, duration, price, and GTT
 
 ---
 
-## PART F: FUTURE SERVICES (Not at Launch)
+## PART E: FUTURE SERVICES (Not at Launch)
 
 | Service | Staff Required | Est. Duration | Est. Price | Target Month |
 |---------|---------------|--------------|-----------|-------------|
@@ -142,6 +132,5 @@ Complete reference for all services and add-ons. Staff, duration, price, and GTT
 | Nail technician | All nail services + nail add-ons, paraffin wax |
 | Hairdresser | All hair services (GTT window + afternoon colour), braiding, scalp treatment |
 | Lash tech | Classic/hybrid/volume lash extensions and infills, lash lift + tint |
-| Scan operator | All 3D scan packages + USB/print add-ons |
 | Receptionist/Manager | Cafe service, birth plan tablet assist, retail sales, no treatment services |
 | Trained staff member | Belly casting |

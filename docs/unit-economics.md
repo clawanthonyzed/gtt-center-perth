@@ -1,76 +1,86 @@
 # GTT Center Perth — Unit Economics
 
-**Status:** Based on Option A (venue fee + room rent model) — see financial-model.md for full P&L  
-**Date:** 2026-06-05
+**Status:** Day 51 package-price model — full rebuild (was Option A venue-fee + room-rent model)
+**Date:** 2026-06-11
 
 ---
 
-## Revenue Per Visit
-
-GTT Center Perth charges a single **experience/coordination fee** per visit.  
-Subtenants price and collect their own service fees directly from customers.
-
-| Metric | Value |
-|---|---|
-| GTT Center Perth experience fee | A$120/visit |
-| Avg customer total spend (fee + services) | A$270–350 |
-| GTT Center Perth revenue per visit | **A$120** |
+> **Day 51 rewrite.** This document was previously based on Option A (A$120 experience fee + subtenant room rent), now removed entirely (`financial-model.md`). Unit economics are rebuilt on the locked Package 1/2/3 model — every visit (AM GTT or PM Spa Package) sells one of Package 1 (A$200), Package 2 (A$250), or Package 3 (A$300), with a 30/40/30 mix assumption. Venue + lounge access is bundled FREE into every package — no separate fee. See `services-pricing-locked.md`.
 
 ---
 
-## Subtenant Room Rent Income (Weekly)
+## Revenue Per Visit (Package Model)
 
-| Subtenant | Rate/Week | Monthly (× 4.33 weeks) |
+| Package | Inclusions | Price | Mix | Weighted |
+|---|---|---|---|---|
+| Package 1 | 2 × 30-min services + free venue/lounge | A$200 | 30% | A$60.00 |
+| Package 2 | 1×30-min + 1×45-min + free venue/lounge | A$250 | 40% | A$100.00 |
+| Package 3 | 2 × 45-min services + free venue/lounge | A$300 | 30% | A$90.00 |
+| **Blended avg revenue/visit** | | | | **A$250.00** |
+
+This A$250 avg applies identically to AM GTT visits and standalone PM Spa Packages — there is no separate "venue fee" or "wellness" revenue line (`cash-flow.md` Day 51 Reconciliation).
+
+---
+
+## Variable Cost Per Visit
+
+Most costs in this model are fixed staff payroll (see Fixed Cost Summary below), not per-visit. The small per-visit variable costs are:
+
+| Cost | Monthly | ÷ 308 visits/month (Month 5+ stable) | Per-visit |
+|---|---|---|---|
+| GTT supplies (glucose, tubes — GTT visits only) | A$400 | ÷ 176 GTT visits | A$2.27 (GTT visits only) |
+| Consumables (wax, nail products, skincare) | A$800 | ÷ 308 total visits | A$2.60 |
+| Laundry/linen | A$350 | ÷ 308 total visits | A$1.14 |
+| **Blended variable cost/visit** | | | **~A$5.00** |
+
+---
+
+## Contribution Margin
+
+| Package | Price | Variable Cost | **Contribution Margin** | Margin % |
+|---|---|---|---|---|
+| Package 1 | A$200 | A$5 | **A$195** | 97.5% |
+| Package 2 | A$250 | A$5 | **A$245** | 98.0% |
+| Package 3 | A$300 | A$5 | **A$295** | 98.3% |
+| **Blended (30/40/30)** | A$250 | A$5 | **A$245** | 98.0% |
+
+Variable costs are negligible (~2% of revenue) — this is a fixed-cost-dominated business. The headline break-even figures in `cash-flow.md` and `financial-break-even-staff.md` use gross revenue ÷ avg package price (A$74,391 ÷ A$250 ≈ 298 visits/month), which is accurate to within ~2% of the contribution-margin-based figure below.
+
+---
+
+## Capacity (Day 51)
+
+| Stream | Cap | Basis |
 |---|---|---|
-| Massage therapist | A$250 | A$1,083 |
-| Nail technician | A$200 | A$866 |
-| Brows artist | A$175 | A$758 |
-| Scan room operator | A$300 | A$1,299 |
-| **Total** | **A$925/week** | **A$4,006/month** |
-
-*Dietitian room rent (A$200–300/wk) added once APD subtenant confirmed.*
+| AM GTT visits | 8/day (176/month) | 2 phlebotomists, 2 collection chairs — Scenario B verified timetable (`operations-manual.md`). Scenario A (10-client growth) deferred, no verified timetable. |
+| PM Spa Packages | 6/day (132/month) | 1 PM Service Therapist (new hire) — `financial-break-even-staff.md` Lever 2 |
+| **Total capacity** | **14/day (308/month)** | Both streams at capacity from Month 5 |
 
 ---
 
-## Capacity
+## Revenue Scenarios (18-Month Ramp)
 
-| Parameter | Value |
-|---|---|
-| Operating hours | Mon–Fri 7:30am–12:30pm |
-| GTT start slots | 8:00 / 8:30 / 9:00 / 9:30am |
-| Bookings/day (launch) | 4 |
-| Bookings/day (capacity) | 8 |
-| Bookings/week at launch | 20 |
-| Bookings/week at capacity | 40 |
-| Bookings/month at capacity | ~160 |
-
----
-
-## Revenue Scenarios
-
-| Scenario | Visits/Month | Experience Fee Rev | Room Rent | Other (Retail/TENS) | **Total Monthly** |
+| Month | GTT Visits | PM Spa | Total Visits | Total Revenue | Notes |
 |---|---|---|---|---|---|
-| Conservative (40%) | 64 | A$7,680 | A$4,006 | A$400 | **A$12,086** |
-| Base (60%) | 96 | A$11,520 | A$4,006 | A$700 | **A$16,226** |
-| Strong (80%) | 128 | A$15,360 | A$4,600 | A$900 | **A$20,860** |
+| M1 (soft open) | 88 | 44 | 132 | A$36,267 | |
+| M2 | 132 | 66 | 198 | A$54,401 | |
+| M3 | 154 | 88 | 242 | A$66,490 | |
+| M4 | 176 | 110 | 286 | A$78,579 | Marginal break-even |
+| M5+ (stable, both at capacity) | 176 | 132 | 308 | A$84,623 | Full break-even |
+
+Full 18-month P&L (incl. fixed costs and Net P&L per month) is canonical in `cash-flow.md`.
 
 ---
 
-## Cost Summary (Monthly, Stable State Month 6)
+## Fixed Cost Summary (Monthly, Stable Operations — Month 5+)
 
-| Category | Monthly |
-|---|---|
-| Venue rent (Osborne Park ~120 sqm) | A$3,500 |
-| Fit-out amortised (A$120K / 48 months) | A$2,500 |
-| Reception wages (20 hrs/wk, Clerks L1) | A$2,271 |
-| Insurance (A$20M public liability) | A$350 |
-| Booking system (Fresha Team, 3 users) | A$45 |
-| Marketing | A$500 |
-| Accounting | A$300 |
-| Utilities | A$400 |
-| Consumables (snacks, lounge amenities) | A$600 |
-| Sundries | A$350 |
-| **Total** | **A$10,816** |
+| Category | Monthly | Notes |
+|---|---|---|
+| Payroll (12 staff incl. relief pool, 12% super) | A$59,422 | `financial-break-even-staff.md` Total Annual Payroll ÷ 12 |
+| Workers comp (1.7% of payroll) | A$989 | |
+| Rent | A$8,000 | 200 sqm @ A$40/sqm/month |
+| Other operating (utilities, insurance, marketing, booking system, accounting, misc) | A$5,980 | See `cash-flow.md` Cost Assumptions for full breakdown |
+| **TOTAL FIXED COSTS** | **A$74,391** | A$892,694/yr |
 
 ---
 
@@ -78,28 +88,35 @@ Subtenants price and collect their own service fees directly from customers.
 
 | Metric | Value |
 |---|---|
-| Fixed monthly costs | A$10,816 |
-| Room rent contribution (certain) | A$4,006 |
-| Remaining to cover from experience fees | A$6,810 |
-| Experience fee per visit | A$120 |
-| **Break-even visits/month** | **57 (13/week, ~3/day)** |
+| Total fixed costs/month | A$74,391 |
+| Avg revenue/visit (30/40/30 mix) | A$250 |
+| **Break-even visits/month (gross)** | **~298 (13.5/day)** |
+| Break-even visits/month (contribution margin, A$245) | ~304 (13.8/day) |
+| Modelled Month 5+ stable volume | 308 visits/month (14/day) |
 
-**3 visits/day breaks even.** Achievable from Week 1 with midwife referrals.
+Month 5+ stable volume (308/month) clears break-even on both bases — Net P&L = +A$10,232/month (`cash-flow.md`).
 
 ---
 
-## Sensitivity: Room Rent as Floor
+## Sensitivity: Package Price vs Margin
 
-Room rent alone covers **37% of monthly fixed costs** regardless of customer volume.  
-If all customer bookings fail entirely: shortfall is A$6,810/month, covered by working capital for 3+ months.  
-Subtenants contracted before opening = immediate income floor on Day 1.
+If the PM Spa Package ramp underperforms (stays below 6/day), the alternative lever is price. From `financial-break-even-staff.md` Sensitivity — Package Price vs Margin (at a 3 PM-packages/day baseline):
+
+| Target Margin | Required Avg Package Price | Example Pkg 1/2/3 |
+|---|---|---|
+| Break-even | A$289 | A$230 / A$290 / A$350 |
+| 5% | A$306 | A$245 / A$305 / A$365 |
+| 8% | A$317 | A$255 / A$315 / A$380 |
+| 10% | A$325 | A$260 / A$325 / A$390 |
+
+**Recommendation (unchanged from `financial-break-even-staff.md`):** launch at Anthony's stated A$200/A$250/A$300 and treat the PM ramp to 6/day (Month 3–6) as the primary path to break-even, with the pricing table above as the fallback.
 
 ---
 
 ## Key Assumptions to Validate Before Lease Signing
 
-1. Perth commercial rent for 110–140 sqm wellness/health space (target Osborne Park or Subiaco)
+1. Perth commercial rent for 200 sqm wellness/health space (Subiaco/Nedlands target)
 2. Actual fit-out cost — get 3 Perth commercial fit-out quotes
-3. WDP pathology partnership model — does WDP charge the venue a fee? (Likely neutral or minor setup cost)
-4. Subtenant market rate confirmation — survey Perth wellness studios
-5. A$120 experience fee market acceptance — validate with 10 target customers before launch
+3. WDP/PathWest pathology partnership model and out-of-pocket fee structure (`services-pricing-locked.md`)
+4. Package 1/2/3 market acceptance — validate with target customers before launch (A$200/A$250/A$300)
+5. PM Spa Package booking demand — validate that the PM Service Therapist's afternoon book can realistically reach 6 packages/day by Month 5 (the model's single biggest assumption)

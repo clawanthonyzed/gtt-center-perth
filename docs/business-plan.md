@@ -8,15 +8,19 @@
 
 ---
 
+> **Day 51 update.** Package pricing (Section 6), staffing (Section 5), and financial overview (Section 9) updated to the Day 51 Package 1/2/3 model (`services-pricing-locked.md`, `financial-break-even-staff.md`, `cash-flow.md`). 3D keepsake scan and dietitian removed from scope entirely — see `equipment-costs.md` and `staff-plan.md`.
+
+---
+
 ## 1. EXECUTIVE SUMMARY
 
-GTT Center Perth is Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT) — a mandatory 2.5-hour pregnancy screening test that ~14,400 Perth women undergo every year. Instead of sitting in a bare pathology waiting room while fasting, patients book into GTT Center Perth and spend their test window receiving massage, nails, brows, a 3D keepsake scan, or a dietitian consultation.
+GTT Center Perth is Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT) — a mandatory 2.5-hour pregnancy screening test that ~14,400 Perth women undergo every year. Instead of sitting in a bare pathology waiting room while fasting, patients book into GTT Center Perth and spend their test window receiving massage, facials, nails, brows/lashes, or hairdressing — bundled into one of three fixed-price packages with free venue/lounge access (`services-pricing-locked.md`).
 
-The venue runs a **morning GTT shift** (3 patient waves: 7:30am–12:15pm) and an **afternoon wellness shift** (12:00pm–5:00pm, no testing). Practitioners are employed directly. The phlebotomist operates under WDP's NATA accreditation as a Licensed Collection Centre.
+The venue runs a **morning GTT shift** (8 clients across 2 collection chairs, 07:40am–12:25pm — see operations-manual.md) and an **afternoon PM Spa Package shift** (12:00pm–6:00pm, no testing — fasting requirement is AM-only). Practitioners are employed directly. The 2 phlebotomists operate under WDP's NATA accreditation as a Licensed Collection Centre.
 
 **The only equivalent business in Australia is MIWM in Melbourne** — fully booked 3–4 weeks in advance at A$365 per visit. Perth is entirely unserved.
 
-**Target:** 12–15 visits/day. Break-even at ~108 visits/month. Profitable from Month 3.
+**Target:** 14 visits/day (8 AM GTT + 6 PM Spa Packages). Break-even at ~298 visits/month (13.5/day). Marginal break-even Month 4, full break-even Month 5+ (`cash-flow.md`).
 
 ---
 
@@ -48,24 +52,22 @@ GTT Center Perth is a purpose-built venue where:
 
 ### Services
 
-**GTT Morning (7:30am–12:15pm):**
-| Service | Duration | Provider |
-|---|---|---|
-| GTT blood collection (T=0, T=60, T=120) | 2.5 hrs total | Employed phlebotomist |
-| Pregnancy massage | 60 min | Employed therapist |
-| Manicure or pedicure | 45 min | Employed nail tech |
-| Brow shaping and tinting | 30 min | Employed beauty therapist |
-| 3D keepsake ultrasound | 25 min | Sublet operator (own machine) |
-| Dietitian consultation (GDM pre/post) | 60 min | Sublet APD |
+**No-interrupt rule:** bloods, Service 1, bloods, Service 2, bloods — wellness services fill the gaps between draws and are NEVER interrupted by a draw, no exceptions (`services-pricing-locked.md` Part A).
 
-**Afternoon Wellness (12:00pm–5:00pm) — no GTT, no testing:**
+**GTT Morning — Package Model (free venue/lounge access bundled into all 3, no separate fee):**
+| Package | Inclusions | Price |
+|---|---|---|
+| Package 1 | 2 × 30-min services (e.g. express massage + classic manicure) | A$200 |
+| Package 2 | 1 × 30-min + 1 × 45-min service (e.g. express facial + standard massage) | A$250 |
+| Package 3 | 2 × 45-min services (e.g. signature facial + standard massage) | A$300 |
+
+GTT blood collection (Draw 1/2/3, ~2.5 hrs total) is provided by 2 employed phlebotomists under the WDP NATA umbrella. All wellness services are 45 min or under, delivered by employed staff (massage, facials, nails, brows/lashes, hairdressing — `services-pricing-locked.md` Part A).
+
+**Afternoon PM Spa Packages (12:00pm–6:00pm) — no GTT, no testing:**
 | Service | Details |
 |---|---|
-| Pregnancy massage | Same staff, no GTT constraint |
-| Nails | Walk-in and booked |
-| Brows | Walk-in and booked |
-| 3D keepsake scan | Sublet operator manages |
-| Dietitian | Post-GDM follow-up, general prenatal nutrition |
+| Same Package 1/2/3 menu | Delivered by 1 PM Service Therapist (new hire, cross-trained massage + facials) |
+| Spray tan, hair colour, lash extensions, belly casting, cut+blowdry | Standalone afternoon-only add-ons (`services-pricing-locked.md` Part B) |
 | Postnatal bookings | Expand in Year 2 |
 
 ---
@@ -116,32 +118,29 @@ GTT Center Perth is a purpose-built venue where:
 
 GTT must start ≤10:00am (ADIPS 2014 guideline — circadian glucose tolerance constraint).
 
-#### Afternoon Shift (Wellness Only)
-12:00pm–5:00pm. No testing. Same staff continue.
-- 6–8 wellness appointments (massage, nails, brows, scan, dietitian)
+#### Afternoon Shift (PM Spa Packages)
+12:00pm–6:00pm. No testing — fasting requirement is AM-only. 1 PM Service Therapist (new hire, cross-trained massage + facials) delivers Package 1/2/3 to PM clients.
+- 6 PM Spa Package appointments/day at capacity (Month 5+)
 
 #### Daily Capacity
 - Morning GTT: 8 patients (2 phlebotomists, 2 chairs, Day 1 — see operations-manual.md)
-- Afternoon wellness: 6–8 patients (requires full-time staff — see staff-plan.md)
-- **Total: 14–16 visits/day**
-- Scenario A (10 GTT clients/morning, 15-min intervals, same 2 chairs/phlebotomists) is the documented growth target once the 8-client model exceeds 80% occupancy — see operations-manual.md
+- Afternoon PM Spa Packages: 6 patients (1 PM Service Therapist, new hire — see staff-plan.md)
+- **Total: 14 visits/day (308/month at full capacity, Month 5+)**
+- Scenario A (10 GTT clients/morning, 15-min intervals, same 2 chairs/phlebotomists) is the documented growth target once the 8-client model exceeds 80% occupancy — see operations-manual.md. Deferred, no verified timetable.
 
-### Staffing (Employed)
+### Staffing (Employed) — full roster in `staff-plan.md` and `financial-break-even-staff.md` (CF-01)
 | Role | Hours | Days |
 |---|---|---|
 | Imara — Managing Director | 7:00am–5:00pm | Mon–Fri |
-| Phlebotomist (×1 → ×2 at scale) | 7:15am–12:30pm | Mon–Fri |
-| Pregnancy massage therapist | 7:30am–4:30pm (FT) | Mon–Fri |
-| Nail technician | 7:30am–4:30pm (FT) | Mon–Fri |
-| Beauty therapist/brows | 7:30am–4:30pm (FT) | Mon–Fri |
-| Receptionist | 7:00am–5:00pm (FT or 2 × PT) | Mon–Fri |
+| Phlebotomist ×2 (Day 1) | 07:30am–12:30pm, AM-only | Mon–Fri |
+| Massage therapist ×2, Nail technician ×2, Beauty therapist ×2, Hairdresser ×2 | AM GTT window (07:00/07:30am–1:00pm), AM-only | Mon–Fri |
+| Receptionist/Manager ×1 | Split shift: 07:00am–12:00pm + 3:00pm–6:00pm | Mon–Fri |
+| PM Service Therapist ×1 (new hire) | 12:00pm–6:00pm | Mon–Fri |
 
 ### Space Requirements
-- Total: 150–180 sqm
+- Total: 120–145 sqm
 - 3 treatment rooms (massage, nails, brows): 3 × 12 sqm = 36 sqm
 - Collection room (ACSQHC spec): 12–15 sqm
-- Scan room (keepsake ultrasound): 15–18 sqm
-- Consulting room (dietitian): 10–12 sqm
 - Lounge and waiting: 30–35 sqm
 - Reception: 10–12 sqm
 - Staff room + storage: 15 sqm
@@ -161,26 +160,23 @@ GTT must start ≤10:00am (ADIPS 2014 guideline — circadian glucose tolerance 
 
 | Stream | Description | Driver |
 |---|---|---|
-| Package sales (GTT morning) | Full package price collected per GTT patient | Morning GTT visits |
-| Wellness bookings (afternoon) | Standalone wellness appointments | Afternoon visits |
-| Scan room sublet | Weekly room rent from keepsake scan operator | Fixed income |
-| Dietitian sublet | Weekly room rent from APD | Fixed income |
-| Retail | Gaia, Weleda, Mustela, etc. | Avg A$8/visit |
-| TENS machine hire | A$30/session | Variable |
+| Package sales (AM GTT) | Package 1/2/3 (A$200/A$250/A$300) per GTT patient, venue/lounge bundled free | AM GTT visits (8/day cap) |
+| Package sales (PM Spa) | Same Package 1/2/3 menu, standalone afternoon | PM Spa Package visits (6/day cap, Month 5+) |
+| Cafe + retail | Gaia, Weleda, Mustela, snacks, drinks (`services-pricing-locked.md` Parts D/E) | ~A$24.75/visit (ancillary) |
 
 ### Pricing
 
-**GTT Packages (per `financial-break-even-staff.md` v2.0 Package Pricing Model — Day 49, locked):**
+**Packages (locked structure, Day 51 — `services-pricing-locked.md`):**
 
 | Package | Inclusions | Price |
 |---|---|---|
-| GTT Lounge | Lounge access, water, herbal tea, GTT coordination, birth plan tablet — no additional services | A$25 |
-| GTT Wellness (default) | Lounge + 2 × 45-min services (massage, facial, gel mani/pedi, brow lamination, lash lift+tint, or hair treatment) | A$225 flat |
-| GTT Luxe | Lounge + pregnancy massage + signature facial + 3D scan Standard | A$325 flat |
+| Package 1 | Free venue/lounge access + 2 × 30-min services (or combo under A$200) | A$200 flat |
+| Package 2 | Free venue/lounge access + 1 × 30-min + 1 × 45-min service (or combo under A$250) | A$250 flat |
+| Package 3 | Free venue/lounge access + 2 × 45-min services (or combo under A$300) | A$300 flat |
 
-**Blended avg (10% Lounge / 70% Wellness / 20% Luxe): A$225.**
+No package is sold lounge-only — venue/lounge access is bundled FREE into all 3, no separate fee anywhere. **Blended avg (30/40/30 mix): A$250/visit**, applied identically to AM GTT and PM Spa Package visits.
 
-**Afternoon/standalone services:** see `extended-wellness-services.md` Day Spa Expansion (lash, hair colour, nail extras — afternoon only) and `services-pricing-locked.md` for full standalone menu. 10% online pre-booking discount applies to afternoon/standalone bookings made alongside a GTT reservation.
+**Afternoon/standalone services:** `services-pricing-locked.md` Part B (spray tan, hair colour, lash extensions, belly casting, cut+blowdry). 10% online pre-booking discount applies to afternoon/standalone bookings made alongside a GTT reservation.
 
 ---
 
@@ -237,7 +233,7 @@ GTT must start ≤10:00am (ADIPS 2014 guideline — circadian glucose tolerance 
 
 ## 9. FINANCIAL OVERVIEW
 
-Figures below are an early estimate (Day 5). Canonical financial model: `cash-flow.md` v1.0 (18-month month-by-month, reconciled Day 50) and `financial-break-even-staff.md` v2.0 (staffing/break-even). See `financial-model.md` for the full superseded analysis (IC-01/IC-06/IC-07).
+Figures below are Month 5+ steady-state, Day 51 package-price model. Canonical financial model: `cash-flow.md` (18-month month-by-month) and `financial-break-even-staff.md` (staffing/break-even). See `financial-model.md` v2.0 for the full model (Option B only).
 
 ### Startup Capital Required
 | Category | Low | High |
@@ -245,7 +241,7 @@ Figures below are an early estimate (Day 5). Canonical financial model: `cash-fl
 | Legal + professional (solicitor, accountant brief) | A$3,000 | A$6,000 |
 | Venue deposit + first 2 months rent | A$10,000 | A$20,000 |
 | Fit-out (treatment rooms, collection room, lounge, reception) | A$100,000 | A$200,000 |
-| FF&E (tables, nail station + LEV, scan room, lounge, reception) | A$20,000 | A$50,000 |
+| FF&E (treatment tables, nail station + LEV, hair stations, lounge, reception) | A$20,000 | A$50,000 |
 | Website + booking system + domain | A$2,000 | A$5,000 |
 | Opening stock (pathology supplies, snacks, products, TENS units) | A$7,000 | A$12,000 |
 | Marketing pre-launch + launch | A$3,000 | A$6,000 |
@@ -255,29 +251,20 @@ Figures below are an early estimate (Day 5). Canonical financial model: `cash-fl
 | **TOTAL** | **A$209,000** | **A$402,600** |
 | **Mid-estimate** | | **A$305,000** |
 
-### Monthly P&L Snapshot (Stable Operations — Month 4)
+### Monthly P&L Snapshot (Stable Operations — Month 5+)
 
 | Line | Amount |
 |---|---|
-| Morning GTT revenue (7 patients/day × 22 days × A$230) | A$35,420 |
-| Afternoon wellness revenue (6 patients/day × 22 days × A$175) | A$23,100 |
-| Sublet income (scan + dietitian) | A$2,165 |
-| Retail + TENS | A$800 |
-| **Total revenue** | **A$61,485** |
-| Staff wages (all employed) | A$34,890 |
-| Venue rent | A$4,500 |
-| Fit-out amortised | A$4,167 |
-| Insurance + compliance | A$700 |
-| Marketing | A$1,000 |
-| Accounting + software | A$800 |
-| Utilities + consumables | A$2,200 |
-| Other | A$500 |
-| **Total costs** | **A$48,757** |
-| **Net profit** | **+A$12,728/month** |
+| AM GTT package revenue (176 visits × A$250 avg) | A$44,000 |
+| PM Spa Package revenue (132 visits × A$250 avg) | A$33,000 |
+| Cafe + retail (ancillary, ~A$24.75/visit × 308 visits) | A$7,623 |
+| **Total revenue** | **A$84,623** |
+| Total fixed costs (payroll incl. relief pool, rent, other operating — `financial-break-even-staff.md`) | A$74,391 |
+| **Net P&L** | **+A$10,232/month** |
 
-**Break-even:** ~108 GTT+wellness visits/month = ~5 visits/day (achievable Month 2–3)  
-**Full capacity profit:** ~A$12,700–17,000/month  
-**Year 2 annualised:** A$150,000–200,000
+**Break-even:** ~298 visits/month (13.5/day) — see `unit-economics.md`  
+**Full capacity (Month 5+) profit:** +A$10,232/month = +A$122,784/yr  
+**Year 1 (incl. ramp-up M1–M4):** +A$37,232 net
 
 ---
 
@@ -314,9 +301,6 @@ YETI Holding Trust (discretionary trust)
                 Operating company under trust ownership
                 Retains profit at 25% company tax
                 Shields from 2028 minimum trust distribution tax
-
-Sublet income: scan room operator + dietitian (own ABN, own business)
-Not employed by trust — Room Licence Agreement only
 ```
 
 **TPI protection:** Revenue stays in trust, not Anthony personally. Correct structure.  
@@ -380,13 +364,12 @@ Not employed by trust — Room Licence Agreement only
 | Perth solicitor and accountant engaged | Week 1 (June 2026) |
 | Venue located, heads of agreement signed | Week 6 (July 2026) |
 | Instagram launched (fit-out begins) | Week 9 (August 2026) |
-| All subtenants signed (scan, dietitian) | Week 10 (August 2026) |
 | All staff hired | Week 14 (September 2026) |
 | Fit-out complete | Week 16 (September 2026) |
 | 300+ waitlist names | Week 18 (October 2026) |
 | Test operations (5 runs) | Week 17–18 (October 2026) |
 | Soft open (waitlist priority) | Week 20 (October 2026) |
 | Full public launch | Week 22 (November 2026) |
-| Break-even month | Month 3 (January 2027) |
-| A$10,000/month profit | Month 4 (February 2027) |
+| Break-even month (marginal) | Month 4 (February 2027) |
+| A$10,000/month profit (full break-even) | Month 5 (March 2027) |
 | Year 1 annualised revenue | A$400,000+ (from Month 6 run rate) |

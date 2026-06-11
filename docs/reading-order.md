@@ -1,6 +1,6 @@
 # GTT Center Perth — Document Index & Reading Order
 
-**Last updated:** 2026-06-10 (Day 50 financial reconciliation, afternoon session, partnerships, audit cleanup)
+**Last updated:** 2026-06-11 (Day 51 package-pricing/staffing model — Package 1/2/3, no-interrupt rule unconditional, 3D scan + dietitian removed, CF-01 split-shift staffing)
 **Total documents:** 45
 
 ---
@@ -15,15 +15,17 @@ Read **executive-summary.md** first. Single document pulling critical informatio
 
 GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" are referenced in multiple files. **Any agent or worker who changes a linked parameter MUST update every doc in that parameter's row, in the same pass — not as a follow-up.** This rule was added Day 49 after a phlebotomist-count and draw-timing conflict went undetected across 3 docs.
 
-| Linked Parameter | Current Value (Day 49–50) | Docs That Reference It |
+| Linked Parameter | Current Value (Day 49–51) | Docs That Reference It |
 |---|---|---|
-| Phlebotomist / collection chair count | 2 phlebotomists + 2 chairs, Day 1 | operations-manual.md, gtt-clinical-protocol.md, ivy-booking-system.md, pathology-collection-room.md, equipment-costs.md, financial-break-even-staff.md, staff-plan.md, executive-summary.md, feasibility.md, business-plan.md, gtt-test-reference.md, cash-flow.md |
+| Phlebotomist / collection chair count | 2 phlebotomists + 2 chairs, Day 1, AM-only (fasting requirement) | operations-manual.md, gtt-clinical-protocol.md, ivy-booking-system.md, pathology-collection-room.md, equipment-costs.md, financial-break-even-staff.md, staff-plan.md, executive-summary.md, feasibility.md, business-plan.md, gtt-test-reference.md, cash-flow.md |
 | Launch scenario / capacity timetable | Scenario B, 8 clients, corrected 0/+75(±5)/+135(±10) draw pathway | operations-manual.md, executive-summary.md, gtt-clinical-protocol.md, business-plan.md, gtt-test-reference.md, cash-flow.md, reading-order.md (this Open Decisions table); review-audit.md CF-02/IC-05/IM-10 marked RESOLVED Day 49 (historical audit trail retained) |
-| GTT package pricing & menu | GTT Lounge (A$25) / GTT Wellness (A$225) / GTT Luxe (A$325) flat tiers; hot stone massage/body scrub/body wrap/standalone paraffin wax removed entirely | services-pricing-locked.md, services-master-table.md, extended-wellness-services.md, financial-break-even-staff.md, executive-summary.md, business-plan.md, cash-flow.md (Day 50) |
+| Package pricing & menu (Day 51) | Package 1 (A$200, 2x30min) / Package 2 (A$250, 30+45min) / Package 3 (A$300, 2x45min) flat tiers — venue + lounge access FREE, bundled into all 3, no separate fee anywhere. Same menu sold as AM GTT packages and PM Spa Packages. 30/40/30 mix -> blended avg A$250/visit. Supersedes GTT Lounge (A$25) / GTT Wellness (A$225) / GTT Luxe (A$325) | services-pricing-locked.md, services-master-table.md, extended-wellness-services.md, financial-break-even-staff.md, executive-summary.md, business-plan.md, cash-flow.md, unit-economics.md, financial-model.md, staff-plan.md, gtt-test-reference.md, operations-manual.md, review-audit.md |
+| No-interrupt rule (Day 51) | Blood draws NEVER interrupt services — no exceptions, including hairdressing. All GTT-window services <45min active testing time | services-pricing-locked.md, services-master-table.md, operations-manual.md, gtt-test-reference.md, executive-summary.md, business-plan.md |
+| Subtenants (Day 51) | NONE. 3D scan operator and dietitian roles removed entirely — no equipment, no operator, no room rental | staff-plan.md, business-plan.md, operations-manual.md, equipment-costs.md, gtt-test-reference.md, review-audit.md, executive-summary.md, financial-break-even-staff.md, services-master-table.md |
 | Discount policy | 10% online pre-booking discount on afternoon/standalone services; no discount on in-center upsells | services-pricing-locked.md, financial-break-even-staff.md, executive-summary.md |
 | Pathology model | Option A (PathWest/WDP satellite) — permanent; Clinipath added Day 50 as tertiary/contingency only | option-b-collection-centre.md, pathology-collection-room.md, executive-summary.md, reading-order.md (Phase 3 table), reed-partnerships.md |
-| Fixed monthly cost base (Day 50) | A$71,236/mo (A$854,832/yr) — 12-staff payroll @ 12% super (A$56,299/mo) + workers comp (A$957/mo) + A$13,980/mo non-wage overhead | cash-flow.md, financial-break-even-staff.md, feasibility.md (line 110) |
-| Afternoon/ancillary revenue (Day 50) | +A$8,167/mo at stable ops (spray tan A$4,833 + retail A$2,083 + cafe A$1,250), unlocked by AM/PM shift split (CF-01), ramps M1-M18 | cash-flow.md, financial-break-even-staff.md |
+| Fixed monthly cost base (Day 51) | A$74,391/mo (A$892,694/yr) — 12-staff payroll incl. relief pool @ A$713,067/yr + workers comp (A$11,867/yr, 1.7%) + A$167,760/yr non-wage overhead | cash-flow.md, financial-break-even-staff.md, financial-model.md, unit-economics.md, business-plan.md, executive-summary.md, staff-plan.md, feasibility.md (line 110) |
+| AM/PM Spa Package revenue (Day 51) | PM Spa Packages (PM Service Therapist, new hire) ramp M1=2/day -> M5+=6/day, same Pkg1/2/3 menu @ A$250 blended avg, no testing. Month 5+ steady state: AM A$44,000/mo + PM A$33,000/mo + cafe/retail A$7,623/mo = A$84,623/mo revenue vs A$74,391/mo costs = +A$10,232/mo Net P&L | cash-flow.md, financial-break-even-staff.md, business-plan.md, unit-economics.md, executive-summary.md |
 
 ---
 
@@ -59,8 +61,7 @@ GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" a
 | 12 | **services-master-table.md** (NEW) | Every service + add-on. Staff, qualification, duration, price, GTT compatibility, interruptible flag. | 15 min |
 | 13 | **services-pricing-locked.md** (v2.0) | Full priced menu. GTT packages, window services, afternoon services, retail, cafe. | 15 min |
 | 14 | **extended-wellness-services.md** (v2.0) | GDM (simplified), belly casting, birth plan, IBCLC future, day spa expansion. | 15 min |
-| 15 | **bloom-baby-case-study.md** (v2.0) | 3D scan in-house strategy. Bloom Baby pricing benchmark. Train-up plan. TGA equipment. | 10 min |
-| 16 | **market-research-findings.md** (NEW) | MIWM operations, pathology fee, spray tan WA, belly cast pricing, lash pricing, hair colour pricing. | 10 min |
+| 15 | **market-research-findings.md** (NEW) | MIWM operations, pathology fee, spray tan WA, belly cast pricing, lash pricing, hair colour pricing. | 10 min |
 
 ---
 
@@ -90,7 +91,7 @@ GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" a
 | # | Document | What It Contains | Time |
 |---|----------|-----------------|------|
 | 24 | **team-startup.md** | 8 empire agents + all physical hires. When to hire each. Receptionist = first hire. | 10 min |
-| 25 | **staff-plan.md** | Staffing roster. Shift structure. 2-per-service-type at launch. | 10 min |
+| 25 | **staff-plan.md** | Staffing roster. CF-01 Day 51 shift structure: 2-per-service-type AM-only, receptionist/manager split shift, PM Service Therapist new hire. | 10 min |
 | 26 | **hr-framework.md** | Award obligations (MA000005, MA000002). Employment contracts. WorkSafe WA. | 15 min |
 | 27 | **phlebotomist-job-posting.md** | Phlebotomist job posting (Option B only). | 5 min |
 | 28 | **onboarding.md** | Staff and agent onboarding procedures. | 10 min |
@@ -153,6 +154,7 @@ GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" a
 | **agents.md** | Empire agent roster for this venture |
 | **inhouse-gtt-research.md** | ARCHIVED. In-house lab rejected. Do not pursue. |
 | **research-supplement-day48-ARCHIVED.md** | ARCHIVED. Merged into research.md v3.0. |
+| **bloom-baby-case-study.md** | ARCHIVED Day 51. 3D scan removed from scope entirely (no equipment, no operator, no subtenant) — see executive-summary.md "Services Removed". |
 
 ---
 
@@ -166,3 +168,4 @@ GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" a
 | Approve Reed to engage WDP/PathWest (+Clinipath contingency)? | Anthony + Imara | WEEK 1 |
 | Brand name — "GTT Center Perth" or premium? | Poppy + Anthony | Week 2 — still open, needs Anthony's input |
 | DVA adviser one-time consultation | Anthony | Not blocking — **CF-07 deferred Day 50, do alongside this when convenient** |
+| PM Spa Package ramp (M1=2/day -> M5+=6/day) — validate against live booking data once PM Service Therapist hired | Bruno | Month 1-5 — Lever 2 is the primary path to break-even (financial-break-even-staff.md); fallback is the price-sensitivity table in the same doc if PM volume underperforms |

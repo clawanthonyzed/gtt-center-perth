@@ -9,6 +9,8 @@
 
 > **⚠ SUPERSEDED further (Day 50):** Canonical shift structure (AM/PM cohorts, CF-01) is now defined in `financial-break-even-staff.md` v2.0 §Shift Structure (CF-01) — see also the AM/PM Shift Roster table below (§2A). Superannuation rate corrected to 12% throughout this document (IC-08 — 12% effective 1 July 2025, the final scheduled SG increase, and the current rate for FY2026).
 
+> **⚠ SUPERSEDED further (Day 51):** Package-pricing/staffing model now canonical — see `financial-break-even-staff.md` v2.0 §Shift Structure (CF-01) Day 51 revision and §Total Annual Payroll. 3D scan operator role removed entirely (no equipment, no subtenant). Dietitian removed (no dietitian at this stage). GTT Center Perth has no subtenants — Section 5 below no longer applies. AM service staff (2x Massage, 2x Nail, 2x Hairdresser, 2x Beauty, 2x Phlebotomist) are AM-only with no PM shift; Receptionist/Manager works a split shift (07:00-12:00 + 15:00-18:00); 1 new-hire PM Service Therapist (12:00-18:00) delivers PM Spa Packages. Total payroll A$713,067/yr (12 roles + A$15,000/yr relief pool). Section 2A below has been rewritten to this model.
+
 ---
 
 ## 1. EMPLOYMENT MODEL — CONFIRMED
@@ -19,9 +21,7 @@ All service delivery staff are **employed** by GTT Center Perth (YETI Holding Tr
 - Clerks Award MA000002 — reception
 - Directors/Managers — individual contracts above award
 
-**Not employed (sublet model retained):**
-- Keepsake ultrasound operator — own machine, own AHPRA/TGA obligations, own ABN
-- Dietitian (APD) — own Medicare billing rights, own ABN, room sublet
+GTT Center Perth has no subtenants (Day 51) — 3D scan operator and dietitian roles removed entirely.
 
 ---
 
@@ -44,30 +44,28 @@ YETI Holding Trust (Anthony Zed — Trustee)
                     │       ├── Nail Technician
                     │       └── Beauty Therapist / Brows
                     │
-                    ├── Receptionist / Customer Experience (reports to Imara)
+                    ├── Receptionist / Customer Experience (reports to Imara, split shift)
                     │
-                    └── External Subtenants (not employed — Room Licence Agreement)
-                            ├── Keepsake Ultrasound Operator
-                            └── Dietitian (APD)
+                    └── PM Service Therapist (new hire — PM Spa Packages, 12:00-18:00)
 ```
 
 ---
 
-## 2A. AM/PM SHIFT ROSTER (CF-01)
+## 2A. AM/PM SHIFT ROSTER (CF-01 — Day 51 revision)
 
-Same 12 staff, split into AM/PM cohorts — no new hires. Canonical detail: `financial-break-even-staff.md` v2.0 §Shift Structure (CF-01).
+12 roles total (11 AM-only/split-shift + 1 new PM hire), plus a relief pool. No AM/PM cohort doubling — the Day 50 "same 12 staff, split into cohorts" model is superseded (Anthony confirmed all 8 AM service staff plus both phlebotomists are needed simultaneously across the AM GTT window per the verified per-staff timetable). Canonical detail: `financial-break-even-staff.md` v2.0 §Shift Structure (CF-01) Day 51 revision.
 
-| Role | Qty | AM Cohort (07:00/07:30–13:00) | PM Cohort (12:00–18:00) |
+| Role | Qty | AM (07:00/07:30–13:00) | PM (12:00–18:00) |
 |---|---|---|---|
-| Receptionist/Manager | 1 | Full day 07:00–18:00 — bridges AM/PM | (same person) |
-| Phlebotomist | 2 | Both — GTT window 07:30–12:30 | — |
-| 3D Scan Operator | 1 | GTT-window scans | Remaining hours (20hr/wk total) — general public/Bloom Baby keepsake scans |
-| Pregnancy Massage Therapist | 2 | 1× — GTT clients (07:00–13:00) | 1× — standalone/day-spa bookings (12:00–18:00) |
-| Nail Technician | 2 | 1× — GTT clients (07:00–13:00) | 1× — standalone/day-spa bookings (12:00–18:00) |
-| Hairdresser | 2 | 1× — GTT clients (07:00–13:00) | 1× — standalone/day-spa bookings (12:00–18:00) |
-| Beauty Therapist/Brows | 2 | 1× — GTT clients (07:00–13:00) | 1× — standalone/day-spa bookings (12:00–18:00) |
+| Receptionist/Manager | 1 | 07:00–12:00 — opening, GTT coordination, AM checkout | 15:00–18:00 — PM Spa Package bookings, closing (break 12:00–15:00) |
+| Phlebotomist | 2 | Both — GTT window 07:30–12:30 | — (AM only, fasting requirement) |
+| Pregnancy Massage Therapist | 2 | Both — GTT clients (07:00–13:00) | — |
+| Nail Technician | 2 | Both — GTT clients (07:00–13:00) | — |
+| Hairdresser | 2 | Both — GTT clients (07:00–13:00) | — |
+| Beauty Therapist/Brows | 2 | Both — GTT clients (07:00–13:00) | — |
+| PM Service Therapist (new hire) | 1 | — | 12:00–18:00 — PM Spa Packages (Package 1/2/3, no testing) |
 
-1-hour overlap (12:00–13:00) for handover and GTT-running-late buffer. PM cohort serves the afternoon menu (standalone GTT-Wellness-equivalent bookings + `extended-wellness-services.md` Day Spa Expansion + spray tan/retail/cafe). Net payroll unchanged at A$675,589/yr — pure scheduling change.
+Downtime between AM bookings (17-33% utilisation) follows the Staff Downtime Protocol (`financial-break-even-staff.md`) — no PM shift for the 8 AM service staff. Casual relief pool (A$15,000/yr, not a fixed FTE) covers sick/holiday absences across all 12 roles. Total payroll A$713,067/yr (12 roles + relief pool) — up from A$675,589/yr (3D scan operator removed, PM Service Therapist + relief pool added).
 
 ---
 
@@ -82,7 +80,6 @@ Same 12 staff, split into AM/PM cohorts — no new hires. Canonical detail: `fin
 **Responsibilities:**
 - Venue operations: opening/closing procedures, daily checklist
 - Staff management: rostering, performance, Fair Work compliance
-- Sublet management: scan operator and dietitian relationships
 - Pathology partner liaison (WDP/PathWest daily coordination)
 - Booking oversight: Fresha calendar management
 - Financial: weekly P&L review, weekly staff payroll approval
@@ -262,29 +259,22 @@ Same 12 staff, split into AM/PM cohorts — no new hires. Canonical detail: `fin
 
 ---
 
-## 5. SUBTENANT INCOME (NOT EMPLOYED)
+## 5. SUBTENANT INCOME — REMOVED (Day 51)
 
-These roles remain on Room Licence Agreements — not employees.
-
-| Role | Weekly rent | Monthly income |
-|---|---|---|
-| Keepsake ultrasound operator | A$300/week | A$1,299 |
-| Dietitian (APD) | A$200/week | A$866 |
-| **Total** | **A$500/week** | **A$2,165/month** |
+GTT Center Perth has no subtenants. The 3D scan operator and dietitian sublet rows are removed entirely — see SUPERSEDED (Day 51) banner above.
 
 ---
 
 ## 6. BREAK-EVEN WITH EMPLOYED MODEL
 
-> **SUPERSEDED** — see financial-break-even-staff.md v2.0 for the current 12-role break-even (A$843,349/yr, ~32 services/day, post-Day-50 overhead reconciliation). Retained below for historical reference only. Superseded by `financial-break-even-staff.md` v2.0 — see banner above.
+> **SUPERSEDED** — see financial-break-even-staff.md v2.0 §Revenue Break-Even for the current Day 51 package-price model. Retained below for historical reference only.
 
-**Fixed monthly costs (all staff + operations):** ~A$26,500  
-**Less sublet income:** −A$2,165  
-**Net to cover from package revenue:** A$24,335  
-**Package revenue per visit (blended avg):** A$225  
-**Break-even visits:** A$24,335 ÷ A$225 = **108 visits/month = 25/week = 5/day**
+**Total break-even revenue (payroll + workers comp + overhead):** A$892,694/year (A$74,391/month)  
+**Package revenue per visit (blended avg, 30/40/30 mix):** A$250  
+**Total visits to break even:** A$892,694 ÷ A$250 = **3,571/year = 14.3/day = 298/month**  
+**Stable monthly Net P&L (Month 5+, 14 visits/day = 8 AM GTT + 6 PM Spa Packages):** +A$10,232/month
 
-*5 visits/day is the break-even. Capacity is 8 visits/day. Break-even is 63% utilisation.*
+*14 visits/day is the break-even (8 AM GTT + 6 PM Spa Packages = full daily capacity). Break-even is reached at the PM Spa Package ramp target (Month 5+, see cash-flow.md).*
 
 ---
 

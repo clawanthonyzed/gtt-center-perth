@@ -1,7 +1,9 @@
 # GTT Center Perth — Executive Summary
 
-**Version:** 1.1 | **Date:** 2026-06-10 (Day 50 financial reconciliation — see Financial Summary, Staffing Model, Pathology Model)
+**Version:** 1.2 | **Date:** 2026-06-11 (Day 51 package-pricing/staffing model — see Services Menu, Staffing Model, Shift Structure, Financial Summary)
 **Read this first. Contains the critical information from all 45 documents.**
+
+> **Day 51 update.** New package model: GTT Lounge/Wellness/Luxe → Package 1 (A$200) / Package 2 (A$250) / Package 3 (A$300), venue + lounge access bundled FREE into every package — no separate fee. 3D scan removed from scope entirely (no equipment, no operator, no subtenant). No dietitian. No-interrupt rule applies to ALL services unconditionally (no hairdressing exception). Staffing: 11 AM-only/split-shift staff + 1 new-hire PM Service Therapist (12:00-18:00) = A$713,067/yr payroll. Total daily capacity 14 visits (8 AM GTT + 6 PM Spa Packages, Month 5+). See `services-pricing-locked.md`, `financial-break-even-staff.md` v2.0, `staff-plan.md`, `cash-flow.md`.
 
 ---
 
@@ -9,7 +11,7 @@
 
 GTT Center Perth is WA's first dedicated Glucose Tolerance Test (GTT) + day spa + hairdresser + diabetes support centre.
 
-Pregnant women must sit in a clinic for 2–2.5 hours during their GTT test. GTT Center Perth makes that wait a premium experience: massage, facials, nails, hair, 3D keepsake scanning, spray tan, belly casting, and full hairdressing — all in one venue. The only service of its kind in Australia.
+Pregnant women must sit in a clinic for 2–2.5 hours during their GTT test. GTT Center Perth makes that wait a premium experience: massage, facials, nails, hair, spray tan, belly casting, and full hairdressing — all bundled into a Package (1/2/3) with free venue + lounge access. The only service of its kind in Australia.
 
 **Entity:** YETI Holding Trust, trading as GTT Center Perth
 **Corporate trustee:** YETI Tipi Holdings PTY LTD
@@ -21,11 +23,11 @@ Pregnant women must sit in a clinic for 2–2.5 hours during their GTT test. GTT
 
 ## The Only Direct Competitor
 
-**MIWM Melbourne** (miwm.com.au) — GP-led, Victoria only, single client at a time, no 3D scanning, no hairdressing, no spray tan.
+**MIWM Melbourne** (miwm.com.au) — GP-led, Victoria only, single client at a time, no hairdressing, no spray tan.
 
-GTT Center Perth advantages: multi-client concurrent scheduling (7–10 simultaneously), 3D keepsake scanning (unique in Australia with GTT), full day spa, full hairdressing, WA only.
+GTT Center Perth advantages: multi-client concurrent scheduling (8 simultaneously), set-package day spa model (Package 1/2/3, free venue + lounge), full hairdressing, WA only.
 
-**Marketing hook:** *"The only place in Australia where you can meet your baby face-to-face on the same day as your glucose test."*
+**Marketing hook:** *"The only place in Australia where your 2-hour glucose test wait becomes a day spa visit — not a waiting room."*
 
 ---
 
@@ -53,7 +55,7 @@ GTT Center Perth advantages: multi-client concurrent scheduling (7–10 simultan
 
 **Arrival:** Customers arrive 10–15 min before appointment. Appointment time = service start time.
 **Glucose drink:** Finished in the lounge (not collection room) — frees collection room for next client.
-**No-interrupt rule:** Blood draws do NOT interrupt services — EXCEPT hairdressing. Phlebotomist times draws around service completion.
+**No-interrupt rule:** Blood draws do NOT interrupt services — no exceptions, including hairdressing. Phlebotomist times draws around service completion.
 **Service windows:** 45 min + 10-min draw gap + 45 min = **90 usable service minutes per client**.
 
 ### Launch Model: Scenario B (8 clients, 20-min intervals, 2 chairs / 2 phlebotomists)
@@ -66,7 +68,7 @@ Peak concurrent: up to 8 clients across 2 chairs. Last client departs ~12:25. Sc
 
 ## Services Menu — Summary
 
-### GTT Window (during 2-hour wait)
+### GTT Window (during 2-hour wait, all <45 min, no-interrupt rule applies)
 
 | Service | Duration | Price | Staff |
 |---------|----------|-------|-------|
@@ -76,22 +78,22 @@ Peak concurrent: up to 8 clients across 2 chairs. Last client departs ~12:25. Sc
 | Gel pedicure | 50 min | A$80 | Nail tech |
 | Brow wax + tint | 25 min | A$55 | Beauty therapist |
 | Lash lift + tint | 45 min | A$95 | Beauty therapist |
-| Blowdry | 30–45 min | A$65–80 | Hairdresser (interruptible) |
-| Haircut | 30–45 min | A$60–85 | Hairdresser (interruptible) |
-| 3D scan — Standard | 30 min | A$89 | Scan operator |
-| 3D scan — Deluxe | 45 min | A$129 | Scan operator |
+| Blowdry | 30–45 min | A$65–80 | Hairdresser |
+| Haircut | 30–45 min | A$60–85 | Hairdresser |
 
 ### Afternoon / Standalone Only
 
-Spray tan (A$60), belly casting (A$250+), hair colour (A$130–400), eyelash extensions (A$140–280), all services >60 min.
+Spray tan (A$60), belly casting (A$250+), hair colour (A$130–400), eyelash extensions (A$140–280), Cut+blowdry (A$95), Scalp treatment+blowdry (A$90), all services >45 min.
 
-### GTT Packages
+### Packages (Day 51 — locked structure, prices reviewable)
 
 | Package | Inclusions | Price |
 |---------|-----------|-------|
-| GTT Lounge | Lounge access, water, herbal tea, GTT coordination, birth plan tablet — no additional services | A$25 |
-| GTT Wellness (default) | Lounge + 2 × 45-min services (massage, facial, gel mani/pedi, brow lamination, lash lift+tint, or hair treatment) | A$225 flat |
-| GTT Luxe | Lounge + standard pregnancy massage (45 min) + signature pregnancy facial (45 min) + 3D scan Standard (30 min) | A$325 flat |
+| Package 1 | Venue + lounge access (free) + any 2 × 30-min services | A$200 flat |
+| Package 2 | Venue + lounge access (free) + 1 × 30-min + 1 × 45-min service | A$250 flat |
+| Package 3 | Venue + lounge access (free) + any 2 × 45-min services | A$300 flat |
+
+No separate venue/lounge fee anywhere — every package bundles free venue + lounge access. Same Package 1/2/3 menu sold both as AM GTT packages and as PM Spa Packages (afternoon, no testing). Package mix assumption (30/40/30) → blended avg **A$250/visit**.
 
 Discount policy: **10% online pre-booking discount** on afternoon/standalone services booked at the same time as a GTT reservation. No discount on in-center upsells (add-ons, cafe, retail, spray tan) — full price applies on the day.
 Morning slots: **GTT clients have priority** until 10:00am.
@@ -104,45 +106,50 @@ Staff employed (casual/part-time). All service revenue flows to GTT Center Perth
 
 | Role | Qty | Annual Cost | Break-even |
 |------|-----|-------------|-----------|
-| Receptionist/Manager (multi-role) | 1 | A$56,237 | 9 services/week |
+| Receptionist/Manager (split shift) | 1 | A$56,237 | 9 services/week |
 | Massage therapist | 2 | A$62,774 each | 2 massages/day |
 | Nail technician | 2 | A$60,456 each | 3 gel nails/day |
 | Hairdresser | 2 | A$60,456 each | 3 blowdrys/day |
 | Beauty therapist | 2 | A$62,774 each | 2 facials/day |
-| 3D scan operator | 1 | A$40,296 | 2 scans/day |
+| PM Service Therapist (new hire) | 1 | A$62,774 | 2 PM packages/day |
 | Phlebotomist (Chair A / Chair B) | 2 | A$43,068 each | n/a — enables GTT throughput |
-| **Total payroll (12 staff)** | | **A$675,589/yr** | |
+| **Total payroll (12 staff)** | | **A$698,067/yr** | |
+| Casual relief pool (sick/holiday cover) | — | A$15,000/yr | — |
+| **Total payroll + relief** | | **A$713,067/yr** | |
 
 **Receptionist/Manager = first hire. Everything else waits for this role to be filled.**
 
-The receptionist role covers: reception, sales, barista, food service, clinic assistant, day-to-day manager.
+The receptionist/manager role covers: reception, sales, barista, food service, clinic assistant, day-to-day manager — split shift (07:00-12:00 + 15:00-18:00).
 
 ### Staff Downtime
 When no client booked: room prep + restock, cross-training, social media content, product training, assist reception. No unstructured downtime.
 
-### Shift Structure (CF-01, Day 50)
-Same 12 staff, split into AM/PM cohorts — no new hires, payroll unchanged at A$675,589/yr. Phlebotomists ×2 + 3D scan operator: AM (GTT window). Receptionist/Manager: full day, bridges AM/PM. Massage/Nail/Hairdresser/Beauty (2 each): one of each pair works AM (serves GTT clients), the other PM (serves standalone afternoon/day-spa bookings), with a 1-hour overlap for handover. This AM/PM split is what unlocks the afternoon/ancillary revenue in the Financial Summary above. See `financial-break-even-staff.md` v2.0 §Shift Structure and `staff-plan.md` §2A AM/PM Shift Roster.
+### Shift Structure (CF-01, Day 51 revision)
+11 of the 12 roles work AM-only or split shift — no AM/PM cohort doubling (Day 50 model superseded; Anthony confirmed all 8 AM service staff + both phlebotomists are needed simultaneously across the AM GTT window). Phlebotomists ×2, Massage ×2, Nail ×2, Hairdresser ×2, Beauty ×2: AM only (07:00/07:30-13:00), serving the 8 AM GTT clients. Receptionist/Manager ×1: split shift (AM 07:00-12:00 + PM 15:00-18:00). PM Service Therapist ×1 (NEW HIRE): 12:00-18:00, delivers PM Spa Packages (Package 1/2/3, no testing) to standalone afternoon clients. Casual relief pool (A$15,000/yr) covers sick/holiday absences across all 12 roles. See `financial-break-even-staff.md` v2.0 §Shift Structure (CF-01) Day 51 revision and `staff-plan.md` §2A AM/PM Shift Roster.
 
 ---
 
 ## Financial Summary
 
-> **⚠ Day 50 Reconciliation:** the figures below replace the Day-48 estimates. The old fixed-cost base (A$39,523/mo, from `financial-model.md`) didn't match the actual 12-staff payroll (A$56,299/mo @ 12% super) — true monthly fixed costs are **A$71,236** (A$854,832/yr). New ancillary revenue (spray tan/retail/cafe, +A$8,167/mo, unlocked by the AM/PM shift split — see Staffing Model below) partly offsets this. Net effect: stable-month profit falls from the old +A$29,192/mo estimate to **+A$5,646/mo** (`cash-flow.md` v1.0), and annual net margin falls from ~10.6% to ~2.8%. The venture remains profitable but the margin for error is thin. `cash-flow.md` v1.0 and `financial-break-even-staff.md` v2.0 are canonical; `financial-model.md` is superseded.
+> **⚠ Day 51 Reconciliation:** the figures below replace the Day-50 estimates. 3D scan operator (A$40,296/yr) removed; PM Service Therapist (new hire, A$62,774/yr) + casual relief pool (A$15,000/yr) added — payroll rises from A$675,589/yr to **A$713,067/yr**. All revenue/break-even now uses Package 1/2/3 prices (no separate A$25 venue fee). At launch (PM ramp 2-3/day), the model is loss-making (~-13.6% — see `financial-break-even-staff.md` §Revenue Break-Even); Lever 2 (growing PM Spa Packages to 6/day by Month 5) closes the gap. Figures below are the **Month 5+ steady-state** (14 visits/day = 8 AM GTT + 6 PM Spa Packages). `cash-flow.md` v1.0, `financial-model.md` v2.0, and `financial-break-even-staff.md` v2.0 are canonical.
 
 | Metric | Figure |
 |--------|--------|
-| Total payroll (12 staff) | A$675,589/yr |
-| Total overhead (rent, utilities, consumables, insurance, marketing, workers comp) | A$167,760/yr (A$13,980/mo non-wage + A$957/mo workers comp) |
-| Total costs | A$843,349/yr |
-| Break-even revenue | A$843,349/yr |
-| Break-even services/day | ~32 services/day |
-| Projected revenue (incl. afternoon/ancillary) | A$868,000/yr |
-| Projected net margin | A$24,651/yr (~2.8%) |
+| Total payroll (12 staff incl. relief pool) | A$713,067/yr |
+| Workers comp (1.7% of payroll) | A$11,867/yr |
+| Non-wage overhead (rent, utilities, consumables, insurance, marketing, etc.) | A$167,760/yr |
+| **Total fixed costs (break-even revenue)** | **A$892,694/yr (A$74,391/month)** |
+| AM GTT package revenue (8/day × 250 days, A$250 blended avg) | A$500,000/yr (A$44,000/mo) |
+| PM Spa Package revenue (Month 5+, 6/day × 250 days, A$250 blended avg, ramping from 2/day Month 1) | A$375,000/yr (A$33,000/mo) |
+| Cafe + retail (ancillary, ~A$24.75/visit × 308 visits/mo) | A$91,476/yr (A$7,623/mo) |
+| **Total revenue (Month 5+ steady state)** | **A$1,015,476/yr (A$84,623/mo)** |
+| **Net P&L (Month 5+)** | **+A$122,784/yr (+A$10,232/mo, ~12.1% margin)** |
+| Break-even visits | 298/month = 14.3/day |
 | Equipment budget | A$49,300–114,700 |
 
-Revenue streams: GTT venue fee (A$25/patient) + service revenue + afternoon services (AM/PM shift split, no new hires — see Staffing Model) + spray tan (A$4,833/mo) + retail (A$2,083/mo) + cafe (A$1,250/mo).
+Revenue streams (Day 51): AM GTT packages (Pkg 1/2/3, free venue + lounge) + PM Spa Packages (same Pkg 1/2/3 menu, no testing, PM Service Therapist) + spray tan + retail + cafe. No separate venue/lounge fee anywhere.
 
-`cash-flow.md` v1.0's month-by-month model differs slightly (stable Net P&L A$5,646/mo = A$67,752/yr) due to workers comp and revenue-stream phasing — both confirm a profitable but thin (~3-8%) margin.
+A 30% trust-distribution tax (proposed in the national budget, not yet legislated) is incorporated into `financial-model.md` v2.0's post-tax figures — see that document for after-tax distributable surplus.
 
 ---
 
@@ -159,19 +166,6 @@ Revenue streams: GTT venue fee (A$25/patient) + service revenue + afternoon serv
 One-time DVA adviser consult recommended but NOT a blocking gate. Business planning and lease signing can proceed.
 
 **CF-07 (Day 50): deferred, not blocking at this stage.** Salary vs trust-distribution split for Imara/Anthony not reviewed this pass — revisit alongside the DVA adviser consult above (see `reading-order.md` Open Decisions).
-
----
-
-## 3D Scanning — In-House Strategy
-
-Equipment: Refurbished SonoScape S20 or Mindray DC-80 from TGA-registered Australian distributor (or Chinese OEM with ARTG listing — must verify before purchase). Budget: A$8,000–25,000.
-
-Pricing matches Bloom Baby (Perth market leader, 1,000+ 5-star reviews):
-- Peek A$49 / Standard A$89 / Deluxe A$129
-
-Launch: Hire experienced scan operator OR train up existing staff member. Offer **free scanning opening week** — builds supervised scan count (50–200 required before independent work) AND generates marketing buzz.
-
-Operator must NEVER say "everything looks healthy" or any diagnostic statement. Keepsake only.
 
 ---
 
@@ -238,9 +232,9 @@ Does NOT offer: meal plans, NDSS registration, APD consultations (deferred indef
 - Perinatal mental health screening (EPDS) — staff not qualified to manage positive screens
 - Men's preconception health
 - Maternity photography
-- APD-led dietary services / NDSS registration
+- APD-led dietary services / NDSS registration / dietitian (no dietitian at this stage)
 - Room rental model (replaced by staff employment)
-- Bloom Baby as subtenant (replaced by in-house 3D scanning)
+- 3D keepsake scanning (Day 51 — removed from scope entirely; no equipment, no operator, no subtenant)
 
 ---
 
@@ -273,7 +267,8 @@ Does NOT offer: meal plans, NDSS registration, APD consultations (deferred indef
 
 - Perth metro: ~14,400 births/year = ~14,400 GTT tests/year = **~277 GTT tests/week**
 - GDM diagnosis rate: 18% = ~2,600 Perth women/year
-- GTT Center Perth capacity: 8–10 bookings/day = 40–50/week = **14.4–18% of Perth GTT market** at full capacity
+- GTT Center Perth GTT capacity: 8 bookings/day (Scenario B) = 40/week = **14.4% of Perth GTT market** at full AM capacity (Scenario A, 10/day deferred = 50/week = 18%)
+- Total daily venue capacity (Day 51): 14 visits/day = 8 AM GTT + 6 PM Spa Packages (general public, non-GTT)
 - No direct WA competitor exists
 
 ---
@@ -281,11 +276,10 @@ Does NOT offer: meal plans, NDSS registration, APD consultations (deferred indef
 ## Hard Rules (Non-Negotiable)
 
 1. **NO IN-HOUSE LAB. EVER.** GTT Center Perth collects specimens; PathWest/WDP analyses them.
-2. **No diagnostic statements** from scan operators, ever.
-3. **No perinatal mental health screening** — staff not qualified.
-4. **Hair services only** can be interrupted for the 1-hour blood draw.
-5. **Centrifuge NaF tubes within 10 minutes** of collection.
-6. **GTT clients have priority** for morning service slots (before 10:00am).
-7. **Spray tan not offered on GTT test day** for pregnant clients.
-8. **No TGA-unregistered medical equipment** (ultrasound, TENS) — Australian ARTG listing required.
-9. **Late arrival >10 minutes** for a booked GTT slot = forfeited slot + A$30 deposit forfeited; client rebooked, not squeezed into the existing schedule.
+2. **No perinatal mental health screening** — staff not qualified.
+3. **No service is ever interrupted** for blood draws — no exceptions, including hairdressing. Phlebotomist times draws around service completion.
+4. **Centrifuge NaF tubes within 10 minutes** of collection.
+5. **GTT clients have priority** for morning service slots (before 10:00am).
+6. **Spray tan not offered on GTT test day** for pregnant clients.
+7. **No TGA-unregistered medical equipment** (ultrasound, TENS) — Australian ARTG listing required.
+8. **Late arrival >10 minutes** for a booked GTT slot = forfeited slot + A$30 deposit forfeited; client rebooked, not squeezed into the existing schedule.

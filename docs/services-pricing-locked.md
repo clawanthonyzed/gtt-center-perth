@@ -21,26 +21,29 @@
 
 ## GTT PACKAGES
 
-The pathology fee (PathWest/WDP) is billed separately to Medicare. The venue package fee covers lounge access, GTT coordination, welcome, and post-test care.
+> **Day 51 model.** Replaces GTT Lounge/Wellness/Luxe (v2.0). Structure locked by Anthony — prices negotiable. No package is sold lounge-only: venue + lounge access is FREE and bundled into all 3 packages, no separate fee.
 
-> **Note on pathology fee:** Contact PathWest (08 6383 4234) and Western Diagnostics Pathology for exact out-of-pocket and collection fee structure before finalising package pricing. Amounts below are estimates pending confirmation.
+The pathology fee (PathWest/WDP) is billed separately to Medicare. Venue + lounge access (water, herbal tea, GTT coordination, birth plan tablet) is included free in every package.
 
-The verified capacity timetable (operations-manual.md) gives every GTT client two 45-min service slots (Service 1 and Service 2) by default. Packages below reflect this as the standard offer, with a no-service option retained for clients who decline.
+> **Note on pathology fee:** Contact PathWest (08 6383 4234) and Western Diagnostics Pathology for exact out-of-pocket and collection fee structure before finalising package pricing.
+
+The verified capacity timetable (operations-manual.md) gives every GTT client two service slots (Service 1: X+15 to X+60, Service 2: X+80 to X+125 — 45 min each, no draw interrupts either slot). Packages below set the price by service duration/value within those slots — clients can use less than the full 45 min per slot (e.g. a 30-min service leaves slack inside the slot).
 
 | Package | Inclusions | Price |
 |---------|-----------|-------|
-| GTT Lounge | Lounge access, water, herbal tea, GTT coordination, birth plan tablet — no additional services | A$25 |
-| GTT Wellness (default) | Lounge + 2 × 45-min services, choice of one per slot from: standard pregnancy massage, signature pregnancy facial, gel mani/pedi (45–55 min), brow lamination, lash lift + tint, or hair treatment (blowdry/hair mask, 45 min) | A$225 flat |
-| GTT Luxe | Lounge + standard pregnancy massage (45 min) + signature pregnancy facial (45 min) + 3D scan Standard (30 min, scheduled around services) | A$325 flat |
+| Package 1 | Venue + lounge access (free) + any 2 × 30-min services from the GTT window menu (Part A) — or a combo of services totalling under A$200 | A$200 flat |
+| Package 2 | Venue + lounge access (free) + 1 × 30-min service + 1 × 45-min service from the GTT window menu — or a combo totalling under A$250 | A$250 flat |
+| Package 3 | Venue + lounge access (free) + any 2 × 45-min services from the GTT window menu — or a combo totalling under A$300 | A$300 flat |
 
-*Inclusions appear free (lounge, tea, birth plan tablet) — bundled into package price.*
-*GTT Wellness service choices are capacity-balanced: each option is staffed by Massage, Beauty, Nails, or Hair across the 2 service slots, matching the verified per-staff timetable.*
+*All GTT services (the wellness services delivered in the two service slots) are 45 minutes or under — no GTT-window service exceeds 45 min of active time.*
+*Venue/lounge inclusions appear free — bundled into package price. No separate venue/lounge fee exists.*
+*Every GTT visit sells one of these 3 packages — financial models must use these package prices, not individual service prices.*
 
 ---
 
 ## PART A: GTT WINDOW SERVICES
 
-*Available during the 2-hour GTT wait. Patient must remain on-site. Services scheduled around blood draws — not interrupted (except hairdressing).*
+*Available during the 2-hour GTT wait. Patient must remain on-site. No-interrupt rule: bloods, Service 1, bloods, Service 2, bloods — services fill the gaps between draws and are NEVER interrupted by a draw (no exceptions, including hairdressing). All services here are 45 min or under so they fit cleanly inside a service slot.*
 
 ---
 
@@ -138,45 +141,37 @@ The verified capacity timetable (operations-manual.md) gives every GTT client tw
 
 **Staff:** 2 × Hairdresser (Cert III SHB30116)
 
-**NOTE: Hair services are the ONLY GTT-window service that CAN be interrupted for the 1-hour blood draw.**
+**GTT Window: 30 min and 45 min only — same no-interrupt rule as all other services (§ Part A intro).**
 
 | Service | Duration | Price |
 |---------|----------|-------|
 | Blowdry (short–medium hair) | 30 min | A$65 |
 | Blowdry (long hair) | 45 min | A$80 |
 | Haircut (excluding colour) | 30–45 min | A$60–85 |
-| Cut + blowdry | 60 min | A$95 |
-| Scalp treatment + blowdry | 50 min | A$90 |
 | Pregnancy-safe hair mask + blowdry | 45 min | A$85 |
 | Braiding / hair up | 30–45 min | A$60–75 |
 
-*Cuts and blowdrys only during GTT window. No chemical treatments during GTT visit.*
-
----
-
-### 6. 3D KEEPSAKE ULTRASOUND
-
-**Staff:** 1 × 3D Scan Operator (trained, 50–200 supervised scans minimum)
-**Pricing matches Bloom Baby market rate.**
-
-| Service | Duration | Price |
-|---------|----------|-------|
-| Peek package (5–10 photos) | 20 min | A$49 |
-| Standard (photos + video clip) | 30 min | A$89 |
-| Deluxe (HD photos + full video + gender reveal) | 45 min | A$129 |
-| Add-on: USB keepsake | — | +A$25 |
-| Add-on: print pack (4 × 6 photos) | — | +A$20 |
-
-*Best booking window: 28–32 weeks. Darkened room required. Family members welcome.*
-*NEVER make diagnostic statements. Keepsake only.*
+*Cut + blowdry (60 min) and scalp treatment + blowdry (50 min) exceed the 45-min GTT slot — afternoon/standalone bookings only (Part B).*
+*No chemical treatments during GTT visit.*
 
 ---
 
 ## PART B: AFTERNOON / STANDALONE SERVICES
 
-*Not available during GTT window. Bookable as separate sessions or afternoon slots.*
+*GTT pathology testing is AM-only (fasting requirement) — no testing in the afternoon. But every other service runs in the afternoon: the full Part A GTT-window menu (massage, facials, nails, brows/lashes, hairdressing) is available as standalone "PM Spa Packages" using the same Package 1/2/3 pricing (no testing, no GTT slot needed), PLUS the longer standalone-only services below (spray tan, hair colour, lash extensions, belly casting, and the 60-min/50-min hairdressing services that exceed the 45-min GTT slot).*
 
 *10% online pre-booking discount applies when booked at the same time as a GTT reservation. Full price applies for in-center/same-day upsells.*
+
+---
+
+### Hairdressing — Afternoon Extras
+
+**Staff:** Hairdresser (Cert III SHB30116) — afternoon only, exceeds 45-min GTT slot
+
+| Service | Duration | Price |
+|---------|----------|-------|
+| Cut + blowdry | 60 min | A$95 |
+| Scalp treatment + blowdry | 50 min | A$90 |
 
 ---
 

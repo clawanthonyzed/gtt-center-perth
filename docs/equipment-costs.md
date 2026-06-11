@@ -1,7 +1,9 @@
 # GTT Center Perth — Equipment Costs: Complete List
 
-**Version:** 1.0 | **Date:** 2026-06-09
+**Version:** 1.1 | **Date:** 2026-06-11
 **Purpose:** Full equipment purchase list for all services at launch. Fit-out (construction) costs are separate.
+
+> **Day 51 update.** 3D keepsake scan removed from scope entirely (no subtenant, no Phase 2 purchase) — see `services-pricing-locked.md`. The 3D Keepsake Ultrasound section and the 3D scanner Phase 2 line item have been removed.
 
 ---
 
@@ -11,7 +13,6 @@
 |----------|-------------|--------------|
 | Pathology collection room | A$7,800 | A$13,200 |
 | Spray tan booth | A$2,500 | A$6,000 |
-| 3D keepsake scan (Phase 2 — see note) | A$0 | A$0 (Bloom Baby subtenant at launch) |
 | Nail station | A$5,000 | A$14,000 |
 | Massage rooms (x2) | A$4,000 | A$10,000 |
 | Hair station | A$3,000 | A$7,000 |
@@ -24,7 +25,6 @@
 | Consumables (opening stock) | A$3,000 | A$6,000 |
 | **TOTAL EQUIPMENT** | **A$49,300** | **A$114,700** |
 | Fit-out (construction, NOT equipment) | A$150,000 | A$280,000 |
-| 3D scanner (if purchased, Phase 2) | A$12,000 | A$25,000 |
 
 ---
 
@@ -67,28 +67,7 @@
 
 ---
 
-## 3. 3D Keepsake Ultrasound (Phase 2 — In-House)
-
-**LAUNCH PLAN: Use Bloom Baby Ultrasound as subtenant. Zero capex at launch.**
-
-Phase 2 purchase (Month 6+ when volume justifies):
-| Item | Qty | Unit Price | Total |
-|------|-----|------------|-------|
-| 3D/4D ultrasound machine (refurb SonoScape S20 or Mindray DC-80, TGA-registered AU distributor) | 1 | A$12,000-25,000 | A$12,000-25,000 |
-| OB convex probe (3.5-5 MHz) | 1 | A$2,000-5,000 | A$2,000-5,000 |
-| 60" display TV for scan room (client viewing) | 1 | A$800-1,500 | A$800-1,500 |
-| HDMI cable + wall mount | 1 | A$100-200 | A$100-200 |
-| USB drives (for image delivery to clients) | 50 | A$3-5 each | A$150-250 |
-| Patient recliner chair (scan room) | 1 | A$400-800 | A$400-800 |
-| Family viewing chairs | 4 | A$100-200 | A$400-800 |
-| Staff training (UltrasoundTrainers.com) | 1 operator | A$1,500-4,000 | A$1,500-4,000 |
-| **3D scanner TOTAL (Phase 2)** | | | **A$17,350-37,550** |
-
-**TGA NOTE:** All ultrasound machines must be ARTG-registered and purchased from a TGA-registered Australian distributor. Direct China import without TGA registration = illegal supply of medical device. See hire-purchase-china.md.
-
----
-
-## 4. Nail Station (2 nail techs, 2 stations)
+## 3. Nail Station (2 nail techs, 2 stations)
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
@@ -110,7 +89,7 @@ Phase 2 purchase (Month 6+ when volume justifies):
 
 ---
 
-## 5. Massage Rooms (x2)
+## 4. Massage Rooms (x2)
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
@@ -127,7 +106,7 @@ Phase 2 purchase (Month 6+ when volume justifies):
 
 ---
 
-## 6. Hair Station
+## 5. Hair Station
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
@@ -143,7 +122,7 @@ Phase 2 purchase (Month 6+ when volume justifies):
 
 ---
 
-## 7. Lounge and Common Areas
+## 6. Lounge and Common Areas
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
@@ -165,7 +144,7 @@ Phase 2 purchase (Month 6+ when volume justifies):
 
 ---
 
-## 8. Cafe and Partner Area
+## 7. Cafe and Partner Area
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
@@ -179,7 +158,7 @@ Phase 2 purchase (Month 6+ when volume justifies):
 
 ---
 
-## 9. Technology
+## 8. Technology
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
@@ -195,7 +174,7 @@ Phase 2 purchase (Month 6+ when volume justifies):
 
 ---
 
-## 10. Hire Fleet (Items Hired to Customers)
+## 9. Hire Fleet (Items Hired to Customers)
 
 **TGA note:** TENS machines must be ARTG-registered. Purchase from Australian registered suppliers only.
 
@@ -218,7 +197,7 @@ Phase 2 purchase (Month 6+ when volume justifies):
 
 ---
 
-## 11. China Sourced Branded Stock (Retail + Hire Buffer)
+## 10. China Sourced Branded Stock (Retail + Hire Buffer)
 
 | Item | Qty | China landed cost | Total |
 |------|-----|-------------------|-------|
@@ -232,7 +211,7 @@ Phase 2 purchase (Month 6+ when volume justifies):
 
 ---
 
-## 12. Emergency and Safety Equipment
+## 11. Emergency and Safety Equipment
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
@@ -247,7 +226,7 @@ Phase 2 purchase (Month 6+ when volume justifies):
 
 ---
 
-## 13. Opening Consumables Stock
+## 12. Opening Consumables Stock
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
@@ -273,7 +252,6 @@ Phase 2 purchase (Month 6+ when volume justifies):
 | Month 2-3 | Spray tan booth, nail station, massage tables, hair station | Allow 4-8 weeks delivery for China-sourced items |
 | Month 3 | Hire fleet stock, China branded items, consumables opening stock | 4 weeks before opening |
 | Month 4 | Final checks, emergency equipment, any missing items | 1-2 weeks before opening |
-| Month 6+ | 3D scanner (if bringing in-house), additional staff equipment | After volume data from Bloom Baby |
 
 ---
 

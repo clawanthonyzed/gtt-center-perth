@@ -3,6 +3,8 @@
 **Version:** 1.0 | **Date:** 2026-06-05  
 **Owner:** Grace (Operations Manager agent) | Imara (Venue Manager, day-to-day authority)
 
+> **Day 51 update.** No-interrupt rule now applies to ALL services unconditionally — no hairdressing exception (see §GTT Scheduling Timetables Key Rules). 3D scan operator removed from the Scenario B timetable; Client 5's Service 2 is now Nails (N2). GTT Center Perth has no subtenants — all subtenant-rent references removed (see staff-plan.md). Receptionist/Manager works a split shift, AM block 07:00-12:00 + PM block 15:00-18:00 (see financial-break-even-staff.md CF-01).
+
 ---
 
 ## 1. DAILY OPERATIONS CADENCE
@@ -83,7 +85,6 @@
 ### Monday
 - Weekly staff meeting (15 min): previous week's bookings, feedback, issues, this week's schedule
 - Imara reviews weekly P&L (previous week completed)
-- Subtenant invoice check: scan operator and dietitian paid their room rent this week?
 - Payroll: weekly pay run via Xero (pay day Friday — process Monday–Tuesday)
 
 ### Wednesday
@@ -98,7 +99,7 @@
 - Fresha weekly report emailed to Bruno (Finance agent) and Anthony
 
 ### Monthly (first Monday)
-- Full financial review: P&L vs target, staff costs, subtenant income, marketing spend
+- Full financial review: P&L vs target, staff costs, marketing spend
 - Bruno (Finance): produce monthly management accounts
 - Fern (HR): any HR actions, upcoming leave, compliance checks
 - Cora (Clinical): clinical compliance review, stock audit, phlebotomist credential check
@@ -195,7 +196,6 @@ Never accept a 9th booking without confirming chair/staff cover via the Scenario
 ### Financial Quality
 - Fresha daily report matches actual payments processed (Imara spot-check weekly)
 - No walkouts without payment — all payments processed at end of visit
-- Subtenant rent: if not received by Wednesday of each week, reminder sent Thursday, escalate to Imara Friday
 
 ---
 
@@ -254,13 +254,12 @@ Never accept a 9th booking without confirming chair/staff cover via the Scenario
 
 | Metric | Target | Alert threshold |
 |---|---|---|
-| Bookings/week | 25+ (break-even) | < 20 (loss-making) |
+| Bookings/week | 69+ (break-even, ~298 visits/month — financial-break-even-staff.md) | < 55 (loss-making) |
 | Show rate (attended vs booked) | > 90% | < 85% |
-| Package avg ticket | > A$200 | < A$160 |
+| Package avg ticket | > A$250 (blended Pkg1/2/3 avg) | < A$200 (below Package 1 floor) |
 | Google review count | +5/week | < 2/week |
 | Specimen rejection rate | < 1% | > 2% |
 | Staff attendance rate | 100% | Any call-out within 1 hour of shift |
-| Subtenant rent collected | 100% weekly | Any outstanding >7 days |
 
 
 ---
@@ -283,13 +282,13 @@ Relative to each client's booked GTT start time (X):
 
 - Customers arrive 10-15 min before X for fasting/Medicare check-in
 - Glucose drink is completed in the collection room (per pathology-collection-room.md Patient Pathway); patient exits to lounge/treatment area at X+15
-- Services do NOT get interrupted for blood draws -- EXCEPT hairdressing (draw can interrupt hair services; resume immediately after)
+- Services do NOT get interrupted for blood draws -- no exceptions, including hairdressing (services-pricing-locked.md Part A)
 - 2 collection chairs (Chair A / Chair B) + 2 phlebotomists from Day 1. Chair A takes odd-numbered clients (1/3/5/7), Chair B takes even-numbered (2/4/6/8). Each chair handles 4 clients at 40-min spacing.
 - This pathway matches gtt-clinical-protocol.md's T+60(±5)/T+120(±10) clinical rule and pathology-collection-room.md's Patient Pathway (T+75/T+135 from arrival).
 
 ### Scenario B -- 8-Client Launch Timetable (LAUNCH MODEL, 20-min arrival intervals)
 
-2 chairs / 2 phlebotomists / 9 service staff (2x Massage, 2x Beauty, 2x Nails, 2x Hair, 1x 3D Scan). Verified Day 49 -- no staff double-booked. One real-time adjustment: Client 1's Draw 2 shifted from its 08:55 target to 08:50 (within ±5min tolerance) to avoid colliding with Client 5's Draw 1 at 09:00 on Chair A.
+2 chairs / 2 phlebotomists / 8 service staff (2x Massage, 2x Beauty, 2x Nails, 2x Hair). Verified Day 49 -- no staff double-booked. One real-time adjustment: Client 1's Draw 2 shifted from its 08:55 target to 08:50 (within ±5min tolerance) to avoid colliding with Client 5's Draw 1 at 09:00 on Chair A. Day 51: Client 5's Service 2 reassigned from 3D Scan (removed) to Nails (N2).
 
 **Per-client view (actual clock times):**
 
@@ -299,7 +298,7 @@ Relative to each client's booked GTT start time (X):
 | 2 | B | 08:00-08:15 | 08:15-09:00 -- Beauty (B1) | 09:15-09:20 | 09:20-10:05 -- Hair (H2) | 10:15-10:20 | ~10:25 |
 | 3 | A | 08:20-08:35 | 08:35-09:20 -- Nails (N1) | 09:35-09:40 | 09:40-10:25 -- Massage (M1) | 10:35-10:40 | ~10:45 |
 | 4 | B | 08:40-08:55 | 08:55-09:40 -- Hair (H1) | 09:55-10:00 | 10:00-10:45 -- Beauty (B1) | 10:55-11:00 | ~11:05 |
-| 5 | A | 09:00-09:15 | 09:15-10:00 -- Massage (M2) | 10:15-10:20 | 10:20-11:05 -- 3D Scan (SC1) | 11:15-11:20 | ~11:25 |
+| 5 | A | 09:00-09:15 | 09:15-10:00 -- Massage (M2) | 10:15-10:20 | 10:20-11:05 -- Nails (N2) -- Gel manicure (45min) | 11:15-11:20 | ~11:25 |
 | 6 | B | 09:20-09:35 | 09:35-10:20 -- Beauty (B2) | 10:35-10:40 | 10:40-11:25 -- Hair (H2) | 11:35-11:40 | ~11:45 |
 | 7 | A | 09:40-09:55 | 09:55-10:40 -- Hair (H1) | 10:55-11:00 | 11:00-11:45 -- Massage (M2) | 11:55-12:00 | ~12:05 |
 | 8 | B | 10:00-10:15 | 10:15-11:00 -- Nails (N1) | 11:15-11:20 | 11:20-12:05 -- Beauty (B2) | 12:15-12:20 | ~12:25 |
@@ -315,15 +314,14 @@ Relative to each client's booked GTT start time (X):
 | Beauty 1 (B1) | 08:15-09:00 (C2), 10:00-10:45 (C4) | Free 09:00-10:00, free 10:45-end |
 | Beauty 2 (B2) | 09:35-10:20 (C6), 11:20-12:05 (C8) | Free 07:40-09:35, free 10:20-11:20 |
 | Nail Tech 1 (N1) | 08:35-09:20 (C3), 10:15-11:00 (C8) | Free 09:20-10:15, free 11:00-end |
-| Nail Tech 2 (N2) | 09:00-09:45 (C1) | Free rest of morning -- available for general-public/walk-in fill |
+| Nail Tech 2 (N2) | 09:00-09:45 (C1), 10:20-11:05 (C5) | Free 09:45-10:20, free 11:05-end |
 | Hairdresser 1 (H1) | 08:55-09:40 (C4), 09:55-10:40 (C7) | Free 09:40-09:55, free 10:40-end |
 | Hairdresser 2 (H2) | 09:20-10:05 (C2), 10:40-11:25 (C6) | Free 10:05-10:40, free 11:25-end |
-| 3D Scan (SC1, subtenant) | 10:20-11:05 (C5) | Free rest of morning -- available for general-public bookings |
-| Receptionist | Continuous 07:25-12:30 | Greets arrivals, runs Draw 2/Draw 3 recall, checkout, payments |
+| Receptionist/Manager | AM block 07:00-12:00 (split shift -- PM block 15:00-18:00 for PM Spa Packages, see CF-01) | Greets arrivals, runs Draw 2/Draw 3 recall, checkout, payments |
 
 **Notes:**
 - Chair utilization ~30% per chair (40min busy / ~270min window) -- comfortable headroom for ±5/±10min real-time tolerance shifts
-- Every service staff member does 1-2 bookings across the ~4.5hr morning (45-90min busy / ~270min = 17-33% utilization). N2 and SC1 have the most slack -- naturally available for general-public/walk-in fill, consistent with services-pricing-locked.md's "GTT clients priority, general public fill remaining gaps" model
+- Every service staff member does 1-2 bookings across the ~4.5hr morning (45-90min busy / ~270min = 17-33% utilization). Downtime between bookings follows the Staff Downtime Protocol (financial-break-even-staff.md) -- no staff member is free for general-public/walk-in fill during the AM GTT window (Day 51: all 8 AM service staff are needed simultaneously, no PM shift)
 - No staff member is double-booked
 
 ### Scenario A -- 10-Client Growth Model (DEFERRED)
@@ -338,4 +336,4 @@ Whiteboard format -- update in real time:
 |---------|--------|--------------|--------|--------------|--------|
 | [Name] | [time] | [time] | [ ] | [time] | [ ] |
 
-Draw alert: set phone timer 5 min before each draw window. If client is mid-service (non-hair), wait for service to end (within tolerance window). For hair services: interrupt and return immediately after draw.
+Draw alert: set phone timer 5 min before each draw window. Services do NOT get interrupted for blood draws -- no exceptions, including hairdressing; wait for service to end (within tolerance window).

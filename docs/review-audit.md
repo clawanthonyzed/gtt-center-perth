@@ -15,6 +15,8 @@
 - 9 missing documents
 - 12 improvement opportunities
 
+> **Day 51 supersession note.** The Day 50 figures referenced throughout CF-01, CF-04, IC-02, IC-03, and IC-07 below are further superseded by the Day 51 package-pricing/staffing model: GTT Lounge (A$25)/Wellness (A$225)/Luxe (A$325) → Package 1 (A$200)/Package 2 (A$250)/Package 3 (A$300), no separate venue/lounge fee; the AM/PM cohort split (one of each pair works AM, the other PM) → AM-only staff (8 of 11 AM staff, no PM shift) + 1 new-hire PM Service Therapist (12:00pm-6:00pm); 3D scan operator role removed entirely; payroll A$675,589/yr → A$713,067/yr (incl. A$15,000/yr relief pool); stable monthly Net P&L A$5,646 → +A$10,232 (Month 5+). See `services-pricing-locked.md`, `financial-break-even-staff.md` (CF-01 Day 51), `cash-flow.md`, `staff-plan.md`. Original Day 49/50 resolutions below retained for audit trail.
+
 ---
 
 ## SECTION 1 — CRITICAL FAILURES
@@ -188,7 +190,7 @@ Documents that contradict each other, creating confusion and execution errors.
 | ID | Conflict | Doc A | Doc B | Resolution Needed |
 |---|---|---|---|---|
 | IC-01 | Ramp-up assumptions | ~~financial-model.md §16: Month 1 = 30 visits, break-even Month 3~~ | ~~cash-flow.md: Month 1 = 176 visits, break-even Month 1~~ | ✅ RESOLVED Day 50 — `financial-model.md` marked superseded in full (deprecation banner, §7); `cash-flow.md` v1.0 is canonical. Post-Day-50 reconciliation, operational break-even is Month 4, not Month 1 (see Day 50 Reconciliation note). |
-| IC-02 | Staff hours | staff-plan.md: massage/nails/beauty = 25hrs/wk (8am–1pm) | cash-flow.md + gtt-test-reference §8: same staff serve afternoon = full-time hours | Must pick one — CF-01 above |
+| IC-02 | Staff hours | staff-plan.md: massage/nails/beauty = 25hrs/wk (8am–1pm) | cash-flow.md + gtt-test-reference §8: same staff serve afternoon = full-time hours | ✅ RESOLVED Day 51 — AM staff (massage/nails/beauty/hair) stay AM-only (no full-time hours, no afternoon shift); afternoon PM Spa Packages covered by 1 new-hire PM Service Therapist (12:00pm-6:00pm). See Day 51 supersession note above and CF-01. |
 | IC-03 | Package pricing | ~~cash-flow.md: "Essential A$195, Premium A$295, Luxury A$395"~~ | ~~business-plan.md §6: "Essential A$80, Relax A$195, Restore A$285, Glow A$345, Complete A$395"~~ | ✅ RESOLVED Day 50 — standardised to GTT Lounge (A$25) / GTT Wellness (A$225) / GTT Luxe (A$325) in both `cash-flow.md` and `business-plan.md`. See CF-04. |
 | IC-04 | Operating days | cash-flow.md: "Mon–Fri, 22 days" | staff-plan.md: Mon–Fri only, all staff | ✅ RESOLVED — both docs consistent (Mon–Fri, 22 days). No change needed; marker only (Day 50). See CF-05. |
 | IC-05 | GTT capacity | ~~business-plan.md §5: "6–9 GTT patients/morning"~~ | ~~gtt-test-reference §9: "5 GTT slots = 5 morning clients, 6+ requires second phlebotomist"~~ | ✅ RESOLVED Day 49 — both docs now state 8 GTT clients/morning, 2 phlebotomists/2 chairs from Day 1, per operations-manual.md |

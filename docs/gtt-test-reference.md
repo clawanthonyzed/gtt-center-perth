@@ -151,7 +151,7 @@ Patient may NOT:
 - **Tolerance:** ±5 minutes (i.e., draw between 55–65 minutes)
 - **Tube type:** Grey-top vacutainer (same as fasting)
 - **Procedure:** Same as T=0 draw
-- If patient is in the middle of a service: escort to collection room, brief interruption, return to service
+- Per the no-interrupt rule (`operations-manual.md`), services are scheduled in the gaps between draws so this should not arise. If a client is running behind schedule, complete the draw in the lounge/reception area — do not pull a client out of an active service.
 - Label: include "1 hour" designation, exact time, patient ID
 
 ### Step 6 — 2-Hour Blood Draw (T=120)
@@ -197,7 +197,7 @@ GDM is diagnosed if **ANY ONE** of the following values is met or exceeded:
 - Fasting ≥7.0 mmol/L or 2hr ≥11.1 mmol/L → likely pre-existing T2DM — refer urgently
 
 **GDM prevalence:** Approximately 12–18% of tested women will receive a GDM diagnosis.  
-At GTT Center Perth: **~1 in 6 patients** will receive a positive result. This is the dietitian referral trigger.
+At GTT Center Perth: **~1 in 6 patients** will receive a positive result. Patients are referred back to their GP/midwife for GDM management — no in-house dietitian at this stage (`services-pricing-locked.md` Future Services).
 
 ---
 
@@ -292,41 +292,40 @@ No formal annual renewal for Cert III, BUT phlebotomists must maintain:
 
 | Staff member | Role during client visit | Time required |
 |---|---|---|
-| Phlebotomist | T=0, T=60, T=120 draws (~10 min each) | 30 min active per client over 2.5 hours |
+| Phlebotomist | Draw 1, Draw 2, Draw 3 (~10 min each) | 30 min active per client over ~2.5 hours |
 | Receptionist | Check-in, transitions, payment | 15–20 min active per client |
-| Massage therapist | 60-min massage | 75 min (inc. room prep/pack) |
-| Nail technician | 45-min mani or pedi | 60 min (inc. setup/clean) |
-| Beauty therapist | 30-min brows | 40 min (inc. setup/clean) |
+| Service 1 staff (massage/nails/facial/brows/hair) | 30 or 45-min service from Package 1/2/3 | 45 min (inc. setup/clean) |
+| Service 2 staff (massage/nails/facial/brows/hair) | 30 or 45-min service from Package 1/2/3 | 45 min (inc. setup/clean) |
 
 **Key insight: each phlebotomist can serve up to 4 GTT clients per chair simultaneously** because blood draws are staggered — the phlebotomist is NOT occupied for the full 2.5 hours per client, only during the short draw windows. With 2 phlebotomists/2 chairs from Day 1 (RESOLVED Day 49), this scales to 8 GTT clients/morning. See operations-manual.md for the verified per-staff timetable.
 
 **Service staff capacity per shift:**
-- 1 massage therapist (60-min treatment + 15 min turnaround = 75 min/patient): 3–4 patients per morning shift
-- 1 nail tech (45 min + 15 min = 60 min/patient): 4–5 patients per morning shift
-- 1 beauty therapist (30 min + 10 min = 40 min/patient): 6–7 patients per morning shift
+- 1 massage therapist (45-min service + 15 min turnaround = 60 min/patient): 5–6 patients per morning shift
+- 1 nail tech (45-min service + 15 min turnaround = 60 min/patient): 5–6 patients per morning shift
+- 1 beauty therapist (30/45-min service + 10 min turnaround = 40–55 min/patient): 6–7 patients per morning shift
 
-### Staff required for 8 GTT clients (morning) + 6 wellness clients (afternoon)
+### Staff required for 8 GTT clients (morning) + 6 PM Spa Package clients (afternoon)
 
-**RESOLVED Day 49:** 2 phlebotomists / 2 chairs from Day 1 (not a Month 2-3 add). See financial-break-even-staff.md for the full 12-staff payroll.
+**RESOLVED Day 49:** 2 phlebotomists / 2 chairs from Day 1 (not a Month 2-3 add). See financial-break-even-staff.md for the full 12-staff payroll (CF-01, Day 51).
 
 | Role | Morning | Afternoon | Total |
 |---|---|---|---|
-| Phlebotomist (Chair A / Chair B) | 2 (25hrs/wk each) | 0 | 2 |
-| Massage therapist | 2 | 1 (or 1 working split) | 2 |
-| Nail technician | 2 | 1 (or 1 working split) | 2 |
-| Beauty therapist | 2 | 1 (same person split shift) | 2 |
-| Hairdresser | 2 | — | 2 |
-| 3D Scan operator | 1 | 1 (sublet) | 1 |
-| Receptionist/Manager | 1 | 1 | 1 |
+| Phlebotomist (Chair A / Chair B) | 2 (AM-only) | 0 | 2 |
+| Massage therapist | 2 | 0 (AM-only — see PM Service Therapist) | 2 |
+| Nail technician | 2 | 0 (AM-only) | 2 |
+| Beauty therapist | 2 | 0 (AM-only) | 2 |
+| Hairdresser | 2 | 0 (AM-only) | 2 |
+| PM Service Therapist (new hire) | 0 | 1 (cross-trained massage + facials) | 1 |
+| Receptionist/Manager | 1 (split shift, AM block) | 1 (same person, PM block) | 1 |
 
 ### Summary ratio
 
 | Scenario | Clients | Staff | Ratio |
 |---|---|---|---|
-| Morning only (8 GTT clients) | 8 | 12 (2 phlebotomists + 2 massage + 2 nails + 2 beauty + 2 hair + 1 scan + 1 reception) | 1.5 staff:client |
-| Full day (8 GTT + 6 wellness) | 14 | 12 (same staff, phlebotomists morning only) | 0.86 staff:client |
+| Morning only (8 GTT clients) | 8 | 11 (2 phlebotomists + 2 massage + 2 nails + 2 beauty + 2 hair + 1 receptionist/manager) | 1.4 staff:client |
+| Full day (8 GTT + 6 PM Spa Packages) | 14 | 12 (11 AM staff + 1 new-hire PM Service Therapist) | 0.86 staff:client |
 
-**Conclusion:** The 12-staff team (per financial-break-even-staff.md) comfortably serves 14-16 clients/day across morning and afternoon without any additional hires.
+**Conclusion:** The 11 AM staff (per financial-break-even-staff.md CF-01) cover all 8 GTT clients within their AM-only shift; 1 additional PM Service Therapist (new hire) covers the 6 PM Spa Package clients. 12 staff total, A$713,067/yr payroll incl. relief pool.
 
 ---
 
@@ -336,21 +335,19 @@ No formal annual renewal for Cert III, BUT phlebotomists must maintain:
 
 Chair A (Phlebotomist A) takes odd-numbered clients (1/3/5/7), Chair B (Phlebotomist B) takes even-numbered clients (2/4/6/8) — each chair handles 4 clients spaced 40min apart. Each phlebotomist performs 12 draws across the morning (4 clients × 3 draws).
 
-### Afternoon Wellness Slots (12:00pm–4:30pm)
+### Afternoon PM Spa Package Slots (12:00pm–6:00pm)
 
-No GTT constraint. Standard beauty/wellness bookings.
-- Massage: 60-min appointments, 4 slots 12:30, 1:45, 3:00, 4:15 (with 15 min turnaround)
-- Nails: 45-min appointments, 5 slots between 12:00–4:30pm
-- Brows: 30-min appointments, 6 slots between 12:00–4:30pm
-- Scan: 25-min slots throughout afternoon (sublet operator manages own schedule)
+No GTT constraint. 1 PM Service Therapist (new hire, cross-trained massage + facials) delivers Package 1/2/3 (2 services back-to-back, ~75–90 min/client).
+- Capacity ramps M1=2/day → M5+=6/day (`financial-break-even-staff.md` Lever 2, `cash-flow.md` ramp)
+- Each PM Spa Package client receives the same Package 1/2/3 menu as AM GTT clients (`services-pricing-locked.md`)
 
-**6–8 afternoon clients is achievable with existing staff working through to 5:00pm.**
+**6 PM Spa Package clients/day at capacity (Month 5+) is the model's single biggest assumption — see `unit-economics.md` Key Assumptions.**
 
 ### Full Day Capacity
 
-**Daily capacity: 8 GTT (morning, see operations-manual.md) + 6–8 wellness (afternoon) = 14–16 clients/day**
+**Daily capacity: 8 GTT (morning, see operations-manual.md) + 6 PM Spa Packages (afternoon, Month 5+) = 14 clients/day (308/month)**
 
-Last GTT client (Client 8) departs ~12:25pm. Staff reset/lunch 12:25pm–1:00pm before afternoon wellness begins.
+Last GTT client (Client 8) departs ~12:25pm. AM staff finish at ~1:00pm (AM-only shift, CF-01); the PM Service Therapist's shift (12:00pm–6:00pm) covers PM Spa Package clients.
 
 ---
 

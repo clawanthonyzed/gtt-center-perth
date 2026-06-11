@@ -7,12 +7,14 @@
 
 ## Staffing Model
 
+> **Day 51 update:** 3D scan operator role removed entirely (no equipment, no subtenant scan revenue — out of scope for startup). Dietitian removed — no dietitian at this stage. The 3D scan operator's payroll line is replaced by 1 new PM Service Therapist (see Shift Structure below).
+
 GTT Center Perth employs all practitioners directly. Venue sets pricing, hours, uniforms, and standards.
 
-**Hybrid structure:**
-- Employ: massage therapists, nail techs, hairdressers, beauty therapists, scan operator, receptionist/manager
-- Contractor: Dietitian (APD own Medicare provider number, room hire arrangement — Month 6+)
-- Contractor: IBCLC lactation consultant (Month 4+)
+**Structure:**
+- Employ: 2× massage therapist, 2× nail technician, 2× hairdresser, 2× beauty therapist, 2× phlebotomist, 1× receptionist/manager (split shift), 1× PM service therapist (new hire)
+- Casual relief pool: budgeted separately for sick/holiday cover (not a fixed FTE — see Shift Structure)
+- Contractor: IBCLC lactation consultant (Month 4+) — only future contractor role retained
 
 ---
 
@@ -27,11 +29,12 @@ GTT Center Perth employs all practitioners directly. Venue sets pricing, hours, 
 | Nail technician | MA000005 | Level 3 | $28.50 | $35.63/hr | A$60,456 incl. super |
 | Hairdresser | MA000005 | Level 3 | $28.50 | $35.63/hr | A$60,456 incl. super |
 | Massage therapist | MA000005 | Level 4 | $29.60 | $37.00/hr | A$62,774 incl. super |
-| 3D scan operator | MA000005 | Level 3 | $28.50 | $35.63/hr | A$40,296 (20hr/wk) |
+| PM Service Therapist (new hire) | MA000005 | Level 4 | $29.60 | $37.00/hr | A$62,774 incl. super |
 | Phlebotomist (x2 — Chair A / Chair B) | Health Professionals MA000027 | Pathology Collector, Cert III/IV | $24.50 | $30.63/hr | A$43,068 (25hr/wk each) |
 
 *Super: 12% on ordinary time earnings. Penalty rates: Saturday 1.33x; Sunday 2.0x; Public Holiday 2.5x.*
 *2 phlebotomists employed from Day 1 — 1 per collection chair (Chair A / Chair B), Mon-Fri 7:30am-12:30pm. See operations-manual.md and staff-plan.md.*
+*PM Service Therapist: cross-trained massage + facials (Cert IV), delivers PM Spa Packages 12:00-18:00. Same award level/rate as Massage/Beauty therapist.*
 
 ---
 
@@ -48,6 +51,8 @@ This is a **multi-role position**. One hire covers:
 **Award level:** Clerks Award MA000002 Level 2–3. If the role includes staff supervision, classify at Level 3 ($27.87/hr base = $34.84/hr casual = A$58,500/yr at 30hr/wk including super).
 
 **Hire sequence:** This is the FIRST physical hire. Everything else waits until this role is filled and trained.
+
+> **Day 51 — split shift (CF-01):** One full continuous day (07:00-18:00) is too much for this role. Same person, same A$56,237/yr, split into two blocks: AM 07:00-12:00 (GTT coordination, opening, AM checkout) + PM 15:00-18:00 (PM Spa Package bookings, closing), with a paid/unpaid midday break 12:00-15:00. No new hire required for this role — see Shift Structure (CF-01) below.
 
 ---
 
@@ -120,17 +125,19 @@ Gross margin above wages: **A$249,226/year per therapist** (with add-ons)
 
 ---
 
-### 3D Scan Operator × 1 — A$40,296/year (20hr/week)
+### PM Service Therapist × 1 — A$62,774/year (new hire, replaces 3D scan operator)
 
-| Service | Price | Sessions/week to break even | Sessions/day |
+Delivers PM Spa Packages (Package 1/2/3, no testing) 12:00-18:00, cross-trained massage + facials so a single therapist can deliver both services in a 2-service package to one client.
+
+| Package | Price | Packages/week to break even | Packages/day |
 |---------|-------|-----------------------------|-------------|
-| Standard scan | A$89 | 8.7/wk | 1.8/day |
-| Deluxe scan | A$129 | 6.0/wk | 1.2/day |
+| Package 2 (30+45min) | A$250 | 10.0/wk | 2.0/day |
+| Package 3 (2x45min) | A$300 | 8.4/wk | 1.7/day |
 
-**2 scans/day breaks even.** With 8 GTT clients/day and ~50% scan uptake = 4 scans/day → profitable from week 1.
+**2 PM packages/day breaks even.** A 6-hour PM shift fits ~3-4 packages/day (each package = 2 services back-to-back, ~75-90min/client).
 
-Revenue potential (5 scans/day × $100 avg): A$500/day → A$130,000/year
-Gross margin above wages: **A$89,704/year**
+Revenue potential (3 packages/day × A$250 avg): A$750/day → A$187,500/year
+Gross margin above wages: **A$124,726/year**
 
 ---
 
@@ -138,79 +145,103 @@ Gross margin above wages: **A$89,704/year**
 
 | Role | Qty | Annual Cost Each | Total |
 |------|-----|-----------------|-------|
-| Receptionist/Manager | 1 | A$56,237 | A$56,237 |
+| Receptionist/Manager (split shift) | 1 | A$56,237 | A$56,237 |
 | Massage therapist | 2 | A$62,774 | A$125,548 |
 | Nail technician | 2 | A$60,456 | A$120,912 |
 | Hairdresser | 2 | A$60,456 | A$120,912 |
 | Beauty therapist | 2 | A$62,774 | A$125,548 |
-| 3D scan operator | 1 | A$40,296 | A$40,296 |
+| PM Service Therapist (new hire) | 1 | A$62,774 | A$62,774 |
 | Phlebotomist | 2 | A$43,068 | A$86,136 |
-| **TOTAL PAYROLL (12 staff)** | **12** | — | **A$675,589** |
+| **TOTAL PAYROLL (12 staff)** | **12** | — | **A$698,067** |
+| Casual Relief Pool (sick/holiday cover, budget — not headcount) | — | — | A$15,000 |
+| **TOTAL PAYROLL + RELIEF** | | | **A$713,067** |
+
+*Day 51: 3D scan operator (A$40,296) removed; PM Service Therapist (A$62,774, new hire) added — net +A$22,478. Relief pool added as a new budget line (+A$15,000) to cover sick/holiday absences across all 12 roles, per Anthony's directive.*
 
 ---
 
-## Shift Structure (CF-01)
+## Shift Structure (CF-01) — Day 51 revision
 
-**Anthony's question answered: same 12 staff, split into AM/PM cohorts — no new hires.**
+> **Supersedes the "no new hires" CF-01 conclusion.** Anthony confirmed: all 8 AM service staff (2x Massage, 2x Nail, 2x Hairdresser, 2x Beauty) plus both phlebotomists are needed simultaneously across the AM GTT window per the verified per-staff timetable (operations-manual.md) — none of them is free to "double" as PM staff. PM coverage and sick/holiday cover therefore require real additions, not just rescheduling.
 
-- **Phlebotomists ×2, 3D Scan Operator:** AM only (GTT window, 07:30-12:30, per the Day-49 capacity timetable in operations-manual.md). The 3D Scan Operator's remaining hours (20hr/wk = 4hr/day) are used for afternoon general-public/Bloom Baby keepsake scan bookings.
-- **Receptionist/Manager ×1:** full operating day (07:00-18:00), bridges AM/PM shifts.
-- **Massage ×2, Nail ×2, Hairdresser ×2, Beauty ×2:** one of each pair works AM (07:00-13:00, serves GTT clients' Service 1/Service 2 slots per the Day-49 timetable — each only 45-90min busy, rest is downtime-protocol), the other works PM (12:00-18:00, serves standalone afternoon/day-spa bookings). 1-hour overlap (12:00-13:00) for handover and GTT-running-late buffer.
-- **Net payroll: unchanged at A$675,589/yr** — this is a scheduling change, not a headcount change.
+- **Phlebotomists ×2:** AM only (GTT window, 07:30-12:30, per the Day-49 capacity timetable in operations-manual.md). No PM clinical role — testing is AM-only (fasting requirement).
+- **Massage ×2, Nail ×2, Hairdresser ×2, Beauty ×2:** all 8 work the AM GTT window (07:00/07:30-13:00), covering all 8 GTT clients' Service 1/Service 2 slots per the verified timetable. Downtime between bookings (17-33% utilisation) follows the Staff Downtime Protocol — no PM shift for these 8.
+- **Receptionist/Manager ×1 (split shift):** AM 07:00-12:00 (opening, GTT coordination, AM checkout) + PM 15:00-18:00 (PM Spa Package bookings, closing), with a break 12:00-15:00. Same person, same A$56,237/yr — no new hire.
+- **PM Service Therapist ×1 (NEW HIRE):** 12:00-18:00, cross-trained massage + facials, delivers PM Spa Packages (Package 1/2/3, no testing) to standalone afternoon clients.
+- **Casual Relief Pool:** budgeted A$15,000/yr, drawn on as needed to cover sick/holiday absences in any of the 12 roles above (not a fixed shift).
+- **Net payroll: A$698,067/yr (12 roles) + A$15,000/yr relief pool = A$713,067/yr** — up from A$675,589/yr (3D scan operator removed, PM Service Therapist + relief pool added).
 
-### Afternoon Menu (PM cohort)
+### PM Spa Packages (PM Service Therapist)
 
-The PM cohort serves: standalone GTT-Wellness-equivalent bookings (massage/facial/nails/hair, full price or 10%-online-discounted alongside a GTT reservation) PLUS `extended-wellness-services.md` "Day Spa Expansion Services" (lash A$140-280, hair colour A$130-200, nail extras A$60-120 — "afternoon only", too long for the GTT window) PLUS spray tan, retail, and cafe (see Revenue Model below — these three streams are unlocked by this shift design).
+The PM Service Therapist sells the same Package 1/2/3 menu as the AM GTT packages (services-pricing-locked.md), minus testing/lounge-coordination — i.e. "PM Spa Packages": 2 services back-to-back (massage/facial combos), ~75-90min/client, ~3-4 clients/6hr shift. PLUS spray tan (automated booth, zero staff), retail, and cafe (passive revenue, available all day).
+
+`extended-wellness-services.md` "Day Spa Expansion Services" (lash A$140-280, hair colour A$130-200, nail extras A$60-120) and the Hairdressing Afternoon Extras (Cut+blowdry, Scalp treatment+blowdry — services-pricing-locked.md) remain afternoon/standalone only, bookable via the AM staff's PM availability where rostered, or future PM hires as volume grows.
 
 ---
 
 ## Revenue Break-Even
 
+> **Day 51 — package-price model.** All revenue/break-even calculations below use Package 1/2/3 prices (services-pricing-locked.md), not individual service prices. No separate "GTT venue fee" line — venue/lounge access is bundled free into every package.
+
 ### Assumptions
-- Average service price: A$105 (blended — GTT window services)
 - Operating days: 250/year
-- GTT venue fee: A$25/patient (pending pathology fee confirmation with PathWest/WDP)
-- 8 GTT clients/day (Scenario B: 20-min intervals)
+- 8 GTT clients/day (Scenario B), 2 phlebotomists, 2 chairs — every GTT visit sells one Package (1/2/3)
+- Package mix assumption (initial, pending booking data): 30% Package 1 (A$200) / 40% Package 2 (A$250) / 30% Package 3 (A$300) → blended avg **A$250/visit**
+- PM Spa Packages (PM Service Therapist): same Pkg1/2/3 menu, no testing, ~3/day at the same A$250 blended avg
 
 ### Full Break-Even (Payroll + Overhead)
 
-Overhead: superseded Day 50 by `cash-flow.md`'s granular non-wage overhead, **A$167,760/yr** (A$13,980/mo) — see its Cost Assumptions table (rent, utilities, internet, Fresha, Resend, ads, GTT supplies, laundry, cleaning, insurance, accounting, consumables, misc).
-- Total overhead (excl. payroll): **A$167,760/year**
-- **Total break-even revenue: A$675,589 + A$167,760 = A$843,349/year**
-- At A$105 avg: **~8,032 services/year = ~32 services/day**
+- Total payroll + relief pool: **A$713,067/year** (see Total Annual Payroll above)
+- Workers comp (1.7% of payroll): **A$11,867/year**
+- Non-wage overhead (cash-flow.md Cost Assumptions — rent, utilities, internet, Fresha, Resend, ads, GTT supplies, laundry, cleaning, insurance, accounting, consumables, misc): **A$167,760/year**
+- **Total break-even revenue (costs): A$713,067 + A$11,867 + A$167,760 = A$892,694/year**
 
 ### Revenue Model
 
 | Stream | Volume | Revenue/year |
 |--------|--------|-------------|
-| GTT venue fee (A$25) | 8/day × 250 = 2,000/yr | A$50,000 |
-| GTT-window services (A$105 avg) | 20/day × 250 | A$525,000 |
-| Afternoon services (A$130 avg) | 6/day × 250 | A$195,000 |
+| GTT packages (avg A$250) | 8/day × 250 = 2,000/yr | A$500,000 |
+| PM Spa Packages (avg A$250) | 3/day × 250 = 750/yr | A$187,500 |
 | Spray tan (passive, A$58 avg) | 4/day × 250 | A$58,000 |
 | Retail (CGM sensors, snacks, products) | — | A$25,000 |
 | Cafe | — | A$15,000 |
-| **Total revenue** | | **A$868,000** |
-| Total costs | | A$843,349 |
-| **Net margin** | | **A$24,651** |
-| **Net margin %** | | **~2.8%** |
+| **Total revenue** | | **A$785,500** |
+| Total costs | | A$892,694 |
+| **Net margin** | | **-A$107,194** |
+| **Net margin %** | | **~-13.6%** |
 
-*Projections at ~75% utilisation. Launch ramp: 30% month 1, 60% by month 3, 80% by month 6.*
+**Honest finding:** at Anthony's stated package prices (A$200/A$250/A$300) and a 3-package/day PM ramp, this model is loss-making — once 3D-scan revenue is removed and PM coverage is properly costed as a new hire (not a free reschedule of existing AM staff), the old "A$24,651 / 2.8%" figure does not survive. Two independent levers close the gap (see below); neither requires abandoning Anthony's package structure.
 
-**Note:** `cash-flow.md` v1.0 is the canonical month-by-month model — its stable-state Net P&L (A$5,646/mo = A$67,752/yr) differs from this annual snapshot because `cash-flow.md` also includes workers comp and uses slightly different revenue-stream phasing. Both confirm the venture is profitable but with thin (~3-8%) margins.
+### Sensitivity — Package Price vs Margin
+
+Holding the structure (2x30min / 30+45min / 2x45min) and total volume (2,000 GTT + 750 PM = 2,750 package sales/yr) fixed, blended avg package price needed for breakeven and target margins:
+
+| Target | Blended avg needed | Example pricing (Pkg1/Pkg2/Pkg3, same 30/40/30 mix) |
+|---|---|---|
+| Breakeven (0%) | A$289 | A$230 / A$290 / A$350 |
+| 5% margin | A$306 | A$245 / A$305 / A$365 |
+| 8% margin | A$317 | A$255 / A$315 / A$380 |
+| 10% margin | A$325 | A$260 / A$325 / A$390 |
+
+**Lever 2 — PM volume instead of price:** at the original A$200/A$250/A$300 prices, growing PM Spa Packages from 3/day to ~6/day (still within "6-8 sessions/shift" per-role capacity, 2 services/package = 3 packages = 6 sessions) adds ~A$187,500/yr — alone enough to reach breakeven without any price change. PM Service Therapist roster should target this ramp by Month 3-6.
+
+**Recommendation:** launch at Anthony's stated A$200/A$250/A$300 (review quarterly per services-pricing-locked.md) and plan the PM ramp (Lever 2) as the primary path to breakeven, with the pricing table above as a fallback if PM volume underperforms. Bruno to validate against live booking data.
+
+**Note:** `cash-flow.md` v1.0 is the canonical month-by-month model — see its Day 51 reconciliation for the monthly build-up of these annual figures.
 
 ---
 
 ## Package Pricing Model
 
-**Philosophy:** Set packages. GTT Center Perth controls price. Client gets flexibility within the package. Venue fee is embedded — inclusions appear free. Every GTT client gets two 45-min service slots by default (per the verified capacity timetable in operations-manual.md).
+**Philosophy:** Set packages. GTT Center Perth controls price. Client gets flexibility within the package. Venue + lounge access is FREE and bundled into all 3 packages — no separate fee, no lounge-only option.
 
 | Package | Inclusions | Price |
 |---------|-----------|-------|
-| GTT Lounge | Lounge access, water, herbal tea, GTT coordination, birth plan tablet — no additional services | A$25 |
-| GTT Wellness (default) | Lounge + 2 × 45-min services, choice of one per slot from: standard pregnancy massage, signature pregnancy facial, gel mani/pedi (45-55 min), brow lamination, lash lift + tint, or hair treatment (blowdry/hair mask, 45 min) | A$225 flat |
-| GTT Luxe | Lounge + standard pregnancy massage (45 min) + signature pregnancy facial (45 min) + 3D scan Standard (30 min, scheduled around services) | A$325 flat |
+| Package 1 | Venue + lounge access (free) + any 2 x 30-min services | A$200 flat |
+| Package 2 | Venue + lounge access (free) + 1 x 30-min + 1 x 45-min service | A$250 flat |
+| Package 3 | Venue + lounge access (free) + any 2 x 45-min services | A$300 flat |
 
-See services-pricing-locked.md for the full package definitions.
+See services-pricing-locked.md for the full package definitions and service menu.
 
 **Discount policy:** 10% online pre-booking discount on afternoon/standalone services booked at the same time as a GTT reservation. No discount on in-center upsells (add-ons, cafe, retail, spray tan) — full price applies on the day.
 
