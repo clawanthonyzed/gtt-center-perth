@@ -1,13 +1,13 @@
 # GTT Center Perth — Onboarding Workflows
 
-**Version:** 1.0 | **Date:** 2026-06-05  
+**Version:** 2.0 | **Date:** 2026-07-01  
 **Two tracks:** Staff Onboarding + Client Onboarding
 
 ---
 
 # PART A — STAFF ONBOARDING
 
-## A1. Pre-Start Checklist (Operations Director (TBD) + Fern complete before Day 1)
+## A1. Pre-Start Checklist (Manager + Fern complete before Day 1)
 
 ### Employment Admin
 - [ ] Employment contract signed and returned (2 copies — employee keeps one)
@@ -26,7 +26,7 @@
 - [ ] Fresha login created (role-appropriate access level)
 - [ ] WhatsApp group "GTT CP Team" — add mobile number
 - [ ] Email (if applicable)
-- [ ] Key/fob/alarm code issued (Operations Director only issues — log all issued keys)
+- [ ] Key/fob/alarm code issued (Manager only issues — log all issued keys)
 
 ### Phlebotomist Specific (additional to above)
 - [ ] WDP/PathWest credential letter received and filed
@@ -38,7 +38,7 @@
 
 ---
 
-## A2. Day 1 Orientation (Operations Director leads — 2 hours)
+## A2. Day 1 Orientation (Manager leads — 2 hours)
 
 ### Tour (30 min)
 - Reception: Fresha terminal, phone, patient files location, welcome pack storage
@@ -63,13 +63,13 @@
 ### Service Standards Briefing (15 min)
 - Patient is always addressed by first name
 - No discussing GTT results (ever) — redirect to their doctor
-- Fasting failure: do not dismiss, notify Operations Director immediately
-- Any patient who feels unwell: alert phlebotomist + Operations Director immediately
+- Fasting failure: do not dismiss, notify Manager immediately
+- Any patient who feels unwell: alert phlebotomist + Manager immediately
 - Phone use: personal phones off during treatment delivery
 
 ### Buddy System (Weeks 1–2)
-- New staff shadow Operations Director or an experienced team member for first 3 shifts
-- No solo patient contact until buddy sign-off (Operations Director confirms readiness)
+- New staff shadow Manager or an experienced team member for first 3 shifts
+- No solo patient contact until buddy sign-off (Manager confirms readiness)
 
 ---
 
@@ -78,13 +78,13 @@
 ### All Staff (Days 1–3)
 - Day 1: Orientation (as above)
 - Day 2: Observe full operating day (shadowing)
-- Day 3: Manage own patient interactions with Operations Director oversight
+- Day 3: Manage own patient interactions with Manager oversight
 
 ### Phlebotomist Only
 - WDP/PathWest phlebotomy protocol review (WDP-provided)
 - GTT clinical protocol (gtt-clinical-protocol.md) — read and sign
-- Adverse event protocol — read, sign, verbal quiz by Imara
-- First collection: Imara present in building
+- Adverse event protocol — read, sign, verbal quiz by Manager
+- First collection: Manager present in building
 
 ### Massage Therapist Only
 - Review GTT Center Perth pregnancy massage intake form
@@ -99,7 +99,7 @@
 
 ---
 
-## A4. 30-Day Review (Imara conducts)
+## A4. 30-Day Review (Manager conducts)
 
 Topics:
 1. How is the role going? Any blockers?
@@ -115,6 +115,42 @@ Outcome: either confirm ongoing employment, identify improvement areas (with 30-
 
 # PART B — CLIENT ONBOARDING
 
+## B0. Booking Policy & Client Terms and Conditions
+
+### Payment Policy
+- **Full payment is required at time of booking.** No deposit option. The full package or service price is charged when the booking is made.
+- Payment is collected via Fresha at the point of booking (card on file).
+- GTT Center Perth does not accept payment on the day.
+
+### Cancellation & Rescheduling Policy
+- **More than 48 hours notice:** full credit applied — client may reschedule to any available slot within 90 days. No refund.
+- **24–48 hours notice:** 50% credit applied to a rescheduled appointment. 50% is retained.
+- **Less than 24 hours notice / same-day cancellation:** no credit, no refund. Full amount retained.
+
+### No-Show Policy
+- If a client does not arrive within 15 minutes of their appointment time without prior contact: appointment is forfeited. **Full payment retained.**
+- No exceptions. This policy exists because GTT slots are 2-hour blocks that cannot be rebooled same-day once the phlebotomist has prepared.
+
+### Fasting Failure Policy
+- If a client arrives having eaten, drunk anything other than water, chewed gum, or consumed medications affecting glucose (check with GP): **the GTT cannot proceed.**
+- The client's appointment is forfeited. **Full payment retained.**
+- Client receives 1 x complimentary wellness service (30-min massage or equivalent) as a goodwill gesture, subject to therapist availability.
+- Client may rebook the GTT package at full price. The complimentary service credit cannot be transferred.
+- Note: this is a medical requirement, not a GTT Center Perth policy. A failed fast invalidates the diagnostic test and cannot be waived.
+
+### Late Arrival Policy
+- **Up to 15 minutes late:** appointment proceeds but services may be reduced at Manager's discretion (blood draw schedule is fixed and cannot be delayed).
+- **More than 15 minutes late:** appointment treated as a no-show. Full payment retained. See No-Show Policy.
+
+### Result Communication
+- GTT Center Perth does not communicate blood test results. Results are sent by WDP/PathWest directly to the referring GP. Clients must follow up with their GP.
+- Any client asking staff for results must be redirected: "I'm sorry, we don't have access to your results — those go directly to your doctor."
+
+### Force Majeure
+- In the unlikely event GTT Center Perth must cancel due to circumstances outside its control (equipment failure, power outage, staff emergency): clients receive a full reschedule at no extra charge and a complimentary service upgrade on their next visit.
+
+---
+
 ## B1. Before Booking (Awareness → Decision)
 
 **How they find us:**
@@ -129,41 +165,54 @@ Outcome: either confirm ongoing employment, identify improvement areas (with 30-
 2. Selects GTT date/time slot
 3. Selects services (limited to what fits in their GTT window)
 4. Enters details: name, mobile, email, due date, referral form availability
-5. Pays A$30 deposit
+5. **Pays full package price at time of booking** — no deposit, no payment on day
 6. Receives instant confirmation email + calendar invite (.ics)
 
 ---
 
 ## B2. Confirmation Email (Immediate Post-Booking)
 
-**Subject:** Your GTT appointment is confirmed — [Date] at [Time]
+**Subject:** Your GTT appointment is confirmed — [Date] at [Start Time]
 
 > Hi [Name],
 >
-> You're booked in for your Glucose Tolerance Test at GTT Center Perth.
+> You're confirmed for your Glucose Tolerance Test experience at GTT Center Perth on **[Day, Date]**.
 >
-> **Your appointment:** [Date], [Start Time]
-> **Services booked:** [List]
-> **Address:** [Address] | **Parking:** [Parking details]
+> **Your personalised schedule:**
+>
+> | Time | What's happening | With |
+> |------|-----------------|------|
+> | [Start Time, e.g. 8:00am] | Arrival + fasting blood draw | [Phlebotomist Name] |
+> | [Start +5min, e.g. 8:05am] | [Service 1, e.g. Prenatal Massage] | [Therapist Name] |
+> | [Start +60min, e.g. 9:00am] | 1-hour blood draw (5 minutes) | [Phlebotomist Name] |
+> | [Start +65min, e.g. 9:05am] | [Service 2, e.g. Express Blowdry] | [Stylist Name] |
+> | [Start +120min, e.g. 10:00am] | Final blood draw + snack pack | [Phlebotomist Name] |
+> | [Start +130min, e.g. 10:10am] | You're done — enjoy the rest of your day! | — |
+>
+> **Address:** [Address] | **Parking:** [Parking details — number of spaces, entry from X street]
+>
+> ---
 >
 > **FASTING REQUIRED — please read carefully:**
 > - Do not eat or drink anything (except water) from midnight the night before
 > - Water is encouraged — stay hydrated
-> - No coffee, tea, juice, gum, or mints
+> - No coffee, tea, juice, gum, mints, or flavoured water
 > - No exercise on the morning of your test
 > - No cigarettes
+>
+> **Important reminder:** Your booking is fully paid. Our fasting policy means **we are unable to refund or credit bookings where the client has not fasted as required** — please take fasting seriously.
 >
 > **Bring:**
 > - Your pathology referral form (from your GP or midwife)
 > - Medicare card
 > - Comfortable, loose clothing (3 blood draws from your arm)
 >
-> **What to expect:** You'll have your first blood draw when you arrive, then spend the next 2 hours enjoying your booked services. A snack pack is waiting for you after your final draw.
+> **If you need to reschedule:** please contact us more than 48 hours before your appointment. Cancellations less than 24 hours before or no-shows are non-refundable. Full terms: [website T&Cs link]
 >
 > Any questions? Call us at [phone] or reply to this email.
 >
 > See you [Day]!
-> — GTT Center Perth
+> — The GTT Center Perth Team
 
 ---
 
@@ -175,7 +224,7 @@ Outcome: either confirm ongoing employment, identify improvement areas (with 30-
 >
 > Bring: referral form + Medicare card.
 >
-> Questions? Call [phone]. See you soon 🌿
+> Questions? Call [phone]. See you soon.
 
 ---
 
@@ -183,7 +232,7 @@ Outcome: either confirm ongoing employment, identify improvement areas (with 30-
 
 > GTT Center Perth reminder: your appointment is TOMORROW at [Time].
 >
-> Stop eating/drinking tonight at [midnight or 8 hours before — personalised].
+> Stop eating/drinking tonight at midnight.
 > Water is fine and encouraged.
 >
 > Address: [address] | Parking: [details]
@@ -196,7 +245,7 @@ Outcome: either confirm ongoing employment, identify improvement areas (with 30-
 
 > See you in 1 hour! GTT Center Perth, [address].
 >
-> Fasting check: nothing since [cutoff time] except water ✓
+> Fasting check: nothing since midnight except water.
 >
 > Bring: referral form + Medicare card.
 >
@@ -211,6 +260,14 @@ This is the most critical touchpoint. Patient is fasting, anxious, possibly firs
 **Receptionist script:**
 > "Good morning [Name]! Welcome — we've been expecting you. I'm [Receptionist Name]. Have you had anything to eat or drink this morning besides water? Great. Can I quickly grab your referral form and Medicare card? Lovely. Let me take you through to [Phlebotomist Name] for your first blood draw, and then the rest of the morning is yours."
 
+**If client discloses they have eaten/drunk (fasting failure):**
+> "Thank you for letting me know — I appreciate you being upfront. Unfortunately we can't proceed with the blood draws today as eating affects the test results. I'm going to get the Manager to come and speak with you — please take a seat. While you wait, can I get you a glass of water?"
+
+- Manager handles the fasting failure conversation — not reception
+- Offer 1 x complimentary wellness service per B0 policy
+- Note the visit in Fresha as "fasting failure — policy applied"
+- Full payment retained (already collected at booking)
+
 **Do NOT say:**
 - "Take a seat" (they've been waiting in pathology rooms before — we're different)
 - "Fill in this form" (welcome pack is pre-printed, they just confirm details)
@@ -218,16 +275,18 @@ This is the most critical touchpoint. Patient is fasting, anxious, possibly firs
 
 **Immediate comfort offer:**
 - "Would you like a glass of water while [Phlebotomist] gets set up?"
-- After T=0 draw: "Now the first part's done — what would you like to drink? We have [herbal tea menu], still water, sparkling..."
+- After first draw: "Now the first part's done — what would you like to drink? We have [herbal tea menu], still water, sparkling..."
 
 ---
 
 ## B7. During the Visit
 
-Receptionist tracks patient's schedule throughout the morning:
-- T=60 draw: escort from service room 5 min before draw time ("Just popping back to [Phlebotomist] for your one-hour blood draw — quick and painless!")
-- T=120 draw: same ("Last one — you're almost done!")
-- Post T=120: snacks delivered to patient immediately, receptionist thanks them
+Receptionist tracks patient's actual appointment schedule throughout the morning (based on their booked start time):
+- **1-hour draw:** escort from service room 5 minutes before their scheduled 1-hour mark ("Just popping back to [Phlebotomist Name] for your one-hour blood draw — quick and painless!")
+- **2-hour draw:** same ("Last one — you're almost done!")
+- **Post final draw:** snacks delivered to patient immediately, receptionist thanks them
+
+Note: use the client's actual scheduled times (from their confirmation email) as the reference — not generic T+ notation.
 
 ---
 
@@ -235,7 +294,7 @@ Receptionist tracks patient's schedule throughout the morning:
 
 **Email (via Fresha/Resend):**
 
-> Subject: Thank you for visiting GTT Center Perth 🌸
+> Subject: Thank you for visiting GTT Center Perth
 >
 > Hi [Name],
 >
@@ -245,15 +304,15 @@ Receptionist tracks patient's schedule throughout the morning:
 >
 > **Your GTT results** will be sent directly to your GP or midwife — please follow up with them. GTT Center Perth does not receive or communicate your results.
 >
-> **If you'd like to come back:** Your next GTT isn't required until your next pregnancy, but our massage therapist, nail tech, and brows team would love to see you again for any pregnancy pampering you need. [Book again link]
+> **If you'd like to come back:** Our massage therapist, nail tech, and brows team would love to see you again for any pregnancy pampering you need. [Book again link]
 >
 > **One small favour:** If you enjoyed your experience, a Google review means the world to a new small business. It takes 90 seconds and helps other Perth mums find us.
 > [Google review link]
 >
-> Thank you for being part of our very first customers. You're why we exist.
+> Thank you for being one of our very first customers. You're why we exist.
 >
 > Warmly,
-> Imara & the GTT Center Perth team
+> The GTT Center Perth Team
 
 ---
 
@@ -283,19 +342,25 @@ After every visit, patient receives:
 **Step 1:** Receptionist receives complaint (verbal or written)
 - Acknowledge immediately: "I'm so sorry to hear that. I want to make sure this is sorted for you."
 - Do not argue, dismiss, or over-explain
-- Escalate to Imara within 30 minutes (same day)
+- Escalate to Manager within 30 minutes (same day)
 
-**Step 2:** Imara calls patient within 4 hours
+**Step 2:** Manager calls patient within 4 hours
 - Listen without interruption
 - Apologise genuinely for their experience
 - Ask what would make it right
 
-**Step 3:** Resolution options (Imara decides)
+**Step 3:** Resolution options (Manager decides)
 - Partial or full refund
 - Complimentary service on next visit
 - Explanation (if clinical: factual, not defensive)
 
-**Step 4:** Document in complaints register with outcome
+**Step 4 — Escalation to Anthony (if needed):**
+- If the complaint involves a clinical adverse event (vasovagal, injury, allergic reaction)
+- If the client is threatening legal action or media
+- If Manager cannot reach a resolution within 48 hours
+- Manager contacts Anthony directly with: complaint summary, what was offered, client's response, recommended next step
+
+**Step 5:** Document in complaints register with outcome
 - Keep for 7 years
 - If complaint involves clinical element: notify WDP/PathWest and solicitor
 
