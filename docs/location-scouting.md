@@ -195,3 +195,28 @@ Southern metro corridor. Leach Hwy and Kwinana Freeway junction. Myaree is estab
 
 *Document owner: Grace (GTT Center Perth Operations Manager)*
 *Version 2.0 — revised to prioritise parking and freeway access over hospital proximity*
+
+---
+
+## Online Search Results (Empire Day 71 — Active Listings Confirmed)
+
+Search conducted 2026-07-01 across commercialrealestate.com.au and REIWA.
+
+### Confirmed Active Inventory
+- **Osborne Park:** 77 active commercial listings (commercialrealestate.com.au/for-lease/osborne+park-wa-6017/) — 55 offices + 14 retail
+- **Joondalup:** 74 active commercial listings (commercialrealestate.com.au/for-lease/joondalup-wa-6027/)
+
+### Specific Properties Flagged for Inspection
+
+| Address | Size | Price | Notes | Agent |
+|---------|------|-------|-------|-------|
+| 2A/236 Main Street, Osborne Park | 144sqm | A$43,200/yr + outgoings | Slightly under target — confirm parking | Ray White Commercial WA |
+| 6/325 Harborne Street, Osborne Park | 268sqm | POA | Retail type — slightly over target, negotiable | AGORA Property Group |
+| 20 Parkland Road, Osborne Park | TBC | TBC | Flagged — request full details | commercialrealestate.com.au #16969571 |
+
+### Next Action
+Anthony or commercial agent to call:
+- **Ray White Commercial WA** — Osborne Park specialists (confirmed active listings)
+- **AGORA Property Group** — 325 Harborne Street inquiry
+- Filter: commercialrealestate.com.au → Osborne Park → min 150sqm → ground floor → parking confirmed BEFORE viewing
+
