@@ -1,3 +1,5 @@
+> **2026-07 UPDATE — PM REVENUE MODEL CHANGE:** PM afternoon sessions are now individual services at individual prices (NOT Package 1/2/3). The PM revenue line in this model (A$250/visit) is STALE and requires recalculation. Grace to update with individual service avg revenue. See investor-memorandum.md v2.0 and services-pricing-locked.md for the revised model.
+
 # GTT Center Perth — 18-Month Cash Flow Projection
 ## YETI Holding Trust | GTT Center Perth trading entity
 ### Version 1.0 | June 2026

@@ -174,7 +174,7 @@
 
 | Action | Owner | By |
 |--------|-------|----|
-| Engage Perth commercial interior designer / architect for concept drawings | Anthony / Imara | Week 3–4 (after venue shortlisted) |
+| Engage Perth commercial interior designer / architect for concept drawings | Anthony | Week 3–4 (after venue shortlisted) |
 | Architect brief: health + beauty, 180–200sqm, WDP-compliant collection room | — | At engagement |
 | WDP site visit to assess shortlisted venue for collection room compliance | Grace + WDP rep | Week 5–6 |
 | Council pre-application — planning zone and building use confirmation | Solicitor | Week 3 |

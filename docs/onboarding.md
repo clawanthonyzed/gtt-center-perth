@@ -7,7 +7,7 @@
 
 # PART A — STAFF ONBOARDING
 
-## A1. Pre-Start Checklist (Imara + Fern complete before Day 1)
+## A1. Pre-Start Checklist (Operations Director (TBD) + Fern complete before Day 1)
 
 ### Employment Admin
 - [ ] Employment contract signed and returned (2 copies — employee keeps one)
@@ -26,7 +26,7 @@
 - [ ] Fresha login created (role-appropriate access level)
 - [ ] WhatsApp group "GTT CP Team" — add mobile number
 - [ ] Email (if applicable)
-- [ ] Key/fob/alarm code issued (Imara only issues — log all issued keys)
+- [ ] Key/fob/alarm code issued (Operations Director only issues — log all issued keys)
 
 ### Phlebotomist Specific (additional to above)
 - [ ] WDP/PathWest credential letter received and filed
@@ -38,7 +38,7 @@
 
 ---
 
-## A2. Day 1 Orientation (Imara leads — 2 hours)
+## A2. Day 1 Orientation (Operations Director leads — 2 hours)
 
 ### Tour (30 min)
 - Reception: Fresha terminal, phone, patient files location, welcome pack storage
@@ -63,13 +63,13 @@
 ### Service Standards Briefing (15 min)
 - Patient is always addressed by first name
 - No discussing GTT results (ever) — redirect to their doctor
-- Fasting failure: do not dismiss, call Imara immediately
-- Any patient who feels unwell: alert phlebotomist + Imara immediately
+- Fasting failure: do not dismiss, notify Operations Director immediately
+- Any patient who feels unwell: alert phlebotomist + Operations Director immediately
 - Phone use: personal phones off during treatment delivery
 
 ### Buddy System (Weeks 1–2)
-- New staff shadow Imara or an experienced team member for first 3 shifts
-- No solo patient contact until buddy sign-off (Imara confirms readiness)
+- New staff shadow Operations Director or an experienced team member for first 3 shifts
+- No solo patient contact until buddy sign-off (Operations Director confirms readiness)
 
 ---
 
@@ -78,7 +78,7 @@
 ### All Staff (Days 1–3)
 - Day 1: Orientation (as above)
 - Day 2: Observe full operating day (shadowing)
-- Day 3: Manage own patient interactions with Imara oversight
+- Day 3: Manage own patient interactions with Operations Director oversight
 
 ### Phlebotomist Only
 - WDP/PathWest phlebotomy protocol review (WDP-provided)

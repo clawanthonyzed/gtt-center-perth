@@ -158,6 +158,8 @@ The verified capacity timetable (operations-manual.md) gives every GTT client tw
 
 ## PART B: AFTERNOON / STANDALONE SERVICES
 
+> **2026-07 UPDATE:** PM afternoon sessions are sold as **individual services at individual prices** — NOT as Package 1/2/3. Clients book single services (massage, facial, nails, brows, hair, spray tan) at the per-service rates below. No minimum package spend applies in the PM session. Financial model (cash-flow.md, unit-economics.md) requires revision to reflect individual service pricing for PM revenue.
+
 *GTT pathology testing is AM-only (fasting requirement) — no testing in the afternoon. But every other service runs in the afternoon: the full Part A GTT-window menu (massage, facials, nails, brows/lashes, hairdressing) is available as standalone "PM Spa Packages" using the same Package 1/2/3 pricing (no testing, no GTT slot needed), PLUS the longer standalone-only services below (spray tan, hair colour, lash extensions, belly casting, and the 60-min/50-min hairdressing services that exceed the 45-min GTT slot).*
 
 *10% online pre-booking discount applies when booked at the same time as a GTT reservation. Full price applies for in-center/same-day upsells.*

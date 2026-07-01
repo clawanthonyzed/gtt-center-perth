@@ -1,6 +1,6 @@
 # GTT Center Perth — In-House GTT Feasibility Research
 ## Can We Run the Full 75g OGTT Without WDP/PathWest?
-### Version 1.0 | June 2026 | Owner: Cora (Clinical) + Imara
+### Version 1.0 | June 2026 | Owner: Cora (Clinical)
 
 ---
 
@@ -304,7 +304,7 @@ These do not require NATA accreditation and should start Day 1:
 
 ---
 
-*Owner: Cora (Clinical) + Imara*  
+*Owner: Cora (Clinical)*  
 *Research conducted: June 2026*  
 *Sources: ADIPS 2025 (MJA/PMC), NATA ISO 15189 programme, NPAAC 7th Ed 2023, MBS Online (item 66548), Services Australia APL/APA documentation, WA ORCHID study (PMC6888052), Jolimont Laboratory NATA record, Health Insurance Act 1973, Health Insurance (Accredited Pathology Laboratories — Approval) Principles 2017*  
 *Review: Solicitor + accountant before Phase 2 capital commitment*

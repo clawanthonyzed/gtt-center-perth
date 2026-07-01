@@ -384,7 +384,7 @@ These documents are referenced or implied but don't exist.
 |---|---|---|---|
 | 🔴 Blocking | docs/consent-form.md | Legal — patient consent before any blood collection | Cora + solicitor |
 | 🔴 Blocking | docs/privacy-policy.md | Legal — required before waitlist collection begins | Solicitor |
-| 🔴 Blocking | docs/emergency-plan.md | WHS compliance — WorkSafe WA requirement | Grace + Imara |
+| 🔴 Blocking | docs/emergency-plan.md | WHS compliance — WorkSafe WA requirement | Grace + Operations Director (TBD) |
 | 🔴 Blocking | docs/website-spec.md | Marketing — nothing works without a website | Poppy + developer |
 | 🟡 High | docs/brand-guide.md | Marketing consistency — Instagram + all materials | Poppy |
 | 🟡 High | docs/patient-intake-form.md | Clinical safety — massage contraindications | Cora + massage therapist |
@@ -438,7 +438,7 @@ A VIP tier at A$495–595 could include:
 - All Complete inclusions
 - Professional bump photography (partner photographer, 20 min)
 - Branded keepsake box (Gaia/Weleda/Mustela products — A$40–60 cost)
-- Personalised handwritten note from Imara
+- Personalised handwritten note from Operations Director
 - Priority booking confirmation
 
 This is pure margin improvement — labor cost barely increases, product cost ~A$60. At 15% of GTT bookings taking VIP: +A$3,000–4,000/month revenue.
@@ -510,7 +510,7 @@ At A$25 retail average × 330 visits = A$8,250/month vs current A$800 projection
 
 Reed's partnership strategy focuses on referral cards. A stronger moat: invite midwife practices to GTT Center Perth for a 30-minute paid lunch-and-learn (A$30–50 voucher + lunch).
 
-They experience the venue themselves. They see the collection room. They meet Imara. They become advocates not just referrers.
+They experience the venue themselves. They see the collection room. They meet the Operations Director. They become advocates not just referrers.
 
 1 lunch-and-learn per quarter, 8–10 midwives attending = 10 new referral relationships per quarter. Much stronger than a referral card drop.
 
@@ -548,18 +548,18 @@ Budget: A$500–800 for 1 professional shoot session during fit-out peak (venue 
 
 ---
 
-### IM-12 | Imara Needs a Deputy / Cross-Training Plan
+### IM-12 | Operations Director Needs a Deputy / Cross-Training Plan
 
-Imara is the single point of failure for:
+The Operations Director is the single point of failure for:
 - Opening the venue (only documented key holder)
 - First response for clinical incidents
 - WDP liaison
 - Payroll approval
 - Staff management
 
-If Imara is ill for 1 week, the business has no fallback. No deputy is named. No cross-training plan documented.
+If Operations Director is unavailable for 1 week, the business has no fallback. No deputy is named. No cross-training plan documented.
 
-Minimum required: receptionist cross-trained as backup opener; phlebotomist cross-trained as backup clinical incident first responder; Bruno (finance agent) can run payroll without Imara's daily input.
+Minimum required: receptionist cross-trained as backup opener; phlebotomist cross-trained as backup clinical incident first responder; Bruno (finance agent) can run payroll without Operations Director's daily input.
 
 ---
 
@@ -597,4 +597,4 @@ Minimum required: receptionist cross-trained as backup opener; phlebotomist cros
 
 *Audit completed by: Idea Lobster (Claude — Idea Lobster mode) | June 2026*  
 *Document owners: Grace (Operations), Bruno (Finance), Cora (Clinical), Jade (CX)*  
-*All findings require Anthony + Imara sign-off before remediation begins*
+*All findings require Anthony sign-off before remediation begins*
