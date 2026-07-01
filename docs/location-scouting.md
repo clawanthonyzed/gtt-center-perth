@@ -1,6 +1,6 @@
 # GTT Center Perth — Location Scouting Report
 
-**Version:** 1.0 | **Date:** 2026-07-01 (Empire Day 71)
+**Version:** 2.0 | **Date:** 2026-07-01 (Empire Day 71)
 **Author:** Idea Lobster (CEO Advisory)
 **Status:** Pre-lease — shortlist for physical inspection
 
@@ -9,55 +9,50 @@
 ## Scouting Brief
 
 **Target space:** 180–220 sqm ground floor commercial tenancy
-**Use class:** Health/beauty services (confirm with local council planning zone before committing)
-**WDP/PathWest requirement:** Blood collection room must meet licensed collection centre specifications — confirm with WDP before signing any lease
-**Rent budget:** A$8,000/month (A$40/sqm/month for 200sqm) — canonical in `financial-model.md`
+**Use class:** Health/beauty services (confirm planning zone with local council before committing to any property)
+**WDP/PathWest requirement:** Blood collection room spec must be confirmed with WDP BEFORE signing any lease
+**Rent budget:** A$7,000–9,000/month (A$35–45/sqm/month for 200sqm)
 **Target open:** October 2026
+
+### Primary Location Criteria
+
+1. **Ample parking — non-negotiable.** GTT clients are 24–28 weeks pregnant. They drive. Minimum 8–10 dedicated or immediately adjacent off-street parking spaces. Street parking alone is not acceptable.
+2. **Freeway or arterial access.** Clients travel from across Perth metro. Location must be easy to find and easy to reach from all directions.
+3. **Ground floor.** Pregnant clients + prams + mobility aids. Any stairs = excluded.
+4. **Right demographic catchment.** Young families, professionals, dual-income households. Perth's growth corridors and established family suburbs.
+5. **Visible signage opportunity.** Storefront or building signage visible from road.
+
+**Clients will travel for this service.** Proximity to a specific hospital is NOT a requirement. Parking and accessibility drive venue selection.
 
 ---
 
-## Priority 1 — SUBIACO (Primary Target)
+## Priority 1 — OSBORNE PARK
 
-### Why Subiaco First
+### Why Osborne Park First
 
-King Edward Memorial Hospital (KEMH) is WA's principal maternity hospital and the source of the largest single concentration of GTT referrals in the state. KEMH performs the highest volume of obstetric procedures in Western Australia — virtually all Perth women using public maternity care at KEMH will have their GTT referral initiated there or by an associated OB/GP within 1–2km.
+Osborne Park sits between the Mitchell Freeway and Wanneroo Road — accessible from every part of Perth (northern suburbs via Mitchell Freeway, southern via Scarborough Beach Rd, eastern via Reid Hwy, western via coastal roads). It is Perth's most connected suburban commercial precinct.
 
-**The ideal venue is within 10 minutes walk of KEMH on Bagot Road, Subiaco.**
+Commercial properties here are typically in low-rise business park style buildings or standalone retail with dedicated off-street parking lots of 10–30 spaces. Rent is substantially lower than inner-city alternatives.
 
-A pregnant woman in her 24–28 week window already travelling to Subiaco for obstetric appointments is the precise referral trigger. A venue on her route between public transport, car park, and KEMH converts a word-of-mouth referral into a walk-in inspection before she even books.
+### Osborne Park Profile
 
-### KEMH Location
-- **Address:** 374 Bagot Rd, Subiaco WA 6008
-- **Catchment:** Entire Perth public maternity population (>50% of all Perth births)
-- **Associated OB/GP clinics within 1km:** Multiple private obstetric suites on Hay St, Rokeby Rd, Churchill Ave
-- **Parking:** Street parking Bagot Rd / Harbourne St; Roberts Rd carpark
+- **Freeway access:** Mitchell Freeway (Karrinyup/Stirling exits) — 2 min from freeway
+- **Demographics:** Within 10km of Stirling, Karrinyup, Scarborough, Joondanna, Balga, Tuart Hill, Innaloo — strong mix of young families and professionals
+- **Parking:** Typically 10–40 dedicated spaces per commercial tenancy (business park/light industrial style) — the best parking of any Perth location for this use
+- **Commercial lease rates:** A$200–350/sqm/yr net (A$17–29/sqm/month) — significantly below budget, providing cashflow buffer during ramp-up
+- **Building type:** Standalone commercial, tilt-panel, or light industrial with office fit-out — ideal for health/beauty conversion (high ceilings, flexible floor plates, loading access)
 
-### Subiaco Suburb Profile
-- **Demographics:** Affluent inner-city (median household income >A$130K), professionals, established families
-- **Foot traffic:** High foot traffic Rokeby Rd retail strip, Subiaco markets footprint
-- **Transport:** Subiaco Train Station (Fremantle Line); multiple bus routes
-- **Commercial lease rates:** A$380–600/sqm/yr net for ground floor retail (A$32–50/sqm/month)
-  - Ground floor retail strip: higher end (~A$45–50/sqm)
-  - First floor commercial suite: lower (~A$30–38/sqm) — less ideal (pregnant patients, stairs)
-  - Former medical/health tenancy: A$35–45/sqm — preferred (may already have compliant WC, clinical features)
+### Target Streets — Osborne Park
 
-### Target Streets — Subiaco
+| Street / Precinct | Notes |
+|------------------|-------|
+| **Hutton St** | Major commercial strip, high visibility, multiple units with own car parks |
+| **Scarborough Beach Rd** | High-traffic arterial, exposure to Innaloo/Stirling traffic |
+| **Balcatta Rd** | Business park units, 10+ space car parks standard |
+| **Warrick St / Odin Drive** | Quieter commercial, larger footprints available |
+| **Joseph Banks** | Light industrial/commercial — lowest rents, highest parking |
 
-| Street | Notes |
-|--------|-------|
-| **Bagot Rd** | Direct KEMH thoroughfare — highest priority. Medical/mixed-use ground floor. |
-| **Rokeby Rd** | Main retail strip. High visibility. Requires council planning approval for health use. |
-| **Churchill Ave** | Adjacent KEMH. Medical/allied health strip. Strong pathology partnership positioning. |
-| **Hay St** | Busy arterial. Private OB suites nearby. Good referral proximity. |
-| **Railway Rd** | Station end, high foot traffic. Mixed commercial. |
-
-### Subiaco Search Strategy
-1. Search commercialrealestate.com.au for "Subiaco commercial lease 150–250sqm"
-2. Contact agents: Ray White Commercial WA, CBRE Perth, Colliers Perth, Savills Perth
-3. Request access to off-market tenancies — many Subiaco medical strips fill by agent-to-agent before listing
-4. Specifically request: former medical/dental/beauty tenancies (plumbing in, may have disabled access, compliant WC already)
-
-**INSPECT MINIMUM 5 PROPERTIES IN SUBIACO BEFORE SHORTLISTING.**
+**INSPECT MINIMUM 5 PROPERTIES IN OSBORNE PARK.**
 
 ---
 
@@ -65,111 +60,121 @@ A pregnant woman in her 24–28 week window already travelling to Subiaco for ob
 
 ### Why Joondalup
 
-Joondalup Health Campus (JHC) has a full obstetric and maternity unit serving the entire northern corridor (Joondalup, Wanneroo, Burns Beach, Ellenbrook). The northern suburbs are WA's highest population growth corridor — first-time buyers and young families who precisely fit the GTT demographic.
+Joondalup is the northern suburbs hub — Mitchell Freeway northern terminus, Joondalup Train Station, Lakeside Shopping Centre adjacent. Joondalup Health Campus is nearby but is NOT the reason to be here. The reason is: 400,000+ people in Perth's northern corridor use Joondalup as their commercial hub. It has large car parks across the CBD precinct.
 
-### JHC Location
-- **Address:** Shenton Ave, Joondalup WA 6027
-- **Catchment:** Northern suburbs (Joondalup, Wanneroo, Clarkson, Kinross, Duncraig, Hillarys, Craigie, Edgewater)
-- **OB/GP density:** High — northern suburbs have significant GP and private OB density
+### Joondalup Profile
 
-### Joondalup Suburb Profile
-- **Demographics:** Mixed income, young families, first-home buyers — volume play vs Subiaco premium
-- **Foot traffic:** Lakeside Joondalup Shopping Centre adjacent — high foot traffic
-- **Transport:** Joondalup Train Station (Joondalup Line)
-- **Commercial lease rates:** A$250–400/sqm/yr net (A$21–33/sqm/month) — A$2,000–3,000/month cheaper than Subiaco at same sqm. Material improvement on M1–M3 ramp-up losses.
+- **Freeway access:** Mitchell Freeway northern end (5 min from Joondalup Dr exit)
+- **Demographics:** Northern suburbs (Joondalup, Wanneroo, Clarkson, Kinross, Duncraig, Hillarys, Craigie, Edgewater, Ocean Reef) — WA's highest population growth corridor. Young families, first-home buyers, dual-income couples.
+- **Parking:** CBD precinct has 2,000+ public parking spaces. Individual commercial tenancies in Joondalup CBD have dedicated car parks. Substantially better than Subiaco or inner-city.
+- **Commercial lease rates:** A$250–400/sqm/yr net (A$21–33/sqm/month) — within budget
+- **Building type:** Modern commercial builds, medical/professional strips, strip retail with rear parking
 
 ### Target Streets — Joondalup
 
 | Street | Notes |
 |--------|-------|
-| **Boas Ave** | Medical/professional strip near JHC. Strong allied health adjacency. |
-| **Lakeside Drive** | Mixed commercial, high traffic. |
-| **Shenton Ave** | JHC frontage. Immediate proximity to maternity unit. |
-| **Grand Blvd** | Joondalup CBD commercial core. |
-
-### Joondalup Considerations
-- Lower rents improve M1–M3 ramp-up cashflow (currently -A$30,685 / -A$16,270 / -A$7,901)
-- Northern suburbs patient base is larger by volume (higher GTT volume potential)
-- Risk: lower income demographic may show higher price sensitivity at A$200–A$300 package price
-- **Recommendation:** Site visit warranted if Subiaco rent exceeds A$50/sqm/month
+| **Boas Ave** | Medical/professional, parking lots, near JHC |
+| **Lakeside Drive / Grand Blvd** | Main commercial, parking adjacent |
+| **Shenton Ave precinct** | Mixed commercial, car park access |
+| **Davidson Tce / Joondalup Dr** | Suburban commercial, ample parking |
 
 ---
 
-## Priority 3 — MURDOCH / FIONA STANLEY
+## Priority 3 — CANNINGTON / EAST CANNINGTON
 
-### Why Murdoch
+### Why Cannington
 
-Fiona Stanley Hospital (FSH) opened 2014 and hosts a major maternity unit. St John of God Murdoch is adjacent. Murdoch precinct is a fast-growing health hub with lower established lease premiums and new commercial development.
+Cannington sits at the intersection of Albany Hwy and Roe Hwy — the eastern metro's main transport hub. Carousel Shopping Centre dominates the area with massive free car parks surrounding it. Commercial tenancies in this area have excellent parking and serve a large southeastern corridor catchment (Cannington, Bentley, Queens Park, Southern River, Gosnells, Thornlie, Langford, Riverton).
 
-### FSH / SJOG Murdoch Location
-- **Address:** Murdoch Drive, Murdoch WA 6150
-- **Catchment:** Southern suburbs (Fremantle, Cockburn, Melville, Success, Coogee, Hamilton Hill)
-- **Commercial lease rates:** A$220–380/sqm/yr net (A$18–32/sqm/month) — lowest of the 3 zones
-- **Advantage:** New-build tenancies available with blank-slate fit-out potential; landlord incentives strong
-- **Risk:** Less established foot traffic than Subiaco or Joondalup CBD
+### Cannington Profile
 
-### Target Precincts — Murdoch
+- **Freeway access:** Roe Hwy + Albany Hwy interchange — easy from all southeastern suburbs
+- **Demographics:** Mixed income, growing families, large multicultural community — high GTT relevance (gestational diabetes rates higher in some ethnic groups, increasing market size)
+- **Parking:** Carousel precinct and surrounding commercial strips have 500+ free spaces. Individual tenancies have own lots.
+- **Commercial lease rates:** A$180–320/sqm/yr net (A$15–27/sqm/month) — lowest of the 3 priority zones
+- **Building type:** Standalone retail, older commercial strips with parking, newer strip centres with rear lots
 
-| Precinct | Notes |
-|----------|-------|
-| **Murdoch Drive / Emplacement Dr** | Immediate FSH proximity. New commercial builds. |
-| **South Street, Murdoch** | Arterial, commercial strip, high traffic. |
-| **Fremantle** — Queen St / Market St | Smaller catchment but affluent, tourist + inner-city mix. |
+### Target Areas — Cannington
 
----
-
-## Priority 4 — MIDLAND (Watchlist Only)
-
-St John of God Midland Public Hospital serves the eastern corridor (Midland, Swan Valley, The Lakes). Lower-income catchment, higher price sensitivity at A$200–A$300 packages. **Do not lead with Midland — watchlist only if primary sites are exhausted.**
+| Area | Notes |
+|------|-------|
+| **Manning Rd / George St area** | Commercial strips near Carousel, parking available |
+| **Albany Hwy commercial** | High traffic, mixed use, good car parking |
+| **Welshpool Rd East** | Business park style, excellent parking, good freeway access |
 
 ---
 
-## Venue Specification — What to Look For
+## Priority 4 — MYAREE / MURDOCH
 
-Every inspection must confirm:
+### Why Myaree / Murdoch
 
-### Non-Negotiable
-- [ ] Ground floor only (pregnant patients, stairs = exclusion)
-- [ ] Minimum 150sqm usable floor area (target 180–200sqm)
-- [ ] Women's accessible WC on-premises or in building (mandatory)
-- [ ] Natural light in at least lounge/reception area (client comfort during 2-hour wait)
-- [ ] Plumbing — minimum 2 wet areas (clinical sink in collection room + hairdressing basin)
-- [ ] Planning zone permits health/beauty services use (confirm with council before any offer)
-- [ ] Loading access for fit-out delivery (treatment beds, nail stations, centrifuge)
-- [ ] Three-phase power available (HVAC, centrifuge, spray tan booth require 3-phase)
-- [ ] Parking — minimum 3 dedicated or within 100m (clients are 24–28 weeks pregnant)
+Southern metro corridor. Leach Hwy and Kwinana Freeway junction. Myaree is established commercial/light industrial with ample parking. Murdoch is a newer precinct (Fiona Stanley Hospital, St John of God Murdoch, Murdoch University) with new commercial development and parking. Serves Fremantle, Cockburn, Melville, Canning Vale southern catchment.
 
-### Preferred
-- [ ] Former medical, dental, or beauty tenancy (plumbing already in, may have compliant disabled WC)
-- [ ] Landlord open to fit-out contribution or rent-free period (standard in Perth 2026)
-- [ ] HVAC already installed (nail ventilation + HVAC = significant saving)
-- [ ] Back-of-house / staff access separate from client entry
-- [ ] 3-phase power confirmed (not just 2-phase)
+### Myaree / Murdoch Profile
+
+- **Freeway access:** Kwinana Freeway (multiple southern exits), Leach Hwy arterial
+- **Demographics:** Southern suburbs (Murdoch, Melville, Cockburn, Canning Vale, Success, Bibra Lake) — large and growing family demographic
+- **Parking:** Excellent. Both Myaree commercial/industrial and Murdoch precinct have dedicated lots
+- **Commercial lease rates:** A$220–380/sqm/yr net (A$18–32/sqm/month)
+
+---
+
+## Suburb Comparison Matrix
+
+| Location | Freeway Access | Parking | Demo Fit | Lease Rate | Overall |
+|----------|---------------|---------|----------|-----------|---------|
+| Osborne Park | ★★★★★ | ★★★★★ | ★★★★ | ★★★★★ | **★★★★★** |
+| Joondalup | ★★★★ | ★★★★★ | ★★★★ | ★★★★ | **★★★★** |
+| Cannington | ★★★★ | ★★★★★ | ★★★ | ★★★★★ | **★★★★** |
+| Myaree/Murdoch | ★★★★ | ★★★★ | ★★★★ | ★★★★ | **★★★★** |
+
+---
+
+## Venue Specification — What Every Inspection Must Confirm
+
+### Parking — Check First, Before Anything Else
+- [ ] Minimum 8 dedicated off-street spaces included with tenancy OR free public car park within 50m
+- [ ] Spaces are well-lit (clients arrive 7:30am in winter = dark)
+- [ ] Pram-accessible (wide spaces preferred, no gravel)
+- [ ] Space for staff (3–5 additional spaces for employed staff)
+
+### Physical Requirements (Non-Negotiable)
+- [ ] Ground floor only
+- [ ] Minimum 150sqm usable (target 180–200sqm)
+- [ ] Women's accessible WC on-premises or immediately in building
+- [ ] Natural light in at least lounge/reception zone
+- [ ] Minimum 2 plumbed wet areas (clinical sink + hairdressing basin)
+- [ ] Planning zone permits health/beauty use (confirm with council before any offer)
+- [ ] 3-phase power confirmed
+- [ ] Loading/delivery access for fit-out
+
+### Preferred Features
+- [ ] Former health, medical, or beauty tenancy (plumbing existing, compliant WC)
+- [ ] HVAC already installed (nail LEV + HVAC = significant saving)
+- [ ] Back-of-house staff access separate from client entry
+- [ ] Storage room or back area for dirty linen, clinical waste
+- [ ] Signage rights — visible from road
 
 ### Lease Terms to Negotiate
 
 | Term | Target |
 |------|--------|
 | Lease length | 3 years initial + 3-year option |
-| Rent review | Fixed CPI (not market review) for initial term |
-| Fit-out contribution | A$20,000–50,000 landlord contribution (negotiate hard — market is soft) |
-| Rent-free period | 3–6 months during fit-out |
-| Personal guarantee | Negotiate cap at 6 months rent (A$48,000) — do NOT give open-ended personal guarantee |
-| Entity signing | YETI Tipi Holdings PTY LTD as trustee for YETI Holding Trust (NOT Anthony personally) |
+| Rent review | Fixed CPI (not market review) |
+| Rent-free period | 3–6 months during fit-out (negotiate this first) |
+| Personal guarantee | Cap at 6 months rent equivalent — NOT open-ended |
+| Entity signing | YETI Tipi Holdings PTY LTD as trustee for YETI Holding Trust |
 
 ---
 
-## Site Comparison Matrix
+## Search Strategy
 
-| Site | Distance to Hospital | Lease Rate | Foot Traffic | Parking | Rating |
-|------|---------------------|-----------|--------------|---------|--------|
-| Subiaco — Bagot Rd | <500m KEMH | A$40–50/sqm | High | Street / Roberts Rd | ★★★★★ |
-| Subiaco — Churchill Ave | <300m KEMH | A$35–45/sqm | Medium | Street | ★★★★★ |
-| Subiaco — Rokeby Rd | 800m KEMH | A$45–55/sqm | Very High | Limited | ★★★★ |
-| Joondalup — Boas Ave | <400m JHC | A$25–33/sqm | Medium | Good | ★★★★ |
-| Joondalup — Shenton Ave | <200m JHC | A$28–35/sqm | Medium | Good | ★★★★ |
-| Murdoch — Emplacement Dr | <500m FSH | A$22–30/sqm | Low-Medium | Good | ★★★ |
-| Fremantle — Queen St | >10km any hospital | A$30–40/sqm | High | Difficult | ★★ |
+1. Engage commercial RE agent with **business park / light industrial** experience in Osborne Park/northern suburbs — not a retail specialist
+2. Search commercialrealestate.com.au: "Osborne Park commercial lease 150–250sqm" and "Joondalup commercial lease 150–250sqm"
+3. Agents to contact: Ray White Commercial WA (Osborne Park focus), CBRE Perth, Colliers Perth (Joondalup specialists), Knight Frank Perth
+4. Ask specifically for: **tenancies with own car parks or guaranteed dedicated spaces**
+5. Do NOT view any property without first confirming parking count
 
 ---
 
@@ -177,16 +182,16 @@ Every inspection must confirm:
 
 | Action | Owner | By |
 |--------|-------|----|
-| Engage commercial RE agent (Subiaco-focused) | Anthony / Imara | Week 1 |
-| List 5 Subiaco inspection candidates | Agent | Week 2 |
+| Contact WDP (08 9317 0999) — confirm collection room spec | Grace / Anthony | **Week 1 — before any venue viewing** |
+| Engage commercial RE agent (Osborne Park + Joondalup focus) | Anthony | Week 1 |
+| Request 5+ inspection candidates with parking confirmed | Agent | Week 2 |
 | Confirm planning zone for each shortlisted site | Solicitor | Week 2 |
-| Contact WDP to understand collection room spec before any lease signed | Grace | Week 1 — Priority 1 |
-| Site inspection round 1 | Anthony + Imara | Week 3–4 |
-| Issue Heads of Agreement on preferred site | Solicitor | Week 5–6 |
+| Site inspection round 1 with WDP room spec in hand | Anthony | Week 3–4 |
+| Issue Heads of Agreement on preferred venue | Solicitor | Week 5–6 |
 
-**The WDP pathology partnership confirmation must happen BEFORE signing any lease** — WDP's collection room specification governs minimum room dimensions and plumbing requirements. Do not commit to a tenancy without this specification confirmed.
+**Rule: WDP collection room spec must be obtained before signing any lease.** WDP's minimum room dimensions and plumbing requirements will determine whether a shortlisted venue is viable.
 
 ---
 
 *Document owner: Grace (GTT Center Perth Operations Manager)*
-*Next review: after site inspection round 1 (Week 3–4)*
+*Version 2.0 — revised to prioritise parking and freeway access over hospital proximity*

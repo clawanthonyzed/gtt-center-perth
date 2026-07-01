@@ -88,6 +88,8 @@ Anthony cannot receive this income personally — TPI pension compliance require
 
 ### Structure Recommendation
 
+**NOTE — 2026-07 UPDATE:** Imara returns to full-time employment from April 2026 (maternity leave ended). Tax rows above assuming "sole income" are no longer applicable — she has her own salary income. Accountant must remodel distributions for her new employment income bracket. Consult accountant before distributing trust income.
+
 **Now (2026):** YETI Trust trades directly. Distribute to Imara (and/or other family beneficiaries at accountant's advice) — most tax-efficient at current Year 1/Year 2 projected profit levels.
 
 **If/when 30% trust-distribution tax is legislated:** add an operating PTY LTD under the trust before the effective date. Re-run §3 with the legislated rate/threshold once known.

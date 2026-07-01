@@ -15,7 +15,7 @@ Pregnant women must sit in a clinic for 2–2.5 hours during their GTT test. GTT
 
 **Entity:** YETI Holding Trust, trading as GTT Center Perth
 **Corporate trustee:** YETI Tipi Holdings PTY LTD
-**Operational director:** Imara
+**Operations Director:** Position to be recruited prior to launch
 **Anthony's role:** Nominal director of corporate trustee. Administrative/paperwork only. Manager runs day-to-day.
 **Launch target:** October 2026 (Month 5)
 

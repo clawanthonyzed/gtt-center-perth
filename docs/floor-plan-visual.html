@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GTT Center Perth — Conceptual Floor Plan</title>
+<style>
+  body { font-family: 'Arial', sans-serif; background: #e8e8e8; margin: 0; padding: 20px; }
+  .page { background: white; width: 860px; margin: 0 auto; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+  h1 { text-align: center; font-size: 18px; margin: 0 0 4px 0; letter-spacing: 2px; color: #1a1a1a; }
+  .subtitle { text-align: center; font-size: 11px; color: #888; margin-bottom: 16px; }
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+<h1>GTT CENTER PERTH — CONCEPTUAL FLOOR PLAN</h1>
+<div class="subtitle">Concept Drawing Only · Not for Construction · Scale Approximate · July 2026 · Prepared by Cole (GTT Architectural Worker)</div>
+
+<svg width="800" height="1040" xmlns="http://www.w3.org/2000/svg" style="display:block; margin: 0 auto;">
+
+  <!-- ======================== ROOM FILLS ======================== -->
+
+  <!-- STREET ENTRY ARROW -->
+  <polygon points="395,14 405,14 405,6 415,6 400,0 385,6 395,6" fill="#555"/>
+  <text x="400" y="28" text-anchor="middle" font-size="10" fill="#555" letter-spacing="1">STREET ENTRY</text>
+
+  <!-- Row 1: Reception + GTT Lounge -->
+  <rect x="60" y="35" width="185" height="215" fill="#FFFDE7" rx="1"/>
+  <rect x="245" y="35" width="495" height="215" fill="#BBDEFB" rx="1"/>
+
+  <!-- Row 2: Cafe + Collection Room + Hairdressing -->
+  <rect x="60" y="250" width="185" height="215" fill="#F3E5F5" rx="1"/>
+  <rect x="245" y="250" width="245" height="215" fill="#FFE0B2" rx="1"/>
+  <rect x="490" y="250" width="250" height="215" fill="#DCEDC8" rx="1"/>
+
+  <!-- Row 3: Treatment Room 1 + Treatment Room 2 + Treatment Room 3 + Nail Station -->
+  <rect x="60" y="465" width="157" height="215" fill="#EDE7F6" rx="1"/>
+  <rect x="217" y="465" width="157" height="215" fill="#EDE7F6" rx="1"/>
+  <rect x="374" y="465" width="157" height="215" fill="#FCE4EC" rx="1"/>
+  <rect x="531" y="465" width="209" height="215" fill="#FFF8E1" rx="1"/>
+
+  <!-- Row 4: Spray Tan + TR4 + Staff Room + WC x2 + Staff WC + Store -->
+  <rect x="60" y="680" width="125" height="140" fill="#FFF3E0" rx="1"/>
+  <rect x="185" y="680" width="160" height="140" fill="#FCE4EC" rx="1"/>
+  <rect x="345" y="680" width="160" height="140" fill="#ECEFF1" rx="1"/>
+  <rect x="505" y="680" width="115" height="68" fill="#B2EBF2" rx="1"/>
+  <rect x="505" y="748" width="115" height="72" fill="#B2EBF2" rx="1"/>
+  <rect x="620" y="680" width="120" height="68" fill="#CFD8DC" rx="1"/>
+  <rect x="620" y="748" width="120" height="72" fill="#CFD8DC" rx="1"/>
+
+  <!-- ======================== EXTERNAL WALLS ======================== -->
+  <rect x="60" y="35" width="680" height="785" fill="none" stroke="#1a1a1a" stroke-width="6"/>
+
+  <!-- ======================== INTERNAL WALLS ======================== -->
+  <!-- Row 1 / Row 2 divider (horizontal) -->
+  <line x1="60" y1="250" x2="740" y2="250" stroke="#333" stroke-width="4"/>
+  <!-- Row 2 / Row 3 divider -->
+  <line x1="60" y1="465" x2="740" y2="465" stroke="#333" stroke-width="4"/>
+  <!-- Row 3 / Row 4 divider -->
+  <line x1="60" y1="680" x2="740" y2="680" stroke="#333" stroke-width="4"/>
+
+  <!-- Row 1 vertical: Reception / Lounge -->
+  <line x1="245" y1="35" x2="245" y2="250" stroke="#333" stroke-width="4"/>
+
+  <!-- Row 2 verticals -->
+  <line x1="245" y1="250" x2="245" y2="465" stroke="#333" stroke-width="4"/>
+  <line x1="490" y1="250" x2="490" y2="465" stroke="#333" stroke-width="4"/>
+
+  <!-- Row 3 verticals -->
+  <line x1="217" y1="465" x2="217" y2="680" stroke="#333" stroke-width="4"/>
+  <line x1="374" y1="465" x2="374" y2="680" stroke="#333" stroke-width="4"/>
+  <line x1="531" y1="465" x2="531" y2="680" stroke="#333" stroke-width="4"/>
+
+  <!-- Row 4 verticals -->
+  <line x1="185" y1="680" x2="185" y2="820" stroke="#333" stroke-width="4"/>
+  <line x1="345" y1="680" x2="345" y2="820" stroke="#333" stroke-width="4"/>
+  <line x1="505" y1="680" x2="505" y2="820" stroke="#333" stroke-width="4"/>
+  <line x1="620" y1="680" x2="620" y2="820" stroke="#333" stroke-width="4"/>
+  <!-- WC horizontal divider -->
+  <line x1="505" y1="748" x2="740" y2="748" stroke="#333" stroke-width="2"/>
+
+  <!-- ======================== DOOR OPENINGS (white gaps) ======================== -->
+  <!-- Entry door — Lounge from street -->
+  <rect x="340" y="32" width="80" height="8" fill="white"/>
+
+  <!-- Entry door — Reception from street -->
+  <rect x="90" y="32" width="60" height="8" fill="white"/>
+
+  <!-- Lounge to Collection Room -->
+  <rect x="282" y="247" width="60" height="8" fill="white"/>
+
+  <!-- Reception to Cafe (internal door) -->
+  <rect x="128" y="247" width="50" height="8" fill="white"/>
+
+  <!-- Treatment room doors (from hallway/row 3 top wall) -->
+  <rect x="85" y="462" width="50" height="8" fill="white"/>
+  <rect x="242" y="462" width="50" height="8" fill="white"/>
+  <rect x="399" y="462" width="50" height="8" fill="white"/>
+  <rect x="556" y="462" width="50" height="8" fill="white"/>
+
+  <!-- Back zone doors -->
+  <rect x="80" y="677" width="50" height="8" fill="white"/>
+  <rect x="220" y="677" width="50" height="8" fill="white"/>
+  <rect x="375" y="677" width="50" height="8" fill="white"/>
+  <rect x="530" y="677" width="45" height="8" fill="white"/>
+
+  <!-- ======================== DOOR SWING ARCS ======================== -->
+  <!-- Entry to Lounge -->
+  <path d="M 340 35 Q 340 75 380 75" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="340" y1="35" x2="420" y2="35" stroke="none"/>
+
+  <!-- Entry to Reception -->
+  <path d="M 90 35 Q 90 70 130 70" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- TR door arcs (inward swing) -->
+  <path d="M 85 465 Q 85 505 125 505" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <path d="M 242 465 Q 242 505 282 505" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <path d="M 399 465 Q 399 505 439 505" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <path d="M 556 465 Q 556 505 596 505" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- ======================== ROOM LABELS ======================== -->
+
+  <!-- RECEPTION -->
+  <text x="152" y="120" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#555">RECEPTION</text>
+  <text x="152" y="137" text-anchor="middle" font-family="Arial" font-size="10" fill="#777">Check-In · Retail</text>
+  <text x="152" y="153" text-anchor="middle" font-family="Arial" font-size="10" fill="#777">2 Workstations</text>
+  <text x="152" y="172" text-anchor="middle" font-family="Arial" font-size="9" fill="#aaa">~16 sqm</text>
+
+  <!-- GTT LOUNGE -->
+  <text x="492" y="112" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#1565C0">GTT LOUNGE</text>
+  <text x="492" y="132" text-anchor="middle" font-family="Arial" font-size="11" fill="#1976D2">8 Reclining Chairs · TV · Ambient Lighting</text>
+  <text x="492" y="150" text-anchor="middle" font-family="Arial" font-size="11" fill="#1976D2">Cafe Counter Along Rear Wall</text>
+  <text x="492" y="167" text-anchor="middle" font-family="Arial" font-size="11" fill="#1976D2">Phone Charging at Every Chair · Natural Light</text>
+  <text x="492" y="186" text-anchor="middle" font-family="Arial" font-size="9" fill="#aaa">~40 sqm</text>
+
+  <!-- CAFE / REFRESH -->
+  <text x="152" y="342" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#6A1B9A">CAFE /</text>
+  <text x="152" y="358" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#6A1B9A">REFRESH</text>
+  <text x="152" y="374" text-anchor="middle" font-family="Arial" font-size="9" fill="#888">Mini fridge · Teas</text>
+  <text x="152" y="390" text-anchor="middle" font-family="Arial" font-size="9" fill="#888">Glucose drinks</text>
+  <text x="152" y="408" text-anchor="middle" font-family="Arial" font-size="9" fill="#aaa">~12 sqm</text>
+
+  <!-- BLOOD COLLECTION ROOM -->
+  <text x="367" y="328" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#E65100">BLOOD</text>
+  <text x="367" y="346" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#E65100">COLLECTION</text>
+  <text x="367" y="365" text-anchor="middle" font-family="Arial" font-size="10" fill="#BF360C">Chair A · Chair B</text>
+  <text x="367" y="381" text-anchor="middle" font-family="Arial" font-size="10" fill="#BF360C">Centrifuge · Medical Fridge</text>
+  <text x="367" y="397" text-anchor="middle" font-family="Arial" font-size="10" fill="#BF360C">Clinical Sink (elbow-operated)</text>
+  <text x="367" y="413" text-anchor="middle" font-family="Arial" font-size="10" fill="#BF360C">Privacy Screens · Sharps</text>
+  <text x="367" y="432" text-anchor="middle" font-family="Arial" font-size="9" fill="#aaa">~20 sqm</text>
+
+  <!-- HAIRDRESSING -->
+  <text x="615" y="328" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2E7D32">HAIRDRESSING</text>
+  <text x="615" y="348" text-anchor="middle" font-family="Arial" font-size="10" fill="#388E3C">2 Styling Chairs</text>
+  <text x="615" y="364" text-anchor="middle" font-family="Arial" font-size="10" fill="#388E3C">2 Backwash Basins</text>
+  <text x="615" y="380" text-anchor="middle" font-family="Arial" font-size="10" fill="#388E3C">Mirror Wall · Back Bar</text>
+  <text x="615" y="398" text-anchor="middle" font-family="Arial" font-size="9" fill="#aaa">~22 sqm</text>
+
+  <!-- TREATMENT ROOM 1 -->
+  <text x="138" y="540" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#4527A0">TREATMENT</text>
+  <text x="138" y="555" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#4527A0">ROOM 1</text>
+  <text x="138" y="572" text-anchor="middle" font-family="Arial" font-size="9" fill="#5E35B1">Pregnancy</text>
+  <text x="138" y="585" text-anchor="middle" font-family="Arial" font-size="9" fill="#5E35B1">Massage</text>
+  <text x="138" y="602" text-anchor="middle" font-family="Arial" font-size="8" fill="#aaa">~13 sqm</text>
+
+  <!-- TREATMENT ROOM 2 -->
+  <text x="295" y="540" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#4527A0">TREATMENT</text>
+  <text x="295" y="555" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#4527A0">ROOM 2</text>
+  <text x="295" y="572" text-anchor="middle" font-family="Arial" font-size="9" fill="#5E35B1">Pregnancy</text>
+  <text x="295" y="585" text-anchor="middle" font-family="Arial" font-size="9" fill="#5E35B1">Massage</text>
+  <text x="295" y="602" text-anchor="middle" font-family="Arial" font-size="8" fill="#aaa">~13 sqm</text>
+
+  <!-- TREATMENT ROOM 3 -->
+  <text x="452" y="540" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#880E4F">TREATMENT</text>
+  <text x="452" y="555" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#880E4F">ROOM 3</text>
+  <text x="452" y="572" text-anchor="middle" font-family="Arial" font-size="9" fill="#AD1457">Facial</text>
+  <text x="452" y="585" text-anchor="middle" font-family="Arial" font-size="9" fill="#AD1457">Beauty</text>
+  <text x="452" y="602" text-anchor="middle" font-family="Arial" font-size="8" fill="#aaa">~13 sqm</text>
+
+  <!-- NAIL STATION -->
+  <text x="635" y="530" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#F57F17">NAIL</text>
+  <text x="635" y="547" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#F57F17">STATION</text>
+  <text x="635" y="565" text-anchor="middle" font-family="Arial" font-size="10" fill="#F9A825">3 Stations</text>
+  <text x="635" y="581" text-anchor="middle" font-family="Arial" font-size="9" fill="#E65100">LEV Ventilation</text>
+  <text x="635" y="597" text-anchor="middle" font-family="Arial" font-size="9" fill="#E65100">Extract → Exterior</text>
+  <text x="635" y="614" text-anchor="middle" font-family="Arial" font-size="8" fill="#aaa">~17 sqm</text>
+
+  <!-- LEV arrow -->
+  <line x1="685" y1="548" x2="733" y2="548" stroke="#E65100" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <defs>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#E65100"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#607D8B"/>
+    </marker>
+  </defs>
+
+  <!-- SPRAY TAN -->
+  <text x="122" y="737" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#E65100">SPRAY</text>
+  <text x="122" y="751" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#E65100">TAN</text>
+  <text x="122" y="765" text-anchor="middle" font-family="Arial" font-size="8" fill="#888">Extractor</text>
+  <text x="122" y="778" text-anchor="middle" font-family="Arial" font-size="7" fill="#aaa">~6 sqm</text>
+
+  <!-- TREATMENT ROOM 4 -->
+  <text x="265" y="730" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#880E4F">TREATMENT</text>
+  <text x="265" y="744" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#880E4F">ROOM 4</text>
+  <text x="265" y="760" text-anchor="middle" font-family="Arial" font-size="9" fill="#AD1457">Brows · Lashes</text>
+  <text x="265" y="775" text-anchor="middle" font-family="Arial" font-size="7" fill="#aaa">~10 sqm</text>
+
+  <!-- STAFF ROOM -->
+  <text x="425" y="730" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#455A64">STAFF</text>
+  <text x="425" y="744" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#455A64">ROOM</text>
+  <text x="425" y="758" text-anchor="middle" font-family="Arial" font-size="9" fill="#607D8B">Lockers · Sink</text>
+  <text x="425" y="772" text-anchor="middle" font-family="Arial" font-size="7" fill="#aaa">~10 sqm</text>
+
+  <!-- PATIENT WC 1 (Accessible) -->
+  <text x="562" y="703" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#00838F">WC 1</text>
+  <text x="562" y="717" text-anchor="middle" font-family="Arial" font-size="8" fill="#00838F">Accessible</text>
+  <text x="562" y="730" text-anchor="middle" font-family="Arial" font-size="7" fill="#aaa">AS 1428.1</text>
+
+  <!-- PATIENT WC 2 -->
+  <text x="562" y="769" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#00838F">WC 2</text>
+  <text x="562" y="783" text-anchor="middle" font-family="Arial" font-size="8" fill="#00838F">Standard</text>
+
+  <!-- STAFF WC -->
+  <text x="680" y="703" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#37474F">STAFF</text>
+  <text x="680" y="717" text-anchor="middle" font-family="Arial" font-size="8" fill="#37474F">WC</text>
+
+  <!-- LINEN / STORAGE -->
+  <text x="680" y="769" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#37474F">LINEN /</text>
+  <text x="680" y="783" text-anchor="middle" font-family="Arial" font-size="8" fill="#37474F">STORE</text>
+
+  <!-- ======================== DIMENSION MARKERS ======================== -->
+  <!-- Width dimension (top) -->
+  <line x1="60" y1="22" x2="740" y2="22" stroke="#888" stroke-width="1"/>
+  <line x1="60" y1="18" x2="60" y2="26" stroke="#888" stroke-width="1"/>
+  <line x1="740" y1="18" x2="740" y2="26" stroke="#888" stroke-width="1"/>
+  <text x="400" y="20" text-anchor="middle" font-family="Arial" font-size="9" fill="#888">~13.6m</text>
+
+  <!-- Height dimension (right) -->
+  <line x1="752" y1="35" x2="752" y2="820" stroke="#888" stroke-width="1"/>
+  <line x1="748" y1="35" x2="756" y2="35" stroke="#888" stroke-width="1"/>
+  <line x1="748" y1="820" x2="756" y2="820" stroke="#888" stroke-width="1"/>
+  <text x="780" y="432" text-anchor="middle" font-family="Arial" font-size="9" fill="#888" transform="rotate(90,780,432)">~15.7m</text>
+
+  <!-- ======================== NORTH ARROW ======================== -->
+  <g transform="translate(740, 840)">
+    <circle cx="0" cy="0" r="20" fill="white" stroke="#555" stroke-width="1.5"/>
+    <polygon points="0,-16 4,4 0,0 -4,4" fill="#333"/>
+    <polygon points="0,16 4,-4 0,0 -4,-4" fill="white" stroke="#333" stroke-width="0.8"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="white">N</text>
+  </g>
+
+  <!-- ======================== SCALE BAR ======================== -->
+  <g transform="translate(60, 840)">
+    <rect x="0" y="0" width="46" height="7" fill="#555"/>
+    <rect x="46" y="0" width="46" height="7" fill="white" stroke="#555" stroke-width="1"/>
+    <rect x="92" y="0" width="46" height="7" fill="#555"/>
+    <rect x="138" y="0" width="46" height="7" fill="white" stroke="#555" stroke-width="1"/>
+    <text x="0" y="18" font-family="Arial" font-size="8" fill="#555">0</text>
+    <text x="44" y="18" font-family="Arial" font-size="8" fill="#555">1m</text>
+    <text x="90" y="18" font-family="Arial" font-size="8" fill="#555">2m</text>
+    <text x="136" y="18" font-family="Arial" font-size="8" fill="#555">3m</text>
+    <text x="182" y="18" font-family="Arial" font-size="8" fill="#555">4m</text>
+    <text x="92" y="-3" text-anchor="middle" font-family="Arial" font-size="8" fill="#888">SCALE 1:50 (APPROX)</text>
+  </g>
+
+  <!-- ======================== LEGEND ======================== -->
+  <g transform="translate(290, 838)">
+    <text x="0" y="0" font-family="Arial" font-size="9" font-weight="bold" fill="#333">ZONE KEY</text>
+    <rect x="0" y="6" width="11" height="11" fill="#BBDEFB" stroke="#aaa" stroke-width="0.5"/>
+    <text x="15" y="16" font-family="Arial" font-size="8" fill="#555">GTT / Clinical</text>
+    <rect x="90" y="6" width="11" height="11" fill="#EDE7F6" stroke="#aaa" stroke-width="0.5"/>
+    <text x="105" y="16" font-family="Arial" font-size="8" fill="#555">Treatment / Massage</text>
+    <rect x="0" y="22" width="11" height="11" fill="#DCEDC8" stroke="#aaa" stroke-width="0.5"/>
+    <text x="15" y="32" font-family="Arial" font-size="8" fill="#555">Hair / Beauty</text>
+    <rect x="90" y="22" width="11" height="11" fill="#FFE0B2" stroke="#aaa" stroke-width="0.5"/>
+    <text x="105" y="32" font-family="Arial" font-size="8" fill="#555">Pathology Collection</text>
+    <rect x="0" y="38" width="11" height="11" fill="#ECEFF1" stroke="#aaa" stroke-width="0.5"/>
+    <text x="15" y="48" font-family="Arial" font-size="8" fill="#555">Staff / Service</text>
+    <rect x="90" y="38" width="11" height="11" fill="#B2EBF2" stroke="#aaa" stroke-width="0.5"/>
+    <text x="105" y="48" font-family="Arial" font-size="8" fill="#555">Amenities</text>
+  </g>
+
+  <!-- ======================== TITLE BLOCK ======================== -->
+  <rect x="60" y="900" width="680" height="130" fill="#F9F9F9" stroke="#333" stroke-width="1.5"/>
+  <line x1="60" y1="930" x2="740" y2="930" stroke="#333" stroke-width="1"/>
+  <line x1="420" y1="900" x2="420" y2="1030" stroke="#333" stroke-width="1"/>
+
+  <!-- Left title block -->
+  <text x="240" y="922" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1a1a1a" letter-spacing="1">GTT CENTER PERTH</text>
+  <text x="240" y="950" text-anchor="middle" font-family="Arial" font-size="11" fill="#444">YETI Holding Trust</text>
+  <text x="240" y="967" text-anchor="middle" font-family="Arial" font-size="11" fill="#444">Perth, Western Australia</text>
+  <text x="240" y="990" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">CONCEPTUAL FLOOR PLAN — INVESTOR PACKAGE</text>
+  <text x="240" y="1007" text-anchor="middle" font-family="Arial" font-size="9" fill="#888">~205 sqm gross | Target usable area: 195 sqm</text>
+  <text x="240" y="1022" text-anchor="middle" font-family="Arial" font-size="9" fill="#C62828" font-weight="bold">NOT FOR CONSTRUCTION — CONCEPT ONLY</text>
+
+  <!-- Right title block -->
+  <text x="580" y="918" text-anchor="middle" font-family="Arial" font-size="10" fill="#555" font-weight="bold">DRAWING INFORMATION</text>
+  <text x="580" y="935" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Drawing No: GTT-FP-001</text>
+  <text x="580" y="950" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Date: July 2026</text>
+  <text x="580" y="965" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Drawn: Cole (GTT Architectural Worker)</text>
+  <text x="580" y="980" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Revision: 01</text>
+  <text x="580" y="998" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Scale: 1:50 approx</text>
+  <text x="580" y="1013" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">For review by: architect / investor</text>
+  <text x="580" y="1028" text-anchor="middle" font-family="Arial" font-size="9" fill="#C62828">CONFIDENTIAL</text>
+
+</svg>
+</div>
+</body>
+</html>
