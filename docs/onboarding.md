@@ -202,6 +202,15 @@ Outcome: either confirm ongoing employment, identify improvement areas (with 30-
 >
 > **Important reminder:** Your booking is fully paid. Our fasting policy means **we are unable to refund or credit bookings where the client has not fasted as required** — please take fasting seriously.
 >
+> **IMPORTANT — Pathology test charges:**
+> Your blood test is processed by our pathology partner (WDP Western Diagnostic Pathology) and billed separately to Medicare — not by GTT Center Perth.
+>
+> - **Medicare card holders:** $0 out of pocket. Your OGTT is bulk-billed by WDP at no charge to you.
+> - **No Medicare card / overseas visitors:** charged privately by WDP — approximately A$40–60. You pay WDP directly.
+> - **No valid referral form from GP or midwife:** your test cannot be processed under Medicare. Confirm with your GP that your referral has been issued before your appointment date.
+>
+> GTT Center Perth collects your package price only. WDP handles all pathology billing independently.
+
 > **Bring:**
 > - Your pathology referral form (from your GP or midwife)
 > - Medicare card
