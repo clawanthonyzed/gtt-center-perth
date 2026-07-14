@@ -156,3 +156,49 @@ The expanded 4-line PM roster is an improvement on the previously flagged -A$9,6
 **Recommended combination:** target Osborne Park rent (already the top location priority) + a simple PM package option once services-pricing-locked.md is revised. Together these more than close the gap and return the model to profitable at Month 5+.
 
 *Recalculated 2026-07-14. Supersedes the PM Spa Package figures in cash-flow.md, which modelled PM as A$250 bundled packages — no longer the confirmed pricing model. Grace to formally update cash-flow.md and financial-model.md headline figures with this table.*
+
+---
+
+## CORRECTION — 2026-07-14: Hours-Based Casual Cost Model
+
+**The previous recalculation above was wrong.** It assumed each of the 4 PM-dedicated casuals worked a full ramped shift (up to 30hrs/week each by Month 4+), mirroring the AM staff shift-length ramp. That is not how casual employment works: **casuals are paid only for hours actually worked**, not for a blanket daily presence regardless of bookings. Anthony caught this directly.
+
+### Corrected Method
+
+Hours per role per day are derived from actual session volume, not shift length:
+
+`hours/role/week = (sessions/day ÷ 4 roles × 5 days) ÷ 1.3 sessions/hr throughput`
+
+Where 1.3 sessions/hr matches the existing "6–8 sessions in a 5-hour shift" throughput already used elsewhere in `financial-break-even-staff.md`. This assumes PM demand splits evenly across the 4 lines — a planning assumption, to be corrected once real booking data shows which services are more popular.
+
+### Corrected PM Labor Cost
+
+| Month | PM Sessions/Day | Hrs/Role/Week | Monthly PM Payroll | Total Fixed Costs |
+|---|---|---|---|---|
+| M1 | 4 | 3.8 | A$2,419 | A$71,976 |
+| M2 | 8 | 7.7 | A$4,838 | A$74,437 |
+| M3 | 12 | 11.5 | A$7,257 | A$76,897 |
+| M4 | 15 | 14.4 | A$9,072 | A$78,742 |
+| M5+ | 16 | 15.4 | A$9,677 | A$79,357 |
+
+*(vs the incorrect prior version, which assumed A$20,538/month PM payroll at M5+ — more than double the real cost)*
+
+### Corrected Full P&L
+
+| Month | AM Revenue | PM Revenue | Ancillary | Total Revenue | Fixed Costs | **Net P&L** |
+|---|---|---|---|---|---|---|
+| M1 | A$22,000 | A$8,360 | A$3,234 | A$33,594 | A$71,976 | **-A$38,382** |
+| M2 | A$33,000 | A$16,720 | A$5,379 | A$55,099 | A$74,437 | **-A$19,338** |
+| M3 | A$38,500 | A$25,080 | A$6,979 | A$70,559 | A$76,897 | **-A$6,337** |
+| M4 | A$44,000 | A$31,350 | A$8,316 | A$83,666 | A$78,742 | **+A$4,924** |
+| M5+ (steady state) | A$44,000 | A$33,440 | A$8,580 | A$86,020 | A$79,357 | **+A$6,663** |
+
+## Revised Finding
+
+Correcting the casual staffing cost to actual hours worked (not blanket shift presence) **turns the model profitable from Month 4** (+A$4,924/month), reaching +A$6,663/month at Month 5+ steady state. This is a large improvement on both prior versions (-A$9,684/month original flag, -A$4,384/month first recalc) — the earlier recalc was itself still overcosting PM labor by assuming full daily rostering regardless of actual bookings.
+
+**Ramp-up losses (Months 1–3) remain real and must be funded from working capital** — this is normal pre-break-even ramp, not a flaw. Cumulative capital position through the ramp still needs tracking against the working capital reserve (see `financial-model.md` working capital section).
+
+**No lever is required to reach break-even anymore** — the corrected model clears it on its own by Month 4. The previously identified levers (Osborne Park rent, PM package option) now serve as **upside**, not requirements — either would push profitability higher rather than being needed to escape a loss.
+
+*This supersedes both the original stale flag and the first (over-costed) recalculation dated 2026-07-14 earlier the same day.*

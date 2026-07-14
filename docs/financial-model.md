@@ -42,7 +42,7 @@ Full Award Wage Summary, Total Annual Payroll, and Shift Structure (CF-01) are c
 ### Full Monthly P&L
 Full 18-month ramp is canonical in `cash-flow.md`. Headline (Month 5+, steady state — both AM at 8 GTT/day and PM at 6 Spa Packages/day):
 
-> **2026-07-14 SUPERSEDED:** the table below still models PM as A$250 bundled packages. PM is now individual services delivered by a 4-role dedicated roster — see `pm-staffing-roster.md` for the current recalculated P&L. Month 5+ steady state: Total Revenue A$86,020/month, Total Fixed Costs A$90,404/month, **Net P&L -A$4,384/month** (not yet break-even — see identified levers in `pm-staffing-roster.md`).
+> **2026-07-14 SUPERSEDED (corrected):** the table below still models PM as A$250 bundled packages. PM is now individual services delivered by a 4-role dedicated roster, costed on actual hours worked — see `pm-staffing-roster.md` for the current recalculated P&L. Month 5+ steady state: Total Revenue A$86,020/month, Total Fixed Costs A$79,357/month, **Net P&L +A$6,663/month** — profitable from Month 4 (+A$4,924/month).
 
 | Line | Monthly (STALE — see note above) | Annual (STALE) |
 |---|---|---|
