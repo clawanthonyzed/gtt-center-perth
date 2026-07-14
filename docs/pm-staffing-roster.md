@@ -202,3 +202,39 @@ Correcting the casual staffing cost to actual hours worked (not blanket shift pr
 **No lever is required to reach break-even anymore** — the corrected model clears it on its own by Month 4. The previously identified levers (Osborne Park rent, PM package option) now serve as **upside**, not requirements — either would push profitability higher rather than being needed to escape a loss.
 
 *This supersedes both the original stale flag and the first (over-costed) recalculation dated 2026-07-14 earlier the same day.*
+
+---
+
+## AM + PM Rostering Methodology — Booking-Driven, Not Calendar-Driven
+
+**Added 2026-07-14.** Corrects the assumption in `cash-flow.md`/`financial-break-even-staff.md` that AM staffing cost ramps on a flat calendar percentage (90% Month 1 / 95% Month 2 / 100% Month 3+) regardless of that day's actual bookings.
+
+### The Core Correction
+
+Clients select their specific services at the time of booking (Fresha). This means the Manager knows, in advance, exactly which practitioners are needed on any given day — before that day arrives. Staffing is not "roster all 8 AM service staff every day regardless of volume" — it is **roster exactly the roles a given day's confirmed bookings require.**
+
+The AM concurrency constraint (established in the prior session — clients arrive staggered and are on-site simultaneously, so no staff member can be reassigned to walk-in/general-public work during the AM window) still applies **within a booked day**. It does not require full 8-person staffing on days where the confirmed bookings don't create overlapping demand for a given service type.
+
+**Concurrency rule, precisely:** a service line needs 2 simultaneous staff only when that day's confirmed bookings show two clients requiring that same service type at overlapping times (as the verified Scenario B timetable shows happens at full 8-client volume — e.g. Massage 1 and Massage 2 overlap 09:40–10:00). At lower confirmed volume, the Manager checks the day's Fresha schedule for actual overlaps and rosters the second person on a line only when the schedule shows one.
+
+### Two Real-World Scenarios — Both Now Modelled as Booking-Driven, Not Ramp-Assumed
+
+**Scenario A — Organic ramp (no pre-opening backlog):**
+Bookings build gradually after launch, as previously assumed (4→6→7→8 clients/day, M1–M4). Under booking-driven rostering, staffing cost during these lower-volume days is likely **lower** than the current flat 90%/95%/100% assumption, since days with fewer overlapping bookings need fewer concurrent staff per line, not just a blanket percentage discount on the full 8-person roster.
+
+**Scenario B — Pre-opening marketing builds a backlog (Anthony's stated intent):**
+If pre-launch promotion fills a waitlist to capacity before Day 1, the venue could open at or near full 8 AM clients/day and full PM booking volume **immediately**, rather than following the organic ramp. In this case:
+- Full AM + PM staffing is rostered from Day 1 (all concurrency requirements met from the outset)
+- **Revenue is also full from Day 1** — this is not a cost increase without offsetting revenue
+- The model skips the Months 1–3 ramp-up losses entirely (previously -A$38,382 / -A$19,338 / -A$6,337) and could be **profitable from Month 1** at the Month 5+ steady-state run rate: **+A$6,663/month**, rather than reaching profitability only in Month 4
+
+### Practical Rostering Process (Pre-Launch and Ongoing)
+
+1. Pre-opening: track waitlist/backlog size weekly via Instagram + booking page signups (already a KPI in `financial-model.md`'s Ramp-Up Traffic Model — 300+ waitlist target)
+2. Once bookings open, the Manager reviews the following week's confirmed Fresha schedule and rosters exactly the staff each day requires — checking for same-service-type overlaps to determine if 2 concurrent staff are needed on a line that day
+3. Casual/flexible employment (already the confirmed model for PM, and consistent with AM's award structure) makes this responsive — staff are rostered to the confirmed schedule, not a fixed calendar assumption
+4. The financial model's ramp curve (M1–M4) should be treated as the **conservative planning scenario**, not a committed forecast. The actual Month 1 outcome depends entirely on how full the pre-opening backlog is — Grace/Bruno should re-run the P&L against real confirmed booking numbers once the waitlist is measurable, rather than defaulting to the calendar ramp.
+
+### Bottom Line
+
+Both AM and PM staffing cost should track **actual confirmed bookings known in advance**, not a fixed calendar percentage. This cuts both ways and is a genuinely better model than what's currently in `cash-flow.md`: if the organic ramp happens, costs are likely lower than currently modelled during the slow months; if the pre-opening marketing push succeeds in building a backlog, the venture could be profitable from Month 1 instead of Month 4. Either way, the static 90%/95%/100% ramp-cost assumption in `cash-flow.md` and `financial-break-even-staff.md` is now superseded by this booking-driven principle — Grace should re-run the actual month-by-month figures once real pre-launch waitlist data exists, rather than relying on the calendar-based estimate.
