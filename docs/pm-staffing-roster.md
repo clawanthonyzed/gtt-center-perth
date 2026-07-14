@@ -1,78 +1,51 @@
-# GTT Center Perth — PM Shift Staffing Roster (Product Doc)
+# GTT Center Perth — PM Shift Staffing Roster
 
-**Version:** 1.0 | **Date:** 2026-07-14
-**Status:** Draft — open questions block roster finalisation
+**Version:** 2.0 | **Date:** 2026-07-14
+**Status:** Decisions locked — ready for financial model integration
 
 ---
 
 ## Problem Statement
 
-The PM shift currently runs on a single dedicated therapist offering individual services only, and this staffing level is the confirmed root cause of the venture's projected -A$9,684/month loss (see diagnose output, prior session). Anthony wants to expand the PM shift to offer both standalone booked services and PM packages (bundled services excluding the blood test) across massage, hair, nail, and beauty lines. This requires new dedicated PM hires — not a stretch of AM staff hours — while AM GTT capacity remains the non-negotiable priority and leave/sick coverage must not create staffing gaps in either shift.
+The PM shift originally ran on a single dedicated therapist offering individual services only — this staffing level was the confirmed root cause of the venture's projected -A$9,684/month loss. Anthony has approved expansion of the PM shift to offer standalone booked services and PM packages (bundled services excluding the blood test) across massage, hair, nail, and beauty lines, via new dedicated PM hires. AM GTT capacity remains the non-negotiable priority.
 
-## Goals
+## Locked Decisions
 
-- PM shift (Mon–Fri) offers standalone individual bookings across massage, hair, nail, and beauty
-- PM shift also offers PM packages (bundled services, GTT blood test excluded)
-- AM GTT capacity (8 clients/day, current staffing) is never reduced by PM staffing decisions
-- Roster has built-in coverage for annual leave, sick leave, and public holidays with no service gap below minimum staffing
-- Updated PM labor cost is reflected in financial-model.md and cash-flow.md so break-even can be recalculated
+| # | Decision | Detail |
+|---|---|---|
+| 1 | **PM shift hours** | 12:00pm–6:00pm, Monday–Friday. Confirmed legal — WA Retail Trading Hours Act 1987 does not restrict personal services/health businesses; standalone tenancy has no extended-trading permit requirement. Confirm no centre-specific trading clause once venue is signed (only relevant if in a shopping centre). |
+| 2 | **Headcount** | 1 dedicated hire per service line at launch (massage, hair, nail, beauty = 4 hires). Scale to 2 per line by Month 3–4, contingent on proven PM booking volume. Mirrors the AM ramp curve already used in investor-memorandum.md (M1–M4 ramp to full capacity). |
+| 3 | **Employment type** | Casual for first 3–6 months. No fortnightly minimum-hours obligation exists under casual employment — only a per-shift minimum engagement (~3 hours, Hair and Beauty Industry Award / Health Professionals Award). Review conversion to part-time at Month 3–6 for roles with proven, regular demand. |
+| 4 | **Leave/relief coverage** | Single cross-shift role per skill (e.g. "Massage Therapist" — not separate AM/PM roles). Dedicated casual relief pool, one per skill line, covers leave/sick gaps across both AM and PM. AM and PM staff are qualification-equivalent and can be rostered into either shift. |
+| 5 | **Public holidays** | Whole venue (AM + PM) closed at launch. Financial comparison showed opening does not clearly cover the wage premium — casual PH rates run ~225% of base, adding ~A$1,040/day in PM wage cost alone, which a 10–15% client surcharge does not fully offset without proven PH demand spike. Revisit after 6–12 months of real booking data. |
 
-## Non-Goals
+## Fair Work Compliance Note
 
-- Not expanding AM GTT capacity beyond 8 clients/day in this phase
-- Not offering GTT blood collection or any pathology service during the PM shift
-- Not resolving PM pricing (already locked in services-pricing-locked.md) — this doc covers staffing only
+Casuals working a regular pattern of hours become eligible to request conversion to part-time employment under the Fair Work "Closing Loopholes" employee-choice pathway — after 6 months normally, or 12 months if classified a "small business employer" (under 15 employees). GTT Center Perth's total headcount sits close to this 15-employee threshold at launch (AM: 12, plus 4 new PM hires = 16). **Grace must track total headcount at each hire — crossing 15 employees changes which conversion timeline applies to all casual staff, not just PM.**
 
-## User Stories
+## Illustrative PM Labor Cost (Launch Phase — 1 per line)
 
-- As a PM walk-in client, I want to book a standalone massage, hair, nail, or beauty service so I can access services without doing a GTT.
-- As a PM client, I want to book a bundled PM package (multiple services, no blood test) so I get value for booking more than one service.
-- As the Manager, I want a roster showing AM and PM coverage per day per role so I can confirm minimum staffing is always met.
-- As the Manager, I want built-in relief coverage so a single staff member's sick day doesn't cancel PM bookings.
+| Role | Weekly hours (ramped, not full 30hrs from Day 1) | Est. casual rate (incl. loading) | Weekly cost (est.) |
+|---|---|---|---|
+| Massage Therapist (PM) | 15 hrs (ramping to 30) | ~A$38/hr | ~A$570 |
+| Hairdresser (PM) | 15 hrs (ramping to 30) | ~A$36/hr | ~A$540 |
+| Nail Technician (PM) | 15 hrs (ramping to 30) | ~A$34/hr | ~A$510 |
+| Beauty Therapist (PM) | 15 hrs (ramping to 30) | ~A$36/hr | ~A$540 |
+| **Total (Month 1 ramp)** | | | **~A$2,160/week (~A$9,360/month)** |
+| **Total (Month 4+, full 30hrs each)** | | | **~A$4,320/week (~A$18,720/month)** |
 
-## Technical Requirements
+**Recommendation carried into financial model:** PM staffing should ramp on the same curve as AM GTT volume (M1: reduced days/hours → M4: full 5-day roster) rather than launching at full PM headcount and hours from Day 1. This avoids re-creating the same cost-ahead-of-revenue problem that caused the original PM shortfall.
 
-- Define minimum PM staffing per service line (massage, hair, nail, beauty) needed to run standalone + PM package bookings 5 days/week
-- Confirm PM-dedicated staff are net-new hires (per Anthony's instruction), not additional hours on existing AM staff
-- Calculate weekly rostered hours per PM role based on confirmed PM shift length (see Open Question 1)
-- Build a leave-coverage model: relief/casual pool sized per role, or defined cross-cover arrangement
-- Recalculate monthly PM labor cost and feed into financial-model.md and cash-flow.md
-- Recalculate PM break-even revenue requirement against the new staffing cost
-- Reconcile PM shift end time across all documents (currently inconsistent — see Open Question 1)
+## Next Step
 
-## Open Questions
-
-1. **PM shift end time:** this brief states 5pm; services-pricing-locked.md and cole.md state 12:00–18:00 (6pm). Must be resolved before rostered hours can be calculated — a 1-hour difference changes weekly PM labor cost by ~20%.
-2. **Headcount per service line:** 1 PM-dedicated staff member per line (massage/hair/nail/beauty), or 2 to match AM capacity? No PM demand data exists pre-launch — recommend starting at 1 per line and scaling on booking volume, but this is Anthony's call.
-3. **Employment type:** are PM-dedicated hires full-time, part-time, or casual? Materially affects wage cost, leave accrual liability, and rostering flexibility.
-4. **Leave coverage model:** dedicated casual/relief pool per role, or occasional AM-staff cross-cover on PM absence days? The latter would partially contradict "no stretching AM staff" — needs an explicit decision.
-5. **PM package definition:** exact service combinations and pricing structure not yet defined. Needed before booking system (Fresha) can be configured.
-6. **Booking priority:** if PM shift is fully booked, do PM package bookings get priority over standalone single-service bookings?
-7. **Public holiday coverage:** stay closed, or open at WA public holiday penalty rates (~2.5x)? Materially affects annual PM labor cost — needs a decision before roster is finalised.
+Grace to feed this cost table into financial-model.md and cash-flow.md, recalculate the PM break-even point against the ramped labor cost (not the flat Month 4+ figure), and confirm whether the loss is closed or reduced to a smaller, known gap.
 
 ## Definition of Done
 
-- [ ] PM shift hours confirmed and consistent across all GTT Center Perth documents
-- [ ] Headcount and employment type for PM-dedicated hires confirmed by Anthony
+- [x] PM shift hours confirmed (6pm) and legal to trade
+- [x] Headcount and employment type confirmed
+- [x] Leave coverage model defined (dedicated casual pool, cross-shift qualified)
+- [x] Public holiday policy confirmed (closed at launch)
 - [ ] Weekly roster template built showing AM + PM coverage per day, per role
-- [ ] Leave/sick/public holiday coverage model defined and costed
 - [ ] Updated PM labor cost fed into financial-model.md and cash-flow.md
-- [ ] Revised break-even point recalculated and confirmed (loss closed, or new gap size known)
-
----
-
-## Assumptions Made
-
-- PM-dedicated hires are treated as net-new headcount, separate from the existing AM team, per Anthony's explicit instruction ("we will need to hire more staff")
-- AM GTT priority is fixed and non-negotiable — no roster option that reduces AM coverage was considered
-- PM shift length (5pm vs 6pm) was NOT resolved — flagged as Open Question 1 rather than assumed, since it materially changes the cost calculation
-
-## Decisions Needed Before Roster Build
-
-1. Confirm PM shift end time: 5pm or 6pm
-2. Confirm headcount per PM service line: 1 or 2
-3. Confirm employment type for PM hires: full-time / part-time / casual
-4. Confirm leave coverage approach: dedicated relief pool vs AM cross-cover
-5. Confirm public holiday policy: closed vs staffed at penalty rates
-
-Once these five are answered, Grace can build the actual weekly roster and cost it into financial-model.md.
+- [ ] Revised break-even point recalculated and confirmed
