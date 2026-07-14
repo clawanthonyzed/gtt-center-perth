@@ -49,3 +49,110 @@ Grace to feed this cost table into financial-model.md and cash-flow.md, recalcul
 - [ ] Weekly roster template built showing AM + PM coverage per day, per role
 - [ ] Updated PM labor cost fed into financial-model.md and cash-flow.md
 - [ ] Revised break-even point recalculated and confirmed
+
+---
+
+## Weekly Roster Template
+
+**Legend:** AM = 07:00–12:30 | PM = 12:00–18:00 | Relief = dedicated casual pool, rotates in fortnightly
+
+### AM Shift (Monday–Friday, fixed — no change to existing model)
+
+| Role | Mon | Tue | Wed | Thu | Fri |
+|---|---|---|---|---|---|
+| Receptionist/Manager (AM block) | 07:00–12:00 | 07:00–12:00 | 07:00–12:00 | 07:00–12:00 | 07:00–12:00 |
+| Phlebotomist — Chair A | 07:30–12:30 | 07:30–12:30 | 07:30–12:30 | 07:30–12:30 | 07:30–12:30 |
+| Phlebotomist — Chair B | 07:30–12:30 | 07:30–12:30 | 07:30–12:30 | 07:30–12:30 | 07:30–12:30 |
+| Massage Therapist ×2 | AM | AM | AM | AM | AM |
+| Hairdresser ×2 | AM | AM | AM | AM | AM |
+| Nail Technician ×2 | AM | AM | AM | AM | AM |
+| Beauty Therapist ×2 | AM | AM | AM | AM | AM |
+
+### PM Shift (Monday–Friday, NEW — 4 dedicated cross-shift-qualified casual hires)
+
+| Role | Mon | Tue | Wed | Thu | Fri |
+|---|---|---|---|---|---|
+| Receptionist/Manager (PM block) | 15:00–18:00 | 15:00–18:00 | 15:00–18:00 | 15:00–18:00 | 15:00–18:00 |
+| Massage Therapist (PM) | 12:00–18:00 | 12:00–18:00 | 12:00–18:00 | 12:00–18:00 | 12:00–18:00 |
+| Hairdresser (PM) | 12:00–18:00 | 12:00–18:00 | 12:00–18:00 | 12:00–18:00 | 12:00–18:00 |
+| Nail Technician (PM) | 12:00–18:00 | 12:00–18:00 | 12:00–18:00 | 12:00–18:00 | 12:00–18:00 |
+| Beauty Therapist (PM) | 12:00–18:00 | 12:00–18:00 | 12:00–18:00 | 12:00–18:00 | 12:00–18:00 |
+
+*Hours shown are Month 4+ full roster. Month 1–3 ramps at 50% / 75% / 87.5% of these hours — reduce days/week or shift length proportionally, Manager's call based on early bookings.*
+
+### Relief Pool Rotation (Fortnightly)
+
+One relief casual per line offered a PM shift once per fortnight, on a rotating day, so no single relief worker is left with zero hours for an extended stretch. Suggested pattern (adjust once real leave patterns are known):
+
+| Fortnight Week | Relief Slot | Covers |
+|---|---|---|
+| Week A | Wednesday PM | Whichever of the 4 PM lines has a booked absence that week; if no absence, relief works as 5th PM slot on the busiest line |
+| Week B | Friday PM | Same rule, rotates to a different regular staff member's line each fortnight |
+
+Relief staff are paid only for shifts worked (casual — no retainer). This is a scheduling commitment to fairness, not a paid guarantee.
+
+---
+
+## Recalculated Financials — PM Individual Services Model
+
+Uses the exact award rates already locked in `financial-break-even-staff.md` (Massage/Beauty A$37.00/hr casual, Hair/Nail A$35.63/hr casual) applied to the new 4-role PM roster, ramped on the same % curve as AM (50/75/87.5/100% of full hours across Months 1–4).
+
+### New PM Payroll (replaces old single PM Service Therapist line)
+
+| Month | PM Hours % | New PM Payroll | Relief Pool | Total New PM Labor |
+|---|---|---|---|---|
+| M1 | 50% | A$10,269 | A$1,667 | A$11,936 |
+| M2 | 75% | A$15,404 | A$1,667 | A$17,071 |
+| M3 | 87.5% | A$17,971 | A$1,667 | A$19,638 |
+| M4+ | 100% | A$20,538 | A$1,667 | A$22,205 |
+
+*Old model: 1 PM Service Therapist at A$62,774/yr (A$5,231/month) + generic relief A$15,000/yr. New model costs roughly 4× more in PM labor at full roster — this is the direct trade-off for 4 dedicated service lines instead of 1 cross-trained generalist.*
+
+### Total Fixed Costs (AM base + new PM roster + unchanged overhead)
+
+| Month | Total Fixed Costs |
+|---|---|
+| M1 | A$79,960 |
+| M2 | A$85,182 |
+| M3 | A$87,793 |
+| M4+ | A$90,404 |
+
+*(vs old stale model: flat A$74,391/month from M3 onward)*
+
+### PM Revenue — Individual Services (A$95 avg/session, NOT packages)
+
+Session volume assumes conservative ~50% utilisation of theoretical 4-line capacity by Month 5+ (16 sessions/day combined, vs ~31/day theoretical max) — no real demand data exists yet, this is a planning estimate.
+
+| Month | PM Sessions/Day | Monthly PM Revenue |
+|---|---|---|
+| M1 | 4 | A$8,360 |
+| M2 | 8 | A$16,720 |
+| M3 | 12 | A$25,080 |
+| M4 | 15 | A$31,350 |
+| M5+ | 16 | A$33,440 |
+
+### Full Recalculated P&L
+
+| Month | AM Revenue | PM Revenue | Ancillary | Total Revenue | Fixed Costs | Net P&L |
+|---|---|---|---|---|---|---|
+| M1 | A$22,000 | A$8,360 | A$3,234 | A$33,594 | A$79,960 | **-A$46,366** |
+| M2 | A$33,000 | A$16,720 | A$5,379 | A$55,099 | A$85,182 | **-A$30,083** |
+| M3 | A$38,500 | A$25,080 | A$6,979 | A$70,559 | A$87,793 | **-A$17,234** |
+| M4 | A$44,000 | A$31,350 | A$8,316 | A$83,666 | A$90,404 | **-A$6,738** |
+| M5+ (steady state) | A$44,000 | A$33,440 | A$8,580 | A$86,020 | A$90,404 | **-A$4,384** |
+
+## Finding
+
+The expanded 4-line PM roster is an improvement on the previously flagged -A$9,684/month loss, but **still does not reach break-even** at Month 5+ steady state — it stabilises at approximately **-A$4,384/month**. The root cause is unchanged in kind: 4 dedicated casual hires cost roughly 4× the old single cross-trained PM therapist, and individual-service pricing (A$95 avg) doesn't generate enough extra volume to close that gap at the modelled 16 sessions/day.
+
+## Levers to Close the Remaining ~A$4,384/Month Gap
+
+| Lever | Effect |
+|---|---|
+| **Osborne Park rent (A$5,500 vs A$8,000 base)** | Saves A$2,500/month — cuts gap to ~-A$1,884/month |
+| **Introduce a modest PM package option** (2 services bundled, small discount vs booking separately — resolves Open Question 5 from the staffing brief) | Lifting PM avg from A$95 to ~A$115/session adds ~A$7,040/month at 352 sessions — closes the gap on its own |
+| **PM volume growth beyond 16/day** | Each extra session/day at A$95 avg adds ~A$2,090/month — ~2.1 extra sessions/day closes the gap alone |
+
+**Recommended combination:** target Osborne Park rent (already the top location priority) + a simple PM package option once services-pricing-locked.md is revised. Together these more than close the gap and return the model to profitable at Month 5+.
+
+*Recalculated 2026-07-14. Supersedes the PM Spa Package figures in cash-flow.md, which modelled PM as A$250 bundled packages — no longer the confirmed pricing model. Grace to formally update cash-flow.md and financial-model.md headline figures with this table.*
