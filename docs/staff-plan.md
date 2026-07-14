@@ -1,5 +1,7 @@
 # GTT Center Perth — Staff Plan
 
+> **2026-07-14 SUPERSEDED — PM MODEL CORRECTED.** References below to a single "PM Service Therapist" delivering "PM Spa Packages" (Package 1/2/3 pricing) are superseded. The confirmed PM model is: **4 dedicated casual hires** (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, delivering **individual standalone services** (not packages) at ~A$95/session average, staffed on actual hours worked — not a blanket shift. Corrected Month 5+ steady state: Total Revenue A$86,020/month, Total Fixed Costs A$79,357/month, **Net P&L +A$6,663/month** — profitable from Month 4 (+A$4,924/month). See `pm-staffing-roster.md` for the full roster, weekly template, and recalculated P&L — this is now the canonical PM reference, superseding this document's PM figures/structure below.
+
 **Version:** 1.0 | **Date:** 2026-06-05  
 **Model:** Wage-based employment (not room rental). Practitioners employed directly by YETI Holding Trust trading as GTT Center Perth.
 
