@@ -238,3 +238,45 @@ If pre-launch promotion fills a waitlist to capacity before Day 1, the venue cou
 ### Bottom Line
 
 Both AM and PM staffing cost should track **actual confirmed bookings known in advance**, not a fixed calendar percentage. This cuts both ways and is a genuinely better model than what's currently in `cash-flow.md`: if the organic ramp happens, costs are likely lower than currently modelled during the slow months; if the pre-opening marketing push succeeds in building a backlog, the venture could be profitable from Month 1 instead of Month 4. Either way, the static 90%/95%/100% ramp-cost assumption in `cash-flow.md` and `financial-break-even-staff.md` is now superseded by this booking-driven principle — Grace should re-run the actual month-by-month figures once real pre-launch waitlist data exists, rather than relying on the calendar-based estimate.
+
+---
+
+## Pre-Opening Waitlist & Staffing Decision Model
+
+**Added 2026-07-14.** Operationalises the Scenario A/B rostering split above — turns "build a backlog before opening" into a trackable, decision-triggering process rather than a hope.
+
+### Waitlist Capture
+
+Every waitlist signup (Instagram, website, referral card) captures:
+- Name, mobile, email, due date (existing funnel field)
+- **Service interest checkboxes:** massage / facial / nails / hair / brows-lashes / spray tan (multi-select) — NEW field, needed to pre-bias which AM service lines get their 2nd concurrent hire first
+- Preferred day-of-week (optional) — helps anticipate which weekdays will book out fastest
+
+### Waitlist Growth Targets (existing milestones, now decision-linked)
+
+| Week (from fit-out start) | Waitlist Target | Trigger |
+|---|---|---|
+| Week 9 | Instagram live, 0 baseline | Marketing tracking begins |
+| Week 13 | 100 signups | **Checkpoint 1** — assess service-interest mix, confirm which 2 AM lines are trending highest demand |
+| Week 18 | 300+ signups | **Checkpoint 2** — begin converting signups to actual confirmed (paid) bookings for Week 1 post-launch |
+| Week 20 (launch) | Confirmed Week 1–2 bookings known | **Staffing Decision Point** — see below |
+
+### Staffing Decision Point (2 Weeks Before Launch)
+
+Convert waitlist signups to **confirmed, paid** bookings (full payment at booking, per `onboarding.md` policy) for the first 2 weeks post-launch. This confirmed number — not the raw waitlist count — drives the Day 1 roster:
+
+| Confirmed Bookings/Day (Week 1) | Staffing Decision |
+|---|---|
+| 6–8 AM clients/day | **Scenario B — full roster from Day 1.** All 8 AM service staff + full PM roster rostered immediately. Skip the organic ramp — go straight toward the Month 5+ run rate. |
+| 4–5 AM clients/day | **Scenario A — organic ramp staffing.** Roster per confirmed daily bookings (booking-driven method above), scale up as later weeks' bookings convert. |
+| Under 4 AM clients/day | **Delay full launch or extend pre-opening marketing** — re-assess before committing to full lease/staffing costs; consider a soft-open with a reduced initial roster while marketing continues. |
+
+**Re-assess weekly for the first 8 weeks** — bookings convert on a rolling basis, not all at once. The Manager updates the roster 1–2 weeks ahead of each week based on the actual confirmed Fresha calendar, per the booking-driven rostering principle already established.
+
+### Service-Mix Pre-Bias (Addresses "Clients Not Getting Their Preferred Service")
+
+If waitlist service-interest data shows (for example) 60% of signups want massage/facial vs 40% wanting nails/hair, the Manager can weight the **2nd concurrent hire per line** toward the higher-demand services first, rather than assuming an even split across all 4 lines. This directly reduces the risk of an AM client being unable to book their preferred service because a line filled up faster than staffing anticipated.
+
+### Conversion Rate — Open Question
+
+No data exists yet on what percentage of waitlist signups convert to confirmed, paid bookings. Industry warm-waitlist conversion is commonly 20–40%, but this is unverified for a maternity wellness category. **Track actual conversion from Week 13 onward** — this number determines whether the 300-signup target genuinely supports a Scenario B (full Day-1) launch, or only supports Scenario A (organic ramp with a head start).
