@@ -280,3 +280,46 @@ If waitlist service-interest data shows (for example) 60% of signups want massag
 ### Conversion Rate — Open Question
 
 No data exists yet on what percentage of waitlist signups convert to confirmed, paid bookings. Industry warm-waitlist conversion is commonly 20–40%, but this is unverified for a maternity wellness category. **Track actual conversion from Week 13 onward** — this number determines whether the 300-signup target genuinely supports a Scenario B (full Day-1) launch, or only supports Scenario A (organic ramp with a head start).
+
+---
+
+## Multi-Role Relief Hiring — Added 2026-07-15
+
+Anthony's direction: prefer relief/casual hires qualified across more than one service line, to reduce total relief headcount needed while improving coverage robustness (a single dual-qualified relief person can cover a gap on either of their two lines, rather than needing a separate specialist per line sitting idle most of the time).
+
+**Massage + Beauty (facials) is the natural pairing** — both are Cert IV under the Hair and Beauty Industry Award, and this dual qualification is already the existing hiring pattern for the PM role in this venture's model (the original PM hire was explicitly "cross-trained massage + facials"). Recommend extending this preference to relief-pool hiring generally.
+
+**Hair and Nails remain harder to combine** — separate trade-specific qualifications (hairdressing apprenticeship vs nail technology), no natural overlap. Recommend keeping these as dedicated single-skill relief hires.
+
+### Revised Relief Pool Structure
+
+| Relief Role | Covers | Reduces From |
+|---|---|---|
+| Massage + Beauty relief (dual-qualified) | Both massage and beauty/facial lines, AM or PM | 2 separate specialists → 1 combined hire |
+| Nail relief | Nail line only, AM or PM | Unchanged |
+| Hair relief | Hair line only, AM or PM | Unchanged |
+
+This drops the relief pool from an implied 4 single-skill specialists to 3 people, at similar total cost but meaningfully better coverage — one relief hire can now step into either a massage or beauty gap on the same day, which a single-skill specialist could never do.
+
+**Action:** when advertising relief/casual roles, explicitly seek or prefer dual massage+beauty (Cert IV) qualification for that combined position.
+
+---
+
+## Profit Breakdown — AM vs PM Contribution (Answers "is +A$6,663/month AM-only or full day?")
+
+**It's the full day** — total AM + PM + ancillary revenue minus all fixed costs (both shifts, shared overhead, relief pool, workers comp). It is not an AM-only figure.
+
+Breaking it down by shift (allocating only directly-attributable labor per shift, leaving shared costs — reception, relief pool, rent, insurance, admin — separate) gives a genuinely useful picture of where the margin actually comes from:
+
+| Component | Revenue | Direct Labor | Contribution |
+|---|---|---|---|
+| **AM (GTT)** | A$44,000/month | A$48,255/month (2× each of massage/nail/hair/beauty + 2 phlebotomists) | **-A$4,255/month** |
+| **PM (individual services)** | A$33,440/month | A$9,677/month (4-role hours-based roster) | **+A$23,763/month** |
+| **Shared/unallocated** (reception, relief, workers comp, rent, utilities, marketing, etc.) minus ancillary revenue | A$8,580/month ancillary | A$21,432/month | **-A$12,852/month** |
+| **Total** | | | **≈+A$6,656/month** (reconciles to the +A$6,663/month figure, small rounding) |
+
+### The Finding
+
+**AM does not cover its own direct staff cost on its own** — it requires 8 concurrently-present staff regardless of the modest A$250/visit package price, which caps its per-client margin hard. **PM is the stronger margin contributor** — the hours-based casual roster (pay only for confirmed booking time) makes every PM dollar of revenue much cheaper to deliver than an AM dollar.
+
+**Strategic implication:** the AM capacity-expansion lever (Section 1 above, 3rd chair → 10 clients/day) directly targets AM's weakest point — spreading the same concurrent-staff cost base across more clients improves AM's per-client margin. This is a stronger argument for the 3rd chair than the raw +A$2,411/month figure alone suggests — it's fixing the shift that's currently subsidised by PM, not just adding volume.

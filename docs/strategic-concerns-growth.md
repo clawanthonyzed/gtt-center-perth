@@ -102,7 +102,7 @@ Key differences from in-state expansion:
 3. Is a Saturday shift (with penalty rates) worth modelling as a near-term profit lever, or reserved for later once Venue 1 is stable?
 4. What relief-pool size is actually "safe" versus the current 1-per-line minimum? No incident data exists yet to calibrate this.
 5. Is there appetite to model AM's 3rd-chair/10-client Scenario A now, or defer until Venue 1 is operating and real demand data exists?
-6. For interstate expansion: is there a specific state Anthony has in mind (e.g. NSW/VIC due to market size), or is this genuinely open at this stage?
+6. ~~For interstate expansion: is there a specific state Anthony has in mind~~ **ANSWERED 2026-07-15:** Victoria, informally — no timeline attached, an early thought only. Logged here so it is not lost, not treated as a commitment.
 
 ## Definition of Done
 
