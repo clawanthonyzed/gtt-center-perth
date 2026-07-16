@@ -124,3 +124,106 @@ Actively seeking someone qualified across massage, beauty, nails, **and** hair i
 4. **Any + Hairdressing** — rare; true hairdressers seldom cross-train into the beauty/massage pathway due to the different trade structure
 
 **Practical approach:** advertise seeking "qualification in 2 or more of: massage, beauty therapy, nail technology, hairdressing" rather than requiring all 4 — this keeps the pool findable while still capturing genuine multi-skill candidates when they exist. Don't let the search for the ideal 4-way hire delay filling the relief pool with strong 2-way candidates now.
+
+---
+
+## SCENARIO C — Verified 07:00 Start Timetable (2 Chairs, 2 Phlebotomists, No New Hire)
+
+**Added 2026-07-16.** Formal verification, same rigor as Scenario B (Day 49) — every draw and every service checked for staff double-booking. First draw moved from 07:40 to **07:00**. End constraint unchanged (last possible new-draw start 10:05, last depart must clear ~12:30 for WDP courier). Same 20-minute stagger as the existing verified model — **no stagger tightening required** to reach this result.
+
+### Result: 10 clients/day confirmed (up from 8), zero double-bookings, same 2 phlebotomists
+
+### Per-Client View (actual clock times, 4 real-time ±5min adjustments applied — same tolerance mechanism used in Scenario B)
+
+| Client | Chair | Draw 1 | Service 1 | Draw 2 | Service 2 | Draw 3 | Depart |
+|---|---|---|---|---|---|---|---|
+| 1 | A | 07:00–07:15 | 07:15–08:00 | 08:10–08:15 | 08:20–09:05 | 09:20–09:25* | ~09:30 |
+| 2 | B | 07:20–07:35 | 07:35–08:20 | 08:30–08:35 | 08:40–09:25 | 09:40–09:45* | ~09:50 |
+| 3 | A | 07:40–07:55 | 07:55–08:40 | 08:50–08:55 | 09:00–09:45 | 10:00–10:05* | ~10:10 |
+| 4 | B | 08:00–08:15 | 08:15–09:00 | 09:10–09:15 | 09:20–10:05 | 10:20–10:25* | ~10:30 |
+| 5 | A | 08:20–08:35 | 08:35–09:20 | 09:30–09:35 | 09:40–10:25 | 10:35–10:40 | ~10:45 |
+| 6 | B | 08:40–08:55 | 08:55–09:40 | 09:50–09:55 | 10:00–10:45 | 10:55–11:00 | ~11:05 |
+| 7 | A | 09:00–09:15 | 09:15–10:00 | 10:10–10:15 | 10:20–11:05 | 11:15–11:20 | ~11:25 |
+| 8 | B | 09:20–09:35 | 09:35–10:20 | 10:30–10:35 | 10:40–11:25 | 11:35–11:40 | ~11:45 |
+| 9 | A | 09:40–09:55 | 09:55–10:40 | 10:50–10:55 | 11:00–11:45 | 11:55–12:00 | ~12:05 |
+| 10 | B | 10:00–10:15 | 10:15–11:00 | 11:10–11:15 | 11:20–12:05 | 12:15–12:20 | ~12:25 |
+
+*Draw 3 shifted +5min from mechanical schedule (same ±5min real-time tolerance rule as Scenario B) to avoid colliding with the next client's Draw 1 on the same chair — 4 such adjustments needed (Clients 1, 2, 3, 4), vs 1 adjustment in the original 8-client Scenario B. This is expected — a denser schedule needs more of these micro-adjustments, all within the existing tolerance rule, none requiring a process change.
+
+**Client 10 departs ~12:25 — confirms the WDP courier/12:30 cutoff still holds at 10 clients.**
+
+### Per-Phlebotomist Load Check
+
+| Chair | Draws Handled | Max Concurrent Overlap Risk |
+|---|---|---|
+| Chair A (Clients 1,3,5,7,9) | 15 draws total | Verified — no overlapping draws on same chair after ±5min adjustments |
+| Chair B (Clients 2,4,6,8,10) | 15 draws total | Verified — no overlapping draws on same chair after ±5min adjustments |
+
+**No 3rd phlebotomist required for this result.**
+
+---
+
+## Service Access Verification — Every Client Reaches Their First Service After Draw 1
+
+Confirms Anthony's requirement: no client is left waiting for an unavailable service line. All 20 service slots (10 clients × 2 services each) checked against the existing 8 treatment staff (2 each: Massage, Beauty, Nails, Hair) — **no new treatment-staff hire required.**
+
+| Staff | Slots Assigned | Times | Overlap Check |
+|---|---|---|---|
+| Massage 1 | 3 | 07:15–08:00, 08:35–09:20, 09:55–10:40 | Clear |
+| Massage 2 | 2 | 09:00–09:45, 10:20–11:05 | Clear |
+| Beauty 1 | 3 | 07:35–08:20, 09:20–10:05, 10:40–11:25 | Clear |
+| Beauty 2 | 2 | 08:55–09:40, 10:15–11:00 | Clear |
+| Nails 1 | 3 | 07:55–08:40, 09:15–10:00, 11:00–11:45 | Clear |
+| Nails 2 | 2 | 08:20–09:05, 09:40–10:25 | Clear |
+| Hair 1 | 3 | 08:15–09:00, 09:35–10:20, 11:20–12:05 | Clear |
+| Hair 2 | 2 | 08:40–09:25, 10:00–10:45 | Clear |
+
+**Zero double-bookings across all 8 treatment staff.** Busiest staff go from 2 slots/day (Scenario B, 8 clients) to 3 slots/day (Scenario C, 10 clients) — a real increase in utilisation (up from ~17–33% toward ~40–50%) but with clear gaps confirmed between every assignment. **Every one of the 10 clients gets both selected services with no wait or unavailability**, using the existing 8-person treatment roster.
+
+### Verdict
+
+**10 AM clients/day is achievable with the existing 2 phlebotomists and 8 treatment staff, by moving first draw to 07:00 — no new hires needed.** This should still be pressure-tested against real early-stage award verification (see below) and a live trial before being treated as final, but the scheduling math is now formally checked, not estimated.
+
+---
+
+## Task 3 — Package Simplification (2 Packages) + Locking the Re-Time Approach
+
+**Re-time confirmed and now formally verified above — 3rd chair is off the table** for the current growth target (10/day). If demand later exceeds this, the 3rd-chair option remains available as a future lever, but is not needed now.
+
+**Which 2 packages?** Not specified — needs your call. Recommendation, given AM's thin per-client margin (previously -A$4,255/month in direct-labor terms):
+
+| Option | Packages Kept | Effect |
+|---|---|---|
+| **Recommended** | Package 2 (A$250) + Package 3 (A$300) — drop Package 1 (A$200) | Raises the blended average above the current A$250, directly reinforcing AM's margin fix. Removes the cheapest entry tier. |
+| Alternative | Package 1 (A$200) + Package 3 (A$300) | Simple "standard vs premium" choice, blended average depends on mix — could land at, above, or below A$250 |
+| Not recommended | Package 1 (A$200) + Package 2 (A$250) | Lowers blended average — works against the AM profitability fix already in progress |
+
+Confirm which 2 and Grace will re-run the AM revenue line with the new mix assumption.
+
+---
+
+## Task 4 — Saturday Collection Research (Correction Needed)
+
+**Your assumption of no Saturday penalty rate does not hold under the awards this venture uses — sourced below.**
+
+### Hair and Beauty Industry Award MA000005 (massage/nail/hair/beauty staff)
+- **Saturday: 133% of base rate for permanent staff, 150% for casuals.** Sunday: 200% for all staff. Public holidays: 250% (permanent) / 275% (casual). ([FairWork Mate — Hair & Beauty Award pay rates 2026](https://fairworkmate.com.au/awards/hair-beauty-award))
+
+### Health Professionals and Support Services Award MA000027 (phlebotomists)
+- General weekend penalty citation: 150% Saturday and Sunday for full-time/part-time, higher for casuals.
+- **However — a specific carve-out exists for private medical/dental/pathology practices:** *"ordinary hours of work for a day worker will be worked between 7:30am and 9:00pm Monday to Friday and between 8:00am and 4:30pm on Saturday."* This suggests Saturday 8am–4:30pm may count as **ordinary hours** (not penalty time) for a phlebotomist specifically rostered under this clause — but this reading needs direct confirmation against the full award text or a payroll advisor before being relied on. **Do not treat this as confirmed** — it's a genuine possible carve-out, not a verified rate. ([Fair Work Ombudsman — MA000027](https://awards.fairwork.gov.au/MA000027.html), [Tanda MA000027 summary](https://help.tanda.co/en/articles/8877248-ma000027-health-professionals-and-support-services-award-2020-hpss-managed-template-summary))
+
+**Bottom line:** treatment staff (massage/hair/nail/beauty) almost certainly attract a Saturday penalty (133–150%) under MA000005 — this looks settled, not ambiguous. Phlebotomists under MA000027 may have a genuine ordinary-hours carve-out for Saturday 8am–4:30pm specifically — this is the one worth chasing down with a payroll advisor, since it could mean Saturday GTT collection runs at or near ordinary phlebotomist rates even while the treatment side pays the penalty.
+
+### Industry Practice — Saturday Pathology Collection Is Standard
+
+Confirmed common practice across major Australian pathology providers — typical Saturday hours run **8:00am–1:00pm** (shorter than weekday hours), e.g. Epworth Pathology, Austral Medical Centre, South Yarra Medical. **Sunday collection is uncommon** — none of the standard collection centres found offer Sunday hours; only a small number of large flagship "supercentres" (e.g. Melbourne Pathology) run 7 days. **This means WDP may well support Saturday collection as standard practice, but Sunday collection should not be assumed — confirm directly in the WDP partnership call.**
+
+### Recommended Weekend Shift Structure (Pending WDP + Award Confirmation)
+
+| Day | Offering | Hours (draft) | Confirm Before Committing |
+|---|---|---|---|
+| Saturday | AM GTT collection (same model as weekday, Scenario B or C capacity) + PM standalone services | 8:00am–1:00pm GTT, PM standalone after | WDP Saturday specimen transport, MA000027 ordinary-hours carve-out for phlebotomists |
+| Sunday | PM standalone services only — **no GTT collection** | Standard PM-style hours | WDP Sunday capability (likely unsupported based on industry norm — confirm directly, don't assume) |
+
+Saturday treatment staff (massage/hair/nail/beauty) will cost 133–150% of ordinary rate regardless — this needs to be built into the weekend revenue model as a real cost, not assumed away. Only the phlebotomist rate has a plausible (unconfirmed) ordinary-rate path.
