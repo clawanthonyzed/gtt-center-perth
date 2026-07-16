@@ -56,3 +56,71 @@ Uses the same hours-based casual costing method as the PM correction. Award pena
 2. Is the 3rd-chair Scenario A timetable to be built now (pre-launch) or deferred until Venue 1 demand data justifies it?
 3. Weekend reception: extend the existing Receptionist/Manager's contract, or hire a dedicated weekend casual?
 4. Stagger-interval tightening (15min) needs a clinical safety sign-off (WDP or internal) before being adopted — not just a scheduling change.
+
+---
+
+## CORRECTION & UPDATE — 2026-07-16
+
+### 1. Clarifying the "40-Minute Gap" — Not Phlebotomist Idle Time in the Way It Sounded
+
+The 40 minutes referenced previously is the interval between **new client starts on the same chair** (Chair A takes clients 1/3/5/7 at 40-min spacing), not a gap where the phlebotomist does nothing. Actual gaps between individual draws are 10–20 minutes (`operations-manual.md`) — used for labelling, centrifuge loading (mandatory 10-min spin per the ORCHID rule), and courier prep. That part is appropriately tight and should not be compressed further — it's clinical safety margin, not waste.
+
+**But Anthony's instinct is still correct, for a different reason:** the verified timetable states chair utilisation is only **~30%** (40 minutes actively busy out of a ~270-minute window per chair). That is real, documented slack — evidence that more clients can be added to the existing 2 chairs without rushing any individual draw.
+
+### End Time Is Fixed — Confirmed
+
+Agreed: 12:25–12:30 depart/collection cutoff is governed by WDP's courier pickup and lab processing schedule, not something GTT Center Perth controls unilaterally. Growth comes from moving the **start** earlier, not the end later. (Should still be confirmed directly with WDP during the partnership call — add "what is your latest specimen pickup time" to the call script if not already covered.)
+
+### How Much Earlier Can It Start?
+
+No WA legal barrier — personal service/health businesses are exempt from retail trading hour restrictions, and there's no minimum opening-time law. The real constraints are:
+1. **Award ordinary-hours span** — starting before the award's defined "ordinary hours" window (commonly ~7am under Hair & Beauty / Health Professionals awards) can trigger an early-morning penalty loading. **Needs verification against current MA000005/MA000027 text before locking a start time** — not confirmed either way here.
+2. **Practical staff commute and client comfort** — fasting clients arriving pre-dawn is not necessarily a problem (many would prefer to get it over with early), but venue lighting/parking safety in winter darkness (already flagged in `location-scouting.md`) becomes more important the earlier the start.
+
+**Recommended starting point: move first draw from 07:40 to 07:00** (40 minutes earlier) — very likely still within ordinary hours, low award risk, and immediately extends the usable start-window from 145 minutes to 185 minutes.
+
+### Combined Capacity Estimate — No New Hire Required
+
+Using the existing 2 chairs, combining (a) the 40-minute-earlier start and (b) a modest stagger tightening justified by the documented 30% utilisation (not rushing individual draws, just starting new clients closer together):
+
+| Scenario | Window | Stagger | Est. Clients/Day |
+|---|---|---|---|
+| Current (verified) | 145 min | 20 min | 8 |
+| Earlier start only | 185 min | 20 min | 10 |
+| Earlier start + modest stagger tightening (20→15min) | 185 min | 15 min | ~13 |
+
+**This revises the previous recommendation.** The 3rd-chair hire may not be necessary at all — re-timing the existing 2 chairs, justified by the documented idle capacity, could reach similar or greater capacity gains at zero additional labor cost. **Before committing to either path, a formal Scenario C timetable must be built and verified** (same rigor as the existing Scenario B — check every staff member for double-booking, including treatment-room concurrency at the higher client count), not assumed from this back-of-envelope estimate.
+
+### 4. Weekend Testing — Bigger Opportunity Than Previously Modelled
+
+Previous version of this document assumed weekends would be PM-style only (no GTT testing). That assumption should be revisited: **there is no operational reason GTT testing can't run on a Saturday**, using the same phlebotomist/chair model as a weekday morning, subject to two confirmations:
+
+1. **WDP must confirm they support Saturday specimen transport and lab processing** — add explicitly to the WDP partnership call script (not yet asked)
+2. **Saturday award rate needs verification.** The previous 1.33x Saturday penalty figure in `financial-break-even-staff.md` is unverified against the current MA000005/MA000027 award text. Anthony's point that Saturday may fall within ordinary hours (no penalty) under a modern personal-care award is plausible and should be checked directly — **do not treat either figure as confirmed until verified** (Fair Work Award Pay Calculator or a payroll advisor).
+
+**If both confirm favourably:** a full Saturday AM GTT day, run at the same economics as a weekday (8–13 clients depending on which capacity scenario above is adopted), would be a materially larger lever than the PM-style weekend model previously costed — potentially A$8,000–14,000/month in additional GTT revenue from one extra trading day, largely at ordinary (non-penalty) labor rates if Anthony's read on the award is correct.
+
+## 3. Consolidated AM Profitability Plan (Answers "Make AM Profitable")
+
+AM currently runs at **-A$4,255/month** in direct-labor terms (previous session). Levers, ranked by leverage-to-cost:
+
+| Lever | Est. Monthly Impact | New Hire Required? | Verification Needed |
+|---|---|---|---|
+| **1. Re-time existing 2 chairs** (earlier start + tighter stagger → ~13/day) | Est. +A$9,000–13,000 revenue at near-zero added labor cost | No | New Scenario C timetable, award early-start check |
+| **2. Package mix upsell** (nudge 30/40/30 mix toward more Package 3 bookings) | Adds to per-visit average without touching capacity | No | Pricing/UX change only |
+| **3. Saturday AM GTT** (if WDP + award both confirm) | Est. +A$8,000–14,000/month, largely ordinary-rate | Possibly (or existing staff on 6th day) | WDP confirmation, award verification |
+| **4. 3rd chair** (original recommendation) | Smaller marginal gain now that Lever 1 may absorb most of the need | Yes, +A$3,589/month | Only pursue if Lever 1's Scenario C shows genuine capacity ceiling below demand |
+
+**Revised recommendation:** pursue Levers 1–3 first — none require new headcount, and together they could flip AM from a -A$4,255/month drag to solidly profitable on its own. Lever 4 (3rd chair) becomes a "only if still needed" fallback once real demand data shows Levers 1–3 aren't enough, rather than the default next step.
+
+## 2. Multi-Role Relief Hiring — Realistic Scope
+
+Actively seeking someone qualified across massage, beauty, nails, **and** hair in one person is the ideal, but worth being direct about the recruiting reality: hairdressing is a distinct trade apprenticeship pathway (Cert III Hairdressing) separate from the Cert IV Beauty/Massage pathway and the Cert II/III Nail Technology pathway. A single person holding all four is rare and would command a premium.
+
+**Recommended search priority (most to least findable):**
+1. **Massage + Beauty** (Cert IV, same award tier) — easiest to find, already the venture's existing hiring pattern
+2. **Beauty + Nails** — some crossover exists in beauty therapy training that includes basic nail services
+3. **Massage + Beauty + Nails** (three-way) — less common, actively worth seeking, don't require it to fill the role
+4. **Any + Hairdressing** — rare; true hairdressers seldom cross-train into the beauty/massage pathway due to the different trade structure
+
+**Practical approach:** advertise seeking "qualification in 2 or more of: massage, beauty therapy, nail technology, hairdressing" rather than requiring all 4 — this keeps the pool findable while still capturing genuine multi-skill candidates when they exist. Don't let the search for the ideal 4-way hire delay filling the relief pool with strong 2-way candidates now.
