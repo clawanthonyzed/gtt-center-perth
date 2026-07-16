@@ -227,3 +227,74 @@ Confirmed common practice across major Australian pathology providers — typica
 | Sunday | PM standalone services only — **no GTT collection** | Standard PM-style hours | WDP Sunday capability (likely unsupported based on industry norm — confirm directly, don't assume) |
 
 Saturday treatment staff (massage/hair/nail/beauty) will cost 133–150% of ordinary rate regardless — this needs to be built into the weekend revenue model as a real cost, not assumed away. Only the phlebotomist rate has a plausible (unconfirmed) ordinary-rate path.
+
+---
+
+## UPDATE — 2026-07-16: AM Profit, Package Pricing, Weekend Structure, 3rd Phlebotomist
+
+### 1. AM Profit Now (Scenario C: 10 clients/day, 07:00 start, Package 2+3 only)
+
+| | Before (8 clients, Pkg1/2/3 mix) | Now (10 clients, Pkg2/3 mix) |
+|---|---|---|
+| AM Revenue | A$44,000/month | **A$60,500/month** (220 visits × A$275 avg — assumes 50/50 Pkg2/Pkg3 mix, confirm actual split once bookings show real preference) |
+| AM Direct Labor | A$48,255/month | A$48,255/month (unchanged — same 2 phlebotomists + 8 treatment staff, no new hires per Scenario C) |
+| Extra opening cost (40min earlier) | — | ~A$980/month (Manager/Reception early open) |
+| **AM Direct Contribution** | **-A$4,255/month** | **≈+A$11,265/month** |
+
+**AM flips from the venture's weakest link to a strong contributor** — purely from the 07:00 start (revenue) and dropping Package 1 (price mix), no new headcount. This is the single biggest improvement found this session.
+
+### 2. Are Package 2 (A$250) and Package 3 (A$300) Priced Too Low?
+
+Checked against live Perth pregnancy/day-spa package pricing:
+
+| Provider | Offering | Price |
+|---|---|---|
+| Serene Day Spa | Massage + facial, 2.5hrs | A$320 |
+| Crown Spa | 60min massage + 30min facial | From A$230 |
+| Standalone prenatal massage alone | 75–90min | A$185–205 |
+
+**Not underpriced** — Package 2 (30+45min, A$250) and Package 3 (2×45min, A$300) sit comfortably within the observed Perth market range for comparable 2-service pregnancy bundles. If anything, given GTT Center Perth's unique captive-audience economics (clients are there for a mandatory 2-hour medical wait regardless — no "convince them to book" friction that standalone day spas face), there may be room to test slightly above these comparables rather than below. Not a pricing problem — worth a modest test-increase once real booking data exists, not an urgent fix.
+
+### 3. Saturday Collection at 07:00 — Confirmed, Reuses Verified Scenario C
+
+Since Saturday runs the same 07:00 start and 5.5-hour window as the weekday model, **the verified Scenario C timetable (10 clients) applies directly to Saturday** — no separate verification needed. Treatment staff cost 133–150% penalty (MA000005, confirmed). Phlebotomist rate for Saturday 8am–4:30pm may fall under the MA000027 ordinary-hours carve-out — **still needs direct confirmation**, not yet verified.
+
+### 4. Sunday — WA Law Confirmed: No Restriction
+
+Checked directly: hairdresser/beautician/barber shops are explicitly listed as **exempt shops under Section 5 of the WA Retail Trading Hours Act 1987** — exempt shops have unrestricted trading hours, no legally mandated start time. **There is no WA law dictating a Sunday start time for this business** — it's entirely an operational choice.
+
+Recommended Sunday structure (operational judgement, not legal requirement): PM-style standalone services + packages (no testing, per your instruction), starting **10:00am** — later than Saturday, reflecting typical Sunday demand patterns for personal care services (later risers, no fasting logistics to plan around since no testing occurs). Confirm or adjust based on preference.
+
+### 5. Relief Phlebotomist — Approved and Added
+
+A 3rd phlebotomist "on the books" purely for holiday/sick coverage (not an active 3rd chair) is now added to the relief pool structure alongside the existing massage+beauty/nail/hair relief roles. Same casual, pay-only-when-working model. Requires the same Cert III/IV Pathology qualification and WDP credentialing as the primary 2 hires — this isn't a lesser-qualified role, just a casual/on-call one.
+
+### 6. Site Expansion — Logged as an Ongoing Consideration
+
+Noted as a standing thought, not a current action item — consistent with `strategic-concerns-growth.md`'s existing 12-month-proof-of-model precondition before a second venue.
+
+### 7. If a 3rd Phlebotomist Becomes an ACTIVE 3rd Chair (Growth Scenario, Not Just Relief)
+
+**a. Would we need more service staff?** Likely yes, at least 1 additional treatment hire. At an estimated 13 clients/day (up from 10), total service demand rises to 26 slots/day vs the 20 slots Scenario C already uses close to comfortably (busiest staff already at 3 slots/day). Pushing to 4 slots/day per busiest staff member is possible but starts eroding the safety buffer the current model relies on — recommend budgeting 1 additional flexible/relief-style treatment hire rather than pushing existing staff to their ceiling.
+
+**b. What would profit be?** Illustrative estimate (not yet formally verified): AM Revenue ≈A$78,650/month (286 visits × A$275avg), AM Direct Labor ≈A$57,075/month (3 phlebotomists + 8-9 treatment staff) → **AM Contribution ≈+A$21,575/month**. Meaningfully better than the 2-chair result, but this is an estimate, not a checked figure.
+
+**c. Would the current timetable work? No.** I attempted to build the 3-chair verified timetable (Scenario D) at the same rigor as Scenario C and **found a genuine double-booking collision** on Chair A that the existing ±5min tolerance mechanism can't cleanly resolve — the client-to-client spacing at a tightened stagger creates a real conflict, not just a minor timing tweak. **This needs proper dedicated scheduling work — likely with a scripted solver rather than manual arithmetic — before a 3rd chair can be committed to.** I won't present an unverified timetable as if it's checked. This is flagged as the next piece of AM capacity work if the 3rd-chair path is pursued.
+
+### 8. Full-Capacity Verified Timetables — Status
+
+| Scenario | Status |
+|---|---|
+| Scenario B (8 clients, 07:40 start, 2 chairs) | Verified (Day 49, original) |
+| **Scenario C (10 clients, 07:00 start, 2 chairs)** | **Verified this session** — see full table above |
+| Scenario D (13 clients, 3 chairs) | **NOT verified — collision found, needs dedicated rebuild** |
+
+PM does not require the same fixed-timetable verification — it's demand-driven booking against open Fresha slots, not a staggered concurrent cohort like AM, so there's no equivalent "PM timetable" to verify in the same way.
+
+### 9. Itemized Setup Costs — Next Deliverable
+
+Agreed the current setup cost figures are too broad. `equipment-costs.md` already itemizes room-by-room equipment reasonably well (individual line items with quantities and price ranges). What's genuinely missing:
+- **Fit-out/construction** is currently one unitemized range (A$40,000–90,000 in `financial-model.md`) — needs breaking into actual trade-by-trade line items (plumbing, electrical, flooring, partition walls, signage, HVAC, painting, etc.)
+- **Pre-launch capital deployment table** (`financial-model.md`) has broad buckets ("Entity setup A$3,000–5,000," "Lease bond A$18,000–30,000") that need itemizing into their actual sub-components
+
+This is a substantial task on its own — recommend it as the next dedicated piece of work rather than folding into this already-large update. Confirm and I'll start on the fit-out trade-by-trade breakdown next.
