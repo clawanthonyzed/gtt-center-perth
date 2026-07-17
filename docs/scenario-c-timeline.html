@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GTT Center Perth — Scenario C Timeline (2 Chairs, 10 Clients)</title>
+<style>
+  body { font-family: Arial, sans-serif; background:#fafafa; margin:40px; }
+  h1 { font-size:18px; }
+  .sub { color:#555; margin-bottom:20px; font-size:13px; }
+  .chart { position:relative; margin-left:90px; }
+  .row-label { position:absolute; left:-90px; width:80px; font-weight:bold; font-size:13px; }
+  .row { position:relative; height:50px; border-bottom:1px solid #ddd; }
+  .axis { position:relative; height:24px; margin-left:90px; border-bottom:2px solid #333; margin-bottom:4px; }
+  .tick { position:absolute; top:0; font-size:11px; color:#333; border-left:1px solid #ccc; padding-left:2px; height:24px; }
+  .block { position:absolute; top:6px; height:38px; border-radius:3px; font-size:10px; color:#fff; overflow:hidden; box-sizing:border-box; border:1px solid rgba(0,0,0,.25); padding:2px 3px; white-space:nowrap; }
+  .draw { top:6px; height:38px; opacity:0.55; }
+  .service { top:6px; height:38px; }
+  .cutoff { position:absolute; top:0; bottom:0; border-left:2px dashed red; }
+  .cutoff-label { position:absolute; top:-18px; font-size:11px; color:red; font-weight:bold; white-space:nowrap; }
+  .legend { margin-top:20px; font-size:12px; }
+  .swatch { display:inline-block; width:12px; height:12px; margin-right:4px; vertical-align:middle; border-radius:2px; }
+  .note { margin-top:16px; font-size:12px; color:#333; max-width:900px; }
+</style>
+</head>
+<body>
+<h1>Scenario C — 2 Chairs, 2 Phlebotomists, 10 Clients/Day (07:00 start)</h1>
+<div class="sub">Scale: 2px/min. Window: 07:00–12:30. Dashed red line = WDP courier cutoff (12:30). Faded blocks = draws (D1/D2/D3), solid blocks = services (S1/S2).</div>
+
+<div class="axis" id="axis"></div>
+<div class="chart">
+  <div class="row-label" style="top:0px">Chair A</div>
+  <div class="row" id="chairA"></div>
+  <div class="row-label" style="top:56px">Chair B</div>
+  <div class="row" id="chairB"></div>
+  <div class="cutoff" id="cutoffline"></div>
+</div>
+
+<div class="legend" id="legend"></div>
+<div class="note">
+Verify visually: no two blocks overlap within the same chair row. Client 10 (Chair B) departs at minute 325 (~12:25) — 5 minutes before the 330-minute (12:30) cutoff line. That 5-minute gap is the entire buffer this schedule runs on.
+</div>
+
+<script>
+const scale = 2; // px per minute
+const colors = ['#e6194b','#3cb44b','#4363d8','#f58231','#911eb4','#46f0f0','#f032e6','#bfef45','#fabed4','#008080'];
+
+const clients = [
+ {n:1, chair:'A', d1:[0,15], s1:[15,60], d2:[70,75], s2:[80,125], d3:[140,145], dep:150},
+ {n:2, chair:'B', d1:[20,35], s1:[35,80], d2:[90,95], s2:[100,145], d3:[160,165], dep:170},
+ {n:3, chair:'A', d1:[40,55], s1:[55,100], d2:[110,115], s2:[120,165], d3:[180,185], dep:190},
+ {n:4, chair:'B', d1:[60,75], s1:[75,120], d2:[130,135], s2:[140,185], d3:[200,205], dep:210},
+ {n:5, chair:'A', d1:[80,95], s1:[95,140], d2:[150,155], s2:[160,205], d3:[215,220], dep:225},
+ {n:6, chair:'B', d1:[100,115], s1:[115,160], d2:[170,175], s2:[180,225], d3:[235,240], dep:245},
+ {n:7, chair:'A', d1:[120,135], s1:[135,180], d2:[190,195], s2:[200,245], d3:[255,260], dep:265},
+ {n:8, chair:'B', d1:[140,155], s1:[155,200], d2:[210,215], s2:[220,265], d3:[275,280], dep:285},
+ {n:9, chair:'A', d1:[160,175], s1:[175,220], d2:[230,235], s2:[240,285], d3:[295,300], dep:305},
+ {n:10, chair:'B', d1:[180,195], s1:[195,240], d2:[250,255], s2:[260,305], d3:[315,320], dep:325},
+];
+
+const axis = document.getElementById('axis');
+for (let m = 0; m <= 330; m += 30) {
+  const t = document.createElement('div');
+  t.className = 'tick';
+  t.style.left = (m*scale) + 'px';
+  const hh = Math.floor(m/60)+7, mm = m%60;
+  t.textContent = String(hh).padStart(2,'0')+':'+String(mm).padStart(2,'0');
+  axis.appendChild(t);
+}
+
+function addBlock(rowId, x0, x1, label, color, cls) {
+  const row = document.getElementById(rowId);
+  const b = document.createElement('div');
+  b.className = 'block ' + cls;
+  b.style.left = (x0*scale) + 'px';
+  b.style.width = Math.max((x1-x0)*scale, 6) + 'px';
+  b.style.background = color;
+  b.textContent = label;
+  row.appendChild(b);
+}
+
+clients.forEach(c => {
+  const row = c.chair === 'A' ? 'chairA' : 'chairB';
+  const color = colors[c.n-1];
+  addBlock(row, c.d1[0], c.d1[1], 'C'+c.n+' D1', color, 'draw');
+  addBlock(row, c.s1[0], c.s1[1], 'C'+c.n+' S1', color, 'service');
+  addBlock(row, c.d2[0], c.d2[1], 'C'+c.n+' D2', color, 'draw');
+  addBlock(row, c.s2[0], c.s2[1], 'C'+c.n+' S2', color, 'service');
+  addBlock(row, c.d3[0], c.d3[1], 'C'+c.n+' D3', color, 'draw');
+});
+
+const cutoff = document.getElementById('cutoffline');
+cutoff.style.left = (330*scale) + 'px';
+const lbl = document.createElement('div');
+lbl.className = 'cutoff-label';
+lbl.style.left = (330*scale - 90) + 'px';
+lbl.textContent = '12:30 WDP courier cutoff';
+cutoff.appendChild(lbl);
+
+const legend = document.getElementById('legend');
+clients.forEach(c => {
+  const s = document.createElement('span');
+  s.style.marginRight = '14px';
+  s.innerHTML = '<span class="swatch" style="background:'+colors[c.n-1]+'"></span>Client '+c.n+' (Chair '+c.chair+', departs ~'+(Math.floor(c.dep/60)+7)+':'+String(c.dep%60).padStart(2,'0')+')';
+  legend.appendChild(s);
+});
+</script>
+</body>
+</html>
