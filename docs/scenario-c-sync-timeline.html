@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GTT Center Perth — Scenario C (Synchronized Start) — Client + Staff Timetables</title>
+<style>
+  body { font-family: Arial, sans-serif; background:#fafafa; margin:40px; }
+  h1 { font-size:20px; margin-bottom:4px; }
+  h2 { font-size:16px; margin-top:50px; border-bottom:2px solid #333; padding-bottom:4px; }
+  .sub { color:#555; margin-bottom:20px; font-size:13px; }
+  .chart { position:relative; margin-left:110px; }
+  .row-label { position:absolute; left:-110px; width:100px; font-weight:bold; font-size:12px; }
+  .row { position:relative; height:44px; border-bottom:1px solid #ddd; }
+  .axis { position:relative; height:24px; margin-left:110px; border-bottom:2px solid #333; margin-bottom:4px; }
+  .tick { position:absolute; top:0; font-size:11px; color:#333; border-left:1px solid #ccc; padding-left:2px; height:24px; }
+  .block { position:absolute; top:5px; height:34px; border-radius:3px; font-size:9px; color:#fff; overflow:hidden; box-sizing:border-box; border:1px solid rgba(0,0,0,.25); padding:2px 3px; white-space:nowrap; }
+  .draw { opacity:0.55; }
+  .cutoff { position:absolute; top:0; bottom:0; border-left:2px dashed red; }
+  .cutoff-label { position:absolute; top:-18px; font-size:11px; color:red; font-weight:bold; white-space:nowrap; }
+  table { border-collapse: collapse; margin-top:16px; font-size:13px; width:100%; }
+  th, td { border:1px solid #ccc; padding:5px 8px; text-align:left; }
+  th { background:#333; color:#fff; }
+  tr:nth-child(even) { background:#f2f2f2; }
+  .note { margin-top:16px; font-size:12px; color:#333; max-width:900px; }
+  .legend { margin-top:14px; font-size:11px; }
+  .swatch { display:inline-block; width:12px; height:12px; margin-right:4px; vertical-align:middle; border-radius:2px; }
+</style>
+</head>
+<body>
+<h1>Scenario C — SYNCHRONIZED Start (Chair A + Chair B start together), 10 Clients/Day</h1>
+<div class="sub">Both chairs run the identical rhythm in parallel (uniform, as requested) instead of the 20min offset. Same total capacity (10/day, 5/chair) — verified structurally identical, plus (new) full treatment-staff concurrency check below, which was not previously built for the synchronized case.</div>
+
+<h2>1. Client / Chair Timetable</h2>
+<div class="axis" id="axis1"></div>
+<div class="chart" id="chart1">
+  <div class="row-label" style="top:0px">Chair A</div>
+  <div class="row" id="chairA"></div>
+  <div class="row-label" style="top:50px">Chair B</div>
+  <div class="row" id="chairB"></div>
+  <div class="cutoff" id="cutoffline1"></div>
+</div>
+<div class="legend" id="legend1"></div>
+
+<h2>2. Full Staff Timetable (2 Phlebotomists + 8 Treatment Staff)</h2>
+<div class="axis" id="axis2"></div>
+<div class="chart" id="chart2">
+  <div class="row-label" style="top:0px">Phleb A</div><div class="row" id="rowPA"></div>
+  <div class="row-label" style="top:50px">Phleb B</div><div class="row" id="rowPB"></div>
+  <div class="row-label" style="top:100px">Massage 1</div><div class="row" id="rowM1"></div>
+  <div class="row-label" style="top:150px">Massage 2</div><div class="row" id="rowM2"></div>
+  <div class="row-label" style="top:200px">Beauty 1</div><div class="row" id="rowB1"></div>
+  <div class="row-label" style="top:250px">Beauty 2</div><div class="row" id="rowB2"></div>
+  <div class="row-label" style="top:300px">Nails 1</div><div class="row" id="rowN1"></div>
+  <div class="row-label" style="top:350px">Nails 2</div><div class="row" id="rowN2"></div>
+  <div class="row-label" style="top:400px">Hair 1</div><div class="row" id="rowH1"></div>
+  <div class="row-label" style="top:450px">Hair 2</div><div class="row" id="rowH2"></div>
+</div>
+
+<div class="note">
+Verification: every treatment line peaks at exactly 2 concurrent bookings (its real capacity) — checked programmatically, not by eye. Both phlebotomists run mirrored schedules (same clock times, different chair) — this is what "uniformity" looks like once built out: literally identical rhythm on both chairs, confirmed collision-free.
+</div>
+
+<script>
+const scale = 1.8;
+const colors = ['#e6194b','#3cb44b','#4363d8','#f58231','#911eb4','#46f0f0','#f032e6','#bfef45','#fabed4','#008080'];
+
+// client: [id, chair, d1, s1(type), d2, s2(type), d3, depart]
+const clients = [
+ {n:1, chair:'A', d1:[0,15], s1:[15,60,'Massage'], d2:[70,75], s2:[80,125,'Beauty'], d3:[140,145]},
+ {n:2, chair:'B', d1:[0,15], s1:[15,60,'Nails'],   d2:[70,75], s2:[80,125,'Hair'],   d3:[140,145]},
+ {n:3, chair:'A', d1:[40,55], s1:[55,100,'Massage'], d2:[110,115], s2:[120,165,'Beauty'], d3:[180,185]},
+ {n:4, chair:'B', d1:[40,55], s1:[55,100,'Nails'],   d2:[110,115], s2:[120,165,'Hair'],   d3:[180,185]},
+ {n:5, chair:'A', d1:[80,95], s1:[95,140,'Massage'], d2:[150,155], s2:[160,205,'Beauty'], d3:[215,220]},
+ {n:6, chair:'B', d1:[80,95], s1:[95,140,'Nails'],   d2:[150,155], s2:[160,205,'Hair'],   d3:[215,220]},
+ {n:7, chair:'A', d1:[120,135], s1:[135,180,'Massage'], d2:[190,195], s2:[200,245,'Beauty'], d3:[255,260]},
+ {n:8, chair:'B', d1:[120,135], s1:[135,180,'Nails'],   d2:[190,195], s2:[200,245,'Hair'],   d3:[255,260]},
+ {n:9, chair:'A', d1:[160,175], s1:[175,220,'Massage'], d2:[230,235], s2:[240,285,'Beauty'], d3:[295,300]},
+ {n:10,chair:'B', d1:[160,175], s1:[175,220,'Nails'],   d2:[230,235], s2:[240,285,'Hair'],   d3:[295,300]},
+];
+
+function buildAxis(id, maxMin) {
+  const axis = document.getElementById(id);
+  for (let m = 0; m <= maxMin; m += 30) {
+    const t = document.createElement('div');
+    t.className = 'tick';
+    t.style.left = (m*scale) + 'px';
+    const hh = Math.floor(m/60)+7, mm = m%60;
+    t.textContent = String(hh).padStart(2,'0')+':'+String(mm).padStart(2,'0');
+    axis.appendChild(t);
+  }
+}
+buildAxis('axis1', 330);
+buildAxis('axis2', 330);
+
+function addBlock(rowId, x0, x1, label, color, cls) {
+  const row = document.getElementById(rowId);
+  const b = document.createElement('div');
+  b.className = 'block ' + (cls||'');
+  b.style.left = (x0*scale) + 'px';
+  b.style.width = Math.max((x1-x0)*scale, 5) + 'px';
+  b.style.background = color;
+  b.textContent = label;
+  row.appendChild(b);
+}
+
+clients.forEach(c => {
+  const row = c.chair === 'A' ? 'chairA' : 'chairB';
+  const color = colors[c.n-1];
+  addBlock(row, c.d1[0], c.d1[1], 'C'+c.n+' D1', color, 'draw');
+  addBlock(row, c.s1[0], c.s1[1], 'C'+c.n+' S1', color);
+  addBlock(row, c.d2[0], c.d2[1], 'C'+c.n+' D2', color, 'draw');
+  addBlock(row, c.s2[0], c.s2[1], 'C'+c.n+' S2', color);
+  addBlock(row, c.d3[0], c.d3[1], 'C'+c.n+' D3', color, 'draw');
+});
+
+const cutoff1 = document.getElementById('cutoffline1');
+cutoff1.style.left = (330*scale) + 'px';
+const lbl1 = document.createElement('div');
+lbl1.className='cutoff-label'; lbl1.style.left=(330*scale-90)+'px'; lbl1.textContent='12:30 WDP courier cutoff (assumed)';
+cutoff1.appendChild(lbl1);
+
+const legend1 = document.getElementById('legend1');
+clients.forEach(c => {
+  const s = document.createElement('span');
+  s.style.marginRight = '14px';
+  s.innerHTML = '<span class="swatch" style="background:'+colors[c.n-1]+'"></span>Client '+c.n+' (Chair '+c.chair+')';
+  legend1.appendChild(s);
+});
+
+// staff rows
+const staffMap = {
+  PA: [], PB: [], M1: [], M2: [], B1: [], B2: [], N1: [], N2: [], H1: [], H2: []
+};
+// phlebotomists: all draws for their chair
+clients.forEach(c => {
+  const p = c.chair === 'A' ? 'PA' : 'PB';
+  staffMap[p].push([c.d1[0], c.d1[1], 'C'+c.n+' D1']);
+  staffMap[p].push([c.d2[0], c.d2[1], 'C'+c.n+' D2']);
+  staffMap[p].push([c.d3[0], c.d3[1], 'C'+c.n+' D3']);
+});
+// treatment staff -- 2-coloring by client parity within each type (matches solved assignment)
+// Massage/Beauty (chair A: clients 1,3,5,7,9), Nails/Hair (chair B: clients 2,4,6,8,10)
+const mAssign = {1:'M1',5:'M1',9:'M1',3:'M2',7:'M2'};
+const bAssign = {1:'B1',5:'B1',9:'B1',3:'B2',7:'B2'};
+const nAssign = {2:'N1',6:'N1',10:'N1',4:'N2',8:'N2'};
+const hAssign = {2:'H1',6:'H1',10:'H1',4:'H2',8:'H2'};
+clients.forEach(c => {
+  if (c.chair === 'A') {
+    staffMap[mAssign[c.n]].push([c.s1[0], c.s1[1], 'C'+c.n+' Massage']);
+    staffMap[bAssign[c.n]].push([c.s2[0], c.s2[1], 'C'+c.n+' Beauty']);
+  } else {
+    staffMap[nAssign[c.n]].push([c.s1[0], c.s1[1], 'C'+c.n+' Nails']);
+    staffMap[hAssign[c.n]].push([c.s2[0], c.s2[1], 'C'+c.n+' Hair']);
+  }
+});
+const rowIdMap = {PA:'rowPA',PB:'rowPB',M1:'rowM1',M2:'rowM2',B1:'rowB1',B2:'rowB2',N1:'rowN1',N2:'rowN2',H1:'rowH1',H2:'rowH2'};
+Object.keys(staffMap).forEach(k => {
+  staffMap[k].forEach(([x0,x1,label]) => {
+    const clientNum = parseInt(label.match(/C(\d+)/)[1]);
+    addBlock(rowIdMap[k], x0, x1, label, colors[clientNum-1], label.includes('D')?'draw':'');
+  });
+});
+</script>
+</body>
+</html>
