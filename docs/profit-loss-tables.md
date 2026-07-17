@@ -118,3 +118,67 @@ The monthly/quarterly/yearly tables below still show the whole business solidly 
 2. **Saturday AM needs a decision** — currently a net drag once the confirmed penalty rate is applied. Not fixed by this document; needs your call.
 3. **Sunday is thin** — technically profitable but only just, and sensitive to real demand undershooting the 6-session/day estimate.
 4. **MA000027 phlebotomist Saturday rate remains unconfirmed** — both scenarios (optimistic/conservative) are shown throughout until this is verified with a payroll advisor or Fair Work directly.
+
+---
+
+## P&L TABLES v2.0 — 2026-07-17 (Corrected Saturday, Sunday Removed, Conservative Baseline)
+
+**Supersedes the v1.0 tables above.** Changes: (1) Saturday AM re-costed on actual hours worked, not a salary-slice — corrects a modeling error that understated Saturday profitability; (2) Sunday trading removed entirely — closed until proven demand exists; (3) all figures now report the conservative case only (no phlebotomist ordinary-hours carve-out assumed) as the standing baseline.
+
+### 1. Weekday (unchanged)
+Revenue A$4,459.50 | Direct Labor A$2,677.50 | Overhead allocation A$974.00 | **Net +A$808.00/day**
+
+### 2. Saturday (corrected — hours-based costing)
+
+| | Amount |
+|---|---|
+| AM Revenue (10 × A$250) | A$2,500.00 |
+| PM Revenue (8 × A$95) | A$760.00 |
+| **Total Revenue** | **A$3,260.00** |
+| AM Direct Labor (hours-based, conservative 150% penalty throughout) | A$1,343.95 |
+| PM Direct Labor (hours-based, 150% penalty) | A$335.55 |
+| **Total Direct Labor** | **A$1,679.50** |
+| **Net Direct Contribution** | **+A$1,580.50** |
+
+### 3. Sunday — CLOSED
+
+No Sunday trading until proven demand exists (standing instruction, 2026-07-17). Removed from all aggregate tables below.
+
+### 4. Weekly (5 Weekdays + 1 Saturday, no Sunday)
+
+| | Revenue | Direct Labor | Net |
+|---|---|---|---|
+| 5× Weekday | A$22,297.50 | A$13,387.50 | +A$8,910.00 |
+| 1× Saturday | A$3,260.00 | A$1,679.50 | +A$1,580.50 |
+| **Weekly Total** | **A$25,557.50** | **A$15,067.00** | **+A$10,490.50** |
+
+### 5. Monthly (4.33 weeks)
+
+| | Amount |
+|---|---|
+| Total Revenue | A$113,712.16 |
+| Total Direct Labor + Opening Costs | A$73,397.34 |
+| Workers Comp (1.7%) | A$1,247.75 |
+| Non-Wage Overhead | A$13,980.00 |
+| **Total Costs** | **A$88,625.09** |
+| **Net P&L (conservative — the standing baseline)** | **+A$25,087.07** |
+
+### 6. Quarterly (3 Months)
+**+A$75,261.21**
+
+### 7. Half-Yearly (6 Months)
+**+A$150,522.42**
+
+### 8. Yearly (12 Months)
+**+A$301,044.84**
+
+---
+
+## Summary of the Correction
+
+| | v1.0 (Saturday costing error, Sunday included) | v2.0 (corrected, conservative baseline) |
+|---|---|---|
+| Monthly | +A$16,954.49 (conservative) | **+A$25,087.07** |
+| Yearly | +A$203,453.88 (conservative) | **+A$301,044.84** |
+
+The Saturday costing error alone was worth roughly A$8,000/month once corrected — a meaningful understatement in the previous version. This v2.0 table is now the standing baseline; treat these figures as conservative, not optimistic — real performance could exceed this if Package 3 bookings run above the Package-2-only safety assumption, or if phlebotomists do qualify for the MA000027 Saturday ordinary-hours carve-out.

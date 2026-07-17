@@ -364,3 +364,49 @@ Checked all 30 service slots (15 clients × 2) against the existing 8 treatment 
 ## Item 9 — Itemized Setup Costs
 
 Noted — you have the capability to build the accurate itemized equipment/consumables list in-house, and ballpark figures are acceptable for trades/construction. No action needed from me here; `equipment-costs.md` and `financial-model.md`'s existing trade-level ballpark figures stand as-is unless you want them revisited.
+
+---
+
+## CORRECTION — 2026-07-17: Saturday Finding Was Wrong (Costing Methodology Error)
+
+**The previous Saturday loss finding was a modeling error, not a real business constraint.** Anthony's pushback was correct — real hair/beauty/personal-care businesses operate profitably on Saturdays across Australia despite penalty rates, because (a) Saturday is typically their busiest demand day, and (b) they cost the day on actual hours worked, not as a slice of ongoing weekday salary.
+
+**The error:** Saturday AM labor was costed using the weekday method — monthly salary ÷ 22 days — which is correct for ongoing contracted weekday staff, but wrong for a bolt-on Saturday shift. Saturday is an *additional* casual shift beyond the normal weekday contract; it should be costed on actual hours worked that day (the same hours-based method already established for PM), not as if it draws from the same fixed monthly salary base as a normal weekday.
+
+### Corrected Full-Staffing Saturday (10 clients, 2 phlebotomists, 8 treatment staff — hours actually worked that day)
+
+| | Conservative (150% penalty on both phlebotomists and treatment) |
+|---|---|
+| Revenue (10 × A$250) | A$2,500.00 |
+| Treatment labor (hours-based: 5 slots/line ÷1.3 throughput × avg $36.3/hr × 1.50 penalty) | A$838.55 |
+| Phlebotomist labor (2 × 5.5hr shift × $30.63/hr × 1.50 penalty, conservative — no ordinary-hours carve-out assumed) | A$505.40 |
+| **Total Direct Labor** | **A$1,343.95** |
+| **Net Direct Contribution** | **+A$1,156.05/day** |
+
+**Saturday AM GTT is solidly profitable at full staffing — no reduction and no premium needed.** The earlier -A$790/day finding is retracted; that was a costing error, not a real result.
+
+### Comparison — Lower Staffing (5 clients, 1 phlebotomist, 1 per treatment line)
+
+| | Conservative |
+|---|---|
+| Revenue (5 × A$250) | A$1,250.00 |
+| Treatment labor (hours-based, 1 per line) | A$418.17 |
+| Phlebotomist labor (1 × ~4hr shift, 150% penalty) | A$183.78 |
+| **Net Direct Contribution** | **+A$648.05/day** |
+
+**Per-client profitability:** full staffing = A$115.61/client; reduced staffing = A$129.61/client — reduced is marginally more profitable per client, but full staffing captures more absolute dollars (A$1,156 vs A$648/day). **Recommendation: run full staffing (10 clients)** — higher total profit, and matches weekday capacity so the roster doesn't need a separate reduced-Saturday staffing plan.
+
+### Premium Pricing — Not Required, But Available as Extra Margin
+
+Since full-staffing Saturday is already profitable without any price increase, a premium isn't necessary. If extra buffer is wanted: a 10% Saturday surcharge (A$275/client) would add ~A$250/day, taking conservative full-staffing Saturday profit to **+A$1,406.05/day**. Optional, not needed to reach profitability.
+
+### Simultaneous Starts Also Apply to the 2-Chair Setup
+
+Confirmed — Scenario C's 20-minute offset between the 2 chairs was always a flow choice for smoother arrivals, not a scheduling requirement. Both chairs could run fully synchronized (same start times) without changing total capacity (still 10 clients/day, 5 per chair) or violating any constraint — the underlying principle was already compatible with Scenario C, just not stated explicitly at the time. No numbers change; this confirms consistency across both verified scenarios.
+
+---
+
+## Standing Instructions From 2026-07-17
+
+1. **All figures use the conservative case as the baseline going forward** — where two scenarios exist (e.g. unconfirmed phlebotomist Saturday penalty), conservative is the default reported number, optimistic is noted as documented upside only.
+2. **Sunday trading is closed until proven demand exists.** Remove Sunday from the operational model and P&L tables — revisit only once real weekday/Saturday demand data justifies testing it.
