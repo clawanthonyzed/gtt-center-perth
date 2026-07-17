@@ -298,3 +298,69 @@ Agreed the current setup cost figures are too broad. `equipment-costs.md` alread
 - **Pre-launch capital deployment table** (`financial-model.md`) has broad buckets ("Entity setup A$3,000–5,000," "Lease bond A$18,000–30,000") that need itemizing into their actual sub-components
 
 This is a substantial task on its own — recommend it as the next dedicated piece of work rather than folding into this already-large update. Confirm and I'll start on the fit-out trade-by-trade breakdown next.
+
+---
+
+## SCENARIO D — Verified 3-Phlebotomist Timetable (2026-07-17)
+
+**Corrected approach.** Your clarification — clients can start simultaneously as long as a phlebotomist and the follow-up services are available — removes the artificial collision from the previous attempt. That collision came from forcing all 3 chairs onto one shared tight stagger. The fix: each chair independently runs its own already-proven-safe 40-minute-per-client rhythm (identical to Scenario C's chairs), just offset slightly from each other for smoother arrival flow. Different phlebotomists can draw at the same literal minute with zero conflict — that was never actually a constraint.
+
+### Result: 15 AM clients/day, 3 phlebotomists, 07:00 start — fully verified, zero collisions
+
+Chair A offset 0min, Chair B offset +10min, Chair C offset +20min. Each chair: 5 clients at 40-min spacing (identical proven rhythm from Scenario B/C).
+
+| Client | Chair | Draw 1 | Service 1 | Draw 2 | Service 2 | Draw 3 | Depart |
+|---|---|---|---|---|---|---|---|
+| 1 | A | 07:00–07:15 | 07:15–08:00 | 08:10–08:15 | 08:20–09:05 | 09:15–09:20 | ~09:25 |
+| 2 | B | 07:10–07:25 | 07:25–08:10 | 08:20–08:25 | 08:30–09:15 | 09:25–09:30 | ~09:35 |
+| 3 | C | 07:20–07:35 | 07:35–08:20 | 08:30–08:35 | 08:40–09:25 | 09:35–09:40 | ~09:45 |
+| 4 | A | 07:40–07:55 | 07:55–08:40 | 08:50–08:55 | 09:00–09:45 | 09:55–10:00 | ~10:05 |
+| 5 | B | 07:50–08:05 | 08:05–08:50 | 09:00–09:05 | 09:10–09:55 | 10:05–10:10 | ~10:15 |
+| 6 | C | 08:00–08:15 | 08:15–09:00 | 09:10–09:15 | 09:20–10:05 | 10:15–10:20 | ~10:25 |
+| 7 | A | 08:20–08:35 | 08:35–09:20 | 09:30–09:35 | 09:40–10:25 | 10:35–10:40 | ~10:45 |
+| 8 | B | 08:30–08:45 | 08:45–09:30 | 09:40–09:45 | 09:50–10:35 | 10:45–10:50 | ~10:55 |
+| 9 | C | 08:40–08:55 | 08:55–09:40 | 09:50–09:55 | 10:00–10:45 | 10:55–11:00 | ~11:05 |
+| 10 | A | 09:00–09:15 | 09:15–10:00 | 10:10–10:15 | 10:20–11:05 | 11:15–11:20 | ~11:25 |
+| 11 | B | 09:10–09:25 | 09:25–10:10 | 10:20–10:25 | 10:30–11:15 | 11:25–11:30 | ~11:35 |
+| 12 | C | 09:20–09:35 | 09:35–10:20 | 10:30–10:35 | 10:40–11:25 | 11:35–11:40 | ~11:45 |
+| 13 | A | 09:40–09:55 | 09:55–10:40 | 10:50–10:55 | 11:00–11:45 | 11:55–12:00 | ~12:05 |
+| 14 | B | 09:50–10:05 | 10:05–10:50 | 11:00–11:05 | 11:10–11:55 | 12:05–12:10 | ~12:15 |
+| 15 | C | 10:00–10:15 | 10:15–11:00 | 11:10–11:15 | 11:20–12:05 | 12:15–12:20 | ~12:25 |
+
+**Client 15 departs ~12:25 — only a 5-minute buffer before the 12:30 WDP courier cutoff.** Tighter than Scenario C's buffer — worth flagging as something to monitor once real courier timing is confirmed with WDP.
+
+### Treatment Staff Verification — No New Hires Required
+
+Checked all 30 service slots (15 clients × 2) against the existing 8 treatment staff. **Every service type stays at a maximum of 2 concurrent bookings at any moment — fully coverable by the existing 2-per-line roster, no 9th hire needed.** This corrects the previous session's estimate (which assumed a 9th hire might be required) — a more careful build shows it isn't.
+
+**Real cost of this capacity:** the busiest staff (1 massage, 1 beauty therapist) go to **5 service slots/day** — up from 3 in Scenario C and 2 in the original Scenario B. That's roughly 68% utilisation, a genuinely full working day. Mathematically clear, but worth watching for staff fatigue and service quality once real-world — this is the edge of what the current headcount can comfortably absorb, not a casual buffer anymore.
+
+### 3rd Phlebotomist — Answering Your Three Questions
+
+**a. More service staff needed?** No — verified above, existing 8 treatment staff cover it, though utilisation on 2 of them is now high.
+
+**b. Profit?** Using the safe Package 2 price (A$250, per your instruction):
+- AM Revenue: 15 × 22 × A$250 = A$82,500/month
+- AM Direct Labor: 3 phlebotomists (A$129,204/yr = A$10,767/month) + 8 treatment staff (A$41,077/month, unchanged) = A$51,844/month
+- Opening cost (07:00 start): A$980/month
+- **AM Contribution: ≈+A$29,676/month**
+
+**c. Current timetable?** No — this is a new one (Scenario D above), built and verified specifically for 3 chairs. The Scenario C (2-chair, 10-client) timetable stays as the current committed baseline; Scenario D is the documented growth path if/when the 3rd phlebotomist is activated as an active chair rather than pure relief.
+
+---
+
+## Package Pricing Timing — Introductory Rate Strategy (2026-07-17)
+
+**Your question:** run current package prices as introductory rates, increase at the 3-month mark?
+
+**Yes, this is a sound approach — worth doing.** One adjustment to consider on timing: Month 4 is already the venture's own break-even milestone in this model (see `pm-staffing-roster.md`), and by Month 4 you'll have a full quarter of real booking data, reviews, and referral momentum — a stronger position to raise prices from than Month 3, where you're still mid-ramp and more price-sensitive to losing early bookings. Moving the increase to Month 4 costs you one extra month at introductory pricing but buys meaningfully more confidence in the increase itself.
+
+**However — this is genuinely your call, not a clear-cut answer.** Month 3 gets you there faster if cash flow during ramp-up is the bigger concern. Confirm which and I'll lock it into `services-pricing-locked.md` and the marketing materials.
+
+**One practical recommendation regardless of timing:** frame it publicly as "founding member pricing" from Day 1, not a silent price increase later. This avoids any bait-and-switch perception for a client base that talks to each other (referral-driven business, per the existing marketing model) — set the expectation upfront that early pricing is limited-time, so the later increase reads as expected, not a surprise.
+
+---
+
+## Item 9 — Itemized Setup Costs
+
+Noted — you have the capability to build the accurate itemized equipment/consumables list in-house, and ballpark figures are acceptable for trades/construction. No action needed from me here; `equipment-costs.md` and `financial-model.md`'s existing trade-level ballpark figures stand as-is unless you want them revisited.

@@ -81,6 +81,8 @@ Levers, roughly in order of effort required:
 
 **What does not replicate cheaply:** the WDP (or alternate pathology partner) relationship requires separate site approval per venue — WDP inspects each physical collection room individually, this is not a blanket approval. A second venue needs its own WDP conversation and its own collection room build, in full, regardless of Venue 1's track record with WDP.
 
+**Layout/functionality lessons from Venue 1 (added 2026-07-17):** Anthony has flagged that Venue 2's site selection must account for lessons learned from Venue 1's actual operational layout and functionality once live — not just repeat the same floor plan blind. Capture layout pain points (chair placement, treatment room flow, reception sightlines, parking-to-entry distance) during Venue 1's first 6 months of operation and feed them directly into Venue 2's site brief and floor plan brief.
+
 **Candidate second-venue locations:** the location-scouting.md priority list (Osborne Park, Joondalup, Cannington, Myaree/Murdoch) already covers 4 corridors — whichever corridor is NOT chosen for Venue 1 becomes the natural Venue 2 candidate, since it avoids cannibalising Venue 1's catchment.
 
 ### 6. Expansion to Different Australian States
