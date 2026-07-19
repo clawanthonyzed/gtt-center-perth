@@ -67,7 +67,7 @@
 - [ ] Weekly fit-out progress check with builder
 - [ ] Furniture and equipment orders: pregnancy massage tables, nail station (with LEV), scan room equipment, lounge seating
 - [ ] Food business notification submitted to local council
-- [ ] Food Safety Supervisor training completed (Imara or designated staff)
+- [ ] Food Safety Supervisor training completed (Venue Manager or designated staff)
 - [ ] Reception hire process begins (part-time permanent, Clerks Award MA000002 Level 1)
 - [ ] Order retail stock (Gaia, Weleda, Mustela)
 - [ ] Order snack/drinks stock (coconut water, protein bars, herbal teas)
@@ -81,7 +81,7 @@
 - [ ] All subtenant Room Licence Agreements signed
 - [ ] Practitioner inductions completed
 - [ ] Reception staff hired and trained
-- [ ] First aid training completed (Anthony and/or Imara)
+- [ ] First aid training completed (Venue Manager — mandatory before venue opens, see emergency-plan.md)
 - [ ] All insurances in place (venue liability + confirm subtenant insurance certificates on file)
 - [ ] Waitlist notification sent to all pre-registered customers
 
@@ -157,7 +157,8 @@
 | WDP/PathWest partnership confirmed | Anthony/Imara | Week 2 |
 | Solicitor engaged (Room Licence + lease review) | Anthony | Week 1 |
 | Accountant brief (Trust structure confirmed) | Anthony | Week 1 |
-| Venue located and heads of agreement signed | Imara | Week 6 |
+| Venue located and heads of agreement signed | Imara (trustee-related signatory — see financial-model.md) | Week 6 |
+| Venue Manager hired (critical path — see hr-framework.md §13) | Anthony/Grace | Week 1 |
 | Scan room subtenant (Bloom Baby) confirmed | Reed | Week 7 |
 | Booking system selected | Ivy | Week 9 |
 
@@ -182,3 +183,9 @@ Do not proceed past each gate without confirming funds:
 - [WDP Partner with Us](https://www.wdp.com.au/clinicians/getting-started-with-us/)
 - [PathWest Contact](https://www.pathwest.health.wa.gov.au/About-Us/Contact-us)
 - [Commercial Real Estate Perth](https://www.commercialrealestate.com.au/for-lease/perth-surrounds-wa/)
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced operational/on-site references to "Imara" (Food Safety Supervisor, first aid holder) with "Venue Manager" (new hire, not yet in place). Imara's lease-signing role (trustee-related) is retained as-is — see `financial-model.md`/`research.md` for the ownership structure, unaffected by this change. Added Venue Manager hiring as a Week 1 key dependency alongside existing critical-path items.
