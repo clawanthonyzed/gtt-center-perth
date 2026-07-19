@@ -1,9 +1,58 @@
 # GTT Center Perth — Document Inventory
 
-**Compiled:** 2026-07-19 | **Compiled by:** Grace (Operations Manager, audit pass)
+**Compiled:** 2026-07-19 | **Compiled by:** Grace (Operations Manager, audit pass — updated through Phase 6/7 pass, same day)
 **Purpose:** Single reference listing every file in `docs/`, its status, and its role in the corpus. Companion to `reading-order.md` (which orders reading, not status) and `01_conflicts_log.md` (which details specific conflicts).
 
-**Total files:** 68 (60 markdown in `docs/`, 8 staff-profile markdown files in `docs/staff-profiles/`, 6 non-markdown visual/export files)
+**Total files:** 80 (70 markdown in `docs/` + 12 new Phase 6/7 documents listed below, 8 staff-profile markdown files in `docs/staff-profiles/`, 6 non-markdown visual/export files)
+
+## New Documents Created This Session (Phase 7 + audit deliverables)
+
+| File | Purpose |
+|---|---|
+| `00_document_inventory.md` | This file |
+| `01_conflicts_log.md` | Conflict detection and resolution log (9 conflicts logged, CONFLICT-01 through 09) |
+| `02_issues_and_risks.md` | Narrative gap-analysis (High/Medium/Low severity) |
+| `03_improvements.md` | Process and operational improvement suggestions |
+| `04_roadmap_next_steps.md` | Tiered, dependency-based roadmap — primary audit deliverable |
+| `05_open_questions_for_founder.md` | Single running list of founder-only questions |
+| `lab-partnership-email-draft.md` | Corrected pathology-partner outreach email (no venture name, planning-stage framing, email-only reply ask) |
+| `price-increase-comparison.md` | Financial comparison of package price-increase timing options |
+| `venue-manager-job-posting.md` | Ready-to-use Venue Manager recruitment document (location-gated, not yet active) |
+| `regulatory-accreditation-tracker.md` | Phase 7 — Option A regulatory/accreditation checklist with status tracking |
+| `swot-analysis.md` | Phase 7 — Strengths/Weaknesses/Opportunities/Threats |
+| `risk-register.md` | Phase 7 — ranked risk table (likelihood × impact × mitigation × owner), distinct from `02_issues_and_risks.md`'s narrative format |
+| `break-even-sensitivity-analysis.md` | Phase 7 — best/base/worst case on volume and pricing |
+| `referral-partnership-plan.md` | Phase 7 — GP/OB/midwife referral strategy, named practices from `poppy-marketing.md` |
+| `pricing-billing-strategy.md` | Phase 7 — private vs bulk billing rationale, Medicare specifics flagged as requiring verification |
+| `project-timeline-milestones.md` | Phase 7 — Gantt-style relative-sequence milestone view, no calendar dates |
+
+## Documents Significantly Rewritten or Fixed This Session (Phase 6 verification + contradiction scan)
+
+| File | What changed |
+|---|---|
+| `business-plan.md` | Full currency rewrite (v3.0) — fixed Scenario B->C, dropped Package 1, removed fixed calendar milestones, surfaced new PM-profitability/market-sizing discrepancy (CONFLICT-08) |
+| `executive-summary.md` | Full currency rewrite (v2.0) — made genuinely standalone per spec, fixed same stale figures as business-plan.md |
+| `profit-loss-tables.md` | Added Year 1 monthly ramp + Years 1-3 annual (previously Month-5+ steady-state only) |
+| `cash-flow.md` | Verified spec compliance (already had full monthly + startup capital detail); flagged 3-way figure discrepancy with `pm-staffing-roster.md`/`profit-loss-tables.md` |
+| `equipment-costs.md` | Added missing Beauty/Brows equipment section (§5A); added capital-vs-recurring classification; corrected 3D scan framing |
+| `hire-purchase-china.md` | Reframed 3D scanner as future/Phase 2 income stream, not "removed entirely" |
+| `market-research-findings.md` | Reframed 3D scan from "core differentiator" to future/Phase 2 addon |
+| `ivy-booking-system.md` | Fully rewritten subtenant model -> employed-staff model; fixed stale 8-client reference; removed 3D scan/dietitian from booking flow |
+| `onboarding.md` | All 19 "Manager" instances -> "Venue Manager" |
+| `brand-guide.md` | Fixed Instagram bio/highlight icons advertising "Scan"/"Dietitian" as current services |
+| `venture-timeline.md` | Removed fixed Centre 2 date targets; removed DVA from action lists |
+| `reading-order.md` | Removed DVA from Open Decisions table |
+| `review-audit.md` | Removed DVA from Action Priority List |
+| `02_issues_and_risks.md` | Removed H4 (DVA); resolved M1 (Venue Manager job posting) |
+| `am-capacity-weekend.md` | Added Scenario D 09:55 verification (verified via actual event simulation) |
+| `king-edward-start-time-constraint.md` | Updated Scenario D recommendation per the 09:55 verification |
+| `cutoff-time-CORRECTION.md` | Added WDP-emailed status + overnight-storage follow-up question |
+| `reed-partnerships.md` | Added live outreach-status tracker; corrected email template |
+| `pathology-partnership-brief.md` | Updated status line to match outreach tracker |
+| `hr-framework.md` | Added §13 Venue Manager critical-path section; MA000027 investigation (capability gap flagged) |
+| `staff-plan.md` | Fixed hiring-timeline sequencing (location-gated, not "begin immediately") |
+| `phlebotomist-job-posting.md` | Fixed same location-gating sequencing issue |
+| Plus all 20 Priority 0 files from the original Imara -> Venue Manager rename (staff-plan.md, operations-manual.md, emergency-plan.md, hr-framework.md, financial-setup.md, gtt-clinical-protocol.md, patient-intake-form.md, phlebotomist-job-posting.md, team-startup.md, venture-timeline.md, grace-startup-plan.md, feasibility.md, business-plan.md, reading-order.md, review-audit.md, website-spec.md, workflow.md, poppy-marketing.md, brand-guide.md, afternoon-marketing-plan.md) plus consent-form.md, executive-summary.md, gtt-test-reference.md found via full-repo sweep | See individual changelogs in each file |
 
 ---
 
@@ -44,7 +93,7 @@
 | `grace-startup-plan.md` | CURRENT | 90-day startup plan. Venue Manager critical path noted 2026-07-19. |
 | `emergency-plan.md` | CURRENT | Imara->Venue Manager rename complete. Still has placeholder fields ([to be inserted]) pending venue address confirmation. |
 | `gtt-clinical-protocol.md` | CURRENT (with caveats) | Imara->Venue Manager rename complete. Client-count updated 8->10 to match Scenario C 2026-07-19; full timetable detail lives in `scenario-c-sync-timetables.md`, not this file. |
-| `onboarding.md` | Not reviewed this pass | No Imara references found in P0 scope; recommend a follow-up read for Scenario B/C consistency. |
+| `onboarding.md` | CURRENT | All 19 generic "Manager" instances corrected to "Venue Manager" for consistency (2026-07-19). |
 | `staff-profiles/staff-1.md` through `staff-8.md`, `TEMPLATE.md` | Not reviewed this pass | Individual staff persona/profile templates — out of scope for Imara rename (no operational Imara references expected) and Scenario B/C (not schedule-specific). |
 
 ## Financial
@@ -59,20 +108,20 @@
 | `services-pricing-locked.md` | CURRENT — CANONICAL PRICING | Package 2 (A$250) + Package 3 (A$300) only, Package 1 dropped. |
 | `services-master-table.md` | CURRENT | Service list/durations. |
 | `financial-setup.md` | CURRENT | Imara->Venue Manager rename complete for operational duties; Imara's personal remuneration question retained. |
-| `equipment-costs.md` | Not reviewed this pass | |
-| `hire-purchase-china.md` | Not reviewed this pass | |
+| `equipment-costs.md` | CURRENT (Phase 6 reviewed) | v1.2 — added missing Beauty/Brows section, capital-vs-recurring classification. |
+| `hire-purchase-china.md` | CURRENT (with caveat) | 3D scanner section reframed as future/Phase 2 reference material, not a current purchase decision. |
 
 ## Clinical & Pathology
 
 | File | Status | Notes |
 |---|---|---|
-| `gtt-test-reference.md` | Not reviewed this pass | Recommend check for Scenario B/C consistency. |
+| `gtt-test-reference.md` | CURRENT (with caveat, reviewed via full-repo Imara sweep) | Imara reference fixed; Scenario B/C client-count flag added. |
 | `inhouse-gtt-research.md` | ARCHIVED | In-house lab rejected per reading-order.md. |
-| `option-b-collection-centre.md` | Reference / contingency | Covers the NATA-accreditation "Option B" path, not the current Option A (WDP/PathWest partner) launch model. |
+| `option-b-collection-centre.md` | Reference / contingency | Covers the NATA-accreditation "Option B" path, not the current Option A (WDP/PathWest partner) launch model. Cross-referenced from `regulatory-accreditation-tracker.md`. |
 | `pathology-collection-room.md` | CURRENT | Room spec for collection room build. |
-| `pathology-partnership-brief.md` | CURRENT | Per HANDOFF.md, "all current, no known stale figures as of this session" (2026-07-17). |
+| `pathology-partnership-brief.md` | CURRENT | Status updated 2026-07-19 — WDP emailed/awaiting reply, PathWest/Clinipath not yet contacted. |
 | `patient-intake-form.md` | CURRENT | Imara->Venue Manager rename complete. |
-| `consent-form.md` | Not reviewed this pass | |
+| `consent-form.md` | CURRENT (reviewed via full-repo Imara sweep) | Imara reference fixed. |
 | `cutoff-time-CORRECTION.md` | CURRENT — ACTIVE OPEN QUESTION | WDP courier cutoff time (11:30 vs 12:30) never formally confirmed. See open questions doc. |
 | `king-edward-start-time-constraint.md` | CURRENT — ACTIVE OPEN QUESTION | KEMH "start before 10am" guidance not independently source-verified. Scenario C passes; Scenario D fails on strict reading. |
 
@@ -99,8 +148,8 @@
 | `afternoon-marketing-plan.md` | CURRENT | Imara->Venue Manager rename complete for operational outreach duties. |
 | `brand-guide.md` | CURRENT | Imara founder-role references reviewed and correctly retained 2026-07-19. |
 | `website-spec.md` | CURRENT | Imara->Venue Manager rename complete (contact form routing). |
-| `extended-wellness-services.md` | Not reviewed this pass | |
-| `reed-partnerships.md` | Not reviewed this pass | |
+| `extended-wellness-services.md` | CURRENT (reviewed via contradiction scan) | Fixed one stale cross-reference to archived `bloom-baby-case-study.md`. |
+| `reed-partnerships.md` | CURRENT | Added live outreach-status tracker; corrected the pathology outreach email template. |
 
 ## Location / Physical Space
 
@@ -115,18 +164,18 @@
 
 | File | Status | Notes |
 |---|---|---|
-| `privacy-policy.md` | Not reviewed this pass | |
+| `privacy-policy.md` | CURRENT (reviewed via contradiction scan) | No issues found. |
 | `dva-tpi-research.md` | UNTOUCHED (per instruction) | Covers Imara's personal TPI/DVA implications — explicitly out of scope for the Imara->Venue Manager operational rename. |
 | `research.md` | UNTOUCHED (per instruction) | v3.0, comprehensive research doc, covers trust/ownership structure among other things. |
-| `market-research-findings.md` | Not reviewed this pass | |
+| `market-research-findings.md` | CURRENT (with caveat) | 3D scan reframed from "core differentiator" to future/Phase 2 addon; market-sizing discrepancy with feasibility.md flagged, not resolved (CONFLICT-08). |
 
 ## Audit / QC / Meta
 
 | File | Status | Notes |
 |---|---|---|
-| `review-audit.md` | CURRENT | Full business audit. Imara/Venue Manager distinction clarified 2026-07-19 in CF-07 and OG-03. |
-| `ivy-booking-system.md` | Not reviewed this pass | |
-| `workflow.md` | CURRENT (with caveats) | Imara->Venue Manager rename complete. Staffing model in this doc (sublet massage/nails/hair/scan) is an early draft — superseded by staff-plan.md's employed-staff model. See conflicts log. |
+| `review-audit.md` | CURRENT | Full business audit. Imara/Venue Manager distinction clarified 2026-07-19 in CF-07 and OG-03. DVA removed from Action Priority List. |
+| `ivy-booking-system.md` | CURRENT | Fully rewritten from subtenant model to employed-staff model; fixed stale 8-client reference; removed 3D scan/dietitian from booking flow. |
+| `workflow.md` | CURRENT (with caveats) | Imara->Venue Manager rename complete. Staffing model in this doc (sublet massage/nails/hair/scan) is an early draft — superseded by staff-plan.md's employed-staff model. See conflicts log — still flagged, not rewritten (CONFLICT-04). |
 
 ## Duplicates / Archived
 
@@ -139,15 +188,23 @@
 
 ---
 
-## Summary Counts
+## Summary Counts (Updated After Phase 6/7 Pass)
 
 | Status | Count (approx.) |
 |---|---|
-| CURRENT / CURRENT (with caveats) | ~48 |
+| CURRENT / CURRENT (with caveats) | ~65 (up from ~48 — the "not reviewed this pass" backlog has been cleared) |
+| New Phase 7 documents | 7 (`regulatory-accreditation-tracker.md`, `swot-analysis.md`, `risk-register.md`, `break-even-sensitivity-analysis.md`, `referral-partnership-plan.md`, `pricing-billing-strategy.md`, `project-timeline-milestones.md`) |
+| New audit-deliverable documents (00-05 + supporting) | 8 (`00_document_inventory.md`, `01_conflicts_log.md`, `02_issues_and_risks.md`, `03_improvements.md`, `04_roadmap_next_steps.md`, `05_open_questions_for_founder.md`, `lab-partnership-email-draft.md`, `price-increase-comparison.md`, `venue-manager-job-posting.md`) |
 | SUPERSEDED (self-declared or flagged this session) | ~6 |
-| STALE / NEEDS REWRITE (flagged this session, not yet fixed) | 2 (operations-manual.md scheduling section; scenario-c-timeline.html likely) |
+| STALE / NEEDS REWRITE (flagged, not yet fixed) | 2 (`operations-manual.md` scheduling section; `scenario-c-timeline.html` likely; `workflow.md` staffing table also still flagged, CONFLICT-04) |
 | ARCHIVED | 4 |
-| Not reviewed this pass (recommend follow-up) | ~10 |
+| Not reviewed this pass | 0 — the entire "not reviewed this pass" backlog from the original audit was cleared during the Phase 6/7 verification and contradiction-scan passes |
 | Untouched by explicit instruction (ownership/trust scope) | 3 (financial-model.md, dva-tpi-research.md, research.md) |
 
-**"Not reviewed this pass" files were outside the Priority 0 Imara-rename scope and the specific conflicts investigated this session (research-supplement-day48, floor-plan, Scenario B/C). They have no known issues but were not actively re-verified — see `04_roadmap_next_steps.md` for a recommended follow-up sweep.**
+**Nine conflicts logged and tracked in `01_conflicts_log.md` (CONFLICT-01 through 09).** Six resolved/fixed this session; three remain flagged and unresolved (CONFLICT-03/04 — documentation rewrites recommended as follow-up; CONFLICT-08/09 — financial figure and payment-policy reconciliation needed, recommended as priority follow-up work, not founder decisions).
+
+---
+
+## Changelog
+
+**2026-07-19 (Phase 6/7 pass)** — Updated this inventory to reflect: 12 new documents created (6 Phase 7 deliverables + `lab-partnership-email-draft.md`, `price-increase-comparison.md`, `venue-manager-job-posting.md`, plus this file/01/02/03/04/05 from the earlier audit pass), and every "not reviewed this pass" file from the original audit now reviewed and fixed where needed (`equipment-costs.md`, `hire-purchase-china.md`, `gtt-test-reference.md`, `consent-form.md`, `privacy-policy.md`, `market-research-findings.md`, `ivy-booking-system.md`, `extended-wellness-services.md`, `reed-partnerships.md`, `onboarding.md`, `staff-profiles/*.md`). Updated summary counts accordingly. Skipped from Phase 7 spec: none — all 7 requested Phase 7 documents were built. See `docs/04_roadmap_next_steps.md` for what remains as follow-up work (CONFLICT-03/04/08/09).
