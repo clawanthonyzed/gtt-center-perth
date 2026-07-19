@@ -1,10 +1,12 @@
 # GTT Center Perth — Phlebotomist Recruitment
 ## Job Description, Advertisement, and Hiring Process
-### Version 1.0 | June 2026 | Owner: Fern (HR) | POST IMMEDIATELY — Week 1
+### Version 1.0 | June 2026 | Owner: Fern (HR) | READY, NOT YET ACTIVE — see sequencing note below
 
 ---
 
-> **URGENCY:** This is the most critical hire. Without a credentialed phlebotomist, GTT Center Perth cannot open as a GTT venue. Post this advertisement in Week 1 across all channels. Do not wait for lease signing or fit-out to begin recruitment.
+> **SEQUENCING UPDATE (2026-07-19 — supersedes the urgency banner immediately below):** Anthony confirmed GTT Center Perth is not recruiting or looking for any staff until a physical venue location is confirmed. This document's original instruction to "post in Week 1... do not wait for lease signing" is stale — recruitment for this role, like the Venue Manager (`docs/venue-manager-job-posting.md`), does not begin until location is secured. This document remains ready to use once that gate is cleared; it is not withdrawn or superseded in substance, only in timing.
+
+> **URGENCY (original, timing superseded above):** This is the most critical hire. Without a credentialed phlebotomist, GTT Center Perth cannot open as a GTT venue. Post this advertisement in Week 1 across all channels. ~~Do not wait for lease signing or fit-out to begin recruitment.~~
 
 ---
 
@@ -251,10 +253,12 @@ If no direct candidate is hired by **Week 12 (8 weeks before soft open)**:
 *Post advertisements: Week 1 — do not delay*  
 *Fallback agency contact: Week 12 if no direct hire secured*
 
-> **Note:** This document assumes the Venue Manager role is filled before phlebotomist interviews begin (Week 1 critical-path hire — see `staff-plan.md` §7, `hr-framework.md` §13). If the Venue Manager has not yet started, Anthony or Fern (HR agent) conducts phlebotomist screening/interviews in the interim.
+> **Note:** This document assumes the Venue Manager role is filled before phlebotomist interviews begin (first hire once recruitment begins — see `staff-plan.md` §7, `hr-framework.md` §13, `docs/venue-manager-job-posting.md`). If the Venue Manager has not yet started, Anthony or Fern (HR agent) conducts phlebotomist screening/interviews in the interim. **Sequencing note (2026-07-19):** neither phlebotomist nor Venue Manager recruitment begins until a physical venue location is confirmed — see `docs/04_roadmap_next_steps.md` Tier 0.
 
 ---
 
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`. Added interim-coverage note given this document's interview steps assume the Venue Manager role is already filled.
+
+**2026-07-19 (founder feedback round 3)** — Corrected the "post immediately, don't wait for lease signing" urgency framing — recruitment for this role does not begin until a physical venue location is confirmed, matching the same sequencing rule now applied to the Venue Manager role (`docs/venue-manager-job-posting.md`). Document content/process is unchanged and remains ready to use once that gate clears.
