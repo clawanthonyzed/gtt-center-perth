@@ -5,6 +5,18 @@
 
 ---
 
+## OUTREACH STATUS (live tracker — update as replies come in)
+
+| Partner | Priority | Status as of 2026-07-19 | Next step |
+|---|---|---|---|
+| **WDP (Western Diagnostic Pathology)** | 1st | **Emailed — awaiting reply.** | When WDP replies: confirm (1) specimen dispatch cutoff time and (2) whether overnight blood storage + next-day lab collection is viable — see `cutoff-time-CORRECTION.md`. |
+| **PathWest** | 2nd | **NOT yet emailed.** | Awaiting decision on whether to approach in parallel with WDP or wait for WDP's reply first (see `docs/05_open_questions_for_founder.md` Q6). |
+| **Clinipath** | 3rd (contingency) | **NOT yet emailed.** | Same as PathWest — contingency only, no action pending. |
+
+**1 of 3 pathology partners contacted so far.** This supersedes any earlier "outreach sent this quarter" framing that implied all three had been approached — only WDP has actually been emailed as of 2026-07-19.
+
+---
+
 ## 1. PATHOLOGY PARTNERS
 
 ### Western Diagnostic Pathology (WDP) — PRIORITY 1
@@ -275,3 +287,9 @@ Approach in priority order. Offer: permanent scan room, fixed weekly rent A$250�
 - [Bloom Baby Ultrasound](https://www.bloombabyultrasound.com.au/)
 - [Dietitians Australia Find a Dietitian](https://dietitiansaustralia.org.au/find-a-dietitian)
 - [Privately Practising Midwives WA](https://vickihobbs.com/privately-practising-midwives-in-western-australia/)
+
+---
+
+## Changelog
+
+**2026-07-19** — Added a live "Outreach Status" tracker at the top of this document per founder update: WDP emailed and awaiting reply; PathWest and Clinipath not yet emailed (1 of 3 partners contacted). Also logged the follow-up question Anthony will ask WDP once they reply (specimen cutoff time AND overnight storage/next-day collection viability) — see `cutoff-time-CORRECTION.md` for full detail.
