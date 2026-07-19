@@ -177,7 +177,7 @@ Representative signature: ___________________________ Date: _______________
 ## SECTION 9 — STAFF USE ONLY (complete at time of appointment)
 
 Fasting confirmed? ☐ Yes — last food/drink (except water) at: _______________ hrs  
-☐ No — test not proceeded. Imara notified at: _______________
+☐ No — test not proceeded. Venue Manager notified at: _______________
 
 Patient ID verified (name + DOB verbal check): ☐ Yes ☐ No
 
@@ -194,3 +194,9 @@ Staff name: ___________________________ Role: _______________
 *[Website]*
 
 *Retain this form for 7 years from patient's last appointment — Privacy Act 1988 (Cth)*
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced operational reference to "Imara" (fasting-failure notification) with "Venue Manager" (new hire, not yet in place). Found in full-repo Imara sweep — this file was outside the original Priority 0 list. Ownership/trust structure unaffected — see `financial-model.md`/`research.md`.
