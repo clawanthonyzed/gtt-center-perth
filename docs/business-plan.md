@@ -133,7 +133,7 @@ GTT must start ≤10:00am (ADIPS 2014 guideline — circadian glucose tolerance 
 ### Staffing (Employed) — full roster in `staff-plan.md` and `financial-break-even-staff.md` (CF-01)
 | Role | Hours | Days |
 |---|---|---|
-| Imara — Managing Director | 7:00am–5:00pm | Mon–Fri |
+| Venue Manager — Managing Director (new hire, not yet in place) | 7:00am–5:00pm | Mon–Fri |
 | Phlebotomist ×2 (Day 1) | 07:30am–12:30pm, AM-only | Mon–Fri |
 | Massage therapist ×2, Nail technician ×2, Beauty therapist ×2, Hairdresser ×2 | AM GTT window (07:00/07:30am–1:00pm), AM-only | Mon–Fri |
 | Receptionist/Manager ×1 | Split shift: 07:00am–12:00pm + 3:00pm–6:00pm | Mon–Fri |
@@ -228,7 +228,7 @@ No package is sold lounge-only — venue/lounge access is bundled FREE into all 
 ### Phase 4 — Growth (Month 3+)
 - Google SEO ("GTT test Perth" — zero current competition)
 - Referral reward programme (A$20 credit for both referrer and new booking)
-- Quarterly midwife/OB practice visits by Imara
+- Quarterly midwife/OB practice visits by the Venue Manager
 - Expand to Saturday morning GTT slots (Year 2, if demand warrants)
 
 ---
@@ -354,7 +354,7 @@ YETI Holding Trust (discretionary trust)
 | GDM diagnostic threshold change | Very low | High | Model survives any threshold change — volume driven by all pregnant women |
 | Capital overrun on fit-out | Medium | High | Get 3 quotes; hold 10% contingency |
 | 2028 trust tax change | Low-medium | Medium | Annual accountant review; operating PTY LTD option ready |
-| Imara unavailable (illness/leave) | Low | High | Receptionist cross-trained; phlebotomist to manage day-of |
+| Venue Manager unavailable (illness/leave) | Low | High | Receptionist cross-trained; phlebotomist to manage day-of |
 
 ---
 
@@ -375,3 +375,9 @@ YETI Holding Trust (discretionary trust)
 | Break-even month (marginal) | Month 4 (February 2027) |
 | A$10,000/month profit (full break-even) | Month 5 (March 2027) |
 | Year 1 annualised revenue | A$400,000+ (from Month 6 run rate) |
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced operational/on-site references to "Imara" (Managing Director day-to-day role) with "Venue Manager" (new hire, not yet in place). Imara's founder/funder status (line 8) is unaffected — see `financial-model.md`/`research.md` for the ownership structure.
