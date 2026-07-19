@@ -60,16 +60,18 @@ GTT Center Perth will:
 
 ---
 
-### 1C. 3D Keepsake Ultrasound Scanner
+### 1C. 3D Keepsake Ultrasound Scanner — FUTURE INCOME STREAM, NOT STARTUP SCOPE
 
-> **SUPERSEDED (flagged 2026-07-19 — see `docs/01_conflicts_log.md`):** This entire section describes purchasing/subletting a 3D scanner as a live option. **This contradicts the confirmed Day 51 decision: 3D keepsake scan is removed from scope entirely — no equipment, no operator, no subtenant.** See `equipment-costs.md`'s own Day 51 update banner, `staff-plan.md` §1, and `services-pricing-locked.md`. The Bloom Baby subtenant approach described below is also superseded — GTT Center Perth has no subtenants at all under the current model. Retained below for historical/reference reasons only — do not use for current equipment planning. This section (and the "TOTAL WITH 3D SCANNER" line in the Budget Summary below) should be removed in a follow-up editorial pass.
+> **REFRAMED 2026-07-19 (founder clarification — supersedes the earlier same-day "superseded/removed entirely" flag below):** Anthony confirmed the 3D keepsake scanner is a **future income stream, to be considered once the venue is established — not part of startup/launch capital or scope.** This is a timing correction, not a full removal: the equipment/pricing research below remains genuinely useful reference material for when this is revisited later, it is simply not a Day 1 purchase decision or part of the launch budget. See `market-research-findings.md` for the matching reframe of 3D scan from "core differentiator" to "future/Phase 2 addon."
+>
+> ~~Previous flag (2026-07-19, earlier same day): this section contradicted the Day 51 decision that 3D scan is removed from scope entirely.~~ **Correction: the accurate framing is "future consideration, not current startup scope" — not "removed entirely."** The Bloom Baby subtenant approach described below is still not applicable under the current no-subtenant employed-staff model (see `staff-plan.md` §1) — if 3D scan is added later, it would be in-house/employed, not a subtenant arrangement, consistent with how every other service line now works.
 
-**CRITICAL TGA COMPLIANCE NOTE:**
+**CRITICAL TGA COMPLIANCE NOTE (still applicable whenever this is revisited):**
 Ultrasound machines are TGA-regulated (Class IIa/IIb medical devices). Must purchase through an Australian TGA-registered distributor — DO NOT import direct from China without going through a registered sponsor/distributor. Doing so is illegal supply of an unregistered medical device.
 
-**Recommended approach for launch (SUPERSEDED — no longer applicable):** ~~Use Bloom Baby Ultrasound as subtenant (they bring their own registered equipment). Avoid purchase until month 3-6 when volume data confirms in-house is worthwhile.~~
+**Not a launch consideration — do not budget for this at startup.** If revisited later (once venue volume and cash flow support the investment), an in-house employed operator (not a subtenant) would be the model, consistent with every other current service line.
 
-**When ready to purchase:**
+**Reference only — pricing research for whenever this is revisited (not a current purchase decision):**
 
 | Model | Source | Price (AUD) | Notes |
 |-------|--------|-------------|-------|
@@ -79,8 +81,8 @@ Ultrasound machines are TGA-regulated (Class IIa/IIb medical devices). Must purc
 | Samsung WS80A (new) | Samsung Medison AU | A$35,000-50,000+ | Best quality; expensive for startup |
 | Generic Chinese 4D (Alibaba — AVOID) | Alibaba direct | A$1,400-8,000 | TGA non-compliant — do not purchase |
 
-**Budget when purchasing:** A$12,000-25,000 (refurbished SonoScape or Mindray)
-**Training budget:** A$1,500-4,000 per operator (UltrasoundTrainers.com WA sessions)
+**Reference budget (not a current line item):** A$12,000-25,000 (refurbished SonoScape or Mindray)
+**Reference training budget (not a current line item):** A$1,500-4,000 per operator (UltrasoundTrainers.com WA sessions)
 
 ---
 
@@ -281,7 +283,7 @@ When scale justifies bulk purchase (after 6 months of operation):
 |----------|----------------|
 | Pathology room equipment | A$7,000-10,000 |
 | Spray tan booth (China) | A$2,500-4,500 |
-| ~~3D scanner (refurbished, AU distributor)~~ | ~~A$12,000-25,000 (Phase 2)~~ **SUPERSEDED — removed from scope entirely (Day 51), see flag in §1C above** |
+| 3D scanner (refurbished, AU distributor) | A$12,000-25,000 — **future/Phase 2 income stream, NOT startup capital, see §1C** |
 | Nail station equipment (mix AU + China) | A$5,000-12,000 |
 | Massage room equipment | A$5,000-10,000 |
 | Hair station equipment | A$3,000-6,000 |
@@ -289,8 +291,8 @@ When scale justifies bulk purchase (after 6 months of operation):
 | Cafe/partner area | A$2,000-5,000 |
 | Hire fleet (TENS + wellness items) | A$8,000-15,000 |
 | China bulk wellness items (hire + retail stock) | A$6,000-10,000 |
-| **TOTAL EQUIPMENT (current scope — no 3D scanner)** | **A$43,500-84,500** |
-| ~~TOTAL WITH 3D SCANNER~~ | ~~A$55,500-109,500~~ **Not applicable — 3D scan removed from scope entirely, this row is historical only** |
+| **TOTAL STARTUP EQUIPMENT (launch scope — excludes 3D scanner)** | **A$43,500-84,500** |
+| TOTAL IF 3D SCANNER ADDED LATER (future/Phase 2, not startup capital) | A$55,500-109,500 |
 
 *Fit-out (construction) is separate: estimated A$150,000-280,000 — see research.md section 9.*
 
@@ -299,3 +301,5 @@ When scale justifies bulk purchase (after 6 months of operation):
 ## Changelog
 
 **2026-07-19** — Found via founder-requested contradiction scan. Flagged §1C (3D Keepsake Ultrasound Scanner) as superseded — it described purchasing or subletting a 3D scanner as a live option, contradicting the confirmed Day 51 decision that 3D scan is removed from scope entirely (no equipment, no operator, no subtenant). Also flagged the "TOTAL WITH 3D SCANNER" budget row as not applicable. See `docs/01_conflicts_log.md` CONFLICT-05.
+
+**2026-07-19 (reframe, same day)** — Founder clarification: 3D scanner is a **future income stream, not startup/launch scope** — corrected from the earlier same-day "removed entirely" framing. Rewrote §1C to keep the equipment/pricing research as reference material for a later revisit, explicitly labelled as not a current purchase decision or startup budget line. Restored the Budget Summary rows (no longer struck through) with clear "future/Phase 2, not startup capital" labelling instead. Cross-referenced `market-research-findings.md`, which received the matching reframe.
