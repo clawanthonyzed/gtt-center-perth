@@ -314,7 +314,7 @@ The Venue Manager (Managing Director) role is a **critical-path hire** — the v
 - WDP/PathWest liaison
 - Staff supervisor
 
-**Recruitment must begin immediately and complete before any other staff onboarding** — see `staff-plan.md` §7 Hiring Timeline (Week 1, critical path) and `venture-timeline.md`/roadmap.
+**Recruitment does NOT begin until a physical venue location is confirmed** (direct founder instruction, 2026-07-19 — GTT Center Perth is not recruiting or looking for any staff, including the Venue Manager, before then). Once recruitment does begin, this must be the first hire, completing before any other staff onboarding — see `staff-plan.md` §7 Hiring Timeline and `venture-timeline.md`/roadmap. A job posting document is already built and ready to use once recruitment starts: `docs/venue-manager-job-posting.md`.
 
 ---
 
@@ -333,3 +333,5 @@ The Venue Manager (Managing Director) role is a **critical-path hire** — the v
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`. Added new §13 formalising the Venue Manager as a critical-path hire.
 
 **2026-07-19 (Saturday carve-out investigation)** — Per Anthony's instruction ("do what you need to"), investigated the MA000027 Saturday ordinary-hours question rather than leaving it open indefinitely. Conclusion: still unconfirmed — this session has no live web-fetch tool to verify the actual current award text, and no shared skill covers Fair Work award interpretation (confirmed via library scan). Documented the gap explicitly and recommended a payroll advisor or Fair Work Infoline as the reliable next step, rather than guessing at a clause citation. Financial models continue conservatively assuming full penalty rates — this is upside-only, not a risk.
+
+**2026-07-19 (founder feedback round 2)** — Corrected §13: recruitment for the Venue Manager does NOT begin until a physical venue location is confirmed (direct founder instruction). Previously said "recruitment must begin immediately" — this implied active recruitment now, which is wrong. The role remains the first hire and still sits on the critical path once recruitment does start. Job posting document now built: `docs/venue-manager-job-posting.md`.
