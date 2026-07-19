@@ -4,7 +4,7 @@
 
 ---
 
-> **Process:** Send digitally via Fresha or Typeform link at 48-hour booking reminder. Patient completes before arrival. Therapist reviews before service begins. If ANY red flag is present, therapist consults Imara before starting.
+> **Process:** Send digitally via Fresha or Typeform link at 48-hour booking reminder. Patient completes before arrival. Therapist reviews before service begins. If ANY red flag is present, therapist consults the Venue Manager before starting.
 
 ---
 
@@ -156,7 +156,7 @@ _______________________________________________
 ☐ Proceed as booked  
 ☐ Proceed with modifications: _______________  
 ☐ Service declined — reason: _______________  
-☐ Imara consulted (time: _______________)  
+☐ Venue Manager consulted (time: _______________)  
 ☐ Medical clearance requested — patient to contact OB/GYN
 
 **Service modifications agreed with patient:** _______________
@@ -165,9 +165,9 @@ _______________________________________________
 
 ---
 
-## STAFF PROTOCOL — WHEN TO STOP AND CONSULT IMARA
+## STAFF PROTOCOL — WHEN TO STOP AND CONSULT THE VENUE MANAGER
 
-Immediately pause and consult Imara before starting any service if:
+Immediately pause and consult the Venue Manager before starting any service if:
 - Patient ticks YES to any absolute contraindication in Section 2
 - Patient reports active abdominal pain, bleeding, or feels "something is wrong"
 - Patient appears pale, distressed, or unwell on arrival
@@ -182,3 +182,9 @@ Immediately pause and consult Imara before starting any service if:
 *Owner: Cora (Clinical) + Pregnancy Massage Therapist*  
 *Store completed forms for 7 years from last appointment*  
 *Digital collection: Typeform or Fresha custom field — integrate before soft open*
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`.
