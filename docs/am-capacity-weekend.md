@@ -329,6 +329,20 @@ Chair A offset 0min, Chair B offset +10min, Chair C offset +20min. Each chair: 5
 
 **Client 15 departs ~12:25 — only a 5-minute buffer before the 12:30 WDP courier cutoff.** Tighter than Scenario C's buffer — worth flagging as something to monitor once real courier timing is confirmed with WDP.
 
+### Can Client 15 Start at 09:55 Instead of 10:00? (Verified 2026-07-19, answering Anthony's question)
+
+**Question:** does moving Client 15's Draw 1 from 10:00 to 09:55 work, given Client 9's Draw 2 on the same chair (Chair C) ends at exactly 09:55 — a zero-minute gap?
+
+**Verdict: yes, workable on the phlebotomist/chair side — checked by simulating the actual event sequence, not eyeballing it.** With one real caveat below (treatment-staff side unverifiable from existing documentation).
+
+**What was checked:** built out Chair C's full draw sequence (Clients 3, 6, 9, 12, 15 — every Draw 1/2/3 across all five clients on that chair) and tested two versions: the current schedule (Client 15 at 10:00) and a version where Client 15's entire visit shifts 5 minutes earlier (Draw 1 at 09:55, and consequently Draw 2 at 11:05 and Draw 3 at 12:10, each service also shifting 5 min earlier).
+
+**Result — no double-booking in either version.** The current schedule already contains two zero-minute back-to-back handoffs on this exact chair (Client 12's Draw 1 ends 09:35 exactly as Client 3's Draw 3 begins at 09:35; Client 15's Draw 1 ends 10:15 exactly as Client 6's Draw 3 begins at 10:15) — a phlebotomist finishing one draw exactly as the next client's draw begins is not a conflict anywhere in this model, since draws are only 5-15 minutes each and clinical draw-timing tolerance windows (±5min on Draw 2, ±10min on Draw 3) are what's actually load-bearing, not a mandatory idle gap between different clients. Shifting Client 15 to 09:55 creates a third such zero-gap handoff (Client 9's Draw 2 ends 09:55, Client 15's Draw 1 begins 09:55) — structurally identical to the two that already exist and are accepted in this same timetable.
+
+**This also directly answers the King Edward "before 10am" question for Scenario D — see the cross-reference and updated recommendation in `king-edward-start-time-constraint.md`.** Client 15's last Draw 1 moving from 10:00 to 09:55 clears the "before 10am" limit without shifting the whole day earlier or dropping the 15th client.
+
+**One caveat this session could not fully close out:** shifting only Client 15 (not the whole Chair C rhythm) compresses the gap between Client 12's and Client 15's Draw 1 starts from the proven 40-minute chair rhythm to 35 minutes. `draw-event-scheduler-findings.md` establishes that the 40-minute per-chair spacing is a *hard structural requirement* driven by each client's own Draw 2 (±5min) / Draw 3 (±10min) tolerance windows, not slack — so a genuine 5-minute compression of that rhythm is not automatically "free" just because the phlebotomist side checks out. The Treatment Staff Verification note above confirms "max 2 concurrent bookings" in aggregate across all 30 service slots, but does not include a per-client staff-assignment table, so **this session cannot verify from existing documentation whether Client 15's shifted Service 1 (10:10-10:55) and Service 2 (11:15-12:00) still avoid a 3rd-concurrent-booking collision on whichever specific staff member serves Client 15.** Recommend building the same per-client staff-assignment table for Scenario D that already exists for Scenario C (`scenario-c-sync-timetables.md` §2 Full Staff Timetable) before treating this 09:55 fix as fully verified end-to-end — the phlebotomist/chair side is solid, the treatment-staff side is the one open thread.
+
 ### Treatment Staff Verification — No New Hires Required
 
 Checked all 30 service slots (15 clients × 2) against the existing 8 treatment staff. **Every service type stays at a maximum of 2 concurrent bookings at any moment — fully coverable by the existing 2-per-line roster, no 9th hire needed.** This corrects the previous session's estimate (which assumed a 9th hire might be required) — a more careful build shows it isn't.
@@ -410,3 +424,9 @@ Confirmed — Scenario C's 20-minute offset between the 2 chairs was always a fl
 
 1. **All figures use the conservative case as the baseline going forward** — where two scenarios exist (e.g. unconfirmed phlebotomist Saturday penalty), conservative is the default reported number, optimistic is noted as documented upside only.
 2. **Sunday trading is closed until proven demand exists.** Remove Sunday from the operational model and P&L tables — revisit only once real weekday/Saturday demand data justifies testing it.
+
+---
+
+## Changelog
+
+**2026-07-19** — Verified Anthony's question ("can the 10:00 appointment start at 09:55?") by simulating the actual Chair C draw-event sequence, not eyeballing it. Verdict: yes, workable on the phlebotomist/chair side — the resulting zero-minute gap is structurally identical to two zero-gap handoffs that already exist elsewhere in this same timetable. One caveat flagged and not resolved: the treatment-staff side of Client 15's shifted services cannot be verified from existing documentation (no per-client staff-assignment table exists for Scenario D, unlike Scenario C). See new "Can Client 15 Start at 09:55 Instead of 10:00?" section above. Cross-referenced and updated the recommendation in `king-edward-start-time-constraint.md`.
