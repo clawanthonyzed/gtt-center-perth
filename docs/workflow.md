@@ -74,7 +74,7 @@
 
 | Role | Model | Hours |
 |---|---|---|
-| Reception/host | Employed (Imara / founder) | Mon–Fri 8am–5pm |
+| Reception/host | Employed (Venue Manager oversight — new hire, not yet in place) | Mon–Fri 8am–5pm |
 | Massage therapist | Sublet | Per booking |
 | Nail technician | Sublet | Per booking |
 | Hairdresser | Sublet | Per booking |
@@ -105,3 +105,9 @@
 | **Ivy** | Booking system config, scheduling, customer comms templates |
 | **Reed** | Pathology partner outreach, subtenant recruitment and contracts |
 | **Poppy** | Instagram, referral network (midwives/OBs), Google Business Profile, SEO |
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced operational reference to "Imara" (Reception/host employment line) with "Venue Manager" (new hire, not yet in place). Ownership/trust structure unaffected — see `financial-model.md`/`research.md`. Note: this document's staffing/subtenant model (sublet massage/nails/hair/scan) is an early draft superseded by `staff-plan.md`'s employed-staff model — flagged separately in `docs/01_conflicts_log.md`.
