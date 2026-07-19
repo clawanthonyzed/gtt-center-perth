@@ -62,10 +62,12 @@ GTT Center Perth will:
 
 ### 1C. 3D Keepsake Ultrasound Scanner
 
+> **SUPERSEDED (flagged 2026-07-19 — see `docs/01_conflicts_log.md`):** This entire section describes purchasing/subletting a 3D scanner as a live option. **This contradicts the confirmed Day 51 decision: 3D keepsake scan is removed from scope entirely — no equipment, no operator, no subtenant.** See `equipment-costs.md`'s own Day 51 update banner, `staff-plan.md` §1, and `services-pricing-locked.md`. The Bloom Baby subtenant approach described below is also superseded — GTT Center Perth has no subtenants at all under the current model. Retained below for historical/reference reasons only — do not use for current equipment planning. This section (and the "TOTAL WITH 3D SCANNER" line in the Budget Summary below) should be removed in a follow-up editorial pass.
+
 **CRITICAL TGA COMPLIANCE NOTE:**
 Ultrasound machines are TGA-regulated (Class IIa/IIb medical devices). Must purchase through an Australian TGA-registered distributor — DO NOT import direct from China without going through a registered sponsor/distributor. Doing so is illegal supply of an unregistered medical device.
 
-**Recommended approach for launch:** Use Bloom Baby Ultrasound as subtenant (they bring their own registered equipment). Avoid purchase until month 3-6 when volume data confirms in-house is worthwhile.
+**Recommended approach for launch (SUPERSEDED — no longer applicable):** ~~Use Bloom Baby Ultrasound as subtenant (they bring their own registered equipment). Avoid purchase until month 3-6 when volume data confirms in-house is worthwhile.~~
 
 **When ready to purchase:**
 
@@ -279,7 +281,7 @@ When scale justifies bulk purchase (after 6 months of operation):
 |----------|----------------|
 | Pathology room equipment | A$7,000-10,000 |
 | Spray tan booth (China) | A$2,500-4,500 |
-| 3D scanner (refurbished, AU distributor) | A$12,000-25,000 (Phase 2) |
+| ~~3D scanner (refurbished, AU distributor)~~ | ~~A$12,000-25,000 (Phase 2)~~ **SUPERSEDED — removed from scope entirely (Day 51), see flag in §1C above** |
 | Nail station equipment (mix AU + China) | A$5,000-12,000 |
 | Massage room equipment | A$5,000-10,000 |
 | Hair station equipment | A$3,000-6,000 |
@@ -287,7 +289,13 @@ When scale justifies bulk purchase (after 6 months of operation):
 | Cafe/partner area | A$2,000-5,000 |
 | Hire fleet (TENS + wellness items) | A$8,000-15,000 |
 | China bulk wellness items (hire + retail stock) | A$6,000-10,000 |
-| **TOTAL EQUIPMENT (excl. 3D scanner)** | **A$43,500-84,500** |
-| **TOTAL WITH 3D SCANNER** | **A$55,500-109,500** |
+| **TOTAL EQUIPMENT (current scope — no 3D scanner)** | **A$43,500-84,500** |
+| ~~TOTAL WITH 3D SCANNER~~ | ~~A$55,500-109,500~~ **Not applicable — 3D scan removed from scope entirely, this row is historical only** |
 
 *Fit-out (construction) is separate: estimated A$150,000-280,000 — see research.md section 9.*
+
+---
+
+## Changelog
+
+**2026-07-19** — Found via founder-requested contradiction scan. Flagged §1C (3D Keepsake Ultrasound Scanner) as superseded — it described purchasing or subletting a 3D scanner as a live option, contradicting the confirmed Day 51 decision that 3D scan is removed from scope entirely (no equipment, no operator, no subtenant). Also flagged the "TOTAL WITH 3D SCANNER" budget row as not applicable. See `docs/01_conflicts_log.md` CONFLICT-05.
