@@ -36,17 +36,17 @@ YETI Holding Trust (Anthony Zed — Trustee)
             │
             ├── Co-Director: Anthony Zed (non-operational, trustee oversight)
             │
-            └── Managing Director / Venue Manager: Imara
+            └── Managing Director / Venue Manager (new hire — not yet in place)
                     │
-                    ├── Clinical Coordinator (reports to Imara)
+                    ├── Clinical Coordinator (reports to Venue Manager)
                     │       └── 2x Phlebotomist (Chair A / Chair B)
                     │
-                    ├── Service Manager (Imara directly at launch)
+                    ├── Service Manager (Venue Manager directly at launch)
                     │       ├── Pregnancy Massage Therapist
                     │       ├── Nail Technician
                     │       └── Beauty Therapist / Brows
                     │
-                    ├── Receptionist / Customer Experience (reports to Imara, split shift)
+                    ├── Receptionist / Customer Experience (reports to Venue Manager, split shift)
                     │
                     └── PM Service Therapist (new hire — PM Spa Packages, 12:00-18:00)
 ```
@@ -74,8 +74,7 @@ Downtime between AM bookings (17-33% utilisation) follows the Staff Downtime Pro
 ## 3. ROLES — FULL DETAIL
 
 ### Managing Director / Venue Manager
-**Name:** Imara (co-founder)  
-**Status:** Full-time salaried  
+**Status:** Full-time salaried — critical-path hire, not yet in place. Venue cannot safely open without this role filled (first-aid/EpiPen response, fire warden, clinical escalation contact, and staff supervision all depend on it — see hiring sequence in Section 7 and `hr-framework.md`).  
 **Employment type:** Employee or trust beneficiary distribution (accountant to advise — see financial-model.md §14)  
 **Rate:** A$72,500/year salary equivalent + 12% super = **A$81,200/year | A$6,767/month** *(super rate corrected Day 50, IC-08)*  
 **Hours:** Mon–Fri 7:00am–3:00pm (opens early, closes after morning session wind-down)  
@@ -148,7 +147,7 @@ Downtime between AM bookings (17-33% utilisation) follows the Staff Downtime Pro
 - Adapt technique to trimester (24–28 weeks primary, but may see 20–34 week patients)
 - Set up and pack down treatment room before/after each client
 - Maintain client intake forms (first visit) and consent records
-- Flag any clinical concerns to Imara immediately (e.g., patient reports concerning symptoms)
+- Flag any clinical concerns to the Venue Manager immediately (e.g., patient reports concerning symptoms)
 - Participate in monthly staff meeting
 
 ---
@@ -236,7 +235,7 @@ Downtime between AM bookings (17-33% utilisation) follows the Staff Downtime Pro
 - Process end-of-visit payments (Fresha checkout)
 - Send post-visit SMS/email follow-up
 - Collect Google review requests (verbal + QR card)
-- Close venue: tidy lounge, restock snacks, lock up, EOD Fresha report to Imara
+- Close venue: tidy lounge, restock snacks, lock up, EOD Fresha report to the Venue Manager
 
 ---
 
@@ -246,7 +245,7 @@ Downtime between AM bookings (17-33% utilisation) follows the Staff Downtime Pro
 
 | Role | Monthly cost |
 |---|---|
-| Imara (Managing Director) | A$6,737 |
+| Venue Manager (Managing Director) | A$6,737 |
 | Phlebotomist (Chair A) | A$3,589 |
 | Phlebotomist (Chair B) | A$3,589 |
 | Pregnancy massage therapist | A$3,529 |
@@ -255,9 +254,9 @@ Downtime between AM bookings (17-33% utilisation) follows the Staff Downtime Pro
 | Receptionist | A$3,474 |
 | Workers compensation premium (~5% of wages excl. MD) | A$971 |
 | **Total (all staff)** | **A$27,135/month** |
-| **Total (excl. Imara — ops cost only)** | **A$20,398/month** |
+| **Total (excl. Venue Manager — ops cost only)** | **A$20,398/month** |
 
-*Imara's remuneration structure (salary vs trust distribution) — accountant brief required before first pay run.*
+*Venue Manager's remuneration structure (salary vs trust distribution) — accountant brief required before first pay run.*
 
 ---
 
@@ -284,6 +283,7 @@ GTT Center Perth has no subtenants. The 3D scan operator and dietitian sublet ro
 
 | Role | Hire by | Notes |
 |---|---|---|
+| **Venue Manager (Managing Director)** | **Week 1 — CRITICAL PATH** | **Must be hired first. Venue cannot safely open without this role in place — first-aid/EpiPen holder, fire warden, clinical escalation contact, and day-to-day staff supervisor all depend on it. Blocks all downstream hiring and training coordination.** |
 | Phlebotomist (x2 — Chair A and Chair B) | Week 7 | Both must be credentialed by WDP/PathWest before venue opens |
 | Receptionist | Week 12 | Train 3 weeks before soft open |
 | Pregnancy massage therapist | Week 12 | Trial run during test operations week |
@@ -302,7 +302,7 @@ GTT Center Perth has no subtenants. The 3D scan operator and dietitian sublet ro
 - [ ] Tax file number declarations collected from each employee
 - [ ] Single Touch Payroll (STP) reporting via payroll software (Xero recommended)
 - [ ] Safety: WorkSafe WA notification, safe workplace assessment, nail station LEV compliance
-- [ ] Food Safety Supervisor (if serving food/snacks): Imara or receptionist to complete training
+- [ ] Food Safety Supervisor (if serving food/snacks): Venue Manager or receptionist to complete training
 
 ---
 
@@ -312,3 +312,9 @@ GTT Center Perth has no subtenants. The 3D scan operator and dietitian sublet ro
 - [Fair Work — Health Professionals Award MA000027](https://www.fairwork.gov.au/employment-conditions/awards/awards-summary/ma000027-summary)
 - [WorkCover WA — Employer registration](https://www.workcover.wa.gov.au/)
 - [ATO — Single Touch Payroll](https://www.ato.gov.au/businesses-and-organisations/hiring-and-paying-your-workers/single-touch-payroll)
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (Managing Director role, new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — see `financial-model.md`/`research.md` for ownership structure, which is unaffected by this change. Added Venue Manager as the Week 1 critical-path hire in the Section 7 hiring timeline (venue cannot safely open without EpiPen/first-aid/fire-warden/escalation coverage in place).
