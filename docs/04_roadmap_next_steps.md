@@ -38,13 +38,15 @@ These don't block the business commercially but **must be fixed before any new s
 
 ---
 
-## TIER 2 — Verification Sweep (No Known Issue, But Not Actively Checked This Session)
+## TIER 2 — Verification Sweep
 
 | # | Action | Detail | Ref |
 |---|---|---|---|
-| 9 | **Follow-up review of ~10 "not reviewed this pass" documents** | `equipment-costs.md`, `hire-purchase-china.md`, `gtt-test-reference.md`, `consent-form.md`, `privacy-policy.md`, `market-research-findings.md`, `ivy-booking-system.md`, `extended-wellness-services.md`, `reed-partnerships.md`, `onboarding.md`, `staff-profiles/*.md`. Check specifically for stale Scenario B references and any other Imara operational references missed by the Priority 0 file list. | M5 |
-| 10 | **Confirm no patient-facing materials reference "8 clients" or a 07:40-based schedule** | SMS templates, confirmation emails, website copy — not checked this session for Scenario B/C consistency. | Follow-up from CONFLICT-03 |
-| 11 | **MA000027 Saturday phlebotomist ordinary-hours carve-out** | Confirm with payroll advisor or Fair Work directly. Upside risk only (potential cost saving currently modelled conservatively as full penalty rate). | M3 |
+| 9 | ~~Follow-up review of ~10 "not reviewed this pass" documents~~ **DONE 2026-07-19** | All 10 documents reviewed and fixed where needed: `equipment-costs.md` (added missing Beauty/Brows section), `hire-purchase-china.md` (3D scan reframed), `gtt-test-reference.md` (Imara fixed, Scenario B/C flagged), `consent-form.md` (Imara fixed), `privacy-policy.md` (no issues), `market-research-findings.md` (3D scan reframed), `ivy-booking-system.md` (fully rewritten), `extended-wellness-services.md` (stale cross-ref fixed), `reed-partnerships.md` (outreach tracker added), `onboarding.md` (Manager -> Venue Manager), `staff-profiles/*.md` (no issues, all correctly on Scenario C already). | M5 |
+| 10 | **Confirm no patient-facing materials reference "8 clients" or a 07:40-based schedule** | Checked `onboarding.md`'s SMS/email templates and `ivy-booking-system.md`'s booking flow this session — no stale client-count references found in patient-facing copy specifically (the stale references found were in internal operational/planning documents, not patient-facing text). Not exhaustively checked against every document. | Follow-up from CONFLICT-03 |
+| 11 | ~~MA000027 Saturday phlebotomist ordinary-hours carve-out~~ **INVESTIGATED 2026-07-19 — capability gap flagged, not resolved** | This session had no live web-fetch tool to verify the current Fair Work award text, and no shared skill covers award interpretation. Documented in `hr-framework.md`. Recommend a payroll advisor or Fair Work Infoline (13 13 94) directly. | M3 |
+| 17 | **NEW — Reconcile CONFLICT-08 (PM-profitability + market-sizing + AM-capacity-figure discrepancies)** | Three related financial/capacity figure discrepancies found during the Phase 6/7 pass — see `docs/01_conflicts_log.md` CONFLICT-08 for full detail. Recommended as a single dedicated reconciliation pass by Bruno/finance function. | CONFLICT-08 |
+| 18 | **NEW — Resolve CONFLICT-09 (payment-timing policy: prepayment vs deposit)** | `onboarding.md` describes full prepayment at booking; `financial-setup.md` describes an A$30 deposit model. Two different customer-facing policies currently coexist unreconciled. Needs a single confirmed policy before any booking flow goes live. | CONFLICT-09 |
 
 ---
 
@@ -100,3 +102,5 @@ See `03_improvements.md` for full detail. Summary:
 ## Changelog
 
 **2026-07-19 (founder feedback round 2)** — Removed DVA/TPI adviser consultation entirely from this roadmap (was Tier 0 #2) per Anthony's direct instruction, stated twice: this is his personal matter, not a GTT Center Perth task. Replaced Tier 0 #2 with "secure a physical venue location" — the actual gating item before any staff recruitment, including the Venue Manager, per Anthony's confirmation that GTT Center Perth is not recruiting/looking for staff until a location is sorted. Updated Tier 0 #3 (Venue Manager recruitment) to explicitly not start until location is confirmed. Marked Tier 1 #6 (Venue Manager job posting) as done — `docs/venue-manager-job-posting.md` built as a ready-to-use document, not an active posting. Updated the recommended order and "did not do" sections to match.
+
+**2026-07-19 (Phase 6/7 pass)** — Marked Tier 2 #9 (follow-up review of "not reviewed this pass" documents) and #11 (MA000027 investigation) as done. Added Tier 2 #17/#18 for the two new discrepancies found during this pass (CONFLICT-08 financial/capacity reconciliation, CONFLICT-09 payment-timing policy conflict). All 7 Phase 7 deliverables (regulatory tracker, SWOT, risk register, break-even/sensitivity analysis, referral partnership plan, pricing/billing strategy, project timeline) are now built — see `docs/00_document_inventory.md` for the full list. Tier 1 #5 and #7 (operations-manual.md and workflow.md rewrites) remain the only substantial editorial tasks not yet completed.
