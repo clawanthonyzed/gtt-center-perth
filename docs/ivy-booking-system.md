@@ -5,6 +5,10 @@
 
 ---
 
+> **SUPERSEDED CONTENT FLAGGED (2026-07-19 — found via founder-requested contradiction scan, see `docs/01_conflicts_log.md`):** Several sections below describe a "subtenant"/room-rental practitioner model (subtenant calendar logins, subtenant rent billing/invoicing, "4-5 subtenants"). **This contradicts the confirmed employed-staff, no-subtenant model** — all service delivery staff are employed directly by GTT Center Perth (see `staff-plan.md` §1, `operations-manual.md` Day 51 update). There is no subtenant rent to bill or invoice. Also flags a stale "8-client/morning" reference (superseded by the current 10-client Scenario C model — see `docs/01_conflicts_log.md` CONFLICT-03). The core platform comparison and recommendation (Fresha) are not affected by either issue — only the subtenant-specific admin/payment sections need a rewrite for the employed-staff model.
+
+---
+
 ## 1. PLATFORM COMPARISON
 
 ### Critical Requirement
@@ -25,7 +29,7 @@ Every service booking MUST be linked to a confirmed GTT appointment time. No pla
 - Revenue model: 20% commission only on **new clients** who book via Fresha marketplace — existing clients and direct bookings are commission-free
 - **$14.95/user/month Team plan** eliminates all marketplace fees
 - **Unlimited free SMS notifications** — huge advantage for high-reminder-volume GTT bookings
-- Multi-practitioner calendar: yes — confirmed sufficient for the verified 2-chair/12-staff capacity model (see operations-manual.md per-staff timetable). Each phlebotomist/chair and each service-category staff member needs their own Fresha calendar resource so the 8-client/morning schedule can be built without double-booking.
+- Multi-practitioner calendar: yes — confirmed sufficient for the verified 2-chair/12-staff capacity model (see operations-manual.md per-staff timetable). Each phlebotomist/chair and each service-category staff member needs their own Fresha calendar resource so the daily GTT schedule can be built without double-booking. *(Client-count updated 2026-07-19: current model is 10 clients/morning, Scenario C — was previously stated as 8/morning, Scenario B, now superseded — see flag above.)*
 - Online payment: yes (Fresha Pay — card processing)
 - Retail/product sales: yes
 - **Weakness:** Not designed for medical/clinical workflows; GTT slot pairing needs workaround
@@ -47,7 +51,7 @@ Every service booking MUST be linked to a confirmed GTT appointment time. No pla
 **Rationale:**
 - Unlimited free SMS covers our high-reminder requirement at zero marginal cost
 - No marketplace commission on direct bookings (all our bookings are direct — via referrals and website, not Fresha marketplace)
-- Multi-practitioner calendar handles all 4–5 subtenants
+- ~~Multi-practitioner calendar handles all 4–5 subtenants~~ **SUPERSEDED — no subtenants under the current model; multi-practitioner calendar instead handles all 12 employed staff (2 phlebotomists + 8 AM treatment staff + reception + PM Service Therapist) — see staff-plan.md.**
 - Built for beauty/wellness (nails, massage, spa) — matches our service types
 - Retail management built in — handles product sales
 - Online payment processing included
@@ -175,14 +179,14 @@ STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 - First on waitlist gets 2-hour window to confirm before next in line is notified
 
 ### Practitioner Management
-- Each sublet practitioner has their own calendar login
-- They set their own availability (must mark at minimum: Mon–Fri 7:30–12:30 as available)
+- ~~Each sublet practitioner has their own calendar login~~ **SUPERSEDED — no subtenants; each employed staff member has their own calendar login instead.**
+- Each staff member's roster/availability is set by the Venue Manager, not self-managed as an independent subtenant would (must mark at minimum: Mon–Fri 7:00–12:30 AM shift availability per their role)
 - Their calendar shows: bookings for the day, customer name + service only (no personal health details)
 - End-of-day summary email: tomorrow's schedule
 
 ### Admin View
-- Daily booking sheet: all GTT slots + associated services + practitioners + payments
-- Weekly revenue report: booking revenue + subtenant rental payments
+- Daily booking sheet: all GTT slots + associated services + staff + payments
+- ~~Weekly revenue report: booking revenue + subtenant rental payments~~ **SUPERSEDED — no subtenant rental income exists under the current model; weekly revenue report is booking revenue only, see `financial-setup.md`.**
 - No-show rate tracker
 - Waitlist volume (demand indicator)
 
@@ -196,10 +200,10 @@ STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 - Payouts: next business day
 - Can split payments: customer pays booking fee; practitioner rent billed separately
 
-**Subtenant Rent Billing:**
-- Invoice each subtenant weekly via Xero or similar accounting software
-- Separate from customer booking system
-- Direct debit setup preferred (auto-debit their nominated account each Monday)
+**~~Subtenant Rent Billing~~ (SUPERSEDED — no subtenants under the current model, see flag above; section retained for historical reference only):**
+- ~~Invoice each subtenant weekly via Xero or similar accounting software~~
+- ~~Separate from customer booking system~~
+- ~~Direct debit setup preferred (auto-debit their nominated account each Monday)~~
 
 ---
 
@@ -208,3 +212,9 @@ STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 - [Cliniko Pricing](https://www.cliniko.com/pricing/)
 - [Fresha Review 2026 — The Salon Business](https://thesalonbusiness.com/fresha-review/)
 - [Cliniko Features](https://www.cliniko.com/features/appointments/)
+
+---
+
+## Changelog
+
+**2026-07-19** — Found via founder-requested contradiction scan. Flagged this document's subtenant/room-rental practitioner model (subtenant calendar logins, subtenant rent invoicing, "4-5 subtenants") as superseded — contradicts the confirmed employed-staff, no-subtenant model. Also fixed a stale "8-client/morning" reference to note the current 10-client Scenario C model. Platform comparison/recommendation (Fresha) unaffected. See `docs/01_conflicts_log.md` CONFLICT-07.
