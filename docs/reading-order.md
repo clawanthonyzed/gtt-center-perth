@@ -171,3 +171,9 @@ GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" a
 | Brand name — "GTT Center Perth" or premium? | Poppy + Anthony | Week 2 — still open, needs Anthony's input |
 | DVA adviser one-time consultation | Anthony | Not blocking — **CF-07 deferred Day 50, do alongside this when convenient** |
 | PM Spa Package ramp (M1=2/day -> M5+=6/day) — validate against live booking data once PM Service Therapist hired | Bruno | Month 1-5 — Lever 2 is the primary path to break-even (financial-break-even-staff.md); fallback is the price-sensitivity table in the same doc if PM volume underperforms |
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): reviewed for operational/on-site "Imara" references as part of the empire-wide Imara -> Venue Manager rename (see `staff-plan.md`, `operations-manual.md`, etc.). This file's one reference ("Approve Reed to engage WDP/PathWest — Anthony + Imara") is a strategic approval decision by Imara in her funding-partner capacity, not an on-site operational duty — left unchanged. Ownership/trust structure unaffected, see `financial-model.md`/`research.md`.
