@@ -13,6 +13,8 @@
 
 > **⚠ SUPERSEDED further (Day 51):** Package-pricing/staffing model now canonical — see `financial-break-even-staff.md` v2.0 §Shift Structure (CF-01) Day 51 revision and §Total Annual Payroll. 3D scan operator role removed entirely (no equipment, no subtenant). Dietitian removed (no dietitian at this stage). GTT Center Perth has no subtenants — Section 5 below no longer applies. AM service staff (2x Massage, 2x Nail, 2x Hairdresser, 2x Beauty, 2x Phlebotomist) are AM-only with no PM shift; Receptionist/Manager works a split shift (07:00-12:00 + 15:00-18:00); 1 new-hire PM Service Therapist (12:00-18:00) delivers PM Spa Packages. Total payroll A$713,067/yr (12 roles + A$15,000/yr relief pool). Section 2A below has been rewritten to this model.
 
+> **Further update (flagged 2026-07-19 — see `docs/01_conflicts_log.md`):** the client-volume model has since moved from Scenario B (8/day) to Scenario C synchronized-start (10/day, 07:00 first draw — see `docs/scenario-c-sync-timetables.md`, `HANDOFF.md`). This does **not** change the headcount conclusion above — Scenario C is explicitly verified to run on the same 2 phlebotomists + 8 treatment staff (2 per category) with no new hires. Treat "8 GTT clients/morning" in the banners above as "10 GTT clients/morning" going forward; the staffing structure itself is unaffected.
+
 ---
 
 ## 1. EMPLOYMENT MODEL — CONFIRMED
@@ -318,3 +320,5 @@ GTT Center Perth has no subtenants. The 3D scan operator and dietitian sublet ro
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (Managing Director role, new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — see `financial-model.md`/`research.md` for ownership structure, which is unaffected by this change. Added Venue Manager as the Week 1 critical-path hire in the Section 7 hiring timeline (venue cannot safely open without EpiPen/first-aid/fire-warden/escalation coverage in place).
+
+**2026-07-19 (audit pass)** — Added a clarifying note that the client-volume model has moved from Scenario B (8/day) to Scenario C synchronized-start (10/day) — headcount/staffing conclusions in this document are unaffected, since Scenario C runs on the same staff numbers.
