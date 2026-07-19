@@ -167,7 +167,7 @@ A 30% trust-distribution tax (proposed in the national budget, not yet legislate
 
 One-time DVA adviser consult recommended but NOT a blocking gate. Business planning and lease signing can proceed.
 
-**CF-07 (Day 50): deferred, not blocking at this stage.** Salary vs trust-distribution split for Imara/Anthony not reviewed this pass — revisit alongside the DVA adviser consult above (see `reading-order.md` Open Decisions).
+**CF-07 (Day 50): deferred, not blocking at this stage.** Salary vs trust-distribution split for Imara/Anthony not reviewed this pass — revisit alongside the DVA adviser consult above (see `reading-order.md` Open Decisions). **Note (2026-07-19):** Anthony is now handling the DVA adviser consultation personally rather than delegating it — removed from `docs/05_open_questions_for_founder.md` as an agent-tracked open question. This is separate from the new Venue Manager operational role (day-to-day duties previously attributed to Imara now sit with a dedicated new hire, not yet in place) — see `staff-plan.md`, `hr-framework.md` §13.
 
 ---
 
@@ -285,3 +285,9 @@ Does NOT offer: meal plans, NDSS registration, APD consultations (deferred indef
 6. **Spray tan not offered on GTT test day** for pregnant clients.
 7. **No TGA-unregistered medical equipment** (ultrasound, TENS) — Australian ARTG listing required.
 8. **Late arrival >10 minutes** for a booked GTT slot = forfeited slot + A$30 deposit forfeited; client rebooked, not squeezed into the existing schedule.
+
+---
+
+## Changelog
+
+**2026-07-19** — Found in full-repo Imara sweep. The one Imara reference in this file (CF-07, salary vs trust-distribution split) is correctly ownership/funder-role context, left as-is. Added a note that Anthony is now handling the DVA adviser consultation personally (removed from the tracked open-questions list) — this is distinct from the separate Venue Manager operational role. Ownership/trust structure unaffected — see `financial-model.md`/`research.md`.
