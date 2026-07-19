@@ -236,6 +236,12 @@ The following were researched but will not be offered:
 
 - services-pricing-locked.md — full service menu with all prices
 - services-master-table.md — complete services table (staff, duration, price, GTT compatibility)
-- bloom-baby-case-study.md — 3D scanning setup and strategy
+- ~~bloom-baby-case-study.md — 3D scanning setup and strategy~~ **ARCHIVED (Day 51) — 3D scan removed from scope entirely, see reading-order.md. Link retained for historical reference only.**
 - financial-break-even-staff.md — staffing model and break-even
 - operations-manual.md — daily operations and timetables
+
+---
+
+## Changelog
+
+**2026-07-19** — Found via founder-requested contradiction scan. No substantive contradictions found in this document's own content (Removed Services section correctly excludes 3D scan/dietitian already). Flagged one stale cross-reference to the now-archived `bloom-baby-case-study.md` in the Related Documents list.
