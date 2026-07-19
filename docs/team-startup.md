@@ -35,7 +35,7 @@ All 8 GTT Center Perth agents are STANDBY. They activate as tasks arise.
 
 ### HIRE 1: Receptionist / Manager (Priority: FIRST HIRE)
 
-**Why first:** This person is the backbone. They greet GTT patients, manage bookings, coordinate practitioners, manage the lounge, and report to Imara. Without this role filled, nothing else works.
+**Why first:** This person is the backbone. They greet GTT patients, manage bookings, coordinate practitioners, manage the lounge, and report to the Venue Manager. Without this role filled, nothing else works.
 
 **Role title:** Centre Coordinator / Practice Manager
 **Award:** Clerks — Private Sector Award MA000002, Level 2-3 (moving to Level 5-6 Hair & Beauty MA000005 if managing beauty staff)
@@ -49,11 +49,11 @@ All 8 GTT Center Perth agents are STANDBY. They activate as tasks arise.
 - Coordinate service schedule with practitioners
 - Manage food/snack service (lounge)
 - Handle retail sales, product hire transactions
-- Supervise daily operations when Imara is not on-site
+- Supervise daily operations when the Venue Manager is not on-site
 - Close and lock venue; daily cash reconciliation
 - Order consumables and stock
 - First-tier complaint handling
-- Report weekly to Imara
+- Report weekly to the Venue Manager
 
 **Qualifications sought:**
 - Certificate III in Business Administration OR experience in spa/salon management
@@ -205,15 +205,22 @@ OR A$33.38-38.00/hr casual (loading included)
 
 ---
 
-## Imara's Role
+## Imara's Role and the Venue Manager Role
 
-Imara is the **operational director** of GTT Center Perth. She:
+**This section previously conflated two distinct roles. They are now separated:**
+
+**Imara (Anthony's partner, funder, trust beneficiary/beneficial owner)** — NOT an on-site operator, NOT employed by the venture:
+- Signs lease as director of YETI Tipi Holdings PTY LTD (trustee) — an ownership/legal function, not day-to-day operations
+- Provides funding (~A$200K savings, self-funded, no external investor)
+- Retains beneficial ownership interest per the trust structure (see `financial-model.md`, `research.md`)
+
+**Venue Manager (new hire, not yet in place)** — the on-site operational director:
 - Signs off on all hiring decisions (with support from Fern agent)
 - Manages the Receptionist/Manager who manages day-to-day
-- Signs lease as director of YETI Tipi Holdings PTY LTD (trustee)
 - Makes pricing and service decisions with input from Bruno + Cora
 - Represents the venture in all partnerships (PathWest, Bloom Baby, GP network)
-- Is NOT employed by the venture (she is the trust beneficiary/beneficial owner)
+- Day-to-day payment approver (< A$2,000), clinical escalation contact, HR disciplinary presence, weekly P&L reviewer, WDP liaison, staff supervisor, emergency first-responder/EpiPen holder, fire warden
+- This is a critical-path hire — see `staff-plan.md` §7, `hr-framework.md` §13
 
 **Anthony's role:** Strategic oversight and empire-level decisions. NOT operationally involved in day-to-day (protects TPI entitlements). See dva-tpi-research.md.
 
@@ -243,3 +250,9 @@ Imara is the **operational director** of GTT Center Perth. She:
 | Beauty therapist | 2 | Casual | A$125,548 combined |
 | 3D scan operator (or Bloom Baby subtenant) | 1 | Casual or subtenant | A$40,296 or A$0 (room rent income) |
 | **TOTAL LAUNCH TEAM** | **10-11** | | **~A$589,000-640,000** |
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Restructured the "Imara's Role" section to clearly separate Imara's ownership/funding role (unaffected) from the on-site Venue Manager's operational duties (new hire, critical-path). See `financial-model.md`/`research.md` for the ownership structure, which this change does not touch.
