@@ -108,40 +108,41 @@ The synchronized version is the more recent and more rigorously verified of the 
 
 ---
 
-## CONFLICT-05 | `hire-purchase-china.md` — Stale 3D Scanner Purchase/Subtenant Section
+## CONFLICT-05 | `hire-purchase-china.md` — 3D Scanner Section Timing
 
-**Status: FLAGGED 2026-07-19 (found via founder-requested contradiction scan) — not rewritten**
+**Status: RESOLVED 2026-07-19 (reframed twice, same day — see below)**
 
-**Finding:** §1C "3D Keepsake Ultrasound Scanner" describes purchasing a 3D scanner or using Bloom Baby Ultrasound as a subtenant as live options, including specific model/pricing tables. This directly contradicts the confirmed Day 51 decision that 3D scan is removed from scope entirely (no equipment, no operator, no subtenant) — already correctly reflected in `equipment-costs.md`'s own banner. The Budget Summary's "TOTAL WITH 3D SCANNER" row is also affected.
+**Finding:** §1C "3D Keepsake Ultrasound Scanner" described purchasing a 3D scanner or using Bloom Baby Ultrasound as a subtenant as live startup options, including specific model/pricing tables.
 
-**Resolution:** Flagged §1C and the two budget-summary rows with superseded banners/strikethrough. Section not deleted or fully rewritten — recommended as a follow-up editorial pass.
+**Resolution history:** First pass (same day) incorrectly flagged this as "contradicts Day 51 — 3D scan removed entirely" and struck through the content. **Corrected same day per direct founder clarification: the 3D scanner is a future income stream, not part of startup/launch scope — this is a timing correction, not a full removal.** §1C was rewritten (not struck through) to keep the equipment/pricing research as reference material for a later revisit, explicitly labelled "not a current purchase decision or startup budget line." Budget Summary rows restored with "future/Phase 2, not startup capital" labelling instead of strikethrough. The Bloom Baby subtenant framing remains correctly noted as inapplicable (no subtenants under the current employed-staff model) regardless of when 3D scan might be revisited.
 
 ---
 
 ## CONFLICT-06 | `market-research-findings.md` — 3D Scan Positioned as Core Differentiator
 
-**Status: FLAGGED 2026-07-19 (found via founder-requested contradiction scan) — flagged in place, not fully rewritten**
+**Status: RESOLVED 2026-07-19 (reframed, same day)**
 
-**Finding:** §1 (MIWM competitor comparison table) and §8 (Key Market Insights Summary) both position "in-house 3D keepsake scanning" as GTT Center Perth's core competitive differentiator, including the claim "GTT Center Perth = first and only GTT + full day spa + 3D scan in Australia." This directly contradicts the Day 51 decision. This is a more consequential instance than most other 3D-scan stragglers because it's framed as *the* marketing differentiator, not just an equipment/staffing line item — if used to brief Poppy (marketing) or any external marketing material, it would actively misrepresent the venture's offering.
+**Finding:** §1 (MIWM competitor comparison table) and §8 (Key Market Insights Summary) both positioned "in-house 3D keepsake scanning" as GTT Center Perth's core competitive differentiator, including the claim "GTT Center Perth = first and only GTT + full day spa + 3D scan in Australia." This is a more consequential instance than most other 3D-scan stragglers because it's framed as *the* marketing differentiator — if used to brief Poppy (marketing) or any external marketing material, it would actively misrepresent the venture's launch-day offering.
 
-**Resolution:** Flagged the document header, the comparison table row, the summary claim, and the §8 insight row with superseded banners/strikethrough, and noted the actual current differentiators (multi-client concurrent model, spray tan, full hairdressing).
+**Resolution:** Rewrote §1 and §8 to reframe the core launch differentiator around the GTT wait-time experience itself (multi-client concurrent model), with 3D scan moved to a clearly-labelled "Future / Phase 2 consideration" note — not deleted from the plan, correctly reflecting Anthony's clarification that 3D scan is a future income stream, not removed entirely.
 
 ---
 
 ## CONFLICT-07 | `ivy-booking-system.md` — Subtenant/Room-Rental Booking Model
 
-**Status: FLAGGED 2026-07-19 (found via founder-requested contradiction scan) — flagged in place, not fully rewritten**
+**Status: RESOLVED 2026-07-19 (fully rewritten, same day — see below)**
 
-**Finding:** The "Practitioner Management," "Admin View," and "Subtenant Rent Billing" sections describe a subtenant/room-rental practitioner model — individual practitioner calendar logins as independent subtenants, weekly subtenant rent invoicing via Xero, direct debit for rent collection. This entirely contradicts the confirmed employed-staff, no-subtenant model. Also contained a stale "8-client/morning" reference (same root issue as CONFLICT-03).
+**Finding:** The "Practitioner Management," "Admin View," and "Subtenant Rent Billing" sections described a subtenant/room-rental practitioner model — individual practitioner calendar logins as independent subtenants, weekly subtenant rent invoicing via Xero, direct debit for rent collection. This entirely contradicted the confirmed employed-staff, no-subtenant model. Also contained a stale "8-client/morning" reference (same root issue as CONFLICT-03) and listed 3D Keepsake Scan / Dietitian consultation as current bookable services in the Step 3 booking flow.
 
-**Resolution:** Flagged the document header and each affected line/section with superseded banners/strikethrough. The core platform comparison and Fresha recommendation are unaffected by this issue and remain valid. Section not fully rewritten for the employed-staff model — recommended as a follow-up action.
+**Resolution history:** First pass (same day) flagged each affected section with superseded banners/strikethrough but did not rewrite. **Fully rewritten same day per direct founder instruction:** "Practitioner Management" retitled "Staff Management" (employed-staff calendar logins, Venue Manager-set rosters), subtenant rent billing/invoicing replaced with a payroll reference (Xero, weekly pay run), "4-5 subtenants" corrected to "12 employed staff," and the booking-flow service list corrected to remove 3D Keepsake Scan and Dietitian consultation as current options and fix service durations to match the current package structure. Core platform comparison and Fresha recommendation were never affected by this issue and remain valid throughout.
 
 ---
 
-## Minor Findings (Contradiction Scan, 2026-07-19) — Flagged, No Rewrite Needed
+## Minor Findings (Contradiction Scan, 2026-07-19)
 
-- **`extended-wellness-services.md`:** stale cross-reference link to the now-archived `bloom-baby-case-study.md` in its "Related Documents" list. Fixed with a strikethrough/archived note — no other issues found in this file.
-- **`onboarding.md`:** uses generic "Manager" throughout (19 instances) rather than "Venue Manager" — not a factual contradiction (unambiguous same role), but a naming-consistency gap versus the rest of the post-rename corpus. Also one self-conditioning "subtenants only" insurance checklist line that's inapplicable, not wrong, under the no-subtenant model. Flagged with a banner; not individually rewritten (19 instances) this session.
+- **`extended-wellness-services.md`:** stale cross-reference link to the now-archived `bloom-baby-case-study.md` in its "Related Documents" list. Fixed with a strikethrough/archived note — no other issues found in this file. **RESOLVED.**
+- **`onboarding.md`:** used generic "Manager" throughout (19 instances) rather than "Venue Manager" — not a factual contradiction (unambiguous same role), but a naming-consistency gap versus the rest of the post-rename corpus. **RESOLVED 2026-07-19 (same day) per direct founder instruction** — all 19 instances corrected to "Venue Manager." Also corrected one self-conditioning "subtenants only" insurance checklist line that was inapplicable (not wrong) under the no-subtenant model.
+- **`business-plan.md`, `brand-guide.md`:** found via the same-day 3D scanner scope check — `business-plan.md`'s Day 51 banner incorrectly said 3D scan was "removed from scope entirely" rather than "future income stream, not launch scope"; `brand-guide.md`'s Instagram bio and highlight-cover-icon list both advertised "Scan" and "Dietitian" as current launch services. **RESOLVED** — both corrected.
 - **`equipment-costs.md`, `privacy-policy.md`, `staff-profiles/*.md`:** reviewed in full — no contradictions found. `staff-profiles/*.md` all correctly reference the current Scenario C (10-client) volume already.
 
 ---
@@ -154,8 +155,10 @@ The synchronized version is the more recent and more rigorously verified of the 
 | CONFLICT-02: floor-plan v2/v3 mismatch | Low-Medium (fit-out brief risk if wrong version used) | RESOLVED (HTML); PDF flagged, not edited |
 | CONFLICT-03: Scenario B vs Scenario C sync | **HIGH** (training/scheduling risk if operations-manual.md read as-is) | FLAGGED, partially resolved — full rewrite recommended as priority action |
 | CONFLICT-04: workflow.md stale subtenant model | Medium (could mislead a new reader on employment structure) | FLAGGED, not rewritten — recommended as follow-up action |
-| CONFLICT-05: hire-purchase-china.md stale 3D scanner section | Medium (equipment budget/planning risk) | FLAGGED, not rewritten |
-| CONFLICT-06: market-research-findings.md 3D scan as differentiator | **Medium-High** (marketing/positioning risk if used to brief external material) | FLAGGED, not rewritten |
-| CONFLICT-07: ivy-booking-system.md subtenant booking model | Medium (booking-system spec risk if built as-is) | FLAGGED, not rewritten |
+| CONFLICT-05: hire-purchase-china.md 3D scanner timing | Medium (equipment budget/planning risk) | RESOLVED — reframed as future/Phase 2, not removed |
+| CONFLICT-06: market-research-findings.md 3D scan as differentiator | **Medium-High** (marketing/positioning risk if used to brief external material) | RESOLVED — reframed to future/Phase 2 addon |
+| CONFLICT-07: ivy-booking-system.md subtenant booking model | Medium (booking-system spec risk if built as-is) | RESOLVED — fully rewritten to employed-staff model |
+
+**Note on CONFLICT-03 (Scenario B vs C):** Anthony's Scenario D single-client 09:55 timing question was verified 2026-07-19 (see `am-capacity-weekend.md` "Can Client 15 Start at 09:55 Instead of 10:00?" and the updated recommendation in `king-edward-start-time-constraint.md`) — this is a scheduling verification, not a documentation contradiction, so it isn't numbered as its own conflict here, but it's directly related to CONFLICT-03's root issue (the AM capacity model evolving faster than some documents track) and resolves the King Edward "before 10am" question for Scenario D specifically.
 
 See `04_roadmap_next_steps.md` for prioritised follow-up actions on the items not fully resolved this session.
