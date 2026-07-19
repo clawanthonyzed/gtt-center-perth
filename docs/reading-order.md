@@ -156,7 +156,11 @@ GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" a
 | **agents.md** | Empire agent roster for this venture |
 | **inhouse-gtt-research.md** | ARCHIVED. In-house lab rejected. Do not pursue. |
 | **research-supplement-day48-ARCHIVED.md** | ARCHIVED. Merged into research.md v3.0. |
+| **research-supplement-day48.md** | ARCHIVED (flagged 2026-07-19 — see `docs/01_conflicts_log.md`). Byte-identical duplicate of research-supplement-day48-ARCHIVED.md above, left over from the merge into research.md v3.0. Same status: superseded, do not treat as current. |
 | **bloom-baby-case-study.md** | ARCHIVED Day 51. 3D scan removed from scope entirely (no equipment, no operator, no subtenant) — see executive-summary.md "Services Removed". |
+| **floor-plan-visual.html / floor-plan-visual.pdf** | SUPERSEDED (flagged 2026-07-19 — see `docs/01_conflicts_log.md`). This is v2 (2026-07-01, box-fill rooms). Use `floor-plan-v3.svg` / `floor-plan-v3.pdf` instead (v3, 2026-07-10 — open-plan lounge, furniture in all rooms, accessible door swing arcs). |
+| **floor-plan-v3.svg / floor-plan-v3.pdf** | CURRENT. v3 (2026-07-10) — canonical floor plan concept, referenced in HANDOFF.md as current. |
+| **floor-plan-concept.md** | Text room schedule (2026-07-01) — same room list/sqm figures as both floor-plan visuals (predates the v2/v3 visual split, which only changed layout style — open plan vs box-fill — not room sizes). Still broadly current for room schedule purposes; not updated alongside the v3 visual revision on 2026-07-10, so treat any layout-specific detail (not sqm figures) as unconfirmed against v3. |
 
 ---
 
@@ -177,3 +181,5 @@ GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" a
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): reviewed for operational/on-site "Imara" references as part of the empire-wide Imara -> Venue Manager rename (see `staff-plan.md`, `operations-manual.md`, etc.). This file's one reference ("Approve Reed to engage WDP/PathWest — Anthony + Imara") is a strategic approval decision by Imara in her funding-partner capacity, not an on-site operational duty — left unchanged. Ownership/trust structure unaffected, see `financial-model.md`/`research.md`.
+
+**2026-07-19 (audit pass)** — Added `research-supplement-day48.md` and floor-plan file entries to the Reference Only table. Flagged `research-supplement-day48.md` as a stale duplicate of the already-archived `research-supplement-day48-ARCHIVED.md` (superseded banner added to the file itself). Flagged `floor-plan-visual.html`/`.pdf` as superseded by `floor-plan-v3.svg`/`.pdf` (superseded banner added to the HTML file). See `docs/01_conflicts_log.md` for full detail.

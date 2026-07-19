@@ -1,5 +1,7 @@
 # GTT Center Perth — Research Supplement: Day 48
 
+> **SUPERSEDED (2026-07-19):** This document's content was merged into `research.md` v3.0 on 2026-06-09 (see `research.md` header: "Supersedes: v2.0 + research-supplement-day48.md"). This file is a stale duplicate of `research-supplement-day48-ARCHIVED.md`, which `reading-order.md` already correctly lists as archived — this copy was never renamed/removed when the merge happened. **Read `research.md` instead.** Retained here only for history; do not treat as current.
+
 **Version:** 1.0 | **Date:** 2026-06-09
 **Supersedes/Adds to:** research.md v2.0 (2026-06-04)
 
