@@ -4,7 +4,11 @@
 
 ---
 
-> **Purpose:** Every piece of content — Instagram post, website page, printed card, email, signage — must feel like it came from the same brand. This document is the single source of truth. When in doubt, check here first.
+> **NAME STATUS (clarified 2026-07-19 — do not treat as locked):** "GTT Center Perth" is a **working placeholder / descriptive place-name**, not a final brand name. Anthony has confirmed a premium brand name and full branding identity (logo, wordmark, colour palette, etc.) will be created later, on his own timeline — this is not a currently-open decision awaiting an answer (see `docs/05_open_questions_for_founder.md` Q7, resolved-not-blocking). **Everything in this document — logo mark description, wordmark styling, colour palette, tone of voice — should be read as illustrative/placeholder work product for the current working name, not as a locked final brand system.** When the real brand name and identity are created, this entire document will need a full revision, not just a find-and-replace of the name.
+
+---
+
+> **Purpose:** Every piece of content — Instagram post, website page, printed card, email, signage — must feel like it came from the same brand. This document is the single source of truth for the *current placeholder brand*. When in doubt, check here first — but expect this to be superseded once the final brand is created.
 
 ---
 
@@ -428,3 +432,5 @@ To keep the brand consistent — especially as partners and third parties produc
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): reviewed for operational/on-site "Imara" references as part of the empire-wide Imara -> Venue Manager rename. Both references in this file (photography brief subject, final brand approval authority) are founder-role content, correctly unaffected — left unchanged. See `financial-model.md`/`research.md` for the ownership structure. Day-to-day venue operations are run by the Venue Manager (new hire, not yet in place) — see `staff-plan.md`.
+
+**2026-07-19 (brand name clarification)** — Added an explicit "Name Status" banner confirming "GTT Center Perth" is a working placeholder, not a locked final brand name. Anthony will create a premium brand name and full identity later, on his own timeline. This document's logo/wordmark/colour content is now explicitly framed as illustrative placeholder work, not a final brand system — see `docs/05_open_questions_for_founder.md` Q7.
