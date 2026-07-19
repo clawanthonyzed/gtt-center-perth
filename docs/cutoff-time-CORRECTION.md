@@ -22,3 +22,15 @@ What general chemistry sources did confirm: fluoride-oxalate (glucose) tubes are
 - **Every document and every scheduler output that cites a specimen cutoff must say "ASSUMED / UNCONFIRMED — pending WDP reply," not state it as fact.** This includes `am-capacity-weekend.md`'s existing "12:30 WDP courier cutoff" references and the visual timelines built this session (`scenario-c-timeline.html`, `scenario-c-sync-timeline.html`) — several of these state it without the caveat and should be treated as provisional, not corrected retroactively.
 - **Scenario D's hiring case (`scenario-d-investigation.md`) is entirely provisional on this number** — do not treat the P&L or staff timetable in that document as final until WDP actually replies.
 - Once WDP responds with a real number, every scheduler built this session (`draw-event-scheduler.py`, `sync-treatment-solver.py`, `scenario-d-staffing.py`) takes it as a single parameter and recomputes instantly — no manual rebuild needed.
+
+---
+
+## Update (2026-07-19) — WDP Emailed, Awaiting Reply
+
+WDP has been emailed. **Still awaiting a reply as of this update — the 11:30/12:30 conflict remains unresolved.** PathWest and Clinipath (the contingency/secondary pathology partners) have not yet been contacted — outreach to them is a separate, not-yet-actioned step (see `docs/05_open_questions_for_founder.md` Q6).
+
+**When WDP replies, Anthony will ask two questions in the same conversation:**
+1. The actual specimen dispatch cutoff time (resolves the 11:30 vs 12:30 conflict directly).
+2. **Whether overnight blood storage + next-day lab collection is viable** as an alternative model to the same-day courier-cutoff constraint.
+
+**Question 2 is not answered here and should not be speculated on** — it depends entirely on WDP's clinical/logistics answer (specimen stability under their actual storage conditions, their lab's next-day intake process, and whether this fits their Licensed Collection Centre QMS). If viable, it could materially change the AM window's end-time constraint that currently drives the whole Scenario C/D capacity ceiling — but that's WDP's determination to make, not an assumption to build into any document ahead of their reply. Once a reply is received, update this file and `docs/05_open_questions_for_founder.md` with the actual answer(s) before they feed into any capacity/scheduling document.
