@@ -12,8 +12,8 @@
 
 | Role | Name | Mobile |
 |---|---|---|
-| Managing Director (first response) | Imara | [to be inserted] |
-| Backup (if Imara unavailable) | Receptionist / Phlebotomist | [to be inserted] |
+| Managing Director / Venue Manager (first response) | [Venue Manager — new hire, not yet in place] | [to be inserted] |
+| Backup (if Venue Manager unavailable) | Receptionist / Phlebotomist | [to be inserted] |
 | WDP/PathWest clinical liaison | [to be inserted] | [to be inserted] |
 | Perth solicitor | [to be inserted] | [to be inserted] |
 | Insurance broker | [to be inserted] | [to be inserted] |
@@ -62,9 +62,9 @@
 
 | Scenario | Who acts first | Who calls 000 | Who manages other patients |
 |---|---|---|---|
-| Patient medical emergency | Phlebotomist (clinical room) OR closest staff member | Receptionist calls 000 | Imara manages other patients |
-| Fire / building emergency | Imara calls evacuation | Receptionist calls 000 | All staff assist evacuation |
-| Imara not present | Senior staff present (phlebotomist or receptionist) | That person calls 000 | Other staff member manages remaining patients |
+| Patient medical emergency | Phlebotomist (clinical room) OR closest staff member | Receptionist calls 000 | Venue Manager manages other patients |
+| Fire / building emergency | Venue Manager calls evacuation | Receptionist calls 000 | All staff assist evacuation |
+| Venue Manager not present | Senior staff present (phlebotomist or receptionist) | That person calls 000 | Other staff member manages remaining patients |
 
 **RULE:** One person stays with the unwell patient at all times. Never leave an unwell patient alone.
 
@@ -80,13 +80,13 @@
 1. **STOP the draw immediately** (remove needle if in progress)
 2. Lay patient flat on the reclining chair or floor — elevate legs above heart level
 3. **Do NOT leave the patient**
-4. Call for Imara (or designated first aider) immediately
+4. Call for the Venue Manager (or designated first aider) immediately
 5. Loosen any tight clothing
 6. Offer cool, damp cloth to forehead if available
 7. Monitor: breathing, colour, responsiveness
 8. If unconscious and not breathing: **call 000, begin CPR, get AED**
 9. If conscious and recovering: remain lying flat for minimum 10 minutes before sitting
-10. Do not proceed with T=60 or T=120 draws until Imara approves
+10. Do not proceed with T=60 or T=120 draws until the Venue Manager approves
 11. Document in incident register within 2 hours
 
 **Tell 000:** "We have a pregnant woman who has fainted at [venue address]. She is [X] weeks pregnant and has been undergoing a glucose tolerance test. She is now [conscious/unconscious] and [breathing/not breathing]."
@@ -136,7 +136,7 @@
 2. Keep patient calm, lying on her left side
 3. Do not give food or water
 4. Tell 000: "Pregnant woman with [symptoms], approximately [X] weeks pregnant, at [venue address]"
-5. Notify Imara
+5. Notify the Venue Manager
 6. Do not delay 000 call for any reason — obstetric emergencies require ambulance
 
 ---
@@ -170,13 +170,13 @@
 7. Account for all staff and patients at assembly point
 8. Do NOT re-enter building until fire brigade says it is safe
 
-**Fire wardens:** Imara (primary) | Receptionist (secondary)
+**Fire wardens:** Venue Manager (primary) | Receptionist (secondary)
 
 ---
 
 ## 7. DATA BREACH
 
-1. Imara assesses: is patient health information involved?
+1. Venue Manager assesses: is patient health information involved?
 2. If yes: notify solicitor within 24 hours before taking any further action
 3. Under Notifiable Data Breaches scheme (Privacy Act): if breach likely to cause serious harm → notify OAIC within 30 days
 4. Do NOT notify patients before getting legal advice (wording must be approved by solicitor)
@@ -194,7 +194,7 @@ All staff must hold current:
 - Anaphylaxis first response training — renew annually
 - Adverse event management in pathology collection settings
 
-**Imara:** must hold current First Aid before venue opens.
+**Venue Manager:** must hold current First Aid before venue opens. This requirement makes the Venue Manager a critical-path hire — the venue cannot safely open without a credentialed first responder/EpiPen holder/fire warden in place (see `staff-plan.md` §7 Hiring Timeline, `hr-framework.md`).
 
 ---
 
@@ -230,7 +230,13 @@ This emergency plan must be reviewed and re-signed annually, or immediately afte
 
 ---
 
-*Owner: Grace (Operations Manager) + Imara (Managing Director)*  
+*Owner: Grace (Operations Manager) + Venue Manager (Managing Director, new hire, not yet in place)*  
 *Compliance: WorkSafe WA — Work Health and Safety Act 2020 (WA)*  
 *Posted copies: collection room, lounge, staff room, reception*  
 *Next review: [date of first anniversary of soft open]*
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`. Added note that the Venue Manager's first-aid/EpiPen/fire-warden credential requirement makes this a critical-path hire before venue opening.
