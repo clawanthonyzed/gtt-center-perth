@@ -233,7 +233,7 @@ Minimum clear space around logo = height of the capital "G" in the wordmark on a
 
 - **Username:** @gttcenterperth
 - **Display name:** GTT Center Perth
-- **Bio:** "Perth's first GTT wellness lounge. Your 2.5hr test wait, reimagined. 💚 Massage · Nails · Brows · Scan · Dietitian [link]"
+- **Bio:** "Perth's first GTT wellness lounge. Your 2.5hr test wait, reimagined. 💚 Massage · Nails · Brows · Hair [link]" *(Updated 2026-07-19: removed "Scan" and "Dietitian" — 3D scan is a future/Phase 2 income stream, not launch scope, per market-research-findings.md and hire-purchase-china.md §1C; dietitian is removed from scope entirely per the Day 51 decision, see staff-plan.md. Do not advertise either as a current service.)*
 - **Profile image:** Leaf logo mark on Lounge White background
 - **Link in bio:** Linktree — two options: Join Waitlist + Book Afternoon Session (post-open)
 
@@ -383,7 +383,7 @@ Good: "Your morning at GTT Center Perth is booked for Thursday 14 August at 8:00
 - [ ] Logo files: SVG + PNG (4 variants × 4 colour options = 16 files)
 - [ ] Instagram profile image (1:1, 400×400px PNG)
 - [ ] 3 brand photography images minimum (hero, massage, lounge)
-- [ ] Instagram highlight cover icons (sets of 5: GTT, Massage, Nails, Scan, Dietitian)
+- [ ] Instagram highlight cover icons (sets of 5: GTT, Massage, Nails, Brows, Hair) *(Updated 2026-07-19: replaced "Scan" and "Dietitian" — neither is launch scope, see bio note above)*
 - [ ] Brand colour swatches saved in Adobe, Figma, and Canva
 
 ### Required Before Phase 2 (Week 16 — website launch)
@@ -434,3 +434,5 @@ To keep the brand consistent — especially as partners and third parties produc
 **2026-07-19** — Founder decision (confirmed 2026-07-18): reviewed for operational/on-site "Imara" references as part of the empire-wide Imara -> Venue Manager rename. Both references in this file (photography brief subject, final brand approval authority) are founder-role content, correctly unaffected — left unchanged. See `financial-model.md`/`research.md` for the ownership structure. Day-to-day venue operations are run by the Venue Manager (new hire, not yet in place) — see `staff-plan.md`.
 
 **2026-07-19 (brand name clarification)** — Added an explicit "Name Status" banner confirming "GTT Center Perth" is a working placeholder, not a locked final brand name. Anthony will create a premium brand name and full identity later, on his own timeline. This document's logo/wordmark/colour content is now explicitly framed as illustrative placeholder work, not a final brand system — see `docs/05_open_questions_for_founder.md` Q7.
+
+**2026-07-19 (3D scan/dietitian scope check)** — Found via founder-requested contradiction scan: Instagram bio and highlight-cover-icon list both advertised "Scan" and "Dietitian" as current launch-day services. Neither is launch scope — 3D scan is a future/Phase 2 income stream (not startup scope, per `hire-purchase-china.md` §1C and `market-research-findings.md`), and dietitian is removed from scope entirely (Day 51 decision, see `staff-plan.md`). Updated both to list only current launch services (Massage, Nails, Brows, Hair, GTT).

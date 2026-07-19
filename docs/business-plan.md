@@ -10,7 +10,7 @@
 
 ---
 
-> **Day 51 update.** Package pricing (Section 6), staffing (Section 5), and financial overview (Section 9) updated to the Day 51 Package 1/2/3 model (`services-pricing-locked.md`, `financial-break-even-staff.md`, `cash-flow.md`). 3D keepsake scan and dietitian removed from scope entirely — see `equipment-costs.md` and `staff-plan.md`.
+> **Day 51 update.** Package pricing (Section 6), staffing (Section 5), and financial overview (Section 9) updated to the Day 51 Package 1/2/3 model (`services-pricing-locked.md`, `financial-break-even-staff.md`, `cash-flow.md`). Dietitian removed from scope entirely. 3D keepsake scan removed from startup/launch scope — **reframed 2026-07-19: it is a future income stream to be considered once the venue is established, not deleted from the plan entirely** — see `equipment-costs.md`, `staff-plan.md`, `hire-purchase-china.md` §1C, `market-research-findings.md`.
 
 ---
 
@@ -381,3 +381,5 @@ YETI Holding Trust (discretionary trust)
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced operational/on-site references to "Imara" (Managing Director day-to-day role) with "Venue Manager" (new hire, not yet in place). Imara's founder/funder status (line 8) is unaffected — see `financial-model.md`/`research.md` for the ownership structure.
+
+**2026-07-19 (3D scan reframe)** — Corrected the Day 51 update banner: 3D keepsake scan is a future income stream, not "removed from scope entirely" as previously stated — this is a timing correction, not a scope deletion. Dietitian remains removed from scope entirely (unaffected by this correction). See `hire-purchase-china.md` §1C and `market-research-findings.md` for the matching reframe.
