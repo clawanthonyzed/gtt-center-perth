@@ -1,4 +1,6 @@
 > **2026-07-14 UPDATE (corrected) — PM MODEL RECALCULATED ON ACTUAL HOURS WORKED:** PM afternoon sessions are individual services (NOT Package 1/2/3), delivered by a 4-role dedicated PM roster (massage, hair, nail, beauty — see `pm-staffing-roster.md`), staffed on hours actually worked (casuals paid per session-hour, not a blanket shift). Full recalculated P&L: **profitable from Month 4 (+A$4,924/month), reaching +A$6,663/month at Month 5+ steady state.** All revenue/cost figures in the tables below are SUPERSEDED — see `pm-staffing-roster.md` "CORRECTION — Hours-Based Casual Cost Model" section for the current authoritative numbers.
+>
+> **FURTHER UPDATE (2026-07-19 — Phase 6 verification pass, found via cross-document check):** `pm-staffing-roster.md` (referenced immediately above as authoritative) is itself built on the 8-client Scenario B AM model and reports a Month 5+ steady-state figure of -A$4,384/month (a loss) under its own later correction — **not** the +A$4,924/Month-4 / +A$6,663/Month-5+ figures stated in the banner above. Neither of those matches `profit-loss-tables.md` v2.0 (2026-07-17, the most recent of the three documents), which reports **+A$25,087.07/month at Month 5+ steady state** under the current 10-client Scenario C model. **This entire file (`cash-flow.md`) is built on the superseded 8-client Scenario B model and 3-package (Package 1/2/3) structure — both since replaced.** Its month-by-month *ramp shape* (gradual build to full capacity by Month 5) remains a reasonable methodology reference, but none of its absolute dollar figures should be treated as current without re-verification against `profit-loss-tables.md` v2.0. See `docs/01_conflicts_log.md` for the full three-way discrepancy and `docs/business-plan.md`/`docs/executive-summary.md` for where this has been flagged in founder-facing summary documents.
 
 # GTT Center Perth — 18-Month Cash Flow Projection
 ## YETI Holding Trust | GTT Center Perth trading entity
@@ -275,3 +277,9 @@ Modelled Month 5+ stable-state volume is 308 visits/month (14/day) — above bre
 
 *Document owner: Bruno (Finance & Bookkeeping) | Reviewed by: Grace (Operations Manager)*  
 *Next review: Month 3 actuals vs model*
+
+---
+
+## Changelog
+
+**2026-07-19 (Phase 6 verification)** — Confirmed this document meets the required spec granularity (monthly cash flow through Year 1+, startup capital outlay through break-even — see the 18-Month Month-by-Month table and Pre-Launch Capital Deployment table above). However, found via cross-document verification that this entire file is built on the superseded 8-client Scenario B model and 3-package structure, and that its own supersession banner pointed to `pm-staffing-roster.md` as authoritative — which is itself superseded by `profit-loss-tables.md` v2.0's current 10-client Scenario C figures. Added a further-update note above documenting this three-way discrepancy. Not rewritten this session (a full rebuild under the current model is a substantial task, recommended as a priority follow-up — see `docs/04_roadmap_next_steps.md` and `docs/01_conflicts_log.md`).
