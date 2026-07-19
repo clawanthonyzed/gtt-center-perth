@@ -132,21 +132,19 @@
 
 ### Months 10-12 (March 2027 - June 2027)
 - Revenue target: A$35,000-50,000/month
-- If Month 9 revenue > A$35,000 consistently: begin planning Centre 2
-- Centre 2 target: open in opposite Perth suburb (north if Centre 1 is south, or vice versa)
-- Hire Centre 2 manager from existing staff (internal promotion)
 - Option B: Fully operational own ACC (or renew Option A if not pursued)
+- **Centre 2 planning:** see updated timing note below — no fixed month-based trigger anymore
 
 ---
 
-## Phase 4: Expansion (Month 13+)
-**Period:** July 2027+
+## Phase 4: Expansion — Timing Not Yet Set
 
-### Centre 2 Pre-Opening (if Centre 1 consistently >A$35,000/month)
-- Repeat Phase 0-2 timeline for Centre 2 location
-- Centre 1 manager trains Centre 2 manager
-- All systems, SOPs, booking software already established — reduced setup time
-- Target Centre 2 open: Month 15-18 (September-December 2027)
+> **Updated 2026-07-19 (founder clarification):** Anthony confirmed the second-venue timeline is set only **after the first venue is running smoothly** — there is no earlier estimate, and the specific month-based targets previously in this section (Month 9 revenue trigger, Month 15-18 open target) should not be treated as a real plan. They are removed below. This matches `strategic-concerns-growth.md`'s existing framing (second venue is a 12-month proof-of-model precondition, not a scheduled milestone) — this document previously had a more specific but unconfirmed date sitting alongside that correct framing, which has now been corrected for consistency.
+
+### Centre 2 Pre-Opening (trigger: Venue 1 running smoothly — no date set)
+- Precondition, not a date: Venue 1 must be running smoothly first (Anthony's own words, 2026-07-19) — no revenue threshold or specific month is currently the trigger; `strategic-concerns-growth.md`'s "12-month proof-of-model precondition" is the closest existing framing, but even that is not a committed date.
+- When triggered: repeat Phase 0-2 timeline for Centre 2 location, Centre 1 manager/Venue Manager trains Centre 2 equivalent, all systems/SOPs/booking software already established — reduced setup time versus Venue 1.
+- Candidate locations: whichever Perth corridor was NOT chosen for Venue 1 (see `strategic-concerns-growth.md` and `location-scouting.md`).
 
 ### Long-Term Vision
 - 3 Perth centres (north, south, inner metro) by 2028
@@ -183,14 +181,18 @@
 | Bloom Baby approach | Reed (agent) |
 | NATA consultant engagement (Option B) | Grace (ops agent) |
 | Budget model | Bruno (finance agent) |
-| Brand name decision | Poppy (marketing agent) |
+| Brand name decision | Poppy (marketing agent) — **not urgent, see note below** |
 | Website brief | Helix (CortexOS frontend — if available) or external dev |
 | Receptionist/Manager JD | Grace (ops agent) |
 
 See team-startup.md for full team roles.
+
+**Note on brand name (2026-07-19):** "GTT Center Perth" is a working placeholder, not a final brand name — Anthony will create a premium brand name and identity later, on his own timeline. This is not an active Week 1-2 task awaiting Poppy's input right now — see `brand-guide.md` and `docs/05_open_questions_for_founder.md` Q7.
 
 ---
 
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): the Week 1 question "is Imara the operational manager?" is resolved NO — a dedicated Venue Manager (new hire, not yet in place) fills this role instead. Imara remains the funding partner/trust beneficiary, unaffected — see `financial-model.md`/`research.md`. Added Venue Manager recruitment as a Week 1 critical-path task in the "Who Is Doing What" table, alongside existing critical-path items.
+
+**2026-07-19 (founder clarifications round 2)** — Removed the specific Month 9 revenue trigger / Month 15-18 open-date targets for "Centre 2" — Anthony confirmed the second-venue timeline is set only after Venue 1 is running smoothly, with no earlier estimate. Rewrote Phase 4 to reflect this. Also flagged the brand name decision as not urgent/placeholder per Anthony's clarification (see `brand-guide.md`).
