@@ -237,7 +237,7 @@ Target keywords (zero commercial competition as of June 2026):
 | SSL certificate | Yes — required for form data collection |
 | Booking widget | Fresha widget embedded on /book page |
 | Privacy Policy | Required page before waitlist launch |
-| Contact form | Yes — general enquiries, routed to Imara email |
+| Contact form | Yes — general enquiries, routed to Venue Manager email |
 | Email integration | Resend connected to waitlist form (automatic confirmation email) |
 | Domain email | [email]@gttcenterperth.com.au for professional appearance |
 
@@ -266,3 +266,9 @@ Phase 2 (Week 16) is DONE when:
 
 *Owner: Poppy (Marketing agent) + assigned developer*  
 *Review: Grace (Operations), Jade (CX), Ivy (Booking)*
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced operational reference to "Imara" (contact form routing) with "Venue Manager" (new hire, not yet in place). Ownership/trust structure unaffected — see `financial-model.md`/`research.md`.
