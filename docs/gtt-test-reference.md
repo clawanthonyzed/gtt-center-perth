@@ -100,7 +100,7 @@ High-risk women may present as early as 10–16 weeks. The same test procedure a
 
 ### Step 1 — Patient Arrival and Identification
 - Receptionist confirms fasting status verbally: "When did you last eat or drink anything except water?"
-  - If < 8 hours: DO NOT proceed. Consult Imara. Reschedule.
+  - If < 8 hours: DO NOT proceed. Consult the Venue Manager. Reschedule.
   - If ≥ 8 hours: proceed
 - Collect pathology request form — confirm patient name, DOB, gestational age, requesting doctor
 - Confirm correct patient (name + DOB verbal check)
@@ -299,7 +299,9 @@ No formal annual renewal for Cert III, BUT phlebotomists must maintain:
 | Service 1 staff (massage/nails/facial/brows/hair) | 30 or 45-min service from Package 1/2/3 | 45 min (inc. setup/clean) |
 | Service 2 staff (massage/nails/facial/brows/hair) | 30 or 45-min service from Package 1/2/3 | 45 min (inc. setup/clean) |
 
-**Key insight: each phlebotomist can serve up to 4 GTT clients per chair simultaneously** because blood draws are staggered — the phlebotomist is NOT occupied for the full 2.5 hours per client, only during the short draw windows. With 2 phlebotomists/2 chairs from Day 1 (RESOLVED Day 49), this scales to 8 GTT clients/morning. See operations-manual.md for the verified per-staff timetable.
+> **Client-count figures below (8/day) flagged stale 2026-07-19 — see `docs/01_conflicts_log.md` CONFLICT-03.** Current committed model is Scenario C synchronized-start, **10 GTT clients/day**, verified in `docs/scenario-c-sync-timetables.md` — not the 8-client figures in this section or in `operations-manual.md` (also flagged, not yet rewritten). Staffing headcount conclusions below are NOT affected (Scenario C runs on the same 2 phlebotomists + 8 treatment staff) — only the client-count and per-shift-patient figures need updating in a follow-up pass.
+
+**Key insight: each phlebotomist can serve up to 4 GTT clients per chair simultaneously** because blood draws are staggered — the phlebotomist is NOT occupied for the full 2.5 hours per client, only during the short draw windows. With 2 phlebotomists/2 chairs from Day 1 (RESOLVED Day 49), this scaled to 8 GTT clients/morning under Scenario B — since superseded by Scenario C's 10 clients/morning (see flag above). See `docs/scenario-c-sync-timetables.md` for the current verified per-staff timetable.
 
 **Service staff capacity per shift:**
 - 1 massage therapist (45-min service + 15 min turnaround = 60 min/patient): 5–6 patients per morning shift
@@ -419,3 +421,9 @@ Specifically:
 - [ACSQHC — Pathology collection standards](https://www.safetyandquality.gov.au/)
 - [Australian Institute of Medical Scientists (AIMS)](https://aims.org.au/)
 - [Certificate III in Pathology Collection HLT37215](https://training.gov.au/Training/Details/HLT37215)
+
+---
+
+## Changelog
+
+**2026-07-19** — Found in full-repo Imara sweep. Replaced operational reference to "Imara" (fasting-failure escalation) with "Venue Manager" (new hire, not yet in place). Also flagged this file's 8-client (Scenario B) staffing/capacity figures as stale — current committed model is 10 clients/day (Scenario C sync), same underlying conflict as `operations-manual.md`/`gtt-clinical-protocol.md` — see `docs/01_conflicts_log.md` CONFLICT-03. Headcount conclusions unaffected; only client-count figures need a follow-up rewrite.
