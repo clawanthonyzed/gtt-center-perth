@@ -1,6 +1,6 @@
 # GTT Center Perth — Financial Infrastructure Setup
 ## Pre-Launch Checklist
-### Version 1.0 | June 2026 | Owner: Bruno (Finance Agent) + Imara
+### Version 1.0 | June 2026 | Owner: Bruno (Finance Agent) + Venue Manager (new hire, not yet in place)
 
 ---
 
@@ -24,13 +24,13 @@ Before any financial setup: brief a Perth-based accountant with experience in:
 1. YETI Holding Trust structure (trust + corporate trustee YETI Tipi Holdings PTY LTD)
 2. GTT Center Perth trading as the trust
 3. Mixed supply GST issue (pathology = GST-free, wellness = taxable, rental income = taxable)
-4. Imara salary vs trust distribution decision (must be resolved before first pay run)
+4. Venue Manager salary vs trust distribution decision (must be resolved before first pay run)
 5. TPI pension implications (flag to DVA-qualified advisor — accountant must know this constraint)
 6. 2028 trust distribution tax risk — should we add an operating PTY LTD under the trust now?
 
 **Deliverables from accountant (get in writing):**
 - [ ] Confirmed entity structure (trust trades directly vs add operating PTY LTD)
-- [ ] Imara remuneration structure (salary amount vs distribution amount)
+- [ ] Venue Manager remuneration structure (salary amount vs distribution amount)
 - [ ] GST registration advice (must register before first booking)
 - [ ] BAS lodgement frequency (monthly vs quarterly — recommend monthly given cash flow tightness in Month 1–3)
 - [ ] Default super fund selection for employee contributions
@@ -65,8 +65,8 @@ Before any financial setup: brief a Perth-based accountant with experience in:
 
 **Setup requirements:**
 - Business bank account in trust name: "YETI Holding Trust t/as GTT Center Perth"
-- Authorised signatories: Anthony (trustee) + Imara (operational authority)
-- Internet banking access for Imara (payment approvals up to A$2,000 per transaction — see Financial Gates in grace-startup-plan.md)
+- Authorised signatories: Anthony (trustee) + Venue Manager (operational authority)
+- Internet banking access for the Venue Manager (payment approvals up to A$2,000 per transaction — see Financial Gates in grace-startup-plan.md)
 - Payments > A$2,000: require Anthony's approval
 
 **GST discipline:** On the 28th of each month, transfer that month's net GST liability to the GST Holding Account. Never spend GST collected — it belongs to the ATO.
@@ -201,7 +201,7 @@ All policies must be active before first patient enters venue.
 GTT Center Perth serves food (packaged snacks, coconut water, herbal teas). This is classified as a **low-risk food business** in WA.
 
 - [ ] Notify the local council (not State Health — councils handle food business notifications in WA)
-- [ ] Required: Food Safety Supervisor certificate (FSS) — Imara or receptionist completes online course (~4 hours, A$100–200)
+- [ ] Required: Food Safety Supervisor certificate (FSS) — Venue Manager or receptionist completes online course (~4 hours, A$100–200)
 - [ ] Document the FSS certificate holder's details for the council notification
 - [ ] Post food safety poster in snack preparation area (free from council)
 - [ ] Note: pre-packaged snacks with intact packaging have minimal requirements. No hot food preparation = no council inspection required.
@@ -212,7 +212,7 @@ GTT Center Perth serves food (packaged snacks, coconut water, herbal teas). This
 
 | Week | Action | Who |
 |---|---|---|
-| Monday | Weekly payroll run (pay Friday) | Bruno (Xero) → Imara approves |
+| Monday | Weekly payroll run (pay Friday) | Bruno (Xero) → Venue Manager approves |
 | Wednesday | Reconcile bank feed in Xero | Bruno |
 | Friday | Weekly P&L report to Anthony | Bruno |
 | Month end | Reconcile all accounts, prepare management accounts | Bruno + accountant |
@@ -226,8 +226,8 @@ GTT Center Perth serves food (packaged snacks, coconut water, herbal teas). This
 
 | Decision | Threshold | Approval required |
 |---|---|---|
-| Individual expense | < A$500 | Imara |
-| Individual expense | A$500–A$2,000 | Imara + notify Bruno |
+| Individual expense | < A$500 | Venue Manager |
+| Individual expense | A$500–A$2,000 | Venue Manager + notify Bruno |
 | Individual expense | > A$2,000 | Anthony explicit approval |
 | New supplier contract | Any amount | Anthony reviews |
 | Lease or property commitment | Any amount | Anthony explicit approval + solicitor |
@@ -239,8 +239,8 @@ GTT Center Perth serves food (packaged snacks, coconut water, herbal teas). This
 
 | Report | Frequency | Owner | Audience |
 |---|---|---|---|
-| Daily revenue summary | Daily | Fresha auto-report → Imara | Imara |
-| Weekly P&L | Weekly (Friday) | Bruno | Anthony + Imara |
+| Daily revenue summary | Daily | Fresha auto-report → Venue Manager | Venue Manager |
+| Weekly P&L | Weekly (Friday) | Bruno | Anthony + Venue Manager |
 | Monthly management accounts | Monthly | Bruno + accountant | Anthony |
 | Quarterly BAS | Monthly (not quarterly — given tight early cash) | Accountant | ATO |
 | Annual financial statements | Annual | Accountant | Trust beneficiaries, bank |
@@ -248,5 +248,11 @@ GTT Center Perth serves food (packaged snacks, coconut water, herbal teas). This
 
 ---
 
-*Owner: Bruno (Finance Agent) | Imara (operational execution)*  
+*Owner: Bruno (Finance Agent) | Venue Manager (operational execution, new hire, not yet in place)*  
 *Accountant brief: Week 1 — this document is the briefing agenda*
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — trust/ownership structure unaffected, see `financial-model.md`/`research.md`. Remuneration-decision items renamed to "Venue Manager salary vs trust distribution" as this is the payroll question for the operational hire, not a change to Imara's funding role.
