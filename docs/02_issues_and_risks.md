@@ -19,17 +19,17 @@ Two different unconfirmed numbers (11:30 and 12:30) have been used across docume
 **Source:** `king-edward-start-time-constraint.md` (existing, still open)
 Anthony reported this guidance from KEMH; a search for the underlying published document failed to locate it. Scenario C passes comfortably (last draw at 09:40) but Scenario D fails on a strict reading (last draw at exactly 10:00, not before it). If this constraint is wrong or misremembered, it currently blocks/complicates the 15-client growth scenario for no real reason; if it's right and unwritten anywhere accessible, GTT Center Perth needs the actual source before relying on or disputing it. **Action: locate the source document, or get written confirmation from KEMH/referring practices.**
 
-### H4. TPI Pension / Trust Distribution Interaction (CF-07) Still Deferred
-**Source:** `review-audit.md` CF-07 (existing, still open — clarified but not resolved this session)
-Multiple documents show Imara projected to receive a A$72,500/year salary or trust distribution from the venture. If Anthony and Imara are assessed as a de facto couple under DVA means-testing rules, this could reduce or eliminate Anthony's TPI pension. This is flagged in CLAUDE.md as non-negotiable and is a **blocking legal gate before any lease or hiring is finalised** — not resolved by this session's Venue Manager rename, which only affects the separate operational-hire payroll line, not Imara's personal remuneration question. **Action: DVA-qualified financial adviser consultation — see open questions doc, already logged as CF-07/blocking.**
+### H4. ~~TPI Pension / Trust Distribution Interaction (CF-07) Still Deferred~~ — REMOVED FROM THIS LOG 2026-07-19
+**Source:** `review-audit.md` CF-07
+Previously listed here as a High-severity blocking item. **Removed 2026-07-19 per Anthony's direct instruction, stated twice: DVA/TPI pension advice is his personal matter, not a GTT Center Perth task, and should not be tracked as a GTT issue/risk.** CF-07's underlying legal analysis in `review-audit.md` is unaffected — only its tracking here is removed.
 
 ---
 
 ## MEDIUM SEVERITY
 
 ### M1. Venue Manager Is a New Critical-Path Hire With No Named Candidate
-**Source:** This session (Priority 0 task)
-The entire operational model — first-aid/EpiPen response, fire warden, clinical escalation, HR discipline, weekly P&L, WDP liaison, day-to-day payment approval — now depends on a Venue Manager role that is a new hire, not yet in place, with no recruitment timeline beyond "Week 1 critical path" in the newly-updated docs. Unlike the phlebotomist hire (which has a full job posting, interview process, and fallback agency plan in `phlebotomist-job-posting.md`), **no equivalent recruitment document exists yet for the Venue Manager role.** `phlebotomist-job-posting.md`'s interview process assumes a Venue Manager already exists to conduct interviews — a real sequencing gap if the Venue Manager isn't hired first. **Action: create a Venue Manager job posting/recruitment document, equivalent in rigor to the phlebotomist one, as a near-term priority.**
+**Source:** This session (Priority 0 task) — **RESOLVED 2026-07-19 (job posting built); recruitment timing corrected 2026-07-19 (founder feedback)**
+The entire operational model — first-aid/EpiPen response, fire warden, clinical escalation, HR discipline, weekly P&L, WDP liaison, day-to-day payment approval — depends on a Venue Manager role that is a new hire, not yet in place. Unlike the phlebotomist hire (which has a full job posting, interview process, and fallback agency plan in `phlebotomist-job-posting.md`), no equivalent recruitment document existed for the Venue Manager role — **now built: `docs/venue-manager-job-posting.md`**, using `phlebotomist-job-posting.md` as a structural template. **Important sequencing correction (2026-07-19):** Anthony confirmed GTT Center Perth is NOT recruiting or looking for any staff, including the Venue Manager, until a physical venue location is confirmed — the job posting document is ready in advance, not an active posting. The document itself flags that its own interview-process section assumes a Venue Manager already exists to interview the phlebotomist — this remains a real sequencing dependency to resolve once recruitment actually begins (Venue Manager first, then phlebotomist).
 
 ### M2. `workflow.md` Describes a Contradictory Staffing Model (Subtenants)
 **Source:** This session (`01_conflicts_log.md` CONFLICT-04)
@@ -76,8 +76,8 @@ Both resolved this session, but the underlying process gap (files not renamed/fl
 | H1 | operations-manual.md trains on wrong scenario | High | Flagged, rewrite pending |
 | H2 | WDP cutoff time unconfirmed | High | Open — needs WDP reply |
 | H3 | KEMH start-time guidance unsourced | High | Open — needs source or confirmation |
-| H4 | TPI pension / trust distribution risk (CF-07) | High | Deferred — needs DVA adviser |
-| M1 | No Venue Manager recruitment document | Medium | Gap — needs creation |
+| H4 | ~~TPI pension / trust distribution risk (CF-07)~~ | — | REMOVED 2026-07-19 — Anthony's personal matter, not a GTT task |
+| M1 | Venue Manager recruitment document | Medium | RESOLVED — `docs/venue-manager-job-posting.md` built; recruitment does not start until location confirmed |
 | M2 | workflow.md contradictory staffing model | Medium | Flagged, rewrite pending |
 | M3 | MA000027 Saturday carve-out unconfirmed | Medium | Open — needs payroll/Fair Work check |
 | M4 | Package price-increase timing undecided | Medium | Founder decision needed |
@@ -88,3 +88,9 @@ Both resolved this session, but the underlying process gap (files not renamed/fl
 | L3 | Duplicate/superseded file housekeeping | Low | Resolved this session, pattern noted |
 
 See `03_improvements.md` for suggested process improvements addressing the root causes (especially L2/L3), and `04_roadmap_next_steps.md` for prioritised next actions.
+
+---
+
+## Changelog
+
+**2026-07-19 (founder feedback round 3)** — Removed H4 (TPI/DVA pension interaction) from this log entirely — Anthony's personal matter, not a GTT task, stated twice. Resolved M1 (Venue Manager job posting) — `docs/venue-manager-job-posting.md` now built; also corrected the recruitment-timing framing to reflect that recruitment does not begin until a physical venue location is confirmed.
