@@ -5,13 +5,13 @@
 
 ---
 
-> **NAMING CONSISTENCY NOTE (2026-07-19 — found via founder-requested contradiction scan, see `docs/01_conflicts_log.md`):** This document refers to the on-site operational lead as "Manager" throughout (19 instances) rather than "Venue Manager," the title now used consistently across the rest of the corpus since the Imara -> Venue Manager rename (`staff-plan.md`, `operations-manual.md`, `hr-framework.md`, etc.). Not a factual contradiction — "Manager" here unambiguously means the same role — but flagged for consistency. Also notes one minor self-conditioning line (A1 checklist: "Public liability insurance... subtenants only") that is not wrong but is effectively inapplicable under the current no-subtenant model. Neither issue was rewritten this session — recommend a find-and-replace pass ("Manager" -> "Venue Manager") as a low-priority follow-up.
+> **NAMING CONSISTENCY — FIXED 2026-07-19:** This document previously referred to the on-site operational lead as generic "Manager" throughout (19 instances) rather than "Venue Manager," the title used consistently across the rest of the corpus since the Imara -> Venue Manager rename. All 19 instances have been updated to "Venue Manager" for consistency (not a factual contradiction — "Manager" always unambiguously meant the same role — this was a naming-consistency fix, not a correction of substance). The A1 checklist's subtenant-insurance line was also corrected to note no subtenants currently exist under this model.
 
 ---
 
 # PART A — STAFF ONBOARDING
 
-## A1. Pre-Start Checklist (Manager + Fern complete before Day 1)
+## A1. Pre-Start Checklist (Venue Manager + Fern complete before Day 1)
 
 ### Employment Admin
 - [ ] Employment contract signed and returned (2 copies — employee keeps one)
@@ -24,13 +24,13 @@
 - [ ] Working with Vulnerable People check verified (if required by role)
 - [ ] Professional qualifications verified: original certificates sighted and copied
 - [ ] Professional memberships verified (massage: ATMS/AMT; others as applicable)
-- [ ] Public liability insurance confirmed (if role requires own insurance — subtenants only)
+- [ ] Public liability insurance confirmed (if role requires own insurance) *(Updated 2026-07-19: no subtenants exist under the current model — this item does not currently apply to any role, retained only in case the model changes)*
 
 ### System Access
 - [ ] Fresha login created (role-appropriate access level)
 - [ ] WhatsApp group "GTT CP Team" — add mobile number
 - [ ] Email (if applicable)
-- [ ] Key/fob/alarm code issued (Manager only issues — log all issued keys)
+- [ ] Key/fob/alarm code issued (Venue Manager only issues — log all issued keys)
 
 ### Phlebotomist Specific (additional to above)
 - [ ] WDP/PathWest credential letter received and filed
@@ -42,7 +42,7 @@
 
 ---
 
-## A2. Day 1 Orientation (Manager leads — 2 hours)
+## A2. Day 1 Orientation (Venue Manager leads — 2 hours)
 
 ### Tour (30 min)
 - Reception: Fresha terminal, phone, patient files location, welcome pack storage
@@ -67,13 +67,13 @@
 ### Service Standards Briefing (15 min)
 - Patient is always addressed by first name
 - No discussing GTT results (ever) — redirect to their doctor
-- Fasting failure: do not dismiss, notify Manager immediately
-- Any patient who feels unwell: alert phlebotomist + Manager immediately
+- Fasting failure: do not dismiss, notify Venue Manager immediately
+- Any patient who feels unwell: alert phlebotomist + Venue Manager immediately
 - Phone use: personal phones off during treatment delivery
 
 ### Buddy System (Weeks 1–2)
-- New staff shadow Manager or an experienced team member for first 3 shifts
-- No solo patient contact until buddy sign-off (Manager confirms readiness)
+- New staff shadow Venue Manager or an experienced team member for first 3 shifts
+- No solo patient contact until buddy sign-off (Venue Manager confirms readiness)
 
 ---
 
@@ -82,13 +82,13 @@
 ### All Staff (Days 1–3)
 - Day 1: Orientation (as above)
 - Day 2: Observe full operating day (shadowing)
-- Day 3: Manage own patient interactions with Manager oversight
+- Day 3: Manage own patient interactions with Venue Manager oversight
 
 ### Phlebotomist Only
 - WDP/PathWest phlebotomy protocol review (WDP-provided)
 - GTT clinical protocol (gtt-clinical-protocol.md) — read and sign
-- Adverse event protocol — read, sign, verbal quiz by Manager
-- First collection: Manager present in building
+- Adverse event protocol — read, sign, verbal quiz by Venue Manager
+- First collection: Venue Manager present in building
 
 ### Massage Therapist Only
 - Review GTT Center Perth pregnancy massage intake form
@@ -103,7 +103,7 @@
 
 ---
 
-## A4. 30-Day Review (Manager conducts)
+## A4. 30-Day Review (Venue Manager conducts)
 
 Topics:
 1. How is the role going? Any blockers?
@@ -143,7 +143,7 @@ Outcome: either confirm ongoing employment, identify improvement areas (with 30-
 - Note: this is a medical requirement, not a GTT Center Perth policy. A failed fast invalidates the diagnostic test and cannot be waived.
 
 ### Late Arrival Policy
-- **Up to 15 minutes late:** appointment proceeds but services may be reduced at Manager's discretion (blood draw schedule is fixed and cannot be delayed).
+- **Up to 15 minutes late:** appointment proceeds but services may be reduced at Venue Manager's discretion (blood draw schedule is fixed and cannot be delayed).
 - **More than 15 minutes late:** appointment treated as a no-show. Full payment retained. See No-Show Policy.
 
 ### Result Communication
@@ -274,9 +274,9 @@ This is the most critical touchpoint. Patient is fasting, anxious, possibly firs
 > "Good morning [Name]! Welcome — we've been expecting you. I'm [Receptionist Name]. Have you had anything to eat or drink this morning besides water? Great. Can I quickly grab your referral form and Medicare card? Lovely. Let me take you through to [Phlebotomist Name] for your first blood draw, and then the rest of the morning is yours."
 
 **If client discloses they have eaten/drunk (fasting failure):**
-> "Thank you for letting me know — I appreciate you being upfront. Unfortunately we can't proceed with the blood draws today as eating affects the test results. I'm going to get the Manager to come and speak with you — please take a seat. While you wait, can I get you a glass of water?"
+> "Thank you for letting me know — I appreciate you being upfront. Unfortunately we can't proceed with the blood draws today as eating affects the test results. I'm going to get the Venue Manager to come and speak with you — please take a seat. While you wait, can I get you a glass of water?"
 
-- Manager handles the fasting failure conversation — not reception
+- Venue Manager handles the fasting failure conversation — not reception
 - Offer 1 x complimentary wellness service per B0 policy
 - Note the visit in Fresha as "fasting failure — policy applied"
 - Full payment retained (already collected at booking)
@@ -355,14 +355,14 @@ After every visit, patient receives:
 **Step 1:** Receptionist receives complaint (verbal or written)
 - Acknowledge immediately: "I'm so sorry to hear that. I want to make sure this is sorted for you."
 - Do not argue, dismiss, or over-explain
-- Escalate to Manager within 30 minutes (same day)
+- Escalate to Venue Manager within 30 minutes (same day)
 
-**Step 2:** Manager calls patient within 4 hours
+**Step 2:** Venue Manager calls patient within 4 hours
 - Listen without interruption
 - Apologise genuinely for their experience
 - Ask what would make it right
 
-**Step 3:** Resolution options (Manager decides)
+**Step 3:** Resolution options (Venue Manager decides)
 - Partial or full refund
 - Complimentary service on next visit
 - Explanation (if clinical: factual, not defensive)
@@ -370,8 +370,8 @@ After every visit, patient receives:
 **Step 4 — Escalation to Anthony (if needed):**
 - If the complaint involves a clinical adverse event (vasovagal, injury, allergic reaction)
 - If the client is threatening legal action or media
-- If Manager cannot reach a resolution within 48 hours
-- Manager contacts Anthony directly with: complaint summary, what was offered, client's response, recommended next step
+- If Venue Manager cannot reach a resolution within 48 hours
+- Venue Manager contacts Anthony directly with: complaint summary, what was offered, client's response, recommended next step
 
 **Step 5:** Document in complaints register with outcome
 - Keep for 7 years
@@ -382,6 +382,8 @@ After every visit, patient receives:
 ## Changelog
 
 **2026-07-19** — Found via founder-requested contradiction scan. No factual contradictions found in this document's content. Flagged a naming-consistency issue: uses "Manager" throughout (19 instances) rather than "Venue Manager" used elsewhere post-rename, and one self-conditioning subtenant-insurance line that's inapplicable (not wrong) under the no-subtenant model. See banner at top of file and `docs/01_conflicts_log.md`.
+
+**2026-07-19 (full fix, same day — supersedes the flag-only pass above)** — Actually fixed all 19 "Manager" instances to "Venue Manager" throughout the document, rather than leaving it flagged. Also corrected the A1 checklist's subtenant-insurance line to note it's currently inapplicable (no subtenants exist) rather than presenting it as a live requirement.
 
 **Response time SLA:**
 - Same-day acknowledgement: 100%
