@@ -570,7 +570,7 @@ Minimum required: receptionist cross-trained as backup opener; phlebotomist cros
 ## ACTION PRIORITY LIST
 
 ### Must Fix Before Lease is Signed
-1. Resolve TPI/DVA pension question with DVA-qualified advisor (CF-07)
+1. ~~Resolve TPI/DVA pension question with DVA-qualified advisor (CF-07)~~ **Removed from this GTT action list 2026-07-19 — Anthony's personal matter, handled by him directly, not a GTT Center Perth task (stated twice). CF-07's underlying legal analysis above is unchanged; only its tracking as an action item here is removed.**
 2. Resolve staff hours conflict — full-time or part-time? Update all cost models (CF-01)
 3. Contact WDP AND PathWest simultaneously (CF-03)
 4. Write privacy-policy.md before any waitlist collection begins (OG-07)
@@ -608,3 +608,5 @@ Minimum required: receptionist cross-trained as backup opener; phlebotomist cros
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): updated the OG-03 historical finding to reflect the current emergency-plan.md wording ("Venue Manager stays with patient", not "Imara"). Added a clarifying note to CF-07 distinguishing the (unchanged) Imara personal TPI/trust-distribution question from the new, separate Venue Manager payroll role. CF-07's substantive legal analysis about Imara's remuneration and TPI means-testing is unchanged and still requires DVA-adviser sign-off — see `financial-model.md`/`research.md`/`dva-tpi-research.md`.
+
+**2026-07-19 (founder feedback round 3)** — Removed the DVA/TPI item from the "Must Fix Before Lease is Signed" action list — Anthony's personal matter, not a GTT Center Perth task, stated twice. CF-07's underlying legal analysis is unaffected; only its tracking as an active GTT action item is removed.
