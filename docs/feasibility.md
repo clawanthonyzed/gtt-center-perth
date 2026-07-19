@@ -191,7 +191,7 @@ Wellness services have minimal regulatory barriers. Standard fair work employmen
 | Nail tech | MA000005 | 38 | Good supply | Low |
 | Brows/beauty | MA000005 | 22.5 (casual) | Good supply | Low |
 | Receptionist | MA000002 | 38 | Good supply | Low |
-| MD (Imara — operations manager) | Management salary | Full time | N/A — Imara | N/A |
+| MD (Venue Manager — operations manager, new hire, not yet in place) | Management salary | Full time | N/A — critical-path hire | N/A |
 
 **Phlebotomists (x2) are the highest-risk hire.** Start recruitment 12 weeks before open — both must be credentialed by WDP/PathWest before venue opens (see operations-manual.md, gtt-clinical-protocol.md). Use AIMS (Australian Institute of Medical Scientists) job board and approach WDP/PathWest for referrals.
 
@@ -249,11 +249,11 @@ Wellness services have minimal regulatory barriers. Standard fair work employmen
 | Phlebotomist hire failure | Medium | High | 🔴 High | Start recruitment 12 weeks early. Engage WDP for referrals. Offer above-award rate. |
 | Low initial patient volume (< 5/day Month 1) | Low | Medium | 🟡 Medium | 300+ waitlist target before opening eliminates this. |
 | Copycat competitor enters market | Medium | Medium | 🟡 Medium | First-mover + midwife referral lock-in (Reed's programme). 18-month head start. |
-| Key staff departure (phlebotomist or Imara) | Medium | High | 🔴 High | Cross-train second phlebotomist by Month 6. Succession plan for Imara. |
+| Key staff departure (phlebotomist or Venue Manager) | Medium | High | 🔴 High | Cross-train second phlebotomist by Month 6. Succession plan for Venue Manager. |
 | Fair Work audit / award underpayment | Low | High | 🟡 Medium | Fern (HR) monitors award rates. Annual wage review. |
 | WDP price increase or exit | Low | High | 🟡 Medium | PathWest as secondary partner. Maintain relationship with both. |
 | Patient adverse event (fainting, collapse) | Low | Very High | 🔴 High | Cora protocols. Staff CPR/first aid. 000 poster in collection room. |
-| Negative online review | Medium | Medium | 🟡 Medium | Jade responds within 24hr. Clinical complaints escalated to Imara + Cora. |
+| Negative online review | Medium | Medium | 🟡 Medium | Jade responds within 24hr. Clinical complaints escalated to Venue Manager + Cora. |
 | Property purchase (trust) capital tied up | Low | Low | 🟢 Low | Year 2–3 decision only. Not time-pressured. |
 | 2028 trust distribution tax changes | Medium | Medium | 🟡 Medium | Review entity structure in 2027. Theodore monitors legislation. |
 | GST compliance error (mixed supply) | Medium | Medium | 🟡 Medium | Accountant setup from Day 1. Xero split GST coding. |
@@ -317,7 +317,7 @@ Wellness services have minimal regulatory barriers. Standard fair work employmen
 | Clinical compliance pathway clear | ✅ | | GO |
 | Financial break-even achievable | ✅ | | GO |
 | Startup capital accessible | ✅ | | GO |
-| Imara committed to MD role | ✅ | | GO |
+| Venue Manager role defined and recruitment planned (critical-path hire, new hire, not yet in place) | ✅ | | GO |
 | YETI Trust structure appropriate | ✅ | | GO |
 | No regulatory show-stoppers found | ✅ | | GO |
 | Risk level acceptable | ✅ (manageable) | | GO |
@@ -332,3 +332,9 @@ The primary risk is execution quality, not market viability. Perth has the popul
 
 *Document owner: Grace (Operations Manager) | Reviewed by: Bruno (Finance), Cora (Clinical)*  
 *Next review: Month 3 actuals — confirm market assumptions*
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced operational references to "Imara" (MD/operations manager role) with "Venue Manager" (new hire, not yet in place). Imara's funding/ownership role is unaffected — see `financial-model.md`/`research.md`.
