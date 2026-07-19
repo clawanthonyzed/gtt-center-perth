@@ -171,6 +171,8 @@ Over 12 months: A$44,928 in overstated profit.
 
 **Status: 🟡 DEFERRED — not blocking at this stage (Anthony, 2026-06-10).** Salary vs trust-distribution split for Imara/Anthony not reviewed this pass. Revisit alongside DVA adviser consultation (see Open Decisions, `reading-order.md`). Original analysis below retained unchanged.
 
+> **Note (2026-07-19):** Founder decision confirmed 2026-07-18 — Imara is not the on-site operational manager; a separate Venue Manager (new hire) fills that role and draws its own salary (see `staff-plan.md`, `hr-framework.md`). This does not resolve the CF-07 question below, which is specifically about Imara's personal remuneration/trust-distribution arrangement and TPI means-testing exposure — that analysis is unchanged and still requires DVA-adviser sign-off. The Venue Manager's salary is a separate payroll line with no TPI/means-testing implication for Anthony (Venue Manager is not his partner).
+
 **Severity: 🔴 HIGH — potential pension loss for Anthony**
 
 Documents repeatedly flag "TPI pension — consult accountant" but never resolve it. The CLAUDE.md states this is non-negotiable. Multiple documents say Imara can receive trust distributions, but:
@@ -244,13 +246,13 @@ Without this: no informed consent = potential liability if anything goes wrong d
 
 **Status: ✅ RESOLVED Day 48** — `emergency-plan.md` exists (see `reading-order.md` PHASE 10). Audit was stale.
 
-Documents mention "call 000" and "Imara stays with patient." ~~No formal emergency plan covering:~~ For QC review, `emergency-plan.md` should cover:
+Documents mention "call 000" and "Venue Manager stays with patient" (updated 2026-07-19 from "Imara stays with patient" — see emergency-plan.md changelog). ~~No formal emergency plan covering:~~ For QC review, `emergency-plan.md` should cover:
 - Location of first aid kit (not specified)
 - Location of AED/defibrillator (not specified — is there one?)
 - Emergency exit routes
 - Evacuation assembly point
 - Who calls 000 vs who stays with patient vs who manages other patients
-- What to do if Imara is not present
+- What to do if the Venue Manager is not present
 - Pregnancy-specific emergency considerations (ambulance must know patient is pregnant)
 
 WorkSafe WA requires a documented emergency plan. Without it: WHS non-compliance from Day 1.
@@ -600,3 +602,9 @@ Minimum required: receptionist cross-trained as backup opener; phlebotomist cros
 *Audit completed by: Idea Lobster (Claude — Idea Lobster mode) | June 2026*  
 *Document owners: Grace (Operations), Bruno (Finance), Cora (Clinical), Jade (CX)*  
 *All findings require Anthony sign-off before remediation begins*
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): updated the OG-03 historical finding to reflect the current emergency-plan.md wording ("Venue Manager stays with patient", not "Imara"). Added a clarifying note to CF-07 distinguishing the (unchanged) Imara personal TPI/trust-distribution question from the new, separate Venue Manager payroll role. CF-07's substantive legal analysis about Imara's remuneration and TPI means-testing is unchanged and still requires DVA-adviser sign-off — see `financial-model.md`/`research.md`/`dva-tpi-research.md`.
