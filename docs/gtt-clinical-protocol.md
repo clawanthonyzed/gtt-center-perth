@@ -70,7 +70,7 @@ T=120+30 (10:30am)
 
 ### GTT Start Times (Staggered)
 
-> **Superseded by operations-manual.md (Day 49):** the 4-slot table below predates the verified 2-chair capacity model. operations-manual.md's GTT Scheduling Timetables section is authoritative for actual launch slot times, draw timing, and staffing.
+> **Superseded by operations-manual.md (Day 49); operations-manual.md itself now superseded (flagged 2026-07-19 — see `docs/01_conflicts_log.md`):** the 4-slot table below predates the verified 2-chair capacity model. The current canonical timetable is Scenario C synchronized-start (10 clients/day, 07:00 first draw) in `docs/scenario-c-sync-timetables.md` — not the 8-client Scenario B tables in operations-manual.md, which are themselves stale pending rewrite.
 
 | Slot | Fasting draw | 1-hour draw | 2-hour draw | Latest depart |
 |---|---|---|---|---|
@@ -79,7 +79,7 @@ T=120+30 (10:30am)
 | Slot C | 8:30am | 9:30am | 10:30am | 10:45am |
 | Slot D | 9:00am | 10:00am | 11:00am | 11:15am |
 
-8 GTT patients per day from Day 1 (2 phlebotomists + 2 collection chairs, alternating-client assignment — Chair A/Phlebotomist A takes odd-numbered clients, Chair B/Phlebotomist B takes even-numbered). See operations-manual.md for the verified per-client and per-staff timetable.
+10 GTT patients per day (2 phlebotomists + 2 collection chairs, synchronized start, 07:00 first draw). See `docs/scenario-c-sync-timetables.md` for the current verified per-client and per-staff timetable.
 
 ---
 
@@ -287,3 +287,5 @@ Before any phlebotomist performs their first collection at GTT Center Perth:
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`. Note: this protocol relies on the Venue Manager as the clinical escalation contact and EpiPen first aider — reinforces the critical-path hiring need documented in `hr-framework.md` §13.
+
+**2026-07-19 (audit pass)** — Updated the client-count claim from 8/day (Scenario B) to 10/day (Scenario C synchronized-start), matching `HANDOFF.md`'s confirmed current operational model, and repointed the "see operations-manual.md" reference to `scenario-c-sync-timetables.md` since operations-manual.md's own timetable section is now flagged stale.

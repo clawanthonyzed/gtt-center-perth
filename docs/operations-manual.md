@@ -268,6 +268,8 @@ Never accept a 9th booking without confirming chair/staff cover via the Scenario
 
 ## GTT SCHEDULING TIMETABLES
 
+> **SUPERSEDED (flagged 2026-07-19 — see `docs/01_conflicts_log.md` for full detail):** Everything below this point describes **Scenario B (8 clients/day, 07:40 first draw)**. Per `HANDOFF.md` (2026-07-17), the current committed operational model is **Scenario C, synchronized-chair-start (10 clients/day, 07:00 first draw)** — fully verified, zero double-bookings, in `docs/scenario-c-sync-timetables.md` (canonical) and `docs/am-capacity-weekend.md` §"SCENARIO C — Verified 07:00 Start Timetable" (staggered predecessor version, also superseded by the sync version). **Use `scenario-c-sync-timetables.md` for the actual launch timetable — do not use the Scenario B tables below for live operations.** This section is retained for historical/methodology reference only (it established the timing-rule pattern that Scenario C reuses) and should be replaced wholesale with the Scenario C content in a follow-up edit — flagged in `docs/04_roadmap_next_steps.md` as a priority action.
+
 ### Key Rules (corrected Day 49 — replaces prior +50/+105 pattern)
 
 Relative to each client's booked GTT start time (X):
@@ -345,3 +347,5 @@ Draw alert: set phone timer 5 min before each draw window. Services do NOT get i
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`.
+
+**2026-07-19 (audit pass)** — Flagged the "GTT SCHEDULING TIMETABLES" section (Scenario B, 8 clients/day) as superseded by Scenario C synchronized-start (10 clients/day) per `HANDOFF.md` and `scenario-c-sync-timetables.md`. Section not yet rewritten — see `docs/01_conflicts_log.md` and `docs/04_roadmap_next_steps.md` for the follow-up action.
