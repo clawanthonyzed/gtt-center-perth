@@ -7,6 +7,10 @@
 
 ---
 
+> **SUPERSEDED (2026-07-19):** Founder decision confirmed 2026-07-18 — Imara is NOT the operational manager. A separate **Venue Manager** role (new hire, not yet in place) is now the on-site Managing Director / day-to-day operational authority. Imara remains the funding partner/trust beneficiary only (see `financial-model.md`, `research.md`). References below to "Anthony + Imara confirm..." decisions on operational matters are historical — those decisions have since been superseded by the Venue Manager model. The Venue Manager is now a **critical-path hire** that should begin recruitment immediately (Week 1) — see `staff-plan.md` §7, `hr-framework.md` §13.
+
+---
+
 ## Phase 0: Planning Month (Weeks 1-4)
 **Period:** 2026-06-09 to 2026-07-09
 **Rule:** NO physical actions. No lease signing. No equipment purchase. Plan only.
@@ -15,7 +19,7 @@
 - [ ] Read all documents in this venture folder (read order: README -> research.md -> this file -> financial-break-even-staff.md -> services-pricing-locked.md)
 - [ ] Anthony + Imara confirm: north or south Perth location preference
 - [ ] Anthony + Imara confirm: launch with Option A (PathWest partner) or pursue Option B from day 1
-- [ ] Anthony + Imara confirm: is Imara the operational manager? (Recommended)
+- [x] ~~Anthony + Imara confirm: is Imara the operational manager?~~ **SUPERSEDED 2026-07-19 — RESOLVED NO.** Imara is not the operational manager. A dedicated Venue Manager (new hire, not yet in place) fills this role — see banner above. **Begin Venue Manager recruitment immediately — this is now Week 1 critical path, in parallel with location/partner decisions below.**
 - [ ] Anthony + Imara confirm: YETI Trust is the operating entity (confirmed in research.md)
 - [ ] Consult DVA financial adviser — confirm TPI/SRDP implications (see dva-tpi-research.md)
 - [ ] Contact Bloom Baby Ultrasound — gauge interest in subtenant partnership (reed agent to prepare)
@@ -42,7 +46,7 @@
 ### Week 4 (2026-06-30 to 2026-07-09)
 - [ ] Select preferred venue location (must have: ground floor, 110+ sqm, parking, zoning allows allied health/beauty)
 - [ ] Legal: lease heads of agreement (NOT full lease yet — negotiate key terms first)
-- [ ] Finalise services menu with Imara (services-pricing-locked.md confirmed)
+- [ ] Finalise services menu with Anthony/Venue Manager (services-pricing-locked.md confirmed)
 - [ ] Budget confirmed: fit-out estimate A$150K-280K; equipment A$60-80K; working capital A$50K
 - [ ] Confirm entity setup complete: YETI Trust ABN, GST registration, business bank account
 - [ ] Option B timeline: NATA consultant engaged, QMS template purchased
@@ -173,6 +177,7 @@
 |------|-------|
 | DVA financial advice | Anthony (personal action — cannot be delegated) |
 | Location decision | Anthony + Imara |
+| **Venue Manager recruitment (CRITICAL PATH)** | **Anthony/Grace — begin Week 1, see staff-plan.md §7** |
 | Commercial real estate enquiries | Reed (agent) |
 | PathWest + WDP approach | Reed (agent) |
 | Bloom Baby approach | Reed (agent) |
@@ -183,3 +188,9 @@
 | Receptionist/Manager JD | Grace (ops agent) |
 
 See team-startup.md for full team roles.
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): the Week 1 question "is Imara the operational manager?" is resolved NO — a dedicated Venue Manager (new hire, not yet in place) fills this role instead. Imara remains the funding partner/trust beneficiary, unaffected — see `financial-model.md`/`research.md`. Added Venue Manager recruitment as a Week 1 critical-path task in the "Who Is Doing What" table, alongside existing critical-path items.
