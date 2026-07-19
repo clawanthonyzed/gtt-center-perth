@@ -114,6 +114,21 @@ Fair Work Commission increases minimum wages annually (typically July 1). Confir
 
 *Phlebotomists in Perth private pathology typically earn A$26–32/hr. Benchmark against WDP/Sonic Healthcare advertised rates at hire time.*
 
+#### Saturday Ordinary-Hours Question — Investigation (2026-07-19)
+
+**Conclusion: still unconfirmed — could not be independently verified this session. Financial models must continue using the conservative full-penalty-rate assumption until a payroll advisor or Fair Work directly confirms otherwise.**
+
+**What was investigated:** `HANDOFF.md` (2026-07-17) flagged "a clause exists suggesting Saturday 8am–4:30pm may count as *ordinary hours* for private pathology practices" under MA000027. Anthony instructed proceeding to verify and document this properly ("do what you need to") rather than leaving it open indefinitely.
+
+**Capability gap, flagged explicitly:** This session has no live web-fetch/browse tool available (no WebFetch/WebSearch/webclaw access in this tool session) to pull the actual current Fair Work MA000027 clause text from fairwork.gov.au or the Fair Work Commission's award database. The skills scanned and confirmed activated for this venture (`australian-tax-accounting`, `business-advisory-australia`, `financial-planning-australia`, `property-investment-australia`, `stop-slop`) do not cover Fair Work award clause interpretation — confirmed via the shared skill library scan (2026-07-19), which found no dedicated Fair Work/modern-award-interpretation skill anywhere in `/opt/openclaw/shared/skills/`. Fabricating a specific clause citation without being able to verify it against the source would be worse than reporting this gap plainly.
+
+**What can be said with confidence:**
+- The underlying legal question is real and worth resolving: MA000027 (Health Professionals and Support Services Award) does structure ordinary hours differently across its various classifications and industry sectors, and it is plausible that a private pathology/collection-centre classification has different Saturday span-of-hours provisions than the general default. This is not implausible on its face.
+- It cannot be confirmed as true or false from this session without either (a) a live fetch of the current award text, or (b) direct advice from a payroll advisor / Fair Work's own advice line.
+- **This is upside-only** — if the carve-out is real, it reduces Saturday phlebotomist labour cost below what every current financial model assumes (which uses full Saturday penalty rates throughout, per `am-capacity-weekend.md` and `HANDOFF.md`). No financial model currently overstates profitability by assuming the carve-out exists — the conservative assumption is already the one in use everywhere.
+
+**Recommended next step (not completed this session):** Either (a) a payroll advisor engaged as part of the Week 1 accountant/solicitor brief (see `financial-setup.md` Step 1) is asked this specific question directly, or (b) Fair Work's Infoline (13 13 94) is called directly. Both are more reliable than a web search for a specific award-clause interpretation question, and neither depends on a tool this session lacks. Update this section with the actual answer once received — do not treat this note as the final word.
+
 ---
 
 ## 5. SUPERANNUATION
@@ -316,3 +331,5 @@ The Venue Manager (Managing Director) role is a **critical-path hire** — the v
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`. Added new §13 formalising the Venue Manager as a critical-path hire.
+
+**2026-07-19 (Saturday carve-out investigation)** — Per Anthony's instruction ("do what you need to"), investigated the MA000027 Saturday ordinary-hours question rather than leaving it open indefinitely. Conclusion: still unconfirmed — this session has no live web-fetch tool to verify the actual current award text, and no shared skill covers Fair Work award interpretation (confirmed via library scan). Documented the gap explicitly and recommended a payroll advisor or Fair Work Infoline as the reliable next step, rather than guessing at a clause citation. Financial models continue conservatively assuming full penalty rates — this is upside-only, not a risk.
