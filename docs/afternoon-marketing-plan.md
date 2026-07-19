@@ -64,8 +64,8 @@ These are referral partners who reach the afternoon customer that midwives don't
 ### Partnership Approach
 
 **Week 1 of each partner outreach (Reed + Poppy coordinate):**
-1. Personal visit or call from Imara — not just email
-2. Offer: Imara visits the studio/practice for a 20-minute introduction coffee
+1. Personal visit or call from the Venue Manager — not just email
+2. Offer: Venue Manager visits the studio/practice for a 20-minute introduction coffee
 3. Leave: A5 referral card (premium printed), our menu card, business cards
 4. Give: 2 complimentary afternoon visits (partner experiences the service, becomes a genuine advocate)
 5. Follow up: 2 weeks later with a "how can we make this work for your clients?" call
@@ -73,7 +73,7 @@ These are referral partners who reach the afternoon customer that midwives don't
 **Formal partner offer (for top 10 partners):**
 - 10% referral credit for every booking they send (tracked via Fresha "How did you hear about us?" field)
 - OR: exclusive "partner pricing" for their clients (A$10 off first visit)
-- Quarterly check-in: Imara visits the top 5 partners in person every 3 months
+- Quarterly check-in: Venue Manager visits the top 5 partners in person every 3 months
 
 ---
 
@@ -135,7 +135,7 @@ Perth has active pregnancy and parenting Facebook communities. Organic engagemen
 |---|---|---|
 | Perth Mums Group | Facebook (200K+ members) | Monthly post: answer questions about pregnancy wellness. Mention GTT Center Perth naturally. Never hard-sell. |
 | Perth Pregnancy Support | Facebook | Educational content: "safe nail polish in pregnancy" type posts |
-| QEII / SCGH Mum Groups | Facebook | Organic mention strategy — Imara joins as a member, adds value |
+| QEII / SCGH Mum Groups | Facebook | Organic mention strategy — Venue Manager joins as a member, adds value |
 | Bubhub Perth | bubhub.com.au/wa | Venue listing + editorial content |
 | Mumbrella (editorial) | mumbrella.com.au | Press release when we open — wellness angle |
 
@@ -218,3 +218,9 @@ The afternoon shift is perfectly positioned for postnatal customers (new mothers
 *Owner: Poppy (Marketing Agent)*  
 *Coordinate with: Reed (partnership outreach), Jade (CX — post-visit afternoon sequence), Ivy (Fresha booking configuration)*  
 *Launch: afternoon content strategy begins Week 9 (with Instagram launch). Partner outreach begins Week 2.*
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced operational/on-site references to "Imara" (personal partner visits, community group engagement) with "Venue Manager" (new hire, not yet in place). Ownership/trust structure unaffected — see `financial-model.md`/`research.md`.
