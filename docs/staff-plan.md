@@ -283,14 +283,16 @@ GTT Center Perth has no subtenants. The 3D scan operator and dietitian sublet ro
 
 ## 7. HIRING TIMELINE
 
-| Role | Hire by | Notes |
+> **Sequencing note (2026-07-19 — founder instruction):** GTT Center Perth is NOT recruiting or looking for any staff — including the Venue Manager — until a physical venue location is confirmed. The "Week 1" labels below describe the relative sequence of hires once recruitment begins, not literal calendar weeks starting now. The Venue Manager remains the first hire and still sits on the critical path, but "critical path" here means "first to hire once location is sorted," not "hire immediately."
+
+| Role | Hire by (relative to recruitment start, not now) | Notes |
 |---|---|---|
-| **Venue Manager (Managing Director)** | **Week 1 — CRITICAL PATH** | **Must be hired first. Venue cannot safely open without this role in place — first-aid/EpiPen holder, fire warden, clinical escalation contact, and day-to-day staff supervisor all depend on it. Blocks all downstream hiring and training coordination.** |
-| Phlebotomist (x2 — Chair A and Chair B) | Week 7 | Both must be credentialed by WDP/PathWest before venue opens |
-| Receptionist | Week 12 | Train 3 weeks before soft open |
-| Pregnancy massage therapist | Week 12 | Trial run during test operations week |
-| Nail technician | Week 12 | Trial run during test operations week |
-| Beauty therapist/brows | Week 14 | Casual initially — confirm demand first |
+| **Venue Manager (Managing Director)** | **Recruitment Week 1 — CRITICAL PATH, but does not begin until a location is confirmed** | **First hire once recruitment starts. Venue cannot safely open without this role in place — first-aid/EpiPen holder, fire warden, clinical escalation contact, and day-to-day staff supervisor all depend on it. Blocks all downstream hiring and training coordination. Job posting document ready: `docs/venue-manager-job-posting.md` — built in advance, not yet posted.** |
+| Phlebotomist (x2 — Chair A and Chair B) | Recruitment Week 7 | Both must be credentialed by WDP/PathWest before venue opens |
+| Receptionist | Recruitment Week 12 | Train 3 weeks before soft open |
+| Pregnancy massage therapist | Recruitment Week 12 | Trial run during test operations week |
+| Nail technician | Recruitment Week 12 | Trial run during test operations week |
+| Beauty therapist/brows | Recruitment Week 14 | Casual initially — confirm demand first |
 
 ---
 
@@ -322,3 +324,5 @@ GTT Center Perth has no subtenants. The 3D scan operator and dietitian sublet ro
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (Managing Director role, new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — see `financial-model.md`/`research.md` for ownership structure, which is unaffected by this change. Added Venue Manager as the Week 1 critical-path hire in the Section 7 hiring timeline (venue cannot safely open without EpiPen/first-aid/fire-warden/escalation coverage in place).
 
 **2026-07-19 (audit pass)** — Added a clarifying note that the client-volume model has moved from Scenario B (8/day) to Scenario C synchronized-start (10/day) — headcount/staffing conclusions in this document are unaffected, since Scenario C runs on the same staff numbers.
+
+**2026-07-19 (founder feedback round 2)** — Corrected §7 Hiring Timeline: GTT Center Perth is NOT recruiting or looking for any staff, including the Venue Manager, until a physical venue location is confirmed (direct founder instruction). Reworded "Week 1" labels to make clear they describe sequence-once-recruitment-starts, not literal weeks starting now. Venue Manager remains the first hire and still sits on the critical path once recruitment does begin. Job posting document now built and ready: `docs/venue-manager-job-posting.md`.
