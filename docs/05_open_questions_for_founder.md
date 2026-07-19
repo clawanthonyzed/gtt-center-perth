@@ -9,55 +9,40 @@
 
 ## BLOCKING (nothing should proceed past these with full confidence)
 
-### Q1. DVA Adviser Consultation — TPI Pension / Trust Distribution Interaction
-**Status:** Deferred, not yet actioned (Anthony, 2026-06-10) — still open as of this session.
-Multiple documents project Imara receiving a salary or trust distribution (~A$72,500/year in earlier models) from the venture. If Anthony and Imara are assessed as a de facto couple under DVA means-testing rules, this income could reduce or eliminate Anthony's TPI pension. **This is a legal prerequisite before signing any lease or hiring anyone** (CLAUDE.md non-negotiable rule; `review-audit.md` CF-07).
-**What's needed:** A one-time consultation with a DVA-qualified financial adviser (not just a general accountant).
-**Note (2026-07-19):** This is separate from the new Venue Manager payroll role, which has no TPI/means-testing implication for Anthony (Venue Manager is not his partner) — see `staff-plan.md`, `hr-framework.md` §13. This question is specifically about Imara's personal remuneration arrangement.
+### Q2. WDP Courier/Specimen Cutoff Time — Never Actually Confirmed; Overnight Storage Now Also a Question
+**Status:** Open. WDP has been emailed (2026-07-19 update) — awaiting reply. PathWest and Clinipath have NOT yet been emailed (1 of 3 pathology partners contacted so far — see Q6).
+Every AM capacity figure above 8 clients/day (the entire case for Scenario C, +25% daily revenue capacity vs Scenario B) depends on this cutoff number (two conflicting unconfirmed figures in use: 11:30 and 12:30, neither from an actual WDP reply).
+**Founder update (2026-07-19):** When WDP replies, Anthony will ask two things: (1) the actual specimen cutoff time, AND (2) whether overnight blood storage + next-day lab collection is viable as an alternative model. **This second question is not answered here — it depends entirely on WDP's reply and is not something to speculate on in the interim.** Both answers should be captured back into `cutoff-time-CORRECTION.md` and this doc once received.
 
-### Q2. WDP Courier/Specimen Cutoff Time — Never Actually Confirmed
-**Status:** Open — two different unconfirmed numbers in use (11:30 and 12:30), neither from an actual WDP reply.
-Every AM capacity figure above 8 clients/day (the entire case for Scenario C, +25% daily revenue capacity vs Scenario B) depends on this number. Chemistry research this session found no clinical reason forcing an early cutoff — it's most likely WDP's own courier/logistics schedule, which may be negotiable.
-**What's needed:** Direct confirmation from WDP of their actual specimen dispatch cutoff time. Reed (partnerships agent) can make this call once Anthony approves the outreach framing (see Q6 below — already approved in principle, but the specific cutoff-time question hasn't had a direct answer yet).
-
-### Q3. King Edward Hospital "Start Before 10am" Guidance — Source Not Found
-**Status:** Open — reported by Anthony from a KEMH conversation/referral form/fact sheet, but the underlying published document could not be located by search this session.
-Scenario C (current model) passes this comfortably. Scenario D (growth scenario, 15 clients/day) fails on a strict reading. If the guidance is real but unwritten, GTT Center Perth needs it in writing before either relying on it or safely disregarding it for Scenario D planning.
-**What's needed:** Either point to the actual source document, or get written confirmation from KEMH or a referring practice.
+### Q3. King Edward Hospital "Start Before 10am" Guidance
+**Status:** Clarified 2026-07-19 — **not a documentation gap, a sourcing clarification.** Anthony confirmed the "before 10am" claim came from general internet research, not a specific locatable KEMH document (referral form, fact sheet, etc.). This is now recorded as **general clinical guidance, source: internet research** — not "unsourced" or "unlocatable," since further searching for a non-existent specific document isn't a useful next step. Scenario C (current model) passes this guidance comfortably; Scenario D (growth scenario, 15 clients/day) fails on a strict reading. If greater certainty is wanted before relying on this for Scenario D planning, the only path is a direct question to KEMH or a referring practice — not further web search.
 
 ---
 
 ## NOT BLOCKING, BUT NEEDS A DECISION
 
 ### Q4. Package Price-Increase Timing
-**Status:** Open, no fixed answer.
-Introductory pricing (Package 2 A$250, Package 3 A$300) is in place. When should prices increase — Month 3 or Month 4? Recommendation in `HANDOFF.md` leans Month 4 (aligns with the venture's own break-even milestone) but is not yet confirmed by Anthony.
+**Status:** Open, no fixed answer. **New deliverable added 2026-07-19:** `docs/price-increase-comparison.md` now lays out the financial comparison between increasing at various months vs holding price steady, using `financial-model.md`/`profit-loss-tables.md` figures, to support this decision when Anthony is ready to make it.
 
-### Q5. MA000027 Saturday Phlebotomist Ordinary-Hours Carve-Out
-**Status:** Open — a clause potentially allowing Saturday 8am–4:30pm to count as ordinary hours (not penalty rate) for private pathology practices has not been verified.
-Not blocking — all current financial models conservatively assume full penalty rates, so this is upside-only (potential cost saving if confirmed favourable). Needs a payroll advisor or direct Fair Work confirmation whenever convenient.
-
-### Q6. WDP/PathWest/Clinipath Partnership Approach — Approved in Principle, Awaiting Replies
-**Status:** In progress. Anthony approved Reed to engage WDP/PathWest (+Clinipath as contingency) — outreach sent this quarter in planning-phase framing ("we are exploring," not "we are establishing," per Anthony's earlier correction). Awaiting replies as of `HANDOFF.md` (2026-07-17).
-No action needed from Anthony right now beyond continuing to await/follow up on replies — logged here so it isn't lost, and because Q2 (cutoff time) will likely be answered in the same conversation once WDP responds.
-
-### Q7. Brand Name — "GTT Center Perth" or a Premium Alternative Name?
-**Status:** Still open per `reading-order.md` — "needs Anthony's input."
-Poppy (marketing agent) has been carrying this as pending. No alternative names logged as under consideration in the corpus as reviewed this session.
+### Q6. Pathology Partnership Outreach — 1 of 3 Contacted
+**Status:** In progress, updated 2026-07-19. **WDP: emailed, awaiting reply.** PathWest and Clinipath: NOT yet emailed (approved in principle as contingency partners, but outreach not yet sent). See `reed-partnerships.md` / `pathology-partnership-brief.md` for status tracking going forward.
+No action needed from Anthony right now beyond deciding if/when Reed should also reach out to PathWest and Clinipath in parallel, or wait for WDP's reply first.
 
 ### Q8. Second Venue / Interstate Expansion Timeline
-**Status:** Not urgent — explicitly logged as a 12-month proof-of-model precondition in `strategic-concerns-growth.md`.
-Victoria mentioned informally as a possible future interstate location, no timeline attached. Just logged so it isn't lost, not something requiring a decision now.
+**Status:** Clarified 2026-07-19. **Anthony confirmed: the second-venue timeline will be set only after the first venue is running smoothly — there is no earlier estimate, and none should be implied in any roadmap document.** Victoria mentioned informally as a possible future interstate location, no timeline attached.
 
-### Q9. Property Search — Two Live Leads, Neither Contacted Yet
-**Status:** Open, low urgency until Tier 0 items above are resolved.
-Per `HANDOFF.md`: Maylands (160sqm, 10 parking, negotiable rent) and South Perth Hardy St (216sqm, A$4,750/month) are the two live leads found via online search. Neither has been called or viewed. Not strictly a "question" but a pending action Anthony may want to prioritise or delegate.
+### Q9. Property Search — Two Live Leads, No Listing Links Saved Locally
+**Status:** Open. Per `HANDOFF.md`: Maylands (160sqm, 10 parking, negotiable rent) and South Perth Hardy St (216sqm, A$4,750/month) are the two live leads found via online search during a prior session.
+**Checked 2026-07-19 — no listing URL, agent name, or listing ID for either property exists anywhere in this repo.** `location-scouting.md`'s "Specific Properties Flagged for Inspection" table only covers three different Osborne Park addresses (with agent names and commercialrealestate.com.au listing IDs) — Maylands and Hardy St are not in that table or anywhere else searched. `HANDOFF.md` records only the summary figures (size/parking/price), not a source link. **Anthony needs to re-locate these two listings himself (or ask whoever found them originally) — no link exists locally to hand back, and inventing one would be worse than reporting the gap.**
 
 ---
 
-## RESOLVED THIS SESSION (kept here briefly for traceability, will drop off in the next refresh)
+## RESOLVED / REMOVED THIS SESSION (kept here briefly for traceability, will drop off in the next refresh)
 
 - ~~Is Imara the operational manager?~~ **RESOLVED NO (confirmed 2026-07-18).** A dedicated Venue Manager (new hire, not yet in place) fills this role. See `venture-timeline.md` changelog.
+- ~~Q1. DVA Adviser Consultation — TPI Pension / Trust Distribution Interaction~~ **REMOVED 2026-07-19 — Anthony is handling this personally, not delegating it.** (Was previously logged here citing `review-audit.md` CF-07 and the CLAUDE.md non-negotiable rule; removed per direct founder instruction, not because the underlying legal question is resolved — CF-07's substantive analysis in `review-audit.md` is untouched.)
+- ~~Q5. MA000027 Saturday Phlebotomist Ordinary-Hours Carve-Out~~ **RESOLVED 2026-07-19 — Anthony said "do what you need to," so this was researched and documented rather than left open.** See `hr-framework.md` for the conclusion (award clause verified/documented).
+- ~~Q7. Brand Name~~ **CLARIFIED 2026-07-19, not resolved but reframed — not a founder question needing an answer right now.** Anthony confirmed "GTT Center Perth" is a working placeholder/place-name, not a locked final brand. A premium brand name and full branding will be created later, on Anthony's timeline — no decision is being awaited currently. See `brand-guide.md`.
 
 ---
 
@@ -68,3 +53,9 @@ When a new founder-only question surfaces in any future session:
 2. Add a one-line pointer from wherever it was discovered (e.g., a changelog entry saying "see open questions doc Q#").
 3. Do not duplicate the full question text in multiple files — this file is the single source of truth.
 4. When a question is resolved, move it to the "Resolved This Session" section with the resolution and date, then drop it entirely on the next full refresh of this document.
+
+---
+
+## Changelog
+
+**2026-07-19 (founder follow-up round):** Applied Anthony's direct clarifications: removed Q1 (DVA/TPI — Anthony handling personally); updated Q2 (WDP emailed/awaiting reply, PathWest+Clinipath not yet emailed, added the overnight-storage follow-up question); reframed Q3 (KEMH guidance is general internet research, not an unlocatable specific document); added Q4 cross-reference to the new `price-increase-comparison.md` deliverable; resolved Q5 (MA000027 Saturday carve-out — researched and documented, see `hr-framework.md`); clarified Q7 (brand name is an explicit placeholder, not an open decision awaiting an answer); clarified Q8 (second-venue timeline is "after first venue runs smoothly," not a date); updated Q9 (confirmed no property listing links exist anywhere in this repo for Maylands/Hardy St — flagged plainly rather than inventing a URL).
