@@ -1,9 +1,23 @@
 # GTT Center Perth — Equipment Costs: Complete List
 
-**Version:** 1.1 | **Date:** 2026-06-11
+**Version:** 1.2 | **Date:** 2026-07-19 (Phase 6 review — gap found and fixed, see changelog)
 **Purpose:** Full equipment purchase list for all services at launch. Fit-out (construction) costs are separate.
 
-> **Day 51 update.** 3D keepsake scan removed from scope entirely (no subtenant, no Phase 2 purchase) — see `services-pricing-locked.md`. The 3D Keepsake Ultrasound section and the 3D scanner Phase 2 line item have been removed.
+> **Day 51 update.** 3D keepsake scan is a future/Phase 2 income stream, not startup scope (reframed 2026-07-19 — was previously stated here as "removed from scope entirely"; see `hire-purchase-china.md` §1C and `market-research-findings.md` for the corrected framing). The 3D Keepsake Ultrasound section and the 3D scanner Phase 2 line item remain out of the summary budget below, consistent with it not being a startup capital line — see `hire-purchase-china.md` §1C for the reference-only pricing if revisited later.
+
+> **All figures below are estimates from general market research (Australian suppliers + China sourcing options where noted), not confirmed quotes.** Get 3 quotes for any major line item before purchasing, per standing financial-gate practice (`financial-setup.md`).
+
+---
+
+## Capital vs Recurring Summary
+
+Per Phase 6 spec, every item below is also classified as either **one-off capital** (purchased once, before opening) or **recurring/consumable** (ongoing, replenished regularly). The category tables below (§1-12) list items in their logical room/service grouping with a Type column; this summary re-groups the same items by capital-vs-recurring split for quick reference.
+
+| Type | What's included | Approx. range |
+|---|---|---|
+| **One-off capital** (equipment, furniture, fixtures, technology hardware) | Phlebotomy chairs, centrifuge, massage tables, nail stations + LEV, styling chairs + backwash, spray tan booth, lounge furniture, AED, iPads/POS/printers, hire-fleet items (TENS units, birth balls, etc. — bought once, hired out repeatedly) | Majority of the A$49,300-114,700 summary budget below |
+| **Recurring/consumable** (replenished regularly, ongoing spend) | Opening stock and ongoing restocking of: massage oil, nail polish/gel, hair products, facial/beauty products, spray tan DHA solution, pathology consumables (tubes, needles — mostly supplied by the pathology partner), cleaning/disinfection supplies, printed forms, lounge snacks/teas | Captured in each section's "opening stock" lines below — ongoing monthly restocking cost is a separate operating-cost line, see `financial-setup.md`/`cash-flow.md`, not this capital-cost document |
+| **Recurring service/subscription** (not physical stock) | Booking software subscription, medical waste disposal contract | Listed inline in §1 (medical waste) and §8 (booking software) with "/yr" or "/month" units to distinguish from one-off purchases |
 
 ---
 
@@ -16,6 +30,7 @@
 | Nail station | A$5,000 | A$14,000 |
 | Massage rooms (x2) | A$4,000 | A$10,000 |
 | Hair station | A$3,000 | A$7,000 |
+| **Beauty/Brows station (added 2026-07-19 — see §5A, was missing from this list despite Beauty Therapist being a staffed role)** | **A$2,800** | **A$7,200** |
 | Lounge and common area | A$5,000 | A$15,000 |
 | Cafe / partner area | A$2,000 | A$6,000 |
 | Technology (tablets, POS, printers) | A$3,000 | A$7,000 |
@@ -23,7 +38,7 @@
 | China sourced branded wellness items (stock) | A$5,000 | A$10,000 |
 | Emergency + safety equipment | A$1,000 | A$2,500 |
 | Consumables (opening stock) | A$3,000 | A$6,000 |
-| **TOTAL EQUIPMENT** | **A$49,300** | **A$114,700** |
+| **TOTAL EQUIPMENT** | **A$52,100** | **A$121,900** |
 | Fit-out (construction, NOT equipment) | A$150,000 | A$280,000 |
 
 ---
@@ -119,6 +134,28 @@
 | Opening stock: pregnancy-safe hair products (no harsh chemicals) | 1 lot | A$200-400 | A$200-400 |
 | Colour gowns + towels (set of 20) | 1 lot | A$150-250 | A$150-250 |
 | **Hair station TOTAL** | | | **A$3,650-8,250** |
+
+---
+
+## 5A. Beauty/Brows Station (Added 2026-07-19 — this section was missing despite Beauty Therapist being a staffed role, see changelog)
+
+**Gap found:** `staff-plan.md` and the floor plan (`floor-plan-v3.svg`/`floor-plan-concept.md`) both include 2 employed Beauty Therapist/Brows staff and a dedicated facial/beauty treatment room, but this equipment list previously had no corresponding section — only a single "facial products" consumables line (§12) with no facial bed, brow/wax equipment, or lighting. Added below.
+
+| Item | Qty | Unit Price | Total | Type |
+|------|-----|------------|-------|------|
+| Facial/beauty treatment bed (electric, adjustable, vinyl) | 2 | A$400-900 | A$800-1,800 | Capital |
+| Magnifying lamp (LED, adjustable arm) | 2 | A$80-150 | A$160-300 | Capital |
+| Wax heater (dual-pot, professional) | 1 | A$120-250 | A$120-250 | Capital |
+| Brow/lash tool kit (tweezers, brushes, applicators) | 2 sets | A$60-120 | A$120-240 | Capital |
+| Facial steamer (optional, if offering deeper facials) | 1 | A$150-350 | A$150-350 | Capital |
+| Trolley/tool cart | 2 | A$100-200 | A$200-400 | Capital |
+| Opening stock: PPD-free brow tint (pregnancy-safe, per `staff-plan.md` requirement) | 1 lot | A$150-250 | A$150-250 | Recurring/consumable |
+| Opening stock: wax (strip + hard wax, pregnancy-safe) | 1 lot | A$100-200 | A$100-200 | Recurring/consumable |
+| Opening stock: facial products (HA serum, niacinamide, pregnancy-safe masks — cross-ref §12, do not double-count) | — | — | See §12 | Recurring/consumable |
+| Disposable brow/wax consumables (spatulas, strips, patch-test kits) | 1 lot | A$100-200 | A$100-200 | Recurring/consumable |
+| **Beauty/Brows station TOTAL** | | | **A$2,800-7,190** | |
+
+**Note:** Beauty Therapist/Brows staff also use the general facial products stock in §12 — the products line there should not be double-counted against this section's total in the Summary Budget above (it isn't; §12 remains a separate consumables category).
 
 ---
 
@@ -260,3 +297,9 @@
 - services-pricing-locked.md — what services each piece of equipment supports
 - financial-break-even-staff.md — ROI calculations per service
 - pathology-collection-room.md — detailed pathology room specifications
+
+---
+
+## Changelog
+
+**2026-07-19 (Phase 6 review)** — Reviewed this document properly against the Phase 6 spec (organize every item needed to open/operate — clinical equipment, furniture/fit-out, IT/software, consumables — by one-off capital vs recurring/consumable, with estimated unit costs and quantities). Found and fixed one genuine gap: **no Beauty Therapist/Brows equipment section existed**, despite Beauty Therapist/Brows being a staffed role (2 employed staff, `staff-plan.md`) with its own treatment room in the floor plan — only a single facial-products consumables line existed. Added new §5A with facial beds, wax heater, brow/lash tools, and consumables, and updated the Summary Budget total accordingly (A$49,300-114,700 → A$52,100-121,900). Added a Capital vs Recurring Summary section per the Phase 6 spec's explicit request for this classification, cross-referencing each existing category table rather than fully restructuring the document (which is already organized sensibly by room/service area — a wholesale reorganization would be more disruptive than useful). Corrected the Day 51 update banner: 3D scan is a future/Phase 2 consideration, not "removed from scope entirely," matching the reframe applied elsewhere this session (`hire-purchase-china.md`, `market-research-findings.md`, `business-plan.md`, `brand-guide.md`).
