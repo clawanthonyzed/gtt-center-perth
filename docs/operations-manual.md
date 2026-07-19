@@ -3,7 +3,7 @@
 > **2026-07-14 SUPERSEDED — PM MODEL CORRECTED.** References below to a single "PM Service Therapist" delivering "PM Spa Packages" (Package 1/2/3 pricing) are superseded. The confirmed PM model is: **4 dedicated casual hires** (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, delivering **individual standalone services** (not packages) at ~A$95/session average, staffed on actual hours worked — not a blanket shift. Corrected Month 5+ steady state: Total Revenue A$86,020/month, Total Fixed Costs A$79,357/month, **Net P&L +A$6,663/month** — profitable from Month 4 (+A$4,924/month). See `pm-staffing-roster.md` for the full roster, weekly template, and recalculated P&L — this is now the canonical PM reference, superseding this document's PM figures/structure below.
 
 **Version:** 1.0 | **Date:** 2026-06-05  
-**Owner:** Grace (Operations Manager agent) | Imara (Venue Manager, day-to-day authority)
+**Owner:** Grace (Operations Manager agent) | Venue Manager (new hire, not yet in place — day-to-day authority)
 
 > **Day 51 update.** No-interrupt rule now applies to ALL services unconditionally — no hairdressing exception (see §GTT Scheduling Timetables Key Rules). 3D scan operator removed from the Scenario B timetable; Client 5's Service 2 is now Nails (N2). GTT Center Perth has no subtenants — all subtenant-rent references removed (see staff-plan.md). Receptionist/Manager works a split shift, AM block 07:00-12:00 + PM block 15:00-18:00 (see financial-break-even-staff.md CF-01).
 
@@ -11,7 +11,7 @@
 
 ## 1. DAILY OPERATIONS CADENCE
 
-### 7:00am — Imara Opens
+### 7:00am — Venue Manager Opens
 - [ ] Disarm alarm, unlock venue
 - [ ] Check Fresha dashboard: today's bookings, any cancellations overnight, waitlist notifications
 - [ ] Review any emails/calls from previous evening
@@ -20,7 +20,7 @@
 - [ ] Send morning summary to self: today's patient count, service mix, any special notes
 
 ### 7:15am — Receptionist Arrives
-- [ ] Receives venue handover from Imara (verbal + Fresha check)
+- [ ] Receives venue handover from the Venue Manager (verbal + Fresha check)
 - [ ] Prepare lounge: herbal teas out, water available, snack station stocked (check stock levels)
 - [ ] Prepare welcome pack for each patient: referral form, GTT information sheet, QR code card (Google review)
 - [ ] Confirm today's 75g glucose solutions are out of fridge (need 20 min room temp before use) — coordinate with phlebotomist
@@ -45,7 +45,7 @@
 **Reception Arrival Flow (per patient):**
 1. Greet by name: "Good morning [Name], welcome to GTT Center Perth!"
 2. Confirm fasting: "When did you last eat or drink anything except water?"
-   - If fasting < 8 hours: DO NOT proceed to T=0 draw. Consult Imara. Offer to reschedule.
+   - If fasting < 8 hours: DO NOT proceed to T=0 draw. Consult the Venue Manager. Offer to reschedule.
    - If fasting confirmed: proceed
 3. Collect referral form and Medicare card — scan and return originals
 4. Offer water immediately ("The phlebotomist recommends drinking water right now — it makes the draw easier")
@@ -72,12 +72,12 @@
 - Service staff: strip and restock treatment rooms, laundry into hamper, restock supplies
 - Receptionist: finalise Fresha end-of-day report, close payments, print tomorrow's booking sheet
 
-### 12:30pm — EOD Wrap (Imara)
+### 12:30pm — EOD Wrap (Venue Manager)
 - [ ] Fresha daily report: bookings completed, revenue, no-shows, cancellations
 - [ ] Review tomorrow's bookings: any gaps, any patients needing reminder call
 - [ ] Staff sign-off: confirm everyone's hours are correct in Fresha/Xero
 - [ ] Check snack/product stock — add to order list if low
-- [ ] Lock collection room (phlebotomist has locked, Imara double-checks)
+- [ ] Lock collection room (phlebotomist has locked, Venue Manager double-checks)
 - [ ] Lock venue, set alarm
 
 ---
@@ -86,7 +86,7 @@
 
 ### Monday
 - Weekly staff meeting (15 min): previous week's bookings, feedback, issues, this week's schedule
-- Imara reviews weekly P&L (previous week completed)
+- Venue Manager reviews weekly P&L (previous week completed)
 - Payroll: weekly pay run via Xero (pay day Friday — process Monday–Tuesday)
 
 ### Wednesday
@@ -96,7 +96,7 @@
 
 ### Friday
 - Staff paid (weekly pay run)
-- Imara: forward-looking booking check for next 2 weeks — any low weeks needing marketing push?
+- Venue Manager: forward-looking booking check for next 2 weeks — any low weeks needing marketing push?
 - Deep clean of all treatment rooms and collection room (book end-of-week 30 min)
 - Fresha weekly report emailed to Bruno (Finance agent) and Anthony
 
@@ -106,7 +106,7 @@
 - Fern (HR): any HR actions, upcoming leave, compliance checks
 - Cora (Clinical): clinical compliance review, stock audit, phlebotomist credential check
 - Jade (CX): customer feedback summary, NPS score, Google review count
-- Imara: cascade all findings to weekly Monday standup
+- Venue Manager: cascade all findings to weekly Monday standup
 
 ---
 
@@ -153,8 +153,8 @@ Never accept a 9th booking without confirming chair/staff cover via the Scenario
 ## 4. COMMUNICATION PROTOCOL
 
 ### Internal Communication
-- **Primary:** Mattermost #gtt-center-perth channel (AI agent layer — Anthony/Imara oversight)
-- **Venue-level:** WhatsApp group "GTT CP Team" — Imara + all staff
+- **Primary:** Mattermost #gtt-center-perth channel (AI agent layer — Anthony/Venue Manager oversight)
+- **Venue-level:** WhatsApp group "GTT CP Team" — Venue Manager + all staff
 - **Urgent/clinical:** Direct call — phone calls for anything time-sensitive
 - **Formal HR/payroll:** Email with cc to Fern (HR agent)
 
@@ -165,13 +165,13 @@ Never accept a 9th booking without confirming chair/staff cover via the Scenario
 
 ### External — Referral Partners (midwives, OBs)
 - Poppy (Marketing agent): manages all referral partner communications
-- Quarterly check-in: Imara visits top 5 referring practices in person
+- Quarterly check-in: Venue Manager visits top 5 referring practices in person
 - Reed (Partnerships agent): manages formal partner agreements
 
 ### External — Pathology Partner (WDP/PathWest)
 - Phlebotomist: daily specimen dispatch communication
-- Imara: monthly operational review with WDP account manager
-- Any clinical incident: Imara calls WDP clinical liaison same day
+- Venue Manager: monthly operational review with WDP account manager
+- Any clinical incident: Venue Manager calls WDP clinical liaison same day
 
 ---
 
@@ -185,7 +185,7 @@ Never accept a 9th booking without confirming chair/staff cover via the Scenario
 - Target: 20+ Google reviews per month in first 3 months
 
 ### Service Quality
-- Massage: Imara conducts unannounced client satisfaction check-in for first 10 bookings
+- Massage: Venue Manager conducts unannounced client satisfaction check-in for first 10 bookings
 - Nails: No acetone products. 9-free or 12-free polishes only. List approved products on order sheet.
 - Brows: Patch test offered for tinting (PPD-free products mandatory)
 - All services: pregnancy-specific intake form completed on first visit, updated each subsequent visit
@@ -196,7 +196,7 @@ Never accept a 9th booking without confirming chair/staff cover via the Scenario
 - Any specimen rejection → immediate root cause investigation
 
 ### Financial Quality
-- Fresha daily report matches actual payments processed (Imara spot-check weekly)
+- Fresha daily report matches actual payments processed (Venue Manager spot-check weekly)
 - No walkouts without payment — all payments processed at end of visit
 
 ---
@@ -205,21 +205,21 @@ Never accept a 9th booking without confirming chair/staff cover via the Scenario
 
 ### Clinical Incident (patient unwell during GTT)
 1. Phlebotomist assesses immediately
-2. Receptionist calls Imara
-3. If emergency: call 000, Imara stays with patient
+2. Receptionist calls the Venue Manager
+3. If emergency: call 000, Venue Manager stays with patient
 4. Post-incident: complete incident register within 24 hours
 5. Notify WDP/PathWest clinical team same day
 6. If patient required ambulance: notify accountant (insurance claim), notify solicitor
 
 ### Non-Clinical Incident (slip/fall, property damage, complaint)
-1. Imara first response
+1. Venue Manager first response
 2. Document in incident register
 3. Photos taken if relevant (property damage)
-4. Customer complaint: Imara calls same day, resolves within 48 hours
+4. Customer complaint: Venue Manager calls same day, resolves within 48 hours
 5. If insurance claim needed: notify Gallagher/BizCover broker
 
 ### Data Breach
-1. Imara assesses: is patient data involved?
+1. Venue Manager assesses: is patient data involved?
 2. If yes: notify solicitor within 24 hours
 3. Under Privacy Act: notify OAIC if breach is serious and likely to cause harm
 4. Do not notify patients before getting legal advice
@@ -339,3 +339,9 @@ Whiteboard format -- update in real time:
 | [Name] | [time] | [time] | [ ] | [time] | [ ] |
 
 Draw alert: set phone timer 5 min before each draw window. Services do NOT get interrupted for blood draws -- no exceptions, including hairdressing; wait for service to end (within tolerance window).
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`.
