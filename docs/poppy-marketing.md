@@ -300,3 +300,9 @@ Launch posts should use:
 - [Mumsgrapevine Facebook Groups](https://mumsgrapevine.com.au/facebook-groups/)
 - [Squarespace Pricing](https://www.squarespace.com/pricing)
 - [Resend Email Platform](https://resend.com)
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): reviewed for operational/on-site "Imara" references as part of the empire-wide Imara -> Venue Manager rename. All three references in this file are founder-story/marketing content (About page story, team spotlight, PR angle) — Imara's role as co-founder is correct and unaffected here, left unchanged. See `financial-model.md`/`research.md` for the ownership structure. Day-to-day venue operations are run by the Venue Manager (new hire, not yet in place) — see `staff-plan.md`, `operations-manual.md`.
