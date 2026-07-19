@@ -1,7 +1,7 @@
 # GTT Center Perth — In-House GTT Clinical Protocol
 
 **Version:** 1.0 | **Date:** 2026-06-05  
-**Owner:** Cora (Clinical Coordinator) + Imara (Venue Manager)  
+**Owner:** Cora (Clinical Coordinator) + Venue Manager (new hire, not yet in place)  
 **Classification:** Clinical Operations — mandatory compliance document
 
 ---
@@ -191,7 +191,7 @@ Communicated via:
 
 1. Keep patient seated or move to lying position immediately
 2. Do NOT allow patient to stand if dizzy
-3. Call Imara immediately
+3. Call the Venue Manager immediately
 4. If unconscious or not responding: call 000 immediately
 5. Do NOT administer food/glucose until after T=0 draw
 6. If patient cannot complete the test (e.g., vomits the glucose drink): do not reattempt, notify referring doctor, reschedule
@@ -210,7 +210,7 @@ Communicated via:
 
 ### Anaphylaxis
 - Phlebotomist must hold current anaphylaxis training
-- Venue must hold EpiPen (Imara first aider)
+- Venue must hold EpiPen (Venue Manager first aider)
 - Refer to venue emergency management plan
 
 ---
@@ -231,7 +231,7 @@ Communicated via:
 
 ### Privacy Act compliance
 - Patient data stored on Fresha (booking details only) + paper records (collection log)
-- Paper records: locked cabinet, access restricted to Imara and phlebotomist
+- Paper records: locked cabinet, access restricted to the Venue Manager and phlebotomist
 - No patient data shared with third parties except the pathology partner (covered by referral form consent)
 
 ---
@@ -245,7 +245,7 @@ Before any phlebotomist performs their first collection at GTT Center Perth:
 - [ ] Working with Vulnerable People check
 - [ ] CPR/First Aid current (HLTAID011, not older than 3 years)
 - [ ] Anaphylaxis training current
-- [ ] Collection room orientation completed with Imara
+- [ ] Collection room orientation completed with the Venue Manager
 - [ ] Adverse event protocol briefing completed
 - [ ] WDP/PathWest specimen handling training completed
 - [ ] Signed confidentiality agreement
@@ -256,15 +256,15 @@ Before any phlebotomist performs their first collection at GTT Center Perth:
 
 ### Daily
 - Phlebotomist: collection log complete, specimens dispatched on time, fridge temp logged
-- Imara: check adverse event register (no entries = good)
+- Venue Manager: check adverse event register (no entries = good)
 
 ### Weekly
-- Imara: review collection log for any anomalies
+- Venue Manager: review collection log for any anomalies
 - Any WDP/PathWest feedback on specimen quality reviewed
 - Near-miss register reviewed
 
 ### Monthly
-- Imara + Cora (Clinical Coordinator agent): full clinical compliance review
+- Venue Manager + Cora (Clinical Coordinator agent): full clinical compliance review
 - Check: all collection logs complete, all staff credentials current, supply inventory
 
 ### Annually
@@ -281,3 +281,9 @@ Before any phlebotomist performs their first collection at GTT Center Perth:
 - [PathWest — Collection services](https://www.pathwest.health.wa.gov.au/)
 - [NATA — Accreditation standards](https://www.nata.com.au/)
 - [RCPA — Collection guidelines](https://www.rcpa.edu.au/)
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`. Note: this protocol relies on the Venue Manager as the clinical escalation contact and EpiPen first aider — reinforces the critical-path hiring need documented in `hr-framework.md` §13.
