@@ -36,7 +36,7 @@ We operate as a Licensed Collection Centre under [WDP/PathWest]'s NATA accredita
 
 As GTT Center Perth's lead phlebotomist, you are the clinical foundation of the entire business. You perform blood collections for the 75g OGTT (T=0, T=60, T=120) across up to 5 concurrent staggered patients each morning, coordinate specimen dispatch to [WDP/PathWest], and ensure our collection room meets ACSQHC and NATA standards at all times.
 
-You will work in a small, collaborative team — mostly alongside Imara (Managing Director), a receptionist, and wellness practitioners. You are not in a large lab — you are the only phlebotomist on shift (initially), and you own your workspace entirely.
+You will work in a small, collaborative team — mostly alongside the Venue Manager (Managing Director), a receptionist, and wellness practitioners. You are not in a large lab — you are the only phlebotomist on shift (initially), and you own your workspace entirely.
 
 ---
 
@@ -62,7 +62,7 @@ You will work in a small, collaborative team — mostly alongside Imara (Managin
 **Compliance**
 - Maintain compliance with NATA Licensed Collection Centre requirements
 - Maintain collection room to ACSQHC and WDP/PathWest standards
-- Report any specimen rejections or adverse events to Imara same day
+- Report any specimen rejections or adverse events to the Venue Manager same day
 
 ---
 
@@ -132,7 +132,7 @@ Perform OGTT (gestational diabetes) blood collections (T=0, T=60, T=120) for up 
 **This is not a lab job.** This is a clinician role in Perth's most unique maternity health venue. If you want to own your collection room, work with grateful patients, and be home before lunch — apply now.
 
 **Apply:** [email] with your CV and a brief note on your phlebotomy experience.  
-**Questions:** Call Imara on [phone] | Closes [date — 4 weeks from posting]
+**Questions:** Call the Venue Manager on [phone] | Closes [date — 4 weeks from posting]
 
 ---
 
@@ -162,7 +162,7 @@ Post the advertisement on ALL of the following simultaneously:
 
 ### Screening (phone — 15 min)
 
-Conducted by Fern (HR agent preparing questions) / Imara (executing)
+Conducted by Fern (HR agent preparing questions) / Venue Manager (executing)
 
 Questions:
 1. Tell me about your phlebotomy experience. How many years? What settings?
@@ -176,7 +176,7 @@ Questions:
 
 ### In-person interview (1 hour — at venue site or temporary location)
 
-**Interview panel:** Imara
+**Interview panel:** Venue Manager
 
 **Assessment areas:**
 
@@ -231,7 +231,7 @@ If no direct candidate is hired by **Week 12 (8 weeks before soft open)**:
 | Week | Action |
 |---|---|
 | Offer accepted | Issue employment contract (Fern template), complete all pre-employment checks |
-| Week 14 | Venue site visit (even if fit-out incomplete). Introduction to Imara and team. |
+| Week 14 | Venue site visit (even if fit-out incomplete). Introduction to the Venue Manager and team. |
 | Week 15 | WDP/PathWest onboarding: credential submission, protocol training, chain-of-custody training |
 | Week 15 | Collection room orientation: equipment locations, supply levels, fridge temperature log procedure, emergency contacts |
 | Week 16 | Mock OGTT runs: 3 full end-to-end practice sessions (volunteer "patients") |
@@ -240,13 +240,21 @@ If no direct candidate is hired by **Week 12 (8 weeks before soft open)**:
 
 **Phlebotomist does NOT start working with real patients until:**
 - [ ] WDP/PathWest credential approval confirmed in writing
-- [ ] Mock OGTT runs passed (Imara signs off)
+- [ ] Mock OGTT runs passed (Venue Manager signs off)
 - [ ] Emergency plan briefed and drilled
 - [ ] Employment contract signed
 - [ ] All background checks cleared
 
 ---
 
-*Owner: Fern (HR Agent) | Imara (interview authority)*  
+*Owner: Fern (HR Agent) | Venue Manager (interview authority, new hire, not yet in place)*  
 *Post advertisements: Week 1 — do not delay*  
 *Fallback agency contact: Week 12 if no direct hire secured*
+
+> **Note:** This document assumes the Venue Manager role is filled before phlebotomist interviews begin (Week 1 critical-path hire — see `staff-plan.md` §7, `hr-framework.md` §13). If the Venue Manager has not yet started, Anthony or Fern (HR agent) conducts phlebotomist screening/interviews in the interim.
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`. Added interim-coverage note given this document's interview steps assume the Venue Manager role is already filled.
