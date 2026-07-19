@@ -7,7 +7,9 @@
 
 ---
 
-> **SUPERSEDED (2026-07-19):** Founder decision confirmed 2026-07-18 — Imara is NOT the operational manager. A separate **Venue Manager** role (new hire, not yet in place) is now the on-site Managing Director / day-to-day operational authority. Imara remains the funding partner/trust beneficiary only (see `financial-model.md`, `research.md`). References below to "Anthony + Imara confirm..." decisions on operational matters are historical — those decisions have since been superseded by the Venue Manager model. The Venue Manager is now a **critical-path hire** that should begin recruitment immediately (Week 1) — see `staff-plan.md` §7, `hr-framework.md` §13.
+> **SUPERSEDED (2026-07-19):** Founder decision confirmed 2026-07-18 — Imara is NOT the operational manager. A separate **Venue Manager** role (new hire, not yet in place) is now the on-site Managing Director / day-to-day operational authority. Imara remains the funding partner/trust beneficiary only (see `financial-model.md`, `research.md`). References below to "Anthony + Imara confirm..." decisions on operational matters are historical — those decisions have since been superseded by the Venue Manager model. The Venue Manager is a **critical-path hire and the first hire once recruitment begins — but recruitment does NOT start until a physical venue location is confirmed** (founder instruction, 2026-07-19: GTT Center Perth is not recruiting or looking for any staff, including the Venue Manager, until location is sorted). See `staff-plan.md` §7, `hr-framework.md` §13. Job posting document ready in advance: `docs/venue-manager-job-posting.md`.
+>
+> **Also note (2026-07-19):** DVA/TPI financial adviser consultation (referenced in the Week 1 checklist below) is Anthony's personal matter, not a GTT Center Perth task — he is handling this directly, not delegating it. Retained below only as a historical planning-document line item; not tracked as an active GTT roadmap action.
 
 ---
 
@@ -19,9 +21,9 @@
 - [ ] Read all documents in this venture folder (read order: README -> research.md -> this file -> financial-break-even-staff.md -> services-pricing-locked.md)
 - [ ] Anthony + Imara confirm: north or south Perth location preference
 - [ ] Anthony + Imara confirm: launch with Option A (PathWest partner) or pursue Option B from day 1
-- [x] ~~Anthony + Imara confirm: is Imara the operational manager?~~ **SUPERSEDED 2026-07-19 — RESOLVED NO.** Imara is not the operational manager. A dedicated Venue Manager (new hire, not yet in place) fills this role — see banner above. **Begin Venue Manager recruitment immediately — this is now Week 1 critical path, in parallel with location/partner decisions below.**
+- [x] ~~Anthony + Imara confirm: is Imara the operational manager?~~ **SUPERSEDED 2026-07-19 — RESOLVED NO.** Imara is not the operational manager. A dedicated Venue Manager (new hire, not yet in place) fills this role — see banner above. **Venue Manager recruitment does NOT begin until a physical venue location is confirmed (founder instruction, 2026-07-19) — once it does, this is the first, critical-path hire.**
 - [ ] Anthony + Imara confirm: YETI Trust is the operating entity (confirmed in research.md)
-- [ ] Consult DVA financial adviser — confirm TPI/SRDP implications (see dva-tpi-research.md)
+- [ ] ~~Consult DVA financial adviser — confirm TPI/SRDP implications~~ **Not a GTT Center Perth task (2026-07-19) — Anthony's personal matter, handled by him directly, not delegated. Retained here only as a historical line item.**
 - [ ] Contact Bloom Baby Ultrasound — gauge interest in subtenant partnership (reed agent to prepare)
 - [ ] Register YETI Trust for GST (if not already done)
 
@@ -156,16 +158,17 @@
 
 ## MONTH 1 CRITICAL PATH (Do This, In This Order)
 
-1. DVA financial advice consultation (Anthony + Imara) — WEEK 1 BLOCKING GATE
-2. North or south Perth decision (Anthony + Imara) — WEEK 1
-3. Commercial real estate brief sent to 2-3 agents — WEEK 2
-4. PathWest + WDP approached via Reed — WEEK 2
-5. Bloom Baby subtenant interest confirmed — WEEK 2
-6. Fit-out contractor quotes obtained (3 minimum) — WEEK 3
-7. Venue shortlist of 3-5 seen in person — WEEK 3
-8. Preferred venue heads of agreement (NOT signed) — WEEK 4
-9. Entity/ABN/GST confirmed — WEEK 4
-10. Budget confirmed: fit-out + equipment + working capital — WEEK 4
+> Note (2026-07-19): DVA financial advice removed from this list — it's Anthony's personal matter, not a GTT Center Perth task (see banner above). Venue Manager recruitment is not on this list because it does not begin until a location is confirmed (see "Who Is Doing What" below) — it follows on from item 1 once resolved, not a parallel Week 1 action.
+
+1. North or south Perth decision (Anthony + Imara) — WEEK 1
+2. Commercial real estate brief sent to 2-3 agents — WEEK 2
+3. PathWest + WDP approached via Reed — WEEK 2
+4. Bloom Baby subtenant interest confirmed — WEEK 2
+5. Fit-out contractor quotes obtained (3 minimum) — WEEK 3
+6. Venue shortlist of 3-5 seen in person — WEEK 3
+7. Preferred venue heads of agreement (NOT signed) — WEEK 4
+8. Entity/ABN/GST confirmed — WEEK 4
+9. Budget confirmed: fit-out + equipment + working capital — WEEK 4
 
 ---
 
@@ -173,9 +176,8 @@
 
 | Task | Owner |
 |------|-------|
-| DVA financial advice | Anthony (personal action — cannot be delegated) |
 | Location decision | Anthony + Imara |
-| **Venue Manager recruitment (CRITICAL PATH)** | **Anthony/Grace — begin Week 1, see staff-plan.md §7** |
+| **Venue Manager recruitment (CRITICAL PATH once location is confirmed)** | **Anthony/Grace — does NOT begin until a physical venue location is sorted (founder instruction, 2026-07-19). Job posting document ready in advance: `docs/venue-manager-job-posting.md`. See staff-plan.md §7.** |
 | Commercial real estate enquiries | Reed (agent) |
 | PathWest + WDP approach | Reed (agent) |
 | Bloom Baby approach | Reed (agent) |
@@ -196,3 +198,5 @@ See team-startup.md for full team roles.
 **2026-07-19** — Founder decision (confirmed 2026-07-18): the Week 1 question "is Imara the operational manager?" is resolved NO — a dedicated Venue Manager (new hire, not yet in place) fills this role instead. Imara remains the funding partner/trust beneficiary, unaffected — see `financial-model.md`/`research.md`. Added Venue Manager recruitment as a Week 1 critical-path task in the "Who Is Doing What" table, alongside existing critical-path items.
 
 **2026-07-19 (founder clarifications round 2)** — Removed the specific Month 9 revenue trigger / Month 15-18 open-date targets for "Centre 2" — Anthony confirmed the second-venue timeline is set only after Venue 1 is running smoothly, with no earlier estimate. Rewrote Phase 4 to reflect this. Also flagged the brand name decision as not urgent/placeholder per Anthony's clarification (see `brand-guide.md`).
+
+**2026-07-19 (founder feedback round 3)** — Removed DVA financial advice from the "Month 1 Critical Path" numbered list and the "Who Is Doing What" table — Anthony's personal matter, not a GTT task, stated twice; retained only as a struck-through historical line in the Week 1 checklist. Corrected all "begin Week 1"/"begin immediately" language for Venue Manager recruitment — it does not start until a physical venue location is confirmed. Job posting document now built: `docs/venue-manager-job-posting.md`.
