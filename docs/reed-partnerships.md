@@ -185,29 +185,28 @@ Approach in priority order. Offer: permanent scan room, fixed weekly rent A$250�
 
 ### Template A — WDP/PathWest/Clinipath Partnership
 
+> **SUPERSEDED 2026-07-19 — see the corrected version below.** The template previously here was wrong on four counts, per Anthony's direct feedback: it named "GTT Center Perth" (a placeholder name, not final — should be a general enquiry with no venture name attached); it framed the venue as "opening"/"purpose-built" (we are in planning/feasibility stage, not building yet); it restated the GTT test duration to the lab (labs already know how long their own test takes); and it asked for a phone call (Anthony wants an email reply only, no call). Corrected version below fixes all four. Actually sent to WDP 2026-07-19 (some minor wording variation likely between what's below and what was actually sent — see `05_open_questions_for_founder.md` Q2 and `cutoff-time-CORRECTION.md` for outreach status).
+
 *For Clinipath, lead with a general partnership inquiry rather than referencing a specific program — Clinipath has no documented Licensed Collection Centre equivalent.*
 
-**Subject:** Partnership Enquiry — GTT Collection at Maternal Wellness Venue, Perth
+**Subject:** Enquiry — Onsite Blood Collection Partnership, Perth
 
-> Dear [Name / Business Development Team],
+> Hi [Name / Business Development Team],
 >
-> My name is [Name] and I am establishing GTT Center Perth — WA's first dedicated wellness venue for pregnant women undergoing the Glucose Tolerance Test.
+> I'm exploring options for a pregnancy-related wellness venue concept currently in the planning/feasibility stage in Perth. Part of the concept involves hosting glucose tolerance test appointments, with an onsite collection room for blood draws during the wait.
 >
-> We are opening a purpose-built maternal wellness venue in [suburb] Perth. Our model centres on hosting GTT appointments, with pregnant women receiving wellness services (massage, nails, 3D ultrasound) during the 2.5-hour test window. We expect to host 20–25 GTT patients per week at launch, growing to 40+ per week.
+> I'd like to ask about partnering with your service for onsite blood collection at a future venue, and understand a couple of practical details:
 >
-> We are seeking a pathology partner to conduct on-site blood collections. We will provide a fully compliant collection room (privacy, wheelchair accessible, sharps disposal, hand hygiene station — built to ACSQHC specifications). Your team would provide the phlebotomist and processing.
+> - What are your typical courier/specimen dispatch cutoff times for a same-day collection site?
+> - Is overnight specimen storage with next-day lab collection workable under your process, as an alternative to a strict same-day cutoff?
 >
-> We understand [WDP/PathWest] has established [Licensed Collection Centre partnerships / satellite collection arrangements] and would welcome a conversation about how this could work for our venue.
+> This is a planning-stage enquiry, not yet an active site — happy to share more detail by email once I understand whether this is something your team supports.
 >
-> We are targeting a soft open in approximately October 2026.
+> Could you reply by email when convenient? I'd prefer to keep this to email for now rather than a call.
 >
-> Would you be available for a 20-minute call this week?
->
-> Kind regards,  
+> Thanks,  
 > [Name]  
-> GTT Center Perth  
-> YETI Tipi Holdings PTY LTD ATF YETI Holding Trust  
-> [phone] | [email]
+> [email]
 
 ---
 
@@ -293,3 +292,5 @@ Approach in priority order. Offer: permanent scan room, fixed weekly rent A$250�
 ## Changelog
 
 **2026-07-19** — Added a live "Outreach Status" tracker at the top of this document per founder update: WDP emailed and awaiting reply; PathWest and Clinipath not yet emailed (1 of 3 partners contacted). Also logged the follow-up question Anthony will ask WDP once they reply (specimen cutoff time AND overnight storage/next-day collection viability) — see `cutoff-time-CORRECTION.md` for full detail.
+
+**2026-07-19 (email rewrite)** — Rewrote Template A per direct founder feedback: the previous draft was wrong on four counts — named "GTT Center Perth" (a placeholder name, not final), framed the venue as already "opening"/"purpose-built" (still planning/feasibility stage), restated the GTT test's own duration to the pathology lab (unnecessary — labs already know this), and asked for a phone call (Anthony wants email replies only). Corrected version is a short, generic, low-key enquiry about onsite blood collection/courier services, asking about cutoff times and overnight-storage viability, requesting an email reply. See also `docs/lab-partnership-email-draft.md` for a standalone copy of the corrected template.
