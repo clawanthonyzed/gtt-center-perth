@@ -5,10 +5,6 @@
 
 ---
 
-> **SUPERSEDED CONTENT FLAGGED (2026-07-19 — found via founder-requested contradiction scan, see `docs/01_conflicts_log.md`):** Several sections below describe a "subtenant"/room-rental practitioner model (subtenant calendar logins, subtenant rent billing/invoicing, "4-5 subtenants"). **This contradicts the confirmed employed-staff, no-subtenant model** — all service delivery staff are employed directly by GTT Center Perth (see `staff-plan.md` §1, `operations-manual.md` Day 51 update). There is no subtenant rent to bill or invoice. Also flags a stale "8-client/morning" reference (superseded by the current 10-client Scenario C model — see `docs/01_conflicts_log.md` CONFLICT-03). The core platform comparison and recommendation (Fresha) are not affected by either issue — only the subtenant-specific admin/payment sections need a rewrite for the employed-staff model.
-
----
-
 ## 1. PLATFORM COMPARISON
 
 ### Critical Requirement
@@ -29,7 +25,7 @@ Every service booking MUST be linked to a confirmed GTT appointment time. No pla
 - Revenue model: 20% commission only on **new clients** who book via Fresha marketplace — existing clients and direct bookings are commission-free
 - **$14.95/user/month Team plan** eliminates all marketplace fees
 - **Unlimited free SMS notifications** — huge advantage for high-reminder-volume GTT bookings
-- Multi-practitioner calendar: yes — confirmed sufficient for the verified 2-chair/12-staff capacity model (see operations-manual.md per-staff timetable). Each phlebotomist/chair and each service-category staff member needs their own Fresha calendar resource so the daily GTT schedule can be built without double-booking. *(Client-count updated 2026-07-19: current model is 10 clients/morning, Scenario C — was previously stated as 8/morning, Scenario B, now superseded — see flag above.)*
+- Multi-practitioner calendar: yes — confirmed sufficient for the verified 2-chair/12-staff capacity model (see operations-manual.md per-staff timetable). Each phlebotomist/chair and each service-category staff member needs their own Fresha calendar resource so the daily 10-client/morning GTT schedule (Scenario C, synchronized start) can be built without double-booking.
 - Online payment: yes (Fresha Pay — card processing)
 - Retail/product sales: yes
 - **Weakness:** Not designed for medical/clinical workflows; GTT slot pairing needs workaround
@@ -51,7 +47,7 @@ Every service booking MUST be linked to a confirmed GTT appointment time. No pla
 **Rationale:**
 - Unlimited free SMS covers our high-reminder requirement at zero marginal cost
 - No marketplace commission on direct bookings (all our bookings are direct — via referrals and website, not Fresha marketplace)
-- ~~Multi-practitioner calendar handles all 4–5 subtenants~~ **SUPERSEDED — no subtenants under the current model; multi-practitioner calendar instead handles all 12 employed staff (2 phlebotomists + 8 AM treatment staff + reception + PM Service Therapist) — see staff-plan.md.**
+- Multi-practitioner calendar handles all 12 employed staff (2 phlebotomists + 8 AM treatment staff + reception + PM Service Therapist) — see `staff-plan.md`
 - Built for beauty/wellness (nails, massage, spa) — matches our service types
 - Retail management built in — handles product sales
 - Online payment processing included
@@ -130,11 +126,11 @@ STEP 3 — Select Services
   System calculates available service window from GTT time
   (e.g. GTT at 8:00am → services available 8:05am–10:05am)
   Customer selects from:
-    - Pregnancy Massage (60 or 90 min)
-    - Nails — Manicure or Pedicure (45–60 min)
+    - Pregnancy Massage (30 or 45 min, per current package structure)
+    - Nails — Manicure or Pedicure (30 or 45 min)
     - Brows (20–30 min)
-    - 3D Keepsake Scan (25 min) — links to scan operator's calendar
-    - Dietitian consultation (60 min) — during or post GTT
+    - Hair (cut, blowdry — 30 or 45 min)
+  *(Updated 2026-07-19: removed 3D Keepsake Scan and Dietitian consultation — neither is launch scope. 3D scan is a future/Phase 2 income stream, not a current bookable service, see `hire-purchase-china.md` §1C and `market-research-findings.md`. Dietitian is removed from scope entirely, see `staff-plan.md`.)*
   System shows only combinations that fit within the GTT window
   Customer selects package OR builds à la carte
 
@@ -178,15 +174,15 @@ STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 - System (or staff) notifies waitlist when cancellation occurs
 - First on waitlist gets 2-hour window to confirm before next in line is notified
 
-### Practitioner Management
-- ~~Each sublet practitioner has their own calendar login~~ **SUPERSEDED — no subtenants; each employed staff member has their own calendar login instead.**
-- Each staff member's roster/availability is set by the Venue Manager, not self-managed as an independent subtenant would (must mark at minimum: Mon–Fri 7:00–12:30 AM shift availability per their role)
-- Their calendar shows: bookings for the day, customer name + service only (no personal health details)
+### Staff Management (employed staff — no subtenants)
+- Each employed staff member has their own Fresha calendar login
+- Roster/availability is set by the Venue Manager (staff do not self-manage availability as an independent subtenant would) — each AM staff member's calendar must reflect their Mon–Fri 7:00–12:30 shift; PM Service Therapist's calendar reflects the 12:00–18:00 PM shift (see `staff-plan.md` §2A)
+- Each staff member's calendar shows: bookings for the day, customer name + service only (no personal health details)
 - End-of-day summary email: tomorrow's schedule
 
 ### Admin View
 - Daily booking sheet: all GTT slots + associated services + staff + payments
-- ~~Weekly revenue report: booking revenue + subtenant rental payments~~ **SUPERSEDED — no subtenant rental income exists under the current model; weekly revenue report is booking revenue only, see `financial-setup.md`.**
+- Weekly revenue report: booking revenue only (no subtenant rental income exists under the employed-staff model) — see `financial-setup.md`
 - No-show rate tracker
 - Waitlist volume (demand indicator)
 
@@ -198,12 +194,11 @@ STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 - Integrated, no separate Stripe account needed for basic setup
 - Processing fee: ~1.7% + $0.30 per transaction (Australian standard)
 - Payouts: next business day
-- Can split payments: customer pays booking fee; practitioner rent billed separately
+- All revenue flows to GTT Center Perth directly — no subtenant rent split, since all service delivery staff are employed, not subletting practitioners (see `staff-plan.md` §1)
 
-**~~Subtenant Rent Billing~~ (SUPERSEDED — no subtenants under the current model, see flag above; section retained for historical reference only):**
-- ~~Invoice each subtenant weekly via Xero or similar accounting software~~
-- ~~Separate from customer booking system~~
-- ~~Direct debit setup preferred (auto-debit their nominated account each Monday)~~
+**Payroll (replaces the subtenant-rent-billing model previously described here):**
+- Staff wages processed via Xero payroll (weekly pay run) — not a rent invoice, see `financial-setup.md` and `hr-framework.md`
+- No separate rent collection process exists or is needed under the employed-staff model
 
 ---
 
@@ -218,3 +213,5 @@ STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 ## Changelog
 
 **2026-07-19** — Found via founder-requested contradiction scan. Flagged this document's subtenant/room-rental practitioner model (subtenant calendar logins, subtenant rent invoicing, "4-5 subtenants") as superseded — contradicts the confirmed employed-staff, no-subtenant model. Also fixed a stale "8-client/morning" reference to note the current 10-client Scenario C model. Platform comparison/recommendation (Fresha) unaffected. See `docs/01_conflicts_log.md` CONFLICT-07.
+
+**2026-07-19 (full fix, same day — supersedes the flag-only pass above)** — Actually rewrote every subtenant/room-rental reference to the employed-staff model rather than leaving it flagged: "Practitioner Management" retitled "Staff Management," subtenant calendar logins -> employed-staff calendar logins with Venue Manager-set rosters, subtenant rent invoicing/direct-debit section replaced with a payroll reference (Xero, weekly pay run), "4-5 subtenants" corrected to "12 employed staff." Also rewrote the Step 3 booking-flow service list — removed 3D Keepsake Scan and Dietitian consultation as current bookable services (neither is launch scope; 3D scan is future/Phase 2, dietitian is removed entirely) and corrected massage/nail service durations to match the current 30/45-min package structure. Removed the earlier superseded-content banner now that the fixes are made directly rather than just flagged.
