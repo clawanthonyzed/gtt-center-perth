@@ -422,3 +422,9 @@ To keep the brand consistent — especially as partners and third parties produc
 *Photography brief: Week 14 shoot (venue must be substantially fit-out)*  
 *Print production: BizPrint Perth or Vistaprint Pro (3 quotes required for >A$500 jobs)*  
 *Review: Imara (final approval on all brand decisions before external use)*
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): reviewed for operational/on-site "Imara" references as part of the empire-wide Imara -> Venue Manager rename. Both references in this file (photography brief subject, final brand approval authority) are founder-role content, correctly unaffected — left unchanged. See `financial-model.md`/`research.md` for the ownership structure. Day-to-day venue operations are run by the Venue Manager (new hire, not yet in place) — see `staff-plan.md`.
