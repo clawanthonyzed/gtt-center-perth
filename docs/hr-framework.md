@@ -1,7 +1,7 @@
 # GTT Center Perth — HR & Compliance Framework
 
 **Version:** 1.0 | **Date:** 2026-06-05  
-**Owner:** Fern (HR/Compliance Agent) | Imara (executing authority)  
+**Owner:** Fern (HR/Compliance Agent) | Venue Manager (executing authority — new hire, not yet in place)  
 **Legal review required:** Engage Perth employment solicitor before first hire to review contracts
 
 ---
@@ -24,7 +24,7 @@
 | Beauty therapist/brows | Hair & Beauty Industry Award MA000005 |
 | Phlebotomist | Health Professionals and Support Services Award MA000027 |
 | Receptionist/admin | Clerks — Private Sector Award MA000002 |
-| Imara (Managing Director) | Individual contract (above award) |
+| Venue Manager (Managing Director) | Individual contract (above award) |
 
 ---
 
@@ -149,7 +149,7 @@ Setup checklist:
 
 ### Annual Leave
 - Part-time employees: 4 weeks pro-rata (e.g., 25hrs/wk = 100 hours annual leave per year = 8.33 hours per month)
-- Requests: minimum 2 weeks notice (ordinary leave); Imara approves
+- Requests: minimum 2 weeks notice (ordinary leave); Venue Manager approves
 - Peak period restrictions: December, January (holiday season — may be busier)
 - Cannot force employee to take leave except in specific circumstances (discuss with solicitor if needed)
 
@@ -158,7 +158,7 @@ Setup checklist:
 - First day of new leave year: first day of employment anniversary
 - Employee must notify before shift start (or as soon as practicable)
 - Carer's certificate or statutory declaration required for absences > 1 day
-- Imara covers or arranges cover for sick leave
+- Venue Manager covers or arranges cover for sick leave
 
 ### Family & Domestic Violence Leave
 - 10 days paid from Day 1 (2024 NES change — ALL employees including part-time and casual)
@@ -176,7 +176,7 @@ Setup checklist:
 ## 8. PERFORMANCE MANAGEMENT
 
 ### Process
-1. **Verbal warning** (documented in Imara's notes): first occurrence of minor issues
+1. **Verbal warning** (documented in the Venue Manager's notes): first occurrence of minor issues
 2. **Written warning** (formal letter via Fern template): repeated or more serious issues
 3. **Performance Improvement Plan (PIP)**: 30-day plan with specific measurable targets
 4. **Termination** (if PIP not met, or serious misconduct): following process below
@@ -184,7 +184,7 @@ Setup checklist:
 ### Termination Process (for performance/conduct)
 - **Never terminate on the spot** (except summary dismissal for serious misconduct)
 - Show cause letter: outline reasons, give employee opportunity to respond (minimum 24 hours)
-- Imara meets employee with a support person (employee's right)
+- Venue Manager meets employee with a support person (employee's right)
 - Decision made after hearing response
 - Final pay: includes all outstanding wages, leave, and any redundancy (if applicable)
 - Notice period served or paid out
@@ -251,7 +251,7 @@ GTT Center Perth starts with < 15 employees. 12-month protection period applies.
 - Reasonable workplace adjustments for disability
 
 **Workplace harassment policy:**
-Imara to issue a written Workplace Harassment Policy to all staff at commencement.  
+Venue Manager to issue a written Workplace Harassment Policy to all staff at commencement.  
 Policy must include: definition, reporting procedure, investigation process, confidentiality, non-retaliation guarantee.  
 Engage Fern (HR agent) to produce a template policy.
 
@@ -283,7 +283,23 @@ Fern (AI HR agent) maintains:
 - Incident register (reviewed monthly)
 - HR policy documents
 
-All sensitive HR matters (disciplinary, complaints, terminations) escalate to Imara + Perth employment solicitor.
+All sensitive HR matters (disciplinary, complaints, terminations) escalate to the Venue Manager + Perth employment solicitor.
+
+---
+
+## 13. VENUE MANAGER — CRITICAL-PATH HIRE
+
+The Venue Manager (Managing Director) role is a **critical-path hire** — the venue cannot safely open without it filled. This role holds:
+- Day-to-day payment approver (< A$2,000)
+- Clinical escalation contact
+- Emergency first-responder / EpiPen holder (requires current First Aid — see `emergency-plan.md`)
+- Fire warden (primary)
+- HR disciplinary presence (verbal warnings, show-cause meetings, terminations)
+- Weekly P&L reviewer
+- WDP/PathWest liaison
+- Staff supervisor
+
+**Recruitment must begin immediately and complete before any other staff onboarding** — see `staff-plan.md` §7 Hiring Timeline (Week 1, critical path) and `venture-timeline.md`/roadmap.
 
 ---
 
@@ -294,3 +310,9 @@ All sensitive HR matters (disciplinary, complaints, terminations) escalate to Im
 - [ATO — Super guarantee](https://www.ato.gov.au/businesses-and-organisations/super-for-employers)
 - [Equal Opportunity Commission WA](https://www.eoc.wa.gov.au/)
 - [Fair Work — Closing Loopholes Act 2024](https://www.fairwork.gov.au/newsroom/news/closing-loopholes-laws)
+
+---
+
+## Changelog
+
+**2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`. Added new §13 formalising the Venue Manager as a critical-path hire.
