@@ -172,9 +172,10 @@ GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" a
 | ~~North or South Perth for Centre 1?~~ ~~Best Perth-metro location, use, and buy-vs-rent — broadened scope (Day 49)~~ Narrowed Day 50: **Subiaco (primary — antenatal demographic, KEMH/SJOG proximity) / Nedlands (secondary — strong medical-consulting zoning, 40+ listings)**. Both have active commercial listings (commercialrealestate.com.au, REIWA). Next step: shortlist 3-5 specific properties (100-150sqm) and arrange inspections. | **Quinn** | URGENT — narrowed, not resolved. Needs physical inspection. |
 | ~~Launch Scenario A (15-min) or B (20-min)?~~ | — | **RESOLVED Day 49: Scenario B (8 clients, 2 phlebotomists, 2 chairs) confirmed as Day 1 launch model** |
 | Approve Reed to engage WDP/PathWest (+Clinipath contingency)? | Anthony + Imara | WEEK 1 |
-| Brand name — "GTT Center Perth" or premium? | Poppy + Anthony | Week 2 — still open, needs Anthony's input |
-| DVA adviser one-time consultation | Anthony | Not blocking — **CF-07 deferred Day 50, do alongside this when convenient** |
+| ~~Brand name — "GTT Center Perth" or premium?~~ | — | **CLARIFIED 2026-07-19 — not an open decision awaiting an answer.** "GTT Center Perth" is a confirmed working placeholder; Anthony will create the premium brand name/identity later, on his own timeline. See `brand-guide.md`. |
 | PM Spa Package ramp (M1=2/day -> M5+=6/day) — validate against live booking data once PM Service Therapist hired | Bruno | Month 1-5 — Lever 2 is the primary path to break-even (financial-break-even-staff.md); fallback is the price-sensitivity table in the same doc if PM volume underperforms |
+
+**Note (2026-07-19):** DVA adviser consultation removed from this table — it is Anthony's personal matter, not a GTT Center Perth task, per his direct instruction (stated twice). It should not be tracked here or in any other GTT roadmap/open-decisions list. CF-07's underlying legal analysis in `review-audit.md` is unaffected by this removal — only the tracking-as-a-GTT-action-item is removed.
 
 ---
 
@@ -183,3 +184,5 @@ GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" a
 **2026-07-19** — Founder decision (confirmed 2026-07-18): reviewed for operational/on-site "Imara" references as part of the empire-wide Imara -> Venue Manager rename (see `staff-plan.md`, `operations-manual.md`, etc.). This file's one reference ("Approve Reed to engage WDP/PathWest — Anthony + Imara") is a strategic approval decision by Imara in her funding-partner capacity, not an on-site operational duty — left unchanged. Ownership/trust structure unaffected, see `financial-model.md`/`research.md`.
 
 **2026-07-19 (audit pass)** — Added `research-supplement-day48.md` and floor-plan file entries to the Reference Only table. Flagged `research-supplement-day48.md` as a stale duplicate of the already-archived `research-supplement-day48-ARCHIVED.md` (superseded banner added to the file itself). Flagged `floor-plan-visual.html`/`.pdf` as superseded by `floor-plan-v3.svg`/`.pdf` (superseded banner added to the HTML file). See `docs/01_conflicts_log.md` for full detail.
+
+**2026-07-19 (founder feedback round 3)** — Removed "DVA adviser one-time consultation" from the Open Decisions table entirely — Anthony's personal matter, not a GTT Center Perth task, stated twice. Also updated the brand name row to reflect that it's a confirmed placeholder, not an open decision awaiting Anthony's input.
