@@ -108,6 +108,44 @@ The synchronized version is the more recent and more rigorously verified of the 
 
 ---
 
+## CONFLICT-05 | `hire-purchase-china.md` — Stale 3D Scanner Purchase/Subtenant Section
+
+**Status: FLAGGED 2026-07-19 (found via founder-requested contradiction scan) — not rewritten**
+
+**Finding:** §1C "3D Keepsake Ultrasound Scanner" describes purchasing a 3D scanner or using Bloom Baby Ultrasound as a subtenant as live options, including specific model/pricing tables. This directly contradicts the confirmed Day 51 decision that 3D scan is removed from scope entirely (no equipment, no operator, no subtenant) — already correctly reflected in `equipment-costs.md`'s own banner. The Budget Summary's "TOTAL WITH 3D SCANNER" row is also affected.
+
+**Resolution:** Flagged §1C and the two budget-summary rows with superseded banners/strikethrough. Section not deleted or fully rewritten — recommended as a follow-up editorial pass.
+
+---
+
+## CONFLICT-06 | `market-research-findings.md` — 3D Scan Positioned as Core Differentiator
+
+**Status: FLAGGED 2026-07-19 (found via founder-requested contradiction scan) — flagged in place, not fully rewritten**
+
+**Finding:** §1 (MIWM competitor comparison table) and §8 (Key Market Insights Summary) both position "in-house 3D keepsake scanning" as GTT Center Perth's core competitive differentiator, including the claim "GTT Center Perth = first and only GTT + full day spa + 3D scan in Australia." This directly contradicts the Day 51 decision. This is a more consequential instance than most other 3D-scan stragglers because it's framed as *the* marketing differentiator, not just an equipment/staffing line item — if used to brief Poppy (marketing) or any external marketing material, it would actively misrepresent the venture's offering.
+
+**Resolution:** Flagged the document header, the comparison table row, the summary claim, and the §8 insight row with superseded banners/strikethrough, and noted the actual current differentiators (multi-client concurrent model, spray tan, full hairdressing).
+
+---
+
+## CONFLICT-07 | `ivy-booking-system.md` — Subtenant/Room-Rental Booking Model
+
+**Status: FLAGGED 2026-07-19 (found via founder-requested contradiction scan) — flagged in place, not fully rewritten**
+
+**Finding:** The "Practitioner Management," "Admin View," and "Subtenant Rent Billing" sections describe a subtenant/room-rental practitioner model — individual practitioner calendar logins as independent subtenants, weekly subtenant rent invoicing via Xero, direct debit for rent collection. This entirely contradicts the confirmed employed-staff, no-subtenant model. Also contained a stale "8-client/morning" reference (same root issue as CONFLICT-03).
+
+**Resolution:** Flagged the document header and each affected line/section with superseded banners/strikethrough. The core platform comparison and Fresha recommendation are unaffected by this issue and remain valid. Section not fully rewritten for the employed-staff model — recommended as a follow-up action.
+
+---
+
+## Minor Findings (Contradiction Scan, 2026-07-19) — Flagged, No Rewrite Needed
+
+- **`extended-wellness-services.md`:** stale cross-reference link to the now-archived `bloom-baby-case-study.md` in its "Related Documents" list. Fixed with a strikethrough/archived note — no other issues found in this file.
+- **`onboarding.md`:** uses generic "Manager" throughout (19 instances) rather than "Venue Manager" — not a factual contradiction (unambiguous same role), but a naming-consistency gap versus the rest of the post-rename corpus. Also one self-conditioning "subtenants only" insurance checklist line that's inapplicable, not wrong, under the no-subtenant model. Flagged with a banner; not individually rewritten (19 instances) this session.
+- **`equipment-costs.md`, `privacy-policy.md`, `staff-profiles/*.md`:** reviewed in full — no contradictions found. `staff-profiles/*.md` all correctly reference the current Scenario C (10-client) volume already.
+
+---
+
 ## Summary
 
 | Conflict | Severity | Status |
@@ -116,5 +154,8 @@ The synchronized version is the more recent and more rigorously verified of the 
 | CONFLICT-02: floor-plan v2/v3 mismatch | Low-Medium (fit-out brief risk if wrong version used) | RESOLVED (HTML); PDF flagged, not edited |
 | CONFLICT-03: Scenario B vs Scenario C sync | **HIGH** (training/scheduling risk if operations-manual.md read as-is) | FLAGGED, partially resolved — full rewrite recommended as priority action |
 | CONFLICT-04: workflow.md stale subtenant model | Medium (could mislead a new reader on employment structure) | FLAGGED, not rewritten — recommended as follow-up action |
+| CONFLICT-05: hire-purchase-china.md stale 3D scanner section | Medium (equipment budget/planning risk) | FLAGGED, not rewritten |
+| CONFLICT-06: market-research-findings.md 3D scan as differentiator | **Medium-High** (marketing/positioning risk if used to brief external material) | FLAGGED, not rewritten |
+| CONFLICT-07: ivy-booking-system.md subtenant booking model | Medium (booking-system spec risk if built as-is) | FLAGGED, not rewritten |
 
 See `04_roadmap_next_steps.md` for prioritised follow-up actions on the items not fully resolved this session.
