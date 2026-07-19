@@ -5,7 +5,7 @@
 
 ---
 
-> **SUPERSEDED CONTENT FLAGGED (2026-07-19 — found via founder-requested contradiction scan, see `docs/01_conflicts_log.md`):** This document repeatedly positions "in-house 3D keepsake scanning" as GTT Center Perth's core competitive differentiator (§1 competitor comparison table, §8 Key Market Insights). **This directly contradicts the confirmed Day 51 decision: 3D keepsake scan is removed from scope entirely — no equipment, no operator, no subtenant** (see `staff-plan.md` §1, `equipment-costs.md`, `services-pricing-locked.md`). The competitive-advantage framing and marketing differentiator claims below should not be used as-is — GTT Center Perth's actual differentiators are the multi-client concurrent model, spray tan, and full hairdressing, not 3D scan. Retained below for historical context only.
+> **REFRAMED 2026-07-19 (founder clarification, supersedes the 2026-07-19 flag below it):** Anthony confirmed the 3D keepsake scanner is a **future income stream, considered for a later phase once the venue is established — not part of startup/launch scope.** This document previously positioned "in-house 3D keepsake scanning" as GTT Center Perth's *core* competitive differentiator and launch-day claim (§1 competitor comparison table, §8 Key Market Insights) — that framing is corrected below. The core differentiator at launch is the GTT wait-time experience itself (multi-client concurrent model turning a mandatory 2-3hr clinical wait into a premium wellness visit), not 3D scan. 3D scan is retained as a clearly-labelled future/Phase 2 addon opportunity, not deleted from the plan entirely.
 
 ---
 
@@ -29,19 +29,20 @@ MIWM (Maternal & Infant Wellbeing Melbourne) is the only direct national competi
 - No 3D scanning offered
 - Victoria only
 
-### GTT Center Perth Advantages Over MIWM
+### GTT Center Perth Advantages Over MIWM (at launch)
 | MIWM | GTT Center Perth |
 |------|-----------------|
 | Single client at a time | Multi-client concurrent (10 simultaneously, Scenario C) |
 | 60-min or 2-hr spa included | Clients choose and pay for services individually |
-| ~~No 3D scanning~~ | ~~In-house 3D keepsake scanning~~ **SUPERSEDED — 3D scan removed from scope entirely (Day 51), see flag above** |
 | No spray tan | Automated spray tan booth |
 | No hairdressing | Full hairdressing (cut, blowdry, colour) |
 | GP-led clinical feel | Premium day spa feel |
 | Victoria only | WA — no competition |
 | Limited social media | Strong social media strategy (Poppy) |
 
-~~**GTT Center Perth = first and only GTT + full day spa + 3D scan in Australia.**~~ **SUPERSEDED — no 3D scan in current scope. Current differentiators: multi-client concurrent model, spray tan, full hairdressing, premium day spa feel, no WA competition.**
+**GTT Center Perth = the first venue in Australia to turn the GTT wait itself into a premium multi-service wellness experience — at launch scope.**
+
+**Future / Phase 2 consideration (not launch scope):** In-house 3D keepsake ultrasound scanning, once venue volume and cash flow support the equipment investment (see `hire-purchase-china.md` §1C). MIWM does not offer 3D scanning — if added later, this would extend GTT Center Perth's differentiation further, but it is not part of the startup positioning and should not be marketed as a launch-day feature.
 
 ---
 
@@ -193,7 +194,8 @@ Our pricing at mid-market: single process A$130–200, full foil A$280–350, ba
 |---------|-------------|
 | MIWM books 3–4 weeks in advance at launch | GTT Perth must advertise heavily before opening; target fully booked from day 1 |
 | MIWM single-client model | GTT Perth multi-client model is a significant operational advantage |
-| ~~No competitor offers 3D scan + GTT~~ | ~~Strongest differentiator in all marketing~~ **SUPERSEDED — 3D scan removed from scope entirely (Day 51). Multi-client concurrent model is the strongest remaining differentiator.** |
+| No competitor offers the multi-client concurrent GTT + wellness model | Strongest launch differentiator in all marketing (see §1 above) |
+| No competitor offers 3D scan + GTT | **Future/Phase 2 opportunity only (2026-07-19) — not a launch-day differentiator.** Worth keeping in view for a later marketing push once added, not before. |
 | Belly cast A$250 is below market | Pricing defensible at launch; increase to A$300+ at 6 months |
 | Lash extensions have no WA licence requirement | Low barrier to add lash tech; just training + insurance |
 | Hair colour: afternoon only for all types | Full hairdressing menu positions venue above a day spa |
@@ -219,3 +221,5 @@ Our pricing at mid-market: single process A$130–200, full foil A$280–350, ba
 ## Changelog
 
 **2026-07-19** — Found via founder-requested contradiction scan. Flagged this document's repeated framing of "in-house 3D keepsake scanning" as GTT Center Perth's core competitive differentiator (§1 competitor table, §8 Key Market Insights) as superseded — directly contradicts the confirmed Day 51 decision that 3D scan is removed from scope entirely. See `docs/01_conflicts_log.md` CONFLICT-06.
+
+**2026-07-19 (reframe, same day)** — Founder clarification: 3D scanner is a **future income stream, not part of startup/launch scope** — not simply "removed entirely" as the earlier same-day flag stated. Rewrote §1 comparison table and §8 Key Market Insights row to move 3D scan into a clearly-labelled "Future / Phase 2 consideration" note, and reframed the core launch differentiator around the GTT wait-time experience itself (multi-client concurrent model), not 3D scan. Cross-referenced `hire-purchase-china.md` §1C, which received the same reframe.
