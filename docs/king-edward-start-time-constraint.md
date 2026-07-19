@@ -1,6 +1,6 @@
 # King Edward Hospital Guidance — GTT Must Start Before 10:00am
 
-**Date:** 2026-07-17 | **Source:** Anthony (King Edward Memorial Hospital recommendation) — **not yet independently verified.** Searched for KEMH's published patient guidance and couldn't locate the specific document confirming this (KEMH's site wasn't indexed with this detail in the search). Doesn't mean it's wrong — likely from a referral form, GP conversation, or a KEMH fact sheet not picked up by search. **Flagging for a source/document reference** so this can be cited properly alongside the other sourced clinical constraints (ADIPS, RCPA etc.) — if you have the actual document or page, that closes this out.
+**Date:** 2026-07-17 | **Source:** General clinical guidance, source: internet research (clarified by Anthony 2026-07-19 — the "before 10am" claim originated from general internet research, not from a specific locatable KEMH document such as a referral form, fact sheet, or published patient guidance). This is not a case of a real document being unlocatable by search — there is no single specific document to find. Treat this as general clinical guidance rather than a formally sourced, citable constraint alongside ADIPS/RCPA-type references.
 
 ## Impact — checked against both current scenarios
 
@@ -18,3 +18,9 @@
 ## Standing note
 
 This is now a second independent constraint on the AM window, alongside the (still unconfirmed) WDP courier cutoff — see `cutoff-time-CORRECTION.md`. The two are different in kind: WDP's is an end-of-day logistics constraint, King Edward's is a start-time clinical/best-practice guidance. Once both are sourced/confirmed, the real usable window is whichever is tighter.
+
+---
+
+## Changelog
+
+**2026-07-19** — Reframed the sourcing status per Anthony's clarification: this is general clinical guidance from internet research, not an unlocatable specific document. Previous wording ("not yet independently verified... couldn't locate the specific document") implied a document exists somewhere and further searching might find it — that search is not a productive next step. If more certainty is wanted before relying on this for Scenario D planning, the path is a direct question to KEMH or a referring practice, not further web search.
