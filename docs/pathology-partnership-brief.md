@@ -2,7 +2,7 @@
 
 **Version:** 1.0 | **Date:** 2026-07-01 (Empire Day 71)
 **Author:** Idea Lobster (CEO Advisory) + Cora (Clinical Coordinator) + Reed (Partnerships)
-**Status:** Action required — WDP call is Week 1 priority before any venue is signed
+**Status:** In progress — WDP emailed 2026-07-19, awaiting reply. PathWest and Clinipath not yet contacted (1 of 3 partners approached). See `reed-partnerships.md` "Outreach Status" for the live tracker.
 
 ---
 
@@ -188,3 +188,9 @@ Option B has been ruled out — not compatible with October 2026 launch. The WDP
 
 *Document owner: Cora (GTT Center Perth Clinical Coordinator) + Reed (Partnerships)*
 *Action: Anthony to call WDP on 08 9317 0999 in Week 1 — before venue search, before lease, before anything else*
+
+---
+
+## Changelog
+
+**2026-07-19** — Updated status line: WDP has been emailed (not yet called) and is awaiting reply; PathWest and Clinipath have not yet been contacted. See `reed-partnerships.md` for the live outreach tracker and `cutoff-time-CORRECTION.md` for the two questions Anthony will ask WDP once they reply.
