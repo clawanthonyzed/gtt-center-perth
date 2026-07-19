@@ -5,6 +5,10 @@
 
 ---
 
+> **NAMING CONSISTENCY NOTE (2026-07-19 — found via founder-requested contradiction scan, see `docs/01_conflicts_log.md`):** This document refers to the on-site operational lead as "Manager" throughout (19 instances) rather than "Venue Manager," the title now used consistently across the rest of the corpus since the Imara -> Venue Manager rename (`staff-plan.md`, `operations-manual.md`, `hr-framework.md`, etc.). Not a factual contradiction — "Manager" here unambiguously means the same role — but flagged for consistency. Also notes one minor self-conditioning line (A1 checklist: "Public liability insurance... subtenants only") that is not wrong but is effectively inapplicable under the current no-subtenant model. Neither issue was rewritten this session — recommend a find-and-replace pass ("Manager" -> "Venue Manager") as a low-priority follow-up.
+
+---
+
 # PART A — STAFF ONBOARDING
 
 ## A1. Pre-Start Checklist (Manager + Fern complete before Day 1)
@@ -372,6 +376,12 @@ After every visit, patient receives:
 **Step 5:** Document in complaints register with outcome
 - Keep for 7 years
 - If complaint involves clinical element: notify WDP/PathWest and solicitor
+
+---
+
+## Changelog
+
+**2026-07-19** — Found via founder-requested contradiction scan. No factual contradictions found in this document's content. Flagged a naming-consistency issue: uses "Manager" throughout (19 instances) rather than "Venue Manager" used elsewhere post-rename, and one self-conditioning subtenant-insurance line that's inapplicable (not wrong) under the no-subtenant model. See banner at top of file and `docs/01_conflicts_log.md`.
 
 **Response time SLA:**
 - Same-day acknowledgement: 100%
