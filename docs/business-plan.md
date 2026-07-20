@@ -17,7 +17,7 @@ GTT Center Perth is a concept for Western Australia's first premium wellness ven
 The current committed operational model (per [HANDOFF.md](HANDOFF.md), 2026-07-17 — the most recent session summary and source of truth for the active plan) is:
 - **AM GTT:** 10 clients/day, 07:00 start, 2 chairs, 2 phlebotomists, synchronized-start schedule (Scenario C — see `docs/scenario-c-sync-timetables.md`)
 - **Packages:** 2 tiers only — Package 1 (A$250, fixed 2×30-min composition) and Package 2 (A$300, flexible choice of 2×45min / 1×45min+1×30min / 2×30min) — renamed/renumbered 2026-07-20, same 2 price points as before, not a re-opening of the earlier decision to drop the old A$200 tier ([services-pricing-locked.md](services-pricing-locked.md))
-- **PM:** Individual standalone services (not packages), 4 dedicated casual hires, costed on actual hours worked. **The PM shift operates as a standalone wellness venue in its own right** — any woman can book a PM appointment directly, not only clients who attended a GTT test that morning.
+- **PM:** Individual standalone a-la-carte services PLUS set/fixed PM packages (committed 2026-07-20 — bundled combos, no client-choice, the opposite flexibility model from AM's Package 2), 4 dedicated casual hires, costed on actual hours worked. Active sales strategy to steer clients toward the package option since it drives higher revenue per visit — see `pm-package-structure.md` for the proposed package menu (pricing requires Anthony's sign-off). **The PM shift operates as a standalone wellness venue in its own right** — any woman can book a PM appointment directly, not only clients who attended a GTT test that morning.
 - **Saturday:** Reuses the AM model + PM standalone, costed as a bolt-on shift
 - **Sunday:** Closed until standalone PM service demand is proven and profitable enough to justify the added penalty-rate staffing cost — a conditional business choice, not a fixed-forever position and not a legal requirement (WA Retail Trading Hours Act exempts this business type from restriction)
 
@@ -64,8 +64,10 @@ Wellness services fill the gaps between blood draws and are never interrupted by
 
 All GTT-window wellness services are 45 minutes or under, delivered by employed staff (massage, nails, brows, hairdressing).
 
-### Afternoon (PM) Model — Standalone Wellness Venue, Individual Services, Not Packages
-**Confirmed model (per [HANDOFF.md](HANDOFF.md)):** the PM shift delivers individual standalone services — not the Package 1/2 structure — via 4 dedicated casual hires (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, costed on **actual hours worked**, not a blanket shift assumption. Average per-service price is modelled at ~A$95 ([pm-staffing-roster.md](pm-staffing-roster.md)) — see §9 for the full financial detail.
+### Afternoon (PM) Model — Standalone Wellness Venue, Individual Services PLUS Set/Fixed Packages
+**Confirmed model (per [HANDOFF.md](HANDOFF.md)):** the PM shift delivers individual standalone services — not the AM Package 1/2 client-choice structure — via 4 dedicated casual hires (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, costed on **actual hours worked**, not a blanket shift assumption. Average per-service price is modelled at ~A$95 ([pm-staffing-roster.md](pm-staffing-roster.md)) — see §9 for the full financial detail.
+
+**Committed 2026-07-20:** PM also now offers a small menu of set/fixed PM packages (bundled combos — e.g. "PM Refresh" pairing a 45-min massage with a 45-min facial at a set price) alongside the existing individual-service menu — the opposite flexibility model from AM's Package 2 (PM packages are fixed combos, not client-choice). Anthony's direction: actively steer/upsell PM clients toward the package option, since it generates materially higher revenue per visit than a single a-la-carte service, even after a bundle discount. See `pm-package-structure.md` for the proposed package menu, modelled revenue impact, and sales strategy — **proposed pricing requires Anthony's sign-off, not yet final.**
 
 **The PM shift is a standalone wellness venue, not an add-on restricted to GTT patients:** any woman — pregnant or not, GTT patient or not — can book a PM appointment directly (massage, nails, hair, beauty), the same way she would book at any day spa. There is no requirement to have attended a GTT test that morning. This matters for market sizing (§4) since the PM addressable market is broader than the AM GTT patient pool.
 
@@ -117,7 +119,7 @@ Per [HANDOFF.md](HANDOFF.md) and `docs/scenario-c-sync-timetables.md` (fully ver
 GTT collection follows ADIPS-guideline timing (fasting draw, 75g glucose drink, then further draws at approximately +1hr and +2hr from the glucose drink). A commonly cited best-practice guideline is to start the test before 10:00am — **this guideline is recorded as general clinical knowledge from internet research, not a specific cited source document; see [king-edward-start-time-constraint.md](king-edward-start-time-constraint.md).** The current Scenario C model comfortably starts its last client at 09:40, within this guideline.
 
 ### Afternoon (PM) Shift
-12:00pm-6:00pm, no GTT testing, no fasting requirement. 4 dedicated casual hires (1 each: massage, hair, nail, beauty) deliver individual standalone services, cross-shift qualified with AM staff, costed on actual hours worked ([pm-staffing-roster.md](pm-staffing-roster.md), [HANDOFF.md](HANDOFF.md)).
+12:00pm-6:00pm, no GTT testing, no fasting requirement. 4 dedicated casual hires (1 each: massage, hair, nail, beauty) deliver individual standalone services PLUS set/fixed PM packages (committed 2026-07-20 — `pm-package-structure.md`), cross-shift qualified with AM staff, costed on actual hours worked ([pm-staffing-roster.md](pm-staffing-roster.md), [HANDOFF.md](HANDOFF.md)).
 
 ### Saturday / Sunday
 Saturday reuses the AM Scenario C timetable (10 clients) plus PM standalone, costed as a bolt-on additional shift (hours-based, not a slice of ongoing weekday salary — see [am-capacity-weekend.md](am-capacity-weekend.md) for the costing methodology correction). Sunday stays closed until standalone PM service demand is proven and profitable enough to justify the added penalty-rate staffing cost — a conditional business choice reviewed against real booking data, not a fixed-forever position, and not a legal requirement ([am-capacity-weekend.md](am-capacity-weekend.md) confirms the WA Retail Trading Hours Act explicitly exempts hairdresser/beautician/barber shops from trading-hour restriction).
@@ -149,7 +151,8 @@ Per [floor-plan-v3.svg](floor-plan-v3.svg)/`.pdf` (current, 2026-07-10) and [flo
 | Stream | Description | Driver |
 |---|---|---|
 | AM GTT package sales | Package 1 (A$250) / Package 2 (A$300) per GTT client, venue/lounge bundled free | Up to 10 packages sold/day (Scenario C cap) |
-| PM standalone services | Individual services, ~A$95/service average, confirmed compatible with the current AM model | 4-line PM roster capacity |
+| PM standalone services | Individual a-la-carte services, ~A$95/service average, confirmed compatible with the current AM model | 4-line PM roster capacity |
+| PM set/fixed packages (committed 2026-07-20) | Bundled 2-service combos (e.g. "PM Refresh") at a set price, actively steered/upsold to clients — see `pm-package-structure.md` for proposed pricing (not yet final) and revenue modelling | Same 4-line PM roster; revenue per package visit modelled at 1.5-2.4x the standalone average |
 | Ancillary (cafe/retail) | Snacks, drinks, retail products (Gaia, Weleda, Mustela) | Per-client ancillary spend |
 
 ### Pricing — Current Locked Structure
@@ -304,3 +307,5 @@ YETI Holding Trust (discretionary trust)
 6. Updated the Staffing section (§5) to reflect the relief/backup staffing added to [staff-plan.md](staff-plan.md) §7B/[hr-framework.md](hr-framework.md) §12A, the volume-triggered growth plan in [staff-plan.md](staff-plan.md) §7A, and corrected terminology to reflect that at least 2 of the 8 AM treatment staff are dual-qualified (Massage+Beauty), not single-role specialists — ties to [multirole-CORRECTION.md](multirole-CORRECTION.md)'s 7-not-8 headcount finding.
 7. Added The GTT Lounge (Sydney, NSW) to the Competitive Analysis (§7) — found in [feasibility.md](feasibility.md), a genuine second GTT-integrated comparable not previously surfaced in this document.
 8. Terminology change (§6, §9): switched from "client visits" to "packages/services sold" as the core revenue metric, since a visit alone carries no dollar figure — applied venture-wide, see cross-referenced documents.
+
+**2026-07-20 (PM packages committed)** — Updated §1, §3, §5, §6 to reflect Anthony's confirmation that PM now offers set/fixed packages (bundled combos, no client-choice) in addition to individual standalone services, with an active sales strategy to steer clients toward the package option for higher revenue per visit. Cross-referenced `pm-package-structure.md` (supersedes the deleted `pm-package-exploration.md`) for the proposed package menu, revenue modelling, and sales strategy — pricing there requires Anthony's sign-off, not yet final.
