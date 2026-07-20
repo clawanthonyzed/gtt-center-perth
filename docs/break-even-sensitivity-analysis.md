@@ -12,8 +12,8 @@
 Per `profit-loss-tables.md` v2.0 (2026-07-17, most recent) and `HANDOFF.md`:
 
 - **Break-even, revenue basis: ~A$88,625/month in total costs to cover** — this is the figure that should be quoted as "the" break-even, since it doesn't force two different client types into one headcount.
-- **Break-even, illustrative single-segment bookends (not the real plan — see caveat below):** ~298 visits/month (~13.5/day) *if every single visit were a Package 2 GTT client at A$250* — this is the figure this section previously reported as the headline, and it is only one bookend, not the actual break-even condition.
-- **Why this needs a caveat, corrected 2026-07-20:** the venture also earns PM standalone wellness revenue (~A$95/visit, no clinical test attached) which this section's headline figure ignores entirely. A GTT-package visit and a PM-standalone visit are not interchangeable — see `gtt-center-perth-overview-for-imara.md` and `executive-summary.md` for the full two-segment breakdown (illustrative bookends of ~355 visits/month if 100% GTT-package, or ~933/month if 100% PM-standalone, against the same ~A$88,625/month cost base). The "298 visits/month" figure in this section is retained below for continuity with `financial-break-even-staff.md`'s existing package-price table (§2), which is itself GTT-package-only and does not model PM standalone volume — read it as a GTT-package-only sub-analysis, not the whole venture's break-even.
+- **Break-even, illustrative single-segment bookends (not the real plan — see caveat below):** ~298 Package 1 sales/month (~13.5/day) *if every single sale were a Package 1 GTT client at A$250* — this is the figure this section previously reported as the headline, and it is only one bookend, not the actual break-even condition.
+- **Why this needs a caveat, corrected 2026-07-20:** the venture also earns PM standalone wellness revenue (~A$95/service, no clinical test attached) which this section's headline figure ignores entirely. A GTT-package sale and a PM-standalone service are not interchangeable — see `gtt-center-perth-overview-for-imara.md` and `executive-summary.md` for the full two-segment breakdown (illustrative bookends of ~355 packages sold/month if 100% GTT-package, or ~933 services/month if 100% PM-standalone, against the same ~A$88,625/month cost base). The "298/month" figure in this section is retained below for continuity with `financial-break-even-staff.md`'s existing package-price table (§2), which is itself GTT-package-only and does not model PM standalone volume — read it as a GTT-package-only sub-analysis, not the whole venture's break-even.
 - Full break-even (all fixed costs covered with margin) is reached at Month 5+ steady state, per the current 10-client AM Scenario C model
 - Marginal break-even (costs just covered) is reached approximately Month 4
 
@@ -27,13 +27,13 @@ Per `profit-loss-tables.md` v2.0 (2026-07-17, most recent) and `HANDOFF.md`:
 
 Per `cash-flow.md`'s existing break-even-visits table (built on the pre-Scenario-C model, but the *relationship* between price and break-even volume is methodologically sound and directionally reusable):
 
-| Avg Package Price | Break-Even Visits/Month | Break-Even Visits/Day |
+| Avg Package Price | Break-Even Sales/Month | Break-Even Sales/Day |
 |---|---|---|
-| A$200 (Package 1 — **no longer offered**, retained for reference only) | 372 | 16.9 |
-| A$250 (current conservative planning price — Package 2) | 298 | 13.5 |
-| A$300 (Package 3 only) | 248 | 11.3 |
+| A$200 (old dropped tier — **no longer offered**, retained for reference only) | 372 | 16.9 |
+| A$250 (current conservative planning price — Package 1) | 298 | 13.5 |
+| A$300 (Package 2 only) | 248 | 11.3 |
 
-**Reading this table:** since Package 1 has been dropped, the realistic range this venture actually operates in is A$250 (conservative, Package 2 only) to A$300 (Package 3 only) — a break-even range of roughly 248-298 visits/month depending on package mix, **if GTT-package visits were the only revenue source**. In practice they are not — PM standalone visits (~A$95, no GTT test) contribute separately, so this table should be read as "how many GTT-package visits alone would be needed," not the venture's actual break-even condition. The current 10-client AM Scenario C model, at full capacity (10/day × ~22 operating days = 220 AM visits/month, plus PM and Saturday), needs to be checked against this range once the PM/Saturday session-count discrepancy (see `business-plan.md` §6) is resolved — this document does not attempt that reconciliation, only surfaces where the two would need to connect.
+**Reading this table:** the realistic range this venture actually operates in is A$250 (conservative, Package 1 only) to A$300 (Package 2 only) — a break-even range of roughly 248-298 packages sold/month depending on package mix, **if GTT-package sales were the only revenue source**. In practice they are not — PM standalone services (~A$95, no GTT test) contribute separately, so this table should be read as "how many GTT-package sales alone would be needed," not the venture's actual break-even condition. The current 10-client AM Scenario C model, at full capacity (10/day × ~22 operating days = 220 AM packages sold/month, plus PM and Saturday), needs to be checked against this range once the PM/Saturday session-count discrepancy (see `business-plan.md` §6) is resolved — this document does not attempt that reconciliation, only surfaces where the two would need to connect.
 
 ---
 
@@ -43,9 +43,9 @@ Adapted from `cash-flow.md`'s existing Revenue Sensitivity table (§Sensitivity 
 
 | Scenario | Description | Monthly Revenue (as originally modelled) | Monthly Profit (as originally modelled) |
 |---|---|---|---|
-| **Worst case** | AM-only at ~70% of capacity, no PM Spa Packages, no ancillary trade | A$30,800 | -A$43,591 (a real loss — this scenario represents a serious under-performance case, not a mild downside) |
+| **Worst case** | AM-only at ~70% of capacity, no PM standalone services, no ancillary trade | A$30,800 | -A$43,591 (a real loss — this scenario represents a serious under-performance case, not a mild downside) |
 | **Base case** | Full modelled capacity at both AM and PM, current conservative A$250 planning price | A$84,623 (as originally modelled — **update this figure once the AM capacity model is reconciled to 10 clients/day, see caveat above**) | +A$10,232 (as originally modelled) |
-| **Best case** | Richer Package 3 mix + extended PM hours | A$101,548 (as originally modelled) | +A$25,657 (as originally modelled) |
+| **Best case** | Richer Package 2 mix + extended PM hours | A$101,548 (as originally modelled) | +A$25,657 (as originally modelled) |
 
 **This table needs re-running under the current Scenario C AM model before being treated as final** — flagged rather than silently re-derived with unverified numbers, consistent with the ground rule to label every assumption and not assert unverified figures as settled.
 
@@ -53,15 +53,15 @@ Adapted from `cash-flow.md`'s existing Revenue Sensitivity table (§Sensitivity 
 
 ## 4. Best / Base / Worst Case — Pricing
 
-Building on `financial-break-even-staff.md`'s existing Sensitivity — Package Price vs Margin table (originally built on a 3-package structure that included the now-dropped Package 1):
+Building on `financial-break-even-staff.md`'s existing Sensitivity — Package Price vs Margin table (originally built on a 3-package structure that included a now-dropped tier):
 
 | Target Margin | Blended Avg Price Needed (as originally modelled, 3-package structure) | Note |
 |---|---|---|
-| Break-even (0%) | A$289 | Under the current 2-package structure (Package 2/A$250, Package 3/A$300), a break-even blended average of A$289 would require a mix weighted toward Package 3 — e.g., roughly 78% Package 3 / 22% Package 2 to reach A$289 average (illustrative arithmetic, not independently re-verified against current volume assumptions) |
-| 5% margin | A$306 | Would require an even heavier Package 3 skew than the mix above |
+| Break-even (0%) | A$289 | Under the current 2-package structure (Package 1/A$250, Package 2/A$300), a break-even blended average of A$289 would require a mix weighted toward Package 2 — e.g., roughly 78% Package 2 / 22% Package 1 to reach A$289 average (illustrative arithmetic, not independently re-verified against current volume assumptions) |
+| 5% margin | A$306 | Would require an even heavier Package 2 skew than the mix above |
 | 8-10% margin | A$317-325 | Same direction, more heavily skewed |
 
-**This table is retained as directional context, not a current pricing recommendation.** The current standing instruction is to use A$250 (Package 2, the lower of the two packages) as the conservative planning price throughout financial models — this table shows what would be needed if the venture wanted to model a richer package mix instead, not a recommendation to change pricing now. See `docs/price-increase-comparison.md` for the separate, more current analysis of price-increase timing.
+**This table is retained as directional context, not a current pricing recommendation.** The current standing instruction is to use A$250 (Package 1, the lower of the two packages) as the conservative planning price throughout financial models — this table shows what would be needed if the venture wanted to model a richer package mix instead, not a recommendation to change pricing now. See `docs/price-increase-comparison.md` for the separate, more current analysis of price-increase timing.
 
 ---
 
@@ -71,11 +71,11 @@ Building on `financial-break-even-staff.md`'s existing Sensitivity — Package P
 
 | | Worst-case volume (~70% capacity) | Base-case volume (full modelled capacity) | Best-case volume (extended PM hours) |
 |---|---|---|---|
-| **Worst-case pricing (Package 2 only, A$250)** | Loss (compounds the worst-case volume loss above) | Base case, as modelled (+A$10,232/month, pending re-verification) | Better than base, still Package-2-only pricing |
-| **Base-case pricing (current 30/70-ish Package 2/3 mix, ~A$260-270 blended)** | Loss, smaller than the worst-case-pricing row | Slightly better than the base case above | Better still |
-| **Best-case pricing (richer Package 3 mix, ~A$289+ blended)** | Still likely a loss at 70% volume — pricing alone cannot offset a genuine volume shortfall | Meaningfully better than base | Best combined outcome modelled |
+| **Worst-case pricing (Package 1 only, A$250)** | Loss (compounds the worst-case volume loss above) | Base case, as modelled (+A$10,232/month, pending re-verification) | Better than base, still Package-1-only pricing |
+| **Base-case pricing (current 30/70-ish Package 1/2 mix, ~A$260-270 blended)** | Loss, smaller than the worst-case-pricing row | Slightly better than the base case above | Better still |
+| **Best-case pricing (richer Package 2 mix, ~A$289+ blended)** | Still likely a loss at 70% volume — pricing alone cannot offset a genuine volume shortfall | Meaningfully better than base | Best combined outcome modelled |
 
-**Reading this grid:** the worst-case scenario (low volume) is not rescued by pricing alone — `profit-loss-tables.md`'s own "Saturday AM runs at a loss" finding demonstrates that fixed staffing costs are largely insensitive to volume within a session, so a genuine demand shortfall is the dominant risk, not a pricing shortfall. This reinforces why pre-launch waitlist-building (per `business-plan.md` §8 Go-to-Market) is treated as a priority activity — it directly targets the volume axis of this grid, which matters more than the pricing axis at low volume.
+**Reading this grid:** the worst-case scenario (low volume) is not rescued by pricing alone — fixed staffing costs are largely insensitive to volume within a session, so a genuine demand shortfall is the dominant risk, not a pricing shortfall. This reinforces why pre-launch waitlist-building (per `business-plan.md` §8 Go-to-Market) is treated as a priority activity — it directly targets the volume axis of this grid, which matters more than the pricing axis at low volume.
 
 ---
 
@@ -86,3 +86,5 @@ Building on `financial-break-even-staff.md`'s existing Sensitivity — Package P
 **2026-07-20 (final consistency sweep)** — Both sourcing caveats in §1 resolved per CONFLICT-08: the Month 4/5 figure discrepancy and the "12-client model" variant are now both reconciled — see updated §1 and `docs/01_conflicts_log.md`.
 
 **2026-07-20 (break-even methodology fix)** — Founder feedback: §1 and §2's headline "298 visits/month" figure blended a single GTT-package client type as if it were the whole venture, ignoring PM standalone wellness revenue entirely (a different average spend, ~A$95 vs ~A$250). Added a revenue-basis figure (~A$88,625/month in costs) as the primary break-even statement, relabelled the visits-based figures as GTT-package-only illustrative bookends, and cross-referenced the full two-segment breakdown now in `gtt-center-perth-overview-for-imara.md`/`executive-summary.md`.
+
+**2026-07-20 (package renumbering + terminology + stale-finding cleanup)** — Renamed all "Package 2/Package 3" references to "Package 1 (A$250)/Package 2 (A$300)" per `services-pricing-locked.md`'s renumbering. Switched "visits" to "packages sold"/"services" throughout, since a visit alone carries no dollar figure. Removed the reference to `profit-loss-tables.md`'s now-deleted "Saturday AM runs at a loss" finding in §5 (that finding was a costing-method error, since fully removed from that document per Anthony's instruction — not restated here either).
