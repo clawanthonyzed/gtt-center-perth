@@ -89,3 +89,23 @@ Even though the analysis shows zero capacity benefit, Anthony's question also as
 ## Changelog
 
 **2026-07-20** — Created in response to Anthony's direct question about floating/decoupled chair assignment. Built and ran an actual scheduler variant (not theoretical reasoning) to test the question against 4 configurations (2/3 chairs × current/extended window), verified with an independent collision check and a finer-granularity stress test. Result: zero capacity gain in every configuration — logged as exploratory analysis only, explicitly not a recommended operational change.
+
+---
+
+## Addendum — One Additional (11th) Client at a 09:55 Start (2026-07-20)
+
+**Anthony's clarified question:** not "can 2 extra clients fit" (already answered no, above/in `business-plan.md`) — specifically, can exactly **one** additional (11th) client be squeezed onto the existing 10-client Scenario C schedule using a 09:55 start slot on one of the 2 chairs?
+
+**Method:** built a direct collision check (not manual eyeballing) against the real, already-scheduled Scenario C timetable (`scenario-c-sync-timetables.md`) — testing whether an 11th client's full draw sequence (Draw 1 at 09:55, Draw 2 at target+tolerance, Draw 3 at target+tolerance) can be placed on Chair A without colliding with Client 9 (the chair's last currently-scheduled client, Draw 1 at 09:40).
+
+**Verdict: No — a genuine 11th client cannot start at 09:55.**
+
+**The specific constraint that blocks it:** Client 9's Draw 1 occupies the chair from 09:40 to 09:55 exactly — there is zero gap before an 11th client's own Draw 1 could begin. Testing every possible placement of the 11th client's Draw 2/Draw 3 within their tolerance windows (±5min/±10min) against Client 9's actual scheduled draws (not just Client 9's outer tolerance bounds) confirms there is no collision-free assignment starting at 09:55 — the chair is occupied at that exact moment, and shifting the 11th client's later draws doesn't fix a Draw-1-vs-Draw-1 conflict at the start.
+
+**Sweep of nearby times (same chair, checked in 5-minute increments):** the next genuinely free start time after 09:40 is **10:00**, not 09:55 — a 20-minute gap, not 15. 09:45, 09:50, 09:55, and 10:05-10:15 all remain blocked; 10:00, 10:20, 10:40, 11:00 are the pattern of genuinely free slots (each exactly 20 minutes apart, half the normal 40-minute new-client rhythm — this is a real but much smaller residual gap than a full new-client slot, not usable for a full 11th client without also moving the last-draw completion time later, see below).
+
+**What a 10:00-start 11th client would actually require:** Draw 1 10:00-10:15, Draw 2 ~11:15-11:20, Draw 3 ~12:15-12:20, departing ~12:30 — twenty minutes later than the current last client's ~12:10 departure. This pushes the last specimen dispatch ~20 minutes later than today's model, which is exactly the kind of window-extension question already flagged as pending WDP's specimen-cutoff confirmation (`draw-event-scheduler-findings.md`, `cutoff-time-CORRECTION.md`) — not something achievable within the current committed 10:05-last-start assumption without that confirmation.
+
+**Bottom line:** 09:55 specifically does not work for an 11th client — the chair is occupied by Client 9's Draw 1 at that exact minute. 10:00 is the next genuinely free start, but using it depends on the same still-unconfirmed WDP window-extension question already tracked elsewhere in this corpus, not a new, independent finding. This is consistent with (not contradicted by) last round's answer that "10/day is the ceiling within the current window" — the ceiling holds for the current window; only extending the window (whether by 15, 20, or 60 minutes) moves it, and that lever was already known and already pending WDP.
+
+**2026-07-20 (11th-client addendum)** — Anthony clarified the ask was for exactly one extra client, not two — re-checked with a direct collision test against the real scheduled Scenario C timetable rather than relying on the prior 2-client answer. Confirmed 09:55 specifically is blocked (Client 9's Draw 1 occupies the chair at that exact time); the next genuinely free slot is 10:00, which depends on the same pending WDP window-extension question as the rest of this corpus, not a new independent capacity source.
