@@ -67,6 +67,7 @@ This was a large consolidation session. If you read nothing else in this section
 | 18 | [financial-break-even-staff.md](financial-break-even-staff.md) | Per-employee break-even, package pricing model |
 | 19 | [unit-economics.md](unit-economics.md) | Revenue per visit |
 | 20 | [financial-setup.md](financial-setup.md) | Trust bank accounts, Xero, payment systems (payment policy corrected this session) |
+| 20a | [revenue-extraction-options.md](revenue-extraction-options.md) | General mechanisms for Anthony/Imara to draw income from the trust (distribution, wages, director fees) — TPI-specific optimisation explicitly out of scope, new this session |
 | 21 | [financial-model.md](financial-model.md) | **SUPERSEDED (self-declared)** — trust/ownership entity structure content only, left untouched this session per explicit scope instruction |
 
 ## PHASE 3: SERVICES & PRICING
@@ -214,3 +215,5 @@ This was a large consolidation session. If you read nothing else in this section
 **2026-07-20 (external resources + PM package exploration added)** — Added row 12a for `external-resources-and-advisors.md` (Phase 1) and row 17a for `pm-package-exploration.md` (Phase 2), both new documents this session.
 
 **2026-07-20 (package renumbering)** — Updated the `services-pricing-locked.md` row to reflect the renaming to Package 1 (A$250)/Package 2 (A$300) — same 2 price points as the prior "Package 2/3" naming. This completes the corpus-wide package-renumbering sweep across all live-referencing documents (see `services-pricing-locked.md`'s own changelog for the full list).
+
+**2026-07-20 (revenue extraction doc added)** — Added row 20a for `revenue-extraction-options.md`, new this session.
