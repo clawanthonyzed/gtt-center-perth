@@ -81,6 +81,8 @@ Complete reference for all services and add-ons. Staff, duration, price, and GTT
 
 ## PART D: AFTERNOON / STANDALONE SERVICES
 
+> **PM packages, committed 2026-07-20:** in addition to booking any individual service below a-la-carte, PM clients can now also book a set/fixed PM package (a specific pre-defined 2-service combo at a set price, no client-choice within the package) — see `pm-package-structure.md` for the proposed package menu (PM Duo, PM Refresh, PM Glow), pricing (requires Anthony's sign-off, not yet final), and the sales strategy to steer clients toward the package option. The individual service prices in this table are also the components used to build those package combos.
+
 | Service | Staff Required | Qualification | Duration | Price | GTT Window | Notes |
 |---------|---------------|---------------|----------|-------|-----------|-------|
 | Cut + blowdry | Hairdresser | Cert III SHB30116 | 60 min | A$95 | No | Exceeds 45-min GTT cap |
@@ -134,3 +136,9 @@ Complete reference for all services and add-ons. Staff, duration, price, and GTT
 | Lash tech | Classic/hybrid/volume lash extensions and infills, lash lift + tint |
 | Receptionist/Manager | Cafe service, birth plan tablet assist, retail sales, no treatment services |
 | Trained staff member | Belly casting |
+
+---
+
+## Changelog
+
+**2026-07-20 (PM packages committed)** — Added a note to Part D confirming PM now offers set/fixed packages (`pm-package-structure.md`) in addition to individual a-la-carte services, per Anthony's confirmation. This table's existing service prices are the components used to build the proposed package combos.
