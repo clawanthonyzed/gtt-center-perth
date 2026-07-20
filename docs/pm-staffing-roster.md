@@ -330,6 +330,32 @@ Breaking it down by shift (allocating only directly-attributable labor per shift
 
 ---
 
+## Would Pre-Planned PM Package Volume Reduce Required Staff? (Added 2026-07-20)
+
+**Anthony's question:** if PM had a known, pre-planned volume — e.g. 10 Package 1 + 10 Package 2 sessions/day, fixed/scheduled in advance rather than the current ad-hoc Fresha-demand-driven individual booking model — would that let fewer staff be rostered than currently required? Does predictability alone reduce headcount/hours needed, independent of total revenue?
+
+### Volume Mismatch Flagged First, Not Silently Reinterpreted
+
+**The 10+10 example volume (20 packages/day) is substantially higher than current total PM session volume — 16 weekday / 8 Saturday sessions, per `profit-loss-tables.md`.** Each package (per `pm-package-structure.md`'s proposed combos) occupies a staff member for ~60-100 minutes, materially longer than the current ~46-minute average single-service session. This is not an apples-to-apples comparison of "same volume, different predictability" — it's also a large volume increase. Modelled below: total staff-hours needed for 20 packages/day at ~82.5min average duration ≈ **27.5 staff-hours**, vs the current 16-session ad-hoc model's ≈**12.3 staff-hours** (16 sessions ÷ 1.3 sessions/hr throughput, `pm-staffing-roster.md`'s existing assumption). **This is flagged explicitly rather than assumed** — if Anthony meant something closer to today's actual volume (e.g. "if today's ~16 sessions were instead 10 packages" or similar), the answer would look different; confirm the intended comparison before treating either figure as the basis for a rostering decision.
+
+### The Actual Predictability Question, Modelled Separately From the Volume Question
+
+To isolate whether *predictability itself* (not volume) reduces staffing, this section compares the current model's actual PM volume (16 sessions/day) under two scheduling approaches — ad-hoc, demand-driven booking vs a fixed, pre-known schedule (the AM Scenario C style) — holding total volume constant:
+
+**Finding 1 — predictability cannot reduce headcount below 1 person per non-poolable specialty line.** The current 4-role structure (1 massage, 1 hair, 1 nail, 1 beauty, with the established Massage+Beauty cross-training pool as the only pooling option — `am-capacity-weekend.md`) is already the minimum-headcount structure for covering 4 distinct qualifications. Knowing the day's volume in advance doesn't change this — if any bookings that day need a Nail Technician, at least 1 Nail Technician must be rostered, regardless of whether that booking was confirmed a week ago or an hour ago. **Predictability affects hours, not headcount floor.**
+
+**Finding 2 — predictability can reduce total staff-hours modestly, via tighter scheduling, but this is a small effect, not a major saving.** The current hours-based costing model (`pm-staffing-roster.md`'s own booking-driven principle) already rosters staff to confirmed Fresha bookings, not blind full shifts — this already captures most of the "known in advance" benefit. The remaining lever is *packing efficiency*: ad-hoc client-chosen booking times likely leave small gaps between sessions (clients pick their own preferred time, not a staff-optimised back-to-back sequence), whereas a fully pre-planned, choreographed schedule (like AM's synchronized Scenario C timetable, zero gaps by design) could pack the same total session count more tightly. Modelled illustratively (no real PM gap-rate data exists yet, since PM hasn't launched): at a 90% ad-hoc packing efficiency vs 100% for a fully choreographed schedule, the saving is **~1.4 staff-hours/day across the whole PM team** — a real but modest effect, not a headcount reduction.
+
+### Bottom Line
+
+**Predictability alone does not reduce the number of PM staff needed (headcount floor is set by which specialty lines have bookings that day, not by how far in advance those bookings were confirmed) — it can only produce a modest reduction in total rostered hours (~1.4 hrs/day illustrative, pending real booking data) via tighter scheduling.** The much larger effect on staffing comes from **volume**, not predictability — the 10+10 example, if genuinely a higher volume than today's model (as flagged above), would need meaningfully *more* staff-hours (~27.5 vs ~12.3), not fewer, regardless of how far in advance it's known. If Anthony's underlying goal is to reduce staffing cost, the more direct lever is the existing hours-based costing model itself (already in place) — not a shift to pre-planned scheduling.
+
+**What this does NOT model:** a genuine "AM-style" fixed PM schedule would also change the *client experience* (clients get an assigned time slot, not their own chosen time) — a real service-model trade-off worth Anthony's separate consideration if this direction is pursued further, not modelled here.
+
+---
+
 ## Changelog
 
 **2026-07-20 (CONFLICT-08 resolution)** — Flagged the "Full Recalculated P&L" table and its "Finding" as superseded — both were built on the stale 8-client/day AM revenue figure (A$44,000/month), not the current verified 10-client/day Scenario C figure (A$55,000/month). Correcting just the AM revenue turns the reported -A$4,384/month loss into a positive contribution; `profit-loss-tables.md` v2.0 (2026-07-17, more recent, matches `HANDOFF.md`) is the current authoritative figure at +A$25,087.07/month. The PM staffing structure decisions in this document (4 dedicated casual hires, hours-based costing, individual services) remain valid and unaffected by this correction.
+
+**2026-07-20 (pre-planned volume staffing question answered)** — Anthony asked whether a known, pre-planned PM package volume (e.g. 10+10/day) would reduce required staff vs the current ad-hoc booking model. Checked and answered: predictability alone does not reduce headcount (still need at least 1 person per non-poolable specialty line with bookings that day) — it can only produce a modest hours reduction (~1.4 hrs/day illustrative) via tighter scheduling. Flagged that the specific 10+10 example volume is substantially higher than current total PM volume (16 weekday/8 Saturday sessions) and involves longer package durations, so it is not a clean "same volume, different predictability" comparison — this was flagged explicitly rather than silently reinterpreted, per instruction.
