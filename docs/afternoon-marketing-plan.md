@@ -96,9 +96,18 @@ The main Instagram strategy (poppy-marketing.md) focuses on GTT education and mo
 ### Instagram — Afternoon Call to Action
 
 Morning CTA: "Book your GTT morning experience →"  
-Afternoon CTA: "Treat yourself to an afternoon session — no GTT required →"
+Afternoon CTA: "Treat yourself to an afternoon session — no GTT required →" — **updated 2026-07-20: lead with the package option** (e.g. "Book our PM Refresh — massage + facial, one relaxing afternoon →") rather than a single-service CTA, per Anthony's confirmed strategy to steer PM demand toward packages (see `pm-package-structure.md`). Individual a-la-carte booking remains available and should still be visible, just not the lead CTA.
 
 Separate booking link in bio for each (or use Linktree with both options clearly labelled).
+
+### PM Package Push — Committed Marketing Direction (Added 2026-07-20)
+
+Anthony confirmed PM will actively steer clients toward the new set/fixed PM packages (`pm-package-structure.md`) since they generate materially higher revenue per visit than a single a-la-carte booking. This changes how afternoon marketing should present the offer:
+
+- **Lead with packages, not individual services** in Instagram captions, ad copy, and the website afternoon page — e.g. "PM Refresh: Massage + Facial" as the headline offer, with individual a-la-carte services listed as a secondary "or book just one service" option, not the primary framing.
+- **Google Ads copy (see §4 below) should be revisited** once specific package names/pricing are confirmed by Anthony, to include a package-led ad variant alongside the existing single-service-keyword campaign (e.g. "Pregnancy Wellness Perth | Massage + Facial Package | Book Now").
+- **Group booking offers (§6) are a natural fit for packages** — a group of 6+ women each booking a PM Refresh is a higher-revenue group sale than 6 single services; worth highlighting packages specifically in group-booking pitches once pricing is confirmed.
+- **Not yet actioned:** exact ad copy, landing page content, and Instagram caption templates featuring specific package names/prices — held pending Anthony's sign-off on `pm-package-structure.md`'s proposed pricing.
 
 ---
 
@@ -224,3 +233,5 @@ The afternoon shift is perfectly positioned for postnatal customers (new mothers
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced operational/on-site references to "Imara" (personal partner visits, community group engagement) with "Venue Manager" (new hire, not yet in place). Ownership/trust structure unaffected — see `financial-model.md`/`research.md`.
+
+**2026-07-20 (PM packages committed — marketing direction updated)** — Added a new section reflecting Anthony's confirmed strategy to steer PM clients toward the new set/fixed PM packages (`pm-package-structure.md`) rather than individual a-la-carte services, since packages drive higher revenue per visit. Updated the Instagram CTA guidance to lead with packages. Flagged specific ad copy/landing page/caption updates as not yet actioned, pending Anthony's sign-off on proposed package pricing.
