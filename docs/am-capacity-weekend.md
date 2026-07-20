@@ -423,10 +423,12 @@ Confirmed — Scenario C's 20-minute offset between the 2 chairs was always a fl
 ## Standing Instructions From 2026-07-17
 
 1. **All figures use the conservative case as the baseline going forward** — where two scenarios exist (e.g. unconfirmed phlebotomist Saturday penalty), conservative is the default reported number, optimistic is noted as documented upside only.
-2. **Sunday trading is closed until proven demand exists.** Remove Sunday from the operational model and P&L tables — revisit only once real weekday/Saturday demand data justifies testing it.
+2. **Sunday trading is closed until standalone PM service demand is proven AND profitable enough to justify the added penalty-rate staffing cost (2.0x under MA000005/MA000027).** Remove Sunday from the operational model and P&L tables — revisit only once real weekday/Saturday demand data shows it would clear this bar, not just that demand exists at all (per Anthony's 2026-07-20 clarification: the criterion is proven-and-profitable, not proven alone).
 
 ---
 
 ## Changelog
 
 **2026-07-19** — Verified Anthony's question ("can the 10:00 appointment start at 09:55?") by simulating the actual Chair C draw-event sequence, not eyeballing it. Verdict: yes, workable on the phlebotomist/chair side — the resulting zero-minute gap is structurally identical to two zero-gap handoffs that already exist elsewhere in this same timetable. One caveat flagged and not resolved: the treatment-staff side of Client 15's shifted services cannot be verified from existing documentation (no per-client staff-assignment table exists for Scenario D, unlike Scenario C). See new "Can Client 15 Start at 09:55 Instead of 10:00?" section above. Cross-referenced and updated the recommendation in `king-edward-start-time-constraint.md`.
+
+**2026-07-20 (Sunday reopening criterion)** — Tightened the Sunday standing instruction to state the actual reopening bar: standalone PM demand must be both proven AND profitable enough to clear the 2.0x penalty-rate cost, not just "demand exists." Per Anthony's feedback that "closed until proven demand exists" undersold that profitability, not mere demand, is the real bar. Cascaded the same reword into `business-plan.md`, `executive-summary.md`, `HANDOFF.md`.
