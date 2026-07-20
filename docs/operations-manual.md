@@ -127,21 +127,20 @@ Services display only for the window available after the selected GTT start time
 3. Receptionist reviews every new online booking same day to confirm pairing is correct
 4. If pairing is missing: receptionist calls patient within 4 hours to confirm GTT time
 
-### Deposit Policy
-- A$30 non-refundable deposit collected at booking
-- Fresha Pay (card) — EFTPOS available at venue for balance
-- Deposit refunded/rescheduled if cancellation ≥24 hours prior
+### Payment Policy (CONFLICT-09 RESOLVED 2026-07-20 — was previously described as an A$30 deposit)
+- **Full package price collected at time of booking** — no deposit-only option (confirmed by Anthony, matches `onboarding.md`'s draft patient-facing copy)
+- Fresha Pay (card online) at time of booking — no separate EFTPOS balance payment needed at the venue
+- Cancellation/refund credit per the tiered policy below, not a simple deposit-refund mechanism
 
 ### Cancellation Workflow
 1. Cancellation comes in via Fresha/phone
-2. Receptionist checks: ≥24 hours → refund deposit, free rescheduled slot
-3. < 24 hours → deposit forfeited, note in Fresha
-4. No-show → full session charged (Fresha card-on-file charge)
-5. Waitlist: if cancellation occurs, immediately notify first person on waitlist (Fresha automated + personal call)
+2. Receptionist checks timing against the tiered policy: ≥48hrs → full credit, reschedule free; 24-48hrs → 50% credit; <24hrs/same-day → no credit, full amount retained (see `onboarding.md` Cancellation & Rescheduling Policy for the full tiered detail)
+3. No-show → full amount already collected at booking, retained
+4. Waitlist: if cancellation occurs, immediately notify first person on waitlist (Fresha automated + personal call)
 
 ### Late Arrival Policy
 - Patients must arrive 10-15 min before their GTT slot (X) for fasting/Medicare check-in and Draw 1
-- **>10 minutes late:** GTT slot forfeited. A$30 deposit forfeited (same mechanism as <24hr cancellation). Patient is rebooked for the next available slot — NOT squeezed into the existing schedule (would breach the next client's draw-timing tolerances on the same chair)
+- **>10 minutes late:** GTT slot forfeited, full amount already paid at booking is retained (same as a same-day cancellation/no-show). Patient is rebooked for the next available slot — NOT squeezed into the existing schedule (would breach the next client's draw-timing tolerances on the same chair)
 - Receptionist calls any patient who has not arrived by 5 minutes before X to confirm status before the 10-minute cutoff
 
 ### Overbooking Rule
@@ -349,3 +348,5 @@ Draw alert: set phone timer 5 min before each draw window. Services do NOT get i
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`.
 
 **2026-07-19 (audit pass)** — Flagged the "GTT SCHEDULING TIMETABLES" section (Scenario B, 8 clients/day) as superseded by Scenario C synchronized-start (10 clients/day) per `HANDOFF.md` and `scenario-c-sync-timetables.md`. Section not yet rewritten — see `docs/01_conflicts_log.md` and `docs/04_roadmap_next_steps.md` for the follow-up action.
+
+**2026-07-20 (CONFLICT-09 resolved)** — Corrected the Deposit Policy section (retitled Payment Policy): Anthony confirmed full package price is collected at time of booking, not an A$30 deposit. Updated the Cancellation Workflow and Late Arrival Policy to match the tiered credit policy already correctly documented in `onboarding.md`, rather than the stale deposit-forfeit mechanism.
