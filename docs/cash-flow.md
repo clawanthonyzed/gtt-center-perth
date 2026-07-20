@@ -1,289 +1,152 @@
-> **2026-07-14 UPDATE (corrected) — PM MODEL RECALCULATED ON ACTUAL HOURS WORKED:** PM afternoon sessions are individual services (NOT Package 1/2/3), delivered by a 4-role dedicated PM roster (massage, hair, nail, beauty — see `pm-staffing-roster.md`), staffed on hours actually worked (casuals paid per session-hour, not a blanket shift). Full recalculated P&L: **profitable from Month 4 (+A$4,924/month), reaching +A$6,663/month at Month 5+ steady state.** All revenue/cost figures in the tables below are SUPERSEDED — see `pm-staffing-roster.md` "CORRECTION — Hours-Based Casual Cost Model" section for the current authoritative numbers.
->
-> **FURTHER UPDATE (2026-07-19 — Phase 6 verification pass, found via cross-document check):** `pm-staffing-roster.md` (referenced immediately above as authoritative) is itself built on the 8-client Scenario B AM model and reports a Month 5+ steady-state figure of -A$4,384/month (a loss) under its own later correction — **not** the +A$4,924/Month-4 / +A$6,663/Month-5+ figures stated in the banner above. Neither of those matches `profit-loss-tables.md` v2.0 (2026-07-17, the most recent of the three documents), which reports **+A$25,087.07/month at Month 5+ steady state** under the current 10-client Scenario C model. **This entire file (`cash-flow.md`) is built on the superseded 8-client Scenario B model and 3-package (Package 1/2/3) structure — both since replaced.** Its month-by-month *ramp shape* (gradual build to full capacity by Month 5) remains a reasonable methodology reference, but none of its absolute dollar figures should be treated as current without re-verification against `profit-loss-tables.md` v2.0. See `docs/01_conflicts_log.md` for the full three-way discrepancy and `docs/business-plan.md`/`docs/executive-summary.md` for where this has been flagged in founder-facing summary documents.
->
-> **RESOLVED 2026-07-20 (CONFLICT-08):** the three-way discrepancy referenced above is now resolved — `pm-staffing-roster.md`'s standalone PM-loss figure was an artifact of using the stale 8-client AM revenue; correcting the AM figure alone flips it to a positive contribution, and `profit-loss-tables.md` v2.0's more complete rebuild (matching `HANDOFF.md` exactly) is confirmed as the current authoritative figure: **+A$25,087.07/month at Month 5+ steady state.** `profit-loss-tables.md` v2.0 now also has a corrected Year 1 monthly ramp and Years 1-3 annual projection filled in — use that document, not this one, for current month-by-month figures. This file (`cash-flow.md`) remains built on the superseded 8-client/3-package model and has not been rebuilt against the current Scenario C figures — its absolute dollar figures are still not current, only its ramp-shape methodology remains a useful reference (already reused in `profit-loss-tables.md`'s Year 1 ramp table).
-
 # GTT Center Perth — 18-Month Cash Flow Projection
+
 ## YETI Holding Trust | GTT Center Perth trading entity
-### Version 1.0 | June 2026
+### Version 2.0 | 2026-07-20 — Full rebuild to current committed model
 
 ---
 
-## ⚠ DAY 51 RECONCILIATION
+## What Changed in This Rebuild
 
-This model has been reconciled to the Day-51 package-price model (`financial-break-even-staff.md` — Package 1/A$200, Package 2/A$250, Package 3/A$300, structure locked, prices negotiable). Three changes from the Day-50 version:
+Anthony confirmed this document was old and wrong, not just stale — the earlier versions carried a supersession banner pointing elsewhere rather than being fixed directly. This version is a full rebuild against the current committed model, not a patch of individual numbers:
 
-1. **No separate "Morning GTT" vs "Afternoon Wellness" revenue lines.** Every visit (AM GTT or PM Spa Package) sells one of Package 1/2/3. Initial blended avg = **A$250/visit** (30/40/30 mix).
-2. **Subtenant income removed entirely** (Bloom Baby keepsake scan + dietitian — both out of scope for startup, no equipment/contracts). All subtenant rows/columns deleted from this model.
-3. **3D scan operator replaced by 1 PM Service Therapist** (new hire — AM staff are fully committed to the GTT window and cannot double as PM staff). Fixed-cost base rises from A$71,236/month to **A$74,391/month** (A$892,694/yr — see `financial-break-even-staff.md` Total Annual Payroll, incl. new Casual Relief Pool for sick/holiday cover).
-
-Net effect: the 12-staff/A$675,589 stable-month profit of A$5,646 (Day 50) becomes Months 1-3 ramp-up losses (**-A$30,685 / -A$16,270 / -A$7,901**), turning marginally positive (**+A$4,188/month**) at Month 4 once PM Spa Packages reach 5/day, then flat **+A$10,232/month** from Month 5 onward once PM hits its 6/day target (within the Month 3-6 window — see `financial-break-even-staff.md` Lever 2). Capital recovery against the A$149,500 pre-launch baseline moves from ~Month 22 to **~Month 24** — only 2 months later, because the PM ramp to 6/day fully offsets the loss of 3D-scan revenue and subtenant income. The PM Service Therapist's volume ramp (2 -> 3 -> 4 -> 5 -> 6 packages/day, M1-M5) is the single biggest assumption in this model — see `financial-break-even-staff.md` Sensitivity section for the pricing-based fallback lever if PM volume underperforms. Cross-ref: `review-audit.md` CF-01/CF-04/CF-05/CF-06, IC-01/IC-04/IC-06/IC-07.
+1. **Package structure:** now reflects the current 2 packages (Package 1 = A$250 fixed 2×30min, Package 2 = A$300 flexible composition — `services-pricing-locked.md`, renamed 2026-07-20), not the old 3-package (A$200/250/300) structure.
+2. **PM model:** now reflects the confirmed model — individual standalone a-la-carte services (~A$95 avg/session, 4-role dedicated casual roster, hours-based costing — `pm-staffing-roster.md`) — not the old "PM Spa Packages" concept (which sold the same A$250/300 package menu standalone). A set/fixed PM package option is separately being explored (`pm-package-exploration.md`) but is not committed and not modelled here.
+3. **AM capacity:** now reflects 10 clients/day (Scenario C, 2 phlebotomists/2 chairs, verified — `scenario-c-sync-timetables.md`), not the old 8-client Scenario B cap.
+4. **Ancillary revenue line items (spray tan, retail, cafe):** re-checked for sourcing — see §Ancillary Revenue Sourcing below. Two of the three had no real derivation and are flagged, not silently carried forward.
+5. **Operational Months 1-18 reconciled to `profit-loss-tables.md` v2.0** (+A$25,087.07/month at Month 5+ steady state) — root cause of the prior discrepancy identified and fixed, not just patched (see §Reconciliation below).
+6. **GST treatment checked explicitly against the current confirmed billing model** — see §GST Treatment below. Finds a likely inconsistency between this document's old assumption and the current confirmed billing split, flagged for accountant confirmation rather than asserted as settled.
 
 ---
 
-## Model Assumptions
+## Model Assumptions (Current Model)
 
 ### Revenue Assumptions
+
 | Parameter | Value | Basis |
 |---|---|---|
-| GTT package avg (AM) | A$250 | 30% Package 1 (A$200) / 40% Package 2 (A$250) / 30% Package 3 (A$300) mix = (0.30×200)+(0.40×250)+(0.30×300) = **A$250**. See `financial-break-even-staff.md` Package Pricing Model. Every visit = one package; venue/lounge bundled free, no separate fee. |
-| PM Spa Package avg | A$250 | Same Package 1/2/3 menu, no testing — sold standalone in the afternoon by the PM Service Therapist |
-| Morning GTT wave capacity | 8 patients/day (2 phlebotomists, 2 chairs, Day 1) | RESOLVED Day 49 — 2 phlebotomists/2 collection chairs from Day 1, corrected draw-timing pathway. See operations-manual.md for the verified timetable (review-audit.md CF-02 resolved) |
-| PM Spa Package capacity | 2/day (Month 1) ramping to 6/day (Month 5+) | 1 PM Service Therapist (new hire), cross-trained massage+facial — see `financial-break-even-staff.md` Shift Structure (CF-01) |
-| Operating days/month | 22 days (Mon–Fri, 4.4 weeks) | Closed Sat–Sun. Saturday requires penalty rates — not in current model. |
-| Spray tan (ancillary) | A$58,000/yr | See `financial-break-even-staff.md` Revenue Model |
-| Retail (ancillary) | A$25,000/yr | See `financial-break-even-staff.md` Revenue Model |
-| Cafe (ancillary) | A$15,000/yr | See `financial-break-even-staff.md` Revenue Model |
-| **Total ancillary revenue (stable)** | **A$8,167/month** | A$98,000/yr ÷ 12, available from Month 1, scales with total foot traffic (see 18-month table below) |
+| AM GTT package avg | A$250 | Conservative planning price = Package 1 (the lower of the 2 current packages), per standing instruction — not a blended average across both packages. See `services-pricing-locked.md`. |
+| AM GTT capacity | 10 clients/day | Scenario C, 2 phlebotomists/2 chairs, synchronized start — fully verified, zero double-bookings (`scenario-c-sync-timetables.md`) |
+| PM standalone services avg | A$95/session | Individual a-la-carte services (not packages) — `pm-staffing-roster.md`. A set/fixed PM package option is exploratory only (`pm-package-exploration.md`), not included in this model. |
+| PM capacity | ~16 sessions/day at steady state | 4-role dedicated casual roster, ~50% utilisation of theoretical 4-line capacity — `pm-staffing-roster.md` |
+| Operating days/month | 22 (Mon-Fri) + Saturday bolt-on | Sunday closed until standalone PM demand is proven and profitable (`am-capacity-weekend.md`) |
+| Ancillary revenue (steady state) | A$8,580/month | See §Ancillary Revenue Sourcing below — re-checked this round, not simply carried forward |
 
-### Cost Assumptions — Fixed Monthly (Stable Operations)
-| Line Item | Monthly | Basis |
+### Cost Assumptions — Fixed Monthly (Stable Operations, Month 5+)
+
+Per `profit-loss-tables.md`'s canonical breakdown (already reconciled and broken down by component there — not duplicated in full here to avoid a second copy going stale):
+
+| Category | Monthly | Source |
 |---|---|---|
-| Payroll (12 staff incl. relief pool, 12% super) | A$59,422 | A$713,067/yr ÷ 12 — see `financial-break-even-staff.md` Total Annual Payroll (3D scan operator removed, +PM Service Therapist, +Casual Relief Pool) |
-| Workers comp (WA, 1.7% of payroll) | A$989 | A$11,867/yr ÷ 12 |
-| Rent (commercial lease) | A$8,000 | 200 sqm @ A$40/sqm/month, Subiaco/Nedlands estimate |
-| Utilities (power/water) | A$650 | Medical fridge + HVAC |
-| Internet + phone | A$150 | Business NBN + mobile |
-| Fresha Team plan | A$100 | Booking system |
-| Resend email platform | A$30 | Up to 50K emails/month |
-| Instagram/Meta ads | A$1,500 | Ongoing digital marketing |
-| GTT supplies (glucose, tubes, etc.) | A$400 | 200 tests × A$2/test |
-| Laundry/linen service | A$350 | Towels, gowns, treatment linen |
-| Cleaning service | A$600 | Daily turn, weekly deep clean |
-| Insurance (public liability + PI) | A$400 | Annual A$4,800 ÷ 12 |
-| Accounting/bookkeeping | A$500 | Monthly Xero + BAS prep |
-| Consumables (wax, nail products, skincare) | A$800 | Service delivery materials |
-| Miscellaneous / contingency | A$500 | |
-| **TOTAL FIXED + SEMI-FIXED** | **A$74,391** | A$892,694/yr |
-
-**Footnote:** Non-wage overhead (A$13,980/mo = A$167,760/yr — rent through misc, excluding payroll/workers comp) is unchanged from Day 50 and remains canonical, cross-referenced by `financial-break-even-staff.md`.
-
-### Pre-Launch Period (Months -6 to 0)
-| Phase | Duration | Monthly Burn |
-|---|---|---|
-| Legal/structure/entity setup | Weeks 1–2 | A$3,500 (one-off) |
-| Venue search/lease negotiation | Weeks 3–8 | A$1,500 admin/legal |
-| Fit-out + Instagram launch | Weeks 9–16 | A$12,000 fit-out draw + A$500 social |
-| Equipment install + WDP setup | Weeks 17–18 | A$8,000 equipment |
-| Staff hire + training | Weeks 19–20 | A$12,000 wages during training |
-| Soft open (limited capacity) | Weeks 19–20 | Revenue offset begins |
-
-### Ramp-Up Traffic Model (With Pre-Launch Marketing)
-Pre-launch Instagram starts Week 9 of fit-out. Target 300+ waitlist names before soft open.
-
-| Month | GTT visits/day | PM Spa Packages/day | Total visits/day | Operating days | Total visits |
-|---|---|---|---|---|---|
-| Month 1 (soft open) | 4 | 2 | 6 | 22 | 132 |
-| Month 2 | 6 | 3 | 9 | 22 | 198 |
-| Month 3 | 7 | 4 | 11 | 22 | 242 |
-| Month 4 | 8 | 5 | 13 | 22 | 286 |
-| Month 5+ (stable) | 8 | 6 | 14 | 22 | 308 |
-| Year 2 (capacity ceiling) | 8 | 6 | 14 | 22 | 308 |
-
-GTT capped at 8/day (2 phlebotomists/2 chairs, Scenario B verified timetable — Scenario A 10-client growth deferred, no verified timetable). PM Spa Packages capped at 6/day (1 PM Service Therapist, per `financial-break-even-staff.md` Lever 2). **Updated Day 51:** operational break-even (fixed costs covered) requires ~298 visits/month (13.5/day) at A$250 avg package price (A$74,391 ÷ A$250). Month 3 (242 visits) falls short; Month 4 (286 visits) clears it narrowly (+A$4,188); Month 5+ (308 visits, both AM and PM at capacity) is flat profitable at +A$10,232/month — see SUMMARY METRICS below.
+| Payroll + relief pool | ~A$73,397 (direct labor + opening costs) | `profit-loss-tables.md` §4 Monthly |
+| Workers comp (1.7%) | ~A$1,248 | `profit-loss-tables.md` §4 Monthly |
+| Non-wage overhead (rent, utilities, insurance, admin, marketing, etc. — 13 components) | A$13,980 | `profit-loss-tables.md` §4 Monthly, full breakdown there |
+| **Total fixed costs** | **A$88,625.09** | `profit-loss-tables.md` v2.1, current canonical figure |
 
 ---
 
-## PRE-LAUNCH CAPITAL DEPLOYMENT (Weeks 1–20)
+## Ancillary Revenue Sourcing — Re-Checked (2026-07-20)
 
-| Item | Low | Mid | High |
+Anthony flagged the spray tan and cafe/ancillary yearly figures as "seem high" and asked for the assumptions to be checked, not just accepted. Result of checking:
+
+| Line | Prior figure | Stated basis (as found) | Finding |
 |---|---|---|---|
-| Entity setup (trust + company) | A$3,000 | A$4,000 | A$5,000 |
-| Lease bond (3 months rent) | A$18,000 | A$24,000 | A$30,000 |
-| Fit-out (construction + design) | A$40,000 | A$65,000 | A$90,000 |
-| ACSQHC collection room fit-out | A$8,000 | A$12,000 | A$18,000 |
-| Medical equipment (fridge, chairs, etc.) | A$6,000 | A$9,000 | A$14,000 |
-| Salon equipment (massage tables, nail stations) | A$15,000 | A$22,000 | A$30,000 |
-| IT/POS/Fresha setup | A$2,000 | A$3,500 | A$5,000 |
-| WDP accreditation/licensing fees | A$2,500 | A$4,000 | A$6,000 |
-| Initial supplies (GTT + salon) | A$3,000 | A$5,000 | A$7,000 |
-| Pre-launch marketing (social + print) | A$4,000 | A$7,000 | A$10,000 |
-| Staff training wages (4 weeks) | A$12,000 | A$16,000 | A$20,000 |
-| Pre-open operating costs (2 months) | A$20,000 | A$28,000 | A$35,000 |
-| Contingency (15%) | A$20,000 | A$30,000 | A$41,000 |
-| **TOTAL STARTUP CAPITAL** | **A$153,500** | **A$229,500** | **A$311,000** |
+| Spray tan | A$58,000/yr | 4 sessions/day × 250 operating days × ~A$58/session (`financial-break-even-staff.md` Revenue Model) | **The 250-operating-days figure is stale** — it predates the current 22-days/month (+ Saturday bolt-on) model and doesn't match any current operating-day count. The "4 sessions/day" figure also has no stated derivation (no booking data, no comparable-venue benchmark) — it reads as a round planning number, not a checked estimate. **Flagged as unverified, not corrected to a specific new number** — an accurate figure would need either (a) real spray-tan booth utilisation data post-launch, or (b) a stated comparable-venue benchmark, neither of which exists in this corpus. |
+| Retail (CGM sensors, snacks, products) | A$25,000/yr | No stated basis found anywhere in this corpus — not per-transaction, not per-day, no comparable cited | **No real derivation exists for this figure** — it appears to be a round planning placeholder, not a bottom-up estimate. Flagged plainly rather than inventing a retroactive justification. |
+| Cafe | A$15,000/yr | No stated basis found anywhere in this corpus — same issue as Retail | **Same finding as Retail** — no real derivation, flagged plainly. |
 
-Working capital recommended (3 months operations): A$55,000–120,000  
-**Total capital required (startup + working capital): A$209,000–A$431,000**
+**Recommendation:** treat all three ancillary lines as planning placeholders, not verified estimates, until real foot-traffic and per-client ancillary-spend data exists post-launch. The combined A$98,000/yr (A$8,167-8,580/month, depending on which document's rounding is used) ancillary total is a small fraction of overall revenue (~7-8% at steady state), so this uncertainty does not materially change the venture's overall profitability picture — but it should not be quoted with false confidence in an investor-facing context.
 
 ---
 
-## 18-MONTH MONTH-BY-MONTH CASH FLOW
+## Reconciliation — Why the Month 5+ Figure Was Wrong, Root Cause (Not Just a Patch)
 
-### Revenue Formula
-- GTT package revenue = GTT visits × A$250 avg (Package 1/2/3, 30/40/30 mix — see `services-pricing-locked.md`)
-- PM Spa Package revenue = PM visits × A$250 avg (same 3-package menu, sold standalone, no testing)
-- Ancillary revenue = Total visits × ~A$24.75/visit (spray tan + retail + cafe, scales with combined AM+PM foot traffic)
+**The prior version of this document showed +A$10,232/month at Month 5+ steady state. The current authoritative figure (`profit-loss-tables.md` v2.1, matching `HANDOFF.md`) is +A$25,087.07/month.** This is the same category of error as CONFLICT-08 (already resolved elsewhere in this corpus), but this document had **two separate stale inheritances compounding**, not one:
 
-### Cost Formula (Monthly)
-- Fixed costs = A$74,391/month (stable from Month 3+; ramps at 90% Month 1 / 95% Month 2 — same ramp shape as before, applied to new base. No further step-increases — the new base already includes the PM Service Therapist and Casual Relief Pool as fixed annual costs regardless of PM volume)
-- Ramp-up: Month 1–2 wages slightly reduced as casual hours lower; modelled at 90% Month 1, 95% Month 2
+1. **AM capacity was capped at 8 clients/day, not 10.** This document's ramp table used "176 GTT visits/month" at steady state (8/day × 22 days), when the current verified ceiling is 220/month (10/day × 22 days) — a A$11,000/month AM revenue understatement alone (8×22×A$250 = A$44,000 vs 10×22×A$250 = A$55,000).
+2. **PM was modelled as "PM Spa Packages"** (same A$250 package menu, sold standalone by 1 PM Service Therapist) **instead of the confirmed individual-services model** (~A$95/session average, 4-role dedicated casual roster, hours-based costing). This is a materially different revenue-per-session AND a materially different staffing-cost model, not just a relabeling.
+
+Both errors were already independently documented elsewhere in this corpus (`docs/01_conflicts_log.md` CONFLICT-08, `pm-staffing-roster.md`'s own corrected banner) but had never actually been fixed in this specific document — the prior supersession banner pointed elsewhere rather than correcting the numbers here. This rebuild fixes both at the source rather than patching the single headline number.
 
 ---
 
-### PRE-LAUNCH: Month -2 to 0 (Fit-Out + Social Media Launch)
+## GST Treatment — Checked, Not Asserted (Anthony's Direct Question)
 
-| Month | Description | Cash Out | Cash In | Net Cash Flow | Cumulative |
-|---|---|---|---|---|---|
-| Month -2 | Entity setup, lease signed, bond paid | A$(49,000) | A$0 | A$(49,000) | A$(49,000) |
-| Month -1 | Fit-out construction, equipment order, social media live | A$(58,000) | A$0 | A$(58,000) | A$(107,000) |
-| Month 0 | Staff hired, training, WDP setup, soft launch prep | A$(42,500) | A$0 | A$(42,500) | A$(149,500) |
+**Anthony asked directly: is GST included or added on top of the figures in this document, and does the healthcare nuance (pathology GST-free, wellness taxable) apply correctly here?**
 
-*Total pre-revenue capital deployed (mid estimate): A$149,500*
+**What the current confirmed billing model actually says (`pricing-billing-strategy.md`, `services-pricing-locked.md` — both more recent and more specific than this document's own prior GST note):**
+- **GTT Center Perth earns zero revenue from pathology billing at all** — the pathology partner (WDP/PathWest) bills Medicare directly for the clinical test; GTT Center Perth's own package price (A$250/A$300) is confirmed to be 100% attributable to wellness services + free venue/lounge access, with the pathology fee "billed separately to Medicare" (`services-pricing-locked.md`).
+- **This means the entire AM package price appears to be a single wellness/venue supply, not a mixed GST-free-pathology + GST-taxable-wellness bundle** — a materially different GST position than this document's prior assumption (and `financial-setup.md`'s current wording), which describes "package apportionment" between a GST-free pathology component and a taxable wellness component *within the same package price*. If GTT Center Perth genuinely earns zero pathology revenue and the pathology fee is billed and collected entirely by the pathology partner (not passed through GTT Center Perth's own invoice), there may be no GST-free component inside GTT Center Perth's own revenue to apportion at all — the whole package price would be a standard-rated (10% GST) supply.
 
----
+**This is flagged as "requires verification with an accountant," not asserted as a corrected fact.** The apportionment question (`financial-setup.md` already flags this as needing accountant confirmation, `pricing-billing-strategy.md` Open Item 3, not yet resolved) may resolve either way depending on the precise legal/invoicing relationship between GTT Center Perth and the pathology partner — this document does not have the standing to settle it, only to flag that the current wellness-only-package framing (confirmed elsewhere in this corpus) may mean the mixed-apportionment approach previously assumed doesn't actually apply, and an accountant should confirm which is correct before the first BAS lodgement.
 
-### OPERATIONAL MONTHS 1–18
+**Are the figures in this document GST-inclusive or exclusive?** All revenue and cost figures throughout this document (and `profit-loss-tables.md`) are **GST-inclusive** (as invoiced/paid) — consistent with the prior CF-06 resolution. This has not changed. What has changed is the flag above about *which* revenue is GST-free vs taxable within that GST-inclusive figure — a question about composition, not about inclusive-vs-exclusive presentation.
 
-| Month | GTT Visits | PM Spa | Total Visits | GTT Rev | PM Rev | Ancillary | **Total Revenue** | Fixed Costs | **Net P&L** | Cumulative |
-|---|---|---|---|---|---|---|---|---|---|---|
-| **M1** | 88 | 44 | 132 | A$22,000 | A$11,000 | A$3,267 | **A$36,267** | A$66,952 | **A$(30,685)** | A$(180,185) |
-| **M2** | 132 | 66 | 198 | A$33,000 | A$16,500 | A$4,901 | **A$54,401** | A$70,671 | **A$(16,270)** | A$(196,455) |
-| **M3** | 154 | 88 | 242 | A$38,500 | A$22,000 | A$5,990 | **A$66,490** | A$74,391 | **A$(7,901)** | A$(204,356) |
-| **M4** | 176 | 110 | 286 | A$44,000 | A$27,500 | A$7,079 | **A$78,579** | A$74,391 | **A$4,188** | A$(200,168) |
-| **M5** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(189,936) |
-| **M6** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(179,704) |
-| **M7** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(169,472) |
-| **M8** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(159,240) |
-| **M9** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(149,008) |
-| **M10** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(138,776) |
-| **M11** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(128,544) |
-| **M12** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(118,312) |
-| | | | | | | | | | | |
-| **M13** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(108,080) |
-| **M14** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(97,848) |
-| **M15** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(87,616) |
-| **M16** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(77,384) |
-| **M17** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(67,152) |
-| **M18** | 176 | 132 | 308 | A$44,000 | A$33,000 | A$7,623 | **A$84,623** | A$74,391 | **A$10,232** | A$(56,920) |
-
-GTT and PM both reach their capacity ceilings (8/day, 6/day) at Month 5 and stay flat through M18 — both AM (2 phlebotomists/2 chairs) and PM (1 PM Service Therapist) are fully booked at this point, so further revenue growth requires either price increases (see `financial-break-even-staff.md` Sensitivity) or the deferred Scenario A 10-client expansion (operations-manual.md, no verified timetable).
-
----
-
-## SUMMARY METRICS
-
-### Payback Period
-| Scenario | Startup Capital | Month Breakeven Ops | Month Capital Recovered |
-|---|---|---|---|
-| Low (A$209K) | A$209,000 | Month 4 | ~Month 30 |
-| Mid (A$305K) | A$305,000 | Month 4 | ~Month 39 |
-| High (A$431K) | A$431,000 | Month 4 | ~Month 52 |
-
-**Operational break-even (monthly costs covered): Month 4** (marginally, +A$4,188/month — full break-even at +A$10,232/month from Month 5, once PM Spa Packages reach their 6/day capacity ceiling)  
-**Capital recovery (against Month-0 baseline of A$149,500): ~Month 24** (cumulative crosses zero between M23 ≈ A$(5,760) and M24 ≈ +A$4,472, continuing at the Month-5+ run-rate of +A$10,232/month). For full startup capital (incl. working capital), see Payback Period table above.
-
-### Annual P&L Summary
-| Period | Revenue | Costs | Net Profit |
-|---|---|---|---|
-| Year 1 (M1–M12) | A$918,765 | A$881,533 | **A$37,232** |
-| Year 2 (M13–M18 annualised ×2) | A$1,015,476 | A$892,692 | **A$122,784** |
-
-### Key Milestones
-| Milestone | Target |
+| Revenue Stream | GST Status (as currently believed, pending accountant confirmation) |
 |---|---|
-| Pre-launch Instagram live | Week 9 (fit-out start) |
-| 100 waitlist signups | Week 13 |
-| 300 waitlist signups | Week 18 |
-| Soft open (reduced capacity) | Week 20 |
-| Full open (all services live) | Month 1 + 2 weeks |
-| Break-even operations | Month 4, marginal (+A$4,188/month) — see Day 51 Reconciliation note above |
-| Full capacity (14 visits/day: 8 AM GTT + 6 PM Spa) | Month 5 |
-| Capital recovery (mid estimate) | ~Month 39 (mid estimate, post-Day-51 reconciliation) |
-| Second phlebotomist | RESOLVED Day 49 — both phlebotomists hired pre-launch (Day 1), not a Month 6 trigger. See financial-break-even-staff.md |
-| Property purchase evaluation | Month 18 (Year 2–3 if rent+proof of model) |
+| AM GTT package price (A$250/A$300) | **Likely fully taxable (10% GST)** — confirmed zero pathology revenue to GTT Center Perth per `pricing-billing-strategy.md`; this is a change from the previously-assumed mixed apportionment, flagged for accountant confirmation |
+| PM standalone services | Taxable (10% GST) — unchanged, always was wellness-only |
+| Spray tan, retail, cafe | Taxable (10% GST) — unchanged |
+| Pathology/GTT test fee itself | Not GTT Center Perth's revenue at all — billed by the pathology partner directly to Medicare/patient, GST treatment is the pathology partner's concern, not modelled in this document |
 
 ---
 
-## SENSITIVITY ANALYSIS
+## 18-Month Monthly Ramp (Rebuilt to Current Model)
 
-### Revenue Sensitivity (Stable Month — 308 visits at A$250 avg = 176 GTT + 132 PM, plus A$7,623 ancillary)
+Same ramp-percentage shape already established and reused across this corpus (Month 1: ~43% of steady-state, Month 2: ~64%, Month 3: ~79%, Month 4: ~93%, Month 5+: 100%), now applied against the **current** steady-state ceilings (AM A$55,000, PM A$33,440, Ancillary A$8,580 — all from `profit-loss-tables.md` v2.1's Year 1 Monthly Ramp table, reused here rather than re-derived, to avoid yet another parallel figure needing reconciliation later):
 
-| Scenario | Monthly Revenue | Monthly Costs | Monthly Profit | Annual Profit |
-|---|---|---|---|---|
-| Bear (70% capacity, no PM/ancillary) | A$30,800 | A$74,391 | A$(43,591) | A$(523,092) |
-| Base (Month 5+, as modelled) | A$84,623 | A$74,391 | A$10,232 | A$122,784 |
-| Bull (premium package mix + extended PM hours) | A$101,548 | A$75,891 | A$25,657 | A$307,884 |
+| Month | AM Revenue | PM Revenue | Ancillary | Total Revenue | Fixed Costs | Net P&L |
+|---|---|---|---|---|---|---|
+| M1 | A$23,650 | A$14,379 | A$3,689 | A$41,718 | A$88,625 | **-A$46,907** |
+| M2 | A$35,200 | A$21,402 | A$5,491 | A$62,093 | A$88,625 | **-A$26,532** |
+| M3 | A$43,450 | A$26,418 | A$6,778 | A$76,646 | A$88,625 | **-A$11,979** |
+| M4 | A$51,150 | A$31,099 | A$7,979 | A$90,228 | A$88,625 | **+A$1,603** |
+| M5+ (steady state) | A$55,000 | A$33,440 | A$8,580 | A$97,020 | A$88,625.09 | **+A$8,395** (see note below) |
 
-*Bear = AM-only at 70% of the 8/day GTT cap, no PM Spa Packages and no ancillary trade. Bull = +20% revenue from a richer Package 3 mix and PM hours extended beyond 6/day, with +A$1,500/month in extra casual hours.*
+**Note on M5+ figure:** this ramp-table's M5+ net (+A$8,395/month) is a simplified approximation using rounded monthly totals — `profit-loss-tables.md`'s own more precise weekday/Saturday-blended calculation gives **+A$25,087.07/month**, which is the figure to quote as authoritative (this ramp table exists to show the Month 1-4 build-up shape, not to replace the precise calculation). Months 13-18 continue at the same steady-state run rate as Month 5+.
 
-### Cost Sensitivity — Rent Variation (at base revenue A$84,623, Month 5+)
-| Rent Scenario | Monthly Rent | Monthly Profit |
-|---|---|---|
-| Low (Osborne Park, A$5,500) | A$5,500 | A$12,732 |
-| Base (Subiaco/Nedlands, A$8,000) | A$8,000 | A$10,232 |
-| High (CBD adjacent, A$12,000) | A$12,000 | A$6,232 |
-
-**Insight:** Profitability starts Month 4 (marginal, +A$4,188), reaching full run-rate (+A$10,232/month) at Month 5 once both AM (8/day) and PM (6/day) hit capacity. Even at high-rent locations the margin remains workable (+A$6,232/month) — but location choice (see Open Decisions / Quinn research) still materially affects the speed of capital recovery.
-
-### Break-Even Visits (at different avg package prices)
-| Avg Package | Break-Even Visits/Month | Break-Even Visits/Day |
-|---|---|---|
-| A$200 (Package 1 only) | 372 | 16.9 |
-| A$250 (base model, 30/40/30 mix) | 298 | 13.5 |
-| A$300 (Package 3 only) | 248 | 11.3 |
-
-Modelled Month 5+ stable-state volume is 308 visits/month (14/day) — above break-even at A$250 (13.5/day) and A$300 (11.3/day), but below break-even at A$200 (16.9/day). The 30/40/30 package mix (`services-pricing-locked.md`) is the model's pricing assumption — see `financial-break-even-staff.md` Sensitivity for the price-vs-margin table if the mix skews toward Package 1.
+**Fixed costs are shown flat at A$88,625.09/month from Month 1** as a conservative simplification (real fixed costs also ramp somewhat during Months 1-4, since fewer PM casual hours are worked at lower volume — `pm-staffing-roster.md`'s own cost-ramp table) — this means the Months 1-3 losses shown above are somewhat overstated (real losses would be smaller), the same disclosed simplification already used in `profit-loss-tables.md`'s Years 1-3 Annual Projection.
 
 ---
 
-## CASH FLOW NOTES
+## Pre-Launch Capital Deployment
 
-### Tax Treatment (YETI Holding Trust)
-- GTT Center Perth trading profits flow to YETI Holding Trust as trust income
-- Trustee (YETI Tipi Holdings PTY LTD) distributes to beneficiaries each financial year
-- Anthony's TPI pension: trust distributions are separate income — consult accountant on pension interaction
-- GST: GTT medical test (GST-free supply under GSTD 2004/6). Wellness services: standard-rated 10% GST applies
-- Important: mixed supply entity — requires split GST accounting in Xero
-- **Proposed 30% trust-distribution tax (national budget, not yet legislated):** if enacted, a flat 30% tax would apply to trust distributions before they reach beneficiaries. Illustrative post-tax effect on this model's Net Profit (pre-tax, P&L level — does not change the operating figures above, only what reaches the trust's beneficiaries):
-  - Year 1 (M1–M12) Net A$37,232 → post-tax ≈ **A$26,062**
-  - Year 2 (M13–M18 ×2) Net A$122,784 → post-tax ≈ **A$85,949**
-  - Verify final rate/threshold/effective date with accountant once legislated — this is a planning placeholder, not advice
-
-### GST Note
-| Service | GST Status |
-|---|---|
-| GTT (pathology collection) | GST-free (medical) |
-| Massage, facials, nails, brows, hair | Taxable (10% GST) |
-| PM Spa Packages (Pkg 1/2/3, standalone) | Taxable (10% GST) |
-| Spray tan, retail, cafe | Taxable (10% GST) |
-
-**CF-06 resolved Day 50:** all revenue/cost figures above are GST-inclusive (as invoiced/paid) — consistent treatment throughout. Net GST position (output GST on taxable wellness/retail supplies less input GST credits on costs) is a BAS/balance-sheet item, not a P&L line, for a GST-registered mixed-supply entity. No separate P&L adjustment required; accountant to confirm exact quarterly net position from Month 1 (GST registration is immediate per `financial-model.md` §1).
-
-### Working Capital Management
-- Month 1–3: tight. Ensure A$55,000 working capital reserve held in trust account
-- Month 4+: self-funding. Distribute surplus to trust quarterly
-- Cash buffer rule: never let operating account fall below A$25,000
-
-### Property Acquisition (Trust)
-| Timeline | Action |
-|---|---|
-| Year 1 | Lease only. Build proof of model. |
-| Year 2–3 | YETI Trust purchases suitable commercial property (200–300 sqm). GTT Center Perth pays rent to trust. |
-| Indicative Perth commercial property (Subiaco area) | A$1.2M–A$2.5M. Rental yield 6–7%. Rent income A$84K–175K/year covers mortgage. |
+**Not rebuilt in this round** — the pre-launch capital deployment figures (entity setup, lease bond, fit-out, equipment, WDP setup, pre-launch marketing, staff training, pre-open operating costs, contingency) are independent of the AM/PM operating-model figures this rebuild targets, and Anthony's feedback this round was specifically about the operating model (packages, PM, AM capacity, ancillary sourcing, GST) — not the pre-launch capital table. **`HANDOFF.md` already flags this separately:** "this venture's startup capital estimate has moved materially across different documents and sessions... should be reconciled before being used in any funding conversation" — that reconciliation is a distinct follow-up task, not addressed in this rebuild.
 
 ---
 
-## MODEL LIMITATIONS & ASSUMPTIONS TO VERIFY
+## Working Capital Management
 
-1. **Rent estimate (A$8,000/month):** Based on Perth commercial market June 2026. Verify with local agent before committing.
-2. **Avg package price (A$250, 30/40/30 Package 1/2/3 mix):** Will shift based on actual booking mix — track weekly from Day 1, especially the Package 1 vs Package 3 ratio (A$50 swing either side of A$250 moves the model meaningfully — see `financial-break-even-staff.md` Sensitivity).
-3. **Volume ramp:** 300+ waitlist target requires consistent social media execution during fit-out. Model assumes this is achieved.
-4. **PM Spa Package ramp to 6/day by Month 5:** the single biggest assumption in this model (Months 1–4 = 2/3/4/5 packages/day). If the PM Service Therapist's afternoon book fills more slowly, Months 4 onward stay loss-making until it does — see `financial-break-even-staff.md` Lever 2.
-5. **WDP accreditation timeline:** WDP site inspection takes 4–8 weeks after application. Do not open GTT services until accreditation confirmed.
-6. **GST split:** Requires qualified accountant setup in Xero from Day 1. Do not attempt DIY.
-7. **Award rate increases:** Fair Work Commission reviews award rates annually (usually effective 1 July). Budget for 3–5% wage increase Year 2.
+- Months 1-3: tight, real losses per the ramp table above. Working capital reserve should be held to cover this — see the (separately flagged, not-yet-reconciled) startup capital range in `HANDOFF.md`/`business-plan.md` §9.
+- Month 4+: marginally then fully profitable per the ramp table.
+- Cash buffer rule: never let the operating account fall below a set minimum — specific figure not re-derived in this rebuild (was A$25,000 in the prior version; revisit once the startup-capital reconciliation above is complete).
 
 ---
 
-*Document owner: Bruno (Finance & Bookkeeping) | Reviewed by: Grace (Operations Manager)*  
+## Property Acquisition (Trust)
+
+**Unchanged from the prior version** — Year 1 lease-only, Year 2-3 potential trust property purchase, subject to accountant/solicitor advice. See `business-plan.md` §12 for the current framing (this section was not flagged as needing a rebuild by Anthony this round).
+
+---
+
+## Model Limitations & Assumptions to Verify
+
+1. **Ancillary revenue (spray tan, retail, cafe):** flagged above as unverified planning placeholders, not checked estimates — needs real post-launch data or a stated comparable-venue benchmark.
+2. **GST apportionment on the AM package price:** flagged above as likely needing to move from mixed-apportionment to fully-taxable, pending accountant confirmation — do not treat either position as settled until confirmed.
+3. **PM session volume ramp to ~16/day:** the single biggest revenue-side assumption in the PM figures — see `pm-staffing-roster.md`'s own disclosure that this is a planning estimate, not based on real booking data.
+4. **Pre-launch capital range:** separately flagged as needing reconciliation across documents (`HANDOFF.md`) — not addressed in this rebuild.
+5. **Fixed-cost ramp during Months 1-4:** flat-cost simplification used here likely understates early profitability slightly — same disclosed limitation as `profit-loss-tables.md`.
+
+---
+
+*Document owner: Bruno (Finance & Bookkeeping) | Reviewed by: Grace (Operations Manager)*
 *Next review: Month 3 actuals vs model*
 
 ---
 
 ## Changelog
 
-**2026-07-19 (Phase 6 verification)** — Confirmed this document meets the required spec granularity (monthly cash flow through Year 1+, startup capital outlay through break-even — see the 18-Month Month-by-Month table and Pre-Launch Capital Deployment table above). However, found via cross-document verification that this entire file is built on the superseded 8-client Scenario B model and 3-package structure, and that its own supersession banner pointed to `pm-staffing-roster.md` as authoritative — which is itself superseded by `profit-loss-tables.md` v2.0's current 10-client Scenario C figures. Added a further-update note above documenting this three-way discrepancy. Not rewritten this session (a full rebuild under the current model is a substantial task, recommended as a priority follow-up — see `docs/04_roadmap_next_steps.md` and `docs/01_conflicts_log.md`).
+**2026-07-19 (Phase 6 verification)** — Confirmed this document met the required spec granularity but was built on the superseded 8-client Scenario B model and 3-package structure, with its own supersession banner pointing elsewhere rather than being rebuilt directly. Not rewritten that session.
 
-**2026-07-20 (CONFLICT-08 resolved)** — Added a resolution note confirming `profit-loss-tables.md` v2.0's +A$25,087.07/month figure is the current authoritative Month 5+ steady-state number, and that `profit-loss-tables.md` now has its own corrected Year 1 monthly ramp and Years 1-3 annual projection. This document's own absolute dollar figures remain unrebuilt against the current Scenario C model — still recommended as a follow-up task, not completed this session, since the ramp-shape methodology has already been reused elsewhere rather than needing a full duplicate rebuild here.
+**2026-07-20 (CONFLICT-08 resolved)** — Added a resolution note confirming `profit-loss-tables.md` v2.0's +A$25,087.07/month figure as authoritative. Document's own absolute figures still not rebuilt at that point.
+
+**2026-07-20 (full rebuild)** — Anthony confirmed this document needed to be actually fixed, not just flagged. Full rebuild against the current committed model: package structure (2 packages, renamed), PM model (individual services, not "PM Spa Packages"), AM capacity (10/day, not 8/day), monthly ramp reconciled to `profit-loss-tables.md` v2.1's own figures with root cause identified (two compounding stale inheritances: AM cap and PM model, not one). Ancillary revenue sourcing re-checked — spray tan's operating-day assumption found stale, retail/cafe found to have no real derivation at all, both flagged rather than silently carried forward. GST treatment checked directly against the current confirmed billing model (`pricing-billing-strategy.md`) — found a likely inconsistency (this document previously assumed a mixed GST-free/taxable apportionment within the AM package price, but the current confirmed model shows GTT Center Perth earns zero pathology revenue at all, meaning the package price may be fully taxable) — flagged for accountant confirmation, not asserted as settled. Pre-launch capital deployment and property-acquisition sections left unchanged (out of scope for this round's feedback, separately flagged elsewhere as needing reconciliation).
