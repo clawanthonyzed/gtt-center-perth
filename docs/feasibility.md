@@ -24,17 +24,19 @@ GTT Center Perth proposes to operate WA's first purpose-built Gestational Diabet
 
 ## 1. Market Analysis
 
+> **CONFLICT-08 CORRECTED (2026-07-20):** The table below previously cited ~35,000 WA births/year, ~28,000 Perth metro, and ~95%+ screening rate ("AIHW Perinatal Data 2024") — these figures could not be reconciled against this venture's own more thoroughly cross-checked research and are corrected below to match `research.md` v3.0 (the explicitly-merged, most heavily sourced research document in this corpus, cross-checked against both WA-level and national-level ABS/AIHW figures). The ~35,000/~28,000 figures appear to have conflated a different statistic — not independently traced to a specific AIHW table this session, and superseded by the figures below.
+
 ### 1.1 Target Population — Perth
 
 | Metric | Figure | Source |
 |---|---|---|
 | Perth population (2026 est.) | ~2.3 million | ABS |
-| Annual births (WA) | ~35,000/year | AIHW Perinatal Data 2024 |
-| Annual births (Perth metro) | ~28,000/year | 80% of WA births |
-| Weekly pregnancies in 24–28 wk window | ~1,100/week | Assuming 40-week gestation cycle |
-| GDM screening rate (universal ADIPS) | ~95%+ | Standard of care |
-| Weekly GTT tests (Perth metro) | ~1,045/week | 95% × 1,100 |
-| Realistic capturable market (Subiaco/Nedlands/West Perth corridor) | ~200–250/week | Catchment area 15km radius |
+| Annual births (WA) | ~18,000/year | ABS, per `research.md` §2 — corrected 2026-07-20, see banner above |
+| Annual births (Perth metro) | ~14,400/year | 80% of WA births, per `research.md` §2 |
+| GDM screening rate (universal ADIPS) | ~100% (effectively universal screening, standard of care) | `research.md` §2, ADIPS |
+| Weekly GTT tests (Perth metro) | ~277/week | `research.md` §2 — derived from ~14,400 tests/year ÷ 52 weeks |
+| GDM diagnosis rate | ~18% | AIHW, per `research.md` §2 — corrected from this document's prior 12-18% estimate to the more specific sourced figure |
+| Realistic capturable market (Subiaco/Nedlands/West Perth corridor) | Not independently re-derived this session — the ~200-250/week figure previously here was calculated from the now-corrected 95%+/1,100-per-week base and should be recalculated from the corrected ~277/week Perth-metro-wide figure if a catchment-specific estimate is needed | Flagged, not recalculated — see `docs/05_open_questions_for_founder.md` if a decision depends on this |
 
 ### 1.2 Target Demographic
 
@@ -82,16 +84,18 @@ GTT Center Perth proposes to operate WA's first purpose-built Gestational Diabet
 
 ### 1.4 Market Size and Revenue Potential
 
+> **CONFLICT-08 note (2026-07-20):** the catchment figure used below (~200-250 GTT tests/week) was calculated from the now-corrected §1.1 market-size figures and has not been independently recalculated against the corrected ~277/week Perth-metro-wide figure. The market-share percentages below (30-37% capture rate to hit the Base scenario) may shift once recalculated — flagged, not fixed, since the correct catchment-specific (not Perth-metro-wide) figure requires its own derivation, not a simple substitution.
+
 | Scenario | Monthly Visits | Revenue | Probability |
 |---|---|---|---|
 | Bear (5% market share of corridor) | 150 | A$33,750 | 20% |
 | Base (10–12% market share) | 330 | A$68,715 | 60% |
 | Bull (20% market share + referral network) | 550 | A$120,000+ | 20% |
 
-**Serviceable market (Subiaco/Nedlands/West Perth/Claremont corridor):**  
-~200–250 GTT tests/week × 4.4 weeks = ~880–1,100 tests/month in catchment.  
-To achieve 330 GTT visits/month = 30–37% capture rate of catchment.  
-This is ambitious but achievable with strong midwife referral network (Reed's mandate).
+**Serviceable market (Subiaco/Nedlands/West Perth/Claremont corridor) — figure needs recalculation, see note above:**  
+~200–250 GTT tests/week × 4.4 weeks = ~880–1,100 tests/month in catchment (this is the pre-correction figure, retained pending recalculation).  
+To achieve 330 GTT visits/month = 30–37% capture rate of catchment (also pending recalculation).  
+This is ambitious but achievable with strong midwife referral network (Reed's mandate) — directional conclusion likely still holds, but the exact percentage should be re-derived once the catchment figure is corrected.
 
 ---
 
@@ -338,3 +342,5 @@ The primary risk is execution quality, not market viability. Perth has the popul
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced operational references to "Imara" (MD/operations manager role) with "Venue Manager" (new hire, not yet in place). Imara's funding/ownership role is unaffected — see `financial-model.md`/`research.md`.
+
+**2026-07-20 (CONFLICT-08 resolution)** — Corrected §1.1's market-sizing figures: WA births ~35,000/year and Perth metro ~28,000/year (cited to "AIHW Perinatal Data 2024") could not be reconciled and are replaced with `research.md` v3.0's more thoroughly sourced figures (~18,000 WA births/year, ~14,400 Perth metro, ~277 GTT tests/week, ~100% universal screening). Flagged §1.4's catchment-specific market-share calculation as needing recalculation from the corrected base figure — not fixed this session, since it requires its own derivation rather than a simple substitution. See `docs/01_conflicts_log.md` CONFLICT-08.
