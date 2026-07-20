@@ -22,12 +22,24 @@ Every pregnant woman in Australia does a mandatory glucose tolerance test around
 |---|---|
 | Monthly profit, once running at a steady, established pace | **approximately +A$25,000/month** |
 | Annualised, at that same steady pace | **approximately +A$301,000/year** |
-| How many client visits per month are needed just to cover costs | approximately 298 visits/month (about 14 a day) |
-| How many visits/day the current model is built to handle | up to 10 morning clinical visits + an afternoon wellness-only shift |
+| Monthly costs that need to be covered before any profit is made | **approximately A$88,600/month** (staff wages, rent, and other running costs) |
 
-These figures already assume a conservative package price (the lower of the two price tiers on offer), not an optimistic best case. If the mix of bookings skews toward the higher-priced package, or if prices are increased once the venue has a track record, the real result could be better than this. The full monthly and yearly figures, with every assumption labelled, are in `docs/profit-loss-tables.md`.
+**Break-even, done properly — by revenue, and by the two different types of client, not one blended headcount:**
 
-**Where the money comes from:** the clinical blood-test part of the business is handled by an external pathology partner and earns GTT Center Perth nothing directly — that part exists purely to bring women through the door. 100% of GTT Center Perth's own revenue comes from the wellness services (massage, nails, hair, facials) sold as fixed-price packages, plus a smaller amount from cafe/retail add-ons.
+A single "how many visits per month" number hides an important detail: GTT Center Perth actually serves two quite different kinds of client, who spend very different amounts, and treating them as one interchangeable unit gives a misleading picture. The honest way to look at it:
+
+| Client type | Typical spend per visit | What "covering costs" looks like *if that were the only kind of client* (illustrative bookend, not the real plan) |
+|---|---|---|
+| Morning GTT clients (the clinical test + wellness package) | ~A$250 per visit (conservative pricing) | Would need ~355 visits/month on its own — far more than the venue can physically fit in the morning slots available (the model caps morning capacity at 10/day, ~220/month) |
+| Afternoon wellness-only clients (no clinical test, individual services) | ~A$95 per visit | Would need ~933 visits/month on its own — well beyond what a small afternoon team could realistically deliver |
+
+**Neither of these extremes is the actual plan — the real model blends both:** roughly 220 morning GTT visits/month plus roughly 350 afternoon wellness-only visits/month, together bringing in the ~A$88,600/month needed to cover costs, with room to spare (that's where the ~A$25,000/month profit comes from). The point of showing the two bookends above isn't that either is realistic on its own — it's to make clear that a GTT visit and an afternoon wellness visit are not equivalent, and any future volume target should say which kind of client it means, not just "visits." Full detail, including the actual blended monthly figures month-by-month, is in `docs/profit-loss-tables.md`.
+
+These figures already assume a conservative package price for the morning packages (the lower of the two price tiers on offer), not an optimistic best case. If the mix of bookings skews toward the higher-priced package, or if prices are increased once the venue has a track record, the real result could be better than this.
+
+**Where the money comes from:** the clinical blood-test part of the business is handled by an external pathology partner and earns GTT Center Perth nothing directly — that part exists purely to bring women through the door. 100% of GTT Center Perth's own revenue comes from the wellness services (massage, nails, hair, facials) sold as fixed-price packages in the morning or as individual services in the afternoon, plus a smaller amount from cafe/retail add-ons.
+
+**How the morning and afternoon connect — this isn't wasted staff time:** the treatment staff (massage therapists, nail technicians, hairdressers, beauty therapists) rostered for the morning GTT shift aren't fully occupied the whole time — each client's own service only takes part of the 2-2.5 hour visit. The model is built so that same morning team can also take **standalone, non-GTT bookings during the gaps between their GTT clients' services** — someone who just wants a manicure, not the blood test, can be slotted into that same morning downtime rather than needing an entirely separate afternoon-only booking. This is on top of, not instead of, the dedicated afternoon-only wellness shift described above.
 
 **What could make this better or worse than modelled — an honest range, not just a rosy number:**
 - **Better case:** if bookings lean toward the pricier service package, or the afternoon-only wellness slots (which don't need the clinical test at all) fill up more than currently modelled, monthly profit could be meaningfully higher.
@@ -86,3 +98,9 @@ None of these are the kind of "we don't actually know if this works" uncertainty
 ---
 
 *This document is a plain-language companion to `docs/executive-summary.md` (the fuller standalone summary with every figure sourced) and `docs/business-plan.md` (the complete plan). Nothing here contradicts those documents — this is the same information, told as a story rather than a reference table.*
+
+---
+
+## Changelog
+
+**2026-07-20** — Founder feedback: fixed the break-even framing, which previously expressed break-even as a single blended "visits/month" figure mixing two very different client types (GTT-package clients at ~A$250/visit vs afternoon wellness-only clients at ~A$95/visit) as if they were interchangeable. Rewrote as a revenue-based figure (~A$88,600/month in costs to cover) plus segment-specific illustrative bookends, making clear the real plan blends both client types rather than relying on either alone. Also added an explicit paragraph confirming the existing downtime-fill model — morning treatment staff take standalone non-GTT bookings during gaps in their GTT client schedule, not just the dedicated afternoon shift.
