@@ -77,7 +77,7 @@
 | `venture-timeline.md` | CURRENT (with caveats) | Original Week 1 "is Imara the operational manager" question formally resolved 2026-07-19 (see changelog). Some dates (Day 48-era) are historical. |
 | `strategic-concerns-growth.md` | CURRENT | Growth path, profit ceiling, interstate expansion considerations. |
 | `reading-order.md` | CURRENT | Document index — read this first. Updated 2026-07-19 with duplicate/superseded file flags. |
-| `HANDOFF.md` | CURRENT — MOST RECENT SESSION SUMMARY | 2026-07-17. **Authoritative source for the current committed operational model** (Scenario C sync, 10 clients/day, Package 2+3 only, Saturday reuse, Sunday closed). Any doc conflicting with this file's "Current Committed Operational Model" section should be treated as stale until reconciled. |
+| `HANDOFF.md` | CURRENT — MOST RECENT SESSION SUMMARY | 2026-07-17. **Authoritative source for the current committed operational model** (Scenario C sync, 10 clients/day, 2 packages only, Saturday reuse, Sunday closed). Any doc conflicting with this file's "Current Committed Operational Model" section should be treated as stale until reconciled. |
 | `agents.md` | CURRENT | Empire agent roster for this venture. |
 
 ## Operations & Staffing
@@ -105,7 +105,7 @@
 | `profit-loss-tables.md` | CURRENT — CANONICAL | v2.0, conservative baseline, no Sunday trading. |
 | `unit-economics.md` | CURRENT (with caveats) | Verify PM figures against `pm-staffing-roster.md`. |
 | `capacity-pricing-audit.md` | CURRENT (with caveats) | Contains correction markers — read in full before quoting. |
-| `services-pricing-locked.md` | CURRENT — CANONICAL PRICING | Package 2 (A$250) + Package 3 (A$300) only, Package 1 dropped. |
+| `services-pricing-locked.md` | CURRENT — CANONICAL PRICING | Package 1 (A$250, fixed 2×30min) + Package 2 (A$300, flexible composition), renumbered 2026-07-20 — same 2 price points as before. |
 | `services-master-table.md` | CURRENT | Service list/durations. |
 | `financial-setup.md` | CURRENT | Imara->Venue Manager rename complete for operational duties; Imara's personal remuneration question retained. |
 | `equipment-costs.md` | CURRENT (Phase 6 reviewed) | v1.2 — added missing Beauty/Brows section, capital-vs-recurring classification. |
@@ -208,3 +208,5 @@
 ## Changelog
 
 **2026-07-19 (Phase 6/7 pass)** — Updated this inventory to reflect: 12 new documents created (6 Phase 7 deliverables + `lab-partnership-email-draft.md`, `price-increase-comparison.md`, `venue-manager-job-posting.md`, plus this file/01/02/03/04/05 from the earlier audit pass), and every "not reviewed this pass" file from the original audit now reviewed and fixed where needed (`equipment-costs.md`, `hire-purchase-china.md`, `gtt-test-reference.md`, `consent-form.md`, `privacy-policy.md`, `market-research-findings.md`, `ivy-booking-system.md`, `extended-wellness-services.md`, `reed-partnerships.md`, `onboarding.md`, `staff-profiles/*.md`). Updated summary counts accordingly. Skipped from Phase 7 spec: none — all 7 requested Phase 7 documents were built. See `docs/04_roadmap_next_steps.md` for what remains as follow-up work (CONFLICT-03/04/08/09).
+
+**2026-07-20 (package renumbering)** — Updated the `HANDOFF.md` and `services-pricing-locked.md` entries to reflect the 2026-07-20 package renumbering (new Package 1 = A$250 fixed 2×30min, new Package 2 = A$300 flexible composition) — same 2 price points as the prior "Package 2/3" naming, renamed only.
