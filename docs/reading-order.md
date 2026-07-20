@@ -74,7 +74,7 @@ This was a large consolidation session. If you read nothing else in this section
 | # | Document | What it contains |
 |---|---|---|
 | 22 | [services-master-table.md](services-master-table.md) | Every service, staff, duration, price |
-| 23 | [services-pricing-locked.md](services-pricing-locked.md) | **Canonical pricing** — Package 2 (A$250) + Package 3 (A$300) only, Package 1 dropped |
+| 23 | [services-pricing-locked.md](services-pricing-locked.md) | **Canonical pricing** — Package 1 (A$250, fixed 2×30min) + Package 2 (A$300, flexible composition), renamed/renumbered 2026-07-20, same 2 price points as before |
 | 24 | [extended-wellness-services.md](extended-wellness-services.md) | GDM info, belly casting, birth plan, day spa expansion |
 | 25 | [market-research-findings.md](market-research-findings.md) | Competitor (MIWM) research, pricing benchmarks — 3D scan reframed as future/Phase 2 this session |
 
@@ -212,3 +212,5 @@ This was a large consolidation session. If you read nothing else in this section
 **2026-07-20 (hyperlinks added)** — Converted every document name in this file to a clickable markdown relative hyperlink (e.g. `[business-plan.md](business-plan.md)`), so Anthony can click through directly on GitHub rather than needing to navigate manually.
 
 **2026-07-20 (external resources + PM package exploration added)** — Added row 12a for `external-resources-and-advisors.md` (Phase 1) and row 17a for `pm-package-exploration.md` (Phase 2), both new documents this session.
+
+**2026-07-20 (package renumbering)** — Updated the `services-pricing-locked.md` row to reflect the renaming to Package 1 (A$250)/Package 2 (A$300) — same 2 price points as the prior "Package 2/3" naming. This completes the corpus-wide package-renumbering sweep across all live-referencing documents (see `services-pricing-locked.md`'s own changelog for the full list).
