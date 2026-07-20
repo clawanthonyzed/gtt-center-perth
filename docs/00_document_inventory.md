@@ -101,7 +101,7 @@
 | File | Status | Notes |
 |---|---|---|
 | [financial-model.md](financial-model.md) | SUPERSEDED (self-declared) | Marked superseded in full per its own banner. Left untouched this session per explicit instruction — covers trust/ownership structure. |
-| [cash-flow.md](cash-flow.md) | CURRENT — CANONICAL | v1.0, referenced as canonical by review-audit.md IC-01/IC-06. |
+| [cash-flow.md](cash-flow.md) | CURRENT — CANONICAL | v2.0, fully rebuilt 2026-07-20 against the current model (2 packages, individual PM services, 10-client AM cap). Flags ancillary-revenue sourcing and a likely GST-apportionment inconsistency needing accountant confirmation. |
 | [profit-loss-tables.md](profit-loss-tables.md) | CURRENT — CANONICAL | v2.0, conservative baseline, no Sunday trading. |
 | [unit-economics.md](unit-economics.md) | CURRENT (with caveats) | Verify PM figures against [pm-staffing-roster.md](pm-staffing-roster.md). |
 | [capacity-pricing-audit.md](capacity-pricing-audit.md) | CURRENT (with caveats) | Contains correction markers — read in full before quoting. |
@@ -212,3 +212,5 @@
 **2026-07-20 (package renumbering)** — Updated the [HANDOFF.md](HANDOFF.md) and [services-pricing-locked.md](services-pricing-locked.md) entries to reflect the 2026-07-20 package renumbering (new Package 1 = A$250 fixed 2×30min, new Package 2 = A$300 flexible composition) — same 2 price points as the prior "Package 2/3" naming, renamed only.
 
 **2026-07-20 (hyperlink sweep)** — Converted every backtick-wrapped filename reference in this document to a clickable relative markdown hyperlink, per the repo-wide hyperlink rule.
+
+**2026-07-20 (cash-flow.md status updated)** — Updated the `cash-flow.md` status-table entry to reflect its full rebuild this session (v2.0) — no longer flagged as carrying a stale 3-way figure discrepancy, since that discrepancy has now been fixed at the source rather than just flagged.
