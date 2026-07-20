@@ -13,16 +13,16 @@ This comparison draws on three existing documents, at different levels of curren
 | Source | Status | What it provides |
 |---|---|---|
 | `profit-loss-tables.md` v2.0 (2026-07-17) | **Current canonical baseline** | Weekday/Saturday/monthly/yearly P&L at the current committed model: Scenario C (10 AM clients/day, 07:00 start), A$250 conservative package price, PM individual services, no Sunday. |
-| `financial-break-even-staff.md` §Sensitivity | Older model (pre-Scenario-C, pre-PM-individual-services correction) | The only existing blended-price sensitivity table in the corpus — shows what price levels are needed for various margin targets. Structure (3-package system with Package 1 at A$200) is **superseded** — GTT Center Perth now runs only Package 2 (A$250) and Package 3 (A$300), Package 1 dropped. Used here for **illustrative price-elasticity direction only**, not as a literal current figure. |
+| `financial-break-even-staff.md` §Sensitivity | Older model (pre-Scenario-C, pre-PM-individual-services correction) | The only existing blended-price sensitivity table in the corpus — shows what price levels are needed for various margin targets. Structure (3-package system with an old A$200 tier) is **superseded** — GTT Center Perth now runs only Package 1 (A$250) and Package 2 (A$300), renamed 2026-07-20. Used here for **illustrative price-elasticity direction only**, not as a literal current figure. |
 | `cash-flow.md` | Partially superseded (see its own banner) | Month-by-month ramp and break-even timing context (Month 4 marginal, Month 5+ steady state) — directionally consistent with `profit-loss-tables.md` v2.0 even though its own per-line figures are stale. |
 
-**Important caveat:** No document in this corpus has run a full month-by-month re-forecast under an explicit "price increases at Month X" assumption using the *current* Scenario C / Package 2+3-only model. What follows is a comparison built from the current baseline figures plus the direction/magnitude implied by the existing sensitivity table — it is a reasoned estimate, not a re-verified new financial model. If Anthony wants a fully rebuilt month-by-month forecast under a specific price-increase scenario, that is a follow-up task, not something already sitting in the existing docs.
+**Important caveat:** No document in this corpus has run a full month-by-month re-forecast under an explicit "price increases at Month X" assumption using the *current* Scenario C / 2-package model. What follows is a comparison built from the current baseline figures plus the direction/magnitude implied by the existing sensitivity table — it is a reasoned estimate, not a re-verified new financial model. If Anthony wants a fully rebuilt month-by-month forecast under a specific price-increase scenario, that is a follow-up task, not something already sitting in the existing docs.
 
 ---
 
 ## 2. Current Baseline (No Price Change)
 
-Per `profit-loss-tables.md` v2.0, using the conservative A$250 AM package price throughout (Package 2, deliberately the lower of the two current packages, per standing instruction):
+Per `profit-loss-tables.md`, using the conservative A$250 AM package price throughout (Package 1, deliberately the lower of the two current packages, per standing instruction):
 
 | Period | Net P&L (conservative baseline, no price change) |
 |---|---|
@@ -42,13 +42,13 @@ This is the "keep price the same" case for the remainder of this comparison — 
 
 There are two distinct ways a "price increase" could be implemented, and they have different financial mechanics:
 
-**Option A — Raise the AM package prices themselves** (e.g., Package 2 A$250 → A$270, Package 3 A$300 → A$320, or similar). This directly raises the A$250 conservative-baseline figure used throughout `profit-loss-tables.md`.
+**Option A — Raise the AM package prices themselves** (e.g., Package 1 A$250 → A$270, Package 2 A$300 → A$320, or similar). This directly raises the A$250 conservative-baseline figure used throughout `profit-loss-tables.md`.
 
-**Option B — Shift the client mix toward Package 3** (encourage/upsell more clients into the higher-priced 2×45-min package instead of the 30+45-min Package 2) without changing either package's sticker price. This raises the *blended average* revenue per client without a headline price change — softer from a marketing perspective, same effect on revenue.
+**Option B — Shift the client mix toward Package 2** (encourage/upsell more clients into the higher-priced, flexible-composition package instead of the fixed 2×30-min Package 1) without changing either package's sticker price. This raises the *blended average* revenue per client without a headline price change — softer from a marketing perspective, same effect on revenue.
 
 The existing sensitivity table in `financial-break-even-staff.md` (built on the older 3-package model) shows the general shape of this relationship even though its literal numbers use a superseded price structure:
 
-| Target margin | Blended avg needed (old 3-package model) | Illustrative interpretation for Package 2+3-only |
+| Target margin | Blended avg needed (old 3-package model) | Illustrative interpretation for the current 2-package structure |
 |---|---|---|
 | Breakeven (0%) | A$289 | Roughly a A$39/client increase over the current A$250 conservative baseline |
 | 5% margin | A$306 | Roughly a A$56/client increase |
@@ -83,3 +83,9 @@ The existing sensitivity table in `financial-break-even-staff.md` (built on the 
 If Anthony wants to move from "financial comparison" to "confirmed number," the next step would be: pick a target month or trigger condition (a specific month, or "once at capacity" as flagged in §4), then have Bruno (finance agent) rebuild the month-by-month cash-flow model with that specific assumption plugged in against the current Scenario C baseline — rather than working from the older sensitivity table's superseded price structure as this document has had to do.
 
 See `docs/05_open_questions_for_founder.md` Q4 for the standing open question this document supports.
+
+---
+
+## Changelog
+
+**2026-07-20 (package renumbering)** — Updated "Package 2/Package 3" references to "Package 1 (A$250)/Package 2 (A$300)" per `services-pricing-locked.md`'s renumbering.
