@@ -88,7 +88,8 @@ This was a large consolidation session. If you read nothing else in this section
 | 28 | [pathology-collection-room.md](pathology-collection-room.md) | Collection room fit-out spec |
 | 29 | [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) | **Canonical current scheduling model** — 10 clients/day, synchronized start, verified zero double-bookings |
 | 30 | [draw-event-scheduler-findings.md](draw-event-scheduler-findings.md) | Solver-based verification of why the current model is at its true capacity optimum |
-| 31 | [scenario-e-floating-chair-investigation.md](scenario-e-floating-chair-investigation.md) | New this session — investigated whether decoupling clients from a fixed chair adds capacity (verdict: no, zero gain, exploratory only) |
+| 31 | [scenario-e-floating-chair-investigation.md](scenario-e-floating-chair-investigation.md) | New this session — investigated whether decoupling clients from a fixed chair adds capacity (verdict: no, zero gain, exploratory only); also answers the specific 11th-client-at-09:55 question (no) |
+| 31a | [am-staffing-by-volume.md](am-staffing-by-volume.md) | New this session — checked phlebotomist/treatment staffing + full-day rosters for every AM volume from 3 to 10 clients/day |
 | 32 | [scenario-d-investigation.md](scenario-d-investigation.md) | Growth scenario — 15 clients/day, 3rd phlebotomist, not yet committed |
 | 33 | [am-capacity-weekend.md](am-capacity-weekend.md) | AM capacity history, Saturday/Sunday trading rationale — contains superseded staggered-chair content, see its own flags |
 | 34 | [option-b-collection-centre.md](option-b-collection-centre.md) | Reference only — in-house accreditation path, rejected |
@@ -217,3 +218,5 @@ This was a large consolidation session. If you read nothing else in this section
 **2026-07-20 (package renumbering)** — Updated the [services-pricing-locked.md](services-pricing-locked.md) row to reflect the renaming to Package 1 (A$250)/Package 2 (A$300) — same 2 price points as the prior "Package 2/3" naming. This completes the corpus-wide package-renumbering sweep across all live-referencing documents (see [services-pricing-locked.md](services-pricing-locked.md)'s own changelog for the full list).
 
 **2026-07-20 (revenue extraction doc added)** — Added row 20a for [revenue-extraction-options.md](revenue-extraction-options.md), new this session.
+
+**2026-07-20 (AM staffing-by-volume added)** — Added row 31a for [am-staffing-by-volume.md](am-staffing-by-volume.md), new this session. Updated row 31's description to note it also answers the specific 11th-client-at-09:55 question.
