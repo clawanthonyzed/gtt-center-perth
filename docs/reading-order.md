@@ -1,188 +1,205 @@
-# GTT Center Perth — Document Index & Reading Order
+# GTT Center Perth — Reading Order & Big-Picture Status
 
-> **2026-07-14 SUPERSEDED — PM MODEL CORRECTED.** References below to a single "PM Service Therapist" delivering "PM Spa Packages" (Package 1/2/3 pricing) are superseded. The confirmed PM model is: **4 dedicated casual hires** (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, delivering **individual standalone services** (not packages) at ~A$95/session average, staffed on actual hours worked — not a blanket shift. Corrected Month 5+ steady state: Total Revenue A$86,020/month, Total Fixed Costs A$79,357/month, **Net P&L +A$6,663/month** — profitable from Month 4 (+A$4,924/month). See `pm-staffing-roster.md` for the full roster, weekly template, and recalculated P&L — this is now the canonical PM reference, superseding this document's PM figures/structure below.
-
-**Last updated:** 2026-06-11 (Day 51 package-pricing/staffing model — Package 1/2/3, no-interrupt rule unconditional, 3D scan + dietitian removed, CF-01 split-shift staffing)
-**Total documents:** 45
-
----
-
-## START HERE
-
-Read **executive-summary.md** first. Single document pulling critical information from every other file. If you only read one thing, read that.
+**Last updated:** 2026-07-20 (full rebuild — see changelog)
+**Total documents:** 92 (80 in `docs/` including this one, 8 staff-profile files, 4 non-markdown visual files)
+**Purpose:** Read this ONE document to see the current, accurate, big-picture state of the venture — what's been fixed this session, what's still open, and what order to read everything else in. This is the entry point; `docs/00_document_inventory.md` is the full per-file status list if you need more detail on any specific document.
 
 ---
 
-## CROSS-DOCUMENT CONSISTENCY RULE (MANDATORY — ALL AGENTS)
+## THE 60-SECOND VERSION
 
-GTT Center Perth has 45 interlinked planning docs. Several "linked parameters" are referenced in multiple files. **Any agent or worker who changes a linked parameter MUST update every doc in that parameter's row, in the same pass — not as a follow-up.** This rule was added Day 49 after a phlebotomist-count and draw-timing conflict went undetected across 3 docs.
+GTT Center Perth is a concept for WA's first premium wellness venue built around the mandatory Glucose Tolerance Test — patients spend the ~2-2.5 hour test wait getting massage/nails/hair/brows instead of sitting in a bare pathology room. **No venue location is secured yet — that is the single blocking gate on everything else** (staff recruitment, fit-out, everything downstream). Current committed operational model: 10 GTT clients/day (Scenario C, 2 chairs, 07:00 start), two package prices (A$250/A$300), full payment collected at booking, projected +A$25,087/month profit at Month 5+ steady state once operating (a planning estimate, not real trading data). Pathology partner (WDP, priority 1) has been emailed, awaiting reply. Self-funded, no external investor, no launch date set.
 
-| Linked Parameter | Current Value (Day 49–51) | Docs That Reference It |
+**For a presentation to a non-technical stakeholder (e.g., Anthony's partner): read `docs/executive-summary.md`.** It is the standalone, current, plain-language summary built for exactly this purpose.
+
+---
+
+## WHAT CHANGED THIS SESSION (2026-07-19 to 2026-07-20) — Read This Before Anything Else
+
+This was a large consolidation session. If you read nothing else in this section, know these five things:
+
+1. **"Imara" no longer means the on-site operator anywhere in this corpus.** A new "Venue Manager" role (not yet hired, recruitment gated on securing a venue location) now covers every day-to-day duty. Imara remains the funding partner/trust beneficiary — her role is ownership/funding only, unchanged.
+2. **The financial model was internally inconsistent across several documents — this is now resolved (CONFLICT-08).** Some older documents (`pm-staffing-roster.md`, `feasibility.md`, `capacity-pricing-audit.md`) carried stale figures (an 8-client AM model instead of the current 10-client Scenario C, and a WA-births figure that didn't match `research.md`). All are now corrected or clearly flagged as superseded. **`profit-loss-tables.md` v2.0 is the current authoritative financial figure: +A$25,087.07/month at Month 5+ steady state.**
+3. **The payment/deposit policy was also inconsistent — this is now resolved (CONFLICT-09).** Confirmed model: full package price collected at time of booking, not a deposit. Corrected everywhere it appeared wrong.
+4. **12 new documents were built** covering regulatory tracking, SWOT, a ranked risk register, break-even/sensitivity analysis, a referral partnership plan, a pricing/billing strategy explainer, a project timeline, plus this session's audit-trail documents (`00`-`05` numbered files) and a new scheduling investigation (`scenario-e-floating-chair-investigation.md`).
+5. **Two things are still genuinely unresolved and flagged, not silently ignored:** `operations-manual.md`'s detailed scheduling section still shows the old 8-client model (CONFLICT-03, not yet rewritten), and `workflow.md`'s staffing table still describes an old subtenant model (CONFLICT-04, not yet rewritten). Neither is safe to train new staff from as-is.
+
+**For the full session work log:** `docs/01_conflicts_log.md` (every conflict found, with resolution status) and `docs/00_document_inventory.md` (every file, current status).
+
+---
+
+## THE CORE STATUS DOCUMENTS (Read These First, In This Order)
+
+| # | Document | What it's for | Time |
+|---|---|---|---|
+| 1 | **This file (`reading-order.md`)** | Big-picture entry point — you're reading it | 5 min |
+| 2 | **`executive-summary.md`** | Standalone plain-language summary — the presentation-ready document | 10 min |
+| 3 | **`HANDOFF.md`** | Most recent detailed session handoff (2026-07-17) — the source of truth for the current committed operational model if you need the underlying detail | 15 min |
+| 4 | **`00_document_inventory.md`** | Every file in this corpus, current status, one line each | 10 min (reference, not linear read) |
+| 5 | **`01_conflicts_log.md`** | Every conflict found this session, resolution status — read if you want to know *why* a figure changed | 15 min (reference) |
+| 6 | **`04_roadmap_next_steps.md`** | The prioritised, dependency-based to-do list — what to actually do next, in what order | 10 min |
+| 7 | **`05_open_questions_for_founder.md`** | The single list of questions only Anthony can answer | 5 min |
+
+---
+
+## PHASE 1: THE BUSINESS CASE
+
+| # | Document | What it contains |
 |---|---|---|
-| Phlebotomist / collection chair count | 2 phlebotomists + 2 chairs, Day 1, AM-only (fasting requirement) | operations-manual.md, gtt-clinical-protocol.md, ivy-booking-system.md, pathology-collection-room.md, equipment-costs.md, financial-break-even-staff.md, staff-plan.md, executive-summary.md, feasibility.md, business-plan.md, gtt-test-reference.md, cash-flow.md |
-| Launch scenario / capacity timetable | Scenario B, 8 clients, corrected 0/+75(±5)/+135(±10) draw pathway | operations-manual.md, executive-summary.md, gtt-clinical-protocol.md, business-plan.md, gtt-test-reference.md, cash-flow.md, reading-order.md (this Open Decisions table); review-audit.md CF-02/IC-05/IM-10 marked RESOLVED Day 49 (historical audit trail retained) |
-| Package pricing & menu (Day 51) | Package 1 (A$200, 2x30min) / Package 2 (A$250, 30+45min) / Package 3 (A$300, 2x45min) flat tiers — venue + lounge access FREE, bundled into all 3, no separate fee anywhere. Same menu sold as AM GTT packages and PM Spa Packages. 30/40/30 mix -> blended avg A$250/visit. Supersedes GTT Lounge (A$25) / GTT Wellness (A$225) / GTT Luxe (A$325) | services-pricing-locked.md, services-master-table.md, extended-wellness-services.md, financial-break-even-staff.md, executive-summary.md, business-plan.md, cash-flow.md, unit-economics.md, financial-model.md, staff-plan.md, gtt-test-reference.md, operations-manual.md, review-audit.md |
-| No-interrupt rule (Day 51) | Blood draws NEVER interrupt services — no exceptions, including hairdressing. All GTT-window services <45min active testing time | services-pricing-locked.md, services-master-table.md, operations-manual.md, gtt-test-reference.md, executive-summary.md, business-plan.md |
-| Subtenants (Day 51) | NONE. 3D scan operator and dietitian roles removed entirely — no equipment, no operator, no room rental | staff-plan.md, business-plan.md, operations-manual.md, equipment-costs.md, gtt-test-reference.md, review-audit.md, executive-summary.md, financial-break-even-staff.md, services-master-table.md |
-| Discount policy | 10% online pre-booking discount on afternoon/standalone services; no discount on in-center upsells | services-pricing-locked.md, financial-break-even-staff.md, executive-summary.md |
-| Pathology model | Option A (PathWest/WDP satellite) — permanent; Clinipath added Day 50 as tertiary/contingency only | option-b-collection-centre.md, pathology-collection-room.md, executive-summary.md, reading-order.md (Phase 3 table), reed-partnerships.md |
-| Fixed monthly cost base (Day 51) | A$74,391/mo (A$892,694/yr) — 12-staff payroll incl. relief pool @ A$713,067/yr + workers comp (A$11,867/yr, 1.7%) + A$167,760/yr non-wage overhead | cash-flow.md, financial-break-even-staff.md, financial-model.md, unit-economics.md, business-plan.md, executive-summary.md, staff-plan.md, feasibility.md (line 110) |
-| AM/PM Spa Package revenue (Day 51) | PM Spa Packages (PM Service Therapist, new hire) ramp M1=2/day -> M5+=6/day, same Pkg1/2/3 menu @ A$250 blended avg, no testing. Month 5+ steady state: AM A$44,000/mo + PM A$33,000/mo + cafe/retail A$7,623/mo = A$84,623/mo revenue vs A$74,391/mo costs = +A$10,232/mo Net P&L | cash-flow.md, financial-break-even-staff.md, business-plan.md, unit-economics.md, executive-summary.md |
+| 8 | `business-plan.md` | Full business plan — vision, model, market, competitive position, financials, risks (v3.0, fully rewritten this session) |
+| 9 | `feasibility.md` | Go/no-go assessment, market sizing (corrected this session), risks |
+| 10 | `swot-analysis.md` | Strengths/Weaknesses/Opportunities/Threats — new this session |
+| 11 | `risk-register.md` | Ranked risk table (likelihood × impact × mitigation × owner) — new this session |
+| 12 | `regulatory-accreditation-tracker.md` | Regulatory/accreditation checklist with status — new this session |
+
+## PHASE 2: FINANCIALS
+
+| # | Document | What it contains |
+|---|---|---|
+| 13 | `profit-loss-tables.md` | **Current canonical P&L** — weekday/weekly/monthly/quarterly/yearly steady-state, plus Year 1 monthly ramp and Years 1-3 annual (added this session) |
+| 14 | `cash-flow.md` | 18-month cash flow — methodology reference only, absolute figures are stale (built on the old 8-client model), see its own banner |
+| 15 | `break-even-sensitivity-analysis.md` | Best/base/worst case on volume and pricing — new this session |
+| 16 | `price-increase-comparison.md` | Analysis of when/whether to raise package prices — new this session |
+| 17 | `pricing-billing-strategy.md` | Private vs bulk billing rationale, Medicare specifics flagged as requiring verification — new this session |
+| 18 | `financial-break-even-staff.md` | Per-employee break-even, package pricing model |
+| 19 | `unit-economics.md` | Revenue per visit |
+| 20 | `financial-setup.md` | Trust bank accounts, Xero, payment systems (payment policy corrected this session) |
+| 21 | `financial-model.md` | **SUPERSEDED (self-declared)** — trust/ownership entity structure content only, left untouched this session per explicit scope instruction |
+
+## PHASE 3: SERVICES & PRICING
+
+| # | Document | What it contains |
+|---|---|---|
+| 22 | `services-master-table.md` | Every service, staff, duration, price |
+| 23 | `services-pricing-locked.md` | **Canonical pricing** — Package 2 (A$250) + Package 3 (A$300) only, Package 1 dropped |
+| 24 | `extended-wellness-services.md` | GDM info, belly casting, birth plan, day spa expansion |
+| 25 | `market-research-findings.md` | Competitor (MIWM) research, pricing benchmarks — 3D scan reframed as future/Phase 2 this session |
+
+## PHASE 4: CLINICAL & SCHEDULING
+
+| # | Document | What it contains |
+|---|---|---|
+| 26 | `gtt-clinical-protocol.md` | GTT procedure detail, phlebotomist protocol |
+| 27 | `gtt-test-reference.md` | Quick reference card for staff |
+| 28 | `pathology-collection-room.md` | Collection room fit-out spec |
+| 29 | `scenario-c-sync-timetables.md` | **Canonical current scheduling model** — 10 clients/day, synchronized start, verified zero double-bookings |
+| 30 | `draw-event-scheduler-findings.md` | Solver-based verification of why the current model is at its true capacity optimum |
+| 31 | `scenario-e-floating-chair-investigation.md` | New this session — investigated whether decoupling clients from a fixed chair adds capacity (verdict: no, zero gain, exploratory only) |
+| 32 | `scenario-d-investigation.md` | Growth scenario — 15 clients/day, 3rd phlebotomist, not yet committed |
+| 33 | `am-capacity-weekend.md` | AM capacity history, Saturday/Sunday trading rationale — contains superseded staggered-chair content, see its own flags |
+| 34 | `option-b-collection-centre.md` | Reference only — in-house accreditation path, rejected |
+
+**Known gap:** `operations-manual.md`'s own scheduling section (Phase 5, below) still shows the old 8-client model — use `scenario-c-sync-timetables.md` for the actual current timetable until that gap is closed.
+
+## PHASE 5: DAILY OPERATIONS
+
+| # | Document | What it contains |
+|---|---|---|
+| 35 | `operations-manual.md` | Daily cadence, opening checklists — **scheduling section flagged stale, rest of document current** |
+| 36 | `workflow.md` | Patient journey — **staffing table flagged stale (old subtenant model), rest of document current** |
+| 37 | `grace-startup-plan.md` | 90-day operations startup plan |
+| 38 | `project-timeline-milestones.md` | Gantt-style relative-sequence milestone view, no calendar dates — new this session |
+
+## PHASE 6: PEOPLE
+
+| # | Document | What it contains |
+|---|---|---|
+| 39 | `team-startup.md` | Empire agents + physical hires, ownership vs operational role split |
+| 40 | `staff-plan.md` | Full staffing roster |
+| 41 | `hr-framework.md` | Award obligations, Venue Manager critical-path hire section |
+| 42 | `venue-manager-job-posting.md` | Ready-to-use recruitment document — **not yet active, gated on securing a venue location** |
+| 43 | `phlebotomist-job-posting.md` | Ready-to-use recruitment document — same gating rule applies |
+| 44 | `onboarding.md` | Staff and client onboarding procedures |
+
+## PHASE 7: EQUIPMENT & SOURCING
+
+| # | Document | What it contains |
+|---|---|---|
+| 45 | `equipment-costs.md` | Complete equipment list by room/service area, capital vs recurring |
+| 46 | `hire-purchase-china.md` | China sourcing guide, TGA compliance |
+
+## PHASE 8: PARTNERSHIPS & BOOKING
+
+| # | Document | What it contains |
+|---|---|---|
+| 47 | `reed-partnerships.md` | Pathology partner outreach — live status tracker (WDP emailed, awaiting reply) |
+| 48 | `pathology-partnership-brief.md` | Pathology partnership model detail |
+| 49 | `lab-partnership-email-draft.md` | The actual outreach email used — new this session |
+| 50 | `cutoff-time-CORRECTION.md` | The still-unresolved WDP courier cutoff question |
+| 51 | `referral-partnership-plan.md` | GP/OB/midwife referral strategy, named practices — new this session |
+| 52 | `ivy-booking-system.md` | Booking system spec (payment policy corrected this session) |
+
+## PHASE 9: LOCATION
+
+| # | Document | What it contains |
+|---|---|---|
+| 53 | `location-scouting.md` | Location search — **no venue secured yet, this is the current blocking gate** |
+| 54 | `floor-plan-v3.svg` / `floor-plan-v3.pdf` | **Current** floor plan concept |
+| 55 | `floor-plan-concept.md` | Text room schedule |
+
+## PHASE 10: MARKETING & BRAND
+
+| # | Document | What it contains |
+|---|---|---|
+| 56 | `poppy-marketing.md` | Instagram, referral network, launch strategy |
+| 57 | `afternoon-marketing-plan.md` | Afternoon/standalone marketing |
+| 58 | `brand-guide.md` | Brand standards — **"GTT Center Perth" is a placeholder name, not final, see banner in that document** |
+| 59 | `website-spec.md` | Website requirements (payment policy corrected this session) |
+
+## PHASE 11: COMPLIANCE & LEGAL
+
+| # | Document | What it contains |
+|---|---|---|
+| 60 | `patient-intake-form.md` | Patient intake form |
+| 61 | `consent-form.md` | GTT consent form (draft, solicitor review required) |
+| 62 | `privacy-policy.md` | Privacy policy (draft, solicitor review required) |
+| 63 | `emergency-plan.md` | Emergency procedures |
+| 64 | `review-audit.md` | Historical full business audit |
+| 65 | `venture-timeline.md` | Month-by-month phase plan — some illustrative calendar dates retained from an earlier draft, not committed |
+
+## PHASE 12: THIS SESSION'S AUDIT TRAIL
+
+| # | Document | What it contains |
+|---|---|---|
+| 66 | `00_document_inventory.md` | Every file, current status |
+| 67 | `01_conflicts_log.md` | Every conflict found, resolution status |
+| 68 | `02_issues_and_risks.md` | Narrative gap analysis |
+| 69 | `03_improvements.md` | Process improvement suggestions |
+| 70 | `04_roadmap_next_steps.md` | Prioritised to-do list |
+| 71 | `05_open_questions_for_founder.md` | Founder-only questions |
 
 ---
 
-## PHASE 0: ORIENTATION (Read First)
+## REFERENCE ONLY / ARCHIVED (Not Required Reading)
 
-| # | Document | What It Contains | Time |
-|---|----------|-----------------|------|
-| 1 | **executive-summary.md** | Single summary of all 45 documents. Critical facts, decisions, numbers. | 15 min |
-| 2 | **reading-order.md** | This document. | 2 min |
-| 3 | **research.md** (v3.0) | Everything: GTT procedure, WA market size, all services, competitors (MIWM), award wages, regulatory context, timetables A+B. | 60 min |
-| 4 | **dva-tpi-research.md** (v2.0) | DVA confirmed safe. Class A Commonwealth Super + TPI. No Service Pension. YETI Trust confirmed. | 10 min |
-
----
-
-## PHASE 1: THE BUSINESS
-
-| # | Document | What It Contains | Time |
-|---|----------|-----------------|------|
-| 5 | **business-plan.md** | Vision, model, market, competitive position. | 20 min |
-| 6 | **feasibility.md** | Location analysis, revenue, risks. | 15 min |
-| 7 | **financial-model.md** | Detailed financial model (Day 5). Cross-reference with break-even doc. | 20 min |
-| 8 | **financial-break-even-staff.md** (v2.0) | Per-employee break-even. Package pricing model. 10% online pre-booking discount policy. Downtime protocol. | 15 min |
-| 9 | **unit-economics.md** | Revenue per GTT client visit. | 10 min |
-| 10 | **cash-flow.md** | Month-by-month cash flow to break-even. | 15 min |
-| 11 | **financial-setup.md** | YETI Trust, bank accounts, Xero, payment systems. | 10 min |
+| Document | Status |
+|---|---|
+| `agents.md` | Empire agent roster reference |
+| `inhouse-gtt-research.md` | ARCHIVED — in-house lab rejected |
+| `research-supplement-day48-ARCHIVED.md` | ARCHIVED — merged into `research.md` v3.0 |
+| `research-supplement-day48.md` | ARCHIVED — stale duplicate of the file above |
+| `bloom-baby-case-study.md` | ARCHIVED — 3D scan removed from launch scope (future/Phase 2 only, see `market-research-findings.md`) |
+| `floor-plan-visual.html` / `.pdf` | SUPERSEDED — this is v2, use `floor-plan-v3.svg`/`.pdf` instead |
+| `capacity-pricing-audit.md` | SUPERSEDED — its "12-client model" depended on a Draw-3 rule that was not carried forward; current ceiling is 10 (Scenario C) or 15 (Scenario D) |
+| `pm-staffing-roster.md` | Staffing structure decisions still valid; its own P&L figures are stale, see banner — use `profit-loss-tables.md` v2.0 instead |
+| `research.md` | **UNTOUCHED (per explicit scope instruction)** — comprehensive research doc, covers trust/ownership structure, authoritative source for market-sizing figures used elsewhere |
+| `dva-tpi-research.md` | **UNTOUCHED (per explicit scope instruction)** — Imara's personal TPI/DVA implications, out of scope for the operational rename |
+| `investor-memorandum.md`, `strategic-concerns-growth.md`, `multirole-CORRECTION.md`, `booking-service-capacity-rule.md`, `scenario-d-demand-analysis.md`, `scenario-c-timeline.html` | Supporting reference documents, not required linear reading |
 
 ---
 
-## PHASE 2: SERVICES
+## OPEN DECISIONS REQUIRING ANTHONY'S INPUT
 
-| # | Document | What It Contains | Time |
-|---|----------|-----------------|------|
-| 12 | **services-master-table.md** (NEW) | Every service + add-on. Staff, qualification, duration, price, GTT compatibility, interruptible flag. | 15 min |
-| 13 | **services-pricing-locked.md** (v2.0) | Full priced menu. GTT packages, window services, afternoon services, retail, cafe. | 15 min |
-| 14 | **extended-wellness-services.md** (v2.0) | GDM (simplified), belly casting, birth plan, IBCLC future, day spa expansion. | 15 min |
-| 15 | **market-research-findings.md** (NEW) | MIWM operations, pathology fee, spray tan WA, belly cast pricing, lash pricing, hair colour pricing. | 10 min |
-
----
-
-## PHASE 3: CLINICAL OPERATIONS
-
-| # | Document | What It Contains | Time |
-|---|----------|-----------------|------|
-| 17 | **gtt-clinical-protocol.md** | GTT procedure detail. ADIPS 2025 thresholds. Phlebotomist protocol. Specimen handling. | 20 min |
-| 18 | **gtt-test-reference.md** | Quick reference card for staff. GTT timing, thresholds. | 5 min |
-| 19 | **pathology-collection-room.md** | Room fit-out spec. Equipment. Patient pathway T=0 to T+15. | 15 min |
-| 20 | **option-b-collection-centre.md** | Own Medicare ACC pathway. NATA + 7-step process. Reference only — not pursuing. Launch and permanent model is Option A (PathWest). | 15 min |
-
----
-
-## PHASE 4: DAILY OPERATIONS
-
-| # | Document | What It Contains | Time |
-|---|----------|-----------------|------|
-| 21 | **operations-manual.md** | Daily cadence. Opening checklists. GTT workflow. Timetable Scenario A and B. Draw tracking. | 20 min |
-| 22 | **workflow.md** | Patient journey. Staff handoffs. Process flows. | 10 min |
-| 23 | **grace-startup-plan.md** | Grace (ops agent) plan. First 30 days of operations. | 10 min |
-
----
-
-## PHASE 5: PEOPLE
-
-| # | Document | What It Contains | Time |
-|---|----------|-----------------|------|
-| 24 | **team-startup.md** | 8 empire agents + all physical hires. When to hire each. Receptionist = first hire. | 10 min |
-| 25 | **staff-plan.md** | Staffing roster. CF-01 Day 51 shift structure: 2-per-service-type AM-only, receptionist/manager split shift, PM Service Therapist new hire. | 10 min |
-| 26 | **hr-framework.md** | Award obligations (MA000005, MA000002). Employment contracts. WorkSafe WA. | 15 min |
-| 27 | **phlebotomist-job-posting.md** | Phlebotomist job posting (Option B only). | 5 min |
-| 28 | **onboarding.md** | Staff and agent onboarding procedures. | 10 min |
-
----
-
-## PHASE 6: EQUIPMENT & SOURCING
-
-| # | Document | What It Contains | Time |
-|---|----------|-----------------|------|
-| 29 | **equipment-costs.md** | Complete equipment list. Budget A$48.5K–113.5K. | 10 min |
-| 30 | **hire-purchase-china.md** | China sourcing guide. TGA compliance. Alibaba search terms. | 10 min |
-
----
-
-## PHASE 7: PARTNERSHIPS & BOOKING
-
-| # | Document | What It Contains | Time |
-|---|----------|-----------------|------|
-| 31 | **reed-partnerships.md** | PathWest, WDP, GP referral network approach. Reed agent plan. | 10 min |
-| 32 | **ivy-booking-system.md** | Booking system spec (Fresha). Patient journey from booking to checkout. | 10 min |
-
----
-
-## PHASE 8: TIMELINE
-
-| # | Document | What It Contains | Time |
-|---|----------|-----------------|------|
-| 33 | **venture-timeline.md** | Month-by-month. Launch target October 2026. Critical path. | 10 min |
-
----
-
-## PHASE 9: MARKETING & BRAND
-
-| # | Document | What It Contains | Time |
-|---|----------|-----------------|------|
-| 34 | **poppy-marketing.md** | Instagram, Facebook, GP referral network, grand opening strategy. | 15 min |
-| 35 | **afternoon-marketing-plan.md** | Afternoon slot marketing. Standalone spa bookings. | 10 min |
-| 36 | **brand-guide.md** | Brand standards, colours, fonts, tone of voice. | 10 min |
-| 37 | **website-spec.md** | Website requirements. Booking integration. | 10 min |
-
----
-
-## PHASE 10: COMPLIANCE & LEGAL
-
-| # | Document | What It Contains | Time |
-|---|----------|-----------------|------|
-| 38 | **patient-intake-form.md** | Patient intake form template. Medicare, consent, fasting confirmation. | 5 min |
-| 39 | **consent-form.md** | GTT consent form. | 5 min |
-| 40 | **privacy-policy.md** | Privacy policy draft. WA Privacy Act compliance. | 5 min |
-| 41 | **emergency-plan.md** | Emergency procedures. Adverse reactions, medical emergency, fire. | 10 min |
-| 42 | **review-audit.md** | Internal review and audit framework. | 10 min |
-
----
-
-## REFERENCE ONLY (Not Required Reading)
-
-| Document | Notes |
-|----------|-------|
-| **agents.md** | Empire agent roster for this venture |
-| **inhouse-gtt-research.md** | ARCHIVED. In-house lab rejected. Do not pursue. |
-| **research-supplement-day48-ARCHIVED.md** | ARCHIVED. Merged into research.md v3.0. |
-| **research-supplement-day48.md** | ARCHIVED (flagged 2026-07-19 — see `docs/01_conflicts_log.md`). Byte-identical duplicate of research-supplement-day48-ARCHIVED.md above, left over from the merge into research.md v3.0. Same status: superseded, do not treat as current. |
-| **bloom-baby-case-study.md** | ARCHIVED Day 51. 3D scan removed from scope entirely (no equipment, no operator, no subtenant) — see executive-summary.md "Services Removed". |
-| **floor-plan-visual.html / floor-plan-visual.pdf** | SUPERSEDED (flagged 2026-07-19 — see `docs/01_conflicts_log.md`). This is v2 (2026-07-01, box-fill rooms). Use `floor-plan-v3.svg` / `floor-plan-v3.pdf` instead (v3, 2026-07-10 — open-plan lounge, furniture in all rooms, accessible door swing arcs). |
-| **floor-plan-v3.svg / floor-plan-v3.pdf** | CURRENT. v3 (2026-07-10) — canonical floor plan concept, referenced in HANDOFF.md as current. |
-| **floor-plan-concept.md** | Text room schedule (2026-07-01) — same room list/sqm figures as both floor-plan visuals (predates the v2/v3 visual split, which only changed layout style — open plan vs box-fill — not room sizes). Still broadly current for room schedule purposes; not updated alongside the v3 visual revision on 2026-07-10, so treat any layout-specific detail (not sqm figures) as unconfirmed against v3. |
-
----
-
-## Open Decisions (Action Required)
-
-| Decision | Owner | Urgency |
-|----------|-------|---------|
-| Confirm pathology fee — PathWest + WDP (Clinipath contingency) | Reed | WEEK 1 — blocks package pricing. CF-03 added Clinipath as fallback (Day 50) — doesn't change urgency. |
-| ~~North or South Perth for Centre 1?~~ ~~Best Perth-metro location, use, and buy-vs-rent — broadened scope (Day 49)~~ Narrowed Day 50: **Subiaco (primary — antenatal demographic, KEMH/SJOG proximity) / Nedlands (secondary — strong medical-consulting zoning, 40+ listings)**. Both have active commercial listings (commercialrealestate.com.au, REIWA). Next step: shortlist 3-5 specific properties (100-150sqm) and arrange inspections. | **Quinn** | URGENT — narrowed, not resolved. Needs physical inspection. |
-| ~~Launch Scenario A (15-min) or B (20-min)?~~ | — | **RESOLVED Day 49: Scenario B (8 clients, 2 phlebotomists, 2 chairs) confirmed as Day 1 launch model** |
-| Approve Reed to engage WDP/PathWest (+Clinipath contingency)? | Anthony + Imara | WEEK 1 |
-| ~~Brand name — "GTT Center Perth" or premium?~~ | — | **CLARIFIED 2026-07-19 — not an open decision awaiting an answer.** "GTT Center Perth" is a confirmed working placeholder; Anthony will create the premium brand name/identity later, on his own timeline. See `brand-guide.md`. |
-| PM Spa Package ramp (M1=2/day -> M5+=6/day) — validate against live booking data once PM Service Therapist hired | Bruno | Month 1-5 — Lever 2 is the primary path to break-even (financial-break-even-staff.md); fallback is the price-sensitivity table in the same doc if PM volume underperforms |
-
-**Note (2026-07-19):** DVA adviser consultation removed from this table — it is Anthony's personal matter, not a GTT Center Perth task, per his direct instruction (stated twice). It should not be tracked here or in any other GTT roadmap/open-decisions list. CF-07's underlying legal analysis in `review-audit.md` is unaffected by this removal — only the tracking-as-a-GTT-action-item is removed.
+**See `docs/05_open_questions_for_founder.md` for the complete, single-source, currently-maintained list.** Do not track founder-only questions here — that document is the single source of truth, per this repo's own convention (see `03_improvements.md` P5).
 
 ---
 
 ## Changelog
 
-**2026-07-19** — Founder decision (confirmed 2026-07-18): reviewed for operational/on-site "Imara" references as part of the empire-wide Imara -> Venue Manager rename (see `staff-plan.md`, `operations-manual.md`, etc.). This file's one reference ("Approve Reed to engage WDP/PathWest — Anthony + Imara") is a strategic approval decision by Imara in her funding-partner capacity, not an on-site operational duty — left unchanged. Ownership/trust structure unaffected, see `financial-model.md`/`research.md`.
+**2026-07-19** — Founder decision (confirmed 2026-07-18): reviewed for operational/on-site "Imara" references as part of the empire-wide Imara -> Venue Manager rename. Left the one strategic-decision reference unchanged (Imara's funding-partner role).
 
-**2026-07-19 (audit pass)** — Added `research-supplement-day48.md` and floor-plan file entries to the Reference Only table. Flagged `research-supplement-day48.md` as a stale duplicate of the already-archived `research-supplement-day48-ARCHIVED.md` (superseded banner added to the file itself). Flagged `floor-plan-visual.html`/`.pdf` as superseded by `floor-plan-v3.svg`/`.pdf` (superseded banner added to the HTML file). See `docs/01_conflicts_log.md` for full detail.
+**2026-07-19 (audit pass)** — Flagged duplicate/superseded reference files.
 
-**2026-07-19 (founder feedback round 3)** — Removed "DVA adviser one-time consultation" from the Open Decisions table entirely — Anthony's personal matter, not a GTT Center Perth task, stated twice. Also updated the brand name row to reflect that it's a confirmed placeholder, not an open decision awaiting Anthony's input.
+**2026-07-19 (founder feedback round 3)** — Removed DVA from the Open Decisions table.
+
+**2026-07-20 (full rebuild)** — This document was significantly out of date (still said "45 documents," listed the superseded 8-client Scenario B as current, retained a fixed "October 2026" launch date, and had no reference to any of this session's 12 new documents or conflict resolutions). Fully rebuilt as a genuine single-entry-point document per Anthony's request: a 60-second summary, a "what changed this session" section, a condensed reading order across 12 phases (down from the prior no-longer-accurate phase list), and explicit pointers to `00_document_inventory.md` (full file-by-file detail) and `01_conflicts_log.md` (conflict resolution detail) rather than duplicating their content here. Removed the "Cross-Document Consistency Rule" linked-parameter table (it listed stale values matching the old model) — the same discipline is now better served by pointing to `profit-loss-tables.md` v2.0 and `scenario-c-sync-timetables.md` as single sources of truth rather than maintaining a parallel value-tracking table that itself goes stale.
