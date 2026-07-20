@@ -52,6 +52,7 @@ This was a large consolidation session. If you read nothing else in this section
 | 10 | [swot-analysis.md](swot-analysis.md) | Strengths/Weaknesses/Opportunities/Threats — new this session |
 | 11 | [risk-register.md](risk-register.md) | Ranked risk table (likelihood × impact × mitigation × owner) — new this session |
 | 12 | [regulatory-accreditation-tracker.md](regulatory-accreditation-tracker.md) | Regulatory/accreditation checklist with status — new this session |
+| 12a | [external-resources-and-advisors.md](external-resources-and-advisors.md) | Which external professionals/services are needed and when — new this session |
 
 ## PHASE 2: FINANCIALS
 
