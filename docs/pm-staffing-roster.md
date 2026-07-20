@@ -3,6 +3,8 @@
 **Version:** 2.0 | **Date:** 2026-07-14
 **Status:** Decisions locked — ready for financial model integration
 
+> **CONFLICT-08 RESOLVED (2026-07-20):** the "Full Recalculated P&L" table below (§Recalculated Financials) reports a Month 5+ steady-state loss of -A$4,384/month. **This figure is stale and superseded — do not use for current financial planning.** It was built using the AM revenue figure from the since-superseded 8-client/day Scenario B model (A$44,000/month = 8 × 22 days × A$250). The current committed AM model is Scenario C (10 clients/day, verified 2026-07-17 — see `docs/scenario-c-sync-timetables.md`), which alone adds ~A$11,000/month in AM revenue (A$55,000 vs A$44,000). Once this and other Scenario-C-era refinements are incorporated, the whole-venture figure is profitable: **`profit-loss-tables.md` v2.0 (2026-07-17, more recent than this document) and `HANDOFF.md` (2026-07-17, the standing authoritative session summary) both report +A$25,087.07/month at Month 5+ steady state — this is the current correct figure.** The PM staffing *decisions* in this document (4 dedicated casual hires, cross-shift qualified, individual services not packages, hours-based costing) remain valid and current — only the dollar figures in the Recalculated Financials section below are stale. See `docs/01_conflicts_log.md` CONFLICT-08 for the full resolution detail.
+
 ---
 
 ## Problem Statement
@@ -131,9 +133,11 @@ Session volume assumes conservative ~50% utilisation of theoretical 4-line capac
 | M4 | 15 | A$31,350 |
 | M5+ | 16 | A$33,440 |
 
-### Full Recalculated P&L
+### Full Recalculated P&L — SUPERSEDED, see banner at top of document
 
-| Month | AM Revenue | PM Revenue | Ancillary | Total Revenue | Fixed Costs | Net P&L |
+> **This table is stale (built on the 8-client/day AM model) — do not use. See `profit-loss-tables.md` v2.0 for the current figures (+A$25,087.07/month at Month 5+ steady state).** Retained below for historical reference only.
+
+| Month | AM Revenue (stale, 8-client model) | PM Revenue | Ancillary | Total Revenue | Fixed Costs | Net P&L (stale) |
 |---|---|---|---|---|---|---|
 | M1 | A$22,000 | A$8,360 | A$3,234 | A$33,594 | A$79,960 | **-A$46,366** |
 | M2 | A$33,000 | A$16,720 | A$5,379 | A$55,099 | A$85,182 | **-A$30,083** |
@@ -141,9 +145,9 @@ Session volume assumes conservative ~50% utilisation of theoretical 4-line capac
 | M4 | A$44,000 | A$31,350 | A$8,316 | A$83,666 | A$90,404 | **-A$6,738** |
 | M5+ (steady state) | A$44,000 | A$33,440 | A$8,580 | A$86,020 | A$90,404 | **-A$4,384** |
 
-## Finding
+## Finding — SUPERSEDED (2026-07-20), see banner at top of document
 
-The expanded 4-line PM roster is an improvement on the previously flagged -A$9,684/month loss, but **still does not reach break-even** at Month 5+ steady state — it stabilises at approximately **-A$4,384/month**. The root cause is unchanged in kind: 4 dedicated casual hires cost roughly 4× the old single cross-trained PM therapist, and individual-service pricing (A$95 avg) doesn't generate enough extra volume to close that gap at the modelled 16 sessions/day.
+~~The expanded 4-line PM roster is an improvement on the previously flagged -A$9,684/month loss, but still does not reach break-even at Month 5+ steady state — it stabilises at approximately -A$4,384/month.~~ **Corrected 2026-07-20:** the -A$4,384/month figure was calculated using the stale 8-client/day AM revenue figure (A$44,000/month). Substituting the current, verified 10-client/day Scenario C AM revenue (A$55,000/month, a A$11,000/month increase) alone flips this to a positive contribution (~+A$6,616/month using this document's own PM/ancillary/cost figures) — and `profit-loss-tables.md` v2.0's own from-scratch rebuild, which also refines cost assumptions beyond just the AM revenue swap, arrives at the more complete and current figure of +A$25,087.07/month at Month 5+ steady state. **The root-cause concern this document raised (4 dedicated casual hires costing roughly 4x a single cross-trained therapist) was a real and worthwhile catch — it just turned out to be affordable once the AM capacity model was corrected from 8 to 10 clients/day, not a genuine standalone loss.**
 
 ## Levers to Close the Remaining ~A$4,384/Month Gap
 
@@ -323,3 +327,9 @@ Breaking it down by shift (allocating only directly-attributable labor per shift
 **AM does not cover its own direct staff cost on its own** — it requires 8 concurrently-present staff regardless of the modest A$250/visit package price, which caps its per-client margin hard. **PM is the stronger margin contributor** — the hours-based casual roster (pay only for confirmed booking time) makes every PM dollar of revenue much cheaper to deliver than an AM dollar.
 
 **Strategic implication:** the AM capacity-expansion lever (Section 1 above, 3rd chair → 10 clients/day) directly targets AM's weakest point — spreading the same concurrent-staff cost base across more clients improves AM's per-client margin. This is a stronger argument for the 3rd chair than the raw +A$2,411/month figure alone suggests — it's fixing the shift that's currently subsidised by PM, not just adding volume.
+
+---
+
+## Changelog
+
+**2026-07-20 (CONFLICT-08 resolution)** — Flagged the "Full Recalculated P&L" table and its "Finding" as superseded — both were built on the stale 8-client/day AM revenue figure (A$44,000/month), not the current verified 10-client/day Scenario C figure (A$55,000/month). Correcting just the AM revenue turns the reported -A$4,384/month loss into a positive contribution; `profit-loss-tables.md` v2.0 (2026-07-17, more recent, matches `HANDOFF.md`) is the current authoritative figure at +A$25,087.07/month. The PM staffing structure decisions in this document (4 dedicated casual hires, hours-based costing, individual services) remain valid and unaffected by this correction.
