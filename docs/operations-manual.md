@@ -255,9 +255,9 @@ Never accept a 9th booking without confirming chair/staff cover via the Scenario
 
 | Metric | Target | Alert threshold |
 |---|---|---|
-| Bookings/week | 69+ (break-even, ~298 visits/month — financial-break-even-staff.md) | < 55 (loss-making) |
+| Package/service sales per week | 69+ (break-even, ~298 Package sales/month — financial-break-even-staff.md) | < 55 (loss-making) |
 | Show rate (attended vs booked) | > 90% | < 85% |
-| Package avg ticket | > A$250 (blended Pkg1/2/3 avg) | < A$200 (below Package 1 floor) |
+| Package avg ticket | > A$250 (blended Package 1/2 avg) | < A$200 (below the old, no-longer-offered A$200 tier) |
 | Google review count | +5/week | < 2/week |
 | Specimen rejection rate | < 1% | > 2% |
 | Staff attendance rate | 100% | Any call-out within 1 hour of shift |
@@ -350,3 +350,5 @@ Draw alert: set phone timer 5 min before each draw window. Services do NOT get i
 **2026-07-19 (audit pass)** — Flagged the "GTT SCHEDULING TIMETABLES" section (Scenario B, 8 clients/day) as superseded by Scenario C synchronized-start (10 clients/day) per `HANDOFF.md` and `scenario-c-sync-timetables.md`. Section not yet rewritten — see `docs/01_conflicts_log.md` and `docs/04_roadmap_next_steps.md` for the follow-up action.
 
 **2026-07-20 (CONFLICT-09 resolved)** — Corrected the Deposit Policy section (retitled Payment Policy): Anthony confirmed full package price is collected at time of booking, not an A$30 deposit. Updated the Cancellation Workflow and Late Arrival Policy to match the tiered credit policy already correctly documented in `onboarding.md`, rather than the stale deposit-forfeit mechanism.
+
+**2026-07-20 (package renumbering + terminology)** — Updated the KPI table's package-price reference to Package 1 (A$250)/Package 2 (A$300, both renamed 2026-07-20) and switched "Bookings/week" metric language to "Package/service sales per week," since a booking alone doesn't carry a dollar figure.
