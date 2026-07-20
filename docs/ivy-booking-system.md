@@ -143,10 +143,9 @@ STEP 5 — Customer Details
   First visit? Yes/No
   How did you hear about us? (tracking)
 
-STEP 6 — Payment
-  Deposit: A$30 (non-refundable if cancels within 24hrs)
-  OR full payment upfront (optional)
-  Payment via Fresha Pay (Visa/MC) or EFTPOS at venue
+STEP 6 — Payment (CONFLICT-09 RESOLVED 2026-07-20 — was previously described as a deposit option)
+  Full package price charged at time of booking (confirmed by Anthony — no deposit-only option)
+  Payment via Fresha Pay (Visa/MC) — no separate EFTPOS balance payment needed at the venue
 
 STEP 7 — Confirmation
   Instant confirmation email + SMS
@@ -159,14 +158,15 @@ STEP 10 — Day-Of Reminder 1 hour before (automated)
 STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 ```
 
-### Cancellation Policy
-- Cancel 24+ hours before: deposit refunded or rescheduled free
-- Cancel within 24 hours: A$30 deposit forfeited
-- No-show: full session charged (deposit + balance)
+### Cancellation Policy (corrected 2026-07-20 to match the confirmed full-payment model)
+- Cancel ≥48 hours before: full credit, reschedule to any available slot within 90 days (no refund)
+- Cancel 24-48 hours before: 50% credit applied to a rescheduled appointment, 50% retained
+- Cancel <24 hours / same-day: no credit, no refund, full amount retained
+- No-show: full amount already collected at booking, retained
 - Practitioner cancels: full refund + priority rebooking
 
 ### Late Arrival Policy
-- >10 minutes late for booked GTT slot: GTT slot forfeited, A$30 deposit forfeited (same as <24hr cancellation), client rebooked for next available slot — not squeezed into the existing schedule (would breach draw-timing tolerances for other clients on the same chair)
+- >10 minutes late for booked GTT slot: GTT slot forfeited, full amount already paid at booking is retained (same as a same-day cancellation), client rebooked for next available slot — not squeezed into the existing schedule (would breach draw-timing tolerances for other clients on the same chair)
 - See operations-manual.md Late Arrival Policy for full detail
 
 ### Waitlist
@@ -215,3 +215,5 @@ STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 **2026-07-19** — Found via founder-requested contradiction scan. Flagged this document's subtenant/room-rental practitioner model (subtenant calendar logins, subtenant rent invoicing, "4-5 subtenants") as superseded — contradicts the confirmed employed-staff, no-subtenant model. Also fixed a stale "8-client/morning" reference to note the current 10-client Scenario C model. Platform comparison/recommendation (Fresha) unaffected. See `docs/01_conflicts_log.md` CONFLICT-07.
 
 **2026-07-19 (full fix, same day — supersedes the flag-only pass above)** — Actually rewrote every subtenant/room-rental reference to the employed-staff model rather than leaving it flagged: "Practitioner Management" retitled "Staff Management," subtenant calendar logins -> employed-staff calendar logins with Venue Manager-set rosters, subtenant rent invoicing/direct-debit section replaced with a payroll reference (Xero, weekly pay run), "4-5 subtenants" corrected to "12 employed staff." Also rewrote the Step 3 booking-flow service list — removed 3D Keepsake Scan and Dietitian consultation as current bookable services (neither is launch scope; 3D scan is future/Phase 2, dietitian is removed entirely) and corrected massage/nail service durations to match the current 30/45-min package structure. Removed the earlier superseded-content banner now that the fixes are made directly rather than just flagged.
+
+**2026-07-20 (CONFLICT-09 resolved)** — Corrected Step 6 Payment and the Cancellation/Late Arrival Policies: Anthony confirmed full package price is charged at booking, not an A$30 deposit. Replaced the deposit-forfeit mechanism with the tiered credit policy (≥48hrs full credit, 24-48hrs 50% credit, <24hrs no credit) that matches `onboarding.md`'s already-correct draft copy.
