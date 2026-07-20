@@ -353,7 +353,7 @@ Checked all 30 service slots (15 clients × 2) against the existing 8 treatment 
 
 **a. More service staff needed?** No — verified above, existing 8 treatment staff cover it, though utilisation on 2 of them is now high.
 
-**b. Profit?** Using the safe Package 2 price (A$250, per your instruction):
+**b. Profit?** Using the safe Package 1 price (A$250, per your instruction — package renamed from "Package 2" to "Package 1" 2026-07-20, same price):
 - AM Revenue: 15 × 22 × A$250 = A$82,500/month
 - AM Direct Labor: 3 phlebotomists (A$129,204/yr = A$10,767/month) + 8 treatment staff (A$41,077/month, unchanged) = A$51,844/month
 - Opening cost (07:00 start): A$980/month
@@ -432,3 +432,5 @@ Confirmed — Scenario C's 20-minute offset between the 2 chairs was always a fl
 **2026-07-19** — Verified Anthony's question ("can the 10:00 appointment start at 09:55?") by simulating the actual Chair C draw-event sequence, not eyeballing it. Verdict: yes, workable on the phlebotomist/chair side — the resulting zero-minute gap is structurally identical to two zero-gap handoffs that already exist elsewhere in this same timetable. One caveat flagged and not resolved: the treatment-staff side of Client 15's shifted services cannot be verified from existing documentation (no per-client staff-assignment table exists for Scenario D, unlike Scenario C). See new "Can Client 15 Start at 09:55 Instead of 10:00?" section above. Cross-referenced and updated the recommendation in `king-edward-start-time-constraint.md`.
 
 **2026-07-20 (Sunday reopening criterion)** — Tightened the Sunday standing instruction to state the actual reopening bar: standalone PM demand must be both proven AND profitable enough to clear the 2.0x penalty-rate cost, not just "demand exists." Per Anthony's feedback that "closed until proven demand exists" undersold that profitability, not mere demand, is the real bar. Cascaded the same reword into `business-plan.md`, `executive-summary.md`, `HANDOFF.md`.
+
+**2026-07-20 (package renumbering)** — Updated the one live/current-planning-price reference ("Profit?" calculation under 3rd Phlebotomist) from "Package 2 (A$250)" to "Package 1 (A$250)" to match the 2026-07-20 renumbering in `services-pricing-locked.md`. The earlier historical narrative in this document (Task 4/UPDATE sections describing the original "which 2 packages to keep" decision using the old Package 1/2/3 A$200/250/300 names) is left as-is — it's a historical record of a decision already made, not a statement of current live pricing.
