@@ -63,6 +63,7 @@ This was a large consolidation session. If you read nothing else in this section
 | 15 | [break-even-sensitivity-analysis.md](break-even-sensitivity-analysis.md) | Best/base/worst case on volume and pricing — new this session |
 | 16 | [price-increase-comparison.md](price-increase-comparison.md) | Analysis of when/whether to raise package prices — new this session |
 | 17 | [pricing-billing-strategy.md](pricing-billing-strategy.md) | Private vs bulk billing rationale, Medicare specifics flagged as requiring verification — new this session |
+| 17a | [pm-package-exploration.md](pm-package-exploration.md) | Exploratory only, not committed — whether PM standalone services should also offer a bundled package option, new this session |
 | 18 | [financial-break-even-staff.md](financial-break-even-staff.md) | Per-employee break-even, package pricing model |
 | 19 | [unit-economics.md](unit-economics.md) | Revenue per visit |
 | 20 | [financial-setup.md](financial-setup.md) | Trust bank accounts, Xero, payment systems (payment policy corrected this session) |
@@ -209,3 +210,5 @@ This was a large consolidation session. If you read nothing else in this section
 **2026-07-20 (Imara overview added)** — Added `docs/gtt-center-perth-overview-for-imara.md` as the recommended presentation-ready document for a non-technical stakeholder, ahead of `executive-summary.md` in the core reading order.
 
 **2026-07-20 (hyperlinks added)** — Converted every document name in this file to a clickable markdown relative hyperlink (e.g. `[business-plan.md](business-plan.md)`), so Anthony can click through directly on GitHub rather than needing to navigate manually.
+
+**2026-07-20 (external resources + PM package exploration added)** — Added row 12a for `external-resources-and-advisors.md` (Phase 1) and row 17a for `pm-package-exploration.md` (Phase 2), both new documents this session.
