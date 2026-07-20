@@ -165,9 +165,9 @@ The verified capacity timetable (`operations-manual.md`) gives every GTT client 
 
 ## PART B: AFTERNOON / STANDALONE SERVICES
 
-> **2026-07 UPDATE:** PM afternoon sessions are sold as **individual services at individual prices** — NOT as Package 1/2/3. Clients book single services (massage, facial, nails, brows, hair, spray tan) at the per-service rates below. No minimum package spend applies in the PM session. Financial model (cash-flow.md, unit-economics.md) requires revision to reflect individual service pricing for PM revenue.
+> **2026-07 UPDATE, revised 2026-07-20:** PM afternoon sessions are sold as **individual services at individual prices** (per-service rates below) — NOT the AM's Package 1/2 structure. **New, committed 2026-07-20:** PM also now offers a small set of **set/fixed PM packages** (bundled combos, no client-choice — see `pm-package-structure.md` for the full proposed menu, pricing, and sales strategy). PM clients choose between (a) individual a-la-carte services below, or (b) one of the fixed PM packages — with an active strategy to steer clients toward the package option since it drives higher revenue per visit. Proposed package pricing requires Anthony's sign-off before going live — see `pm-package-structure.md`.
 
-*GTT pathology testing is AM-only (fasting requirement) — no testing in the afternoon. PM standalone services are sold as individual a-la-carte services, NOT as Package 1/2 (see 2026-07 update banner above) — this reference to "PM Spa Packages" is retained only for the longer standalone-only services below (spray tan, hair colour, lash extensions, belly casting, and the 60-min/50-min hairdressing services that exceed the 45-min GTT slot), which remain afternoon/standalone-only regardless of package model.*
+*GTT pathology testing is AM-only (fasting requirement) — no testing in the afternoon. PM standalone services are sold as individual a-la-carte services plus set/fixed PM packages (see banner above) — this is distinct from AM's Package 1/2 (client-choice) model. The longer standalone-only services below (spray tan, hair colour, lash extensions, belly casting, and the 60-min/50-min hairdressing services that exceed the 45-min GTT slot) remain afternoon/standalone-only regardless of package model.*
 
 *10% online pre-booking discount applies when booked at the same time as a GTT reservation. Full price applies for in-center/same-day upsells.*
 
@@ -325,3 +325,5 @@ When a staff member has no booked client:
 ## Changelog
 
 **2026-07-20 (package renumbering)** — Anthony confirmed a renumbering/renaming of the 2 surviving packages, not a re-opening of the earlier decision to drop the old A$200 tier. New "Package 1" (A$250) is now a fixed 2×30min composition (previously this was the dropped A$200 tier's composition, now moved to the A$250 price point). New "Package 2" (A$300) is now a flexible choice of 2×45min / 1×45min+1×30min / 2×30min (previously this flexibility sat under the old "Package 3" name). Mapping (New 1 = old A$250 tier, New 2 = old A$300 tier) stated explicitly as an assumption per Anthony's instruction, correctable by rename only if wrong since both price points are unchanged.
+
+**2026-07-20 (PM packages committed)** — Updated Part B banner: PM now offers set/fixed packages (bundled combos) in addition to individual a-la-carte services, per Anthony's confirmation. Cross-referenced `pm-package-structure.md` for the proposed package menu, pricing (requires Anthony's sign-off), and sales strategy.
