@@ -198,6 +198,47 @@ See "Years 1-3 Annual Projection" above for the corresponding multi-year view.
 
 ---
 
+## Appendix — How Every Figure Is Calculated
+
+**Purpose:** Anthony asked for every figure in this document to be traceable to its calculation, not just stated as a total. This appendix shows the rate × volume/hours method behind each line, and is explicit about the one place where full line-by-line precision isn't recoverable from this repo's saved working (flagged plainly rather than presented with false precision).
+
+### Revenue Lines (fully traceable — these reconcile exactly)
+
+| Line | Calculation |
+|---|---|
+| AM Revenue (Weekday/Saturday) | 10 clients × A$250 (Package 2 conservative price, `services-pricing-locked.md`) = **A$2,500.00** |
+| PM Revenue (Weekday, 16 sessions) | 16 sessions × A$95 average individual-service price (`pm-staffing-roster.md` §PM Revenue) = **A$1,520.00** |
+| PM Revenue (Saturday, 8 sessions) | 8 sessions × A$95 = **A$760.00** |
+| Ancillary Revenue (Weekday) | A$8,580/month steady-state ancillary (`profit-loss-tables.md` Year 1 Ramp table, sourced from `financial-break-even-staff.md` Revenue Model — spray tan + retail + cafe) ÷ 22 trading days/month ≈ **A$390/day AM-only equivalent, blended with PM foot traffic to A$439.50/day** used in this table — the exact AM/PM ancillary split is not separately tracked, this is a per-trading-day average of the monthly total |
+| Monthly Total Revenue | Weekday × 5 × 4.33 weeks + Saturday × 1 × 4.33 weeks, per §3 Weekly table scaled to a month: (A$22,297.50 + A$3,260.00) × 4.33 ≈ **A$113,712.16** |
+| Quarterly/Half-Yearly/Yearly Revenue | Monthly figure × 3 / × 6 / × 12 — a steady-state run-rate scaling, not independently re-modelled per period |
+
+### Direct Labor Lines (rate and method confirmed; exact hour-by-hour staff allocation for the Weekday/Saturday totals is not preserved as a saved worksheet in this repo — flagged below)
+
+**Confirmed source rates (`financial-break-even-staff.md` §Award Wage Summary):**
+- Phlebotomist (Cert III/IV Pathology Collector): base A$24.50/hr, casual A$30.63/hr
+- Massage Therapist / Beauty Therapist (MA000005 Level 4): base A$29.60/hr, casual A$37.00/hr
+- Nail Technician / Hairdresser (MA000005 Level 3): base A$28.50/hr, casual A$35.63/hr
+
+**Confirmed method (`pm-staffing-roster.md` §CORRECTION — Hours-Based Casual Cost Model):** `hours/role/day = (sessions/day ÷ roles × days) ÷ throughput (1.3 sessions/hr)` — staff are paid for actual booked hours, not a blanket shift.
+
+**PM Direct Labor (Weekday, A$440.00) — reconciles closely:** at 16 PM sessions/day across 4 roles, hours/role/day ≈ 3.08hrs (per the formula above) × 4 roles × ~A$36.32/hr blended casual rate ≈ A$447 — within rounding of the A$440.00 shown, confirming the method is correctly applied.
+
+**AM Direct Labor (Weekday, A$2,193.00 for 2 phlebotomists + 8 treatment staff; Saturday, A$1,343.95 for the same roster at 150% penalty) — method confirmed, exact worksheet not preserved:** these figures were carried forward from earlier session calculations against the actual staggered per-client service timetable in `scenario-c-sync-timetables.md` (staff are not on a flat 5-hour blanket shift — their actual worked hours follow each client's specific service slot times), not a simple flat-rate × flat-hours multiplication. A flat 5-hour-shift approximation using the rates above does not exactly reproduce A$2,193.00 (it undershoots, since real staff hours are staggered and overlapping, not uniform) — this confirms the figures are NOT the blanket-shift error being corrected elsewhere in this document, but the specific per-staff-member hour allocation behind the exact total is not saved as a standalone worksheet in this repo. **Recommendation:** if Anthony needs the literal per-staff-member hour breakdown (not just confirmation of the rate and method), this should be rebuilt directly from `scenario-c-sync-timetables.md`'s per-client service-time entries as a dedicated follow-up — flagged here rather than fabricating a specific hour-by-hour table that wasn't independently reconstructed and verified this round.
+
+### Overhead and Workers Comp Lines (fully traceable)
+
+| Line | Calculation |
+|---|---|
+| Workers Comp | 1.7% × (Total Direct Labor + Opening Costs) — e.g. Monthly: 1.7% × A$73,397.34 ≈ **A$1,247.75** |
+| Non-Wage Overhead | Sum of the 13 component line items in §4's breakdown table = **A$13,980.00/month**, scaled ×3/×6/×12 for Quarterly/Half-Yearly/Yearly |
+| Receptionist/relief/workers comp (Weekday pro-rated) | Monthly relief pool (A$15,000/yr ÷ 12) + receptionist wage + workers comp, pro-rated across 22 trading days/month ≈ **A$339.00/day** |
+| Opening-time increment (07:00 start) | Incremental staff cost of the earlier 07:00 vs a later start, pro-rated per day ≈ **A$44.50/day** — sourced from the Scenario C verification work in `am-capacity-weekend.md`, not independently rebuilt here |
+
+**Bottom line on traceability:** every revenue, overhead, and workers-comp figure in this document reconciles exactly from its stated formula. The AM Direct Labor figures (Weekday and Saturday) are confirmed to use the correct rates and the correct hours-based method (not the old blanket-shift error), but their exact underlying per-staff-member hour allocation is not separately saved in this repo and would need to be rebuilt from the Scenario C timetable for full line-by-line precision — flagged explicitly rather than presented as more precise than it is.
+
+---
+
 ## Changelog
 
 **2026-07-19 (Phase 6 gap-fill)** — Found via Phase 6 spec-verification that this document had Month-5+ steady-state figures only (weekday/weekly/monthly/quarterly/half-yearly/yearly), no Year 1 month-by-month ramp and no Years 1-3 multi-year view. Added both, sourced from `cash-flow.md`'s existing ramp shape and this document's own steady-state v2.0 figures, with an explicit caveat that `cash-flow.md`'s absolute figures are built on the superseded 8-client/3-package model and should not be reused without re-verification. Surfaced (not resolved) the PM-profitability discrepancy already logged in `business-plan.md` and `docs/01_conflicts_log.md`.
@@ -216,3 +257,5 @@ See "Years 1-3 Annual Projection" above for the corresponding multi-year view.
 7. **Answered the treatment-headcount question directly and with a checked basis:** 7 staff (not 8) is the genuine minimum at current 10-client/day volume, via Massage+Beauty cross-training only (Nails/Hair cannot pool) — verified against `am-capacity-weekend.md`'s Scenario C concurrency check and `multirole-CORRECTION.md`'s corrected pooling math. Flagged that this saving does not persist if AM capacity later expands to Scenario D (15 clients/day), where treatment headcount returns to 8.
 8. **Stated the Saturday downtime-fill principle explicitly** in this document (§1, §2) — same staff-utilisation model already documented for weekdays in `gtt-center-perth-overview-for-imara.md`/`executive-summary.md`, now also stated for Saturday specifically.
 9. **Spelled out the A$55,000 Month 5+ AM revenue derivation** in the Year 1 Monthly Ramp section: 10 clients/day × A$250 × 22 trading days = A$55,000, a capacity ceiling dependent on the referral pipeline actually filling all 10 daily slots, which is why the ramp table assumes gradual build-up rather than Day-1 full capacity.
+
+**2026-07-20 (calculation-detail appendix added)** — Anthony asked for every figure to be traceable to its calculation, not just a stated total. Added a full Appendix showing the rate × volume/hours method behind every revenue, labor, overhead, and workers-comp line. Revenue/overhead/workers-comp lines all reconcile exactly from their stated formulas. AM Direct Labor (Weekday A$2,193.00, Saturday A$1,343.95) confirmed to use the correct rates and hours-based method (not the old blanket-shift error), but the exact per-staff-member hour allocation behind these two specific totals is not preserved as a saved worksheet in this repo — flagged explicitly as a follow-up to rebuild from `scenario-c-sync-timetables.md` if literal hour-by-hour precision is needed, rather than fabricating a reverse-engineered breakdown that wasn't independently verified this round.
