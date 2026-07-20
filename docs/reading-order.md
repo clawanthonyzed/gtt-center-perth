@@ -63,7 +63,7 @@ This was a large consolidation session. If you read nothing else in this section
 | 15 | [break-even-sensitivity-analysis.md](break-even-sensitivity-analysis.md) | Best/base/worst case on volume and pricing — new this session |
 | 16 | [price-increase-comparison.md](price-increase-comparison.md) | Analysis of when/whether to raise package prices — new this session |
 | 17 | [pricing-billing-strategy.md](pricing-billing-strategy.md) | Private vs bulk billing rationale, Medicare specifics flagged as requiring verification — new this session |
-| 17a | [pm-package-exploration.md](pm-package-exploration.md) | Exploratory only, not committed — whether PM standalone services should also offer a bundled package option, new this session |
+| 17a | [pm-package-structure.md](pm-package-structure.md) | **COMMITTED direction** — PM now offers set/fixed packages alongside standalone services, with a "push toward package" sales strategy; proposed pricing needs Anthony's sign-off. Supersedes the deleted `pm-package-exploration.md`. |
 | 18 | [financial-break-even-staff.md](financial-break-even-staff.md) | Per-employee break-even, package pricing model |
 | 19 | [unit-economics.md](unit-economics.md) | Revenue per visit |
 | 20 | [financial-setup.md](financial-setup.md) | Trust bank accounts, Xero, payment systems (payment policy corrected this session) |
@@ -220,3 +220,5 @@ This was a large consolidation session. If you read nothing else in this section
 **2026-07-20 (revenue extraction doc added)** — Added row 20a for [revenue-extraction-options.md](revenue-extraction-options.md), new this session.
 
 **2026-07-20 (AM staffing-by-volume added)** — Added row 31a for [am-staffing-by-volume.md](am-staffing-by-volume.md), new this session. Updated row 31's description to note it also answers the specific 11th-client-at-09:55 question.
+
+**2026-07-20 (PM packages committed)** — Updated row 17a: `pm-package-exploration.md` deleted and replaced by [pm-package-structure.md](pm-package-structure.md), reflecting Anthony's confirmation that PM packages are now a committed direction, not exploratory.
