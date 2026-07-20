@@ -18,7 +18,7 @@ This is the same idea already flagged as a lever in `pm-staffing-roster.md` §Le
 
 ## 1. Positioning — Why This Might Make Sense
 
-- **AM already has a package structure** (Package 2 A$250, Package 3 A$300 — `services-pricing-locked.md`) built around 2 services bundled with the GTT wait. PM clients have no GTT wait to fill, so the "why bundle" logic is different — it would need to stand on its own value (convenience + modest discount), not "something to do while you wait."
+- **AM already has a package structure** (Package 1 A$250, Package 2 A$300 — `services-pricing-locked.md`) built around 2 services bundled with the GTT wait. PM clients have no GTT wait to fill, so the "why bundle" logic is different — it would need to stand on its own value (convenience + modest discount), not "something to do while you wait."
 - **Some standalone wellness clients naturally want 2+ services anyway** (e.g. a blowdry + gel manicure before an event) — a package makes this an easier single booking decision and a slightly better deal than pricing each service separately, which can nudge average spend up per visit.
 - **Risk:** PM package clients take longer per visit (2 services back-to-back, ~75-90 min vs ~30-45 min for a single service), which uses more staff-hours per client at a lower effective hourly staff-cost recovery than 2 separate single-service clients booked back-to-back with a different staff member each — this needs checking against actual PM capacity, not assumed as free upside.
 
@@ -37,7 +37,7 @@ Individual PM service prices average ~A$95/session (`pm-staffing-roster.md`, `se
 
 - **Single-therapist package (2 services, same practitioner, e.g. massage + facial cross-trained skillset):** works within the existing PM roster's cross-training pattern (`pm-staffing-roster.md` §Multi-Role Relief Hiring already establishes Massage+Beauty cross-qualification) — lowest staffing complexity, since one practitioner delivers both services back-to-back to one client.
 - **Two-therapist package (e.g. blowdry + manicure, different skill lines):** requires coordinating two PM staff members' schedules for the same client at overlapping/sequential times — same concurrency logic already modelled for AM in `operations-manual.md`, but PM currently has only 1 dedicated hire per line, so a 2-therapist package would occupy 2 of the 4 PM lines simultaneously for one client, reducing how many separate single-service clients those 2 lines could otherwise serve in that window. This is the main real staffing cost of the idea and needs modelling against actual PM demand patterns, not assumed neutral.
-- **Booking system:** Fresha supports package/bundle booking already (used for AM Package 2/3) — no new tooling required if adopted.
+- **Booking system:** Fresha supports package/bundle booking already (used for AM Package 1/2) — no new tooling required if adopted.
 
 ## 4. What Would Need to Happen Before Adopting This
 
@@ -63,3 +63,5 @@ Individual PM service prices average ~A$95/session (`pm-staffing-roster.md`, `se
 ## Changelog
 
 **2026-07-20** — Created as a new exploratory document per Anthony's request: explore (not commit to) a PM standalone package option alongside the existing individual-service model. Positioning, illustrative pricing, and staffing effect covered; explicitly flagged as not a recommendation or decision.
+
+**2026-07-20 (package renumbering)** — Updated "Package 2/Package 3" references to "Package 1 (A$250)/Package 2 (A$300)" per `services-pricing-locked.md`'s renumbering.
