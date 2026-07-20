@@ -15,9 +15,9 @@ Per `profit-loss-tables.md` v2.0 (2026-07-17, most recent) and `HANDOFF.md`:
 - Full break-even (all fixed costs covered with margin) is reached at Month 5+ steady state, per the current 10-client AM Scenario C model
 - Marginal break-even (costs just covered) is reached approximately Month 4
 
-**Sourcing caveat, carried over from `business-plan.md`'s rewrite:** the exact Month 4/5 figures differ slightly across `cash-flow.md` (+A$4,188 at Month 4, built on the superseded 8-client model) and `pm-staffing-roster.md` (+A$4,924, also pre-Scenario-C) — neither has been re-verified against the current 10-client model. Treat "Month 4 marginal, Month 5+ full" as the directionally correct answer; treat the exact dollar figures at each month as estimates pending reconciliation.
+**Sourcing note — RESOLVED 2026-07-20 (CONFLICT-08):** the Month 4/5 figures previously appeared to differ across `cash-flow.md` (+A$4,188 at Month 4) and `pm-staffing-roster.md` (+A$4,924) because both were built on the superseded 8-client AM model. This is now resolved — `profit-loss-tables.md` v2.0's own corrected Year 1 Monthly Ramp table (added 2026-07-19, reconciled 2026-07-20) is the current authoritative source for the month-by-month build-up. "Month 4 marginal, Month 5+ full" remains directionally correct and is now backed by a reconciled figure, not just a directional estimate.
 
-**Note on a fifth documentation variant found this session:** `capacity-pricing-audit.md` (2026-06-11) references a "12-client/2-chair model" as its own headline capacity finding — earlier and different again from both the 8-client Scenario B and the current 10-client Scenario C sync model. This is not resolved here; it is flagged as an additional instance of the same recurring capacity-figure drift pattern documented in `docs/01_conflicts_log.md` CONFLICT-03, and should be included in any future consolidation pass across all AM-capacity documents.
+**Note on the fifth documentation variant — RESOLVED 2026-07-20 (CONFLICT-08):** `capacity-pricing-audit.md` (2026-06-11)'s "12-client/2-chair model" has been traced and flagged as superseded in that document directly — it depended on a relaxed Draw 3 rule that was not carried forward into subsequent scheduling documents. The current standing capacity ceiling is confirmed as 10 clients/day (Scenario C) or 15/day (Scenario D), not 12. See `docs/01_conflicts_log.md` CONFLICT-08 for the full resolution.
 
 ---
 
@@ -80,3 +80,5 @@ Building on `financial-break-even-staff.md`'s existing Sensitivity — Package P
 ## Changelog
 
 **2026-07-19** — Created as a new Phase 7 deliverable, building on `financial-break-even-staff.md` §Sensitivity, `capacity-pricing-audit.md`, and `profit-loss-tables.md` rather than re-deriving new figures from scratch. Flagged (not resolved) a fifth instance of the recurring AM-capacity-figure discrepancy — `capacity-pricing-audit.md`'s own "12-client" headline figure, distinct from both the 8-client Scenario B and current 10-client Scenario C models. Added §5 (combined volume × pricing grid) as new synthesis not present in any single existing source document.
+
+**2026-07-20 (final consistency sweep)** — Both sourcing caveats in §1 resolved per CONFLICT-08: the Month 4/5 figure discrepancy and the "12-client model" variant are now both reconciled — see updated §1 and `docs/01_conflicts_log.md`.
