@@ -298,7 +298,7 @@ GTT Center Perth has no subtenants. The 3D scan operator and dietitian sublet ro
 
 ## 7A. STAFF GROWTH PLAN — SCALING TRIGGER, NOT A STATIC HEADCOUNT (Added 2026-07-20)
 
-**Anthony's feedback:** the headcount above is presented as a fixed number, with no explicit rule for when it grows. This section adds the actual scaling trigger, tied to PM standalone demand (the segment expected to grow, per `pm-staffing-roster.md` §Locked Decisions #2 and `pm-package-exploration.md`), rather than a static "12 roles, done" picture.
+**Anthony's feedback:** the headcount above is presented as a fixed number, with no explicit rule for when it grows. This section adds the actual scaling trigger, tied to PM standalone demand (the segment expected to grow, per `pm-staffing-roster.md` §Locked Decisions #2 and `pm-package-structure.md`, the now-committed PM package direction), rather than a static "12 roles, done" picture.
 
 **The trigger is booking volume against current PM capacity, checked monthly, not a calendar date.**
 
@@ -381,3 +381,5 @@ The existing A$15,000/yr relief line in `financial-break-even-staff.md` was a ge
 **2026-07-19 (founder feedback round 2)** — Corrected §7 Hiring Timeline: GTT Center Perth is NOT recruiting or looking for any staff, including the Venue Manager, until a physical venue location is confirmed (direct founder instruction). Reworded "Week 1" labels to make clear they describe sequence-once-recruitment-starts, not literal weeks starting now. Venue Manager remains the first hire and still sits on the critical path once recruitment does begin. Job posting document now built and ready: `docs/venue-manager-job-posting.md`.
 
 **2026-07-20 (staff growth plan + relief/backup staffing added)** — Added §7A (staff growth plan): an explicit, volume-triggered scaling rule (PM line utilisation/turned-away bookings, AM waitlist, Sunday trial) rather than a static headcount, per Anthony's feedback. Added §7B (relief/backup staffing): closes the gap Anthony flagged — every staffing section only counted day-to-day rostered headcount with no sick-leave/holiday coverage plan. Covers both phlebotomists (ties to the Venue Manager's first-aid/EpiPen role — recommends a cross-trained backup) and treatment staff (extends `pm-staffing-roster.md`'s existing Massage+Beauty dual-qualified relief pairing from PM-only to also cover AM absences). Cost impact flagged as directionally consistent with the existing A$15,000/yr relief line in `financial-break-even-staff.md`, not yet rebuilt bottom-up from real absence data.
+
+**2026-07-20 (PM packages committed)** — Updated §7A's cross-reference from the now-deleted `pm-package-exploration.md` to `pm-package-structure.md`, reflecting Anthony's confirmation that PM packages are a committed direction, not exploratory.
