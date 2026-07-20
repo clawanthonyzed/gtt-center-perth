@@ -77,7 +77,7 @@ Per `HANDOFF.md` (2026-07-17, the most recent session summary and source of trut
 | Break-even | ~298 visits/month (~13.5/day) | `profit-loss-tables.md`, `unit-economics.md` |
 | Marginal break-even reached | Month 4 (approximate) | `HANDOFF.md`, `cash-flow.md` |
 
-**Internal discrepancy flagged, not resolved this session:** `pm-staffing-roster.md` (2026-07-14) models the PM shift under the pre-Scenario-C (8-client) AM assumptions and reports the PM shift alone as a *loss* at Month 5+ steady state (-A$4,384/month), while `profit-loss-tables.md` v2.0 (2026-07-17, current canonical baseline) reports the whole venture profitable at the same steady-state point under the current 10-client Scenario C model. These two figures have not been reconciled — see `docs/01_conflicts_log.md`.
+**Internal discrepancy RESOLVED 2026-07-20:** `pm-staffing-roster.md` (2026-07-14) previously modelled the PM shift under the pre-Scenario-C (8-client) AM assumptions and reported the PM shift alone as a *loss* at Month 5+ steady state (-A$4,384/month) — this was an artifact of the stale 8-client AM revenue figure, not a genuine standalone loss. Correcting the AM revenue to the current 10-client Scenario C figure resolves the discrepancy: `profit-loss-tables.md` v2.0's whole-venture profitability figure (+A$25,087.07/month, matching `HANDOFF.md`) is the confirmed current authoritative figure. See `docs/01_conflicts_log.md` CONFLICT-08 for full detail.
 
 ---
 
@@ -106,7 +106,6 @@ Self-funded via Anthony's partner's (Imara's) approximately A$200,000 in savings
 
 - WDP courier/specimen cutoff time confirmation (awaiting WDP reply)
 - Physical venue location (blocks all recruitment and fit-out)
-- Reconciliation of the market-sizing and PM-profitability discrepancies noted above
 - Package price-increase timing (see `docs/price-increase-comparison.md`)
 
 ---
@@ -114,3 +113,5 @@ Self-funded via Anthony's partner's (Imara's) approximately A$200,000 in savings
 ## Changelog
 
 **2026-07-19 (Phase 6 full currency rewrite, v2.0)** — Found via Phase 6 spec-verification pass that this document was severely stale: described the superseded 8-client Scenario B model as current; carried a fixed "October 2026" launch date directly contradicting the standing "no launch date set" instruction; still listed the dropped Package 1 (A$200); described DVA/trust structure as "confirmed safe, proceed" (a stale framing given Anthony is now handling this personally rather than treating it as settled); retained dietitian-related content ("GDM Management" section) despite dietitian being removed from scope entirely; and cited `financial-model.md` v2.0 as canonical when that document is self-declared superseded. Fully rewritten to stand alone (per Phase 6 spec: problem, solution, market opportunity, business model, status, financial snapshot, funding position, team) and to reflect current sourcing (`HANDOFF.md`, `profit-loss-tables.md` v2.0, `services-pricing-locked.md`, `scenario-c-sync-timetables.md`). Removed detailed content duplicated better elsewhere (full GTT clinical timing table, detailed staffing cost table, collection room spec, hard rules list) in favour of cross-references — this document's job per spec is a standalone summary, not a full duplicate of `business-plan.md`/`gtt-clinical-protocol.md`/`pathology-collection-room.md`. Surfaced the same PM-profitability and market-sizing discrepancies found in `business-plan.md`'s rewrite — not resolved, logged in `docs/01_conflicts_log.md` and `docs/05_open_questions_for_founder.md`.
+
+**2026-07-20 (CONFLICT-08 resolved)** — Resolved the PM-profitability discrepancy in the Financial Snapshot section: `pm-staffing-roster.md`'s reported PM-shift loss was an artifact of the stale 8-client AM model, not a genuine loss. `profit-loss-tables.md` v2.0's +A$25,087.07/month figure (matching `HANDOFF.md`) is confirmed current and authoritative. Removed the resolved item from the Key Open Questions list.
