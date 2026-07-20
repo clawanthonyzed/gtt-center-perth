@@ -1,7 +1,7 @@
 # GTT Center Perth — Profit & Loss Tables
 
 **Version:** 2.1 | **Date:** 2026-07-20 (v1.0 removed entirely per Anthony's instruction — see Changelog)
-**Base model:** Current committed operational plan — 2 chairs, 10 AM clients/day (07:00 start, Scenario C verified), PM individual services (4-role hours-based roster), Saturday AM+PM (hours-based costing), **no Sunday trading** (closed until standalone PM demand is proven and profitable — see `am-capacity-weekend.md`). **All AM package revenue uses A$250 (Package 2, the lower of the 2 confirmed packages) per instruction — this is a deliberate safety margin, not the full potential average if Package 3 bookings run higher.**
+**Base model:** Current committed operational plan — 2 chairs, 10 AM clients/day (07:00 start, Scenario C verified), PM individual services (4-role hours-based roster), Saturday AM+PM (hours-based costing), **no Sunday trading** (closed until standalone PM demand is proven and profitable — see `am-capacity-weekend.md`). **All AM package revenue uses A$250 (Package 1, the lower of the 2 confirmed packages, renamed 2026-07-20) per instruction — this is a deliberate safety margin, not the full potential average if Package 2 sales run higher.**
 
 *The 3-phlebotomist/15-client scenario (Scenario D, `am-capacity-weekend.md`) is a separate growth path, not the base case used here.*
 
@@ -37,7 +37,7 @@ What changed between the original (now-deleted) v1.0 tables and the current v2.1
 
 **Saturday downtime-fill (same principle as weekday):** on Saturdays, as on weekdays, the 8 AM treatment staff are not continuously occupied by GTT-package clients for the entire session — their own downtime between rostered GTT services is available for standalone, non-GTT bookings, the same downtime-fill model already documented for weekdays in `gtt-center-perth-overview-for-imara.md` and `executive-summary.md`. This is not a separate Saturday-specific policy, it's the same staff-utilisation principle applied on the day it also occurs.
 
-**Ancillary Revenue — what it is:** cafe and retail spend (snacks, drinks, retail wellness products — Gaia, Weleda, Mustela brands per `business-plan.md` §6 Revenue Streams), earned per visit across both AM and PM clients. Not a separate service line with its own staff — it rides on existing foot traffic.
+**Ancillary Revenue — what it is:** cafe and retail spend (snacks, drinks, retail wellness products — Gaia, Weleda, Mustela brands per `business-plan.md` §6 Revenue Streams), earned per client across both AM package sales and PM standalone services. Not a separate service line with its own staff — it rides on existing foot traffic.
 
 ## 2. Saturday (AM GTT + PM Standalone, Hours-Based Costing)
 
@@ -130,7 +130,7 @@ Non-Wage Overhead is broken down below by component (source: `cash-flow.md` §Co
 
 ## Key Callouts
 
-1. **AM contribution corrected for safety:** using A$250 (not a blended A$275 mixed-price estimate), AM's direct contribution is a strong, conservative baseline. Real performance could exceed this if Package 3 bookings run above the Package-2-only safety assumption.
+1. **AM contribution corrected for safety:** using A$250 (not a blended A$275 mixed-price estimate), AM's direct contribution is a strong, conservative baseline. Real performance could exceed this if Package 2 sales run above the Package-1-only safety assumption.
 2. **Saturday is profitable, not a drag** — once costed on actual hours worked (see the clarification section above), Saturday AM+PM contributes +A$1,580.50/day. The earlier "Saturday runs at a loss" finding was a costing-method error in a since-removed draft, not a real finding about the business — see Changelog for what was removed and why.
 3. **Sunday remains closed** — not modelled anywhere in this document. Reopening depends on standalone PM demand being proven and profitable enough to justify the added penalty-rate cost (`am-capacity-weekend.md`), not on this document.
 4. **MA000027 phlebotomist Saturday ordinary-hours question remains unconfirmed** — this document uses the conservative full-penalty-rate assumption throughout (no optimistic/pending-verification scenario shown, since that scenario added confusion without changing the standing baseline). If a payroll advisor or Fair Work confirms an ordinary-hours carve-out exists, Saturday profitability would improve further — upside only, never assumed.
@@ -180,9 +180,9 @@ Non-Wage Overhead is broken down below by component (source: `cash-flow.md` §Co
 
 **Purpose:** month-by-month build-up across Year 1, since the steady-state tables above only describe ongoing operation once the venture is running at full capacity.
 
-**Where the Month 5+ AM figure of A$55,000 comes from, and how it's achievable:** 10 clients/day × A$250 (Package 2 conservative price) × 22 trading days/month = **A$55,000/month**. This is a **capacity ceiling** (the verified Scenario C maximum — see `scenario-c-sync-timetables.md`), not a guaranteed figure. Actually earning it depends on booking all 10 daily AM slots consistently across the month via the referral/waitlist pipeline (`business-plan.md` §8 Go-to-Market, `pm-staffing-roster.md` §Pre-Opening Waitlist & Staffing Decision Model) — which is exactly why the ramp table below assumes a gradual build (43%/64%/79%/93%/100% of this ceiling across Months 1-5), not full capacity from Day 1.
+**Where the Month 5+ AM figure of A$55,000 comes from, and how it's achievable:** 10 clients/day × A$250 (Package 1 conservative price) × 22 trading days/month = **A$55,000/month**. This is a **capacity ceiling** (the verified Scenario C maximum — see `scenario-c-sync-timetables.md`), not a guaranteed figure. Actually earning it depends on booking all 10 daily AM slots consistently across the month via the referral/waitlist pipeline (`business-plan.md` §8 Go-to-Market, `pm-staffing-roster.md` §Pre-Opening Waitlist & Staffing Decision Model) — which is exactly why the ramp table below assumes a gradual build (43%/64%/79%/93%/100% of this ceiling across Months 1-5), not full capacity from Day 1.
 
-**Method:** apply the same ramp percentages `cash-flow.md` used (Month 1: ~43% of steady-state visits, Month 2: ~64%, Month 3: ~79%, Month 4: ~93%, Month 5+: 100%) to this document's own current Month 5+ steady-state figures (AM A$55,000, PM A$33,440 — using `pm-staffing-roster.md`'s validated session-volume ramp, confirmed compatible with the 10-client AM model — and ancillary A$8,580, all at Month 5+).
+**Method:** apply the same ramp percentages `cash-flow.md` used (Month 1: ~43% of steady-state packages/services sold, Month 2: ~64%, Month 3: ~79%, Month 4: ~93%, Month 5+: 100%) to this document's own current Month 5+ steady-state figures (AM A$55,000, PM A$33,440 — using `pm-staffing-roster.md`'s validated session-volume ramp, confirmed compatible with the 10-client AM model — and ancillary A$8,580, all at Month 5+).
 
 | Month | AM GTT Revenue | PM Revenue | Ancillary | Total Revenue (approx.) | Note |
 |---|---|---|---|---|---|
@@ -206,7 +206,7 @@ See "Years 1-3 Annual Projection" above for the corresponding multi-year view.
 
 | Line | Calculation |
 |---|---|
-| AM Revenue (Weekday/Saturday) | 10 clients × A$250 (Package 2 conservative price, `services-pricing-locked.md`) = **A$2,500.00** |
+| AM Revenue (Weekday/Saturday) | 10 clients × A$250 (Package 1 conservative price, `services-pricing-locked.md`) = **A$2,500.00** |
 | PM Revenue (Weekday, 16 sessions) | 16 sessions × A$95 average individual-service price (`pm-staffing-roster.md` §PM Revenue) = **A$1,520.00** |
 | PM Revenue (Saturday, 8 sessions) | 8 sessions × A$95 = **A$760.00** |
 | Ancillary Revenue (Weekday) | A$8,580/month steady-state ancillary (`profit-loss-tables.md` Year 1 Ramp table, sourced from `financial-break-even-staff.md` Revenue Model — spray tan + retail + cafe) ÷ 22 trading days/month ≈ **A$390/day AM-only equivalent, blended with PM foot traffic to A$439.50/day** used in this table — the exact AM/PM ancillary split is not separately tracked, this is a per-trading-day average of the monthly total |
@@ -259,3 +259,5 @@ See "Years 1-3 Annual Projection" above for the corresponding multi-year view.
 9. **Spelled out the A$55,000 Month 5+ AM revenue derivation** in the Year 1 Monthly Ramp section: 10 clients/day × A$250 × 22 trading days = A$55,000, a capacity ceiling dependent on the referral pipeline actually filling all 10 daily slots, which is why the ramp table assumes gradual build-up rather than Day-1 full capacity.
 
 **2026-07-20 (calculation-detail appendix added)** — Anthony asked for every figure to be traceable to its calculation, not just a stated total. Added a full Appendix showing the rate × volume/hours method behind every revenue, labor, overhead, and workers-comp line. Revenue/overhead/workers-comp lines all reconcile exactly from their stated formulas. AM Direct Labor (Weekday A$2,193.00, Saturday A$1,343.95) confirmed to use the correct rates and hours-based method (not the old blanket-shift error), but the exact per-staff-member hour allocation behind these two specific totals is not preserved as a saved worksheet in this repo — flagged explicitly as a follow-up to rebuild from `scenario-c-sync-timetables.md` if literal hour-by-hour precision is needed, rather than fabricating a reverse-engineered breakdown that wasn't independently verified this round.
+
+**2026-07-20 (package renumbering + terminology)** — Updated the remaining "Package 2/Package 3" references (base-model banner, Key Callouts, Year 1 Ramp derivation, calculation appendix) to "Package 1 (A$250)/Package 2 (A$300)" per `services-pricing-locked.md`'s renumbering — these were missed in the earlier v2.1 rewrite pass. Also tightened "visits" language to "packages/services sold" for consistency with the venture-wide terminology change (a visit alone carries no dollar figure).
