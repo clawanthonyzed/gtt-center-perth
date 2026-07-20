@@ -1,37 +1,46 @@
 # GTT Center Perth — PM Standalone Package Exploration
 
-**Status:** EXPLORATORY ONLY — not committed, not a decision. Anthony asked for this to be explored and written down, not adopted.
+**Status:** EXPLORATORY, direction clarified 2026-07-20 — still not committed/priced/built, but Anthony has now specified the shape this would take if adopted (see below), narrower than the fully-open exploration this document started as.
 
-**Version:** 1.0 | **Date:** 2026-07-20
+**Version:** 1.1 | **Date:** 2026-07-20
 
 ---
 
 ## What This Is
 
-Currently, the PM shift (12:00-18:00, no GTT test attached) sells **individual a-la-carte services only** — one massage, one manicure, one blowdry, etc., each priced and booked separately (~A$95 avg/session, per `pm-staffing-roster.md`). This document explores whether PM should **also** offer a bundled package option (2+ services booked together at a modest discount vs booking them separately) for standalone wellness clients who are not doing a GTT test.
+Currently, the PM shift (12:00-18:00, no GTT test attached) sells **individual a-la-carte services only** — one massage, one manicure, one blowdry, etc., each priced and booked separately (~A$95 avg/session, per `pm-staffing-roster.md`). This document explores whether PM should **also** offer bundled package combos on top of that existing individual-service menu (not instead of it) — 2+ services booked together at a modest discount vs booking them separately.
 
 This is the same idea already flagged as a lever in `pm-staffing-roster.md` §Levers to Close the Remaining Gap ("Introduce a modest PM package option... Lifting PM avg from A$95 to ~A$115/session adds ~A$7,040/month at 352 sessions") — that mention was written when the PM model still showed a small loss and needed upside levers. The gap has since closed on its own (see `profit-loss-tables.md` v2.0, +A$25,087/month), so this is no longer a "needed to survive" lever — it is now purely an optional revenue-growth idea worth thinking through properly before deciding either way.
 
-**This document does not recommend adopting PM packages.** It lays out the positioning logic, rough pricing math, and staffing effect so the idea can be evaluated later against real PM booking data, not launch-day guesswork.
+### Important Distinction — PM Packages Are Set/Fixed, NOT Client-Choice (Clarified 2026-07-20)
+
+**Do not conflate this with the AM GTT package renumbering.** The two package models work in opposite directions on flexibility, and this is a deliberate, clarified distinction, not an oversight:
+
+- **AM GTT packages** (`services-pricing-locked.md`, renamed 2026-07-20): Package 1 is a fixed 2×30min composition; **Package 2 gives the client a choice** of 2×45min, or 1×45min+1×30min, or 2×30min. Flexibility lives in the pricier tier.
+- **PM packages** (this document, direction clarified 2026-07-20): the opposite model. If adopted, PM packages would be **set, fixed bundled combos** — a specific pre-defined pairing of 2 services at a specific price, not a menu the client chooses from at booking. PM would then offer two tiers of choice: (a) individual a-la-carte services (existing, unchanged), and (b) a small number of specific, pre-defined set packages (new, if adopted) — with no client-choice flexibility within the package tier itself.
+
+**Why this matters practically:** a set/fixed PM package is simpler to roster and price (the Manager/Fresha knows in advance exactly which 2 service lines and durations a "PM Duo" or "PM Refresh" booking will need, rather than needing to handle an arbitrary client-chosen combination) — this is a meaningfully lower staffing-coordination burden than an AM-style client-choice model would be, and is one of the reasons a fixed-combo direction makes more sense for PM specifically (see §3 Staffing Effect below, largely unchanged by this clarification since the illustrative package ideas in §2 were already effectively fixed combos, just not explicitly labelled as such).
+
+**This document does not recommend adopting PM packages.** It lays out the positioning logic, rough pricing math, and staffing effect so the idea can be evaluated later against real PM booking data, not launch-day guesswork. The clarification above narrows *what kind* of package this would be if adopted — it does not change the "not yet adopted" status.
 
 ---
 
 ## 1. Positioning — Why This Might Make Sense
 
-- **AM already has a package structure** (Package 1 A$250, Package 2 A$300 — `services-pricing-locked.md`) built around 2 services bundled with the GTT wait. PM clients have no GTT wait to fill, so the "why bundle" logic is different — it would need to stand on its own value (convenience + modest discount), not "something to do while you wait."
+- **AM already has a package structure** (Package 1 A$250 fixed, Package 2 A$300 client-choice — `services-pricing-locked.md`) built around 2 services bundled with the GTT wait. PM clients have no GTT wait to fill, so the "why bundle" logic is different — it would need to stand on its own value (convenience + modest discount), not "something to do while you wait." PM's own package direction (if adopted) is set/fixed combos only, not a client-choice model like AM's Package 2 — see the distinction above.
 - **Some standalone wellness clients naturally want 2+ services anyway** (e.g. a blowdry + gel manicure before an event) — a package makes this an easier single booking decision and a slightly better deal than pricing each service separately, which can nudge average spend up per visit.
 - **Risk:** PM package clients take longer per visit (2 services back-to-back, ~75-90 min vs ~30-45 min for a single service), which uses more staff-hours per client at a lower effective hourly staff-cost recovery than 2 separate single-service clients booked back-to-back with a different staff member each — this needs checking against actual PM capacity, not assumed as free upside.
 
 ## 2. Rough Pricing Logic (Illustrative Only — Not a Proposal)
 
-Individual PM service prices average ~A$95/session (`pm-staffing-roster.md`, `services-master-table.md`). A simple package model, purely illustrative:
+Individual PM service prices average ~A$95/session (`pm-staffing-roster.md`, `services-master-table.md`). A set/fixed package model — each row below is a specific, pre-defined combo at a specific price, not a menu the client chooses within at booking (see distinction above):
 
-| Package idea | Inclusions | Sum of individual prices (illustrative) | Package price (illustrative ~10-15% discount) | Effective avg/session within package |
+| Set package idea (fixed combo, not client-choice) | Inclusions (fixed) | Sum of individual prices (illustrative) | Package price (illustrative ~10-15% discount) | Effective avg/session within package |
 |---|---|---|---|---|
-| PM Duo | 1× 30-min service + 1× 45-min service | ~A$95 + A$120 = A$215 | ~A$185-195 | ~A$92.50-97.50/session |
-| PM Refresh | 2× 45-min services | ~A$120 + A$120 = A$240 | ~A$205-215 | ~A$102.50-107.50/session |
+| PM Duo | 1× 30-min service + 1× 45-min service, specific pairing set in advance (e.g. always Blowdry + Express Facial, not client's choice of any 30+45 combo) | ~A$95 + A$120 = A$215 | ~A$185-195 | ~A$92.50-97.50/session |
+| PM Refresh | 2× 45-min services, specific pairing set in advance (e.g. always Standard Massage + Signature Facial) | ~A$120 + A$120 = A$240 | ~A$205-215 | ~A$102.50-107.50/session |
 
-**Important caveat:** these are illustrative arithmetic only, built from the same rough service-price figures already in the corpus — not independently re-verified against a real PM service-price list, and not tested with any actual customer. The A$115 "lifted avg" figure quoted in `pm-staffing-roster.md`'s original lever discussion assumed a specific volume/mix that was never validated either.
+**Important caveat:** these are illustrative arithmetic only, built from the same rough service-price figures already in the corpus — not independently re-verified against a real PM service-price list, and not tested with any actual customer. The A$115 "lifted avg" figure quoted in `pm-staffing-roster.md`'s original lever discussion assumed a specific volume/mix that was never validated either. The specific service pairings named above (e.g. "Blowdry + Express Facial") are illustrative placeholders only — which exact combos would actually be offered as set packages is itself an open question, not decided here.
 
 ## 3. Staffing Effect
 
@@ -65,3 +74,5 @@ Individual PM service prices average ~A$95/session (`pm-staffing-roster.md`, `se
 **2026-07-20** — Created as a new exploratory document per Anthony's request: explore (not commit to) a PM standalone package option alongside the existing individual-service model. Positioning, illustrative pricing, and staffing effect covered; explicitly flagged as not a recommendation or decision.
 
 **2026-07-20 (package renumbering)** — Updated "Package 2/Package 3" references to "Package 1 (A$250)/Package 2 (A$300)" per `services-pricing-locked.md`'s renumbering.
+
+**2026-07-20 (PM package direction clarified — set/fixed, not client-choice)** — Anthony clarified an important distinction: AM's Package 2 gives the client a choice of composition (2×45min / 1×45min+1×30min / 2×30min), but PM packages, if adopted, would work the opposite way — set, fixed, pre-defined combos (e.g. always "Blowdry + Express Facial" as one specific package) with no client-choice flexibility within the package tier. Updated the positioning and pricing-logic sections to reflect this explicitly, since the two package models should not be conflated. Status remains exploratory — this clarifies *what kind* of package PM would offer if adopted, not a decision to adopt it.
