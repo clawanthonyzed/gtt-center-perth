@@ -302,6 +302,37 @@ All sensitive HR matters (disciplinary, complaints, terminations) escalate to th
 
 ---
 
+## 12A. RELIEF / BACKUP STAFFING POLICY (Added 2026-07-20)
+
+**Gap Anthony flagged:** the leave-management provisions in §7 above describe employees' entitlement to leave, but this document did not previously state a policy for how the venue actually stays covered when someone takes that leave (planned or sick). This section is the HR-policy counterpart to the operational relief plan in `staff-plan.md` §7B — that document covers the staffing/roster mechanics; this section covers the HR/compliance framing.
+
+### Policy Statement
+
+GTT Center Perth maintains a standing casual relief pool covering both clinical (phlebotomist) and treatment (massage/nail/hair/beauty) roles, engaged specifically to cover sick leave, annual leave, and family/domestic violence leave absences without reducing same-day service capacity below the safe operating minimum.
+
+### Clinical Relief (Phlebotomist)
+
+- Minimum 1 relief phlebotomist, credentialed (Cert III/IV Pathology Collection, WDP/PathWest-approved collector status, current CPR) **before** being called on for a shift — not credentialed reactively on the day of an absence, since credentialing lead time makes same-day reactive hiring impossible.
+- Engaged as casual, paid only for shifts worked, per `staff-plan.md` §7B cost estimate (~A$2,000/yr illustrative, to be replaced with a real figure once absence-rate data exists).
+- **Same-day escalation if no relief is available:** the Venue Manager decides whether to run at reduced capacity (single chair, halve the client list for that day) or reschedule affected bookings — this must be a documented same-day decision process, not an ad hoc call, since it directly affects patients who have already fasted.
+
+### Treatment Staff Relief
+
+- 3 relief roles (Massage+Beauty dual-qualified, Nail, Hair) per the cross-trained model in `staff-plan.md` §7B, available for both AM and PM absence coverage.
+- Same "Fair Work Closing Loopholes" casual-conversion tracking already noted in `pm-staffing-roster.md` §Fair Work Compliance Note applies to relief staff too — track hours worked by each relief casual over time, since a regular pattern of relief shifts can itself trigger a conversion-to-part-time request after 6-12 months (small business employer threshold, 15 employees).
+
+### Venue Manager Backup (First Aid / EpiPen / Fire Warden)
+
+- The Venue Manager is the sole designated first-aid/EpiPen holder and fire warden (§13 below) — this document did not previously address what happens if the Venue Manager themself is absent.
+- **Recommendation (not yet actioned):** cross-train at least one other regularly-on-site staff member (Receptionist is the natural candidate — present for the full AM window every day) in current First Aid (HLTAID011) and EpiPen administration, as a same-day fallback only. This does not change who holds primary responsibility day-to-day.
+- Fire warden backup: at minimum, confirm with the eventual landlord/building whether a building-level fire warden scheme exists as a fallback, since a single-person venue-level fire warden with no backup is a genuine safety gap on the Venue Manager's day off.
+
+### What This Does Not Change
+
+This section does not add new headcount cost beyond what `staff-plan.md` §7B and the existing A$15,000/yr relief line in `financial-break-even-staff.md` already account for — it formalises the policy and escalation process around the same relief pool, and flags the Venue Manager backup recommendation as still open (not yet actioned).
+
+---
+
 ## 13. VENUE MANAGER — CRITICAL-PATH HIRE
 
 The Venue Manager (Managing Director) role is a **critical-path hire** — the venue cannot safely open without it filled. This role holds:
@@ -335,3 +366,5 @@ The Venue Manager (Managing Director) role is a **critical-path hire** — the v
 **2026-07-19 (Saturday carve-out investigation)** — Per Anthony's instruction ("do what you need to"), investigated the MA000027 Saturday ordinary-hours question rather than leaving it open indefinitely. Conclusion: still unconfirmed — this session has no live web-fetch tool to verify the actual current award text, and no shared skill covers Fair Work award interpretation (confirmed via library scan). Documented the gap explicitly and recommended a payroll advisor or Fair Work Infoline as the reliable next step, rather than guessing at a clause citation. Financial models continue conservatively assuming full penalty rates — this is upside-only, not a risk.
 
 **2026-07-19 (founder feedback round 2)** — Corrected §13: recruitment for the Venue Manager does NOT begin until a physical venue location is confirmed (direct founder instruction). Previously said "recruitment must begin immediately" — this implied active recruitment now, which is wrong. The role remains the first hire and still sits on the critical path once recruitment does start. Job posting document now built: `docs/venue-manager-job-posting.md`.
+
+**2026-07-20 (relief/backup staffing policy added)** — Added §12A: closes the gap Anthony flagged that leave entitlements were documented (§7) but no coverage/relief policy existed to actually staff around them. Covers clinical (phlebotomist) and treatment-staff relief pools, and explicitly flags the Venue Manager's first-aid/EpiPen/fire-warden single-point-of-failure risk with a cross-training recommendation (not yet actioned). Companion to the operational relief plan added the same day in `staff-plan.md` §7B.
