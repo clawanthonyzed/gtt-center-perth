@@ -88,11 +88,13 @@ The synchronized version is the more recent and more rigorously verified of the 
 
 ## Other Consistency Checks Performed (No Conflict Found)
 
-- **Package pricing:** `services-pricing-locked.md`, `HANDOFF.md`, and `financial-break-even-staff.md` all agree: Package 2 (A$250) + Package 3 (A$300) only, Package 1 dropped. Consistent.
+- **Package pricing:** `services-pricing-locked.md`, `HANDOFF.md`, and `financial-break-even-staff.md` all agree: 2 packages only, at A$250 and A$300 (renamed to Package 1/Package 2 respectively, 2026-07-20 — see `services-pricing-locked.md` changelog). Consistent.
 - **Saturday/Sunday model:** `HANDOFF.md`, `am-capacity-weekend.md` agree: Saturday reuses AM model + PM standalone (hours-based costing), Sunday closed. Consistent.
 - **PM staffing model:** `pm-staffing-roster.md` is consistently cited as canonical by `business-plan.md`, `staff-plan.md`, and `operations-manual.md` banners. Consistent (all three defer to it correctly).
 - **Superannuation rate (12%):** Consistent across `staff-plan.md`, `hr-framework.md`, `financial-setup.md`.
 - **No subtenants:** Consistent across `staff-plan.md`, `operations-manual.md` (Day 51 update explicitly removes subtenant-rent references). **Exception: `workflow.md` still describes a sublet model (massage/nails/hair/scan) — flagged below.**
+
+**2026-07-20 (package renumbering)** — Updated the package-pricing consistency-check line above to reflect the renaming of the 2 surviving packages to Package 1 (A$250)/Package 2 (A$300) — see `services-pricing-locked.md` changelog. Historical CONFLICT/IC entries elsewhere in this log describing the earlier Package 1/2/3 (A$200/250/300) naming are left as-is, since they are a historical record of past resolutions, not a statement of current fact.
 
 ---
 
