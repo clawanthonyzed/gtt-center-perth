@@ -10,7 +10,7 @@
 
 GTT Center Perth is a concept for WA's first premium wellness venue built around the mandatory Glucose Tolerance Test — patients spend the ~2-2.5 hour test wait getting massage/nails/hair/brows instead of sitting in a bare pathology room. **No venue location is secured yet — that is the single blocking gate on everything else** (staff recruitment, fit-out, everything downstream). Current committed operational model: 10 GTT clients/day (Scenario C, 2 chairs, 07:00 start), two package prices (A$250/A$300), full payment collected at booking, projected +A$25,087/month profit at Month 5+ steady state once operating (a planning estimate, not real trading data). Pathology partner (WDP, priority 1) has been emailed, awaiting reply. Self-funded, no external investor, no launch date set.
 
-**For a presentation to a non-technical stakeholder (e.g., Anthony's partner): read `docs/executive-summary.md`.** It is the standalone, current, plain-language summary built for exactly this purpose.
+**For a presentation to a non-technical stakeholder (e.g., Anthony's partner Imara): read `docs/gtt-center-perth-overview-for-imara.md`.** It's a plain-language, story-format walkthrough built specifically for this purpose. `docs/executive-summary.md` is the fuller, more technically-sourced standalone summary if more detail is needed.
 
 ---
 
@@ -33,12 +33,13 @@ This was a large consolidation session. If you read nothing else in this section
 | # | Document | What it's for | Time |
 |---|---|---|---|
 | 1 | **This file (`reading-order.md`)** | Big-picture entry point — you're reading it | 5 min |
-| 2 | **`executive-summary.md`** | Standalone plain-language summary — the presentation-ready document | 10 min |
-| 3 | **`HANDOFF.md`** | Most recent detailed session handoff (2026-07-17) — the source of truth for the current committed operational model if you need the underlying detail | 15 min |
-| 4 | **`00_document_inventory.md`** | Every file in this corpus, current status, one line each | 10 min (reference, not linear read) |
-| 5 | **`01_conflicts_log.md`** | Every conflict found this session, resolution status — read if you want to know *why* a figure changed | 15 min (reference) |
-| 6 | **`04_roadmap_next_steps.md`** | The prioritised, dependency-based to-do list — what to actually do next, in what order | 10 min |
-| 7 | **`05_open_questions_for_founder.md`** | The single list of questions only Anthony can answer | 5 min |
+| 2 | **`gtt-center-perth-overview-for-imara.md`** | Plain-language, presentation-ready summary — for a non-technical stakeholder | 10 min |
+| 3 | **`executive-summary.md`** | Fuller standalone summary, more technically sourced | 10 min |
+| 4 | **`HANDOFF.md`** | Most recent detailed session handoff (2026-07-17) — the source of truth for the current committed operational model if you need the underlying detail | 15 min |
+| 5 | **`00_document_inventory.md`** | Every file in this corpus, current status, one line each | 10 min (reference, not linear read) |
+| 6 | **`01_conflicts_log.md`** | Every conflict found this session, resolution status — read if you want to know *why* a figure changed | 15 min (reference) |
+| 7 | **`04_roadmap_next_steps.md`** | The prioritised, dependency-based to-do list — what to actually do next, in what order | 10 min |
+| 8 | **`05_open_questions_for_founder.md`** | The single list of questions only Anthony can answer | 5 min |
 
 ---
 
@@ -203,3 +204,5 @@ This was a large consolidation session. If you read nothing else in this section
 **2026-07-19 (founder feedback round 3)** — Removed DVA from the Open Decisions table.
 
 **2026-07-20 (full rebuild)** — This document was significantly out of date (still said "45 documents," listed the superseded 8-client Scenario B as current, retained a fixed "October 2026" launch date, and had no reference to any of this session's 12 new documents or conflict resolutions). Fully rebuilt as a genuine single-entry-point document per Anthony's request: a 60-second summary, a "what changed this session" section, a condensed reading order across 12 phases (down from the prior no-longer-accurate phase list), and explicit pointers to `00_document_inventory.md` (full file-by-file detail) and `01_conflicts_log.md` (conflict resolution detail) rather than duplicating their content here. Removed the "Cross-Document Consistency Rule" linked-parameter table (it listed stale values matching the old model) — the same discipline is now better served by pointing to `profit-loss-tables.md` v2.0 and `scenario-c-sync-timetables.md` as single sources of truth rather than maintaining a parallel value-tracking table that itself goes stale.
+
+**2026-07-20 (Imara overview added)** — Added `docs/gtt-center-perth-overview-for-imara.md` as the recommended presentation-ready document for a non-technical stakeholder, ahead of `executive-summary.md` in the core reading order.
