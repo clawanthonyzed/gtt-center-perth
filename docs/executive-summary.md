@@ -57,9 +57,10 @@ Per `HANDOFF.md` (2026-07-17, the most recent session summary and source of trut
 
 - **AM GTT:** 10 clients/day, 07:00 start, 2 chairs, 2 phlebotomists, synchronized-start schedule (Scenario C — `docs/scenario-c-sync-timetables.md`, fully verified with zero double-bookings)
 - **Packages:** Only Package 2 (A$250) and Package 3 (A$300) — Package 1 (A$200) has been dropped (`services-pricing-locked.md`)
+- **AM downtime fill:** the 8 AM treatment staff (massage/nail/hair/beauty) are not fully occupied for the entire GTT window — each client's own service only fills part of their ~2-2.5hr visit. The model is built so this same AM staff also takes standalone, non-GTT bookings during the gaps between their rostered GTT clients' services, not just a dedicated separate shift.
 - **PM shift:** Individual standalone services (not packages), 4 dedicated casual hires (1 each: massage, hair, nail, beauty), cross-shift qualified with AM staff, costed on actual hours worked
 - **Saturday:** Reuses the AM Scenario C model + PM standalone, costed as a bolt-on shift
-- **Sunday:** Closed — a business choice, not a legal requirement (the WA Retail Trading Hours Act exempts this business type from trading-hour restriction)
+- **Sunday:** Closed until standalone PM service demand is proven and profitable to justify the additional penalty-rate staffing cost — a conditional business choice, not a fixed-forever position, and not a legal requirement (the WA Retail Trading Hours Act exempts this business type from trading-hour restriction)
 
 **Known documentation gap:** `operations-manual.md`'s own detailed scheduling section still describes the earlier, superseded 8-client Scenario B model rather than the current 10-client Scenario C model — flagged and not yet fully rewritten, see `docs/01_conflicts_log.md` CONFLICT-03.
 
@@ -76,8 +77,11 @@ Per `HANDOFF.md` (2026-07-17, the most recent session summary and source of trut
 | Startup capital (estimate range) | ~A$209,000-431,000 (mid-estimate ~A$305,000) | `cash-flow.md` — **note: `HANDOFF.md` separately cites a "more realistic" A$144,500-242,500 range; this venture's startup capital estimate has not been fully reconciled across documents, see `docs/05_open_questions_for_founder.md`** |
 | Monthly steady-state Net P&L (Month 5+) | +A$25,087.07/month | `profit-loss-tables.md` v2.0, matches `HANDOFF.md` |
 | Yearly run-rate (Month 5+ steady state) | +A$301,044.84/year | `profit-loss-tables.md` v2.0 |
-| Break-even | ~298 visits/month (~13.5/day) | `profit-loss-tables.md`, `unit-economics.md` |
+| Break-even (revenue, not headcount) | ~A$88,625/month in total costs to cover | `profit-loss-tables.md` v2.0 |
+| Break-even (illustrative segment bookends — not the real mix) | ~355 visits/month if 100% GTT-package clients (A$250 avg) OR ~933/month if 100% PM standalone clients (A$95 avg) — the real plan blends both, see below | `profit-loss-tables.md`, `unit-economics.md` |
 | Marginal break-even reached | Month 4 (approximate) | `HANDOFF.md`, `cash-flow.md` |
+
+**Why break-even is shown this way (corrected 2026-07-20):** a single blended "visits/month" figure treats a GTT-package client (~A$250/visit) and a PM standalone client (~A$95/visit) as interchangeable units, which understates how different they actually are. The real model blends roughly 220 AM GTT visits/month (10/day × 22 days) with roughly 350 PM standalone sessions/month, together covering the ~A$88,625/month cost base with margin to spare (the source of the ~A$25,087/month profit figure above). The two single-segment bookends in the table exist only to make the per-client-type spend difference concrete, not as a realistic standalone scenario.
 
 **Internal discrepancy RESOLVED 2026-07-20:** `pm-staffing-roster.md` (2026-07-14) previously modelled the PM shift under the pre-Scenario-C (8-client) AM assumptions and reported the PM shift alone as a *loss* at Month 5+ steady state (-A$4,384/month) — this was an artifact of the stale 8-client AM revenue figure, not a genuine standalone loss. Correcting the AM revenue to the current 10-client Scenario C figure resolves the discrepancy: `profit-loss-tables.md` v2.0's whole-venture profitability figure (+A$25,087.07/month, matching `HANDOFF.md`) is the confirmed current authoritative figure. See `docs/01_conflicts_log.md` CONFLICT-08 for full detail.
 
@@ -119,3 +123,5 @@ Self-funded via Anthony's partner's (Imara's) approximately A$200,000 in savings
 **2026-07-20 (CONFLICT-08 resolved)** — Resolved the PM-profitability discrepancy in the Financial Snapshot section: `pm-staffing-roster.md`'s reported PM-shift loss was an artifact of the stale 8-client AM model, not a genuine loss. `profit-loss-tables.md` v2.0's +A$25,087.07/month figure (matching `HANDOFF.md`) is confirmed current and authoritative. Removed the resolved item from the Key Open Questions list.
 
 **2026-07-20 (presentation document added)** — Cross-referenced the new `docs/gtt-center-perth-overview-for-imara.md`, a plain-language companion to this document built specifically for presenting the venture to a non-technical stakeholder.
+
+**2026-07-20 (founder feedback — break-even/downtime/Sunday fixes)** — Fixed the break-even framing per Anthony's feedback: replaced the single blended "298 visits/month" figure with a revenue-based figure (~A$88,625/month in costs) plus segment-specific bookends (GTT-package vs PM-standalone clients), since blending two very different average-spend client types into one headcount was misleading. Added explicit confirmation of the existing AM downtime-fill model (treatment staff take standalone bookings during gaps in their GTT client schedule). Reworded the Sunday-closed line to state the actual reopening condition (proven, profitable standalone PM demand) rather than just "closed."
