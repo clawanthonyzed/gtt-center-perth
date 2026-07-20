@@ -1,6 +1,8 @@
 # GTT Center Perth — Financial Break-Even: Staff Employment Model
 
 > **2026-07-14 SUPERSEDED — PM MODEL CORRECTED.** References below to a single "PM Service Therapist" delivering "PM Spa Packages" (Package 1/2/3 pricing) are superseded. The confirmed PM model is: **4 dedicated casual hires** (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, delivering **individual standalone services** (not packages) at ~A$95/session average, staffed on actual hours worked — not a blanket shift. Corrected Month 5+ steady state: Total Revenue A$86,020/month, Total Fixed Costs A$79,357/month, **Net P&L +A$6,663/month** — profitable from Month 4 (+A$4,924/month). See `pm-staffing-roster.md` for the full roster, weekly template, and recalculated P&L — this is now the canonical PM reference, superseding this document's PM figures/structure below.
+>
+> **2026-07-20 — break-even methodology also superseded.** All "break-even revenue/visits" figures in this document (§Revenue Break-Even, §Sensitivity) are built on the stale 8-client Scenario B model AND blend GTT-package and PM-standalone clients into one "package sales/yr" or "blended avg price" figure — the same distortion Anthony flagged this round. The current, correct break-even statement is **~A$88,625/month in total costs to cover**, reached via ~220 AM GTT visits/month (A$250 avg) + ~350 PM standalone visits/month (A$95 avg) — see `profit-loss-tables.md` v2.0, `gtt-center-perth-overview-for-imara.md`, and `executive-summary.md` for the current, reconciled figures. Do not use this document's §Revenue Break-Even/§Sensitivity numbers for current planning; retained below for historical trace only.
 
 **Version:** 2.0 | **Date:** 2026-06-09
 **Model:** Casual/part-time employees. 100% of service revenue flows to GTT Center Perth.
@@ -280,5 +282,12 @@ Staff with no booked client:
 
 - services-pricing-locked.md — full service menu
 - services-master-table.md — all services table
-- staff-plan.md — staffing roster
+- staff-plan.md — staffing roster (see relief/backup staffing section added 2026-07-20)
+- hr-framework.md — relief/backup staffing policy added 2026-07-20
 - operations-manual.md — daily operations and timetables
+
+---
+
+## Changelog
+
+**2026-07-20 (break-even methodology cascade)** — Added a top-level supersession note flagging that this document's §Revenue Break-Even and §Sensitivity sections both (a) use the stale 8-client Scenario B AM model and (b) blend GTT-package and PM-standalone clients into one figure, the same issue Anthony flagged in `gtt-center-perth-overview-for-imara.md`/`executive-summary.md`. Current authoritative break-even figures now live in `profit-loss-tables.md` v2.0 and the two documents above. This document's own figures are not corrected line-by-line (the whole PM/AM model here is already superseded per the 2026-07-14 banner) — retained for historical trace only. Cross-referenced the relief/backup staffing sections added to `staff-plan.md` and `hr-framework.md` this round; the A$15,000/yr relief pool line already present in this document's Total Annual Payroll table (added Day 51) is consistent with that direction and does not need to change.
