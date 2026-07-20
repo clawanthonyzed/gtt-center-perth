@@ -1,6 +1,8 @@
 # GTT Center Perth — Capacity, Pricing & Profit Audit
 
-> **2026-07-14 SUPERSEDED — PM MODEL CORRECTED.** References below to a single "PM Service Therapist" delivering "PM Spa Packages" (Package 1/2/3 pricing) are superseded. The confirmed PM model is: **4 dedicated casual hires** (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, delivering **individual standalone services** (not packages) at ~A$95/session average, staffed on actual hours worked — not a blanket shift. Corrected Month 5+ steady state: Total Revenue A$86,020/month, Total Fixed Costs A$79,357/month, **Net P&L +A$6,663/month** — profitable from Month 4 (+A$4,924/month). See `pm-staffing-roster.md` for the full roster, weekly template, and recalculated P&L — this is now the canonical PM reference, superseding this document's PM figures/structure below.
+> **2026-07-20 SUPERSEDED — 12-CLIENT MODEL RESTS ON A LATER-REVERSED ASSUMPTION (CONFLICT-08 resolution).** §1 below ("Capacity — The 12-Client / 2-Chair Model") depends on a relaxed Draw 3 rule ("no upper bound... placed at the earliest 5-min chair-free slot ≥X+125"). **This relaxed rule was not carried forward** — the current standing clinical rule, confirmed in `operations-manual.md`'s "Key Rules" table and used by every subsequent verified scheduling document (`scenario-c-sync-timetables.md`, `draw-event-scheduler-findings.md`, `docs/scenario-e-floating-chair-investigation.md`), is **Draw 3 tolerance ±10min of target X+135** — the same bounded-tolerance rule this document's v1.0 originally used before this relaxation. **The current, actively verified AM capacity ceiling is 10 clients/day (Scenario C, 2 chairs) or 15 clients/day (Scenario D, 3 chairs) — not 12.** Do not cite the 12-client figure as a current capacity option. Retained below for historical reference and methodology only — see `docs/01_conflicts_log.md` CONFLICT-08 for full detail.
+
+> **2026-07-14 SUPERSEDED — PM MODEL CORRECTED.** References below to a single "PM Service Therapist" delivering "PM Spa Packages" (Package 1/2/3 pricing) are superseded. The confirmed PM model is: **4 dedicated casual hires** (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, delivering **individual standalone services** (not packages) at ~A$95/session average, staffed on actual hours worked — not a blanket shift. Corrected Month 5+ steady state: **see `profit-loss-tables.md` v2.0 for the current figures (+A$25,087.07/month at Month 5+ steady state) — the figures immediately below this banner are also stale, both due to the PM model change AND the Draw-3-rule reversal noted above.** See `pm-staffing-roster.md` for the PM staffing structure (still valid) and `profit-loss-tables.md` v2.0 for current financial figures.
 
 **Version:** 2.0 | **Date:** 2026-06-11 (Day 51)
 **Author:** Idea Lobster (internal review, requested by Anthony for Phase 1 confidence before lease/hire commitments)
@@ -36,7 +38,9 @@ Anthony reviewed v1.0 and raised 10 points. This revision answers all of them:
 
 ---
 
-## 1. Capacity — The 12-Client / 2-Chair Model
+## 1. Capacity — The 12-Client / 2-Chair Model — SUPERSEDED, see banner at top of document
+
+> **Reminder: this entire section is superseded (2026-07-20).** The current standing capacity ceiling is 10 clients/day (Scenario C) or 15/day (Scenario D, 3 chairs) — both using the bounded Draw 3 tolerance rule (±10min), not this section's relaxed "no upper bound" assumption. Read on for historical/methodology interest only.
 
 ### 1.1 Method — Draw 3 corrected (point 1)
 
@@ -329,3 +333,9 @@ Both PathWest and WDP (Healius) maintain "Relief Pathology Collector" / "Patholo
 - **(NEW v2.0)** GST/mixed supply: [ATO — GSTR 2001/8 Apportioning the consideration for a supply](https://www.ato.gov.au/law/view/document?docid=GST%2FGSTR20018%2FNAT%2FATO%2F00001), [ATO — GST and medical services](https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/in-detail/your-industry/gst-and-health/medical-services), [ATO — Supply of services through a third party](https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/in-detail/your-industry/gst-and-health/supply-of-services-through-a-third-party)
 - **(NEW v2.0)** Relief phlebotomist roles: [PathWest — Certificate III in Pathology Collection](https://pathwest.health.wa.gov.au/ResearchAndEducation/Pages/Certificate-III-in-Pathology-Collection.aspx), [PathWest — Vacancies](https://pathwest.health.wa.gov.au/About-Us/Work-With-Us/Vacancies)
 - Internal: operations-manual.md, financial-break-even-staff.md, cash-flow.md, staff-plan.md, services-master-table.md, gtt-clinical-protocol.md, option-b-collection-centre.md, pathology-collection-room.md, market-research-findings.md, feasibility.md, review-audit.md, reading-order.md
+
+---
+
+## Changelog
+
+**2026-07-20 (CONFLICT-08 resolution)** — Flagged the entire §1 "12-Client / 2-Chair Model" as superseded — it depends on a relaxed Draw 3 rule ("no upper bound") that was not carried forward into subsequent scheduling documents, which all use the bounded ±10min tolerance rule. The current standing capacity ceiling is 10 clients/day (Scenario C) or 15/day (Scenario D), not 12. See `docs/01_conflicts_log.md` CONFLICT-08 and `docs/scenario-e-floating-chair-investigation.md` (which independently confirms the ±10min rule is the one used in current verified scheduling analysis).
