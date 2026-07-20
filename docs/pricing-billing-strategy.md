@@ -49,7 +49,7 @@ GTT Center Perth's revenue model has two entirely separate billing streams that 
 - The clinical test is billed the way Australian pathology has always billed GTTs (bulk-billed to Medicare where eligible) — this isn't a strategic choice GTT Center Perth is making, it's simply how the existing pathology system already works, inherited via the partnership model
 - The wellness experience is billed privately because it is, by definition, an elective add-on with no Medicare rebate pathway — there's no bulk-billing option available for a massage or manicure regardless of what GTT Center Perth might prefer
 
-**This means GTT Center Perth is not actually setting pricing/billing *strategy* for the clinical component at all** — that's inherited from the pathology partner's existing Medicare arrangement. The only pricing/billing decisions genuinely within GTT Center Perth's control are the wellness package prices themselves (`services-pricing-locked.md`) and the payment-timing/deposit policy (flagged above as internally inconsistent and needing resolution).
+**This means GTT Center Perth is not actually setting pricing/billing *strategy* for the clinical component at all** — that's inherited from the pathology partner's existing Medicare arrangement. The only pricing/billing decisions genuinely within GTT Center Perth's control are the wellness package prices themselves (`services-pricing-locked.md`) and the payment-timing policy, **now confirmed: full package price collected at time of booking, no deposit (resolved 2026-07-20, see Open Items below).**
 
 ---
 
@@ -61,14 +61,16 @@ GTT Center Perth's revenue model has two entirely separate billing streams that 
 
 ---
 
-## Open Items Requiring Resolution (not resolved in this document)
+## Open Items
 
-1. **Payment timing inconsistency:** full-prepayment-at-booking (`onboarding.md` draft) vs A$30 deposit model (`financial-setup.md`) — these two documents currently describe different policies. Needs a single confirmed policy before either is published to patients. See `docs/01_conflicts_log.md`.
-2. **Pathology out-of-pocket figures:** the A$40-60 non-Medicare estimate needs direct confirmation with the pathology partner once the partnership is finalised.
-3. **GST apportionment method:** needs accountant confirmation before the first taxable transaction (`financial-setup.md` Step 1).
+1. ~~Payment timing inconsistency~~ **RESOLVED 2026-07-20:** Anthony confirmed full package price is collected at time of booking, not a deposit. Corrected in `financial-setup.md`, `operations-manual.md`, `ivy-booking-system.md`, and `website-spec.md` — all now match `onboarding.md`'s originally-correct draft copy. See `docs/01_conflicts_log.md` CONFLICT-09.
+2. **Pathology out-of-pocket figures:** the A$40-60 non-Medicare estimate needs direct confirmation with the pathology partner once the partnership is finalised. Not resolved.
+3. **GST apportionment method:** needs accountant confirmation before the first taxable transaction (`financial-setup.md` Step 1). Not resolved.
 
 ---
 
 ## Changelog
 
 **2026-07-19** — Created as a new Phase 7 deliverable. Referenced `services-pricing-locked.md` for the confirmed wellness pricing. Flagged all Medicare/pathology billing specifics as "requires verification," per the ground rule that this is a healthcare venture and clinical/regulatory/billing claims should not be asserted as settled. Found and logged a new internal inconsistency (payment-timing: prepayment vs deposit model) while researching this document — added to `docs/01_conflicts_log.md`.
+
+**2026-07-20 (CONFLICT-09 resolved)** — Anthony confirmed full payment at booking, not a deposit. Updated this document and cross-referenced the four other documents corrected to match (`financial-setup.md`, `operations-manual.md`, `ivy-booking-system.md`, `website-spec.md`).
