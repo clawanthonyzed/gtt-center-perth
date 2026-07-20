@@ -10,7 +10,7 @@
 GTT Center Perth's revenue model has two entirely separate billing streams that must not be confused with each other:
 
 1. **The pathology/GTT test itself** — billed by the pathology partner (WDP priority, PathWest/Clinipath contingency), not by GTT Center Perth. GTT Center Perth earns zero revenue from this stream (`pathology-partnership-brief.md`: "GTT Center Perth earns zero from pathology billing. All revenue comes from packages and services.")
-2. **The wellness package (Package 2/3) and any standalone/afternoon services** — billed entirely by GTT Center Perth, privately, at the locked prices in `services-pricing-locked.md`. This is where 100% of GTT Center Perth's own revenue comes from.
+2. **The wellness package (Package 1/2) and any standalone/afternoon services** — billed entirely by GTT Center Perth, privately, at the locked prices in `services-pricing-locked.md`. This is where 100% of GTT Center Perth's own revenue comes from.
 
 ---
 
@@ -36,7 +36,7 @@ GTT Center Perth's revenue model has two entirely separate billing streams that 
 **This is fully within GTT Center Perth's own control and is the confirmed, locked model** — no Medicare involvement, no bulk-billing ambiguity.
 
 - **Model:** private billing, no health-insurance rebate pathway involved (wellness services — massage, nails, hair, brows — are not Medicare or private-health-fund rebateable in this context)
-- **Pricing:** Package 2 (A$250) and Package 3 (A$300) — flat, locked prices per `services-pricing-locked.md` v2.0. Package 1 (A$200) has been dropped.
+- **Pricing:** Package 1 (A$250) and Package 2 (A$300) — flat, locked prices per `services-pricing-locked.md`, renamed 2026-07-20 (same 2 price points as before, the old A$200 tier remains dropped).
 - **Payment timing:** per `onboarding.md`'s current draft policy, full payment is collected at time of booking (no deposit-only model) — this is a stricter policy than some competitor models (e.g., MIWM's booking structure was not independently verified for its own payment timing) and should be confirmed as the final policy before publishing, since `financial-setup.md` elsewhere describes an A$30 deposit model rather than full prepayment. **This is an internal inconsistency, not a Medicare-related item** — flagged here since it's directly relevant to billing strategy, and logged in `docs/01_conflicts_log.md` as a new finding.
 - **GST treatment:** wellness services are standard-rated (10% GST); the pathology/GTT component is GST-free (medical supply) — this is a mixed-supply business requiring split GST accounting in Xero from Day 1 (`cash-flow.md`, `financial-setup.md`). **Requires verification:** the exact apportionment method when a single package price bundles a GST-free component (venue/lounge access, arguably attributable to the GTT visit) with GST-taxable wellness services — flagged in `financial-setup.md` as needing accountant confirmation, not yet resolved.
 
@@ -57,7 +57,7 @@ GTT Center Perth's revenue model has two entirely separate billing streams that 
 
 1. **No incentive or ability to alter the pathology billing model** — it's inherited from the partner, not a GTT Center Perth decision, and any attempt to change it would require renegotiating the entire Option A partnership structure.
 2. **Private billing for wellness services is the only available option** — there is no Medicare or private-health-fund rebate pathway for massage/nails/hair/brows in this context, so "private billing" isn't a strategic preference, it's the only mechanism that exists.
-3. **The locked Package 2/3 structure (`services-pricing-locked.md`) already reflects the pricing decision** — this document exists to explain the billing *mechanics* around that pricing, not to re-litigate the price points themselves. See `docs/price-increase-comparison.md` for the separate analysis of whether/when to change the price points.
+3. **The locked Package 1/2 structure (`services-pricing-locked.md`) already reflects the pricing decision** — this document exists to explain the billing *mechanics* around that pricing, not to re-litigate the price points themselves. See `docs/price-increase-comparison.md` for the separate analysis of whether/when to change the price points.
 
 ---
 
@@ -74,3 +74,5 @@ GTT Center Perth's revenue model has two entirely separate billing streams that 
 **2026-07-19** — Created as a new Phase 7 deliverable. Referenced `services-pricing-locked.md` for the confirmed wellness pricing. Flagged all Medicare/pathology billing specifics as "requires verification," per the ground rule that this is a healthcare venture and clinical/regulatory/billing claims should not be asserted as settled. Found and logged a new internal inconsistency (payment-timing: prepayment vs deposit model) while researching this document — added to `docs/01_conflicts_log.md`.
 
 **2026-07-20 (CONFLICT-09 resolved)** — Anthony confirmed full payment at booking, not a deposit. Updated this document and cross-referenced the four other documents corrected to match (`financial-setup.md`, `operations-manual.md`, `ivy-booking-system.md`, `website-spec.md`).
+
+**2026-07-20 (package renumbering)** — Updated "Package 2/Package 3" references to "Package 1 (A$250)/Package 2 (A$300)" per `services-pricing-locked.md`'s renumbering.
