@@ -23,23 +23,28 @@
 
 ## GTT PACKAGES
 
-> **Day 51 model.** Replaces GTT Lounge/Wellness/Luxe (v2.0). Structure locked by Anthony — prices negotiable. No package is sold lounge-only: venue + lounge access is FREE and bundled into all 3 packages, no separate fee.
+> **2026-07-20 renumbering (confirmed by Anthony) — same 2 priced tiers, new names/numbers and new composition rule.** This is NOT a re-opening of the earlier decision to drop the old "Package 1 (A$200)" — there are still only 2 priced tiers, at the same A$250/A$300 price points. What changed is the naming and the composition of each tier:
+> - **New "Package 1" (A$250)** = fixed composition: 2 × 30-min services.
+> - **New "Package 2" (A$300)** = flexible composition: client's choice of 2×45min, OR 1×45min+1×30min, OR 2×30min.
+> - **Mapping assumption, stated explicitly so it's correctable if wrong:** this document maps New Package 1 to the old A$250 tier and New Package 2 to the old A$300 tier (cheaper/fixed → renamed 1, pricier/flexible → renamed 2) — the natural direction given the old A$250 tier was already the cheaper of the two. If this mapping is wrong, the fix is a rename only, not a re-derivation of any pricing/revenue figures, since both tiers keep their existing prices.
+> - **Composition change, not just a rename:** the old A$250 tier's fixed composition was 1×30min+1×45min; the new A$250 tier (New Package 1) is instead fixed at 2×30min. This is a genuine change to what A$250 buys, not cosmetic — flagged here since it affects which services a Package-1 client can choose (see Part A below for durations).
+
+Structure locked by Anthony — prices negotiable. No package is sold lounge-only: venue + lounge access is FREE and bundled into both packages, no separate fee.
 
 The pathology fee (PathWest/WDP) is billed separately to Medicare. Venue + lounge access (water, herbal tea, GTT coordination, birth plan tablet) is included free in every package.
 
 > **Note on pathology fee:** Contact PathWest (08 6383 4234) and Western Diagnostics Pathology for exact out-of-pocket and collection fee structure before finalising package pricing.
 
-The verified capacity timetable (operations-manual.md) gives every GTT client two service slots (Service 1: X+15 to X+60, Service 2: X+80 to X+125 — 45 min each, no draw interrupts either slot). Packages below set the price by service duration/value within those slots — clients can use less than the full 45 min per slot (e.g. a 30-min service leaves slack inside the slot).
+The verified capacity timetable (`operations-manual.md`) gives every GTT client two service slots (Service 1: X+15 to X+60, Service 2: X+80 to X+125 — 45 min each, no draw interrupts either slot). Packages below set the price by service duration/value within those slots — clients can use less than the full 45 min per slot (e.g. a 30-min service leaves slack inside the slot).
 
 | Package | Inclusions | Price |
 |---------|-----------|-------|
-| Package 1 | Venue + lounge access (free) + any 2 × 30-min services from the GTT window menu (Part A) — or a combo of services totalling under A$200 | A$200 flat |
-| Package 2 | Venue + lounge access (free) + 1 × 30-min service + 1 × 45-min service from the GTT window menu — or a combo totalling under A$250 | A$250 flat |
-| Package 3 | Venue + lounge access (free) + any 2 × 45-min services from the GTT window menu — or a combo totalling under A$300 | A$300 flat |
+| Package 1 | Venue + lounge access (free) + 2 × 30-min services from the GTT window menu (Part A) — fixed composition, no flexibility | A$250 flat |
+| Package 2 | Venue + lounge access (free) + client's choice of: 2 × 45-min services, OR 1 × 45-min + 1 × 30-min service, OR 2 × 30-min services, from the GTT window menu | A$300 flat |
 
 *All GTT services (the wellness services delivered in the two service slots) are 45 minutes or under — no GTT-window service exceeds 45 min of active time.*
 *Venue/lounge inclusions appear free — bundled into package price. No separate venue/lounge fee exists.*
-*Every GTT visit sells one of these 3 packages — financial models must use these package prices, not individual service prices.*
+*Every GTT visit sells one of these 2 packages — financial models must use these package prices, not individual service prices.*
 
 ---
 
@@ -162,7 +167,7 @@ The verified capacity timetable (operations-manual.md) gives every GTT client tw
 
 > **2026-07 UPDATE:** PM afternoon sessions are sold as **individual services at individual prices** — NOT as Package 1/2/3. Clients book single services (massage, facial, nails, brows, hair, spray tan) at the per-service rates below. No minimum package spend applies in the PM session. Financial model (cash-flow.md, unit-economics.md) requires revision to reflect individual service pricing for PM revenue.
 
-*GTT pathology testing is AM-only (fasting requirement) — no testing in the afternoon. But every other service runs in the afternoon: the full Part A GTT-window menu (massage, facials, nails, brows/lashes, hairdressing) is available as standalone "PM Spa Packages" using the same Package 1/2/3 pricing (no testing, no GTT slot needed), PLUS the longer standalone-only services below (spray tan, hair colour, lash extensions, belly casting, and the 60-min/50-min hairdressing services that exceed the 45-min GTT slot).*
+*GTT pathology testing is AM-only (fasting requirement) — no testing in the afternoon. PM standalone services are sold as individual a-la-carte services, NOT as Package 1/2 (see 2026-07 update banner above) — this reference to "PM Spa Packages" is retained only for the longer standalone-only services below (spray tan, hair colour, lash extensions, belly casting, and the 60-min/50-min hairdressing services that exceed the 45-min GTT slot), which remain afternoon/standalone-only regardless of package model.*
 
 *10% online pre-booking discount applies when booked at the same time as a GTT reservation. Full price applies for in-center/same-day upsells.*
 
@@ -314,3 +319,9 @@ When a staff member has no booked client:
 6. Complete any mandatory training or product knowledge modules
 7. Assist receptionist with client coordination or cafe prep
 8. No idle time — assign a task from this list as default
+
+---
+
+## Changelog
+
+**2026-07-20 (package renumbering)** — Anthony confirmed a renumbering/renaming of the 2 surviving packages, not a re-opening of the earlier decision to drop the old A$200 tier. New "Package 1" (A$250) is now a fixed 2×30min composition (previously this was the dropped A$200 tier's composition, now moved to the A$250 price point). New "Package 2" (A$300) is now a flexible choice of 2×45min / 1×45min+1×30min / 2×30min (previously this flexibility sat under the old "Package 3" name). Mapping (New 1 = old A$250 tier, New 2 = old A$300 tier) stated explicitly as an assumption per Anthony's instruction, correctable by rename only if wrong since both price points are unchanged.
