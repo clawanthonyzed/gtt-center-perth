@@ -11,7 +11,9 @@
 
 Per `profit-loss-tables.md` v2.0 (2026-07-17, most recent) and `HANDOFF.md`:
 
-- **Break-even: ~298 visits/month (~13.5/day)** at the A$250 conservative planning price (Package 2, the lower of the two current packages)
+- **Break-even, revenue basis: ~A$88,625/month in total costs to cover** — this is the figure that should be quoted as "the" break-even, since it doesn't force two different client types into one headcount.
+- **Break-even, illustrative single-segment bookends (not the real plan — see caveat below):** ~298 visits/month (~13.5/day) *if every single visit were a Package 2 GTT client at A$250* — this is the figure this section previously reported as the headline, and it is only one bookend, not the actual break-even condition.
+- **Why this needs a caveat, corrected 2026-07-20:** the venture also earns PM standalone wellness revenue (~A$95/visit, no clinical test attached) which this section's headline figure ignores entirely. A GTT-package visit and a PM-standalone visit are not interchangeable — see `gtt-center-perth-overview-for-imara.md` and `executive-summary.md` for the full two-segment breakdown (illustrative bookends of ~355 visits/month if 100% GTT-package, or ~933/month if 100% PM-standalone, against the same ~A$88,625/month cost base). The "298 visits/month" figure in this section is retained below for continuity with `financial-break-even-staff.md`'s existing package-price table (§2), which is itself GTT-package-only and does not model PM standalone volume — read it as a GTT-package-only sub-analysis, not the whole venture's break-even.
 - Full break-even (all fixed costs covered with margin) is reached at Month 5+ steady state, per the current 10-client AM Scenario C model
 - Marginal break-even (costs just covered) is reached approximately Month 4
 
@@ -31,7 +33,7 @@ Per `cash-flow.md`'s existing break-even-visits table (built on the pre-Scenario
 | A$250 (current conservative planning price — Package 2) | 298 | 13.5 |
 | A$300 (Package 3 only) | 248 | 11.3 |
 
-**Reading this table:** since Package 1 has been dropped, the realistic range this venture actually operates in is A$250 (conservative, Package 2 only) to A$300 (Package 3 only) — a break-even range of roughly 248-298 visits/month depending on package mix. The current 10-client AM Scenario C model, at full capacity (10/day × ~22 operating days = 220 AM visits/month, plus PM and Saturday), needs to be checked against this range once the PM/Saturday session-count discrepancy (see `business-plan.md` §6) is resolved — this document does not attempt that reconciliation, only surfaces where the two would need to connect.
+**Reading this table:** since Package 1 has been dropped, the realistic range this venture actually operates in is A$250 (conservative, Package 2 only) to A$300 (Package 3 only) — a break-even range of roughly 248-298 visits/month depending on package mix, **if GTT-package visits were the only revenue source**. In practice they are not — PM standalone visits (~A$95, no GTT test) contribute separately, so this table should be read as "how many GTT-package visits alone would be needed," not the venture's actual break-even condition. The current 10-client AM Scenario C model, at full capacity (10/day × ~22 operating days = 220 AM visits/month, plus PM and Saturday), needs to be checked against this range once the PM/Saturday session-count discrepancy (see `business-plan.md` §6) is resolved — this document does not attempt that reconciliation, only surfaces where the two would need to connect.
 
 ---
 
@@ -82,3 +84,5 @@ Building on `financial-break-even-staff.md`'s existing Sensitivity — Package P
 **2026-07-19** — Created as a new Phase 7 deliverable, building on `financial-break-even-staff.md` §Sensitivity, `capacity-pricing-audit.md`, and `profit-loss-tables.md` rather than re-deriving new figures from scratch. Flagged (not resolved) a fifth instance of the recurring AM-capacity-figure discrepancy — `capacity-pricing-audit.md`'s own "12-client" headline figure, distinct from both the 8-client Scenario B and current 10-client Scenario C models. Added §5 (combined volume × pricing grid) as new synthesis not present in any single existing source document.
 
 **2026-07-20 (final consistency sweep)** — Both sourcing caveats in §1 resolved per CONFLICT-08: the Month 4/5 figure discrepancy and the "12-client model" variant are now both reconciled — see updated §1 and `docs/01_conflicts_log.md`.
+
+**2026-07-20 (break-even methodology fix)** — Founder feedback: §1 and §2's headline "298 visits/month" figure blended a single GTT-package client type as if it were the whole venture, ignoring PM standalone wellness revenue entirely (a different average spend, ~A$95 vs ~A$250). Added a revenue-basis figure (~A$88,625/month in costs) as the primary break-even statement, relabelled the visits-based figures as GTT-package-only illustrative bookends, and cross-referenced the full two-segment breakdown now in `gtt-center-perth-overview-for-imara.md`/`executive-summary.md`.
