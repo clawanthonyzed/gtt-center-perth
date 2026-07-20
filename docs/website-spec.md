@@ -141,7 +141,7 @@ Home
 - Build a custom booking form on the website
 - Step 1: Patient selects GTT start time (7:30am, 8:00am, 8:30am, 9:00am, 9:30am)
 - Step 2: Available services display with only time slots that fit within the patient's GTT window
-- Step 3: Patient selects services and pays deposit (A$30) via Stripe
+- Step 3: Patient selects services and pays full package price (not a deposit — corrected 2026-07-20, CONFLICT-09) via Stripe/Fresha Pay
 - Step 4: Booking is automatically created in Fresha via API
 - Technical requirements: Squarespace custom code embed + Fresha API credentials + Stripe
 
@@ -272,3 +272,5 @@ Phase 2 (Week 16) is DONE when:
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced operational reference to "Imara" (contact form routing) with "Venue Manager" (new hire, not yet in place). Ownership/trust structure unaffected — see `financial-model.md`/`research.md`.
+
+**2026-07-20 (CONFLICT-09 resolved)** — Corrected the custom booking form spec: Step 3 now specifies full package price at booking, not a A$30 deposit, matching Anthony's confirmed payment model. See `docs/01_conflicts_log.md` CONFLICT-09.
