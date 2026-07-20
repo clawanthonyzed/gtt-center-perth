@@ -296,6 +296,59 @@ GTT Center Perth has no subtenants. The 3D scan operator and dietitian sublet ro
 
 ---
 
+## 7A. STAFF GROWTH PLAN — SCALING TRIGGER, NOT A STATIC HEADCOUNT (Added 2026-07-20)
+
+**Anthony's feedback:** the headcount above is presented as a fixed number, with no explicit rule for when it grows. This section adds the actual scaling trigger, tied to PM standalone demand (the segment expected to grow, per `pm-staffing-roster.md` §Locked Decisions #2 and `pm-package-exploration.md`), rather than a static "12 roles, done" picture.
+
+**The trigger is booking volume against current PM capacity, checked monthly, not a calendar date.**
+
+| Signal | Threshold | Action |
+|---|---|---|
+| PM standalone sessions/day, sustained over 4+ consecutive weeks | Averaging ≥80% of a single PM line's daily capacity (per `pm-staffing-roster.md`'s ~1.3 sessions/hr throughput, a 6hr PM shift ≈ 7-8 sessions/day per line) | Add a 2nd casual hire on that specific service line only (not all 4 lines at once) — mirrors `pm-staffing-roster.md` Locked Decision #2's "scale to 2 per line by Month 3-4, contingent on proven volume" |
+| Any single PM line turning away bookings (fully booked more than ~2 days/week) | Recurring for 3+ consecutive weeks | Same as above — treat turned-away bookings as a stronger signal than raw utilisation %, since it's direct evidence of lost revenue, not just a busy roster |
+| Sunday demand (if/when explored per the reopening criterion in `am-capacity-weekend.md`) | A trial period showing sustained bookings that clear the 2.0x penalty-rate cost with margin | Reopen Sunday on the PM-standalone model only (`operations-manual.md` §4) — a separate trigger from the PM weekday hire trigger above |
+| AM capacity ceiling reached (10 clients/day, Scenario C, sustained waitlist) | Confirmed waitlist turning away bookings for 4+ consecutive weeks | Evaluate 3rd phlebotomist chair (Scenario D, 15 clients/day) per `am-capacity-weekend.md` — this is an AM-side trigger, distinct from the PM triggers above, and already flagged there as "not yet committed" |
+
+**Why this is deliberately volume-triggered rather than time-triggered:** `pm-staffing-roster.md`'s own "booking-driven rostering" principle (§AM + PM Rostering Methodology) already establishes that staffing should track actual confirmed bookings, not a calendar assumption — this section applies the same logic one level up, to headcount growth decisions, not just week-to-week rostering.
+
+**Who decides:** Venue Manager proposes the hire against the trigger table above, Anthony/Grace approve before the job posting goes out — consistent with the existing hiring-sequencing principle in §7 (nothing is recruited speculatively ahead of confirmed demand).
+
+---
+
+## 7B. RELIEF / BACKUP STAFFING — SICK LEAVE & HOLIDAY COVERAGE (Added 2026-07-20)
+
+**Gap Anthony flagged:** every staffing section in this document (and in `financial-break-even-staff.md`, `pm-staffing-roster.md`) counts only day-to-day rostered headcount — 2 phlebotomists, 2 per AM treatment line, 4 PM hires, 1 Venue Manager. None of these figures account for what happens when a rostered staff member is sick or on annual leave. This section makes that coverage explicit rather than assumed.
+
+### Why This Matters More Than a Generic "Relief Pool" Line Suggests
+
+The existing A$15,000/yr "Casual Relief Pool" budget line (`financial-break-even-staff.md` §Total Annual Payroll) is a cost placeholder, not a staffing plan — it doesn't say *who* covers *which* role, or how many relief people are actually needed to make that coverage real. Two categories need different treatment:
+
+### Phlebotomists (Clinical — Highest Coverage Risk)
+
+- **Why this is the tightest gap:** the AM GTT model requires exactly 2 phlebotomists, both on-site simultaneously, for the entire 07:00/07:30-12:30 window — there is no "spare" clinical capacity built into Scenario C's verified timetable (`scenario-c-sync-timetables.md`). If one phlebotomist is sick with no relief, the venue cannot run at full 10-client capacity that day (a single chair can't absorb both chairs' clients without breaching the concurrency model).
+- **Relief requirement:** at least 1 dedicated relief phlebotomist, credentialed and WDP/PathWest-approved in advance (not hired reactively on the day of an absence — credentialing takes time, see §Requirements at hire above), available on an on-call/casual basis.
+- **Interaction with the Venue Manager's first-aid/EpiPen role:** the Venue Manager is the designated first-aid/EpiPen holder and fire warden (§3 above) — if the Venue Manager is also absent on a day a phlebotomist calls in sick, the venue has a second, compounding coverage gap (clinical + emergency-response). **Recommendation: cross-train at least one other on-site staff member (e.g. the Receptionist, who is present for the full AM window) in first aid/EpiPen response as a backup to the Venue Manager**, so a single absence doesn't leave the venue without both. This does not replace the Venue Manager's primary responsibility — it's a same-day fallback only.
+- **Cost impact:** relief phlebotomist paid only for shifts actually worked (casual, no retainer) — same principle as the existing PM relief pool. Estimated at Cert III/IV Pathology Collector casual rate (~A$30.63/hr per `financial-break-even-staff.md`) for an assumed ~1 sick/leave day covered per fortnight across 2 phlebotomists (illustrative, not based on real absence data yet): ~5hrs/fortnight × A$30.63 ≈ A$77/fortnight ≈ **~A$2,000/year**, materially smaller than a full second FTE.
+
+### Treatment Staff (Massage/Nail/Hair/Beauty — AM and PM)
+
+- **Cross-trained backup approach, not a 1:1 relief hire per line:** per `pm-staffing-roster.md` §Multi-Role Relief Hiring (already decided for the PM relief pool), Massage+Beauty is a natural dual-qualification pairing (both Cert IV under MA000005) — the same principle extends to AM. A single relief hire cross-trained in Massage+Beauty can cover either line's absence; Hair and Nail remain separate single-skill relief roles (no natural qualification overlap).
+- **Revised AM+PM combined relief structure:** 3 relief roles cover all 8 lines (4 AM + 4 PM, since AM and PM staff are already qualification-equivalent and cross-shift rostrable per the existing model):
+
+| Relief Role | Covers | Basis |
+|---|---|---|
+| Massage + Beauty relief (dual-qualified, Cert IV) | Massage or Beauty line, AM or PM | Extends `pm-staffing-roster.md`'s existing PM relief pairing to also cover AM absences |
+| Nail relief | Nail line only, AM or PM | Single-skill, no natural pairing available |
+| Hair relief | Hair line only, AM or PM | Single-skill, no natural pairing available |
+
+- **This is a genuine gap-fill, not double-counting the existing PM relief pool** — the existing pool (`pm-staffing-roster.md` §Relief Pool Rotation) was scoped to PM absences only; this section extends the same 3 people to also be available for AM absences, since AM and PM staff already share qualifications and cross-shift eligibility under the current model.
+
+### Cost Impact — Where This Shows Up in Financial Models
+
+The existing A$15,000/yr relief line in `financial-break-even-staff.md` was a generic placeholder not broken down by role or absence-day assumption. It is directionally consistent with the phlebotomist estimate above (~A$2,000/yr) plus a treatment-staff relief estimate, but **has not been rebuilt bottom-up from actual absence-rate assumptions** — flagging this as still an estimate, not a verified figure. **Recommendation:** once real roster data exists (post-launch), recalculate the relief budget from actual sick/leave days taken rather than the current flat placeholder. No material change is proposed to `financial-break-even-staff.md`'s or `profit-loss-tables.md`'s headline P&L figures this round, since the existing A$15,000/yr line already sits in the cost base and this section does not suggest it needs to be materially larger or smaller — only that it now has an explicit "who covers what" plan behind it rather than being an unallocated number.
+
+---
+
 ## 8. EMPLOYMENT COMPLIANCE REQUIREMENTS (before first hire)
 
 - [ ] WorkCover WA registration (employer registration)
@@ -326,3 +379,5 @@ GTT Center Perth has no subtenants. The 3D scan operator and dietitian sublet ro
 **2026-07-19 (audit pass)** — Added a clarifying note that the client-volume model has moved from Scenario B (8/day) to Scenario C synchronized-start (10/day) — headcount/staffing conclusions in this document are unaffected, since Scenario C runs on the same staff numbers.
 
 **2026-07-19 (founder feedback round 2)** — Corrected §7 Hiring Timeline: GTT Center Perth is NOT recruiting or looking for any staff, including the Venue Manager, until a physical venue location is confirmed (direct founder instruction). Reworded "Week 1" labels to make clear they describe sequence-once-recruitment-starts, not literal weeks starting now. Venue Manager remains the first hire and still sits on the critical path once recruitment does begin. Job posting document now built and ready: `docs/venue-manager-job-posting.md`.
+
+**2026-07-20 (staff growth plan + relief/backup staffing added)** — Added §7A (staff growth plan): an explicit, volume-triggered scaling rule (PM line utilisation/turned-away bookings, AM waitlist, Sunday trial) rather than a static headcount, per Anthony's feedback. Added §7B (relief/backup staffing): closes the gap Anthony flagged — every staffing section only counted day-to-day rostered headcount with no sick-leave/holiday coverage plan. Covers both phlebotomists (ties to the Venue Manager's first-aid/EpiPen role — recommends a cross-trained backup) and treatment staff (extends `pm-staffing-roster.md`'s existing Massage+Beauty dual-qualified relief pairing from PM-only to also cover AM absences). Cost impact flagged as directionally consistent with the existing A$15,000/yr relief line in `financial-break-even-staff.md`, not yet rebuilt bottom-up from real absence data.
