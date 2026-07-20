@@ -44,7 +44,7 @@ The Oral Glucose Tolerance Test (OGTT / GTT) screens for Gestational Diabetes Me
 
 ```
 T=0 (Arrival — 8:00am example)
-  │   Patient arrives fasting (8+ hours, water only)
+  │   Patient arrives fasting (10-12 hours per current PathWest guidance, water only — see Fasting Requirements below)
   │   Receptionist confirms fasting status, collects referral form + Medicare card
   │   Phlebotomist performs FIRST blood draw (fasting glucose)
   │   Patient drinks 75g glucose solution over 5 minutes
@@ -93,12 +93,16 @@ Communicated via:
 
 ### Fasting Requirements (patient-facing language)
 
-> **From midnight the night before your appointment:**
+**Fasting window — sourced 2026-07-20 from PathWest's official patient instructions (see `king-edward-start-time-constraint.md` for both source PDFs):** minimum 10 hours fasted, maximum 12 hours per the current (2024) PathWest document — an earlier (2019) PathWest version stated a 16-hour maximum; use the 2024 figures as primary since they're more recent, and confirm directly with the pathology partner if a specific booking's timing would land outside the 10-12hr window. This replaces the previous "8+ hours, no stated maximum" framing used elsewhere in this document and in scheduling copy — the booking/reminder system should be checked to ensure late-evening or very-early-fast bookings don't fall outside this 10-12hr window.
+
+> **From midnight the night before your appointment (or per your personalised fasting window — see below):**
 > - NO food or drinks except plain water
 > - NO coffee, tea, juice, soft drink, or flavoured water
 > - NO chewing gum, mints, or lollies
 > - NO cigarettes (nicotine affects results)
 > - NO exercise on the morning of your test
+>
+> **Fasting window:** Aim for 10-12 hours fasted by the time of your appointment — not less than 10 hours, and ideally not more than 12. Your booking confirmation will include your personalised fasting start time based on your appointment slot.
 >
 > **Water:** Drink plenty of water. Stay hydrated — it makes blood draws easier.
 >
@@ -289,3 +293,5 @@ Before any phlebotomist performs their first collection at GTT Center Perth:
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`. Note: this protocol relies on the Venue Manager as the clinical escalation contact and EpiPen first aider — reinforces the critical-path hiring need documented in `hr-framework.md` §13.
 
 **2026-07-19 (audit pass)** — Updated the client-count claim from 8/day (Scenario B) to 10/day (Scenario C synchronized-start), matching `HANDOFF.md`'s confirmed current operational model, and repointed the "see operations-manual.md" reference to `scenario-c-sync-timetables.md` since operations-manual.md's own timetable section is now flagged stale.
+
+**2026-07-20 (real fasting-window source found)** — Updated fasting requirements from "8+ hours, no stated maximum" to the sourced 10-12 hour window (current PathWest patient instructions, 2024 version — see `king-edward-start-time-constraint.md`). This is a real, citable fasting range with both a minimum and a maximum, replacing an unsourced approximation.
