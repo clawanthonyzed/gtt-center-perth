@@ -134,22 +134,26 @@ GTT Center Perth is a mixed supply business. Every transaction must be coded cor
 - [ ] Test: process A$1 transaction, verify bank receipt, reverse transaction
 - [ ] Receipt printing: paper and emailed receipt both operational
 
-### Fresha Pay (online deposits)
+### Fresha Pay (full payment at booking)
+
+> **CONFLICT-09 RESOLVED (2026-07-20):** Anthony confirmed the model is **full payment collected at time of booking**, not a deposit. This section previously described an A$30 deposit + balance-on-day model — corrected below to match the confirmed policy, and to match `onboarding.md`'s draft patient-facing copy, which already stated full prepayment (that document was correct; this one was stale).
 
 - [ ] Fresha Pay connected to trust bank account
-- [ ] A$30 deposit configured for all GTT bookings
-- [ ] Card-on-file enabled for no-show charges
-- [ ] Test: make a test booking, pay A$30 deposit, verify it appears in bank account within 3 business days
-- [ ] Refund test: refund the A$30, confirm it returns to test card
+- [ ] Full package price charged at time of booking (no deposit-only option)
+- [ ] Card-on-file enabled as a backup for any exceptional cases (e.g., a price adjustment after service selection)
+- [ ] Test: make a test booking, pay full package price, verify it appears in bank account within 3 business days
+- [ ] Refund test: process a cancellation refund per policy (see `onboarding.md` Cancellation & Rescheduling Policy), confirm it returns to test card
 
 ### Payment flow
 
 | Stage | Payment | Method |
 |---|---|---|
-| Booking | A$30 deposit | Fresha Pay (card online) |
-| End of visit | Balance of package | EFTPOS terminal (in venue) |
-| No-show | Full session charge | Fresha Pay card-on-file |
-| Cancellation ≥24hrs | Deposit refunded | Fresha Pay refund |
+| Booking | Full package price | Fresha Pay (card online) |
+| End of visit | Nothing further owed (already paid in full) | — |
+| No-show | Full amount retained (already charged at booking) | — |
+| Cancellation ≥48hrs | Full credit, reschedule to any available slot within 90 days (no refund) | Per `onboarding.md` Cancellation & Rescheduling Policy |
+| Cancellation 24-48hrs | 50% credit applied to rescheduled appointment, 50% retained | Per `onboarding.md` Cancellation & Rescheduling Policy |
+| Cancellation <24hrs / same-day | No credit, no refund, full amount retained | Per `onboarding.md` Cancellation & Rescheduling Policy |
 
 ---
 
@@ -256,3 +260,5 @@ GTT Center Perth serves food (packaged snacks, coconut water, herbal teas). This
 ## Changelog
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — trust/ownership structure unaffected, see `financial-model.md`/`research.md`. Remuneration-decision items renamed to "Venue Manager salary vs trust distribution" as this is the payroll question for the operational hire, not a change to Imara's funding role.
+
+**2026-07-20 (CONFLICT-09 resolved)** — Corrected the Fresha Pay/Payment flow sections: Anthony confirmed full package price is collected at time of booking, not an A$30 deposit. Updated the payment flow table to the tiered cancellation-credit policy matching `onboarding.md`. See `docs/01_conflicts_log.md` CONFLICT-09.
