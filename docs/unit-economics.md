@@ -3,6 +3,8 @@
 # GTT Center Perth — Unit Economics
 
 > **2026-07-14 SUPERSEDED — PM MODEL CORRECTED.** References below to a single "PM Service Therapist" delivering "PM Spa Packages" (Package 1/2/3 pricing) are superseded. The confirmed PM model is: **4 dedicated casual hires** (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, delivering **individual standalone services** (not packages) at ~A$95/session average, staffed on actual hours worked — not a blanket shift. Corrected Month 5+ steady state: Total Revenue A$86,020/month, Total Fixed Costs A$79,357/month, **Net P&L +A$6,663/month** — profitable from Month 4 (+A$4,924/month). See `pm-staffing-roster.md` for the full roster, weekly template, and recalculated P&L — this is now the canonical PM reference, superseding this document's PM figures/structure below.
+>
+> **2026-07-20 — break-even/unit-economics methodology also superseded.** This entire document's "blended avg revenue/visit" approach (§Revenue Per Visit, §Break-Even) treats every visit — AM GTT and PM standalone alike — as one interchangeable A$250 package sale. That is no longer the model: PM is individual standalone services (~A$95 avg, see banner above), a materially different unit economics profile from a GTT-package visit (~A$250 avg). Blending them into one "298 visits/month" figure (as this document and `financial-break-even-staff.md`/`cash-flow.md` originally did) understates how different the two client types are — Anthony flagged this directly. Current authoritative figures: ~A$88,625/month total costs, ~220 AM GTT visits/month (A$250 avg) + ~350 PM standalone visits/month (A$95 avg) — see `profit-loss-tables.md` v2.0, `gtt-center-perth-overview-for-imara.md`, `executive-summary.md`. This document is retained for historical trace of the Day-51 Option-A-to-package rebuild only; do not use its capacity (8-client Scenario B), revenue, or break-even figures for current planning.
 
 **Status:** Day 51 package-price model — full rebuild (was Option A venue-fee + room-rent model)
 **Date:** 2026-06-11
@@ -124,3 +126,9 @@ If the PM Spa Package ramp underperforms (stays below 6/day), the alternative le
 3. WDP/PathWest pathology partnership model and out-of-pocket fee structure (`services-pricing-locked.md`)
 4. Package 1/2/3 market acceptance — validate with target customers before launch (A$200/A$250/A$300)
 5. PM Spa Package booking demand — validate that the PM Service Therapist's afternoon book can realistically reach 6 packages/day by Month 5 (the model's single biggest assumption)
+
+---
+
+## Changelog
+
+**2026-07-20 (break-even methodology cascade)** — Added a top-level supersession note: this document's blended "avg revenue/visit" and break-even figures treat GTT-package and PM-standalone visits as one interchangeable unit, which is no longer accurate (PM is individual services at ~A$95 avg, not A$250 packages) and was flagged directly by Anthony as misleading. Current authoritative figures are in `profit-loss-tables.md` v2.0. This document's own line-items are not individually rewritten (it was already superseded on both the PM model and the 8-client capacity model) — retained for historical trace only.
