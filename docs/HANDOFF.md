@@ -8,7 +8,7 @@ Turn GTT Center Perth from a paper concept into an investor-ready, operationally
 - **Packages:** Only Package 2 (A$250, 30+45min) and Package 3 (A$300, 2×45min). Package 1 (A$200) dropped. **A$250 is used as the conservative safety price in every forward calculation** — this is a deliberate instruction, don't substitute a blended/mixed-price average.
 - **PM:** Individual standalone services (explicitly NOT packages) — 4 dedicated casual hires (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, costed on **actual hours worked**, not a blanket shift.
 - **Saturday:** Reuses the AM Scenario C timetable directly (same 10 clients) + PM standalone. Costed as a bolt-on additional shift (hours-based), not weekday salary-slice — see "What Didn't Work" below.
-- **Sunday:** **Closed.** Explicit instruction — no Sunday trading until proven demand exists.
+- **Sunday:** **Closed until standalone PM service demand is proven and profitable** enough to justify the added penalty-rate staffing cost — a conditional business choice reviewed against real booking data, not a fixed-forever position.
 - **Growth path, not yet committed:** 3rd phlebotomist as an active chair (not just relief) → "Scenario D" verified, 15 clients/day, no new treatment hires needed (though 2 of the 8 treatment staff hit ~68% utilisation at this volume — genuinely full, not casual buffer).
 
 ## Financial Baseline (conservative, steady state, Month 5+)
@@ -36,7 +36,7 @@ Full tables (weekday/Saturday/weekly/monthly/quarterly/half-yearly/yearly) in `p
 **General pattern to watch for:** before costing any new staffing scenario, first classify it — is this an ongoing weekday/contracted role (cost via monthly salary ÷22) or a bolt-on additional shift (cost via actual hours worked)? Getting this wrong understated profitability twice in this session alone.
 
 ## Regulatory Findings (Confirmed, Sourced)
-- WA Retail Trading Hours Act: hairdresser/beautician/barber shops are explicitly exempt (Section 5) — no legal restriction on start times any day, including Sunday. Sunday closure here is Anthony's business choice, not a legal requirement.
+- WA Retail Trading Hours Act: hairdresser/beautician/barber shops are explicitly exempt (Section 5) — no legal restriction on start times any day, including Sunday. Sunday closure here is Anthony's business choice, not a legal requirement — the reopening trigger is proven, profitable standalone PM demand, not a permanent decision.
 - Hair and Beauty Industry Award MA000005: Saturday penalty **confirmed** — 133% (permanent) / 150% (casual). Sunday 200%. Public holiday 250–275%.
 - Health Professionals Award MA000027 (phlebotomists): a clause exists suggesting Saturday 8am–4:30pm may count as *ordinary hours* for private pathology practices — **unconfirmed**, needs a payroll advisor or Fair Work direct check. All financial models use the conservative (full penalty) assumption until this is verified.
 
@@ -60,3 +60,7 @@ Full tables (weekday/Saturday/weekly/monthly/quarterly/half-yearly/yearly) in `p
 - Local Claude memory: `project_gtt_center_perth.md`, indexed in `MEMORY.md`
 
 **For a new conversation window: point Claude at this file plus the second-brain entry above — that's sufficient context to continue without re-reading the full session.**
+
+---
+
+**2026-07-20 addendum:** Sunday-closed wording above reworded per Anthony's feedback — the closure is conditional on standalone PM demand not yet being proven/profitable, not a permanent position. Same reword applied across `business-plan.md`, `executive-summary.md`, `operations-manual.md`. Also this round: break-even reframed in revenue + segment-split terms (not blended visit headcount) across `gtt-center-perth-overview-for-imara.md`, `executive-summary.md`, `break-even-sensitivity-analysis.md`, `financial-break-even-staff.md`, `unit-economics.md`; AM downtime-fill model made explicit in the two presentation-facing documents; new exploratory `pm-package-exploration.md` added; staff growth trigger and relief/backup staffing sections added to `staff-plan.md`/`hr-framework.md`; real PathWest source found and applied to `king-edward-start-time-constraint.md`/`gtt-clinical-protocol.md`; `external-resources-and-advisors.md` added; `reading-order.md` hyperlinked throughout.
