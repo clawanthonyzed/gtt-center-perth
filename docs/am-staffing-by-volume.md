@@ -32,6 +32,8 @@ This document assumes, for modelling purposes, that **Chair A's clients choose M
 
 **Why 7-8 is the ceiling from N=7 onward, not just at N=10:** once a chair has 2 or more clients whose 45-minute service slots overlap under the 40-minute admission rhythm, that line's concurrency ceiling of 2 is already reached — this happens at the 2nd client on a given chair, so Chair B's Nails/Hair requirement reaches its final "2 each" ceiling as soon as Chair B has 2 clients (N=7 in this document's chair-filling convention), not only when the whole day reaches 10.
 
+**Important update (2026-07-21) — this table is one illustrative mix, not a true minimum or worst case:** see §Does Pre-Known Service Composition Tighten the Roster Further? below. The "7 staff" figure assumes a specific 50/50 Massage+Beauty / Nails+Hair split — real bookings could need as few as 6 (if concentrated on the poolable Massage+Beauty combo) or more than 7 (if concentrated on Nails or Hair specifically) once actual per-client service selections are known, rather than just a headcount.
+
 ---
 
 ## Full-Day Rosters by Volume
@@ -114,6 +116,28 @@ These three volumes share the identical staffing requirement as N=7 above — on
 
 ---
 
+## Does Pre-Known Service Composition (Not Just Client Count) Tighten the Roster Further? (Added 2026-07-21)
+
+**Anthony's clarified question:** within the existing 10-client/day ceiling (no capacity change), if each of the 10 clients has already pre-booked a specific Package (1 or 2) with a **known service selection**, not just a headcount — does knowing exactly which services each client will use let AM roster fewer (or different) treatment staff than the volume-only model above (7 treatment staff at N=10)?
+
+### The Summary Table Above Was Never a Worst-Case Model — This Is the Key Finding
+
+**Checked, and the answer changes the framing of the existing table:** the "7 treatment staff at N=10" figure in the Summary Table above is not a worst-case ceiling and not a true minimum — it's the result of **one specific, illustrative, assumed service mix** (Chair A's 5 clients always want Massage+Beauty, Chair B's 5 clients always want Nails+Hair, evenly split). The document's own caveat already flagged this convention as illustrative, but did not check what happens under a *different* real mix. This section checks that directly.
+
+**True worst case (checked via the same concurrency solver):** if enough real clients' bookings happen to cluster onto the same single service line (a legitimate possibility — nothing in the booking system prevents 6+ clients all choosing, say, Massage as one of their 2 services), peak concurrent demand on that **one line alone can reach 6** — not the "2 per line" ceiling the illustrative model assumes. If that heavily-demanded line is Nails or Hair (non-poolable), this could require **more than 7 total treatment staff** to safely cover a real, unfavourable-but-plausible booking mix.
+
+**True best case (checked the same way):** if the real bookings cluster favourably — e.g. all 10 clients happen to only want services from the poolable Massage+Beauty combo, with zero demand for Nails or Hair that day — the Massage+Beauty pool only needs to cover **6** concurrent bookings (not 3), and Nails/Hair need **zero** staff, for a genuine total of **6 treatment staff, one fewer than the illustrative model's 7.**
+
+### Direct Answer
+
+**Yes, pre-known service composition can tighten (or loosen) the roster below/above the volume-only model's 7-staff figure — in both directions, depending on what that specific day's real bookings actually are.** The volume-only model (client count alone) cannot distinguish between a favourable day (needs 6) and an unfavourable day (could need more than 7) — it only produces one illustrative middle answer. **Knowing the actual service composition in advance lets the Manager roster exactly what that specific day requires, rather than a single blanket number every day** — this is the same "booking-driven, not calendar-driven" rostering principle already established in `pm-staffing-roster.md` §AM + PM Rostering Methodology, now confirmed to apply to treatment-line allocation specifically, not just overall headcount ramp.
+
+**Practical implication:** once GTT Center Perth is live and Fresha shows real, confirmed package/service selections for the coming week, the Manager should compute that specific week's actual per-line concurrency (using the same method demonstrated here) rather than defaulting to the illustrative 7-staff figure every day. On a day where bookings happen to concentrate on the poolable Massage+Beauty combo, 6 staff may genuinely be enough — a real, checked cost saving, not a guess. Conversely, if a real day's bookings cluster heavily onto Nails or Hair specifically, the Manager needs to check whether more than 7 is actually required, rather than assuming 7 is always a safe ceiling.
+
+**What this does not change:** the phlebotomist requirement (1 per active chair, 2 at N≥6) is unaffected by service composition — phlebotomists handle blood draws regardless of which treatment services a client selected, so this finding is specific to treatment staff only.
+
+---
+
 ## What This Enables — Natural Next Step (Flagged, Not Built Here)
 
 With a genuine per-volume staffing requirement now established, the natural next step is a **per-volume P&L** — recalculating AM revenue, direct labor cost, and net contribution at each of 3-10 clients/day, the same way `profit-loss-tables.md` currently does only for the full 10-client steady-state case. This would show, for example, whether a 6-client day (2 phlebotomists rostered for just 1 extra Chair-B client) is worth running versus holding at 5 (1 phlebotomist, no 2nd chair needed) — a genuine cost/revenue trade-off this document's staffing table alone can't answer. **Not built in this document** — flagged as the logical follow-up once Anthony confirms this staffing table is correct, per his own framing of the request.
@@ -133,3 +157,5 @@ With a genuine per-volume staffing requirement now established, the natural next
 ## Changelog
 
 **2026-07-20** — Created per Anthony's request: checked (not estimated) phlebotomist and treatment-staff requirements for AM client volumes 3-10/day, built directly on the verified Scenario C timing and the existing Massage+Beauty pooling finding. Includes a full-day roster for each volume. Flagged the per-volume P&L as a natural next step, not built in this document. Flagged explicitly that the specific service-line labels (Massage vs Nails etc.) at low volume are an illustrative convention matching the verified 10-client model's structure, not a claim about which services real bookings will actually request — the Manager should roster the specific lines that day's real Fresha bookings need, per the existing booking-driven principle.
+
+**2026-07-21 (pre-known composition question answered)** — Anthony clarified the "10+10" question was actually about AM (not PM): within the existing 10-client ceiling, does knowing each client's actual pre-booked service selection (not just the headcount) tighten the roster below the 7-staff figure? Checked directly with the same concurrency solver: **the existing "7 staff" Summary Table figure was never a true worst-case or minimum — it's one specific, illustrative, 50/50 service-mix assumption.** True worst case (adversarial clustering onto one non-poolable line) can require more than 7; true best case (clustering onto the poolable Massage+Beauty combo) needs as few as 6. Confirmed pre-known composition genuinely changes the answer in both directions and lets the Manager roster the exact right number for that specific day, rather than a single blanket figure — the same booking-driven principle already established in `pm-staffing-roster.md`, now confirmed to apply to treatment-line allocation specifically. Phlebotomist requirement unaffected (draws don't depend on treatment-service choice).
