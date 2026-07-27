@@ -70,6 +70,22 @@ The existing sensitivity table in `financial-break-even-staff.md` (built on the 
 
 ---
 
+## 4A. Concrete Price Targets — Added 2026-07-27 Per Anthony's Request
+
+Anthony asked specifically what Package 1/2 actually go **to**, not just when — and to add a 12-month review as a third checkpoint option alongside Month 3/Month 4. This section adds real dollar figures against each timing option in §4 above, so all three can be compared side-by-side on one basis.
+
+**Basis for the dollar figures below:** §3's Option A framing (raise the sticker price directly) applied at the same "modest A$10-20/client blended increase" magnitude §3 itself flags as the expected meaningfully-additive range — no new demand-elasticity modelling exists in this corpus (see §5), so these are **illustrative target price points consistent with the existing analysis, not a newly re-derived number.** If Anthony wants a different magnitude, the mechanics below hold, only the dollar inputs change.
+
+| Timing option | Package 1 (currently A$250) → | Package 2 (currently A$300) → | Rationale |
+|---|---|---|---|
+| **Month 3 increase** | A$265 (+A$15) | A$315 (+A$15) | Smaller, earlier increase — a smaller absolute bump reduces the risk of denting early-ramp demand/reputation while the venue is still building its waitlist-to-booking conversion (per §4's Month 3 risk note). |
+| **Month 4 increase** (HANDOFF.md's standing lean) | A$270 (+A$20) | A$320 (+A$20) | Larger increase, applied once the venue has already reached marginal profitability — pricing is proven to work at this point, so the increase reads as "capturing more margin from demonstrated success," matching the existing recommendation. |
+| **12-month review checkpoint (NEW — added 2026-07-27)** | Re-evaluate from a full year of real booking/demand data — no target figure proposed here | Re-evaluate from a full year of real booking/demand data — no target figure proposed here | **Deliberately no number attached.** Unlike the Month 3/4 options (which are pre-committed increases based on projections), a 12-month checkpoint means the actual increase (if any) is set using a full year of real demand data — including whether the venue reaches the capacity-constrained state flagged in §4's "increase later" row. This is the most information-rich option of the three, at the cost of leaving margin on the table for longer if demand does turn out to support a higher price sooner. |
+
+**Reading this table:** Month 3 and Month 4 are both "commit to a number now" options — they only differ in timing and magnitude. The 12-month review is structurally different — it is a decision-*deferral* mechanism, not a third price point. If Anthony wants a number attached to the 12-month option too (e.g., "review with a working assumption of +A$20-30 if demand supports it"), that can be added, but it wasn't specified in the request and inventing one would blur the distinction between "committed now" and "decided later with real data" that makes the 12-month option useful in the first place.
+
+---
+
 ## 5. What This Document Does NOT Do
 
 - It does not produce a new month-by-month dollar forecast under a specific price and specific month — that would require rebuilding the ramp model with current Scenario C figures and a stated price-increase assumption, which is a follow-up task, not something derivable purely from re-reading existing docs.
@@ -89,3 +105,5 @@ See `docs/05_open_questions_for_founder.md` Q4 for the standing open question th
 ## Changelog
 
 **2026-07-20 (package renumbering)** — Updated "Package 2/Package 3" references to "Package 1 (A$250)/Package 2 (A$300)" per `services-pricing-locked.md`'s renumbering.
+
+**2026-07-27 (concrete targets + 12-month option added)** — Per Anthony's direct request: added §4A with actual proposed Package 1/Package 2 dollar targets for the Month 3 and Month 4 timing options (previously this document discussed timing and mechanics but never stated a target price), and added a third option — a 12-month review checkpoint — as a decision-deferral alternative to committing to a number now. All three now presented side-by-side for Anthony's decision. Figures are illustrative, consistent with §3's existing "modest A$10-20/client" finding, not a newly re-derived elasticity model.

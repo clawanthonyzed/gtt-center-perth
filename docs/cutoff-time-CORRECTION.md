@@ -25,12 +25,14 @@ What general chemistry sources did confirm: fluoride-oxalate (glucose) tubes are
 
 ---
 
-## Update (2026-07-19) — WDP Emailed, Awaiting Reply
+## Update (2026-07-19) — WDP Contacted, Awaiting Reply
 
-WDP has been emailed. **Still awaiting a reply as of this update — the 11:30/12:30 conflict remains unresolved.** PathWest and Clinipath (the contingency/secondary pathology partners) have not yet been contacted — outreach to them is a separate, not-yet-actioned step (see `docs/05_open_questions_for_founder.md` Q6).
+**Corrected 2026-07-27:** WDP was contacted via WDP's own online enquiry form, not by email as this section originally stated — there is no WDP email thread. **Still awaiting a reply as of this update — the 11:30/12:30 conflict remains unresolved.** PathWest and Clinipath (the contingency/secondary pathology partners) were emailed 2026-07-27 — see `docs/05_open_questions_for_founder.md` Q6 and `pathwest-clinipath-outreach-2026-07-27.md`.
 
 **When WDP replies, Anthony will ask two questions in the same conversation:**
 1. The actual specimen dispatch cutoff time (resolves the 11:30 vs 12:30 conflict directly).
 2. **Whether overnight blood storage + next-day lab collection is viable** as an alternative model to the same-day courier-cutoff constraint.
 
 **Question 2 is not answered here and should not be speculated on** — it depends entirely on WDP's clinical/logistics answer (specimen stability under their actual storage conditions, their lab's next-day intake process, and whether this fits their Licensed Collection Centre QMS). If viable, it could materially change the AM window's end-time constraint that currently drives the whole Scenario C/D capacity ceiling — but that's WDP's determination to make, not an assumption to build into any document ahead of their reply. Once a reply is received, update this file and `docs/05_open_questions_for_founder.md` with the actual answer(s) before they feed into any capacity/scheduling document.
+
+**2026-07-27 correction note:** the heading and body above previously said "WDP Emailed" — corrected to reflect the actual channel used (online enquiry form). Same PathWest/Clinipath outreach question that was open here is now actioned — both emailed 2026-07-27.

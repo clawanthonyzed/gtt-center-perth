@@ -208,15 +208,21 @@ Search conducted 2026-07-01 across commercialrealestate.com.au and REIWA.
 
 ### Specific Properties Flagged for Inspection
 
-| Address | Size | Price | Notes | Agent |
-|---------|------|-------|-------|-------|
-| 2A/236 Main Street, Osborne Park | 144sqm | A$43,200/yr + outgoings | Slightly under target — confirm parking | Ray White Commercial WA |
-| 6/325 Harborne Street, Osborne Park | 268sqm | POA | Retail type — slightly over target, negotiable | AGORA Property Group |
-| 20 Parkland Road, Osborne Park | TBC | TBC | Flagged — request full details | commercialrealestate.com.au #16969571 |
+**Links verified live 2026-07-27 — all three confirmed real, current listings (not assumed from the original search summary):**
+
+| Address | Size | Price | Notes | Agent | Listing Link |
+|---------|------|-------|-------|-------|--------------|
+| 2A/236 Main Street, Osborne Park | 144sqm | A$43,200/yr + outgoings A$15,038/yr + GST | Slightly under target — confirm parking. Ground floor, ex-brokerage/retail, reverse cycle AC, kitchen/shower amenities | Ray White Commercial WA — Tom Jones (0478 771 117) / Lachlan Burrows (0499 552 296) | https://www.commercialrealestate.com.au/property/2a-236-main-street-osborne-park-wa-6017-16172595 |
+| 6/325 Harborne Street, Osborne Park | 268sqm | A$55,000/yr net + GST (price corrected 2026-07-27 — was listed as "POA," actual figure now confirmed) | Retail/showroom type — slightly over target, negotiable | AGORA Property Group — Shannon Swarts | https://reiwa.com.au/6-325-harborne-street-osborne-park-4941752/ |
+| 20 Parkland Road, Osborne Park | 994sqm, 28 parking | TBC | **Flagged 2026-07-27 — this is a whole-floor office ~4-6x larger than the 150-250sqm target. Likely not viable at this size; Quinn to confirm before treating as a real lead, do not book an inspection on this one without re-checking fit first.** | commercialrealestate.com.au #16969571 | https://www.commercialrealestate.com.au/property/20-parkland-road-osborne-park-wa-6017-16969571 |
 
 ### Next Action
 Anthony or commercial agent to call:
-- **Ray White Commercial WA** — Osborne Park specialists (confirmed active listings)
-- **AGORA Property Group** — 325 Harborne Street inquiry
+- **Ray White Commercial WA** — 2A/236 Main Street, contact Tom Jones or Lachlan Burrows directly (numbers above)
+- **AGORA Property Group** — 6/325 Harborne Street, contact Shannon Swarts
+- **20 Parkland Road** — confirm size fit with Quinn before contacting; likely oversized for this venture's footprint
 - Filter: commercialrealestate.com.au → Osborne Park → min 150sqm → ground floor → parking confirmed BEFORE viewing
+
+### Maylands / South Perth Hardy St Leads — Unconfirmed (re-checked 2026-07-27)
+Per `05_open_questions_for_founder.md` Q9: Maylands (160sqm, 10 parking, negotiable rent) and South Perth Hardy St (216sqm, A$4,750/month) were referenced in `HANDOFF.md` as live leads from an earlier session, but no listing URL, agent name, or listing ID was ever saved anywhere in this repo. Re-searched directly 2026-07-27 (commercialrealestate.com.au, REIWA) — no property matching those exact specs currently exists in either suburb; the Hardy St listings that do exist (19 Hardy St, 22 Hardy St) are marked leased/inactive. **Treating both as unconfirmed rather than live leads. Quinn tasked with running a fresh, broader search of both suburbs (and/or Osborne Park/Joondalup as already-proven catchments) to find real replacement candidates — see team-meeting-2026-07-27.md follow-up tasking.**
 
