@@ -61,6 +61,51 @@ A second listing ID exists for the same address (18093774) — not checked this 
 
 **Net effect: only 1 of the original 3 Osborne Park leads is both real and currently available.** This is a materially different picture from last session's report (which presented all 3 as live) — worth surfacing to Anthony directly rather than letting the correction sit quietly in a changelog.
 
+> **DEPRIORITIZED 2026-07-28:** the "confirm 6/325 Harborne Street's exact outgoings figure" follow-up item is deprioritized per Anthony — not a current priority, not pursued further this round.
+
+---
+
+## NEW CANDIDATES FOUND — 2026-07-28 (Active Search, Not Just Brief Update)
+
+**Search widened beyond Osborne Park per corrected brief (150sqm+ floor, no max, any suburb, layout must fit 2 phlebotomy chairs + treatment rooms + reception, true occupancy cost vs A$96,000/yr budget). 3 new candidates found with real, verified URLs — reported honestly including the ones with real constraints, not just the best-looking one.**
+
+### A. 45 Stirling Highway, Nedlands — TWO available tenancies, same building
+
+**URL:** https://www.commercialrealestate.com.au/property/45-stirling-highway-nedlands-wa-6009-17339924
+**Status:** Confirmed available (cross-checked via search, not leased) — listed by Terry Menage and Matthew Edwards, Raine & Horne Commercial.
+
+| Tenancy | Size | Net Rent | Outgoings (FY25) | Car bays |
+|---|---|---|---|---|
+| Level 1, North West | 150sqm | $295/sqm/yr | $146.88/sqm/yr (or possibly a flat annual figure — **not fully clear from the search summary which, flagging rather than guessing**) | 3 bays @ $200/bay/month |
+| Ground Floor | 240sqm | $295/sqm/yr | $146.88/sqm/yr (same caveat) | 6 bays @ $200/bay/month |
+
+**Rough occupancy cost check (150sqm tenancy, treating $295 and $146.88 both as $/sqm/yr, the more likely reading):** (295+146.88) × 150 ≈ **A$66,282/yr rent+outgoings**, plus 3 car bays × $200/month × 12 = $7,200/yr ≈ **A$73,482/yr total, before GST** — **within the A$96,000/yr budget if this reading is correct**, but flagged as needing direct confirmation from the agent, not booked as certain. Fitout newly refurbished, suitable for office/physio/medical/allied health per the listing — **not confirmed suitable for a 2-chair phlebotomy + treatment-room layout specifically, that needs an actual floor plan from the agent.**
+
+### B. 53 Hardy Road, Nedlands — Existing medical/consulting fitout, strong layout match
+
+**URL:** https://www.commercialrealestate.com.au/property/53-hardy-road-nedlands-wa-6009-17238765
+**Status:** Confirmed available (a separate, older listing at the same address — ID 2017775807 — is SOLD, not the same one; this is the current for-lease listing, cross-checked). Agents: Tim Pittaway (0420 226 058), Rory Walker (0449 007 759).
+
+**Why this is a strong layout candidate:** corner site with signage, open plan reception, **4 well-sized consulting rooms**, waiting area, disabled bathroom, main road exposure, **8 car bays onsite**. This is the closest match to GTT's actual layout need (phlebotomy chairs + treatment rooms + reception) found this session — an existing medical fitout with a real reception + multi-room layout, not a generic office shell. **Size and price were not stated in the search summary** — flagged, needs a direct agent call to get sqm and rent, not guessed at.
+
+### C. Suite 6, 1 Alvan Street, Mount Lawley — real lead, real parking constraint flagged
+
+**URL:** https://vpgproperty.com.au/properties/suites-6-1-alvan-street-mount-lawley-wa-6050/
+**Status:** Confirmed available, listed directly on the leasing agent's (VPG Property) own site — not commercialrealestate.com.au for this one, but a genuine direct listing.
+
+- **Size:** not explicitly restated in sqm in the search summary (described as "4 offices" fitout) — the earlier search reference to "219sqm" was for a similarly-described Alvan Street suite and **has not been independently confirmed as this exact suite**, flagging rather than asserting.
+- **Price:** A$14,000/yr excluding GST and outgoings — well under the A$96,000/yr budget on rent alone, even with outgoings added.
+- **Parking: only 2 exclusive car bays.** **This is a real constraint against GTT's parking-first requirement** (per `location-scouting.md`'s own standing rule: "do NOT view any property without first confirming parking count," and the venture's 10-client/day model implying meaningfully more than 2 bays needed) — flagging this honestly as a likely disqualifier, not omitting it because the price looks attractive.
+
+### Summary of New Candidates
+
+| Candidate | Size | Est. Cost | Parking | Layout Fit | Status |
+|---|---|---|---|---|---|
+| 45 Stirling Hwy, Nedlands (150sqm tenancy) | 150sqm | ~A$73,482/yr (unconfirmed reading, needs agent confirmation) | 3 bays | Not confirmed for 2-chair layout | **Available, worth a call** |
+| 45 Stirling Hwy, Nedlands (240sqm tenancy) | 240sqm | Proportionally higher, not computed (same $/sqm rate, more bays) | 6 bays | Not confirmed | **Available, worth a call — more bays than the 150sqm option** |
+| 53 Hardy Road, Nedlands | Not stated | Not stated | 8 bays | **Best layout match found (existing 4-room medical fitout + reception)** | **Available — call agent for size/price, most promising lead** |
+| Suite 6, 1 Alvan St, Mount Lawley | ~219sqm (unconfirmed match) | A$14,000/yr + outgoings (cheap) | **Only 2 bays — likely disqualifying** | 4 offices, not phlebotomy-specific | **Available but parking is a real problem** |
+
 ## Quinn's Search Brief — Corrected 2026-07-28
 
 - **Size:** 150sqm floor, **no maximum** (prior "150-250sqm target" framing used elsewhere in this repo, e.g. `location-scouting.md`, is too narrow — correct to "150sqm+, no upper limit" going forward)
@@ -71,5 +116,7 @@ A second listing ID exists for the same address (18093774) — not checked this 
 ## Changelog
 
 **2026-07-28** — Re-verified all property leads per Anthony's explicit instruction for literal URLs and against the stated concern that last round had false regressions. Found 2A/236 Main Street is actually leased (not available) — correcting the 2026-07-27 report, which did not check current availability status, only listing existence. 6/325 Harborne Street confirmed genuinely live via direct page fetch. 20 Parkland Road's current status could not be confirmed (fetch blocked). Maylands/Hardy St replacement search still unsuccessful — flagged as a tooling limitation (WebFetch blocked on the primary listing sites) rather than guessed at.
+
+**2026-07-28 (later same day) — active new-property search, per Anthony's instruction to find new candidates, not just update the brief.** 3 new candidates found with real URLs: 45 Stirling Highway Nedlands (2 tenancies, 150sqm and 240sqm, both confirmed available), 53 Hardy Road Nedlands (existing 4-room medical fitout + reception, best layout match found, size/price not yet obtained — needs an agent call), Suite 6/1 Alvan Street Mount Lawley (confirmed available, cheap, but only 2 car bays — flagged as a likely disqualifier, not hidden). Harborne Street outgoings follow-up deprioritized per instruction. None of the 3 new candidates were independently size/price-confirmed to the same depth as 6/325 Harborne Street (search-summary-level detail only, not a full direct-fetch verification) — flagged as the next step, not assumed complete.
 
 **2026-07-28 (correction, same day)** — Removed the unfounded "likely oversized, recommend dropping" flag on 20 Parkland Road — Anthony confirmed 150sqm is a floor with no maximum, this agent's prior flag was an assumption not sourced from any actual instruction. Corrected Quinn's search brief: 150sqm+ no max, widen beyond Osborne Park, compare true occupancy cost against the real A$96,000/yr rent budget (sourced from `profit-loss-tables.md`, not previously looked up before this correction).

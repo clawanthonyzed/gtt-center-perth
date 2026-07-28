@@ -1,61 +1,67 @@
 # GTT Center Perth — Multi-Role Cross-Trained Staffing Model
 
-**Version:** 2.0 | **Date:** 2026-07-28 (corrected same day) | **Author:** Grace
-**Status:** Supersedes v1.0 of this document (2026-07-28), which misinterpreted Anthony's instruction as dropping the AM/PM shift structure. **CORRECTED: the AM/PM shift structure is NOT being dropped.** Anthony's own words: "i have not said anything about dropping the am/pm titles as we are still looking to operate in a shift model." This version reflects the actual instruction.
+**Version:** 3.0 | **Date:** 2026-07-28 (refined same day) | **Author:** Grace
+**Status:** Refines (does not reverse) v2.0 of this document. v2.0 correctly established: (a) the AM/PM shift structure itself is not dropped, (b) staff should be cross-trained across service SPECIALTIES (hair+nails, massage+beauty), not across shifts. **v3.0 adds:** service staff are recruited into ONE combined pool, not permanently assigned to "the AM team" or "the PM team" — individuals are rostered flexibly into AM or PM shifts, with a default weekly rotation policy (below), rather than being hired as AM-only or PM-only from day one.
 
 ---
 
-## The Instruction — Corrected
+## The Instruction — Refined
 
-Anthony's actual ask: recruit and roster service staff who are **cross-trained/qualified across multiple SERVICE ROLES** (e.g. a hair stylist also qualified in nails; a massage therapist also qualified in beauty) — for roster flexibility, sick-leave/holiday coverage, and broader service range per staff member. **Roles** in this context means the service specialty (massage/hair/nail/beauty, and separately phlebotomist/manager/reception) — **not** AM vs PM shift assignment. The AM shift (GTT support model, 07:00-13:00) and PM shift (individual services, 12:00-18:00) remain two separate, distinct shifts, as originally structured — this instruction does not touch shift timing or structure at all.
+Anthony's refinement, via the coordinator: hiring does not need to be split into separate AM-only and PM-only postings. Service staff are **one flexible pool**, rostered into AM or PM shifts as needed — **on top of** the cross-role qualification already established in v2.0 (hair+nails, massage+beauty etc.). This is genuinely different from both prior versions:
 
-**v1.0 of this document (superseded) incorrectly read "dual/multi-role" as "dual-shift" (AM+PM flexibility for the same person) — this was a misinterpretation, corrected same day per direct founder correction.** The AM/PM shift split, titles, and separate rostering by shift remain exactly as they were in `staff-plan.md` §2A and `pm-staffing-roster.md` before this document was first created.
+- **v1.0 (wrong, reverted):** staff work both AM and PM shifts flexibly, potentially the same day — misread the instruction entirely.
+- **v2.0 (correct as far as it went, now extended):** cross-train across service specialties, AM and PM remain two entirely separate hiring pools and ads.
+- **v3.0 (this version):** cross-train across service specialties (unchanged from v2.0) AND recruit into one combined pool, with individuals rostered into either shift on a rotating basis — **not mixing AM and PM within the same week**. Anthony asked the coordinator for a recommendation on rotation cadence; the coordinator recommended **week-on-AM / week-on-PM rotation** for predictability, and Anthony has not overridden it — **this is the default policy until Anthony says otherwise, not a final locked decision.**
 
-**Manager/Receptionist change — this part was correct in v1.0 and is unaffected by the correction:** hours run from opening until the last AM package client leaves (not a fixed PM cutoff), and the role requires beauty-field industry experience. Retained as-is below.
+**AM and PM shift windows themselves are unchanged:** AM = 07:00-13:00 (GTT support model), PM = 12:00-18:00 (individual services) — same times, same structure, same titles. What changes is that a given staff member's week is assigned to one shift block or the other, rotating over time, rather than being permanently fixed to one shift as their whole employment.
 
 ---
 
-## What Actually Changes
+## Default Rostering Policy — Week-On/Week-Off Rotation
 
-This is genuinely narrower than v1.0's (wrong) interpretation. The change is about **hiring criteria and role breadth**, not shift structure:
+- **Unit of rotation: one calendar week.** A staff member works either all-AM shifts or all-PM shifts for a given week, then rotates to the other shift the following week (or per whatever cadence the Venue Manager sets — week-on/week-off is the starting default, not a fixed forever-rule).
+- **Why week-level, not day-level:** day-to-day AM/PM mixing was explicitly rejected (that was v1.0's error) — predictability for both the staff member and the roster is the stated reason for the coordinator's recommendation, consistent with `pm-staffing-roster.md`'s existing "booking-driven, but not chaotic" rostering philosophy.
+- **This is a recommendation, not yet Anthony-confirmed as final** — flagged explicitly per the coordinator's own framing ("he hasn't overridden it, use it as the default policy unless told otherwise"). If Anthony later specifies a different cadence (e.g. fortnightly, or a fixed % split), this section updates accordingly.
+- **Interaction with cross-role qualification (v2.0):** a Massage+Beauty dual-qualified staff member, for example, could be rostered on their "AM week" primarily doing Massage (if that's where AM demand sits that week) and on their "PM week" primarily doing Beauty (if that's where PM demand sits) — the two dimensions (which shift block, which service specialty) are independent and both flexible, within the person's actual qualifications.
 
-1. **Recruit multi-qualified candidates within each shift, not single-specialty hires.** Instead of hiring 1 person who is only a Nail Technician and a separate person who is only a Hairdresser, prefer candidates who hold qualifications in 2+ service lines (e.g. Nail Technology + Hairdressing, or Massage + Beauty) where the trades genuinely allow it.
-2. **Trade-qualification reality check — carried forward correctly from `multirole-CORRECTION.md`, and it constrains this instruction too:**
-   - **Massage + Beauty:** genuine, already-established cross-training pool (shared Cert IV tier under MA000005). This pairing is straightforward to recruit for and already used in `multirole-CORRECTION.md`'s AM headcount reduction (8→7 staff).
-   - **Nail Technology (Cert III SHB30115) and Hairdressing (Cert III SHB30416):** separate trade qualifications, no natural training overlap. A genuinely dual-qualified Hair+Nail candidate is possible (someone who has completed both certificates) but is **a rarer hire, not a training pathway GTT Center Perth can create quickly** — this is a real constraint, not something to gloss over. Recruiting should actively prefer such candidates where they exist, but the roster cannot assume every Hair or Nail hire will also hold the other qualification.
-   - **Phlebotomist, Manager, Reception:** these are separate professional/compliance-gated roles (HLT37215 Certificate III in Pathology Collection for phlebotomy; beauty-field experience + Fair Work/financial competence for Manager) — cross-training a treatment-line staff member into phlebotomy is not realistic given the NPAAC/WDP credentialing requirement (see `industry-standards-reference-2026-07-28.md`), and is not what this instruction is asking for. Not modelled as an option here.
-3. **This affects hiring/job-ad language and relief-pool composition, not the AM/PM roster structure itself.** The existing AM/PM shift split, headcount-per-shift, and hours all stay exactly as previously documented in `staff-plan.md` §2A and `pm-staffing-roster.md` — those documents' AM/PM supersession banners (added in error during v1.0 of this document) are being reverted.
+---
+
+## Trade-Qualification Constraints (Unchanged From v2.0)
+
+- **Massage + Beauty:** genuine, already-established cross-training pool (shared Cert IV tier under MA000005).
+- **Nail Technology (Cert III SHB30115) and Hairdressing (Cert III SHB30416):** separate trade qualifications, no natural training overlap — a dual Hair+Nail hire is possible but rarer, actively preferred where found, not assumed as the norm.
+- **Phlebotomist, Manager, Reception:** separate professional/compliance-gated roles, not part of this cross-training model (see `industry-standards-reference-2026-07-28.md`).
 
 ---
 
 ## Revised Job Ad Direction
 
-The combined "PM Casual Treatment Roles" ad drafted 2026-07-27 and the v1.0 "dual-role AM/PM" rewrite from earlier today are both being corrected: **the ad should ask for multi-role qualification combinations (e.g. "Hair + Nails," "Massage + Beauty"), not dual-shift AM/PM availability.** AM and PM roles remain separately advertised/rostered as they were before v1.0 of this document — see `pm-casual-roles-job-posting.md` v3.0 for the corrected ad.
+**One combined ad, not separate AM/PM ads** (this reverses v2.0's "AM and PM roles remain separately advertised" line — that line is now superseded by this refinement). The ad should communicate: (1) cross-role qualification is a genuine preference (hair+nails, massage+beauty), (2) the role is rostered into either AM or PM shift blocks on a rotating (default week-on/week-off) basis, not fixed to one shift permanently. See `pm-casual-roles-job-posting.md` v4.0 for the corrected combined ad, which also applies the legally-compliant "flexible hours, ideal for those returning to work or balancing family commitments" framing per Anthony's targeting instruction (see that document's own changelog for the discrimination-law reasoning).
 
 ---
 
-## Financial Impact — Recomputed Under the Corrected Model
+## Financial Impact — Reassessed Under the Refined Model
 
-**v1.0's flagged "financial impact needs recomputation" note was based on a shift-merge that isn't actually happening — re-assessing under the real, narrower instruction:**
+**v2.0's "no material change" conclusion needs re-checking under this refinement, not silently carried forward:**
 
-- **AM side:** unaffected beyond what `multirole-CORRECTION.md` already established (8→7 treatment staff via Massage+Beauty pooling, already reflected in the standing +A$25,087.07/month baseline via `am-staffing-by-volume.md`/`profit-loss-tables.md`). Anthony's new instruction to also seek Hair+Nail dual-qualified candidates **does not by itself reduce AM headcount below 7** — Nails and Hair still peak at 2 concurrent bookings each at 10-client volume (`multirole-CORRECTION.md`), so even a fully Hair+Nail-qualified pair would still need 2 people rostered across those 2 lines' combined 4 concurrent slots at peak — a genuine Hair+Nail dual hire changes *who* can be rostered where (roster flexibility, relief coverage), not how many bodies are needed at the AM volume peak.
-- **PM side:** unaffected — `pm-staffing-roster.md`'s 4-dedicated-casual-hire, hours-based costing model (A$440/weekday direct labor) stands as previously documented. This instruction doesn't touch PM headcount or hours.
-- **Relief pool:** this is where a real, if modest, saving exists. `staff-plan.md` §7B's existing relief-pool costing (~A$2,000/yr phlebotomist relief + a treatment-staff relief estimate within the existing A$15,000/yr placeholder) already assumed a Massage+Beauty dual-qualified relief person as the model for cross-trained backup coverage. Extending the *hiring preference* (not a structural change) to also seek Hair+Nail dual-qualified candidates where available could, if such hires are actually found, reduce the number of distinct relief specialists needed from 3 (Massage+Beauty, Nail-only, Hair-only per `staff-plan.md` §7B) toward 2 (Massage+Beauty, Hair+Nail) — **but this is contingent on actually finding and hiring dual-qualified Hair+Nail candidates, which §Trade-qualification reality check above flags as a rarer hire, not guaranteed.** Not booked as a confirmed saving; flagged as a possible, unquantified upside if recruiting succeeds.
-
-**Conclusion: the standing +A$25,087.07/month baseline is NOT materially changed by this corrected instruction.** Unlike v1.0's (wrong) shift-merge interpretation — which would have required real recomputation — the actual instruction (hiring preference for multi-role-qualified candidates within the existing AM/PM shift structure) does not change headcount, hours, or cost inputs to the existing model. It is a recruiting/relief-flexibility improvement, not a P&L-changing structural one. **This conclusion is computed, not assumed** — see the AM/PM/relief breakdown above for the reasoning, not just an assertion that nothing changed.
+- **Headcount:** still governed by the same peak-concurrency minimums established in `am-staffing-by-volume.md`/`multirole-CORRECTION.md` (7 treatment staff at AM peak, 10-client volume) and `pm-staffing-roster.md` (4 PM roles). **Rotating the same pool of people through AM and PM weeks does not, by itself, reduce the total number of people needed** — AM still needs 7 people rostered in any given AM week, PM still needs 4 people rostered in any given PM week; if the pool is smaller than 7+4=11 total heads, the same individuals must appear in both an "AM week" and cover PM some other week, which is exactly what the rotation enables, but doesn't shrink the per-week concurrent requirement.
+- **Where a genuine (if still unquantified) saving could exist:** if the combined pool is recruited at fewer than 11 total heads (e.g. 8-9 people rotating through both shifts across the roster cycle, rather than 7 AM-dedicated + 4 PM-dedicated with no overlap), the same people cover both shifts across weeks — this is a genuine headcount-pool reduction, distinct from the within-week concurrency floor. **This is the one respect in which v3.0 does have a real financial-planning implication v2.0 didn't fully capture** — v2.0 assumed AM and PM stayed two separate hiring pools (11 heads total); v3.0's combined pool could plausibly be smaller, but the exact number depends on how AM-week and PM-week demand actually overlap across the roster cycle, which is not yet knowable without real booking data.
+- **Not booked as a confirmed saving.** Flagged as the genuine open question for the Venue Manager to resolve once real rosters run — consistent with `dual-role-staffing-model` v2.0's existing practice of not inventing precision that doesn't exist yet.
+- **PM hours-cost and AM fixed-shift-cost mechanics are otherwise unchanged** — the standing +A$25,087.07/month baseline remains the operating assumption; not restated as newly confirmed unchanged, but not contradicted by this refinement either.
 
 ---
 
-## Manager/Receptionist Role — Hours and Requirement Change (Unaffected by This Correction, Retained From v1.0)
+## Manager/Receptionist Role — Hours and Requirement Change (Unaffected, Carried Forward From v2.0)
 
-**Hours:** previously a fixed split shift (07:00-12:00 AM block + 15:00-18:00 PM block, with a 12:00-15:00 break, per `staff-plan.md` §2A/§3). **Corrected per Anthony's instruction: hours now run from opening until the last AM package client leaves** — a variable end-of-AM-shift time driven by the actual day's booking volume/timetable, not a fixed 12:00 cutoff followed by a break. Needs the Venue Manager (once hired) to define the exact resulting daily hours pattern once real AM timetables are running.
-
-**New requirement:** beauty-field industry experience, not just admin/ops/reception experience.
+**Hours:** opening until the last AM package client leaves (variable, not a fixed PM cutoff/split shift).
+**Requirement:** beauty-field industry experience, not just admin/ops experience.
 
 ---
 
 ## Changelog
 
-**2026-07-28 (v1.0, superseded same day)** — Originally created interpreting Anthony's instruction as dropping the AM/PM shift split entirely (staff working both AM and PM shifts flexibly). **This was wrong** — corrected same day.
+**2026-07-28 (v1.0, superseded same day)** — Originally interpreted as dropping the AM/PM shift structure entirely. Wrong, corrected.
 
-**2026-07-28 (v2.0, this version)** — Corrected per direct founder correction, relayed via team meeting follow-up: "dual/multi-role" means cross-training across service SPECIALTIES (e.g. hair+nails, massage+beauty), not AM/PM shift flexibility. Anthony explicitly confirmed the AM/PM shift structure/titles are not being dropped. Reverted the AM/PM-split-dropped banners added to `staff-plan.md`, `pm-staffing-roster.md`, and `am-staffing-by-volume.md`. Rewrote the combined job ad (`pm-casual-roles-job-posting.md` v3.0) to ask for multi-role qualification combinations within the existing shift structure, not dual-shift availability. Recomputed financial impact under the corrected model: **no material change to the +A$25,087.07/month baseline** (computed, not assumed — see §Financial Impact above), a smaller effect than v1.0's flagged-but-unresolved shift-merge would have caused. Manager/Receptionist hours and beauty-field-experience requirement changes are unaffected by this correction and remain in force.
+**2026-07-28 (v2.0, superseded same day)** — Corrected to: cross-train across service specialties, AM/PM shift structure and separate AM/PM hiring pools both stand. This was partially right (specialty cross-training) and partially incomplete (kept AM/PM as separate hiring pools/ads, which the coordinator's refinement below removes).
+
+**2026-07-28 (v3.0, this version)** — Refined per coordinator relay: one combined service-staff pool (not separate AM/PM ads), individuals rostered flexibly into AM or PM per week, default policy is week-on-AM/week-on-PM rotation (Anthony's own recommendation via the coordinator, not yet overridden — flagged as default-not-final). Cross-role specialty qualification from v2.0 is retained unchanged, now explicitly modelled as independent from the shift-rotation dimension. Financial impact reassessed: unlike v2.0, this version does flag one genuine (if unquantified) potential saving — a smaller combined pool than 11 separate AM+PM heads — as an open question for real booking data to resolve, not assumed either way.
