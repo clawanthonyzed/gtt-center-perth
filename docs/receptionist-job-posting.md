@@ -2,11 +2,13 @@
 
 ## Job Description, Advertisement, and Hiring Process
 
-### Version 1.0 | 2026-07-27 | Owner: Fern (HR) | DRAFT — AWAITING ANTHONY APPROVAL, NOT YET POSTED
+### Version 2.0 | 2026-07-28 | Owner: Fern (HR) | DRAFT — AWAITING ANTHONY APPROVAL, NOT YET POSTED
+
+> **UPDATED 2026-07-28, supersedes v1.0 (2026-07-27).** Anthony's direct instruction: hours no longer end at a fixed 12:15pm — they now run from opening until the last AM package client leaves (variable, day-dependent). Added a beauty-field industry experience requirement (previously only medical/allied-health reception was "preferred," beauty-field was not mentioned at all — this is a genuine requirement change, not a wording tweak). See `dual-role-staffing-model-2026-07-28.md`.
 
 ---
 
-> **STATUS — DRAFT, NOT ACTIVE:** Built for Anthony's approval per his 2026-07-27 request. Same sequencing rule as the Venue Manager/Phlebotomist/PM Casual Roles postings: **do NOT post or begin outreach until a physical venue location is confirmed** (standing founder instruction, 2026-07-19). Per `staff-plan.md` §7, this role is hired at Recruitment Week 12, trained 3 weeks before soft open. Structural template: `phlebotomist-job-posting.md`.
+> **STATUS — DRAFT, NOT ACTIVE:** Built for Anthony's approval. Same sequencing rule as the Venue Manager/Service Staff postings: **do NOT post or begin outreach until a physical venue location is confirmed** (standing founder instruction, 2026-07-19). Per `staff-plan.md` §7, this role is hired at Recruitment Week 12, trained 3 weeks before soft open — timing to be reconfirmed against the new variable-hours model. Structural template: `phlebotomist-job-posting.md`.
 
 ---
 
@@ -16,9 +18,9 @@
 **Organisation:** GTT Center Perth (YETI Holding Trust)
 **Location:** [Suburb — to be confirmed once venue location is secured], Western Australia
 **Employment type:** Permanent part-time
-**Hours:** Monday–Friday, 7:15am–12:15pm (25hrs/week — earlier start to cover opening + pre-appointment check-ins)
+**Hours:** Monday–Friday, from opening (approx. 7:15am) until the last AM package client leaves — **variable, not a fixed cutoff** (corrected 2026-07-28; exact typical hours to be confirmed once real AM booking timetables are running — see `dual-role-staffing-model-2026-07-28.md`)
 **Award:** Clerks — Private Sector Award MA000002, Level 1 Grade 1
-**Remuneration:** ~A$26.17/hr (indicative, confirm against current FWC determination at time of hire) + 12% superannuation (~A$3,474/month total cost per `staff-plan.md` §3)
+**Remuneration:** ~A$26.17/hr (indicative, confirm against current FWC determination at time of hire) + 12% superannuation (monthly cost figure in `staff-plan.md` §3 is provisional, based on the prior fixed-hours model — flagged as needing recalculation once actual variable hours are confirmed)
 **Start date:** [To be set — Recruitment Week 12, 3 weeks before soft open]
 
 ---
@@ -55,11 +57,11 @@ The Receptionist is the first and last point of contact for every client — ope
 
 | Requirement | Detail |
 |---|---|
+| **Beauty-field industry experience (NEW REQUIREMENT, 2026-07-28)** | **Required** — direct experience working in a beauty/wellness/day-spa environment (reception, coordination, or practitioner background). Not just admin/ops/medical reception experience — this is a genuine change from the prior "preferred, medical/allied health" framing. |
 | Communication | Strong, warm, professional — maternal health context awareness |
 | Booking software | Fresha (or equivalent) — training provided in first week |
-| Experience | Medical/allied health reception experience preferred, not essential |
 | Background checks | National Police Clearance + Working with Vulnerable People check (WA) — required given the client population is pregnant women |
-| Availability | Early start (7:15am), Monday–Friday |
+| Availability | Early start (approx. 7:15am) through to variable AM-session end time, Monday–Friday |
 
 ---
 
@@ -71,11 +73,11 @@ A new maternal wellness venue concept, currently in planning, is seeking a Recep
 
 **What you'll do:** Open the venue, greet and coordinate pregnant clients through their GTT appointment and wellness services, manage bookings via Fresha, handle checkout and follow-up.
 
-**Hours:** Mon–Fri, 7:15am–12:15pm (25hrs/week)
+**Hours:** Mon–Fri, from opening until the last AM client leaves (variable — not a fixed finish time)
 **Pay:** ~A$26/hr + super
 **Location:** [Suburb — TBC once venue location confirmed]
 
-**You need:** Strong communication skills, comfort with booking software, Police clearance + Working with Vulnerable People check.
+**You need:** Beauty-field industry experience (required), strong communication skills, comfort with booking software, Police clearance + Working with Vulnerable People check.
 
 **Apply:** [email] with your CV. **Questions:** [contact]. Closes [date].
 
@@ -108,3 +110,5 @@ Screening (phone, 15 min) and in-person interview conducted by the Venue Manager
 ## Changelog
 
 **2026-07-27** — Created per Anthony's direct request to draft ads for all remaining unfilled roles per `staff-plan.md` §3/§7. Rates and hours sourced directly from `staff-plan.md`'s existing Receptionist role detail — not invented. Presented for approval, not posted.
+
+**2026-07-28 (v2.0 — hours and requirements updated)** — Anthony's direct instruction: hours changed from fixed 7:15am-12:15pm split-shift to "opening until last AM client leaves" (variable); added beauty-field industry experience as a required (not preferred) qualification. See `dual-role-staffing-model-2026-07-28.md`.

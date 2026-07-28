@@ -1,5 +1,7 @@
 # GTT Center Perth — AM Staffing by Client Volume (3-10/day)
 
+> **NOTE 2026-07-28 (not superseded, cross-referenced):** this document's AM-only verified timetables and Massage+Beauty pooling logic remain valid and are a direct input into the new dual-role staffing model — the AM-side headcount minimums calculated here (7-8 treatment staff depending on volume) still apply for the AM shift itself. What changes per Anthony's instruction is that the specific *people* filling these AM slots on a given day are now drawn from a combined AM/PM dual-role pool, not a permanently AM-only team. See `dual-role-staffing-model-2026-07-28.md` for the combined-pool model this document now feeds into.
+
 **Version:** 1.0 | **Date:** 2026-07-20
 **Purpose:** Anthony wants to roster AM staff based on how many clients actually book on a given day, not always run the full 10-client complement. This document gives the checked (solver-verified, not estimated) staffing requirement — phlebotomists and treatment staff by role — for every volume from 3 to 10 clients/day, plus a full-day roster for each volume.
 

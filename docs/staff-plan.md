@@ -1,5 +1,7 @@
 # GTT Center Perth — Staff Plan
 
+> **2026-07-28 SUPERSEDED — AM/PM STAFF SPLIT DROPPED.** Anthony's direct instruction: the AM/PM staff split is dropped entirely. All service staff (massage/hair/nail/beauty) must be dual/multi-role capable (AM or PM shift-flexible), recruited via one combined ad, not separate AM/PM ads. The Manager/Receptionist role's hours now run from opening until the last AM package client leaves (not a fixed PM cutoff/split shift), and the role now requires beauty-field industry experience. **See `dual-role-staffing-model-2026-07-28.md` — this is now the canonical staffing model, superseding the AM/PM split described in §2, §2A, and the Receptionist role detail in §3 below.** Financial-impact status: NOT assumed unchanged — flagged as requiring recomputation once a real dual-role headcount is validated (see that document's §Revised Roster Approach); the standing +A$25,087.07/month baseline should be treated as provisional pending that recomputation, not restated as current fact.
+
 > **2026-07-14 SUPERSEDED — PM MODEL CORRECTED.** References below to a single "PM Service Therapist" delivering "PM Spa Packages" (Package 1/2/3 pricing) are superseded. The confirmed PM model is: **4 dedicated casual hires** (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, delivering **individual standalone services** (not packages) at ~A$95/session average, staffed on actual hours worked — not a blanket shift. Corrected Month 5+ steady state: Total Revenue A$86,020/month, Total Fixed Costs A$79,357/month, **Net P&L +A$6,663/month** — profitable from Month 4 (+A$4,924/month). See `pm-staffing-roster.md` for the full roster, weekly template, and recalculated P&L — this is now the canonical PM reference, superseding this document's PM figures/structure below.
 
 **Version:** 1.0 | **Date:** 2026-06-05  
@@ -31,6 +33,8 @@ GTT Center Perth has no subtenants (Day 51) — 3D scan operator and dietitian r
 
 ## 2. ORGANISATIONAL STRUCTURE
 
+> **SUPERSEDED 2026-07-28:** this org chart (and §2A below) still shows a "Service Manager" AM-only branch and a separate "PM Service Therapist" — both stale relative to the current model even before today's change (see the 2026-07-14 top-of-document banner: PM is actually 4 dedicated casual hires per `pm-staffing-roster.md`, not 1 PM Service Therapist). Today's change goes further: **there is no longer a separate AM service branch and PM branch at all — one combined dual-role Service Staff pool covers both**, per `dual-role-staffing-model-2026-07-28.md`. The chart below is retained for historical reference only; see that document for the current org structure.
+
 ```
 YETI Holding Trust (Anthony Zed — Trustee)
     │
@@ -56,6 +60,8 @@ YETI Holding Trust (Anthony Zed — Trustee)
 ---
 
 ## 2A. AM/PM SHIFT ROSTER (CF-01 — Day 51 revision)
+
+> **SUPERSEDED 2026-07-28 — AM/PM split dropped.** The table below describes AM and PM as fixed, separate assignments per role — this is the exact model Anthony's 2026-07-28 instruction removes. See `dual-role-staffing-model-2026-07-28.md` for the current dual-role approach (same people flexibly rostered across AM and PM shifts based on bookings, not permanently assigned to one or the other). Retained below for historical reference only.
 
 12 roles total (11 AM-only/split-shift + 1 new PM hire), plus a relief pool. No AM/PM cohort doubling — the Day 50 "same 12 staff, split into cohorts" model is superseded (Anthony confirmed all 8 AM service staff plus both phlebotomists are needed simultaneously across the AM GTT window per the verified per-staff timetable). Canonical detail: `financial-break-even-staff.md` v2.0 §Shift Structure (CF-01) Day 51 revision.
 
@@ -209,21 +215,24 @@ Downtime between AM bookings (17-33% utilisation) follows the Staff Downtime Pro
 ---
 
 ### Receptionist / Customer Experience Coordinator
+
+> **UPDATED 2026-07-28 — see `dual-role-staffing-model-2026-07-28.md`:** Hours and requirements below corrected per Anthony's direct instruction. Hours no longer end at a fixed 12:15pm — they now run from opening until the last AM package client leaves (variable, day-dependent). A beauty-field industry experience requirement has been added (was previously only "preferred," not required, and was framed as medical/allied-health reception experience, not beauty-industry). Monthly cost figure below is retained from the fixed 25hrs/week model and is flagged as needing recalculation once the Venue Manager (once hired) confirms the actual resulting variable-hours pattern.
+
 **Status:** Permanent part-time  
 **Award:** Clerks — Private Sector Award MA000002  
 **Classification:** Level 1 Grade 1  
 **Base rate:** A$26.17/hr (MA000002 L1, 2026 — confirm against current determination)  
-**Hours:** Mon–Fri 7:15am–12:15pm (25hrs/week — earlier start to cover opening + pre-appointment check-ins)  
-**Monthly cost:**
+**Hours:** Mon–Fri, opening (7:15am) until the last AM package client leaves — variable, not a fixed 12:15pm cutoff (corrected 2026-07-28; previously fixed 25hrs/week — **flagged: actual weekly hours and monthly cost below need recalculation once real AM timetables define the typical "last client leaves" time**, see `dual-role-staffing-model-2026-07-28.md`)  
+**Monthly cost (retained from prior fixed-hours model, NOT yet recalculated for the new variable-hours structure — see flag above):**
 - Base wages: 25 × 4.33 × A$26.17 = A$2,832
 - Superannuation (12%): A$340
 - Leave provisions (10%): A$316
-- **Total: ~A$3,474/month**
+- **Total: ~A$3,474/month (provisional, pending recalculation)**
 
 **Requirements at hire:**
+- **Beauty-field industry experience (NEW REQUIREMENT, 2026-07-28 — not just preferred, now required)** — direct experience in a beauty/wellness/day-spa environment, not solely admin/ops/medical reception background
 - Strong communication — warm, professional, maternal health context awareness
 - Fresha booking system (train in first week)
-- Medical/allied health reception experience preferred
 - Police clearance (working with vulnerable clients)
 
 **Responsibilities:**
@@ -383,3 +392,5 @@ The existing A$15,000/yr relief line in `financial-break-even-staff.md` was a ge
 **2026-07-20 (staff growth plan + relief/backup staffing added)** — Added §7A (staff growth plan): an explicit, volume-triggered scaling rule (PM line utilisation/turned-away bookings, AM waitlist, Sunday trial) rather than a static headcount, per Anthony's feedback. Added §7B (relief/backup staffing): closes the gap Anthony flagged — every staffing section only counted day-to-day rostered headcount with no sick-leave/holiday coverage plan. Covers both phlebotomists (ties to the Venue Manager's first-aid/EpiPen role — recommends a cross-trained backup) and treatment staff (extends `pm-staffing-roster.md`'s existing Massage+Beauty dual-qualified relief pairing from PM-only to also cover AM absences). Cost impact flagged as directionally consistent with the existing A$15,000/yr relief line in `financial-break-even-staff.md`, not yet rebuilt bottom-up from real absence data.
 
 **2026-07-20 (PM packages committed)** — Updated §7A's cross-reference from the now-deleted `pm-package-exploration.md` to `pm-package-structure.md`, reflecting Anthony's confirmation that PM packages are a committed direction, not exploratory.
+
+**2026-07-28 (AM/PM staff split dropped)** — Anthony's direct instruction: drop the AM/PM staff split entirely, all service staff dual/multi-role capable (AM or PM shift-flexible), one combined recruitment ad not separate AM/PM ads. Manager/Receptionist hours changed to "opening until last AM client leaves" (was fixed split-shift with a 12:00-15:00 break) and a beauty-field industry experience requirement added. Added superseded banners to §2 (org chart), §2A (AM/PM shift roster table), and updated §3's Receptionist role detail directly. New canonical staffing-model document: `dual-role-staffing-model-2026-07-28.md`. **Financial impact NOT assumed unchanged** — flagged as requiring recomputation once a real dual-role headcount is validated; treat the standing +A$25,087.07/month baseline as provisional pending that work, not restated as current fact.
