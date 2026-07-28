@@ -4,15 +4,15 @@
 
 ---
 
-## 1. WDP (Western Diagnostic Pathology)
+## 1. WDP (Western Diagnostic Pathology) — REPLY RECEIVED, THREAD ACTIVE
 
-**Contact method: NO direct email published. Contact form only.**
+**STATUS UPDATE 2026-07-28 (later same day): WDP has replied — this is no longer a "pending" outreach.** Carole Rivers (Customer & Commercial Manager, Country) is engaged. Per Anthony: courier/GTT collection is feasible with the correct specimen tubes, and WDP wants (1) more detail on the venture's vision, and (2) to discuss on-site pathology staff presence. **Anthony has a draft reply already written and will send it himself — no action needed from this agent on the reply content.** This log entry exists purely to correct the record so the WDP thread doesn't keep showing as "pending" in this doc or `reed-partnerships.md`/`05_open_questions_for_founder.md`/`cutoff-time-CORRECTION.md`/`pathology-partnership-brief.md` when it has actually progressed to an active back-and-forth.
 
-Checked directly on https://www.wdp.com.au/clinicians/getting-started-with-us/ (fetched live 2026-07-28): the page has "Get started" and "Contact us" buttons, both linking to an in-page form (anchor `#submit`) — no email address is published anywhere on that page. This confirms the prior session's finding — not a stale carryover, independently re-verified.
+**Contact method used:** confirmed still the online enquiry form (not email — no email address exists for WDP, re-confirmed live on https://www.wdp.com.au/clinicians/getting-started-with-us/ 2026-07-28), consistent with the earlier correction. The reply itself may have come back via a different channel (email/phone) once WDP responded to the form submission — not confirmed which, not material to this correction.
 
-**Action required:** submit via the WDP website's contact form directly (cannot be "sent" as an email from this environment — no capability exists, and there is no email address to send to). If a phone-based route is preferred instead, WDP's published number is 08 9317 0999.
-
-**No ready-to-send email body applies here** since there's no email address — the enquiry needs to go through the web form or phone.
+**Open items from WDP's reply, per Anthony, for whoever picks this thread up next:**
+- Provide more detail on the venture's vision (marketing/business-plan framing, not just the operational courier question originally asked)
+- Discuss on-site pathology staff presence — this may affect the phlebotomist employment model (`staff-plan.md`'s "employed by GTT Center Perth, not WDP" model) if WDP is asking about their own staff presence on-site vs GTT's employed phlebotomists — **flagging as a genuine open question, not assuming which way this resolves.**
 
 ---
 
@@ -85,3 +85,5 @@ Checked directly on https://www.wdp.com.au/clinicians/getting-started-with-us/ (
 ## Changelog
 
 **2026-07-28** — Verified all 3 lab contacts fresh against live sources per Anthony's explicit instruction not to reuse anything from memory that might be stale. WDP: re-confirmed no email exists (form-only). PathWest: confirmed via direct fetch of PathWest's own Contact Us page. Clinipath: confirmed via search corroboration (direct page fetch blocked, flagged).
+
+**2026-07-28 (later same day) — WDP reply logged.** Carole Rivers (Customer & Commercial Manager, Country) responded — courier/GTT collection feasible with correct tubes, WDP wants more vision detail and wants to discuss on-site pathology staff presence. Anthony has a draft reply ready to send himself. Updated this doc so the WDP thread no longer shows as "pending" — corrected the same status elsewhere in the repo (`reed-partnerships.md`, `05_open_questions_for_founder.md`, `cutoff-time-CORRECTION.md`, `pathology-partnership-brief.md`).

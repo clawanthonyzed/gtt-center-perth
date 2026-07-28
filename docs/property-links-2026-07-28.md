@@ -2,6 +2,8 @@
 
 **Re-verified this session per Anthony's instruction for literal clickable URLs, not "a link exists" as a concept. Correction found vs the 2026-07-27 report below — flagged explicitly, not glossed over.**
 
+> **CORRECTED 2026-07-28 (same day):** Anthony clarified the actual size brief: **150sqm is the floor, no maximum specified.** The "likely oversized, recommend dropping" framing applied to 20 Parkland Road below was an unfounded assumption on this agent's part, not something Anthony ever specified as a constraint — corrected below, that framing is removed. Real occupancy-cost comparison should be against the actual rent budget (A$8,000/month = A$96,000/year, per `profit-loss-tables.md` — see `dual-role-staffing-model-2026-07-28.md`'s companion note or `rent-budget-2026-07-28.md`), not against an assumed sqm ceiling. Search should also widen beyond Osborne Park — no suburb restriction was ever given by Anthony.
+
 ---
 
 ## 1. 2A/236 Main Street, Osborne Park — CORRECTION: NO LONGER AVAILABLE
@@ -29,11 +31,13 @@ A second listing ID exists for the same address (18093774) — not checked this 
 
 ---
 
-## 3. 20 Parkland Road, Osborne Park — STATUS UNCLEAR, FLAGGED
+## 3. 20 Parkland Road, Osborne Park — STATUS UNCLEAR, SIZE FLAG REMOVED
 
 **URL:** https://www.commercialrealestate.com.au/property/20-parkland-road-osborne-park-wa-6017-16969571
 
-**Could not directly confirm current availability this session** — direct fetch of the listing page returned HTTP 403 (blocked), same as the Main Street listing above. Search results show this address is part of a larger A-grade office building (7 floors, NABERS 5-star, per Centuria/sidespace.com.au listings for the same building) with multiple different floor spaces advertised at different times (e.g. a 770sqm Level 7 space at $350/sqm found in a different listing for the same building) — **the specific 994sqm/28-parking listing flagged last session may or may not still be the current live listing for this address; not confirmed either way.** Given this address was already flagged last session as likely oversized for GTT Center Perth's ~150-250sqm target, and its live status is now also unconfirmed, **recommend dropping this lead rather than pursuing it further.**
+**Could not directly confirm current availability this session** — direct fetch of the listing page returned HTTP 403 (blocked), same as the Main Street listing above. Search results show this address is part of a larger A-grade office building (7 floors, NABERS 5-star, per Centuria/sidespace.com.au listings for the same building) with multiple different floor spaces advertised at different times (e.g. a 770sqm Level 7 space at $350/sqm found in a different listing for the same building) — **the specific 994sqm/28-parking listing flagged last session may or may not still be the current live listing for this address; not confirmed either way.**
+
+**CORRECTED 2026-07-28: the prior "likely oversized, recommend dropping" flag is removed** — Anthony confirmed 150sqm is a floor, not a target range, with no upper limit specified. This was an unfounded assumption on this agent's part. **The genuine open item is availability status (fetch blocked), not size** — worth a direct check (call the listing agent) if pursued, purely to confirm it's still on the market and to compare the real occupancy cost (rent + outgoings + GST, if this is the ~A$350/sqm building rate seen elsewhere in the search, that alone would be ~A$348,000+/yr for 994sqm — a genuine like-for-like comparison against the A$96,000/yr rent budget still needs doing before ruling this in or out, not assumed either way).
 
 ---
 
@@ -51,12 +55,21 @@ A second listing ID exists for the same address (18093774) — not checked this 
 |---|---|---|
 | 2A/236 Main Street, Osborne Park | https://www.commercialrealestate.com.au/property/2a-236-main-street-osborne-park-wa-6017-16172595 | **LEASED — do not pursue** (correction from 2026-07-27) |
 | 6/325 Harborne Street, Osborne Park | https://reiwa.com.au/6-325-harborne-street-osborne-park-4941752/ | **LIVE — only confirmed-active lead** |
-| 20 Parkland Road, Osborne Park | https://www.commercialrealestate.com.au/property/20-parkland-road-osborne-park-wa-6017-16969571 | **Unconfirmed status, likely oversized — recommend dropping** |
+| 20 Parkland Road, Osborne Park | https://www.commercialrealestate.com.au/property/20-parkland-road-osborne-park-wa-6017-16969571 | **Unconfirmed availability status (size flag removed 2026-07-28 — no max sqm specified)** |
 | Maylands (160sqm, 10 parking) | **No URL exists** | Unconfirmed, no replacement found this session |
 | South Perth Hardy St (216sqm, A$4,750/mo) | **No URL exists** | Unconfirmed, no replacement found this session |
 
 **Net effect: only 1 of the original 3 Osborne Park leads is both real and currently available.** This is a materially different picture from last session's report (which presented all 3 as live) — worth surfacing to Anthony directly rather than letting the correction sit quietly in a changelog.
 
+## Quinn's Search Brief — Corrected 2026-07-28
+
+- **Size:** 150sqm floor, **no maximum** (prior "150-250sqm target" framing used elsewhere in this repo, e.g. `location-scouting.md`, is too narrow — correct to "150sqm+, no upper limit" going forward)
+- **Suburb:** **widen beyond Osborne Park** — no suburb restriction has been given by Anthony; Osborne Park/Joondalup were prior sessions' own narrowing, not a founder instruction
+- **True occupancy cost comparison:** rent + outgoings + GST, compared against the real rent budget of **A$8,000/month = A$96,000/year** (see `profit-loss-tables.md` line 70, `dual-role-staffing-model-2026-07-28.md` companion note) — not a bare headline rent figure
+- **Availability status:** confirm current live/leased status directly (agent call or direct site check) before presenting any lead as active — do not repeat the 2A/236 Main Street error above (existence confirmed, current status not)
+
 ## Changelog
 
-**2026-07-28** — Re-verified all property leads per Anthony's explicit instruction for literal URLs and against the stated concern that last round had false regressions. Found 2A/236 Main Street is actually leased (not available) — correcting the 2026-07-27 report, which did not check current availability status, only listing existence. 6/325 Harborne Street confirmed genuinely live via direct page fetch. 20 Parkland Road's current status could not be confirmed (fetch blocked) and is flagged for dropping given both size and status uncertainty. Maylands/Hardy St replacement search still unsuccessful — flagged as a tooling limitation (WebFetch blocked on the primary listing sites) rather than guessed at.
+**2026-07-28** — Re-verified all property leads per Anthony's explicit instruction for literal URLs and against the stated concern that last round had false regressions. Found 2A/236 Main Street is actually leased (not available) — correcting the 2026-07-27 report, which did not check current availability status, only listing existence. 6/325 Harborne Street confirmed genuinely live via direct page fetch. 20 Parkland Road's current status could not be confirmed (fetch blocked). Maylands/Hardy St replacement search still unsuccessful — flagged as a tooling limitation (WebFetch blocked on the primary listing sites) rather than guessed at.
+
+**2026-07-28 (correction, same day)** — Removed the unfounded "likely oversized, recommend dropping" flag on 20 Parkland Road — Anthony confirmed 150sqm is a floor with no maximum, this agent's prior flag was an assumption not sourced from any actual instruction. Corrected Quinn's search brief: 150sqm+ no max, widen beyond Osborne Park, compare true occupancy cost against the real A$96,000/yr rent budget (sourced from `profit-loss-tables.md`, not previously looked up before this correction).

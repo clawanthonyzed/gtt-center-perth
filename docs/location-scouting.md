@@ -170,11 +170,13 @@ Southern metro corridor. Leach Hwy and Kwinana Freeway junction. Myaree is estab
 
 ## Search Strategy
 
-1. Engage commercial RE agent with **business park / light industrial** experience in Osborne Park/northern suburbs — not a retail specialist
-2. Search commercialrealestate.com.au: "Osborne Park commercial lease 150–250sqm" and "Joondalup commercial lease 150–250sqm"
-3. Agents to contact: Ray White Commercial WA (Osborne Park focus), CBRE Perth, Colliers Perth (Joondalup specialists), Knight Frank Perth
+> **CORRECTED 2026-07-28:** the "150–250sqm" range below is superseded — Anthony confirmed 150sqm is a floor, no maximum specified. The Osborne Park/Joondalup-only framing is also a prior-session narrowing, not a founder-given suburb restriction — widen the search. Compare true occupancy cost (rent + outgoings + GST) against the actual rent budget of A$8,000/month = A$96,000/year (`profit-loss-tables.md`), not a bare headline rent figure.
+
+1. Engage commercial RE agent with relevant experience for the actual space size once identified — not restricted to business park/light industrial or Osborne Park/northern suburbs specifically
+2. Search commercialrealestate.com.au: "[suburb] commercial lease 150sqm+" — no upper size bound, widen beyond Osborne Park/Joondalup
+3. Agents to contact: Ray White Commercial WA, CBRE Perth, Colliers Perth, Knight Frank Perth, AGORA Property Group (already engaged re: 6/325 Harborne St) — expand beyond Osborne Park/Joondalup-focused agents as the search widens
 4. Ask specifically for: **tenancies with own car parks or guaranteed dedicated spaces**
-5. Do NOT view any property without first confirming parking count
+5. Do NOT view any property without first confirming parking count AND current live/available status (see the 2A/236 Main Street lesson in `property-links-2026-07-28.md` — a listing existing is not the same as it being available)
 
 ---
 
@@ -214,7 +216,7 @@ Search conducted 2026-07-01 across commercialrealestate.com.au and REIWA.
 |---------|------|-------|-------|-------|--------------|---|
 | 2A/236 Main Street, Osborne Park | 144sqm | A$43,200/yr + outgoings A$15,038/yr + GST | Ground floor, ex-brokerage/retail, reverse cycle AC, kitchen/shower amenities | Ray White Commercial WA — Tom Jones (0478 771 117) / Lachlan Burrows (0499 552 296) | https://www.commercialrealestate.com.au/property/2a-236-main-street-osborne-park-wa-6017-16172595 | **LEASED — do not pursue** |
 | 6/325 Harborne Street, Osborne Park | 268sqm | A$55,000/yr net + GST | Retail/showroom type — slightly over target, negotiable, available immediately | AGORA Property Group — Shannon Swarts (0448 218 629) / Jonathan Kilborn (0404 796 137) | https://reiwa.com.au/6-325-harborne-street-osborne-park-4941752/ | **CONFIRMED LIVE — only active lead of the three** |
-| 20 Parkland Road, Osborne Park | 994sqm, 28 parking | TBC | Whole-floor office ~4-6x larger than the 150-250sqm target, part of a larger multi-floor A-grade building with varying space availability | commercialrealestate.com.au #16969571 | https://www.commercialrealestate.com.au/property/20-parkland-road-osborne-park-wa-6017-16969571 | **Status unconfirmed (fetch blocked) + likely oversized — recommend dropping** |
+| 20 Parkland Road, Osborne Park | 994sqm, 28 parking | TBC | Part of a larger multi-floor A-grade building with varying space availability. **Size flag removed 2026-07-28 — 150sqm is a floor, no max specified, this is not automatically oversized.** | commercialrealestate.com.au #16969571 | https://www.commercialrealestate.com.au/property/20-parkland-road-osborne-park-wa-6017-16969571 | **Status unconfirmed (fetch blocked) — confirm availability and true occupancy cost (rent+outgoings+GST vs A$96,000/yr budget) before ruling in or out** |
 
 ### Next Action (updated 2026-07-28)
 - **AGORA Property Group** — 6/325 Harborne Street is the only confirmed-live lead; contact Shannon Swarts (0448 218 629) or Jonathan Kilborn (0404 796 137)

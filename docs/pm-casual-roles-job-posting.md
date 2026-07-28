@@ -1,67 +1,60 @@
-# GTT Center Perth — Combined Service Staff Recruitment (Dual-Role, AM/PM)
+# GTT Center Perth — PM Casual Treatment Roles Recruitment
 
 ## Job Descriptions, Advertisement, and Hiring Process (Massage / Hair / Nail / Beauty)
 
-### Version 2.0 | 2026-07-28 | Owner: Fern (HR) | DRAFT — AWAITING ANTHONY APPROVAL, NOT YET POSTED
+### Version 3.0 | 2026-07-28 (corrected same day) | Owner: Fern (HR) | DRAFT — AWAITING ANTHONY APPROVAL, NOT YET POSTED
 
-> **REWRITTEN 2026-07-28, supersedes v1.0 (2026-07-27).** Anthony's direct instruction: drop the AM/PM staff split entirely — recruit via one combined service-staff ad, not separate AM/PM ads. This version replaces the original "PM Casual Treatment Roles" framing (a PM-only ad) with a single dual-role ad covering all 4 treatment lines, each explicitly recruited as AM/PM shift-flexible. See `dual-role-staffing-model-2026-07-28.md` for the full model this ad is built on.
-
----
-
-> **STATUS — DRAFT, NOT ACTIVE:** Do NOT post or begin outreach until a physical venue location is confirmed (standing founder instruction, 2026-07-19). Structural template: `phlebotomist-job-posting.md` / `venue-manager-job-posting.md`.
+> **CORRECTED 2026-07-28, supersedes v2.0 (same day).** v2.0 rewrote this ad as a dual-SHIFT (AM/PM flexible) ad, based on a misinterpretation of Anthony's instruction that was corrected same day: "i have not said anything about dropping the am/pm titles as we are still looking to operate in a shift model." **This is a PM-only ad again, as originally structured (v1.0, 2026-07-27) — the AM/PM shift split stands.** What's genuinely new vs v1.0: the ad now actively seeks candidates cross-trained across multiple SERVICE SPECIALTIES (e.g. Hair + Nails, Massage + Beauty), for roster flexibility and relief/sick-leave coverage within the PM shift — not AM/PM shift flexibility. See `dual-role-staffing-model-2026-07-28.md` v2.0 for the corrected model this ad is built on.
 
 ---
 
-## PART 1 — JOB DESCRIPTION (shared framing, 4 treatment lines, all dual-role)
+> **STATUS — DRAFT, NOT ACTIVE:** Do NOT post or begin outreach until a physical venue location is confirmed (standing founder instruction, 2026-07-19). Per `staff-plan.md` §7, these PM roles are hired at Recruitment Week 14, after AM staff are already in place. Structural template: `phlebotomist-job-posting.md` / `venue-manager-job-posting.md`.
 
-### Positions: Service Staff — Massage / Hairdresser / Nail Technician / Beauty Therapist (Dual-Role, AM & PM)
+---
+
+## PART 1 — JOB DESCRIPTION (shared framing, 4 PM treatment lines)
+
+### Positions: PM Casual Treatment Practitioner — Massage / Hairdresser / Nail Technician / Beauty Therapist
 **Organisation:** GTT Center Perth (YETI Holding Trust)
 **Location:** [Suburb — to be confirmed once venue location is secured], Western Australia
-**Employment type:** Permanent part-time or casual (mix depending on line and stage — see `dual-role-staffing-model-2026-07-28.md`; casual initially for newly-added lines/hours, consistent with existing ramp practice)
-**Hours:** **Dual-role — you will be rostered across BOTH our morning GTT-support window (approx. 07:00–13:00) AND our afternoon standalone-services window (approx. 12:00–18:00), based on the week's confirmed bookings.** Not a fixed AM-only or PM-only position. Actual weekly hours/day mix set by the Venue Manager's booking-driven roster, published weekly.
+**Employment type:** Casual (for first 3–6 months; review conversion to part-time at Month 3–6 for roles with proven, regular demand — see `pm-staffing-roster.md` Locked Decision #3)
+**Hours:** Monday–Friday, 12:00pm–6:00pm (ramping from ~15hrs/week at launch to ~30hrs/week by Month 4, per the same ramp curve as AM GTT volume) — **PM shift only, this is not an AM/PM dual-shift position.**
 **Awards:** Hair & Beauty Industry Award MA000005 (Massage, Hair, Nail, Beauty)
-**Remuneration:** rates depend on employment type and classification at hire (indicative casual range A$34–38/hr incl. loading per line, per `pm-staffing-roster.md`'s prior rate research — confirm against current FWC determination at time of hire) + 12% superannuation
-**Start date:** [To be set — see `staff-plan.md` §7 hiring sequence, timing to be reconfirmed against the new combined-pool model]
+**Remuneration:** Massage ~A$38/hr, Hairdresser ~A$36/hr, Beauty Therapist ~A$36/hr, Nail Technician ~A$34/hr (casual rates incl. loading, indicative — confirm against current FWC determination at time of hire) + 12% superannuation
+**Start date:** [To be set — Recruitment Week 14, after AM team is operational; see `staff-plan.md` §7]
 
 ---
 
 ### About GTT Center Perth
 
-GTT Center Perth is a concept currently in the planning/feasibility stage for Western Australia's first dedicated Glucose Tolerance Test (GTT) wellness venue. In the mornings, our service staff support pregnant clients during their mandatory GTT wait; in the afternoons, the same staff deliver standalone massage, hair, nail, and beauty services to the wider community. **This is one combined role, not two separate jobs** — you'll be trained and rostered to work confidently in both settings.
+GTT Center Perth is a concept currently in the planning/feasibility stage for Western Australia's first dedicated Glucose Tolerance Test (GTT) wellness venue. In the mornings we host pregnant women during their mandatory GTT wait (a separate AM team); in the afternoons, these 4 PM roles open our treatment rooms to walk-in/booked clients from the wider community — standalone massage, hair, nail, and beauty services, not linked to any clinical appointment.
 
 *Note for whoever posts this ad: "GTT Center Perth" is currently a working/placeholder name — check `brand-guide.md` for current naming status before external use.*
 
 ---
 
-### Role Overview (applies to all 4 lines)
+### Role Overview
 
-You deliver your specialty service — massage, hair, nail, or beauty — to whichever client population you're rostered for on a given shift: GTT clients during their wait (morning) or standalone booked/walk-in clients (afternoon). **Important trade-qualification note:** "dual-role" here means AM/PM shift flexibility within your own trade line — a Nail Technician works both AM and PM nail bookings, a Hairdresser works both AM and PM hair bookings. It does not mean cross-training into a different trade (e.g. a Nail Technician is not expected to also deliver massage) — Nail and Hair are separate, non-overlapping trade qualifications. **Massage and Beauty Therapy staff are the one exception where genuine cross-trade pooling is offered** (both sit under a shared Cert IV tier), and candidates dual-qualified in both are especially welcomed, though not required.
+Each PM Casual Treatment Practitioner delivers standalone individual services (not packages) in their specialty — massage, hair, nail, or beauty — during the 12:00pm–6:00pm PM shift. **We actively prefer candidates cross-qualified across 2 or more of these specialties** (e.g. Nail Technology + Hairdressing, or Massage Therapy + Beauty Therapy) — this broadens the service range you can offer clients and gives you and the venue more rostering flexibility, including covering colleagues' sick leave/holidays across your qualified lines. Single-specialty candidates are still very welcome — multi-qualification is a genuine preference, not a hard requirement, since we recognise dual Hair+Nail qualification in particular is less common than a single trade qualification.
 
 ---
 
-### Key Responsibilities (by line, same duties whether AM or PM shift)
+### Key Responsibilities (by line — you may be rostered across any line you're qualified in)
 
 **Massage Therapist**
-- Deliver 60-min massage treatments (pregnancy-safe technique for AM/GTT clients; general therapeutic massage for PM standalone clients)
-- Set up/pack down treatment room before/after each client; maintain client intake and consent records
+- Deliver 60-min massage treatments; set up/pack down treatment room; maintain client intake and consent records
 
 **Hairdresser**
-- Full hairdressing menu (cut, colour, style) across both AM and PM bookings
-- Maintain station hygiene and product inventory
+- Full hairdressing menu (cut, colour, style); maintain station hygiene and product inventory
 
 **Nail Technician**
-- Manicure and pedicure services (45–60 min)
-- Maintain nail station ventilation compliance and pregnancy-safe product inventory for AM clients
-- Sterilise/sanitise tools to AS 4187 standards
+- Manicure and pedicure services (45–60 min); maintain nail station ventilation compliance (WorkSafe WA local exhaust ventilation) and pregnancy-safe product inventory; sterilise/sanitise tools to AS 4187 standards
 
 **Beauty Therapist / Brows**
-- Brow shaping, waxing, tinting, facials
-- PPD-free tint products where servicing pregnant (AM) clients
+- Brow shaping, waxing, tinting, facials; PPD-free tint products where servicing pregnant clients
 
-**Shared (all 4 lines, both shifts)**
-- Process bookings/checkout via Fresha
-- Participate in monthly staff meeting
-- Flag any client-facing concerns to the Venue Manager
+**Shared (all lines)**
+- Process bookings/checkout via Fresha; participate in monthly staff meeting; flag any client-facing concerns to the Venue Manager
 
 ---
 
@@ -69,20 +62,20 @@ You deliver your specialty service — massage, hair, nail, or beauty — to whi
 
 | Line | Requirement |
 |---|---|
-| Massage | Cert IV Massage Therapy (HLT52015) minimum; pregnancy massage specialisation preferred given AM client mix |
+| Massage | Cert IV Massage Therapy (HLT52015) minimum; pregnancy massage specialisation a plus |
 | Hairdresser | Cert III Hairdressing (SHB30416) minimum, current registration |
 | Nail Technician | Cert III Nail Technology (SHB30115) |
 | Beauty Therapist | Cert III Beauty Therapy (SHB30115), waxing/brow proficiency |
-| All lines | **Genuine availability across both morning and afternoon shifts, on a rostered basis (not optional flexibility — this is core to the role)**; current First Aid (HLTAID011) preferred; National Police Clearance + Working with Vulnerable People check (WA) — required given AM client population includes pregnant women; own professional kit preferred |
+| **Preferred (all lines)** | **Qualification in a 2nd complementary specialty** — Massage+Beauty (natural pairing, shared Cert IV tier) or Hair+Nail (less common, still valued if held) |
+| All lines | Current First Aid (HLTAID011) preferred; National Police Clearance + Working with Vulnerable People check (WA); own professional kit preferred |
 
 ---
 
 ### What We Offer
 
-- A genuine dual-role position — broader hours availability and more consistent rostered income than a PM-only or AM-only casual position would offer
-- Small, purpose-driven team, founding service-staff roster
-- Above-standard rates for the sector
-- Clear path to part-time conversion for lines/hours proving out regular demand
+- A role that can grow with your qualifications — the more service lines you're qualified in, the more hours/rostering flexibility available to you
+- Clear path to part-time conversion at Month 3–6 if demand proves out
+- Small, purpose-driven team, founding PM roster
 
 ---
 
@@ -92,17 +85,17 @@ You deliver your specialty service — massage, hair, nail, or beauty — to whi
 
 ---
 
-**[MASSAGE THERAPIST / HAIRDRESSER / NAIL TECHNICIAN / BEAUTY THERAPIST] — Dual-Role AM/PM | New Wellness Concept | Perth WA**
+**PM CASUAL [MASSAGE THERAPIST / HAIRDRESSER / NAIL TECHNICIAN / BEAUTY THERAPIST] — New Wellness Concept | Perth WA**
 
-A new maternal wellness venue concept, currently in planning, is seeking a [role] for a genuine dual-role position — you'll work both our morning GTT-support shift and our afternoon standalone-services shift, rostered weekly around confirmed bookings.
+A new maternal wellness venue concept, currently in planning, is seeking a casual [role] for our afternoon (12pm–6pm) shift, Monday–Friday. **Dual-qualified in a second specialty (e.g. Hair+Nail, or Massage+Beauty)? Even better — tell us.**
 
-**What you'll do:** Deliver [massage / hair / nail / beauty] services to pregnant clients during their morning GTT wait, and to standalone walk-in/booked clients in the afternoon — same skillset, two client populations.
+**What you'll do:** Deliver standalone [massage / hair / nail / beauty] services to walk-in and booked PM clients.
 
-**Hours:** Genuinely dual-role, Mon–Fri, roughly 07:00–13:00 AND 12:00–18:00 windows (not both every day — rostered per week against real bookings)
-**Pay:** A$[34-38]/hr (incl. loading if casual) + super
+**Hours:** Mon–Fri, 12:00pm–6:00pm, casual (ramping from ~15 to ~30 hrs/week over the first 4 months)
+**Pay:** ~A$[34-38]/hr casual (incl. loading) + super
 **Location:** [Suburb — TBC once venue location confirmed]
 
-**You need:** Relevant Cert III/IV qualification, genuine AM+PM availability, own kit preferred, Police clearance + Working with Vulnerable People check.
+**You need:** Relevant Cert III/IV qualification, own kit preferred, Police clearance + Working with Vulnerable People check. A second complementary qualification is a genuine plus, not required.
 
 **Apply:** [email] with your CV. **Questions:** [contact]. Closes [date].
 
@@ -110,7 +103,7 @@ A new maternal wellness venue concept, currently in planning, is seeking a [role
 
 ## PART 3 — RECRUITMENT CHANNELS
 
-**Do not activate until the venue location is confirmed.**
+**Do not activate until the venue location is confirmed and the AM team is already operational (Recruitment Week 14 per `staff-plan.md` §7).**
 
 | Channel | Notes |
 |---|---|
@@ -123,7 +116,7 @@ A new maternal wellness venue concept, currently in planning, is seeking a [role
 
 ## PART 4 — INTERVIEW PROCESS
 
-Screening (phone, 15 min) and in-person trial shift, conducted by the Venue Manager. Standard reference check (1 required) plus pre-employment checks (Police Clearance, WWVP) as per `venue-manager-job-posting.md` Part 4 structure. **Add a specific screening question on genuine AM+PM availability** — this is core to the dual-role model, not a nice-to-have, and should be confirmed before an offer, not discovered after.
+Screening (phone, 15 min) and in-person trial shift, conducted by the Venue Manager. Standard reference check (1 required) plus pre-employment checks (Police Clearance, WWVP). **Ask directly about any 2nd-specialty qualification** so it's captured for rostering purposes, even if not required for the role.
 
 ---
 
@@ -135,6 +128,8 @@ Screening (phone, 15 min) and in-person trial shift, conducted by the Venue Mana
 
 ## Changelog
 
-**2026-07-27** — Created as "PM Casual Treatment Roles" (v1.0) — a PM-only ad for 4 separate casual hires, per the then-current AM/PM split model.
+**2026-07-27 (v1.0)** — Created as "PM Casual Treatment Roles" — a PM-only ad for 4 separate casual hires.
 
-**2026-07-28 (v2.0 — rewritten for dual-role model)** — Anthony's direct instruction dropped the AM/PM staff split entirely: rewritten from a PM-only ad into one combined Service Staff ad covering all 4 lines as AM/PM dual-role positions, per `dual-role-staffing-model-2026-07-28.md`. Added the trade-qualification caveat (dual-role means AM/PM flexibility within a trade line, not cross-trade pooling, except Massage/Beauty which already cross-trains) so the ad doesn't overstate what candidates are being asked to do. Rates carried forward from v1.0's `pm-staffing-roster.md`-sourced figures pending Anthony's approval and the flagged financial recomputation in `dual-role-staffing-model-2026-07-28.md`.
+**2026-07-28 (v2.0, superseded same day)** — Incorrectly rewritten as a dual-SHIFT (AM/PM flexible) ad, based on a misinterpretation of Anthony's instruction.
+
+**2026-07-28 (v3.0, this version — corrected)** — Reverted to a PM-only ad (AM/PM shift split stands, per Anthony's direct correction). Added a genuine, correctly-scoped change: actively seeking candidates cross-qualified across 2+ service specialties (Hair+Nail, Massage+Beauty) as a preference, not a requirement, for roster/relief flexibility within the PM shift — this is what Anthony actually asked for. See `dual-role-staffing-model-2026-07-28.md` v2.0.

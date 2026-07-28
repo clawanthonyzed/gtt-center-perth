@@ -25,14 +25,16 @@ What general chemistry sources did confirm: fluoride-oxalate (glucose) tubes are
 
 ---
 
-## Update (2026-07-19) — WDP Contacted, Awaiting Reply
+## Update (2026-07-28) — WDP Replied, Active Conversation
 
-**Corrected 2026-07-27:** WDP was contacted via WDP's own online enquiry form, not by email as this section originally stated — there is no WDP email thread. **Still awaiting a reply as of this update — the 11:30/12:30 conflict remains unresolved.** PathWest and Clinipath (the contingency/secondary pathology partners) were emailed 2026-07-27 — see `docs/05_open_questions_for_founder.md` Q6 and `pathwest-clinipath-outreach-2026-07-27.md`.
+**WDP has replied as of 2026-07-28** — Carole Rivers (Customer & Commercial Manager, Country) confirmed courier/GTT collection is feasible with the correct specimen tubes, and asked for more detail on the venture's vision plus a discussion of on-site pathology staff presence. **The specific 11:30 vs 12:30 cutoff-time question has NOT yet been directly answered in what's been relayed — still open**, to be raised in Anthony's next reply (he has a draft ready to send himself). PathWest and Clinipath were emailed 2026-07-27, still awaiting reply — see `docs/05_open_questions_for_founder.md` Q6 and `lab-outreach-2026-07-28.md`.
 
-**When WDP replies, Anthony will ask two questions in the same conversation:**
+**When the cutoff-specific exchange happens, Anthony will ask two questions:**
 1. The actual specimen dispatch cutoff time (resolves the 11:30 vs 12:30 conflict directly).
 2. **Whether overnight blood storage + next-day lab collection is viable** as an alternative model to the same-day courier-cutoff constraint.
 
-**Question 2 is not answered here and should not be speculated on** — it depends entirely on WDP's clinical/logistics answer (specimen stability under their actual storage conditions, their lab's next-day intake process, and whether this fits their Licensed Collection Centre QMS). If viable, it could materially change the AM window's end-time constraint that currently drives the whole Scenario C/D capacity ceiling — but that's WDP's determination to make, not an assumption to build into any document ahead of their reply. Once a reply is received, update this file and `docs/05_open_questions_for_founder.md` with the actual answer(s) before they feed into any capacity/scheduling document.
+**Question 2 is not answered here and should not be speculated on** — it depends entirely on WDP's clinical/logistics answer (specimen stability under their actual storage conditions, their lab's next-day intake process, and whether this fits their Licensed Collection Centre QMS). If viable, it could materially change the AM window's end-time constraint that currently drives the whole Scenario C/D capacity ceiling — but that's WDP's determination to make, not an assumption to build into any document ahead of their reply. Once received, update this file and `docs/05_open_questions_for_founder.md` with the actual answer(s) before they feed into any capacity/scheduling document.
 
-**2026-07-27 correction note:** the heading and body above previously said "WDP Emailed" — corrected to reflect the actual channel used (online enquiry form). Same PathWest/Clinipath outreach question that was open here is now actioned — both emailed 2026-07-27.
+**2026-07-27 correction note (retained for trace):** the heading and body previously said "WDP Emailed" — corrected to reflect the actual channel used (online enquiry form). PathWest/Clinipath both emailed 2026-07-27.
+
+**2026-07-28 update:** WDP's reply logged above — this section corrected from "awaiting reply" framing to reflect the active conversation.
