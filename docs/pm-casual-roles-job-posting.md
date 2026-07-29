@@ -2,13 +2,13 @@
 
 ## Job Descriptions, Advertisement, and Hiring Process (Massage / Hair / Nail / Beauty)
 
-### Version 4.0 | 2026-07-28 (refined same day) | Owner: Fern (HR) | DRAFT — AWAITING ANTHONY APPROVAL, NOT YET POSTED
+### Version 4.1 | 2026-07-28 (refined same day), status updated 2026-07-29 | Owner: Fern (HR) | ON HOLD — NOT READY FOR APPROVAL
 
 > **REFINED 2026-07-28, supersedes v3.0 (same day).** v3.0 correctly reverted to a PM-only ad with cross-role qualification preference, but the coordinator's refinement removes the AM/PM-separate-ads split entirely: **one combined ad, one combined hiring pool**, individuals rostered flexibly into AM or PM shift blocks on a rotating basis (default: week-on-AM/week-on-PM, Anthony's own recommendation, not yet overridden). Cross-role specialty qualification (hair+nails, massage+beauty) from v3.0 is retained. Also applies Anthony's legal-wording instruction: target return-to-work/flexible-hours candidates without naming a protected characteristic ("mums") directly — see §Legal Wording Note below. See `dual-role-staffing-model-2026-07-28.md` v3.0 for the full model.
 
 ---
 
-> **STATUS — DRAFT, NOT ACTIVE:** Do NOT post or begin outreach until a physical venue location is confirmed (standing founder instruction, 2026-07-19). Structural template: `phlebotomist-job-posting.md` / `venue-manager-job-posting.md`.
+> **STATUS — ON HOLD (updated 2026-07-29):** Cannot post or begin recruitment until **BOTH** a pathology partnership (WDP/PathWest/Clinipath) **AND** a physical venue location are confirmed — a two-gate condition. This is parked, not "ready for approval" — no action needed on this ad until both gates clear. Structural template: `phlebotomist-job-posting.md` / `venue-manager-job-posting.md`.
 
 ---
 

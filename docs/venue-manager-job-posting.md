@@ -2,11 +2,11 @@
 
 ## Job Description, Advertisement, and Hiring Process
 
-### Version 1.0 | 2026-07-19 | Owner: Fern (HR) | READY TO USE — NOT YET POSTED
+### Version 1.1 | 2026-07-19, status updated 2026-07-29 | Owner: Fern (HR) | ON HOLD — NOT READY FOR APPROVAL
 
 ---
 
-> **STATUS — READY, NOT ACTIVE:** This document is built in advance so recruitment can start immediately once the gating condition below is met. **Do NOT post this advertisement or begin outreach yet.** Per Anthony's direct instruction (2026-07-19): GTT Center Perth is not recruiting or looking for any staff, including the Venue Manager, until a physical venue location is confirmed. This is a change from this document's structural template (`phlebotomist-job-posting.md`), which says "post immediately" — that urgency does not apply here. Once a location is secured, the Venue Manager becomes the first hire and this document activates — see `staff-plan.md` §7 and `hr-framework.md` §13.
+> **STATUS — ON HOLD (updated 2026-07-29):** Anthony's decision: cannot post this advertisement or begin recruitment until **BOTH** a pathology partnership (WDP/PathWest/Clinipath) **AND** a physical venue location are confirmed — a two-gate condition, not just the location gate previously stated. This document is built in advance so recruitment can start once both gates clear, but it is not "ready for approval" in the interim — it's parked. Once both a partnership and a location are secured, the Venue Manager becomes the first hire and this document activates — see `staff-plan.md` §7 and `hr-framework.md` §13.
 
 ---
 

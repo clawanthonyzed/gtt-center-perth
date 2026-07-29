@@ -1,8 +1,10 @@
 # GTT Center Perth — Package Price-Increase Timing: Financial Comparison
 
+> **DECIDED 2026-07-29 — DEFERRED, not a live open option among three.** Anthony's decision: no price increase until the venue has been operating **12+ months**. Not Month 3, not Month 4 — deferred entirely. The Month 3/Month 4 scenarios and the "12-month review checkpoint" below are retained as historical financial-comparison reference only, not as three live options awaiting a choice — the choice has been made (defer to 12+ months). Do not re-present this as an open decision in future sessions.
+
 **Compiled:** 2026-07-19 | **Compiled by:** Grace (Operations Manager)
-**Purpose:** New deliverable requested by Anthony — compare "increase package price at Month X" vs "keep price the same," using existing financial-model figures, to support the Q4 open-question decision (package price-increase timing) in `docs/05_open_questions_for_founder.md`.
-**This document does not make the decision for Anthony — it lays out the financial comparison so he can.**
+**Purpose:** New deliverable requested by Anthony — compare "increase package price at Month X" vs "keep price the same," using existing financial-model figures, to support the Q4 open-question decision (package price-increase timing) in `docs/05_open_questions_for_founder.md`. **Decision made 2026-07-29 — see banner above.**
+**This document does not make the decision for Anthony — it lays out the financial comparison so he can.** *(Historical note: it has since been made — deferred to 12+ months.)*
 
 ---
 
@@ -70,7 +72,9 @@ The existing sensitivity table in `financial-break-even-staff.md` (built on the 
 
 ---
 
-## 4A. Concrete Price Targets — Added 2026-07-27 Per Anthony's Request
+## 4A. Concrete Price Targets — Added 2026-07-27, DECISION MADE 2026-07-29
+
+> **The three options below are historical comparison reference only. Anthony has decided: DEFER to 12+ months of operation, not Month 3 or Month 4.** This table is retained to show the reasoning that was weighed, not as a live menu of choices.
 
 Anthony asked specifically what Package 1/2 actually go **to**, not just when — and to add a 12-month review as a third checkpoint option alongside Month 3/Month 4. This section adds real dollar figures against each timing option in §4 above, so all three can be compared side-by-side on one basis.
 
@@ -107,3 +111,5 @@ See `docs/05_open_questions_for_founder.md` Q4 for the standing open question th
 **2026-07-20 (package renumbering)** — Updated "Package 2/Package 3" references to "Package 1 (A$250)/Package 2 (A$300)" per `services-pricing-locked.md`'s renumbering.
 
 **2026-07-27 (concrete targets + 12-month option added)** — Per Anthony's direct request: added §4A with actual proposed Package 1/Package 2 dollar targets for the Month 3 and Month 4 timing options (previously this document discussed timing and mechanics but never stated a target price), and added a third option — a 12-month review checkpoint — as a decision-deferral alternative to committing to a number now. All three now presented side-by-side for Anthony's decision. Figures are illustrative, consistent with §3's existing "modest A$10-20/client" finding, not a newly re-derived elasticity model.
+
+**2026-07-29 (decision made — deferred to 12+ months)** — Anthony's decision: no price increase until the venue has been operating 12+ months. Not Month 3, not Month 4. This document's three-option comparison is no longer a live open question — updated banners throughout to reflect the decision as made, not pending. `docs/05_open_questions_for_founder.md` Q4 should be updated to match (cross-reference, not duplicated here).

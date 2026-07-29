@@ -21,8 +21,8 @@ Every AM capacity figure above 8 clients/day (the entire case for Scenario C, +2
 
 ## NOT BLOCKING, BUT NEEDS A DECISION
 
-### Q4. Package Price-Increase Timing
-**Status:** Open, no fixed answer. **New deliverable added 2026-07-19:** `docs/price-increase-comparison.md` now lays out the financial comparison between increasing at various months vs holding price steady, using [financial-model.md](financial-model.md)/[profit-loss-tables.md](profit-loss-tables.md) figures, to support this decision when Anthony is ready to make it.
+### Q4. Package Price-Increase Timing — RESOLVED 2026-07-29
+**Status:** **DECIDED.** Anthony: no price increase until the venue has been operating 12+ months — not Month 3, not Month 4. Deferred entirely. See `docs/price-increase-comparison.md` for the retained financial-comparison reasoning (historical reference, not a live open question).
 
 ### Q6. Pathology Partnership Outreach — 3 of 3 Contacted, WDP Now Active (updated 2026-07-28)
 **Status:** In progress. **WDP: replied (2026-07-28) — Carole Rivers engaged, feasible with correct tubes, wants vision detail + on-site staff discussion, Anthony has a draft reply ready. PathWest: emailed 2026-07-27 (info.pathwest@health.wa.gov.au), awaiting reply. Clinipath: emailed 2026-07-27 (businessdevelopment@clinipath.net), awaiting reply.** See [reed-partnerships.md](reed-partnerships.md) / [pathology-partnership-brief.md](pathology-partnership-brief.md) for status tracking going forward, and `pathwest-clinipath-outreach-2026-07-27.md` / `lab-outreach-2026-07-28.md` for the outreach/reply copy.

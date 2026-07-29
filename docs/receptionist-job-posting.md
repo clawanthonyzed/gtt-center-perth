@@ -2,13 +2,13 @@
 
 ## Job Description, Advertisement, and Hiring Process
 
-### Version 2.0 | 2026-07-28 | Owner: Fern (HR) | DRAFT — AWAITING ANTHONY APPROVAL, NOT YET POSTED
+### Version 2.1 | 2026-07-28, status updated 2026-07-29 | Owner: Fern (HR) | ON HOLD — NOT READY FOR APPROVAL
 
 > **UPDATED 2026-07-28, supersedes v1.0 (2026-07-27).** Anthony's direct instruction: hours no longer end at a fixed 12:15pm — they now run from opening until the last AM package client leaves (variable, day-dependent). Added a beauty-field industry experience requirement (previously only medical/allied-health reception was "preferred," beauty-field was not mentioned at all — this is a genuine requirement change, not a wording tweak). See `dual-role-staffing-model-2026-07-28.md`.
 
 ---
 
-> **STATUS — DRAFT, NOT ACTIVE:** Built for Anthony's approval. Same sequencing rule as the Venue Manager/Service Staff postings: **do NOT post or begin outreach until a physical venue location is confirmed** (standing founder instruction, 2026-07-19). Per `staff-plan.md` §7, this role is hired at Recruitment Week 12, trained 3 weeks before soft open — timing to be reconfirmed against the new variable-hours model. Structural template: `phlebotomist-job-posting.md`.
+> **STATUS — ON HOLD (updated 2026-07-29):** Cannot post or begin recruitment until **BOTH** a pathology partnership (WDP/PathWest/Clinipath) **AND** a physical venue location are confirmed — a two-gate condition. This is parked, not "ready for approval." Per `staff-plan.md` §7, this role is hired at Recruitment Week 12 once recruitment overall begins — timing to be reconfirmed once both gates clear. Structural template: `phlebotomist-job-posting.md`.
 
 ---
 
