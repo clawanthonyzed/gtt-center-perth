@@ -1,6 +1,8 @@
 # GTT Center Perth — Conceptual Floor Plan
 
-**Version:** 1.1 | **Date:** 2026-07-01, updated 2026-07-28 | **Author:** Idea Lobster (CEO Advisory) + Grace
+> **PARKED 2026-07-29 — Anthony determined this team lacks real architectural/spatial design capability to produce a workable circulation layout. A professional architect/interior designer is needed for the actual floor plan once a venue is confirmed. The ~249sqm total area target and compliance findings below remain valid inputs for that future work; the room-box arrangement itself should not be used as a real layout.**
+
+**Version:** 1.1 | **Date:** 2026-07-01, updated 2026-07-28, parked 2026-07-29 | **Author:** Idea Lobster (CEO Advisory) + Grace
 **Status:** Concept only — for architect brief. Not a construction document.
 **Target area:** ~246-250sqm usable floor area including growth reservations (up from 180-200sqm, see §Growth Reservations below)
 
