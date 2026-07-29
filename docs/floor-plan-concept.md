@@ -1,9 +1,12 @@
 # GTT Center Perth — Conceptual Floor Plan
 
-**Version:** 1.0 | **Date:** 2026-07-01 (Empire Day 71)
-**Author:** Idea Lobster (CEO Advisory) + Grace
+**Version:** 1.1 | **Date:** 2026-07-01, updated 2026-07-28 | **Author:** Idea Lobster (CEO Advisory) + Grace
 **Status:** Concept only — for architect brief. Not a construction document.
-**Target area:** 180–200sqm usable floor area
+**Target area:** ~246-250sqm usable floor area including growth reservations (up from 180-200sqm, see §Growth Reservations below)
+
+> **UPDATED 2026-07-28 — GROWTH RESERVATIONS ADDED (mirrors phlebotomy Scenario D).** Per Anthony's instruction: one extra station/room added per service type (hair, nails, massage, beauty/facial) beyond the current day-one committed model, as a **space reservation only** — not staffed, not costed in the current financial model (`profit-loss-tables.md`, `staff-plan.md`, `am-staffing-by-volume.md` are all unaffected by this change). Same treatment as the existing phlebotomy Scenario D (2→3 chairs, documented but not committed/staffed). New rooms/stations are clearly labelled "GROWTH RESERVATION" throughout this document — do not read them as part of the current 10-client/day, 2x-per-category staffing model. **Also fixed in this update:** Treatment Rooms now specify a second sink (hands-free tap) per WA Skin Penetration Code §7.1-7.2 finding (`standards-floorplan-crosscheck-2026-07-28.md`) — see §Critical Design Requirements below.
+>
+> **Pre-existing inconsistency flagged, not newly introduced:** this document's room-schedule sqm figures (Treatment Rooms 1/2 = 14sqm each) differ slightly from the more recent, to-scale `floor-plan-v3.svg` (Massage 1/2 = ~12sqm each, dated 2026-07-08, one week after this document). The growth-reservation sqm calculations below use the SVG's more current, dimensioned figures as the primary basis (flagged explicitly), with this document's room schedule updated to match for consistency going forward.
 
 ---
 
@@ -21,19 +24,21 @@
 
 ## Room Schedule
 
+**Day-One Committed Model (current, staffed, costed — matches `staff-plan.md`'s 2x-per-category model):**
+
 | Room | Target sqm | Notes |
 |------|-----------|-------|
-| Reception / check-in | 12 | 2 workstations, retail display, waiting bench for arrivals |
-| GTT Lounge | 32 | 8 reclining/comfort chairs, TV, cafe counter, natural light preferred |
-| Blood Collection Room | 22 | 2 phlebotomy chairs, centrifuge, medical fridge, sharps, privacy screens, clinical sink |
-| Treatment Room 1 — Massage | 14 | Massage table, clinical sink, dimmer lighting, privacy lock |
-| Treatment Room 2 — Massage / Facial | 14 | Massage table or facial bed, clinical sink |
-| Treatment Room 3 — Facial / Beauty | 12 | Facial bed, beauty station, clinical sink |
-| Treatment Room 4 — Facial / Brows / Lashes | 12 | Facial bed, beauty mirror station, clinical sink |
-| Nail Station Area | 20 | 3 nail stations, LEV extraction (mandatory WorkSafe WA compliance) |
-| Hairdressing Area | 20 | 2 styling chairs, backwash basin, mirror wall, back bar |
+| Reception / check-in | 15 | 2 workstations, retail display, waiting bench for arrivals (sqm updated to match `floor-plan-v3.svg`) |
+| GTT Lounge | 35 | 8 reclining/comfort chairs, TV, cafe counter, natural light preferred (sqm updated to match SVG) |
+| Blood Collection Room | 18 | 2 phlebotomy chairs, centrifuge, medical fridge, sharps, privacy screens, clinical sink (sqm updated to match SVG) |
+| Treatment Room 1 — Massage | 12 | Massage table, **2 sinks (client hand-wash, hands-free tap + instrument decontamination)**, dimmer lighting, privacy lock — see §Critical Design Requirements |
+| Treatment Room 2 — Massage | 12 | Massage table, **2 sinks (as above)**, clinical sink |
+| Treatment Room 3 — Facial / Beauty | 11 | Facial bed, beauty station, **2 sinks (as above)** |
+| Treatment Room 4 — Facial / Brows / Lashes | 11 | Facial bed, beauty mirror station, **2 sinks (as above)** |
+| Nail Station Area | 24 | 3 nail stations, LEV extraction (mandatory WorkSafe WA compliance) |
+| Hairdressing Area | 22 | 2 styling chairs, backwash basin, mirror wall, back bar |
 | Spray Tan Booth | 6 | Enclosed, extractor fan, changing area, drip tray |
-| Cafe / Refreshments Counter | 8 | Kitchenette, mini fridge, herbal tea, coconut water, low-risk food notification |
+| Cafe / Refreshments Counter | 8 | Kitchenette, mini fridge, herbal tea, coconut water, low-risk food notification (Food Act 2008 — see `standards-floorplan-crosscheck-2026-07-28.md`) |
 | Staff Room | 10 | Lockers, table, sink, kettle — staff only |
 | Patient WC — Accessible | 7 | Mandatory. Pregnant patients, mobility aid access. |
 | Patient WC — Standard | 4 | Second WC for volume |
@@ -41,11 +46,24 @@
 | Clean Linen / Storage | 6 | Shelving, locked consumable cabinet |
 | Dirty Linen / Biohazard | 4 | Separate from clean — clinical waste, soiled linen |
 | Circulation / Hallway | 16 | Minimum 1.5m wide (pregnant patients, prams, mobility aids) |
-| **TOTAL** | **~203sqm** | |
+| **DAY-ONE SUBTOTAL** | **~207sqm** | Matches `floor-plan-v3.svg`'s dimensioned total |
+
+**Growth Reservations (2026-07-28 addition — space only, NOT staffed or costed in the current financial model, same treatment as phlebotomy Scenario D):**
+
+| Room | Target sqm | Notes |
+|------|-----------|-------|
+| Treatment Room 5 — Massage **(GROWTH RESERVATION)** | 12 | Marginal unit cost matches Treatment Rooms 1/2. Not part of current 2x-massage-therapist model — reserved shell space for a 3rd massage therapist if/when justified by demand, same logic as `am-capacity-weekend.md`'s Scenario D phlebotomy chair. |
+| Treatment Room 6 — Facial / Beauty **(GROWTH RESERVATION)** | 11 | Marginal unit cost matches Treatment Rooms 3/4. Reserved shell space for a 3rd beauty therapist. |
+| Nail Station Area — 4th station **(GROWTH RESERVATION)** | 8 | Marginal per-station cost (24sqm ÷ 3 = 8sqm/station). Shares existing LEV infrastructure — does not require a duplicate extraction system, only proportionally larger ducting/capacity, to be confirmed with the LEV contractor at fit-out. |
+| Hairdressing Area — 3rd styling chair **(GROWTH RESERVATION)** | 11 | Marginal per-chair cost (22sqm ÷ 2 = 11sqm/chair). May be able to share the existing single backwash basin at low volume (Code requires "minimum 1 basin at launch," not 1-per-chair) — a 2nd basin would only be needed once 3rd-chair volume is genuinely running, not at reservation stage. |
+| **GROWTH RESERVATION SUBTOTAL** | **~42sqm** | |
+| **NEW TOTAL (day-one + growth reservations)** | **~249sqm** | Up from ~207sqm day-one-only. **This is the real, calculated figure — not a guess.** |
 
 ---
 
 ## Conceptual Layout (ASCII — for architect brief only, not to scale)
+
+**Note (2026-07-28):** the ASCII layout below has not been redrawn to include the 4 growth-reservation rooms/stations (Treatment Room 5, Treatment Room 6, 4th Nail Station, 3rd Hair Chair) — see the Room Schedule above for their sqm and adjacency logic instead. `floor-plan-v3.svg` has been annotated with a growth-reservation callout note rather than a full geometric redraw (see that file's own changelog note) — a precise to-scale redraw of the actual room boxes was judged too risky to do reliably without visual/CAD tooling to verify no overlaps, and was not attempted rather than risk presenting an inaccurate drawing as accurate.
 
 ```
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -132,11 +150,15 @@
 
 ### Treatment Rooms
 - **Privacy lock** — thumb-turn deadbolt client-side (no key). Client must be able to lock from inside.
-- **Clinical sink** — hot/cold, soap dispenser, paper towel dispenser (infection control).
+- **TWO sinks, per WA Skin Penetration Code §7.1-7.2 (fixed 2026-07-28, see `standards-floorplan-crosscheck-2026-07-28.md`):**
+  1. **Hand-wash sink** — hot/cold, **hands-free tap** (elbow, sensor, or foot-operated — required for new premises under §7.1), soap dispenser, paper towel dispenser.
+  2. **Instrument decontamination sink** — separate from the hand-wash sink, in a designated cleaning/prep area distinct from the client treatment area per §7.2 ("work space or preparation area shall be separate from the client treatment or work area... at least two sinks, one for hand washing and one for cleaning and decontaminating appliances"). This was the single biggest gap found in the 2026-07-28 standards cross-check — previously only 1 sink was specified per room.
 - **Dimmer lighting** — massage requires dark/ambient; facial may need clinical lighting option. Install dual circuit.
-- **Sound insulation** — acoustically isolated from adjacent rooms (massage = quiet environment).
+- **Sound insulation** — acoustically isolated from adjacent rooms (massage = quiet environment). Matches AMT Massage Code's "clinic rooms should be impervious to sound" requirement.
 - **Hooks and gown rail** — clients undress for massage. Minimum 3 hooks at entry.
-- **NB: Treatment rooms 3 and 4** are for facial/beauty/brow work — do not need a full massage table, but must accommodate a facial bed (approximately 1900mm × 650mm) plus operator space on 3 sides.
+- **Floor surface** — smooth, impervious, non-slip per WA Skin Penetration Code §7.1/§7.2 (previously unspecified for treatment rooms — only Nail Station and Hairdressing had a stated flooring material; corrected 2026-07-28).
+- **NB: Treatment rooms 3, 4, and 6 (growth reservation)** are for facial/beauty/brow work — do not need a full massage table, but must accommodate a facial bed (approximately 1900mm × 650mm) plus operator space on 3 sides.
+- **Treatment Room 5 (GROWTH RESERVATION)** follows the same spec as Rooms 1/2 (massage). **Treatment Room 6 (GROWTH RESERVATION)** follows the same spec as Rooms 3/4 (facial/beauty). Neither is fitted out or equipped in the day-one build — shell space only, per the growth-reservation principle.
 
 ### Reception
 - **Line of sight to entry door** — staff must see who enters without turning around.
@@ -153,6 +175,8 @@
 
 ## Fit-Out Cost Estimate
 
+> **Note (2026-07-28): figures below are for the day-one committed model only (~207sqm), NOT including the 4 growth-reservation rooms/stations.** Consistent with the growth-reservation principle (space only, not staffed/costed/equipped), the growth rooms need only basic shell construction (walls, floor, power) at this stage — not full fit-out (equipment, fixtures, second sinks fitted out). A precise incremental shell-only cost for the ~42sqm of growth space was not computed here — flagged as a follow-up if Anthony wants it, not estimated without a real basis.
+
 | Category | Low | Mid | High |
 |----------|-----|-----|------|
 | Construction (partitions, electrical, plumbing, HVAC, flooring) | A$150,000 | A$200,000 | A$280,000 |
@@ -160,9 +184,9 @@
 | Furniture and fittings (lounge chairs, reception counter, styling chairs) | A$15,000 | A$25,000 | A$35,000 |
 | Signage (shopfront + internal wayfinding) | A$3,000 | A$5,000 | A$8,000 |
 | IT / AV (POS, booking tablets, TVs, music system) | A$5,000 | A$8,000 | A$12,000 |
-| **TOTAL** | **A$222,300** | **A$313,000** | **A$449,700** |
+| **TOTAL (day-one model only)** | **A$222,300** | **A$313,000** | **A$449,700** |
 | Less: Landlord fit-out contribution (negotiate) | — | (A$30,000) | (A$60,000) |
-| **Net mid-range estimate** | | **~A$283,000** | |
+| **Net mid-range estimate (day-one only)** | | **~A$283,000** | |
 
 **Fit-out timing:** 8–10 weeks from lease signing to practical completion (Perth commercial builders, mid-2026 market).
 
@@ -191,3 +215,9 @@
 
 *Document owner: Grace (GTT Center Perth Operations Manager)*
 *For architect use: treat this document as the client brief, not a dimensioned drawing. All dimensions are indicative only and must be verified against actual tenancy floor plate.*
+
+---
+
+## Changelog
+
+**2026-07-28** — Anthony's instruction: add +1 station/room per service type (massage, facial/beauty, nails, hair) as a growth reservation, mirroring the existing phlebotomy Scenario D pattern (documented, not staffed/costed). Added Treatment Room 5 (massage, +12sqm), Treatment Room 6 (facial/beauty, +11sqm), 4th nail station (+8sqm), 3rd hair chair (+11sqm) — total +42sqm. New combined target: ~249sqm (up from ~207sqm day-one-only), calculated from `floor-plan-v3.svg`'s dimensioned per-room figures, not guessed. Also fixed the second-sink/hands-free-tap gap found in `standards-floorplan-crosscheck-2026-07-28.md` (WA Skin Penetration Code §7.1-7.2) — every treatment room (day-one and growth) now specifies 2 sinks. Flagged and did not silently resolve a pre-existing sqm inconsistency between this document's original room schedule and the more recent `floor-plan-v3.svg`. Did not attempt a full geometric SVG redraw of the growth rooms (risk of an inaccurate-but-confident-looking drawing) — SVG instead annotated with a text note, this document is the source of truth for the growth-reservation room schedule.
