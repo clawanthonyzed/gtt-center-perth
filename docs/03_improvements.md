@@ -13,7 +13,7 @@ The Scenario B/C conflict (see [01_conflicts_log.md](01_conflicts_log.md) CONFLI
 **Suggestion:** Create one short, permanent "current model" document (e.g. `CURRENT-MODEL.md`) at the top of the reading order, containing only the handful of numbers that change most often — client volume/scenario, package pricing, operating days, current headcount — each with a one-line pointer to its full detail document. Every other document references *this* file's numbers rather than restating them. When the model changes, only this one file needs an update to keep everything else honest, even if the full detail rewrite in [operations-manual.md](operations-manual.md) etc. lags behind by a few days.
 
 ### P2. Rename-or-Delete Discipline for Superseded Files
-Both duplicate/stale-file conflicts found this session ([research-supplement-day48.md](research-supplement-day48.md), `floor-plan-visual.*`) happened because a newer version was created without the older version being renamed, flagged, or removed. The `-ARCHIVED` suffix convention already exists and works well (see [research-supplement-day48-ARCHIVED.md](research-supplement-day48-ARCHIVED.md), [inhouse-gtt-research.md](inhouse-gtt-research.md)) — it just wasn't applied consistently.
+Both duplicate/stale-file conflicts found this session ([research-supplement-day48.md](archive/research-supplement-day48.md), `floor-plan-visual.*`) happened because a newer version was created without the older version being renamed, flagged, or removed. The `-ARCHIVED` suffix convention already exists and works well (see [research-supplement-day48-ARCHIVED.md](archive/research-supplement-day48-ARCHIVED.md), [inhouse-gtt-research.md](archive/inhouse-gtt-research.md)) — it just wasn't applied consistently.
 
 **Suggestion:** When creating a v2/v3 of any document (especially visual/binary files like floor plans, which can't carry an inline banner as easily as markdown), immediately either (a) rename the old version with a `-SUPERSEDED` or `-ARCHIVED` suffix, or (b) add an entry to [reading-order.md](reading-order.md)'s Reference Only table in the same commit. Treat this as part of "done," not a follow-up task.
 
@@ -30,7 +30,7 @@ Most documents have a `**Version:** X.X | **Date:** YYYY-MM-DD` line near the to
 ### P5. Founder-Only Questions Collected in One Place
 Before this session, founder-only open questions were scattered across [reading-order.md](reading-order.md)'s "Open Decisions" table, [HANDOFF.md](HANDOFF.md)'s "Still Open" list, individual CORRECTION files, and inline notes in [review-audit.md](review-audit.md). This made it easy to lose track of what still needed Anthony's input.
 
-**Suggestion (implemented this session):** [05_open_questions_for_founder.md](05_open_questions_for_founder.md) now exists as the single running list. **Recommend this becomes the standing convention** — any new founder-only question discovered in future sessions gets added there first, with a pointer from wherever it was discovered, rather than being logged only inline.
+**Suggestion (implemented this session):** [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) now exists as the single running list. **Recommend this becomes the standing convention** — any new founder-only question discovered in future sessions gets added there first, with a pointer from wherever it was discovered, rather than being logged only inline.
 
 ---
 

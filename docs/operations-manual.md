@@ -1,5 +1,7 @@
 # GTT Center Perth — Operations Manual
 
+> **Canonical current-state numbers (package prices, client capacity, headcount, P&L, capital range) live in `docs/CURRENT-STATE.md` — every figure below defers to that file if the two ever disagree.**
+
 > **2026-07-14 SUPERSEDED — PM MODEL CORRECTED.** References below to a single "PM Service Therapist" delivering "PM Spa Packages" (Package 1/2/3 pricing) are superseded. The confirmed PM model is: **4 dedicated casual hires** (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, delivering **individual standalone services** (not packages) at ~A$95/session average, staffed on actual hours worked — not a blanket shift. Corrected Month 5+ steady state: Total Revenue A$86,020/month, Total Fixed Costs A$79,357/month, **Net P&L +A$6,663/month** — profitable from Month 4 (+A$4,924/month). See `pm-staffing-roster.md` for the full roster, weekly template, and recalculated P&L — this is now the canonical PM reference, superseding this document's PM figures/structure below.
 
 **Version:** 1.0 | **Date:** 2026-06-05  
@@ -144,8 +146,8 @@ Services display only for the window available after the selected GTT start time
 - Receptionist calls any patient who has not arrived by 5 minutes before X to confirm status before the 10-minute cutoff
 
 ### Overbooking Rule
-Maximum 8 GTT patients per day from Day 1 — 2 phlebotomists, 2 collection chairs (Chair A / Chair B), alternating-client assignment (Chair A: clients 1/3/5/7, Chair B: clients 2/4/6/8). See GTT Scheduling Timetables below for the verified per-client and per-staff schedule.  
-Never accept a 9th booking without confirming chair/staff cover via the Scenario A growth model (see below).
+Maximum 10 GTT patients per day (Scenario C, synchronized-chair-start — current committed model as of 2026-07-17) — 2 phlebotomists, 2 collection chairs (Chair A / Chair B), alternating-client assignment (Chair A: clients 1/3/5/7/9, Chair B: clients 2/4/6/8/10). See GTT Scheduling Timetables below for the verified per-client and per-staff schedule.
+Never accept an 11th booking without confirming chair/staff cover via the Scenario D growth model (see below) — Scenario D (15 clients/day, 3rd phlebotomist/chair) is a documented but not-yet-committed growth path, not an active option.
 
 ---
 
@@ -267,9 +269,11 @@ Never accept a 9th booking without confirming chair/staff cover via the Scenario
 
 ## GTT SCHEDULING TIMETABLES
 
-> **SUPERSEDED (flagged 2026-07-19 — see `docs/01_conflicts_log.md` for full detail):** Everything below this point describes **Scenario B (8 clients/day, 07:40 first draw)**. Per `HANDOFF.md` (2026-07-17), the current committed operational model is **Scenario C, synchronized-chair-start (10 clients/day, 07:00 first draw)** — fully verified, zero double-bookings, in `docs/scenario-c-sync-timetables.md` (canonical) and `docs/am-capacity-weekend.md` §"SCENARIO C — Verified 07:00 Start Timetable" (staggered predecessor version, also superseded by the sync version). **Use `scenario-c-sync-timetables.md` for the actual launch timetable — do not use the Scenario B tables below for live operations.** This section is retained for historical/methodology reference only (it established the timing-rule pattern that Scenario C reuses) and should be replaced wholesale with the Scenario C content in a follow-up edit — flagged in `docs/04_roadmap_next_steps.md` as a priority action.
+> **Current committed model: Scenario C, synchronized chair start, 10 clients/day, 07:00 first draw.** Verified 2026-07-17 in `docs/scenario-c-sync-timetables.md` — zero double-bookings across both phlebotomists and all 8 treatment staff, checked programmatically (exhaustive interval-overlap simulation), not manually. **This section replaces the prior Scenario B (8-client, 07:40 first draw) tables in full** — Scenario B was the launch model between 2026-06-05 and 2026-07-17 and is retained nowhere else in this document; its historical detail lives in `docs/scenario-c-sync-timetables.md`'s own change history and `am-capacity-weekend.md` if a methodology reference is ever needed. Do not re-introduce Scenario B figures into this manual.
+>
+> **Canonical figures for AM capacity, package prices, and P&L all live in `docs/CURRENT-STATE.md` — this section is the operational timetable only, not a second source for those figures.**
 
-### Key Rules (corrected Day 49 — replaces prior +50/+105 pattern)
+### Key Rules
 
 Relative to each client's booked GTT start time (X):
 
@@ -286,52 +290,63 @@ Relative to each client's booked GTT start time (X):
 - Customers arrive 10-15 min before X for fasting/Medicare check-in
 - Glucose drink is completed in the collection room (per pathology-collection-room.md Patient Pathway); patient exits to lounge/treatment area at X+15
 - Services do NOT get interrupted for blood draws -- no exceptions, including hairdressing (services-pricing-locked.md Part A)
-- 2 collection chairs (Chair A / Chair B) + 2 phlebotomists from Day 1. Chair A takes odd-numbered clients (1/3/5/7), Chair B takes even-numbered (2/4/6/8). Each chair handles 4 clients at 40-min spacing.
+- **2 collection chairs (Chair A / Chair B), synchronized start.** Both chairs start their client cohort at the identical clock time each slot (not a 20-min stagger). Chair A takes odd-numbered clients (1/3/5/7/9), Chair B takes even-numbered (2/4/6/8/10). Each chair handles 5 clients at 40-min spacing.
 - This pathway matches gtt-clinical-protocol.md's T+60(±5)/T+120(±10) clinical rule and pathology-collection-room.md's Patient Pathway (T+75/T+135 from arrival).
+- **10 clients/day is the verified maximum on 2 chairs within the current window** (last new Draw 1 at 09:40) — tighter packing was tested directly (`draw-event-scheduler-findings.md`) and produces worse throughput, not more capacity. This ceiling is a scheduling-feasibility result, not a guarantee that 10 bookings/day will actually be sold — see `docs/CURRENT-STATE.md`.
 
-### Scenario B -- 8-Client Launch Timetable (LAUNCH MODEL, 20-min arrival intervals)
+### Scenario C -- 10-Client Synchronized-Start Timetable (CURRENT MODEL, verified 2026-07-17)
 
-2 chairs / 2 phlebotomists / 8 service staff (2x Massage, 2x Beauty, 2x Nails, 2x Hair). Verified Day 49 -- no staff double-booked. One real-time adjustment: Client 1's Draw 2 shifted from its 08:55 target to 08:50 (within ±5min tolerance) to avoid colliding with Client 5's Draw 1 at 09:00 on Chair A. Day 51: Client 5's Service 2 reassigned from 3D Scan (removed) to Nails (N2).
+2 chairs / 2 phlebotomists / 8 service staff (2× Massage, 2× Beauty, 2× Nails, 2× Hair). Verified programmatically — zero double-bookings across every staff member and both chairs.
 
 **Per-client view (actual clock times):**
 
-| Client | Chair | Draw 1 | Service 1 (staff) | Draw 2 | Service 2 (staff) | Draw 3 | Depart |
+| Client | Chair | Draw 1 | Service 1 | Draw 2 | Service 2 | Draw 3 | Depart |
 |---|---|---|---|---|---|---|---|
-| 1 | A | 07:40-07:55 | 07:55-08:40 -- Massage (M1) | 08:50-08:55 | 09:00-09:45 -- Nails (N2) | 09:55-10:00 | ~10:05 |
-| 2 | B | 08:00-08:15 | 08:15-09:00 -- Beauty (B1) | 09:15-09:20 | 09:20-10:05 -- Hair (H2) | 10:15-10:20 | ~10:25 |
-| 3 | A | 08:20-08:35 | 08:35-09:20 -- Nails (N1) | 09:35-09:40 | 09:40-10:25 -- Massage (M1) | 10:35-10:40 | ~10:45 |
-| 4 | B | 08:40-08:55 | 08:55-09:40 -- Hair (H1) | 09:55-10:00 | 10:00-10:45 -- Beauty (B1) | 10:55-11:00 | ~11:05 |
-| 5 | A | 09:00-09:15 | 09:15-10:00 -- Massage (M2) | 10:15-10:20 | 10:20-11:05 -- Nails (N2) -- Gel manicure (45min) | 11:15-11:20 | ~11:25 |
-| 6 | B | 09:20-09:35 | 09:35-10:20 -- Beauty (B2) | 10:35-10:40 | 10:40-11:25 -- Hair (H2) | 11:35-11:40 | ~11:45 |
-| 7 | A | 09:40-09:55 | 09:55-10:40 -- Hair (H1) | 10:55-11:00 | 11:00-11:45 -- Massage (M2) | 11:55-12:00 | ~12:05 |
-| 8 | B | 10:00-10:15 | 10:15-11:00 -- Nails (N1) | 11:15-11:20 | 11:20-12:05 -- Beauty (B2) | 12:15-12:20 | ~12:25 |
+| 1 | A | 07:00–07:15 | 07:15–08:00 Massage (M1) | 08:10–08:15 | 08:20–09:05 Beauty (B1) | 09:20–09:25 | ~09:30 |
+| 2 | B | 07:00–07:15 | 07:15–08:00 Nails (N1) | 08:10–08:15 | 08:20–09:05 Hair (H1) | 09:20–09:25 | ~09:30 |
+| 3 | A | 07:40–07:55 | 07:55–08:40 Massage (M2) | 08:50–08:55 | 09:00–09:45 Beauty (B2) | 10:00–10:05 | ~10:10 |
+| 4 | B | 07:40–07:55 | 07:55–08:40 Nails (N2) | 08:50–08:55 | 09:00–09:45 Hair (H2) | 10:00–10:05 | ~10:10 |
+| 5 | A | 08:20–08:35 | 08:35–09:20 Massage (M1) | 09:30–09:35 | 09:40–10:25 Beauty (B1) | 10:35–10:40 | ~10:45 |
+| 6 | B | 08:20–08:35 | 08:35–09:20 Nails (N1) | 09:30–09:35 | 09:40–10:25 Hair (H1) | 10:35–10:40 | ~10:45 |
+| 7 | A | 09:00–09:15 | 09:15–10:00 Massage (M2) | 10:10–10:15 | 10:20–11:05 Beauty (B2) | 11:15–11:20 | ~11:25 |
+| 8 | B | 09:00–09:15 | 09:15–10:00 Nails (N2) | 10:10–10:15 | 10:20–11:05 Hair (H2) | 11:15–11:20 | ~11:25 |
+| 9 | A | 09:40–09:55 | 09:55–10:40 Massage (M1) | 10:50–10:55 | 11:00–11:45 Beauty (B1) | 11:55–12:00 | ~12:05 |
+| 10 | B | 09:40–09:55 | 09:55–10:40 Nails (N1) | 10:50–10:55 | 11:00–11:45 Hair (H1) | 11:55–12:00 | ~12:05 |
 
-**Per-staff view (whole morning, actual clock times):**
+Note: Client 1 and Client 2's Draw 2 both land at 08:10–08:15 — same literal clock minute, different chairs/phlebotomists. This is the synchronized-start effect: both phlebotomists draw at the same moment, confirmed not a conflict (separate chairs, separate staff).
 
-| Staff | Bookings | Free / downtime |
-|---|---|---|
-| Phlebotomist A (Chair A) | 12 draws across clients 1/3/5/7 at 07:40, 08:20, 08:50, 09:00, 09:35, 09:40, 09:55, 09:55, 10:15, 10:35, 10:55, 11:15, 11:55 | Gaps of 10-20min between draws -- used for labelling/centrifuge/courier prep |
-| Phlebotomist B (Chair B) | 12 draws across clients 2/4/6/8 at 08:00, 08:40, 09:15, 09:20, 09:55, 10:00, 10:15, 10:15, 10:35, 10:55, 11:15, 11:35, 12:15 | Same as above |
-| Massage 1 (M1) | 07:55-08:40 (C1), 09:40-10:25 (C3) | Free 08:40-09:40, free 10:25-end |
-| Massage 2 (M2) | 09:15-10:00 (C5), 11:00-11:45 (C7) | Free 07:40-09:15, free 10:00-11:00, free 11:45-end |
-| Beauty 1 (B1) | 08:15-09:00 (C2), 10:00-10:45 (C4) | Free 09:00-10:00, free 10:45-end |
-| Beauty 2 (B2) | 09:35-10:20 (C6), 11:20-12:05 (C8) | Free 07:40-09:35, free 10:20-11:20 |
-| Nail Tech 1 (N1) | 08:35-09:20 (C3), 10:15-11:00 (C8) | Free 09:20-10:15, free 11:00-end |
-| Nail Tech 2 (N2) | 09:00-09:45 (C1), 10:20-11:05 (C5) | Free 09:45-10:20, free 11:05-end |
-| Hairdresser 1 (H1) | 08:55-09:40 (C4), 09:55-10:40 (C7) | Free 09:40-09:55, free 10:40-end |
-| Hairdresser 2 (H2) | 09:20-10:05 (C2), 10:40-11:25 (C6) | Free 10:05-10:40, free 11:25-end |
-| Receptionist/Manager | AM block 07:00-12:00 (split shift -- PM block 15:00-18:00 for PM Spa Packages, see CF-01) | Greets arrivals, runs Draw 2/Draw 3 recall, checkout, payments |
+**Per-staff view (whole morning):**
 
-**Notes:**
-- Chair utilization ~30% per chair (40min busy / ~270min window) -- comfortable headroom for ±5/±10min real-time tolerance shifts
-- Every service staff member does 1-2 bookings across the ~4.5hr morning (45-90min busy / ~270min = 17-33% utilization). Downtime between bookings follows the Staff Downtime Protocol (financial-break-even-staff.md) -- no staff member is free for general-public/walk-in fill during the AM GTT window (Day 51: all 8 AM service staff are needed simultaneously, no PM shift)
-- No staff member is double-booked
+| Staff | Bookings |
+|---|---|
+| Phlebotomist A (Chair A) | 15 draws across clients 1/3/5/7/9 |
+| Phlebotomist B (Chair B) | 15 draws across clients 2/4/6/8/10 (identical clock times to Phlebotomist A, mirrored) |
+| Massage 1 (M1) | C1 07:15–08:00, C5 08:35–09:20, C9 09:55–10:40 (3 bookings) |
+| Massage 2 (M2) | C3 07:55–08:40, C7 09:15–10:00 (2 bookings) |
+| Beauty 1 (B1) | C1 08:20–09:05, C5 09:40–10:25, C9 11:00–11:45 (3 bookings) |
+| Beauty 2 (B2) | C3 09:00–09:45, C7 10:20–11:05 (2 bookings) |
+| Nails 1 (N1) | C2 07:15–08:00, C6 08:35–09:20, C10 09:55–10:40 (3 bookings) |
+| Nails 2 (N2) | C4 07:55–08:40, C8 09:15–10:00 (2 bookings) |
+| Hair 1 (H1) | C2 08:20–09:05, C6 09:40–10:25, C10 11:00–11:45 (3 bookings) |
+| Hair 2 (H2) | C4 09:00–09:45, C8 10:20–11:05 (2 bookings) |
+| Receptionist/Manager | AM block 07:00-12:00 (split shift — PM block 15:00-18:00, see financial-break-even-staff.md CF-01) | Greets arrivals, runs Draw 2/Draw 3 recall, checkout, payments |
 
-### Scenario A -- 10-Client Growth Model (DEFERRED)
+**Verification (programmatic, not manual):**
 
-Use only once the 8-client Scenario B model above is consistently >80% booked. Same 2-chair structure, 5 clients/chair at 30-min spacing -> ~67-74% chair utilization. Workable but tight. A full verified per-client/per-staff timetable for Scenario A has not yet been built -- build and verify it (same method as Scenario B above, checking for staff double-booking) before activating, to avoid reintroducing draw-timing conflicts.
+| Line | Peak concurrent | Capacity | Result |
+|---|---|---|---|
+| Massage | 2 | 2 | OK |
+| Beauty | 2 | 2 | OK |
+| Nails | 2 | 2 | OK |
+| Hair | 2 | 2 | OK |
 
-### Phlebotomist Draw Tracking (Scenario B)
+Zero double-bookings, all 10 clients placed. Every service staff member does 2-3 bookings across the ~4.5hr morning. Downtime between bookings follows the Staff Downtime Protocol (financial-break-even-staff.md) — no staff member is free for general-public/walk-in fill during the AM GTT window (all 8 AM treatment staff are needed simultaneously; see `profit-loss-tables.md` Treatment Headcount section for the checked answer on whether this can drop to 7 via Massage+Beauty cross-training).
+
+### Scenario D -- 15-Client Growth Model (NOT COMMITTED)
+
+Growth path only, not the current model. 3rd phlebotomist as an active chair (not just relief), no new treatment hires needed, though 2 of the 8 treatment staff reach ~68% utilisation at this volume. See `scenario-d-investigation.md` and `am-capacity-weekend.md` for the full verified timetable and staffing implications before treating this as active. **Provisional on WDP confirming the specimen cutoff time** — see `cutoff-time-CORRECTION.md` (still unresolved as of 2026-07-28).
+
+### Phlebotomist Draw Tracking
 
 Whiteboard format -- update in real time:
 
@@ -352,3 +367,5 @@ Draw alert: set phone timer 5 min before each draw window. Services do NOT get i
 **2026-07-20 (CONFLICT-09 resolved)** — Corrected the Deposit Policy section (retitled Payment Policy): Anthony confirmed full package price is collected at time of booking, not an A$30 deposit. Updated the Cancellation Workflow and Late Arrival Policy to match the tiered credit policy already correctly documented in `onboarding.md`, rather than the stale deposit-forfeit mechanism.
 
 **2026-07-20 (package renumbering + terminology)** — Updated the KPI table's package-price reference to Package 1 (A$250)/Package 2 (A$300, both renamed 2026-07-20) and switched "Bookings/week" metric language to "Package/service sales per week," since a booking alone doesn't carry a dollar figure.
+
+**2026-07-29 (Scenario B section rewritten in place — external audit finding)** — An outside reviewer found that the GTT Scheduling Timetables section still described the abandoned 8-client Scenario B model, ten days after being flagged as superseded (2026-07-19) — the exact risk the flag itself warned about ("if a Venue Manager or new staff member reads this document cover-to-cover... they will train on an 8-client/07:40-start model that does not match the actual committed 10-client/07:00-start model"). Fixed directly this session: the entire section (Key Rules, per-client timetable, per-staff timetable, verification, overbooking rule) now describes the current Scenario C synchronized-start model (10 clients/day) in full, written out in-line — not a pointer to `scenario-c-sync-timetables.md`. The Scenario B tables are not retained anywhere in this document (they described a model abandoned 2026-07-17, 12 days before this fix); historical detail remains in `scenario-c-sync-timetables.md`'s own file if ever needed. Added a pointer at the top of this document to the new `docs/CURRENT-STATE.md` as the single canonical source for figures.

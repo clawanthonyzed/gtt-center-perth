@@ -12,7 +12,7 @@
 - **Captive, non-discretionary demand base.** GTT is a mandatory pregnancy screening test — the underlying demand for the test itself does not depend on marketing (unlike a typical discretionary wellness service).
 - **Full-service breadth.** Massage, nails, hair, brows/beauty, and spray tan cover a broader service range than the identified competitor (MIWM), which does not offer hairdressing.
 - **Clear pathology partnership model (Option A).** Partnering with an already-accredited provider (WDP priority) avoids the 12-18 month in-house accreditation timeline that Option B would have required (`option-b-collection-centre.md`) — this materially de-risks time-to-open versus a self-accredited model.
-- **Self-funded, no external investor pressure.** Funded via Anthony's partner's savings (~A$200K) — no investor deadline or equity dilution pressure driving premature decisions.
+- **Self-funded, no external investor pressure.** Funded via Anthony and Imara's joint savings (~A$200K) — no investor deadline or equity dilution pressure driving premature decisions. (Corrected 2026-07-29 — previously miswritten as Imara's savings alone.)
 
 ---
 

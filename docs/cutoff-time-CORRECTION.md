@@ -38,3 +38,17 @@ What general chemistry sources did confirm: fluoride-oxalate (glucose) tubes are
 **2026-07-27 correction note (retained for trace):** the heading and body previously said "WDP Emailed" — corrected to reflect the actual channel used (online enquiry form). PathWest/Clinipath both emailed 2026-07-27.
 
 **2026-07-28 update:** WDP's reply logged above — this section corrected from "awaiting reply" framing to reflect the active conversation.
+
+---
+
+## Update (2026-07-29) — Carole Rivers Verbally Confirmed No Cutoff Within Operating Hours — NOT Yet in Writing
+
+**Carole Rivers (WDP, Customer & Commercial Manager, Country) verbally confirmed there is no specimen-pickup cutoff within business operating hours.** This directly answers the standing 11:30-vs-12:30 question — but it is a **verbal confirmation only**, not yet in writing/email.
+
+`[VERIFIED — Carole Rivers, WDP, verbal confirmation, 2026-07-29]`
+
+**This is real and should be relied on for planning purposes — it is not the same status as the two previously-unconfirmed 11:30/12:30 figures, which had no source at all.** But it is **not fully closed out** either: a verbal confirmation from one contact is a real but weaker form of evidence than a written reply, and this repo's own standing instruction (above, 2026-07-17) explicitly required documenting anything short of an actual WDP reply as unconfirmed. Treating this as identically strong as a written confirmation would repeat the same class of error this file was created to catch.
+
+**Standing action item — do not close until done:** get this specific confirmation ("no specimen-pickup cutoff within business operating hours") in writing/email from WDP, for the permanent record. Anthony has an existing draft reply in progress to WDP (see the 2026-07-28 update above) — this confirmation should be explicitly referenced/requested in that reply, or in a short separate follow-up, so there is a written record to point to rather than relying on a verbal exchange indefinitely. Added to `docs/VERIFICATION-TRACKER.md` item 1 and `docs/CURRENT-STATE.md` §1.
+
+**Practical effect on the AM/PM capacity model (Scenario C/D):** if no cutoff exists within operating hours, the courier-cutoff constraint that has driven the AM window's end-time ceiling in every scheduling document to date (`scenario-c-sync-timetables.md`, `am-capacity-weekend.md`, `draw-event-scheduler-findings.md`) may no longer be the binding constraint — this could open room for later start times or a wider window than currently modelled. **Not yet actioned in any scheduling document** — the verbal-only status means this should be treated as directionally encouraging, not yet a basis for re-running the capacity model. Re-verify once the written confirmation exists, then update the schedulers.

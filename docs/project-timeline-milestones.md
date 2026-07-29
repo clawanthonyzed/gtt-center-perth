@@ -1,7 +1,7 @@
 # GTT Center Perth — Project Timeline (Milestone Sequence)
 
 **Version:** 1.0 | **Date:** 2026-07-19 (Phase 7 new deliverable)
-**Purpose:** A Gantt-style relative-sequencing milestone view, reflecting `docs/04_roadmap_next_steps.md`'s dependency tiers as a visual/sequential timeline. **No calendar dates** — per standing instruction, no launch date is set; this reflects relative order and dependency, not a schedule. Distinct from `venture-timeline.md` (an earlier week-numbered phase plan that still carries some illustrative calendar dates from a prior planning pass, and from `04_roadmap_next_steps.md` (a dependency-tier action list, not a visual timeline).
+**Purpose:** A Gantt-style relative-sequencing milestone view, reflecting `docs/04_roadmap_next_steps.md`'s dependency tiers as a visual/sequential timeline. **No calendar dates** — per standing instruction, no launch date is set; this reflects relative order and dependency, not a schedule. Distinct from `venture-timeline.md` (an earlier week-numbered phase plan that still carries some illustrative calendar dates from a prior planning pass, and from `VERIFICATION-TRACKER.md` (a dependency-tier action list, not a visual timeline).
 
 ---
 
@@ -106,7 +106,7 @@ Full public launch                  ---->                        [====>---------
 These can happen at any point, independent of the location/staffing dependency chain above:
 
 - Regulatory tracker maintenance (`docs/regulatory-accreditation-tracker.md`) — update as items progress
-- Documentation currency fixes (Tier 1 items in `04_roadmap_next_steps.md` — rewriting `operations-manual.md`'s scheduling section, `workflow.md`'s staffing table, etc.)
+- Documentation currency fixes (Tier 1 items in `VERIFICATION-TRACKER.md` — rewriting `operations-manual.md`'s scheduling section, `workflow.md`'s staffing table, etc.)
 - Financial model reconciliation (CONFLICT-08/09 in `docs/01_conflicts_log.md`)
 - Package price-increase timing decision (`docs/price-increase-comparison.md`) — this is a Stage-3-or-later decision in practice (no point raising prices before there's a live venue), but the analysis itself doesn't need to wait
 
@@ -141,4 +141,4 @@ Second venue                             ---->[future — not yet triggered]
 
 ## Changelog
 
-**2026-07-19** — Created as a new Phase 7 deliverable. Built directly from `docs/04_roadmap_next_steps.md`'s dependency tiers, translated into a Gantt-style relative-sequence view per the Phase 7 spec's request for "rough relative sequencing (not calendar dates)." Distinct from `venture-timeline.md` (earlier week-numbered plan with some legacy calendar dates) and `04_roadmap_next_steps.md` (tiered action list, not a visual timeline) — cross-references both rather than duplicating their content.
+**2026-07-19** — Created as a new Phase 7 deliverable. Built directly from `docs/04_roadmap_next_steps.md`'s dependency tiers, translated into a Gantt-style relative-sequence view per the Phase 7 spec's request for "rough relative sequencing (not calendar dates)." Distinct from `venture-timeline.md` (earlier week-numbered plan with some legacy calendar dates) and `VERIFICATION-TRACKER.md` (tiered action list, not a visual timeline) — cross-references both rather than duplicating their content.

@@ -2,6 +2,8 @@
 
 **Version:** 1.0 | **Date:** 2026-07-15
 
+> **2026-07-29 note (external audit sweep, `tools/check_consistency.py`):** this document contains several generations of the AM standalone-profitability figure as the model evolved same-week (-A$4,255/month direct-labor terms → ≈+A$11,265/month under a since-abandoned A$275-blended/Package-2+3-only pricing assumption). **Neither figure is the current one.** The current, standing AM-standalone figure is **+A$6,745/month** (10 clients/day × A$250 conservative price, unchanged direct labor) — see `docs/CURRENT-STATE.md` §7 for the full delta table and `pm-staffing-roster.md`'s corrected Profit Breakdown table. This document is retained for its verified scheduling methodology (Scenario C's 07:00-start derivation, Saturday/Sunday award research, multi-role hiring analysis) — do not quote any dollar figure below without cross-checking `docs/CURRENT-STATE.md` first.
+
 ---
 
 ## 1. Current AM Max: 8 Clients/Day — Verified

@@ -15,7 +15,7 @@ GTT Center Perth trades under **YETI Holding Trust** (a discretionary trust), wi
 
 **Anthony and Imara's specific relationship to the trust, as already established in this venture's documents (`financial-model.md`, `research.md`):**
 - Anthony — Trustee (non-operational; not doing hands-on GTT Center Perth work)
-- Imara — funding partner (provided the ~A$200K self-funding capital); also not operationally involved day-to-day (the Venue Manager, a separate hire, runs the venue)
+- Imara — funding partner (co-provided the ~A$200K self-funding capital, jointly with Anthony — corrected 2026-07-29, previously miswritten as Imara's savings alone); also not operationally involved day-to-day (the Venue Manager, a separate hire, runs the venue)
 
 Neither is currently described as an employee of GTT Center Perth. This matters because it changes which mechanisms are actually available to each of them (see below).
 

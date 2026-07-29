@@ -5,17 +5,17 @@
 
 ---
 
-## CONFLICT-01 | [research-supplement-day48.md](research-supplement-day48.md) — Stale Duplicate
+## CONFLICT-01 | [research-supplement-day48.md](archive/research-supplement-day48.md) — Stale Duplicate
 
 **Status: RESOLVED 2026-07-19**
 
-**Finding:** `docs/research-supplement-day48.md` and `docs/research-supplement-day48-ARCHIVED.md` are byte-identical (confirmed via `diff` — zero output). [reading-order.md](reading-order.md) already correctly lists [research-supplement-day48-ARCHIVED.md](research-supplement-day48-ARCHIVED.md) as "ARCHIVED. Merged into research.md v3.0." The non-archived copy ([research-supplement-day48.md](research-supplement-day48.md)) was never renamed or removed when the Day 48 supplement was merged into [research.md](research.md) v3.0 (confirmed via [research.md](research.md)'s own header: "Supersedes: v2.0 + research-supplement-day48.md").
+**Finding:** `docs/research-supplement-day48.md` and `docs/research-supplement-day48-ARCHIVED.md` are byte-identical (confirmed via `diff` — zero output). [reading-order.md](reading-order.md) already correctly lists [research-supplement-day48-ARCHIVED.md](archive/research-supplement-day48-ARCHIVED.md) as "ARCHIVED. Merged into research.md v3.0." The non-archived copy ([research-supplement-day48.md](archive/research-supplement-day48.md)) was never renamed or removed when the Day 48 supplement was merged into [research.md](research.md) v3.0 (confirmed via [research.md](research.md)'s own header: "Supersedes: v2.0 + research-supplement-day48.md").
 
 **Root cause:** When the merge into research.md v3.0 happened (2026-06-09), one copy was renamed to `-ARCHIVED` and the original filename copy was left in place instead of being deleted or also renamed.
 
 **Resolution:**
-- Added a superseded banner to [research-supplement-day48.md](research-supplement-day48.md) pointing to [research.md](research.md) as canonical.
-- Added an entry for [research-supplement-day48.md](research-supplement-day48.md) in [reading-order.md](reading-order.md)'s Reference Only table, marked ARCHIVED with the same status as its sibling.
+- Added a superseded banner to [research-supplement-day48.md](archive/research-supplement-day48.md) pointing to [research.md](research.md) as canonical.
+- Added an entry for [research-supplement-day48.md](archive/research-supplement-day48.md) in [reading-order.md](reading-order.md)'s Reference Only table, marked ARCHIVED with the same status as its sibling.
 - File retained (not deleted) to preserve history per repo convention (other archived docs are kept, not removed).
 
 ---
@@ -25,15 +25,15 @@
 **Status: RESOLVED 2026-07-19 (partial — see note on PDF)**
 
 **Finding:** Two floor plan concept renders exist with different layouts and no cross-reference:
-- [floor-plan-visual.html](floor-plan-visual.html) / [floor-plan-visual.pdf](floor-plan-visual.pdf) — git history confirms this is v2 (commit d85c56c, 2026-07-01), box-fill room layout.
+- [floor-plan-visual.html](archive/floor-plan-visual.html) / [floor-plan-visual.pdf](archive/floor-plan-visual.pdf) — git history confirms this is v2 (commit d85c56c, 2026-07-01), box-fill room layout.
 - [floor-plan-v3.svg](floor-plan-v3.svg) / [floor-plan-v3.pdf](floor-plan-v3.pdf) — git history confirms this is v3 (commit 25bdc5d, 2026-07-10), open-plan lounge with furniture and accessible door swing arcs — described in its own commit message as a deliberate revision of the earlier version.
 
 [HANDOFF.md](HANDOFF.md) (2026-07-17, most recent session summary) lists [floor-plan-v3.svg](floor-plan-v3.svg)/`.pdf` as current with no mention of the v2 files, implying the v2 files are stale but this was never stated explicitly anywhere in the docs themselves, and neither file was flagged as superseded.
 
 **Resolution:**
-- Added a red, bold superseded banner directly into [floor-plan-visual.html](floor-plan-visual.html)'s visible subtitle, pointing to [floor-plan-v3.svg](floor-plan-v3.svg)/`.pdf` as current.
+- Added a red, bold superseded banner directly into [floor-plan-visual.html](archive/floor-plan-visual.html)'s visible subtitle, pointing to [floor-plan-v3.svg](floor-plan-v3.svg)/`.pdf` as current.
 - Added entries for all four floor-plan files (plus [floor-plan-concept.md](floor-plan-concept.md)) to [reading-order.md](reading-order.md)'s Reference Only table with accurate status.
-- **[floor-plan-visual.pdf](floor-plan-visual.pdf) (binary) could not be text-edited** with available tools — its superseded status is recorded in [reading-order.md](reading-order.md) and [00_document_inventory.md](00_document_inventory.md) instead. If Anthony wants the PDF itself visually marked, it needs to be re-exported from the (now-updated) HTML or regenerated.
+- **[floor-plan-visual.pdf](archive/floor-plan-visual.pdf) (binary) could not be text-edited** with available tools — its superseded status is recorded in [reading-order.md](reading-order.md) and [00_document_inventory.md](00_document_inventory.md) instead. If Anthony wants the PDF itself visually marked, it needs to be re-exported from the (now-updated) HTML or regenerated.
 
 ---
 
@@ -56,7 +56,7 @@ However, `docs/operations-manual.md` — the primary day-to-day operations refer
 The synchronized version is the more recent and more rigorously verified of the two, and [am-capacity-weekend.md](am-capacity-weekend.md) itself (line ~405) confirms the sync variant is consistent with the original Scenario C finding. **[scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) should be treated as the single canonical timetable.**
 
 **Resolution so far:**
-- Added a clear superseded banner to [operations-manual.md](operations-manual.md)'s GTT Scheduling Timetables section, pointing to [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) as canonical. **The Scenario B tables were NOT deleted or rewritten** — only flagged — because a full rewrite of the per-client/per-staff tables, the "Notes" analysis, and the Scenario A/D cross-references in that section is a substantial editorial task warranting its own dedicated pass (recommended as a priority action — see [04_roadmap_next_steps.md](04_roadmap_next_steps.md)).
+- Added a clear superseded banner to [operations-manual.md](operations-manual.md)'s GTT Scheduling Timetables section, pointing to [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) as canonical. **The Scenario B tables were NOT deleted or rewritten** — only flagged — because a full rewrite of the per-client/per-staff tables, the "Notes" analysis, and the Scenario A/D cross-references in that section is a substantial editorial task warranting its own dedicated pass (recommended as a priority action — see [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md)).
 - Updated [gtt-clinical-protocol.md](gtt-clinical-protocol.md)'s client count from 8 to 10 and repointed its reference to [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md).
 - Added a clarifying note to [staff-plan.md](staff-plan.md) confirming the headcount conclusions (2 phlebotomists + 8 treatment staff, 2 per category) are unaffected by the Scenario B->C change — Scenario C explicitly runs on the same staff numbers, just a tighter schedule.
 
@@ -142,7 +142,7 @@ The synchronized version is the more recent and more rigorously verified of the 
 
 ## Minor Findings (Contradiction Scan, 2026-07-19)
 
-- **[extended-wellness-services.md](extended-wellness-services.md):** stale cross-reference link to the now-archived [bloom-baby-case-study.md](bloom-baby-case-study.md) in its "Related Documents" list. Fixed with a strikethrough/archived note — no other issues found in this file. **RESOLVED.**
+- **[extended-wellness-services.md](extended-wellness-services.md):** stale cross-reference link to the now-archived [bloom-baby-case-study.md](archive/bloom-baby-case-study.md) in its "Related Documents" list. Fixed with a strikethrough/archived note — no other issues found in this file. **RESOLVED.**
 - **[onboarding.md](onboarding.md):** used generic "Manager" throughout (19 instances) rather than "Venue Manager" — not a factual contradiction (unambiguous same role), but a naming-consistency gap versus the rest of the post-rename corpus. **RESOLVED 2026-07-19 (same day) per direct founder instruction** — all 19 instances corrected to "Venue Manager." Also corrected one self-conditioning "subtenants only" insurance checklist line that was inapplicable (not wrong) under the no-subtenant model.
 - **[business-plan.md](business-plan.md), [brand-guide.md](brand-guide.md):** found via the same-day 3D scanner scope check — [business-plan.md](business-plan.md)'s Day 51 banner incorrectly said 3D scan was "removed from scope entirely" rather than "future income stream, not launch scope"; [brand-guide.md](brand-guide.md)'s Instagram bio and highlight-cover-icon list both advertised "Scan" and "Dietitian" as current launch services. **RESOLVED** — both corrected.
 - **[equipment-costs.md](equipment-costs.md), [privacy-policy.md](privacy-policy.md), `staff-profiles/*.md`:** reviewed in full — no contradictions found. `staff-profiles/*.md` all correctly reference the current Scenario C (10-client) volume already.
@@ -177,6 +177,6 @@ The synchronized version is the more recent and more rigorously verified of the 
 
 **CONFLICT-09 detail — RESOLVED 2026-07-20:** [onboarding.md](onboarding.md)'s draft patient-facing confirmation email copy stated "full payment is required at time of booking. No deposit option." while [financial-setup.md](financial-setup.md) (Step 5, Payment flow table), [operations-manual.md](operations-manual.md) (Deposit Policy), [ivy-booking-system.md](ivy-booking-system.md) (Step 6 Payment), and [website-spec.md](website-spec.md) (Step 3) all described an A$30 deposit-at-booking + balance-on-day model. **Anthony confirmed the correct policy: full payment is collected at time of booking, no deposit** — [onboarding.md](onboarding.md)'s draft copy was the one document that already had it right. Corrected the other four documents to match, and updated `docs/pricing-billing-strategy.md`'s own open-item note.
 
-See [04_roadmap_next_steps.md](04_roadmap_next_steps.md) for prioritised follow-up actions on the items not fully resolved this session.
+See [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) for prioritised follow-up actions on the items not fully resolved this session.
 
 **2026-07-20 (hyperlink sweep)** — Converted backtick-wrapped filename references throughout this document to clickable relative markdown hyperlinks, per the repo-wide hyperlink rule.

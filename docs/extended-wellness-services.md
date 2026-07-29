@@ -244,4 +244,4 @@ The following were researched but will not be offered:
 
 ## Changelog
 
-**2026-07-19** — Found via founder-requested contradiction scan. No substantive contradictions found in this document's own content (Removed Services section correctly excludes 3D scan/dietitian already). Flagged one stale cross-reference to the now-archived `bloom-baby-case-study.md` in the Related Documents list.
+**2026-07-19** — Found via founder-requested contradiction scan. No substantive contradictions found in this document's own content (Removed Services section correctly excludes 3D scan/dietitian already). Flagged one stale cross-reference to the now-archived `archive/bloom-baby-case-study.md` in the Related Documents list.

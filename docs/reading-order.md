@@ -38,8 +38,8 @@ This was a large consolidation session. If you read nothing else in this section
 | 4 | **[HANDOFF.md](HANDOFF.md)** | Most recent detailed session handoff (2026-07-17) — the source of truth for the current committed operational model if you need the underlying detail | 15 min |
 | 5 | **[00_document_inventory.md](00_document_inventory.md)** | Every file in this corpus, current status, one line each | 10 min (reference, not linear read) |
 | 6 | **[01_conflicts_log.md](01_conflicts_log.md)** | Every conflict found this session, resolution status — read if you want to know *why* a figure changed | 15 min (reference) |
-| 7 | **[04_roadmap_next_steps.md](04_roadmap_next_steps.md)** | The prioritised, dependency-based to-do list — what to actually do next, in what order | 10 min |
-| 8 | **[05_open_questions_for_founder.md](05_open_questions_for_founder.md)** | The single list of questions only Anthony can answer | 5 min |
+| 7 | **[VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md)** | The prioritised, dependency-based to-do list — what to actually do next, in what order | 10 min |
+| 8 | **[VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md)** | The single list of questions only Anthony can answer | 5 min |
 
 ---
 
@@ -51,7 +51,7 @@ This was a large consolidation session. If you read nothing else in this section
 | 9 | [feasibility.md](feasibility.md) | Go/no-go assessment, market sizing (corrected this session), risks |
 | 10 | [swot-analysis.md](swot-analysis.md) | Strengths/Weaknesses/Opportunities/Threats — new this session |
 | 11 | [risk-register.md](risk-register.md) | Ranked risk table (likelihood × impact × mitigation × owner) — new this session |
-| 12 | [regulatory-accreditation-tracker.md](regulatory-accreditation-tracker.md) | Regulatory/accreditation checklist with status — new this session |
+| 12 | [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) | Regulatory/accreditation checklist with status — new this session |
 | 12a | [external-resources-and-advisors.md](external-resources-and-advisors.md) | Which external professionals/services are needed and when — new this session |
 
 ## PHASE 2: FINANCIALS
@@ -170,8 +170,8 @@ This was a large consolidation session. If you read nothing else in this section
 | 67 | [01_conflicts_log.md](01_conflicts_log.md) | Every conflict found, resolution status |
 | 68 | [02_issues_and_risks.md](02_issues_and_risks.md) | Narrative gap analysis |
 | 69 | [03_improvements.md](03_improvements.md) | Process improvement suggestions |
-| 70 | [04_roadmap_next_steps.md](04_roadmap_next_steps.md) | Prioritised to-do list |
-| 71 | [05_open_questions_for_founder.md](05_open_questions_for_founder.md) | Founder-only questions |
+| 70 | [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) | Prioritised to-do list |
+| 71 | [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) | Founder-only questions |
 
 ---
 
@@ -180,11 +180,11 @@ This was a large consolidation session. If you read nothing else in this section
 | Document | Status |
 |---|---|
 | [agents.md](agents.md) | Empire agent roster reference |
-| [inhouse-gtt-research.md](inhouse-gtt-research.md) | ARCHIVED — in-house lab rejected |
-| [research-supplement-day48-ARCHIVED.md](research-supplement-day48-ARCHIVED.md) | ARCHIVED — merged into [research.md](research.md) v3.0 |
-| [research-supplement-day48.md](research-supplement-day48.md) | ARCHIVED — stale duplicate of the file above |
-| [bloom-baby-case-study.md](bloom-baby-case-study.md) | ARCHIVED — 3D scan removed from launch scope (future/Phase 2 only, see [market-research-findings.md](market-research-findings.md)) |
-| [floor-plan-visual.html](floor-plan-visual.html) / [floor-plan-visual.pdf](floor-plan-visual.pdf) | SUPERSEDED — this is v2, use [floor-plan-v3.svg](floor-plan-v3.svg)/[.pdf](floor-plan-v3.pdf) instead |
+| [inhouse-gtt-research.md](archive/inhouse-gtt-research.md) | ARCHIVED — in-house lab rejected |
+| [research-supplement-day48-ARCHIVED.md](archive/research-supplement-day48-ARCHIVED.md) | ARCHIVED — merged into [research.md](research.md) v3.0 |
+| [research-supplement-day48.md](archive/research-supplement-day48.md) | ARCHIVED — stale duplicate of the file above |
+| [bloom-baby-case-study.md](archive/bloom-baby-case-study.md) | ARCHIVED — 3D scan removed from launch scope (future/Phase 2 only, see [market-research-findings.md](market-research-findings.md)) |
+| [floor-plan-visual.html](archive/floor-plan-visual.html) / [floor-plan-visual.pdf](archive/floor-plan-visual.pdf) | SUPERSEDED — this is v2, use [floor-plan-v3.svg](floor-plan-v3.svg)/[.pdf](floor-plan-v3.pdf) instead |
 | [capacity-pricing-audit.md](capacity-pricing-audit.md) | SUPERSEDED — its "12-client model" depended on a Draw-3 rule that was not carried forward; current ceiling is 10 (Scenario C) or 15 (Scenario D) |
 | [pm-staffing-roster.md](pm-staffing-roster.md) | Staffing structure decisions still valid; its own P&L figures are stale, see banner — use [profit-loss-tables.md](profit-loss-tables.md) v2.0 instead |
 | [research.md](research.md) | **UNTOUCHED (per explicit scope instruction)** — comprehensive research doc, covers trust/ownership structure, authoritative source for market-sizing figures used elsewhere |
@@ -195,7 +195,7 @@ This was a large consolidation session. If you read nothing else in this section
 
 ## OPEN DECISIONS REQUIRING ANTHONY'S INPUT
 
-**See [05_open_questions_for_founder.md](05_open_questions_for_founder.md) for the complete, single-source, currently-maintained list.** Do not track founder-only questions here — that document is the single source of truth, per this repo's own convention (see [03_improvements.md](03_improvements.md) P5).
+**See [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) for the complete, single-source, currently-maintained list.** Do not track founder-only questions here — that document is the single source of truth, per this repo's own convention (see [03_improvements.md](03_improvements.md) P5).
 
 ---
 

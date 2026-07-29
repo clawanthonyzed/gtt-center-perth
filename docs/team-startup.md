@@ -169,7 +169,7 @@ OR A$33.38-38.00/hr casual (loading included)
 
 **Training budget:** A$1,500-4,000 per staff member (formal course)
 
-**Note:** Launch strategy — approach Bloom Baby Ultrasound as subtenant first (they bring own equipment + trained staff, pay weekly room rent). Once volume data supports it, bring in-house with own equipment and trained staff. See bloom-baby-case-study.md.
+**Note:** Launch strategy — approach Bloom Baby Ultrasound as subtenant first (they bring own equipment + trained staff, pay weekly room rent). Once volume data supports it, bring in-house with own equipment and trained staff. See `archive/bloom-baby-case-study.md` (ARCHIVED — 3D scan removed from launch scope entirely, retained for historical reference only; this whole HIRE 6 section describes a role not in current scope).
 
 ---
 
@@ -211,7 +211,7 @@ OR A$33.38-38.00/hr casual (loading included)
 
 **Imara (Anthony's partner, funder, trust beneficiary/beneficial owner)** — NOT an on-site operator, NOT employed by the venture:
 - Signs lease as director of YETI Tipi Holdings PTY LTD (trustee) — an ownership/legal function, not day-to-day operations
-- Provides funding (~A$200K savings, self-funded, no external investor)
+- Co-provides funding (~A$200K joint savings with Anthony, self-funded, no external investor — corrected 2026-07-29, previously miswritten as Imara's savings alone)
 - Retains beneficial ownership interest per the trust structure (see `financial-model.md`, `research.md`)
 
 **Venue Manager (new hire, not yet in place)** — the on-site operational director:

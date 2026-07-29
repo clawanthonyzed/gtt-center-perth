@@ -18,7 +18,7 @@ Instead of a bare pathology waiting room while fasting, patients would spend the
 **Entity:** YETI Holding Trust, trading as GTT Center Perth
 **Corporate trustee:** YETI Tipi Holdings PTY LTD
 **Founders:** Anthony Zed (trustee, non-operational — administrative oversight only) + Imara (funding partner)
-**Funding:** Self-funded via Anthony's partner's savings (~A$200,000), no external investor sought to date
+**Funding:** Self-funded via Anthony and Imara's joint savings (~A$200,000), no external investor sought to date (corrected 2026-07-29 — previously miswritten as Imara's savings alone)
 **Status:** Pre-launch, planning/feasibility stage. **No launch date is set** — the venture proceeds by dependency sequencing, not a calendar target (standing instruction; see `docs/04_roadmap_next_steps.md`).
 
 ---
@@ -45,7 +45,7 @@ GTT Center Perth partners with an already-NATA-accredited pathology provider for
 - **The pathology partner provides:** the NATA accreditation umbrella, specimen processing, and result reporting to the referring doctor
 - **GTT Center Perth does not:** diagnose, interpret, or communicate test results
 
-**Building an in-house NATA/RCPA-accredited collection centre (Option B) was investigated and rejected** — see [option-b-collection-centre.md](option-b-collection-centre.md) and [inhouse-gtt-research.md](inhouse-gtt-research.md) — primarily due to the 12-18 month accreditation timeline.
+**Building an in-house NATA/RCPA-accredited collection centre (Option B) was investigated and rejected** — see [option-b-collection-centre.md](option-b-collection-centre.md) and [inhouse-gtt-research.md](archive/inhouse-gtt-research.md) — primarily due to the 12-18 month accreditation timeline.
 
 **Partnership status (2026-07-19):** WDP has been emailed, awaiting reply. PathWest and Clinipath have not yet been contacted (1 of 3 potential partners approached so far).
 
@@ -89,7 +89,7 @@ Per [HANDOFF.md](HANDOFF.md) (2026-07-17, the most recent session summary and so
 
 ## Funding Position
 
-Self-funded via Anthony's partner's (Imara's) approximately A$200,000 in savings. No external investor has been sought. Revenue flows through YETI Holding Trust, not to Anthony personally, to protect his TPI pension entitlement (see [research.md](research.md), [financial-model.md](financial-model.md) for the full trust/ownership analysis — deliberately not duplicated here). **Anthony is handling any DVA/TPI-specific financial advice personally** — this is not delegated to any agent working on this venture (direct instruction, 2026-07-19).
+Self-funded via Anthony and Imara's joint savings (approximately A$200,000). No external investor has been sought. **Corrected 2026-07-29 — Anthony confirmed directly this is joint savings, not Imara's savings alone (a wording fix; ownership/financial-oversight roles are unchanged).** Revenue flows through YETI Holding Trust, not to Anthony personally, to protect his TPI pension entitlement (see [research.md](research.md), [financial-model.md](financial-model.md) for the full trust/ownership analysis — deliberately not duplicated here). **Anthony is handling any DVA/TPI-specific financial advice personally** — this is not delegated to any agent working on this venture (direct instruction, 2026-07-19).
 
 ---
 

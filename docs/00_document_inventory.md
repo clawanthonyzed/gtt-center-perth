@@ -13,12 +13,12 @@
 | [01_conflicts_log.md](01_conflicts_log.md) | Conflict detection and resolution log (9 conflicts logged, CONFLICT-01 through 09) |
 | [02_issues_and_risks.md](02_issues_and_risks.md) | Narrative gap-analysis (High/Medium/Low severity) |
 | [03_improvements.md](03_improvements.md) | Process and operational improvement suggestions |
-| [04_roadmap_next_steps.md](04_roadmap_next_steps.md) | Tiered, dependency-based roadmap — primary audit deliverable |
-| [05_open_questions_for_founder.md](05_open_questions_for_founder.md) | Single running list of founder-only questions |
+| ~~04_roadmap_next_steps.md~~ | Originally: tiered, dependency-based roadmap. **Merged into [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) 2026-07-29; source file archived to `archive/`.** |
+| ~~05_open_questions_for_founder.md~~ | Originally: single running list of founder-only questions. **Merged into [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) 2026-07-29; source file archived to `archive/`.** |
 | [lab-partnership-email-draft.md](lab-partnership-email-draft.md) | Corrected pathology-partner outreach email (no venture name, planning-stage framing, email-only reply ask) |
 | [price-increase-comparison.md](price-increase-comparison.md) | Financial comparison of package price-increase timing options |
 | [venue-manager-job-posting.md](venue-manager-job-posting.md) | Ready-to-use Venue Manager recruitment document (location-gated, not yet active) |
-| [regulatory-accreditation-tracker.md](regulatory-accreditation-tracker.md) | Phase 7 — Option A regulatory/accreditation checklist with status tracking |
+| ~~regulatory-accreditation-tracker.md~~ | Originally: Phase 7 — Option A regulatory/accreditation checklist with status tracking. **Merged into [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) 2026-07-29; source file archived to `archive/`.** |
 | [swot-analysis.md](swot-analysis.md) | Phase 7 — Strengths/Weaknesses/Opportunities/Threats |
 | [risk-register.md](risk-register.md) | Phase 7 — ranked risk table (likelihood × impact × mitigation × owner), distinct from [02_issues_and_risks.md](02_issues_and_risks.md)'s narrative format |
 | [break-even-sensitivity-analysis.md](break-even-sensitivity-analysis.md) | Phase 7 — best/base/worst case on volume and pricing |
@@ -100,7 +100,7 @@
 
 | File | Status | Notes |
 |---|---|---|
-| [financial-model.md](financial-model.md) | SUPERSEDED (self-declared) | Marked superseded in full per its own banner. Left untouched this session per explicit instruction — covers trust/ownership structure. |
+| [financial-model.md](financial-model.md) | **RESOLVED 2026-07-29 — split, not archived whole** | Was previously marked "SUPERSEDED (self-declared)" in full. Opened and checked directly per Anthony's instruction: contained both stale P&L content and still-relevant trust/tax content. Stale P&L section archived to `archive/financial-model-superseded-pnl-section-2026-06-11.md`; trust/tax-treatment content kept live in `financial-model.md` v3.0 (renamed in scope, not filename, to "Trust Structure & Tax Treatment") with dollar figures flagged as needing a re-run against current P&L. No longer "untouched" — see that document's own 2026-07-29 changelog. |
 | [cash-flow.md](cash-flow.md) | CURRENT — CANONICAL | v2.0, fully rebuilt 2026-07-20 against the current model (2 packages, individual PM services, 10-client AM cap). Flags ancillary-revenue sourcing and a likely GST-apportionment inconsistency needing accountant confirmation. |
 | [profit-loss-tables.md](profit-loss-tables.md) | CURRENT — CANONICAL | v2.0, conservative baseline, no Sunday trading. |
 | [unit-economics.md](unit-economics.md) | CURRENT (with caveats) | Verify PM figures against [pm-staffing-roster.md](pm-staffing-roster.md). |
@@ -116,8 +116,8 @@
 | File | Status | Notes |
 |---|---|---|
 | [gtt-test-reference.md](gtt-test-reference.md) | CURRENT (with caveat, reviewed via full-repo Imara sweep) | Imara reference fixed; Scenario B/C client-count flag added. |
-| [inhouse-gtt-research.md](inhouse-gtt-research.md) | ARCHIVED | In-house lab rejected per reading-order.md. |
-| [option-b-collection-centre.md](option-b-collection-centre.md) | Reference / contingency | Covers the NATA-accreditation "Option B" path, not the current Option A (WDP/PathWest partner) launch model. Cross-referenced from [regulatory-accreditation-tracker.md](regulatory-accreditation-tracker.md). |
+| [inhouse-gtt-research.md](archive/inhouse-gtt-research.md) | ARCHIVED | In-house lab rejected per reading-order.md. |
+| [option-b-collection-centre.md](option-b-collection-centre.md) | Reference / contingency | Covers the NATA-accreditation "Option B" path, not the current Option A (WDP/PathWest partner) launch model. Cross-referenced from [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md). |
 | [pathology-collection-room.md](pathology-collection-room.md) | CURRENT | Room spec for collection room build. |
 | [pathology-partnership-brief.md](pathology-partnership-brief.md) | CURRENT | Status updated 2026-07-19 — WDP emailed/awaiting reply, PathWest/Clinipath not yet contacted. |
 | [patient-intake-form.md](patient-intake-form.md) | CURRENT | Imara->Venue Manager rename complete. |
@@ -148,7 +148,7 @@
 | [afternoon-marketing-plan.md](afternoon-marketing-plan.md) | CURRENT | Imara->Venue Manager rename complete for operational outreach duties. |
 | [brand-guide.md](brand-guide.md) | CURRENT | Imara founder-role references reviewed and correctly retained 2026-07-19. |
 | [website-spec.md](website-spec.md) | CURRENT | Imara->Venue Manager rename complete (contact form routing). |
-| [extended-wellness-services.md](extended-wellness-services.md) | CURRENT (reviewed via contradiction scan) | Fixed one stale cross-reference to archived [bloom-baby-case-study.md](bloom-baby-case-study.md). |
+| [extended-wellness-services.md](extended-wellness-services.md) | CURRENT (reviewed via contradiction scan) | Fixed one stale cross-reference to archived [bloom-baby-case-study.md](archive/bloom-baby-case-study.md). |
 | [reed-partnerships.md](reed-partnerships.md) | CURRENT | Added live outreach-status tracker; corrected the pathology outreach email template. |
 
 ## Location / Physical Space
@@ -158,7 +158,7 @@
 | [location-scouting.md](location-scouting.md) | CURRENT | Per HANDOFF.md, "all current, no known stale figures" (2026-07-17). |
 | [floor-plan-concept.md](floor-plan-concept.md) | CURRENT | Text room schedule, 2026-07-01. Room list consistent across v2/v3 visuals. |
 | [floor-plan-v3.svg](floor-plan-v3.svg) / [floor-plan-v3.pdf](floor-plan-v3.pdf) | **CURRENT** | v3, 2026-07-10 — open-plan lounge, furniture, accessible door swing arcs. Canonical per HANDOFF.md. |
-| [floor-plan-visual.html](floor-plan-visual.html) / [floor-plan-visual.pdf](floor-plan-visual.pdf) | SUPERSEDED (flagged 2026-07-19) | v2, 2026-07-01 — box-fill room layout. Superseded banner added to the HTML file. PDF is a binary export of the same v2 content — cannot be text-edited; status recorded in [reading-order.md](reading-order.md) and this inventory instead. |
+| [floor-plan-visual.html](archive/floor-plan-visual.html) / [floor-plan-visual.pdf](archive/floor-plan-visual.pdf) | SUPERSEDED (flagged 2026-07-19) | v2, 2026-07-01 — box-fill room layout. Superseded banner added to the HTML file. PDF is a binary export of the same v2 content — cannot be text-edited; status recorded in [reading-order.md](reading-order.md) and this inventory instead. |
 
 ## Compliance & Legal
 
@@ -181,10 +181,10 @@
 
 | File | Status | Notes |
 |---|---|---|
-| [research-supplement-day48-ARCHIVED.md](research-supplement-day48-ARCHIVED.md) | ARCHIVED (correctly labelled) | Merged into research.md v3.0. |
-| [research-supplement-day48.md](research-supplement-day48.md) | ARCHIVED (flagged 2026-07-19) | Byte-identical duplicate of the file above, left over from the merge — was never renamed/removed. Superseded banner added. |
-| [bloom-baby-case-study.md](bloom-baby-case-study.md) | ARCHIVED | 3D scan removed from scope entirely (Day 51). |
-| [inhouse-gtt-research.md](inhouse-gtt-research.md) | ARCHIVED | In-house lab rejected. |
+| [research-supplement-day48-ARCHIVED.md](archive/research-supplement-day48-ARCHIVED.md) | ARCHIVED (correctly labelled) | Merged into research.md v3.0. |
+| [research-supplement-day48.md](archive/research-supplement-day48.md) | ARCHIVED (flagged 2026-07-19) | Byte-identical duplicate of the file above, left over from the merge — was never renamed/removed. Superseded banner added. |
+| [bloom-baby-case-study.md](archive/bloom-baby-case-study.md) | ARCHIVED | 3D scan removed from scope entirely (Day 51). |
+| [inhouse-gtt-research.md](archive/inhouse-gtt-research.md) | ARCHIVED | In-house lab rejected. |
 
 ---
 
@@ -193,13 +193,13 @@
 | Status | Count (approx.) |
 |---|---|
 | CURRENT / CURRENT (with caveats) | ~65 (up from ~48 — the "not reviewed this pass" backlog has been cleared) |
-| New Phase 7 documents | 7 ([regulatory-accreditation-tracker.md](regulatory-accreditation-tracker.md), [swot-analysis.md](swot-analysis.md), [risk-register.md](risk-register.md), [break-even-sensitivity-analysis.md](break-even-sensitivity-analysis.md), [referral-partnership-plan.md](referral-partnership-plan.md), [pricing-billing-strategy.md](pricing-billing-strategy.md), [project-timeline-milestones.md](project-timeline-milestones.md)) |
-| New audit-deliverable documents (00-05 + supporting) | 8 (`00_document_inventory.md`, [01_conflicts_log.md](01_conflicts_log.md), [02_issues_and_risks.md](02_issues_and_risks.md), [03_improvements.md](03_improvements.md), [04_roadmap_next_steps.md](04_roadmap_next_steps.md), [05_open_questions_for_founder.md](05_open_questions_for_founder.md), [lab-partnership-email-draft.md](lab-partnership-email-draft.md), [price-increase-comparison.md](price-increase-comparison.md), [venue-manager-job-posting.md](venue-manager-job-posting.md)) |
+| New Phase 7 documents | 7 ([VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md), [swot-analysis.md](swot-analysis.md), [risk-register.md](risk-register.md), [break-even-sensitivity-analysis.md](break-even-sensitivity-analysis.md), [referral-partnership-plan.md](referral-partnership-plan.md), [pricing-billing-strategy.md](pricing-billing-strategy.md), [project-timeline-milestones.md](project-timeline-milestones.md)) |
+| New audit-deliverable documents (00-05 + supporting) | 8 (`00_document_inventory.md`, [01_conflicts_log.md](01_conflicts_log.md), [02_issues_and_risks.md](02_issues_and_risks.md), [03_improvements.md](03_improvements.md), [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md), [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md), [lab-partnership-email-draft.md](lab-partnership-email-draft.md), [price-increase-comparison.md](price-increase-comparison.md), [venue-manager-job-posting.md](venue-manager-job-posting.md)) |
 | SUPERSEDED (self-declared or flagged this session) | ~6 |
 | STALE / NEEDS REWRITE (flagged, not yet fixed) | 2 ([operations-manual.md](operations-manual.md) scheduling section; [scenario-c-timeline.html](scenario-c-timeline.html) likely; [workflow.md](workflow.md) staffing table also still flagged, CONFLICT-04) |
 | ARCHIVED | 4 |
 | Not reviewed this pass | 0 — the entire "not reviewed this pass" backlog from the original audit was cleared during the Phase 6/7 verification and contradiction-scan passes |
-| Untouched by explicit instruction (ownership/trust scope) | 3 (financial-model.md, dva-tpi-research.md, research.md) |
+| Untouched by explicit instruction (ownership/trust scope) | 2 (dva-tpi-research.md, research.md). **financial-model.md removed from this list 2026-07-29** — opened and split per Anthony's direct instruction (no longer "untouched"), see its row above and its own changelog. |
 
 **Nine conflicts logged and tracked in [01_conflicts_log.md](01_conflicts_log.md) (CONFLICT-01 through 09).** Six resolved/fixed this session; three remain flagged and unresolved (CONFLICT-03/04 — documentation rewrites recommended as follow-up; CONFLICT-08/09 — financial figure and payment-policy reconciliation needed, recommended as priority follow-up work, not founder decisions).
 
@@ -214,3 +214,5 @@
 **2026-07-20 (hyperlink sweep)** — Converted every backtick-wrapped filename reference in this document to a clickable relative markdown hyperlink, per the repo-wide hyperlink rule.
 
 **2026-07-20 (cash-flow.md status updated)** — Updated the `cash-flow.md` status-table entry to reflect its full rebuild this session (v2.0) — no longer flagged as carrying a stale 3-way figure discrepancy, since that discrepancy has now been fixed at the source rather than just flagged.
+
+**2026-07-29 (external audit response — archive, don't flag)** — An outside reviewer found that this repo's process of adding a "SUPERSEDED"/"ARCHIVED" banner without physically moving the file (see [operations-manual.md](operations-manual.md)'s Scenario B section, left in place for 10 days after being flagged) had itself caused a real staff-training risk. Actioned this session: every file already marked SUPERSEDED/ARCHIVED in this inventory as of 2026-07-19 has now been physically moved to `docs/archive/` via `git mv` (history preserved) — [inhouse-gtt-research.md](archive/inhouse-gtt-research.md), [research-supplement-day48-ARCHIVED.md](archive/research-supplement-day48-ARCHIVED.md), [research-supplement-day48.md](archive/research-supplement-day48.md), [bloom-baby-case-study.md](archive/bloom-baby-case-study.md), [floor-plan-visual.html](archive/floor-plan-visual.html), [floor-plan-visual.pdf](archive/floor-plan-visual.pdf). All in-repo links/references to these 6 files updated to the new path (verified via grep sweep, [research.md](research.md) left untouched — protected file, its one reference is a historical "supersedes" note, not a live pointer). **Update 2026-07-29 (later same session):** [financial-model.md](financial-model.md) was initially left as an open, unresolved conflict (it met the literal archive criteria but was also one of 3 files marked out-of-scope/untouched per an earlier session's instruction). Anthony directly instructed this be checked and resolved rather than left open — opened the file, confirmed it mixed stale P&L content with still-relevant trust/tax-treatment content, and **split it**: stale P&L archived to `archive/financial-model-superseded-pnl-section-2026-06-11.md`, trust/tax content kept live in `financial-model.md` v3.0. See that document's own row above and changelog for full detail. [operations-manual.md](operations-manual.md)'s Scenario B section (the file the review specifically named) was not archived as a separate file — it was rewritten in place with the current Scenario C model inlined, since it's one section of an otherwise-current document, not a standalone stale file. See `docs/CURRENT-STATE.md` (new this session) for the single canonical numbers file every other document now points to instead of re-stating figures independently.

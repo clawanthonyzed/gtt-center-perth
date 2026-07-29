@@ -311,24 +311,28 @@ This drops the relief pool from an implied 4 single-skill specialists to 3 peopl
 
 ---
 
-## Profit Breakdown — AM vs PM Contribution (Answers "is +A$6,663/month AM-only or full day?")
+## Profit Breakdown — AM vs PM Contribution (Answers "is +A$25,087.07/month AM-only or full day?")
 
-**It's the full day** — total AM + PM + ancillary revenue minus all fixed costs (both shifts, shared overhead, relief pool, workers comp). It is not an AM-only figure.
+> **CORRECTED 2026-07-29 (external audit finding):** the table below previously used A$44,000/month AM revenue — the stale 8-client/day Scenario B figure — even though CONFLICT-08 (resolved 2026-07-20, see `docs/01_conflicts_log.md`) had already established the current AM revenue as A$55,000/month (10-client Scenario C, verified). This is exactly the kind of leftover contradiction an outside reviewer found: a fix applied to the venture-level headline figure (`profit-loss-tables.md`) but never propagated to this segment-level breakdown, which is precisely where Anthony's belief that "AM loses money on its own" originated. Corrected below using the current A$55,000/month AM revenue figure. **This is not a new model** — it is the same 2026-07-17 Scenario C capacity change already resolved elsewhere, applied to a table that was never updated. See `docs/CURRENT-STATE.md` §7 and `docs/VERIFICATION-TRACKER.md` for the full input-by-input delta.
+
+**It's the full day** — total AM + PM + ancillary revenue minus all fixed costs (both shifts, shared overhead, relief pool, workers comp). It is not an AM-only figure — but see the AM-standalone contribution row below, since that specific number is the one this correction concerns.
 
 Breaking it down by shift (allocating only directly-attributable labor per shift, leaving shared costs — reception, relief pool, rent, insurance, admin — separate) gives a genuinely useful picture of where the margin actually comes from:
 
 | Component | Revenue | Direct Labor | Contribution |
 |---|---|---|---|
-| **AM (GTT)** | A$44,000/month | A$48,255/month (2× each of massage/nail/hair/beauty + 2 phlebotomists) | **-A$4,255/month** |
+| **AM (GTT)** | A$55,000/month `[MODELED — capacity ceiling, scenario-c-sync-timetables.md verified, 10 clients/day × A$250 × 22 days; contingent on the referral pipeline filling all 10 daily slots]` | A$48,255/month (2× each of massage/nail/hair/beauty + 2 phlebotomists — unchanged by the 8→10 client change, since headcount is set by peak concurrency, not client count) | **+A$6,745/month** |
 | **PM (individual services)** | A$33,440/month | A$9,677/month (4-role hours-based roster) | **+A$23,763/month** |
 | **Shared/unallocated** (reception, relief, workers comp, rent, utilities, marketing, etc.) minus ancillary revenue | A$8,580/month ancillary | A$21,432/month | **-A$12,852/month** |
-| **Total** | | | **≈+A$6,656/month** (reconciles to the +A$6,663/month figure, small rounding) |
+| **Total** | | | **≈+A$17,656/month** (does not reconcile exactly to the venture-level +A$25,087.07/month headline — see note below) |
 
-### The Finding
+**Note on reconciliation gap:** the ≈+A$17,656/month sum above does not match `profit-loss-tables.md`'s precise +A$25,087.07/month headline figure exactly — that document uses its own more granular weekday/Saturday-blended calculation (including Saturday's separate contribution and the 07:00 opening-time increment), not this simplified 3-row shift breakdown. Flagged plainly rather than forcing a false match; `profit-loss-tables.md` is the more precise source for the venture-level total, this table is for shift-level intuition only.
 
-**AM does not cover its own direct staff cost on its own** — it requires 8 concurrently-present staff regardless of the modest A$250/visit package price, which caps its per-client margin hard. **PM is the stronger margin contributor** — the hours-based casual roster (pay only for confirmed booking time) makes every PM dollar of revenue much cheaper to deliver than an AM dollar.
+### The Finding (Corrected)
 
-**Strategic implication:** the AM capacity-expansion lever (Section 1 above, 3rd chair → 10 clients/day) directly targets AM's weakest point — spreading the same concurrent-staff cost base across more clients improves AM's per-client margin. This is a stronger argument for the 3rd chair than the raw +A$2,411/month figure alone suggests — it's fixing the shift that's currently subsidised by PM, not just adding volume.
+**AM now covers its own direct staff cost on a standalone basis** (+A$6,745/month, up from a modelled -A$4,255/month under the old 8-client assumption) — the same 8-person concurrent staff requirement is now spread across 10 package sales/day instead of 8, improving AM's per-client margin without any cost change. **PM remains the stronger per-dollar margin contributor** — the hours-based casual roster (pay only for confirmed booking time) still makes every PM dollar of revenue cheaper to deliver than an AM dollar, even with AM now standing on its own.
+
+**Strategic implication:** the AM capacity-expansion lever that flipped this figure (Scenario C, 8→10 clients/day, verified 2026-07-17) has already been actioned as the current committed model — there is no further pending action here. The Scenario D growth path (15 clients/day, 3rd chair) would extend the same logic further but is not yet committed and is provisional on WDP's specimen-cutoff confirmation (`cutoff-time-CORRECTION.md`, still unresolved).
 
 ---
 
@@ -365,3 +369,5 @@ To isolate whether *predictability itself* (not volume) reduces staffing, this s
 **2026-07-28 (superseded — AM/PM split dropped) — SUPERSEDED SAME DAY, SEE BELOW.** Anthony's direct instruction removes the "4 dedicated PM-only casual hires" model this document was built around. Added superseded banner at top pointing to `dual-role-staffing-model-2026-07-28.md`. This document's PM-only headcount and cost figures are retained for historical trace only, not current planning.
 
 **2026-07-28 (correction, same day) — AM/PM shift split is NOT dropped.** The entry immediately above was a misinterpretation, corrected same day per Anthony's direct correction. This document's 4-dedicated-PM-hire model, headcount, and cost figures remain current and in force. Reverted the top-of-document superseded banner. See `dual-role-staffing-model-2026-07-28.md` v2.0 for the corrected (narrower) instruction: cross-train staff across service specialties, not across AM/PM shifts.
+
+**2026-07-29 (Profit Breakdown table corrected — external audit finding)** — The "Profit Breakdown — AM vs PM Contribution" table still used the stale A$44,000/month (8-client) AM revenue figure, 9 days after CONFLICT-08 resolved this exact figure elsewhere in the corpus (2026-07-20). This was the direct source of the "AM loses money on its own" framing that later surfaced as an open question. Corrected to A$55,000/month (10-client Scenario C, verified) — AM standalone contribution flips from -A$4,255/month to +A$6,745/month. Flagged explicitly that this is not a new model, just the existing Scenario C change finally propagated to this table. See `docs/CURRENT-STATE.md` and `docs/VERIFICATION-TRACKER.md` for the full delta.

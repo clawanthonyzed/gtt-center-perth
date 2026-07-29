@@ -60,7 +60,7 @@
 This is the most consequential external relationship in the entire venture, but it's already extensively documented — not repeated here. See:
 - `reed-partnerships.md` for the live outreach status (WDP emailed, awaiting reply; PathWest and Clinipath not yet contacted)
 - `pathology-partnership-brief.md` for the partnership model detail
-- `regulatory-accreditation-tracker.md` for the accreditation/compliance checklist tied to this relationship
+- `VERIFICATION-TRACKER.md` for the accreditation/compliance checklist tied to this relationship
 
 ---
 
@@ -74,9 +74,9 @@ These are the specific external reference documents this venture's own planning 
 | Fair Work Hair & Beauty Industry Award MA000005 | Governs massage/nail/hair/beauty staff pay and penalty rates | `hr-framework.md`, `staff-plan.md` |
 | Fair Work Clerks — Private Sector Award MA000002 | Governs reception/admin staff pay | `hr-framework.md`, `staff-plan.md` |
 | WA Retail Trading Hours Act | Confirms hairdresser/beautician/barber shops are exempt from trading-hour restriction — the basis for Sunday closure being a business choice, not a legal requirement | `am-capacity-weekend.md` |
-| WA Health / ACSQHC collection-centre requirements | Governs the physical collection room build and compliance | `pathology-collection-room.md`, `regulatory-accreditation-tracker.md` |
+| WA Health / ACSQHC collection-centre requirements | Governs the physical collection room build and compliance | `pathology-collection-room.md`, `VERIFICATION-TRACKER.md` |
 | PathWest Patient Instructions — GTT (2019 and 2024 versions) | Official source for the fasting window and the "preferably before 10am" start-time guidance | `king-edward-start-time-constraint.md`, `gtt-clinical-protocol.md` — sourced 2026-07-20 |
-| Privacy Act 1988 (Cth) / Notifiable Data Breaches scheme | Governs patient health-information handling | `privacy-policy.md`, `regulatory-accreditation-tracker.md` |
+| Privacy Act 1988 (Cth) / Notifiable Data Breaches scheme | Governs patient health-information handling | `privacy-policy.md`, `VERIFICATION-TRACKER.md` |
 
 ---
 

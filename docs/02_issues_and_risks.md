@@ -1,7 +1,7 @@
 # GTT Center Perth — Issues and Risks (Gap Analysis)
 
 **Compiled:** 2026-07-19 | **Compiled by:** Grace (Operations Manager, audit pass)
-**Purpose:** Consolidated gap analysis across the docs corpus — combines newly found issues from this session's audit with still-open items already logged elsewhere ([review-audit.md](review-audit.md), [cutoff-time-CORRECTION.md](cutoff-time-CORRECTION.md), [king-edward-start-time-constraint.md](king-edward-start-time-constraint.md)). Organized by severity. Founder-only decisions are cross-referenced to [05_open_questions_for_founder.md](05_open_questions_for_founder.md), not duplicated in full here.
+**Purpose:** Consolidated gap analysis across the docs corpus — combines newly found issues from this session's audit with still-open items already logged elsewhere ([review-audit.md](review-audit.md), [cutoff-time-CORRECTION.md](cutoff-time-CORRECTION.md), [king-edward-start-time-constraint.md](king-edward-start-time-constraint.md)). Organized by severity. Founder-only decisions are cross-referenced to [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md), not duplicated in full here.
 
 ---
 
@@ -87,7 +87,7 @@ Both resolved this session, but the underlying process gap (files not renamed/fl
 | L2 | Scheduling conflict class re-opens repeatedly | Low | Process observation, no action needed |
 | L3 | Duplicate/superseded file housekeeping | Low | Resolved this session, pattern noted |
 
-See [03_improvements.md](03_improvements.md) for suggested process improvements addressing the root causes (especially L2/L3), and [04_roadmap_next_steps.md](04_roadmap_next_steps.md) for prioritised next actions.
+See [03_improvements.md](03_improvements.md) for suggested process improvements addressing the root causes (especially L2/L3), and [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) for prioritised next actions.
 
 ---
 

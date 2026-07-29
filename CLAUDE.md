@@ -26,6 +26,13 @@ Copied from the empire shared skill library (`/opt/openclaw/shared/skills/` on s
 
 - Venture is NOT blank-slate — 60+ docs exist, several current as of 2026-07-17/18.
 - Imara has zero operational involvement (confirmed 2026-07-18) — a Venue Manager (new hire, not yet recruited) covers every on-site duty previously attributed to her. Anthony/Imara retain ownership + financial oversight only.
-- Funding: self-funded via Anthony's partner's ~A$200K savings, no external investor.
+- Funding: self-funded via Anthony + Imara's joint savings (~A$200K), no external investor. **Corrected 2026-07-29 — previously miswritten as "Imara's personal savings" in several docs; Anthony confirmed directly it is joint savings, not Imara's alone.**
 - Launch date: not set — sequence roadmap by dependency only.
 - AM model: Scenario C, 10 clients/day, 07:00 start. Packages: only A$250/A$300 (Package 1 dropped). Saturday reuses AM + PM standalone. Sunday closed.
+
+## Governance — Read Before Stating Any Figure
+
+- **`rules/CLAUDE.md`** (this repo's own governance rules, created 2026-07-29) — hard rule: no financial/regulatory figure without a `[VERIFIED]`/`[MODELED]`/`[PLACEHOLDER]` tag.
+- **`docs/CURRENT-STATE.md`** — the single canonical source for package prices, client capacity, headcount, monthly net P&L, and startup capital range. Every other document defers to it.
+- **`docs/VERIFICATION-TRACKER.md`** — the single running list of unconfirmed facts, who can confirm each, and status (merges the former `05_open_questions_for_founder.md`, `regulatory-accreditation-tracker.md`, `04_roadmap_next_steps.md`).
+- Run `python tools/check_consistency.py` before quoting any figure externally.

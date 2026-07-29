@@ -53,7 +53,7 @@ These figures already assume a conservative package price for the morning packag
 | | Estimate |
 |---|---|
 | Startup capital needed (fit-out, equipment, working capital, before any revenue) | roughly A$209,000-431,000, most likely around A$305,000 |
-| Anthony's / Imara's funding source | self-funded from Imara's own savings (~A$200,000), no outside investor involved |
+| Anthony's / Imara's funding source | self-funded from Anthony and Imara's joint savings (~A$200,000), no outside investor involved (corrected 2026-07-29 — previously miswritten as Imara's savings alone) |
 
 **Honest flag:** this startup-cost range has moved a bit across different planning sessions as the model has been refined — the figure above is the most detailed breakdown available, but it hasn't been pinned to one single confirmed number yet, since a specific venue hasn't been chosen (fit-out cost depends heavily on the actual space). This will firm up once a location is selected and real fit-out quotes come in.
 

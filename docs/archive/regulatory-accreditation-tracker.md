@@ -18,7 +18,7 @@
 
 ## 1. Pathology Collection Accreditation (Option A Model)
 
-**Context, confirmed:** GTT Center Perth pursues Option A — partnering with an already-NATA-accredited pathology provider (WDP priority 1, PathWest secondary, Clinipath contingency) for collection oversight. Option B (building an in-house NATA/RCPA-accredited collection centre) was investigated and explicitly rejected — see `option-b-collection-centre.md` and `inhouse-gtt-research.md`, primarily due to the 12-18 month accreditation timeline. **The items below reflect what is actually still required under Option A — this is a much shorter list than a full in-house accreditation pathway would require.**
+**Context, confirmed:** GTT Center Perth pursues Option A — partnering with an already-NATA-accredited pathology provider (WDP priority 1, PathWest secondary, Clinipath contingency) for collection oversight. Option B (building an in-house NATA/RCPA-accredited collection centre) was investigated and explicitly rejected — see `option-b-collection-centre.md` and `archive/inhouse-gtt-research.md`, primarily due to the 12-18 month accreditation timeline. **The items below reflect what is actually still required under Option A — this is a much shorter list than a full in-house accreditation pathway would require.**
 
 | Item | Status | Notes |
 |---|---|---|
@@ -102,4 +102,4 @@ None of these are unusual or high-risk for this type of business under the curre
 
 ## Changelog
 
-**2026-07-19** — Created as a new Phase 7 deliverable. Reflects the confirmed Option A model (not Option B/in-house accreditation) — see `option-b-collection-centre.md`/`inhouse-gtt-research.md` for why Option B was rejected. Cross-references `hr-framework.md` and `docs/pricing-billing-strategy.md` rather than duplicating their content.
+**2026-07-19** — Created as a new Phase 7 deliverable. Reflects the confirmed Option A model (not Option B/in-house accreditation) — see `option-b-collection-centre.md`/`archive/inhouse-gtt-research.md` for why Option B was rejected. Cross-references `hr-framework.md` and `docs/pricing-billing-strategy.md` rather than duplicating their content.
