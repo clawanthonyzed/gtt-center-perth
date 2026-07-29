@@ -77,5 +77,29 @@ Per `industry-standards-reference-2026-07-28.md`, GTT's café/refreshments count
 
 **The concept floor plan's treatment rooms need a second sink (or clearly designated separate prep/cleaning area) and hands-free taps, per WA Skin Penetration Code §7.1-7.2** — this is the single most concrete, specific, fixable gap found across all three standards. Everything else is either already met, not applicable, or genuinely blocked on external information (WDP's room spec, a venue address for Food Act notification, or NPAAC's inaccessible text).
 
+---
+
+## Scope Narrowing (2026-07-28, later same day) — Which Services Actually Trigger the Code
+
+Anthony confirmed GTT will NOT offer waxing that nicks skin, shaving, microneedling, or dermaplaning. The Code's own trigger definition (Definitions, p.4): **"Skin penetration procedure — Means any process involving the piercing, cutting, puncturing, tearing or shaving of the skin, mucous membrane or conjunctiva of the eye."** Checked against GTT's actual planned service menu (`services-pricing-locked.md`), not assumption:
+
+| Service | Triggers the Code? | Reasoning |
+|---|---|---|
+| Blood collection (phlebotomy) | **YES** | Venepuncture is unambiguously "piercing... of the skin." Unaffected by this scope narrowing. |
+| Nail treatments (manicure/pedicure) | **LIKELY YES** | Standard industry cuticle trimming (nippers) cuts cuticle tissue, which is skin — plausibly "cutting... of the skin." **Flagged as an assumption pending confirmation of GTT's actual cuticle protocol** (push-back only vs. trim), not a confirmed clause match. |
+| Hair cutting/styling | **NO** | The Code's definition is "cutting... of the skin" — hair cutting is cutting of hair, not skin. Razor work (which would trigger "shaving... of the skin") is excluded from GTT's scope per Anthony. |
+| Massage | **NO** | No piercing, cutting, puncturing, tearing, or shaving of skin occurs under any circumstance. Confirmed unchanged from the earlier finding — massage was already the cleanest match against these standards. |
+| Plain non-invasive facials | **NO** | No trigger action occurs. |
+| Brow waxing / threading | **GENUINE BOUNDARY CASE, NOT RESOLVED** | Both are real, currently planned services (`services-pricing-locked.md`: "Brow wax + reshape," "Brow thread + reshape"). Whether professionally-executed waxing (no nicking) constitutes "tearing... of the skin" under the plain text is a real judgment call this agent cannot resolve with confidence — not a government ruling, just a reasoned reading of ambiguous wording. |
+
+**Sink requirement scoped accordingly, not applied blanket:**
+- **No longer needs the 2-sink/hands-free-tap fix:** Massage Rooms (1, 2, 5-growth), Hairdressing Area.
+- **Retains the fix (conservative default given unresolved boundary questions):** Nail Station Area, Facial/Beauty Rooms (3, 4, 6-growth).
+- **Retains the fix (unambiguous):** Blood Collection Room.
+
+This is a real, calculated fit-out cost reduction for 3 of 7 treatment-adjacent rooms — not assumed, and not overstated: 2 of the remaining rooms (Nail, Facial/Beauty) are retained on a conservative-not-confirmed basis, not because they're definitely required.
+
 ## Changelog
 **2026-07-28 (v2)** — Superseded v1's "none read" status. Obtained and read WA Skin Penetration Code (509 lines) and AMT Massage Code (1,392 lines) in full via pdftotext extraction after WebFetch returned unreadable binary. NPAAC genuinely inaccessible after 6 attempts — flagged honestly, not guessed. Found a real, previously-unflagged threshold question: the Skin Penetration Code's exemption list may not cover phlebotomists. Drafted Food Act 2008 notification next steps, correctly identified as blocked on venue location rather than outstanding through inaction.
+
+**2026-07-28 (v3, later same day)** — Anthony narrowed GTT's service scope (no nicking-waxing, shaving, microneedling, dermaplaning). Re-checked the Code's trigger definition against GTT's actual planned service menu, room by room. Result: Massage and Hairdressing no longer need the 2-sink/hands-free-tap fix; Nail and Facial/Beauty retain it on a conservative, not-confirmed basis (cuticle cutting, brow waxing/threading both sit in genuine unresolved territory); Blood Collection Room unaffected. Corresponding edits made to `floor-plan-concept.md`.
