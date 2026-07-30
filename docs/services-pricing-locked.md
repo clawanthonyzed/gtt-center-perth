@@ -310,15 +310,7 @@ All colour services take 60 min minimum — **afternoon/standalone only.**
 
 ## Staff Downtime Protocol
 
-When a staff member has no booked client:
-1. Clean and prepare treatment room for next booking
-2. Restock professional products and consumables
-3. Review their booking schedule and next client notes
-4. Cross-train on an adjacent service (e.g., beauty therapist learns brow waxing)
-5. Create social media content (photos of treatment setup, products)
-6. Complete any mandatory training or product knowledge modules
-7. Assist receptionist with client coordination or cafe prep
-8. No idle time — assign a task from this list as default
+**Canonical version now lives in `financial-break-even-staff.md`'s "Staff Downtime Protocol" section — not duplicated here as of 2026-07-30 (this document previously carried its own independent copy, which had started to drift in wording from the other; consolidated to one source to prevent recurrence).** Summary: take a standalone/non-GTT booking first if one is available for the gap (permanent policy, not ramp-up-only); the cleaning/training/social-media task list is the fallback when no such booking exists.
 
 ---
 

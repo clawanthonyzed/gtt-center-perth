@@ -23,6 +23,8 @@
 | Operating days | Mon-Sat AM (6 days), PM Mon-Fri + Sat bolt-on, Sunday closed | `[MODELED — assumption: Sunday reopens only once standalone PM demand is proven and profitable; a business choice, not a legal requirement per WA Retail Trading Hours Act exemption — am-capacity-weekend.md]` |
 | WDP specimen dispatch cutoff | No cutoff within business operating hours (per WDP) — supersedes the earlier 11:30/12:30 conflict | `[VERIFIED — Carole Rivers, WDP, verbal confirmation, 2026-07-29]`. **Verbal only, not yet in writing — do not treat as fully closed out.** Standing action item: get this in writing/email for the permanent record (see `docs/VERIFICATION-TRACKER.md` item 1, `cutoff-time-CORRECTION.md`). Not yet actioned into any scheduling document — the AM/PM capacity ceiling above still uses the original courier-cutoff-constrained schedule until the written confirmation lands and the schedulers are re-run. |
 | Growth path (not committed) | Scenario D, 15 clients/day, 3rd phlebotomist/chair | `[MODELED — am-capacity-weekend.md, scenario-d-investigation.md; provisional on the WDP cutoff answer above]` |
+| Rostering policy | Roster only the roles a given day's confirmed bookings actually require — a **standing, permanent operating rule**, not a ramp-up-period measure | `[VERIFIED — Anthony's direct instruction, 2026-07-30]` — see `pm-staffing-roster.md`'s Booking-Driven Rostering Policy section, formalized as permanent 2026-07-30 |
+| Staff downtime policy | Take a standalone/non-GTT booking first if one is available for the gap; cleaning/training list is the fallback — permanent policy | `[VERIFIED — Anthony's direct instruction, 2026-07-30]` — see `financial-break-even-staff.md`'s Staff Downtime Protocol, updated 2026-07-30. Quantified revenue impact: §8 below. |
 
 ---
 
@@ -115,7 +117,21 @@
 
 ---
 
-## 8. How to Use This File
+## 8. Downtime-Fill Revenue — Tagged Upside (Added 2026-07-30, Separate From the Baseline)
+
+**Policy (permanent, not ramp-up-only):** AM treatment staff now take a standalone/non-GTT booking first during their own downtime between scheduled GTT-package bookings — the cleaning/training task list is the fallback, used only when no such booking is available (`financial-break-even-staff.md`'s Staff Downtime Protocol, updated 2026-07-30). This governs rostering permanently, at any volume level, per `pm-staffing-roster.md`'s Booking-Driven Rostering Policy (retitled 2026-07-30 to make its permanence explicit — it does not stop applying once ramp-up ends).
+
+| Item | Value | Tag |
+|---|---|---|
+| Total AM treatment-staff downtime/day (8 staff) | 1,260 min = 21.0 staff-hours | `[VERIFIED — scenario-c-sync-timetables.md §2, walked directly from the timetable's own booking times within its 07:15-11:45 bookended window; not estimated]` |
+| Theoretical fill ceiling | 27.3 sessions/day = A$2,593.50/day = A$57,057.00/month | `[MODELED — arithmetic on the verified downtime figure above, using throughput/price assumptions below; this is a raw capacity ceiling, not a realistic estimate — see profit-loss-tables.md's caveats]` |
+| **Downtime-fill revenue upside (headline)** | **A$28,528.50/month** | `[MODELED — assumption: 50% utilisation of theoretical AM-downtime booking capacity (same discount factor pm-staffing-roster.md already applies to standalone PM demand); throughput 1.3 sessions/hr and A$95/session average both reused from pm-staffing-roster.md]` |
+
+**This figure is deliberately NOT included in §5's +A$25,087.07/month baseline — it is a separate, more speculative upside line.** Full derivation, gap-chunk verification, and caveats (no demand validation for this specific slot type, not yet built into any booking system) in `profit-loss-tables.md`'s "Downtime-Fill Revenue — Upside Estimate" section. Treat as a stretch upside for planning conversations, not a figure to rely on for cash-flow or break-even calculations.
+
+---
+
+## 9. How to Use This File
 
 - Every document in `docs/` that states a package price, client capacity, headcount, monthly P&L figure, or startup capital range should point here, not restate the figure as its own independent source.
 - Run `python tools/check_consistency.py` before quoting any figure externally (investor conversation, lease negotiation, staff training) — it greps every `docs/*.md` file for values that contradict this file.
@@ -129,3 +145,5 @@
 **2026-07-29 (created)** — Built in response to an outside review that found the financial model had moved 5+ times with contradicting numbers across documents, false precision on a pre-revenue business, and at least one document (`operations-manual.md`) still training staff on an abandoned model 10 days after being flagged. This file is the process fix, not just a numbers fix — see `rules/CLAUDE.md` for the accompanying hard rule requiring every future figure to carry a tag from this system.
 
 **2026-07-29 (later same session — follow-up corrections from Anthony)** — Two direct corrections applied: (1) the WDP specimen-pickup cutoff row in §1 updated from `[PLACEHOLDER]` to `[VERIFIED — Carole Rivers, WDP, verbal confirmation, 2026-07-29]` — no cutoff exists within business operating hours, per WDP, but this is verbal only and not yet in writing; kept as an open action item in `docs/VERIFICATION-TRACKER.md`, not closed out. (2) Confirmed no funding-source wording errors exist in this file (checked directly) — the "Imara's personal savings" wording error found in 6 other documents this session (`CLAUDE.md`, `executive-summary.md`, `gtt-center-perth-overview-for-imara.md`, `revenue-extraction-options.md`, `risk-register.md`, `swot-analysis.md`, `team-startup.md`, `financial-model.md`) does not appear here since this file never described the funding source. Also: `financial-model.md` was opened and split this session (not left "untouched") — see that document's own changelog; its trust/tax content is separate from this file's scope and not duplicated here.
+
+**2026-07-30 (permanent downtime policy + tagged upside line, per Anthony's direct instruction)** — Added two §1 rows recording the new permanent rostering/downtime policy (previously this was implicitly framed as a ramp-up-period practice in `pm-staffing-roster.md`, now explicitly a standing rule at any volume level). Added new §8 "Downtime-Fill Revenue — Tagged Upside," quantifying the policy using real per-staff gap-time data pulled directly from `scenario-c-sync-timetables.md` (not estimated) — headline figure **A$28,528.50/month**, `[MODELED]`, kept strictly separate from the +A$25,087.07/month baseline in §5, not blended into it. Full derivation in `profit-loss-tables.md`. Also fixed a contradiction the policy change exposed: `operations-manual.md`, `financial-break-even-staff.md`, and `pm-staffing-roster.md` previously stated AM treatment staff could never be reassigned to walk-in/general-public work during the AM window — corrected across all three to reflect that individual downtime between scheduled bookings is now fillable, while the headcount floor (set by peak concurrent demand) is unchanged.

@@ -20,6 +20,8 @@
 
 Note: Client 1 and Client 2's Draw 2 both land at 08:10–08:15 — same literal clock minute, different chairs/phlebotomists. This is the synchronized-start effect in practice: both phlebotomists draw at the same moment, confirmed not a conflict (separate chairs, separate staff).
 
+> **Used 2026-07-30 as the source data for a new downtime-fill revenue estimate** (`docs/profit-loss-tables.md`'s tagged upside line, `docs/CURRENT-STATE.md` §8) — the per-staff booking gaps in §2 below were walked directly to compute real per-person free-time minutes, not estimated. See those documents for the resulting dollar figure and full methodology.
+
 ## 2. Full Staff Timetable
 
 | Staff | Bookings (time — client) |

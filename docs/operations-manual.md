@@ -340,7 +340,7 @@ Note: Client 1 and Client 2's Draw 2 both land at 08:10–08:15 — same literal
 | Nails | 2 | 2 | OK |
 | Hair | 2 | 2 | OK |
 
-Zero double-bookings, all 10 clients placed. Every service staff member does 2-3 bookings across the ~4.5hr morning. Downtime between bookings follows the Staff Downtime Protocol (financial-break-even-staff.md) — no staff member is free for general-public/walk-in fill during the AM GTT window (all 8 AM treatment staff are needed simultaneously; see `profit-loss-tables.md` Treatment Headcount section for the checked answer on whether this can drop to 7 via Massage+Beauty cross-training).
+Zero double-bookings, all 10 clients placed. Every service staff member does 2-3 bookings across the ~4.5hr morning, leaving real per-person downtime between bookings (135-180 min/person, see `docs/CURRENT-STATE.md` §8 for the full per-staff breakdown pulled directly from this timetable). **Updated 2026-07-30 — policy change:** this downtime is now available for standalone/non-GTT bookings first (Staff Downtime Protocol, `financial-break-even-staff.md`, updated 2026-07-30), not reserved exclusively for cleaning/training as previously stated. This does not reduce the headcount floor — all 8 (or 7, if Massage+Beauty pooling is adopted) AM treatment staff are still needed simultaneously at peak-concurrency moments in the schedule (see `profit-loss-tables.md` Treatment Headcount section) — it only means each individual's idle minutes between their own scheduled bookings can now be filled with an outside client rather than sitting unused.
 
 ### Scenario D -- 15-Client Growth Model (NOT COMMITTED)
 

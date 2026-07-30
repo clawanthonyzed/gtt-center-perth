@@ -166,10 +166,10 @@ Gross margin above wages: **A$124,726/year**
 
 ## Shift Structure (CF-01) — Day 51 revision
 
-> **Supersedes the "no new hires" CF-01 conclusion.** Anthony confirmed: all 8 AM service staff (2x Massage, 2x Nail, 2x Hairdresser, 2x Beauty) plus both phlebotomists are needed simultaneously across the AM GTT window per the verified per-staff timetable (operations-manual.md) — none of them is free to "double" as PM staff. PM coverage and sick/holiday cover therefore require real additions, not just rescheduling.
+> **Supersedes the "no new hires" CF-01 conclusion.** Anthony confirmed: all 8 AM service staff (2x Massage, 2x Nail, 2x Hairdresser, 2x Beauty) plus both phlebotomists are needed simultaneously across the AM GTT window per the verified per-staff timetable (operations-manual.md) — at peak concurrency, none of them can be pulled off the roster entirely to cover a dedicated PM shift. PM coverage and sick/holiday cover therefore still require real additions (the dedicated 4-role PM roster below), not a full substitute. **Updated 2026-07-30:** this does not mean AM staff are unavailable for standalone bookings during their own individual downtime between GTT-package bookings — see the Staff Downtime Protocol update below, now a permanent policy.
 
 - **Phlebotomists ×2:** AM only (GTT window, 07:30-12:30, per the Day-49 capacity timetable in operations-manual.md). No PM clinical role — testing is AM-only (fasting requirement).
-- **Massage ×2, Nail ×2, Hairdresser ×2, Beauty ×2:** all 8 work the AM GTT window (07:00/07:30-13:00), covering all 8 GTT clients' Service 1/Service 2 slots per the verified timetable. Downtime between bookings (17-33% utilisation) follows the Staff Downtime Protocol — no PM shift for these 8.
+- **Massage ×2, Nail ×2, Hairdresser ×2, Beauty ×2:** all 8 work the AM GTT window (07:00/07:30-13:00), covering all 8 GTT clients' Service 1/Service 2 slots per the verified timetable. Downtime between bookings (17-33% utilisation) follows the Staff Downtime Protocol — **updated 2026-07-30: standalone bookings first, cleaning/training as fallback** (see below). This does not add a dedicated PM shift for these 8 — the dedicated PM roster remains a separate 4-role hire.
 - **Receptionist/Manager ×1 (split shift):** AM 07:00-12:00 (opening, GTT coordination, AM checkout) + PM 15:00-18:00 (PM Spa Package bookings, closing), with a break 12:00-15:00. Same person, same A$56,237/yr — no new hire.
 - **PM Service Therapist ×1 (NEW HIRE):** 12:00-18:00, cross-trained massage + facials, delivers PM Spa Packages (Package 1/2/3, no testing) to standalone afternoon clients.
 - **Casual Relief Pool:** budgeted A$15,000/yr, drawn on as needed to cover sick/holiday absences in any of the 12 roles above (not a fixed shift).
@@ -255,15 +255,22 @@ See services-pricing-locked.md for the full package definitions and service menu
 
 ## Staff Downtime Protocol
 
-Staff with no booked client:
-1. Clean and prep treatment room for next booking
-2. Restock professional products and consumables
-3. Review next client notes and special requirements
-4. Cross-train on adjacent service (e.g., beauty therapist learns brow waxing)
-5. Create social media content (treatment room setup, product features)
-6. Complete product knowledge or mandatory training modules
-7. Assist receptionist — client coordination, cafe prep, stock orders
-8. Receptionist assigns from this list — no unstructured downtime
+> **Updated 2026-07-30 — policy change, per Anthony's direct instruction.** Taking a standalone/non-GTT booking is now the FIRST option during staff downtime, not a possibility excluded by the old "no staff member is free for general-public/walk-in fill during the AM GTT window" framing (see the reconciliation note below the list). The cleaning/training list is now the fallback, used only when no standalone booking is available for that gap. This is a permanent policy change, not a ramp-up-period note — see `pm-staffing-roster.md`'s Booking-Driven Rostering Policy section (retitled 2026-07-30 to make its permanence explicit) and the new downtime-fill upside line in `profit-loss-tables.md`.
+
+**This is canonical — `services-pricing-locked.md`'s own copy of this protocol now points here rather than maintaining a second independent copy.**
+
+Staff with no booked client, in order:
+1. **Take a standalone/non-GTT client booking if one is available for the gap** (spray tan booth excepted — that's self-service/zero-staff). Check the day's Fresha schedule for a standalone booking that fits the specific gap length and the staff member's specialty — per `docs/CURRENT-STATE.md`'s downtime-fill policy. Only fall through to the list below if no such booking exists for that specific gap.
+2. Clean and prep treatment room for next booking
+3. Restock professional products and consumables
+4. Review next client notes and special requirements
+5. Cross-train on adjacent service (e.g., beauty therapist learns brow waxing)
+6. Create social media content (treatment room setup, product features)
+7. Complete product knowledge or mandatory training modules
+8. Assist receptionist — client coordination, cafe prep, stock orders
+9. Receptionist assigns from this list — no unstructured downtime
+
+**Reconciliation note (2026-07-30):** this section of the document (§Shift Structure, CF-01, above) previously stated "no PM shift for these 8" / "none of them is free to 'double' as PM staff," reflecting the pre-policy-change assumption that AM treatment staff could never be booked for outside clients during the AM window. **That framing is superseded by this policy change** — individual staff members' downtime *between* their own scheduled GTT-package bookings is now explicitly available for standalone bookings; the unchanged constraint is that the **8-person (or 7, if Massage+Beauty pooling is adopted) headcount itself cannot be reduced**, since peak concurrent demand still requires that many staff simultaneously present at certain moments in the schedule. Downtime-fill is about using otherwise-idle minutes for a staff member who is present but not currently serving a GTT client — it does not change the headcount floor. See `docs/CURRENT-STATE.md` §8 for the quantified revenue estimate this unlocks, kept as a separate tagged upside line, not blended into the conservative baseline.
 
 ---
 

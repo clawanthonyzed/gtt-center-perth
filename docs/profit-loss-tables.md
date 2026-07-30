@@ -91,6 +91,8 @@ Non-Wage Overhead is broken down below by component (source: [cash-flow.md](cash
 | **Total Costs** | **A$88,625.09** |
 | **Net P&L (standing conservative baseline)** | **+A$25,087.07** |
 
+**This baseline figure does NOT include the Downtime-Fill Revenue upside — see the dedicated section below "Key Callouts." That figure is a separate, more speculative, tagged estimate — deliberately not blended into this line.**
+
 ## 5. Quarterly (3 Months)
 
 | | Amount |
@@ -134,10 +136,64 @@ Non-Wage Overhead is broken down below by component (source: [cash-flow.md](cash
 2. **Saturday is profitable, not a drag** — once costed on actual hours worked (see the clarification section above), Saturday AM+PM contributes +A$1,580.50/day. The earlier "Saturday runs at a loss" finding was a costing-method error in a since-removed draft, not a real finding about the business — see Changelog for what was removed and why.
 3. **Sunday remains closed** — not modelled anywhere in this document. Reopening depends on standalone PM demand being proven and profitable enough to justify the added penalty-rate cost ([am-capacity-weekend.md](am-capacity-weekend.md)), not on this document.
 4. **MA000027 phlebotomist Saturday ordinary-hours question remains unconfirmed** — this document uses the conservative full-penalty-rate assumption throughout (no optimistic/pending-verification scenario shown, since that scenario added confusion without changing the standing baseline). If a payroll advisor or Fair Work confirms an ordinary-hours carve-out exists, Saturday profitability would improve further — upside only, never assumed.
+5. **Downtime-fill revenue is a separate, tagged upside — not included above.** See the dedicated section immediately below for the full derivation and dollar figure. Do not add it to the +A$25,087.07/month baseline when quoting a headline number.
 
 ---
 
-## Treatment Headcount — Can It Be Trimmed Below 8 at 10 Clients/Day?
+## Downtime-Fill Revenue — Upside Estimate (Separate From the Baseline, Added 2026-07-30)
+
+> **Policy context:** per Anthony's direct instruction (2026-07-30), AM treatment staff now take a standalone/non-GTT booking first during their own downtime between scheduled GTT-package bookings, with the cleaning/training task list as the fallback (`financial-break-even-staff.md`'s Staff Downtime Protocol) — a permanent policy, not a ramp-up measure (`pm-staffing-roster.md`'s Booking-Driven Rostering Policy). This section quantifies what that policy is actually worth, using real gap-time data pulled directly from the verified schedule — not a guess.
+
+### Method — Real Gap Times, Not Estimated
+
+Source: `scenario-c-sync-timetables.md` §2 "Full Staff Timetable" — the verified, current Scenario C AM schedule (10 clients/day, 2 chairs, synchronized start). Every AM treatment booking block in that schedule is 45 minutes. The operating window used is 07:15 (the first treatment booking's start time, Clients 1 & 2) to 11:45 (the last treatment booking's end time, Clients 9 & 10) = **270 minutes**, taken directly from the timetable's own bookended activity span, not assumed.
+
+Walking each of the 8 AM treatment staff's actual booking times in that timetable and subtracting from the 270-minute window:
+
+| Staff | Bookings (from scenario-c-sync-timetables.md) | Booked minutes | Free/downtime minutes |
+|---|---|---|---|
+| Massage 1 (M1) | 3 bookings (07:15-08:00, 08:35-09:20, 09:55-10:40) | 135 | 135 |
+| Massage 2 (M2) | 2 bookings (07:55-08:40, 09:15-10:00) | 90 | 180 |
+| Beauty 1 (B1) | 3 bookings (08:20-09:05, 09:40-10:25, 11:00-11:45) | 135 | 135 |
+| Beauty 2 (B2) | 2 bookings (09:00-09:45, 10:20-11:05) | 90 | 180 |
+| Nails 1 (N1) | 3 bookings (07:15-08:00, 08:35-09:20, 09:55-10:40) | 135 | 135 |
+| Nails 2 (N2) | 2 bookings (07:55-08:40, 09:15-10:00) | 90 | 180 |
+| Hair 1 (H1) | 3 bookings (08:20-09:05, 09:40-10:25, 11:00-11:45) | 135 | 135 |
+| Hair 2 (H2) | 2 bookings (09:00-09:45, 10:20-11:05) | 90 | 180 |
+| **Total (8 staff)** | | **900** | **1,260** |
+
+**Gap-chunk check (not just aggregate minutes):** walking each staff member's actual free intervals (not just the total) confirms the downtime breaks into 2-3 contiguous chunks of 35-105 minutes each — e.g. M1 is free 08:00-08:35 (35min), 09:20-09:55 (35min), 10:40-11:45 (65min). These chunk sizes match the existing 30/45-min standalone service durations already in `services-pricing-locked.md`, so the gaps are realistically bookable slots, not unusable slivers.
+
+**Total downtime: 1,260 minutes/day across 8 AM treatment staff = 21.0 staff-hours/day.**
+
+### Conversion to Dollars — Reusing Existing Assumptions, Not Inventing New Ones
+
+| Step | Value | Source |
+|---|---|---|
+| Total downtime | 21.0 staff-hours/day | Derived above, directly from `scenario-c-sync-timetables.md` |
+| Throughput | 1.3 sessions/hr | `pm-staffing-roster.md`'s Hours-Based Casual Cost Model (itself sourced from "6-8 sessions in a 5-hour shift," `financial-break-even-staff.md`) — reused, not a new assumption |
+| Theoretical ceiling | 21.0 × 1.3 = 27.3 sessions/day | Arithmetic |
+| Average revenue/session | A$95 | `pm-staffing-roster.md` PM Revenue — Individual Services — reused, not a new assumption |
+| Theoretical ceiling ($/day) | 27.3 × A$95 = **A$2,593.50/day** | Arithmetic |
+| Theoretical ceiling ($/month) | A$2,593.50 × 22 trading days = **A$57,057.00/month** | Standing 22-trading-day/month convention used throughout this document |
+
+**This A$57,057.00/month figure is a raw scheduling-capacity ceiling, not a realistic estimate** — it assumes every single minute of every staff member's downtime is filled with a paying client, every single day, with zero friction and zero unfilled gaps. Presenting it as-is would repeat exactly the false-precision problem this repo's documents have already been corrected for once this session.
+
+**Applying the same 50% utilisation discount `pm-staffing-roster.md` already applies to standalone PM demand** (its own reasoning: "~50% utilisation of theoretical 4-line capacity... no real demand data exists yet") — reused here for consistency rather than inventing a new discount factor:
+
+**A$57,057.00/month × 50% = A$28,528.50/month**
+
+`[MODELED — assumption: 50% utilisation of theoretical AM-downtime booking capacity, the same discount factor already applied to standalone PM demand elsewhere in this repo; throughput (1.3 sessions/hr) and average price (A$95/session) both reused from pm-staffing-roster.md, not new assumptions. Gap-time data itself is directly pulled from scenario-c-sync-timetables.md, not estimated.]`
+
+### Caveats — Why This Is the Least-Verified Line in the Model
+
+This is a larger and less-verified figure than it might look, for reasons beyond the 50% discount already applied:
+
+1. **No demand validation exists at all for this specific slot type.** Unlike the PM shift (a dedicated, marketed 12:00-18:00 block that at least has a coherent "come in for an afternoon treatment" pitch), AM downtime-fill slots are scattered, unpredictable-timing gaps around an active clinical operation. Nobody has tested whether demand exists for a walk-in/standalone booking squeezed into a specific staff member's 35-105 minute gap mid-morning.
+2. **Operational risk, not just a revenue question.** If an outside client's service runs long, it must not delay that staff member's return for their next scheduled GTT-package client's service — this needs a real booking-system safeguard (buffer time, hard cutoffs before the next GTT booking), not just an assumption that it works out.
+3. **Not yet built into any live booking system.** This is a policy decision, not something Fresha (or any booking flow) currently enforces or exposes to receptionists/clients as a bookable slot type.
+
+**Recommendation: treat this as a stretch upside for planning conversations, not as a figure to rely on for cash-flow or break-even calculations.** Keep it visible and separate (as done here) rather than either hiding it or quietly folding it into the conservative baseline.
 
 **Direct answer: yes — 7 staff, not 8, is the genuine minimum at the current 10-client/day (Scenario C) volume, via one specific cross-training pool. This is a checked answer against the verified scheduling model, not a guess.**
 
@@ -261,3 +317,5 @@ See "Years 1-3 Annual Projection" above for the corresponding multi-year view.
 **2026-07-20 (calculation-detail appendix added)** — Anthony asked for every figure to be traceable to its calculation, not just a stated total. Added a full Appendix showing the rate × volume/hours method behind every revenue, labor, overhead, and workers-comp line. Revenue/overhead/workers-comp lines all reconcile exactly from their stated formulas. AM Direct Labor (Weekday A$2,193.00, Saturday A$1,343.95) confirmed to use the correct rates and hours-based method (not the old blanket-shift error), but the exact per-staff-member hour allocation behind these two specific totals is not preserved as a saved worksheet in this repo — flagged explicitly as a follow-up to rebuild from [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) if literal hour-by-hour precision is needed, rather than fabricating a reverse-engineered breakdown that wasn't independently verified this round.
 
 **2026-07-20 (package renumbering + terminology)** — Updated the remaining "Package 2/Package 3" references (base-model banner, Key Callouts, Year 1 Ramp derivation, calculation appendix) to "Package 1 (A$250)/Package 2 (A$300)" per [services-pricing-locked.md](services-pricing-locked.md)'s renumbering — these were missed in the earlier v2.1 rewrite pass. Also tightened "visits" language to "packages/services sold" for consistency with the venture-wide terminology change (a visit alone carries no dollar figure).
+
+**2026-07-30 (downtime-fill revenue upside added, per Anthony's direct instruction)** — Added a new "Downtime-Fill Revenue — Upside Estimate" section, quantifying the new standalone-booking-first Staff Downtime Protocol policy (`financial-break-even-staff.md`) using real per-staff gap-time data pulled directly from `scenario-c-sync-timetables.md` (1,260 min/day total downtime across 8 AM treatment staff, not estimated). Converted to dollars using two assumptions already established elsewhere in this repo (1.3 sessions/hr throughput, A$95/session average, both from `pm-staffing-roster.md`) plus the same 50% utilisation discount that document already applies to standalone PM demand. Result: **A$28,528.50/month**, tagged `[MODELED]`, kept as a separate line in §4 Monthly and its own dedicated section — explicitly not blended into the +A$25,087.07/month conservative baseline. Flagged as the least-verified line in the model (no demand validation for this specific slot type, not yet built into any booking system).
