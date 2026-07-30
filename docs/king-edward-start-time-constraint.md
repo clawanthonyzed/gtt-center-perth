@@ -1,6 +1,13 @@
 # PathWest GTT Patient Instructions — Start Time and Fasting Requirements
 
-**Date:** 2026-07-20 (rewritten with real source — see changelog)
+**Date:** 2026-07-30 (superseded by a real, direct WDP reply — see the section below the PathWest sourcing)
+
+> **2026-07-30 — SUPERSEDED by direct WDP correspondence, more authoritative than the PathWest patient-instructions PDF below.** Carole Rivers (WDP, Customer & Commercial Manager, Country) replied by email with WDP's own actual practice: *"WDP generally performs GTTs in the morning only... As a guide, we would not normally commence a GTT after 10:30am. The exception would be circumstances such as shift workers..."* `[VERIFIED — Carole Rivers, WDP, email, 2026-07-30]`. This is a real, written answer from the actual negotiating partner, not a general patient-instructions document from a different (though related) pathology provider — it takes precedence over the PathWest sourcing below. **Scenario C's last Draw 1 at 09:40 clears this comfortably** — 50 minutes inside WDP's own "not normally after 10:30am" guidance, a wider margin than the previous PathWest-sourced "before 10:00am" guidance gave. The PathWest material below is retained as a secondary/historical source (it's still a real, useful cross-reference for the general clinical rationale), not deleted, since it doesn't contradict WDP's answer — WDP's guidance is simply more permissive and, being from the actual partner, more directly applicable.
+
+---
+
+## Original PathWest Sourcing (secondary reference — see WDP correction above for the current governing guidance)
+
 **Source: SOURCED, OFFICIAL, CITABLE.** Two official PathWest patient instruction documents, one hosted on King Edward Memorial Hospital's own site:
 
 - **PathWest Patient Instructions — GTT, January 2019** (hosted on KEMH's site): https://www.kemh.health.wa.gov.au/~/media/PathWest/Documents/For-Patients/Patient-Instructions---GTT-January-2019.pdf — direct quote: *"The test should be performed in the morning, preferably started before 10.00am (particularly if you are pregnant)."*
@@ -41,9 +48,9 @@
 
 ---
 
-## Standing note
+## Standing note (updated 2026-07-30)
 
-This is now a second independent constraint on the AM window, alongside the (still unconfirmed) WDP courier cutoff — see `cutoff-time-CORRECTION.md`. The two are different in kind: WDP's is an end-of-day logistics constraint (still unsourced, awaiting a direct reply), King Edward/PathWest's is a start-time guidance (now sourced, but framed as "preferably," not absolute). Once both are fully confirmed, the real usable window is whichever is tighter.
+**Both the start-time guidance and the end-of-day cutoff are now sourced directly from WDP** (Carole Rivers, email, 2026-07-30) — see the update banner at the top of this document and `cutoff-time-CORRECTION.md` for the cutoff/overnight-storage answer. WDP's start-time guidance ("not normally after 10:30am") is more permissive than the earlier PathWest-sourced "preferably before 10:00am," and Scenario C's 09:40 last draw clears both comfortably either way — this was never actually the tight constraint; the courier/specimen-handling side (`cutoff-time-CORRECTION.md`) was always the more operationally significant one, and that too now has a real (if still nuanced, not blanket) answer from WDP directly.
 
 ---
 
@@ -54,3 +61,5 @@ This is now a second independent constraint on the AM window, alongside the (sti
 **2026-07-19 (Scenario D fix update)** — Updated the Scenario D recommendation: verified that shifting only Client 15's start from 10:00 to 09:55 clears the guidance for all 15 clients, without needing a whole-day shift or dropped client.
 
 **2026-07-20 (real source found — full rewrite)** — Anthony found and provided the actual official PathWest patient instructions PDF (2019 version, hosted on KEMH's own site), which contains the exact "preferably started before 10.00am (particularly if you are pregnant)" quote. This is a real, citable, official source — not general internet research as previously framed. Also incorporated the 2024 current version's fasting-window figures (10-12hrs, vs the 2019 document's 10-16hrs) as the primary current reference, noting the discrepancy rather than silently picking one. Retitled the document from "King Edward Hospital Guidance" to "PathWest GTT Patient Instructions" since PathWest, not KEMH itself, is the author of the guidance (KEMH merely hosts a copy of the 2019 PDF). Updated `docs/05_open_questions_for_founder.md` Q3 to reflect this is now resolved/sourced, not just clarified — see that document.
+
+**2026-07-30 (superseded by direct WDP email)** — Carole Rivers' actual email reply (pasted directly by Anthony, primary-source correspondence, not a general patient-instructions document) states WDP itself "would not normally commence a GTT after 10:30am" except for circumstances like shift workers. This is more authoritative than the PathWest PDF (it's the actual negotiating partner's own stated practice, not a general patient-facing document from a related but different provider) and more permissive (10:30am vs 10:00am). Tagged `[VERIFIED — Carole Rivers, WDP, email, 2026-07-30]`. Scenario C's last Draw 1 at 09:40 clears this with 50 minutes to spare. PathWest sourcing retained as secondary reference, not deleted — the two don't conflict, WDP's is simply the more directly applicable and more permissive answer.

@@ -67,16 +67,35 @@ CHECKS = [
         ],
     ),
     (
-        "Monthly net P&L, steady state (canonical: +A$25,087.07/month)",
-        "+A$25,087.07/month",
+        "Monthly net P&L, steady state (canonical: +A$16,507.07/month, ancillary excluded 2026-07-30)",
+        "+A$16,507.07/month",
         [
             re.compile(r"-\s*A\$\s*9,684"),
             re.compile(r"-\s*A\$\s*4,384"),
             re.compile(r"-\s*A\$\s*4,255"),
             re.compile(r"\+\s*A\$\s*6,663"),
             re.compile(r"\+\s*A\$\s*10,232"),
+            re.compile(r"\+\s*A\$\s*25,087"),
+            re.compile(r"\+\s*A\$\s*301,044"),
         ],
     ),
+    (
+        "Downtime-fill/early-release (canonical: TWO separate pools -- A$9,509.50/month revenue + A$14,647.05/month cost saving, 2026-07-30)",
+        "A$9,509.50/month (a) + A$14,647.05/month (b), never blended",
+        [
+            re.compile(r"A\$\s*28,528\.50"),
+            re.compile(r"1,260\s*min"),
+        ],
+    ),
+    (
+        "WDP specimen cutoff (canonical: conditional/nuanced answer per Carole Rivers' email, 2026-07-30 -- NOT a blanket 'no cutoff')",
+        "conditional -- see cutoff-time-CORRECTION.md",
+        [
+            re.compile(r"no\s+cutoff\s+within\s+business", re.IGNORECASE),
+            re.compile(r"no\s+specimen-pickup\s+cutoff", re.IGNORECASE),
+        ],
+    ),
+
     (
         "Startup capital range (canonical: UNRECONCILED -- 3 conflicting ranges, see docs/CURRENT-STATE.md §6)",
         "UNRECONCILED (do not quote any single range as settled)",

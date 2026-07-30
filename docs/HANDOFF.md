@@ -12,14 +12,17 @@ Turn GTT Center Perth from a paper concept into an investor-ready, operationally
 - **Growth path, not yet committed:** 3rd phlebotomist as an active chair (not just relief) → "Scenario D" verified, 15 clients/day, no new treatment hires needed (though 2 of the 8 treatment staff hit ~68% utilisation at this volume — genuinely full, not casual buffer).
 
 ## Financial Baseline (conservative, steady state, Month 5+)
-| Period | Net P&L |
-|---|---|
-| Monthly | +A$25,087.07 |
-| Quarterly | +A$75,261.21 |
-| Half-yearly | +A$150,522.42 |
-| Yearly | +A$301,044.84 |
 
-Full tables (weekday/Saturday/weekly/monthly/quarterly/half-yearly/yearly) in [profit-loss-tables.md](profit-loss-tables.md) v2.0 on GitHub. These are ongoing run-rate figures — they exclude Months 1–3 ramp losses and pre-launch capital (~A$144,500–242,500 realistic range, down from an inflated A$363,000 original figure).
+**Superseded 2026-07-30 — ancillary revenue excluded from the baseline entirely, per Anthony's direct instruction. See `docs/CURRENT-STATE.md` §5 and `profit-loss-tables.md` v2.1 for the current figures — do not quote the table below as current.**
+
+| Period | Net P&L (historical, pre-2026-07-30) | Net P&L (current, ancillary excluded) |
+|---|---|---|
+| Monthly | ~~+A$25,087.07~~ | **+A$16,507.07** |
+| Quarterly | ~~+A$75,261.21~~ | **+A$49,521.21** |
+| Half-yearly | ~~+A$150,522.42~~ | **+A$99,042.42** |
+| Yearly | ~~+A$301,044.84~~ | **+A$198,084.84** |
+
+Full tables (weekday/Saturday/weekly/monthly/quarterly/half-yearly/yearly) in [profit-loss-tables.md](profit-loss-tables.md) v2.1 on GitHub (current version, not v2.0). These are ongoing run-rate figures — they exclude Months 1–3 ramp losses and pre-launch capital (3 conflicting ranges exist across this repo's own documents, never reconciled — see `docs/CURRENT-STATE.md` §6, do not quote the old "~A$144,500-242,500" range here as settled).
 
 ## What Worked
 - **Booking-driven rostering** — since clients select services at booking time, staff can be rostered to confirmed bookings rather than a blanket calendar assumption. This unlocked the whole AM capacity improvement.

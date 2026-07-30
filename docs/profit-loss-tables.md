@@ -3,6 +3,8 @@
 **Version:** 2.1 | **Date:** 2026-07-20 (v1.0 removed entirely per Anthony's instruction — see Changelog)
 **Base model:** Current committed operational plan — 2 chairs, 10 AM clients/day (07:00 start, Scenario C verified), PM individual services (4-role hours-based roster), Saturday AM+PM (hours-based costing), **no Sunday trading** (closed until standalone PM demand is proven and profitable — see [am-capacity-weekend.md](am-capacity-weekend.md)). **All AM package revenue uses A$250 (Package 1, the lower of the 2 confirmed packages, renamed 2026-07-20) per instruction — this is a deliberate safety margin, not the full potential average if Package 2 sales run higher.**
 
+> **2026-07-30 — Ancillary revenue excluded from the baseline entirely, per Anthony's direct instruction ("too much of a variable" with no real basis yet).** Every table below now treats ancillary (cafe/retail) as **A$0** in the headline P&L — it is no longer included in Total Revenue or Net P&L anywhere in this document. It is kept visible only as a separate, clearly-labelled pure-upside line (see "Ancillary Revenue — Excluded From Baseline" below Key Callouts) if/when it materialises in practice. **This changes the standing conservative baseline from +A$25,087.07/month to +A$16,507.07/month** — see §4 Monthly below for the corrected figure and full reconciliation.
+
 *The 3-phlebotomist/15-client scenario (Scenario D, [am-capacity-weekend.md](am-capacity-weekend.md)) is a separate growth path, not the base case used here.*
 
 ---
@@ -25,19 +27,19 @@ What changed between the original (now-deleted) v1.0 tables and the current v2.1
 |---|---|
 | AM Revenue (10 clients × A$250) | A$2,500.00 |
 | PM Revenue (16 sessions × A$95) | A$1,520.00 |
-| Ancillary Revenue (cafe/retail — see note below) | A$439.50 |
-| **Total Revenue** | **A$4,459.50** |
+| Ancillary Revenue | **A$0.00 (excluded from baseline 2026-07-30 — see note below)** |
+| **Total Revenue** | **A$4,020.00** |
 | AM Direct Labor (2 phlebotomists + 8 treatment staff) | A$2,193.00 |
 | PM Direct Labor (4-role hours-based roster) | A$440.00 |
 | Opening-time increment (07:00 start, vs later start) | A$44.50 |
 | Overhead allocation (rent/utilities/admin/marketing, pro-rated per day) | A$635.00 |
 | Receptionist/relief/workers comp (pro-rated per day) | A$339.00 |
 | **Total Cost** | **A$3,651.50** |
-| **Net P&L** | **+A$808.00** |
+| **Net P&L** | **+A$368.50** |
 
 **Saturday downtime-fill (same principle as weekday):** on Saturdays, as on weekdays, the 8 AM treatment staff are not continuously occupied by GTT-package clients for the entire session — their own downtime between rostered GTT services is available for standalone, non-GTT bookings, the same downtime-fill model already documented for weekdays in [gtt-center-perth-overview-for-imara.md](gtt-center-perth-overview-for-imara.md) and [executive-summary.md](executive-summary.md). This is not a separate Saturday-specific policy, it's the same staff-utilisation principle applied on the day it also occurs.
 
-**Ancillary Revenue — what it is:** cafe and retail spend (snacks, drinks, retail wellness products — Gaia, Weleda, Mustela brands per [business-plan.md](business-plan.md) §6 Revenue Streams), earned per client across both AM package sales and PM standalone services. Not a separate service line with its own staff — it rides on existing foot traffic.
+**Ancillary Revenue — excluded from the baseline (2026-07-30):** previously A$439.50/day in this table (cafe/retail spend — snacks, drinks, retail wellness products, Gaia/Weleda/Mustela brands per [business-plan.md](business-plan.md) §6). Per Anthony's direct instruction, ancillary is now treated as A$0 in every headline P&L figure in this document — "too much of a variable" with no real basis yet (see `cash-flow.md`'s own Ancillary Revenue Sourcing section, which already flagged 2 of 3 component lines as having no real derivation at all). Kept visible only as a separate, clearly-tagged pure-upside line — see "Ancillary Revenue — Excluded From Baseline" below Key Callouts.
 
 ## 2. Saturday (AM GTT + PM Standalone, Hours-Based Costing)
 
@@ -57,9 +59,9 @@ What changed between the original (now-deleted) v1.0 tables and the current v2.1
 
 | | Revenue | Direct Labor | Net |
 |---|---|---|---|
-| 5× Weekday | A$22,297.50 | A$13,387.50 | +A$8,910.00 |
-| 1× Saturday | A$3,260.00 | A$1,679.50 | +A$1,580.50 |
-| **Weekly Total** | **A$25,557.50** | **A$15,067.00** | **+A$10,490.50** |
+| 5× Weekday (ancillary excluded, A$368.50/day net) | A$20,100.00 | A$13,387.50 | +A$1,842.50 |
+| 1× Saturday (no ancillary line in this table already) | A$3,260.00 | A$1,679.50 | +A$1,580.50 |
+| **Weekly Total** | **A$23,360.00** | **A$15,067.00** | **+A$3,423.00** |
 
 ## 4. Monthly (4.33 weeks)
 
@@ -84,47 +86,47 @@ Non-Wage Overhead is broken down below by component (source: [cash-flow.md](cash
 
 | | Amount |
 |---|---|
-| Total Revenue | A$113,712.16 |
+| Total Revenue (ancillary excluded — was A$113,712.16 including ~A$8,580/month ancillary) | **A$105,132.16** |
 | Total Direct Labor + Opening Costs | A$73,397.34 |
 | Workers Comp (1.7%) | A$1,247.75 |
 | Non-Wage Overhead (see breakdown above) | A$13,980.00 |
 | **Total Costs** | **A$88,625.09** |
-| **Net P&L (standing conservative baseline)** | **+A$25,087.07** |
+| **Net P&L (standing conservative baseline, ancillary excluded 2026-07-30)** | **+A$16,507.07** |
 
-**This baseline figure does NOT include the Downtime-Fill Revenue upside — see the dedicated section below "Key Callouts." That figure is a separate, more speculative, tagged estimate — deliberately not blended into this line.**
+**Corrected 2026-07-30 — this baseline was +A$25,087.07/month; it is now +A$16,507.07/month with ancillary revenue (~A$8,580/month) excluded entirely, per Anthony's direct instruction.** Ancillary is kept visible only as a separate, clearly-tagged pure-upside line — see "Ancillary Revenue — Excluded From Baseline" below Key Callouts — not folded back into this figure under any circumstance. **This baseline also does NOT include the Between-Client Downtime-Fill Revenue (A$9,509.50/month) or the Early-Release Cost Saving (A$14,647.05/month) — see the dedicated section below Key Callouts. All three (ancillary, downtime-fill, early-release) are separate, tagged lines, never blended into this baseline or into each other.**
 
 ## 5. Quarterly (3 Months)
 
 | | Amount |
 |---|---|
-| Total Revenue | A$341,136.48 |
+| Total Revenue (ancillary excluded — was A$341,136.48) | **A$315,396.48** |
 | Total Direct Labor + Opening Costs | A$220,192.02 |
 | Workers Comp (1.7%) | A$3,743.25 |
 | Non-Wage Overhead | A$41,940.00 |
 | **Total Costs** | **A$265,875.27** |
-| **Net P&L** | **+A$75,261.21** |
+| **Net P&L (ancillary excluded 2026-07-30 — was +A$75,261.21)** | **+A$49,521.21** |
 
 ## 6. Half-Yearly (6 Months)
 
 | | Amount |
 |---|---|
-| Total Revenue | A$682,272.96 |
+| Total Revenue (ancillary excluded — was A$682,272.96) | **A$630,792.96** |
 | Total Direct Labor + Opening Costs | A$440,384.04 |
 | Workers Comp (1.7%) | A$7,486.50 |
 | Non-Wage Overhead | A$83,880.00 |
 | **Total Costs** | **A$531,750.54** |
-| **Net P&L** | **+A$150,522.42** |
+| **Net P&L (ancillary excluded 2026-07-30 — was +A$150,522.42)** | **+A$99,042.42** |
 
 ## 7. Yearly (12 Months)
 
 | | Amount |
 |---|---|
-| Total Revenue | A$1,364,545.92 |
+| Total Revenue (ancillary excluded — was A$1,364,545.92) | **A$1,261,585.92** |
 | Total Direct Labor + Opening Costs | A$880,768.08 |
 | Workers Comp (1.7%) | A$14,973.00 |
 | Non-Wage Overhead | A$167,760.00 |
 | **Total Costs** | **A$1,063,501.08** |
-| **Net P&L** | **+A$301,044.84** |
+| **Net P&L (ancillary excluded 2026-07-30 — was +A$301,044.84)** | **+A$198,084.84** |
 
 **These are steady-state figures (Month 5+ run rate) — they do not include the Months 1–3 ramp-up losses (see Year 1 Monthly Ramp below), or the pre-launch capital deployment.** This table answers "what does ongoing operation look like once running," not the path to get there. Quarterly/Half-Yearly/Yearly figures above are the Monthly figures scaled by 3/6/12 — a steady-state run-rate projection, not a separately-modelled scenario for each period.
 
@@ -136,64 +138,116 @@ Non-Wage Overhead is broken down below by component (source: [cash-flow.md](cash
 2. **Saturday is profitable, not a drag** — once costed on actual hours worked (see the clarification section above), Saturday AM+PM contributes +A$1,580.50/day. The earlier "Saturday runs at a loss" finding was a costing-method error in a since-removed draft, not a real finding about the business — see Changelog for what was removed and why.
 3. **Sunday remains closed** — not modelled anywhere in this document. Reopening depends on standalone PM demand being proven and profitable enough to justify the added penalty-rate cost ([am-capacity-weekend.md](am-capacity-weekend.md)), not on this document.
 4. **MA000027 phlebotomist Saturday ordinary-hours question remains unconfirmed** — this document uses the conservative full-penalty-rate assumption throughout (no optimistic/pending-verification scenario shown, since that scenario added confusion without changing the standing baseline). If a payroll advisor or Fair Work confirms an ordinary-hours carve-out exists, Saturday profitability would improve further — upside only, never assumed.
-5. **Downtime-fill revenue is a separate, tagged upside — not included above.** See the dedicated section immediately below for the full derivation and dollar figure. Do not add it to the +A$25,087.07/month baseline when quoting a headline number.
+5. **Downtime-fill revenue and early-release cost saving are two separate, tagged lines — neither included above.** Corrected 2026-07-30: these are two distinct pools (between-booking gaps vs lead-in/tail), not one blended figure — see the dedicated section immediately below for the full derivation and dollar figures. Do not add either to the +A$16,507.07/month baseline when quoting a headline number.
+6. **Ancillary revenue is excluded entirely from the baseline (2026-07-30, per Anthony's direct instruction) — the baseline dropped from +A$25,087.07/month to +A$16,507.07/month as a result.** Ancillary is not deleted from this document, only removed from every headline figure — see "Ancillary Revenue — Excluded From Baseline" immediately below for the pure-upside figure kept visible separately.
 
 ---
 
-## Downtime-Fill Revenue — Upside Estimate (Separate From the Baseline, Added 2026-07-30)
+## Ancillary Revenue — Excluded From Baseline (2026-07-30)
 
-> **Policy context:** per Anthony's direct instruction (2026-07-30), AM treatment staff now take a standalone/non-GTT booking first during their own downtime between scheduled GTT-package bookings, with the cleaning/training task list as the fallback (`financial-break-even-staff.md`'s Staff Downtime Protocol) — a permanent policy, not a ramp-up measure (`pm-staffing-roster.md`'s Booking-Driven Rostering Policy). This section quantifies what that policy is actually worth, using real gap-time data pulled directly from the verified schedule — not a guess.
+**Per Anthony's direct instruction: ancillary revenue (cafe/retail) is excluded entirely from every headline P&L figure in this document — treated as A$0 in the baseline — because it is "too much of a variable" with no real basis yet.** This is not a data-quality nuance to footnote, it is a decision to stop letting an unverified figure prop up the headline number at all.
 
-### Method — Real Gap Times, Not Estimated
+**Why this was overdue:** `cash-flow.md`'s own Ancillary Revenue Sourcing section (2026-07-20) already found that 2 of the 3 ancillary component lines (retail, cafe) have **no stated basis anywhere in this corpus** — "no real derivation exists for this figure... it appears to be a round planning placeholder, not a bottom-up estimate," and the third (spray tan) used a stale, superseded operating-days assumption. Despite this being flagged 10 days before this exclusion, the ~A$8,580/month figure kept quietly reducing the reported baseline cost gap in every P&L table until now.
 
-Source: `scenario-c-sync-timetables.md` §2 "Full Staff Timetable" — the verified, current Scenario C AM schedule (10 clients/day, 2 chairs, synchronized start). Every AM treatment booking block in that schedule is 45 minutes. The operating window used is 07:15 (the first treatment booking's start time, Clients 1 & 2) to 11:45 (the last treatment booking's end time, Clients 9 & 10) = **270 minutes**, taken directly from the timetable's own bookended activity span, not assumed.
+| Item | Value | Tag |
+|---|---|---|
+| Ancillary revenue (previous baseline figure, now excluded) | ~A$8,580/month | `[PLACEHOLDER — no real derivation for 2 of 3 component lines (retail, cafe); spray tan's operating-day assumption is stale — cash-flow.md's own finding]` |
+| **Ancillary revenue in the current baseline** | **A$0.00/month** | `[VERIFIED — Anthony's direct instruction, 2026-07-30]` |
 
-Walking each of the 8 AM treatment staff's actual booking times in that timetable and subtracting from the 270-minute window:
+**If ancillary revenue materialises in practice once the venue is trading, it should be tracked and reported as a separate pure-upside line — not folded back into the baseline retroactively.** Real post-launch foot-traffic and per-client spend data would need to exist before this could ever move from `[PLACEHOLDER]` to `[MODELED]` or `[VERIFIED]`.
 
-| Staff | Bookings (from scenario-c-sync-timetables.md) | Booked minutes | Free/downtime minutes |
-|---|---|---|---|
-| Massage 1 (M1) | 3 bookings (07:15-08:00, 08:35-09:20, 09:55-10:40) | 135 | 135 |
-| Massage 2 (M2) | 2 bookings (07:55-08:40, 09:15-10:00) | 90 | 180 |
-| Beauty 1 (B1) | 3 bookings (08:20-09:05, 09:40-10:25, 11:00-11:45) | 135 | 135 |
-| Beauty 2 (B2) | 2 bookings (09:00-09:45, 10:20-11:05) | 90 | 180 |
-| Nails 1 (N1) | 3 bookings (07:15-08:00, 08:35-09:20, 09:55-10:40) | 135 | 135 |
-| Nails 2 (N2) | 2 bookings (07:55-08:40, 09:15-10:00) | 90 | 180 |
-| Hair 1 (H1) | 3 bookings (08:20-09:05, 09:40-10:25, 11:00-11:45) | 135 | 135 |
-| Hair 2 (H2) | 2 bookings (09:00-09:45, 10:20-11:05) | 90 | 180 |
-| **Total (8 staff)** | | **900** | **1,260** |
+---
 
-**Gap-chunk check (not just aggregate minutes):** walking each staff member's actual free intervals (not just the total) confirms the downtime breaks into 2-3 contiguous chunks of 35-105 minutes each — e.g. M1 is free 08:00-08:35 (35min), 09:20-09:55 (35min), 10:40-11:45 (65min). These chunk sizes match the existing 30/45-min standalone service durations already in `services-pricing-locked.md`, so the gaps are realistically bookable slots, not unusable slivers.
+## Downtime-Fill Revenue & Early-Release Saving — Two Separate Pools (Corrected 2026-07-30)
 
-**Total downtime: 1,260 minutes/day across 8 AM treatment staff = 21.0 staff-hours/day.**
+> **This section replaces the 2026-07-30 version that blended all AM treatment-staff downtime into one lump "downtime-fill" figure (A$28,528.50/month, from a claimed 1,260 min/day total).** Anthony corrected this the same day: only genuine **between-booking** gaps (mid-shift, between two of a staff member's own scheduled clients) are a real revenue opportunity, and only when booked **in advance online** — not walk-in, not day-of. Time **before a staff member's first booking or after their last** (lead-in/tail) is not sellable revenue; instead, that staff member's engagement should simply start later or end earlier, saving wage cost. These are two separate pools and must not be blended into one figure.
 
-### Conversion to Dollars — Reusing Existing Assumptions, Not Inventing New Ones
+### Independently Re-Derived Minute Totals — Reconciliation of the 420 / 1,320 / 1,260 Figures
+
+**Re-walked every one of the 8 AM treatment staff's bookings directly from `scenario-c-sync-timetables.md` §2, classifying every idle block as either (a) strictly between two of that staff member's own bookings, or (b) before their first booking or after their last.** Both pools require a defined shift boundary to measure lead-in/tail against — used **07:00 (venue open) to 12:30 (EOD wrap)**, both times taken directly from `operations-manual.md`'s own Daily Operations Cadence (§1), not invented — a 330-minute nominal shift.
+
+| Staff | Bookings | Booked min | Between-gap min (pool a) | Lead-in min | Tail min | Lead+tail min (pool b) |
+|---|---|---|---|---|---|---|
+| Massage 1 (M1) | 07:15-08:00, 08:35-09:20, 09:55-10:40 | 135 | 70 | 15 | 110 | 125 |
+| Massage 2 (M2) | 07:55-08:40, 09:15-10:00 | 90 | 35 | 55 | 150 | 205 |
+| Beauty 1 (B1) | 08:20-09:05, 09:40-10:25, 11:00-11:45 | 135 | 70 | 80 | 45 | 125 |
+| Beauty 2 (B2) | 09:00-09:45, 10:20-11:05 | 90 | 35 | 120 | 85 | 205 |
+| Nails 1 (N1) | 07:15-08:00, 08:35-09:20, 09:55-10:40 | 135 | 70 | 15 | 110 | 125 |
+| Nails 2 (N2) | 07:55-08:40, 09:15-10:00 | 90 | 35 | 55 | 150 | 205 |
+| Hair 1 (H1) | 08:20-09:05, 09:40-10:25, 11:00-11:45 | 135 | 70 | 80 | 45 | 125 |
+| Hair 2 (H2) | 09:00-09:45, 10:20-11:05 | 90 | 35 | 120 | 85 | 205 |
+| **Total (8 staff)** | | **900** | **420** | | | **1,320** |
+
+**This independently reproduces exactly the 420 min/day (pool a) and 1,320 min/day (pool b) figures — confirmed, not just accepted.**
+
+**Reconciling against the previous 1,260 min/day total (2026-07-30, earlier same day):** that figure used a *narrower, shared* 07:15-11:45 (270 min) window applied identically to every staff member, and treated 100% of the leftover time within that narrower window as one undifferentiated "downtime" pool, without distinguishing between-gaps from lead-in/tail. The new split uses a *wider* 07:00-12:30 (330 min) nominal shift boundary per staff — 60 minutes/staff wider — which alone accounts for the difference: 1,740 (=420+1,320) − 1,260 = 480 min = 60 min × 8 staff, exactly. **Both the widened boundary and the pool split are corrections, not just a different number for the same thing** — the old figure both used the wrong (narrower, non-sourced) window and incorrectly treated lead-in/tail time as equally fillable revenue, which it is not.
+
+### Pool (a) — Between-Client Downtime-Fill Revenue (Advance-Online-Booking Only)
+
+**Policy: fillable only by standalone/non-GTT bookings made in advance online — not walk-in, not day-of** (`financial-break-even-staff.md`'s Staff Downtime Protocol, updated 2026-07-30 to reflect this constraint).
 
 | Step | Value | Source |
 |---|---|---|
-| Total downtime | 21.0 staff-hours/day | Derived above, directly from `scenario-c-sync-timetables.md` |
-| Throughput | 1.3 sessions/hr | `pm-staffing-roster.md`'s Hours-Based Casual Cost Model (itself sourced from "6-8 sessions in a 5-hour shift," `financial-break-even-staff.md`) — reused, not a new assumption |
-| Theoretical ceiling | 21.0 × 1.3 = 27.3 sessions/day | Arithmetic |
-| Average revenue/session | A$95 | `pm-staffing-roster.md` PM Revenue — Individual Services — reused, not a new assumption |
-| Theoretical ceiling ($/day) | 27.3 × A$95 = **A$2,593.50/day** | Arithmetic |
-| Theoretical ceiling ($/month) | A$2,593.50 × 22 trading days = **A$57,057.00/month** | Standing 22-trading-day/month convention used throughout this document |
+| Total between-booking downtime | 420 min/day = 7.0 staff-hours/day | Derived above, directly from `scenario-c-sync-timetables.md` |
+| Throughput | 1.3 sessions/hr | `pm-staffing-roster.md`'s Hours-Based Casual Cost Model — reused, not a new assumption |
+| Theoretical ceiling | 7.0 × 1.3 = 9.1 sessions/day | Arithmetic |
+| Average revenue/session | A$95 | `pm-staffing-roster.md` PM Revenue — Individual Services — reused |
+| Theoretical ceiling ($/day → $/month) | 9.1 × A$95 = A$864.50/day × 22 days = **A$19,019.00/month** | Arithmetic; same 22-trading-day/month convention used throughout this document |
+| **Between-Client Downtime-Fill Revenue (headline, 50% utilisation applied)** | **A$9,509.50/month** | Same 50% utilisation discount `pm-staffing-roster.md` already applies to standalone PM demand — reused, not a new discount factor |
 
-**This A$57,057.00/month figure is a raw scheduling-capacity ceiling, not a realistic estimate** — it assumes every single minute of every staff member's downtime is filled with a paying client, every single day, with zero friction and zero unfilled gaps. Presenting it as-is would repeat exactly the false-precision problem this repo's documents have already been corrected for once this session.
+`[MODELED — assumption: 50% utilisation of theoretical between-booking capacity, same discount factor as standalone PM demand elsewhere in this repo; throughput and price both reused from pm-staffing-roster.md. Gap-time data pulled directly from scenario-c-sync-timetables.md. Additional constraint vs the 2026-07-30 version: advance-online-booking only — no walk-in/day-of fill, per Anthony's correction — which this 50% utilisation figure does not separately discount for further; treat as an additional, unquantified downward pressure on real-world uptake, on top of the discount already applied.]`
 
-**Applying the same 50% utilisation discount `pm-staffing-roster.md` already applies to standalone PM demand** (its own reasoning: "~50% utilisation of theoretical 4-line capacity... no real demand data exists yet") — reused here for consistency rather than inventing a new discount factor:
+### Pool (b) — Early-Release Cost Saving (Lead-In + Tail, Subject to the 3-Hour Minimum Engagement)
 
-**A$57,057.00/month × 50% = A$28,528.50/month**
+**Policy: a staff member's engagement starts later (skipping lead-in) or ends earlier (skipping tail) instead of running the full nominal shift — a wage saving, not sellable revenue.**
 
-`[MODELED — assumption: 50% utilisation of theoretical AM-downtime booking capacity, the same discount factor already applied to standalone PM demand elsewhere in this repo; throughput (1.3 sessions/hr) and average price (A$95/session) both reused from pm-staffing-roster.md, not new assumptions. Gap-time data itself is directly pulled from scenario-c-sync-timetables.md, not estimated.]`
+**Constraint checked, not assumed:** both the Hair and Beauty Industry Award (MA000005) and the Health Professionals and Support Services Award (MA000027) set a minimum casual engagement — confirmed directly against the primary Fair Work Ombudsman/Fair Work Commission award text, not just a search snippet:
+- MA000005 clause 11.5: *"The minimum daily engagement for a casual employee is 3 consecutive hours."*
+- MA000027 clause 11.2: *"the minimum period of engagement of a casual employee is 3 hours"* (clause 11.3 carves out a 2-hour minimum for cleaners in private medical practices specifically — does not apply to phlebotomists or treatment staff).
 
-### Caveats — Why This Is the Least-Verified Line in the Model
+`[VERIFIED — Fair Work Ombudsman/Fair Work Commission, MA000005 clause 11.5 and MA000027 clause 11.2, checked via direct WebFetch against awards.fairwork.gov.au, 2026-07-30]`
 
-This is a larger and less-verified figure than it might look, for reasons beyond the 50% discount already applied:
+**Practical consequence:** no rostered engagement shorter than 180 minutes (3 hours). Checking each staff member's "trimmed span" (first-booking-start to last-booking-end, which already includes their pool-(a) between-gaps) against this floor:
 
-1. **No demand validation exists at all for this specific slot type.** Unlike the PM shift (a dedicated, marketed 12:00-18:00 block that at least has a coherent "come in for an afternoon treatment" pitch), AM downtime-fill slots are scattered, unpredictable-timing gaps around an active clinical operation. Nobody has tested whether demand exists for a walk-in/standalone booking squeezed into a specific staff member's 35-105 minute gap mid-morning.
-2. **Operational risk, not just a revenue question.** If an outside client's service runs long, it must not delay that staff member's return for their next scheduled GTT-package client's service — this needs a real booking-system safeguard (buffer time, hard cutoffs before the next GTT booking), not just an assumption that it works out.
-3. **Not yet built into any live booking system.** This is a policy decision, not something Fresha (or any booking flow) currently enforces or exposes to receptionists/clients as a bookable slot type.
+| Staff | Trimmed span (booked + between) | 3hr floor met? | Buffer needed | Lead+tail saveable | Rate | $ saved/day |
+|---|---|---|---|---|---|---|
+| Massage 1 (M1) | 205 min | Yes (>180) | 0 | 125 min | A$37.00/hr | A$77.08 |
+| Massage 2 (M2) | 125 min | **No** — below 180 | 55 min | 150 min | A$37.00/hr | A$92.50 |
+| Beauty 1 (B1) | 205 min | Yes | 0 | 125 min | A$37.00/hr | A$77.08 |
+| Beauty 2 (B2) | 125 min | **No** | 55 min | 150 min | A$37.00/hr | A$92.50 |
+| Nails 1 (N1) | 205 min | Yes | 0 | 125 min | A$35.63/hr | A$74.23 |
+| Nails 2 (N2) | 125 min | **No** | 55 min | 150 min | A$35.63/hr | A$89.08 |
+| Hair 1 (H1) | 205 min | Yes | 0 | 125 min | A$35.63/hr | A$74.23 |
+| Hair 2 (H2) | 125 min | **No** | 55 min | 150 min | A$35.63/hr | A$89.08 |
+| **Total** | | | | **1,100 min/day** | | **A$665.78/day** |
 
-**Recommendation: treat this as a stretch upside for planning conversations, not as a figure to rely on for cash-flow or break-even calculations.** Keep it visible and separate (as done here) rather than either hiding it or quietly folding it into the conservative baseline.
+**The 4 staff with only 2 bookings/day (M2, B2, N2, H2) cannot have their engagement trimmed all the way down to their natural 125-minute span** — that falls below the 3-hour award floor, so 55 minutes of paid buffer must be retained per person (assignable to cleaning/training/prep per the Staff Downtime Protocol fallback, not sellable). **This is why pool (b)'s saveable total is 1,100 min/day, not the naive 1,320 min/day** — the naive figure would understate real wage cost by assuming engagements could be trimmed to the exact booked minute, which the award does not allow.
+
+| Step | Value |
+|---|---|
+| Total lead+tail minutes, naive (unconstrained) | 1,320 min/day |
+| Total lead+tail minutes, SAVEABLE (3hr-floor-constrained) | **1,100 min/day** |
+| **Early-Release Cost Saving (headline, $/day)** | **A$665.78/day** |
+| **Early-Release Cost Saving (headline, $/month, ×22 days)** | **A$14,647.05/month** |
+
+`[MODELED — assumption: staggered per-person engagement start/end times aligned to each individual's actual first/last booking (subject to the 3-hour floor), rather than one uniform shift start/end for the whole team — a real rostering complexity, not yet built into any live roster. Wage rates (Massage/Beauty A$37.00/hr, Nails/Hair A$35.63/hr casual) sourced from financial-break-even-staff.md's Award Wage Summary, traceable.]`
+
+**This is a cost saving, kept as its own separate line — it is not blended with Pool (a)'s revenue figure.**
+
+### Summary — Two Separate, Tagged Lines (Not One Blended Figure)
+
+| Line | Monthly figure | Type |
+|---|---|---|
+| (a) Between-Client Downtime-Fill Revenue | **A$9,509.50/month** | Upside revenue, `[MODELED]`, advance-online-booking only |
+| (b) Early-Release Cost Saving | **A$14,647.05/month** | Cost saving, `[MODELED]`, subject to the 3-hour minimum engagement |
+
+**Neither line is included in the +A$25,087.07/month baseline (§4 Monthly above) — both are separate, tagged, more speculative figures, visible for planning conversations, not relied upon for cash-flow or break-even calculations.** Full caveats (no demand validation for pool (a)'s slot type, staggered-roster complexity for pool (b)) carried forward from the prior version of this section.
+
+---
+
+## Treatment Headcount — Can It Be Trimmed Below 8 at 10 Clients/Day?
+
+> **2026-07-30 note:** this section's heading was accidentally dropped in an earlier same-session edit that inserted the Downtime-Fill Revenue section above, leaving this content orphaned under that heading. Restored here — no content was lost, only its own section heading, now fixed.
 
 **Direct answer: yes — 7 staff, not 8, is the genuine minimum at the current 10-client/day (Scenario C) volume, via one specific cross-training pool. This is a checked answer against the verified scheduling model, not a guess.**
 
@@ -214,19 +268,38 @@ This is a larger and less-verified figure than it might look, for reasons beyond
 
 **Not yet actioned:** this document reports the checked answer; whether to actually reduce from 8 to 7 (and where to source a Massage+Beauty dual-qualified hire) is an operational hiring decision for the Venue Manager, not something this document commits to.
 
+### Extended Check (2026-07-30) — Would a Nails+Hair Cross-Qualification Reduce Headcount Further, Below 7?
+
+**Solver-verified, not estimated — re-ran the scheduling constraint check (same method as `sync-treatment-solver.py`'s Massage+Beauty verification) against the real Scenario C booking data (`scenario-c-sync-timetables.md`), adding a hypothetical Nails+Hair combined pool alongside the existing Massage+Beauty pool.**
+
+| Pool | Peak concurrent demand at 10 clients/day |
+|---|---|
+| Massage + Beauty (existing, established pool) | 3 (unchanged, re-confirmed by direct re-run) |
+| Nails + Hair (hypothetical — checked this session) | 3 |
+| **Total staff needed if both pools adopted** | **6** (down from 7) |
+
+**Result: yes, headcount could drop to 6 (from 7) if a genuine Nails+Hair dual-qualified hire existed** — the combined Nails+Hair pool peaks at 3 concurrent bookings in the verified schedule (not 4, since the two lines' bookings don't all overlap simultaneously), the same mechanism that already makes Massage+Beauty poolable.
+
+**Important caveats, not just a headline number:**
+1. **Hireability is a real, separate constraint from scheduling feasibility.** Unlike Massage+Beauty (both Cert IV under MA000005, an already-established and actively-sought cross-training pairing in this venture's hiring plans), Nail Technology (Cert II/III) and Hairdressing (Cert III apprenticeship) are genuinely separate trade pathways with no natural training overlap — already flagged in `am-capacity-weekend.md`'s Multi-Role Relief Hiring section as "harder to combine... recommend keeping these as dedicated single-skill relief hires." This solver result answers "is it schedulable," not "is such a hire realistically findable."
+2. **The specific Nails-then-Hair booking pattern in the verified Scenario C schedule is an illustrative assignment convention** (Chair B clients happen to be modelled as Nails-then-Hair in this specific schedule), not a claim about what real clients will actually book — the same caveat `am-staffing-by-volume.md` already raises for the Chair A/Massage+Beauty vs Chair B/Nails+Hair convention. Real day-to-day bookings may cluster differently, which could change this specific peak-concurrency number in either direction.
+3. **Not booked as a confirmed saving.** This is a checked scheduling-feasibility answer for the Venue Manager to weigh against real recruiting difficulty, not a headcount reduction to plan around yet.
+
 ---
 
 ## Years 1-3 Annual Projection
 
 **Purpose:** filling the gap for a multi-year annual view, per the business-plan spec.
 
-**One remaining honest limitation:** the Year 1 estimate below uses flat Month 5+ fixed costs applied across all 12 months as a conservative simplification — in reality, fixed costs also ramp during Months 1-4 (fewer casual PM hours worked at lower volume, per [pm-staffing-roster.md](pm-staffing-roster.md)'s own cost-ramp table), so this approach *understates* Year 1 profitability somewhat by charging full steady-state costs against ramped-up revenue in the early months. A precise Year 1 figure would need the matching cost ramp built in — flagged as a follow-up refinement, not fabricated here with false precision. Years 2-3 use this document's own current Month-5+ steady-state run-rate (10-client Scenario C, A$301,044.84/year), assuming the venture holds at its verified capacity ceiling with no further AM capacity expansion (Scenario D, 15 clients/day, is a documented but not-yet-committed growth path — see [scenario-d-investigation.md](scenario-d-investigation.md) — not assumed here).
+**One remaining honest limitation:** the Year 1 estimate below uses flat Month 5+ fixed costs applied across all 12 months as a conservative simplification — in reality, fixed costs also ramp during Months 1-4 (fewer casual PM hours worked at lower volume, per [pm-staffing-roster.md](pm-staffing-roster.md)'s own cost-ramp table), so this approach *understates* Year 1 profitability somewhat by charging full steady-state costs against ramped-up revenue in the early months. A precise Year 1 figure would need the matching cost ramp built in — flagged as a follow-up refinement, not fabricated here with false precision. Years 2-3 use this document's own current Month-5+ steady-state run-rate (10-client Scenario C, **A$198,084.84/year, ancillary excluded 2026-07-30** — was A$301,044.84/year), assuming the venture holds at its verified capacity ceiling with no further AM capacity expansion (Scenario D, 15 clients/day, is a documented but not-yet-committed growth path — see [scenario-d-investigation.md](scenario-d-investigation.md) — not assumed here).
+
+**2026-07-30 update — ancillary excluded, Year 1 range shifted down proportionally.** Removing ancillary from every month in the ramp table lowers the same flat-cost-approximation calculation from an apparent -A$13,000 to an apparent **-A$105,381** (recomputed directly, not just estimated — the ~A$92,000 shift matches removing ~A$8,580/month ancillary across the year, adjusted for the lower ramp-month amounts in Months 1-4). This is a proportional adjustment of the existing approximate range, not a from-scratch rebuild — the same disclosed flat-cost limitation applies (it still understates real profitability, now shifted onto a lower base).
 
 | Year | Net P&L (annual) | Basis |
 |---|---|---|
-| Year 1 (ramp-up + partial steady-state) | Likely in the range of breakeven-to-modestly-positive to +A$25,000-40,000, once costs are properly ramp-matched to revenue (a flat-cost approximation using this document's own ramp-table revenue produces a small apparent loss of roughly -A$13,000, but this is known to understate profitability since it doesn't ramp costs down in the early months — treat the true figure as better than this flat-cost approximation suggests) | Derived from this document's Year 1 Monthly Ramp table below, using Month 5+ flat costs as a known-conservative simplification |
-| Year 2 (full steady-state, 10-client Scenario C, no further capacity change) | ~A$301,044.84 | This document's steady-state figure, current canonical AM model |
-| Year 3 (same, assuming no material change — the actual figure depends entirely on whether Scenario D or further growth levers are pursued) | ~A$301,044.84 (flat, if no capacity change) | Same as Year 2 — **this is a "no growth" placeholder, not a forecast.** If Scenario D (15 clients/day) is activated, see [scenario-d-investigation.md](scenario-d-investigation.md)'s own P&L estimate instead. |
+| Year 1 (ramp-up + partial steady-state) | Likely in the range of a modest loss to modestly positive — roughly -A$20,000 to +A$5,000 — once costs are properly ramp-matched to revenue (the flat-cost approximation using this document's own ramp-table revenue now produces an apparent loss of roughly -A$105,381, but this is known to understate profitability since it doesn't ramp costs down in the early months — treat the true figure as better than this flat-cost approximation suggests, same disclosed limitation as before, now applied to the ancillary-excluded figures) | Derived from this document's Year 1 Monthly Ramp table below (ancillary excluded 2026-07-30), using Month 5+ flat costs as a known-conservative simplification |
+| Year 2 (full steady-state, 10-client Scenario C, no further capacity change) | ~A$198,084.84 (ancillary excluded 2026-07-30 — was ~A$301,044.84) | This document's steady-state figure, current canonical AM model |
+| Year 3 (same, assuming no material change — the actual figure depends entirely on whether Scenario D or further growth levers are pursued) | ~A$198,084.84 (flat, if no capacity change) | Same as Year 2 — **this is a "no growth" placeholder, not a forecast.** If Scenario D (15 clients/day) is activated, see [scenario-d-investigation.md](scenario-d-investigation.md)'s own P&L estimate instead. |
 
 **This table should not be treated as a confident 3-year forecast.** The remaining limitation (flat vs ramped costs in Year 1) is a known, disclosed simplification, not an unresolved contradiction — recommend Bruno/finance function build the cost-ramp-matched version once Year 1 real data exists, for a materially more accurate (and likely more favourable) Year 1 figure than the conservative approximation shown here.
 
@@ -238,17 +311,17 @@ This is a larger and less-verified figure than it might look, for reasons beyond
 
 **Where the Month 5+ AM figure of A$55,000 comes from, and how it's achievable:** 10 clients/day × A$250 (Package 1 conservative price) × 22 trading days/month = **A$55,000/month**. This is a **capacity ceiling** (the verified Scenario C maximum — see [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md)), not a guaranteed figure. Actually earning it depends on booking all 10 daily AM slots consistently across the month via the referral/waitlist pipeline ([business-plan.md](business-plan.md) §8 Go-to-Market, [pm-staffing-roster.md](pm-staffing-roster.md) §Pre-Opening Waitlist & Staffing Decision Model) — which is exactly why the ramp table below assumes a gradual build (43%/64%/79%/93%/100% of this ceiling across Months 1-5), not full capacity from Day 1.
 
-**Method:** apply the same ramp percentages [cash-flow.md](cash-flow.md) used (Month 1: ~43% of steady-state packages/services sold, Month 2: ~64%, Month 3: ~79%, Month 4: ~93%, Month 5+: 100%) to this document's own current Month 5+ steady-state figures (AM A$55,000, PM A$33,440 — using [pm-staffing-roster.md](pm-staffing-roster.md)'s validated session-volume ramp, confirmed compatible with the 10-client AM model — and ancillary A$8,580, all at Month 5+).
+**Method:** apply the same ramp percentages [cash-flow.md](cash-flow.md) used (Month 1: ~43% of steady-state packages/services sold, Month 2: ~64%, Month 3: ~79%, Month 4: ~93%, Month 5+: 100%) to this document's own current Month 5+ steady-state figures (AM A$55,000, PM A$33,440 — using [pm-staffing-roster.md](pm-staffing-roster.md)'s validated session-volume ramp, confirmed compatible with the 10-client AM model). **Ancillary revenue excluded entirely (2026-07-30), per Anthony's direct instruction — see "Ancillary Revenue — Excluded From Baseline" above.**
 
 | Month | AM GTT Revenue | PM Revenue | Ancillary | Total Revenue (approx.) | Note |
 |---|---|---|---|---|---|
-| Month 1 | ~A$27,500 (43% of A$55,000 ceiling, ~4-5 clients/day) | ~A$14,380 (43% of A$33,440) | ~A$3,690 | ~A$45,570 | Ramp estimate |
-| Month 2 | ~A$35,200 (64%) | ~A$21,400 | ~A$5,490 | ~A$62,090 | Ramp estimate |
-| Month 3 | ~A$43,450 (79%) | ~A$26,420 | ~A$6,780 | ~A$76,650 | Ramp estimate |
-| Month 4 | ~A$51,150 (93%) | ~A$31,100 | ~A$7,980 | ~A$90,230 | Ramp estimate |
-| Month 5+ | A$55,000 (100%, verified ceiling — 10/day × A$250 × 22 days) | A$33,440 | A$8,580 | A$97,020 (revenue only — see Fixed Costs below for net) | **AM figure is fully verified (Scenario C ceiling); PM/ancillary figures are the ramp-shape estimate, confirmed directionally compatible with the AM model but not independently re-verified session-by-session** |
+| Month 1 | ~A$27,500 (43% of A$55,000 ceiling, ~4-5 clients/day) | ~A$14,380 (43% of A$33,440) | **A$0 (excluded)** | ~A$41,880 | Ramp estimate |
+| Month 2 | ~A$35,200 (64%) | ~A$21,400 | **A$0 (excluded)** | ~A$56,600 | Ramp estimate |
+| Month 3 | ~A$43,450 (79%) | ~A$26,420 | **A$0 (excluded)** | ~A$69,870 | Ramp estimate |
+| Month 4 | ~A$51,150 (93%) | ~A$31,100 | **A$0 (excluded)** | ~A$82,250 | Ramp estimate |
+| Month 5+ | A$55,000 (100%, verified ceiling — 10/day × A$250 × 22 days) | A$33,440 | **A$0 (excluded)** | A$88,440 (revenue only — see Fixed Costs below for net) | **AM figure is fully verified (Scenario C ceiling); PM figure is the ramp-shape estimate, confirmed directionally compatible with the AM model but not independently re-verified session-by-session. Ancillary excluded from baseline 2026-07-30 — see note above.** |
 
-**Fixed costs at Month 5+ (per §4 Monthly table above): A$88,625.09/month. Net P&L at Month 5+: Total Revenue A$97,020 minus Total Costs A$88,625.09 ≈ +A$8,395/month using this simplified ramp-table revenue sum — note this differs slightly from the headline +A$25,087.07/month figure because that figure uses this document's own more precise weekday/Saturday-blended calculation (§1-2 above), not this simplified Month-1-5 ramp table's rounded monthly totals. Treat the headline +A$25,087.07/month (weekday/Saturday blend) as the more precise figure; this ramp table is for visualising the build-up shape across Year 1, not as a replacement for the precise weekday-based calculation above.**
+**Fixed costs at Month 5+ (per §4 Monthly table above): A$88,625.09/month. Net P&L at Month 5+: Total Revenue A$88,440 minus Total Costs A$88,625.09 ≈ -A$185.09/month using this simplified ramp-table revenue sum** — this simplified table now shows a near-zero/marginal result at Month 5+, materially different from the headline +A$16,507.07/month figure, because that figure uses this document's own more precise weekday/Saturday-blended calculation (§1-2 above), not this simplified Month-1-5 ramp table's rounded monthly totals (the same disclosed gap that existed before ancillary was excluded — see the earlier version of this note in git history). **Treat the headline +A$16,507.07/month (weekday/Saturday blend) as the more precise figure; this ramp table is for visualising the build-up shape across Year 1, not as a replacement for the precise weekday-based calculation above.**
 
 See "Years 1-3 Annual Projection" above for the corresponding multi-year view.
 
@@ -265,8 +338,8 @@ See "Years 1-3 Annual Projection" above for the corresponding multi-year view.
 | AM Revenue (Weekday/Saturday) | 10 clients × A$250 (Package 1 conservative price, [services-pricing-locked.md](services-pricing-locked.md)) = **A$2,500.00** |
 | PM Revenue (Weekday, 16 sessions) | 16 sessions × A$95 average individual-service price ([pm-staffing-roster.md](pm-staffing-roster.md) §PM Revenue) = **A$1,520.00** |
 | PM Revenue (Saturday, 8 sessions) | 8 sessions × A$95 = **A$760.00** |
-| Ancillary Revenue (Weekday) | A$8,580/month steady-state ancillary (`profit-loss-tables.md` Year 1 Ramp table, sourced from [financial-break-even-staff.md](financial-break-even-staff.md) Revenue Model — spray tan + retail + cafe) ÷ 22 trading days/month ≈ **A$390/day AM-only equivalent, blended with PM foot traffic to A$439.50/day** used in this table — the exact AM/PM ancillary split is not separately tracked, this is a per-trading-day average of the monthly total |
-| Monthly Total Revenue | Weekday × 5 × 4.33 weeks + Saturday × 1 × 4.33 weeks, per §3 Weekly table scaled to a month: (A$22,297.50 + A$3,260.00) × 4.33 ≈ **A$113,712.16** |
+| ~~Ancillary Revenue (Weekday)~~ | **Historical calculation, superseded 2026-07-30 — ancillary is now A$0 in the baseline, per Anthony's direct instruction (see "Ancillary Revenue — Excluded From Baseline" above).** Retained below for trace only: was A$8,580/month steady-state ancillary (`profit-loss-tables.md` Year 1 Ramp table, sourced from [financial-break-even-staff.md](financial-break-even-staff.md) Revenue Model — spray tan + retail + cafe) ÷ 22 trading days/month ≈ A$390/day AM-only equivalent, blended with PM foot traffic to A$439.50/day used in the (now superseded) Weekday table — the exact AM/PM ancillary split was never separately tracked. |
+| Monthly Total Revenue | **Ancillary excluded 2026-07-30.** Weekday × 5 × 4.33 weeks + Saturday × 1 × 4.33 weeks, per §3 Weekly table scaled to a month: (A$20,100.00 + A$3,260.00) × 4.33 ≈ **A$101,168.00** — note this does not reconcile exactly to the A$105,132.16 stated in §4 Monthly (a small pre-existing weekly-to-monthly scaling discrepancy of ~A$3,964 that predates this session's ancillary-exclusion work and was not introduced by it — flagged here rather than silently smoothed over; §4's own figure, arrived at by directly subtracting the A$8,580 ancillary from the previously-stated A$113,712.16, is the one currently used as canonical, since the pre-existing discrepancy's root cause has not yet been traced). |
 | Quarterly/Half-Yearly/Yearly Revenue | Monthly figure × 3 / × 6 / × 12 — a steady-state run-rate scaling, not independently re-modelled per period |
 
 ### Direct Labor Lines (rate and method confirmed; exact hour-by-hour staff allocation for the Weekday/Saturday totals is not preserved as a saved worksheet in this repo — flagged below)
@@ -319,3 +392,10 @@ See "Years 1-3 Annual Projection" above for the corresponding multi-year view.
 **2026-07-20 (package renumbering + terminology)** — Updated the remaining "Package 2/Package 3" references (base-model banner, Key Callouts, Year 1 Ramp derivation, calculation appendix) to "Package 1 (A$250)/Package 2 (A$300)" per [services-pricing-locked.md](services-pricing-locked.md)'s renumbering — these were missed in the earlier v2.1 rewrite pass. Also tightened "visits" language to "packages/services sold" for consistency with the venture-wide terminology change (a visit alone carries no dollar figure).
 
 **2026-07-30 (downtime-fill revenue upside added, per Anthony's direct instruction)** — Added a new "Downtime-Fill Revenue — Upside Estimate" section, quantifying the new standalone-booking-first Staff Downtime Protocol policy (`financial-break-even-staff.md`) using real per-staff gap-time data pulled directly from `scenario-c-sync-timetables.md` (1,260 min/day total downtime across 8 AM treatment staff, not estimated). Converted to dollars using two assumptions already established elsewhere in this repo (1.3 sessions/hr throughput, A$95/session average, both from `pm-staffing-roster.md`) plus the same 50% utilisation discount that document already applies to standalone PM demand. Result: **A$28,528.50/month**, tagged `[MODELED]`, kept as a separate line in §4 Monthly and its own dedicated section — explicitly not blended into the +A$25,087.07/month conservative baseline. Flagged as the least-verified line in the model (no demand validation for this specific slot type, not yet built into any booking system).
+
+**2026-07-30 (later same day — corrections from Anthony, major rework)** — Three corrections applied:
+1. **Downtime-fill split into two pools, not one blended figure.** Anthony corrected the earlier same-day A$28,528.50/month single figure: only between-booking gaps (mid-shift, advance-online-booking only) are sellable revenue; lead-in/tail time should instead let a staff member's engagement start later/end earlier (a cost saving, not revenue). Independently re-derived both pools directly from `scenario-c-sync-timetables.md`, reproducing exactly 420 min/day (between-gaps) and 1,320 min/day (naive lead+tail) — reconciled against the earlier 1,260 min/day figure (narrower, non-split window; difference fully explained, not a mystery). Also checked the 3-hour minimum casual engagement directly against the primary Fair Work Ombudsman/Commission award text (MA000005 clause 11.5, MA000027 clause 11.2, via direct WebFetch, not just a search snippet) — `[VERIFIED]` — and applied it to the lead/tail pool, reducing the naive 1,320 min/day to 1,100 min/day actually saveable. New headline figures: (a) Between-Client Downtime-Fill Revenue A$9,509.50/month, (b) Early-Release Cost Saving A$14,647.05/month — two separate lines, never blended.
+2. **Fixed an accidental heading deletion** from the earlier same-day edit — the "Treatment Headcount" section's own heading was dropped when the Downtime-Fill section was inserted above it, orphaning its content. Restored, no content lost.
+3. **Added a solver-verified extension** to the Treatment Headcount analysis: re-ran the scheduling constraint check with a hypothetical Nails+Hair cross-qualification pool (in addition to the existing Massage+Beauty pool) against the real Scenario C booking data — result: headcount could drop to 6 (from 7) if such a hire existed, though hireability (not scheduling feasibility) is the real-world constraint, flagged explicitly.
+
+**2026-07-30 (ancillary revenue excluded from baseline entirely, per Anthony's direct instruction)** — Ancillary ("too much of a variable" with no real basis yet — `cash-flow.md` had already found 2 of 3 component lines have no real derivation, 10 days before this exclusion) is now A$0 in every headline P&L figure in this document: Weekday, Weekly, Monthly, Quarterly, Half-Yearly, Yearly, Year 1 Monthly Ramp, and Years 1-3 Annual Projection all recomputed. **Standing conservative baseline moves from +A$25,087.07/month to +A$16,507.07/month** (+A$301,044.84/year to +A$198,084.84/year). Ancillary kept visible only as a separate, clearly-tagged pure-upside line ("Ancillary Revenue — Excluded From Baseline"), not deleted from the document, never folded back into the baseline. Also found and flagged (not silently fixed) a small pre-existing weekly-to-monthly revenue-scaling discrepancy (~A$3,964-4,700) in this document's own Appendix, predating this session's work.

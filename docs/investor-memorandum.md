@@ -34,7 +34,7 @@ Every pregnant woman in Australia is offered this test between 24–28 weeks ges
 | Package 2 price | **A$300** (flexible 2×45min / 45+30min / 2×30min) | `[MODELED — same basis]` |
 | AM GTT capacity ceiling | **220 visits/month** (10/day × 22 trading days) | `[VERIFIED — scenario-c-sync-timetables.md scheduling-feasibility simulation, 2026-07-17; a capacity ceiling, not a booking guarantee]` |
 | PM individual services capacity | **~350 sessions/month** (~16/day) | `[MODELED — assumption: ~50% of theoretical 4-line capacity, pm-staffing-roster.md, no real demand data yet]` |
-| Monthly net P&L (steady state, Month 5+) | **+A$25,087.07/month** | `[MODELED — profit-loss-tables.md v2.1, 2026-07-20]` |
+| Monthly net P&L (steady state, Month 5+) | **+A$16,507.07/month** (ancillary revenue excluded 2026-07-30 — was +A$25,087.07/month) | `[MODELED — profit-loss-tables.md v2.1, 2026-07-30 recalculation]` |
 | Monthly fixed costs (steady state) | **A$88,625.09** | `[MODELED — same source]` |
 | Startup capital requirement | **Not yet reconciled — see CURRENT-STATE.md** | `[PLACEHOLDER — 3 conflicting ranges exist across this repo's own documents, never reconciled]` |
 
@@ -158,9 +158,9 @@ Blood collection is performed by GTT Center Perth's employed phlebotomists under
 | Workers compensation (WA, 1.7%) | ~A$1,248 | A$14,973 | `[MODELED — traceable calculation]` |
 | Non-wage overhead (rent, utilities, insurance, marketing, etc. — 13 components) | A$13,980 | A$167,760 | `[MODELED — profit-loss-tables.md §4 breakdown]` |
 | **Total Fixed Costs** | **A$88,625.09** | **A$1,063,501.08** | |
-| **Net P&L (Month 5+, steady state)** | **+A$25,087.07** | **+A$301,044.84** | `[MODELED — profit-loss-tables.md v2.1, precise weekday/Saturday-blended calculation, 2026-07-20; not based on real trading data]` |
+| **Net P&L (Month 5+, steady state)** | **+A$16,507.07** (ancillary excluded 2026-07-30) | **+A$198,084.84** | `[MODELED — profit-loss-tables.md v2.1, precise weekday/Saturday-blended calculation, 2026-07-30 recalculation; not based on real trading data]` |
 
-**Note on the two revenue totals above:** `profit-loss-tables.md`'s simplified Month-by-month ramp table sums to A$97,020/month at M5+ (giving an approximate +A$8,395/month net), while its own more precise weekday/Saturday-blended calculation gives A$113,712.16/month total revenue and the headline **+A$25,087.07/month** net figure. The precise calculation is the one to quote — the ramp table exists only to show the Month 1-4 build-up shape. This is disclosed directly in `profit-loss-tables.md` rather than presenting one number as if no discrepancy existed.
+**Note on the two revenue totals above:** `profit-loss-tables.md`'s simplified Month-by-month ramp table sums to A$88,440/month at M5+ (giving an approximate -A$185/month net), while its own more precise weekday/Saturday-blended calculation gives A$105,132.16/month total revenue and the headline **+A$16,507.07/month** net figure. The precise calculation is the one to quote — the ramp table exists only to show the Month 1-4 build-up shape. This is disclosed directly in `profit-loss-tables.md` rather than presenting one number as if no discrepancy existed. **(Figures updated 2026-07-30 — ancillary revenue, previously ~A$8,580/month, is now excluded entirely from this baseline per Anthony's direct instruction; the pre-2026-07-30 figures were A$113,712.16 revenue and +A$25,087.07/month net.)**
 
 **Ramp-up losses (Months 1-3) are real** and must be funded from working capital — see `docs/CURRENT-STATE.md` for the startup capital range, which is currently unreconciled across this repo's own documents (flagged, not smoothed over).
 

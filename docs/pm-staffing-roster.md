@@ -315,7 +315,9 @@ This drops the relief pool from an implied 4 single-skill specialists to 3 peopl
 
 ---
 
-## Profit Breakdown — AM vs PM Contribution (Answers "is +A$25,087.07/month AM-only or full day?")
+## Profit Breakdown — AM vs PM Contribution (Answers "is the venture headline AM-only or full day?")
+
+> **2026-07-30 note:** the venture-level headline figure referenced throughout this section (+A$25,087.07/month) is now stale — `profit-loss-tables.md` excludes ancillary revenue from the baseline as of 2026-07-30, moving the standing conservative baseline to **+A$16,507.07/month**. This section's own AM/PM segment breakdown figures below are unaffected by that specific change (ancillary was never allocated to either segment in this table), but the "reconciles to +A$25,087.07" cross-reference below is now comparing against a superseded figure — see `docs/CURRENT-STATE.md` §5 for the current baseline.
 
 > **CORRECTED 2026-07-29 (external audit finding):** the table below previously used A$44,000/month AM revenue — the stale 8-client/day Scenario B figure — even though CONFLICT-08 (resolved 2026-07-20, see `docs/01_conflicts_log.md`) had already established the current AM revenue as A$55,000/month (10-client Scenario C, verified). This is exactly the kind of leftover contradiction an outside reviewer found: a fix applied to the venture-level headline figure (`profit-loss-tables.md`) but never propagated to this segment-level breakdown, which is precisely where Anthony's belief that "AM loses money on its own" originated. Corrected below using the current A$55,000/month AM revenue figure. **This is not a new model** — it is the same 2026-07-17 Scenario C capacity change already resolved elsewhere, applied to a table that was never updated. See `docs/CURRENT-STATE.md` §7 and `docs/VERIFICATION-TRACKER.md` for the full input-by-input delta.
 

@@ -125,5 +125,5 @@ Key differences from in-state expansion:
 ## Decisions Needed Before Work Begins
 
 1. Confirm Fresha availability-blocking behaviour before launch (technical test, not a strategic decision — but blocking)
-2. Confirm whether Saturday trading and AM 3rd-chair expansion should be actively planned now or deferred until Venue 1 is live
+2. ~~Confirm whether Saturday trading and AM 3rd-chair expansion should be actively planned now or deferred until Venue 1 is live~~ **RESOLVED 2026-07-30 — trading days settled: AM runs Monday-Friday AND Saturday, actively planned as part of the current model (not deferred). Sunday closed.** Saturday is already fully modelled with its own P&L (`profit-loss-tables.md` §2) and staffing (`am-capacity-weekend.md`) — this is no longer an open question. The AM 3rd-chair expansion (Scenario D, 15 clients/day) remains a separate, not-yet-committed growth path, distinct from the (settled) Saturday trading-day question — see `docs/CURRENT-STATE.md` §1.
 3. Confirm interstate ambition — genuinely open, or is there a target state/timeline in mind

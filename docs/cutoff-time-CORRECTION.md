@@ -41,14 +41,33 @@ What general chemistry sources did confirm: fluoride-oxalate (glucose) tubes are
 
 ---
 
-## Update (2026-07-29) — Carole Rivers Verbally Confirmed No Cutoff Within Operating Hours — NOT Yet in Writing
+## Update (2026-07-29) — Carole Rivers Verbally Confirmed No Cutoff Within Operating Hours — SUPERSEDED 2026-07-30, see below
 
-**Carole Rivers (WDP, Customer & Commercial Manager, Country) verbally confirmed there is no specimen-pickup cutoff within business operating hours.** This directly answers the standing 11:30-vs-12:30 question — but it is a **verbal confirmation only**, not yet in writing/email.
+~~Carole Rivers (WDP, Customer & Commercial Manager, Country) verbally confirmed there is no specimen-pickup cutoff within business operating hours.~~ **This 2026-07-29 verbal readback was an oversimplification, corrected 2026-07-30 by Carole's actual written email — see below. It was never a blanket "no cutoff," and should not have been summarised that way even as a verbal-only status.** Retained here (struck through) for trace, not deleted.
 
-`[VERIFIED — Carole Rivers, WDP, verbal confirmation, 2026-07-29]`
+---
 
-**This is real and should be relied on for planning purposes — it is not the same status as the two previously-unconfirmed 11:30/12:30 figures, which had no source at all.** But it is **not fully closed out** either: a verbal confirmation from one contact is a real but weaker form of evidence than a written reply, and this repo's own standing instruction (above, 2026-07-17) explicitly required documenting anything short of an actual WDP reply as unconfirmed. Treating this as identically strong as a written confirmation would repeat the same class of error this file was created to catch.
+## Update (2026-07-30) — Carole Rivers' Actual Email Reply — Real, Written, More Nuanced Than the Verbal Readback
 
-**Standing action item — do not close until done:** get this specific confirmation ("no specimen-pickup cutoff within business operating hours") in writing/email from WDP, for the permanent record. Anthony has an existing draft reply in progress to WDP (see the 2026-07-28 update above) — this confirmation should be explicitly referenced/requested in that reply, or in a short separate follow-up, so there is a written record to point to rather than relying on a verbal exchange indefinitely. Added to `docs/VERIFICATION-TRACKER.md` item 1 and `docs/CURRENT-STATE.md` §1.
+Carole Rivers' actual email (pasted directly by Anthony in chat — genuine written correspondence, not from an attached doc) gives a real but **conditional**, not unconditional, answer:
 
-**Practical effect on the AM/PM capacity model (Scenario C/D):** if no cutoff exists within operating hours, the courier-cutoff constraint that has driven the AM window's end-time ceiling in every scheduling document to date (`scenario-c-sync-timetables.md`, `am-capacity-weekend.md`, `draw-event-scheduler-findings.md`) may no longer be the binding constraint — this could open room for later start times or a wider window than currently modelled. **Not yet actioned in any scheduling document** — the verbal-only status means this should be treated as directionally encouraging, not yet a basis for re-running the capacity model. Re-verify once the written confirmation exists, then update the schedulers.
+- Overnight storage is viable **"in some circumstances"** — fluoride oxalate tubes (the type used for GTT glucose specimens) are stable for approximately 24 hours.
+- **"A late booking would not necessarily prevent collection, although specimen type and storage requirements would always need to be considered."**
+
+`[VERIFIED — Carole Rivers, WDP, email, 2026-07-30]`
+
+**This is NOT the same as "no cutoff within business hours."** The 2026-07-29 verbal readback (struck through above) oversimplified a conditional, case-by-case answer into a blanket confirmation — exactly the kind of overstatement this repo's own standing instruction (2026-07-17, above) exists to prevent. The real answer is: **a late booking is not automatically rejected, and overnight storage is a genuine option in at least some circumstances** — but whether a specific late booking can actually be accommodated depends on the specimen type and storage conditions being right for that day, not a standing, unconditional guarantee that any time works.
+
+**This is now written, primary-source correspondence — a stronger evidentiary status than the 2026-07-29 verbal-only confirmation.** No further "get it in writing" action item is needed for this specific point (the original 11:30-vs-12:30 question is answered — there isn't a single fixed cutoff, there's a conditional, circumstance-dependent answer instead). What remains open: the exact conditions (which specimen handling/storage setup on GTT Center Perth's side would need to be in place to reliably use the overnight-storage option) are not yet spelled out — see `docs/VERIFICATION-TRACKER.md` for this as a still-open follow-up question, distinct from the now-answered "is there a hard cutoff" question.
+
+**Practical effect on the AM/PM capacity model (Scenario C/D):** the courier-cutoff constraint that has driven the AM window's end-time ceiling in every scheduling document to date (`scenario-c-sync-timetables.md`, `am-capacity-weekend.md`, `draw-event-scheduler-findings.md`) is confirmed **not to be a hard, unconditional wall** — there is real flexibility (overnight storage in some circumstances, late bookings not automatically rejected). **Still not yet actioned into any scheduling document** — this is a real, written, more-favourable answer than previously assumed, but "in some circumstances" and "would always need to be considered" mean the exact operational conditions need to be nailed down with WDP (what storage setup, what specimen handling) before re-running the capacity model on the assumption that the window can simply be widened. Treat as a genuine, sourced upside for a future capacity review, not yet a basis for changing today's Scenario C/D figures.
+
+## New Information — WDP Commercial/Rental Structure (2026-07-30)
+
+Carole's email also describes WDP's model for a venue-based collection clinic: **an annual rental arrangement**, with terms depending on expected pathology volume, number of referring doctors on-site, location/accessibility, and the overall business opportunity. **No figure is quantified anywhere in this correspondence.** Added as a new tracked item in `docs/VERIFICATION-TRACKER.md` (owner: Anthony/WDP commercial negotiation) — do not invent a rental estimate anywhere in this repo until a real figure exists.
+
+## Critical Open Question — Phlebotomist Employment Model (2026-07-30, NOT DECIDED)
+
+Carole's email states that under this rental model, WDP staff's **"safety, wellbeing and employment responsibilities... would remain with Western Diagnostic Pathology."** This raises a real, high-priority, unresolved question: does GTT Center Perth still employ its own phlebotomist(s) directly (the current modelled assumption — AM Direct Labor stays at ~A$48,255/month per `docs/CURRENT-STATE.md`), or does WDP supply/employ the phlebotomist as part of the rental deal (which would replace that wage line with a to-be-negotiated rental fee instead)?
+
+**Anthony's explicit answer: NOT DECIDED — ask Carole to clarify directly before assuming either way.** `[PLACEHOLDER — critical dependency, not yet resolved]`. **Do not change the AM Direct Labor cost line in any P&L document over this** — the current figure (in-house employment assumption) stays as the modelled baseline until this is actually answered. See `docs/CURRENT-STATE.md` §4 and §7 for the prominent flag on this dependency, and `docs/VERIFICATION-TRACKER.md` for the high-priority tracked item.
