@@ -28,7 +28,7 @@ Copied from the empire shared skill library (`/opt/openclaw/shared/skills/` on s
 - Imara has zero operational involvement (confirmed 2026-07-18) — a Venue Manager (new hire, not yet recruited) covers every on-site duty previously attributed to her. Anthony/Imara retain ownership + financial oversight only.
 - Funding: self-funded via Anthony + Imara's joint savings (~A$200K), no external investor. **Corrected 2026-07-29 — previously miswritten as "Imara's personal savings" in several docs; Anthony confirmed directly it is joint savings, not Imara's alone.**
 - Launch date: not set — sequence roadmap by dependency only.
-- AM model: Scenario C, 10 clients/day, 07:00 start. Packages: only A$250/A$300 (Package 1 dropped). Saturday reuses AM + PM standalone. Sunday closed.
+- AM model: **12 clients/day, 07:00 start, 6 slots/chair** (corrected 2026-07-30 — was 10 clients/day/5 slots-per-chair; Anthony committed the extended morning WDP's real 10:30am start-time guidance allows). Packages: only A$250/A$300 (Package 1 dropped). Saturday reuses AM + PM standalone, same 12-client volume. Sunday closed. 8-staff treatment roster required (no pooling reduction — the 7/6-staff findings only ever applied at the now-superseded 10-client volume).
 
 ## Governance — Read Before Stating Any Figure
 

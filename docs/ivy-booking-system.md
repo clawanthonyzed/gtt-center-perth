@@ -161,6 +161,8 @@ STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 
 ### Chair B Opening Policy — Enquiry Threshold (added 2026-07-30, per Anthony's direct instruction)
 
+> **FLAGGED, later 2026-07-30 — genuine conflict with the now-committed 12-client model, not resolved here.** This policy was recorded earlier the same session, while 10 clients/day was still the committed volume. Later the same day, Anthony corrected the committed model to 12 clients/day — **both chairs running synchronized across all 6 daily slots as the baseline**, which is not obviously compatible with "Chair B only opens once 2 enquiries exist." Does this enquiry-threshold policy still apply (e.g., only below the 12-client committed volume, or only during ramp-up before real demand reaches it), or is it superseded now that both-chairs-always-on is the target? **Not guessed at — flagged for Anthony's clarification.** See `docs/CURRENT-STATE.md` §1 and `docs/VERIFICATION-TRACKER.md` item 1f.
+
 `[VERIFIED — Anthony's direct instruction, 2026-07-30]` **Chair A is the default/guaranteed chair for any given slot. Chair B does not open automatically — it opens only once 2 enquiries exist for the same slot.**
 
 - Every GTT slot's Chair B capacity is presented to the customer as **"Enquire"**, not an instant confirmed booking — this is a genuine change to the booking-flow logic in STEP 1/STEP 6 above for the 2nd-and-later client in a given slot.

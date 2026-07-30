@@ -48,13 +48,16 @@ STALENESS_WINDOW = 3  # lines of preceding context also checked for a marker
 # (parameter_name, canonical_value_display, [stale/conflicting regex patterns])
 CHECKS = [
     (
-        "AM GTT client capacity (canonical: 10 clients/day, scenario-c-sync-timetables.md)",
-        "10 clients/day",
+        "AM GTT client capacity (canonical: 12 clients/day, committed 2026-07-30, scenario-c-sync-timetables.md §0)",
+        "12 clients/day",
         [
             re.compile(r"\b8\s*(GTT\s+)?clients?\s*/\s*day\b", re.IGNORECASE),
             re.compile(r"\b8[\s-]client\b", re.IGNORECASE),
             re.compile(r"\b8\s+GTT\s+(patients|clients)\b", re.IGNORECASE),
             re.compile(r"176\s*(GTT\s+)?visits\s*/\s*month", re.IGNORECASE),
+            re.compile(r"\b10\s*(GTT\s+)?clients?\s*/\s*day\b", re.IGNORECASE),
+            re.compile(r"\b10[\s-]client\b", re.IGNORECASE),
+            re.compile(r"220\s*(GTT\s+)?visits\s*/\s*month", re.IGNORECASE),
         ],
     ),
     (
@@ -67,8 +70,8 @@ CHECKS = [
         ],
     ),
     (
-        "Monthly net P&L, steady state (canonical: +A$16,507.07/month, ancillary excluded 2026-07-30)",
-        "+A$16,507.07/month",
+        "Monthly net P&L, steady state (canonical: +A$28,488.42/month, 12-client + ancillary-excluded, 2026-07-30)",
+        "+A$28,488.42/month",
         [
             re.compile(r"-\s*A\$\s*9,684"),
             re.compile(r"-\s*A\$\s*4,384"),
@@ -77,14 +80,27 @@ CHECKS = [
             re.compile(r"\+\s*A\$\s*10,232"),
             re.compile(r"\+\s*A\$\s*25,087"),
             re.compile(r"\+\s*A\$\s*301,044"),
+            re.compile(r"\+\s*A\$\s*16,507"),
+            re.compile(r"\+\s*A\$\s*198,084"),
+            re.compile(r"\+\s*A\$\s*6,745"),
         ],
     ),
     (
-        "Downtime-fill/early-release (canonical: TWO separate pools -- A$9,509.50/month revenue + A$14,647.05/month cost saving, 2026-07-30)",
-        "A$9,509.50/month (a) + A$14,647.05/month (b), never blended",
+        "Downtime-fill/early-release (canonical: TWO separate pools, 12-client recompute -- A$12,679.33/month revenue + A$16,511.22/month cost saving, 2026-07-30)",
+        "A$12,679.33/month (a) + A$16,511.22/month (b), never blended",
         [
             re.compile(r"A\$\s*28,528\.50"),
             re.compile(r"1,260\s*min"),
+            re.compile(r"A\$\s*9,509\.50"),
+            re.compile(r"A\$\s*14,647\.05"),
+        ],
+    ),
+    (
+        "Treatment headcount pooling (canonical: 8-staff, no pooling, at the committed 12-client volume -- 7/6-staff findings only applied at the superseded 10-client model)",
+        "8 staff, no pooling reduction",
+        [
+            re.compile(r"7\s*staff.{0,40}genuine minimum", re.IGNORECASE),
+            re.compile(r"6\s*staff.{0,40}down from 7", re.IGNORECASE),
         ],
     ),
     (
