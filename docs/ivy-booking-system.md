@@ -114,6 +114,7 @@ STEP 1 — Select GTT Date
   Customer lands on booking page
   Sees calendar of available GTT morning slots (synced with pathology partner availability)
   Selects date and time (7:30am / 8:00am / 8:30am / 9:00am / 9:30am options)
+  *(Chair B slots show as "Enquire" not "Book" until the 2-enquiry threshold is met — see Chair B Opening Policy below.)*
 
 STEP 2 — Enter GTT Reference (if pathology books separately)
   If pathology partner books GTT independently:
@@ -157,6 +158,29 @@ STEP 9 — 24-Hour SMS Reminder (automated, with fasting time callout)
 STEP 10 — Day-Of Reminder 1 hour before (automated)
 STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 ```
+
+### Chair B Opening Policy — Enquiry Threshold (added 2026-07-30, per Anthony's direct instruction)
+
+`[VERIFIED — Anthony's direct instruction, 2026-07-30]` **Chair A is the default/guaranteed chair for any given slot. Chair B does not open automatically — it opens only once 2 enquiries exist for the same slot.**
+
+- Every GTT slot's Chair B capacity is presented to the customer as **"Enquire"**, not an instant confirmed booking — this is a genuine change to the booking-flow logic in STEP 1/STEP 6 above for the 2nd-and-later client in a given slot.
+- The **first** enquiry for a slot is Chair A — this converts to a normal confirmed, paid booking immediately (unchanged from the existing flow).
+- The **second** enquiry for the same slot triggers Chair B to open for that slot: its own phlebotomist plus whichever treatment lines that specific slot's two clients actually need. Once triggered, both the first and second client's bookings convert to confirmed, and normal payment/confirmation (STEP 6/7) proceeds for both.
+- **If a second enquiry never arrives for a slot**, the first client's booking still proceeds on Chair A alone (the enquiry-only state applies to whether Chair B opens, not to whether the first client's own booking is honoured).
+- **Not yet specified by this policy (flagged, not invented):** the exact customer-facing wait/notification mechanics for a lone first enquiry (how long they wait before being offered an alternative slot, whether a cutoff time applies) are not yet defined — this needs a follow-up decision before the booking system is actually built, not assumed here.
+
+**Cost consequence of opening Chair B — hand-derived, not solver-verified, flagged as such:** opening Chair B for a slot adds roughly 1 new phlebotomist plus 2 new treatment staff at the 3-hour minimum casual engagement floor each (MA000005 clause 11.5 / MA000027 clause 11.2 — see `financial-break-even-staff.md`), using Nails+Hair as the fresh pairing for that slot's treatment lines:
+
+| Role | Rate (casual) | 3hr floor cost |
+|---|---|---|
+| Phlebotomist | A$30.63/hr | A$91.89 |
+| Nails | A$35.63/hr | A$106.89 |
+| Hair | A$35.63/hr | A$106.89 |
+| **Total unavoidable added cost, Chair B opening at all** | | **~A$305.67 (~A$306)** |
+
+`[MODELED — hand-derived from confirmed award rates, not independently solver-verified against a real schedule; directionally right, not exact — the 3-hour floor is a worst-case minimum-engagement assumption, real cost could differ depending on how many Chair B clients are actually booked that day]`
+
+**Break-even:** one Chair B client (A$250 Package 1 revenue) does not clear the ~A$306 cost (net ~-A$56). Two Chair B clients (A$500 revenue) does clear it (net ~+A$194) — consistent with the 2-enquiry threshold being the actual trigger point, not an arbitrary number.
 
 ### Cancellation Policy (corrected 2026-07-20 to match the confirmed full-payment model)
 - Cancel ≥48 hours before: full credit, reschedule to any available slot within 90 days (no refund)
@@ -217,3 +241,5 @@ STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 **2026-07-19 (full fix, same day — supersedes the flag-only pass above)** — Actually rewrote every subtenant/room-rental reference to the employed-staff model rather than leaving it flagged: "Practitioner Management" retitled "Staff Management," subtenant calendar logins -> employed-staff calendar logins with Venue Manager-set rosters, subtenant rent invoicing/direct-debit section replaced with a payroll reference (Xero, weekly pay run), "4-5 subtenants" corrected to "12 employed staff." Also rewrote the Step 3 booking-flow service list — removed 3D Keepsake Scan and Dietitian consultation as current bookable services (neither is launch scope; 3D scan is future/Phase 2, dietitian is removed entirely) and corrected massage/nail service durations to match the current 30/45-min package structure. Removed the earlier superseded-content banner now that the fixes are made directly rather than just flagged.
 
 **2026-07-20 (CONFLICT-09 resolved)** — Corrected Step 6 Payment and the Cancellation/Late Arrival Policies: Anthony confirmed full package price is charged at booking, not an A$30 deposit. Replaced the deposit-forfeit mechanism with the tiered credit policy (≥48hrs full credit, 24-48hrs 50% credit, <24hrs no credit) that matches `onboarding.md`'s already-correct draft copy.
+
+**2026-07-30 (Chair B enquiry-threshold opening policy added, per Anthony's direct instruction)** — Added a new "Chair B Opening Policy" section: Chair A is the default/guaranteed chair per slot; Chair B opens only once a 2nd enquiry arrives for the same slot (not automatically alongside Chair A as the current committed Scenario C model assumes for full-capacity days). Updated STEP 1 to note Chair B slots show as "Enquire" not "Book" below the threshold. Added the hand-derived (not solver-verified) ~A$306 unavoidable added cost of opening Chair B at all, and the 2-client break-even point — both flagged explicitly as directional, not exact. See `docs/CURRENT-STATE.md` and `docs/VERIFICATION-TRACKER.md` for the same policy recorded canonically.

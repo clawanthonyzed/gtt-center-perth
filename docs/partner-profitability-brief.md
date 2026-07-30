@@ -1,8 +1,8 @@
 # GTT Center Perth — The Case, For Imara
 
-*A plain-English summary of where this stands and why the numbers work. Every figure below traces back to a specific document in this repo — ask to see the source for anything. Current as of 2026-07-30 — see `docs/CURRENT-STATE.md` for the canonical, tagged version of every figure here.*
+*A plain-English summary of where this stands and why the numbers work. Every figure below traces back to a specific document in this repo — ask to see the source for anything. Rebuilt 2026-07-30 — see `docs/CURRENT-STATE.md` for the canonical, tagged version of every figure here.*
 
-> **Adopted 2026-07-30** from an earlier parallel session's draft, rewritten to correct the funding-source wording (was "personal savings," corrected to joint savings) and updated against this session's most current figures (ancillary revenue excluded, Carole Rivers' actual WDP email integrated, phlebotomist employment model flagged open). Do not treat the earlier draft (if it resurfaces elsewhere) as current — this version supersedes it.
+> **Note:** a parallel session is independently rebuilding this same document for comparison, on purpose — this is not a redundant effort. This version is built from this repo's canonical `docs/CURRENT-STATE.md`, cross-checked directly, not copied from an earlier draft.
 
 ---
 
@@ -38,19 +38,32 @@ Same staff, same venue, open to anyone (not just GTT clients) from midday. Becau
 |---|---|---|
 | Total revenue (mornings + afternoons) | A$105,132 | A$1,261,586 |
 | Total costs (all wages, rent, insurance, admin, everything) | A$88,625 | A$1,063,501 |
-| **Net profit** | **A$16,507** | **A$198,085** |
+| **Net profit (baseline)** | **A$16,507** | **A$198,085** |
 
 This is the "running normally" figure, not day one — it assumes the booking calendar is full. Realistically it takes a few months to get there; the first year is closer to breakeven while bookings build up, which is normal for any new venue.
 
 **Note on this figure vs an earlier draft:** an earlier version of this brief quoted A$25,087/month and A$301,045/year, which included roughly A$8,580/month of cafe/retail revenue (spray tan, snacks, products). We've since decided to exclude that entirely from the headline number — it's genuinely too uncertain to lean on (no real basis for the figure yet), so the number above is the honest one to plan around. If cafe/retail revenue does materialise once we're open, it's upside on top of this, not baked in.
 
+## Two more upside numbers — real, but not counted in the A$16,507/month above
+
+Staff have real gaps between their own appointments during the morning. We've worked out two separate ways to make use of that, and kept both **deliberately out of the baseline above** because neither has been tested with real demand yet:
+
+| | Monthly figure | What it is |
+|---|---|---|
+| **Between-client bookings** (staff take an outside client during a genuine gap between two of their own GTT-client appointments, but only if that outside client booked in advance online — no walk-ins, no same-day) | **+A$9,509.50** | Extra revenue, if it happens |
+| **Early release** (a staff member's day ends earlier than the standard shift once their last GTT client is done, rather than being paid to sit around) | **+A$14,647.05** | Wage cost avoided, if rostered this way |
+
+Both are worked out from the actual verified schedule (not a guess), and both respect the legal minimum — casual staff can't be engaged for less than 3 hours at a time under the awards that apply here, which we checked directly against the real Fair Work rulebook, not just assumed. Together they're a meaningful upside (~A$24,000/month combined) but neither is guaranteed, so neither is folded into the "A$16,507/month" figure above. Treat them as what could be true once we're operating, not what we're planning around.
+
 ## What's already locked down
 
 **Our pathology partner replied — by real email, not just a phone call — on two of the questions that had been hanging over this:**
-- **Start time:** they said they wouldn't normally start a test after 10:30am. Our verified schedule finishes its last morning start at 9:40am — comfortably inside that.
-- **Specimen pickup timing:** this isn't a hard, fixed cutoff — samples can be stored overnight in some circumstances, and a late booking wouldn't automatically be turned away, though it does depend on specimen type and storage conditions on the day. That's a real, useful answer, even if it's not an unconditional "anytime works."
+- **Start time:** they said they wouldn't normally start a test after 10:30am. Our verified schedule finishes its last morning start at 9:40am — comfortably inside that. (We also checked: could we squeeze in a 6th client per chair — 12 a day instead of 10 — given this later cutoff? Yes, the schedule itself holds up with our current 8-person treatment team, though the day would run about 25-40 minutes later and it's not something we're doing yet — just confirmed it's possible if we ever want to.)
+- **Specimen pickup timing:** this isn't a hard, fixed cutoff — samples can be stored overnight in some circumstances, and a late booking wouldn't automatically be turned away, though it does depend on specimen type and storage conditions on the day. That's a real, useful, **written** answer, even if it's not an unconditional "anytime works" — we're being careful not to overstate this one, since an earlier internal summary of a phone conversation had rounded it up to "no cutoff at all," which wasn't quite right.
 
 We also know, because we tested it by actually simulating the schedule rather than guessing, that 10 clients a day fits cleanly with 2 phlebotomist chairs.
+
+**How the second chair actually turns on:** rather than running both chairs flat-out every day regardless of demand, the plan is simpler and cheaper to start: a client enquires about a time slot, and it's confirmed on the first chair straight away. If a second person enquires about that same slot, that's when the second chair (and its own phlebotomist and treatment staff) actually opens for that slot. One person alone in a slot doesn't justify the added cost of opening a second chair (roughly A$306 in unavoidable minimum-engagement wages for that slot) — two people does.
 
 ## What isn't locked down yet, and needs to happen before this becomes real
 
@@ -66,4 +79,4 @@ The whole model depends on actually filling 10 morning slots a day and a reasona
 
 ---
 
-*Every number in this brief comes directly from `profit-loss-tables.md`, `financial-break-even-staff.md`, and `docs/CURRENT-STATE.md` in the project repo — happy to pull up the underlying calculation for any of them.*
+*Every number in this brief comes directly from `profit-loss-tables.md`, `financial-break-even-staff.md`, `ivy-booking-system.md`, and `docs/CURRENT-STATE.md` in the project repo — happy to pull up the underlying calculation for any of them.*
