@@ -57,7 +57,21 @@ Clients 11 and 12 (bold) are the new 6th slot per chair. Last Draw 1 at 10:20am 
 - Massage+Beauty pooled (7-staff, cap 3): peak concurrent demand on the pool exceeds 3 — 2 clients unassignable.
 - Massage+Beauty AND Nails+Hair both pooled (6-staff, cap 3 each): 4 clients unassignable.
 
-**The full, un-pooled 8-person roster is required at 12 clients/day.** The 7-staff/6-staff findings from 2026-07-29 are historical, correct only for the now-superseded 10-client model.
+**The full, un-pooled 8-person roster is required at 12 clients/day.** The 7-staff/6-staff findings from 2026-07-29 are historical, correct only for the now-superseded 10-client model. **Clarifying note (2026-07-30, later same day): 8-staff-unpooled is not "banned" — it's the correct, expected requirement at this 12-client design ceiling. 7-staff-pooled (Massage+Beauty) remains a legitimate daily-rostering choice on lower-volume actual days, below this ceiling — not retired as a concept, just no longer the committed target at the ceiling.**
+
+### 0.4 True Maximum (N_max) Search — 2026-07-30, later same day — EXPLORED, NOT ADOPTED
+
+Per Anthony's direct instruction ("we are aiming for 12 or max capacity for 2 chairs and last client before 10:30am"), re-ran the full optimization search (`tools/draw-event-scheduler.py`'s `run()`, multi-resolution sweep of `CANDIDATE_STEP` from 1 to 44+, not the fixed 40-min-cadence assumption above), bounded by last Draw 1 strictly before 10:30am (minute 210 from 07:00).
+
+**True chair/phlebotomist-only ceiling: 14 clients/day** (best found at search resolution step=1; every other tested resolution gives 12 or 13). The 14-client schedule packs clients into two tight bursts (07:00-07:46 and 09:55-10:26) separated by a ~2hr09min mid-morning gap with zero new arrivals — a materially different shape from the smooth 40-min-cadence rhythm above.
+
+**But 14 is not achievable with the existing 8-person treatment roster.** Independently re-verified via interval-overlap simulation: within each burst, per-line treatment concurrency peaks at **3 concurrent clients per line** (Massage, Beauty, Nails, Hair each individually checked), not the 2 that 8 staff (2-per-line) can cover. Achieving 14 would require **12 treatment staff (3 per line), not 8.**
+
+Directly tested the maximum N that respects both the chair/draw-timing constraint AND the existing 8-staff (2-per-line) concurrency cap simultaneously: **12 — exactly the committed model above, not a different number.**
+
+**Financial verdict:** extra revenue from 12→14 (2 clients × A$250 × 22 days) = A$11,000/month. Extra labor for the 4 additional treatment staff (1 more Massage A$62,774/yr, 1 more Beauty A$62,774/yr, 1 more Nail A$60,456/yr, 1 more Hair A$60,456/yr = A$246,460/yr ÷ 12) = A$20,538.33/month. **Net ≈-A$9,538.33/month if 14 were pursued — worse than staying at 12.**
+
+**Conclusion: 12 clients/day (§0 above) remains the committed model. N_max=14 is documented here as an explored-and-rejected alternative, not adopted** — flagged prominently because Anthony's instruction explicitly asked for "max capacity," and the honest finding is that the mathematical maximum exists but costs more than it earns. This is Anthony's decision to revisit if he disagrees with the recommendation. See `docs/CURRENT-STATE.md` §1/§7 for the same finding recorded canonically.
 
 ---
 
@@ -117,3 +131,5 @@ The only lever not yet closed off by the solver: **whether a non-phlebotomist as
 **2026-07-17 (created)** — Synchronized-start verification for the then-current 10-client model.
 
 **2026-07-30 (superseded, full rebuild)** — Anthony corrected the committed AM volume to 12 clients/day, per WDP's real 10:30am start-time guidance (Carole Rivers, email, 2026-07-30) and a solver check confirming the extended 6-slot/chair schedule clears both draw-timing and treatment-staff concurrency. Added §0 with the full 12-client client/chair timetable, staff timetable, and verification (both re-derived directly, not assumed from the 10-client pattern). The 10-client tables (§1-3) are retained below, explicitly marked historical, for trace — not deleted, since they document a real verified milestone, just no longer the current model. §4's ceiling discussion updated to reflect that the constraint that originally capped this at 10 (an assumed ~12:30 courier cutoff) has since been shown to be more flexible than assumed.
+
+**2026-07-30 (later still — N_max search completed, added as §0.4, explored and rejected)** — Per Anthony's "12 or max capacity" instruction, re-ran the full optimization search with a multi-resolution sweep — true chair-only ceiling is 14, not 12, but requires 12 treatment staff (not 8, peak concurrency 3/line not 2 during the resulting bursty schedule) and is financially worse than 12 (net ≈-A$9,538.33/month). 12 clients/day (§0) reconfirmed as the committed model; N_max=14 documented in new §0.4 as explored-and-rejected, not adopted. Also added a clarifying note to §0.3 that 8-staff-unpooled is not "banned" and 7-staff-pooled remains valid for lower-volume days.

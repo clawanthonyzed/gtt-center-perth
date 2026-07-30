@@ -1,6 +1,6 @@
 # GTT Center Perth — The Case, For Imara
 
-*A plain-English summary of where this stands and why the numbers work. Every figure below traces back to a specific document in this repo — ask to see the source for anything. Rebuilt 2026-07-30 (twice — this is the latest version, 12 clients/day is the committed model) — see `docs/CURRENT-STATE.md` for the canonical, tagged version of every figure here.*
+*A plain-English summary of where this stands and why the numbers work. Every figure below traces back to a specific document in this repo — ask to see the source for anything. Updated 2026-07-30 (later same day — a true-maximum search was run and a higher volume was explored and rejected, 12 clients/day remains the committed model) — see `docs/CURRENT-STATE.md` for the canonical, tagged version of every figure here.*
 
 > **Note:** a parallel session is independently rebuilding this same document for comparison, on purpose — this is not a redundant effort. This version is built from this repo's canonical `docs/CURRENT-STATE.md`, cross-checked directly, not copied from an earlier draft.
 
@@ -27,6 +27,8 @@ This was the open question: does the actual GTT/wellness pairing — the thing t
 That's the floor case — every client at the cheaper package, no upsells. If even some clients take the A$300 package instead, this number goes up, not down. **The wage cost didn't change when we added the 2 extra clients** — it's the same 8 people, same pay, just serving more people in a slightly longer morning (about 40 minutes later finish), so the extra revenue is close to pure profit.
 
 **One important open question on this figure:** our pathology partner's actual proposal is an annual rental arrangement for the collection clinic space, and their email raises the possibility that *they* employ the phlebotomist under that arrangement, not us. If that turns out to be the case, the A$2,193/day wage line above would be replaced by a rental fee instead — a different, not-yet-modelled number. **Not decided yet — we need to ask them directly before assuming either way.**
+
+**We also checked whether we could squeeze in even more than 12 (2026-07-30, later the same day)** — Anthony asked us to find the true maximum our 2 chairs can handle before 10:30am, not just confirm 12 works. The honest answer: mathematically, 14 is possible, but only by packing bookings into two tight clusters instead of an even rhythm, and it would need 4 more treatment staff (12 total, not 8) to keep up with those clusters. Once we ran the numbers, the extra 2 clients would bring in A$11,000 a month more revenue, but the extra staff would cost about A$20,538 a month more — a net loss of roughly A$9,538 a month compared to staying at 12. **So we're staying at 12 a day, not pushing to 14** — the "maximum" exists on paper but isn't a better business decision.
 
 ## The afternoon (day spa) side is where the real margin is
 

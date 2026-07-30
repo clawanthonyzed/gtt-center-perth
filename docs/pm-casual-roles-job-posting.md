@@ -74,6 +74,8 @@ You deliver your specialty service — massage, hair, nail, or beauty — to whi
 | **Preferred (all lines)** | Qualification in a 2nd complementary specialty — Massage+Beauty or Hair+Nail |
 | All lines | Genuine availability across the rotating weekly AM/PM roster; current First Aid (HLTAID011) preferred; National Police Clearance + Working with Vulnerable People check (WA); own professional kit preferred |
 
+**Why the Massage+Beauty preference matters (updated 2026-07-30, later same day):** the committed AM design ceiling is 12 clients/day (a full optimization search this same day confirmed a mathematical maximum of 14 exists, but it would require a full 12-person treatment roster and is financially worse than 12 — see `docs/CURRENT-STATE.md` §1/§7, not adopted) — at 12 clients/day, the full 8-person roster with no pooling is correct and expected. On lower-volume actual days (below the ceiling), a Massage+Beauty dual-qualified hire lets the Venue Manager roster a smaller, pooled team (7 staff) instead of the full 8 — a genuine daily-rostering saving that doesn't apply on peak days, but does on quieter ones. This is a rostering-flexibility preference for lower-volume days, not a plan to permanently run below the full roster, and not a suggestion that 8-staff-unpooled is disfavoured at the design ceiling.
+
 ---
 
 ### What We Offer
@@ -142,3 +144,5 @@ Screening (phone, 15 min) and in-person trial shift, conducted by the Venue Mana
 **2026-07-28 (v3.0, superseded same day)** — Corrected back to PM-only ad, added cross-role specialty preference (hair+nails, massage+beauty).
 
 **2026-07-28 (v4.0, this version)** — Refined per coordinator relay: rewritten as one combined AM/PM ad, individuals rostered into a rotating weekly shift-block pattern (default week-on-AM/week-on-PM). Applied Anthony's legal-wording instruction — ad targets flexible-hours/return-to-work candidates via job-condition language ("flexible hours, ideal for those returning to work or balancing family commitments"), never naming a protected characteristic directly (see §Legal Wording Note). Retained v3.0's cross-role specialty preference language unchanged.
+
+**2026-07-30 (v4.1, addendum)** — Added a clarifying paragraph tying the Massage+Beauty cross-qualification preference explicitly to daily-rostering flexibility below the committed 12-client design ceiling (a full N_max search this same day confirmed 14 is mathematically possible but requires a full 12-person roster and is financially worse — not adopted, see `docs/CURRENT-STATE.md` §1/§7). 7-staff-pooled is a legitimate lower-volume choice, not a plan to permanently under-staff.
