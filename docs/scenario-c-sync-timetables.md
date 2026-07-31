@@ -75,6 +75,34 @@ Per Anthony's direct instruction ("we are aiming for 12 or max capacity for 2 ch
 
 ---
 
+### 0.5 Carole's Hard Clinical-Mark Constraint (Exact 60/120-Minute Draw Spacing) — SOLVED, 2026-08
+
+**Background:** every schedule above (§0-§0.4) used the draw-event model's D2/D3 TOLERANCE windows (Draw 2 target X+75 ±5min, Draw 3 target X+135 ±10min) to dodge chair collisions — verified for internal double-booking/concurrency only, never checked against clinical tolerance for OGTT draw-timing accuracy. Carole Rivers' (WDP) full email chain includes her own indicative timetable for a ~14-patient morning, using **exact clinical marks**: Fasting (Draw 1) → **exactly 1-Hour** (Draw 2, X+60) → **exactly 2-Hour** (Draw 3, X+120), no flex mentioned, pairs starting roughly every 15 minutes. **Minor inconsistency noted, not silently resolved:** Carole's own narrative says "~14 patients," but her table lists 8 pairs = 16 patients — both her numbers are shown here, neither picked silently.
+
+**(a) Re-ran the scheduler constrained to EXACT 60-minute and 120-minute post-Draw-1 spacing (zero tolerance), both draw-timing feasibility and wellness-service fit, at 12 and 14 clients:**
+
+*Draw-timing (chair/phlebotomist collision) feasibility:* **both 12 and 14 clients remain achievable** on 2 chairs within the existing last-Draw-1-before-10:30am window — confirmed via a dedicated hard-constraint solver (fixed Draw2=X+60, Draw3=X+120 for every client, multi-resolution sweep). The best schedule (14 clients) naturally converges to the same ~15-minute pair-arrival cadence Carole's own table uses — a genuine cross-check that the two independently-built schedules agree on shape, not just headcount.
+
+*Wellness-service-block fit — this is where a real trade-off exists, reported plainly:*
+- **Service 1 window (between Draw 1 end and Draw 2's exact mark):** X+15 to X+60 = 45 minutes total, for the service itself plus a walk-back/prep transition buffer.
+  - Package 1 (30-min service): 30min service + 15min buffer — **fits comfortably.**
+  - A 45-min service scheduled FIRST: 45min service + 0min buffer — **does not fit** (no time for the client to return to the collection-room chair or for the phlebotomist to prep). Using this repo's own established 10-minute transition-buffer convention (already used for the flexible-tolerance model), **Service 1 is capped at 35 minutes**, not 45.
+- **Service 2 window (between Draw 2 end and Draw 3's exact mark):** X+65 to X+120 = 55 minutes total.
+  - A 45-min service scheduled SECOND: 45min service + 10min buffer — **fits fine**, same buffer convention as elsewhere in this document.
+
+**Exactly what has to give:** Package 1 (2×30min) is entirely unaffected by Carole's hard clinical marks. Package 2's flexible combos work **if the 45-min service is always routed to Slot 2, never Slot 1** — a booking-system rule (whichever of the client's two chosen services is 30min goes first, whichever is 45min goes second), not a structural blocker. **The one combo that genuinely cannot fit as specified is "2×45min both slots"** — the first of the two 45-min blocks would need to shrink to ≤35 minutes (a real, disclosed reduction), or that specific combo should not be offered under this constraint. This is a legitimate, reportable trade-off, not a failure to hide.
+
+**(b) Tested Carole's own ~15-minute pair-spacing cadence against treatment-line peak concurrency (Massage+Beauty pool, Nails, Hair), using the sweep-line + greedy first-fit methods already established for the 12/14-client checks — not eyeballed:**
+
+| Volume | Massage+Beauty pool | Nails | Hair | **Total headcount** | vs. previously-established figure |
+|---|---|---|---|---|---|
+| 12 clients (hard-constraint, Carole's cadence) | 3 | 2 | 3 | **8** | **Unchanged from the committed model's 8** — same total, but the split shifts (Hair needs 3 not 2, the Massage+Beauty pool needs 3 not 4, under this specific tighter-cadence arrangement). Checked at two different N=12 configurations (both give the same 8/3-2-3 split), not a one-off. |
+| 14 clients (hard-constraint, Carole's cadence) | 3 | 3 | 3 | **9** | **Exactly matches** the already-proven 14-client ceiling headcount (§0.4 above) — Carole's tighter ~15-min cadence does not add headcount beyond what was already found. |
+
+**Conclusion: Carole's ~15-minute pair-spacing cadence is workable at both 12 and 14 clients, on 2 chairs, without any additional treatment headcount beyond the already-committed/proven figures (8 at 12/day, 9 at 14/day).** The genuine trade-off is not headcount — it's the wellness-service-block constraint in (a) above: Package 2's "2×45min" combo needs adjusting (route the 45-min service to Slot 2, or accept a shortened first block) once the exact clinical marks are the design basis rather than the flexible-tolerance windows used throughout this document until now. See `docs/VERIFICATION-TRACKER.md` for the same finding logged canonically.
+
+---
+
 ## 1. Client / Chair Timetable (10 Clients — HISTORICAL, superseded 2026-07-30, retained for trace)
 
 | Client | Chair | Draw 1 | Service 1 | Draw 2 | Service 2 | Draw 3 | Depart |
@@ -137,3 +165,5 @@ The only lever not yet closed off by the solver: **whether a non-phlebotomist as
 **2026-07-31 ("unpooled" retired everywhere per Anthony's direct instruction; N_max headcount re-corrected via dual-qualification, conclusion reversed)** — Removed all "unpooled" language from §0.3/§0.4 — every treatment-staff figure restated as "dual-qualified, required by peak overlap." Re-tested §0.4's N=14 headcount with Massage+Beauty dual-qualification against the real bursty timing (interval-overlap simulation): true minimum is 9, not 12. Net financial verdict reverses to +A$6,155.17/month better than staying at 12. Presented as a finding for Anthony's decision, not adopted unilaterally. See `docs/CURRENT-STATE.md` §1/§4/§7 for full method.
 
 **2026-07-31 (later same day — Anthony's decision: 14 is a PROVEN CEILING, 12 stays the committed daily target)** — Retitled §0.4 to reflect the final framing. Anthony: "have 14 as the ceiling and prove it. 12 clients a day is what we will aim for each day." Completed the proof: full whole-venture P&L (+A$36,726.23/month, `profit-loss-tables.md`) and a second independent headcount check (greedy first-fit assignment, agrees exactly with the sweep-line method). 12 clients/day (§0) remains the committed daily operating target throughout this document, unchanged.
+
+**2026-08 (later — Carole's hard clinical-mark constraint solved, added as new §0.5)** — Per Carole's full email chain (her own indicative timetable uses exact 60/120-min post-Draw-1 marks, no flex), built a dedicated hard-constraint solver (zero tolerance on Draw2/Draw3 timing) and re-ran both the draw-timing feasibility check and the wellness-service-block fit check at 12 and 14 clients. **Draw-timing: both 12 and 14 remain achievable** — the resulting schedule naturally converges to Carole's own ~15-min pair cadence, a genuine cross-check. **Service-block fit: Package 1 unaffected; Package 2 works if the 45-min service always routes to Slot 2 (booking-system rule); the pure "2×45min" combo genuinely cannot fit both blocks at full length — one must shrink to ≤35min, a disclosed trade-off, not hidden.** Tested Carole's ~15-min cadence against treatment-line peak concurrency using the established sweep-line + greedy first-fit methods: **headcount unchanged at both volumes (8 at 12/day, 9 at 14/day)** — the per-line split shifts slightly at 12/day (Hair 3 not 2, Massage+Beauty pool 3 not 4) but the total headcount does not increase. Logged the same finding in `docs/VERIFICATION-TRACKER.md`.

@@ -12,7 +12,7 @@
 
 **Open items from WDP's reply, per Anthony, for whoever picks this thread up next:**
 - Provide more detail on the venture's vision (marketing/business-plan framing, not just the operational courier question originally asked)
-- Discuss on-site pathology staff presence — this may affect the phlebotomist employment model (`staff-plan.md`'s "employed by GTT Center Perth, not WDP" model) if WDP is asking about their own staff presence on-site vs GTT's employed phlebotomists — **flagging as a genuine open question, not assuming which way this resolves.**
+- Discuss on-site pathology staff presence — **SETTLED, 2026-08 (reconfirmed), not an open question.** Anthony's direct words: "WDP staff or hired phlebotomists will only work inside the scope of pathology collection. This has been addressed multiple times." Whichever employment model is eventually used (in-house vs WDP-supplied — that specific question remains genuinely open, `docs/VERIFICATION-TRACKER.md` item 1d), the collector's work scope is settled: pathology collection only, never wellness services or general venue duties. This does not conflict with `staff-plan.md`'s model. The only remaining open sub-question is narrower: whether "under observation" requires the client staying within the collector's sightline/shared area, or allows a separate treatment room with quick staff response — see `docs/wdp-reply-carole-2026-07-30.md`.
 
 ---
 
