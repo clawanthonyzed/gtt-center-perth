@@ -117,6 +117,46 @@
 
 **No single figure is presented here as canonical.** Picking one of the three arbitrarily would repeat exactly the false-precision problem this file exists to prevent. **What's actually needed:** a fresh, itemised fit-out/equipment/legal/working-capital build against the current model (10-client Scenario C, 2-package structure, current staffing) — tracked as an open item in `docs/VERIFICATION-TRACKER.md`. Anthony and an accountant/quantity surveyor should confirm before this figure is used in any real funding conversation.
 
+### Section 7 Build (2026-07-31) — Full Startup Capital, Structured to Match the Client-Facing Partner Brief
+
+**A 5th data point, still not canonical** (this file continues to present no single figure as authoritative — see above), but this is the first FULLY itemised, internally consistent build in the repo, assembled specifically to patch the client-facing document prepared for Anthony's partner Imara. Two figures below (7.3) were sourced directly from Anthony's own working session, not derived in this repo — tagged accordingly.
+
+**7.1 Equipment, Furniture, Fixtures & Expendables**
+
+| Component | Low | High | Source |
+|---|---|---|---|
+| Equipment (pathology, massage, nails ×4, hair ×4, beauty, lounge, tech, safety, consumables — day-one only) | A$42,690 | A$96,530 | `equipment-costs.md` Summary Budget, 2026-07-31 recompute |
+| Furniture and fittings (lounge chairs, reception counter, styling chairs) | A$15,000 | A$35,000 | `floor-plan-concept.md` Fit-Out Cost Estimate |
+| Signage (shopfront + internal wayfinding) | A$3,000 | A$8,000 | `floor-plan-concept.md` Fit-Out Cost Estimate |
+| **7.1 TOTAL** | **A$60,690** | **A$139,530** | `[MODELED — sum of the two source documents above, both independently tagged in their own files]` |
+
+**7.2 Fit-out/Construction (construction cost only — furniture/signage moved to 7.1 above, not double-counted here)**
+
+| Component | Low | High | Source |
+|---|---|---|---|
+| Construction (open-plan/curtain layout, 239sqm day-one, raw-shell scenario) | A$162,452 | A$306,029 | `floor-plan-concept.md` Fit-Out Cost Estimate, 2026-07-31 itemised bottom-up recompute |
+| Less: landlord fit-out contribution (negotiate) | (A$60,000) | (A$30,000) | Applied at the favourable end for best-case, unfavourable end for higher-case — see 7.4 arithmetic below |
+| **7.2 NET** | **A$102,452** | **A$306,029** | (best-case takes the full A$60,000 landlord deduction; higher-case takes none — see 7.4) |
+
+**Not attempted, flagged rather than fabricated:** a "former health/beauty tenancy" discount scenario (lower construction cost for taking over an existing compatible fit-out) was explicitly requested against and declined — it would require inventing a fresh discount percentage with no basis in this repo. **Needs a fresh assessment once a specific venue candidate exists**, not a reused/invented percentage.
+
+**7.3 Working Capital & Pre-Launch Costs**
+
+| Component | Low | High | Tag |
+|---|---|---|---|
+| Working capital reserve (funds Months 1-3 operating losses) | A$85,000 | A$110,000 | `[MODELED — from Anthony's partner-brief working session, basis stated: Section 6's ~A$84,468 combined Month 1-3 loss, plus a buffer]` |
+| Legal/entity setup, lease bond (~2 months' rent), first-year insurance | A$20,000 | A$28,000 | `[MODELED — from Anthony's partner-brief working session, basis as stated by Anthony]` |
+| **7.3 TOTAL** | **A$105,000** | **A$138,000** | Sourced from Anthony directly, 2026-07-31 — not independently re-derived in this repo, logged here for the first time |
+
+**7.4 Full Picture — Total Startup Capital Required**
+
+- **Best case:** 7.1 low (A$60,690) + [7.2 construction low (A$162,452) − max landlord contribution (A$60,000)] + 7.3 low (A$105,000) = A$60,690 + A$102,452 + A$105,000 = **A$268,142**
+- **Higher case:** 7.1 high (A$139,530) + 7.2 construction high (A$306,029, no landlord contribution applied) + 7.3 high (A$138,000) = **A$583,559**
+
+**Total Startup Capital Required: A$268,142 – A$583,559**
+
+`[MODELED — full arithmetic shown above, not a rounded guess; every component individually sourced and tagged]`. This is a 5th, still-unreconciled data point against the 3 historical ranges above (and the 4th, `floor-plan-concept.md`-only figure) — presented for the specific purpose of patching the client-facing partner brief with an internally consistent number, not as a claim that the startup-capital-range reconciliation problem flagged above is now resolved.
+
 ---
 
 ## 7. AM/GTT Segment Profitability — Delta Table (Old Model vs Current Model)
@@ -258,3 +298,5 @@ Both per `financial-break-even-staff.md`'s Staff Downtime Protocol and `pm-staff
 **Two things completed before 14 could be called proven, both now done:** (a) full whole-venture P&L at N=14, not just the AM segment — Monthly Net P&L **+A$36,726.23** (delta of +A$8,237.81/month vs the 12-client baseline, reflecting the AM segment swing of +A$6,155.17/month plus the resulting Workers Comp uptick), Quarterly/Half-Yearly/Yearly scaled the same way as the 12-client table; both downtime-fill upside lines rechecked against the actual bursty 14-client schedule (not carried over) — Between-Client Downtime-Fill Revenue **A$20,717.12/month** (up from A$12,679.33 at 12-client, 915 min/day across 9 stations vs 560 min/day at 8), Early-Release Cost Saving **A$14,026.54/month** (down from A$16,511.22 at 12-client, 1,065 min/day naive lead+tail vs 1,240 min/day — the bursty schedule keeps each station's trimmed span fuller, less idle time per person, despite the extra head). Full breakdown in §1 above and `profit-loss-tables.md`. (b) the 9-staff headcount, having been wrong twice already at this exact question, was independently cross-verified using a second, genuinely different algorithm (greedy first-fit station assignment, not just sweep-line peak counting) — exact agreement, 9 confirmed proven, not just estimated. **Capability gap disclosed:** `tools/GTT-Rostering-Simulator.html` could not be found anywhere in this repo (file search + full `git log --all` history checked) despite being referenced as available — the independent greedy first-fit script was used instead, and is disclosed as the substitute method rather than silently treating the missing tool as unavailable-and-skipped.
 
 14 is now documented as **"PROVEN CEILING — A$36,726.23/month full P&L, 9 dual-qualified staff, verified via two independent methods (sweep-line peak concurrency + greedy first-fit assignment)"** in §1, §4, and §7 above — presented as headroom/growth capacity, explicitly not replacing 12 as the committed daily target anywhere in this file. Propagated with the same framing to `profit-loss-tables.md`, `scenario-c-sync-timetables.md` §0.4, and `CLAUDE.md` — see each document's own changelog entry.
+
+**2026-07-31 (later same day — full Section 7 startup capital build, to patch the client-facing partner brief)** — Added a new "Section 7 Build" subsection to §6, structured to match a client-facing document prepared for Anthony's partner Imara: 7.1 Equipment/Furniture/Fixtures (A$60,690-139,530, combining `equipment-costs.md`'s day-one equipment total with `floor-plan-concept.md`'s furniture/signage lines), 7.2 Construction only (A$162,452-306,029 raw-shell scenario, landlord contribution applied as its own line — a "former health/beauty tenancy" discount scenario was explicitly requested against and declined, since it would require inventing an unbased discount percentage; flagged as needing a fresh assessment once a specific venue exists, not fabricated), 7.3 Working Capital & Pre-Launch (A$105,000-138,000 — the working capital reserve A$85,000-110,000 and legal/entity/bond/insurance A$20,000-28,000 components were sourced directly from Anthony's own working session, not derived in this repo, tagged accordingly), and 7.4 Full Picture Total: **A$268,142 (best case) to A$583,559 (higher case)**, full arithmetic shown. This is a 5th, still-unreconciled data point against §6's existing 4 — not presented as resolving the startup-capital reconciliation problem, only as the first fully itemised, internally consistent figure assembled for this specific purpose. `docs/VERIFICATION-TRACKER.md` item 6 updated to reference it.
