@@ -59,7 +59,7 @@ Clients 11 and 12 (bold) are the new 6th slot per chair. Last Draw 1 at 10:20am 
 
 **The committed 12-client model requires 8 dual-qualified treatment staff, required by peak overlap — there is no "unpooled" model.** The 7-staff/6-staff findings from 2026-07-29 (Massage+Beauty pool sized to 3) are correct only for the now-superseded 10-client model — at 12 clients/day the pool's own peak concurrency is 4 (same as the sum of the individual Massage and Beauty peaks). **Clarifying note: 8 is correct and expected at this 12-client design ceiling. 7 (pool sized to 3) remains a legitimate daily-rostering choice on lower-volume actual days, below this ceiling.**
 
-### 0.4 True Maximum (N_max) Search — RE-CORRECTED 2026-07-31 — dual-qualification re-tested against the real 14-client timing
+### 0.4 14 Clients/Day — PROVEN CEILING (Maximum Verified Capacity), NOT the Daily Operating Target
 
 Per Anthony's direct instruction ("we are aiming for 12 or max capacity for 2 chairs and last client before 10:30am"), re-ran the full optimization search (`tools/draw-event-scheduler.py`'s `run()`, multi-resolution sweep of `CANDIDATE_STEP` from 1 to 44+, not the fixed 40-min-cadence assumption above), bounded by last Draw 1 strictly before 10:30am (minute 210 from 07:00).
 
@@ -71,7 +71,7 @@ Per Anthony's direct instruction ("we are aiming for 12 or max capacity for 2 ch
 
 **Financial verdict, recomputed:** extra revenue from 12→14 = A$11,000/month. Extra labor cost at 9 staff (A$551,058/yr) vs the 12-client model's 8 staff (A$492,920/yr) = +A$4,844.83/month, not +A$20,538.33/month. **Net: +A$6,155.17/month if 14 is pursued with the correctly dual-qualification-optimized 9-person roster — better than staying at 12.**
 
-**Conclusion: this reverses the earlier "12 remains committed, N_max=14 explored and rejected" finding, which used an uncorrected headcount estimate.** Whether to adopt 14 as the new committed model is presented as a finding, not decided unilaterally — Anthony's call. See `docs/CURRENT-STATE.md` §1/§4/§7 for the same finding recorded canonically.
+**Conclusion, Anthony's decision 2026-07-31: "have 14 as the ceiling and prove it. 12 clients a day is what we will aim for each day."** 14 is now proven — 9-staff headcount confirmed via two independent methods (sweep-line peak concurrency + greedy first-fit assignment, exact agreement), full whole-venture P&L completed (+A$36,726.23/month, see `profit-loss-tables.md`) — and documented as a proven ceiling/growth-headroom figure. **12 clients/day (§0 above) remains the committed daily operating target, unchanged.** See `docs/CURRENT-STATE.md` §1/§4/§7 for the same finding recorded canonically.
 
 ---
 
@@ -135,3 +135,5 @@ The only lever not yet closed off by the solver: **whether a non-phlebotomist as
 **2026-07-30 (later still — N_max search completed, added as §0.4, first pass explored and rejected using a naive headcount estimate)** — Per Anthony's "12 or max capacity" instruction, re-ran the full optimization search with a multi-resolution sweep — true chair-only ceiling is 14, not 12. Headcount check used an uncorrected per-line multiply (12), not yet tested against dual-qualification.
 
 **2026-07-31 ("unpooled" retired everywhere per Anthony's direct instruction; N_max headcount re-corrected via dual-qualification, conclusion reversed)** — Removed all "unpooled" language from §0.3/§0.4 — every treatment-staff figure restated as "dual-qualified, required by peak overlap." Re-tested §0.4's N=14 headcount with Massage+Beauty dual-qualification against the real bursty timing (interval-overlap simulation): true minimum is 9, not 12. Net financial verdict reverses to +A$6,155.17/month better than staying at 12. Presented as a finding for Anthony's decision, not adopted unilaterally. See `docs/CURRENT-STATE.md` §1/§4/§7 for full method.
+
+**2026-07-31 (later same day — Anthony's decision: 14 is a PROVEN CEILING, 12 stays the committed daily target)** — Retitled §0.4 to reflect the final framing. Anthony: "have 14 as the ceiling and prove it. 12 clients a day is what we will aim for each day." Completed the proof: full whole-venture P&L (+A$36,726.23/month, `profit-loss-tables.md`) and a second independent headcount check (greedy first-fit assignment, agrees exactly with the sweep-line method). 12 clients/day (§0) remains the committed daily operating target throughout this document, unchanged.
