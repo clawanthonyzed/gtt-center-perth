@@ -68,6 +68,28 @@ Anthony cannot receive this income personally — TPI pension compliance require
 
 ---
 
+## 2A. Is YETI Holding Trust Still the Best Structure? — Genuine Open Investigation, 2026-07-31
+
+**Anthony's direct instruction: investigate this properly, not with a one-line risk mention — but explicitly do NOT recommend restructuring pre-emptively against a policy that isn't law yet.**
+
+**What's actually confirmed vs proposed, stated plainly:** the 30% minimum tax on discretionary trust distributions was announced in the 2026-27 Federal Budget (12 May 2026), with a proposed effective date of 1 July 2028. **This is announced, not legislated.** No exposure draft or bill has been released as of this document's last update; formal consultation is still expected before any legislation is introduced. Treating this as a certainty this early would be presenting policy risk as settled fact — the opposite error to ignoring it entirely.
+
+**Why YETI Holding Trust is not being second-guessed on TPI grounds — that part is settled, not open:** the trust structure exists because Anthony's TPI pension compliance requires that this income never reach him personally (§2 above, "Trust Structure is mandatory regardless of tax efficiency"). This is a non-negotiable structural constraint, not a tax-optimisation choice — no restructuring conversation should ever put personal receipt of this income back on the table. The genuinely open question is narrower: **given the trust is fixed, is a bare discretionary trust the right vehicle within that constraint, or would an operating company under the trust (or some other structure) be better — now, or if/when the 30% tax actually lands?**
+
+**The case for waiting (why no pre-emptive restructuring now):**
+- The 30% tax isn't law. Restructuring against a proposal that could change materially in consultation, be delayed, or not pass at all risks real, certain costs (legal/accounting fees, potential CGT/stamp duty triggers on restructuring, ongoing compliance overhead of an additional entity) against an uncertain, not-yet-crystallised benefit.
+- GTT Center Perth is pre-revenue. Every structure-comparison figure in §2 above is built on stale or illustrative profit levels — there is no real trading history yet to model the actual tax exposure at either the current profit level or a genuine steady-state level.
+- Anthony's own prior instruction (§2, "build for this now... do not wait for legislation to pass before planning the structure") is honoured by having the comparison framework and the PTY LTD-under-trust contingency plan ready (§2 already does this) — not by executing a restructure today. Planning ≠ acting.
+
+**The case for continuing to monitor closely, not filing this away:**
+- If the 30% tax is legislated close to the proposed 1 July 2028 date, an operating PTY LTD under the trust becomes clearly preferable at higher profit levels per §2's own modelling (item 3 in the Findings list above) — this is a genuine, material outcome shift, not a marginal one.
+- The venture's own steady-state profit trajectory (currently ~A$28,488.42/month committed, ~A$36,726.23/month at the proven 14-client ceiling — see `docs/CURRENT-STATE.md` §5) is exactly the profit range where the structure choice starts to matter most, per §2's Findings.
+- Consultation processes for tax measures like this can move faster than expected once a government commits politically — "not law yet" is a reason to plan, not a reason to stop watching.
+
+**Conclusion, not a decision:** YETI Holding Trust is not flagged as wrong or in need of change right now. Whether it remains the best available structure **within the TPI-mandated trust constraint** is a genuine open question that depends on facts not yet known (legislated rate/threshold/effective date, and GTT Center Perth's actual trading profit once real). This is not resolved here either way — see the dated follow-up trigger in `docs/VERIFICATION-TRACKER.md`.
+
+---
+
 ## 3. Open Items (Trust/Tax Scope Only)
 
 | Decision | Status | Reference |
@@ -96,3 +118,5 @@ Anthony cannot receive this income personally — TPI pension compliance require
 **2026-06-11 (v2.0)** — Day 51 rewrite, Option A removed (see git history for the pre-split full document).
 
 **2026-07-29 (v3.0 — split, per Anthony's direct instruction)** — This document was checked directly (not assumed) against the "SUPERSEDED (self-declared)" status flagged in `docs/00_document_inventory.md`. Found it mixed stale P&L content (§2 CONFIRMED MODEL, now archived) with still-relevant trust/tax content (the former §3 TRUST STRUCTURE — TAX TREATMENT, now this document's §2). Split rather than archived whole: stale P&L section moved to `docs/archive/financial-model-superseded-pnl-section-2026-06-11.md` (git history preserved); trust/tax content kept live here with the dollar-figure tables flagged as needing a re-run against current profit levels (methodology retained as valid). Also fixed the joint-savings wording error in §1 (previously said "Anthony's partner's savings" implying Imara alone — corrected to joint savings, per Anthony's direct confirmation the same session). §1's basic trust facts noted as overlapping `research.md` §7 — not de-duplicated by deletion, since `research.md` is itself a protected, out-of-scope-for-editing file this session; flagged instead.
+
+**2026-07-31 (§2A added — genuine trust-structure investigation, per Anthony's direct instruction)** — Anthony wanted real investigation into whether YETI Holding Trust remains the best structure given the proposed 30% trust-distribution tax, not a one-line risk mention. Added §2A: confirmed the tax is announced (2026-27 Federal Budget, 12 May 2026) not legislated — no exposure draft or bill released, consultation still expected. Separated the settled question (trust structure is TPI-mandated, not up for debate) from the genuinely open one (bare discretionary trust vs an operating company under the trust, once real facts exist). Laid out the case for waiting (restructuring against unlegislated policy risks certain costs against an uncertain benefit; the venture is pre-revenue) against the case for continued close monitoring (material outcome shift if legislated near the proposed date; the venture's own profit trajectory sits in the range where structure choice matters most). Explicitly does not recommend restructuring pre-emptively. Added a dated follow-up trigger to `docs/VERIFICATION-TRACKER.md` (revisit once legislation drops, or by Year 3 of trading, whichever comes first).

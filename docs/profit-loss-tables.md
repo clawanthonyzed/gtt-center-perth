@@ -51,9 +51,11 @@ What changed between the original (now-deleted) v1.0 tables and the current v2.1
 | PM Revenue (8 × A$95) | A$760.00 |
 | **Total Revenue** | **A$3,760.00** (was A$3,260.00) |
 | AM Direct Labor (hours-based, full 150% casual penalty applied throughout — **scales with volume, unlike the weekday FTE figure**) | **A$1,612.74** (was A$1,343.95; proportional +20% scaling for the extra 2 clients, `[MODELED — estimate, not a fresh Saturday-specific solver rebuild]`) |
-| PM Direct Labor (hours-based, full 150% casual penalty applied throughout) | A$335.55 |
-| **Total Direct Labor** | **A$1,948.29** (was A$1,679.50) |
-| **Net Direct Contribution** | **+A$1,811.71** (was +A$1,580.50) |
+| PM Direct Labor (hours-based, full 150% casual penalty applied throughout) | **A$654.32** (corrected 2026-07-31, was A$335.55 — see 3-hour minimum flag below) |
+| **Total Direct Labor** | **A$2,267.06** (was A$1,948.29) |
+| **Net Direct Contribution** | **+A$1,492.94** (was +A$1,811.71) |
+
+> **3-hour minimum casual engagement check, 2026-07-31, per Anthony's direct instruction — checked against the actual spreadsheet, not assumed compliant.** At 8 PM sessions/day split evenly across the 4 PM roles (the model's own stated assumption), each role needs only **1.54 hours/day** of actual booked time (2 sessions ÷ 1.3 sessions/hr throughput) — well below the 3-consecutive-hour minimum casual engagement required under MA000005 cl. 11.5 / MA000027 cl. 11.2 (`[VERIFIED — Fair Work Ombudsman/Fair Work Commission, checked via direct WebFetch, 2026-07-30]`, already established elsewhere in this document). **The prior A$335.55 figure priced each role at its raw calculated hours (1.54hrs), not the enforced 3-hour floor — genuinely understated.** Corrected: 4 roles × 3-hour minimum × the Saturday blended casual rate (A$54.53/hr, backed out from the original figure's own implied rate) = **A$654.32/day**, a real +A$318.77/day increase. **The Weekday figure (A$440.00, §1 above) is NOT corrected — checked separately and found marginally compliant, not understated:** at 16 sessions/day split evenly, each role needs 3.08 hours/day, just above the 3-hour floor. This is a thin margin (2.6% above the floor) contingent on the model's own even-split-across-4-roles assumption holding — flagged as fragile, not re-costed, since the assumption itself is unconfirmed against real demand data (see `pm-staffing-roster.md`'s own caveat on this point).
 
 **Saturday downtime-fill:** the same AM treatment staff working Saturday also take standalone PM-style bookings during gaps between their rostered GTT clients' services, exactly as on weekdays (see note in §1 above) — this is already reflected in the PM session volume assumption (8 sessions/day) used in this table, not an additional unmodelled upside.
 
@@ -62,8 +64,8 @@ What changed between the original (now-deleted) v1.0 tables and the current v2.1
 | | Revenue | Direct Labor (shown) | Net |
 |---|---|---|---|
 | 5× Weekday (12-client model, ancillary excluded, A$868.50/day net) | A$22,600.00 | A$13,165.00 | +A$4,342.50 |
-| 1× Saturday (12-client model, no ancillary line in this table already) | A$3,760.00 | A$1,948.29 | +A$1,811.71 |
-| **Weekly Total** | **A$26,360.00** | **A$15,113.29** | **+A$6,154.21** |
+| 1× Saturday (12-client model, no ancillary line in this table already; **PM Direct Labor corrected 2026-07-31 for the 3-hour minimum, see §2**) | A$3,760.00 | A$2,267.06 | +A$1,492.94 (was +A$1,811.71) |
+| **Weekly Total** | **A$26,360.00** | **A$15,432.06** | **+A$5,835.44** (was +A$6,154.21) |
 
 *(Was Revenue A$23,360.00, Direct Labor A$15,067.00, Net +A$3,423.00 at the superseded 10-client model.)*
 
@@ -84,7 +86,7 @@ Non-Wage Overhead is broken down below by component (source: [cash-flow.md](cash
 | GTT supplies (glucose, tubes — 200 tests × A$2) | A$400.00 |
 | Laundry/linen service | A$350.00 |
 | Cleaning service (daily turn + weekly deep clean) | A$600.00 |
-| Insurance (public liability + PI, A$4,800/yr ÷ 12) | A$400.00 |
+| Insurance (public liability + PI, A$4,800/yr ÷ 12) | A$400.00 `[PLACEHOLDER — corrected 2026-07-31: never an actual insurance quote, a round planning estimate presented without a tag until now. Applies to the same insurance component inside docs/CURRENT-STATE.md §6's Section 7 Build 7.3 line.]` |
 | Accounting/bookkeeping (monthly Xero + BAS prep) | A$500.00 |
 | Consumables (wax, nail products, skincare) | A$800.00 |
 | Miscellaneous / contingency | A$500.00 |
@@ -93,13 +95,15 @@ Non-Wage Overhead is broken down below by component (source: [cash-flow.md](cash
 | | Amount |
 |---|---|
 | Total Revenue (12-client model, ancillary excluded — was A$105,132.16 at 10-client) | **A$118,297.16** |
-| Total Direct Labor + Opening Costs (weekday AM labor unchanged, Saturday AM labor scales with volume — see §2) | A$74,561.20 |
-| Workers Comp (1.7%) | A$1,267.54 |
+| Total Direct Labor + Opening Costs (weekday AM labor unchanged, Saturday AM labor scales with volume — see §2; **Saturday PM labor corrected 2026-07-31 for the 3-hour minimum**) | **A$75,941.47** (was A$74,561.20) |
+| Workers Comp (1.7%) | **A$1,291.00** (was A$1,267.54) |
 | Non-Wage Overhead (see breakdown above, unchanged — rent/utilities not client-volume-driven) | A$13,980.00 |
-| **Total Costs** | **A$89,808.74** |
-| **Net P&L (standing conservative baseline, 12-client model, ancillary excluded)** | **+A$28,488.42** |
+| **Total Costs** | **A$91,212.47** (was A$89,808.74) |
+| **Net P&L (standing conservative baseline, 12-client model, ancillary excluded)** | **+A$27,084.69** (was +A$28,488.42, corrected 2026-07-31 for the Saturday PM 3-hour minimum) |
 
-**Corrected 2026-07-30, twice in the same day.** First correction: ancillary revenue (~A$8,580/month) excluded entirely, moving the baseline from +A$25,087.07/month to +A$16,507.07/month. Second, later correction: Anthony confirmed 12 clients/day (not 10) is the committed AM volume — moving the baseline again to **+A$28,488.42/month**. Built via a delta approach from the validated 10-client (ancillary-excluded) baseline: +A$13,165.00/month extra AM revenue (2 extra clients/day × A$250 × 26.33 trading-day-equivalents/month, unchanged headcount/FTE labor cost — see the AM Direct Labor note below) + A$1,163.86/month extra Saturday AM labor (hours-based costing scales with volume — a proportional +20% estimate, not an independently rebuilt Saturday-specific solver schedule) + the resulting Workers Comp uptick. **This baseline does NOT include the Between-Client Downtime-Fill Revenue (A$12,679.33/month) or the Early-Release Cost Saving (A$16,511.22/month) — both recomputed for the 12-client schedule below, not carried over from the 10-client figures. All three (ancillary, downtime-fill, early-release) are separate, tagged lines, never blended into this baseline or into each other.**
+**Corrected 2026-07-30, twice in the same day.** First correction: ancillary revenue (~A$8,580/month) excluded entirely, moving the baseline from +A$25,087.07/month to +A$16,507.07/month. Second, later correction: Anthony confirmed 12 clients/day (not 10) is the committed AM volume — moving the baseline again to +A$28,488.42/month. Built via a delta approach from the validated 10-client (ancillary-excluded) baseline: +A$13,165.00/month extra AM revenue (2 extra clients/day × A$250 × 26.33 trading-day-equivalents/month, unchanged headcount/FTE labor cost — see the AM Direct Labor note below) + A$1,163.86/month extra Saturday AM labor (hours-based costing scales with volume — a proportional +20% estimate, not an independently rebuilt Saturday-specific solver schedule) + the resulting Workers Comp uptick. **This baseline does NOT include the Between-Client Downtime-Fill Revenue (A$12,679.33/month) or the Early-Release Cost Saving (A$16,511.22/month) — both recomputed for the 12-client schedule below, not carried over from the 10-client figures. All three (ancillary, downtime-fill, early-release) are separate, tagged lines, never blended into this baseline or into each other.**
+
+**Corrected again 2026-07-31 — PM Direct Labor's 3-hour minimum casual engagement checked against the actual spreadsheet, not assumed compliant (see §2).** Saturday PM Direct Labor was understated (each of the 4 PM roles priced at its raw calculated 1.54 hours/day, not the enforced 3-consecutive-hour minimum under MA000005 cl. 11.5/MA000027 cl. 11.2) — corrected from A$335.55/day to A$654.32/day, a +A$318.77/day increase, +A$1,380.27/month once scaled to 4.33 Saturdays/month, plus the resulting +A$23.47/month Workers Comp uptick. **New standing conservative baseline: +A$27,084.69/month** (was +A$28,488.42/month). The Weekday PM figure (A$440.00) was checked and found NOT understated — marginally compliant at 3.08 hours/role/day, though this is a thin, assumption-dependent margin, flagged in §2, not re-costed.
 
 **AM Direct Labor recomputed fresh at 12 clients/day, not reused from the 10-client figure (per instruction):** 2 phlebotomists (A$86,136/yr) + 8 treatment staff (A$492,920/yr) = A$579,056/yr ÷ 12 = **A$48,254.67/month ≈ A$48,255/month — confirmed UNCHANGED.** Headcount is unchanged (solver-confirmed — see the Treatment Headcount section below, the 7-staff/6-staff pooling reductions do not hold at 12/day), these are fixed-salary FTE roles (not hours-billed), and the extended AM day (~12:48pm last departure) still fits inside the already-budgeted 07:00-13:00 shift window (`financial-break-even-staff.md`'s own stated AM shift structure) — so 2 extra clients/day at the same headcount and cost is pure margin. This is a genuine recomputation (traced from the canonical Total Annual Payroll table), not an assumption that nothing changed.
 
@@ -108,33 +112,33 @@ Non-Wage Overhead is broken down below by component (source: [cash-flow.md](cash
 | | Amount |
 |---|---|
 | Total Revenue (12-client model, ancillary excluded — was A$315,396.48 at 10-client) | **A$354,891.48** |
-| Total Direct Labor + Opening Costs | A$223,683.60 |
-| Workers Comp (1.7%) | A$3,802.62 |
+| Total Direct Labor + Opening Costs (**Saturday PM 3-hour minimum correction applied, 2026-07-31**) | **A$227,824.41** (was A$223,683.60) |
+| Workers Comp (1.7%) | **A$3,873.01** (was A$3,802.62) |
 | Non-Wage Overhead | A$41,940.00 |
-| **Total Costs** | **A$269,426.22** |
-| **Net P&L (12-client model, ancillary excluded)** | **+A$85,465.26** (was +A$49,521.21 at 10-client) |
+| **Total Costs** | **A$273,637.42** (was A$269,426.22) |
+| **Net P&L (12-client model, ancillary excluded)** | **+A$81,254.06** (was +A$85,465.26 before the 3-hour minimum correction; +A$49,521.21 at 10-client) |
 
 ## 6. Half-Yearly (6 Months)
 
 | | Amount |
 |---|---|
 | Total Revenue (12-client model, ancillary excluded — was A$630,792.96 at 10-client) | **A$709,782.96** |
-| Total Direct Labor + Opening Costs | A$447,367.20 |
-| Workers Comp (1.7%) | A$7,605.24 |
+| Total Direct Labor + Opening Costs (**Saturday PM 3-hour minimum correction applied, 2026-07-31**) | **A$455,648.82** (was A$447,367.20) |
+| Workers Comp (1.7%) | **A$7,746.03** (was A$7,605.24) |
 | Non-Wage Overhead | A$83,880.00 |
-| **Total Costs** | **A$538,852.44** |
-| **Net P&L (12-client model, ancillary excluded)** | **+A$170,930.51** (was +A$99,042.42 at 10-client) |
+| **Total Costs** | **A$547,274.85** (was A$538,852.44) |
+| **Net P&L (12-client model, ancillary excluded)** | **+A$162,508.11** (was +A$170,930.51 before the 3-hour minimum correction; +A$99,042.42 at 10-client) |
 
 ## 7. Yearly (12 Months)
 
 | | Amount |
 |---|---|
 | Total Revenue (12-client model, ancillary excluded — was A$1,261,585.92 at 10-client) | **A$1,419,565.92** |
-| Total Direct Labor + Opening Costs | A$894,734.40 |
-| Workers Comp (1.7%) | A$15,210.49 |
+| Total Direct Labor + Opening Costs (**Saturday PM 3-hour minimum correction applied, 2026-07-31**) | **A$911,297.64** (was A$894,734.40) |
+| Workers Comp (1.7%) | **A$15,492.06** (was A$15,210.49) |
 | Non-Wage Overhead | A$167,760.00 |
-| **Total Costs** | **A$1,077,704.89** |
-| **Net P&L (12-client model, ancillary excluded)** | **+A$341,861.03** (was +A$198,084.84 at 10-client; +A$301,044.84 before either correction) |
+| **Total Costs** | **A$1,094,549.70** (was A$1,077,704.89) |
+| **Net P&L (12-client model, ancillary excluded)** | **+A$325,016.22** (was +A$341,861.03 before the 3-hour minimum correction; +A$198,084.84 at 10-client; +A$301,044.84 before either correction) |
 
 **These are steady-state figures (Month 5+ run rate) — they do not include the Months 1–3 ramp-up losses (see Year 1 Monthly Ramp below), or the pre-launch capital deployment.** This table answers "what does ongoing operation look like once running," not the path to get there. Quarterly/Half-Yearly/Yearly figures above are the Monthly figures scaled by 3/6/12 — a steady-state run-rate projection, not a separately-modelled scenario for each period.
 
@@ -379,6 +383,30 @@ Both remain separate, tagged lines, never blended into the A$36,726.23/month bas
 
 **Fixed costs at Month 5+ (per §4 Monthly table above): A$89,808.74/month. Net P&L at Month 5+: Total Revenue A$99,440 minus Total Costs A$89,808.74 ≈ +A$9,631.26/month using this simplified ramp-table revenue sum** — an improvement from the 10-client model's near-zero/marginal simplified result, but still materially different from the headline +A$28,488.42/month figure, because that figure uses this document's own more precise weekday/Saturday-blended calculation (§1-2 above), not this simplified Month-1-5 ramp table's rounded monthly totals — the same disclosed gap that existed at the 10-client model. **Treat the headline +A$28,488.42/month (weekday/Saturday blend) as the more precise figure; this ramp table is for visualising the build-up shape across Year 1, not as a replacement for the precise weekday-based calculation above.**
 
+### Marketing Spend Ramp — 2026-07-31, per Anthony's direct instruction
+
+**Flagged and corrected:** the A$1,500/month Instagram/Meta ads line in §4's Non-Wage Overhead breakdown was applied flat from Month 1, which doesn't match Anthony's actual go-to-market plan — referral relationships (midwives, OBs) build gradually rather than a full paid-ads launch on day one. Real 2026 AU small-business benchmarks suggest A$800-1,200/month is more typical at this revenue scale early on. **A$1,500/month is retained in the steady-state Month 5+ table above and in every Quarterly/Half-Yearly/Yearly figure — this is the conservative, unchanged case.** What was missing is a genuine Month 1-4 ramp, modelled below rather than left as a flat, overstated early-months cost:
+
+| Month | Marketing Spend | Saving vs flat A$1,500/month | Basis |
+|---|---|---|---|
+| Month 1 | A$600 | A$900 | `[MODELED — referral-relationship-building phase, minimal paid spend, AU small-business benchmark]` |
+| Month 2 | A$800 | A$700 | `[MODELED — same basis, ramping]` |
+| Month 3 | A$1,000 | A$500 | `[MODELED — same basis, ramping]` |
+| Month 4 | A$1,200 | A$300 | `[MODELED — same basis, ramping]` |
+| Month 5+ | A$1,500 (unchanged, steady state) | A$0 | Matches §4 Monthly table, no change |
+
+**This improves the ramp — it does not worsen it.** Applying this saving directly to the Month 1-4 Net P&L figures already stated in `docs/CURRENT-STATE.md` §5 (each of which used the flat A$1,500/month cost basis):
+
+| Month | Net P&L (flat A$1,500 marketing, prior figure) | Net P&L (ramped marketing, corrected) | Improvement |
+|---|---|---|---|
+| Month 1 | ~-A$47,050 | **~-A$46,150** | +A$900 |
+| Month 2 | ~-A$26,167 | **~-A$25,467** | +A$700 |
+| Month 3 | ~-A$11,251 | **~-A$10,751** | +A$500 |
+| Month 4 | ~+A$2,670 | **~+A$2,970** | +A$300 |
+| Month 5+ | +A$9,631.26 (simplified ramp-table basis) / +A$28,488.42 (precise weekday/Saturday blend, headline) | Unchanged — no marketing ramp saving applies once steady state is reached | — |
+
+`docs/CURRENT-STATE.md` §5 updated to these ramped figures — see that document's own changelog.
+
 See "Years 1-3 Annual Projection" above for the corresponding multi-year view.
 
 ---
@@ -465,3 +493,5 @@ See "Years 1-3 Annual Projection" above for the corresponding multi-year view.
 **2026-07-31 (later same day — Anthony's decision: 14 is a PROVEN CEILING, 12 stays the committed daily target; full whole-venture P&L completed; headcount independently re-verified a second way)** — Anthony: "have 14 as the ceiling and prove it. 12 clients a day is what we will aim for each day." Rewrote the section to reflect this — 12 remains the committed daily operating target throughout this document, 14 is documented as proven growth headroom, not a replacement. Completed the two things needed before 14 could be called proven: (a) full whole-venture P&L at N=14 — Monthly Net P&L +A$36,726.23 (delta +A$8,237.81 vs the 12-client baseline), Quarterly/Half-Yearly/Yearly scaled the same way, both downtime-fill/early-release lines rechecked against the real bursty schedule (A$20,717.12/month and A$14,026.54/month respectively, not carried over from 12); (b) independently cross-verified the 9-staff headcount using a second, genuinely different algorithm (greedy first-fit station assignment vs the earlier sweep-line peak-concurrency method) — exact agreement, proving rather than estimating 9. Disclosed that `tools/GTT-Rostering-Simulator.html`, referenced as an available cross-check tool, could not be found in this repo — used the independent greedy first-fit script instead.
 
 **2026-07-31 (later same day — weekly/monthly reconciliation checked, per coordinator's request reviewing a client-facing document)** — Investigated whether §3's Weekly Total (+A$6,154.21) double-counts or has a gap versus §4's Monthly Net P&L. **Finding: neither a double-count nor a gap in the actual headline figures — but a genuinely asymmetric presentation, now clarified with a note.** §3's Weekday row nets a full cost stack (including its overhead/opening-increment/receptionist share, per §1) while its Saturday row nets Direct Contribution only (Revenue minus AM+PM Direct Labor, per §2's own explicit label) — mixing the two under one "Weekly Total Net" column is misleading if read as a true weekly P&L. Confirmed Saturday correctly carries zero separate overhead line in §3 — overhead is one flat monthly figure in §4, already covering all 6 trading days once; adding a Saturday-specific overhead share to §3 would double-count against §4, not fill a gap. Added an explicit reconciliation note to §3 stating this, and that §4/§5/§6/§7 (Monthly/Quarterly/Half-Yearly/Yearly) are built independently via the validated delta-approach, not by scaling §3 — §3 is retained for weekday-vs-Saturday intuition only.
+
+**2026-07-31 (later still — PM 3-hour minimum checked against the actual spreadsheet, per Anthony's direct instruction, Saturday PM Direct Labor corrected)** — Anthony flagged that PM casual staff must be rostered a minimum 3 consecutive hours under MA000005 cl. 11.5/MA000027 cl. 11.2, and asked whether this document's PM Direct Labor figures actually respect that floor per individual role, not assumed compliant by default. Checked: **Saturday (A$335.55/day) did not** — at 8 PM sessions/day split evenly across the 4 roles (this document's own stated assumption), each role needs only 1.54 hours/day of actual booked time, well below the 3-hour floor; the figure had been priced at the raw calculated hours, not the enforced minimum. Corrected to **A$654.32/day** (4 roles × 3-hour minimum × the Saturday blended casual rate), a real +A$318.77/day understatement now fixed, cascading to +A$1,380.27/month in §4 Monthly (plus +A$23.47/month Workers Comp), and scaled through §5/§6/§7 Quarterly/Half-Yearly/Yearly. **New standing conservative baseline: +A$27,084.69/month** (was +A$28,488.42/month). **Weekday (A$440.00/day) checked and found NOT understated** — at 16 sessions/day split evenly, each role needs 3.08 hours/day, marginally above the floor; flagged as a thin, assumption-dependent margin (contingent on the unconfirmed even-split-across-4-roles assumption) rather than re-costed, since it does not currently breach the floor. **Not yet propagated to the N=14 PROVEN CEILING figures above** (which use the same Saturday hours-based PM costing methodology, scaled proportionally from this 12-client baseline) — flagged as an open follow-up in `docs/VERIFICATION-TRACKER.md`, not silently left inconsistent.

@@ -106,6 +106,8 @@ Same ramp-percentage shape already established and reused across this corpus (Mo
 
 **Fixed costs are shown flat at A$88,625.09/month from Month 1** as a conservative simplification (real fixed costs also ramp somewhat during Months 1-4, since fewer PM casual hours are worked at lower volume — `pm-staffing-roster.md`'s own cost-ramp table) — this means the Months 1-3 losses shown above are somewhat overstated (real losses would be smaller), the same disclosed simplification already used in `profit-loss-tables.md`'s Years 1-3 Annual Projection.
 
+> **Flagged 2026-07-31, not rebuilt this round:** this table already predates the 12-client committed model and the ancillary-revenue exclusion (still shows the superseded 10-client/A$55,000-AM/ancillary-included figures) — a pre-existing propagation gap already tracked in `docs/VERIFICATION-TRACKER.md` item 14, not newly introduced. **Also applies here and not yet modelled:** the Month 1-4 marketing spend ramp (A$600/800/1,000/1,200 building to the A$1,500 steady-state, per Anthony's direct instruction — see `profit-loss-tables.md`'s "Marketing Spend Ramp" section for the full basis and the corrected figures already applied there and in `docs/CURRENT-STATE.md` §5). Rebuilding this whole table (volume, ancillary, AND marketing ramp together) is a larger undertaking than the marketing-specific ask this round — flagged as the next follow-up when this table is next touched, rather than attempted piecemeal under time pressure and risking a partial, inconsistent rebuild.
+
 ---
 
 ## Pre-Launch Capital Deployment

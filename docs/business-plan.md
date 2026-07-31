@@ -12,7 +12,7 @@
 
 ## 1. EXECUTIVE SUMMARY
 
-GTT Center Perth is a concept for Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT) — a mandatory ~2.5-hour pregnancy screening test undergone by an estimated ~14,000-18,000 WA women per year (see §4 for derivation and sourcing). Instead of a bare pathology waiting room while fasting, patients would book into GTT Center Perth and spend the test window receiving massage, nails, brows, or hairdressing, priced as one of two fixed packages with venue/lounge access bundled free ([services-pricing-locked.md](services-pricing-locked.md)).
+GTT Center Perth is a concept for Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT) — a mandatory ~2.5-hour pregnancy screening test undergone by an estimated **~33,570 WA women per year (corrected 2026-07-31, was ~14,000-18,000 — see §4 for derivation and sourcing)**. Instead of a bare pathology waiting room while fasting, patients would book into GTT Center Perth and spend the test window receiving massage, nails, brows, or hairdressing, priced as one of two fixed packages with venue/lounge access bundled free ([services-pricing-locked.md](services-pricing-locked.md)).
 
 The current committed operational model (per [HANDOFF.md](HANDOFF.md), 2026-07-17 — the most recent session summary and source of truth for the active plan) is:
 - **AM GTT:** 10 clients/day, 07:00 start, 2 chairs, 2 phlebotomists, synchronized-start schedule (Scenario C — see `docs/scenario-c-sync-timetables.md`)
@@ -79,16 +79,19 @@ All GTT-window wellness services are 45 minutes or under, delivered by employed 
 
 **All figures below are derived estimates from publicly available statistics, not primary market research commissioned for this venture — treat as directional, not precise.**
 
+> **CORRECTED 2026-07-31 — the market-size figures below were an unsourced planning estimate, not real ABS data. Checked against KPMG's published analysis of ABS Births, Australia 2024 (media release 17 July 2025): real 2024 figures are ~292,500 national, ~26,790 Greater Perth (actual GCCSA figure, not an estimated 80% share), ~33,570 WA total — Perth's real birth count is nearly double the old ~14,400 estimate.**
+
 | Metric | Value | Source / Derivation |
 |---|---|---|
-| WA births per year | ~18,000 | ABS, per [research.md](research.md) §2 |
-| Perth metro births per year | ~14,400 | 80% of WA births, per [research.md](research.md) §2 |
+| Australian births per year | ~292,500 | KPMG analysis of ABS Births, Australia 2024, 17 July 2025 |
+| WA births per year | ~33,570 | KPMG analysis of ABS Births, Australia 2024, 17 July 2025 |
+| Perth metro (Greater Perth GCCSA) births per year | ~26,790 | KPMG analysis of ABS Births, Australia 2024, 17 July 2025 — **real GCCSA figure, not an estimated 80% share of WA total** (the old methodology) |
 | GDM screening rate | ~100% (effectively universal screening, standard of care) | ADIPS, per [research.md](research.md) §2 |
 | GDM diagnosis rate | ~18% | AIHW, per [research.md](research.md) §2 |
-| Perth metro GTT tests/week | ~277/week | Derived: ~14,400 tests/year ÷ 52 weeks, per [research.md](research.md) §2 |
+| Perth metro GTT tests/week | ~515/week | Derived: ~26,790 tests/year ÷ 52 weeks `[VERIFIED — KPMG analysis of ABS Births, Australia 2024, 17 July 2025; ABS figures noted as preliminary/subject to revision]` |
 
 ### Addressable Market
-GTT Center Perth's current capacity model is 10 GTT clients/day (Scenario C, 2 phlebotomists/2 chairs), operating **6 days/week (Monday-Saturday) — Sunday is closed** (see §5, [am-capacity-weekend.md](am-capacity-weekend.md)), giving up to 60 AM GTT slots/week, not 50. Against a Perth metro market of ~277 GTT tests/week, this represents roughly **22% of the addressable weekly market at full AM capacity** across the 6 operating days — corrected from an earlier 5-day-only calculation that undercounted the Saturday AM slots already committed to the operational model. [research.md](research.md)'s own "11-14% of Perth metro GTT tests" market-share-needed figure was calculated against a 5-day, 8-client assumption and has not been re-run against the current 6-day/10-client model — flagged as a follow-up reconciliation, not yet actioned.
+GTT Center Perth's committed capacity model is **12 GTT clients/day** (see [docs/CURRENT-STATE.md](CURRENT-STATE.md) §1, superseding the 10-client Scenario C figure this section previously cited), operating **6 days/week (Monday-Saturday) — Sunday is closed** (see §5, [am-capacity-weekend.md](am-capacity-weekend.md)), giving **72 AM GTT slots/week**. Against the corrected Perth metro market of ~515 GTT tests/week, this represents roughly **~14% of the addressable weekly market at full AM capacity** — down from the previously-stated ~22-26%, not because the venue's capacity shrank, but because the real market is nearly double what the old, unsourced estimate assumed. A **14-client/day PROVEN CEILING** also exists (84 slots/week, ~16% of the corrected market) — documented as growth headroom, not the committed daily target, see [docs/CURRENT-STATE.md](CURRENT-STATE.md) §1.
 
 ### Scheduling — Latest AM Start Time and Whether 2 Extra Clients Fit (Checked, Not Guessed)
 
@@ -309,3 +312,5 @@ YETI Holding Trust (discretionary trust)
 8. Terminology change (§6, §9): switched from "client visits" to "packages/services sold" as the core revenue metric, since a visit alone carries no dollar figure — applied venture-wide, see cross-referenced documents.
 
 **2026-07-20 (PM packages committed)** — Updated §1, §3, §5, §6 to reflect Anthony's confirmation that PM now offers set/fixed packages (bundled combos, no client-choice) in addition to individual standalone services, with an active sales strategy to steer clients toward the package option for higher revenue per visit. Cross-referenced `pm-package-structure.md` (supersedes the deleted `pm-package-exploration.md`) for the proposed package menu, revenue modelling, and sales strategy — pricing there requires Anthony's sign-off, not yet final.
+
+**2026-07-31 (market-size figures corrected — real ABS data, not an estimate)** — The venture's planning figures (~277,000 national births, ~18,000 WA, ~14,400 Perth metro, from an assumed "~80% metro share") were themselves an unsourced estimate, not real ABS data, despite being tagged as ABS-derived. Checked against KPMG's published analysis of ABS Births, Australia 2024 (media release 17 July 2025): real 2024 figures are ~292,500 national, ~26,790 Greater Perth (the actual GCCSA figure, not an estimated share), ~33,570 WA total — Perth's real birth count is nearly double the old estimate. Corrected §1's intro paragraph and §4's market-sizing table and Addressable Market section: Perth GTT tests/week is really ~515 (not ~277), and the committed 12-client/day model's 72-slot/week capacity is ~14% of the market (not ~22-26% as previously stated across two prior corrections). This does not change the venture's committed capacity or P&L — only the market-share percentage, which is now more conservative, not more aggressive. Tagged `[VERIFIED — KPMG analysis of ABS Births, Australia 2024, 17 July 2025]`, ABS figures noted as preliminary/subject to revision. Propagated the same correction to `docs/CURRENT-STATE.md`, `docs/investor-memorandum.md`, `docs/research.md`, `docs/feasibility.md` — see each document's own changelog.

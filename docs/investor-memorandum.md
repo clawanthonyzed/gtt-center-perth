@@ -46,18 +46,20 @@ Every pregnant woman in Australia is offered this test between 24–28 weeks ges
 
 The 75g Oral Glucose Tolerance Test (OGTT) is the gold-standard screening method for Gestational Diabetes Mellitus (GDM) in Australia, mandated by ADIPS 2025 guidelines and recommended for **100% of pregnant women** between 24–28 weeks gestation.
 
+> **CORRECTED 2026-07-31 — the ABS-attributed figures below were an unsourced estimate, not real ABS data.** Checked against KPMG's published analysis of ABS Births, Australia 2024 (media release 17 July 2025): Perth's real birth count is nearly double the old estimate. See changelog.
+
 | Statistic | Figure | Source |
 |-----------|--------|--------|
-| Australian births per year | ~277,000 | ABS 2024 |
-| GTT tests performed nationally per year | ~270,000 | AIHW estimate |
-| WA births per year | ~18,000 | ABS |
-| Perth metro births per year | ~14,400 | ~80% metro share |
-| **Perth GTT tests per year** | **~14,400** | Universal screening rate |
-| **Perth GTT tests per week** | **~277** | 14,400 ÷ 52 |
+| Australian births per year | ~292,500 | `[VERIFIED — KPMG analysis of ABS Births, Australia 2024, 17 July 2025]` |
+| GTT tests performed nationally per year | ~270,000 | AIHW estimate (unaffected by this correction — different source/metric, not re-verified this round) |
+| WA births per year | ~33,570 | `[VERIFIED — KPMG analysis of ABS Births, Australia 2024, 17 July 2025]` |
+| Perth metro (Greater Perth GCCSA) births per year | ~26,790 | `[VERIFIED — KPMG analysis of ABS Births, Australia 2024, 17 July 2025]` — real GCCSA figure, not an estimated 80% share |
+| **Perth GTT tests per year** | **~26,790** | Universal screening rate |
+| **Perth GTT tests per week** | **~515** | 26,790 ÷ 52 |
 | GDM diagnosis rate | 18% | AIHW 2023–24 |
-| Perth GDM diagnoses per year | ~2,600 | 18% of 14,400 |
+| Perth GDM diagnoses per year | ~4,820 | 18% of 26,790 |
 
-**GTT Center Perth's current AM capacity ceiling is 220 GTT visits/month** (10/day × 22 trading days, Scenario C — verified scheduling-feasibility, not a booking guarantee) — approximately 22% of Perth's total weekly GTT volume across a 6-day operating week (Monday-Saturday). Clients will travel from across Perth metro to access this service — location criteria prioritise ample parking and freeway access over proximity to any specific hospital.
+**GTT Center Perth's committed AM capacity ceiling is 264 GTT visits/month** (12/day × 22 trading days, committed daily target — verified scheduling-feasibility, not a booking guarantee; corrected 2026-07-31, was 220/month at the superseded 10-client model) — approximately **~14% of Perth's real weekly GTT volume** (corrected 2026-07-31 — was stated as ~22%, itself based on an unsourced market-size figure that understated Perth's real birth count by nearly half; see the market-size correction above) across a 6-day operating week (Monday-Saturday). A **14-client/day PROVEN CEILING** also exists (growth headroom, not the committed daily target — see `docs/CURRENT-STATE.md` §1). Clients will travel from across Perth metro to access this service — location criteria prioritise ample parking and freeway access over proximity to any specific hospital.
 
 ### The Unmet Need
 
@@ -313,6 +315,8 @@ To progress: NDA on request. Full document pack to verified parties.
 ## Changelog
 
 **2026-07-29 (full reconciliation, external audit response)** — An outside reviewer found this document's §3 body table still showed a -A$9,684/month loss built on the abandoned 8-client/3-package launch model, contradicting the profitable banner sitting directly above it — a banner-vs-body contradiction, not just a stale figure. Fixed at the source, not just the headline number: Executive Summary, §2 Business Model (package table, PM model), §3 Financial Projections (full P&L rebuild against `profit-loss-tables.md` v2.1/`cash-flow.md` v2.0), §4 Staffing Model (current headcount, hours-based PM costing), §8 Capital Requirement (surfaced the 3-way unreconciled range across this repo's own documents rather than repeating one arbitrarily), §9 Timeline (removed a fixed October 2026 date that contradicted this venture's own "no launch date set" standing position). Every figure now carries a `[VERIFIED]`/`[MODELED]`/`[PLACEHOLDER]` tag per `docs/CURRENT-STATE.md`'s system (new this session) — this document no longer restates absolute figures as if independently sourced; it points to CURRENT-STATE.md as canonical.
+
+**2026-07-31 (market-size figures corrected — real ABS data via KPMG, not an unsourced estimate)** — The ABS-attributed market-size table was itself an unsourced estimate (~277,000 national, ~18,000 WA, ~14,400 Perth metro from an assumed "~80% metro share"), despite carrying an "ABS 2024" source tag. Checked against KPMG's published analysis of ABS Births, Australia 2024 (media release 17 July 2025): real figures are ~292,500 national, ~33,570 WA, ~26,790 Greater Perth (the actual GCCSA figure, not an estimated share) — Perth's real birth count is nearly double the old estimate. Corrected the market-size table, Perth GTT tests/week (~515, was ~277), Perth GDM diagnoses/year (~4,820, was ~2,600), and the Addressable Market paragraph's capacity ceiling (264/month at the committed 12-client model, was 220/month at the superseded 10-client model) and market-share percentage (~14%, was ~22% — a more conservative, not more aggressive, correction). Tagged `[VERIFIED — KPMG analysis of ABS Births, Australia 2024, 17 July 2025]`, ABS figures noted as preliminary/subject to revision.
 
 ---
 

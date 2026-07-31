@@ -38,7 +38,7 @@
 
 ### 7:30am — Service Staff Arrive (Massage, Nails, Brows)
 - [ ] Set up treatment rooms: linens fresh, equipment sanitised from previous day
-- [ ] Check Fresha for their individual appointment schedule
+- [ ] **Receive the day's roster/schedule from the Venue Manager** (printed/shared schedule — corrected 2026-07-31: staff do not each log into Fresha themselves; the Venue Manager builds the schedule in Fresha and distributes it, see `ivy-booking-system.md`'s Staff Management section)
 - [ ] Confirm any patient-specific notes (e.g., neck pain, late trimester, preferred pressure)
 - [ ] Restock any professional products needed
 

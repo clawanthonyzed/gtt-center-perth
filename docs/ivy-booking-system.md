@@ -25,7 +25,7 @@ Every service booking MUST be linked to a confirmed GTT appointment time. No pla
 - Revenue model: 20% commission only on **new clients** who book via Fresha marketplace — existing clients and direct bookings are commission-free
 - **$14.95/user/month Team plan** eliminates all marketplace fees
 - **Unlimited free SMS notifications** — huge advantage for high-reminder-volume GTT bookings
-- Multi-practitioner calendar: yes — confirmed sufficient for the verified 2-chair/12-staff capacity model (see operations-manual.md per-staff timetable). Each phlebotomist/chair and each service-category staff member needs their own Fresha calendar resource so the daily 10-client/morning GTT schedule (Scenario C, synchronized start) can be built without double-booking.
+- Multi-practitioner calendar: yes — confirmed sufficient for the verified 2-chair/8-treatment-staff (12-client committed model) capacity model, built and managed via **1-2 admin seats (Venue Manager + Receptionist), not one Fresha account per staff member — corrected 2026-07-31, per Anthony's direct instruction.** Fresha's resource-scheduling model still tracks each phlebotomist/chair and service-category slot internally so the daily GTT schedule (synchronized start) can be built without double-booking — but that's admin-side configuration, not a login each treatment/reception staff member holds themselves. The Venue Manager builds the roster in Fresha and distributes it to staff directly (see Staff Management section below).
 - Online payment: yes (Fresha Pay — card processing)
 - Retail/product sales: yes
 - **Weakness:** Not designed for medical/clinical workflows; GTT slot pairing needs workaround
@@ -42,7 +42,7 @@ Every service booking MUST be linked to a confirmed GTT appointment time. No pla
 
 ## 2. RECOMMENDATION
 
-**Use Fresha (Team plan, $14.95/user/month) with a GTT pairing workaround.**
+**Use Fresha (Team plan, $14.95/user/month, 1-2 admin seats only — Venue Manager + Receptionist, not one seat per treatment/reception staff member) with a GTT pairing workaround.**
 
 **Rationale:**
 - Unlimited free SMS covers our high-reminder requirement at zero marginal cost
@@ -204,11 +204,14 @@ STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 - System (or staff) notifies waitlist when cancellation occurs
 - First on waitlist gets 2-hour window to confirm before next in line is notified
 
-### Staff Management (employed staff — no subtenants)
-- Each employed staff member has their own Fresha calendar login
-- Roster/availability is set by the Venue Manager (staff do not self-manage availability as an independent subtenant would) — each AM staff member's calendar must reflect their Mon–Fri 7:00–12:30 shift; PM Service Therapist's calendar reflects the 12:00–18:00 PM shift (see `staff-plan.md` §2A)
-- Each staff member's calendar shows: bookings for the day, customer name + service only (no personal health details)
-- End-of-day summary email: tomorrow's schedule
+### Staff Management (employed staff — no subtenants) — CORRECTED 2026-07-31, per Anthony's direct instruction
+
+> **Model correction:** this section previously described every employed treatment/reception staff member holding their own individual Fresha calendar login. **That is not the operating model.** The actual model is a client-facing booking system (Fresha) plus **the Venue Manager manually building the roster and distributing it to staff** (e.g., printed/shared daily schedule) — NOT per-staff booking-system accounts. This resolves the earlier open flag that ~17 per-seat Fresha accounts could blow out the software cost — **only 1-2 admin seats are needed** (Venue Manager + Receptionist), not one per treatment/reception staff member.
+
+- Fresha is used by 1-2 admin seats (Venue Manager, Receptionist) to manage the booking calendar, resource allocation (chairs/rooms/staff-category slots), and payments.
+- The Venue Manager builds the daily/weekly roster from Fresha's booking data and **distributes it to staff directly** (printed sheet, shared roster doc, or verbal handover) — staff do not each log into Fresha themselves to see their own schedule.
+- Staff do not self-manage availability as an independent subtenant would — the Venue Manager sets roster/availability centrally, consistent with the confirmed employed-staff model.
+- End-of-day: Venue Manager prepares tomorrow's schedule and distributes it to staff (not an automated per-staff Fresha notification).
 
 ### Admin View
 - Daily booking sheet: all GTT slots + associated services + staff + payments
@@ -251,3 +254,5 @@ STEP 11 — Post-Visit Follow-Up 24 hours after (automated)
 **2026-07-30 (Chair B enquiry-threshold opening policy added, per Anthony's direct instruction)** — Added a new "Chair B Opening Policy" section: Chair A is the default/guaranteed chair per slot; Chair B opens only once a 2nd enquiry arrives for the same slot (not automatically alongside Chair A as the current committed Scenario C model assumes for full-capacity days). Updated STEP 1 to note Chair B slots show as "Enquire" not "Book" below the threshold. Added the hand-derived (not solver-verified) ~A$306 unavoidable added cost of opening Chair B at all, and the 2-client break-even point — both flagged explicitly as directional, not exact. See `docs/CURRENT-STATE.md` and `docs/VERIFICATION-TRACKER.md` for the same policy recorded canonically.
 
 **2026-07-30 (later still — Chair B "conflict" clarified, not left flagged; N_max=14 search documented as explored-and-rejected)** — The banner above previously flagged an apparent conflict between this enquiry-threshold policy and the newly-committed 12-client model. Rewrote it: this was a scoping error, not a genuine fork — design/target capacity (12 clients/day, reconfirmed after a full optimization search found the true chair-only ceiling is 14 but rejected it since it needs 12 treatment staff and is financially worse) and daily rostering (this policy) are two different levels, not competing rules. Nothing left for Anthony to decide on this point. See `docs/CURRENT-STATE.md` §1/§7 for the full search-and-rejection detail.
+
+**2026-07-31 (booking system model corrected — no per-staff Fresha accounts, per Anthony's direct instruction)** — Corrected a genuine model error: this document previously described every employed treatment/reception staff member holding their own individual Fresha calendar login. The actual model is a client-facing booking system (Fresha, 1-2 admin seats only — Venue Manager + Receptionist) plus the Venue Manager manually building the roster and distributing it to staff directly — not per-staff booking-system accounts. Resolves the earlier open flag that ~17 per-seat Fresha accounts could blow out software cost. Fixed the Fresha Detail section, the Recommendation line, and rewrote the Staff Management section. Propagated the same correction to `operations-manual.md`'s 7:30am checklist.

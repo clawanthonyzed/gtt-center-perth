@@ -46,22 +46,24 @@ The GTT (Glucose Tolerance Test) and the Gestational Diabetes Test are **the sam
 
 ## 2. MARKET SIZE — AUSTRALIA AND WA
 
+> **CORRECTED 2026-07-31, per Anthony's direct instruction ("propagate everywhere," "grep every doc") — overriding this file's earlier "explicitly out of scope for editing" flag (`docs/01_conflicts_log.md` CONFLICT-08, 2026-07-20).** That earlier flag protected this file from an unrelated editing task; leaving it uncorrected here would leave the root source every other document cites ("per research.md §2") still showing the wrong figures while its dependents show corrected ones — a worse inconsistency than a targeted, disclosed fix. The figures below were an unsourced planning estimate, not real ABS data, despite the "(ABS 2024)"/"(ABS)" tags. Checked against KPMG's published analysis of ABS Births, Australia 2024 (media release 17 July 2025).
+
 ### National
-- Australian births per year: ~277,000 (ABS 2024)
-- GDM diagnosis rate: **18% of pregnant women** (AIHW 2023–24) = **~49,800 GDM diagnoses/year nationally**
+- Australian births per year: ~292,500 `[VERIFIED — KPMG analysis of ABS Births, Australia 2024, 17 July 2025]` (was ~277,000, unsourced estimate)
+- GDM diagnosis rate: **18% of pregnant women** (AIHW 2023–24) = **~52,650 GDM diagnoses/year nationally** (was ~49,800, recomputed against the corrected national births figure)
 - Testing rate: Effectively 100% of pregnancies are offered the GTT (universal screening)
-- **Estimated GTT tests performed nationally: ~270,000/year**
+- **Estimated GTT tests performed nationally: ~270,000/year** (AIHW estimate — different source/metric, not re-verified this round)
 
 ### Western Australia
-- WA births per year: ~18,000 (ABS)
-- Perth metro share: ~80% = **~14,400 births/year in Perth metro**
-- GTT testing rate ~100% = **~14,400 GTT tests/year in Perth metro**
-- Per week: **~277 GTT tests/week in Perth metro**
-- GDM diagnosis rate (18%) = ~2,600 Perth women diagnosed with GDM per year
+- WA births per year: ~33,570 `[VERIFIED — KPMG analysis of ABS Births, Australia 2024, 17 July 2025]` (was ~18,000)
+- Perth metro (Greater Perth GCCSA) births per year: **~26,790** `[VERIFIED — KPMG analysis of ABS Births, Australia 2024, 17 July 2025 — real GCCSA figure, not an estimated 80% share]` (was ~14,400, based on an assumed "80% metro share" that is no longer used)
+- GTT testing rate ~100% = **~26,790 GTT tests/year in Perth metro**
+- Per week: **~515 GTT tests/week in Perth metro** (was ~277/week — Perth's real birth count is nearly double the old estimate)
+- GDM diagnosis rate (18%) = ~4,820 Perth women diagnosed with GDM per year (was ~2,600)
 
 ### GTT Center Perth Capacity vs Market
-- Venue capacity: 30–40 bookings/week (morning window only, see §1)
-- Market share needed to fill: **11–14% of Perth metro GTT tests**
+- Venue capacity: 30–40 bookings/week (morning window only, see §1) — **this line itself predates the current 12-client/72-slot committed model and was already flagged as not independently re-derived (see `docs/01_conflicts_log.md` CONFLICT-08's own note) — not corrected here either, still an open follow-up.**
+- Market share needed to fill (at the stale 30-40/week figure above): **11–14% of Perth metro GTT tests** — **at the corrected ~515/week market size, this percentage would actually be lower (not higher), since the denominator grew — flagged as needing its own recalculation alongside the venue-capacity line above, not assumed.** See `docs/CURRENT-STATE.md` §3 for the current, correctly-sourced committed-model market share (~14% at 72 slots/week ÷ ~515/week).
 - This is achievable with just 2–3 strong referral network partners
 
 ### High-Risk Populations (higher GDM rates — target for marketing)
