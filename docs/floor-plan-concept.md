@@ -26,40 +26,44 @@
 
 ## Room Schedule
 
-**Day-One Committed Model (current, staffed, costed — matches `staff-plan.md`'s 2x-per-category model):**
+**Day-One Committed Model (current, staffed, costed):**
 
-| Room | Target sqm | Notes |
-|------|-----------|-------|
-| Reception / check-in | 15 | 2 workstations, retail display, waiting bench for arrivals (sqm updated to match `floor-plan-v3.svg`) |
-| GTT Lounge | 35 | 8 reclining/comfort chairs, TV, cafe counter, natural light preferred (sqm updated to match SVG) |
-| Blood Collection Room | 18 | 2 phlebotomy chairs, centrifuge, medical fridge, sharps, privacy screens, clinical sink (sqm updated to match SVG) |
-| Treatment Room 1 — Massage | 12 | Massage table, **1 clinical sink (SCOPED DOWN 2026-07-28 — see below)**, dimmer lighting, privacy lock — see §Critical Design Requirements |
-| Treatment Room 2 — Massage | 12 | Massage table, **1 clinical sink (SCOPED DOWN, as above)** |
-| Treatment Room 3 — Facial / Beauty | 11 | Facial bed, beauty station, **2 sinks (RETAINED — brow waxing/threading offered here, see below)** |
-| Treatment Room 4 — Facial / Brows / Lashes | 11 | Facial bed, beauty mirror station, **2 sinks (RETAINED, as above)** |
-| Nail Station Area | 24 | 3 nail stations, LEV extraction (mandatory WorkSafe WA compliance). **2 sinks per station RETAINED 2026-07-28 — cuticle trimming likely triggers the Code, see below** |
-| Hairdressing Area | 22 | 2 styling chairs, backwash basin, mirror wall, back bar. **2-sink fix SCOPED DOWN 2026-07-28 — hair cutting does not trigger the Code, see below** |
-| Spray Tan Booth | 6 | Enclosed, extractor fan, changing area, drip tray |
-| Cafe / Refreshments Counter | 8 | Kitchenette, mini fridge, herbal tea, coconut water, low-risk food notification (Food Act 2008 — see `standards-floorplan-crosscheck-2026-07-28.md`) |
-| Staff Room | 10 | Lockers, table, sink, kettle — staff only |
-| Patient WC — Accessible | 7 | Mandatory. Pregnant patients, mobility aid access. |
-| Patient WC — Standard | 4 | Second WC for volume |
-| Staff WC | 4 | Separate from patient WCs |
-| Clean Linen / Storage | 6 | Shelving, locked consumable cabinet |
-| Dirty Linen / Biohazard | 4 | Separate from clean — clinical waste, soiled linen |
-| Circulation / Hallway | 16 | Minimum 1.5m wide (pregnant patients, prams, mobility aids) |
-| **DAY-ONE SUBTOTAL** | **~207sqm** | Matches `floor-plan-v3.svg`'s dimensioned total |
+> **MAJOR REVISION 2026-07-31, per Anthony's direct instruction — construction type corrected, fixture counts corrected.** Two changes, both real structural/cost changes, not adjustments: **(1) Only the Blood Collection Room needs solid walls** (venepuncture is the one genuinely clinical/privacy-critical activity). GTT Lounge, Hairdressing, and Nail Station Area are now **open plan, no internal walls** between them. Massage and Beauty/Brows treatment areas use **partition curtains, not stud-wall-and-door construction.** This is a genuine fit-out cost reduction — internal partition walls/doors are one of the most expensive commercial fit-out line items — see the Fit-Out Cost Estimate section below for the itemised recompute. **(2) Fixture counts increased: 4 hairdressing chairs (was 2) with 2-3 wash/backwash stations, and 4 nail sections (was 3 day-one + 1 growth-reservation — now all 4 are day-one committed).** Room sqm recalculated below from the per-unit marginal basis already established in this document (11sqm/hair-chair, 8sqm/nail-station), not just relabelled.
 
-**Growth Reservations (2026-07-28 addition — space only, NOT staffed or costed in the current financial model, same treatment as phlebotomy Scenario D):**
+| Room | Target sqm | Construction Type | Notes |
+|------|-----------|-------------------|-------|
+| Reception / check-in | 15 | Solid walls | 2 workstations, retail display, waiting bench for arrivals |
+| GTT Lounge | 35 | **Open plan (no internal walls to Hairdressing/Nails)** | 8 reclining/comfort chairs, TV, cafe counter, natural light preferred |
+| Blood Collection Room | 18 | **Solid walls (the only room requiring them)** | 2 phlebotomy chairs, centrifuge, medical fridge, sharps, privacy screens, clinical sink |
+| Treatment Room 1 — Massage | 12 | **Partition curtain, not walled** | Massage table, 1 clinical sink, dimmer lighting, curtain-track privacy — see §Critical Design Requirements |
+| Treatment Room 2 — Massage | 12 | **Partition curtain, not walled** | Massage table, 1 clinical sink |
+| Treatment Room 3 — Facial / Beauty | 11 | **Partition curtain, not walled** | Facial bed, beauty station, 2 sinks (brow waxing/threading offered here, see below) |
+| Treatment Room 4 — Facial / Brows / Lashes | 11 | **Partition curtain, not walled** | Facial bed, beauty mirror station, 2 sinks |
+| Nail Station Area — **4 stations (corrected 2026-07-31, was 3)** | **32** | **Open plan** | 4 nail stations (8sqm/station, marginal basis from the prior growth-reservation calc), LEV extraction (mandatory WorkSafe WA compliance) — **see flagged tension below re: open-plan vs LEV air-separation requirement.** 2 sinks per station retained — cuticle trimming likely triggers the Code, see below |
+| Hairdressing Area — **4 chairs (corrected 2026-07-31, was 2)** | **52** (2 backwash) — **56 if 3rd backwash added** | **Open plan** | 4 styling chairs (11sqm/chair marginal basis) + 2-3 backwash stations (~4sqm each, `[MODELED]`), mirror wall, back bar. No Code-mandated 2-sink requirement (hair cutting does not trigger it) |
+| Spray Tan Booth | — | — | **MOVED TO PHASE 2 (2026-07-31) — see `equipment-costs.md` §2. Removed from day-one subtotal.** |
+| Cafe / Refreshments Counter | 8 | Solid walls (kitchenette) | Kitchenette, mini fridge, herbal tea, coconut water, low-risk food notification (Food Act 2008). **Day-one core function retained (glucose drink dispensing is part of the GTT protocol, not ancillary) — distinct from the Phase 2 "Cafe/partner area" hospitality upsell in `equipment-costs.md` §7, which is separate and excluded from day-one.** |
+| Staff Room | 10 | Solid walls | Lockers, table, sink, kettle — staff only |
+| Patient WC — Accessible | 7 | Solid walls | Mandatory. Pregnant patients, mobility aid access. |
+| Patient WC — Standard | 4 | Solid walls | Second WC for volume |
+| Staff WC | 4 | Solid walls | Separate from patient WCs |
+| Clean Linen / Storage | 6 | Solid walls | Shelving, locked consumable cabinet |
+| Dirty Linen / Biohazard | 4 | Solid walls | Separate from clean — clinical waste, soiled linen |
+| Circulation / Hallway | 16 | n/a | Minimum 1.5m wide (pregnant patients, prams, mobility aids) |
+| **DAY-ONE SUBTOTAL** | **~239sqm** | | Up from ~207sqm — net effect of +8sqm (Nails), +30sqm (Hairdressing, 2-backwash basis), -6sqm (Spray Tan moved to Phase 2). **Recalculated, not just relabelled.** |
 
-| Room | Target sqm | Notes |
-|------|-----------|-------|
-| Treatment Room 5 — Massage **(GROWTH RESERVATION)** | 12 | Marginal unit cost matches Treatment Rooms 1/2. Not part of current 2x-massage-therapist model — reserved shell space for a 3rd massage therapist if/when justified by demand, same logic as `am-capacity-weekend.md`'s Scenario D phlebotomy chair. |
-| Treatment Room 6 — Facial / Beauty **(GROWTH RESERVATION)** | 11 | Marginal unit cost matches Treatment Rooms 3/4. Reserved shell space for a 3rd beauty therapist. |
-| Nail Station Area — 4th station **(GROWTH RESERVATION)** | 8 | Marginal per-station cost (24sqm ÷ 3 = 8sqm/station). Shares existing LEV infrastructure — does not require a duplicate extraction system, only proportionally larger ducting/capacity, to be confirmed with the LEV contractor at fit-out. |
-| Hairdressing Area — 3rd styling chair **(GROWTH RESERVATION)** | 11 | Marginal per-chair cost (22sqm ÷ 2 = 11sqm/chair). May be able to share the existing single backwash basin at low volume (Code requires "minimum 1 basin at launch," not 1-per-chair) — a 2nd basin would only be needed once 3rd-chair volume is genuinely running, not at reservation stage. |
-| **GROWTH RESERVATION SUBTOTAL** | **~42sqm** | |
-| **NEW TOTAL (day-one + growth reservations)** | **~249sqm** | Up from ~207sqm day-one-only. **This is the real, calculated figure — not a guess.** |
+**Growth Reservations (space only, NOT staffed or costed in the current financial model, same treatment as phlebotomy Scenario D):**
+
+> **2026-07-31 — Hairdressing 3rd-chair and Nail 4th-station reservations REMOVED from this table, not because they were wrong, but because they are now absorbed into the day-one committed count above (4 chairs, 4 stations already committed).** Only the Massage/Beauty growth rooms remain as reservations, now correctly priced on the cheaper curtain-partition basis instead of the old walled-room basis.
+
+| Room | Target sqm | Construction Type | Notes |
+|------|-----------|-------------------|-------|
+| Treatment Room 5 — Massage **(GROWTH RESERVATION)** | 12 | **Partition curtain, not walled (corrected 2026-07-31)** | Marginal unit cost matches Treatment Rooms 1/2. Reserved shell space for a 3rd massage therapist if/when justified by demand. |
+| Treatment Room 6 — Facial / Beauty **(GROWTH RESERVATION)** | 11 | **Partition curtain, not walled (corrected 2026-07-31)** | Marginal unit cost matches Treatment Rooms 3/4. Reserved shell space for a 3rd beauty therapist. |
+| **GROWTH RESERVATION SUBTOTAL** | **~23sqm** | | Down from ~42sqm — the 2 growth lines removed above are now day-one, not because the reservation concept changed. |
+| **NEW TOTAL (day-one + growth reservations)** | **~262sqm** | | Up from ~249sqm. Net effect: hair/nail day-one expansion (+38sqm) outweighs the growth-reservation reduction (-19sqm) and spray-tan removal (-6sqm). **This is the real, calculated figure — not a guess.** |
+
+**Flagged, not silently resolved — LEV vs open-plan tension for the Nail Station Area:** the pre-existing Adjacency Requirements table below states Nail Station "Must NOT be Adjacent To: Treatment rooms, **lounge**" (fume containment), and the Critical Design Requirements section states nail vapours "cannot share air with treatment rooms." Anthony's new instruction puts Nails in the same open-plan zone as the Lounge. These are not necessarily incompatible in practice — many real nail salons achieve WorkSafe-compliant air separation via per-station downdraft/capture-hood LEV rather than full room enclosure — but this is a genuine open design question, not resolved here with confidence. **Needs confirmation from a WorkSafe WA-familiar fit-out contractor or the LEV supplier before fit-out, not assumed either way.**
 
 ---
 
@@ -105,15 +109,18 @@
 
 ## Adjacency Requirements (Critical for Architect)
 
+> **UPDATED 2026-07-31 — Nail Station's "must NOT be adjacent to lounge" rule is now in direct tension with the open-plan instruction (Lounge/Hairdressing/Nails share one open zone).** Not silently resolved — flagged in the Room Schedule above. The row below is left showing the ORIGINAL fume-containment concern rather than deleted, since it may still need honouring via per-station LEV rather than room-level separation — confirm with a WorkSafe WA-familiar contractor before fit-out.
+
 | Room | Must be Adjacent To | Must NOT be Adjacent To |
 |------|--------------------|-----------------------|
-| Collection Room | GTT Lounge | Staff room, spray tan booth |
-| GTT Lounge | Reception, Collection Room | Nail station (LEV fumes) |
-| Nail Station | External wall (LEV extraction) | Treatment rooms, lounge |
-| Treatment Rooms | Hallway (private access) | Reception, nail station |
+| Collection Room | GTT Lounge | Staff room |
+| GTT Lounge | Reception, Collection Room | — (now open-plan with Hairdressing/Nails, see flag above) |
+| Nail Station | External wall (LEV extraction) | Treatment rooms — **"lounge" removed from this column 2026-07-31 since Nails/Lounge are now the same open-plan zone; the underlying fume-containment concern is not resolved, only the room-boundary framing is updated to match the new layout — see flag above** |
+| Treatment Rooms (Massage/Beauty, curtain-partitioned) | Hallway (private access) | Reception, nail station |
 | Hairdressing | External natural light (preferred), plumbing wall | Collection room |
-| Spray Tan Booth | External wall (extraction) | Lounge, collection room |
 | Staff Room | Staff WC | Client areas (not accessible to clients) |
+
+**Spray Tan Booth row removed 2026-07-31 — moved to Phase 2, not part of the day-one floor plan; see `equipment-costs.md` §2 for its retained content.**
 
 ---
 
@@ -129,15 +136,15 @@
 - **Sound insulation** — Collection Room must not allow sound to pass to adjacent treatment rooms (medical privacy).
 - **WDP compliance** — exact room spec must be confirmed with WDP before finalising. WDP has published licensed collection centre standards that govern minimum dimensions and fittings.
 
-### Nail Station Area
-- **LEV (Local Exhaust Ventilation) — mandatory** — nail vapours (acrylics, gel, acetone) cannot share air with treatment rooms. Dedicated extraction to outside, not recirculation. WorkSafe WA compliance required.
+### Nail Station Area — **4 stations, OPEN PLAN (corrected 2026-07-31)**
+- **LEV (Local Exhaust Ventilation) — mandatory, method TBC for open-plan** — nail vapours (acrylics, gel, acetone) cannot share air with treatment rooms. Dedicated extraction to outside, not recirculation. WorkSafe WA compliance required. **Open-plan layout means room-level air separation is no longer the mechanism — per-station downdraft/capture-hood LEV is the likely approach, not confirmed here, flagged for the LEV contractor.**
 - Pre-application to WorkSafe WA must be submitted before fit-out commences.
-- **Electrical** — each nail station needs minimum 2x 10A GPOs.
+- **Electrical** — each of the 4 nail stations needs minimum 2x 10A GPOs.
 - **Flooring** — chemical-resistant vinyl or tile. No carpet.
 
-### Hairdressing Area
-- **Backwash basin** — plumbed hot/cold, neck rest. Minimum 1 basin at launch.
-- **Mirror wall** — full-length wall mirror behind styling chairs, front-lit with warm LED strip.
+### Hairdressing Area — **4 chairs, 2-3 backwash stations, OPEN PLAN (corrected 2026-07-31)**
+- **Backwash basins** — plumbed hot/cold, neck rest. 2-3 basins for 4 chairs (up from "minimum 1 basin at launch" for 2 chairs) — see Room Schedule for the sqm impact of 2 vs 3.
+- **Mirror wall** — full-length wall mirror behind all 4 styling chairs, front-lit with warm LED strip.
 - **Colour mixing station** — provision only at launch (colour services deferred to Month 4+).
 - **Flooring** — waterproof, hair-cleaning friendly. No carpet.
 
@@ -154,15 +161,15 @@
 
 > **SCOPE-NARROWED 2026-07-28 — sink requirement re-assessed per service, not applied blanket.** Anthony confirmed GTT will NOT offer waxing that nicks skin, shaving, microneedling, or dermaplaning. Re-checking the Code's own trigger definition (`standards-floorplan-crosscheck-2026-07-28.md` §Scope Narrowing) against GTT's actual planned services: **the 2-sink/hands-free-tap fix now applies only to rooms where a genuinely skin-penetrating service happens** — see the room-by-room breakdown below, not a uniform requirement across all treatment rooms as the 2026-07-28 (earlier same day) version of this document stated.
 
-- **Privacy lock** — thumb-turn deadbolt client-side (no key). Client must be able to lock from inside. (Applies to all treatment rooms regardless of Code trigger.)
-- **Massage Rooms (1, 2, 5-growth) — SCOPED DOWN to 1 sink.** Massage involves no piercing, cutting, puncturing, tearing, or shaving of skin under any circumstance — does not trigger the WA Skin Penetration Code at all. A single clinical sink (hot/cold, soap, paper towel — general hygiene, not this Code's requirement) is sufficient. The 2nd sink/hands-free-tap fix does not apply here.
+- **Privacy — curtain, not lock, 2026-07-31 correction.** Massage and Facial/Beauty rooms are now partition-curtain bays, not walled rooms with doors — the previous "thumb-turn deadbolt client-side" spec does not apply, since there is no door. Use a full-length, opaque, lockable-track privacy curtain (curtain cannot be pulled open from outside once closed) as the equivalent privacy mechanism. **Only the Blood Collection Room retains a real door and lock**, per the new construction-type rule (see Room Schedule).
+- **Massage Rooms (1, 2, 5-growth) — SCOPED DOWN to 1 sink, curtain-partitioned not walled.** Massage involves no piercing, cutting, puncturing, tearing, or shaving of skin under any circumstance — does not trigger the WA Skin Penetration Code at all. A single clinical sink (hot/cold, soap, paper towel — general hygiene, not this Code's requirement) is sufficient. The 2nd sink/hands-free-tap fix does not apply here.
 - **Facial/Beauty Rooms (3, 4, 6-growth) — 2 sinks RETAINED.** Plain non-invasive facials do not trigger the Code, but **brow waxing and brow threading are both real, planned services here** (`services-pricing-locked.md`: "Brow wax + reshape," "Brow thread + reshape"). Whether professionally-executed waxing (no nicking) constitutes "tearing... of the skin" under the Code's definition is a genuine boundary question this agent cannot resolve with confidence either way — **retaining the 2-sink/hands-free-tap fix here as the conservative choice**, not because it's confirmed required, but because the alternative (removing it and being wrong) is the worse error.
   1. **Hand-wash sink** — hot/cold, hands-free tap, soap dispenser, paper towel dispenser.
   2. **Instrument decontamination sink** — separate, in a designated prep area distinct from the treatment area, per §7.2.
 - **Nail Station Area — 2 sinks per station RETAINED (moved from Treatment Rooms section, applies to the Nail Station Area, see Room Schedule).** GTT's manicure/pedicure menu (`services-pricing-locked.md`) does not explicitly state cuticle technique, but standard industry practice for "classic manicure"/"gel manicure"/pedicure services includes cuticle trimming with nippers, which cuts cuticle tissue (skin) — this plausibly triggers the Code's "cutting... of the skin" definition. **Flagged as an assumption pending confirmation of GTT's actual cuticle protocol (push-back only vs. trim/cut)** — retained as the conservative default.
 - **Hairdressing Area — SCOPED DOWN, no Code-mandated 2-sink requirement.** Hair cutting is cutting of hair, not skin — does not meet the Code's definition ("cutting... of the skin, mucous membrane or conjunctiva of the eye"). Razor work (which would trigger "shaving... of the skin") is excluded from GTT's scope per Anthony. The existing single backwash basin (per Hairdressing Area's own spec) is sufficient — this was never a Code requirement to begin with, now confirmed.
 - **Dimmer lighting** — massage requires dark/ambient; facial may need clinical lighting option. Install dual circuit.
-- **Sound insulation** — acoustically isolated from adjacent rooms (massage = quiet environment). Matches AMT Massage Code's "clinic rooms should be impervious to sound" requirement. (Unaffected by the Skin Penetration Code scope narrowing — separate standard.)
+- **Sound insulation — genuinely weakened by the curtain-partition change, flagged not hidden.** Matches AMT Massage Code's "clinic rooms should be impervious to sound" requirement, which a curtain cannot achieve to the same standard as a solid wall. **This is a real trade-off of the 2026-07-31 fit-out cost reduction, not resolved here** — options (white noise/ambient sound masking, acoustic curtain fabric, spacing bays away from each other) should be discussed with the architect/interior designer at engagement, not assumed adequate by default.
 - **Hooks and gown rail** — clients undress for massage. Minimum 3 hooks at entry.
 - **Floor surface** — smooth, impervious, non-slip. **Now applies specifically to the Facial/Beauty Rooms and Nail Station Area (Code-triggering), not a blanket requirement across all treatment rooms** — Massage Rooms and Hairdressing Area may use a different floor finish since the Code no longer applies there, though a similarly practical/washable surface remains good practice regardless.
 - **Blood Collection Room** — piercing (venepuncture) unambiguously triggers the Code's definition regardless of this scope narrowing. 2-sink/hands-free-tap fix and all other §7 requirements remain fully in force, unchanged.
@@ -182,20 +189,32 @@
 
 ## Fit-Out Cost Estimate
 
-> **Note (2026-07-28): figures below are for the day-one committed model only (~207sqm), NOT including the 4 growth-reservation rooms/stations.** Consistent with the growth-reservation principle (space only, not staffed/costed/equipped), the growth rooms need only basic shell construction (walls, floor, power) at this stage — not full fit-out (equipment, fixtures, second sinks fitted out). A precise incremental shell-only cost for the ~42sqm of growth space was not computed here — flagged as a follow-up if Anthony wants it, not estimated without a real basis.
+> **MAJOR REVISION 2026-07-31 — itemised recompute for the open-plan/curtain layout and the 239sqm day-one footprint, per Anthony's direct instruction. Independently re-derived below, not copied from any reference figure.** Figures are for the day-one committed model only (~239sqm), NOT including the ~23sqm growth-reservation rooms (Massage/Beauty, now also curtain-partitioned).
+
+**Construction cost — independent bottom-up build:**
+
+1. **Base shell rate, derived from this document's own prior figures (not fabricated fresh):** the original Construction line (A$150,000-280,000 for the old ~207sqm walled model) implies A$724.64-1,352.66/sqm `[MODELED — reverse-derived from this document's own 2026-07-19 figures, disclosed rather than treated as a fresh independent rate]`. Applied to the new 239sqm day-one footprint: **A$173,188-323,285.**
+2. **Partition-to-curtain saving (Massage Rooms 1-2, Facial/Beauty Rooms 3-4 — 4 rooms):** estimated ~2 internal stud walls (~3.4m each) + 1 door with hardware eliminated per room = ~27.2m of wall + 4 doors removed, replaced by 4 curtain-track bays. Wall removal A$180-280/lm `[MODELED — general Perth commercial fit-out planning rate, not a confirmed quote]` × 27.2m = A$4,896-7,616. Door removal A$800-1,500/door × 4 = A$3,200-6,000. Curtain track + medical-grade privacy curtain A$150-350/bay `[MODELED]` × 4 = A$600-1,400 (added cost, not saved). **Net saving: A$7,496-12,216.**
+3. **Open-plan saving (GTT Lounge/Hairdressing/Nail Station Area merging into one zone):** estimated ~3 internal partition walls (~6m each) eliminated = ~18m, no door replacement needed (open archway transitions). A$180-280/lm × 18m = **A$3,240-5,040 saved.**
+4. **Total construction-type saving: A$10,736-17,256** (item 2 + item 3 above).
+5. **Net Construction estimate: A$173,188-323,285 (base shell at new sqm) minus A$10,736-17,256 (savings) = A$162,452-306,029.**
+
+**Genuinely disclosed limitation:** this bottom-up estimate covers wall/door/curtain costs only — it does NOT separately reduce electrical (fewer circuits/switches per enclosed room) or HVAC zoning (shared open-plan air handling vs per-room diffusers/returns), both of which typically also drop when converting enclosed rooms to open-plan/curtain bays. **This estimate likely understates the true saving, not overstates it** — flagged rather than guessed at with a made-up correction factor.
 
 | Category | Low | Mid | High |
 |----------|-----|-----|------|
-| Construction (partitions, electrical, plumbing, HVAC, flooring) | A$150,000 | A$200,000 | A$280,000 |
-| Equipment (phlebotomy, massage, nails, hair, spray tan, lounge — see `equipment-costs.md`) | A$49,300 | A$75,000 | A$114,700 |
-| Furniture and fittings (lounge chairs, reception counter, styling chairs) | A$15,000 | A$25,000 | A$35,000 |
+| Construction (partitions, electrical, plumbing, HVAC, flooring — 2026-07-31 recompute, open-plan/curtain, 239sqm) | A$162,452 | A$234,241 | A$306,029 |
+| Equipment (pathology, massage, nails ×4, hair ×4, beauty, lounge, tech, safety, consumables — day-one only, see `equipment-costs.md`, spray tan moved to Phase 2) | A$42,690 | A$69,610 | A$96,530 |
+| Furniture and fittings (lounge chairs, reception counter, styling chairs — unaffected by wall/curtain change) | A$15,000 | A$25,000 | A$35,000 |
 | Signage (shopfront + internal wayfinding) | A$3,000 | A$5,000 | A$8,000 |
 | IT / AV (POS, booking tablets, TVs, music system) | A$5,000 | A$8,000 | A$12,000 |
-| **TOTAL (day-one model only)** | **A$222,300** | **A$313,000** | **A$449,700** |
+| **TOTAL (day-one model only, 2026-07-31 recompute)** | **A$228,142** | **A$341,851** | **A$457,559** |
 | Less: Landlord fit-out contribution (negotiate) | — | (A$30,000) | (A$60,000) |
-| **Net mid-range estimate (day-one only)** | | **~A$283,000** | |
+| **Net mid-range estimate (day-one only)** | | **~A$311,851** | |
 
-**Fit-out timing:** 8–10 weeks from lease signing to practical completion (Perth commercial builders, mid-2026 market).
+**Comparison to the prior (2026-07-28) figure:** TOTAL was A$222,300-449,700 (mid A$313,000). The new TOTAL is A$228,142-457,559 (mid A$341,851) — **higher on both ends, not lower**, because the equipment/hair/nail fixture-count expansion (+A$8,690-14,830 vs the old equipment range, once spray tan is also removed) and the larger day-one sqm footprint (239 vs 207) outweigh the wall-to-curtain construction saving. **The fit-out cost reduction from walls-to-curtains is real (A$10,736-17,256, confirmed above) — but it is not the dominant driver of the overall budget this round; the fixture-count increase is larger.** Flagged plainly rather than implying an overall reduction that isn't actually there.
+
+**Fit-out timing:** 8–10 weeks from lease signing to practical completion (Perth commercial builders, mid-2026 market). Open-plan/curtain construction may complete faster than the old walled-room plan (fewer partition/door trades), not independently re-estimated here.
 
 **Landlord contribution:** Perth commercial leasing market 2026 — new tenancies in non-prime locations regularly attract A$20,000–60,000 in landlord fit-out contributions or equivalent rent-free periods. First negotiating position on any lease.
 
@@ -228,5 +247,15 @@
 ## Changelog
 
 **2026-07-28** — Anthony's instruction: add +1 station/room per service type (massage, facial/beauty, nails, hair) as a growth reservation, mirroring the existing phlebotomy Scenario D pattern (documented, not staffed/costed). Added Treatment Room 5 (massage, +12sqm), Treatment Room 6 (facial/beauty, +11sqm), 4th nail station (+8sqm), 3rd hair chair (+11sqm) — total +42sqm. New combined target: ~249sqm (up from ~207sqm day-one-only), calculated from `floor-plan-v3.svg`'s dimensioned per-room figures, not guessed. Also fixed the second-sink/hands-free-tap gap found in `standards-floorplan-crosscheck-2026-07-28.md` (WA Skin Penetration Code §7.1-7.2) — every treatment room (day-one and growth) now specifies 2 sinks. Flagged and did not silently resolve a pre-existing sqm inconsistency between this document's original room schedule and the more recent `floor-plan-v3.svg`. Did not attempt a full geometric SVG redraw of the growth rooms (risk of an inaccurate-but-confident-looking drawing) — SVG instead annotated with a text note, this document is the source of truth for the growth-reservation room schedule.
+
+**2026-07-31 (major revision — construction type corrected, fixture counts corrected, per Anthony's direct instruction)** — Two real structural/cost changes, not adjustments:
+
+1. **Construction type corrected: only the Blood Collection Room needs solid walls.** GTT Lounge, Hairdressing, and Nail Station Area are now open plan (no internal walls between them). Massage and Beauty/Brows treatment areas use partition curtains, not stud-wall-and-door construction. Updated the Room Schedule, Adjacency Requirements (flagged, not silently resolved, a genuine tension between the new open-plan Nail Station and the pre-existing "must not be adjacent to lounge" LEV/fume-containment rule — needs WorkSafe WA/LEV-contractor confirmation, not assumed), and Critical Design Requirements (privacy lock replaced with curtain-track privacy for Massage/Beauty; sound insulation flagged as a genuine, not-hidden trade-off of the curtain change).
+
+2. **Fixture counts corrected: 4 hairdressing chairs (was 2) with 2-3 backwash stations (was 1), and 4 nail sections (was 3 day-one + 1 growth-reservation, now all 4 day-one committed).** Recalculated sqm from the per-unit marginal basis already established in this document (11sqm/hair-chair, 8sqm/nail-station) — Nail Station Area 24→32sqm, Hairdressing Area 22→52sqm (2-backwash basis, 56sqm at 3). Removed the now-redundant "4th nail station" and "3rd hair chair" growth-reservation lines (absorbed into day-one). Spray Tan Booth moved to Phase 2 (see `equipment-costs.md` §2), removed from the day-one subtotal (-6sqm). New day-one subtotal ~239sqm (was ~207sqm); new combined total (day-one + remaining Massage/Beauty growth reservations) ~262sqm (was ~249sqm).
+
+**Fit-Out Cost Estimate fully rebuilt, itemised, independently re-derived (not copied from any reference figure):** Construction cost recomputed via a bottom-up build — base shell rate reverse-derived from this document's own prior figures, applied to the new 239sqm, minus a confirmed A$10,736-17,256 saving from the wall-to-curtain/open-plan conversion (itemised: ~27.2m of wall + 4 doors removed for Massage/Beauty, ~18m of wall removed for the open-plan Lounge/Hair/Nails zone, less 4 curtain-track bays added). Net Construction: A$162,452-306,029. **Genuine finding, not the expected direction: the overall day-one fit-out TOTAL increased (A$228,142-457,559, was A$222,300-449,700), not decreased — the confirmed curtain/open-plan saving is real but smaller than the added cost of the 4-chair/4-station fixture-count expansion.** Reported plainly rather than forcing a "cost reduction" narrative that the numbers don't actually support once both changes are combined.
+
+**Headcount check, genuinely re-verified via the solver, not assumed:** confirmed the 4-chair/4-station fixture-count increase does NOT change the 12-client committed daily target's treatment headcount — peak concurrent Nails/Hair demand remains solver-verified at 2 each, driven by client timing/concurrency, not by how many physical stations exist. Nails and Hair headcount stays at 2 each. Full detail in `equipment-costs.md`'s changelog.
 
 **2026-07-28 (later same day) — sink requirement scoped down, not blanket.** Anthony confirmed GTT excludes waxing that nicks skin, shaving, microneedling, and dermaplaning. Re-checked the WA Skin Penetration Code's own trigger definition ("piercing, cutting, puncturing, tearing or shaving of the skin") against GTT's actual planned services (`services-pricing-locked.md`). Result: **Massage Rooms (1, 2, 5-growth) and Hairdressing Area no longer need the 2-sink/hands-free-tap fix** — massage never triggers the Code, and hair cutting is cutting of hair not skin, with razor work excluded from scope. **Nail Station Area and Facial/Beauty Rooms (3, 4, 6-growth) retain the fix** — cuticle trimming (standard in manicure/pedicure) plausibly cuts skin, and brow waxing/threading (both real planned services) sit in a genuine, unresolved boundary zone for the Code's "tearing of the skin" language — retained as the conservative choice, not asserted as a confirmed requirement either way. Blood Collection Room fix is unaffected (venepuncture unambiguously triggers the Code). Net effect: 3 of 7 treatment-adjacent rooms (Massage 1/2/5, Hairdressing) now need only standard hygiene sinks, not the Code-specific 2-sink/hands-free-tap spec — a real, calculated fit-out cost reduction, not assumed.

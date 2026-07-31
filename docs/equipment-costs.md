@@ -23,23 +23,28 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 
 ## Summary Budget
 
-| Category | Low Estimate | High Estimate |
-|----------|-------------|--------------|
-| Pathology collection room | A$7,800 | A$13,200 |
-| Spray tan booth | A$2,500 | A$6,000 |
-| Nail station | A$5,000 | A$14,000 |
-| Massage rooms (x2) | A$4,000 | A$10,000 |
-| Hair station | A$3,000 | A$7,000 |
-| **Beauty/Brows station (added 2026-07-19 — see §5A, was missing from this list despite Beauty Therapist being a staffed role)** | **A$2,800** | **A$7,200** |
-| Lounge and common area | A$5,000 | A$15,000 |
-| Cafe / partner area | A$2,000 | A$6,000 |
-| Technology (tablets, POS, printers) | A$3,000 | A$7,000 |
-| Hire fleet (TENS + wellness items) | A$8,000 | A$18,000 |
-| China sourced branded wellness items (stock) | A$5,000 | A$10,000 |
-| Emergency + safety equipment | A$1,000 | A$2,500 |
-| Consumables (opening stock) | A$3,000 | A$6,000 |
-| **TOTAL EQUIPMENT** | **A$52,100** | **A$121,900** |
-| Fit-out (construction, NOT equipment) | A$150,000 | A$280,000 |
+> **PHASE 2 / POST-LAUNCH EXPANSION reclassification, 2026-07-31, per Anthony's direct instruction.** Spray tan booth, Cafe/partner area, Hire fleet (birth-prep items), and China Sourced Branded Stock (the retail/hire-buffer stock that directly supports the hire fleet) are **legitimate expansion ideas Anthony wants kept on the roadmap — not mistakes, not deleted.** They are relabeled below as Phase 2/post-launch, excluded from the day-one committed budget and every P&L figure (the same treatment already given to café/retail revenue in `profit-loss-tables.md`'s Ancillary Revenue exclusion). Content is fully retained, not removed — see §2, §7, §9, §10 below, each now clearly headed "PHASE 2."
+
+| Category | Low Estimate | High Estimate | Phase |
+|----------|-------------|--------------|-------|
+| Pathology collection room | A$7,800 | A$13,200 | Day-one |
+| Nail station (**4 stations, corrected 2026-07-31 — was 2/3, see §3**) | A$9,340 | A$20,280 | Day-one |
+| Massage rooms (x2 — unaffected by the curtain-vs-wall change, equipment count unchanged) | A$4,000 | A$10,000 | Day-one |
+| Hair station (**4 chairs + 2 backwash, corrected 2026-07-31 — was 2 chairs/1 backwash, see §5**) | A$6,750 | A$15,350 | Day-one |
+| Beauty/Brows station (added 2026-07-19 — see §5A) | A$2,800 | A$7,200 | Day-one |
+| Lounge and common area | A$5,000 | A$15,000 | Day-one |
+| Technology (tablets, POS, printers) | A$3,000 | A$7,000 | Day-one |
+| Emergency + safety equipment | A$1,000 | A$2,500 | Day-one |
+| Consumables (opening stock) | A$3,000 | A$6,000 | Day-one |
+| **TOTAL EQUIPMENT (DAY-ONE ONLY, 2026-07-31 recompute)** | **A$42,690** | **A$96,530** | |
+| Spray tan booth | A$2,500 | A$6,000 | **PHASE 2** |
+| Cafe / partner area | A$2,000 | A$6,000 | **PHASE 2** |
+| Hire fleet (TENS + wellness items) | A$8,000 | A$18,000 | **PHASE 2** |
+| China sourced branded wellness items (stock) | A$5,000 | A$10,000 | **PHASE 2** |
+| **PHASE 2 SUBTOTAL (not in day-one budget)** | **A$17,500** | **A$40,000** | |
+| Fit-out (construction, NOT equipment — 2026-07-31 recompute, open-plan/curtain layout, 239sqm day-one) | A$162,452 | A$306,029 | Day-one |
+
+**If the 3rd backwash station is added (upper end of the 2-3 range Anthony specified), Hair station totals A$7,750-17,850 instead — add A$1,000-2,500 to the totals above.** Full itemised recompute for both the equipment quantity changes and the fit-out construction-type changes (walls vs curtains vs open-plan) is in `docs/floor-plan-concept.md`'s Room Schedule and Fit-Out Cost Estimate sections — this document's figures are sourced from that recompute, not derived independently twice.
 
 ---
 
@@ -67,7 +72,9 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 
 ---
 
-## 2. Spray Tan Booth
+## 2. Spray Tan Booth — PHASE 2 / POST-LAUNCH EXPANSION (2026-07-31, not day-one)
+
+> **Excluded from the day-one committed budget and every P&L figure, per Anthony's direct instruction.** This is a legitimate expansion idea kept on the roadmap, not a mistake — content retained in full below, not deleted. Do not cost this into the day-one Summary Budget total or the floor plan's day-one room schedule going forward.
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
@@ -82,25 +89,29 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 
 ---
 
-## 3. Nail Station (2 nail techs, 2 stations)
+## 3. Nail Station — 4 stations, corrected 2026-07-31 (was inconsistently listed as "2 nail techs, 2 stations" here vs 3 stations day-one in `floor-plan-concept.md` — that pre-existing gap is fixed at the same time as the new 4-station count)
+
+**2026-07-31 correction, per Anthony's direct instruction:** day-one nail sections increase to 4 (from the 3 already committed in `floor-plan-concept.md`'s room schedule — this document's own qty column had never been updated to match that 3-station commitment, a separate pre-existing gap fixed here too). Quantities below updated from 2 to 4 for all per-station items.
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
-| Nail table with built-in dust collector | 2 | A$500-800 | A$1,000-1,600 |
-| Local exhaust ventilation (LEV) unit (WorkSafe WA compliant) | 1 | A$1,500-4,000 installed | A$1,500-4,000 |
-| UV/LED nail lamp (professional) | 2 | A$100-200 | A$200-400 |
-| Client manicure chair | 2 | A$200-400 | A$400-800 |
-| Pedicure spa chair (pipeless for hygiene) | 2 | A$800-2,000 | A$1,600-4,000 |
-| Nail tool trolley | 2 | A$150-300 | A$300-600 |
+| Nail table with built-in dust collector | 4 | A$500-800 | A$2,000-3,200 |
+| Local exhaust ventilation (LEV) unit (WorkSafe WA compliant — shared system, sized for 4 stations) | 1 | A$1,500-4,000 installed | A$1,500-4,000 |
+| UV/LED nail lamp (professional) | 4 | A$100-200 | A$400-800 |
+| Client manicure chair | 4 | A$200-400 | A$800-1,600 |
+| Pedicure spa chair (pipeless for hygiene) | 4 | A$800-2,000 | A$3,200-8,000 |
+| Nail tool trolley | 4 | A$150-300 | A$600-1,200 |
 | Opening stock: 9-free gel polish (minimum 20 colours) | 20 colours | A$15-25 each | A$300-500 |
 | Opening stock: base coats, top coats, treatments | 1 lot | A$100-200 | A$100-200 |
 | Regular polish selection (20+ colours) | 20 | A$8-15 each | A$160-300 |
 | Nail files, buffers, tools (bulk) | 1 lot | A$150-250 | A$150-250 |
 | Disinfection solution + containers | 1 lot | A$80-150 | A$80-150 |
 | Nail dust masks (N95, box of 50) | 2 boxes | A$25-40 | A$50-80 |
-| **Nail station TOTAL** | | | **A$5,840-12,880** |
+| **Nail station TOTAL (4 stations)** | | | **A$9,340-20,280** (was A$5,840-12,880 at 2 stations) |
 
 **China sourcing opportunity:** Pedicure chairs (pipeless) available from China at A$500-1,500 vs A$800-2,000 locally. High quality available. Ensure CE certification and pipeless design (hygiene). See hire-purchase-china.md.
+
+**Headcount note:** 4 physical stations does NOT by itself require 4 nail technicians — see §Treatment Headcount note in the Changelog below. At the committed 12-client/day daily target, peak concurrent Nails demand is solver-verified at 2 — headcount stays at 2, unchanged, regardless of the extra station count (extra stations provide rostering flexibility and PM standalone-booking capacity, not a mandatory extra hire).
 
 ---
 
@@ -121,19 +132,24 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 
 ---
 
-## 5. Hair Station
+## 5. Hair Station — 4 styling chairs, corrected 2026-07-31 (was 2)
+
+**2026-07-31 correction, per Anthony's direct instruction:** day-one hairdressing chairs increase to 4 (from 2), with 2-3 wash/backwash stations (up from 1). Quantities below use 4 chairs and the midpoint of 2-3 backwash stations (2, conservative — see note).
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
-| Styling chair (hydraulic, wipe-clean) | 2 | A$500-1,200 | A$1,000-2,400 |
-| Backwash basin + client chair | 1 | A$1,000-2,500 | A$1,000-2,500 |
-| Professional hair dryer (Dyson, GHD, or equivalent) | 2 | A$250-500 | A$500-1,000 |
-| Straightening iron (professional) | 2 | A$150-300 | A$300-600 |
-| Salon mirror (lighted) | 1 | A$200-500 | A$200-500 |
-| Tool trolley + tool organiser | 2 | A$150-300 | A$300-600 |
+| Styling chair (hydraulic, wipe-clean) | 4 | A$500-1,200 | A$2,000-4,800 |
+| Backwash basin + client chair | 2 (range 2-3, see note) | A$1,000-2,500 | A$2,000-5,000 |
+| Professional hair dryer (Dyson, GHD, or equivalent) | 4 | A$250-500 | A$1,000-2,000 |
+| Straightening iron (professional) | 4 | A$150-300 | A$600-1,200 |
+| Salon mirror (lighted, full-length wall mirror behind 4 chairs) | 1 | A$200-500 | A$200-500 |
+| Tool trolley + tool organiser | 4 | A$150-300 | A$600-1,200 |
 | Opening stock: pregnancy-safe hair products (no harsh chemicals) | 1 lot | A$200-400 | A$200-400 |
 | Colour gowns + towels (set of 20) | 1 lot | A$150-250 | A$150-250 |
-| **Hair station TOTAL** | | | **A$3,650-8,250** |
+| **Hair station TOTAL (4 chairs, 2 backwash)** | | | **A$6,750-15,350** (was A$3,650-8,250 at 2 chairs, 1 backwash) |
+| **If 3rd backwash added (upper end of the 2-3 range)** | +1 | A$1,000-2,500 | **+A$1,000-2,500 (total A$7,750-17,850)** |
+
+**Headcount note:** 4 physical chairs does NOT by itself require 4 hairdressers — see §Treatment Headcount note in the Changelog below. At the committed 12-client/day daily target, peak concurrent Hair demand is solver-verified at 2 — headcount stays at 2, unchanged, regardless of the extra chair count (extra chairs provide rostering flexibility, PM standalone/walk-in capacity, and headroom toward the 14-client proven ceiling's 3-per-line requirement, not a mandatory extra hire at 12/day).
 
 ---
 
@@ -181,7 +197,9 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 
 ---
 
-## 7. Cafe and Partner Area
+## 7. Cafe and Partner Area — PHASE 2 / POST-LAUNCH EXPANSION (2026-07-31, not day-one)
+
+> **Excluded from the day-one committed budget and every P&L figure, per Anthony's direct instruction — same treatment as `profit-loss-tables.md`'s existing Ancillary Revenue exclusion.** Legitimate expansion idea kept on the roadmap, not a mistake — content retained in full below, not deleted.
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
@@ -211,7 +229,9 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 
 ---
 
-## 9. Hire Fleet (Items Hired to Customers)
+## 9. Hire Fleet (Items Hired to Customers) — PHASE 2 / POST-LAUNCH EXPANSION (2026-07-31, not day-one)
+
+> **Excluded from the day-one committed budget and every P&L figure, per Anthony's direct instruction.** The birth-prep hire fleet (TENS, birth balls, peanut balls, etc.) is a legitimate expansion idea kept on the roadmap, not a mistake — content and the annual hire revenue potential below are retained in full, not deleted. Do not cost this into the day-one Summary Budget total, and do not count the "Annual hire revenue potential" figures below into any committed P&L until this is actually launched.
 
 **TGA note:** TENS machines must be ARTG-registered. Purchase from Australian registered suppliers only.
 
@@ -234,7 +254,9 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 
 ---
 
-## 10. China Sourced Branded Stock (Retail + Hire Buffer)
+## 10. China Sourced Branded Stock (Retail + Hire Buffer) — PHASE 2 / POST-LAUNCH EXPANSION (2026-07-31, not day-one)
+
+> **Excluded from the day-one committed budget and every P&L figure, per Anthony's direct instruction.** This stock directly supports the Phase 2 Hire Fleet (§9) — not explicitly named in Anthony's instruction alongside spray tan/café/hire fleet, but grouped here as the same category since it's retail+hire-buffer stock for the same birth-prep item range, flagged as an inference rather than a literal instruction match. Content retained in full, not deleted.
 
 | Item | Qty | China landed cost | Total |
 |------|-----|-------------------|-------|
@@ -303,3 +325,11 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 ## Changelog
 
 **2026-07-19 (Phase 6 review)** — Reviewed this document properly against the Phase 6 spec (organize every item needed to open/operate — clinical equipment, furniture/fit-out, IT/software, consumables — by one-off capital vs recurring/consumable, with estimated unit costs and quantities). Found and fixed one genuine gap: **no Beauty Therapist/Brows equipment section existed**, despite Beauty Therapist/Brows being a staffed role (2 employed staff, `staff-plan.md`) with its own treatment room in the floor plan — only a single facial-products consumables line existed. Added new §5A with facial beds, wax heater, brow/lash tools, and consumables, and updated the Summary Budget total accordingly (A$49,300-114,700 → A$52,100-121,900). Added a Capital vs Recurring Summary section per the Phase 6 spec's explicit request for this classification, cross-referencing each existing category table rather than fully restructuring the document (which is already organized sensibly by room/service area — a wholesale reorganization would be more disruptive than useful). Corrected the Day 51 update banner: 3D scan is a future/Phase 2 consideration, not "removed from scope entirely," matching the reframe applied elsewhere this session (`hire-purchase-china.md`, `market-research-findings.md`, `business-plan.md`, `brand-guide.md`).
+
+**2026-07-31 (fixture-count correction + Phase 2 relabeling, per Anthony's direct instruction)** — Two changes:
+
+1. **Fixture counts corrected:** Nail stations 2/3 → **4** (§3; also fixed a pre-existing inconsistency where this document's own qty column said "2" while `floor-plan-concept.md`'s room schedule already committed to 3 day-one). Hairdressing chairs 2 → **4**, with 2-3 backwash stations (up from 1) (§5). New TOTAL EQUIPMENT (day-one only) A$42,690-96,530, up from the prior day-one-equivalent figure. **Headcount check, genuinely re-verified, not assumed:** 4 physical nail/hair stations does NOT change the required headcount at the 12-client committed daily target — peak concurrent Nails/Hair demand is solver-verified at 2 each (unaffected by furniture count, since concurrency is driven by client timing, not station availability). Nails and Hair headcount **stays at 2 each.** Extra stations provide rostering flexibility, PM standalone-booking capacity, and headroom toward the 14-client proven ceiling's 3-per-line requirement — not a mandatory extra hire at 12/day.
+
+2. **Phase 2 / post-launch expansion relabeling:** Spray tan booth (§2), Cafe/partner area (§7), Hire fleet (§9), and China sourced branded stock (§10, inferred as the same category) relabeled as Phase 2 — legitimate expansion ideas Anthony wants kept on the roadmap, not mistakes. Excluded from the day-one Summary Budget total and every P&L figure, same treatment already given to café/retail ancillary revenue in `profit-loss-tables.md`. Content fully retained, not deleted — each section now has a clear "PHASE 2" header so a future pass doesn't silently cost them into the day-one budget or delete them thinking they're out of scope entirely.
+
+Fit-out (construction) figure updated to A$162,452-306,029 (was A$150,000-280,000) reflecting both the sqm increase (4 hair chairs/4 nail stations, spray tan moved to Phase 2) and the wall-to-curtain/open-plan construction-type change — full itemised build in `docs/floor-plan-concept.md`'s Fit-Out Cost Estimate section, this document's figure is sourced from that recompute.

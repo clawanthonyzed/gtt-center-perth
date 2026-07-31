@@ -2,7 +2,7 @@
 
 **Version:** 1.0 | **Date:** 2026-07-01 (Empire Day 71)
 **Author:** Idea Lobster (CEO Advisory) + Cora (Clinical Coordinator) + Reed (Partnerships)
-**Status:** In progress — **WDP has replied (2026-07-28)**: Carole Rivers (Customer & Commercial Manager, Country) engaged, courier/GTT feasible with correct tubes, wants more vision detail + on-site pathology staff presence discussed. Anthony has a draft reply ready to send himself. PathWest and Clinipath emailed 2026-07-27, still awaiting reply. See `reed-partnerships.md` "Outreach Status" for the live tracker and `lab-outreach-2026-07-28.md` for the reply log.
+**Status:** In progress — **WDP has replied (2026-07-28)**: Carole Rivers (Customer & Commercial Manager, Country) engaged, courier/GTT feasible with correct tubes, wants more vision detail + on-site pathology staff presence discussed. **Anthony's reply is SENT (2026-07-31)** — full text filed at `wdp-reply-carole-2026-07-30.md`. PathWest and Clinipath emailed 2026-07-27, still awaiting reply (separate, unsent thread — see `VERIFICATION-TRACKER.md` item 4). See `reed-partnerships.md` "Outreach Status" for the live tracker and `lab-outreach-2026-07-28.md` for the reply log.
 
 ---
 
