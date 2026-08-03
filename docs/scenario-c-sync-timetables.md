@@ -75,7 +75,9 @@ Per Anthony's direct instruction ("we are aiming for 12 or max capacity for 2 ch
 
 ---
 
-### 0.5 Carole's Hard Clinical-Mark Constraint (Exact 60/120-Minute Draw Spacing) — SOLVED, 2026-08
+### 0.5 Carole's Hard Clinical-Mark Constraint (Exact 60/120-Minute Draw Spacing) — SUPERSEDED 2026-08, retained for trace
+
+> **SUPERSEDED, later in 2026-08 — this section's specific schedule spec (15-min Draw 1, asymmetric 35/45-min service caps, non-synchronized chair starts) is replaced by §0.6 below.** Anthony's follow-up instruction fixed four exact constraints not used here: synchronized chair starts (both chairs start each pair at the identical clock minute), every draw exactly 5 minutes (not 15 for Draw 1), and BOTH service windows fixed at 45 minutes (not one capped at 35). **Do not use this section's tables or the 35-min-cap finding going forward — see §0.6.** Kept below for trace only, since it documents a real intermediate step (proving the exact-clinical-mark constraint was solvable at all, before the further synchronized/5-min-draw refinement).
 
 **Background:** every schedule above (§0-§0.4) used the draw-event model's D2/D3 TOLERANCE windows (Draw 2 target X+75 ±5min, Draw 3 target X+135 ±10min) to dodge chair collisions — verified for internal double-booking/concurrency only, never checked against clinical tolerance for OGTT draw-timing accuracy. Carole Rivers' (WDP) full email chain includes her own indicative timetable for a ~14-patient morning, using **exact clinical marks**: Fasting (Draw 1) → **exactly 1-Hour** (Draw 2, X+60) → **exactly 2-Hour** (Draw 3, X+120), no flex mentioned, pairs starting roughly every 15 minutes. **Minor inconsistency noted, not silently resolved:** Carole's own narrative says "~14 patients," but her table lists 8 pairs = 16 patients — both her numbers are shown here, neither picked silently.
 
@@ -100,6 +102,103 @@ Per Anthony's direct instruction ("we are aiming for 12 or max capacity for 2 ch
 | 14 clients (hard-constraint, Carole's cadence) | 3 | 3 | 3 | **9** | **Exactly matches** the already-proven 14-client ceiling headcount (§0.4 above) — Carole's tighter ~15-min cadence does not add headcount beyond what was already found. |
 
 **Conclusion: Carole's ~15-minute pair-spacing cadence is workable at both 12 and 14 clients, on 2 chairs, without any additional treatment headcount beyond the already-committed/proven figures (8 at 12/day, 9 at 14/day).** The genuine trade-off is not headcount — it's the wellness-service-block constraint in (a) above: Package 2's "2×45min" combo needs adjusting (route the 45-min service to Slot 2, or accept a shortened first block) once the exact clinical marks are the design basis rather than the flexible-tolerance windows used throughout this document until now. See `docs/VERIFICATION-TRACKER.md` for the same finding logged canonically.
+
+---
+
+### 0.6 CANONICAL Synchronized-Pair Model — Exact 60/120-min Marks, 5-min Draws, Both Services Fixed at 45min
+
+**This is the current, canonical hard-constraint schedule — supersedes §0.5 entirely.** Four fixed constraints, per Anthony's direct instruction: (1) Chair A and Chair B start every pair at the identical clock minute — no offset. (2) Every draw (D1, D2, D3) is exactly 5 minutes, same duration for every client. (3) Draw 2 = own Draw 1 + exactly 60 min; Draw 3 = own Draw 1 + exactly 120 min — no exceptions. (4) Both Service 1 and Service 2 are exactly 45 minutes, same fixed length in both slots. Per-client shape: Draw1[0-5] → Service1[5-50] → 10-min buffer[50-60] → Draw2[60-65] → Service2[65-110] → 10-min buffer[110-120] → Draw3[120-125] — each 60-minute block is 5(draw)+45(service)+10(buffer)=60, exactly accounted for.
+
+**Method:** since both chairs are perfect mirrors (always starting together), feasibility reduces to a single chair's own client sequence being collision-free. Verified programmatically for every table below — zero double-bookings, checked pairwise across every client on each chair, not just adjacent ones.
+
+**Headcount is cadence-dependent, not fixed** — re-derived explicitly for every scenario below via sweep-line peak concurrency AND greedy first-fit assignment (both methods agree throughout). A tighter pair-to-pair gap packs more clients into a shorter morning but raises peak service overlap (more clients "in service" simultaneously), which raises headcount. A wider gap holds headcount down but takes longer.
+
+**Standard 12/14-client tables (pair gap = 23 minutes, chosen because it holds headcount at 8 for both volumes — the tightest gap that does):**
+
+*Sent to Carole via the clinic-operations overview document — these are the only two tables from this section shared externally.*
+
+| Client | Chair | Draw 1 | Service 1 | Draw 2 (+60min) | Service 2 | Draw 3 (+120min) |
+|---|---|---|---|---|---|---|
+| 1 | A | 07:00 | 07:05–07:50 | 08:00–08:05 | 08:05–08:50 | 09:00–09:05 |
+| 2 | B | 07:00 | 07:05–07:50 | 08:00–08:05 | 08:05–08:50 | 09:00–09:05 |
+| 3 | A | 07:23 | 07:28–08:13 | 08:23–08:28 | 08:28–09:13 | 09:23–09:28 |
+| 4 | B | 07:23 | 07:28–08:13 | 08:23–08:28 | 08:28–09:13 | 09:23–09:28 |
+| 5 | A | 07:46 | 07:51–08:36 | 08:46–08:51 | 08:51–09:36 | 09:46–09:51 |
+| 6 | B | 07:46 | 07:51–08:36 | 08:46–08:51 | 08:51–09:36 | 09:46–09:51 |
+| 7 | A | 08:09 | 08:14–08:59 | 09:09–09:14 | 09:14–09:59 | 10:09–10:14 |
+| 8 | B | 08:09 | 08:14–08:59 | 09:09–09:14 | 09:14–09:59 | 10:09–10:14 |
+| 9 | A | 08:32 | 08:37–09:22 | 09:32–09:37 | 09:37–10:22 | 10:32–10:37 |
+| 10 | B | 08:32 | 08:37–09:22 | 09:32–09:37 | 09:37–10:22 | 10:32–10:37 |
+| 11 | A | 08:55 | 09:00–09:45 | 09:55–10:00 | 10:00–10:45 | 10:55–11:00 |
+| 12 | B | 08:55 | 09:00–09:45 | 09:55–10:00 | 10:00–10:45 | 10:55–11:00 |
+
+12-client headcount: **8 total (4 Massage+Beauty pool + 2 Nails + 2 Hair).**
+
+14-client table adds two more rows at the same g=23 cadence: Client 13/14, Chair A/B, Draw1 09:18, Service1 09:23–10:08, Draw2 10:18–10:23, Service2 10:23–11:08, Draw3 11:18–11:23. 14-client headcount: **8 total (same split — 4+2+2), better than the previously-assumed 9.**
+
+**Below this line: Anthony's internal planning scenarios only — NOT part of what was sent to Carole, not for external use.**
+
+#### Scenario A — 08:00 Start, Same g=23 Cadence, Running to the 10:30 Guidance Limit
+
+Shifted start, same four constraints, same 23-min cadence. Window (last Draw1 strictly before 10:30, from 08:00) = 149 minutes. **7 pairs (14 clients) fit** — last Draw 1 at 10:18, still inside the 10:30 limit. Headcount unchanged at **8** (translation-invariant — same relative pattern, just shifted in clock time, so the same collision-freedom and concurrency findings carry over exactly).
+
+| Client | Chair | Draw 1 | Service 1 | Draw 2 (+60min) | Service 2 | Draw 3 (+120min) |
+|---|---|---|---|---|---|---|
+| 1 | A | 08:00 | 08:05–08:50 | 09:00–09:05 | 09:05–09:50 | 10:00–10:05 |
+| 2 | B | 08:00 | 08:05–08:50 | 09:00–09:05 | 09:05–09:50 | 10:00–10:05 |
+| 3 | A | 08:23 | 08:28–09:13 | 09:23–09:28 | 09:28–10:13 | 10:23–10:28 |
+| 4 | B | 08:23 | 08:28–09:13 | 09:23–09:28 | 09:28–10:13 | 10:23–10:28 |
+| 5 | A | 08:46 | 08:51–09:36 | 09:46–09:51 | 09:51–10:36 | 10:46–10:51 |
+| 6 | B | 08:46 | 08:51–09:36 | 09:46–09:51 | 09:51–10:36 | 10:46–10:51 |
+| 7 | A | 09:09 | 09:14–09:59 | 10:09–10:14 | 10:14–10:59 | 11:09–11:14 |
+| 8 | B | 09:09 | 09:14–09:59 | 10:09–10:14 | 10:14–10:59 | 11:09–11:14 |
+| 9 | A | 09:32 | 09:37–10:22 | 10:32–10:37 | 10:37–11:22 | 11:32–11:37 |
+| 10 | B | 09:32 | 09:37–10:22 | 10:32–10:37 | 10:37–11:22 | 11:32–11:37 |
+| 11 | A | 09:55 | 10:00–10:45 | 10:55–11:00 | 11:00–11:45 | 11:55–12:00 |
+| 12 | B | 09:55 | 10:00–10:45 | 10:55–11:00 | 11:00–11:45 | 11:55–12:00 |
+| 13 | A | 10:18 | 10:23–11:08 | 11:18–11:23 | 11:23–12:08 | 12:18–12:23 |
+| 14 | B | 10:18 | 10:23–11:08 | 11:18–11:23 | 11:23–12:08 | 12:18–12:23 |
+
+#### Scenario B — True Maximum Capacity, 07:00–10:30, Under the Corrected Constraints (the important one)
+
+**The old "14-client proven ceiling" was derived under the previous draw-timing model (15-min Draw 1, tolerance windows) and has never held under the corrected constraints.** Full search, not cadence arithmetic: greedy adaptive admission (try to admit a new pair as early as possible, at 1-minute resolution, skip only if it collides with an already-admitted client's draws on that chair), swept across multiple resolutions, verified programmatically pairwise across every admitted client.
+
+**True maximum: 18 pairs = 36 clients.** Verified: zero collisions across all 18×17/2=153 pair-comparisons, both chairs. The schedule is bursty, not uniform: 12 pairs (24 clients) admit in a tight cluster from 07:00 to 07:55 (every 5 minutes), then the chair is fully occupied processing that cluster's Draw 2s (08:00-09:00, every 5-min slot taken) and Draw 3s (09:00-10:00, every 5-min slot taken) — zero new admissions possible in that ~2-hour stretch — then a second cluster of 6 pairs (12 clients) admits from 10:00 to 10:25.
+
+**Headcount re-derived explicitly, not assumed — and it does NOT hold at 8/9:** Massage+Beauty pool peak = 9, Nails peak = 9, Hair peak = 9 (sweep-line and greedy first-fit agree). **Total treatment headcount: 27** — more than triple the committed 8.
+
+**Revenue/cost implications, same method as the 12-vs-14 comparison:** extra revenue vs the 12-client baseline = 24 extra clients × A$250 × 22 days = **+A$132,000/month**. Extra labor (19 additional heads: +5 Massage+Beauty pool, +7 Nails, +7 Hair) = **+A$96,687.83/month**. Net, on labor alone: **+A$35,312.17/month better than the 12-client baseline.**
+
+**This labor-only comparison is not the real constraint — flagged prominently, not glossed over.** `docs/floor-plan-concept.md`'s committed day-one floor plan has only 4 nail stations, 4 hairdressing chairs, and 2 Massage + 2 Beauty rooms — nowhere near the 9 stations per line this 36-client schedule would need simultaneously. **The true mathematical draw-timing maximum is real and verified, but is not achievable within the venue's planned physical footprint without a floor-plan rebuild far beyond anything currently costed.** Presented as a theoretical ceiling for awareness, not a recommended operating point.
+
+*(Full 36-client table not reproduced here — 18 pairs at the specific bursty admission times above; available on request if needed for further planning.)*
+
+#### Scenario C — Same Model, 25-Minute Cadence (Rounder Number, Looser Than the Tightest-Found 23 Minutes)
+
+Confirmed, not assumed: 25 minutes is looser than the tightest collision-free gap (23), so collision-freedom holds — verified programmatically for every table below.
+
+**12-equivalent (6 pairs, g=25) — headcount 8 (4+2+2):**
+
+| Client | Chair | Draw 1 | Service 1 | Draw 2 (+60min) | Service 2 | Draw 3 (+120min) |
+|---|---|---|---|---|---|---|
+| 1 | A | 07:00 | 07:05–07:50 | 08:00–08:05 | 08:05–08:50 | 09:00–09:05 |
+| 2 | B | 07:00 | 07:05–07:50 | 08:00–08:05 | 08:05–08:50 | 09:00–09:05 |
+| 3 | A | 07:25 | 07:30–08:15 | 08:25–08:30 | 08:30–09:15 | 09:25–09:30 |
+| 4 | B | 07:25 | 07:30–08:15 | 08:25–08:30 | 08:30–09:15 | 09:25–09:30 |
+| 5 | A | 07:50 | 07:55–08:40 | 08:50–08:55 | 08:55–09:40 | 09:50–09:55 |
+| 6 | B | 07:50 | 07:55–08:40 | 08:50–08:55 | 08:55–09:40 | 09:50–09:55 |
+| 7 | A | 08:15 | 08:20–09:05 | 09:15–09:20 | 09:20–10:05 | 10:15–10:20 |
+| 8 | B | 08:15 | 08:20–09:05 | 09:15–09:20 | 09:20–10:05 | 10:15–10:20 |
+| 9 | A | 08:40 | 08:45–09:30 | 09:40–09:45 | 09:45–10:30 | 10:40–10:45 |
+| 10 | B | 08:40 | 08:45–09:30 | 09:40–09:45 | 09:45–10:30 | 10:40–10:45 |
+| 11 | A | 09:05 | 09:10–09:55 | 10:05–10:10 | 10:10–10:55 | 11:05–11:10 |
+| 12 | B | 09:05 | 09:10–09:55 | 10:05–10:10 | 10:10–10:55 | 11:05–11:10 |
+
+**14-equivalent (7 pairs, g=25) — headcount 8 (4+2+2):** adds Client 13/14, Draw1 09:30, Service1 09:35–10:20, Draw2 10:30–10:35, Service2 10:35–11:20, Draw3 11:30–11:35.
+
+**Scenario C's own maximum (uniform 25-min cadence, full window):** 9 pairs = **18 clients**, last pair Draw1 10:20 (before 10:30). Headcount still **8 (4+2+2)** — unlike Scenario B's bursty 36-client maximum, the uniform-cadence approach never triggers the headcount spike, because arrivals never cluster.
+
+**Trade-off vs Scenario B, quantified:** 36 (Scenario B, bursty adaptive) − 18 (Scenario C, uniform 25-min) = **18 fewer clients** at the wider, rounder, easier-to-communicate cadence — but Scenario C's 18-client maximum needs no extra headcount at all (still 8), while Scenario B's 36-client maximum needs 27. The rounder cadence trades raw capacity for a much simpler staffing story.
 
 ---
 
@@ -167,3 +266,5 @@ The only lever not yet closed off by the solver: **whether a non-phlebotomist as
 **2026-07-31 (later same day — Anthony's decision: 14 is a PROVEN CEILING, 12 stays the committed daily target)** — Retitled §0.4 to reflect the final framing. Anthony: "have 14 as the ceiling and prove it. 12 clients a day is what we will aim for each day." Completed the proof: full whole-venture P&L (+A$36,726.23/month, `profit-loss-tables.md`) and a second independent headcount check (greedy first-fit assignment, agrees exactly with the sweep-line method). 12 clients/day (§0) remains the committed daily operating target throughout this document, unchanged.
 
 **2026-08 (later — Carole's hard clinical-mark constraint solved, added as new §0.5)** — Per Carole's full email chain (her own indicative timetable uses exact 60/120-min post-Draw-1 marks, no flex), built a dedicated hard-constraint solver (zero tolerance on Draw2/Draw3 timing) and re-ran both the draw-timing feasibility check and the wellness-service-block fit check at 12 and 14 clients. **Draw-timing: both 12 and 14 remain achievable** — the resulting schedule naturally converges to Carole's own ~15-min pair cadence, a genuine cross-check. **Service-block fit: Package 1 unaffected; Package 2 works if the 45-min service always routes to Slot 2 (booking-system rule); the pure "2×45min" combo genuinely cannot fit both blocks at full length — one must shrink to ≤35min, a disclosed trade-off, not hidden.** Tested Carole's ~15-min cadence against treatment-line peak concurrency using the established sweep-line + greedy first-fit methods: **headcount unchanged at both volumes (8 at 12/day, 9 at 14/day)** — the per-line split shifts slightly at 12/day (Hair 3 not 2, Massage+Beauty pool 3 not 4) but the total headcount does not increase. Logged the same finding in `docs/VERIFICATION-TRACKER.md`.
+
+**2026-08 (later still — synchronized-pair/5-min-draw/45+45-service model supersedes §0.5 entirely; added as canonical §0.6; three internal planning scenarios added)** — Anthony fixed four exact constraints, superseding the §0.5 spec: synchronized chair starts, every draw exactly 5 minutes, Draw2/Draw3 at exact +60/+120min, both service windows fixed at 45 minutes (5+45+10 buffer = 60min per block, exactly accounted for). Since both chairs always start together, feasibility reduces to one chair's own sequence being collision-free — verified programmatically throughout. **Standard 12/14-client tables at a 23-minute pair cadence (headcount 8 at both volumes, the tightest gap that holds headcount there) — these two tables are what went into the client-facing clinic-operations overview sent to Carole, nothing else in §0.6.** Three additional scenarios added, explicitly Anthony's internal planning only, not shared externally: **Scenario A** (08:00 start, same cadence — 14 clients fit before 10:30, headcount unchanged at 8, translation-invariant). **Scenario B** (true maximum search, greedy adaptive admission, verified pairwise — **36 clients (18 pairs), a bursty two-cluster schedule, materially higher than the old 14-client "proven ceiling," which never held under these corrected constraints**; headcount re-derived at **27**, more than triple the committed 8; net financial upside on labor alone (+A$35,312.17/month) but flagged prominently that the venue's committed floor plan has nowhere near enough physical stations — 4 nail/4 hair/2+2 massage-beauty vs the 9-per-line this schedule needs — making this a theoretical ceiling, not an achievable operating point without a floor-plan rebuild). **Scenario C** (uniform 25-min cadence, confirmed looser than the tightest-found 23min — 12/14-equivalent tables plus its own maximum of 18 clients, headcount holding at 8 throughout; quantified trade-off vs Scenario B: 18 fewer clients for a much simpler, headcount-neutral cadence).
