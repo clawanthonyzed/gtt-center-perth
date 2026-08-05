@@ -2,9 +2,9 @@
 
 **Purpose:** one consolidated document covering every schedule scenario discussed across this repo's recent work, side by side, so the full picture is visible in one place instead of pieced together from separate replies. All computation pulled from or cross-checked against `scenario-c-sync-timetables.md` and this engagement's established solvers (`tools/draw-event-scheduler.py` for the tolerance-window model; the synchronized-pair/5-min-draw solver for the corrected model) — nothing here is a fresh, unverified estimate.
 
-**Carole-facing vs internal-only, stated plainly per scenario:** Scenarios 3 and 4 are what was sent to Carole (via the clinic-operations overview document). Scenarios 1, 2, 5, 6, and 7 are internal planning only — never shared externally.
+**Carole-facing vs internal-only, stated plainly per scenario — UPDATED 2026-08, later still, per Anthony's direct edit:** Scenarios 3 and 4 (23-minute cadence) are **no longer** what was sent to Carole — superseded for that specific purpose, kept as valid internal reference. **The current Carole-facing pair is Scenario 7c (07:00 start, g=25, 18 clients — "Table 1") and a new 08:00-start/g=25/12-client variant ("Table 2", added below as Scenario 8, not previously in this document's numbered set).** Everything else (1, 2, 5, 6, 7a, 7b) remains internal planning only — never shared externally.
 
-**Cross-referenced from:** `docs/CURRENT-STATE.md` §1 and `docs/scenario-c-sync-timetables.md` (both point here for the full side-by-side picture; this document does not replace either as the canonical source for its own respective model).
+**Cross-referenced from:** `docs/CURRENT-STATE.md` §1 and `docs/scenario-c-sync-timetables.md` (both point here for the full side-by-side picture; this document does not replace either as the canonical source for its own respective model). See `scenario-c-sync-timetables.md` §0.6a for the same Carole-facing swap recorded canonically.
 
 ---
 
@@ -14,13 +14,14 @@
 |---|---|---|---|---|---|---|---|
 | 1 | Original committed (historical) | Tolerance-window, 40-min cadence | 12 | 8 (4 MB + 2 N + 2 H — old unpooled-language framing, now "dual-qualified required by peak overlap") | 10 | No — historical only | Superseded, kept for trace |
 | 2 | Original 14-client ceiling (historical) | Tolerance-window, bursty | 14 | 9 (3 MB + 3 N + 3 H) | 11 | No — historical only | Superseded, kept for trace |
-| 3 | Corrected 12-client (current) | Synchronized, 5-min draws, exact 60/120, 45+45 service, g=23 | 12 | 8 (4 MB + 2 N + 2 H) | 10 | **Yes** | **Achievable as-is, current floor plan/staffing** |
-| 4 | Corrected 14-client (current) | Same, g=23 | 14 | 8 (4 MB + 2 N + 2 H) | 10 | **Yes** | **Achievable as-is, current floor plan/staffing** |
+| 3 | Corrected 12-client | Synchronized, 5-min draws, exact 60/120, 45+45 service, g=23 | 12 | 8 (4 MB + 2 N + 2 H) | 10 | **No longer — superseded for Carole, kept as internal reference** | Achievable as-is, current floor plan/staffing |
+| 4 | Corrected 14-client | Same, g=23 | 14 | 8 (4 MB + 2 N + 2 H) | 10 | **No longer — superseded for Carole, kept as internal reference** | Achievable as-is, current floor plan/staffing |
 | 5 | Scenario A (08:00 start) | Same, g=23, shifted start | 14 | 8 (4 MB + 2 N + 2 H) | 10 | No — internal only | Achievable as-is, no floor-plan/staffing change |
 | 6 | Scenario B (true maximum) | Same, bursty adaptive admission | 36 | 27 (9 MB + 9 N + 9 H) | 29 | No — internal only | **NOT achievable within the current floor plan or staffing — requires a floor-plan redesign (9 stations/line vs the committed 4 nail/4 hair/2+2 massage-beauty) and roughly 3.4× the current treatment headcount** |
 | 7a | Scenario C, 12-equivalent | Same, g=25 | 12 | 8 (4 MB + 2 N + 2 H) | 10 | No — internal only | Achievable as-is, no floor-plan/staffing change |
 | 7b | Scenario C, 14-equivalent | Same, g=25 | 14 | 8 (4 MB + 2 N + 2 H) | 10 | No — internal only | Achievable as-is, no floor-plan/staffing change |
-| 7c | Scenario C, own maximum | Same, g=25, full window | 18 | 8 (4 MB + 2 N + 2 H) | 10 | No — internal only | Achievable as-is, no floor-plan/staffing change |
+| 7c | Scenario C, own maximum ("Table 1") | Same, g=25, full window, 07:00 start | 18 | 8 (4 MB + 2 N + 2 H) | 10 | **Yes — current, "Table 1"** | **Achievable as-is, current floor plan/staffing** |
+| 8 | New: 08:00 start, g=25 ("Table 2") | Same, g=25, shifted start | 12 | 8 (4 MB + 2 N + 2 H) | 10 | **Yes — current, "Table 2"** | **Achievable as-is, current floor plan/staffing** |
 
 ---
 
@@ -113,9 +114,9 @@
 
 ---
 
-## 3. Corrected 12-Client Model (Carole-Facing, Current)
+## 3. Corrected 12-Client Model (No Longer Carole-Facing — Superseded for That Purpose, Kept as Internal Reference)
 
-**Model: synchronized chair starts, every draw exactly 5 minutes, Draw 2/3 at exact +60/+120min, both services fixed at 45 minutes, 23-minute pair cadence, 07:00 start.** Pulled from `scenario-c-sync-timetables.md` §0.6. **This is one of the two tables sent to Carole via the clinic-operations overview document.**
+**Model: synchronized chair starts, every draw exactly 5 minutes, Draw 2/3 at exact +60/+120min, both services fixed at 45 minutes, 23-minute pair cadence, 07:00 start.** Pulled from `scenario-c-sync-timetables.md` §0.6. **UPDATED 2026-08, later still: this is no longer sent to Carole — Anthony replaced this 23-min/12-14-client pair with the 25-min cadence pair (Scenario 7c "Table 1" and new Scenario 8 "Table 2" below). Still a valid, verified schedule, kept here for internal reference.**
 
 ### Client / Chair Timetable
 
@@ -158,9 +159,9 @@ Phlebotomist A (Chair A): draws for clients 1,3,5,7,9,11. Phlebotomist B (Chair 
 
 ---
 
-## 4. Corrected 14-Client Model (Carole-Facing, Current)
+## 4. Corrected 14-Client Model (No Longer Carole-Facing — Superseded for That Purpose, Kept as Internal Reference)
 
-Same constraints as Scenario 3, same 23-min cadence, extended by one pair. **The second of the two tables sent to Carole.**
+Same constraints as Scenario 3, same 23-min cadence, extended by one pair. **UPDATED 2026-08, later still: no longer sent to Carole — see Scenario 7c ("Table 1") and Scenario 8 ("Table 2") below for the current Carole-facing pair.**
 
 ### Client / Chair Timetable
 
@@ -377,7 +378,9 @@ Same as 7a plus Client 13/14 (Chair A/B): Draw1 09:30, Service1 09:35–10:20, D
 
 **Headcount: 8 treatment (4+2+2) + 2 phlebotomists = 10 total — same as 7a.**
 
-### 7c. Scenario C's Own Maximum (9 Pairs, 18 Clients, g=25, Full Window)
+### 7c. Scenario C's Own Maximum (9 Pairs, 18 Clients, g=25, Full Window) — **CAROLE-FACING, CURRENT — "Table 1"**
+
+**UPDATED 2026-08, later still: this table is now one of the two tables actually sent to Carole**, per Anthony's direct edit to the reply email — referred to as "Table 1" (07:00 start, 25-min cadence, running to the 10:30 guidance limit).
 
 Adds clients 15/16 (Draw1 09:55) and 17/18 (Draw1 10:20, last Draw1 before 10:30) to the 7b sequence. **Staff addition:** MB1 also takes C17-Massage 10:25–11:10 and C17-Beauty 11:25–12:10; MB2 also takes C15-Massage 10:00–10:45 and C15-Beauty 11:00–11:45; N1 also takes C18-Nails 10:25–11:10; N2 also takes C16-Nails 10:00–10:45; H1 also takes C18-Hair 11:25–12:10; H2 also takes C16-Hair 11:00–11:45.
 
@@ -385,7 +388,44 @@ Adds clients 15/16 (Draw1 09:55) and 17/18 (Draw1 10:20, last Draw1 before 10:30
 
 **Trade-off vs Scenario B, quantified: 36 (Scenario B) − 18 (Scenario C's own maximum) = 18 fewer clients** at the wider, rounder, easier-to-communicate cadence — but Scenario C's 18-client maximum needs zero extra headcount, while Scenario B's 36-client maximum needs 19 additional treatment staff (27 total).
 
-**Verdict (all three sub-cases): achievable as-is, within the current committed floor plan and 8-person treatment headcount. No changes needed at 12, 14, or even 18 clients under this cadence.**
+**Verdict (7a and 7b): achievable as-is, within the current committed floor plan and 8-person treatment headcount, internal reference only. Verdict (7c, "Table 1"): achievable as-is, current floor plan/staffing — CURRENT CAROLE-FACING TABLE.**
+
+---
+
+## 8. New: 08:00 Start, 25-Minute Cadence, Running to the 10:30 Guidance Limit — **CAROLE-FACING, CURRENT — "Table 2"**
+
+**Added 2026-08, later still, per Anthony's direct edit to the Carole reply — the second of the two current Carole-facing tables ("Table 2").** Not previously in this document's numbered set — Scenario A used 08:00 start but at 23-min cadence (Scenario 5 above); this is a fresh computation at 25-min cadence. Window (last Draw 1 strictly before 10:30, from 08:00) = 149 minutes. **12 clients (6 pairs) fit** — last Draw 1 at 10:05. Verified programmatically, zero collisions on both chairs.
+
+### Client / Chair Timetable
+
+| Client | Chair | Draw 1 | Service 1 | Draw 2 (+60min) | Service 2 | Draw 3 (+120min) |
+|---|---|---|---|---|---|---|
+| 1 | A | 08:00 | 08:05–08:50 | 09:00–09:05 | 09:05–09:50 | 10:00–10:05 |
+| 2 | B | 08:00 | 08:05–08:50 | 09:00–09:05 | 09:05–09:50 | 10:00–10:05 |
+| 3 | A | 08:25 | 08:30–09:15 | 09:25–09:30 | 09:30–10:15 | 10:25–10:30 |
+| 4 | B | 08:25 | 08:30–09:15 | 09:25–09:30 | 09:30–10:15 | 10:25–10:30 |
+| 5 | A | 08:50 | 08:55–09:40 | 09:50–09:55 | 09:55–10:40 | 10:50–10:55 |
+| 6 | B | 08:50 | 08:55–09:40 | 09:50–09:55 | 09:55–10:40 | 10:50–10:55 |
+| 7 | A | 09:15 | 09:20–10:05 | 10:15–10:20 | 10:20–11:05 | 11:15–11:20 |
+| 8 | B | 09:15 | 09:20–10:05 | 10:15–10:20 | 10:20–11:05 | 11:15–11:20 |
+| 9 | A | 09:40 | 09:45–10:30 | 10:40–10:45 | 10:45–11:30 | 11:40–11:45 |
+| 10 | B | 09:40 | 09:45–10:30 | 10:40–10:45 | 10:45–11:30 | 11:40–11:45 |
+| 11 | A | 10:05 | 10:10–10:55 | 11:05–11:10 | 11:10–11:55 | 12:05–12:10 |
+| 12 | B | 10:05 | 10:10–10:55 | 11:05–11:10 | 11:10–11:55 | 12:05–12:10 |
+
+### Staff Timetable
+
+**Massage+Beauty pool:** MB1: C1-Massage 08:05–08:50, C5-Massage 08:55–09:40, C9-Massage 09:45–10:30, C9-Beauty 10:45–11:30. MB2: C3-Massage 08:30–09:15, C7-Massage 09:20–10:05, C11-Massage 10:10–10:55, C11-Beauty 11:10–11:55. MB3: C1-Beauty 09:05–09:50, C5-Beauty 09:55–10:40. MB4: C3-Beauty 09:30–10:15, C7-Beauty 10:20–11:05.
+
+**Nails:** N1: C2 08:05–08:50, C6 08:55–09:40, C10 09:45–10:30. N2: C4 08:30–09:15, C8 09:20–10:05, C12 10:10–10:55.
+
+**Hair:** H1: C2 09:05–09:50, C6 09:55–10:40, C10 10:45–11:30. H2: C4 09:30–10:15, C8 10:20–11:05, C12 11:10–11:55.
+
+Phlebotomist A: draws for clients 1,3,5,7,9,11. Phlebotomist B: draws for clients 2,4,6,8,10,12.
+
+**Headcount: 8 treatment (4 Massage+Beauty pool + 2 Nails + 2 Hair) + 2 phlebotomists = 10 total — identical headcount to Table 1 ("7c"), fewer clients (12 vs 18) because the later start leaves less room before the 10:30 cutoff.**
+
+**Verdict: achievable as-is, current floor plan/staffing — CURRENT CAROLE-FACING TABLE.**
 
 ---
 
@@ -403,3 +443,5 @@ Adds clients 15/16 (Draw1 09:55) and 17/18 (Draw1 10:20, last Draw1 before 10:30
 ## Changelog
 
 **2026-08 (created)** — Assembled per Anthony's/the coordinator's direct instruction: all 7 scenarios discussed across this engagement's recent work, side by side, in one document. Client tables pulled directly where they already existed in `scenario-c-sync-timetables.md`; full staff rosters generated for every scenario (the piece most often missing before), using the same sweep-line + greedy first-fit methods established throughout this engagement — no new methodology introduced. Cross-referenced from `docs/CURRENT-STATE.md` §1 and `docs/scenario-c-sync-timetables.md`.
+
+**2026-08 (later still — Carole-facing tables swapped, per Anthony's direct edit)** — Scenarios 3 and 4 (23-minute cadence) are no longer what was sent to Carole — relabelled "superseded for that purpose, kept as internal reference," not deleted. **Scenario 7c (07:00 start, g=25, 18 clients) is now Carole-facing, "Table 1."** Added new **Scenario 8** (08:00 start, g=25, 12 clients, "Table 2") — a genuinely new computation, not previously in this document's numbered set, verified programmatically zero-collision, headcount confirmed at 8 treatment + 2 phlebotomists = 10 total, same as every other configuration in this document. Updated the Quick Comparison table's "Carole-facing?" column and the top-of-document framing paragraph to match. Propagated the same correction to `docs/wdp-reply-carole-2026-08-03.md` and `docs/scenario-c-sync-timetables.md` §0.6a.

@@ -117,7 +117,7 @@ Per Anthony's direct instruction ("we are aiming for 12 or max capacity for 2 ch
 
 **Standard 12/14-client tables (pair gap = 23 minutes, chosen because it holds headcount at 8 for both volumes — the tightest gap that does):**
 
-*Sent to Carole via the clinic-operations overview document — these are the only two tables from this section shared externally.*
+> **SUPERSEDED for Carole-facing purposes, 2026-08, later still — these two tables are NO LONGER what was sent to Carole.** Anthony replaced them with the 25-minute-cadence pair (07:00-start/18-client and 08:00-start/12-client — see §0.6a immediately below the 14-client table) in the actual clinic-operations overview sent to Carole. The 23-minute/12-14-client tables below remain valid, verified schedules — kept here for reference and as an internal option — but are no longer the Carole-facing pair.
 
 | Client | Chair | Draw 1 | Service 1 | Draw 2 (+60min) | Service 2 | Draw 3 (+120min) |
 |---|---|---|---|---|---|---|
@@ -137,6 +137,58 @@ Per Anthony's direct instruction ("we are aiming for 12 or max capacity for 2 ch
 12-client headcount: **8 total (4 Massage+Beauty pool + 2 Nails + 2 Hair).**
 
 14-client table adds two more rows at the same g=23 cadence: Client 13/14, Chair A/B, Draw1 09:18, Service1 09:23–10:08, Draw2 10:18–10:23, Service2 10:23–11:08, Draw3 11:18–11:23. 14-client headcount: **8 total (same split — 4+2+2), better than the previously-assumed 9.**
+
+### 0.6a CURRENT CAROLE-FACING TABLES (25-minute cadence) — these are the two tables actually sent
+
+**Anthony replaced the 23-min/12-14-client pair above with this 25-minute-cadence pair for the actual clinic-operations overview sent to Carole.** Both tables verified programmatically — zero collisions on both chairs.
+
+**Table 1 — 07:00 start, 25-min cadence, running to the 10:30 guidance limit (18 clients, 9 pairs).** Identical to Scenario C's "own maximum" (§0.6 Scenario C sub-case, below) — same parameters exactly.
+
+| Client | Chair | Draw 1 | Service 1 | Draw 2 (+60min) | Service 2 | Draw 3 (+120min) |
+|---|---|---|---|---|---|---|
+| 1 | A | 07:00 | 07:05-07:50 | 08:00-08:05 | 08:05-08:50 | 09:00-09:05 |
+| 2 | B | 07:00 | 07:05-07:50 | 08:00-08:05 | 08:05-08:50 | 09:00-09:05 |
+| 3 | A | 07:25 | 07:30-08:15 | 08:25-08:30 | 08:30-09:15 | 09:25-09:30 |
+| 4 | B | 07:25 | 07:30-08:15 | 08:25-08:30 | 08:30-09:15 | 09:25-09:30 |
+| 5 | A | 07:50 | 07:55-08:40 | 08:50-08:55 | 08:55-09:40 | 09:50-09:55 |
+| 6 | B | 07:50 | 07:55-08:40 | 08:50-08:55 | 08:55-09:40 | 09:50-09:55 |
+| 7 | A | 08:15 | 08:20-09:05 | 09:15-09:20 | 09:20-10:05 | 10:15-10:20 |
+| 8 | B | 08:15 | 08:20-09:05 | 09:15-09:20 | 09:20-10:05 | 10:15-10:20 |
+| 9 | A | 08:40 | 08:45-09:30 | 09:40-09:45 | 09:45-10:30 | 10:40-10:45 |
+| 10 | B | 08:40 | 08:45-09:30 | 09:40-09:45 | 09:45-10:30 | 10:40-10:45 |
+| 11 | A | 09:05 | 09:10-09:55 | 10:05-10:10 | 10:10-10:55 | 11:05-11:10 |
+| 12 | B | 09:05 | 09:10-09:55 | 10:05-10:10 | 10:10-10:55 | 11:05-11:10 |
+| 13 | A | 09:30 | 09:35-10:20 | 10:30-10:35 | 10:35-11:20 | 11:30-11:35 |
+| 14 | B | 09:30 | 09:35-10:20 | 10:30-10:35 | 10:35-11:20 | 11:30-11:35 |
+| 15 | A | 09:55 | 10:00-10:45 | 10:55-11:00 | 11:00-11:45 | 11:55-12:00 |
+| 16 | B | 09:55 | 10:00-10:45 | 10:55-11:00 | 11:00-11:45 | 11:55-12:00 |
+| 17 | A | 10:20 | 10:25-11:10 | 11:20-11:25 | 11:25-12:10 | 12:20-12:25 |
+| 18 | B | 10:20 | 10:25-11:10 | 11:20-11:25 | 11:25-12:10 | 12:20-12:25 |
+
+**Table 1 headcount: 4 Massage+Beauty pool + 2 Nails + 2 Hair = 8 treatment, + 2 phlebotomists = 10 total.**
+
+**Table 2 — 08:00 start, 25-min cadence, running to the 10:30 guidance limit (12 clients, 6 pairs). New computation, not previously logged in this file.** Window (last Draw 1 strictly before 10:30, from 08:00) = 149 minutes. Verified programmatically, zero collisions on both chairs.
+
+| Client | Chair | Draw 1 | Service 1 | Draw 2 (+60min) | Service 2 | Draw 3 (+120min) |
+|---|---|---|---|---|---|---|
+| 1 | A | 08:00 | 08:05-08:50 | 09:00-09:05 | 09:05-09:50 | 10:00-10:05 |
+| 2 | B | 08:00 | 08:05-08:50 | 09:00-09:05 | 09:05-09:50 | 10:00-10:05 |
+| 3 | A | 08:25 | 08:30-09:15 | 09:25-09:30 | 09:30-10:15 | 10:25-10:30 |
+| 4 | B | 08:25 | 08:30-09:15 | 09:25-09:30 | 09:30-10:15 | 10:25-10:30 |
+| 5 | A | 08:50 | 08:55-09:40 | 09:50-09:55 | 09:55-10:40 | 10:50-10:55 |
+| 6 | B | 08:50 | 08:55-09:40 | 09:50-09:55 | 09:55-10:40 | 10:50-10:55 |
+| 7 | A | 09:15 | 09:20-10:05 | 10:15-10:20 | 10:20-11:05 | 11:15-11:20 |
+| 8 | B | 09:15 | 09:20-10:05 | 10:15-10:20 | 10:20-11:05 | 11:15-11:20 |
+| 9 | A | 09:40 | 09:45-10:30 | 10:40-10:45 | 10:45-11:30 | 11:40-11:45 |
+| 10 | B | 09:40 | 09:45-10:30 | 10:40-10:45 | 10:45-11:30 | 11:40-11:45 |
+| 11 | A | 10:05 | 10:10-10:55 | 11:05-11:10 | 11:10-11:55 | 12:05-12:10 |
+| 12 | B | 10:05 | 10:10-10:55 | 11:05-11:10 | 11:10-11:55 | 12:05-12:10 |
+
+**Table 2 headcount: 4 Massage+Beauty pool + 2 Nails + 2 Hair = 8 treatment, + 2 phlebotomists = 10 total — identical headcount to Table 1, fewer clients (12 vs 18) because the later start leaves less room before the 10:30 cutoff.**
+
+**These two tables (Table 1 and Table 2 above) are the current Carole-facing pair, referenced in `docs/wdp-reply-carole-2026-08-03.md` and the attached clinic-operations overview.**
+
+---
 
 **Below this line: Anthony's internal planning scenarios only — NOT part of what was sent to Carole, not for external use.**
 
@@ -272,3 +324,5 @@ The only lever not yet closed off by the solver: **whether a non-phlebotomist as
 **2026-08 (later still — synchronized-pair/5-min-draw/45+45-service model supersedes §0.5 entirely; added as canonical §0.6; three internal planning scenarios added)** — Anthony fixed four exact constraints, superseding the §0.5 spec: synchronized chair starts, every draw exactly 5 minutes, Draw2/Draw3 at exact +60/+120min, both service windows fixed at 45 minutes (5+45+10 buffer = 60min per block, exactly accounted for). Since both chairs always start together, feasibility reduces to one chair's own sequence being collision-free — verified programmatically throughout. **Standard 12/14-client tables at a 23-minute pair cadence (headcount 8 at both volumes, the tightest gap that holds headcount there) — these two tables are what went into the client-facing clinic-operations overview sent to Carole, nothing else in §0.6.** Three additional scenarios added, explicitly Anthony's internal planning only, not shared externally: **Scenario A** (08:00 start, same cadence — 14 clients fit before 10:30, headcount unchanged at 8, translation-invariant). **Scenario B** (true maximum search, greedy adaptive admission, verified pairwise — **36 clients (18 pairs), a bursty two-cluster schedule, materially higher than the old 14-client "proven ceiling," which never held under these corrected constraints**; headcount re-derived at **27**, more than triple the committed 8; net financial upside on labor alone (+A$35,312.17/month) but flagged prominently that the venue's committed floor plan has nowhere near enough physical stations — 4 nail/4 hair/2+2 massage-beauty vs the 9-per-line this schedule needs — making this a theoretical ceiling, not an achievable operating point without a floor-plan rebuild). **Scenario C** (uniform 25-min cadence, confirmed looser than the tightest-found 23min — 12/14-equivalent tables plus its own maximum of 18 clients, headcount holding at 8 throughout; quantified trade-off vs Scenario B: 18 fewer clients for a much simpler, headcount-neutral cadence).
 
 **2026-08 (later still — master scenario comparison assembled)** — Added a cross-reference to `docs/scenario-comparison-master-2026-08.md`, which pulls Scenarios 1, 3, and 4's client tables directly from this file (§0.1 and §0.6), reconstructs Scenario 2's full client table and staff roster (never previously written out in full — only described narratively in §0.4), and adds full named-staff rosters for every scenario in this file that previously only stated headcount totals (§0.6's Scenarios A/B/C). Scenario B's 27-person treatment roster is shown explicitly there, not just as a headcount figure.
+
+**2026-08 (later still — Carole-facing tables swapped, per Anthony's direct edit)** — The 23-minute/12-14-client pair (originally in §0.6, marked "sent to Carole") is **no longer** the Carole-facing pair — flagged as superseded for that specific purpose, kept as a valid internal reference, not deleted. Added new §0.6a with the actual current Carole-facing tables: Table 1 (07:00 start, g=25, 18 clients — identical to Scenario C's own-maximum sub-case) and Table 2 (08:00 start, g=25, 12 clients — a new computation, not previously logged in this file). Both verified programmatically, zero collisions. Both hold headcount at 8 treatment + 2 phlebotomists = 10 total, same as every other g=23/g=25 configuration in this document. Propagated the same correction to `docs/wdp-reply-carole-2026-08-03.md`, `docs/CURRENT-STATE.md`, and `docs/scenario-comparison-master-2026-08.md`.
