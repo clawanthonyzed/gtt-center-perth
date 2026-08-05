@@ -1,7 +1,9 @@
 # GTT Center Perth — Profit & Loss Tables
 
-**Version:** 2.1 | **Date:** 2026-07-20 (v1.0 removed entirely per Anthony's instruction — see Changelog)
-**Base model:** Current COMMITTED operational plan (corrected 2026-07-30) — 2 chairs, **12 AM clients/day** (07:00 start, extended morning built around WDP's "not normally after 10:30am" guidance, solver-verified zero double-bookings/concurrency violations), PM individual services (4-role hours-based roster), Saturday AM+PM (hours-based costing, same 12-client AM volume), **no Sunday trading** (closed until standalone PM demand is proven and profitable — see [am-capacity-weekend.md](am-capacity-weekend.md)). **All AM package revenue uses A$250 (Package 1, the lower of the 2 confirmed packages, renamed 2026-07-20) per instruction — this is a deliberate safety margin, not the full potential average if Package 2 sales run higher.**
+**Version:** 3.0 | **Date:** 2026-08-05 (REBASE — see Changelog; v2.1's 12-client/23-min-cadence tables retired to historical, not deleted)
+**Base model:** Current COMMITTED operational plan (REBASED 2026-08-05) — 2 chairs, **18 AM clients/day, Table 1, 07:00 start, 25-min pair cadence, exact 60/120min clinical marks, 5-min draws** (solver-verified zero double-bookings/concurrency violations — `docs/scenario-c-sync-timetables.md` §0.6a), PM individual services (4-role hours-based roster), Saturday AM+PM (hours-based costing, same 18-client AM volume as weekday), **no Sunday trading** (closed until standalone PM demand is proven and profitable — see [am-capacity-weekend.md](am-capacity-weekend.md)). **Secondary reference model: Table 2, 08:00 start, 12 clients/day, same 25-min cadence, identical 8-treatment/2-phlebotomist headcount — see the dedicated section below.** **All AM package revenue uses A$250 (Package 1, the lower of the 2 confirmed packages, renamed 2026-07-20) per instruction — this is a deliberate safety margin, not the full potential average if Package 2 sales run higher.**
+
+> **REBASE 2026-08-05, per Anthony's direct instruction — the 25-min-cadence tables (previously Carole-facing only) are now the actual basis for every table in this document.** The 12-client/23-min-cadence tables below (§1-§7 as originally built 2026-07-30/31) are RETIRED to historical/superseded status, retained in full for trace, not deleted — see the new "PRIMARY REBASED MODEL" section immediately below Key Callouts for the current committed figures. **Framing flag:** Table 1 (18-client) is adopted as "the committed daily target" because it strictly dominates Table 2 (identical headcount, more revenue) — flagged explicitly in `docs/CURRENT-STATE.md` §7 in case Anthony means something different by "these tables." If the 12-client/day volume itself should stay the target, Table 2's figures in the same new section are the ones to use instead.
 
 > **2026-07-30 (major correction, later the same day) — 12 clients/day is now the COMMITTED AM volume, replacing the 10-client Scenario C model used everywhere below until this point.** Anthony corrected this directly: the extended morning (10:20am last Draw 1, ~12:48pm last departure — both solver-verified against WDP's real 10:30am start-time guidance) is the committed operating model, not a "maybe later" ceiling. **Every table in this document is recomputed below for 12 clients/day — do not use any pre-2026-07-30 10-client figure as current.** Headcount stays at 8 treatment staff (no pooling reduction — see the Treatment Headcount section, the 2026-07-29 7-staff/6-staff findings only ever applied at 10-client volume and are now explicitly marked historical).
 
@@ -23,7 +25,7 @@ What changed between the original (now-deleted) v1.0 tables and the current v2.1
 
 ---
 
-## 1. Weekday (Typical Mon–Fri Day)
+## 1. Weekday (Typical Mon-Fri Day) — HISTORICAL, superseded 2026-08-05 (old 12-client/23-min-cadence model; see new PRIMARY REBASED MODEL section below Key Callouts for current figures)
 
 | | Amount |
 |---|---|
@@ -43,7 +45,7 @@ What changed between the original (now-deleted) v1.0 tables and the current v2.1
 
 **Ancillary Revenue — excluded from the baseline (2026-07-30):** previously A$439.50/day in this table (cafe/retail spend — snacks, drinks, retail wellness products, Gaia/Weleda/Mustela brands per [business-plan.md](business-plan.md) §6). Per Anthony's direct instruction, ancillary is now treated as A$0 in every headline P&L figure in this document — "too much of a variable" with no real basis yet (see `cash-flow.md`'s own Ancillary Revenue Sourcing section, which already flagged 2 of 3 component lines as having no real derivation at all). Kept visible only as a separate, clearly-tagged pure-upside line — see "Ancillary Revenue — Excluded From Baseline" below Key Callouts.
 
-## 2. Saturday (AM GTT + PM Standalone, Hours-Based Costing)
+## 2. Saturday (AM GTT + PM Standalone, Hours-Based Costing) — HISTORICAL, superseded 2026-08-05
 
 | | Amount |
 |---|---|
@@ -59,7 +61,7 @@ What changed between the original (now-deleted) v1.0 tables and the current v2.1
 
 **Saturday downtime-fill:** the same AM treatment staff working Saturday also take standalone PM-style bookings during gaps between their rostered GTT clients' services, exactly as on weekdays (see note in §1 above) — this is already reflected in the PM session volume assumption (8 sessions/day) used in this table, not an additional unmodelled upside.
 
-## 3. Weekly (5 Weekdays + 1 Saturday, No Sunday)
+## 3. Weekly (5 Weekdays + 1 Saturday, No Sunday) — HISTORICAL, superseded 2026-08-05
 
 | | Revenue | Direct Labor (shown) | Net |
 |---|---|---|---|
@@ -71,7 +73,7 @@ What changed between the original (now-deleted) v1.0 tables and the current v2.1
 
 > **Reconciliation check, 2026-07-31 — checked for a double-count or gap, found neither, but the presentation is asymmetric and clarified here.** The Weekday row's "Net" (+A$4,342.50 = 5 × A$868.50) is a FULL net figure — it already deducts the weekday's own share of opening-time increment, overhead allocation, and receptionist/relief/workers comp (see §1's full cost stack), even though only the "Direct Labor" column is shown here. The Saturday row's "Net" (+A$1,811.71) is genuinely **Direct Contribution only** (Revenue minus AM+PM Direct Labor, nothing else) — matching §2's own explicit "Net Direct Contribution" label, by design, the same segment-level convention used elsewhere in this repo (e.g. `docs/CURRENT-STATE.md` §7's AM-segment delta tables). **Saturday correctly carries no separate overhead line here** — not a gap. Overhead (rent, utilities, admin, marketing) is a single flat monthly figure in §4 below, not pro-rated per trading day, so it already covers the whole month's operations (all 6 trading days, Monday through Saturday) exactly once — adding a Saturday-specific overhead share to this weekly table would double-count it against §4's Monthly total, not fill a gap. **What this means practically: the +A$6,154.21 "Weekly Total Net" above should not be multiplied by 4.33 to estimate the monthly figure** — it mixes a full-net weekday view with a direct-contribution-only Saturday view, so scaling it doesn't reconcile cleanly against §4's Monthly Net P&L (a pre-existing, already-disclosed scaling gap — see the Appendix note further below). **§4 Monthly (and Quarterly/Half-Yearly/Yearly) are built independently via the validated delta-approach from the original per-line derivation, not by scaling this table, and remain the canonical whole-venture figures.** This table is retained for weekday-vs-Saturday intuition only, not as a monthly-scaling input.
 
-## 4. Monthly (4.33 weeks)
+## 4. Monthly (4.33 weeks) — HISTORICAL, superseded 2026-08-05
 
 Non-Wage Overhead is broken down below by component (source: [cash-flow.md](cash-flow.md) §Cost Assumptions — Fixed Monthly, cross-referenced as canonical by [financial-break-even-staff.md](financial-break-even-staff.md)):
 
@@ -107,7 +109,7 @@ Non-Wage Overhead is broken down below by component (source: [cash-flow.md](cash
 
 **AM Direct Labor recomputed fresh at 12 clients/day, not reused from the 10-client figure (per instruction):** 2 phlebotomists (A$86,136/yr) + 8 treatment staff (A$492,920/yr) = A$579,056/yr ÷ 12 = **A$48,254.67/month ≈ A$48,255/month — confirmed UNCHANGED.** Headcount is unchanged (solver-confirmed — see the Treatment Headcount section below, the 7-staff/6-staff pooling reductions do not hold at 12/day), these are fixed-salary FTE roles (not hours-billed), and the extended AM day (~12:48pm last departure) still fits inside the already-budgeted 07:00-13:00 shift window (`financial-break-even-staff.md`'s own stated AM shift structure) — so 2 extra clients/day at the same headcount and cost is pure margin. This is a genuine recomputation (traced from the canonical Total Annual Payroll table), not an assumption that nothing changed.
 
-## 5. Quarterly (3 Months)
+## 5. Quarterly (3 Months) — HISTORICAL, superseded 2026-08-05
 
 | | Amount |
 |---|---|
@@ -118,7 +120,7 @@ Non-Wage Overhead is broken down below by component (source: [cash-flow.md](cash
 | **Total Costs** | **A$273,637.42** (was A$269,426.22) |
 | **Net P&L (12-client model, ancillary excluded)** | **+A$81,254.06** (was +A$85,465.26 before the 3-hour minimum correction; +A$49,521.21 at 10-client) |
 
-## 6. Half-Yearly (6 Months)
+## 6. Half-Yearly (6 Months) — HISTORICAL, superseded 2026-08-05
 
 | | Amount |
 |---|---|
@@ -129,7 +131,7 @@ Non-Wage Overhead is broken down below by component (source: [cash-flow.md](cash
 | **Total Costs** | **A$547,274.85** (was A$538,852.44) |
 | **Net P&L (12-client model, ancillary excluded)** | **+A$162,508.11** (was +A$170,930.51 before the 3-hour minimum correction; +A$99,042.42 at 10-client) |
 
-## 7. Yearly (12 Months)
+## 7. Yearly (12 Months) — HISTORICAL, superseded 2026-08-05
 
 | | Amount |
 |---|---|
@@ -152,6 +154,99 @@ Non-Wage Overhead is broken down below by component (source: [cash-flow.md](cash
 4. **MA000027 phlebotomist Saturday ordinary-hours question remains unconfirmed** — this document uses the conservative full-penalty-rate assumption throughout (no optimistic/pending-verification scenario shown, since that scenario added confusion without changing the standing baseline). If a payroll advisor or Fair Work confirms an ordinary-hours carve-out exists, Saturday profitability would improve further — upside only, never assumed.
 5. **Downtime-fill revenue and early-release cost saving are two separate, tagged lines — neither included above.** Corrected 2026-07-30: these are two distinct pools (between-booking gaps vs lead-in/tail), not one blended figure — see the dedicated section immediately below for the full derivation and dollar figures. Do not add either to the +A$16,507.07/month baseline when quoting a headline number.
 6. **Ancillary revenue is excluded entirely from the baseline (2026-07-30, per Anthony's direct instruction) — the baseline dropped from +A$25,087.07/month to +A$16,507.07/month as a result.** Ancillary is not deleted from this document, only removed from every headline figure — see "Ancillary Revenue — Excluded From Baseline" immediately below for the pure-upside figure kept visible separately.
+7. **REBASE 2026-08-05 — every table above (§1-§7) describes the OLD, now-historical 12-client/23-min-cadence model.** Current committed figures are in the "PRIMARY REBASED MODEL" section immediately below.
+
+---
+
+## PRIMARY REBASED MODEL (2026-08-05) — Table 1 (18-client/07:00/g=25) and Table 2 (12-client/08:00/g=25)
+
+> **Per Anthony's direct instruction: the 25-min-cadence tables, previously used only for the Carole-facing document, are now the actual basis for every committed financial figure in this document.** §1-§7 above (the 12-client/23-min-cadence model) are retired to historical/superseded status, retained for trace only. Full client/staff schedules: `docs/scenario-c-sync-timetables.md` §0.6a. Formula/methodology unchanged from every prior round in this document — this is a rebase of inputs, not a new modeling approach.
+
+### Weekday — Table 1 (PRIMARY, 18 clients/day, 07:00 start)
+
+| | Amount | vs old (12-client) |
+|---|---|---|
+| AM Revenue (18 clients × A$250) | **A$4,500.00** | +A$1,500.00 |
+| PM Revenue (16 sessions × A$95) | A$1,520.00 | unchanged |
+| **Total Revenue** | **A$6,020.00** | +A$1,500.00 |
+| AM Direct Labor (2 phlebotomists + 8 treatment staff — **unchanged headcount, unchanged cost**) | A$2,193.00 | unchanged (FTE-based) |
+| PM Direct Labor | A$440.00 | unchanged |
+| Opening-time increment (07:00 start) | A$44.50 | unchanged (same 07:00 start as the old model) |
+| Overhead allocation (pro-rated per day) | A$635.00 | unchanged |
+| Receptionist/relief/workers comp (pro-rated per day) | A$339.00 | unchanged |
+| **Total Cost** | **A$3,651.50** | unchanged |
+| **Net P&L** | **+A$2,368.50** | +A$1,500.00 — the full extra AM revenue flows straight to margin, same headcount |
+
+### Weekday — Table 2 (secondary, 12 clients/day, 08:00 start)
+
+| | Amount | vs old (12-client/23-min) |
+|---|---|---|
+| AM Revenue (12 clients × A$250) | A$3,000.00 | unchanged (same client volume) |
+| PM Revenue | A$1,520.00 | unchanged |
+| **Total Revenue** | **A$4,520.00** | unchanged |
+| AM Direct Labor | A$2,193.00 | unchanged (same headcount) |
+| PM Direct Labor | A$440.00 | unchanged |
+| Opening-time increment | A$44.50 — `[OPEN ITEM, flagged not assumed: this line is sourced to a 07:00-specific start cost; Table 2 starts at 08:00, so this may not apply — not re-derived with confidence, logged in docs/VERIFICATION-TRACKER.md rather than guessed at]` | unchanged, pending the open item |
+| Overhead allocation | A$635.00 | unchanged |
+| Receptionist/relief/workers comp | A$339.00 | unchanged |
+| **Total Cost** | **A$3,651.50** | unchanged |
+| **Net P&L** | **+A$868.50** — numerically identical to the old 12-client model, same client volume/headcount | unchanged (possible small upside from the open item above, not yet quantified) |
+
+### Monthly — Table 1 (PRIMARY)
+
+| | Amount | vs old (12-client) |
+|---|---|---|
+| Total Revenue | **A$157,792.16** | +A$39,495.00 (+A$33,000.00 weekday AM + A$6,495.00 Saturday AM) |
+| Total Direct Labor + Opening Costs | **A$79,433.05** | +A$3,491.58 (Saturday AM labor scales 1.5x with the longer 18-client AM day, hours-based costing: A$1,612.74/day -> A$2,419.11/day; weekday AM labor unchanged, FTE) |
+| Workers Comp (1.7%) | **A$1,350.36** | +A$59.36 |
+| Non-Wage Overhead | A$13,980.00 | unchanged |
+| **Total Costs** | **A$94,763.41** | +A$3,550.94 |
+| **Net P&L — NEW PRIMARY COMMITTED FIGURE** | **+A$63,028.75** | **+A$35,944.06** |
+
+### Monthly — Table 2 (secondary)
+
+| | Amount |
+|---|---|
+| Total Revenue | A$118,297.16 — identical to the old 12-client model |
+| Total Direct Labor + Opening Costs | A$75,941.47 — identical |
+| Workers Comp (1.7%) | A$1,291.00 — identical |
+| Non-Wage Overhead | A$13,980.00 |
+| **Total Costs** | A$91,212.47 |
+| **Net P&L — SECONDARY REFERENCE FIGURE** | **+A$27,084.69 — numerically unchanged from the old 12-client/23-min baseline** |
+
+### Quarterly / Half-Yearly / Yearly — Table 1 (PRIMARY)
+
+| Period | Net P&L |
+|---|---|
+| Quarterly (x3) | +A$189,086.25 |
+| Half-Yearly (x6) | +A$378,172.51 |
+| Yearly (x12) | +A$756,345.01 |
+
+**Table 2's Quarterly/Half-Yearly/Yearly figures are identical to the old 12-client model's §5/§6/§7 above** (+A$81,254.06 / +A$162,508.11 / +A$325,016.22) — not restated separately since the Monthly figure is unchanged.
+
+### Downtime-Fill Revenue & Early-Release Saving — recomputed fresh for both new tables
+
+| Item | Table 1 (PRIMARY) | Table 2 (secondary) |
+|---|---|---|
+| Between-booking gaps (8 stations) | 160 min/day | 100 min/day |
+| **(a) Between-Client Downtime-Fill Revenue** | **A$3,622.67/month** | **A$2,264.17/month** |
+| **(b) Early-Release Cost Saving** | **A$14,167.19/month** | **A$18,495.99/month — larger than Table 1's despite fewer clients, a genuine consequence of Table 2's later start/shorter schedule leaving more unsold lead/tail time per station, disclosed not smoothed over** |
+
+**Neither is included in the Net P&L headline figures above** — same policy as every prior round in this document (`[MODELED]`, same formulas: downtime-fill = (gap min/day / 60) x 1.3 sessions/hr x 50% utilisation x A$95/session x 22 days; early-release = per-station saveable lead+tail x award rate, summed, x22 days).
+
+### Treatment Headcount — confirmed identical at both new tables
+
+**8 dual-qualified treatment staff (4 Massage+Beauty pool + 2 Nails + 2 Hair) + 2 phlebotomists, at BOTH 18-client Table 1 and 12-client Table 2** — verified via sweep-line peak concurrency AND greedy first-fit (exact agreement). The 25-min uniform cadence never triggers the headcount spike the old 23-min-cadence 14-client search needed 9 staff for. See `docs/scenario-c-sync-timetables.md` §0.6a and `docs/CURRENT-STATE.md` §4.
+
+### Item 1 — 7th pair at 10:25 on Table 2 (tested and REJECTED)
+
+Inserting a 7th pair at exactly 10:25 (5-min draws, +60/+120min marks) collides at the chair level with the existing schedule (client 3's Draw 3 lands exactly 10:25-10:30, clashing with the new pair's Draw 1). Only 10:10 and 10:20 are collision-free among all whole-minute candidates 10:10-10:29 — both raise treatment headcount to 11 (5 pool + 3 Nails + 3 Hair), not 8, confirmed via both sweep-line and greedy first-fit. **Not adopted.** Table 2 remains 6 pairs/12 clients/8 staff.
+
+---
+
+## OLD, HISTORICAL 12-Client/23-Min-Cadence Model — Retained For Trace, No Longer Committed (2026-07-20 through 2026-08-05)
+
+**Everything below this point, through the end of the "Years 1-3 Annual Projection" and "Year 1 Monthly Ramp" sections, describes the old committed model — retained in full for trace, per this document's standing "never delete, mark superseded" convention. See the PRIMARY REBASED MODEL section immediately above for the current committed figures.**
 
 ---
 
@@ -453,6 +548,8 @@ See "Years 1-3 Annual Projection" above for the corresponding multi-year view.
 ---
 
 ## Changelog
+
+**2026-08-05 (REBASE — 25-min-cadence tables become the actual financial basis, per Anthony's direct instruction; v3.0)** — Until this round, Table 1 (07:00-start/18-client) and Table 2 (08:00-start/12-client), both g=25, were used only for the Carole-facing document — every committed figure in this document still reflected the old 12-client/23-min-cadence model. Rebased in full: added a new "PRIMARY REBASED MODEL" section (Weekday/Monthly/Quarterly/Half-Yearly/Yearly for both tables, Downtime-Fill/Early-Release recomputed fresh against each table's own gap pattern, Treatment Headcount confirmed identical at both tables, Item 1's 10:25-insertion test result). **New primary committed Monthly Net P&L: +A$63,028.75** (Table 1, was +A$27,084.69 at the old 12-client model — delta +A$35,944.06/month at zero extra weekday labor cost, same 8-treatment/2-phlebotomist headcount serving 50% more daily clients). Secondary reference (Table 2): +A$27,084.69/month, numerically unchanged from the old baseline since client volume and headcount match exactly — one open item flagged, not assumed: Table 2's 08:00 start may eliminate the A$44.50/day opening-time increment sourced specifically to a 07:00 start, not yet quantified. §1-§7 (the old 12-client/23-min-cadence tables) are retired to historical/superseded status, retained in full below the new section for trace, never deleted. Propagated to `docs/CURRENT-STATE.md` and `docs/VERIFICATION-TRACKER.md` — see those documents' own changelog entries. **Not yet done, flagged as an open follow-up:** Year 1 Monthly Ramp and Years 1-3 Annual Projection (further below) have not been independently rebuilt against Table 1's higher ceiling — retained as historical/directional only, not restated as current.
 
 **2026-07-19 (Phase 6 gap-fill)** — Found via Phase 6 spec-verification that this document had Month-5+ steady-state figures only (weekday/weekly/monthly/quarterly/half-yearly/yearly), no Year 1 month-by-month ramp and no Years 1-3 multi-year view. Added both, sourced from [cash-flow.md](cash-flow.md)'s existing ramp shape and this document's own steady-state v2.0 figures, with an explicit caveat that [cash-flow.md](cash-flow.md)'s absolute figures are built on the superseded 8-client/3-package model and should not be reused without re-verification. Surfaced (not resolved) the PM-profitability discrepancy already logged in [business-plan.md](business-plan.md) and `docs/01_conflicts_log.md`.
 
