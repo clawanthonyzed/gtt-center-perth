@@ -121,6 +121,8 @@
 
 ### PRIMARY — Table 1 (18-client/07:00/g=25), steady state
 
+> **Independently re-verified from scratch, 2026-08-07** — full 9-step first-principles walkthrough (18 clients x A$250 x 22/4.33 days, headcount re-confirmation, Saturday labor scaling, Workers Comp, final arithmetic check) in `docs/profit-loss-tables.md`'s "Monthly — Table 1 (PRIMARY)" section. **Result: A$63,028.75/month confirmed, exact match, no rounding drift.** One pre-existing, already-disclosed gap surfaced during re-verification (not new, not this rebase's fault): a first-principles revenue sum lands ~A$2,576 below the delta-built A$157,792.16 figure — the same fixed-size weekly-to-monthly scaling artifact already flagged in `profit-loss-tables.md`'s Appendix since 2026-07-30, present identically at the 10-client and 12-client stages too. This document's own established convention treats the delta-built figure as canonical — followed here, not silently overridden.
+
 | Line | Amount | Tag |
 |---|---|---|
 | Total Revenue (Monthly) | **A$157,792.16** (was A$118,297.16 at the old 12-client/23-min model — delta +A$39,495.00, all from AM: +A$33,000.00 weekday (6 extra clients × A$250 × 22 days) + A$6,495.00 Saturday (6 extra clients × A$250 × 4.33 Saturdays), PM/ancillary unchanged) | `[MODELED — delta-reconciliation build from the validated 12-client baseline in profit-loss-tables.md, same methodology as every prior model-change round in this file]` |
