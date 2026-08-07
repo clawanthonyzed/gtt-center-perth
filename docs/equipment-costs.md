@@ -27,7 +27,7 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 
 | Category | Low Estimate | High Estimate | Phase |
 |----------|-------------|--------------|-------|
-| Pathology collection room | A$7,800 | A$13,200 | Day-one |
+| Pathology collection room (**was A$7,800-13,200, +A$500-900 for the vasovagal reclining chair/couch, added 2026-08-07 — see §1**) | A$8,300 | A$14,100 | Day-one |
 | Nail station (**4 stations, corrected 2026-07-31 — was 2/3, see §3**) | A$9,340 | A$20,280 | Day-one |
 | Massage rooms (x2 — unaffected by the curtain-vs-wall change, equipment count unchanged) | A$4,000 | A$10,000 | Day-one |
 | Hair station (**4 chairs + 2 backwash, corrected 2026-07-31 — was 2 chairs/1 backwash, see §5**) | A$6,750 | A$15,350 | Day-one |
@@ -36,7 +36,8 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 | Technology (tablets, POS, printers) | A$3,000 | A$7,000 | Day-one |
 | Emergency + safety equipment | A$1,000 | A$2,500 | Day-one |
 | Consumables (opening stock) | A$3,000 | A$6,000 | Day-one |
-| **TOTAL EQUIPMENT (DAY-ONE ONLY, 2026-07-31 recompute)** | **A$42,690** | **A$96,530** | |
+| **TOTAL EQUIPMENT (DAY-ONE ONLY, 2026-08-07 recompute — was A$42,690-96,530, +A$500-900 for the vasovagal reclining chair/couch)** | **A$43,190** | **A$97,430** | |
+| **Pre-existing, disclosed, not-newly-introduced gap:** this Summary Budget's "Pathology collection room" row (A$7,800-13,200 before this update) never exactly matched §1's own itemized total (A$5,830-9,340 before this update) — a ~A$1,970-3,860 unexplained gap predating this session. Not investigated or reconciled this round (out of this specific task's scope); the same delta (+A$500-900) was applied to both rows to preserve whatever that pre-existing buffer represents, rather than silently closing it. Flagged for a future consistency pass. | | | |
 | Spray tan booth | A$2,500 | A$6,000 | **PHASE 2** |
 | Cafe / partner area | A$2,000 | A$6,000 | **PHASE 2** |
 | Hire fleet (TENS + wellness items) | A$8,000 | A$18,000 | **PHASE 2** |
@@ -53,6 +54,7 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
 | Phlebotomy chair (reclining, vinyl, wipe-clean) — Chair A + Chair B | 2 | A$800-1,200 | A$1,600-2,400 |
+| **Reclining chair or examination couch (vasovagal recovery, separate from the 2 phlebotomy chairs) — ADDED 2026-08-07** | 1 | A$500-900 | A$500-900 |
 | Tabletop centrifuge (refrigerated, Hettich Universal 320R or equiv) | 1 | A$3,500-5,000 | A$3,500-5,000 |
 | Sharps containers (1.4L bench + 5L room) | 4 | A$8-15 | A$32-60 |
 | Biohazard waste bins (yellow, lidded) | 2 | A$35-60 | A$70-120 |
@@ -65,10 +67,12 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 | Patient documentation drawer/lockable | 1 | A$100-200 | A$100-200 |
 | Thermal label printer (Zebra ZD420) | 1 | A$350 | A$350 |
 | Medical waste disposal contract (annual, not one-off) | 1 | A$600-1,200/yr | A$600-1,200/yr |
-| **Pathology room TOTAL** | | | **A$5,830-9,340** |
+| **Pathology room TOTAL (was A$5,830-9,340, +A$500-900 for the vasovagal reclining chair/couch added 2026-08-07)** | | | **A$6,330-10,240** |
 | + Medical waste contract (ongoing) | | | + A$600-1,200/yr |
 
 **Note on centrifuge:** The centrifuge is the most critical piece of equipment in the venue. GDM underdiagnosis risk without centrifugation within 10 minutes (ORCHID study). Do not compromise on quality.
+
+**Note on the reclining chair/exam couch, added 2026-08-07:** flagged as missing from `docs/floor-plan-concept.md`'s Blood Collection Room requirements during the 2026-08-06 cross-check against Carole Rivers' (WDP) detailed ACC/NPAAC room spec (`docs/VERIFICATION-TRACKER.md` item 30) — a client feeling faint or having a vasovagal reaction during/after venepuncture needs somewhere separate from the 2 active phlebotomy chairs to recover, since those chairs need to stay free for the next pair. `[MODELED — market-research estimate, same basis as every other line in this table, not a confirmed quote]`. Priced below the phlebotomy chairs (which need blood-draw-specific armrests/positioning) since this is a simpler recovery recliner.
 
 ---
 
@@ -323,6 +327,8 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 ---
 
 ## Changelog
+
+**2026-08-07 (reclining chair/exam couch for vasovagal episodes added as a real line item, per Anthony's direct instruction)** — Previously only logged as a gap in `docs/VERIFICATION-TRACKER.md` item 30 (2026-08-06 cross-check against Carole Rivers' ACC/NPAAC room spec). Added to §1 Pathology Collection Room as a real, costed line: A$500-900 `[MODELED — market-research estimate, same basis as every other line in this table]`. Recomputed §1's own itemized TOTAL (A$5,830-9,340 -> A$6,330-10,240) and the Summary Budget's "Pathology collection room" row and "TOTAL EQUIPMENT (DAY-ONE ONLY)" row by the same +A$500-900 delta (A$42,690-96,530 -> A$43,190-97,430). Flagged, not silently fixed: a pre-existing, unexplained ~A$1,970-3,860 gap between the Summary Budget's Pathology collection room row and §1's own itemized total already existed before this change — the same delta was applied to both rather than reconciling that gap, which is out of this task's scope. Propagated to `docs/CURRENT-STATE.md` §6/§7's Section 7 Build (Equipment line and 7.1 subtotal) — see that document's own changelog entry.
 
 **2026-07-19 (Phase 6 review)** — Reviewed this document properly against the Phase 6 spec (organize every item needed to open/operate — clinical equipment, furniture/fit-out, IT/software, consumables — by one-off capital vs recurring/consumable, with estimated unit costs and quantities). Found and fixed one genuine gap: **no Beauty Therapist/Brows equipment section existed**, despite Beauty Therapist/Brows being a staffed role (2 employed staff, `staff-plan.md`) with its own treatment room in the floor plan — only a single facial-products consumables line existed. Added new §5A with facial beds, wax heater, brow/lash tools, and consumables, and updated the Summary Budget total accordingly (A$49,300-114,700 → A$52,100-121,900). Added a Capital vs Recurring Summary section per the Phase 6 spec's explicit request for this classification, cross-referencing each existing category table rather than fully restructuring the document (which is already organized sensibly by room/service area — a wholesale reorganization would be more disruptive than useful). Corrected the Day 51 update banner: 3D scan is a future/Phase 2 consideration, not "removed from scope entirely," matching the reframe applied elsewhere this session (`hire-purchase-china.md`, `market-research-findings.md`, `business-plan.md`, `brand-guide.md`).
 

@@ -192,10 +192,10 @@
 
 | Component | Low | High | Source |
 |---|---|---|---|
-| Equipment (pathology, massage, nails ×4, hair ×4, beauty, lounge, tech, safety, consumables — day-one only) | A$42,690 | A$96,530 | `equipment-costs.md` Summary Budget, 2026-07-31 recompute |
+| Equipment (pathology, massage, nails ×4, hair ×4, beauty, lounge, tech, safety, consumables — day-one only; **was A$42,690-96,530, +A$500-900 for the vasovagal reclining chair/couch added 2026-08-07**) | A$43,190 | A$97,430 | `equipment-costs.md` Summary Budget, 2026-08-07 recompute |
 | Furniture and fittings (lounge chairs, reception counter, styling chairs) | A$15,000 | A$35,000 | `floor-plan-concept.md` Fit-Out Cost Estimate |
 | Signage (shopfront + internal wayfinding) | A$3,000 | A$8,000 | `floor-plan-concept.md` Fit-Out Cost Estimate |
-| **7.1 TOTAL** | **A$60,690** | **A$139,530** | `[MODELED — sum of the two source documents above, both independently tagged in their own files]` |
+| **7.1 TOTAL (was A$60,690-139,530)** | **A$61,190** | **A$140,430** | `[MODELED — sum of the two source documents above, both independently tagged in their own files]` |
 
 **7.2 Fit-out/Construction (construction cost only, RECOMPUTED at this document's established A$800-1,250/sqm rate — no landlord contribution deducted anywhere in the headline)**
 
@@ -218,10 +218,10 @@
 
 **7.4 Full Picture — Total Startup Capital Required (RECONCILED, landlord contribution removed from headline)**
 
-- **Best case:** 7.1 low (A$60,690) + 7.2 low (A$191,200) + 7.3 low (A$105,000) = **A$356,890**
-- **Higher case:** 7.1 high (A$139,530) + 7.2 high (A$298,750) + 7.3 high (A$138,000) = **A$576,280**
+- **Best case:** 7.1 low (A$61,190) + 7.2 low (A$191,200) + 7.3 low (A$105,000) = **A$357,390** (was A$356,890, +A$500 from the 2026-08-07 equipment addition)
+- **Higher case:** 7.1 high (A$140,430) + 7.2 high (A$298,750) + 7.3 high (A$138,000) = **A$577,180** (was A$576,280, +A$900)
 
-**Adopted total, per Anthony's own reconciliation: A$292,335 – A$594,900.** `[MODELED — Anthony's reconciled figure, adopted as instructed]`. **Disclosed, not hidden: this agent's own component-by-component sum above (A$356,890–576,280) does not land exactly on the adopted A$292,335-594,900 range** — the gap is a few percent on both ends, most plausibly from reconciliation choices in how Anthony combined the underlying components that aren't fully visible in this repo (e.g. a different low-end scenario weighting, or a partial/negotiated landlord-contribution assumption reinstated at the very low end despite the "removed from headline" instruction). **The adopted A$292,335-594,900 figure is what should be quoted and patched into the client-facing document — it is Anthony's own reconciliation, not superseded by this agent's component sum.** Both this agent's component build and the adopted total are shown side by side rather than silently reconciled to hide the small gap.
+**Adopted total, per Anthony's own reconciliation: A$292,335 – A$594,900.** `[MODELED — Anthony's reconciled figure, adopted as instructed]`. **Disclosed, not hidden: this agent's own component-by-component sum above (A$357,390–577,180) does not land exactly on the adopted A$292,335-594,900 range** — the gap is a few percent on both ends, most plausibly from reconciliation choices in how Anthony combined the underlying components that aren't fully visible in this repo (e.g. a different low-end scenario weighting, or a partial/negotiated landlord-contribution assumption reinstated at the very low end despite the "removed from headline" instruction). **The adopted A$292,335-594,900 figure is what should be quoted and patched into the client-facing document — it is Anthony's own reconciliation, not superseded by this agent's component sum.** Both this agent's component build and the adopted total are shown side by side rather than silently reconciled to hide the small gap.
 
 **Up from A$276,635-554,900 (the original reference range this whole Section 7 exercise started from) — both corrections (landlord contribution removed, construction recomputed at the higher established rate) push the range up. Disclosed plainly, not smoothed over.**
 
@@ -365,6 +365,8 @@ Both per `financial-break-even-staff.md`'s Staff Downtime Protocol and `pm-staff
 ---
 
 ## Changelog
+
+**2026-08-07 (reclining chair/exam couch added as a real costed line, per Anthony's direct instruction)** — Previously only a flagged gap (`docs/VERIFICATION-TRACKER.md` item 30). Added to `equipment-costs.md` §1 as A$500-900 `[MODELED]`. Propagated here: Equipment line A$42,690-96,530 -> A$43,190-97,430, §7.1 TOTAL A$60,690-139,530 -> A$61,190-140,430, §7.4 this-agent's-own component sum A$356,890-576,280 -> A$357,390-577,180. Anthony's own adopted total (A$292,335-594,900) is unaffected — it was never derived from this agent's component sum, per the pre-existing disclosed gap noted in §7.4.
 
 **2026-07-29 (created)** — Built in response to an outside review that found the financial model had moved 5+ times with contradicting numbers across documents, false precision on a pre-revenue business, and at least one document (`operations-manual.md`) still training staff on an abandoned model 10 days after being flagged. This file is the process fix, not just a numbers fix — see `rules/CLAUDE.md` for the accompanying hard rule requiring every future figure to carry a tag from this system.
 
