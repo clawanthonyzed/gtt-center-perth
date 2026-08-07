@@ -48,8 +48,8 @@ STALENESS_WINDOW = 3  # lines of preceding context also checked for a marker
 # (parameter_name, canonical_value_display, [stale/conflicting regex patterns])
 CHECKS = [
     (
-        "AM GTT client capacity (canonical: 12 clients/day, committed 2026-07-30, scenario-c-sync-timetables.md §0)",
-        "12 clients/day",
+        "AM GTT client capacity (canonical PRIMARY: 18 clients/day, 07:00 start, g=25, rebased 2026-08-05, CURRENT-STATE.md §1; 12 clients/day, 08:00 start, g=25 remains a legitimate SECONDARY reference model, Table 2 -- not itself stale, so not added as a new stale-pattern check here)",
+        "18 clients/day (primary) / 12 clients/day (secondary, Table 2)",
         [
             re.compile(r"\b8\s*(GTT\s+)?clients?\s*/\s*day\b", re.IGNORECASE),
             re.compile(r"\b8[\s-]client\b", re.IGNORECASE),
@@ -70,8 +70,8 @@ CHECKS = [
         ],
     ),
     (
-        "Monthly net P&L, steady state (canonical: +A$28,488.42/month, 12-client + ancillary-excluded, 2026-07-30)",
-        "+A$28,488.42/month",
+        "Monthly net P&L, steady state (canonical PRIMARY: +A$63,028.75/month, 18-client/07:00/g=25, rebased 2026-08-05, CURRENT-STATE.md §5; +A$27,084.69/month remains valid as the SECONDARY Table-2 reference figure, not itself stale)",
+        "+A$63,028.75/month (primary) / +A$27,084.69/month (secondary, Table 2)",
         [
             re.compile(r"-\s*A\$\s*9,684"),
             re.compile(r"-\s*A\$\s*4,384"),
@@ -86,13 +86,22 @@ CHECKS = [
         ],
     ),
     (
-        "Downtime-fill/early-release (canonical: TWO separate pools, 12-client recompute -- A$12,679.33/month revenue + A$16,511.22/month cost saving, 2026-07-30)",
-        "A$12,679.33/month (a) + A$16,511.22/month (b), never blended",
+        "Downtime-fill/early-release (canonical PRIMARY, 18-client Table 1, rebased 2026-08-05: A$3,622.67/month (a) + A$14,167.19/month (b); SECONDARY, 12-client Table 2: A$2,264.17/month (a) + A$18,495.99/month (b) -- both remain valid, CURRENT-STATE.md §8)",
+        "Table 1: A$3,622.67 (a) + A$14,167.19 (b); Table 2: A$2,264.17 (a) + A$18,495.99 (b)",
         [
             re.compile(r"A\$\s*28,528\.50"),
             re.compile(r"1,260\s*min"),
             re.compile(r"A\$\s*9,509\.50"),
             re.compile(r"A\$\s*14,647\.05"),
+        ],
+    ),
+    (
+        "14-client PROVEN CEILING model (canonical: HISTORICAL/superseded 2026-08-05 -- dominated entirely by the new 18-client Table 1 primary model at the same 8-treatment-staff headcount; CURRENT-STATE.md §1)",
+        "SUPERSEDED -- see docs/CURRENT-STATE.md's 2026-08-05 REBASE banner",
+        [
+            re.compile(r"A\$\s*36,726\.23"),
+            re.compile(r"A\$\s*20,717\.12"),
+            re.compile(r"A\$\s*14,026\.54"),
         ],
     ),
     (
