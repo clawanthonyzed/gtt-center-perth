@@ -14,7 +14,7 @@ If every client could freely pick which service happens first, and enough client
 
 **2. Enforce a per-service daily capacity cap at booking time**, computed from real peak-concurrent-demand analysis (not guessed):
 
-| Service pool | Cap (10-client/day volume) | Cap (15-client/day volume, if 3rd phlebotomist active) |
+| Service pool | Cap (historical 10-client/day volume, not yet re-derived for the current 18-client model) | Cap (15-client/day volume, if 3rd phlebotomist active) |
 |---|---|---|
 | Massage + Beauty (cross-trained, 3–4 staff) | 3 concurrent | 4 concurrent |
 | Nails (standalone, 2 staff) | 2 concurrent | 2 concurrent |

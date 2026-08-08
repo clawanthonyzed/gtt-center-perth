@@ -43,7 +43,7 @@ Before this session, founder-only open questions were scattered across [reading-
 
 **Suggestion:** Build a [venue-manager-job-posting.md](venue-manager-job-posting.md) using [phlebotomist-job-posting.md](phlebotomist-job-posting.md) as a structural template, reusing the role detail already in [staff-plan.md](staff-plan.md) §3 and [hr-framework.md](hr-framework.md) §13.
 
-### O2. Reconcile the WDP Cutoff Time Before Committing to Any Scenario Above 8 Clients/Day
+### O2. Reconcile the WDP Cutoff Time Before Committing to Any Scenario Above 8 Clients/Day (historical framing — resolved, see cutoff-time-CORRECTION.md and docs/CURRENT-STATE.md)
 Both `H2` in the issues log and the existing [cutoff-time-CORRECTION.md](cutoff-time-CORRECTION.md) flag this, but it's worth restating as an improvement rather than just a risk: the entire value of moving from Scenario B to Scenario C (25% more daily revenue capacity) rests on an unconfirmed number. This is a cheap, one-phone-call fix (per [cutoff-time-CORRECTION.md](cutoff-time-CORRECTION.md)'s own recommendation) relative to the revenue at stake.
 
 **Suggestion:** Prioritise the WDP call above almost everything else in the pre-launch checklist — it's the single highest-leverage open item in the entire corpus.

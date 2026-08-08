@@ -6,9 +6,9 @@
 
 ---
 
-## 1. Current AM Max: 8 Clients/Day — Verified
+## 1. Current AM Max: 8 Clients/Day — Verified (historical, since superseded twice, see docs/CURRENT-STATE.md)
 
-Confirmed against the verified Scenario B timetable (`operations-manual.md`): 2 chairs, 2 phlebotomists, 20-minute staggered arrivals. Each client's full journey (first draw to departure) takes ~145 minutes. The AM window (07:30–12:30, 300 min) allows a last start of ~10:05, giving a usable 145-minute start window. At a 20-minute stagger, that supports 8 client starts — matches the current verified model exactly.
+Confirmed against the verified (historical) Scenario B timetable (`operations-manual.md`): 2 chairs, 2 phlebotomists, 20-minute staggered arrivals. Each client's full journey (first draw to departure) takes ~145 minutes. The AM window (07:30–12:30, 300 min) allows a last start of ~10:05, giving a usable 145-minute start window. At a 20-minute stagger, that supports 8 client starts — matches the current verified model exactly.
 
 ## 2. Growth Levers — What Increases AM Capacity
 
@@ -104,16 +104,16 @@ Previous version of this document assumed weekends would be PM-style only (no GT
 
 ## 3. Consolidated AM Profitability Plan (Answers "Make AM Profitable")
 
-AM currently runs at **-A$4,255/month** in direct-labor terms (previous session). Levers, ranked by leverage-to-cost:
+AM currently ran at **-A$4,255/month** in direct-labor terms (historical, previous session, long since superseded -- see docs/CURRENT-STATE.md for the current +A$63,028.75/month primary figure). Levers, ranked by leverage-to-cost:
 
 | Lever | Est. Monthly Impact | New Hire Required? | Verification Needed |
 |---|---|---|---|
 | **1. Re-time existing 2 chairs** (earlier start + tighter stagger → ~13/day) | Est. +A$9,000–13,000 revenue at near-zero added labor cost | No | New Scenario C timetable, award early-start check |
-| **2. Package mix upsell** (nudge 30/40/30 mix toward more Package 3 bookings) | Adds to per-visit average without touching capacity | No | Pricing/UX change only |
+| **2. Package mix upsell (historical, old 3-tier naming)** (nudge 30/40/30 mix toward more Package 3 bookings) | Adds to per-visit average without touching capacity | No | Pricing/UX change only |
 | **3. Saturday AM GTT** (if WDP + award both confirm) | Est. +A$8,000–14,000/month, largely ordinary-rate | Possibly (or existing staff on 6th day) | WDP confirmation, award verification |
 | **4. 3rd chair** (original recommendation) | Smaller marginal gain now that Lever 1 may absorb most of the need | Yes, +A$3,589/month | Only pursue if Lever 1's Scenario C shows genuine capacity ceiling below demand |
 
-**Revised recommendation:** pursue Levers 1–3 first — none require new headcount, and together they could flip AM from a -A$4,255/month drag to solidly profitable on its own. Lever 4 (3rd chair) becomes a "only if still needed" fallback once real demand data shows Levers 1–3 aren't enough, rather than the default next step.
+**Revised recommendation (historical):** pursue Levers 1-3 first — none require new headcount, and together they could flip AM from a -A$4,255/month drag (historical figure) to solidly profitable on its own. Lever 4 (3rd chair) becomes a "only if still needed" fallback once real demand data shows Levers 1–3 aren't enough, rather than the default next step.
 
 ## 2. Multi-Role Relief Hiring — Realistic Scope
 
@@ -192,7 +192,7 @@ Confirms Anthony's requirement: no client is left waiting for an unavailable ser
 
 **Re-time confirmed and now formally verified above — 3rd chair is off the table** for the current growth target (10/day). If demand later exceeds this, the 3rd-chair option remains available as a future lever, but is not needed now.
 
-**Which 2 packages?** Not specified — needs your call. Recommendation, given AM's thin per-client margin (previously -A$4,255/month in direct-labor terms):
+**Which 2 packages?** Not specified at the time — needs your call (historical section, old 3-tier Package 1/2/3 structure, since replaced by the current 2-tier A$250/A$300 structure, see docs/CURRENT-STATE.md §2). Recommendation, given AM's thin per-client margin at the time (historical, previously -A$4,255/month in direct-labor terms):
 
 | Option | Packages Kept | Effect |
 |---|---|---|
@@ -239,13 +239,13 @@ Saturday treatment staff (massage/hair/nail/beauty) will cost 133–150% of ordi
 | | Before (8 clients, Pkg1/2/3 mix) | Now (10 clients, Pkg2/3 mix) |
 |---|---|---|
 | AM Revenue | A$44,000/month | **A$60,500/month** (220 visits × A$275 avg — assumes 50/50 Pkg2/Pkg3 mix, confirm actual split once bookings show real preference) |
-| AM Direct Labor | A$48,255/month | A$48,255/month (unchanged — same 2 phlebotomists + 8 treatment staff, no new hires per Scenario C) |
+| AM Direct Labor (historical figures, since superseded) | A$48,255/month | A$48,255/month (unchanged — same 2 phlebotomists + 8 treatment staff, no new hires per Scenario C) |
 | Extra opening cost (40min earlier) | — | ~A$980/month (Manager/Reception early open) |
-| **AM Direct Contribution** | **-A$4,255/month** | **≈+A$11,265/month** |
+| **AM Direct Contribution (historical)** | **-A$4,255/month** | **≈+A$11,265/month** |
 
 **AM flips from the venture's weakest link to a strong contributor** — purely from the 07:00 start (revenue) and dropping Package 1 (price mix), no new headcount. This is the single biggest improvement found this session.
 
-### 2. Are Package 2 (A$250) and Package 3 (A$300) Priced Too Low?
+### 2. Are Package 2 (A$250) and Package 3 (A$300) Priced Too Low? (historical, old 3-tier Package 1/2/3 naming -- see docs/CURRENT-STATE.md §2 for the current 2-tier A$250/A$300 structure)
 
 Checked against live Perth pregnancy/day-spa package pricing:
 
@@ -255,7 +255,7 @@ Checked against live Perth pregnancy/day-spa package pricing:
 | Crown Spa | 60min massage + 30min facial | From A$230 |
 | Standalone prenatal massage alone | 75–90min | A$185–205 |
 
-**Not underpriced** — Package 2 (30+45min, A$250) and Package 3 (2×45min, A$300) sit comfortably within the observed Perth market range for comparable 2-service pregnancy bundles. If anything, given GTT Center Perth's unique captive-audience economics (clients are there for a mandatory 2-hour medical wait regardless — no "convince them to book" friction that standalone day spas face), there may be room to test slightly above these comparables rather than below. Not a pricing problem — worth a modest test-increase once real booking data exists, not an urgent fix.
+**Not underpriced (historical analysis)** — Package 2 (30+45min, A$250) and Package 3 (2×45min, A$300) sit comfortably within the observed Perth market range for comparable 2-service pregnancy bundles. If anything, given GTT Center Perth's unique captive-audience economics (clients are there for a mandatory 2-hour medical wait regardless — no "convince them to book" friction that standalone day spas face), there may be room to test slightly above these comparables rather than below. Not a pricing problem — worth a modest test-increase once real booking data exists, not an urgent fix.
 
 ### 3. Saturday Collection at 07:00 — Confirmed, Reuses Verified Scenario C
 
