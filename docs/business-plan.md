@@ -23,7 +23,7 @@ The current committed operational model (per [HANDOFF.md](HANDOFF.md), 2026-07-1
 
 **The only comparable business found in market research is MIWM in Melbourne** (see [market-research-findings.md](market-research-findings.md)) — reported fully booked 3-4 weeks in advance. No direct WA competitor has been identified in the research conducted for this venture.
 
-**Financial baseline (conservative, steady-state, Month 5+, per [profit-loss-tables.md](profit-loss-tables.md) v2.0 and [HANDOFF.md](HANDOFF.md)):** +A$25,087.07/month, +A$301,044.84/year. **This figure is a planning estimate based on assumed booking volumes and no real trading data — see §9 for the full breakdown and sourcing.**
+**Financial baseline (historical, conservative, steady-state, Month 5+, per [profit-loss-tables.md](profit-loss-tables.md) v2.0 and [HANDOFF.md](HANDOFF.md)):** was +A$25,087.07/month, +A$301,044.84/year at the time — since superseded, see `docs/CURRENT-STATE.md` for the current +A$63,028.75/month primary figure. **This figure is a planning estimate based on assumed booking volumes and no real trading data — see §9 for the full breakdown and sourcing.**
 
 ---
 
@@ -211,7 +211,7 @@ SEO content strategy, referral reward programme, quarterly referring-practice vi
 | Mid | ~A$305,000 | [cash-flow.md](cash-flow.md) |
 | High | ~A$431,000 | [cash-flow.md](cash-flow.md) |
 
-**Note:** [HANDOFF.md](HANDOFF.md) (2026-07-17) cites a "more realistic range" of A$144,500-242,500, described as "down from an inflated A$363,000 original figure" — **this venture's startup capital estimate has moved materially across different documents and sessions; [cash-flow.md](cash-flow.md)'s figures above should be treated as the most detailed breakdown available, but the overall range itself has not settled and should be reconciled before being used in any funding conversation.** See `docs/05_open_questions_for_founder.md`.
+**Note (historical, unreconciled range, one of 3+ conflicting historical figures):** [HANDOFF.md](HANDOFF.md) (2026-07-17) cites a "more realistic range" of A$144,500-242,500, described as "down from an inflated A$363,000 original figure" — **this venture's startup capital estimate has moved materially across different documents and sessions; [cash-flow.md](cash-flow.md)'s figures above should be treated as the most detailed breakdown available, but the overall range itself has not settled and should be reconciled before being used in any funding conversation.** See `docs/CURRENT-STATE.md` §6 for the full, current, still-unreconciled comparison.
 
 ### Monthly P&L Snapshot — Stable Operations, Month 5+ (per [profit-loss-tables.md](profit-loss-tables.md) v2.0, current canonical baseline)
 

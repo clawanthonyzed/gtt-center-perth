@@ -32,9 +32,9 @@ Every pregnant woman in Australia is offered this test between 24–28 weeks ges
 |--------|-------|-----|
 | Package 1 price | **A$250** (fixed 2×30-min) | `[MODELED — Anthony's locked launch price, not externally market-tested]` |
 | Package 2 price | **A$300** (flexible 2×45min / 45+30min / 2×30min) | `[MODELED — same basis]` |
-| AM GTT capacity ceiling | **220 visits/month** (10/day × 22 trading days) | `[VERIFIED — scenario-c-sync-timetables.md scheduling-feasibility simulation, 2026-07-17; a capacity ceiling, not a booking guarantee]` |
+| AM GTT capacity ceiling (historical figure, superseded twice — see docs/CURRENT-STATE.md for the current 396 visits/month, 18-client Table 1 primary model) | **220 visits/month** (10/day × 22 trading days) | `[VERIFIED — scenario-c-sync-timetables.md scheduling-feasibility simulation, 2026-07-17; a capacity ceiling, not a booking guarantee]` |
 | PM individual services capacity | **~350 sessions/month** (~16/day) | `[MODELED — assumption: ~50% of theoretical 4-line capacity, pm-staffing-roster.md, no real demand data yet]` |
-| Monthly net P&L (steady state, Month 5+) | **+A$16,507.07/month** (ancillary revenue excluded 2026-07-30 — was +A$25,087.07/month) | `[MODELED — profit-loss-tables.md v2.1, 2026-07-30 recalculation]` |
+| Monthly net P&L (historical, steady state, Month 5+ — superseded, see docs/CURRENT-STATE.md for the current +A$63,028.75/month primary figure) | **+A$16,507.07/month** (ancillary revenue excluded 2026-07-30 — was +A$25,087.07/month) | `[MODELED — profit-loss-tables.md v2.1, 2026-07-30 recalculation]` |
 | Monthly fixed costs (steady state) | **A$88,625.09** | `[MODELED — same source]` |
 | Startup capital requirement | **Not yet reconciled — see CURRENT-STATE.md** | `[PLACEHOLDER — 3 conflicting ranges exist across this repo's own documents, never reconciled]` |
 
@@ -160,7 +160,7 @@ Blood collection is performed by GTT Center Perth's employed phlebotomists under
 | Workers compensation (WA, 1.7%) | ~A$1,248 | A$14,973 | `[MODELED — traceable calculation]` |
 | Non-wage overhead (rent, utilities, insurance, marketing, etc. — 13 components) | A$13,980 | A$167,760 | `[MODELED — profit-loss-tables.md §4 breakdown]` |
 | **Total Fixed Costs** | **A$88,625.09** | **A$1,063,501.08** | |
-| **Net P&L (Month 5+, steady state)** | **+A$16,507.07** (ancillary excluded 2026-07-30) | **+A$198,084.84** | `[MODELED — profit-loss-tables.md v2.1, precise weekday/Saturday-blended calculation, 2026-07-30 recalculation; not based on real trading data]` |
+| **Net P&L (historical, Month 5+, steady state)** | **+A$16,507.07** (ancillary excluded 2026-07-30) | **+A$198,084.84** | `[MODELED — profit-loss-tables.md v2.1, precise weekday/Saturday-blended calculation, 2026-07-30 recalculation; not based on real trading data — since superseded, see docs/CURRENT-STATE.md for the current +A$63,028.75/month primary figure]` |
 
 **Note on the two revenue totals above:** `profit-loss-tables.md`'s simplified Month-by-month ramp table sums to A$88,440/month at M5+ (giving an approximate -A$185/month net), while its own more precise weekday/Saturday-blended calculation gives A$105,132.16/month total revenue and the headline **+A$16,507.07/month** net figure. The precise calculation is the one to quote — the ramp table exists only to show the Month 1-4 build-up shape. This is disclosed directly in `profit-loss-tables.md` rather than presenting one number as if no discrepancy existed. **(Figures updated 2026-07-30 — ancillary revenue, previously ~A$8,580/month, is now excluded entirely from this baseline per Anthony's direct instruction; the pre-2026-07-30 figures were A$113,712.16 revenue and +A$25,087.07/month net.)**
 
@@ -172,8 +172,8 @@ Blood collection is performed by GTT Center Perth's employed phlebotomists under
 |--------|-------|-----|
 | Variable cost per visit | ~A$5 (consumables, linen, supplies) | `[MODELED]` |
 | Contribution margin per GTT visit (avg A$250) | **A$245 (98%)** | `[MODELED]` |
-| AM GTT direct labor cost (2 phlebotomists + 8 treatment staff, unaffected by the 8→10 client change since headcount is set by peak concurrency, not client count) | A$48,255/month | `[MODELED — traceable from financial-break-even-staff.md award rates × confirmed headcount]` |
-| AM segment standalone contribution (revenue minus direct labor only, before shared overhead) | **+A$6,745/month** (was -A$4,255/month under the old 8-client model) | See §7 delta table in `docs/CURRENT-STATE.md` and `docs/VERIFICATION-TRACKER.md` for the full input-by-input reconciliation — this is not a newly-modeled improvement, it is the existing 2026-07-17 Scenario C capacity change applied to a segment table that was never updated |
+| AM GTT direct labor cost (2 phlebotomists + 8 treatment staff — headcount confirmed unchanged all the way through the current 18-client Table 1 model too, since it's set by peak concurrency, not client count) | A$48,255/month | `[MODELED — traceable from financial-break-even-staff.md award rates × confirmed headcount]` |
+| AM segment standalone contribution (historical, revenue minus direct labor only, before shared overhead) | **+A$6,745/month** (was -A$4,255/month under the old 8-client model — both since superseded, current figure is +A$50,745.33/month at the 18-client Table 1 model, see docs/CURRENT-STATE.md §7) | See §7 delta table in `docs/CURRENT-STATE.md` and `docs/VERIFICATION-TRACKER.md` for the full input-by-input reconciliation |
 
 ---
 
@@ -289,7 +289,7 @@ GTT Center Perth employs all service delivery staff directly. No subtenants. **C
 | Venue Manager + staff recruitment | After venue location confirmed | Venue Manager is the first hire — see `docs/venue-manager-job-posting.md` |
 | Systems + marketing | Parallel, once staff/venue confirmed | Fresha live, Instagram, GP referral network activation |
 | Soft open | After all blocking gates cleared | No date committed |
-| Full operation | Following soft-open ramp | AM + PM sessions ramping toward the 10-client/day capacity ceiling |
+| Full operation | Following soft-open ramp | AM + PM sessions ramping toward the current committed capacity ceiling (historical text said 10-client/day; now 18-client/day Table 1, see docs/CURRENT-STATE.md) |
 
 ---
 

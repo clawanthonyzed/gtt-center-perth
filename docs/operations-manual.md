@@ -259,7 +259,7 @@ Never accept an 11th booking without confirming chair/staff cover via the Scenar
 |---|---|---|
 | Package/service sales per week | 69+ (break-even, ~298 Package sales/month — financial-break-even-staff.md) | < 55 (loss-making) |
 | Show rate (attended vs booked) | > 90% | < 85% |
-| Package avg ticket | > A$250 (blended Package 1/2 avg) | < A$200 (below the old, no-longer-offered A$200 tier) |
+| Package avg ticket | > A$250 (blended Package 1/2 avg) | < A$200 (below the old, no-longer-offered, historical A$200 tier) |
 | Google review count | +5/week | < 2/week |
 | Specimen rejection rate | < 1% | > 2% |
 | Staff attendance rate | 100% | Any call-out within 1 hour of shift |

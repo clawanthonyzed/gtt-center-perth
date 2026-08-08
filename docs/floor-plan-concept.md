@@ -18,7 +18,7 @@
 2. **Collection room is adjacent to lounge** — phlebotomist walks 3 steps to client, not across the building. ADIPS-compliant draw timing depends on proximity.
 3. **Treatment rooms are private** — no client sees another client in mid-treatment. Pregnancy modesty is non-negotiable.
 4. **Nail station ventilation (LEV)** is a separate zone with dedicated extraction — cannot share recirculated air with treatment rooms.
-5. **Lounge seats 8 simultaneously** — Scenario B runs 8 GTT clients in the AM window. All 8 must be comfortably seated in the lounge at once.
+5. **Lounge seats 8 simultaneously (historical design principle from the 8-client Scenario B era)** — the lounge must comfortably seat the current committed model's simultaneous client count (18/day at peak under Table 1's 25-min cadence, not just 8 — see docs/CURRENT-STATE.md); at minimum, all originally-specified 8 in the lounge at once.
 6. **Hairdressing needs a plumbed basin** — dedicated backwash, not shared with medical sinks.
 7. **Staff zone is separated** — staff room and WC are not accessible through client areas.
 
