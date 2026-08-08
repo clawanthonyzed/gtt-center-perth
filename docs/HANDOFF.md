@@ -17,12 +17,14 @@ Turn GTT Center Perth from a paper concept into an investor-ready, operationally
 
 **Superseded 2026-07-30 — ancillary revenue excluded from the baseline entirely, per Anthony's direct instruction. See `docs/CURRENT-STATE.md` §5 and `profit-loss-tables.md` v2.1 for the current figures — do not quote the table below as current.**
 
-| Period | Net P&L (historical, pre-2026-07-30) | Net P&L (current, ancillary excluded) |
+> **Both columns below are now historical, corrected 2026-08-08.** The right-hand "current" column was accurate as of 2026-07-30 only — it predates the 2026-07-31 Saturday-PM 3-hour-minimum correction, the 2026-08-05 Table 1/Table 2 rebase, and the 18-client PRIMARY figure (+A$63,028.75/month) now current per `docs/CURRENT-STATE.md` §5. Both columns are retained for historical trace only.
+
+| Period | Net P&L (historical, pre-2026-07-30) | Net P&L (historical, 2026-07-30 only — since superseded twice more, see banner above) |
 |---|---|---|
-| Monthly | ~~+A$25,087.07~~ | **+A$16,507.07** |
-| Quarterly | ~~+A$75,261.21~~ | **+A$49,521.21** |
-| Half-yearly | ~~+A$150,522.42~~ | **+A$99,042.42** |
-| Yearly (historical, both figures superseded) | ~~+A$301,044.84~~ | **+A$198,084.84** |
+| Monthly | ~~+A$25,087.07~~ | ~~+A$16,507.07~~ |
+| Quarterly | ~~+A$75,261.21~~ | ~~+A$49,521.21~~ |
+| Half-yearly | ~~+A$150,522.42~~ | ~~+A$99,042.42~~ |
+| Yearly (historical, all figures superseded) | ~~+A$301,044.84~~ | ~~+A$198,084.84~~ |
 
 Full tables (weekday/Saturday/weekly/monthly/quarterly/half-yearly/yearly) in [profit-loss-tables.md](profit-loss-tables.md) v2.1 on GitHub (historical version at the time this was written — since superseded by v3.0's 2026-08-05 rebase). These are ongoing run-rate figures — they exclude Months 1–3 ramp losses and pre-launch capital (3+ conflicting ranges exist across this repo's own documents, never reconciled — see `docs/CURRENT-STATE.md` §6, do not quote the old "~A$144,500-242,500" range here as settled).
 
@@ -45,7 +47,7 @@ Full tables (weekday/Saturday/weekly/monthly/quarterly/half-yearly/yearly) in [p
 - Hair and Beauty Industry Award MA000005: Saturday penalty **confirmed** — 133% (permanent) / 150% (casual). Sunday 200%. Public holiday 250–275%.
 - Health Professionals Award MA000027 (phlebotomists): a clause exists suggesting Saturday 8am–4:30pm may count as *ordinary hours* for private pathology practices — **unconfirmed**, needs a payroll advisor or Fair Work direct check. All financial models use the conservative (full penalty) assumption until this is verified.
 
-## Still Open — Needs Anthony's Input Next Session
+## Still Open — Needs Anthony's Input Next Session (as of 2026-07-17 — several items below have since moved; check `docs/VERIFICATION-TRACKER.md` for current status before acting on this list)
 1. **Package price-increase timing** — introductory rates now, raise at Month 3 or Month 4? Recommendation leans Month 4 (aligns with the venture's own break-even milestone), not yet confirmed by Anthony.
 2. **MA000027 Saturday phlebotomist carve-out** — needs direct verification with a payroll advisor.
 3. **WDP courier/lab specimen cutoff time** — currently assumed 12:30pm (drives the whole AM timetable's end constraint). Needs direct confirmation with WDP — at the 15-client Scenario D volume, the buffer before this cutoff is only 5 minutes, which is tight.
@@ -71,3 +73,5 @@ Full tables (weekday/Saturday/weekly/monthly/quarterly/half-yearly/yearly) in [p
 **2026-07-20 addendum:** Sunday-closed wording above reworded per Anthony's feedback — the closure is conditional on standalone PM demand not yet being proven/profitable, not a permanent position. Same reword applied across [business-plan.md](business-plan.md), [executive-summary.md](executive-summary.md), [operations-manual.md](operations-manual.md). Also this round: break-even reframed in revenue + segment-split terms (not blended visit headcount) across [gtt-center-perth-overview-for-imara.md](gtt-center-perth-overview-for-imara.md), [executive-summary.md](executive-summary.md), [break-even-sensitivity-analysis.md](break-even-sensitivity-analysis.md), [financial-break-even-staff.md](financial-break-even-staff.md), [unit-economics.md](unit-economics.md); AM downtime-fill model made explicit in the two presentation-facing documents; new exploratory [pm-package-exploration.md](pm-package-exploration.md) added; staff growth trigger and relief/backup staffing sections added to [staff-plan.md](staff-plan.md)/[hr-framework.md](hr-framework.md); real PathWest source found and applied to [king-edward-start-time-constraint.md](king-edward-start-time-constraint.md)/[gtt-clinical-protocol.md](gtt-clinical-protocol.md); [external-resources-and-advisors.md](external-resources-and-advisors.md) added; [reading-order.md](reading-order.md) hyperlinked throughout.
 
 **2026-07-20 addendum 2:** [profit-loss-tables.md](profit-loss-tables.md)'s superseded v1.0 tables (including the "Saturday runs at a loss" finding) were deleted entirely per Anthony's instruction — v2.1 is now the sole standalone document, with the Saturday penalty rate clarified as real/correctly-applied (only the old costing method was wrong), full weekday/quarterly/half-yearly/yearly breakdown tables, non-wage overhead and ancillary-revenue composition breakdowns, a calculation-detail appendix, and a checked answer to "can treatment headcount drop below 8" (yes, 7, at current 10-client volume only — see that document). Packages renamed 2026-07-20: Package 1 = A$250 (fixed 2×30min), Package 2 = A$300 (flexible composition) — same 2 price points as the previous "Package 2/3" naming, sweep in progress across all referencing documents.
+
+**2026-08-08 (F-2 correction, per `docs/architecture/REPOSITORY-AUDIT.md`):** the 2026-08-07 staleness banner at the top of this file already correctly flagged the whole document as historical. This pass went further: the Financial Baseline table (both columns) is now explicitly marked historical rather than implying its right-hand column was still current, and the "Still Open" section header now states its own as-of date rather than implying it's a live to-do list. No content was deleted. This correction did not touch, resolve, or take a position on the Table 1 vs. Table 2 primary/secondary framing question (`docs/VERIFICATION-TRACKER.md` item 1m).

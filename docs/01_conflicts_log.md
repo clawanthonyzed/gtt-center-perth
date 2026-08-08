@@ -60,10 +60,12 @@ The synchronized version is the more recent and more rigorously verified of the 
 - Updated [gtt-clinical-protocol.md](gtt-clinical-protocol.md)'s client count from 8 to 10 and repointed its reference to [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md).
 - Added a clarifying note to [staff-plan.md](staff-plan.md) confirming the headcount conclusions (2 phlebotomists + 8 treatment staff, 2 per category) are unaffected by the Scenario B->C change — Scenario C explicitly runs on the same staff numbers, just a tighter schedule.
 
-**Not yet resolved — recommended follow-up (see roadmap):**
+**Not yet resolved as of 2026-07-20 — recommended follow-up (see roadmap):**
 - Full rewrite of [operations-manual.md](operations-manual.md)'s GTT Scheduling Timetables section to replace the Scenario B tables with the Scenario C sync tables (or a direct pointer + brief summary, if a full table duplication isn't desired).
 - Flag/update [scenario-c-timeline.html](scenario-c-timeline.html) (the visual companion to the staggered, non-sync Scenario C) — likely also superseded by [scenario-c-sync-timeline.html](scenario-c-sync-timeline.html), not confirmed or flagged this session due to time.
 - Confirm whether any patient-facing materials (SMS templates, confirmation emails, website copy) reference "8 clients" or 07:40-based times anywhere — not checked this session.
+
+> **Update, 2026-08-08 (F-2, per `docs/architecture/REPOSITORY-AUDIT.md`):** the first bullet above **was actioned** — `operations-manual.md`'s GTT Scheduling Timetables section was rewritten 2026-07-30, replacing the Scenario B (8-client) tables with the then-current 12-client model (see `docs/VERIFICATION-TRACKER.md` item 15, "RESOLVED 2026-07-30"). This document's own "Not yet resolved" list above was never updated to reflect that, until now — a smaller instance of the same "flagged but not tracked through to resolution" pattern this log exists to catch. **Current status: `operations-manual.md` is no longer on the 8-client model, but it also has not been updated for the 2026-08-05 Table 1 (18-client)/Table 2 (12-client) rebase — it is one rebase behind `docs/CURRENT-STATE.md`, not the two-rebases-behind state this file previously implied.** The second and third bullets (the non-sync HTML timeline, and patient-facing materials) were not checked this pass either — still genuinely open, not newly resolved.
 
 ---
 
@@ -155,7 +157,7 @@ The synchronized version is the more recent and more rigorously verified of the 
 |---|---|---|
 | CONFLICT-01: research-supplement-day48.md duplicate | Low (no operational impact, just clutter/confusion risk) | RESOLVED |
 | CONFLICT-02: floor-plan v2/v3 mismatch | Low-Medium (fit-out brief risk if wrong version used) | RESOLVED (HTML); PDF flagged, not edited |
-| CONFLICT-03: Scenario B vs Scenario C sync | **HIGH** (training/scheduling risk if operations-manual.md read as-is) | FLAGGED, partially resolved — full rewrite recommended as priority action |
+| CONFLICT-03: Scenario B vs Scenario C sync | **HIGH at the time** (training/scheduling risk if operations-manual.md read as-is) | **RESOLVED 2026-07-30** (operations-manual.md rewritten to the 12-client model — see the 2026-08-08 update note under CONFLICT-03 above); now superseded in its own right by the 2026-08-05 rebase, tracked as a normal "one rebase behind" gap, not a live conflict |
 | CONFLICT-04: workflow.md stale subtenant model | Medium (could mislead a new reader on employment structure) | FLAGGED, not rewritten — recommended as follow-up action |
 | CONFLICT-05: hire-purchase-china.md 3D scanner timing | Medium (equipment budget/planning risk) | RESOLVED — reframed as future/Phase 2, not removed |
 | CONFLICT-06: market-research-findings.md 3D scan as differentiator | **Medium-High** (marketing/positioning risk if used to brief external material) | RESOLVED — reframed to future/Phase 2 addon |
@@ -180,3 +182,5 @@ The synchronized version is the more recent and more rigorously verified of the 
 See [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) for prioritised follow-up actions on the items not fully resolved this session.
 
 **2026-07-20 (hyperlink sweep)** — Converted backtick-wrapped filename references throughout this document to clickable relative markdown hyperlinks, per the repo-wide hyperlink rule.
+
+**2026-08-08 (F-2 correction — CONFLICT-03's tracked status brought back in line with what actually happened)** — `docs/architecture/REPOSITORY-AUDIT.md` found this log's CONFLICT-03 entry still listed `operations-manual.md`'s rewrite as an unactioned recommendation, when `docs/VERIFICATION-TRACKER.md` item 15 shows it was actually completed 2026-07-30. Added an update note under CONFLICT-03 and corrected its Summary table row. No other conflict entries in this file were re-investigated this pass (CONFLICT-04, still genuinely open, was independently re-checked and confirmed still open — `docs/workflow.md`'s staffing table still shows the sublet model as of 2026-08-08). This correction did not resolve, decide, or touch the still-open Table 1 vs. Table 2 primary/secondary framing question (`docs/VERIFICATION-TRACKER.md` item 1m).
