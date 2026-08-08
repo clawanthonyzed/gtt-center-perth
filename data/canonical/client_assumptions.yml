@@ -1,0 +1,255 @@
+# GTT Center Perth -- Canonical Client/Operational Assumptions (proof of concept)
+#
+# Populated from docs/CURRENT-STATE.md §1 and §3, cross-checked against
+# docs/scenario-c-sync-timetables.md and docs/VERIFICATION-TRACKER.md. Values are split
+# into UNIVERSAL (true regardless of which scenario is adopted) and SCENARIO-DEPENDENT
+# (differ between Table 1 and Table 2 -- linked by scenario_id to data/canonical/scenarios.yml
+# rather than restated independently, per this repo's no-duplicate-figures rule).
+#
+# This file does NOT decide Table 1 vs. Table 2 -- see data/canonical/scenarios.yml and
+# docs/VERIFICATION-TRACKER.md item 1m.
+#
+# Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
+# PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+
+schema_version: 1
+dataset: client_assumptions
+last_updated: "2026-08-08"
+
+# =====================================================================
+# UNIVERSAL -- true under both Table 1 and Table 2 (per docs/CURRENT-STATE.md §1)
+# =====================================================================
+universal:
+  - id: chairs_count
+    name: "Collection chairs"
+    value: 2
+    unit: count
+    status: VERIFIED
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+    notes: "Same under both Table 1 and Table 2."
+
+  - id: phlebotomists_count
+    name: "Phlebotomists"
+    value: 2
+    unit: count
+    status: VERIFIED
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+    notes: "Same under both Table 1 and Table 2. Employment model (in-house vs. WDP-supplied) is a separate, still-open item -- see docs/VERIFICATION-TRACKER.md item 1d, not represented in this file."
+
+  - id: draw_duration_minutes
+    name: "Single blood-draw duration"
+    value: 5
+    unit: minutes
+    status: VERIFIED
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, REBASE banner"}
+    notes: "Exact, under the synchronized model both tables use."
+
+  - id: draw_2_target_offset_minutes
+    name: "Draw 2 target offset from GTT start"
+    value: 60
+    unit: minutes
+    status: VERIFIED
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, REBASE banner"}
+    notes: "Exact clinical mark, not a tolerance window, under the synchronized model."
+
+  - id: draw_3_target_offset_minutes
+    name: "Draw 3 target offset from GTT start"
+    value: 120
+    unit: minutes
+    status: VERIFIED
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, REBASE banner"}
+
+  - id: service_block_duration_minutes
+    name: "Each of the 2 service slots per client"
+    value: 45
+    unit: minutes
+    status: VERIFIED
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, REBASE banner"}
+    notes: "Both service windows fixed at 45min under the synchronized model. Cross-checked against docs/services-pricing-locked.md's GTT window service durations -- consistent, no conflict."
+
+  - id: appointment_service_slots_per_client
+    name: "Service slots per GTT client"
+    value: 2
+    unit: count
+    status: VERIFIED
+    source: {file: docs/services-pricing-locked.md, section: "GTT PACKAGES intro"}
+    notes: "Service 1 (X+15 to X+60) and Service 2 (X+80 to X+125) under the historical timing model referenced in that source; exact offsets under the current synchronized model are draw_2/draw_3_target_offset_minutes above, not independently re-derived here."
+
+  - id: wdp_start_time_guidance
+    name: "WDP GTT start-time guidance"
+    value: "would not normally commence a GTT after 10:30am"
+    unit: null
+    status: VERIFIED
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+    verified_by: "Carole Rivers, Western Diagnostic Pathology"
+    verified_date: "2026-07-30"
+    notes: "Both Table 1 (last Draw 1 10:20) and Table 2 (last Draw 1 10:05) are built to clear this guidance with margin."
+
+  - id: wdp_dispatch_cutoff
+    name: "WDP specimen dispatch cutoff"
+    value: "conditional -- overnight storage viable 'in some circumstances', not a blanket cutoff"
+    unit: null
+    status: VERIFIED
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+    verified_by: "Carole Rivers, Western Diagnostic Pathology"
+    verified_date: "2026-07-30"
+    notes: "Exact storage/handling conditions still not fully specified -- see docs/cutoff-time-CORRECTION.md and docs/VERIFICATION-TRACKER.md item 1."
+
+  - id: activity_restriction_policy
+    name: "Patient activity/waiting-area restriction during GTT"
+    value: "remain at the collection centre -- WDP's own policy layered on NPAAC, not an NPAAC mandate itself"
+    unit: null
+    status: VERIFIED
+    source: {file: docs/VERIFICATION-TRACKER.md, section: "items 29, 29b, 29c, 29d"}
+    verified_by: "Carole Rivers, Western Diagnostic Pathology"
+    verified_date: "2026-08-08"
+    notes: "Confirmed directly by Carole in her own words 2026-08-08 (item 29d), corroborating the independent primary-source research in items 29/29b/29c. Not the same as 'must stay seated in a single room' -- her wording is 'remain at the collection centre', a facility-wide framing, still being clarified internally by WDP's Quality Department for a wellness-centre setting."
+
+  - id: operating_days
+    name: "Trading days"
+    value: "Monday-Saturday, Sunday closed"
+    unit: null
+    status: DECIDED
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, HISTORICAL rows (Operating days)"}
+    verified_by: "Anthony"
+    verified_date: "2026-07-30"
+    notes: "Sunday reopening is conditional (MODELLED, not VERIFIED) -- see sunday_reopen_condition below."
+
+  - id: sunday_reopen_condition
+    name: "Condition for reopening Sunday trading"
+    value: "only once standalone PM demand is proven and profitable"
+    unit: null
+    status: MODELLED
+    status_detail: "a business choice, not a legal requirement -- WA Retail Trading Hours Act exemption confirmed for hairdresser/beautician/barber shops, per docs/HANDOFF.md Regulatory Findings"
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, HISTORICAL rows (Operating days)"}
+
+  - id: saturday_volume_assumption
+    name: "Saturday AM client volume relationship to weekday"
+    value: "assumed to scale with the same client count as the weekday model (18 for Table 1 / 12 for Table 2)"
+    unit: null
+    status: MODELLED
+    status_detail: >
+      INFERRED, not independently re-stated as an explicit number in CURRENT-STATE.md §1's Table 1/2
+      structure. Basis for the inference: (a) the historical policy that 'Saturday reuses the AM model
+      at the same volume as weekday' (VERIFIED, Anthony's direct instruction, 2026-07-30), and (b)
+      §5's Saturday AM labor line for Table 1 being scaled by a 1.5x factor "matching the 12->18
+      client ratio", which only makes sense if Saturday's client count also scaled proportionally.
+      Flagged as an inference rather than a directly-quoted figure -- do not treat this record as
+      equally certain to the VERIFIED weekday client_volume figures in scenarios.yml.
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model (historical Saturday policy) + §5 Monthly Net P&L (Saturday labor scaling note)"}
+
+  - id: casual_min_engagement_hours
+    name: "Casual minimum engagement (award floor)"
+    value: 3
+    unit: hours
+    status: VERIFIED
+    source: {file: docs/VERIFICATION-TRACKER.md, section: "item 1i"}
+    notes: "MA000005 cl.11.5 / MA000027 cl.11.2. A real bug this rule prevents recurring: Saturday PM Direct Labor was once understated (1.54hrs/role/day priced at raw hours) before this floor was correctly applied -- see item 1i for the full history."
+
+  - id: am_shift_window_staff
+    name: "AM staff shift window"
+    value: "07:00-13:00"
+    unit: null
+    status: VERIFIED
+    source: {file: docs/financial-break-even-staff.md, section: "Shift Structure"}
+    notes: "Operational buffer: comfortably covers Table 1's last departure (well inside the shift window per CURRENT-STATE.md §1) without needing a separate explicit buffer-minutes figure."
+
+  - id: pm_steady_state_capacity
+    name: "PM individual services capacity (steady state)"
+    value: 16
+    unit: "sessions/day (approx. 350/month)"
+    status: MODELLED
+    status_detail: "assumption: ~50% utilisation of theoretical 4-line capacity -- no real demand data exists yet"
+    source: {file: docs/CURRENT-STATE.md, section: "§3 Client Capacity"}
+    notes: "Unaffected by the AM-only 2026-08-05 rebase."
+
+  - id: addressable_market_perth_weekly
+    name: "Perth metro GTT tests/week (addressable market)"
+    value: 515
+    unit: "tests/week"
+    status: VERIFIED
+    source: {file: docs/CURRENT-STATE.md, section: "§3 Client Capacity"}
+    verified_by: "KPMG analysis of ABS Births, Australia 2024 (media release 17 July 2025)"
+    notes: "Real 2024 Greater Perth GCCSA figure ~26,790 births/year / 52 weeks, universal GTT screening assumed. ABS figures noted as preliminary/subject to revision."
+
+  - id: service_mix_am_package_split
+    name: "AM Package 1 vs. Package 2 booking mix"
+    value: null
+    unit: "% split"
+    status: PLACEHOLDER
+    source: null
+    notes: "No real booking data exists anywhere in this repo (pre-launch venture) -- genuinely unknown, not estimated. Flagged rather than assumed a 50/50 or any other split."
+
+# =====================================================================
+# SCENARIO-DEPENDENT -- differ between Table 1 and Table 2.
+# Linked by scenario_id to data/canonical/scenarios.yml records -- NOT restated
+# independently here (client_volume, start_time, cadence, headcount, and financial
+# result live in scenarios.yml; this section only adds fields not already captured there).
+# =====================================================================
+scenario_dependent:
+  - id: capacity_ceiling_share_of_market
+    name: "Share of addressable market at full AM capacity"
+    scenario_id: scenario_table_1
+    value: "~21% (108 slots/week / ~515/week)"
+    status: MODELLED
+    status_detail: "derived from addressable_market_perth_weekly above and scenario_table_1's client_volume x 6 operating days"
+    derived_from: [addressable_market_perth_weekly]
+    source: {file: docs/CURRENT-STATE.md, section: "§3 Client Capacity"}
+
+  - id: capacity_ceiling_share_of_market
+    name: "Share of addressable market at full AM capacity"
+    scenario_id: scenario_table_2
+    value: "~14% (72 slots/week / ~515/week)"
+    status: MODELLED
+    status_detail: "derived from addressable_market_perth_weekly above and scenario_table_2's client_volume x 6 operating days; numerically unchanged from the pre-rebase committed figure's arithmetic"
+    derived_from: [addressable_market_perth_weekly]
+    source: {file: docs/CURRENT-STATE.md, section: "§3 Client Capacity"}
+
+  - id: am_weekly_ceiling
+    name: "AM GTT weekly ceiling (6-day week incl. Saturday)"
+    scenario_id: scenario_table_1
+    value: 108
+    unit: "slots/week"
+    status: MODELLED
+    status_detail: "derived: 18/day x 6 days"
+    derived_from: []
+    source: {file: docs/CURRENT-STATE.md, section: "§3 Client Capacity"}
+
+  - id: am_weekly_ceiling
+    name: "AM GTT weekly ceiling (6-day week incl. Saturday)"
+    scenario_id: scenario_table_2
+    value: 72
+    unit: "slots/week"
+    status: MODELLED
+    status_detail: "derived: 12/day x 6 days"
+    derived_from: []
+    source: {file: docs/CURRENT-STATE.md, section: "§3 Client Capacity"}
+
+# Operational buffers not otherwise captured above
+operational_buffers:
+  - id: shift_window_buffer
+    name: "Margin between last scheduled departure and end of AM staff shift"
+    value: "well inside the 07:00-13:00 shift window under both tables (per CURRENT-STATE.md §1); exact minutes not independently re-stated in this file"
+    status: MODELLED
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+    notes: "Not quantified to the exact minute in this pass -- CURRENT-STATE.md's own wording ('well inside the shift window') is itself qualitative, not a specific number, so this record mirrors that rather than inventing precision."
+
+  - id: wdp_guidance_buffer_table1
+    name: "Margin before WDP's 10:30am guidance -- Table 1"
+    value: 10
+    unit: minutes
+    status: CALCULATED
+    status_detail: "10:30 minus scenario_table_1's last_draw_1_time (10:20)"
+    derived_from: []
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, HISTORICAL rows"}
+
+  - id: wdp_guidance_buffer_table2
+    name: "Margin before WDP's 10:30am guidance -- Table 2"
+    value: 25
+    unit: minutes
+    status: CALCULATED
+    status_detail: "10:30 minus scenario_table_2's last_draw_1_time (10:05)"
+    derived_from: []
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model"}
+
+conflicts: []

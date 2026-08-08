@@ -1,0 +1,261 @@
+# GTT Center Perth -- Canonical Pricing Data (proof of concept)
+#
+# Populated from docs/CURRENT-STATE.md §2 (canonical) cross-checked against
+# docs/services-pricing-locked.md and docs/pm-package-structure.md (existing pricing
+# source docs). No price was invented. Where a value is not yet decided (e.g. PM
+# package pricing), it is recorded with status PLACEHOLDER and both proposed options
+# shown -- not collapsed to a single guessed figure.
+#
+# Scope of this pass (see docs/architecture/CANONICAL-DATA-POC.md for what's deferred):
+# headline AM/PM pricing (from CURRENT-STATE.md §2) + a representative slice of
+# individual GTT-window a-la-carte services (from services-pricing-locked.md Part A) to
+# demonstrate the schema handles both packages and individual services. The FULL
+# a-la-carte menu (all durations/add-ons), PM afternoon-only services, retail, and cafe
+# pricing are NOT migrated this pass -- they remain accurate in
+# docs/services-pricing-locked.md prose and are flagged as a future migration domain.
+#
+# Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
+# PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+
+schema_version: 1
+dataset: pricing
+last_updated: "2026-08-08"
+
+records:
+  # --- AM headline packages (canonical, CURRENT-STATE.md §2) ---
+  - id: am_package_1
+    name: "AM Package 1"
+    category: package
+    price: 250
+    currency: AUD
+    duration: "2 x 30 min (fixed composition, no flexibility)"
+    inclusions: ["venue + lounge access (free, bundled)", "2 x 30-min services chosen from the GTT window menu"]
+    exclusions: ["pathology fee (billed separately to Medicare by WDP/PathWest, not part of this price)"]
+    status: MODELLED
+    status_detail: "Anthony's locked launch price, not externally market-tested"
+    source: {file: docs/CURRENT-STATE.md, section: "§2 Package Prices"}
+    source_date: "2026-07-20"
+    verified_by: null
+    verified_date: null
+    notes: >
+      Cross-checked against docs/services-pricing-locked.md (same price/composition,
+      2026-07-20 renumbering) -- agrees exactly, no conflict found. Used as the deliberate
+      conservative revenue-calculation price for AM (not a blended average with Package 2)
+      per docs/CURRENT-STATE.md §2's explicit standing instruction.
+
+  - id: am_package_2
+    name: "AM Package 2"
+    category: package
+    price: 300
+    currency: AUD
+    duration: "client's choice: 2x45min, OR 1x45min+1x30min, OR 2x30min"
+    inclusions: ["venue + lounge access (free, bundled)", "flexible-composition services chosen from the GTT window menu"]
+    exclusions: ["pathology fee (billed separately to Medicare by WDP/PathWest, not part of this price)"]
+    status: MODELLED
+    status_detail: "same basis as am_package_1 -- Anthony's locked launch price, not externally market-tested"
+    source: {file: docs/CURRENT-STATE.md, section: "§2 Package Prices"}
+    source_date: "2026-07-20"
+    verified_by: null
+    verified_date: null
+    notes: "Cross-checked against docs/services-pricing-locked.md -- agrees exactly, no conflict found."
+
+  - id: am_price_used_for_revenue
+    name: "AM price used in revenue calculations"
+    category: policy
+    price: 250
+    currency: AUD
+    duration: null
+    inclusions: []
+    exclusions: []
+    status: DECIDED
+    source: {file: docs/CURRENT-STATE.md, section: "§2 Package Prices"}
+    source_date: "2026-07-20"
+    notes: "A$250 (Package 1) used as a deliberate conservative safety price for every AM revenue calculation in the model, not a blended average with Package 2 -- a standing instruction, not a re-derivation each time."
+
+  - id: am_price_increase_policy
+    name: "Package price-increase timing"
+    category: policy
+    price: null
+    currency: null
+    duration: null
+    inclusions: []
+    exclusions: []
+    status: DECIDED
+    source: {file: docs/VERIFICATION-TRACKER.md, section: "item 36, OTHER FOUNDER-ONLY DECISIONS"}
+    source_date: "2026-07-29"
+    notes: "No price increase until 12+ months of operation -- deferred entirely, not Month 3/4. Historical reasoning retained in docs/price-increase-comparison.md."
+
+  # --- PM pricing (canonical, CURRENT-STATE.md §2) ---
+  - id: pm_alacarte_average
+    name: "PM individual a-la-carte average"
+    category: service_average
+    price: 95
+    currency: AUD
+    duration: null
+    inclusions: []
+    exclusions: []
+    status: MODELLED
+    status_detail: "pm-staffing-roster.md planning estimate, no real booking data exists yet"
+    source: {file: docs/CURRENT-STATE.md, section: "§2 Package Prices"}
+    source_date: "2026-07-14"
+    notes: "This is an aggregate planning average across all PM a-la-carte services, not a single service's price -- see docs/services-pricing-locked.md Part B for individual PM service prices (not migrated this pass, see file header)."
+
+  - id: pm_package_direction
+    name: "PM set/fixed package direction"
+    category: policy
+    price: null
+    currency: null
+    duration: null
+    inclusions: []
+    exclusions: []
+    status: DECIDED
+    source: {file: docs/CURRENT-STATE.md, section: "§2 Package Prices"}
+    source_date: "2026-07-30"
+    notes: "Direction (PM Duo/Refresh/Glow menu) is confirmed, not exploratory -- but final pricing is a separate, still-open item, see pm_package_duo/refresh/glow records below."
+
+  - id: pm_package_duo
+    name: "PM Duo (proposed)"
+    category: package
+    price: null
+    currency: AUD
+    duration: "~60-75 min"
+    inclusions: ["Blowdry (30min, A$65)", "Express Glow Facial (30min, A$95)"]
+    exclusions: []
+    status: PLACEHOLDER
+    status_detail: "final price not signed off by Anthony -- two proposed options exist, not collapsed to one"
+    source: {file: docs/pm-package-structure.md, section: "Proposed Package Options table"}
+    source_date: "2026-07-20"
+    proposed_prices:
+      sum_of_individual: 160
+      at_10pct_discount: 144
+      at_15pct_discount: 136
+    notes: "Sum of individual service prices A$160. Two discount-tier proposals exist (10% -> A$144, 15% -> A$136); pm-package-structure.md explicitly states neither is locked -- Anthony's call. Recorded as PLACEHOLDER, not defaulted to either option."
+
+  - id: pm_package_refresh
+    name: "PM Refresh (proposed)"
+    category: package
+    price: null
+    currency: AUD
+    duration: "~90-100 min"
+    inclusions: ["Standard Pregnancy Massage (45min, A$120)", "Signature Pregnancy Facial (45min, A$130)"]
+    exclusions: []
+    status: PLACEHOLDER
+    status_detail: "final price not signed off by Anthony -- two proposed options exist, not collapsed to one"
+    source: {file: docs/pm-package-structure.md, section: "Proposed Package Options table"}
+    source_date: "2026-07-20"
+    proposed_prices:
+      sum_of_individual: 250
+      at_10pct_discount: 225
+      at_15pct_discount: 212
+    notes: "Sum of individual service prices A$250. Same two-tier proposal structure as pm_package_duo."
+
+  - id: pm_package_glow
+    name: "PM Glow (proposed)"
+    category: package
+    price: null
+    currency: AUD
+    duration: "~75-90 min"
+    inclusions: ["Gel Manicure (45min, A$75)", "Express Glow Facial (30min, A$95)"]
+    exclusions: []
+    status: PLACEHOLDER
+    status_detail: "final price not signed off by Anthony -- two proposed options exist, not collapsed to one"
+    source: {file: docs/pm-package-structure.md, section: "Proposed Package Options table"}
+    source_date: "2026-07-20"
+    proposed_prices:
+      sum_of_individual: 170
+      at_10pct_discount: 153
+      at_15pct_discount: 144
+    notes: "Sum of individual service prices A$170. Same two-tier proposal structure as pm_package_duo."
+
+  # --- Individual GTT-window a-la-carte services (representative slice only, see file header) ---
+  - id: service_massage_express
+    name: "Express pregnancy massage (back, neck, shoulders)"
+    category: gtt_window_service
+    price: 75
+    currency: AUD
+    duration: "30 min"
+    inclusions: []
+    exclusions: ["60-min massage -- afternoon/standalone booking only, not this record"]
+    status: VERIFIED
+    source: {file: docs/services-pricing-locked.md, section: "PART A, 1. PREGNANCY MASSAGE"}
+    source_date: "2026-06-09"
+    notes: "Verified against the locked pricing menu directly -- a single, undisputed source, no cross-check conflict possible."
+
+  - id: service_massage_standard
+    name: "Standard pregnancy massage"
+    category: gtt_window_service
+    price: 120
+    currency: AUD
+    duration: "45 min"
+    inclusions: []
+    exclusions: []
+    status: VERIFIED
+    source: {file: docs/services-pricing-locked.md, section: "PART A, 1. PREGNANCY MASSAGE"}
+    source_date: "2026-06-09"
+
+  - id: service_facial_express
+    name: "Express glow facial"
+    category: gtt_window_service
+    price: 95
+    currency: AUD
+    duration: "30 min"
+    inclusions: []
+    exclusions: []
+    status: VERIFIED
+    source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS (PREGNANCY-SAFE)"}
+    source_date: "2026-06-09"
+
+  - id: service_facial_signature
+    name: "Signature pregnancy facial"
+    category: gtt_window_service
+    price: 130
+    currency: AUD
+    duration: "45 min"
+    inclusions: []
+    exclusions: []
+    status: VERIFIED
+    source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS (PREGNANCY-SAFE)"}
+    source_date: "2026-06-09"
+
+  - id: service_manicure_classic
+    name: "Classic manicure (regular polish)"
+    category: gtt_window_service
+    price: 55
+    currency: AUD
+    duration: "30 min"
+    inclusions: []
+    exclusions: []
+    status: VERIFIED
+    source: {file: docs/services-pricing-locked.md, section: "PART A, 3. NAIL SERVICES"}
+    source_date: "2026-06-09"
+
+  - id: service_brow_wax_reshape
+    name: "Brow wax + reshape"
+    category: gtt_window_service
+    price: 45
+    currency: AUD
+    duration: "20 min"
+    inclusions: []
+    exclusions: []
+    status: VERIFIED
+    source: {file: docs/services-pricing-locked.md, section: "PART A, 4. BROWS & LASHES"}
+    source_date: "2026-06-09"
+
+  - id: service_blowdry_short_medium
+    name: "Blowdry (short-medium hair)"
+    category: gtt_window_service
+    price: 65
+    currency: AUD
+    duration: "30 min"
+    inclusions: []
+    exclusions: []
+    status: VERIFIED
+    source: {file: docs/services-pricing-locked.md, section: "PART A, 5. HAIRDRESSING -- GTT WINDOW SERVICES"}
+    source_date: "2026-06-09"
+
+# No conflicting prices were found across docs/CURRENT-STATE.md, docs/services-pricing-locked.md,
+# and docs/pm-package-structure.md for any figure recorded above. The PM package prices are not a
+# "conflict" in the sense this list tracks -- they are a single source (pm-package-structure.md)
+# presenting two not-yet-decided options, correctly represented above as PLACEHOLDER with both
+# options shown, not as disagreeing sources.
+conflicts: []

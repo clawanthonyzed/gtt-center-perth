@@ -1,0 +1,229 @@
+# GTT Center Perth -- Canonical Scenario Registry (proof of concept)
+#
+# Purpose: represent the venture's operating-model scenarios as structured data.
+# Per the coordinator's explicit instruction for this phase: BOTH Table 1 and
+# Table 2 are represented in full, NEITHER is marked primary, and this file
+# does not resolve docs/VERIFICATION-TRACKER.md item 1m (which of the two is
+# "the" committed daily target -- an open question for Anthony, not this file).
+#
+# Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
+# PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+#
+# See docs/architecture/CANONICAL-DATA-POC.md for how to read/validate this file.
+
+schema_version: 1
+dataset: scenarios
+last_updated: "2026-08-08"
+
+records:
+  - id: scenario_table_1
+    name: "Table 1 -- 18 clients/day, 07:00 start, 25-min cadence"
+    is_primary: false   # deliberately false -- see notes below and VERIFICATION-TRACKER.md item 1m
+    is_primary_note: >
+      docs/CURRENT-STATE.md's own prose describes Table 1 as the "PRIMARY committed daily model"
+      because it strictly dominates Table 2 (same headcount, more revenue) -- but that same
+      document explicitly flags this adoption as a framing choice "not yet confirmed by Anthony"
+      (item 1m). Per the coordinator's explicit instruction for this canonical-data proof of
+      concept, is_primary is set to false for BOTH scenarios at the data layer until Anthony
+      resolves item 1m directly -- this is a deliberately more conservative stance than
+      CURRENT-STATE.md's prose currently takes, disclosed here rather than silently matched or
+      silently overridden.
+
+    client_volume:
+      value: 18
+      unit: "clients/day"
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+      notes: "9 pairs. Solver-verified, zero chair/phlebotomist collisions."
+
+    start_time:
+      value: "07:00"
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+      notes: "Synchronized dual-chair start."
+
+    cadence_minutes:
+      value: 25
+      unit: "minutes, uniform pair-to-pair"
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+
+    last_draw_1_time:
+      value: "10:20"
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+      notes: "10 minutes inside WDP's 'not normally after 10:30am' guidance."
+
+    chairs:
+      value: 2
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+
+    treatment_staffing:
+      value: 8
+      composition: "4 Massage+Beauty pool + 2 Nails + 2 Hair"
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model / §4 Headcount"}
+      notes: "Verified via sweep-line peak concurrency AND greedy first-fit, exact agreement (this repo's established two-method proof standard)."
+
+    phlebotomy_staffing:
+      value: 2
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model / §4 Headcount"}
+
+    total_staffing:
+      value: 10
+      status: CALCULATED
+      status_detail: "treatment_staffing + phlebotomy_staffing"
+      derived_from: [treatment_staffing, phlebotomy_staffing]
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+
+    monthly_financial_result:
+      value: 63028.75
+      currency: AUD
+      unit: "A$/month, net P&L, Month 5+ steady state"
+      status: MODELLED
+      status_detail: "delta-reconciliation build from the validated baseline; independently re-verified from scratch 2026-08-07 via a full 9-step first-principles walkthrough, exact match, no rounding drift (one pre-existing, already-disclosed ~A$2,576 weekly-to-monthly scaling gap noted separately, not unique to this figure)"
+      source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, PRIMARY -- Table 1"}
+
+    quarterly_financial_result:
+      value: 189086.25
+      currency: AUD
+      status: CALCULATED
+      status_detail: "monthly_financial_result x 3"
+      derived_from: [monthly_financial_result]
+      source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, PRIMARY -- Table 1"}
+
+    status: MODELLED   # record-level rollup -- the least-certain field (monthly_financial_result) governs
+    source: {file: docs/CURRENT-STATE.md, section: "§1, §4, §5 -- see individual fields above for exact sub-sections"}
+    notes: >
+      Full method: docs/scenario-c-sync-timetables.md §0.6a. Full scenario comparison:
+      docs/scenario-comparison-master-2026-08.md. This scenario is described in CURRENT-STATE.md's
+      own prose as "PRIMARY" -- see is_primary_note above for why is_primary is nonetheless set to
+      false in this canonical record.
+
+  - id: scenario_table_2
+    name: "Table 2 -- 12 clients/day, 08:00 start, 25-min cadence"
+    is_primary: false
+    is_primary_note: >
+      docs/CURRENT-STATE.md's own prose describes Table 2 as the "SECONDARY reference model."
+      This canonical record agrees with that characterisation for now, but is_primary is still
+      explicitly false (not implicitly true-by-default) so that a future automated process
+      cannot silently promote it either -- both scenarios require an explicit, positive
+      confirmation from Anthony before either is_primary flag is set to true.
+
+    client_volume:
+      value: 12
+      unit: "clients/day"
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+      notes: "6 pairs. Same headcount as Table 1, fewer clients -- later start leaves less room before the 10:30 WDP guidance limit."
+
+    start_time:
+      value: "08:00"
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+      notes: "Synchronized dual-chair start."
+
+    cadence_minutes:
+      value: 25
+      unit: "minutes, uniform pair-to-pair"
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+
+    last_draw_1_time:
+      value: "10:05"
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+
+    chairs:
+      value: 2
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+
+    treatment_staffing:
+      value: 8
+      composition: "4 Massage+Beauty pool + 2 Nails + 2 Hair -- identical to Table 1"
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model / §4 Headcount"}
+
+    phlebotomy_staffing:
+      value: 2
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model / §4 Headcount"}
+
+    total_staffing:
+      value: 10
+      status: CALCULATED
+      status_detail: "treatment_staffing + phlebotomy_staffing"
+      derived_from: [treatment_staffing, phlebotomy_staffing]
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, CURRENT COMMITTED MODEL table"}
+
+    seventh_pair_extension:
+      value: "REJECTED -- does not work at 8 staff"
+      status: VERIFIED
+      source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, Item 1 finding, 2026-08-05"}
+      notes: >
+        Tested inserting a 7th pair at 10:25 (and swept every whole-minute candidate 10:10-10:29).
+        Only 10:10 and 10:20 are collision-free, and both raise treatment headcount to 11
+        (5 pool + 3 Nails + 3 Hair), confirmed via sweep-line + greedy first-fit. Not adopted --
+        Table 2 stays at 6 pairs/12 clients/8 staff.
+
+    monthly_financial_result:
+      value: 27084.69
+      currency: AUD
+      unit: "A$/month, net P&L, Month 5+ steady state"
+      status: MODELLED
+      status_detail: "numerically unchanged from the pre-2026-08-05 12-client/23-min-cadence baseline, since client volume and headcount are identical -- not independently re-derived under the new cadence"
+      source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, SECONDARY -- Table 2"}
+
+    status: MODELLED
+    source: {file: docs/CURRENT-STATE.md, section: "§1, §4, §5 -- see individual fields above for exact sub-sections"}
+    notes: >
+      Open item, not quantified: whether the A$44.50/day "opening-time increment" (sourced to a
+      07:00-specific start cost) still applies at Table 2's 08:00 start -- if not, Table 2's true
+      Net P&L is slightly HIGHER than A$27,084.69/month. See docs/VERIFICATION-TRACKER.md item 1o.
+      This canonical record states the CURRENT-STATE.md figure as-is and flags the open item via
+      open_items below rather than adjusting the value.
+
+# Historical scenarios -- retained for trace only, per this repo's "never delete, mark superseded"
+# convention (rules/CLAUDE.md companion rule 1; docs/CURRENT-STATE.md's existing practice).
+# Deliberately minimal (not fully re-populated with every field) -- full detail remains in
+# docs/CURRENT-STATE.md's own "Historical, superseded" sections; this is a pointer, not a
+# duplicate migration of that content.
+historical_scenarios:
+  - id: scenario_14_client_ceiling
+    name: "14-client proven ceiling (pre-2026-08-05)"
+    status: SUPERSEDED
+    superseded_by: scenario_table_1
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, 14-client PROVEN CEILING rows"}
+    notes: "Dominated entirely by scenario_table_1 at the same 8-treatment-staff headcount, serving more clients. Full figures (9 staff, +A$36,726.23/month) not re-transcribed here -- see the cited source section."
+
+  - id: scenario_12client_23min_historical
+    name: "12-client/23-min-cadence committed model (2026-07-30 to 2026-08-05)"
+    status: SUPERSEDED
+    superseded_by: scenario_table_2
+    source: {file: docs/CURRENT-STATE.md, section: "§1 Operational Model, HISTORICAL rows"}
+    notes: "Numerically coincides with scenario_table_2's client volume and headcount (12/day, 8+2 staff) but is a genuinely different schedule (23-min vs 25-min cadence, different start-time derivation) -- coincidence of arithmetic, not the same model, per CURRENT-STATE.md's own explicit disclosure."
+
+  - id: scenario_10client_historical
+    name: "10-client Scenario C sync model (pre-2026-07-30)"
+    status: SUPERSEDED
+    superseded_by: scenario_12client_23min_historical
+    source: {file: docs/HANDOFF.md, section: "Current Committed Operational Model (2026-07-17, now historical)"}
+    notes: "The venture's original committed AM model, superseded twice since. Not the subject of this canonical-data POC pass -- flagged for completeness only."
+
+# Open items directly relevant to this file's own unresolved question -- pointers into
+# docs/VERIFICATION-TRACKER.md, not a duplicate open-items ledger.
+open_items:
+  - id: item_1m
+    description: "Which scenario (Table 1 or Table 2) is the actual committed daily target -- the 'framing flag' is not yet confirmed by Anthony."
+    source: {file: docs/VERIFICATION-TRACKER.md, section: "item 1m"}
+  - id: item_1o
+    description: "Whether Table 2's 08:00 start still incurs the 07:00-sourced 'opening-time increment' -- if not, Table 2's true Net P&L is slightly higher than stated."
+    source: {file: docs/VERIFICATION-TRACKER.md, section: "item 1o"}
+
+# No conflicting values were found between docs/CURRENT-STATE.md's own Table 1/Table 2 figures
+# and any other source document consulted for this file (docs/scenario-c-sync-timetables.md,
+# docs/scenario-comparison-master-2026-08.md) -- both are consistent with CURRENT-STATE.md.
+conflicts: []
