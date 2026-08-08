@@ -38,7 +38,15 @@ ARCHIVE_DIR = DOCS_DIR / "archive"
 # lines above it), mean this is a historical/explanatory mention, not a live
 # unflagged restatement -- skip it.
 STALENESS_MARKERS = re.compile(
-    r"superseded|stale|historical|was\s|prior|previously|corrected|correction|"
+    # NOTE (fixed 2026-08-08): `prior` was previously unanchored, so it matched
+    # inside unrelated words like "priority" (e.g. "WDP, priority 1") and
+    # silently suppressed genuine findings sitting within STALENESS_WINDOW
+    # lines of any such word. Anchored to \b...\b so it only matches the
+    # intentional marker word "prior" itself (e.g. "the prior model"), not a
+    # substring of a longer word. See docs/architecture/CANONICAL-DATA-POC.md
+    # for how this was found and tests/test_check_consistency.py for the
+    # regression test proving both directions.
+    r"superseded|stale|historical|was\s|\bprior\b|previously|corrected|correction|"
     r"flagged|archive|abandoned|old model|old figure|no longer|not.{0,15}current|"
     r"CONFLICT-|changelog|deprecated",
     re.IGNORECASE,
