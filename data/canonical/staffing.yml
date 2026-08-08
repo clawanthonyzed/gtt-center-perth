@@ -1,0 +1,255 @@
+# GTT Center Perth -- Canonical Staffing Data (proof of concept, Phase 2)
+#
+# Populated from docs/CURRENT-STATE.md §4 (canonical headcount), cross-checked against
+# docs/financial-break-even-staff.md, docs/pm-staffing-roster.md, docs/hr-framework.md,
+# docs/multirole-CORRECTION.md, and docs/VERIFICATION-TRACKER.md. No headcount, skill
+# pairing, or shift assumption was invented -- every field traces to a named source, and
+# genuinely unresolved fields are PLACEHOLDER, not guessed.
+#
+# Categories preserved per the coordinator's instruction: treatment / phlebotomy /
+# management_admin / other (PM roster + relief pool) / scenario-specific.
+#
+# Table 1 (18 clients/day) vs. Table 2 (12 clients/day) -- per docs/CURRENT-STATE.md §4,
+# AM treatment + phlebotomy headcount is IDENTICAL under both (a genuine, notable finding
+# of the 2026-08-05 rebase, not an oversight of this file). Where headcount differs
+# between scenarios (the historical 14-client ceiling), both are preserved, neither is
+# chosen -- see historical_staffing_scenarios below.
+#
+# Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
+# PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+
+schema_version: 1
+dataset: staffing
+last_updated: "2026-08-08"
+
+records:
+  - id: staff_venue_manager
+    role: "Venue Manager (Managing Director)"
+    category: management_admin
+    position: "Venue Manager"
+    headcount: 1
+    fte: null
+    employment_type: null
+    required_skills: ["day-to-day operations management", "staff supervision", "Fresha/booking oversight"]
+    service_capabilities: []
+    operating_availability: null
+    shift_assumptions: null
+    break_assumptions: null
+    staffing_scenario: universal
+    status: PLACEHOLDER
+    source: {file: docs/CURRENT-STATE.md, section: "§4 Headcount"}
+    notes: "Critical-path hire, recruitment gated on securing a physical venue location -- not yet begun. Employment type (salaried, contract) not decided anywhere in this repo -- not guessed here."
+
+  - id: staff_phlebotomist
+    role: Phlebotomist
+    category: phlebotomy
+    position: "Phlebotomist (Chair A / Chair B)"
+    headcount: 2
+    fte: 2
+    employment_type: "OPEN -- in-house employment is the current modelled baseline used in every P&L figure, but a WDP-supplied/rental-clinic alternative is a real, unresolved possibility"
+    required_skills: ["Pathology Collector, Cert III/IV", "Health Professionals Award MA000027 classification"]
+    service_capabilities: ["blood collection / GTT draw events"]
+    operating_availability: "AM only (GTT window, fasting requirement -- no PM clinical role)"
+    shift_assumptions: "07:30-12:30 Mon-Fri per docs/financial-break-even-staff.md's Shift Structure -- written against the historical 8-client model's 07:00/07:40 start and NOT independently re-stated for Table 1's 07:00 start or Table 2's 08:00 start. Flagged as an open gap, not silently carried forward as current."
+    break_assumptions: null
+    staffing_scenario: [scenario_table_1, scenario_table_2]
+    status: MODELLED
+    status_detail: "headcount (2) is VERIFIED per CURRENT-STATE.md §4, identical under both scenarios -- but the employment MODEL (who employs them) is a critical open dependency, not settled. Do not treat employment_type above as decided."
+    source: {file: docs/CURRENT-STATE.md, section: "§4 Headcount"}
+    notes: >
+      CRITICAL OPEN DEPENDENCY, per docs/VERIFICATION-TRACKER.md item 1d: Carole Rivers (WDP)'s
+      email states phlebotomist "safety, wellbeing and employment responsibilities ... would
+      remain with Western Diagnostic Pathology" under a rental-clinic model. Anthony's explicit
+      instruction: NOT DECIDED, do not assume either way. See item 1d-be for the pure financial
+      break-even comparison target (≈A$104,834-106,631/yr) this decision would be weighed against
+      -- not migrated into this file this pass (a derived/comparative figure, not a wage record).
+
+  - id: staff_treatment_massage_beauty_pool
+    role: "Massage Therapist / Beauty Therapist (dual-qualified pool)"
+    category: treatment
+    position: "Treatment staff -- Massage+Beauty pool"
+    headcount: 4
+    fte: 4
+    employment_type: "casual initially; reviewed for conversion to part-time once regular, proven hours exist per role"
+    required_skills: ["Cert IV HLT42015 (pregnancy massage specialisation)", "Diploma of Beauty Therapy"]
+    service_capabilities: ["pregnancy massage", "pregnancy-safe facials"]
+    operating_availability: "AM GTT window"
+    shift_assumptions: "07:00-13:00 AM staff shift window (docs/financial-break-even-staff.md's Shift Structure section, cross-referenced in data/canonical/client_assumptions.yml's am_shift_window_staff record)"
+    break_assumptions: null
+    staffing_scenario: [scenario_table_1, scenario_table_2]
+    status: VERIFIED
+    source: {file: docs/CURRENT-STATE.md, section: "§4 Headcount"}
+    notes: >
+      Dual-qualification (Massage+Beauty, Cert IV) is a CONFIRMED, hireable pairing -- distinct
+      from Nails+Hair, which has no confirmed dual-qualification pairing (VERIFICATION NEEDED,
+      per CURRENT-STATE.md §4). Peak concurrency of this pool is 4 at BOTH Table 1 (18-client)
+      and Table 2 (12-client) volumes -- verified via sweep-line peak concurrency AND greedy
+      first-fit, exact agreement (this repo's established two-method proof standard). A
+      lower-volume daily-rostering option (pool sized to 3, i.e. 7 total treatment staff instead
+      of 8) was found valid at the historical 12-client/23-min-cadence model
+      (docs/CURRENT-STATE.md §4) -- **NOT independently re-verified against Table 1/Table 2's
+      25-min cadence this pass**, flagged as an open item rather than assumed to still hold.
+
+  - id: staff_treatment_nails
+    role: "Nail Technician"
+    category: treatment
+    position: "Treatment staff -- Nails"
+    headcount: 2
+    fte: 2
+    employment_type: "casual initially; reviewed for conversion to part-time once regular, proven hours exist per role"
+    required_skills: ["Cert III SHB30321"]
+    service_capabilities: ["manicure", "pedicure", "nail add-ons"]
+    operating_availability: "AM GTT window"
+    shift_assumptions: "07:00-13:00 AM staff shift window"
+    break_assumptions: null
+    staffing_scenario: [scenario_table_1, scenario_table_2]
+    status: VERIFIED
+    source: {file: docs/CURRENT-STATE.md, section: "§4 Headcount"}
+    notes: "No confirmed dual-qualification pairing with Hair -- each line costed independently. Peak of 2 identical at both Table 1 and Table 2."
+
+  - id: staff_treatment_hair
+    role: "Hairdresser"
+    category: treatment
+    position: "Treatment staff -- Hair"
+    headcount: 2
+    fte: 2
+    employment_type: "casual initially; reviewed for conversion to part-time once regular, proven hours exist per role"
+    required_skills: ["Cert III SHB30116"]
+    service_capabilities: ["blowdry", "haircut", "braiding/hair up (GTT window services)"]
+    operating_availability: "AM GTT window"
+    shift_assumptions: "07:00-13:00 AM staff shift window"
+    break_assumptions: null
+    staffing_scenario: [scenario_table_1, scenario_table_2]
+    status: VERIFIED
+    source: {file: docs/CURRENT-STATE.md, section: "§4 Headcount"}
+    notes: "No confirmed dual-qualification pairing with Nails -- each line costed independently. Peak of 2 identical at both Table 1 and Table 2."
+
+  - id: staff_receptionist_manager
+    role: "Receptionist / Manager"
+    category: management_admin
+    position: "Receptionist/Manager (split shift)"
+    headcount: 1
+    fte: 1
+    employment_type: null
+    required_skills: ["Clerks Award MA000002 classification", "reception", "sales/upselling", "GTT coordination", "day-to-day scheduling"]
+    service_capabilities: []
+    operating_availability: "split shift"
+    shift_assumptions: "AM 07:00-12:00 (opening, GTT coordination, AM checkout) + PM 15:00-18:00 (PM bookings, closing), with a midday break 12:00-15:00"
+    break_assumptions: "midday break 12:00-15:00 -- source document literally states 'paid/unpaid midday break', not resolved which. Recorded as-is, not guessed."
+    staffing_scenario: universal
+    status: MODELLED
+    source: {file: docs/financial-break-even-staff.md, section: "Receptionist / Manager Role, Day 51 split-shift note (CF-01)"}
+    notes: >
+      employment_type not stated in this repo (unlike the PM roster's explicit "casual for
+      first 3-6 months") -- left null rather than inferred. The AM 07:00-12:00 block was
+      written against the historical 07:00 start assumption and has NOT been independently
+      re-checked against Table 2's 08:00 start -- flagged, not silently assumed still correct.
+
+  - id: staff_pm_massage
+    role: "Massage Therapist (PM)"
+    category: other
+    position: "PM dedicated casual -- massage line"
+    headcount: 1
+    fte: null
+    employment_type: "casual for first 3-6 months; review conversion to part-time at Month 3-6 for roles with proven, regular demand"
+    required_skills: ["cross-shift qualified with AM Massage+Beauty staff"]
+    service_capabilities: ["pregnancy massage (standalone/afternoon)"]
+    operating_availability: "PM, Mon-Fri 12:00-18:00 (rostered window -- actual paid hours are hours-based, not a blanket shift, see wages.yml minimum_engagement records)"
+    shift_assumptions: "hours-based costing: hours/role/week = (sessions/day / 4 roles x 5 days) / 1.3 sessions/hr throughput -- not a fixed shift-length payroll"
+    break_assumptions: null
+    staffing_scenario: universal
+    status: MODELLED
+    source: {file: docs/CURRENT-STATE.md, section: "§4 Headcount (PM dedicated casual roster row)"}
+    notes: "One of 4 PM dedicated casual roles (massage, hair, nail, beauty -- 1 each), per docs/pm-staffing-roster.md Locked Decisions #2/#3. Structure/headcount current; PM P&L dollar figures in pm-staffing-roster.md are themselves historical (built on the pre-rebase AM model) -- not migrated here, that's a models/ concern."
+
+  - id: staff_pm_hair
+    role: "Hairdresser (PM)"
+    category: other
+    position: "PM dedicated casual -- hair line"
+    headcount: 1
+    fte: null
+    employment_type: "casual for first 3-6 months; review conversion to part-time at Month 3-6 for roles with proven, regular demand"
+    required_skills: ["Cert III SHB30116"]
+    service_capabilities: ["blowdry", "haircut (standalone/afternoon)"]
+    operating_availability: "PM, Mon-Fri 12:00-18:00 (rostered window -- actual paid hours are hours-based)"
+    shift_assumptions: "hours-based costing, same formula as staff_pm_massage"
+    break_assumptions: null
+    staffing_scenario: universal
+    status: MODELLED
+    source: {file: docs/CURRENT-STATE.md, section: "§4 Headcount (PM dedicated casual roster row)"}
+    notes: "No confirmed cross-qualification pairing for the PM Hair role -- costed independently, same as its AM counterpart."
+
+  - id: staff_pm_nail
+    role: "Nail Technician (PM)"
+    category: other
+    position: "PM dedicated casual -- nail line"
+    headcount: 1
+    fte: null
+    employment_type: "casual for first 3-6 months; review conversion to part-time at Month 3-6 for roles with proven, regular demand"
+    required_skills: ["Cert III SHB30321"]
+    service_capabilities: ["manicure", "pedicure (standalone/afternoon)"]
+    operating_availability: "PM, Mon-Fri 12:00-18:00 (rostered window -- actual paid hours are hours-based)"
+    shift_assumptions: "hours-based costing, same formula as staff_pm_massage"
+    break_assumptions: null
+    staffing_scenario: universal
+    status: MODELLED
+    source: {file: docs/CURRENT-STATE.md, section: "§4 Headcount (PM dedicated casual roster row)"}
+    notes: "No confirmed cross-qualification pairing for the PM Nail role -- costed independently."
+
+  - id: staff_pm_beauty
+    role: "Beauty Therapist (PM)"
+    category: other
+    position: "PM dedicated casual -- beauty line"
+    headcount: 1
+    fte: null
+    employment_type: "casual for first 3-6 months; review conversion to part-time at Month 3-6 for roles with proven, regular demand"
+    required_skills: ["Diploma of Beauty Therapy"]
+    service_capabilities: ["facials (standalone/afternoon)"]
+    operating_availability: "PM, Mon-Fri 12:00-18:00 (rostered window -- actual paid hours are hours-based)"
+    shift_assumptions: "hours-based costing, same formula as staff_pm_massage"
+    break_assumptions: null
+    staffing_scenario: universal
+    status: MODELLED
+    source: {file: docs/CURRENT-STATE.md, section: "§4 Headcount (PM dedicated casual roster row)"}
+    notes: "Cross-training pool with staff_pm_massage (Massage+Beauty, same Cert IV pairing as AM) is the one confirmed PM pooling option, per docs/pm-staffing-roster.md's Multi-Role Relief Hiring section -- not applied to reduce this record's headcount of 1, since PM's committed structure is explicitly 1-per-line, not pooled, per docs/CURRENT-STATE.md §4."
+
+  - id: staff_casual_relief_pool
+    role: "Casual Relief Pool"
+    category: other
+    position: "Relief / backup coverage across AM+PM"
+    headcount: null
+    fte: null
+    employment_type: "casual, budget line not a fixed headcount"
+    required_skills: []
+    service_capabilities: []
+    operating_availability: "as needed, sick/holiday cover across any of the roles above"
+    shift_assumptions: null
+    break_assumptions: null
+    staffing_scenario: universal
+    status: MODELLED
+    source: {file: docs/CURRENT-STATE.md, section: "§4 Headcount (Casual Relief Pool row)"}
+    notes: "A$15,000/yr budgeted -- see wages.yml for this figure as a wage/employer-cost record. docs/pm-staffing-roster.md's Multi-Role Relief Hiring section (2026-07-15) proposes a 3-person structure (Massage+Beauty dual relief, Nail relief, Hair relief) as a recommendation, not yet confirmed as the adopted relief-pool structure in CURRENT-STATE.md itself -- flagged, not asserted as settled."
+
+# Historical staffing scenarios -- retained for trace only, per this repo's "never delete,
+# mark superseded" convention. NOT fully re-populated (full detail remains in
+# docs/CURRENT-STATE.md's own historical sections).
+historical_staffing_scenarios:
+  - id: staffing_14client_ceiling_historical
+    name: "Treatment headcount at the 14-client proven ceiling (pre-2026-08-05)"
+    headcount_treatment: 9
+    composition: "3 Massage+Beauty pool + 3 Nails + 3 Hair"
+    status: SUPERSEDED
+    superseded_by: staff_treatment_massage_beauty_pool  # + staff_treatment_nails + staff_treatment_hair, at 8 total under Table 1/2
+    source: {file: docs/CURRENT-STATE.md, section: "§4 Headcount, 14-client PROVEN CEILING row"}
+    notes: "Dominated entirely by Table 1's 8-staff headcount serving more clients (18 vs 14) -- retained for trace only."
+
+  - id: staffing_10client_historical
+    name: "Treatment headcount at the original 10-client Scenario C model (pre-2026-07-30)"
+    headcount_treatment: 8
+    composition: "2 each of Massage, Nails, Hair, Beauty (no pooling reduction assessed at this stage)"
+    status: SUPERSEDED
+    superseded_by: staff_treatment_massage_beauty_pool
+    source: {file: docs/HANDOFF.md, section: "Current Committed Operational Model (2026-07-17, now historical)"}
+    notes: "Predates the Massage+Beauty dual-qualification pooling analysis entirely -- flagged for completeness only, not the subject of this pass."
+
+conflicts: []

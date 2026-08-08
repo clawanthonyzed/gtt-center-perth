@@ -1,0 +1,312 @@
+# GTT Center Perth -- Canonical Wage Data (proof of concept, Phase 2)
+#
+# Populated from docs/financial-break-even-staff.md's Award Wage Summary (the table
+# CURRENT-STATE.md's own payroll math is actually built from -- cross-checked
+# arithmetically: 4x$62,774 (Massage+Beauty) + 4x$60,456 (Nails+Hair) = $492,920/yr,
+# exactly matching CURRENT-STATE.md §5's "8 treatment staff (A$492,920/yr)" figure),
+# cross-referenced against docs/hr-framework.md and docs/HANDOFF.md.
+#
+# IMPORTANT -- multiple genuine conflicts were found across these three sources on both
+# base hourly rates and penalty-rate percentages. None was silently resolved. See the
+# `conflicts` list at the bottom of this file and each affected record's own notes.
+#
+# Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
+# PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+
+schema_version: 1
+dataset: wages
+last_updated: "2026-08-08"
+
+records:
+  # --- Base hourly / annual rates, per role (primary source: financial-break-even-staff.md) ---
+  - id: wage_receptionist_manager
+    role: "Receptionist/Manager"
+    employment_type: "casual (rate table); annual figure assumes 30hr/wk"
+    hourly_rate: {base: 26.70, casual_loaded: 33.38, currency: AUD}
+    salary: {annual_at_30hr_week: 56237, currency: AUD, includes_super: true}
+    superannuation: null   # see wage_superannuation_rate below -- not restated per-role
+    payroll_tax: null       # see wage_payroll_tax below
+    leave_loading: {casual_loading_pct: 25}
+    minimum_engagement_assumptions: null   # see wage_casual_minimum_engagement below
+    other_employer_costs: null   # see wage_workers_comp_rate below
+    effective_date: "2025-07-01"
+    status: MODELLED
+    status_detail: "internally consistent with the arithmetic base->casual conversion (base x 1.25 = casual rate) -- not independently externally re-verified this session"
+    source: {file: docs/financial-break-even-staff.md, section: "Award Wage Summary (Effective 1 July 2025)"}
+    notes: >
+      Award/level cited as Clerks MA000002 Level 2. docs/hr-framework.md's own Clerks Award
+      table gives a different indicative 2026 rate (~A$26.17-27.42/hr, Level 1 Grade 1 / Level
+      2) -- close to but not identical to this record's $26.70 base, and explicitly labelled
+      "Indicative (2026)" / "CONFIRM CURRENT AWARD RATE BEFORE ISSUING CONTRACTS" by its own
+      source document, i.e. a lower-confidence planning figure, not a second confident claim.
+      Not treated as a hard conflict given hr-framework.md's own self-declared indicative
+      status, but flagged for completeness.
+
+  - id: wage_beauty_therapist
+    role: "Beauty Therapist"
+    employment_type: casual
+    hourly_rate: {base: 29.60, casual_loaded: 37.00, currency: AUD}
+    salary: {annual_at_30hr_week: 62774, currency: AUD, includes_super: true}
+    superannuation: null
+    payroll_tax: null
+    leave_loading: {casual_loading_pct: 25}
+    minimum_engagement_assumptions: null
+    other_employer_costs: null
+    effective_date: "2025-07-01"
+    status: MODELLED
+    status_detail: "award/level cited (MA000005 Level 4) but no external primary-source citation for the exact dollar figure -- see conflicts list, hr-framework.md's indicative 2026 Level 4/5 range ($24.89-26.56/hr) is materially lower than this $29.60 base"
+    source: {file: docs/financial-break-even-staff.md, section: "Award Wage Summary (Effective 1 July 2025)"}
+    notes: "This is the operative rate -- it is the one CURRENT-STATE.md's own payroll totals are arithmetically built from (see this file's header note). Not necessarily the more ACCURATE figure, just the one the venture's committed model currently uses."
+
+  - id: wage_massage_therapist
+    role: "Massage Therapist"
+    employment_type: casual
+    hourly_rate: {base: 29.60, casual_loaded: 37.00, currency: AUD}
+    salary: {annual_at_30hr_week: 62774, currency: AUD, includes_super: true}
+    superannuation: null
+    payroll_tax: null
+    leave_loading: {casual_loading_pct: 25}
+    minimum_engagement_assumptions: null
+    other_employer_costs: null
+    effective_date: "2025-07-01"
+    status: MODELLED
+    status_detail: "same rate/status as wage_beauty_therapist -- same award level (MA000005 Level 4)"
+    source: {file: docs/financial-break-even-staff.md, section: "Award Wage Summary (Effective 1 July 2025)"}
+    notes: "Also the confirmed rate applied to PM Massage staffing, per docs/pm-staffing-roster.md's Recalculated Financials section ('Massage/Beauty A$37.00/hr casual')."
+
+  - id: wage_nail_technician
+    role: "Nail Technician"
+    employment_type: casual
+    hourly_rate: {base: 28.50, casual_loaded: 35.63, currency: AUD}
+    salary: {annual_at_30hr_week: 60456, currency: AUD, includes_super: true}
+    superannuation: null
+    payroll_tax: null
+    leave_loading: {casual_loading_pct: 25}
+    minimum_engagement_assumptions: null
+    other_employer_costs: null
+    effective_date: "2025-07-01"
+    status: MODELLED
+    status_detail: "award/level cited (MA000005 Level 3) but hr-framework.md's indicative 2026 Level 3 rate (~$23.49/hr) is materially lower than this $28.50 base -- see conflicts list"
+    source: {file: docs/financial-break-even-staff.md, section: "Award Wage Summary (Effective 1 July 2025)"}
+    notes: "Also the confirmed rate applied to PM Nail staffing ('Hair/Nail A$35.63/hr casual', docs/pm-staffing-roster.md)."
+
+  - id: wage_hairdresser
+    role: Hairdresser
+    employment_type: casual
+    hourly_rate: {base: 28.50, casual_loaded: 35.63, currency: AUD}
+    salary: {annual_at_30hr_week: 60456, currency: AUD, includes_super: true}
+    superannuation: null
+    payroll_tax: null
+    leave_loading: {casual_loading_pct: 25}
+    minimum_engagement_assumptions: null
+    other_employer_costs: null
+    effective_date: "2025-07-01"
+    status: MODELLED
+    status_detail: "same rate/status as wage_nail_technician -- same award level (MA000005 Level 3)"
+    source: {file: docs/financial-break-even-staff.md, section: "Award Wage Summary (Effective 1 July 2025)"}
+    notes: "Also the confirmed rate applied to PM Hair staffing ('Hair/Nail A$35.63/hr casual', docs/pm-staffing-roster.md)."
+
+  - id: wage_phlebotomist
+    role: Phlebotomist
+    employment_type: "casual (rate table); annual figure assumes 25hr/wk each"
+    hourly_rate: {base: 24.50, casual_loaded: 30.63, currency: AUD}
+    salary: {annual_at_25hr_week: 43068, currency: AUD, includes_super: true}
+    superannuation: null
+    payroll_tax: null
+    leave_loading: {casual_loading_pct: 25}
+    minimum_engagement_assumptions: null
+    other_employer_costs: null
+    effective_date: "2025-07-01"
+    status: MODELLED
+    status_detail: "award cited (MA000027, Pathology Collector Cert III/IV). docs/hr-framework.md gives a differently-structured indicative range for MA000027 ($25.43-30.51/hr across 3 classifications, 'Phlebotomists in Perth private pathology typically earn A$26-32/hr') -- broadly overlapping with this record's $24.50 base/$30.63 casual, not a sharp conflict, but not an exact match either"
+    source: {file: docs/financial-break-even-staff.md, section: "Award Wage Summary (Effective 1 July 2025)"}
+    notes: >
+      This is the figure CURRENT-STATE.md §5's A$86,136/yr (2x this record's annual figure)
+      and §4/item 1d-be's break-even comparison are built from -- sourced directly, not
+      re-estimated, per docs/VERIFICATION-TRACKER.md item 1d-be's own explicit statement.
+      Entirely contingent on the in-house employment model holding (see
+      data/canonical/staffing.yml's staff_phlebotomist record, item 1d).
+
+  # --- Superannuation, payroll tax, workers comp (employer-cost items, not per-role) ---
+  - id: wage_superannuation_rate
+    role: "(all roles)"
+    category: employer_cost
+    value_pct: 12
+    basis: "Ordinary Time Earnings (OTE)"
+    status: MODELLED
+    status_detail: >
+      Two internal sources agree (financial-break-even-staff.md: "Super: 12% on ordinary
+      time earnings"; hr-framework.md: "12% of OTE, effective 1 July 2025 -- the final
+      scheduled Superannuation Guarantee increase. This is the current rate (FY2026)").
+      docs/01_conflicts_log.md's own consistency sweep also confirms this figure agrees
+      across staff-plan.md/hr-framework.md/financial-setup.md. Consistent with the actual
+      legislated Australian SG rate schedule reaching 12% at 1 July 2025 as its final
+      scheduled step (general knowledge, not independently re-fetched from a primary
+      legislative source this session) -- internally well-corroborated, but not tagged
+      VERIFIED, since no document in this repo cites an external primary source
+      (ATO/legislation) with a fetch date, unlike the 3-hour-minimum rule below.
+    source: {file: docs/hr-framework.md, section: "5. SUPERANNUATION"}
+    notes: "hr-framework.md itself flags 'confirm current rate with accountant at hire -- rate increases annually' -- treat as a planning assumption, not a locked contractual fact."
+
+  - id: wage_payroll_tax
+    role: "(all roles)"
+    category: employer_cost
+    value_pct: null
+    status: PLACEHOLDER
+    source: null
+    notes: >
+      Not addressed anywhere in this repo's documents (checked docs/hr-framework.md's
+      Payroll Setup and Superannuation sections, docs/financial-setup.md, and
+      docs/CURRENT-STATE.md -- no mention found). Genuinely unknown whether WA payroll tax
+      applies at this venture's payroll scale (WA's payroll tax threshold is well above
+      this venture's modelled total payroll, per general knowledge -- but this was NOT
+      independently verified against the current WA payroll tax threshold this session, and
+      is not asserted as fact here). Flagged as an unresolved verification requirement per
+      the coordinator's explicit instruction, not silently assumed either way.
+
+  - id: wage_workers_comp_rate
+    role: "(all roles)"
+    category: employer_cost
+    value_pct: 1.7
+    basis: "% of Direct Labor"
+    status: MODELLED
+    source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L"}
+    notes: "Applied consistently across CURRENT-STATE.md's Table 1/Table 2 P&L figures. No external WorkCover WA premium-schedule citation found in this repo for this specific rate -- MODELLED, not VERIFIED."
+
+  # --- Casual minimum engagement (the specific item the coordinator asked to be investigated) ---
+  - id: wage_casual_minimum_engagement
+    role: "(all casual roles)"
+    category: award_provision
+    value_hours: 3
+    basis: "minimum consecutive hours per casual engagement"
+    status: VERIFIED
+    status_detail: >
+      INVESTIGATED per the coordinator's explicit 5-step instruction, not adopted blindly:
+      (1) WHAT THE REPO SAYS: a 3-consecutive-hour minimum casual engagement applies to
+      any casual shift/booking-gap costing.
+      (2) WHERE IT CAME FROM: cited to MA000005 clause 11.5 and MA000027 clause 11.2,
+      in docs/financial-break-even-staff.md's Staff Downtime Protocol section, tagged
+      "[VERIFIED -- Fair Work Ombudsman/Fair Work Commission, checked via direct WebFetch,
+      2026-07-30]" -- a real external-source citation with a method and a date, not a bare
+      assertion.
+      (3) SUPPORTING/DISPUTING EVIDENCE IN THE REPO: supporting -- the rule was actively
+      APPLIED to correct a real costing bug (docs/VERIFICATION-TRACKER.md item 1i: Saturday
+      PM Direct Labor was understated at 1.54hrs/role/day before this 3-hour floor was
+      correctly enforced, corrected to A$654.32/day from A$335.55/day). This is stronger
+      evidence than a citation alone -- the rule was tested against a real number and
+      changed a real output. No disputing evidence was found anywhere in this repo.
+      (4) CAN IT SAFELY BE MARKED VERIFIED: yes, on the strength of the repo's own
+      documented external check -- but disclosed honestly: THIS SESSION did not
+      independently re-fetch the Fair Work Ombudsman/Fair Work Commission source itself.
+      The VERIFIED status here traces to the prior session's own direct-WebFetch check
+      (2026-07-30), not a fresh external verification performed while building this file.
+      (5) N/A -- resolved at step 4, with the disclosure above carried forward rather than
+      silently dropped.
+    source: {file: docs/financial-break-even-staff.md, section: "Staff Downtime Protocol"}
+    verified_by: "Fair Work Ombudsman / Fair Work Commission (per the source document's own citation)"
+    verified_date: "2026-07-30"
+    notes: >
+      Item 1i's open follow-up (docs/VERIFICATION-TRACKER.md) is NOT resolved by this
+      record: the 14-client PROVEN CEILING figures used the same Saturday hours-based PM
+      costing methodology, scaled proportionally, and were NOT re-checked for this same
+      3-hour-floor issue before that scenario was superseded (2026-08-05) -- moot now that
+      Table 1/Table 2 have superseded the 14-client ceiling, but recorded for completeness.
+
+  - id: wage_ma000027_saturday_carveout
+    role: Phlebotomist
+    category: award_provision
+    value: null
+    status: PLACEHOLDER
+    status_detail: >
+      DISTINCT from wage_casual_minimum_engagement above -- this is a different provision
+      entirely (whether Saturday 8am-4:30pm counts as ORDINARY HOURS for private pathology
+      practices under MA000027, which would reduce Saturday phlebotomist penalty-rate cost),
+      not the 3-hour engagement floor. Genuinely unconfirmed: docs/hr-framework.md's own
+      investigation (2026-07-19) found "no live web-fetch/browse tool available" in that
+      session to check the actual MA000027 clause text, and explicitly recommends a payroll
+      advisor or Fair Work's Infoline (13 13 94) as next steps -- neither completed. All
+      financial models use the conservative full-penalty assumption until this is resolved.
+    source: {file: docs/VERIFICATION-TRACKER.md, section: "FINANCIAL -- NEEDS ACCOUNTANT CONFIRMATION, item 11"}
+    notes: "This session did not attempt external verification either -- recorded as an unresolved verification requirement, not silently resolved, per the coordinator's explicit instruction."
+
+  # --- Penalty rates -- genuine 3-way source conflict, not resolved (see conflicts list) ---
+  - id: wage_ma000005_saturday_penalty
+    role: "(MA000005 roles: Massage/Beauty/Nail/Hair)"
+    category: penalty_rate
+    value_pct: null
+    status: PLACEHOLDER
+    status_detail: "three sources in this repo disagree -- see conflicts list at the bottom of this file. Not resolved to a single figure."
+    source: null
+    notes: "financial-break-even-staff.md: 133% (1.33x). docs/HANDOFF.md: '133% (permanent) / 150% (casual)'. docs/hr-framework.md: 150% flat, plus explicitly labelled 'Indicative (2026), CONFIRM BEFORE ISSUING CONTRACTS'. All current staff are modelled as casual, so if any one source is right, HANDOFF.md's 150% casual figure and hr-framework.md's 150% flat figure would agree -- but neither is independently verified against a fetched primary source, and financial-break-even-staff.md (the document CURRENT-STATE.md's own payroll totals are built from) uses 133%. Genuinely unresolved."
+
+  - id: wage_ma000005_sunday_penalty
+    role: "(MA000005 roles)"
+    category: penalty_rate
+    value_pct: null
+    status: PLACEHOLDER
+    status_detail: "three sources disagree -- see conflicts list"
+    source: null
+    notes: "financial-break-even-staff.md: 200% (2.0x). docs/HANDOFF.md: 200%. docs/hr-framework.md: 175%. Two of three agree at 200%, but hr-framework.md's own disclaimer ('Indicative (2026)') means this isn't a confident majority resolution -- recorded as PLACEHOLDER, not silently resolved to the 2-of-3 figure."
+
+  - id: wage_ma000005_public_holiday_penalty
+    role: "(MA000005 roles)"
+    category: penalty_rate
+    value_pct: null
+    status: PLACEHOLDER
+    status_detail: "three sources disagree -- see conflicts list"
+    source: null
+    notes: "financial-break-even-staff.md: 250% (2.5x). docs/HANDOFF.md: '250-275%'. docs/hr-framework.md: 250% flat. Currently moot for financial modelling since Public Holidays are closed at launch (docs/pm-staffing-roster.md Locked Decision #5) -- but recorded honestly rather than silently resolved, in case that decision changes."
+
+  - id: wage_ma000002_saturday_penalty
+    role: "Receptionist/Manager (Clerks MA000002)"
+    category: penalty_rate
+    value_pct: 125
+    status: MODELLED
+    source: {file: docs/hr-framework.md, section: "Clerks Award MA000002, Penalty rates"}
+    notes: "Single source, no conflict found for this specific award/role combination -- not cross-referenced elsewhere in this repo's financial documents (Receptionist/Manager Saturday penalty was not itemised in financial-break-even-staff.md or HANDOFF.md)."
+
+# Genuine, disclosed conflicts -- none silently resolved. Per the coordinator's explicit
+# instruction ("do NOT silently pick one -- record it as a conflict instead").
+conflicts:
+  - id: conflict_ma000005_penalty_rates
+    description: >
+      MA000005 (Hair & Beauty Industry Award) Saturday/Sunday/Public Holiday penalty rates
+      are stated THREE different ways across three documents in this repo:
+      Saturday -- financial-break-even-staff.md 133%, HANDOFF.md 133% (permanent)/150%
+      (casual), hr-framework.md 150% flat.
+      Sunday -- financial-break-even-staff.md 200%, HANDOFF.md 200%, hr-framework.md 175%.
+      Public Holiday -- financial-break-even-staff.md 250%, HANDOFF.md 250-275%,
+      hr-framework.md 250%.
+    affected_records: [wage_ma000005_saturday_penalty, wage_ma000005_sunday_penalty, wage_ma000005_public_holiday_penalty]
+    sources:
+      - {file: docs/financial-break-even-staff.md, section: "Award Wage Summary (Effective 1 July 2025)"}
+      - {file: docs/HANDOFF.md, section: "Regulatory Findings (Confirmed, Sourced)"}
+      - {file: docs/hr-framework.md, section: "Hair & Beauty Industry Award MA000005, Penalty rates"}
+    resolution_status: UNRESOLVED
+    notes: "None of the three cites a fetched primary source for the specific percentages (unlike wage_casual_minimum_engagement, which does). Flagged for a future session with award-interpretation/live-fetch capability -- do not pick one silently."
+
+  - id: conflict_base_hourly_rates_vs_hr_framework
+    description: >
+      docs/financial-break-even-staff.md's base hourly rates (used for every current P&L
+      calculation in this repo) are materially higher than docs/hr-framework.md's own
+      "Indicative rate (2026)" figures for the same award levels -- e.g. MA000005 Level 4
+      (Beauty/Massage): $29.60/hr (financial-break-even-staff.md) vs ~$24.89-26.56/hr
+      (hr-framework.md, Levels 4-5); MA000005 Level 3 (Nails/Hair): $28.50/hr vs ~$23.49/hr.
+    affected_records: [wage_beauty_therapist, wage_massage_therapist, wage_nail_technician, wage_hairdresser]
+    sources:
+      - {file: docs/financial-break-even-staff.md, section: "Award Wage Summary (Effective 1 July 2025)"}
+      - {file: docs/hr-framework.md, section: "4. AWARD WAGE RATES (CURRENT -- VERIFY BEFORE ISSUING CONTRACTS)"}
+    resolution_status: UNRESOLVED -- financial-break-even-staff.md's rates were used as the primary record above, since they are the ones CURRENT-STATE.md's own payroll totals are arithmetically traceable to (see this file's header). This is a "which figure the model currently runs on" choice, NOT a claim that financial-break-even-staff.md's rates are more accurate. hr-framework.md's own framing ("Indicative", "confirm before issuing contracts") suggests it may be the more cautious/placeholder-aware of the two, not necessarily the wrong one.
+    notes: "Both documents are dated within the same repo era (financial-break-even-staff.md: 'Effective 1 July 2025'; hr-framework.md: 'Indicative (2026)') -- the gap is not obviously explained by a wage-review timing difference alone."
+
+  - id: conflict_award_rate_staleness
+    description: >
+      Every wage rate in this file traces to a source stating "Effective 1 July 2025" or
+      "Indicative (2026)". Today's date in this session is 2026-08-08 -- after the Fair
+      Work Commission's typical annual wage review effective date (1 July each year,
+      per docs/hr-framework.md's own note: "Fair Work Commission increases minimum wages
+      annually (typically July 1)"). None of these rates has been re-checked against a
+      possible 1 July 2026 Annual Wage Review outcome.
+    affected_records: ["all wage_* records with a base/casual hourly_rate"]
+    resolution_status: UNRESOLVED -- flagged as an explicit unresolved verification requirement, not silently assumed current or silently updated.
+    notes: "This is a genuinely new finding from this pass, not previously logged in docs/VERIFICATION-TRACKER.md -- recommend adding a tracker item there in a future session (not done this pass, to stay within this phase's authorised file list)."
