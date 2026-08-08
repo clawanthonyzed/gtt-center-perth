@@ -78,7 +78,7 @@ This document details exactly how to design, fit out, equip, and maintain the pa
 - Wide seat (bariatric options available — relevant in pregnancy context)
 - **Perth suppliers:** Sunflower Medical, Alphatec Australia, Ultramedic
 - **Cost:** A$600-1,500 per chair
-- **Quantity:** 2, independent of Option A/B — required to meet the 8-client/morning capacity model (2 chairs, 2 phlebotomists, alternating-client assignment: Chair A takes odd-numbered clients, Chair B takes even-numbered). See operations-manual.md for the verified per-client and per-staff timetable.
+- **Quantity:** 2, independent of Option A/B — the 2-chair, 2-phlebotomist model itself is unchanged from the historical 8-client capacity figure through to the current 18-client/day committed model (chair count doesn't scale with client volume, only cadence does — see docs/CURRENT-STATE.md). See operations-manual.md for the verified per-client and per-staff timetable.
 
 ### Tabletop Centrifuge
 - **Critical for GDM accuracy:** NaF/fluoride-oxalate tubes MUST be centrifuged within 10 minutes of draw to prevent glycolysis (false low glucose reading — causes 62% GDM underdiagnosis per WA ORCHID study)
