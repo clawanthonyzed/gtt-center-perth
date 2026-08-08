@@ -37,17 +37,17 @@
 
 ---
 
-## CONFLICT-03 | Scenario B (8 clients/day) vs Scenario C Sync (10 clients/day) — Operational Model Mismatch
+## CONFLICT-03 | Scenario B (8 clients/day) vs Scenario C Sync (10 clients/day) — Operational Model Mismatch (historical — both figures long since superseded, see docs/CURRENT-STATE.md for the current 18-client Table 1 model)
 
-**Status: PARTIALLY RESOLVED 2026-07-19 — flagged, not fully rewritten**
+**Status: PARTIALLY RESOLVED 2026-07-19 — flagged, not fully rewritten at the time (both underlying models are now historical anyway)**
 
 **Finding:** This is the most significant conflict found this session. Per [HANDOFF.md](HANDOFF.md) (2026-07-17, the most recent and most authoritative session summary), **the current committed operational model is Scenario C, synchronized-chair-start: 10 clients/day, 07:00 first draw** — fully verified in `docs/scenario-c-sync-timetables.md` (programmatic double-booking check, zero conflicts across 2 phlebotomists and 8 treatment staff).
 
-However, `docs/operations-manual.md` — the primary day-to-day operations reference, read by all staff — still contains an entire "GTT SCHEDULING TIMETABLES" section built around **Scenario B (8 clients/day, 07:40 first draw)**, labelled "LAUNCH MODEL," with full per-client and per-staff tables. This is the document staff-plan.md, gtt-clinical-protocol.md, and patient-facing materials point to as authoritative.
+However, `docs/operations-manual.md` — the primary day-to-day operations reference, read by all staff — at the time still contained an entire "GTT SCHEDULING TIMETABLES" section built around the historical **Scenario B (8 clients/day, 07:40 first draw)**, labelled "LAUNCH MODEL," with full per-client and per-staff tables (both figures long since superseded, see docs/CURRENT-STATE.md). This was the document staff-plan.md, gtt-clinical-protocol.md, and patient-facing materials pointed to as authoritative at the time.
 
-`docs/gtt-clinical-protocol.md` also stated "8 GTT patients per day" and pointed to operations-manual.md for the verified timetable — doubly wrong (wrong number, and pointing to a now-also-wrong source).
+`docs/gtt-clinical-protocol.md` also stated the historical "8 GTT patients per day" figure and pointed to operations-manual.md for the verified timetable — doubly wrong at the time (wrong number, and pointing to a now-also-wrong source).
 
-**Why this matters:** If a Venue Manager or new staff member reads [operations-manual.md](operations-manual.md) cover-to-cover (as instructed by [reading-order.md](reading-order.md)), they will train on an 8-client/07:40-start model that does not match the actual committed 10-client/07:00-start model. This could cause real scheduling errors at launch — under- or over-booking the day, wrong arrival-time communications to patients, wrong phlebotomist load expectations.
+**Why this matters (historical context — both the 8-client and 10-client models below are since superseded, see docs/CURRENT-STATE.md):** If a Venue Manager or new staff member reads [operations-manual.md](operations-manual.md) cover-to-cover (as instructed by [reading-order.md](reading-order.md)), they will train on an 8-client/07:40-start model that does not match the then-actual committed 10-client/07:00-start model. This could cause real scheduling errors at launch — under- or over-booking the day, wrong arrival-time communications to patients, wrong phlebotomist load expectations.
 
 **Secondary finding:** Even within the "Scenario C" family, there are two versions:
 1. Staggered Scenario C (20-min offset between chairs) — in [am-capacity-weekend.md](am-capacity-weekend.md), dated 2026-07-16.

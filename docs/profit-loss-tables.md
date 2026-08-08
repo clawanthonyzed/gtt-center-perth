@@ -382,7 +382,7 @@ Inserting a 7th pair at exactly 10:25 (5-min draws, +60/+120min marks) collides 
 
 **Solver-verified, not estimated — re-ran the scheduling constraint check (same method as `sync-treatment-solver.py`'s Massage+Beauty verification) against the real Scenario C booking data (`scenario-c-sync-timetables.md`), adding a hypothetical Nails+Hair combined pool alongside the existing Massage+Beauty pool.**
 
-| Pool | Peak concurrent demand at 10 clients/day |
+| Pool | Peak concurrent demand at 10 clients/day (historical) |
 |---|---|
 | Massage + Beauty (existing, established pool) | 3 (unchanged, re-confirmed by direct re-run) |
 | Nails + Hair (hypothetical — checked this session) | 3 |
@@ -423,14 +423,14 @@ Inserting a 7th pair at exactly 10:25 (5-min draws, +60/+120min marks) collides 
 
 **Full whole-venture P&L at the 14-client ceiling (historical — this whole 14-client PROVEN CEILING model is superseded/dominated by the current 18-client Table 1 primary model at the same 8-treatment-staff headcount, see docs/CURRENT-STATE.md's 2026-08-05 REBASE banner; not just the AM segment):**
 
-| | 12-client (committed daily target) | 14-client (PROVEN CEILING) | Delta |
+| | 12-client (historical, committed daily target at the time) | 14-client (historical PROVEN CEILING, both superseded, see docs/CURRENT-STATE.md) | Delta |
 |---|---|---|---|
 | Total Revenue | A$118,297.16 | **A$131,462.16** | +A$13,165.00 |
 | Total Direct Labor + Opening Costs | A$74,561.20 | **A$79,406.03** | +A$4,844.83 (AM treatment labor only — PM and opening-increment unaffected) |
 | Workers Comp (1.7% of Direct Labor) | A$1,267.54 | **A$1,349.90** | +A$82.36 |
 | Non-Wage Overhead (fixed, not volume-driven) | A$13,980.00 | **A$13,980.00** | A$0.00 |
 | **Total Costs** | **A$89,808.74** | **A$94,735.93** | +A$4,927.19 |
-| **Monthly Net P&L** | **+A$28,488.42** | **+A$36,726.23** | **+A$8,237.81** |
+| **Monthly Net P&L (historical, both figures superseded)** | **+A$28,488.42** | **+A$36,726.23** | **+A$8,237.81** |
 | Quarterly (×3) | +A$85,465.26 | **+A$110,178.69** | +A$24,713.43 |
 | Half-Yearly (×6) | +A$170,930.51 | **+A$220,357.38** | +A$49,426.87 |
 | Yearly (×12) | +A$341,861.03 | **+A$440,714.76** | +A$98,853.73 |
@@ -444,8 +444,8 @@ Inserting a 7th pair at exactly 10:25 (5-min draws, +60/+120min marks) collides 
 | Between-gap minutes/day (across all treatment stations) | 560 min (8 stations) | **915 min (9 stations)** | Computed directly from the per-station greedy first-fit assignment |
 | Naive lead+tail minutes/day | 1,240 min | **1,065 min** — down despite the extra head, because the bursty schedule keeps each station's trimmed span fuller | Same source |
 | 3-hour floor buffer needed | None (all 8 stations already exceed 180 min trimmed span) | **None (all 9 stations exceed 180 min trimmed span)** | Checked per-station |
-| **Between-Client Downtime-Fill Revenue** | A$12,679.33/month | **A$20,717.12/month** | `[MODELED — 1.3 sessions/hr × 50% utilisation × A$95/session × 22 trading days, same formula as the 12-client figure, verified by reproducing that figure exactly from the same formula]` |
-| **Early-Release Cost Saving** | A$16,511.22/month | **A$14,026.54/month** | `[MODELED — per-station saveable minutes × the station's own award rate (A$37.00/hr Massage+Beauty pool, A$35.63/hr Nails/Hair), summed and ×22 trading days]` |
+| **Between-Client Downtime-Fill Revenue (historical, both figures superseded)** | A$12,679.33/month | **A$20,717.12/month** | `[MODELED — 1.3 sessions/hr × 50% utilisation × A$95/session × 22 trading days, same formula as the 12-client figure, verified by reproducing that figure exactly from the same formula]` |
+| **Early-Release Cost Saving (historical, both figures superseded)** | A$16,511.22/month | **A$14,026.54/month** | `[MODELED — per-station saveable minutes × the station's own award rate (A$37.00/hr Massage+Beauty pool, A$35.63/hr Nails/Hair), summed and ×22 trading days]` |
 
 Both remain separate, tagged lines, never blended into the (historical, superseded) A$36,726.23/month baseline above or into each other.
 

@@ -23,13 +23,13 @@ Uses the corrected multi-role model: 4× Massage/Beauty dual-qualified (Staff 1�
 | Staff 8 | 09:00–09:45 C4 (Hair), 09:50–10:35 C8 (Hair), 10:40–11:25 C12 (Hair) |
 | Phlebotomist A/B/C | 15 draws each across their 5 chair-assigned clients (see am-capacity-weekend.md Scenario D per-chair breakdown) |
 
-Busiest treatment staff: 4 bookings/day (up from 3 at today's 10-client volume) — real increase in workload, not a casual buffer, worth watching for fatigue once live.
+Busiest treatment staff: 4 bookings/day (up from 3 at the then-current, now-historical 10-client volume, see docs/CURRENT-STATE.md for the current 18-client model) — real increase in workload, not a casual buffer, worth watching for fatigue once live.
 
 ## 3. P&L — Current (7-staff, 2 phlebotomists) vs Scenario D (8-staff, 3 phlebotomists)
 
 Both use the conservative safe price (A$250/client, per standing instruction) and 22 trading days/month.
 
-| | Current (10 clients/day) | Scenario D (15 clients/day) |
+| | Current at the time (historical, 10 clients/day) | Scenario D (15 clients/day) |
 |---|---|---|
 | Revenue | 10×22×$250 = **$55,000** | 15×22×$250 = **$82,500** |
 | Phlebotomist labor | 2× ≈ **$7,178** | 3× ≈ **$10,767** |

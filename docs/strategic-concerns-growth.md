@@ -34,7 +34,7 @@ GTT Center Perth's single-venue model is close to finalised (corrected staffing,
 
 ### 1. AM Clients Not Getting Their Selected Services
 
-**Root cause:** only 2 staff per service line, staggered 20-minute arrivals, 8 clients/day cap. If the same service (e.g. hairdressing) is already booked out for that morning's cohort, a later-booking client physically cannot get that service that day.
+**Root cause (historical framing, 8-client cap since superseded — see docs/CURRENT-STATE.md for the current 18-client model):** only 2 staff per service line, staggered arrivals, a per-day cap. If the same service (e.g. hairdressing) is already booked out for that morning's cohort, a later-booking client physically cannot get that service that day.
 
 **Mitigation already structurally in place:** clients select services at booking time (not on arrival), so Fresha can show real-time per-slot availability — if hair is full for a given morning, the client simply cannot select it and is offered an alternative or a different day.
 
@@ -55,7 +55,7 @@ Single-venue, current model, capacity-capped at 14 visits/day (8 AM GTT + up to 
 | Period | Figure |
 |---|---|
 | Month 4 (break-even reached) | +A$4,924/month |
-| Month 5+ steady state | **+A$6,663/month (+A$79,956/year)** |
+| Month 5+ steady state (historical, superseded, see docs/CURRENT-STATE.md for the current +A$63,028.75/month primary figure) | **+A$6,663/month (+A$79,956/year)** |
 | Bear case (AM-only, no PM/ancillary — see `cash-flow.md` sensitivity) | Loss — model depends on both AM and PM contributing |
 | Bull case (premium package mix + extended PM hours, per `cash-flow.md` sensitivity) | Materially higher — not yet recalculated against the corrected PM model |
 
@@ -103,7 +103,7 @@ Key differences from in-state expansion:
 2. What is the realistic conversion rate from waitlist signup to confirmed paid booking? No data exists yet — see `pm-staffing-roster.md` waitlist section.
 3. Is a Saturday shift (with penalty rates) worth modelling as a near-term profit lever, or reserved for later once Venue 1 is stable?
 4. What relief-pool size is actually "safe" versus the current 1-per-line minimum? No incident data exists yet to calibrate this.
-5. Is there appetite to model AM's 3rd-chair/10-client Scenario A now, or defer until Venue 1 is operating and real demand data exists?
+5. Is there appetite to model AM's 3rd-chair growth path now (historical text referenced the then-current 10-client Scenario A, since superseded — see docs/CURRENT-STATE.md), or defer until Venue 1 is operating and real demand data exists?
 6. ~~For interstate expansion: is there a specific state Anthony has in mind~~ **ANSWERED 2026-07-15:** Victoria, informally — no timeline attached, an early thought only. Logged here so it is not lost, not treated as a commitment.
 
 ## Definition of Done

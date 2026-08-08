@@ -33,7 +33,7 @@ Clients 11 and 12 (bold) are the new 6th slot per chair. Last Draw 1 at 10:20am 
 |---|---|
 | **Phlebotomist A** (Chair A) | Draws for clients 1/3/5/7/9/11 at the same clock pattern as the client table above (18 draws total) |
 | **Phlebotomist B** (Chair B) | Identical clock times to Phlebotomist A, mirrored onto clients 2/4/6/8/10/12 (18 draws) |
-| **Massage 1 (M1)** | C1 07:15–08:00, C5 08:35–09:20, C9 09:55–10:40 (3 bookings — unchanged from the 10-client model) |
+| **Massage 1 (M1)** | C1 07:15–08:00, C5 08:35–09:20, C9 09:55–10:40 (3 bookings — unchanged from the historical 10-client model) |
 | **Massage 2 (M2)** | C3 07:55–08:40, C7 09:15–10:00, **C11 10:35–11:20** (3 bookings — was 2 at the 10-client model; gains the new client) |
 | **Beauty 1 (B1)** | C1 08:20–09:05, C5 09:40–10:25, C9 11:00–11:45 (3 bookings — unchanged) |
 | **Beauty 2 (B2)** | C3 09:00–09:45, C7 10:20–11:05, **C11 11:40–12:25** (3 bookings — was 2) |
@@ -53,7 +53,7 @@ Clients 11 and 12 (bold) are the new 6th slot per chair. Last Draw 1 at 10:20am 
 | Nails | 2 | 2 | OK |
 | Hair | 2 | 2 | OK |
 
-**Zero double-bookings, all 12 clients placed.** Phlebotomist/chair side independently re-verified (not assumed from the 10-client pattern) — zero collisions across both chairs' full 18-draw sequences each.
+**Zero double-bookings, all 12 clients placed.** Phlebotomist/chair side independently re-verified (not assumed from the historical 10-client pattern) — zero collisions across both chairs' full 18-draw sequences each.
 
 **Pooling re-checked at 12 clients, both FAIL** (see `profit-loss-tables.md`'s Treatment Headcount section for full detail):
 - Massage+Beauty pooled (7-staff, cap 3): peak concurrent demand on the pool exceeds 3 — 2 clients unassignable.
@@ -73,7 +73,7 @@ Per Anthony's direct instruction ("we are aiming for 12 or max capacity for 2 ch
 
 **Financial verdict, recomputed:** extra revenue from 12→14 = A$11,000/month. Extra labor cost at 9 staff (A$551,058/yr) vs the 12-client model's 8 staff (A$492,920/yr) = +A$4,844.83/month, not +A$20,538.33/month. **Net: +A$6,155.17/month if 14 is pursued with the correctly dual-qualification-optimized 9-person roster — better than staying at 12.**
 
-**Conclusion, Anthony's decision 2026-07-31: "have 14 as the ceiling and prove it. 12 clients a day is what we will aim for each day."** 14 is now proven — 9-staff headcount confirmed via two independent methods (sweep-line peak concurrency + greedy first-fit assignment, exact agreement), full whole-venture P&L completed (+A$36,726.23/month, see `profit-loss-tables.md`) — and documented as a proven ceiling/growth-headroom figure. **12 clients/day (§0 above) remains the committed daily operating target, unchanged.** See `docs/CURRENT-STATE.md` §1/§4/§7 for the same finding recorded canonically.
+**Conclusion, Anthony's decision 2026-07-31 (historical — this entire 14-client ceiling finding is now superseded by the 18-client Table 1 model, see docs/CURRENT-STATE.md's 2026-08-05 REBASE banner): "have 14 as the ceiling and prove it. 12 clients a day is what we will aim for each day."** 14 was proven at the time — 9-staff headcount confirmed via two independent methods (sweep-line peak concurrency + greedy first-fit assignment, exact agreement), full whole-venture P&L completed (+A$36,726.23/month, see `profit-loss-tables.md`) — and documented as a proven ceiling/growth-headroom figure at the time. **12 clients/day (§0 above) remains the committed daily operating target, unchanged.** See `docs/CURRENT-STATE.md` §1/§4/§7 for the same finding recorded canonically.
 
 ---
 

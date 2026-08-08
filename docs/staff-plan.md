@@ -284,7 +284,7 @@ GTT Center Perth has no subtenants. The 3D scan operator and dietitian sublet ro
 **Total break-even revenue (payroll + workers comp + overhead):** A$892,694/year (A$74,391/month)  
 **Package revenue per visit (blended avg, 30/40/30 mix):** A$250  
 **Total visits to break even:** A$892,694 ÷ A$250 = **3,571/year = 14.3/day = 298/month**  
-**Stable monthly Net P&L (Month 5+, 14 visits/day = 8 AM GTT + 6 PM Spa Packages):** +A$10,232/month
+**Stable monthly Net P&L (historical, Month 5+, 14 visits/day = 8 AM GTT + 6 PM Spa Packages):** +A$10,232/month — superseded, see docs/CURRENT-STATE.md for the current +A$63,028.75/month primary figure
 
 *14 visits/day is the break-even (8 AM GTT + 6 PM Spa Packages = full daily capacity). Break-even is reached at the PM Spa Package ramp target (Month 5+, see cash-flow.md).*
 
@@ -334,7 +334,7 @@ The existing A$15,000/yr "Casual Relief Pool" budget line (`financial-break-even
 
 ### Phlebotomists (Clinical — Highest Coverage Risk)
 
-- **Why this is the tightest gap:** the AM GTT model requires exactly 2 phlebotomists, both on-site simultaneously, for the entire 07:00/07:30-12:30 window — there is no "spare" clinical capacity built into Scenario C's verified timetable (`scenario-c-sync-timetables.md`). If one phlebotomist is sick with no relief, the venue cannot run at full 10-client capacity that day (a single chair can't absorb both chairs' clients without breaching the concurrency model).
+- **Why this is the tightest gap:** the AM GTT model requires exactly 2 phlebotomists, both on-site simultaneously, for the entire AM window — there is no "spare" clinical capacity built into the verified timetable (`scenario-c-sync-timetables.md`). If one phlebotomist is sick with no relief, the venue cannot run at full committed capacity that day (historical text said 10-client; now 18-client, see docs/CURRENT-STATE.md) (a single chair can't absorb both chairs' clients without breaching the concurrency model).
 - **Relief requirement:** at least 1 dedicated relief phlebotomist, credentialed and WDP/PathWest-approved in advance (not hired reactively on the day of an absence — credentialing takes time, see §Requirements at hire above), available on an on-call/casual basis.
 - **Interaction with the Venue Manager's first-aid/EpiPen role:** the Venue Manager is the designated first-aid/EpiPen holder and fire warden (§3 above) — if the Venue Manager is also absent on a day a phlebotomist calls in sick, the venue has a second, compounding coverage gap (clinical + emergency-response). **Recommendation: cross-train at least one other on-site staff member (e.g. the Receptionist, who is present for the full AM window) in first aid/EpiPen response as a backup to the Venue Manager**, so a single absence doesn't leave the venue without both. This does not replace the Venue Manager's primary responsibility — it's a same-day fallback only.
 - **Cost impact:** relief phlebotomist paid only for shifts actually worked (casual, no retainer) — same principle as the existing PM relief pool. Estimated at Cert III/IV Pathology Collector casual rate (~A$30.63/hr per `financial-break-even-staff.md`) for an assumed ~1 sick/leave day covered per fortnight across 2 phlebotomists (illustrative, not based on real absence data yet): ~5hrs/fortnight × A$30.63 ≈ A$77/fortnight ≈ **~A$2,000/year**, materially smaller than a full second FTE.

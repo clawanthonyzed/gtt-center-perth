@@ -51,7 +51,7 @@ CortexOS venture registration -- already done, contrary to what the brief implie
 | 2 | Fix staff-plan.md: replace Imara with "Venue Manager (to be hired)" across org chart, pay table, EOD/close duties, Food Safety Supervisor line | Fern | 2 hrs | YES -- blocks correct recruiting |
 | 3 | Write Venue Manager job ad + open recruitment (after #2 is fixed) | Fern | 1 day to draft, Anthony to approve budget/post | YES -- critical path, venue cannot safely open without this hire |
 | 4 | Call the 3 Osborne Park agents (Ray White Commercial WA, AGORA Property Group, and the #16969571 listing) to book inspections | Anthony | 1-2 hrs of calls | YES -- nothing else physical can start without a venue |
-| 5 | Rewrite ivy-booking-system.md against the committed 10-client/employed-staff model (drop subtenant billing language, correct 8-to-10 client references) | Ivy | 1 day | Not launch-blocking short-term, but must be fixed before Fresha setup begins |
+| 5 | Rewrite ivy-booking-system.md against the committed employed-staff model (drop subtenant billing language, correct client-count references — historical text said 10-client, now 18-client, see docs/CURRENT-STATE.md) | Ivy | 1 day | Not launch-blocking short-term, but must be fixed before Fresha setup begins |
 | 6 | Resolve 3D scan scope ambiguity -- Grace to state current scope in one line, Poppy/Jade to grep and align all marketing-facing docs | Grace + Poppy + Jade | 2-3 hrs | Not launch-blocking, but a legal/marketing accuracy risk if left |
 | 7 | Decide package price-increase timing: Month 3 vs Month 4 | Anthony | 5 min decision | No -- can be decided any time before Month 3 |
 | 8 | PathWest/Clinipath outreach | Reed | N/A | No -- correctly sequenced behind WDP, do not start early |

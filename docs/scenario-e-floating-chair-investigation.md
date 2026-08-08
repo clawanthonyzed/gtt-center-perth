@@ -7,7 +7,7 @@
 
 ## The Question
 
-Anthony asked: *"Is there a way to fit more clients in if the client doesn't have to go back to the same chair?"* — i.e., in the current Scenario C/D model, each client's full visit (Draw 1 → Service 1 → Draw 2 → Service 2 → Draw 3) is pinned to a single chair (Chair A, B, or C) for the whole visit. Would decoupling this — letting a client return to *whichever chair is free* for Draw 2 and Draw 3, not necessarily their original Draw 1 chair — increase daily capacity beyond the current verified 10-client (Scenario C) or 15-client (Scenario D) ceilings?
+Anthony asked: *"Is there a way to fit more clients in if the client doesn't have to go back to the same chair?"* — i.e., in the current Scenario C/D model, each client's full visit (Draw 1 → Service 1 → Draw 2 → Service 2 → Draw 3) is pinned to a single chair (Chair A, B, or C) for the whole visit. Would decoupling this — letting a client return to *whichever chair is free* for Draw 2 and Draw 3, not necessarily their original Draw 1 chair — increase daily capacity beyond the then-current verified 10-client (Scenario C, historical, since superseded) or 15-client (Scenario D) ceilings?
 
 ---
 
@@ -94,7 +94,7 @@ Even though the analysis shows zero capacity benefit, Anthony's question also as
 
 ## Addendum — One Additional (11th) Client at a 09:55 Start (2026-07-20)
 
-**Anthony's clarified question:** not "can 2 extra clients fit" (already answered no, above/in `business-plan.md`) — specifically, can exactly **one** additional (11th) client be squeezed onto the existing 10-client Scenario C schedule using a 09:55 start slot on one of the 2 chairs?
+**Anthony's clarified question:** not "can 2 extra clients fit" (already answered no, above/in `business-plan.md`) — specifically, can exactly **one** additional (11th) client be squeezed onto the then-existing, now-historical 10-client Scenario C schedule using a 09:55 start slot on one of the 2 chairs?
 
 **Method:** built a direct collision check (not manual eyeballing) against the real, already-scheduled Scenario C timetable (`scenario-c-sync-timetables.md`) — testing whether an 11th client's full draw sequence (Draw 1 at 09:55, Draw 2 at target+tolerance, Draw 3 at target+tolerance) can be placed on Chair A without colliding with Client 9 (the chair's last currently-scheduled client, Draw 1 at 09:40).
 
