@@ -136,7 +136,7 @@ Delivers PM Spa Packages (Package 1/2/3, no testing) 12:00-18:00, cross-trained 
 | Package | Price | Packages/week to break even | Packages/day |
 |---------|-------|-----------------------------|-------------|
 | Package 2 (30+45min) | A$250 | 10.0/wk | 2.0/day |
-| Package 3 (2x45min) | A$300 | 8.4/wk | 1.7/day |
+| Package 3 (historical old-3-tier naming, 2x45min) | A$300 | 8.4/wk | 1.7/day |
 
 **2 PM packages/day breaks even.** A 6-hour PM shift fits ~3-4 packages/day (each package = 2 services back-to-back, ~75-90min/client).
 
@@ -169,7 +169,7 @@ Gross margin above wages: **A$124,726/year**
 > **Supersedes the "no new hires" CF-01 conclusion.** Anthony confirmed: all 8 AM service staff (2x Massage, 2x Nail, 2x Hairdresser, 2x Beauty) plus both phlebotomists are needed simultaneously across the AM GTT window per the verified per-staff timetable (operations-manual.md) — at peak concurrency, none of them can be pulled off the roster entirely to cover a dedicated PM shift. PM coverage and sick/holiday cover therefore still require real additions (the dedicated 4-role PM roster below), not a full substitute. **Updated 2026-07-30:** this does not mean AM staff are unavailable for standalone bookings during their own individual downtime between GTT-package bookings — see the Staff Downtime Protocol update below, now a permanent policy.
 
 - **Phlebotomists ×2:** AM only (GTT window, 07:30-12:30, per the Day-49 capacity timetable in operations-manual.md). No PM clinical role — testing is AM-only (fasting requirement).
-- **Massage ×2, Nail ×2, Hairdresser ×2, Beauty ×2:** all 8 work the AM GTT window (07:00/07:30-13:00), covering all 8 GTT clients' Service 1/Service 2 slots per the verified timetable. Downtime between bookings (17-33% utilisation) follows the Staff Downtime Protocol — **updated 2026-07-30: standalone bookings first, cleaning/training as fallback** (see below). This does not add a dedicated PM shift for these 8 — the dedicated PM roster remains a separate 4-role hire.
+- **Massage ×2, Nail ×2, Hairdresser ×2, Beauty ×2:** all 8 work the AM GTT window (07:00/07:30-13:00), covering all 8 GTT clients' (historical volume, see docs/CURRENT-STATE.md for the current 18-client model — headcount finding unchanged) Service 1/Service 2 slots per the then-verified timetable. Downtime between bookings (17-33% utilisation) follows the Staff Downtime Protocol — **updated 2026-07-30: standalone bookings first, cleaning/training as fallback** (see below). This does not add a dedicated PM shift for these 8 — the dedicated PM roster remains a separate 4-role hire.
 - **Receptionist/Manager ×1 (split shift):** AM 07:00-12:00 (opening, GTT coordination, AM checkout) + PM 15:00-18:00 (PM Spa Package bookings, closing), with a break 12:00-15:00. Same person, same A$56,237/yr — no new hire.
 - **PM Service Therapist ×1 (NEW HIRE):** 12:00-18:00, cross-trained massage + facials, delivers PM Spa Packages (Package 1/2/3, no testing) to standalone afternoon clients.
 - **Casual Relief Pool:** budgeted A$15,000/yr, drawn on as needed to cover sick/holiday absences in any of the 12 roles above (not a fixed shift).
@@ -189,8 +189,8 @@ The PM Service Therapist sells the same Package 1/2/3 menu as the AM GTT package
 
 ### Assumptions
 - Operating days: 250/year
-- 8 GTT clients/day (Scenario B), 2 phlebotomists, 2 chairs — every GTT visit sells one Package (1/2/3)
-- Package mix assumption (initial, pending booking data): 30% Package 1 (A$200) / 40% Package 2 (A$250) / 30% Package 3 (A$300) → blended avg **A$250/visit**
+- 8 GTT clients/day (historical, Scenario B), 2 phlebotomists, 2 chairs — every GTT visit sells one Package (1/2/3, historical old 3-tier naming)
+- Package mix assumption (historical, old 3-tier structure, initial, pending booking data): 30% Package 1 (A$200) / 40% Package 2 (A$250) / 30% Package 3 (A$300) → blended avg **A$250/visit**
 - PM Spa Packages (PM Service Therapist): same Pkg1/2/3 menu, no testing, ~3/day at the same A$250 blended avg
 
 ### Full Break-Even (Payroll + Overhead)
@@ -241,9 +241,9 @@ Holding the structure (2x30min / 30+45min / 2x45min) and total volume (2,000 GTT
 
 | Package | Inclusions | Price |
 |---------|-----------|-------|
-| Package 1 | Venue + lounge access (free) + any 2 x 30-min services | A$200 flat |
+| Package 1 (historical, old 3-tier structure, dropped 2026-07-20) | Venue + lounge access (free) + any 2 x 30-min services | A$200 flat |
 | Package 2 | Venue + lounge access (free) + 1 x 30-min + 1 x 45-min service | A$250 flat |
-| Package 3 | Venue + lounge access (free) + any 2 x 45-min services | A$300 flat |
+| Package 3 (historical, old 3-tier naming) | Venue + lounge access (free) + any 2 x 45-min services | A$300 flat |
 
 See services-pricing-locked.md for the full package definitions and service menu.
 

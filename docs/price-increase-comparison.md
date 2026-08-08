@@ -31,10 +31,10 @@ Per `profit-loss-tables.md`, using the conservative A$250 AM package price throu
 | Weekday | +A$808.00/day |
 | Saturday (AM+PM combined) | +A$1,580.50/day |
 | Weekly | +A$10,490.50 |
-| Monthly | +A$25,087.07 |
+| Monthly (historical baseline, superseded — see docs/CURRENT-STATE.md for the current +A$63,028.75/month primary figure) | +A$25,087.07 |
 | Quarterly | +A$75,261.21 |
 | Half-Yearly | +A$150,522.42 |
-| Yearly | +A$301,044.84 |
+| Yearly (historical, superseded) | +A$301,044.84 |
 
 This is the "keep price the same" case for the remainder of this comparison — every scenario below is measured as a delta against this baseline.
 
@@ -65,7 +65,7 @@ The existing sensitivity table in `financial-break-even-staff.md` (built on the 
 
 | Scenario | Mechanics | Estimated effect |
 |---|---|---|
-| **Hold steady (no increase)** | Baseline above continues indefinitely. | +A$25,087/month from Month 5+ steady state (per `profit-loss-tables.md` v2.0), +A$301,045/year. Simple, no customer-facing price-change risk, no re-marketing needed. Leaves margin upside on the table if demand can absorb a higher price. |
+| **Hold steady (no increase)** | Baseline above continues indefinitely. | Historical figures shown (+A$25,087/month, +A$301,045/year per `profit-loss-tables.md` v2.0) -- since superseded, see docs/CURRENT-STATE.md for the current +A$63,028.75/month primary figure; this scenario's mechanics/reasoning still apply, just against the new baseline. Simple, no customer-facing price-change risk, no re-marketing needed. Leaves margin upside on the table if demand can absorb a higher price. |
 | **Increase at Month 3** | Price rises before the venue has reached its Month 4 marginal break-even point (per `cash-flow.md`'s ramp timeline — note this timeline uses the older PM/staffing model, so the exact month labels are directional, not exact under the current Scenario C figures). | Higher risk: raising price while still building initial demand/reputation could slow the waitlist-to-booking conversion Anthony is relying on for the ramp. Financial upside (extra margin per client) arrives earlier, but is a smaller base (fewer clients/day early in the ramp) than the Month 4+ scenario, so the absolute A$ benefit of an earlier increase is smaller than it looks — the percentage benefit is front-loaded onto a smaller volume. |
 | **Increase at Month 4** (HANDOFF.md's leaning recommendation) | Price rises at the point the venue crosses into (marginal) profitability, per the existing ramp narrative. | Lower risk: the pricing is already proven to work (demand held up) at the point of increase, and the venue is already covering its costs, so this reads as "capturing more margin from success" rather than "changing price to survive." Matches the standing recommendation already in `HANDOFF.md`. |
 | **Increase later (e.g., Month 6+, after PM/AM capacity ceiling reached)** | Price rises once both AM and PM capacity are fully booked (Month 5+ steady state, per `profit-loss-tables.md` and `cash-flow.md`). | This is arguably the *lowest-risk and highest-leverage* timing of all three, though not explicitly modelled as a separate scenario in any existing document: once the venue is capacity-constrained (fully booked AM + PM), a price increase captures pure margin without needing to attract more clients — demand is already exceeding supply at that point (a full booking calendar is itself evidence pricing has room to move). This scenario is flagged here as worth Anthony's direct consideration, not because any existing document already models it. |

@@ -23,7 +23,7 @@
 
 ## GTT PACKAGES
 
-> **2026-07-20 renumbering (confirmed by Anthony) — same 2 priced tiers, new names/numbers and new composition rule.** This is NOT a re-opening of the earlier decision to drop the old "Package 1 (A$200)" — there are still only 2 priced tiers, at the same A$250/A$300 price points. What changed is the naming and the composition of each tier:
+> **2026-07-20 renumbering (confirmed by Anthony) — same 2 priced tiers, new names/numbers and new composition rule.** This is NOT a re-opening of the earlier (historical) decision to drop the old "Package 1 (A$200)" — there are still only 2 priced tiers, at the same A$250/A$300 price points. What changed is the naming and the composition of each tier:
 > - **New "Package 1" (A$250)** = fixed composition: 2 × 30-min services.
 > - **New "Package 2" (A$300)** = flexible composition: client's choice of 2×45min, OR 1×45min+1×30min, OR 2×30min.
 > - **Mapping assumption, stated explicitly so it's correctable if wrong:** this document maps New Package 1 to the old A$250 tier and New Package 2 to the old A$300 tier (cheaper/fixed → renamed 1, pricier/flexible → renamed 2) — the natural direction given the old A$250 tier was already the cheaper of the two. If this mapping is wrong, the fix is a rename only, not a re-derivation of any pricing/revenue figures, since both tiers keep their existing prices.

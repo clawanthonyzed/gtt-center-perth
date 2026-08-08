@@ -19,9 +19,9 @@
 
 | Package | Inclusions | Price | Mix | Weighted |
 |---|---|---|---|---|
-| Package 1 | 2 × 30-min services + free venue/lounge | A$200 | 30% | A$60.00 |
-| Package 2 | 1×30-min + 1×45-min + free venue/lounge | A$250 | 40% | A$100.00 |
-| Package 3 | 2 × 45-min services + free venue/lounge | A$300 | 30% | A$90.00 |
+| Package 1 (historical, old 3-tier structure, dropped 2026-07-20) | 2 × 30-min services + free venue/lounge | A$200 | 30% | A$60.00 |
+| Package 2 (historical, since renamed/renumbered) | 1×30-min + 1×45-min + free venue/lounge | A$250 | 40% | A$100.00 |
+| Package 3 (historical, since renamed/renumbered) | 2 × 45-min services + free venue/lounge | A$300 | 30% | A$90.00 |
 | **Blended avg revenue/visit** | | | | **A$250.00** |
 
 This A$250 avg applies identically to AM GTT visits and standalone PM Spa Packages — there is no separate "venue fee" or "wellness" revenue line (`cash-flow.md` Day 51 Reconciliation).
@@ -45,9 +45,9 @@ Most costs in this model are fixed staff payroll (see Fixed Cost Summary below),
 
 | Package | Price | Variable Cost | **Contribution Margin** | Margin % |
 |---|---|---|---|---|
-| Package 1 | A$200 | A$5 | **A$195** | 97.5% |
-| Package 2 | A$250 | A$5 | **A$245** | 98.0% |
-| Package 3 | A$300 | A$5 | **A$295** | 98.3% |
+| Package 1 (historical, old 3-tier structure) | A$200 | A$5 | **A$195** | 97.5% |
+| Package 2 (historical naming) | A$250 | A$5 | **A$245** | 98.0% |
+| Package 3 (historical naming) | A$300 | A$5 | **A$295** | 98.3% |
 | **Blended (30/40/30)** | A$250 | A$5 | **A$245** | 98.0% |
 
 Variable costs are negligible (~2% of revenue) — this is a fixed-cost-dominated business. The headline break-even figures in `cash-flow.md` and `financial-break-even-staff.md` use gross revenue ÷ avg package price (A$74,391 ÷ A$250 ≈ 298 visits/month), which is accurate to within ~2% of the contribution-margin-based figure below.
@@ -58,7 +58,7 @@ Variable costs are negligible (~2% of revenue) — this is a fixed-cost-dominate
 
 | Stream | Cap | Basis |
 |---|---|---|
-| AM GTT visits | 8/day (176/month) | 2 phlebotomists, 2 collection chairs — Scenario B verified timetable (`operations-manual.md`). Scenario A (10-client growth) deferred, no verified timetable. |
+| AM GTT visits (historical, per the banner above — superseded, see docs/CURRENT-STATE.md for the current 18-client Table 1 model) | 8/day (176/month) | 2 phlebotomists, 2 collection chairs — Scenario B verified timetable (`operations-manual.md`). Scenario A (10-client growth) deferred, no verified timetable at the time. |
 | PM Spa Packages | 6/day (132/month) | 1 PM Service Therapist (new hire) — `financial-break-even-staff.md` Lever 2 |
 | **Total capacity** | **14/day (308/month)** | Both streams at capacity from Month 5 |
 
@@ -100,7 +100,7 @@ Full 18-month P&L (incl. fixed costs and Net P&L per month) is canonical in `cas
 | Break-even visits/month (contribution margin, A$245) | ~304 (13.8/day) |
 | Modelled Month 5+ stable volume | 308 visits/month (14/day) |
 
-Month 5+ stable volume (308/month) clears break-even on both bases — Net P&L = +A$10,232/month (`cash-flow.md`).
+Month 5+ stable volume (308/month) clears break-even on both bases — Net P&L was +A$10,232/month at the time (historical, superseded, see docs/CURRENT-STATE.md for the current +A$63,028.75/month primary figure) (`cash-flow.md`).
 
 ---
 
