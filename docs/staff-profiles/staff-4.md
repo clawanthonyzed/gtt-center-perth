@@ -16,7 +16,7 @@
 ## Shift History (this venue)
 | Shift type | Typical assignment |
 |---|---|
-| AM (07:00–12:30) | Massage+Beauty pool, ~2-3 GTT-client service bookings/day at current 10-client volume (Scenario C) |
+| AM (07:00–12:30) | Massage+Beauty pool, ~2-3 GTT-client service bookings/day at the committed 18-client/day volume (Table 1, 07:00 start, g=25 -- was 10-client Scenario C, superseded 2026-07-30 then rebased 2026-08-05) |
 | PM (12:00–18:00) | Cross-shift qualified — same skill applies to PM standalone individual services |
 | Relief pool | Eligible — Massage+Beauty pool relief hires preferred per multi-role hiring direction |
 
