@@ -1,8 +1,12 @@
 # GTT Center Perth — Canonical Data Proof of Concept
 
-**Purpose:** document the first real implementation slice of the architecture designed in `docs/architecture/` — SOURCE DOCUMENTS → CANONICAL YAML → VALIDATOR, for exactly three domains (pricing, client assumptions, scenarios), nothing more. This is a proof of concept: it proves the pattern works end-to-end on a bounded slice, not a completed migration.
+**Purpose:** document the first real implementation slice of the architecture designed in `docs/architecture/` — SOURCE DOCUMENTS → CANONICAL YAML → VALIDATOR. This is a proof of concept: it proves the pattern works end-to-end on a bounded slice, not a completed migration.
 
-**Scope of this phase, explicitly:** `data/canonical/pricing.yml`, `data/canonical/client_assumptions.yml`, `data/canonical/scenarios.yml`, `tools/validate_canonical_data.py`, plus corrections to `README.md` and four nav/meta docs (`docs/reading-order.md`, `docs/00_document_inventory.md`, `docs/01_conflicts_log.md`, `docs/HANDOFF.md`). **Not built this phase:** the Master Financial Model, the Master Operations Model, any XLSX/PDF/DOCX generation, the remaining ~130 markdown files' migration, and — deliberately — a resolution of Table 1 vs. Table 2 as primary.
+**Phase 1 scope (2026-08-08):** `data/canonical/pricing.yml`, `data/canonical/client_assumptions.yml`, `data/canonical/scenarios.yml`, `tools/validate_canonical_data.py`, plus corrections to `README.md` and four nav/meta docs (`docs/reading-order.md`, `docs/00_document_inventory.md`, `docs/01_conflicts_log.md`, `docs/HANDOFF.md`).
+
+**Phase 2 scope (2026-08-08, same day, follow-on):** a fix to a real bug found in `tools/check_consistency.py` during Phase 1 (§8 below, now resolved — see §11), a new regression test suite (`tests/test_check_consistency.py`), and two new canonical domains: `data/canonical/staffing.yml` and `data/canonical/wages.yml`, with matching validator extensions. See §10-§16 below for full Phase 2 detail.
+
+**Not built either phase:** the Master Financial Model, the Master Operations Model, any XLSX/PDF/DOCX generation, the remaining canonical domains from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch (payroll_costs, opex, startup_costs, capex, revenue_assumptions, financial_assumptions, risks, decisions, sources, verification_status), and — deliberately, in both phases — a resolution of Table 1 vs. Table 2 as primary.
 
 ---
 
@@ -10,12 +14,14 @@
 
 ```
 data/canonical/
-├── pricing.yml              AM/PM headline pricing + a representative slice of individual services
-├── client_assumptions.yml   universal + scenario-dependent operational assumptions
-└── scenarios.yml            Table 1 and Table 2, both explicit, neither marked primary
+├── pricing.yml              AM/PM headline pricing + a representative slice of individual services       [Phase 1]
+├── client_assumptions.yml   universal + scenario-dependent operational assumptions                        [Phase 1]
+├── scenarios.yml            Table 1 and Table 2, both explicit, neither marked primary                    [Phase 1]
+├── staffing.yml             every role, headcount, category, skills, shift assumptions                    [Phase 2]
+└── wages.yml                hourly rates, super, workers comp, casual-minimum rule, penalty-rate conflicts [Phase 2]
 ```
 
-All three files live under `data/canonical/` — the first real content in the `data/` layer proposed in `docs/architecture/TARGET-ARCHITECTURE.md` Layer 2. `docs/CURRENT-STATE.md` remains the authoritative human-readable canonical file; these three YAML files are a machine-readable **subset** of it, not a replacement, and not (yet) auto-generated from it or vice versa — a human (this session) transcribed values from `CURRENT-STATE.md` and its cited sources into YAML, checking each one against the source rather than re-deriving anything.
+All five files live under `data/canonical/` — real content in the `data/` layer proposed in `docs/architecture/TARGET-ARCHITECTURE.md` Layer 2. `docs/CURRENT-STATE.md` remains the authoritative human-readable canonical file; these YAML files are a machine-readable **subset** of it (plus, for staffing/wages, of `docs/financial-break-even-staff.md`, `docs/hr-framework.md`, `docs/pm-staffing-roster.md`, and `docs/HANDOFF.md`), not a replacement, and not (yet) auto-generated from it or vice versa — a human (this session) transcribed values from source documents into YAML, checking each one against the source rather than re-deriving anything.
 
 ---
 
@@ -121,7 +127,7 @@ What *is* recorded as genuinely open (not a data-entry conflict, but a real unre
 
 ---
 
-## 8. A Note on `tools/check_consistency.py` (relevant to trusting "0 findings")
+## 8. A Note on `tools/check_consistency.py` (relevant to trusting "0 findings") — bug found Phase 1, FIXED Phase 2 (see §11)
 
 While preparing this proof of concept, a real bug was found in the existing `tools/check_consistency.py`'s staleness-marker detection: its `STALENESS_MARKERS` regex includes the bare substring `prior` (intended to catch the word "prior"/"previously") with no word boundary, so it also matches inside unrelated words like **"priority"** — e.g. "Pathology partner (WDP, **priority** 1) has been emailed" in `docs/reading-order.md` was enough to suppress a genuine, otherwise-unflagged stale figure (`10 GTT clients/day`) sitting three lines later, purely because "priority" happened to be within the script's 3-line lookback window. This was confirmed by directly invoking the script's own `scan_file()`/`has_marker()` functions against the real file content, not inferred.
 
@@ -129,17 +135,161 @@ While preparing this proof of concept, a real bug was found in the existing `too
 
 ---
 
-## 9. Recommended Next Migration Domain
+## 9. Recommended Next Migration Domain (Phase 1 recommendation — actioned in Phase 2, see §12-§13)
 
 **`data/canonical/staffing.yml` and `data/canonical/wages.yml`**, in that order, for two reasons:
 
 1. They are the most direct dependency of the Financial Model's payroll module and the Operations Model's roster-requirement module (`docs/architecture/MODEL-ARCHITECTURE.md` §4's "cross-model dependency rule") — building them next means the next domain migrated is also the next one that unblocks real model-building, not just more inert data.
 2. They have a real, disclosed, previously-actually-occurring bug to validate against: `docs/VERIFICATION-TRACKER.md` item 1i (the Saturday PM 3-hour-minimum casual engagement rule being under-applied, then corrected) is exactly the kind of error a `staffing.yml`/`wages.yml` pair with a payroll-calculation validator (extending `tools/validate_canonical_data.py` per `docs/architecture/VALIDATION-ARCHITECTURE.md` §2.1's "3-hour casual minimum check") would catch automatically going forward.
 
-`services.yml` (the full a-la-carte catalog deferred in §7) is the next-best alternative if a lower-risk, non-financial domain is preferred first.
+`services.yml` (the full a-la-carte catalog deferred in §7) was the next-best alternative if a lower-risk, non-financial domain was preferred first — not chosen; Anthony approved the staffing/wages route instead (§10 below). **See §16 for the Phase 2 recommendation of what comes after staffing/wages.**
 
 ---
 
-## 10. What This Document Does Not Do
+# PHASE 2 (2026-08-08, same day) — Consistency-Checker Fix, Staffing, Wages
 
-It does not build the Master Financial Model, Master Operations Model, any document generator, or any output format. It does not migrate `staffing.yml`, `wages.yml`, `payroll_costs.yml`, `opex.yml`, `startup_costs.yml`, or any other domain from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original 20-domain sketch. It does not resolve Table 1 vs. Table 2. It does not fix `tools/check_consistency.py`'s disclosed bug (§8).
+Sequence followed, per the coordinator's explicit instruction: **CONSISTENCY CHECKER FIX → STAFFING DATA → WAGE DATA → VALIDATION.**
+
+## 10. Consistency-Checker Fix
+
+The bug disclosed in §8 (the `prior` substring matching inside `priority`) was fixed by anchoring the regex to `\bprior\b`. Full before/after evidence:
+
+**Before the fix** (confirmed by running `has_marker()` against a temporary copy of the pre-fix regex, then deleted — not left in the repo):
+```
+BEFORE FIX -- has_marker on a line containing only 'priority': True (bug: True means falsely triggered)
+BEFORE FIX -- has_marker on the real stale-figure line (3 lines after 'priority'): True (bug: True means the genuine stale finding was suppressed)
+BEFORE FIX -- has_marker on a line using 'prior' as an intentional marker: True (expected True either way)
+```
+
+**After the fix:**
+```
+test_prior_as_whole_word_still_matches ... ok
+test_priority_substring_does_not_match ... ok
+test_genuine_stale_finding_near_priority_is_still_detected ... ok
+test_existing_markers_unaffected ... ok
+test_scan_file_end_to_end_on_real_repo_docs ... ok
+
+Ran 5 tests in 0.007s
+OK
+```
+
+The fix (`tools/check_consistency.py`, `STALENESS_MARKERS` regex): `prior` → `\bprior\b`, with an inline comment explaining why, pointing to the regression test. **Smallest safe change, as instructed** — no other marker pattern was touched, and the checker's overall method (grep-based sweep, not a semantic parser) was not replaced.
+
+## 11. Regression Test
+
+New file: `tests/test_check_consistency.py` — 5 tests (see the actual output in §10 above). This is the **first automated test suite in this repo** — no `tests/` directory or test infrastructure existed before this session, so "run the full existing consistency test suite" (per the coordinator's Part 2 instruction) is satisfied by this new suite plus the full whole-repo `check_consistency.py` run in §12 below, since no other test suite pre-existed to run.
+
+Tests cover, specifically: `prior` still works as an intentional marker (✓); `priority` does not trigger it (✓); a genuine stale finding reconstructed from the real `docs/reading-order.md` bug case is still detected even with `priority` nearby (✓); five other existing marker words are unaffected by the fix (✓); an end-to-end run of the real `scan_file()` against the real `docs/reading-order.md` completes without error (✓).
+
+## 12. Full Consistency Run (Post-Fix)
+
+```
+check_consistency: 0 findings across all docs/*.md (excluding archive/).
+All tracked figures consistent with docs/CURRENT-STATE.md.
+```
+
+**This "0 findings" result is now genuinely trustworthy, not just unexamined**, for a specific reason: a diagnostic sweep (not committed, run ad hoc this session) counted **533 raw pattern hits** across the corpus — every line anywhere in `docs/*.md` matching one of `check_consistency.py`'s tracked stale-figure patterns, *before* the staleness-marker suppression logic runs at all. After the marker-suppression logic (with the `prior`/`priority` bug now fixed), **all 533 are correctly suppressed** — spot-checking a sample of the raw hits confirms each sits inside genuinely historical/superseded prose (the word "historical" or "superseded" literally appears in nearly every sampled line). This means the 0-findings result reflects 533 correctly-classified historical mentions, not 533 silently-swallowed live errors. No findings were suppressed, deleted, archived, or altered to force this result — this is the checker's genuine output against the repo as it stands, per the coordinator's explicit instruction not to manufacture a clean pass.
+
+## 13. Staffing Data Migrated (`data/canonical/staffing.yml`)
+
+11 current-model records (`records`) + 2 historical stub records (`historical_staffing_scenarios`), covering every category the coordinator asked to be preserved:
+
+| Category | Records |
+|---|---|
+| `management_admin` | Venue Manager (PLACEHOLDER — not hired), Receptionist/Manager |
+| `phlebotomy` | Phlebotomist ×2 (headcount VERIFIED, employment model OPEN per item 1d) |
+| `treatment` | Massage+Beauty pool ×4, Nails ×2, Hair ×2 — all VERIFIED, identical under both Table 1 and Table 2 |
+| `other` | PM dedicated casual roster ×4 (1 each: massage/hair/nail/beauty), Casual Relief Pool (budget line) |
+
+**Table 1 vs. Table 2 — both preserved, neither chosen, as instructed:** AM treatment + phlebotomy headcount is identical under both scenarios (a genuine finding already established in `docs/CURRENT-STATE.md` §4, not something this file re-derives) — represented via `staffing_scenario: [scenario_table_1, scenario_table_2]` on each affected record, rather than picking one. Where headcount *does* differ (the historical 14-client ceiling, 9 staff instead of 8), both figures are preserved via `historical_staffing_scenarios`, marked `SUPERSEDED`, not deleted.
+
+**Sources used:** `docs/CURRENT-STATE.md` §4 (primary, for current headcount), `docs/financial-break-even-staff.md` (Receptionist split-shift detail, AM shift window), `docs/pm-staffing-roster.md` (PM roster structure, Locked Decisions), `docs/multirole-CORRECTION.md`/`docs/VERIFICATION-TRACKER.md` item 1d (dual-qualification pairing and phlebotomist employment-model status).
+
+## 14. Wage Data Migrated (`data/canonical/wages.yml`)
+
+18 records covering hourly/annual rates for every role, plus employer-cost items (superannuation, payroll tax, workers comp) and award-provision rules (casual minimum engagement, MA000027 Saturday carve-out, MA000005/MA000002 penalty rates).
+
+**A material finding, not previously logged anywhere in this repo:** cross-referencing `docs/financial-break-even-staff.md`, `docs/hr-framework.md`, and `docs/HANDOFF.md` surfaced **two genuine, previously-undisclosed conflicts**, both recorded in `wages.yml`'s `conflicts` list rather than silently resolved:
+
+1. **MA000005 penalty rates disagree three ways.** Saturday: 133% (`financial-break-even-staff.md`) vs. "133% permanent/150% casual" (`HANDOFF.md`) vs. 150% flat (`hr-framework.md`). Sunday: 200% vs. 200% vs. 175%. Public Holiday: 250% vs. "250-275%" vs. 250%. None of the three cites a fetched primary source for the exact percentages.
+2. **Base hourly rates disagree materially** between `financial-break-even-staff.md` (the rates every current P&L figure is arithmetically built from — verified directly: 4×A$62,774 + 4×A$60,456 = A$492,920/yr, exactly matching `docs/CURRENT-STATE.md` §5's 8-treatment-staff figure) and `docs/hr-framework.md`'s own "Indicative rate (2026)" table (materially lower, e.g. Nail/Hair Level 3: $28.50/hr vs. ~$23.49/hr) — the latter is self-labelled indicative/needs-confirmation, so this wasn't forced into a false resolution either.
+
+Neither conflict was picked a winner on — both are recorded, sourced, and left open, per the coordinator's explicit instruction.
+
+**A third finding, also new:** every wage rate in this repo is dated "Effective 1 July 2025" or "Indicative (2026)," and this session's date (2026-08-08) is after the Fair Work Commission's typical 1 July annual wage review date — none of these rates has been re-checked against a possible 1 July 2026 review outcome. Recorded as `conflict_award_rate_staleness`, an explicit unresolved verification requirement, not silently assumed current.
+
+**Sources used:** `docs/financial-break-even-staff.md` (Award Wage Summary — primary), `docs/hr-framework.md` (cross-check, surfaced the conflicts above), `docs/HANDOFF.md` (cross-check, surfaced the penalty-rate conflict), `docs/pm-staffing-roster.md` (confirms the same AM rates apply to PM roles), `docs/CURRENT-STATE.md` §5 (workers comp rate).
+
+## 15. The 3-Hour Casual Minimum — Investigation Finding
+
+Investigated per the coordinator's explicit 5-step instruction, not adopted blindly (full detail in `wages.yml`'s `wage_casual_minimum_engagement` record):
+
+1. **What the repo says:** a 3-consecutive-hour minimum casual engagement (MA000005 clause 11.5, MA000027 clause 11.2).
+2. **Where it came from:** `docs/financial-break-even-staff.md`'s Staff Downtime Protocol section, tagged `[VERIFIED — Fair Work Ombudsman/Fair Work Commission, checked via direct WebFetch, 2026-07-30]` — a real external-source citation with a method and a date.
+3. **Supporting/disputing evidence in the repo:** supporting — the rule was actively *applied* to correct a real costing bug (`docs/VERIFICATION-TRACKER.md` item 1i: Saturday PM Direct Labor corrected from A$335.55/day to A$654.32/day once the 3-hour floor was properly enforced). No disputing evidence found anywhere.
+4. **Can it safely be marked VERIFIED:** **yes** — on the strength of the repo's own documented external check — but disclosed honestly: this session did not independently re-fetch the Fair Work source itself; the VERIFIED status traces to the prior session's own direct-WebFetch check (2026-07-30), not a fresh verification performed while building this file.
+5. **N/A** — resolved at step 4.
+
+**Explicitly distinguished from a different, genuinely still-unconfirmed MA000027 provision** (whether Saturday 8am-4:30pm counts as *ordinary hours* for phlebotomists, which would reduce Saturday penalty cost) — recorded separately as `wage_ma000027_saturday_carveout`, `PLACEHOLDER`, per `docs/VERIFICATION-TRACKER.md` item 11's own "capability gap flagged, unconfirmed" status. These are two different provisions and were not conflated.
+
+## 16. Validator Extensions and Test Result
+
+`tools/validate_canonical_data.py` extended with 3 new check categories (full detail in the script's own docstring): (a) `staffing.yml` required-field + category-vocabulary checks, (b) `wages.yml` status/value consistency checks (a `PLACEHOLDER` record may not carry a concrete value; a non-`PLACEHOLDER`/`SUPERSEDED` "rate-shaped" record may not be null), (c) scenario-reference validity (`staffing_scenario`/`scenario_id` fields must resolve to a real id in `scenarios.yml`, auto-loaded regardless of which files are targeted) and a new global cross-file duplicate-ID check (an id must be unique across *all* `data/canonical/*.yml` files, not just within one).
+
+**Real-data result** (all 5 files):
+```
+data\canonical\client_assumptions.yml: PASS
+data\canonical\pricing.yml: PASS
+data\canonical\scenarios.yml: PASS
+data\canonical\staffing.yml: PASS
+data\canonical\wages.yml: PASS
+  WARN: [x3 -- the disclosed conflicts.yml entries in wages.yml, correctly surfaced as warnings, not failures]
+
+validate_canonical_data: 5 file(s) checked, 0 error(s), 3 warning(s).
+All checks passed.
+```
+
+**Deliberately-broken test result** (scratch fixtures, not committed — same discipline as Phase 1, per the coordinator's explicit instruction):
+```
+bad_staffing.yml: FAIL
+  ERROR: disallowed status value 'BOGUS' ...
+  ERROR: category 'not_a_real_category' is not one of the known staffing categories ...
+  ERROR: missing required staffing field(s): ['category']
+  ERROR: staffing_scenario references unknown scenario id 'scenario_table_99' ...
+
+bad_wages.yml: FAIL
+  ERROR: status=MODELLED but no 'source' key present ...
+  ERROR: Conflicting prices for ('base_rate', 'Nail Technician base rate') ...
+  ERROR: status=PLACEHOLDER but 'value_pct' is 42, not null ...
+  ERROR: status=VERIFIED but 'value_pct' is null ...
+  ERROR: records[*].id 'staff_x' also appears in bad_staffing.yml ...
+
+validate_canonical_data: 2 file(s) checked, 9 error(s), 0 warning(s).
+```
+
+All 6 required test cases (invalid status, duplicate ID, missing source, conflicting wage/rate, missing required field, malformed scenario reference) were confirmed caught, plus 2 bonus cases (`PLACEHOLDER`-with-value and `VERIFIED`-with-null-value) the wages-specific check also catches. Fixtures deleted after the test run, not committed.
+
+---
+
+## 17. Unresolved Issues (Phase 2, carried forward — not resolved this pass)
+
+- **The 3 wage conflicts** (§14) — penalty rates, base-rate discrepancy, award-staleness — all genuinely open. Recommend adding tracker rows to `docs/VERIFICATION-TRACKER.md` in a future session (not done this pass, to stay within this phase's authorised file list — only `data/`, `tools/`, `tests/`, and `docs/architecture/` were touched).
+- **The 7-vs-8 treatment-staff daily-rostering finding** (staffing.yml's `staff_treatment_massage_beauty_pool` note) — valid at the historical 12-client/23-min model, not independently re-verified against Table 1/Table 2's 25-min cadence.
+- **Receptionist/Manager's AM 07:00-12:00 shift block** — written against the pre-rebase 07:00 start assumption, not re-checked against Table 2's 08:00 start.
+- **MA000027 Saturday ordinary-hours carve-out** (item 11) — still unconfirmed, same status as before this pass; no external verification attempted.
+- **Payroll tax** — genuinely absent from this repo's documents entirely; recorded as `PLACEHOLDER`, not assumed either way.
+
+## 18. Recommended Next Canonical Migration Domain
+
+**`data/canonical/opex.yml`** (non-wage operating expenses — rent, utilities, insurance, Fresha/Resend/marketing, GTT supplies, laundry, cleaning, accounting, consumables), for two reasons:
+
+1. It's the other direct input the Master Financial Model's P&L module needs alongside `staffing.yml`/`wages.yml` (per `docs/architecture/MODEL-ARCHITECTURE.md` §1's dependency graph) — completing it means the P&L's cost side is fully sourced from canonical data, not just payroll.
+2. `docs/CURRENT-STATE.md` §6/§7's startup-capital reconciliation gap (3-6 unreconciled ranges, explicitly disclosed as never resolved) sits directly adjacent to opex — migrating opex first would surface whether the same "which source document is authoritative" question recurs there too, before attempting the harder `startup_costs.yml`/`capex.yml` domains.
+
+`services.yml` (the full a-la-carte catalog, deferred twice now — Phase 1 §7 and Phase 1 §9) remains the next-best lower-risk alternative if a non-financial domain is preferred.
+
+---
+
+## 19. What This Document Does Not Do
+
+It does not build the Master Financial Model, Master Operations Model, any document generator, or any output format. It does not migrate `payroll_costs.yml`, `opex.yml`, `startup_costs.yml`, `services.yml` (full catalog), or any other remaining domain from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch. It does not resolve Table 1 vs. Table 2. It does not add tracker rows to `docs/VERIFICATION-TRACKER.md` for the new conflicts found this phase (§17) — flagged as a recommended follow-up, not actioned, to stay within this phase's authorised scope.
