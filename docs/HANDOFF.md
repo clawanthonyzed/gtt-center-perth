@@ -1,5 +1,7 @@
 # GTT Center Perth — Session Handoff (2026-07-17)
 
+> **STALENESS NOTE, added 2026-08-07 (consistency backlog pass):** this is a dated 2026-07-17 point-in-time handoff snapshot. The "Current Committed Operational Model" section below (10 clients/day) is historical — superseded first by the 12-client model (2026-07-30), then by the 2026-08-05 rebase to 18-client/day (Table 1, primary). See `docs/CURRENT-STATE.md` for the live figures; this document is retained for historical trace only.
+
 ## Goal
 Turn GTT Center Perth from a paper concept into an investor-ready, operationally-verified venture: financial model, staffing structure, verified timetables, floor plan, location shortlist, pathology partnership outreach — all pre-launch, no venue signed yet.
 
@@ -20,9 +22,9 @@ Turn GTT Center Perth from a paper concept into an investor-ready, operationally
 | Monthly | ~~+A$25,087.07~~ | **+A$16,507.07** |
 | Quarterly | ~~+A$75,261.21~~ | **+A$49,521.21** |
 | Half-yearly | ~~+A$150,522.42~~ | **+A$99,042.42** |
-| Yearly | ~~+A$301,044.84~~ | **+A$198,084.84** |
+| Yearly (historical, both figures superseded) | ~~+A$301,044.84~~ | **+A$198,084.84** |
 
-Full tables (weekday/Saturday/weekly/monthly/quarterly/half-yearly/yearly) in [profit-loss-tables.md](profit-loss-tables.md) v2.1 on GitHub (current version, not v2.0). These are ongoing run-rate figures — they exclude Months 1–3 ramp losses and pre-launch capital (3 conflicting ranges exist across this repo's own documents, never reconciled — see `docs/CURRENT-STATE.md` §6, do not quote the old "~A$144,500-242,500" range here as settled).
+Full tables (weekday/Saturday/weekly/monthly/quarterly/half-yearly/yearly) in [profit-loss-tables.md](profit-loss-tables.md) v2.1 on GitHub (historical version at the time this was written — since superseded by v3.0's 2026-08-05 rebase). These are ongoing run-rate figures — they exclude Months 1–3 ramp losses and pre-launch capital (3+ conflicting ranges exist across this repo's own documents, never reconciled — see `docs/CURRENT-STATE.md` §6, do not quote the old "~A$144,500-242,500" range here as settled).
 
 ## What Worked
 - **Booking-driven rostering** — since clients select services at booking time, staff can be rostered to confirmed bookings rather than a blanket calendar assumption. This unlocked the whole AM capacity improvement.

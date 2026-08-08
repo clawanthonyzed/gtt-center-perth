@@ -123,7 +123,7 @@ This is ambitious but achievable with strong midwife referral network (Reed's ma
 
 | Metric | Low | Mid | High |
 |---|---|---|---|
-| Total startup capital | A$209,000 | A$305,000 | A$431,000 |
+| Total startup capital (historical, retained for reference per the cross-ref above, superseded by docs/CURRENT-STATE.md §6's later ranges) | A$209,000 | A$305,000 | A$431,000 |
 | Month 1 net P&L | A$(371) | A$(371) | A$(371) |
 | Month 3 net P&L (with subtenants) | A$20,392 | A$20,392 | A$20,392 |
 | Month 4 net P&L (full capacity) | A$29,192 | A$29,192 | A$29,192 |
@@ -293,7 +293,7 @@ Wellness services have minimal regulatory barriers. Standard fair work employmen
 
 | Pathway | Timeline | Revenue Uplift |
 |---|---|---|
-| Scenario A growth (10 GTT clients/morning, same 2 chairs/2 phlebotomists, 15-min intervals) | Once 8-client model >80% occupancy | Incremental GTT + service revenue — see operations-manual.md Scenario A (deferred) |
+| Scenario A growth (historical framing — 10 GTT clients/morning, same 2 chairs/2 phlebotomists, 15-min intervals; both the 8-client baseline and the 10-client target described here are long since superseded, see docs/CURRENT-STATE.md for the current 18-client Table 1 primary model) | Once 8-client model >80% occupancy | Incremental GTT + service revenue — see operations-manual.md Scenario A (deferred) |
 | Property acquisition in trust → rental income | Year 2–3 | +A$7K–12K/month (offsetting rent) |
 | Second location (Joondalup or Fremantle) | Year 3–4 | +A$50K–80K/month |
 | GTT Center brand franchise to east coast operators | Year 4–5 | Franchise income |

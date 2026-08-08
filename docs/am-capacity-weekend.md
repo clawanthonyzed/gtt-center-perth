@@ -196,9 +196,9 @@ Confirms Anthony's requirement: no client is left waiting for an unavailable ser
 
 | Option | Packages Kept | Effect |
 |---|---|---|
-| **Recommended** | Package 2 (A$250) + Package 3 (A$300) — drop Package 1 (A$200) | Raises the blended average above the current A$250, directly reinforcing AM's margin fix. Removes the cheapest entry tier. |
-| Alternative | Package 1 (A$200) + Package 3 (A$300) | Simple "standard vs premium" choice, blended average depends on mix — could land at, above, or below A$250 |
-| Not recommended | Package 1 (A$200) + Package 2 (A$250) | Lowers blended average — works against the AM profitability fix already in progress |
+| **Recommended (historical, old 3-tier naming, superseded)** | Package 2 (A$250) + Package 3 (A$300) — drop Package 1 (A$200) | Raises the blended average above the current A$250, directly reinforcing AM's margin fix. Removes the cheapest entry tier. |
+| Alternative (historical) | Package 1 (A$200) + Package 3 (A$300) | Simple "standard vs premium" choice, blended average depends on mix — could land at, above, or below A$250 |
+| Not recommended (historical) | Package 1 (A$200) + Package 2 (A$250) | Lowers blended average — works against the AM profitability fix already in progress |
 
 Confirm which 2 and Grace will re-run the AM revenue line with the new mix assumption.
 

@@ -308,7 +308,7 @@ No formal annual renewal for Cert III, BUT phlebotomists must maintain:
 - 1 nail tech (45-min service + 15 min turnaround = 60 min/patient): 5–6 patients per morning shift
 - 1 beauty therapist (30/45-min service + 10 min turnaround = 40–55 min/patient): 6–7 patients per morning shift
 
-### Staff required for 8 GTT clients (morning) + 6 PM Spa Package clients (afternoon)
+### Staff required for 8 GTT clients (morning) + 6 PM Spa Package clients (afternoon) — historical volume label, headcount finding still holds (same 8 treatment + 2 phlebotomists confirmed at 12- and 18-client volumes too, see docs/CURRENT-STATE.md §4)
 
 **RESOLVED Day 49:** 2 phlebotomists / 2 chairs from Day 1 (not a Month 2-3 add). See financial-break-even-staff.md for the full 12-staff payroll (CF-01, Day 51).
 
@@ -326,10 +326,10 @@ No formal annual renewal for Cert III, BUT phlebotomists must maintain:
 
 | Scenario | Clients | Staff | Ratio |
 |---|---|---|---|
-| Morning only (8 GTT clients) | 8 | 11 (2 phlebotomists + 2 massage + 2 nails + 2 beauty + 2 hair + 1 receptionist/manager) | 1.4 staff:client |
+| Morning only (historical, 8 GTT clients) | 8 | 11 (2 phlebotomists + 2 massage + 2 nails + 2 beauty + 2 hair + 1 receptionist/manager) | 1.4 staff:client |
 | Full day (8 GTT + 6 PM Spa Packages) | 14 | 12 (11 AM staff + 1 new-hire PM Service Therapist) | 0.86 staff:client |
 
-**Conclusion:** The 11 AM staff (per financial-break-even-staff.md CF-01) cover all 8 GTT clients within their AM-only shift; 1 additional PM Service Therapist (new hire) covers the 6 PM Spa Package clients. 12 staff total, A$713,067/yr payroll incl. relief pool.
+**Conclusion (historical volume, current at the time written):** The 11 AM staff (per financial-break-even-staff.md CF-01) cover all 8 GTT clients within their AM-only shift; 1 additional PM Service Therapist (new hire) covers the 6 PM Spa Package clients. 12 staff total, A$713,067/yr payroll incl. relief pool.
 
 ---
 
