@@ -48,7 +48,7 @@ Ask to speak to: Business Development, Clinician Partnerships, or their LCC Prog
 
 ### Key Points to Cover in Meeting
 1. Our model: wellness centre hosting GTT clients, not a medical practice
-2. Volume: 8 clients/day (176/month) from Day 1, growing with referral network
+2. Volume: 8 clients/day (176/month) from Day 1 (historical planning figure at the time this brief was written — since superseded, current committed model is 18 clients/day, see docs/CURRENT-STATE.md), growing with referral network
 3. Hours: 7:30am–12:30pm Mon–Fri
 4. Exclusivity: willing to send all pathology (not just GTT) through WDP
 5. Our phlebotomists: we want to employ 2 from Day 1 — can they work under WDP's accreditation umbrella?

@@ -11,7 +11,7 @@
 | Monthly | **A$8,000.00** |
 | Yearly | **A$96,000.00** (A$8,000 × 12) |
 
-**Basis:** 200sqm @ A$40/sqm/month, Subiaco/Nedlands estimate (per the same line item). This is a planning estimate tied to a specific 200sqm/suburb assumption, not a confirmed signed lease — it's the working figure the whole P&L baseline (+A$25,087.07/month) is built on.
+**Basis:** 200sqm @ A$40/sqm/month, Subiaco/Nedlands estimate (per the same line item). This is a planning estimate tied to a specific 200sqm/suburb assumption, not a confirmed signed lease — it's the working figure the whole P&L baseline is built on (rent itself doesn't scale with client volume, so this A$8,000/month figure is unchanged; the P&L baseline it feeds into was +A$25,087.07/month historically, now +A$63,028.75/month, see docs/CURRENT-STATE.md).
 
 **Use for property comparisons going forward:** any new property lead's true occupancy cost (rent + outgoings + GST) should be compared against this **A$96,000/year** figure, not against a bare headline rent number, and not against an assumed sqm range (see `property-links-2026-07-28.md` and `location-scouting.md` corrections re: 150sqm floor, no max specified).
 

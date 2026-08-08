@@ -145,7 +145,7 @@ Session volume assumes conservative ~50% utilisation of theoretical 4-line capac
 | M2 | A$33,000 | A$16,720 | A$5,379 | A$55,099 | A$85,182 | **-A$30,083** |
 | M3 | A$38,500 | A$25,080 | A$6,979 | A$70,559 | A$87,793 | **-A$17,234** |
 | M4 | A$44,000 | A$31,350 | A$8,316 | A$83,666 | A$90,404 | **-A$6,738** |
-| M5+ (steady state) | A$44,000 | A$33,440 | A$8,580 | A$86,020 | A$90,404 | **-A$4,384** |
+| M5+ (historical, steady state) | A$44,000 | A$33,440 | A$8,580 | A$86,020 | A$90,404 | **-A$4,384** |
 
 ## Finding — SUPERSEDED (2026-07-20), see banner at top of document
 
@@ -197,7 +197,7 @@ Where 1.3 sessions/hr matches the existing "6–8 sessions in a 5-hour shift" th
 | M2 | A$33,000 | A$16,720 | A$5,379 | A$55,099 | A$74,437 | **-A$19,338** |
 | M3 | A$38,500 | A$25,080 | A$6,979 | A$70,559 | A$76,897 | **-A$6,337** |
 | M4 | A$44,000 | A$31,350 | A$8,316 | A$83,666 | A$78,742 | **+A$4,924** |
-| M5+ (steady state) | A$44,000 | A$33,440 | A$8,580 | A$86,020 | A$79,357 | **+A$6,663** |
+| M5+ (historical, steady state) | A$44,000 | A$33,440 | A$8,580 | A$86,020 | A$79,357 | **+A$6,663** |
 
 ## Revised Finding
 
@@ -227,7 +227,7 @@ The AM concurrency constraint (clients arrive staggered and are on-site simultan
 
 ### Two Real-World Scenarios — Both Now Modelled as Booking-Driven, Not Ramp-Assumed
 
-**Scope note (2026-07-30):** the two scenarios below are specifically about the pre-launch/early-ramp period (how fast the venue reaches full booking volume). They are illustrations of the permanent policy applied to that specific period — the underlying rule itself (roster to that day's confirmed bookings, not a blanket assumption) does not stop applying once Month 5+ steady state is reached. At full 10-client/day volume, the same principle still governs whether a given day needs both staff on a line or just one — it simply resolves to "yes, both" more often once volume is consistently high, not because the rule changed, but because confirmed bookings more often show the overlap that triggers 2-person staffing.
+**Scope note (2026-07-30):** the two scenarios below are specifically about the pre-launch/early-ramp period (how fast the venue reaches full booking volume). They are illustrations of the permanent policy applied to that specific period — the underlying rule itself (roster to that day's confirmed bookings, not a blanket assumption) does not stop applying once Month 5+ steady state is reached. At the then-current, now-historical 10-client/day volume (superseded, see docs/CURRENT-STATE.md for the current 18-client model), the same principle still governs whether a given day needs both staff on a line or just one — it simply resolves to "yes, both" more often once volume is consistently high, not because the rule changed, but because confirmed bookings more often show the overlap that triggers 2-person staffing.
 
 **Scenario A — Organic ramp (no pre-opening backlog):**
 Bookings build gradually after launch, as previously assumed (4→6→7→8 clients/day, M1–M4). Under booking-driven rostering, staffing cost during these lower-volume days is likely **lower** than the current flat 90%/95%/100% assumption, since days with fewer overlapping bookings need fewer concurrent staff per line, not just a blanket percentage discount on the full 8-person roster.

@@ -317,7 +317,7 @@ Inserting a 7th pair at exactly 10:25 (5-min draws, +60/+120min marks) collides 
 
 **Constraint (unchanged, already verified 2026-07-30):** MA000005 clause 11.5 and MA000027 clause 11.2 both set a 3-consecutive-hour minimum casual engagement — `[VERIFIED — Fair Work Ombudsman/Fair Work Commission, checked via direct WebFetch against awards.fairwork.gov.au, 2026-07-30]`.
 
-**A genuine change at 12 clients/day: no buffer is needed for anyone.** Every staff member's trimmed span (booked + between-gaps = 135+70 = 205 min) now exceeds the 180-min floor — unlike the 10-client model, where 4 of 8 staff had only a 125-min trimmed span and needed a 55-min mandatory buffer.
+**A genuine change at 12 clients/day (historical figures, this whole section superseded, see docs/CURRENT-STATE.md): no buffer is needed for anyone.** Every staff member's trimmed span (booked + between-gaps = 135+70 = 205 min) now exceeds the 180-min floor — unlike the historical 10-client model, where 4 of 8 staff had only a 125-min trimmed span and needed a 55-min mandatory buffer.
 
 | Staff | Trimmed span | 3hr floor met? | Buffer needed | Lead+tail saveable | Rate | $ saved/day |
 |---|---|---|---|---|---|---|
@@ -342,7 +342,7 @@ Inserting a 7th pair at exactly 10:25 (5-min draws, +60/+120min marks) collides 
 
 **This is a cost saving, kept as its own separate line — it is not blended with Pool (a)'s revenue figure.**
 
-### Summary — Two Separate, Tagged Lines (Not One Blended Figure, Not Carried Over From the 10-Client Figures)
+### Summary — Two Separate, Tagged Lines (Not One Blended Figure, Not Carried Over From the Historical 10-Client Figures)
 
 | Line | Monthly figure (12-client) | Monthly figure (10-client, historical) | Type |
 |---|---|---|---|
@@ -363,7 +363,7 @@ Inserting a 7th pair at exactly 10:25 (5-min draws, +60/+120min marks) collides 
 
 **The check:** [am-capacity-weekend.md](am-capacity-weekend.md)'s Scenario C treatment-staff verification confirms every one of the 30 service slots (10 clients × ~2-3 services each across the AM window) stays at a maximum of 2 concurrent bookings per service line, using the existing 8-person roster (2 each: Massage, Nail, Hair, Beauty). [multirole-CORRECTION.md](multirole-CORRECTION.md) then re-examined whether any of these 4 lines can be pooled to reduce headcount:
 
-| Pool | Peak concurrent demand at 10 clients/day |
+| Pool | Peak concurrent demand at 10 clients/day (historical) |
 |---|---|
 | Massage + Beauty (poolable — both Cert IV under MA000005, natural cross-train pairing) | 3 |
 | Nails (standalone — separate trade-specific qualification, no natural overlap) | 2 |
@@ -405,7 +405,7 @@ Inserting a 7th pair at exactly 10:25 (5-min draws, +60/+120min marks) collides 
 | 7-staff (Massage+Beauty pooled, cap 3) | **FAILS** — 2 clients unassignable (specific clients 6 and 12 in the solver run) |
 | 6-staff (Massage+Beauty AND Nails+Hair both pooled, cap 3 each) | **FAILS** — 4 clients unassignable (specific clients 5, 6, 11, and 12) |
 
-**The committed 12-client model requires 8 dual-qualified treatment staff, required by peak overlap — there is no "unpooled" model.** All treatment staff are hired dual/multi-qualified (Massage+Beauty confirmed pairing); at 12 clients/day the Massage+Beauty pool's own peak concurrency is 4 (matching the sum of the individual Massage and Beauty peaks — pooling provides no further reduction at this specific volume), plus 2 Nails plus 2 Hair. This is the direct, solver-verified answer to "does 12 clients/day need more headcount than 10" — the answer is: not more than the original 8, but definitely more than the 7 or 6 that pooling allows at 10 clients/day. **Clarifying note: the 8-person figure at the 12-client design ceiling is correct and expected — dual-qualification just doesn't happen to reduce it further at this specific volume. 7 (pool sized to 3) remains a legitimate daily-rostering choice on lower-volume actual days, below this ceiling.**
+**The then-committed 12-client model (historical, superseded, see docs/CURRENT-STATE.md) required 8 dual-qualified treatment staff, required by peak overlap — there is no "unpooled" model.** All treatment staff are hired dual/multi-qualified (Massage+Beauty confirmed pairing); at 12 clients/day the Massage+Beauty pool's own peak concurrency is 4 (matching the sum of the individual Massage and Beauty peaks — pooling provides no further reduction at this specific volume), plus 2 Nails plus 2 Hair. This is the direct, solver-verified answer to "does 12 clients/day need more headcount than 10" — the answer is: not more than the original 8, but definitely more than the 7 or 6 that pooling allows at 10 clients/day. **Clarifying note: the 8-person figure at the 12-client design ceiling is correct and expected — dual-qualification just doesn't happen to reduce it further at this specific volume. 7 (pool sized to 3) remains a legitimate daily-rostering choice on lower-volume actual days, below this ceiling.**
 
 ### 14 Clients/Day — PROVEN CEILING (Maximum Verified Capacity), NOT the Daily Operating Target
 
@@ -421,7 +421,7 @@ Inserting a 7th pair at exactly 10:25 (5-min draws, +60/+120min marks) collides 
 
 **True minimum treatment headcount at 14/day: 9 (3 Massage+Beauty pool + 3 Nails + 3 Hair), proven.** `[VERIFICATION NEEDED — Nails+Hair pairing not yet confirmed as hireable]`: if confirmed, the same method gives a hypothetical 6 — flagged only, not assumed.
 
-**Full whole-venture P&L at the 14-client ceiling (not just the AM segment):**
+**Full whole-venture P&L at the 14-client ceiling (historical — this whole 14-client PROVEN CEILING model is superseded/dominated by the current 18-client Table 1 primary model at the same 8-treatment-staff headcount, see docs/CURRENT-STATE.md's 2026-08-05 REBASE banner; not just the AM segment):**
 
 | | 12-client (committed daily target) | 14-client (PROVEN CEILING) | Delta |
 |---|---|---|---|
@@ -437,7 +437,7 @@ Inserting a 7th pair at exactly 10:25 (5-min draws, +60/+120min marks) collides 
 
 `[MODELED — delta-reconciliation build from the validated 12-client baseline, same methodology used for the 10→12 correction, not reused/copied figures]`. Total Revenue built as: AM A$3,500/day (14×A$250) × 22 weekdays = A$77,000, PM A$1,520/day × 22 = A$33,440, Saturday AM A$3,500 × 4.33 = A$15,155, Saturday PM A$760 × 4.33 = A$3,290.80 — ancillary A$0 throughout, same as the 12-client baseline.
 
-**Downtime-Fill/Early-Release, rechecked against the actual bursty 14-client schedule (not carried over from 12):**
+**Downtime-Fill/Early-Release, rechecked against the actual bursty 14-client schedule (historical, superseded, see docs/CURRENT-STATE.md; not carried over from 12):**
 
 | Item | 12-client | 14-client (PROVEN CEILING) | Method |
 |---|---|---|---|
@@ -447,7 +447,7 @@ Inserting a 7th pair at exactly 10:25 (5-min draws, +60/+120min marks) collides 
 | **Between-Client Downtime-Fill Revenue** | A$12,679.33/month | **A$20,717.12/month** | `[MODELED — 1.3 sessions/hr × 50% utilisation × A$95/session × 22 trading days, same formula as the 12-client figure, verified by reproducing that figure exactly from the same formula]` |
 | **Early-Release Cost Saving** | A$16,511.22/month | **A$14,026.54/month** | `[MODELED — per-station saveable minutes × the station's own award rate (A$37.00/hr Massage+Beauty pool, A$35.63/hr Nails/Hair), summed and ×22 trading days]` |
 
-Both remain separate, tagged lines, never blended into the A$36,726.23/month baseline above or into each other.
+Both remain separate, tagged lines, never blended into the (historical, superseded) A$36,726.23/month baseline above or into each other.
 
 **Bottom line: 14 clients/day, staffed with 9 dual-qualified treatment staff, is now proven — full P&L, headcount confirmed via two independent methods, downtime-fill/early-release rechecked against the real schedule.** It is documented as growth headroom. **12 clients/day remains the committed daily operating target throughout this document — nothing above changes any 12-client figure.** See `docs/CURRENT-STATE.md` §1/§4/§7 and `scenario-c-sync-timetables.md` §0.4 for the same finding recorded canonically.
 

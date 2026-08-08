@@ -86,10 +86,10 @@ This was a large consolidation session. If you read nothing else in this section
 | 26 | [gtt-clinical-protocol.md](gtt-clinical-protocol.md) | GTT procedure detail, phlebotomist protocol |
 | 27 | [gtt-test-reference.md](gtt-test-reference.md) | Quick reference card for staff |
 | 28 | [pathology-collection-room.md](pathology-collection-room.md) | Collection room fit-out spec |
-| 29 | [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) | **Canonical current scheduling model** — 10 clients/day, synchronized start, verified zero double-bookings |
+| 29 | [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) | **Canonical scheduling model** — originally 10 clients/day (historical), synchronized start, verified zero double-bookings; now also houses the current 18-client Table 1 primary model (2026-08-05 rebase) |
 | 30 | [draw-event-scheduler-findings.md](draw-event-scheduler-findings.md) | Solver-based verification of why the current model is at its true capacity optimum |
 | 31 | [scenario-e-floating-chair-investigation.md](scenario-e-floating-chair-investigation.md) | New this session — investigated whether decoupling clients from a fixed chair adds capacity (verdict: no, zero gain, exploratory only); also answers the specific 11th-client-at-09:55 question (no) |
-| 31a | [am-staffing-by-volume.md](am-staffing-by-volume.md) | New this session — checked phlebotomist/treatment staffing + full-day rosters for every AM volume from 3 to 10 clients/day |
+| 31a | [am-staffing-by-volume.md](am-staffing-by-volume.md) | Checked phlebotomist/treatment staffing + full-day rosters for every AM volume from 3 to 10 clients/day (historical volume range, methodology still valid, see docs/CURRENT-STATE.md for the current committed volume) |
 | 32 | [scenario-d-investigation.md](scenario-d-investigation.md) | Growth scenario — 15 clients/day, 3rd phlebotomist, not yet committed |
 | 33 | [am-capacity-weekend.md](am-capacity-weekend.md) | AM capacity history, Saturday/Sunday trading rationale — contains superseded staggered-chair content, see its own flags |
 | 34 | [option-b-collection-centre.md](option-b-collection-centre.md) | Reference only — in-house accreditation path, rejected |
