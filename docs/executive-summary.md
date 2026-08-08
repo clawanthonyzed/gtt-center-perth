@@ -55,7 +55,7 @@ GTT Center Perth partners with an already-NATA-accredited pathology provider for
 
 Per [HANDOFF.md](HANDOFF.md) (2026-07-17, the most recent session summary and source of truth for the active plan):
 
-- **AM GTT:** 10 clients/day, 07:00 start, 2 chairs, 2 phlebotomists, synchronized-start schedule (Scenario C — `docs/scenario-c-sync-timetables.md`, fully verified with zero double-bookings)
+- **AM GTT (historical, superseded twice — see docs/CURRENT-STATE.md for the current 18-client Table 1 primary model):** 10 clients/day, 07:00 start, 2 chairs, 2 phlebotomists, synchronized-start schedule (Scenario C — `docs/scenario-c-sync-timetables.md`, fully verified with zero double-bookings)
 - **Packages:** 2 tiers only, renamed/renumbered 2026-07-20 — Package 1 (A$250, fixed 2×30min) and Package 2 (A$300, flexible composition), same 2 price points as before, not a re-opening of the earlier decision to drop the old A$200 tier ([services-pricing-locked.md](services-pricing-locked.md))
 - **AM downtime fill:** the 8 AM treatment staff (massage/nail/hair/beauty) are not fully occupied for the entire GTT window — each client's own service only fills part of their ~2-2.5hr visit. The model is built so this same AM staff also takes standalone, non-GTT bookings during the gaps between their rostered GTT clients' services, not just a dedicated separate shift.
 - **PM shift:** Individual standalone services (not packages), 4 dedicated casual hires (1 each: massage, hair, nail, beauty), cross-shift qualified with AM staff, costed on actual hours worked

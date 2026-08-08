@@ -115,7 +115,7 @@ All pregnant women in the broader gestational window (not just GTT week) plus po
 
 ## 5. OPERATIONS
 
-### Current Committed Model — Scenario C (10 clients/day, 07:00 start)
+### Current Committed Model — Scenario C (historical, 10 clients/day, 07:00 start — superseded, see docs/CURRENT-STATE.md for the current 18-client Table 1 primary model)
 
 Per [HANDOFF.md](HANDOFF.md) and `docs/scenario-c-sync-timetables.md` (fully verified, zero double-bookings): 2 collection chairs, 2 phlebotomists, synchronized start at 07:00, 5 clients per chair.
 
@@ -164,7 +164,7 @@ Per [floor-plan-v3.svg](floor-plan-v3.svg)/`.pdf` (current, 2026-07-10) and [flo
 
 Financial models in this venture use **A$250 (Package 1, the lower of the two current packages) as the standard planning price per AM GTT package sold** — a deliberate conservative safety margin, per standing instruction, not a blended average across both packages. See [services-pricing-locked.md](services-pricing-locked.md) for the full locked structure and `docs/price-increase-comparison.md` for analysis of when/whether to raise prices.
 
-**Sourcing note on PM average (~A$95/service):** [profit-loss-tables.md](profit-loss-tables.md)'s whole-venture profitability figure (+A$25,087.07/month, matching [HANDOFF.md](HANDOFF.md)) is the confirmed current authoritative figure, incorporating this PM average alongside the current 10-client Scenario C AM model.
+**Sourcing note on PM average (~A$95/service):** [profit-loss-tables.md](profit-loss-tables.md)'s whole-venture profitability figure was, at the time this was written, +A$25,087.07/month (matching [HANDOFF.md](HANDOFF.md)) — historical, since superseded twice (see docs/CURRENT-STATE.md for the current +A$63,028.75/month primary figure), incorporating this PM average alongside the then-current, now-historical 10-client Scenario C AM model.
 
 ---
 
@@ -207,7 +207,7 @@ SEO content strategy, referral reward programme, quarterly referring-practice vi
 
 | Range | Amount | Source |
 |---|---|---|
-| Low | ~A$209,000 | [cash-flow.md](cash-flow.md) |
+| Low (historical, one of 3+ unreconciled ranges) | ~A$209,000 | [cash-flow.md](cash-flow.md) |
 | Mid | ~A$305,000 | [cash-flow.md](cash-flow.md) |
 | High | ~A$431,000 | [cash-flow.md](cash-flow.md) |
 
@@ -219,7 +219,7 @@ SEO content strategy, referral reward programme, quarterly referring-practice vi
 |---|---|
 | Total Revenue | A$113,712.16 (per [cash-flow.md](cash-flow.md)) — **note: [profit-loss-tables.md](profit-loss-tables.md) v2.0's own monthly total is derived differently; see that document directly for its full breakdown rather than relying on this summary line alone** |
 | Total Costs (payroll, workers comp, non-wage overhead) | A$88,625.09 |
-| **Net P&L (conservative baseline)** | **+A$25,087.07/month** |
+| **Net P&L (historical conservative baseline, superseded, see docs/CURRENT-STATE.md)** | **+A$25,087.07/month** |
 
 **Break-even:** ~A$88,625/month in total costs to cover (revenue basis) — or, as an illustrative single-segment bookend only, approximately 298 Package 1 sales/month (13.5/day) *if every single sale were an AM GTT package at A$250 and nothing else*, which is not the real mix ([profit-loss-tables.md](profit-loss-tables.md), [unit-economics.md](unit-economics.md), [gtt-center-perth-overview-for-imara.md](gtt-center-perth-overview-for-imara.md) for the full two-segment breakdown). **Full break-even reached Month 5+; Month 4 is marginally profitable, per [profit-loss-tables.md](profit-loss-tables.md)'s corrected Year 1 Monthly Ramp table.**
 

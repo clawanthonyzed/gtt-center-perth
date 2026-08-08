@@ -34,7 +34,7 @@ Anthony reviewed v1.0 and raised 10 points. This revision answers all of them:
 - **Recommend collapsing 3 packages to 2** — "Standard" (merging old Pkg 1 + Pkg 2) and "Premium" (old Pkg 3) — at **A$250 / A$330 (GST-inclusive)**. This folds in GST-safety margin (point 5) and is cross-checked against services-master-table.md a la carte pricing (point 8), answering points 5, 6 and 8 together.
 - **GTT Center Perth cannot bill Medicare directly** under Option A — but the patient's pathology test itself is typically Medicare-bulk-billed/$0 out-of-pocket via PathWest/WDP, independent of our package fee. That's a marketing point, not a new revenue line (point 7, §4).
 - **"Relief Pathology Collector" is an established Perth job category at PathWest/WDP** — calling a pathology provider for short-notice locum phlebotomist cover is realistic and should be added to Reed's negotiation scope (point 9, §6.4).
-- **New "Lever 0" (AM capacity 8→12/day):** at unchanged costs, Month 5+ Net P&L could rise from the canonical **+A$10,232/mo** to roughly **+A$32,000–34,000/mo (+A$386,000–407,000/yr, ~30-31% margin)** — by far the largest lever identified across v1.0 and v2.0, contingent on a booking-demand ramp (§5.2).
+- **New "Lever 0" (historical, AM capacity 8->12/day):** at unchanged costs, Month 5+ Net P&L could rise from the then-canonical (now historical, superseded) **+A$10,232/mo** to roughly **+A$32,000–34,000/mo (+A$386,000–407,000/yr, ~30-31% margin)** — by far the largest lever identified across v1.0 and v2.0, contingent on a booking-demand ramp (§5.2).
 
 ---
 
@@ -93,7 +93,7 @@ Same per-chair pattern as the proven Scenario B (40-min spacing per chair), just
 
 **Verified — no chair double-booking, no Draw collisions.** C12 (the last client) departs ~13:05, just 5 minutes past the nominal 13:00 AM-shift end — within the "no hard cutoff" allowance (point 3). Every other client departs comfortably inside the window.
 
-**Why this beats v1.0's Scenario A:** same 2 chairs, same 2 phlebotomists, same staff — but **2 more clients/day** (12 vs 10) with **comfortable margins** instead of zero slack. There is no reason to consider the old 10-client/30-min-spacing model as a step; this 12-client/40-min-spacing model is strictly better in every dimension.
+**Why this beats v1.0's Scenario A (historical comparison, both since superseded):** same 2 chairs, same 2 phlebotomists, same staff — but **2 more clients/day** (12 vs 10) with **comfortable margins** instead of zero slack. There is no reason to consider the old 10-client/30-min-spacing model as a step; this 12-client/40-min-spacing model was strictly better in every dimension at the time (both now historical, see docs/CURRENT-STATE.md).
 
 ### 1.4 v1.0's Scenario A finding — corrected/superseded
 
@@ -233,7 +233,7 @@ Per option-b-collection-centre.md (line 53), under Option A, **GTT Center Perth 
 |---|---|
 | Month 5+ steady-state revenue | A$84,623/mo (AM A$44,000 + PM A$33,000 + cafe/retail A$7,623) |
 | Month 5+ steady-state costs | A$74,391/mo |
-| **Month 5+ Net P&L** | **+A$10,232/mo = +A$122,784/yr (~12.1% margin)** |
+| **Month 5+ Net P&L (historical, superseded)** | **+A$10,232/mo = +A$122,784/yr (~12.1% margin)** |
 | Month 4 (marginal break-even) | +A$4,188/mo |
 | Year 1 (incl. M1-3 ramp losses) | +A$37,232 net |
 | Year 2 | +A$122,784 |
@@ -244,7 +244,7 @@ Source of truth: cash-flow.md (canonical month-by-month model, Day 51 reconcilia
 
 ### 5.2 NEW — Lever 0: AM capacity 8→12 clients/day (§1.3)
 
-- **Current AM revenue** (8 clients/day, A$250 blended avg, ~22 working days/mo): A$44,000/mo — matches cash-flow.md.
+- **Then-current AM revenue (historical, 8 clients/day, A$250 blended avg, ~22 working days/mo):** A$44,000/mo — matched cash-flow.md at the time.
 - **New AM revenue at 12 clients/day**, ~22 working days/mo:
   - At *old* A$250 blended avg: 12 × A$250 × 22 = **A$66,000/mo** (+A$22,000/mo)
   - At the *new* §3.3 blended net average (A$256.36): 12 × A$256.36 × 22 ≈ **A$67,680/mo** (+A$23,680/mo)
@@ -253,7 +253,7 @@ Source of truth: cash-flow.md (canonical month-by-month model, Day 51 reconcilia
   - At old pricing: A$66,000 + A$33,000 (PM) + A$7,623 (cafe/retail) − A$74,391 = **+A$32,232/mo (+A$386,784/yr, ~30.2% margin)**
   - At new 2-tier pricing: A$67,680 + A$33,000 + A$7,623 − A$74,391 = **+A$33,912/mo (+A$406,944/yr, ~31.4% margin)**
 
-**Either way, roughly 3x the canonical +A$10,232/mo baseline — the largest single lever identified across v1.0 and v2.0.**
+**Either way, roughly 3x the then-canonical (historical, superseded) +A$10,232/mo baseline — the largest single lever identified across v1.0 and v2.0 at the time.**
 
 **Caveat (same as Lever 2's existing open item):** this is a *supply-side* finding — the chairs, staff and timing can handle 12/day. It assumes booking demand fills all 12 slots. Recommend adding an AM 8→12 booking ramp to Bruno's existing PM-ramp validation scope (reading-order.md Open Decisions), tracked over Months 1-5 alongside the PM ramp, before assuming the full +A$22-24K/mo as committed revenue.
 
@@ -268,7 +268,7 @@ Source of truth: cash-flow.md (canonical month-by-month model, Day 51 reconcilia
 
 | Lever | Type | Impact | Status |
 |---|---|---|---|
-| **Lever 0 (NEW)** — AM capacity 8→12/day, $0 incremental cost | Supply + demand | Net P&L +A$32,232 to +A$33,912/mo (vs +A$10,232 baseline) | New this audit. Needs booking-demand ramp, like Lever 2. |
+| **Lever 0 (NEW, historical)** — AM capacity 8->12/day, $0 incremental cost | Supply + demand | Net P&L +A$32,232 to +A$33,912/mo (vs +A$10,232 baseline, both historical/superseded) | New this audit at the time. Needs booking-demand ramp, like Lever 2. |
 | Lever 1 (price) | Price | Superseded by §3's 2-tier A$250/A$330 redesign — folds in a small (~2-3%) net uplift on top of Lever 0 | Updated this audit |
 | Lever 2 (PM volume — primary per v1.0) | Demand | +A$187,500/yr, already the Day-51 plan | Unchanged |
 | Scenario C (3-chair growth, was "Scenario C" in v1.0) | Supply | +1 to +9 clients/day beyond 12 (13-21 total), ~A$43-45K/yr cost | Reframed §2 |
@@ -296,7 +296,7 @@ If ~25-30% of the pool were earmarked for phlebotomist relief (≈A$3,750-4,500/
 
 1. **Pre-credential a casual/part-time 3rd phlebotomist now** — ties into §2.3's 3-chair growth lever (same hire serves both purposes).
 2. **Cross-training** (already in the Staff Downtime Protocol): service-staff cross-train on adjacent categories during downtime — doesn't help phlebotomy (Cert III HLT37215-gated) but reduces single-point-of-failure risk for Massage/Nail/Hair/Beauty absences.
-3. **Reduced-capacity-day fallback:** if a service-category staff member is out, drop that day's bookings back to Scenario B's 8-client level via Fresha (4 slots/category = 50% of the new 360-min basis for the remaining staff member — comfortable).
+3. **Reduced-capacity-day fallback (historical framing, Scenario B/8-client since superseded):** if a service-category staff member is out, drop that day's bookings back to Scenario B's 8-client level via Fresha (4 slots/category = 50% of the new 360-min basis for the remaining staff member — comfortable).
 4. **Updated "no late arrivals" note:** §1.4 confirms the §1.3 model has comfortable margins (unlike v1.0's Scenario A), so minor (2-5min) lateness remains a non-event, as under Scenario B. operations-manual.md's existing ">10min late = forfeited slot, rebooked" rule is unaffected.
 
 ### 6.4 NEW — Pathology-clinic short-notice relief (point 9)

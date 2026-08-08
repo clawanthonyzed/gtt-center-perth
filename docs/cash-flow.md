@@ -25,7 +25,7 @@ Anthony confirmed this document was old and wrong, not just stale — the earlie
 | Parameter | Value | Basis |
 |---|---|---|
 | AM GTT package avg | A$250 | Conservative planning price = Package 1 (the lower of the 2 current packages), per standing instruction — not a blended average across both packages. See `services-pricing-locked.md`. |
-| AM GTT capacity | 10 clients/day | Scenario C, 2 phlebotomists/2 chairs, synchronized start — fully verified, zero double-bookings (`scenario-c-sync-timetables.md`) |
+| AM GTT capacity (historical, superseded twice, see docs/CURRENT-STATE.md) | 10 clients/day | Scenario C, 2 phlebotomists/2 chairs, synchronized start — fully verified, zero double-bookings (`scenario-c-sync-timetables.md`) |
 | PM standalone services avg | A$95/session | Individual a-la-carte services — `pm-staffing-roster.md`. Set/fixed PM packages are now committed (`pm-package-structure.md`) but their revenue uplift is not yet included in this model's figures pending real uptake data. |
 | PM capacity | ~16 sessions/day at steady state | 4-role dedicated casual roster, ~50% utilisation of theoretical 4-line capacity — `pm-staffing-roster.md` |
 | Operating days/month | 22 (Mon-Fri) + Saturday bolt-on | Sunday closed until standalone PM demand is proven and profitable (`am-capacity-weekend.md`) |
@@ -102,7 +102,7 @@ Same ramp-percentage shape already established and reused across this corpus (Mo
 | M4 | A$51,150 | A$31,099 | A$7,979 | A$90,228 | A$88,625 | **+A$1,603** |
 | M5+ (steady state) | A$55,000 | A$33,440 | A$8,580 | A$97,020 | A$88,625.09 | **+A$8,395** (see note below) |
 
-**Note on M5+ figure:** this ramp-table's M5+ net (+A$8,395/month) is a simplified approximation using rounded monthly totals — `profit-loss-tables.md`'s own more precise weekday/Saturday-blended calculation gives **+A$25,087.07/month**, which is the figure to quote as authoritative (this ramp table exists to show the Month 1-4 build-up shape, not to replace the precise calculation). Months 13-18 continue at the same steady-state run rate as Month 5+.
+**Note on M5+ figure (historical — both figures below since superseded, see docs/CURRENT-STATE.md for the current +A$63,028.75/month primary figure):** this ramp-table's M5+ net (+A$8,395/month) was a simplified approximation using rounded monthly totals — `profit-loss-tables.md`'s own more precise weekday/Saturday-blended calculation gave **+A$25,087.07/month** at the time, which was the figure to quote as authoritative then (this ramp table exists to show the Month 1-4 build-up shape, not to replace the precise calculation). Months 13-18 continue at the same steady-state run rate as Month 5+.
 
 **Fixed costs are shown flat at A$88,625.09/month from Month 1** as a conservative simplification (real fixed costs also ramp somewhat during Months 1-4, since fewer PM casual hours are worked at lower volume — `pm-staffing-roster.md`'s own cost-ramp table) — this means the Months 1-3 losses shown above are somewhat overstated (real losses would be smaller), the same disclosed simplification already used in `profit-loss-tables.md`'s Years 1-3 Annual Projection.
 
