@@ -11,7 +11,7 @@
 
 ## Important Caveat Before Reading the Table
 
-This document assumes, for modelling purposes, that **Chair A's clients choose Massage + Beauty and Chair B's clients choose Nails + Hair** — the same convention already used in the verified 10-client model. In reality, at lower volume, whichever chair a client is assigned to should reflect the treatment lines their **actual booking** requests, not an arbitrary assumption. The genuine planning takeaway from this document is the **shape** of the staffing requirement (how many phlebotomists, and the ceiling on treatment concurrency per active chair) — the specific service-line labels (Massage vs Nails, etc.) should be swapped to match whichever 2 lines that day's real Chair-A and Chair-B bookings actually need, per the booking-driven rostering principle already established in `pm-staffing-roster.md` §AM + PM Rostering Methodology ("the Manager reviews the following week's confirmed Fresha schedule and rosters exactly the staff each day requires").
+This document assumes, for modelling purposes, that **Chair A's clients choose Massage + Beauty and Chair B's clients choose Nails + Hair** — the same convention already used in the verified (historical) 10-client model. In reality, at lower volume, whichever chair a client is assigned to should reflect the treatment lines their **actual booking** requests, not an arbitrary assumption. The genuine planning takeaway from this document is the **shape** of the staffing requirement (how many phlebotomists, and the ceiling on treatment concurrency per active chair) — the specific service-line labels (Massage vs Nails, etc.) should be swapped to match whichever 2 lines that day's real Chair-A and Chair-B bookings actually need, per the booking-driven rostering principle already established in `pm-staffing-roster.md` §AM + PM Rostering Methodology ("the Manager reviews the following week's confirmed Fresha schedule and rosters exactly the staff each day requires").
 
 ---
 
@@ -120,7 +120,7 @@ These three volumes share the identical staffing requirement as N=7 above — on
 
 ## Does Pre-Known Service Composition (Not Just Client Count) Tighten the Roster Further? (Added 2026-07-21)
 
-**Anthony's clarified question:** within the existing 10-client/day ceiling (no capacity change), if each of the 10 clients has already pre-booked a specific Package (1 or 2) with a **known service selection**, not just a headcount — does knowing exactly which services each client will use let AM roster fewer (or different) treatment staff than the volume-only model above (7 treatment staff at N=10)?
+**Anthony's clarified question (historical, 2026-07-21, against the then-current 10-client/day ceiling):** within that ceiling (no capacity change at the time), if each of the 10 clients has already pre-booked a specific Package (1 or 2) with a **known service selection**, not just a headcount — does knowing exactly which services each client will use let AM roster fewer (or different) treatment staff than the volume-only model above (7 treatment staff at N=10)?
 
 ### The Summary Table Above Was Never a Worst-Case Model — This Is the Key Finding
 
@@ -148,7 +148,7 @@ With a genuine per-volume staffing requirement now established, the natural next
 
 ## Related Documents
 
-- `scenario-c-sync-timetables.md` — the verified 10-client model this document's timing is directly built from
+- `scenario-c-sync-timetables.md` — the verified (historical) 10-client model this document's timing is directly built from
 - `multirole-CORRECTION.md` — the Massage+Beauty pooling logic (7-not-8 finding) applied here across all volumes
 - `am-capacity-weekend.md` — Multi-Role Relief Hiring analysis confirming Nails/Hair cannot pool
 - `pm-staffing-roster.md` §AM + PM Rostering Methodology — the booking-driven principle this document's real-world caveat relies on

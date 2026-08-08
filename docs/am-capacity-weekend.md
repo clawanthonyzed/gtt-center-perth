@@ -27,7 +27,7 @@ Adding a 3rd phlebotomist/chair and tightening stagger to 15 minutes (spread acr
 | Item | Monthly |
 |---|---|
 | 3rd phlebotomist (same award rate as existing 2, A$43,068/yr) | +A$3,589 |
-| Extra AM revenue (10 vs 8 clients/day × A$250 avg) | +A$6,000 |
+| Extra AM revenue (10 vs 8 clients/day × A$250 avg, historical Scenario B->C step) | +A$6,000 |
 | **Net gain (before treatment-room concurrency check)** | **+A$2,411/month** |
 
 **Caveat — not yet fully verified:** at 10 clients/day, total AM service demand rises from 16 to 20 services/day. Current treatment-room staff (2 per line) have significant headroom (17–33% utilisation at 8 clients/day per `operations-manual.md`), so this is very likely absorbable without new treatment-room hires — but **a full Scenario A timetable (mirroring the existing verified Scenario B) needs to be built and checked for staff double-booking before this is committed to**, the same way Scenario B was verified on Day 49.
@@ -133,7 +133,7 @@ Actively seeking someone qualified across massage, beauty, nails, **and** hair i
 
 **Added 2026-07-16.** Formal verification, same rigor as Scenario B (Day 49) — every draw and every service checked for staff double-booking. First draw moved from 07:40 to **07:00**. End constraint unchanged (last possible new-draw start 10:05, last depart must clear ~12:30 for WDP courier). Same 20-minute stagger as the existing verified model — **no stagger tightening required** to reach this result.
 
-### Result: 10 clients/day confirmed (up from 8), zero double-bookings, same 2 phlebotomists
+### Result (historical, 2026-07-16): 10 clients/day confirmed (up from 8), zero double-bookings, same 2 phlebotomists
 
 ### Per-Client View (actual clock times, 4 real-time ±5min adjustments applied — same tolerance mechanism used in Scenario B)
 
@@ -150,7 +150,7 @@ Actively seeking someone qualified across massage, beauty, nails, **and** hair i
 | 9 | A | 09:40–09:55 | 09:55–10:40 | 10:50–10:55 | 11:00–11:45 | 11:55–12:00 | ~12:05 |
 | 10 | B | 10:00–10:15 | 10:15–11:00 | 11:10–11:15 | 11:20–12:05 | 12:15–12:20 | ~12:25 |
 
-*Draw 3 shifted +5min from mechanical schedule (same ±5min real-time tolerance rule as Scenario B) to avoid colliding with the next client's Draw 1 on the same chair — 4 such adjustments needed (Clients 1, 2, 3, 4), vs 1 adjustment in the original 8-client Scenario B. This is expected — a denser schedule needs more of these micro-adjustments, all within the existing tolerance rule, none requiring a process change.
+*Draw 3 shifted +5min from mechanical schedule (same ±5min real-time tolerance rule as Scenario B) to avoid colliding with the next client's Draw 1 on the same chair — 4 such adjustments needed (Clients 1, 2, 3, 4), vs 1 adjustment in the original (historical) 8-client Scenario B. This is expected — a denser schedule needs more of these micro-adjustments, all within the existing tolerance rule, none requiring a process change.
 
 **Client 10 departs ~12:25 — confirms the WDP courier/12:30 cutoff still holds at 10 clients.**
 
@@ -234,7 +234,7 @@ Saturday treatment staff (massage/hair/nail/beauty) will cost 133–150% of ordi
 
 ## UPDATE — 2026-07-16: AM Profit, Package Pricing, Weekend Structure, 3rd Phlebotomist
 
-### 1. AM Profit Now (Scenario C: 10 clients/day, 07:00 start, Package 2+3 only)
+### 1. AM Profit Now (historical, 2026-07-16 — Scenario C: 10 clients/day, 07:00 start, Package 2+3 only)
 
 | | Before (8 clients, Pkg1/2/3 mix) | Now (10 clients, Pkg2/3 mix) |
 |---|---|---|
@@ -361,7 +361,7 @@ Checked all 30 service slots (15 clients × 2) against the existing 8 treatment 
 - Opening cost (07:00 start): A$980/month
 - **AM Contribution: ≈+A$29,676/month**
 
-**c. Current timetable?** No — this is a new one (Scenario D above), built and verified specifically for 3 chairs. The Scenario C (2-chair, 10-client) timetable stays as the current committed baseline; Scenario D is the documented growth path if/when the 3rd phlebotomist is activated as an active chair rather than pure relief.
+**c. Current timetable?** No — this is a new one (Scenario D above), built and verified specifically for 3 chairs. The Scenario C (2-chair, 10-client) timetable was the committed baseline at the time this was written (historical — since superseded twice, see docs/CURRENT-STATE.md); Scenario D remains the documented growth path if/when the 3rd phlebotomist is activated as an active chair rather than pure relief.
 
 ---
 

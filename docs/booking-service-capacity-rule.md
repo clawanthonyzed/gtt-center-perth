@@ -2,6 +2,8 @@
 
 **Date:** 2026-07-17 | **Status:** Specified, needs implementation (Fresha config or the planned custom booking page)
 
+> **STALENESS NOTE, added 2026-08-07 (consistency backlog pass):** the caps table below was derived for the then-current 10-client/day volume (historical — superseded first by the 12-client model, then by the 2026-08-05 rebase to 18-client/day, Table 1 primary). The underlying policy (business-assigned service order + a per-service capacity cap) remains sound and likely still applicable, since treatment headcount is confirmed unchanged at 8 (4 Massage+Beauty pool + 2 Nails + 2 Hair) across the 12- and 18-client 25-min-cadence models — but the specific cap NUMBERS below have not been independently re-derived against the new 18-client schedule's actual peak-concurrency pattern. Needs a dedicated recompute before implementation, not assumed still exactly correct.
+
 ## The problem this solves
 
 If every client could freely pick which service happens first, and enough clients independently pick the same single service, the queue backs up — tested directly this session: 10 clients all wanting Hair with only 2 Hair staff produces waits growing to 20 minutes, affecting 8 of 10 clients. Statistically unlikely under normal demand mix, but the booking system should prevent it structurally rather than rely on luck.

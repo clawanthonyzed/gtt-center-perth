@@ -3,6 +3,8 @@
 **Compiled:** 2026-07-19 | **Compiled by:** Grace (Operations Manager, audit pass)
 **Purpose:** Process and documentation improvements suggested by this session's audit, distinct from [02_issues_and_risks.md](02_issues_and_risks.md) (which lists gaps/risks) — this document focuses on how the corpus is maintained going forward, plus a few substantive operational suggestions.
 
+> **STALENESS NOTE, added 2026-08-07 (consistency backlog pass):** this document is a dated 2026-07-19 snapshot — client-volume figures below (e.g. "8 Clients/Day," Scenario B/C) describe that era's model, long since superseded first by the 12-client committed model (2026-07-30) and then by the 2026-08-05 rebase to 18-client/day (Table 1, primary). Historical suggestions/process content below is still valid as process guidance; any specific client-volume number is historical, not current — see `docs/CURRENT-STATE.md` for the live figures.
+
 ---
 
 ## Documentation Process Improvements

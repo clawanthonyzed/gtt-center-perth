@@ -33,18 +33,18 @@ Per `cash-flow.md`'s existing break-even-visits table (built on the pre-Scenario
 | A$250 (current conservative planning price — Package 1) | 298 | 13.5 |
 | A$300 (Package 2 only) | 248 | 11.3 |
 
-**Reading this table:** the realistic range this venture actually operates in is A$250 (conservative, Package 1 only) to A$300 (Package 2 only) — a break-even range of roughly 248-298 packages sold/month depending on package mix, **if GTT-package sales were the only revenue source**. In practice they are not — PM standalone services (~A$95, no GTT test) contribute separately, so this table should be read as "how many GTT-package sales alone would be needed," not the venture's actual break-even condition. The current 10-client AM Scenario C model, at full capacity (10/day × ~22 operating days = 220 AM packages sold/month, plus PM and Saturday), needs to be checked against this range once the PM/Saturday session-count discrepancy (see `business-plan.md` §6) is resolved — this document does not attempt that reconciliation, only surfaces where the two would need to connect.
+**Reading this table:** the realistic range this venture actually operates in is A$250 (conservative, Package 1 only) to A$300 (Package 2 only) — a break-even range of roughly 248-298 packages sold/month depending on package mix, **if GTT-package sales were the only revenue source**. In practice they are not — PM standalone services (~A$95, no GTT test) contribute separately, so this table should be read as "how many GTT-package sales alone would be needed," not the venture's actual break-even condition. The historical 10-client AM Scenario C model (superseded, see docs/CURRENT-STATE.md for the current 18-client Table 1 figures), at full capacity (10/day × ~22 operating days = 220 AM packages sold/month, plus PM and Saturday), needs to be checked against this range once the PM/Saturday session-count discrepancy (see `business-plan.md` §6) is resolved — this document does not attempt that reconciliation, only surfaces where the two would need to connect.
 
 ---
 
 ## 3. Best / Base / Worst Case — Patient Volume
 
-Adapted from `cash-flow.md`'s existing Revenue Sensitivity table (§Sensitivity Analysis), re-labelled Best/Base/Worst per this document's spec, with the same caveat that the underlying AM capacity figure (8 vs 10 clients/day) needs updating:
+Adapted from `cash-flow.md`'s existing Revenue Sensitivity table (§Sensitivity Analysis), re-labelled Best/Base/Worst per this document's spec, with the same caveat that the underlying AM capacity figure (historical 8 vs 10 clients/day, both since superseded by the 18-client rebase) needs updating:
 
 | Scenario | Description | Monthly Revenue (as originally modelled) | Monthly Profit (as originally modelled) |
 |---|---|---|---|
 | **Worst case** | AM-only at ~70% of capacity, no PM standalone services, no ancillary trade | A$30,800 | -A$43,591 (a real loss — this scenario represents a serious under-performance case, not a mild downside) |
-| **Base case** | Full modelled capacity at both AM and PM, current conservative A$250 planning price | A$84,623 (as originally modelled — **update this figure once the AM capacity model is reconciled to 10 clients/day, see caveat above**) | +A$10,232 (as originally modelled) |
+| **Base case** | Full modelled capacity at both AM and PM, current conservative A$250 planning price | A$84,623 (as originally modelled, historical 10-client basis — **not yet re-run against the current 18-client Table 1 model, see caveat above**) | +A$10,232 (as originally modelled, historical) |
 | **Best case** | Richer Package 2 mix + extended PM hours | A$101,548 (as originally modelled) | +A$25,657 (as originally modelled) |
 
 **This table needs re-running under the current Scenario C AM model before being treated as final** — flagged rather than silently re-derived with unverified numbers, consistent with the ground rule to label every assumption and not assert unverified figures as settled.
@@ -71,7 +71,7 @@ Building on `financial-break-even-staff.md`'s existing Sensitivity — Package P
 
 | | Worst-case volume (~70% capacity) | Base-case volume (full modelled capacity) | Best-case volume (extended PM hours) |
 |---|---|---|---|
-| **Worst-case pricing (Package 1 only, A$250)** | Loss (compounds the worst-case volume loss above) | Base case, as modelled (+A$10,232/month, pending re-verification) | Better than base, still Package-1-only pricing |
+| **Worst-case pricing (Package 1 only, A$250)** | Loss (compounds the worst-case volume loss above) | Base case, as modelled (historical, +A$10,232/month, pending re-verification against the current 18-client model) | Better than base, still Package-1-only pricing |
 | **Base-case pricing (current 30/70-ish Package 1/2 mix, ~A$260-270 blended)** | Loss, smaller than the worst-case-pricing row | Slightly better than the base case above | Better still |
 | **Best-case pricing (richer Package 2 mix, ~A$289+ blended)** | Still likely a loss at 70% volume — pricing alone cannot offset a genuine volume shortfall | Meaningfully better than base | Best combined outcome modelled |
 
