@@ -4,10 +4,10 @@ GTT Center Perth -- Canonical data validator (proof of concept).
 Validates data/canonical/*.yml files against the schema/governance conventions
 established in docs/architecture/CANONICAL-DATA-SCHEMA.md and
 docs/architecture/DATA-GOVERNANCE.md. This is a proof-of-concept validator for
-nine files (pricing.yml, client_assumptions.yml, scenarios.yml, staffing.yml,
+ten files (pricing.yml, client_assumptions.yml, scenarios.yml, staffing.yml,
 wages.yml -- Phase 2; opex.yml -- Phase 3; startup_costs.yml, capex.yml --
-Phase 4; services.yml -- Phase 5) -- it is not a general schema engine and
-does not validate every field type strictly.
+Phase 4; services.yml -- Phase 5; revenue_assumptions.yml -- Phase 6) -- it is
+not a general schema engine and does not validate every field type strictly.
 
 Checks performed:
   1. YAML validity (parse error -> hard failure)
@@ -124,6 +124,30 @@ Checks performed:
       must have both `price` and `price_range` null; a non-`PLACEHOLDER`/
       non-`SUPERSEDED` record must have at least one of `price`,
       `price_range`, or `pricing_ref` set.
+  21. (Phase 6, revenue_assumptions.yml) Required fields per `records` entry
+      (id, category, name, status). `service_ref`/`pricing_ref`, where set,
+      must exist in services.yml/pricing.yml respectively (same pattern as
+      §19, extended to a second reference field). `frequency`, where set,
+      uses the same controlled vocabulary as opex.yml (§11) plus `daily`
+      (added for this file's per-day client/session-volume records).
+  22. (Phase 6) Percentage range check -- any `value` field (a plain number
+      or a dict) whose record's `unit` is `"%"` must have every numeric
+      value between 0 and 100 inclusive.
+  23. (Phase 6) Status-vs-value consistency, generalised beyond a single
+      `price`/`amount` field -- a non-`PLACEHOLDER`/`SUPERSEDED` record must
+      have at least one of: `value` (not null), `service_ref`, `pricing_ref`,
+      or a non-empty `description` (several records in this file are
+      qualitative/policy facts with no single numeric value -- a real,
+      sourced description satisfies the "needs something asserted" rule the
+      same way a number or a reference does). A `PLACEHOLDER` record must
+      have `value: null`.
+  24. (Phase 6) Service-mix-totals-100 check -- applied ONLY when a record
+      explicitly sets `mix_complete: true` (the coordinator's explicit
+      instruction: do not require mix percentages to sum to 100% otherwise,
+      since most mix-adjacent records in this file are deliberately partial
+      or represent a single modelling convention, not a complete
+      mutually-exclusive split). Where `mix_complete: true`, every `_pct`-
+      suffixed key in the record's `value` dict must sum to 100 (+/- 0.5).
 
 Exit code: 0 if all checks pass across all validated files, 1 if any check
 fails in any file. Usable in CI / pre-commit, same convention as
@@ -178,6 +202,7 @@ SCENARIO_REF_FIELDS = {"staffing_scenario", "scenario_id", "scenario_applicabili
 OPEX_RECORD_REQUIRED_FIELDS = {"id", "category", "name", "status", "frequency", "cost_type"}
 ALLOWED_OPEX_FREQUENCIES = {
     "weekly", "monthly", "quarterly", "annual", "one_off", "per_transaction", "not_specified",
+    "daily",  # added Phase 6 for revenue_assumptions.yml's per-day client/session-volume records
 }
 ALLOWED_OPEX_COST_TYPES = {
     "FIXED", "VARIABLE", "SEMI_VARIABLE", "ONE_OFF", "STARTUP", "CAPEX", "COGS", "PAYROLL",
@@ -203,6 +228,9 @@ QUANTITY_UNIT_COST_RELATIVE_TOLERANCE = 0.005  # 0.5%
 # from the 7 governance statuses, per the coordinator's explicit instruction).
 SERVICES_RECORD_REQUIRED_FIELDS = {"id", "category", "name", "status", "lifecycle"}
 ALLOWED_SERVICE_LIFECYCLES = {"current", "proposed", "historical", "superseded"}
+
+# revenue_assumptions.yml -- required fields per `records` entry.
+REVENUE_ASSUMPTIONS_RECORD_REQUIRED_FIELDS = {"id", "category", "name", "status"}
 
 # scenario_dependent intentionally repeats `id` once per scenario_id -- see
 # data/canonical/client_assumptions.yml's own header comment.
@@ -702,6 +730,110 @@ def check_services_schema(data, f: Findings):
                 )
 
 
+def _sum_pct_fields(value_dict):
+    """Sum every key ending in '_pct' in a value dict -- used by the
+    mix_complete: true check. Returns None if no such keys exist."""
+    pct_vals = [v for k, v in value_dict.items() if k.endswith("_pct") and _is_number(v)]
+    if not pct_vals:
+        return None
+    return sum(pct_vals)
+
+
+def check_revenue_assumptions_schema(data, f: Findings):
+    if data.get("dataset") != "revenue_assumptions":
+        return
+    valid_service_ids = load_valid_service_ids()
+    valid_pricing_ids = load_valid_pricing_ids()
+    records = data.get("records", [])
+    for i, rec in enumerate(records):
+        if not isinstance(rec, dict):
+            f.error(f"records[{i}]: not a mapping -- cannot check required fields")
+            continue
+        rid = rec.get("id")
+
+        missing = REVENUE_ASSUMPTIONS_RECORD_REQUIRED_FIELDS - set(rec.keys())
+        if missing:
+            f.error(f"records[{i}] (id={rid!r}): missing required revenue_assumptions field(s): {sorted(missing)}")
+
+        service_ref = rec.get("service_ref")
+        if service_ref is not None and service_ref not in valid_service_ids:
+            f.error(
+                f"records[{i}] (id={rid!r}): service_ref {service_ref!r} does not exist in "
+                f"data/canonical/services.yml's records -- malformed service reference"
+            )
+        pricing_ref = rec.get("pricing_ref")
+        if pricing_ref is not None and pricing_ref not in valid_pricing_ids:
+            f.error(
+                f"records[{i}] (id={rid!r}): pricing_ref {pricing_ref!r} does not exist in "
+                f"data/canonical/pricing.yml's records -- malformed pricing reference"
+            )
+
+        freq = rec.get("frequency")
+        if freq is not None and freq not in ALLOWED_OPEX_FREQUENCIES:
+            f.error(
+                f"records[{i}] (id={rid!r}): frequency {freq!r} is not one of "
+                f"the known frequencies {sorted(ALLOWED_OPEX_FREQUENCIES)}"
+            )
+
+        value = rec.get("value")
+        if not _is_valid_amount_shape(value):
+            f.error(f"records[{i}] (id={rid!r}): 'value' is a malformed numeric value ({value!r})")
+
+        # Percentage range check (0-100), when unit == "%".
+        if rec.get("unit") == "%":
+            check_vals = []
+            if _is_number(value):
+                check_vals = [value]
+            elif isinstance(value, dict):
+                check_vals = [v for v in value.values() if _is_number(v)]
+            for v in check_vals:
+                if not (0 <= v <= 100):
+                    f.error(f"records[{i}] (id={rid!r}): percentage value {v} is outside the valid 0-100 range")
+
+        # Status-vs-value consistency, generalised: value OR service_ref OR
+        # pricing_ref OR a real description satisfies "needs something".
+        status = rec.get("status")
+        has_something = (
+            value is not None or service_ref is not None or pricing_ref is not None
+            or bool(rec.get("description"))
+        )
+        if status == "PLACEHOLDER" and value is not None:
+            f.error(f"records[{i}] (id={rid!r}): status=PLACEHOLDER but 'value' is {value!r}, not null")
+        if status not in ("PLACEHOLDER", "SUPERSEDED") and not has_something:
+            f.error(
+                f"records[{i}] (id={rid!r}): status={status} but none of value/service_ref/"
+                f"pricing_ref/description is set -- nothing is actually asserted"
+            )
+
+        # mix_complete: true -> the record's own *_pct value-dict keys must sum to 100.
+        if rec.get("mix_complete") is True and isinstance(value, dict):
+            total = _sum_pct_fields(value)
+            if total is not None and abs(total - 100) > 0.5:
+                f.error(
+                    f"records[{i}] (id={rid!r}): mix_complete=true but *_pct fields in 'value' "
+                    f"sum to {total}, not 100"
+                )
+
+
+def load_valid_service_ids() -> set:
+    """Load data/canonical/services.yml (if present) to build the set of
+    valid service_ref ids. Mirrors load_valid_pricing_ids."""
+    valid = set()
+    services_path = CANON_DIR / "services.yml"
+    if not services_path.exists():
+        return valid
+    try:
+        sdata = yaml.safe_load(services_path.read_text(encoding="utf-8"))
+    except yaml.YAMLError:
+        return valid
+    if not isinstance(sdata, dict):
+        return valid
+    for rec in sdata.get("records", []) or []:
+        if isinstance(rec, dict) and rec.get("id"):
+            valid.add(rec["id"])
+    return valid
+
+
 def load_valid_scenario_ids() -> set:
     """Load data/canonical/scenarios.yml (if present) to build the set of valid
     scenario ids ('universal' plus every id in records/historical_scenarios).
@@ -782,6 +914,7 @@ def validate_file(path: Path):
         check_startup_costs_schema(data, f)
         check_capex_schema(data, f)
         check_services_schema(data, f)
+        check_revenue_assumptions_schema(data, f)
         check_scenario_references(data, f, load_valid_scenario_ids())
 
     return f, data

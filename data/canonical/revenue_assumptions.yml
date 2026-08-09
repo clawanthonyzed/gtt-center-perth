@@ -1,0 +1,397 @@
+# GTT Center Perth -- Canonical Revenue Assumptions (proof of concept, Phase 6)
+#
+# The assumptions layer connecting services.yml + pricing.yml + client_assumptions.yml +
+# scenarios.yml into a traceable revenue picture -- NOT a revenue model or forecast. Per the
+# coordinator's explicit Part 2 instruction: where a figure is already canonical elsewhere
+# (client volume in scenarios.yml/client_assumptions.yml, price in pricing.yml/services.yml),
+# this file REFERENCES it by id (`scenario_ref`, `service_ref`, `pricing_ref`) rather than
+# restating it -- new records here are limited to genuinely new facts not captured anywhere
+# else in the canonical layer (Saturday PM session count, PM theoretical capacity, ramp
+# curves, ancillary-revenue historical figures, discount/leakage policy, and the
+# revenue-reconstruction traceability records).
+#
+# Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
+# PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+
+schema_version: 1
+dataset: revenue_assumptions
+last_updated: "2026-08-09"
+
+records:
+  # ============================================================
+  # CLIENT VOLUME -- genuinely new facts only (existing volume figures already
+  # canonical in scenarios.yml/client_assumptions.yml, referenced not restated)
+  # ============================================================
+  - id: rev_pm_saturday_sessions
+    category: client_volume
+    subcategory: pm_volume
+    name: "PM Saturday session count"
+    description: "Distinct from PM weekday volume (16 sessions/day) -- half the weekday figure"
+    value: 8
+    unit: "sessions/day"
+    frequency: daily
+    scenario_applicability: universal
+    service_ref: null
+    pricing_ref: pm_alacarte_average
+    status: MODELLED
+    status_detail: "used directly in CURRENT-STATE.md §5's own Table 1 first-principles revenue walkthrough ('Saturday 8 sessions x A$95 x 4.33 = A$3,290.80/month') but never previously captured as its own standalone canonical fact anywhere in data/canonical/ -- genuinely new find this phase, not an invented figure (directly transcribed from the cited source's own arithmetic)."
+    source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, Monthly -- Table 1 (PRIMARY), step 3"}
+    notes: "Stated as 'unchanged by the AM rebase' in the source, i.e. applies identically regardless of Table 1 vs Table 2 -- recorded as scenario_applicability: universal, matching client_assumptions.yml's own pm_steady_state_capacity record."
+
+  # ============================================================
+  # SERVICE MIX
+  # ============================================================
+  - id: rev_am_package_mix_current
+    category: service_mix
+    subcategory: am_package
+    name: "AM package mix used for revenue calculation (current model)"
+    description: "The REAL client choice between AM Package 1 (A$250) and Package 2 (A$300) is unknown -- no booking data exists (client_assumptions.yml's service_mix_am_package_split is PLACEHOLDER). For REVENUE CALCULATION purposes specifically, every current P&L figure instead uses a separate, deliberate MODELLING CONVENTION: 100% Package 1 price, as a conservative floor, not a mix assumption."
+    value: null
+    scenario_applicability: universal
+    service_ref: null
+    pricing_ref: am_price_used_for_revenue
+    status: DECIDED
+    status_detail: "the modelling convention itself (use Package 1 price, not a blended average) is a real founder decision (DECIDED, per pricing.yml's am_price_used_for_revenue record) -- but it is NOT a claim about the real service mix, which remains genuinely unknown (PLACEHOLDER, client_assumptions.yml's service_mix_am_package_split)"
+    source: {file: docs/CURRENT-STATE.md, section: "§2 Package Prices"}
+    notes: "This record exists specifically to make the relationship between the two existing canonical facts explicit -- 'no known mix' and 'Package 1 used for revenue calc regardless of mix' are two different statements, both true, easily conflated."
+
+  - id: rev_pm_service_mix_current
+    category: service_mix
+    subcategory: pm_service
+    name: "PM service mix used for revenue calculation (current model)"
+    description: "100% of current PM revenue figures use the individual a-la-carte average (A$95/session) -- the 3 proposed PM packages (Duo/Refresh/Glow) are NOT incorporated into any current revenue figure, pending real uptake data"
+    value: null
+    scenario_applicability: universal
+    service_ref: svc_pm_alacarte
+    pricing_ref: pm_alacarte_average
+    status: DECIDED
+    status_detail: "explicit modelling choice, not an assumption about real future behaviour -- docs/cash-flow.md states this directly: PM package revenue uplift is 'not yet included in this model's figures pending real uptake data'"
+    source: {file: docs/cash-flow.md, section: "What Changed in This Rebuild, item 2"}
+    notes: "If PM package uptake is ever incorporated, PM revenue could be higher than any current figure shows -- a disclosed upside, not modelled."
+
+  - id: rev_am_package_mix_historical_3tier
+    category: service_mix
+    subcategory: am_package
+    name: "Historical AM package mix (old 3-tier structure)"
+    description: "30% Package 1 (A$200) / 40% Package 2 (A$250) / 30% Package 3 (A$300), blended average A$250/visit"
+    value: {package_1_pct: 30, package_2_pct: 40, package_3_pct: 30}
+    unit: "%"
+    mix_complete: true
+    scenario_applicability: universal
+    service_ref: null
+    pricing_ref: null
+    status: SUPERSEDED
+    superseded_by: rev_am_package_mix_current
+    source: {file: docs/financial-break-even-staff.md, section: "Revenue Break-Even, Assumptions"}
+    notes: "From the historical (pre-2026-07-20) 3-package structure, since renumbered to 2 packages. Retained for trace, per this repo's convention -- never applies to the current 2-package model. Genuinely new capture this phase -- not previously in any canonical data file."
+
+  # ============================================================
+  # CAPACITY / UTILISATION -- new facts (existing ceiling figures already
+  # canonical in client_assumptions.yml/scenarios.yml)
+  # ============================================================
+  - id: rev_pm_theoretical_max_capacity
+    category: capacity_utilisation
+    subcategory: pm_capacity
+    name: "PM theoretical maximum capacity (4-line, unconstrained)"
+    value: 31
+    unit: "sessions/day"
+    frequency: daily
+    scenario_applicability: universal
+    service_ref: svc_pm_alacarte
+    pricing_ref: null
+    status: MODELLED
+    status_detail: "the theoretical ceiling if all 4 PM lines (massage/hair/nail/beauty) ran at full back-to-back capacity all day -- not itself independently derived in this repo (no per-line throughput x hours breakdown shown), just stated as a planning figure"
+    source: {file: docs/pm-staffing-roster.md, section: "PM Revenue"}
+    notes: "Genuinely new capture -- referenced in the source alongside the already-canonical 16 sessions/day (client_assumptions.yml's pm_steady_state_capacity) but never itself recorded as a standalone fact before."
+
+  - id: rev_pm_utilisation_calculated
+    category: capacity_utilisation
+    subcategory: pm_capacity
+    name: "PM utilisation rate -- calculated precisely vs. the source's own rounded framing"
+    value: 51.6
+    unit: "%"
+    frequency: not_specified
+    scenario_applicability: universal
+    service_ref: null
+    pricing_ref: null
+    status: CALCULATED
+    status_detail: "16 (pm_steady_state_capacity) / 31 (rev_pm_theoretical_max_capacity) x 100 = 51.6%, calculated directly from the two canonical inputs -- NOT identical to the source document's own rounded '~50%' framing (docs/pm-staffing-roster.md), a minor precision difference, disclosed rather than silently using one or the other"
+    derived_from: [rev_pm_theoretical_max_capacity]
+    source: {file: docs/pm-staffing-roster.md, section: "PM Revenue"}
+    notes: "Both framings (the source's rounded ~50% and this record's precise 51.6%) describe the same underlying relationship -- neither is wrong, the gap is just rounding, disclosed here rather than picking one silently."
+
+  # ============================================================
+  # RAMP-UP ASSUMPTIONS -- all historical-basis only, none rebuilt against
+  # Table 1/Table 2 (an explicit, pre-existing gap in CURRENT-STATE.md's own
+  # changelog, not newly discovered, but formalised into canonical data here)
+  # ============================================================
+  - id: rev_ramp_pct_curve_historical
+    category: ramp_up
+    subcategory: am_pm_ramp_shape
+    name: "Month 1-5+ ramp percentage curve (of steady-state ceiling)"
+    value: {month_1: 43, month_2: 64, month_3: 79, month_4: 93, month_5_plus: 100}
+    unit: "% of steady-state ceiling"
+    scenario_applicability: universal
+    service_ref: null
+    pricing_ref: null
+    status: SUPERSEDED
+    superseded_by: null
+    status_detail: >
+      GAP, not resolved -- this ramp shape has NEVER been rebuilt against the 2026-08-05
+      Table 1 (18-client)/Table 2 (12-client) rebase. docs/CURRENT-STATE.md's own changelog
+      explicitly states the Year 1 Monthly Ramp is "not yet done, flagged as an open
+      follow-up." No `superseded_by` record exists because no current-model replacement has
+      been built -- marked SUPERSEDED to reflect that the ceiling figures it was built
+      against (the old 12-client/23-min-cadence model) are themselves historical, but this
+      does not mean a corrected version exists elsewhere to point to.
+    source: {file: docs/profit-loss-tables.md, section: "Year 1 Monthly Ramp"}
+    notes: "Reused identically across docs/profit-loss-tables.md and docs/cash-flow.md's own ramp tables -- but see conflict_ramp_base_ceiling_mismatch below: the two documents apply this SAME percentage shape to DIFFERENT base ceiling figures, never cross-reconciled."
+
+  - id: rev_pm_session_ramp_historical
+    category: ramp_up
+    subcategory: pm_ramp
+    name: "PM session count ramp, Month 1 to Month 5+"
+    value: {month_1: 4, month_2: 8, month_3: 12, month_4: 15, month_5_plus: 16}
+    unit: "sessions/day"
+    scenario_applicability: universal
+    service_ref: svc_pm_alacarte
+    pricing_ref: pm_alacarte_average
+    status: MODELLED
+    status_detail: "the Month 5+ endpoint (16) matches the already-canonical client_assumptions.yml pm_steady_state_capacity exactly -- the ramp PATH to it (Months 1-4) is PM-specific and not directly tied to the AM client-volume rebase, so this ramp shape may still be usable as-is even though the AM-side ramp (rev_ramp_pct_curve_historical) is not -- flagged as a plausible distinction, not confirmed by any explicit repo statement either way"
+    source: {file: docs/pm-staffing-roster.md, section: "PM Revenue -- Individual Services"}
+    notes: "Same underlying session counts also drive the PM payroll ramp already canonical in wages.yml's hours-based costing references -- not restated here, cross-referenced only."
+
+  # ============================================================
+  # ANCILLARY REVENUE -- historical figures + current (excluded) treatment
+  # ============================================================
+  - id: rev_ancillary_spraytan_historical
+    category: ancillary_revenue
+    subcategory: spray_tan
+    name: "Spray tan ancillary revenue (historical planning figure)"
+    value: 58000
+    currency: AUD
+    unit: "AUD/year"
+    frequency: annual
+    scenario_applicability: universal
+    service_ref: svc_pm_spray_tan
+    pricing_ref: null
+    status: MODELLED
+    status_detail: "a real, sourced figure (not an unknown), but built on assumptions the source itself flags as stale/undocumented -- the underlying '4 sessions/day x 250 operating days' basis is stale (250 operating days predates the current 22-days/month + Saturday model) and the 4-sessions/day figure has no stated derivation at all -- docs/cash-flow.md's own finding, not re-derived here. Also now doubly out of scope: spray tan itself is Phase 2/post-launch (see services.yml's svc_pm_spray_tan, opex.yml/capex.yml Phase-2 exclusions)."
+    source: {file: docs/cash-flow.md, section: "Ancillary Revenue Sourcing"}
+    notes: "Excluded from every current baseline revenue figure -- see rev_ancillary_excluded_from_baseline below."
+
+  - id: rev_ancillary_retail_historical
+    category: ancillary_revenue
+    subcategory: retail
+    name: "Retail ancillary revenue (historical planning figure)"
+    value: 25000
+    currency: AUD
+    unit: "AUD/year"
+    frequency: annual
+    scenario_applicability: universal
+    service_ref: null
+    pricing_ref: null
+    status: MODELLED
+    status_detail: "a real, sourced figure, but no stated basis exists anywhere in this repo -- not per-transaction, not per-day, no comparable cited. docs/cash-flow.md's own finding: 'appears to be a round planning placeholder, not a bottom-up estimate.'"
+    source: {file: docs/cash-flow.md, section: "Ancillary Revenue Sourcing"}
+    notes: "Excluded from every current baseline revenue figure -- see rev_ancillary_excluded_from_baseline below. Retail ITEMS themselves (Freestyle Libre sensor, recipe book, etc.) are individually priced in services.yml's ancillary_retail_* records -- this figure is the aggregate annual revenue LINE, a different thing from the per-item prices, never reconciled against them (no stated volume assumption connects the two)."
+
+  - id: rev_ancillary_cafe_historical
+    category: ancillary_revenue
+    subcategory: cafe
+    name: "Cafe ancillary revenue (historical planning figure)"
+    value: 15000
+    currency: AUD
+    unit: "AUD/year"
+    frequency: annual
+    scenario_applicability: universal
+    service_ref: null
+    pricing_ref: null
+    status: MODELLED
+    status_detail: "a real, sourced figure -- same finding as retail: no bottom-up derivation exists anywhere in this repo"
+    source: {file: docs/cash-flow.md, section: "Ancillary Revenue Sourcing"}
+    notes: "Excluded from every current baseline revenue figure -- see rev_ancillary_excluded_from_baseline below. Cafe ITEMS are individually priced in services.yml's ancillary_cafe_* records -- same unreconciled-aggregate-vs-per-item gap as retail."
+
+  - id: rev_ancillary_excluded_from_baseline
+    category: ancillary_revenue
+    subcategory: policy
+    name: "Ancillary revenue treatment in the current baseline"
+    value: 0
+    currency: AUD
+    unit: "AUD/month"
+    frequency: monthly
+    scenario_applicability: universal
+    service_ref: null
+    pricing_ref: null
+    status: VERIFIED
+    status_detail: "Anthony's direct instruction, 2026-07-30: ancillary revenue (cafe/retail) is excluded ENTIRELY from every headline P&L figure -- treated as A$0.00/month in the baseline, 'because it is too much of a variable with no real basis yet.' This is the figure actually used in Table 1/Table 2's current Total Revenue -- confirmed directly in this phase's own revenue-reconstruction exercise (rev_reconstruction_table1_monthly, rev_reconstruction_table2_monthly below): neither reconstruction includes any ancillary component, and both land within the known A$2,576.36 scaling-artifact gap of CURRENT-STATE.md's own stated totals -- consistent with A$0 ancillary, not the historical ~A$8,580/month figure."
+    source: {file: docs/profit-loss-tables.md, section: "Ancillary Revenue -- Excluded From Baseline (2026-07-30)"}
+    notes: "'If ancillary revenue materialises in practice once the venue is trading, it should be tracked and reported as a separate pure-upside line — not folded back into the baseline retroactively,' per the source's own words."
+
+  # ============================================================
+  # DISCOUNTS / LEAKAGE (Part 7)
+  # ============================================================
+  - id: rev_discount_pm_prebooking
+    category: discount_leakage
+    subcategory: promotional_discount
+    name: "PM pre-booking discount"
+    description: "10% online pre-booking discount on afternoon/standalone services booked at the same time as a GTT reservation. No discount on in-center upsells (add-ons, cafe, retail, spray tan) -- full price applies on the day."
+    value: 10
+    unit: "%"
+    scenario_applicability: universal
+    service_ref: svc_pm_alacarte
+    pricing_ref: null
+    status: VERIFIED
+    source: {file: docs/services-pricing-locked.md, section: "Model Confirmation"}
+    notes: "NOT applied anywhere in any current revenue figure -- the reconstruction exercise below (rev_reconstruction_table1_monthly) uses the full, undiscounted PM average (A$95/session per pricing.yml's pm_alacarte_average), meaning current PM revenue figures may be a slight overstatement if this discount applies broadly to GTT-paired PM bookings. Flagged as a genuine gap, not corrected here."
+
+  - id: rev_cancellation_noshow_policy
+    category: discount_leakage
+    subcategory: cancellation_policy
+    name: "Cancellation/no-show revenue-retention policy"
+    description: "Full package price collected at time of booking (no deposit). Cancellation >=48hrs: full credit, reschedule within 90 days, no refund. Cancellation 24-48hrs: 50% credit, 50% retained. Cancellation <24hrs/no-show: no credit, no refund, full amount retained."
+    value: null
+    scenario_applicability: universal
+    service_ref: null
+    pricing_ref: null
+    status: DECIDED
+    status_detail: >
+      Net effect on revenue MODELLING, not previously stated explicitly anywhere in this repo:
+      because full payment is collected upfront and the venue retains most or all of it under
+      every cancellation tier (only the >=48hr tier defers the booking to a new date, it does
+      not refund), there is structurally NO assumed cash-revenue leakage from cancellations or
+      no-shows in any current P&L figure -- consistent with (not contradicting) every revenue
+      reconstruction in this file not carrying any cancellation-rate deduction. This is a
+      genuine finding from this phase's own analysis of the policy's revenue effect, not
+      previously stated as a modelling implication anywhere in the source documents.
+    source: {file: docs/onboarding.md, section: "Cancellation & Rescheduling Policy"}
+    notes: "GAP, disclosed not resolved: a true bad-debt/chargeback rate (e.g. a card dispute after a no-show charge) has never been modelled anywhere in this repo -- genuinely unknown, not assumed to be zero, just never addressed."
+
+  - id: rev_merchant_fees_boundary
+    category: discount_leakage
+    subcategory: payment_processing
+    name: "Merchant/EFTPOS fees -- boundary note, not a revenue deduction"
+    description: "Card transaction fees (Fresha Pay, EFTPOS) are modelled as an OPERATING EXPENSE, not a revenue deduction -- per the coordinator's explicit Part 7 instruction and consistent with how they were already recorded last phase."
+    value: null
+    scenario_applicability: universal
+    service_ref: null
+    pricing_ref: null
+    status: DECIDED
+    source: {file: docs/financial-setup.md, section: "STEP 5 -- EFTPOS AND PAYMENT PROCESSING"}
+    notes: "See data/canonical/opex.yml's opex_eftpos_transaction_fee record for the actual figures (1.4-1.6% of card revenue, provider not chosen) -- not restated here, cross-referenced only. All revenue figures in this file are GROSS of merchant fees."
+
+  # ============================================================
+  # REVENUE-EQUATION TRACEABILITY (Part 8/9) -- the actual reconstruction
+  # exercise, using ONLY already-canonical inputs (scenarios.yml, pricing.yml,
+  # client_assumptions.yml, and this file's own new records above). Pure
+  # traceability check, NOT a new forecast -- every input traces to an
+  # existing canonical id, and the exercise stops at "does it reconcile,"
+  # not "what should the number be."
+  # ============================================================
+  - id: rev_reconstruction_table1_monthly
+    category: revenue_reconstruction
+    subcategory: monthly_total
+    name: "Table 1 (18-client) monthly revenue -- first-principles reconstruction"
+    description: >
+      Weekday AM: scenarios.yml#scenario_table_1.client_volume (18) x pricing.yml#am_price_used_for_revenue
+      (A$250) x client_assumptions.yml#operating_days-implied 22 trading days = A$99,000.00.
+      Saturday AM: 18 x A$250 x 4.33 Saturdays/month = A$19,485.00.
+      Weekday PM: client_assumptions.yml#pm_steady_state_capacity (16) x pricing.yml#pm_alacarte_average
+      (A$95) x 22 days = A$33,440.00.
+      Saturday PM: rev_pm_saturday_sessions (8) x A$95 x 4.33 = A$3,290.80.
+      Ancillary: rev_ancillary_excluded_from_baseline (A$0.00).
+      SUM = A$155,215.80.
+    value: 155215.80
+    currency: AUD
+    unit: "AUD/month"
+    frequency: monthly
+    scenario_applicability: scenario_table_1
+    service_ref: null
+    pricing_ref: null
+    status: CALCULATED
+    status_detail: >
+      RECONCILIATION RESULT: this first-principles sum (A$155,215.80) does NOT match
+      docs/CURRENT-STATE.md §5's own stated "canonical" Table 1 Total Revenue figure
+      (A$157,792.16) -- a gap of exactly A$2,576.36. This is NOT a new discrepancy found this
+      phase -- CURRENT-STATE.md's own 2026-08-07 re-verification already disclosed this exact
+      gap and attributed it to "the same fixed-size weekly-to-monthly revenue-scaling
+      discrepancy already flagged in this document's own Appendix... present identically at
+      the 10-client, 12-client, and now 18-client stages." What IS new this phase: this
+      reconciliation was independently reproduced here using ONLY already-canonical data-layer
+      inputs (not re-reading CURRENT-STATE.md's own prose figures), confirming the gap is real
+      and reproducible from the canonical layer itself, not an artifact of this file's own
+      transcription. THE MISSING ASSUMPTION: the exact mechanism of the "weekly-to-monthly
+      scaling" step that produces the extra A$2,576.36 in CURRENT-STATE.md's own delta-built
+      figure is not documented precisely enough anywhere in this repo to reproduce
+      independently -- it is a real, named, but not fully specified adjustment.
+    derived_from: [rev_pm_saturday_sessions, rev_ancillary_excluded_from_baseline]
+    source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, Monthly -- Table 1 (PRIMARY), 9-step walkthrough"}
+    notes: "Full detail and independent verification arithmetic in docs/architecture/REVENUE-ASSUMPTION-AUDIT.md §5."
+
+  - id: rev_reconstruction_table2_monthly
+    category: revenue_reconstruction
+    subcategory: monthly_total
+    name: "Table 2 (12-client) monthly revenue -- first-principles reconstruction"
+    description: >
+      Weekday AM: scenarios.yml#scenario_table_2.client_volume (12) x pricing.yml#am_price_used_for_revenue
+      (A$250) x 22 days = A$66,000.00.
+      Saturday AM: 12 x A$250 x 4.33 = A$12,990.00.
+      Weekday PM: 16 x A$95 x 22 = A$33,440.00 (same as Table 1 -- PM is AM-volume-independent).
+      Saturday PM: 8 x A$95 x 4.33 = A$3,290.80 (same as Table 1).
+      Ancillary: A$0.00.
+      SUM = A$115,720.80.
+    value: 115720.80
+    currency: AUD
+    unit: "AUD/month"
+    frequency: monthly
+    scenario_applicability: scenario_table_2
+    service_ref: null
+    pricing_ref: null
+    status: CALCULATED
+    status_detail: >
+      RECONCILIATION RESULT: this first-principles sum (A$115,720.80) does NOT match
+      docs/CURRENT-STATE.md §5's own stated Table 2 Total Revenue figure (A$118,297.16) -- a
+      gap of exactly A$2,576.36, IDENTICAL to Table 1's gap (rev_reconstruction_table1_monthly).
+      This exact match is itself confirmatory, not coincidental -- it directly verifies
+      CURRENT-STATE.md's own claim that this is a "fixed-size" artifact independent of client
+      volume, reproduced here from canonical data for Table 2 specifically for the first time
+      (CURRENT-STATE.md's own detailed 9-step walkthrough was only performed for Table 1;
+      Table 2's total was stated without an equivalent independent re-derivation until now).
+    derived_from: [rev_pm_saturday_sessions, rev_ancillary_excluded_from_baseline]
+    source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, Monthly -- Table 2 (secondary)"}
+    notes: "Full detail in docs/architecture/REVENUE-ASSUMPTION-AUDIT.md §5."
+
+# ============================================================
+# Genuine, disclosed conflicts -- none silently resolved.
+# ============================================================
+conflicts:
+  - id: conflict_ramp_base_ceiling_mismatch
+    description: >
+      docs/profit-loss-tables.md's Year 1 Monthly Ramp table applies the 43/64/79/93/100%
+      ramp shape to a A$66,000/month AM steady-state ceiling (the 12-client/23-min-cadence
+      model, post-2026-07-30 correction). docs/cash-flow.md's own 18-month ramp table applies
+      the SAME percentage shape to a DIFFERENT A$55,000/month AM ceiling (the older 10-client
+      model) -- producing different absolute-dollar ramp figures in two documents that both
+      present themselves as current. Neither has been rebuilt against Table 1 (18-client) or
+      Table 2 (12-client, 25-min cadence)'s actual current ceilings.
+    affected_records: [rev_ramp_pct_curve_historical]
+    sources:
+      - {file: docs/profit-loss-tables.md, section: "Year 1 Monthly Ramp"}
+      - {file: docs/cash-flow.md, section: "18-Month Monthly Ramp (Rebuilt to Current Model)"}
+    resolution_status: UNRESOLVED
+    notes: "Not previously cross-compared directly against each other anywhere in this repo -- each document's own staleness banners flag themselves individually relative to CURRENT-STATE.md, but neither flags disagreeing with the other specifically. New finding this phase."
+
+  - id: conflict_ancillary_aggregate_vs_itemised
+    description: >
+      The historical ancillary revenue aggregates (spray tan A$58,000/yr, retail A$25,000/yr,
+      cafe A$15,000/yr) have no stated connection to services.yml's individually-priced
+      ancillary items (7 cafe items A$3-12 each, 5 retail items A$18-105 each) -- no volume
+      assumption (e.g. "X cafe items sold per client per visit") bridges the per-item prices
+      to the aggregate annual figures. Both may be independently unreliable planning numbers,
+      not a reconciled build-up.
+    affected_records: [rev_ancillary_spraytan_historical, rev_ancillary_retail_historical, rev_ancillary_cafe_historical]
+    sources:
+      - {file: docs/cash-flow.md, section: "Ancillary Revenue Sourcing"}
+      - {file: docs/services-pricing-locked.md, section: "PART D, PART E"}
+    resolution_status: UNRESOLVED
+    notes: "Moot for the current baseline (ancillary revenue is A$0.00/month per rev_ancillary_excluded_from_baseline) but would need resolving before ancillary revenue is ever reintroduced."
