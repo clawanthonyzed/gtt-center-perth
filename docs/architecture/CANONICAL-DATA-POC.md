@@ -10,7 +10,9 @@
 
 **Phase 4 scope (2026-08-09, same day, follow-on):** two new canonical domains, `data/canonical/startup_costs.yml` and `data/canonical/capex.yml`, plus a dedicated narrative reconciliation document (`docs/architecture/STARTUP-COST-RECONCILIATION.md`), matching validator extensions, and 6 new tracker items. See §28-§34 below for full Phase 4 detail.
 
-**Not built any phase so far:** the Master Financial Model, the Master Operations Model, any XLSX/PDF/DOCX generation, the remaining canonical domains from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch (payroll_costs, revenue_assumptions, financial_assumptions, risks, decisions, sources, verification_status), and — deliberately, across every phase so far — a resolution of Table 1 vs. Table 2 as primary, or of the startup-capital reconciliation problem.
+**Phase 5 scope (2026-08-09, same day, follow-on):** one new canonical domain, `data/canonical/services.yml` (the complete service catalogue — 99 services, up from Phase 1's 7-item representative slice), plus a dedicated completeness audit document (`docs/architecture/SERVICE-CATALOGUE-AUDIT.md`), matching validator extensions, and 5 new tracker items. See §36-§43 below for full Phase 5 detail.
+
+**Not built any phase so far:** the Master Financial Model, the Master Operations Model, any XLSX/PDF/DOCX generation, the remaining canonical domains from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch (payroll_costs, revenue_assumptions, financial_assumptions, risks, decisions, sources, verification_status), and — deliberately, across every phase so far — a resolution of Table 1 vs. Table 2 as primary, of the startup-capital reconciliation problem, or of any of the 6 service-pricing conflicts.
 
 ---
 
@@ -27,7 +29,9 @@ data/canonical/
 │                             marketing/consumables, 28 records, 3 conflicts
 ├── startup_costs.yml        pre-opening cash outlay, working capital (kept separate), contingency,         [Phase 4]
 │                             9 historical total-figure estimates, 12 records + 2 conflicts
-└── capex.yml                durable physical/IT assets, 11 records + 2 conflicts                           [Phase 4]
+├── capex.yml                durable physical/IT assets, 11 records + 2 conflicts                           [Phase 4]
+└── services.yml             complete service catalogue -- 99 services (88 records + 6 historical +         [Phase 5]
+                              5 future), 13 referencing pricing.yml by id, 6 conflicts
 ```
 
 All eight files live under `data/canonical/` — real content in the `data/` layer proposed in `docs/architecture/TARGET-ARCHITECTURE.md` Layer 2. `docs/CURRENT-STATE.md` remains the authoritative human-readable canonical file; these YAML files are a machine-readable **subset** of it (plus, for staffing/wages, of `docs/financial-break-even-staff.md`, `docs/hr-framework.md`, `docs/pm-staffing-roster.md`, and `docs/HANDOFF.md`; and for startup_costs/capex, of `docs/floor-plan-concept.md`, `docs/equipment-costs.md`, `docs/grace-startup-plan.md`, `docs/financial-setup.md`, `docs/investor-memorandum.md`), not a replacement, and not (yet) auto-generated from it or vice versa — a human (this session) transcribed values from source documents into YAML, checking each one against the source rather than re-deriving anything.
@@ -447,12 +451,59 @@ Full narrative in `docs/architecture/STARTUP-COST-RECONCILIATION.md` §2 — six
 
 `docs/VERIFICATION-TRACKER.md` items **25, 26, 27, 28, 29, 30** (FINANCIAL — NEEDS ACCOUNTANT CONFIRMATION section, continuing the sequential numbering from item 24) — full detail in that file and in `docs/architecture/STARTUP-COST-RECONCILIATION.md`.
 
-## 34. Recommended Next Canonical Migration Domain
+## 34. Recommended Next Canonical Migration Domain (Phase 4 recommendation — actioned in Phase 5, see §36-§43)
 
 **`data/canonical/services.yml`** (the full a-la-carte service catalog, deferred four times now across Phases 1, 3, and this recommendation) — the last clearly-scoped, lower-risk, non-financial domain remaining from the original `CANONICAL-DATA-SCHEMA.md` sketch. Alternatively, **`data/canonical/revenue_assumptions.yml`** (ancillary revenue lines — spray tan, retail, cafe — already flagged throughout this repo as unverified planning placeholders with no bottom-up derivation) would complete the P&L's revenue side to match how thoroughly the cost side (staffing/wages/opex/startup/capex) has now been canonicalised. Either is a smaller, bounded next step than attempting the Master Financial Model itself, which remains explicitly out of scope until Anthony authorises that phase directly.
 
+`services.yml` was chosen; not attempted this recommendation round: `revenue_assumptions.yml`, still the next-best alternative. **See §42 for the Phase 5 recommendation of what comes after.**
+
 ---
 
-## 35. What This Document Does Not Do (as of Phase 4)
+# PHASE 5 (2026-08-09, same day) — Complete Service Catalogue
 
-It does not build the Master Financial Model, Master Operations Model, any Excel/XLSX workbook, P&L, cash-flow model, balance sheet, chart, PDF, or DOCX. It does not migrate `services.yml`, `payroll_costs.yml`, `revenue_assumptions.yml`, `financial_assumptions.yml`, `risks.yml`, `decisions.yml`, `sources.yml`, `verification_status.yml`, or any other remaining domain from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch. It does not resolve Table 1 vs. Table 2 as primary. It does not resolve any of the wage conflicts (tracker items 16-18), the opex conflicts/gaps (items 19-24), or the startup-cost/capex conflicts and gaps added this phase (items 25-30) — all eighteen are recorded, sourced, and left open. It does not choose a single authoritative startup-capital figure, obtain real quotes, or engage an accountant/quantity surveyor — `docs/architecture/STARTUP-COST-RECONCILIATION.md` §4 states plainly what that would actually require, without attempting it.
+## 36. Service Data Migrated (`data/canonical/services.yml`)
+
+**99 services total** — 88 in `records`, 6 in `historical_services`, 5 in `future_services` — up from Phase 1's deliberately-scoped 7-item representative slice. Full breakdown by category and lifecycle in `docs/architecture/SERVICE-CATALOGUE-AUDIT.md` §1-§2.
+
+**Architecture decision (Part 6, "explain the relationship explicitly"):** `services.yml` is the service catalogue/identity/commercial-definition layer; `data/canonical/pricing.yml` remains the canonical PRICING layer. **13 of the 88 records reference `pricing.yml` by `pricing_ref` id** (AM Package 1/2, PM a-la-carte average, PM Duo/Refresh/Glow, and the 7 individual services Phase 1 already migrated) and do NOT restate a price — one authoritative price per service, as instructed. **The remaining 75 records carry price directly**, since `pricing.yml`'s own Phase 1 header explicitly deferred "the full a-la-carte menu, all durations/add-ons" to a later pass — this phase is that pass, and these prices are being canonicalised for the first time anywhere in this repo's machine-readable layer, not duplicated from an existing pricing.yml record. A future consolidation pass could migrate these into `pricing.yml` proper and convert them to `pricing_ref`, matching the original 13 — flagged as a known follow-up, not attempted this phase (would not change any value, only which file stores it).
+
+**`lifecycle` field (Part 4):** a new field, distinct from the 7 governance statuses, per the coordinator's explicit instruction not to invent an 8th status. Values: current (82), proposed (6), historical (6, in the separate `historical_services` list). Enforced directly, not just declared: `svc_pm_spray_tan` is `lifecycle: proposed` despite both its pricing source documents still presenting it as current — see §38.
+
+**Sources used:** `docs/services-pricing-locked.md` (primary, Parts A-E), `docs/services-master-table.md` (fills real pricing gaps the "locked" document leaves unpriced, and is the sole source for the 5 future services' price estimates), `docs/extended-wellness-services.md` (surfaced 4 of the 6 declared conflicts, plus the GDM Information Session — a genuinely new service find), `docs/pm-package-structure.md`, `docs/pm-staffing-roster.md`, `docs/hire-purchase-china.md` §1C (3D scan), `docs/market-research-findings.md` (belly-casting market comparison, not a GTT price itself).
+
+## 37. Current vs. Proposed vs. Historical Breakdown
+
+Full table in `docs/architecture/SERVICE-CATALOGUE-AUDIT.md` §2. Headline: 82 current, 6 proposed (in `records`) + 5 future services (in the separate `future_services` list, Month 3+ to Month 6+) + 6 historical/removed.
+
+## 38. Pricing Conflicts (6 Declared)
+
+1. **`conflict_spraytan_status_and_price`** — price AND lifecycle both unresolved; the single most consequential finding this phase (a service two documents still present as current/priced was moved to Phase 2 nearly 2 weeks before this migration, undisclosed until now).
+2. **`conflict_haircolour_prices`** — 4 of 7 hair colour services disagree between `services-pricing-locked.md`/`services-master-table.md` and `extended-wellness-services.md`; highest PM-revenue-impact conflict found (hair colour services run up to A$400).
+3. **`conflict_lash_infill_price`** — A$125 vs. A$120, smallest-magnitude conflict, retained regardless of size.
+4. **`conflict_gdm_snack_pack_price`** — A$20 point vs. A$18-25 range.
+5. **`conflict_dietitian_service_status`** — "planned Month 6+" vs. "deferred indefinitely," a genuine unresolved decision point about whether a whole future revenue line should be planned for at all.
+6. **`conflict_locked_pricing_completeness_gap`** — not a disagreement, a genuine completeness gap: `services-pricing-locked.md` (titled "Locked Pricing") doesn't itself price 6 services it describes as bookable.
+
+Full detail: `docs/architecture/SERVICE-CATALOGUE-AUDIT.md` §4.
+
+## 39. Ancillary Revenue Services
+
+Café (7 items, A$3-12), retail (5 items including 2 free-goodwill lines), and the newly-found GDM Information Session (contractor-delivered group session, client price genuinely undecided between free/A$20-30 in the source itself — not a document conflict, a real open choice) are all recorded with `revenue_type: ancillary_cafe`/`ancillary_retail`/`ancillary_uncertain`, per the coordinator's explicit instruction not to assume ancillary contribution unless the repo supports it. None of these was assumed to contribute a specific revenue figure — that remains entirely unattempted, consistent with the existing `docs/CURRENT-STATE.md`/`docs/cash-flow.md` findings that the venture's own ancillary-revenue lines (spray tan, retail, café totals) are themselves flagged as unverified planning placeholders with no bottom-up derivation, not re-litigated here.
+
+## 40. Duplicate/Overlap Findings
+
+None found representing the *same* service twice under different IDs. The closest candidates all resolved to either a genuine conflict (§38, kept as separate records with the conflict disclosed) or a legitimately distinct pairing correctly kept as two records (e.g. `addon_brow_wax_tint_during_facial`, a facial add-on, vs. `svc_brow_wax_tint`, the same service booked standalone — same price, different bundled duration, relationship noted in both records). Full detail: `docs/architecture/SERVICE-CATALOGUE-AUDIT.md` §6.
+
+## 41. Verification Items Added
+
+`docs/VERIFICATION-TRACKER.md` items **31, 32, 33, 34, 35** (FINANCIAL — NEEDS ACCOUNTANT CONFIRMATION section, continuing the sequential numbering from item 30) — full detail in that file and in `docs/architecture/SERVICE-CATALOGUE-AUDIT.md`.
+
+## 42. Recommended Next Canonical Migration Domain
+
+**`data/canonical/revenue_assumptions.yml`** (ancillary revenue lines — spray tan, retail, café totals — already flagged throughout this repo, including newly by this phase, as unverified planning placeholders) would now complete the P&L revenue side to match how thoroughly the cost side has been canonicalised across Phases 2-4. Alternatively, a **consolidation pass migrating `services.yml`'s 75 directly-priced records into `pricing.yml` proper** (converting them to `pricing_ref`, matching the original 13) would tighten the "one authoritative price per service" architecture from "one canonical record, currently in services.yml" to "one canonical record, in the file literally named for pricing" — a smaller, more mechanical task than a new domain, worth considering before the Master Financial Model is ever attempted.
+
+---
+
+## 43. What This Document Does Not Do (as of Phase 5)
+
+It does not build the Master Financial Model, Master Operations Model, any Excel/XLSX workbook, P&L, cash-flow model, balance sheet, chart, PDF, or DOCX, or any revenue forecast. It does not migrate `payroll_costs.yml`, `revenue_assumptions.yml`, `financial_assumptions.yml`, `risks.yml`, `decisions.yml`, `sources.yml`, `verification_status.yml`, or any other remaining domain from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch. It does not resolve Table 1 vs. Table 2 as primary. It does not resolve any of the wage conflicts (tracker items 16-18), opex conflicts/gaps (items 19-24), startup-cost/capex conflicts and gaps (items 25-30), or the service-catalogue conflicts and gaps added this phase (items 31-35) — all twenty-three are recorded, sourced, and left open. It does not decide PM package pricing, resolve the spray-tan status/price question, or migrate `services.yml`'s 75 directly-priced records into `pricing.yml` proper.
