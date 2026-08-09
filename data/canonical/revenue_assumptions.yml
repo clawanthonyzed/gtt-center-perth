@@ -12,6 +12,21 @@
 #
 # Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
 # PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+#
+# METHODOLOGY UPDATE (2026-08-09, per Anthony's direct decision): the days-based
+# first-principles revenue formula (client_volume x price x operating_days, summed across
+# AM/PM x weekday/Saturday) is now the CANONICAL revenue methodology going forward --
+# see docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md for the full formula and worked
+# examples. `rev_reconstruction_table1_monthly` and `rev_reconstruction_table2_monthly`
+# below (originally built last phase as a reconciliation CHECK against the historical
+# delta-built figures) are now the venture's actual canonical Total Revenue figures for
+# Table 1/Table 2, not merely a check. The historical delta-built figures they were checked
+# against (A$157,792.16 / A$118,297.16, themselves inherited from an untraceable original
+# A$113,712.16 baseline -- see docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md)
+# are preserved below as their own explicit HISTORICAL/INHERITED records
+# (`rev_historical_table1_monthly_inherited` / `rev_historical_table2_monthly_inherited`),
+# not deleted or silently dropped -- this repo's history is never rewritten, per
+# rules/CLAUDE.md companion rule 1.
 
 schema_version: 1
 dataset: revenue_assumptions
@@ -291,11 +306,12 @@ records:
   - id: rev_reconstruction_table1_monthly
     category: revenue_reconstruction
     subcategory: monthly_total
-    name: "Table 1 (18-client) monthly revenue -- first-principles reconstruction"
+    name: "Table 1 (18-client) monthly revenue -- CANONICAL first-principles methodology (adopted 2026-08-09)"
+    methodology: canonical_first_principles
     description: >
       Weekday AM: scenarios.yml#scenario_table_1.client_volume (18) x pricing.yml#am_price_used_for_revenue
-      (A$250) x client_assumptions.yml#operating_days-implied 22 trading days = A$99,000.00.
-      Saturday AM: 18 x A$250 x 4.33 Saturdays/month = A$19,485.00.
+      (A$250) x client_assumptions.yml#operating_days_per_month_weekday (22) = A$99,000.00.
+      Saturday AM: 18 x A$250 x client_assumptions.yml#operating_saturdays_per_month (4.33) = A$19,485.00.
       Weekday PM: client_assumptions.yml#pm_steady_state_capacity (16) x pricing.yml#pm_alacarte_average
       (A$95) x 22 days = A$33,440.00.
       Saturday PM: rev_pm_saturday_sessions (8) x A$95 x 4.33 = A$3,290.80.
@@ -310,32 +326,64 @@ records:
     pricing_ref: null
     status: CALCULATED
     status_detail: >
-      RECONCILIATION RESULT: this first-principles sum (A$155,215.80) does NOT match
-      docs/CURRENT-STATE.md §5's own stated "canonical" Table 1 Total Revenue figure
-      (A$157,792.16) -- a gap of exactly A$2,576.36. This is NOT a new discrepancy found this
-      phase -- CURRENT-STATE.md's own 2026-08-07 re-verification already disclosed this exact
-      gap and attributed it to "the same fixed-size weekly-to-monthly revenue-scaling
-      discrepancy already flagged in this document's own Appendix... present identically at
-      the 10-client, 12-client, and now 18-client stages." What IS new this phase: this
-      reconciliation was independently reproduced here using ONLY already-canonical data-layer
-      inputs (not re-reading CURRENT-STATE.md's own prose figures), confirming the gap is real
-      and reproducible from the canonical layer itself, not an artifact of this file's own
-      transcription. THE MISSING ASSUMPTION: the exact mechanism of the "weekly-to-monthly
-      scaling" step that produces the extra A$2,576.36 in CURRENT-STATE.md's own delta-built
-      figure is not documented precisely enough anywhere in this repo to reproduce
-      independently -- it is a real, named, but not fully specified adjustment.
+      CANONICAL AS OF 2026-08-09, per Anthony's direct decision: this days-based
+      first-principles sum is now the venture's canonical Table 1 monthly revenue figure,
+      superseding docs/CURRENT-STATE.md §5's inherited delta-built total (A$157,792.16,
+      preserved below as rev_historical_table1_monthly_inherited) for future modelling
+      purposes. This record was originally built (previous phase) as a reconciliation CHECK
+      against that historical figure, which surfaced a A$2,576.36 gap traced in
+      docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md to an untraceable original
+      A$113,712.16 baseline predating this repo's saved working -- since that baseline's exact
+      derivation cannot be reproduced, and this first-principles formula IS fully reproducible
+      from canonical inputs alone, Anthony decided to adopt this methodology going forward
+      rather than continue carrying the unexplained historical figure. Full formula and worked
+      example: docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md §6.
     derived_from: [rev_pm_saturday_sessions, rev_ancillary_excluded_from_baseline]
     source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, Monthly -- Table 1 (PRIMARY), 9-step walkthrough"}
-    notes: "Full detail and independent verification arithmetic in docs/architecture/REVENUE-ASSUMPTION-AUDIT.md §5."
+    notes: "Full derivation and independent verification arithmetic in docs/architecture/REVENUE-ASSUMPTION-AUDIT.md §5 (original reconciliation check) and docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md (canonical adoption, worked examples, daily/weekly/quarterly/annualised figures)."
+
+  - id: rev_historical_table1_monthly_inherited
+    category: revenue_reconstruction
+    subcategory: monthly_total
+    name: "Table 1 (18-client) monthly revenue -- HISTORICAL/INHERITED delta-built figure"
+    methodology: historical_delta_built
+    description: >
+      docs/CURRENT-STATE.md §5's own stated Table 1 Total Revenue: "was A$118,297.16 at the old
+      12-client/23-min model -- delta +A$39,495.00, all from AM: +A$33,000.00 weekday (6 extra
+      clients x A$250 x 22 days) + A$6,495.00 Saturday (6 extra clients x A$250 x 4.33
+      Saturdays), PM/ancillary unchanged." Traced in full in
+      docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md §6 back through the 12-client
+      and historical 10-client stages to an original ancillary-included 10-client baseline of
+      A$113,712.16, whose own exact calculation method is not preserved anywhere in this repo.
+    value: 157792.16
+    currency: AUD
+    unit: "AUD/month"
+    frequency: monthly
+    scenario_applicability: scenario_table_1
+    service_ref: null
+    pricing_ref: null
+    status: SUPERSEDED
+    superseded_by: rev_reconstruction_table1_monthly
+    status_detail: >
+      Preserved for trace, per rules/CLAUDE.md companion rule 1 (never delete/rewrite history)
+      -- NOT deleted despite no longer being the canonical methodology as of 2026-08-09. The
+      A$2,576.36 gap between this figure and the canonical first-principles figure
+      (rev_reconstruction_table1_monthly) is real and was not forced to reconcile -- see
+      docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md for the full trace. This
+      record's own historical origin (the A$113,712.16 baseline) remains permanently
+      unresolved -- see docs/VERIFICATION-TRACKER.md item 36.
+    source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, PRIMARY -- Table 1"}
+    notes: "Do not use this figure for any future revenue modelling -- use rev_reconstruction_table1_monthly instead, per Anthony's 2026-08-09 decision."
 
   - id: rev_reconstruction_table2_monthly
     category: revenue_reconstruction
     subcategory: monthly_total
-    name: "Table 2 (12-client) monthly revenue -- first-principles reconstruction"
+    name: "Table 2 (12-client) monthly revenue -- CANONICAL first-principles methodology (adopted 2026-08-09)"
+    methodology: canonical_first_principles
     description: >
       Weekday AM: scenarios.yml#scenario_table_2.client_volume (12) x pricing.yml#am_price_used_for_revenue
-      (A$250) x 22 days = A$66,000.00.
-      Saturday AM: 12 x A$250 x 4.33 = A$12,990.00.
+      (A$250) x client_assumptions.yml#operating_days_per_month_weekday (22) = A$66,000.00.
+      Saturday AM: 12 x A$250 x client_assumptions.yml#operating_saturdays_per_month (4.33) = A$12,990.00.
       Weekday PM: 16 x A$95 x 22 = A$33,440.00 (same as Table 1 -- PM is AM-volume-independent).
       Saturday PM: 8 x A$95 x 4.33 = A$3,290.80 (same as Table 1).
       Ancillary: A$0.00.
@@ -349,17 +397,38 @@ records:
     pricing_ref: null
     status: CALCULATED
     status_detail: >
-      RECONCILIATION RESULT: this first-principles sum (A$115,720.80) does NOT match
-      docs/CURRENT-STATE.md §5's own stated Table 2 Total Revenue figure (A$118,297.16) -- a
-      gap of exactly A$2,576.36, IDENTICAL to Table 1's gap (rev_reconstruction_table1_monthly).
-      This exact match is itself confirmatory, not coincidental -- it directly verifies
-      CURRENT-STATE.md's own claim that this is a "fixed-size" artifact independent of client
-      volume, reproduced here from canonical data for Table 2 specifically for the first time
-      (CURRENT-STATE.md's own detailed 9-step walkthrough was only performed for Table 1;
-      Table 2's total was stated without an equivalent independent re-derivation until now).
+      CANONICAL AS OF 2026-08-09, per Anthony's direct decision -- same basis as
+      rev_reconstruction_table1_monthly above. Supersedes docs/CURRENT-STATE.md §5's inherited
+      Table 2 total (A$118,297.16, preserved below as rev_historical_table2_monthly_inherited)
+      for future modelling purposes. Full formula: docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md §7.
     derived_from: [rev_pm_saturday_sessions, rev_ancillary_excluded_from_baseline]
     source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, Monthly -- Table 2 (secondary)"}
-    notes: "Full detail in docs/architecture/REVENUE-ASSUMPTION-AUDIT.md §5."
+    notes: "Full detail in docs/architecture/REVENUE-ASSUMPTION-AUDIT.md §5 and docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md."
+
+  - id: rev_historical_table2_monthly_inherited
+    category: revenue_reconstruction
+    subcategory: monthly_total
+    name: "Table 2 (12-client) monthly revenue -- HISTORICAL/INHERITED delta-built figure"
+    methodology: historical_delta_built
+    description: >
+      docs/CURRENT-STATE.md §5's own stated Table 2 Total Revenue: "A$118,297.16 -- identical
+      to the old committed model's revenue, since Table 2 also serves 12 clients/day." Same
+      inherited-baseline origin as rev_historical_table1_monthly_inherited above (both trace to
+      the same untraceable A$113,712.16 historical 10-client figure).
+    value: 118297.16
+    currency: AUD
+    unit: "AUD/month"
+    frequency: monthly
+    scenario_applicability: scenario_table_2
+    service_ref: null
+    pricing_ref: null
+    status: SUPERSEDED
+    superseded_by: rev_reconstruction_table2_monthly
+    status_detail: >
+      Preserved for trace, not deleted, per rules/CLAUDE.md companion rule 1 -- same status as
+      rev_historical_table1_monthly_inherited above. Do not use for future modelling.
+    source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, SECONDARY -- Table 2"}
+    notes: "Do not use this figure for any future revenue modelling -- use rev_reconstruction_table2_monthly instead, per Anthony's 2026-08-09 decision."
 
 # ============================================================
 # Genuine, disclosed conflicts -- none silently resolved.

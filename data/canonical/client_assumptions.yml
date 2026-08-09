@@ -180,6 +180,40 @@ universal:
     source: null
     notes: "No real booking data exists anywhere in this repo (pre-launch venture) -- genuinely unknown, not estimated. Flagged rather than assumed a 50/50 or any other split."
 
+  - id: operating_days_per_month_weekday
+    name: "Trading weekdays per month (revenue-calculation convention)"
+    value: 22
+    unit: "days/month"
+    status: MODELLED
+    status_detail: >
+      Added 2026-08-09 as part of adopting the days-based first-principles revenue methodology
+      (docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md) -- NOT a new assumption invented for
+      that phase. This exact figure (22 trading days/month) is already used consistently,
+      dozens of times, throughout this repo's existing saved working (docs/CURRENT-STATE.md §5's
+      own 9-step Table 1 walkthrough, docs/profit-loss-tables.md's Appendix and Downtime-Fill/
+      Early-Release formulas, docs/investor-memorandum.md's capacity-ceiling line,
+      docs/booking-service-capacity-rule.md) -- this record simply gives that pre-existing,
+      repeatedly-applied convention its own canonical id for the first time, so the revenue
+      formula can reference it rather than restating the bare number inline. No independent
+      derivation of "why 22" (vs. the literal 52 weeks/year x 5 weekdays / 12 months = 21.67)
+      is stated anywhere in this repo -- it reads as a standard rounded planning convention, not
+      independently re-derived here.
+    source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, Monthly -- Table 1 (PRIMARY), 9-step walkthrough, step 1"}
+    notes: "Cross-checked identical in docs/profit-loss-tables.md's Appendix and every AM/PM revenue line in this repo -- no conflicting weekday-count figure found anywhere."
+
+  - id: operating_saturdays_per_month
+    name: "Trading Saturdays per month (revenue-calculation convention)"
+    value: 4.33
+    unit: "Saturdays/month"
+    status: MODELLED
+    status_detail: >
+      Added 2026-08-09, same basis as operating_days_per_month_weekday above -- an existing,
+      repeatedly-applied repo convention (52 weeks/year / 12 months = 4.3333, rounded to 4.33),
+      given its own canonical id for the first time, not a new assumption. Used identically in
+      every Saturday revenue/cost line across docs/CURRENT-STATE.md and docs/profit-loss-tables.md.
+    source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, Monthly -- Table 1 (PRIMARY), 9-step walkthrough, step 2"}
+    notes: "This is the same 4.33 figure docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md §9 already tested against alternative weeks/month conventions (4.345, 52/12) -- retained as-is since it is the figure actually used throughout this repo's saved working, not because it was proven more mathematically correct than the alternatives."
+
 # =====================================================================
 # SCENARIO-DEPENDENT -- differ between Table 1 and Table 2.
 # Linked by scenario_id to data/canonical/scenarios.yml records -- NOT restated
