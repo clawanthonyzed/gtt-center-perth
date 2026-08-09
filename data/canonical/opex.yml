@@ -1,0 +1,653 @@
+# GTT Center Perth -- Canonical Non-Payroll Operating Expenses (proof of concept, Phase 3)
+#
+# Populated from docs/profit-loss-tables.md's Non-Wage Overhead breakdown (the table
+# CURRENT-STATE.md's own "A$13,980.00, unchanged" figure is built from -- cross-checked
+# arithmetically: all 13 line items below sum to exactly A$13,980.00), cross-referenced
+# against docs/cash-flow.md, docs/rent-budget-2026-07-28.md, docs/financial-setup.md,
+# docs/equipment-costs.md, docs/ivy-booking-system.md, and docs/unit-economics.md
+# (historical, cited for a genuine classification-ambiguity finding, not as a current
+# source). No amount was invented. Several genuine conflicts and gaps were found
+# cross-referencing these documents against each other -- none silently resolved.
+#
+# Scope: NON-PAYROLL operating expenses only. Does not duplicate wages.yml (payroll,
+# super, workers-comp RATE) except where the repo itself presents a cost inside an
+# "Insurance" cost table alongside payroll-adjacent items (financial-setup.md Step 8
+# bundles Workers Compensation with Public Liability/PI/Property/Business Interruption --
+# recorded here as a cross-reference/reconciliation record against wages.yml's existing
+# wage_workers_comp_rate, not a second source of truth for the same figure).
+#
+# Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
+# PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+#
+# cost_type vocabulary (per the coordinator's Part 2 instruction, one field, 8 values):
+# FIXED | VARIABLE | SEMI_VARIABLE | ONE_OFF | STARTUP | CAPEX | COGS | PAYROLL.
+# A record classified STARTUP/CAPEX/COGS/PAYROLL here is recorded ONLY because the
+# source document explicitly discusses it as an operating-adjacent cost worth
+# cross-referencing -- it does not become part of this file's recurring-opex total,
+# and is flagged in its own notes as "not opex, cross-referenced only."
+
+schema_version: 1
+dataset: opex
+last_updated: "2026-08-09"
+
+records:
+  # ============================================================
+  # PREMISES
+  # ============================================================
+  - id: opex_rent
+    category: premises
+    subcategory: rent
+    name: "Commercial lease -- base rent"
+    description: "200sqm @ A$40/sqm/month, Subiaco/Nedlands planning estimate -- not a signed lease"
+    amount: 8000.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 8000.00
+    annual_equivalent: 96000.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    effective_date: null
+    status: MODELLED
+    status_detail: "planning estimate tied to a specific 200sqm/Subiaco-Nedlands assumption, not a confirmed signed lease -- explicitly flagged as such in the source document itself"
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+    notes: >
+      Cross-checked against docs/rent-budget-2026-07-28.md (agrees exactly: A$8,000/month =
+      A$96,000/year, the figure every property candidate in docs/property-links-2026-07-28.md
+      is compared against). Confirmed UNCHANGED under both Table 1 and Table 2 (CURRENT-STATE.md
+      §5: "rent/utilities not client-volume-driven"). NOT included in this record: whether this
+      figure is net or gross of outgoings -- see opex_rent_outgoings_ambiguity below, a genuine
+      unresolved classification gap, not resolved here.
+
+  - id: opex_rent_outgoings_ambiguity
+    category: premises
+    subcategory: outgoings
+    name: "Outgoings (rates, building insurance, maintenance) -- inclusion in rent figure unclear"
+    description: "Whether opex_rent's A$8,000/month figure is net or gross of outgoings is not stated anywhere in this repo"
+    amount: null
+    currency: AUD
+    frequency: not_specified
+    monthly_equivalent: null
+    annual_equivalent: null
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: PLACEHOLDER
+    source: {file: docs/grace-startup-plan.md, section: "line 140 general note"}
+    notes: >
+      docs/grace-startup-plan.md states, as a general Perth-market note (not specific to any
+      confirmed venue): "outgoings (rates, insurance, maintenance) typically add 15-25% on top
+      of face rent in Perth retail/commercial." Applied to opex_rent's A$8,000/month, this would
+      mean true occupancy cost could be A$9,200-10,000/month, not A$8,000 -- a potentially
+      material understatement of monthly burn if the modelled figure is meant to be face rent
+      only. `docs/profit-loss-tables.md`'s own line item ("Rent (commercial lease, 200 sqm @
+      A$40/sqm/month, Subiaco/Nedlands estimate)") does not state whether A$40/sqm is net or
+      gross. Genuinely unresolved -- not assumed either way. See VERIFICATION-TRACKER item 24.
+
+  - id: opex_utilities
+    category: premises
+    subcategory: utilities
+    name: "Utilities (power/water, medical fridge + HVAC)"
+    description: null
+    amount: 650.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 650.00
+    annual_equivalent: 7800.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+    notes: "Confirmed unchanged under both Table 1 and Table 2, per CURRENT-STATE.md §5."
+
+  - id: opex_cleaning
+    category: premises
+    subcategory: cleaning
+    name: "Cleaning service (daily turn + weekly deep clean)"
+    description: null
+    amount: 600.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 600.00
+    annual_equivalent: 7200.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+    notes: null
+
+  - id: opex_laundry
+    category: premises
+    subcategory: laundry
+    name: "Laundry/linen service"
+    description: null
+    amount: 350.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 350.00
+    annual_equivalent: 4200.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "CLASSIFICATION AMBIGUITY, not silently resolved -- see notes"
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+    notes: >
+      docs/profit-loss-tables.md presents this as a flat FIXED monthly line within
+      "Non-Wage Overhead," and CURRENT-STATE.md §5 states the whole A$13,980.00 total is
+      "unchanged -- rent/utilities not client-volume-driven" under both Table 1 and Table 2.
+      However, docs/unit-economics.md (historical, superseded, cited here only for this
+      classification finding) explicitly treats this SAME A$350/month figure as a VARIABLE
+      per-visit cost: "A$350 / 308 total visits = A$1.14/visit." Neither document is more
+      "correct" by this repo's own authority -- flagged as a genuine internal classification
+      disagreement (FIXED vs VARIABLE), not resolved here. See VERIFICATION-TRACKER item 22
+      (grouped with the related GTT-supplies/Consumables finding below).
+
+  - id: opex_medical_waste
+    category: premises
+    subcategory: waste
+    name: "Medical waste disposal contract"
+    description: "Annual contract, not a one-off purchase -- per docs/equipment-costs.md's own explicit labelling"
+    amount: {low: 600.00, high: 1200.00}
+    currency: AUD
+    frequency: annual
+    monthly_equivalent: {low: 50.00, high: 100.00}
+    annual_equivalent: {low: 600.00, high: 1200.00}
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "GAP, not a conflict -- this cost is real and sourced, but is NOT included anywhere in docs/profit-loss-tables.md's 13-line Non-Wage Overhead total (A$13,980.00/month), which sums exactly to its stated total without this line"
+    source: {file: docs/equipment-costs.md, section: "§1 Pathology Collection Room"}
+    notes: >
+      Confirmed via arithmetic: the 13 Non-Wage Overhead line items in
+      docs/profit-loss-tables.md §4 sum to exactly A$13,980.00 with no room for this cost --
+      it is a genuinely separate, real, sourced cost that has never been incorporated into the
+      canonical monthly overhead total. If added, monthly overhead would rise from A$13,980.00
+      to A$14,030.00-14,080.00 (a small but real, currently-missing amount). See
+      VERIFICATION-TRACKER item 21.
+
+  # ============================================================
+  # TECHNOLOGY
+  # ============================================================
+  - id: opex_booking_software
+    category: technology
+    subcategory: booking_software
+    name: "Fresha booking system (Team plan)"
+    description: null
+    amount: 100.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 100.00
+    annual_equivalent: 1200.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "CONFLICT, not silently resolved -- see notes and conflicts list at bottom of file"
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+    notes: >
+      This A$100.00/month figure is the one feeding the current P&L total. It does not match
+      docs/ivy-booking-system.md's own detailed Fresha pricing ("$14.95/user/month Team plan,"
+      confirmed 1-2 admin seats only per that document's 2026-07-31 correction) -- which would
+      put the real cost at A$14.95-29.90/month, materially LOWER than the modelled A$100.00.
+      Separately, docs/equipment-costs.md §8 still lists a completely different, stale
+      alternative ("Booking software subscription (Timely, Phorest, or Mindbody), A$50-200/month")
+      -- a different platform entirely, superseded by the Fresha decision (per
+      docs/01_conflicts_log.md CONFLICT-07's resolution) but never corrected in that specific
+      document. See conflict_booking_software_cost below and VERIFICATION-TRACKER item 20.
+
+  - id: opex_internet_phone
+    category: technology
+    subcategory: connectivity
+    name: "Internet + phone"
+    description: null
+    amount: 150.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 150.00
+    annual_equivalent: 1800.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+    notes: null
+
+  - id: opex_email_platform
+    category: technology
+    subcategory: email
+    name: "Resend email platform"
+    description: null
+    amount: 30.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 30.00
+    annual_equivalent: 360.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+    notes: null
+
+  - id: opex_xero_subscription
+    category: technology
+    subcategory: accounting_software
+    name: "Xero subscription (bundled, not separately itemised)"
+    description: "Xero itself has no standalone dollar figure anywhere in this repo -- bundled into opex_accounting_bookkeeping's A$500/month line"
+    amount: null
+    currency: AUD
+    frequency: not_specified
+    monthly_equivalent: null
+    annual_equivalent: null
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: PLACEHOLDER
+    source: {file: docs/hr-framework.md, section: "6. PAYROLL SETUP (XERO)"}
+    notes: >
+      docs/hr-framework.md and docs/financial-setup.md both confirm Xero is the confirmed
+      payroll/accounting platform, but neither states its subscription price separately from
+      the bookkeeper's monthly fee -- see opex_accounting_bookkeeping below, which bundles
+      "monthly Xero + BAS prep" into one A$500.00/month figure. Not broken out here since no
+      source document does so; recorded as PLACEHOLDER rather than estimating a split.
+
+  - id: opex_eftpos_software_fee
+    category: technology
+    subcategory: payment_processing
+    name: "EFTPOS/card-payment software fee"
+    description: "Two provider options documented, neither chosen -- Tyro A$35/month software fee (terminal leased, A$0 upfront) vs Square (A$0/month, A$299 one-off terminal purchase, CAPEX not opex)"
+    amount: null
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: null
+    annual_equivalent: null
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: PLACEHOLDER
+    status_detail: "provider decision not made -- both options' fixed monthly fee recorded, neither picked"
+    source: {file: docs/financial-setup.md, section: "STEP 5 -- EFTPOS AND PAYMENT PROCESSING"}
+    proposed_options:
+      tyro: {monthly_fee: 35.00, currency: AUD, terminal_cost: 0.00, terminal_note: "leased"}
+      square: {monthly_fee: 0.00, currency: AUD, terminal_cost: 299.00, terminal_note: "one-off purchase, CAPEX not opex -- not itemised in this file"}
+    notes: >
+      NOT included anywhere in docs/profit-loss-tables.md's Non-Wage Overhead total -- a
+      genuine gap, distinct from and additional to opex_eftpos_transaction_fee below. See
+      VERIFICATION-TRACKER item 23.
+
+  - id: opex_eftpos_transaction_fee
+    category: technology
+    subcategory: payment_processing
+    name: "EFTPOS/card transaction fee (% of card revenue)"
+    description: "Tyro 1.4% vs Square 1.6% (cards present) -- provider not chosen"
+    amount: {low_pct: 1.4, high_pct: 1.6}
+    currency: AUD
+    frequency: per_transaction
+    monthly_equivalent: null
+    annual_equivalent: null
+    cost_type: VARIABLE
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "both percentages are real, sourced figures -- what's undecided is WHICH provider (affecting which % applies) and the resulting dollar amount (not computed against any revenue figure, since that would require an unstated assumption about what % of revenue is card-paid)"
+    source: {file: docs/financial-setup.md, section: "STEP 5 -- EFTPOS AND PAYMENT PROCESSING"}
+    notes: >
+      Genuinely missing from the modelled Non-Wage Overhead total. At scale (e.g. ~1.5% of
+      Table 1's ~A$157,792.16/month total revenue, if all revenue is card-processed) this could
+      be on the order of A$2,000+/month -- NOT a trivial omission, flagged as material. This
+      session did not compute that estimate as a canonical figure (it would require an assumption
+      about what % of revenue is card-paid vs other methods, not stated anywhere) -- flagged as
+      an open item, not silently estimated. See VERIFICATION-TRACKER item 23.
+
+  # ============================================================
+  # PROFESSIONAL
+  # ============================================================
+  - id: opex_accounting_bookkeeping
+    category: professional
+    subcategory: accounting
+    name: "Accounting/bookkeeping (monthly Xero + BAS prep)"
+    description: null
+    amount: 500.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 500.00
+    annual_equivalent: 6000.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+    notes: "See opex_xero_subscription above -- this figure bundles the Xero subscription and bookkeeping labor together, not separately itemised anywhere in this repo."
+
+  - id: opex_accountant_initial_brief
+    category: professional
+    subcategory: accounting
+    name: "Accountant initial brief and structure confirmation"
+    description: "One-off engagement, Week 1, before any other financial setup step -- NOT recurring opex"
+    amount: {low: 500.00, high: 1500.00}
+    currency: AUD
+    frequency: one_off
+    monthly_equivalent: null
+    annual_equivalent: null
+    cost_type: STARTUP
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "explicitly STARTUP, not recurring opex -- recorded here only per the coordinator's Part 1 'Professional' category instruction; not included in any recurring-opex total in this file"
+    source: {file: docs/financial-setup.md, section: "STEP 1 -- ENGAGE ACCOUNTANT"}
+    notes: "No monthly/annual equivalent computed -- a one-off cost does not have a recurring equivalent, manufacturing one would misrepresent it."
+
+  - id: opex_asic_business_name
+    category: professional
+    subcategory: registration
+    name: "ASIC business name registration"
+    description: "\"GTT Center Perth\" business name registration, renewed annually"
+    amount: 39.00
+    currency: AUD
+    frequency: annual
+    monthly_equivalent: 3.25
+    annual_equivalent: 39.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    source: {file: docs/financial-setup.md, section: "STEP 2 -- ABN AND BUSINESS NAME REGISTRATION"}
+    notes: "Small, genuinely recurring (annual renewal) -- not previously incorporated into docs/profit-loss-tables.md's Non-Wage Overhead total (a trivial-magnitude gap, not tracker-worthy on its own per the coordinator's 'skip trivial documentation differences' instruction)."
+
+  - id: opex_food_safety_supervisor_cert
+    category: professional
+    subcategory: compliance_training
+    name: "Food Safety Supervisor (FSS) certificate"
+    description: "Online course, ~4 hours -- one-off training cost, renewal frequency not stated anywhere in this repo"
+    amount: {low: 100.00, high: 200.00}
+    currency: AUD
+    frequency: one_off
+    monthly_equivalent: null
+    annual_equivalent: null
+    cost_type: STARTUP
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "renewal cadence unknown -- PLACEHOLDER on whether this recurs"
+    source: {file: docs/financial-setup.md, section: "STEP 9 -- FOOD BUSINESS NOTIFICATION"}
+    notes: "If FSS certification requires periodic renewal (common for this type of credential in other contexts, but NOT independently confirmed for this exact WA course this session), this would need reclassifying to a recurring low-frequency cost -- flagged, not assumed either way."
+
+  - id: opex_commercial_lease_solicitor
+    category: professional
+    subcategory: legal
+    name: "Commercial lease solicitor review"
+    description: null
+    amount: null
+    currency: AUD
+    frequency: one_off
+    monthly_equivalent: null
+    annual_equivalent: null
+    cost_type: STARTUP
+    scenario_applicability: universal
+    status: PLACEHOLDER
+    source: {file: docs/external-resources-and-advisors.md, section: "3. Commercial Lease Solicitor / Agent"}
+    notes: "The need for this service is documented and its timing (Week 8-10, before signing) is specified, but no dollar cost estimate exists anywhere in this repo -- genuinely unknown, not estimated."
+
+  # ============================================================
+  # INSURANCE
+  # ============================================================
+  - id: opex_insurance_modelled
+    category: insurance
+    subcategory: combined_pl_pi
+    name: "Insurance (public liability + PI) -- modelled flat figure used in the current P&L"
+    description: "The single figure feeding docs/profit-loss-tables.md's Non-Wage Overhead total"
+    amount: 400.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 400.00
+    annual_equivalent: 4800.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "already flagged at source as 'never an actual insurance quote, a round planning estimate' -- carries a real number under a named, not-yet-proven assumption, so MODELLED (not PLACEHOLDER, which would require no concrete value) per docs/architecture/DATA-GOVERNANCE.md's own distinction. CONFLICT, not silently resolved -- see conflict_insurance_estimate below"
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+    notes: >
+      Same figure cross-referenced by docs/CURRENT-STATE.md §7.3's "First-year insurance"
+      working-capital line (~A$400/month basis) -- a deliberate, disclosed cross-reference
+      between the recurring-opex figure and the startup-capital reserve, not a duplication error.
+      This A$400/month = A$4,800/year figure is materially LOWER than the sum of the itemised
+      insurance records below (opex_insurance_public_liability through
+      opex_insurance_business_interruption, A$11,700-19,000/year combined) -- see
+      conflict_insurance_estimate.
+
+  - id: opex_insurance_public_liability
+    category: insurance
+    subcategory: public_liability
+    name: "Public liability insurance"
+    description: "A$20M minimum coverage, per NATA requirement"
+    amount: {low: 2500.00, high: 4500.00}
+    currency: AUD
+    frequency: annual
+    monthly_equivalent: {low: 208.33, high: 375.00}
+    annual_equivalent: {low: 2500.00, high: 4500.00}
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    source: {file: docs/financial-setup.md, section: "STEP 8 -- INSURANCE"}
+    notes: "One of 5 line items in financial-setup.md's itemised insurance table -- see conflict_insurance_estimate."
+
+  - id: opex_insurance_professional_indemnity
+    category: insurance
+    subcategory: professional_indemnity
+    name: "Professional indemnity insurance"
+    description: "A$5M minimum coverage"
+    amount: {low: 2000.00, high: 4000.00}
+    currency: AUD
+    frequency: annual
+    monthly_equivalent: {low: 166.67, high: 333.33}
+    annual_equivalent: {low: 2000.00, high: 4000.00}
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    source: {file: docs/financial-setup.md, section: "STEP 8 -- INSURANCE"}
+    notes: "One of 5 line items in financial-setup.md's itemised insurance table -- see conflict_insurance_estimate."
+
+  - id: opex_insurance_workers_comp_estimate
+    category: insurance
+    subcategory: workers_compensation
+    name: "Workers compensation -- flat annual estimate (cross-reference, NOT the modelled figure)"
+    description: "financial-setup.md's own dollar-range estimate for WorkCover WA premiums, distinct from wages.yml's %-of-payroll modelled figure"
+    amount: {low: 4500.00, high: 6000.00}
+    currency: AUD
+    frequency: annual
+    monthly_equivalent: {low: 375.00, high: 500.00}
+    annual_equivalent: {low: 4500.00, high: 6000.00}
+    cost_type: PAYROLL
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "a real, sourced dollar-range estimate (not an unknown), but CROSS-REFERENCE ONLY, not a competing source of truth -- data/canonical/wages.yml's wage_workers_comp_rate (1.7% of Direct Labor) remains the authoritative modelled figure feeding the P&L. This record exists to document a real reconciliation gap between the two, not to replace either."
+    source: {file: docs/financial-setup.md, section: "STEP 8 -- INSURANCE / STEP 6 -- WORKCOVER WA REGISTRATION"}
+    notes: >
+      At Table 1's actual modelled Direct Labor (~A$953K/yr annualised from A$79,433.05/month),
+      1.7% works out to roughly A$16,200/year -- nearly 3x financial-setup.md's own flat
+      A$4,500-6,000/year Step 8 estimate. STEP 6's own worked example ("A$22,575 gross wages x
+      ~1.7% = ~A$384/month") uses a wages base far smaller than this venture's actual current
+      payroll (12+ roles, ~A$700-900K/yr total) -- the flat estimate in Step 8 appears to be
+      built on the same stale, much-smaller wage-base assumption as Step 6's example, not
+      recalculated for the current headcount. The 1.7% RATE itself is NOT in dispute (matches
+      wages.yml's wage_workers_comp_rate and STEP 6's "approximate rate 1.5-2.0% of wages"
+      range) -- only the resulting DOLLAR figure in Step 8's table is stale. Folded into
+      VERIFICATION-TRACKER item 19 (the broader insurance-conflict item) as a sub-point, not a
+      separate tracker item.
+
+  - id: opex_insurance_property_contents
+    category: insurance
+    subcategory: property_contents
+    name: "Commercial property / contents insurance"
+    description: "Covers fit-out + equipment value"
+    amount: {low: 1500.00, high: 2500.00}
+    currency: AUD
+    frequency: annual
+    monthly_equivalent: {low: 125.00, high: 208.33}
+    annual_equivalent: {low: 1500.00, high: 2500.00}
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "GAP, not just a conflict -- this cost has NO counterpart anywhere in the modelled A$400/month Non-Wage Overhead insurance line, which explicitly covers only 'public liability + PI'"
+    source: {file: docs/financial-setup.md, section: "STEP 8 -- INSURANCE"}
+    notes: "Entirely absent from docs/profit-loss-tables.md's Non-Wage Overhead total -- see conflict_insurance_estimate."
+
+  - id: opex_insurance_business_interruption
+    category: insurance
+    subcategory: business_interruption
+    name: "Business interruption insurance (optional)"
+    description: "6 months revenue coverage"
+    amount: {low: 1200.00, high: 2000.00}
+    currency: AUD
+    frequency: annual
+    monthly_equivalent: {low: 100.00, high: 166.67}
+    annual_equivalent: {low: 1200.00, high: 2000.00}
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "explicitly OPTIONAL per the source table -- not assumed adopted"
+    source: {file: docs/financial-setup.md, section: "STEP 8 -- INSURANCE"}
+    notes: "Also absent from the modelled Non-Wage Overhead total -- but explicitly optional, so this is a lower-priority gap than the mandatory policies above."
+
+  # ============================================================
+  # MARKETING
+  # ============================================================
+  - id: opex_marketing_ads_steady_state
+    category: marketing
+    subcategory: digital_ads
+    name: "Instagram/Meta ads (ongoing digital marketing) -- steady state"
+    description: "Flat figure retained in the Month 5+ steady-state table and every Quarterly/Half-Yearly/Yearly figure -- the conservative, unchanged case"
+    amount: 1500.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 1500.00
+    annual_equivalent: 18000.00
+    cost_type: SEMI_VARIABLE
+    scenario_applicability: universal
+    status: MODELLED
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown + Marketing Spend Ramp section"}
+    notes: "SEMI_VARIABLE because a genuine Month 1-4 ramp exists below this steady-state figure -- see opex_marketing_ads_ramp."
+
+  - id: opex_marketing_ads_ramp
+    category: marketing
+    subcategory: digital_ads
+    name: "Instagram/Meta ads -- Month 1-4 ramp (not yet steady state)"
+    description: "A genuine ramp, not a flat Month-1 application of the steady-state figure -- per Anthony's direct instruction, corrected 2026-07-31"
+    amount: {month_1: 600.00, month_2: 800.00, month_3: 1000.00, month_4: 1200.00}
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: null
+    annual_equivalent: null
+    cost_type: SEMI_VARIABLE
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "no single monthly_equivalent computed -- amount varies by month, per-month values recorded instead of a manufactured average"
+    source: {file: docs/profit-loss-tables.md, section: "Marketing Spend Ramp"}
+    notes: "Not yet independently rebuilt against Table 1's higher revenue ceiling -- flagged in docs/CURRENT-STATE.md's own changelog as an open follow-up, not addressed in this pass."
+
+  # ============================================================
+  # CONSUMABLES / OPERATING SUPPLIES -- classification ambiguity flagged, not resolved
+  # ============================================================
+  - id: opex_gtt_supplies
+    category: consumables
+    subcategory: clinical_supplies
+    name: "GTT supplies (glucose, tubes)"
+    description: "Basis stated as '200 tests x A$2'"
+    amount: 400.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 400.00
+    annual_equivalent: 4800.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: >
+      TWO SEPARATE, DISCLOSED ISSUES, neither resolved here: (1) STALE VOLUME BASIS -- "200
+      tests" does not match either current committed scenario (Table 1: 18/day x 22 days = 396
+      tests/month; Table 2: 12/day x 22 days = 264 tests/month) -- both are higher than 200,
+      meaning this cost is likely UNDERSTATED at the current committed model. (2)
+      CLASSIFICATION AMBIGUITY -- docs/profit-loss-tables.md treats this as FIXED (bundled into
+      "Non-Wage Overhead," a total CURRENT-STATE.md describes as "not client-volume-driven"),
+      but docs/unit-economics.md (historical, cited for this finding only) explicitly computes
+      it as a VARIABLE per-visit cost ("A$400 / 176 GTT visits = A$2.27/visit (GTT visits only)"),
+      consistent with its own "200 tests x A$2/test" derivation -- a cost that is structurally
+      per-unit (glucose + tubes per test) is not naturally FIXED. Neither figure was adjusted --
+      both issues flagged for a future session with model-building authority.
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+    notes: "See VERIFICATION-TRACKER item 22 (material -- could roughly double under Table 1 if corrected proportionally, ~A$792/month at 396 tests x A$2)."
+
+  - id: opex_consumables_general
+    category: consumables
+    subcategory: treatment_supplies
+    name: "Consumables (wax, nail products, skincare)"
+    description: null
+    amount: 800.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 800.00
+    annual_equivalent: 9600.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "CLASSIFICATION AMBIGUITY -- same FIXED-vs-VARIABLE disagreement as opex_gtt_supplies, see that record's notes for the full explanation"
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+    notes: >
+      docs/unit-economics.md (historical) computes this as VARIABLE: "A$800 / 308 total visits =
+      A$2.60/visit." Same unresolved FIXED-vs-VARIABLE disagreement as opex_gtt_supplies and
+      opex_laundry -- grouped together under VERIFICATION-TRACKER item 22.
+
+  - id: opex_misc_contingency
+    category: consumables
+    subcategory: contingency
+    name: "Miscellaneous / contingency"
+    description: null
+    amount: 500.00
+    currency: AUD
+    frequency: monthly
+    monthly_equivalent: 500.00
+    annual_equivalent: 6000.00
+    cost_type: FIXED
+    scenario_applicability: universal
+    status: MODELLED
+    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+    notes: null
+
+# ============================================================
+# Genuine, disclosed conflicts -- none silently resolved. Per the coordinator's explicit
+# instruction (Part 5): "do NOT silently pick one -- record the conflict."
+# ============================================================
+conflicts:
+  - id: conflict_insurance_estimate
+    description: >
+      docs/profit-loss-tables.md's modelled Non-Wage Overhead "Insurance (public liability + PI)"
+      line is a flat A$400.00/month (A$4,800.00/year), already self-tagged PLACEHOLDER ("never
+      an actual insurance quote"). docs/financial-setup.md STEP 8's own itemised insurance table
+      (5 policy types: public liability, professional indemnity, workers compensation, property
+      contents, business interruption) totals A$11,700-19,000/year -- 2.4x to 4x higher than the
+      modelled figure, and covers 3 more policy types (workers comp, property, business
+      interruption) that the modelled A$400/month figure does not claim to cover at all.
+    affected_records: [opex_insurance_modelled, opex_insurance_public_liability, opex_insurance_professional_indemnity, opex_insurance_workers_comp_estimate, opex_insurance_property_contents, opex_insurance_business_interruption]
+    sources:
+      - {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+      - {file: docs/financial-setup.md, section: "STEP 8 -- INSURANCE"}
+      - {file: docs/CURRENT-STATE.md, section: "§7.3 Working Capital & Pre-Launch Costs"}
+    resolution_status: UNRESOLVED
+    notes: "The single highest-materiality finding in this file -- directly affects modelled monthly burn and P&L bottom line under both Table 1 and Table 2. See VERIFICATION-TRACKER item 19."
+
+  - id: conflict_booking_software_cost
+    description: >
+      Three different figures exist for the same decided platform (Fresha): the modelled P&L
+      figure (A$100.00/month), the actual documented Fresha Team-plan pricing for the confirmed
+      1-2 admin seats (A$14.95-29.90/month, materially LOWER), and a stale reference to a
+      different, superseded platform choice entirely (Timely/Phorest/Mindbody, A$50-200/month)
+      left uncorrected in docs/equipment-costs.md.
+    affected_records: [opex_booking_software]
+    sources:
+      - {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+      - {file: docs/ivy-booking-system.md, section: "Fresha Detail"}
+      - {file: docs/equipment-costs.md, section: "§8 Technology"}
+    resolution_status: UNRESOLVED
+    notes: "Unusual direction of error vs most other findings in this file -- the modelled figure may OVERSTATE this specific cost, not understate it. See VERIFICATION-TRACKER item 20."
+
+  - id: conflict_variable_vs_fixed_classification
+    description: >
+      GTT supplies, general consumables, and laundry/linen are treated as FIXED costs bundled
+      into "Non-Wage Overhead" in docs/profit-loss-tables.md / docs/CURRENT-STATE.md, but are
+      explicitly computed as VARIABLE per-visit costs in docs/unit-economics.md (historical).
+      Neither document has more standing authority than the other on this specific question --
+      docs/CURRENT-STATE.md's own governance does not address per-line cost-behavior
+      classification, only the total dollar figure.
+    affected_records: [opex_gtt_supplies, opex_consumables_general, opex_laundry]
+    sources:
+      - {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+      - {file: docs/unit-economics.md, section: "Variable Cost Per Visit"}
+    resolution_status: UNRESOLVED
+    notes: "See VERIFICATION-TRACKER item 22. Relevant to any future model that computes per-visit unit economics under Table 1/Table 2's actual client volumes."

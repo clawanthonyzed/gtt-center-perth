@@ -4,9 +4,9 @@ GTT Center Perth -- Canonical data validator (proof of concept).
 Validates data/canonical/*.yml files against the schema/governance conventions
 established in docs/architecture/CANONICAL-DATA-SCHEMA.md and
 docs/architecture/DATA-GOVERNANCE.md. This is a proof-of-concept validator for
-five files (pricing.yml, client_assumptions.yml, scenarios.yml, staffing.yml,
-wages.yml, added Phase 2) -- it is not a general schema engine and does not
-validate every field type strictly.
+six files (pricing.yml, client_assumptions.yml, scenarios.yml, staffing.yml,
+wages.yml -- Phase 2; opex.yml -- Phase 3) -- it is not a general schema engine
+and does not validate every field type strictly.
 
 Checks performed:
   1. YAML validity (parse error -> hard failure)
@@ -53,6 +53,28 @@ Checks performed:
       (loaded automatically from data/canonical/scenarios.yml regardless of
       which files were passed as targets, so a malformed/typo'd scenario
       reference is always caught).
+  11. (Phase 3, opex.yml) Required fields per record (id, category, name,
+      status, frequency, cost_type); `frequency` restricted to a known
+      vocabulary (weekly/monthly/quarterly/annual/one_off/per_transaction/
+      not_specified); `cost_type` restricted to the coordinator's 8-value
+      vocabulary (FIXED/VARIABLE/SEMI_VARIABLE/ONE_OFF/STARTUP/CAPEX/COGS/
+      PAYROLL).
+  12. (Phase 3, opex.yml) `amount` (and `monthly_equivalent`/
+      `annual_equivalent`, where present) must be `null`, a plain number, or
+      a dict whose every value is a plain number (covers low/high ranges,
+      per-month ramps, etc.) -- anything else is a malformed numeric value.
+      A `PLACEHOLDER` record must have `amount: null` (a real record with a
+      concrete value is not a placeholder, whatever its confidence level);
+      a non-`PLACEHOLDER`/non-`SUPERSEDED` record must NOT have `amount: null`
+      (a confident status needs something behind it) -- same rule already
+      applied to wages.yml's rate fields (§9), reused here.
+  13. (Phase 3, opex.yml) Monthly/annual normalisation correctness -- where
+      `frequency` is `monthly`/`quarterly`/`annual` and `amount` is present,
+      any stated `monthly_equivalent`/`annual_equivalent` must arithmetically
+      match `amount` at that frequency (within a small floating-point
+      tolerance). Records with `frequency` of `one_off`/`per_transaction`/
+      `not_specified`, or with `amount: null`, are skipped -- no normalised
+      equivalent should exist to check in those cases.
 
 Exit code: 0 if all checks pass across all validated files, 1 if any check
 fails in any file. Usable in CI / pre-commit, same convention as
@@ -98,6 +120,20 @@ WAGE_VALUE_FIELDS = ("hourly_rate", "salary", "value", "value_pct", "value_hours
 # Fields, found anywhere in a file, that must reference a real scenario id
 # (or the literal string "universal") -- validated against scenarios.yml.
 SCENARIO_REF_FIELDS = {"staffing_scenario", "scenario_id"}
+
+# opex.yml -- required fields, and the two controlled vocabularies the
+# coordinator specified (Part 2's cost-classification list; a frequency list
+# derived from what Part 4's normalisation actually needs to distinguish).
+OPEX_RECORD_REQUIRED_FIELDS = {"id", "category", "name", "status", "frequency", "cost_type"}
+ALLOWED_OPEX_FREQUENCIES = {
+    "weekly", "monthly", "quarterly", "annual", "one_off", "per_transaction", "not_specified",
+}
+ALLOWED_OPEX_COST_TYPES = {
+    "FIXED", "VARIABLE", "SEMI_VARIABLE", "ONE_OFF", "STARTUP", "CAPEX", "COGS", "PAYROLL",
+}
+# Frequencies for which a monthly/annual equivalent is meaningful and checked.
+NORMALISABLE_OPEX_FREQUENCIES = {"monthly", "quarterly", "annual"}
+NUMERIC_TOLERANCE = 0.02  # AUD, floating-point/rounding slack for equivalence checks
 
 # scenario_dependent intentionally repeats `id` once per scenario_id -- see
 # data/canonical/client_assumptions.yml's own header comment.
@@ -296,6 +332,112 @@ def check_wages_schema(data, f: Findings):
                 )
 
 
+def _is_number(x) -> bool:
+    return isinstance(x, (int, float)) and not isinstance(x, bool)
+
+
+def _is_valid_amount_shape(x) -> bool:
+    """None, a plain number, or a dict whose every value is a plain number."""
+    if x is None:
+        return True
+    if _is_number(x):
+        return True
+    if isinstance(x, dict):
+        return all(_is_number(v) for v in x.values())
+    return False
+
+
+def check_opex_schema(data, f: Findings):
+    if data.get("dataset") != "opex":
+        return
+    records = data.get("records", [])
+    for i, rec in enumerate(records):
+        if not isinstance(rec, dict):
+            f.error(f"records[{i}]: not a mapping -- cannot check required fields")
+            continue
+        rid = rec.get("id")
+
+        missing = OPEX_RECORD_REQUIRED_FIELDS - set(rec.keys())
+        if missing:
+            f.error(f"records[{i}] (id={rid!r}): missing required opex field(s): {sorted(missing)}")
+            continue  # further checks below assume these fields exist
+
+        freq = rec.get("frequency")
+        if freq not in ALLOWED_OPEX_FREQUENCIES:
+            f.error(
+                f"records[{i}] (id={rid!r}): frequency {freq!r} is not one of "
+                f"the known frequencies {sorted(ALLOWED_OPEX_FREQUENCIES)}"
+            )
+
+        cost_type = rec.get("cost_type")
+        if cost_type not in ALLOWED_OPEX_COST_TYPES:
+            f.error(
+                f"records[{i}] (id={rid!r}): cost_type {cost_type!r} is not one of "
+                f"the known cost types {sorted(ALLOWED_OPEX_COST_TYPES)}"
+            )
+
+        status = rec.get("status")
+        for field_name in ("amount", "monthly_equivalent", "annual_equivalent"):
+            if field_name not in rec:
+                continue
+            val = rec[field_name]
+            if not _is_valid_amount_shape(val):
+                f.error(
+                    f"records[{i}] (id={rid!r}): '{field_name}' is a malformed numeric value "
+                    f"({val!r}) -- must be null, a number, or a dict of numbers"
+                )
+
+        amount = rec.get("amount")
+        if status == "PLACEHOLDER" and amount is not None:
+            f.error(
+                f"records[{i}] (id={rid!r}): status=PLACEHOLDER but 'amount' is {amount!r}, "
+                f"not null -- a PLACEHOLDER record must not assert a concrete value"
+            )
+        if status not in ("PLACEHOLDER", "SUPERSEDED") and amount is None:
+            f.error(
+                f"records[{i}] (id={rid!r}): status={status} but 'amount' is null -- "
+                f"a non-PLACEHOLDER/SUPERSEDED record must have a real value backing its status"
+            )
+
+        # Monthly/annual normalisation correctness.
+        if freq in NORMALISABLE_OPEX_FREQUENCIES and _is_number(amount):
+            expected_monthly = {"monthly": amount, "annual": amount / 12, "quarterly": amount / 3}[freq]
+            expected_annual = {"monthly": amount * 12, "annual": amount, "quarterly": amount * 4}[freq]
+            me = rec.get("monthly_equivalent")
+            ae = rec.get("annual_equivalent")
+            if _is_number(me) and abs(me - expected_monthly) > NUMERIC_TOLERANCE:
+                f.error(
+                    f"records[{i}] (id={rid!r}): monthly_equivalent={me} does not match "
+                    f"amount={amount} at frequency={freq} (expected ~{expected_monthly:.2f})"
+                )
+            if _is_number(ae) and abs(ae - expected_annual) > NUMERIC_TOLERANCE:
+                f.error(
+                    f"records[{i}] (id={rid!r}): annual_equivalent={ae} does not match "
+                    f"amount={amount} at frequency={freq} (expected ~{expected_annual:.2f})"
+                )
+        elif freq in NORMALISABLE_OPEX_FREQUENCIES and isinstance(amount, dict):
+            me, ae = rec.get("monthly_equivalent"), rec.get("annual_equivalent")
+            for key, val in amount.items():
+                if not _is_number(val):
+                    continue
+                expected_monthly = {"monthly": val, "annual": val / 12, "quarterly": val / 3}[freq]
+                expected_annual = {"monthly": val * 12, "annual": val, "quarterly": val * 4}[freq]
+                if isinstance(me, dict) and key in me and _is_number(me[key]):
+                    if abs(me[key] - expected_monthly) > NUMERIC_TOLERANCE:
+                        f.error(
+                            f"records[{i}] (id={rid!r}): monthly_equivalent.{key}={me[key]} does "
+                            f"not match amount.{key}={val} at frequency={freq} "
+                            f"(expected ~{expected_monthly:.2f})"
+                        )
+                if isinstance(ae, dict) and key in ae and _is_number(ae[key]):
+                    if abs(ae[key] - expected_annual) > NUMERIC_TOLERANCE:
+                        f.error(
+                            f"records[{i}] (id={rid!r}): annual_equivalent.{key}={ae[key]} does "
+                            f"not match amount.{key}={val} at frequency={freq} "
+                            f"(expected ~{expected_annual:.2f})"
+                        )
+
+
 def load_valid_scenario_ids() -> set:
     """Load data/canonical/scenarios.yml (if present) to build the set of valid
     scenario ids ('universal' plus every id in records/historical_scenarios).
@@ -372,6 +514,7 @@ def validate_file(path: Path):
         check_scenario_registry_invariant(data, f)
         check_staffing_schema(data, f)
         check_wages_schema(data, f)
+        check_opex_schema(data, f)
         check_scenario_references(data, f, load_valid_scenario_ids())
 
     return f, data
