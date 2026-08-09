@@ -24,7 +24,7 @@ records:
     employment_type: "casual (rate table); annual figure assumes 30hr/wk"
     hourly_rate: {base: 26.70, casual_loaded: 33.38, currency: AUD}
     salary: {annual_at_30hr_week: 56237, currency: AUD, includes_super: true}
-    superannuation: null   # see wage_superannuation_rate below -- not restated per-role
+    superannuation: "INCLUDED in the annual salary figure above, per docs/financial-break-even-staff.md's explicit 'incl. super' label on this role's row -- see wage_superannuation_rate for the 12% rate. Confirmed 2026-08-09 (tracker item 46)."
     payroll_tax: null       # see wage_payroll_tax below
     leave_loading: {casual_loading_pct: 25}
     minimum_engagement_assumptions: null   # see wage_casual_minimum_engagement below
@@ -47,7 +47,7 @@ records:
     employment_type: casual
     hourly_rate: {base: 29.60, casual_loaded: 37.00, currency: AUD}
     salary: {annual_at_30hr_week: 62774, currency: AUD, includes_super: true}
-    superannuation: null
+    superannuation: "INCLUDED in the annual salary figure above, per docs/financial-break-even-staff.md's explicit 'incl. super' label on this role's row -- see wage_superannuation_rate for the 12% rate. Confirmed 2026-08-09 (tracker item 46)."
     payroll_tax: null
     leave_loading: {casual_loading_pct: 25}
     minimum_engagement_assumptions: null
@@ -63,7 +63,7 @@ records:
     employment_type: casual
     hourly_rate: {base: 29.60, casual_loaded: 37.00, currency: AUD}
     salary: {annual_at_30hr_week: 62774, currency: AUD, includes_super: true}
-    superannuation: null
+    superannuation: "INCLUDED in the annual salary figure above, per docs/financial-break-even-staff.md's explicit 'incl. super' label on this role's row -- see wage_superannuation_rate for the 12% rate. Confirmed 2026-08-09 (tracker item 46)."
     payroll_tax: null
     leave_loading: {casual_loading_pct: 25}
     minimum_engagement_assumptions: null
@@ -79,7 +79,7 @@ records:
     employment_type: casual
     hourly_rate: {base: 28.50, casual_loaded: 35.63, currency: AUD}
     salary: {annual_at_30hr_week: 60456, currency: AUD, includes_super: true}
-    superannuation: null
+    superannuation: "INCLUDED in the annual salary figure above, per docs/financial-break-even-staff.md's explicit 'incl. super' label on this role's row -- see wage_superannuation_rate for the 12% rate. Confirmed 2026-08-09 (tracker item 46)."
     payroll_tax: null
     leave_loading: {casual_loading_pct: 25}
     minimum_engagement_assumptions: null
@@ -95,7 +95,7 @@ records:
     employment_type: casual
     hourly_rate: {base: 28.50, casual_loaded: 35.63, currency: AUD}
     salary: {annual_at_30hr_week: 60456, currency: AUD, includes_super: true}
-    superannuation: null
+    superannuation: "INCLUDED in the annual salary figure above, per docs/financial-break-even-staff.md's explicit 'incl. super' label on this role's row -- see wage_superannuation_rate for the 12% rate. Confirmed 2026-08-09 (tracker item 46)."
     payroll_tax: null
     leave_loading: {casual_loading_pct: 25}
     minimum_engagement_assumptions: null
@@ -110,8 +110,8 @@ records:
     role: Phlebotomist
     employment_type: "casual (rate table); annual figure assumes 25hr/wk each"
     hourly_rate: {base: 24.50, casual_loaded: 30.63, currency: AUD}
-    salary: {annual_at_25hr_week: 43068, currency: AUD, includes_super: true}
-    superannuation: null
+    salary: {annual_at_25hr_week: 43068, currency: AUD, includes_super: false}
+    superannuation: "EXCLUDED from the annual salary figure above -- CORRECTED 2026-08-09 (tracker item 46). docs/financial-break-even-staff.md's Award Wage Summary table states this role's annual figure as 'A$43,068 (25hr/wk each)' with NO 'incl. super' text, unlike the other 6 roles in that same table, which all explicitly say 'incl. super' -- a real, disclosed asymmetry in the source itself, not an inference. `includes_super` was previously (incorrectly) set to `true` here by inheriting the pattern used for the other 6 roles without checking this row specifically -- fixed at the canonical layer, not perpetuated. Superannuation (12%) is therefore ADDED on top of this figure in data/canonical/cost_ramp.yml's payroll calculation. See wage_superannuation_rate and cost_ramp.yml#conflict_superannuation_partial_coverage."
     payroll_tax: null
     leave_loading: {casual_loading_pct: 25}
     minimum_engagement_assumptions: null
@@ -146,7 +146,16 @@ records:
       VERIFIED, since no document in this repo cites an external primary source
       (ATO/legislation) with a fetch date, unlike the 3-hour-minimum rule below.
     source: {file: docs/hr-framework.md, section: "5. SUPERANNUATION"}
-    notes: "hr-framework.md itself flags 'confirm current rate with accountant at hire -- rate increases annually' -- treat as a planning assumption, not a locked contractual fact."
+    notes: >
+      hr-framework.md itself flags "confirm current rate with accountant at hire -- rate
+      increases annually" -- treat as a planning assumption, not a locked contractual fact.
+      IMPLEMENTED 2026-08-09 (docs/VERIFICATION-TRACKER.md item 46, resolved): this rate had
+      existed in this file since Phase 2 but was never actually applied to any payroll
+      calculation anywhere in this repo's history -- now applied in
+      data/canonical/cost_ramp.yml's payroll_breakdown, per each role's own record above
+      (superannuation field) for the inclusive/exclusive treatment. Eligibility rule (e.g. any
+      minimum-earnings threshold) is not stated anywhere in this repo -- applied universally,
+      not independently verified against current Australian SG eligibility rules.
 
   - id: wage_payroll_tax
     role: "(all roles)"

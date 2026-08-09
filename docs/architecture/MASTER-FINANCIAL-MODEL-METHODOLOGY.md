@@ -45,11 +45,11 @@ Read directly from `revenue_ramp.yml`'s `am_revenue`, `pm_revenue`, `ancillary_r
 Read directly from `cost_ramp.yml`'s `fixed_costs`, `variable_costs`, `payroll_costs`, `total_operating_costs`, and `payroll_breakdown` fields.
 
 **Payroll breakdown (per the coordinator's requested lines):**
-- **AM direct labour** — `payroll_breakdown.am_weekday_direct_labor` + `am_saturday_direct_labor` (fixed from Month 1, see `cost_ramp.yml#conflict_am_labor_ramp_unmodelled`).
+- **AM direct labour** — `payroll_breakdown.am_weekday_direct_labor` (split into `am_weekday_treatment_staff` + `am_weekday_phlebotomist`, see Superannuation below) + `am_saturday_direct_labor` (fixed from Month 1, see `cost_ramp.yml#conflict_am_labor_ramp_unmodelled`).
 - **PM direct labour** — `payroll_breakdown.pm_weekday_direct_labor` + `pm_saturday_direct_labor` (ramps via the PM session-count curve, floor-constrained — see `docs/architecture/COST-RAMP-METHODOLOGY.md` §5).
 - **Workers comp** — `payroll_breakdown.workers_comp` (1.7% of Direct Labor + Opening Costs).
-- **Superannuation** — **NOT** in `cost_ramp.yml`'s own payroll total. A genuinely new finding this phase: superannuation (`wages.yml#wage_superannuation_rate`, 12% of OTE) is not included anywhere in this venture's payroll modelling — not in `cost_ramp.yml`, and not in any historical `CURRENT-STATE.md` figure either. Shown here as a disclosed, **supplementary** line (`superannuation_supplementary` in every P&L month), calculated but NOT folded into the primary Total Operating Costs / Net Operating Result, to preserve exact traceability to `cost_ramp.yml`'s already-validated total. See `conflict_superannuation_not_in_cost_ramp` and the new tracker item this phase adds.
-- **Other** — `opening_time_increment` + `receptionist_relief` (payroll-adjacent but not strictly labor).
+- **Superannuation** — **RESOLVED 2026-08-09** (`docs/VERIFICATION-TRACKER.md` item 46). `payroll_breakdown.superannuation`, now included directly in `cost_ramp.yml`'s own authoritative `payroll_costs` total — **not** a model-layer special case. Evidence: `docs/financial-break-even-staff.md`'s Award Wage Summary table labels 6 of 7 roles' annual salaries "incl. super" but explicitly not the Phlebotomist row — so super (12% of OTE) is added to the phlebotomist AM-weekday portion, AM Saturday, and both PM Direct Labor components, but NOT to the treatment-staff AM-weekday portion (already included) or to the Opening-Time Increment/Receptionist-Relief components (genuinely unresolved — see `cost_ramp.yml#conflict_superannuation_partial_coverage`). Full sourced reasoning: `docs/architecture/COST-RAMP-METHODOLOGY.md` §4a.
+- **Other** — `opening_time_increment` + `receptionist_relief` (payroll-adjacent but not strictly labor; no superannuation applied to these two, per the disclosed gap above).
 
 **Operating expenses (non-payroll):** `cost_ramp.yml`'s `fixed_costs` (Non-Wage Overhead minus marketing — premises, utilities, technology, professional, insurance, consumables, laundry, misc, all FIXED per the status-quo classification) + `variable_costs` (the marketing ramp, the one documented volume/time-ramped opex line).
 
@@ -76,50 +76,56 @@ No EBITDA, EBIT, or "Net Profit" line is used — these terms are not defined an
 
 ## 8. Table 1 — 24-Month P&L
 
-| Month | Revenue | Payroll | Gross Contribution | Operating Expenses | Total Operating Costs | Net Operating Result |
+**RECALCULATED 2026-08-09 to include superannuation (`docs/VERIFICATION-TRACKER.md` item 46, resolved). Was Payroll A$80,939.77 (M1-4) / A$81,034.18 (M5+), Net Operating Result A$60,201.62 (M5+) before super was added — see §15 for the prior figure, retained for trace.**
+
+| Month | Revenue | Payroll (incl. super) | Gross Contribution | Operating Expenses | Total Operating Costs | Net Operating Result |
 |---|---|---|---|---|---|---|
-| M1 | A$66,742.79 | A$80,939.77 | −A$14,196.98 | A$13,080.00 | A$94,019.77 | **−A$27,276.98** |
-| M2 | A$99,338.11 | A$80,939.77 | A$18,398.34 | A$13,280.00 | A$94,219.77 | **A$5,118.34** |
-| M3 | A$122,620.48 | A$80,939.77 | A$41,680.71 | A$13,480.00 | A$94,419.77 | **A$28,200.71** |
-| M4 | A$144,350.69 | A$80,939.77 | A$63,410.92 | A$13,680.00 | A$94,619.77 | **A$49,730.92** |
-| M5-M24 (each) | A$155,215.80 | A$81,034.18 | A$74,181.62 | A$13,980.00 | A$95,014.18 | **A$60,201.62** |
+| M1 | A$66,742.79 | A$84,548.54 | −A$17,805.75 | A$13,080.00 | A$97,628.54 | **−A$30,885.75** |
+| M2 | A$99,338.11 | A$84,548.54 | A$14,789.57 | A$13,280.00 | A$97,828.54 | **A$1,509.57** |
+| M3 | A$122,620.48 | A$84,548.54 | A$38,071.94 | A$13,480.00 | A$98,028.54 | **A$24,591.94** |
+| M4 | A$144,350.69 | A$84,548.54 | A$59,802.15 | A$13,680.00 | A$98,228.54 | **A$46,122.15** |
+| M5-M24 (each) | A$155,215.80 | A$84,654.10 | A$70,561.70 | A$13,980.00 | A$98,634.10 | **A$56,581.70** |
 
-**24-month totals:** Revenue A$3,537,368.07; Total Operating Costs A$2,277,562.68; Net Operating Result A$1,259,805.39. **Annualised (steady state):** Revenue A$1,862,589.60; Operating Costs A$1,140,170.16; Net Operating Result A$722,419.44.
-
-**If superannuation is included** (supplementary, not primary): Month 1-4 Net Operating Result would be ~A$9,550.41/month lower; Month 5+ ~A$9,561.56/month lower.
+**24-month totals:** Revenue A$3,537,368.07; Total Operating Costs A$2,364,396.16; Net Operating Result A$1,172,971.91. **Annualised (steady state):** Revenue A$1,862,589.60; Operating Costs A$1,183,609.20; Net Operating Result A$678,980.40.
 
 ---
 
 ## 9. Table 2 — 24-Month P&L
 
-| Month | Revenue | Payroll | Gross Contribution | Operating Expenses | Total Operating Costs | Net Operating Result |
+**RECALCULATED 2026-08-09 to include superannuation. Was Payroll A$77,388.82 (M1-4) / A$77,483.24 (M5+), Net Operating Result A$24,257.56 (M5+) before super.**
+
+| Month | Revenue | Payroll (incl. super) | Gross Contribution | Operating Expenses | Total Operating Costs | Net Operating Result |
 |---|---|---|---|---|---|---|
-| M1 | A$49,759.94 | A$77,388.82 | −A$27,628.88 | A$13,080.00 | A$90,468.82 | **−A$40,708.88** |
-| M2 | A$74,061.31 | A$77,388.82 | −A$3,327.51 | A$13,280.00 | A$90,668.82 | **−A$16,607.51** |
-| M3 | A$91,419.43 | A$77,388.82 | A$14,030.61 | A$13,480.00 | A$90,868.82 | **A$550.61** |
-| M4 | A$107,620.34 | A$77,388.82 | A$30,231.52 | A$13,680.00 | A$91,068.82 | **A$16,551.52** |
-| M5-M24 (each) | A$115,720.80 | A$77,483.24 | A$38,237.56 | A$13,980.00 | A$91,463.24 | **A$24,257.56** |
+| M1 | A$49,759.94 | A$80,578.60 | −A$30,818.66 | A$13,080.00 | A$93,658.60 | **−A$43,898.66** |
+| M2 | A$74,061.31 | A$80,578.60 | −A$6,517.29 | A$13,280.00 | A$93,858.60 | **−A$19,797.29** |
+| M3 | A$91,419.43 | A$80,578.60 | A$10,840.83 | A$13,480.00 | A$94,058.60 | **−A$2,639.17** |
+| M4 | A$107,620.34 | A$80,578.60 | A$27,041.74 | A$13,680.00 | A$94,258.60 | **A$13,361.74** |
+| M5-M24 (each) | A$115,720.80 | A$80,684.16 | A$35,036.64 | A$13,980.00 | A$94,664.16 | **A$21,056.64** |
 
-**24-month totals:** Revenue A$2,637,277.02; Total Operating Costs A$2,192,340.08; Net Operating Result A$444,936.94. **Annualised (steady state):** Revenue A$1,388,649.60; Operating Costs A$1,097,558.88; Net Operating Result A$291,090.72.
+**24-month totals:** Revenue A$2,637,277.02; Total Operating Costs A$2,269,117.60; Net Operating Result A$368,159.42. **Annualised (steady state):** Revenue A$1,388,649.60; Operating Costs A$1,135,969.92; Net Operating Result A$252,679.68.
 
-**Notable finding:** Table 2's Month 3 Net Operating Result is only +A$550.61 — a thin margin, materially different from Table 1's comfortable Month 3 profitability (+A$28,200.71).
+**Material finding:** Table 2's Month 3 Net Operating Result FLIPPED from marginally positive (+A$550.61, pre-super) to **negative (−A$2,639.17)** once superannuation was correctly included — Table 2 does not turn cumulatively profitable on a monthly basis until Month 4.
+
+*(24-month totals shown in §9 above.)*
 
 ---
 
 ## 10. Scenario Comparison
 
+**RECALCULATED 2026-08-09 for superannuation (item 46).**
+
 | | Table 1 | Table 2 |
 |---|---|---|
 | Clients/day | 18 | 12 |
 | Steady-state revenue | A$155,215.80 | A$115,720.80 |
-| Steady-state payroll | A$81,034.18 | A$77,483.24 |
+| Steady-state payroll (incl. super) | A$84,654.10 | A$80,684.16 |
 | Steady-state opex | A$13,980.00 | A$13,980.00 |
-| Total operating costs | A$95,014.18 | A$91,463.24 |
-| Monthly operating result | A$60,201.62 | A$24,257.56 |
+| Total operating costs | A$98,634.10 | A$94,664.16 |
+| Monthly operating result | A$56,581.70 | A$21,056.64 |
 | Annualised revenue | A$1,862,589.60 | A$1,388,649.60 |
-| Annualised operating result | A$722,419.44 | A$291,090.72 |
+| Annualised operating result | A$678,980.40 | A$252,679.68 |
 
-**Month snapshot comparison (M1/M3/M5/M12/M24):** M12 and M24 are identical to M5 for both scenarios under the flat-extension rule (§4). Table 1 is profitable from Month 2; Table 2 from Month 3 (barely). Neither scenario is marked primary.
+**Month snapshot comparison (M1/M3/M5/M12/M24):** M12 and M24 are identical to M5 for both scenarios under the flat-extension rule (§4). Table 1 is profitable from Month 2; Table 2 does not turn profitable until Month 4 (Month 3 is now a loss, −A$2,639.17, once superannuation is included — see §9). Neither scenario is marked primary.
 
 ---
 
@@ -141,16 +147,20 @@ Kept structurally out of the operating P&L. `tools/master_financial_model.py`'s 
 
 **Methodology:** operating cash flow = net operating result, as an **accrual-basis proxy**, explicitly **not** a true cash-basis forecast — no debtor/creditor timing data exists anywhere in this repo (see `assumption_cashflow_accrual_proxy`). Startup expenditure and capex timing are **not** included — no canonical per-month timing schedule exists for either.
 
+**RECALCULATED 2026-08-09 for superannuation (item 46). Was: Table 1 trough −A$27,276.98 (M1); Table 2 trough −A$57,316.39 (M2).**
+
 | | Table 1 | Table 2 |
 |---|---|---|
-| Cumulative position, M1 | −A$27,276.98 | −A$40,708.88 |
-| Cumulative position, M4 | A$55,772.99 | −A$40,214.26 |
-| Cumulative position, M12 | A$537,385.95 | A$153,846.22 |
-| Cumulative position, M24 | A$1,259,805.39 | A$444,936.94 |
-| Trough month | M1 | M2 |
-| Trough cumulative position | **−A$27,276.98** | **−A$57,316.39** |
+| Cumulative position, M1 | −A$30,885.75 | −A$43,898.66 |
+| Cumulative position, M4 | A$41,337.91 | −A$52,973.38 |
+| Cumulative position, M12 | A$493,991.51 | A$115,479.74 |
+| Cumulative position, M24 | A$1,172,971.91 | A$368,159.42 |
+| Trough month | M1 | **M3 (moved from M2)** |
+| Trough cumulative position | **−A$30,885.75** | **−A$66,335.12** |
 
-**These trough figures are OPERATING cash movements only** — they do NOT include startup capital deployment and must not be read as "the venture needs only this much funding" (`conflict_funding_requirement_not_established`, explicitly disclosed).
+**Material change:** Table 2's trough moved from Month 2 to Month 3 and deepened materially (was −A$57,316.39, now −A$66,335.12), because Month 3's net operating result flipped from marginally positive to a loss once superannuation was correctly included (§9).
+
+**These trough figures are OPERATING cash movements only** — they do NOT include startup capital deployment and must not be read as "the venture needs only this much funding" (`conflict_funding_requirement_not_established`, explicitly disclosed, item 47 untouched this phase).
 
 ---
 
@@ -160,22 +170,26 @@ A traditional contribution-margin break-even (fixed costs ÷ contribution margin
 
 **What IS computed and defensible:** an AM client-volume break-even, holding Month 5+ PM revenue/payroll/opex fixed and treating AM revenue as the one genuinely linear-in-volume component (price × operating days).
 
+**RECALCULATED 2026-08-09 for superannuation (item 46). Was: Table 1 8.854 clients/day (margin 9.146); Table 2 8.315 clients/day (margin 3.685).**
+
 | | Table 1 | Table 2 |
 |---|---|---|
-| Break-even AM client volume/day | **8.854** | **8.315** |
-| Break-even monthly revenue | A$95,012.26 | A$91,464.29 |
+| Break-even AM client volume/day | **9.404** | **8.801** |
+| Break-even monthly revenue | A$98,632.63 | A$94,663.38 |
 | Committed client volume/day | 18 | 12 |
-| Margin of safety (clients/day) | 9.146 (~51% of committed) | 3.685 (~31% of committed) |
+| Margin of safety (clients/day) | 8.596 (~48% of committed) | 3.199 (~27% of committed) |
 
-Table 2's margin of safety is materially thinner — a genuine, disclosed risk-profile difference between the two scenarios.
+Break-even volume rose and margin of safety narrowed for both scenarios once superannuation was included, but Table 1 remains comfortably below committed volume. Table 2's margin of safety is now materially thinner (~27%, down from ~31%) — a genuine, disclosed risk-profile difference between the two scenarios.
 
 ---
 
 ## 14. Sensitivity Analysis
 
-**Client volume (50/75/100/125% of committed):** payroll and opex held at Month 5+ steady state, per `assumption_sensitivity_payroll_not_flexed` (matching the base case's own disclosed conservatism — no invented payroll-flex methodology). Table 1 remains marginally profitable even at 50% of committed volume (+A$959.12/month); Table 2 is loss-making at 50% (−A$15,237.44/month) — a materially different risk profile.
+**RECALCULATED 2026-08-09 for superannuation (item 46).**
 
-**Insurance (modelled A$400/month vs. itemised A$975-1,583/month, mandatory policies only):** at Table 1, Net Operating Result ranges A$59,684.96-60,201.62/month depending on which insurance figure is used — a small (~0.9%) but real sensitivity. Neither figure is chosen as correct (`opex.yml#conflict_insurance_estimate`, unresolved).
+**Client volume (50/75/100/125% of committed):** payroll and opex held at Month 5+ steady state, per `assumption_sensitivity_payroll_not_flexed` (matching the base case's own disclosed conservatism — no invented payroll-flex methodology). **Material change: Table 1 at 50% of committed volume is now LOSS-MAKING (−A$2,660.80/month)**, reversing the prior (pre-super) finding that it remained marginally profitable (+A$959.12/month). Table 2 at 50% deepens to −A$18,438.36/month (was −A$15,237.44/month) — a materially different risk profile from Table 1 at the same relative shortfall.
+
+**Insurance (modelled A$400/month vs. itemised A$975-1,583/month, mandatory policies only):** at Table 1, Net Operating Result now ranges A$56,065.04-56,581.70/month depending on which insurance figure is used — the same ~A$516.66/month delta as before, now measured against a lower (post-super) base. Neither figure is chosen as correct (`opex.yml#conflict_insurance_estimate`, unresolved).
 
 **Payroll (wage conflicts 16-18):** **not** flexed in this sensitivity — the underlying wage-rate/penalty-rate conflicts remain PLACEHOLDER/UNRESOLVED (`wages.yml`), and this model does not invent a resolution to produce a sensitivity range that doesn't exist in the source data.
 
@@ -191,7 +205,7 @@ Table 2's margin of safety is materially thinner — a genuine, disclosed risk-p
 |---|---|---|---|
 | Table 1 Monthly Revenue | **A$155,215.80** (CALCULATED) | A$157,792.16 (SUPERSEDED) | A$2,576.36, origin permanently unresolved (item 36) |
 | Table 2 Monthly Revenue | **A$115,720.80** (CALCULATED) | A$118,297.16 (SUPERSEDED) | Same gap, same disclosed origin |
-| Table 1 Monthly NET P&L (historical) | — | **A$63,028.75** (SUPERSEDED) | **This is Net P&L, NOT revenue** — confirmed again this phase (`docs/VERIFICATION-TRACKER.md` item 40). This model's own comparable figure is Net Operating Result (A$60,201.62 for Table 1) — a third, genuinely different number, since it is built on canonical revenue AND `cost_ramp.yml`'s own slightly different payroll total (`conflict_direct_labor_reconciliation_gap`). Not a typo — three distinct figures for related-but-different things. |
+| Table 1 Monthly NET P&L (historical) | — | **A$63,028.75** (SUPERSEDED) | **This is Net P&L, NOT revenue** — confirmed again this phase (`docs/VERIFICATION-TRACKER.md` item 40). This model's own comparable figure is Net Operating Result (**A$56,581.70** for Table 1, RECALCULATED 2026-08-09 to include superannuation, item 46 — was A$60,201.62 before) — a third, genuinely different number, since it is built on canonical revenue, `cost_ramp.yml`'s own slightly different payroll total (`conflict_direct_labor_reconciliation_gap`), AND now superannuation (never included in the historical figure at all). Not a typo — genuinely different figures for related-but-different things. |
 
 None of these historical figures was altered to match the canonical model, and the canonical model was not altered to match them, per explicit instruction.
 
@@ -200,7 +214,7 @@ None of these historical figures was altered to match the canonical model, and t
 ## 16. Data Traceability — Example Dependency Chains
 
 1. **Table 1 Month 12 Revenue** → `outputs.steady_state_summary` (this model) → `revenue_ramp.yml#ramp_table1_m5plus` (Month 12 = M5plus, per §4) → `docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md` → `scenarios.yml#scenario_table_1.client_volume` → `pricing.yml#am_price_used_for_revenue`, `#pm_alacarte_average`.
-2. **Table 1 Month 12 Payroll** → `cost_ramp.yml#cost_table1_m5plus.payroll_breakdown` → `staffing.yml` (headcount) + `wages.yml` (rates) → `wages.yml#wage_casual_minimum_engagement` (the 3-hour floor governing PM labor).
+2. **Table 1 Month 12 Payroll** → `cost_ramp.yml#cost_table1_m5plus.payroll_breakdown` → `staffing.yml` (headcount) + `wages.yml` (rates) → `wages.yml#wage_casual_minimum_engagement` (the 3-hour floor governing PM labor) → `wages.yml#wage_superannuation_rate` (12% OTE, added 2026-08-09, item 46) → `docs/financial-break-even-staff.md` Award Wage Summary lines 29-37 (inclusive/exclusive treatment per role).
 3. **Table 1 Month 12 Insurance** → `outputs.sensitivity_insurance` → `cost_ramp.yml#cost_table1_m5plus.fixed_costs` → `opex.yml#opex_insurance_modelled` → `docs/profit-loss-tables.md` §4 (original source) → `opex.yml#conflict_insurance_estimate` (UNRESOLVED).
 
 Full chains (5 total) recorded in `data/models/master_financial_model.yml#traceability`.
@@ -215,8 +229,8 @@ Full chains (5 total) recorded in `data/models/master_financial_model.yml#tracea
 4. AM labour ramp (item 43) — this model's cost figures assume full AM staffing from Month 1; **not** silently changed, explicitly labelled a current modelling assumption (`assumption_sensitivity_payroll_not_flexed`).
 5. Direct Labor reconciliation gap (item 44) — the ~A$246.57/month gap stays disclosed, propagates into this model's Net Operating Result unchanged.
 6. Consumables/laundry classification (item 45) — not invented, GTT-supplies-only exploratory alternative remains non-primary.
-7. **New this phase:** superannuation is not included in any payroll total anywhere in this repo's history — a materially significant, newly-surfaced gap (§6, new tracker item).
-8. **New this phase:** no opening funding requirement is established — the cash-flow trough figures are operating-only, explicitly not a funding conclusion.
+7. **RESOLVED 2026-08-09 (item 46):** superannuation was not included in any payroll total anywhere in this repo's history — now implemented at the canonical cost/wage layer (`wages.yml` + `cost_ramp.yml`, §6/§4a of `docs/architecture/COST-RAMP-METHODOLOGY.md`), flowing through this model automatically. A narrower gap remains: superannuation is NOT applied to the Opening-Time Increment or Receptionist/Relief Pool components (`cost_ramp.yml#conflict_superannuation_partial_coverage`) — genuinely unresolved, not guessed at. The eligibility rule (minimum-earnings threshold, if any) is also not stated anywhere in this repo.
+8. No opening funding requirement is established — the cash-flow trough figures are operating-only, explicitly not a funding conclusion. **Item 47 remains untouched this phase, per explicit instruction** — only the trough figures themselves were kept numerically consistent with the recalculated cash flow (§12).
 
 ---
 

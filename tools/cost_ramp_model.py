@@ -51,7 +51,21 @@ MONTHS = ["M1", "M2", "M3", "M4", "M5plus"]
 # §4 for the disclosed rationale/limitation of this treatment).
 # Source: docs/CURRENT-STATE.md §5, "AM Direct Labor, both models -- UNCHANGED
 # at A$48,254.67/month".
-AM_WEEKDAY_DIRECT_LABOR_MONTHLY = 48254.67
+#
+# SPLIT INTO TWO SUB-COMPONENTS (Phase 9 resume, 2026-08-09) -- required for
+# correct superannuation treatment (see SUPERANNUATION_RATE_PCT below):
+# docs/financial-break-even-staff.md's own "Award Wage Summary" table (lines
+# 29-37) explicitly labels 6 of 7 roles' annual figures "incl. super"
+# (Receptionist/Manager, Beauty therapist, Nail technician, Hairdresser,
+# Massage therapist, PM Service Therapist) but does NOT apply that label to
+# the Phlebotomist row ("A$43,068 (25hr/wk each)" -- no "incl. super" text).
+# This is a real, disclosed asymmetry in the source document itself, not an
+# inference -- the 8 treatment staff's annual salaries already include
+# superannuation; the 2 phlebotomists' annual salary (A$86,136/yr total)
+# does not.
+AM_WEEKDAY_TREATMENT_STAFF_MONTHLY = 492920 / 12  # A$41,076.67 -- 8 treatment staff, already INCLUDES super
+AM_WEEKDAY_PHLEBOTOMIST_MONTHLY = 86136 / 12       # A$7,178.00 -- 2 phlebotomists, does NOT include super
+AM_WEEKDAY_DIRECT_LABOR_MONTHLY = round(AM_WEEKDAY_TREATMENT_STAFF_MONTHLY + AM_WEEKDAY_PHLEBOTOMIST_MONTHLY, 2)  # A$48,254.67 -- unchanged total
 
 # AM Direct Labor (Saturday) -- hours-based, scales with the scenario's
 # COMMITTED client volume (not the ramp-period actual volume, which has no
@@ -118,6 +132,48 @@ PM_SESSION_RAMP = {"M1": 4, "M2": 8, "M3": 12, "M4": 15, "M5plus": 16}
 PM_WEEKDAY_M5PLUS_DAILY_LABOR_CANONICAL_ANCHOR = 440.00
 
 WORKERS_COMP_RATE_PCT = 1.7  # wages.yml#wage_workers_comp_rate, MODELLED
+
+# ---------------------------------------------------------------------------
+# SUPERANNUATION (Phase 9 resume, 2026-08-09) -- data/canonical/wages.yml's
+# wage_superannuation_rate (12% of Ordinary Time Earnings, MODELLED), applied
+# here for the first time to the ACTUAL payroll figures -- previously the
+# rate existed in wages.yml but was never applied anywhere in this repo's
+# payroll modelling (docs/VERIFICATION-TRACKER.md item 46).
+#
+# INCLUSIVE/EXCLUSIVE TREATMENT -- read directly off
+# docs/financial-break-even-staff.md's own Award Wage Summary table, not
+# inferred or invented:
+#   - AM Weekday Direct Labor, TREATMENT STAFF portion (A$41,076.67/month):
+#     ALREADY INCLUDES super, per that table's explicit "incl. super" label
+#     on 6 of 7 roles (Beauty/Massage/Nail/Hair/PM Service Therapist/
+#     Receptionist-Manager) -- no super added here, adding it again would
+#     double-count.
+#   - AM Weekday Direct Labor, PHLEBOTOMIST portion (A$7,178.00/month): does
+#     NOT include super -- that table's Phlebotomist row states "A$43,068
+#     (25hr/wk each)" with no "incl. super" text, a real, disclosed asymmetry
+#     in the source itself. Super IS added here.
+#   - AM Saturday, PM Weekday, PM Saturday Direct Labor: all built from the
+#     raw hourly `casual_loaded` award rate (e.g. A$37.00/hr), which the
+#     source table's own structure treats as EXCLUSIVE of super (super only
+#     appears once the figure is annualised into a fully-loaded package cost)
+#     -- super IS added here, on top of the hours-based calculation.
+#   - Opening-time increment, Receptionist/Relief Pool: these are bundled,
+#     non-role-specific operational figures (the Receptionist/Relief figure
+#     is itself only an approximate "~A$339.00/day" per docs/profit-loss-
+#     tables.md's own Appendix, not cleanly decomposable back to the
+#     Receptionist's own annual salary) -- super treatment for these two
+#     components is genuinely UNRESOLVED, not guessed at. No super is added
+#     to them. See conflict_superannuation_partial_coverage in cost_ramp.yml.
+#
+# ELIGIBILITY RULE: not stated anywhere in this repo's canonical or source
+# documents (no minimum-earnings threshold, no age threshold is mentioned).
+# This module therefore applies the 12% rate universally to every eligible
+# wage component above, without any earnings-threshold carve-out -- flagged
+# as an unconfirmed assumption, not independently verified against current
+# Australian SG eligibility rules (which this module does not attempt to
+# state as fact).
+# ---------------------------------------------------------------------------
+SUPERANNUATION_RATE_PCT = 12.0  # wages.yml#wage_superannuation_rate, MODELLED
 
 # GTT supplies variable-alternative rate -- opex.yml#opex_gtt_supplies' own
 # stated basis ("200 tests x A$2"), reused here per-test, per-day (weekday
@@ -195,7 +251,9 @@ def compute_pm_weekday_daily_labor(month):
 
 def compute_payroll(scenario_id, month, inputs: CanonicalCostInputs):
     """Returns a dict of payroll components for one (scenario, month)."""
-    am_weekday = AM_WEEKDAY_DIRECT_LABOR_MONTHLY
+    am_weekday_treatment = AM_WEEKDAY_TREATMENT_STAFF_MONTHLY  # already includes super -- no super added
+    am_weekday_phlebotomist = AM_WEEKDAY_PHLEBOTOMIST_MONTHLY   # does NOT include super -- super added below
+    am_weekday = round(am_weekday_treatment + am_weekday_phlebotomist, 2)
     am_saturday = round(AM_SATURDAY_DAILY_LABOR[scenario_id] * inputs.operating_saturdays, 2)
     pm_weekday_daily = compute_pm_weekday_daily_labor(month)
     pm_weekday = round(pm_weekday_daily * inputs.operating_days_weekday, 2)
@@ -207,16 +265,28 @@ def compute_payroll(scenario_id, month, inputs: CanonicalCostInputs):
         am_weekday + am_saturday + pm_weekday + pm_saturday + opening_increment + receptionist_relief, 2
     )
     workers_comp = round(direct_labor_and_opening * WORKERS_COMP_RATE_PCT / 100, 2)
-    payroll_total = round(direct_labor_and_opening + workers_comp, 2)
+
+    # Superannuation -- applied ONLY to the components confirmed super-exclusive
+    # (see SUPERANNUATION_RATE_PCT's own docstring for the full, source-based
+    # reasoning). Opening-time increment and Receptionist/Relief are excluded --
+    # genuinely unresolved, not guessed at.
+    superannuation = round(
+        (am_weekday_phlebotomist + am_saturday + pm_weekday + pm_saturday) * SUPERANNUATION_RATE_PCT / 100, 2
+    )
+
+    payroll_total = round(direct_labor_and_opening + workers_comp + superannuation, 2)
 
     return {
         "am_weekday_direct_labor": am_weekday,
+        "am_weekday_treatment_staff": round(am_weekday_treatment, 2),
+        "am_weekday_phlebotomist": round(am_weekday_phlebotomist, 2),
         "am_saturday_direct_labor": am_saturday,
         "pm_weekday_direct_labor": pm_weekday,
         "pm_saturday_direct_labor": pm_saturday,
         "opening_time_increment": opening_increment,
         "receptionist_relief": receptionist_relief,
         "direct_labor_and_opening_total": direct_labor_and_opening,
+        "superannuation": superannuation,
         "workers_comp": workers_comp,
         "payroll_total": payroll_total,
     }

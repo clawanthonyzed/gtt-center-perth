@@ -25,10 +25,15 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 CANONICAL_DIR = REPO_ROOT / "data" / "canonical"
 MODELS_DIR = REPO_ROOT / "data" / "models"
 MFM_PATH = REPO_ROOT / "tools" / "master_financial_model.py"
+CRM_PATH = REPO_ROOT / "tools" / "cost_ramp_model.py"
 
 _spec = importlib.util.spec_from_file_location("master_financial_model", MFM_PATH)
 mfm = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(mfm)
+
+_crm_spec = importlib.util.spec_from_file_location("cost_ramp_model", CRM_PATH)
+crm = importlib.util.module_from_spec(_crm_spec)
+_crm_spec.loader.exec_module(crm)
 
 
 def load_canonical_yaml(filename):
@@ -284,8 +289,14 @@ class UnresolvedAssumptionsVisibleTests(unittest.TestCase):
         conflict_ids = {c["id"] for c in data["conflicts"]}
         self.assertIn("conflict_superannuation_not_in_cost_ramp", conflict_ids)
         self.assertIn("conflict_funding_requirement_not_established", conflict_ids)
+        # conflict_superannuation_not_in_cost_ramp is now RESOLVED (item 46) -- every OTHER
+        # conflict must remain UNRESOLVED (item 47/funding requirement stays untouched, per
+        # explicit instruction not to resolve it this phase).
         for c in data["conflicts"]:
-            self.assertEqual(c["resolution_status"], "UNRESOLVED")
+            if c["id"] == "conflict_superannuation_not_in_cost_ramp":
+                self.assertTrue(str(c["resolution_status"]).startswith("RESOLVED"))
+            else:
+                self.assertEqual(c["resolution_status"], "UNRESOLVED")
 
     def test_am_labor_ramp_assumption_documented(self):
         data = load_model_yaml("master_financial_model.yml")
@@ -338,6 +349,124 @@ class BreakEvenDefensibilityTests(unittest.TestCase):
             self.assertLess(be["breakeven_am_client_volume_per_day"], be["committed_client_volume_per_day"])
             self.assertIn("defensibility_note", be)
             self.assertIn("NOT computed", be["defensibility_note"])
+
+
+class SuperannuationRegressionTests(unittest.TestCase):
+    """Regression tests for superannuation (docs/VERIFICATION-TRACKER.md item
+    46, resolved 2026-08-09) -- implemented at the canonical cost/wage layer
+    (data/canonical/wages.yml + data/canonical/cost_ramp.yml), NOT as a
+    special case in tools/master_financial_model.py."""
+
+    def test_master_financial_model_has_no_special_case_superannuation_code(self):
+        """tools/master_financial_model.py must not itself compute
+        superannuation -- it must flow through automatically via
+        cost_ramp.yml's payroll_costs."""
+        source_text = MFM_PATH.read_text(encoding="utf-8")
+        # The docstring is allowed to mention "superannuation" (historical
+        # narration of the fix) -- the actual P&L calculation function must
+        # not contain a superannuation formula.
+        pnl_func_start = source_text.index("def compute_month_pnl(")
+        rest = source_text[pnl_func_start:]
+        next_def = rest.find("\ndef ", 1)
+        func_body = rest[:next_def] if next_def != -1 else rest
+        self.assertNotIn("SUPERANNUATION_RATE_PCT", func_body)
+        self.assertNotIn("* 0.12", func_body)
+        self.assertNotIn("/ 100 * 12", func_body)
+
+    def test_cost_ramp_model_computes_superannuation(self):
+        """tools/cost_ramp_model.py (the canonical layer) must be the one
+        computing superannuation."""
+        cost_model_source = (REPO_ROOT / "tools" / "cost_ramp_model.py").read_text(encoding="utf-8")
+        self.assertIn("SUPERANNUATION_RATE_PCT", cost_model_source)
+        self.assertIn("superannuation", cost_model_source)
+
+    def test_superannuation_rate_matches_wages_yml(self):
+        wage_records = load_canonical_yaml("wages.yml")["records"]
+        rec = find_record(wage_records, "wage_superannuation_rate")
+        self.assertEqual(rec["value_pct"], 12)
+        self.assertEqual(rec["status"], "MODELLED")
+
+    def test_treatment_staff_super_inclusive_phlebotomist_exclusive(self):
+        """docs/financial-break-even-staff.md's own table labels 6 of 7
+        roles 'incl. super' but NOT the Phlebotomist row -- confirmed in
+        wages.yml's per-role superannuation field and the salary.includes_super
+        flag."""
+        wage_records = load_canonical_yaml("wages.yml")["records"]
+        treatment_role_ids = ("wage_beauty_therapist", "wage_massage_therapist", "wage_nail_technician", "wage_hairdresser", "wage_receptionist_manager")
+        for role_id in treatment_role_ids:
+            rec = find_record(wage_records, role_id)
+            self.assertTrue(rec["salary"]["includes_super"], f"{role_id} should be includes_super: true")
+            self.assertIn("INCLUDED", rec["superannuation"])
+        phleb = find_record(wage_records, "wage_phlebotomist")
+        self.assertFalse(phleb["salary"]["includes_super"], "wage_phlebotomist should be includes_super: false")
+        self.assertIn("EXCLUDED", phleb["superannuation"])
+
+    def test_payroll_costs_higher_than_before_superannuation_was_added(self):
+        """Sanity check: Month 5+ payroll_costs must exceed
+        direct_labor_and_opening_total + workers_comp alone (i.e.
+        superannuation is a real, positive additive line, not zero)."""
+        cost_ramp_records = load_canonical_yaml("cost_ramp.yml")["records"]
+        for cost_id in ("cost_table1_m5plus", "cost_table2_m5plus"):
+            rec = find_record(cost_ramp_records, cost_id)
+            bd = rec["payroll_breakdown"]
+            self.assertGreater(bd["superannuation"], 0)
+            without_super = bd["direct_labor_and_opening_total"] + bd["workers_comp"]
+            self.assertAlmostEqual(rec["payroll_costs"], without_super + bd["superannuation"], places=2)
+
+    def test_superannuation_not_double_counted_on_treatment_staff_am_weekday(self):
+        """The AM-weekday treatment-staff sub-component must NOT have super
+        added on top (it's already included in the source annual salary) --
+        verified by confirming superannuation is computed only from
+        phlebotomist + hours-based components, not the full am_weekday figure."""
+        inputs = crm.CanonicalCostInputs()
+        payroll = crm.compute_payroll("scenario_table_1", "M5plus", inputs)
+        expected_super_base = (
+            payroll["am_weekday_phlebotomist"]
+            + payroll["am_saturday_direct_labor"]
+            + payroll["pm_weekday_direct_labor"]
+            + payroll["pm_saturday_direct_labor"]
+        )
+        expected_super = round(expected_super_base * crm.SUPERANNUATION_RATE_PCT / 100, 2)
+        self.assertAlmostEqual(payroll["superannuation"], expected_super, places=2)
+        # Confirm it does NOT equal super computed on the FULL am_weekday_direct_labor
+        # (which would double-count the treatment-staff portion).
+        double_counted_base = expected_super_base + payroll["am_weekday_treatment_staff"]
+        double_counted_super = round(double_counted_base * crm.SUPERANNUATION_RATE_PCT / 100, 2)
+        self.assertNotAlmostEqual(payroll["superannuation"], double_counted_super, places=2)
+
+    def test_am_weekday_split_sums_to_original_total(self):
+        """am_weekday_treatment_staff + am_weekday_phlebotomist must equal
+        am_weekday_direct_labor exactly (A$48,254.67, unchanged from before
+        the split was introduced)."""
+        inputs = crm.CanonicalCostInputs()
+        payroll = crm.compute_payroll("scenario_table_1", "M1", inputs)
+        self.assertAlmostEqual(
+            payroll["am_weekday_treatment_staff"] + payroll["am_weekday_phlebotomist"],
+            payroll["am_weekday_direct_labor"],
+            places=2,
+        )
+        self.assertAlmostEqual(payroll["am_weekday_direct_labor"], 48254.67, places=2)
+
+    def test_superannuation_flows_through_master_model_automatically(self):
+        """The Master Financial Model's payroll figure must exactly match
+        cost_ramp.yml's own (super-inclusive) payroll_costs -- confirming
+        super flows through the normal canonical-data pipeline, not a
+        special case."""
+        cost_ramp_records = load_canonical_yaml("cost_ramp.yml")["records"]
+        inputs = mfm.CanonicalModelInputs()
+        for scenario_id, cost_id in (("scenario_table_1", "cost_table1_m5plus"), ("scenario_table_2", "cost_table2_m5plus")):
+            cost_rec = find_record(cost_ramp_records, cost_id)
+            pnl = mfm.compute_month_pnl(scenario_id, 5, inputs)
+            self.assertAlmostEqual(pnl["payroll"], cost_rec["payroll_costs"], places=2)
+            bd = cost_rec["payroll_breakdown"]
+            self.assertGreater(pnl["payroll"], bd["direct_labor_and_opening_total"] + bd["workers_comp"] - 0.01)
+
+    def test_tracker_item_46_evidence_documented_in_model_yaml(self):
+        data = load_model_yaml("master_financial_model.yml")
+        assumption_ids = {a["id"] for a in data["assumptions"]}
+        self.assertIn("assumption_superannuation_canonical", assumption_ids)
+        rec = find_record(data["assumptions"], "assumption_superannuation_canonical")
+        self.assertIn("financial-break-even-staff.md", rec["source"]["file"])
 
 
 if __name__ == "__main__":

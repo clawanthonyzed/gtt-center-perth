@@ -62,18 +62,43 @@ assumptions:
     notes: "Applies identically to both revenue (revenue_ramp.yml has no Month 6+ record) and costs (cost_ramp.yml, same)."
 
   - id: assumption_superannuation_supplementary
-    name: "Superannuation (12% OTE) shown as a supplementary, non-primary P&L line"
+    name: "SUPERSEDED 2026-08-09 -- superannuation is no longer a supplementary line, see assumption_superannuation_canonical"
+    status: SUPERSEDED
+    superseded_by: assumption_superannuation_canonical
+    status_detail: >
+      Phase 9's first pass computed superannuation as a disclosed, NON-primary supplementary
+      line here in the model layer, because cost_ramp.yml did not yet include it anywhere.
+      RESOLVED 2026-08-09 (docs/VERIFICATION-TRACKER.md item 46): superannuation is now
+      implemented at the canonical cost/wage layer itself (data/canonical/wages.yml +
+      data/canonical/cost_ramp.yml), not bolted onto this model -- see
+      assumption_superannuation_canonical below. This record retained for trace only, per this
+      repo's never-delete-history convention.
+    source: {file: data/canonical/wages.yml, section: "wage_superannuation_rate"}
+    notes: "Superseded, not deleted."
+
+  - id: assumption_superannuation_canonical
+    name: "Superannuation (12% OTE) implemented at the canonical cost/wage layer -- not a model-layer special case"
     status: MODELLED
     status_detail: >
-      wages.yml#wage_superannuation_rate (12%, MODELLED) is NOT currently included anywhere in
-      cost_ramp.yml's own payroll_costs total -- a genuine gap, not previously surfaced (see
-      conflict_superannuation_not_in_cost_ramp below and the new tracker item this phase adds).
-      This model computes it as a disclosed SUPPLEMENTARY line (12% x direct_labor_and_opening_total,
-      excluding Workers Comp, which is an employer on-cost, not itself Ordinary Time Earnings) --
-      shown alongside, NOT substituted into, the PRIMARY Net Operating Result (which continues to
-      match cost_ramp.yml's authoritative payroll_costs total exactly, preserving traceability).
-    source: {file: data/canonical/wages.yml, section: "wage_superannuation_rate"}
-    notes: "If superannuation is included, Net Operating Result is materially lower (~A$9,500-9,560/month at Table 1 steady state, ~A$9,130-9,140/month at Table 2) -- see outputs.steady_state_summary below."
+      RESOLVED 2026-08-09 (docs/VERIFICATION-TRACKER.md item 46). Evidence:
+      docs/financial-break-even-staff.md's Award Wage Summary table (lines 29-37) explicitly
+      labels 6 of 7 roles' annual salary figures "incl. super" (Receptionist/Manager, Beauty
+      therapist, Nail technician, Hairdresser, Massage therapist, PM Service Therapist) but NOT
+      the Phlebotomist row ("A$43,068 (25hr/wk each)", no "incl. super" text) -- a real,
+      disclosed asymmetry read directly off the source table, not inferred. Rate: 12% of
+      Ordinary Time Earnings (wages.yml#wage_superannuation_rate, well-corroborated across 3
+      internal documents). Treatment: super is ADDED to every payroll component built from the
+      raw hourly `casual_loaded` award rate (AM Weekday Phlebotomist portion, AM Saturday, PM
+      Weekday, PM Saturday -- all exclusive of super per the source table's structure) and NOT
+      added to the AM Weekday Treatment Staff portion (already included, adding again would
+      double-count). Opening-Time Increment and Receptionist/Relief Pool: super treatment
+      genuinely unresolved (see cost_ramp.yml#conflict_superannuation_partial_coverage) -- no
+      super applied to either, a disclosed, not invented, gap. Implemented in
+      tools/cost_ramp_model.py (SUPERANNUATION_RATE_PCT) and flows through this model's
+      `payroll` field automatically via cost_ramp.yml -- no special-case code in
+      tools/master_financial_model.py.
+    source: {file: docs/financial-break-even-staff.md, section: "Award Wage Summary (Effective 1 July 2025), lines 29-37"}
+    notes: "Eligibility rule (minimum-earnings threshold, if any) not stated anywhere in this repo -- applied universally, not independently verified against current Australian SG eligibility rules."
 
   - id: assumption_cashflow_accrual_proxy
     name: "Cash flow uses net operating result as an accrual-basis proxy, NOT a true cash-basis forecast"
@@ -131,14 +156,13 @@ outputs:
       pm_revenue: 36730.80
       ancillary_revenue: 0.00
       total_revenue: 155215.80
-      payroll: 81034.18
-      gross_contribution: 74181.62
+      payroll: 84654.10
+      gross_contribution: 70561.70
       operating_expenses: 13980.00
-      total_operating_costs: 95014.18
-      net_operating_result: 60201.62
-      superannuation_supplementary: 9561.56
-      net_operating_result_incl_super_supplementary: 50640.06
+      total_operating_costs: 98634.10
+      net_operating_result: 56581.70
       status: CALCULATED
+      status_detail: "RECALCULATED 2026-08-09 -- payroll now includes superannuation (A$3,619.92/month at Table 1 steady state), flowing through automatically from data/canonical/cost_ramp.yml#cost_table1_m5plus. Was payroll=81034.18/net_operating_result=60201.62 before item 46 was resolved -- see historical_reconciliation for the prior figure, retained for trace."
       source: {file: data/canonical/revenue_ramp.yml, section: "ramp_table1_m5plus"}
     - scenario_id: scenario_table_2
       month: M5plus
@@ -146,140 +170,140 @@ outputs:
       pm_revenue: 36730.80
       ancillary_revenue: 0.00
       total_revenue: 115720.80
-      payroll: 77483.24
-      gross_contribution: 38237.56
+      payroll: 80684.16
+      gross_contribution: 35036.64
       operating_expenses: 13980.00
-      total_operating_costs: 91463.24
-      net_operating_result: 24257.56
-      superannuation_supplementary: 9142.56
-      net_operating_result_incl_super_supplementary: 15115.00
+      total_operating_costs: 94664.16
+      net_operating_result: 21056.64
       status: CALCULATED
+      status_detail: "RECALCULATED 2026-08-09 -- payroll now includes superannuation (A$3,200.92/month at Table 2 steady state). Was payroll=77483.24/net_operating_result=24257.56 before item 46 was resolved."
       source: {file: data/canonical/revenue_ramp.yml, section: "ramp_table2_m5plus"}
 
   totals_24mo:
     - scenario_id: scenario_table_1
       total_revenue_24mo: 3537368.07
-      total_operating_costs_24mo: 2277562.68
-      total_net_operating_result_24mo: 1259805.39
+      total_operating_costs_24mo: 2364396.16
+      total_net_operating_result_24mo: 1172971.91
       annualised_revenue_steady_state: 1862589.60
-      annualised_operating_costs_steady_state: 1140170.16
-      annualised_net_operating_result_steady_state: 722419.44
+      annualised_operating_costs_steady_state: 1183609.20
+      annualised_net_operating_result_steady_state: 678980.40
       status: CALCULATED
       status_detail: "M1-M4 individual + M5plus x 20 (Months 5-24) -- per assumption_24month_extension_flat"
       source: {file: "tools/master_financial_model.py output, 2026-08-09", section: "compute_24_month_totals(scenario_table_1)"}
     - scenario_id: scenario_table_2
       total_revenue_24mo: 2637277.02
-      total_operating_costs_24mo: 2192340.08
-      total_net_operating_result_24mo: 444936.94
+      total_operating_costs_24mo: 2269117.60
+      total_net_operating_result_24mo: 368159.42
       annualised_revenue_steady_state: 1388649.60
-      annualised_operating_costs_steady_state: 1097558.88
-      annualised_net_operating_result_steady_state: 291090.72
+      annualised_operating_costs_steady_state: 1135969.92
+      annualised_net_operating_result_steady_state: 252679.68
       status: CALCULATED
-      status_detail: "Same method as Table 1"
+      status_detail: "Same method as Table 1, recalculated 2026-08-09 for superannuation (item 46)"
       source: {file: "tools/master_financial_model.py output, 2026-08-09", section: "compute_24_month_totals(scenario_table_2)"}
 
   cash_flow_summary:
     - scenario_id: scenario_table_1
       opening_cash: null
       opening_cash_status: PLACEHOLDER
-      cumulative_position_m1: -27276.98
-      cumulative_position_m4: 55772.99
-      cumulative_position_m12: 537385.95
-      cumulative_position_m24: 1259805.39
+      cumulative_position_m1: -30885.75
+      cumulative_position_m4: 41337.91
+      cumulative_position_m12: 493991.51
+      cumulative_position_m24: 1172971.91
       trough_month: 1
-      trough_cumulative_position: -27276.98
+      trough_cumulative_position: -30885.75
       status: CALCULATED
-      status_detail: "Accrual-basis proxy (assumption_cashflow_accrual_proxy) -- NOT a true cash-basis forecast. Trough is Month 1 itself -- Table 1 turns cumulatively positive from Month 2 onward."
+      status_detail: "RECALCULATED 2026-08-09 for superannuation (item 46). Accrual-basis proxy (assumption_cashflow_accrual_proxy) -- NOT a true cash-basis forecast. Trough is Month 1 itself -- Table 1 turns cumulatively positive from Month 2 onward (unchanged direction, deeper trough)."
       source: {file: "tools/master_financial_model.py output, 2026-08-09", section: "compute_cash_flow(scenario_table_1)"}
     - scenario_id: scenario_table_2
       opening_cash: null
       opening_cash_status: PLACEHOLDER
-      cumulative_position_m1: -40708.88
-      cumulative_position_m4: -40214.26
-      cumulative_position_m12: 153846.22
-      cumulative_position_m24: 444936.94
-      trough_month: 2
-      trough_cumulative_position: -57316.39
+      cumulative_position_m1: -43898.66
+      cumulative_position_m4: -52973.38
+      cumulative_position_m12: 115479.74
+      cumulative_position_m24: 368159.42
+      trough_month: 3
+      trough_cumulative_position: -66335.12
       status: CALCULATED
-      status_detail: "Table 2 stays cumulatively negative through Month 1-2, turning positive at Month 3 (M3 net operating result is only +A$550.61, a thin margin)."
+      status_detail: "RECALCULATED 2026-08-09 for superannuation (item 46) -- trough MOVED from Month 2 to Month 3, and deepened materially (was -A$57,316.39, now -A$66,335.12), because Month 3's net operating result flipped from marginally positive (+A$550.61) to negative (-A$2,639.17) once superannuation was correctly included."
       source: {file: "tools/master_financial_model.py output, 2026-08-09", section: "compute_cash_flow(scenario_table_2)"}
 
   breakeven:
     - scenario_id: scenario_table_1
-      breakeven_am_client_volume_per_day: 8.854
-      breakeven_monthly_revenue: 95012.26
+      breakeven_am_client_volume_per_day: 9.404
+      breakeven_monthly_revenue: 98632.63
       committed_client_volume_per_day: 18
-      margin_of_safety_clients_per_day: 9.146
+      margin_of_safety_clients_per_day: 8.596
       status: CALCULATED
-      status_detail: "See assumption_breakeven_am_volume_only for the full defensibility reasoning."
+      status_detail: "RECALCULATED 2026-08-09 for superannuation (item 46) -- was 8.854 clients/day (margin 9.146) before super was included; break-even volume rose, margin of safety narrowed, but remains comfortably below committed volume. See assumption_breakeven_am_volume_only for the full defensibility reasoning."
       source: {file: "tools/master_financial_model.py output, 2026-08-09", section: "compute_breakeven(scenario_table_1)"}
     - scenario_id: scenario_table_2
-      breakeven_am_client_volume_per_day: 8.315
-      breakeven_monthly_revenue: 91464.29
+      breakeven_am_client_volume_per_day: 8.801
+      breakeven_monthly_revenue: 94663.38
       committed_client_volume_per_day: 12
-      margin_of_safety_clients_per_day: 3.685
+      margin_of_safety_clients_per_day: 3.199
       status: CALCULATED
-      status_detail: "Table 2's margin of safety (3.685 clients/day, ~31% of committed volume) is materially thinner than Table 1's (9.146 clients/day, ~51%)."
+      status_detail: "RECALCULATED 2026-08-09 for superannuation (item 46) -- was 8.315 clients/day (margin 3.685) before super; margin of safety narrowed further to ~27% of committed volume (from ~31%), materially thinner than Table 1's ~48%."
       source: {file: "tools/master_financial_model.py output, 2026-08-09", section: "compute_breakeven(scenario_table_2)"}
 
   sensitivity_client_volume:
     - scenario_id: scenario_table_1
       results:
-        - {pct_of_committed: 50, client_volume_per_day: 9.00, total_revenue: 95973.30, net_operating_result: 959.12}
-        - {pct_of_committed: 75, client_volume_per_day: 13.50, total_revenue: 125594.55, net_operating_result: 30580.37}
-        - {pct_of_committed: 100, client_volume_per_day: 18.00, total_revenue: 155215.80, net_operating_result: 60201.62}
-        - {pct_of_committed: 125, client_volume_per_day: 22.50, total_revenue: 184837.05, net_operating_result: 89822.87}
+        - {pct_of_committed: 50, client_volume_per_day: 9.00, total_revenue: 95973.30, net_operating_result: -2660.80}
+        - {pct_of_committed: 75, client_volume_per_day: 13.50, total_revenue: 125594.55, net_operating_result: 26960.45}
+        - {pct_of_committed: 100, client_volume_per_day: 18.00, total_revenue: 155215.80, net_operating_result: 56581.70}
+        - {pct_of_committed: 125, client_volume_per_day: 22.50, total_revenue: 184837.05, net_operating_result: 86202.95}
       status: CALCULATED
-      status_detail: "Payroll/opex held at Month 5+ steady state throughout -- see assumption_sensitivity_payroll_not_flexed. Even at 50% of committed volume, Table 1 remains marginally profitable (+A$959.12/month) under this treatment."
+      status_detail: "RECALCULATED 2026-08-09 for superannuation (item 46) -- MATERIAL CHANGE: Table 1 at 50% of committed volume is now LOSS-MAKING (-A$2,660.80/month), reversing the prior (pre-super) finding that it remained marginally profitable (+A$959.12/month) at 50%. See assumption_sensitivity_payroll_not_flexed."
       source: {file: "tools/master_financial_model.py output, 2026-08-09", section: "compute_sensitivity_client_volume(scenario_table_1)"}
     - scenario_id: scenario_table_2
       results:
-        - {pct_of_committed: 50, client_volume_per_day: 6.00, total_revenue: 76225.80, net_operating_result: -15237.44}
-        - {pct_of_committed: 75, client_volume_per_day: 9.00, total_revenue: 95973.30, net_operating_result: 4510.06}
-        - {pct_of_committed: 100, client_volume_per_day: 12.00, total_revenue: 115720.80, net_operating_result: 24257.56}
-        - {pct_of_committed: 125, client_volume_per_day: 15.00, total_revenue: 135468.30, net_operating_result: 44005.06}
+        - {pct_of_committed: 50, client_volume_per_day: 6.00, total_revenue: 76225.80, net_operating_result: -18438.36}
+        - {pct_of_committed: 75, client_volume_per_day: 9.00, total_revenue: 95973.30, net_operating_result: 1309.14}
+        - {pct_of_committed: 100, client_volume_per_day: 12.00, total_revenue: 115720.80, net_operating_result: 21056.64}
+        - {pct_of_committed: 125, client_volume_per_day: 15.00, total_revenue: 135468.30, net_operating_result: 40804.14}
       status: CALCULATED
-      status_detail: "At 50% of committed volume, Table 2 is loss-making (-A$15,237.44/month) under this treatment -- a materially different risk profile from Table 1 at the same relative shortfall."
+      status_detail: "RECALCULATED 2026-08-09 for superannuation (item 46) -- at 50% of committed volume, loss deepened from -A$15,237.44/month to -A$18,438.36/month; at 75%, still marginally profitable (+A$1,309.14/month, was +A$4,510.06)."
       source: {file: "tools/master_financial_model.py output, 2026-08-09", section: "compute_sensitivity_client_volume(scenario_table_2)"}
 
   sensitivity_insurance:
     - scenario_id: scenario_table_1
       results:
-        - {label: "modelled (current)", monthly_insurance: 400.00, adjusted_net_operating_result: 60201.62}
-        - {label: "itemised low (mandatory policies only)", monthly_insurance: 500.00, adjusted_net_operating_result: 60101.62}
-        - {label: "itemised high (mandatory policies only)", monthly_insurance: 916.66, adjusted_net_operating_result: 59684.96}
+        - {label: "modelled (current)", monthly_insurance: 400.00, adjusted_net_operating_result: 56581.70}
+        - {label: "itemised low (mandatory policies only)", monthly_insurance: 500.00, adjusted_net_operating_result: 56481.70}
+        - {label: "itemised high (mandatory policies only)", monthly_insurance: 916.66, adjusted_net_operating_result: 56065.04}
       status: CALCULATED
-      status_detail: "References opex.yml's own conflict_insurance_estimate -- mandatory policies only (public liability, professional indemnity, property/contents); optional business interruption excluded, per that record's own status_detail. Neither figure is chosen as correct."
+      status_detail: "RECALCULATED 2026-08-09 for superannuation (item 46) -- the A$400-916.66/month insurance delta itself is unchanged, only the base Net Operating Result shifted. References opex.yml's own conflict_insurance_estimate -- mandatory policies only; optional business interruption excluded. Neither figure is chosen as correct."
       source: {file: "tools/master_financial_model.py output, 2026-08-09", section: "compute_sensitivity_insurance(scenario_table_1)"}
     - scenario_id: scenario_table_2
       results:
-        - {label: "modelled (current)", monthly_insurance: 400.00, adjusted_net_operating_result: 24257.56}
-        - {label: "itemised low (mandatory policies only)", monthly_insurance: 500.00, adjusted_net_operating_result: 24157.56}
-        - {label: "itemised high (mandatory policies only)", monthly_insurance: 916.66, adjusted_net_operating_result: 23740.90}
+        - {label: "modelled (current)", monthly_insurance: 400.00, adjusted_net_operating_result: 21056.64}
+        - {label: "itemised low (mandatory policies only)", monthly_insurance: 500.00, adjusted_net_operating_result: 20956.64}
+        - {label: "itemised high (mandatory policies only)", monthly_insurance: 916.66, adjusted_net_operating_result: 20539.98}
       status: CALCULATED
-      status_detail: "Same basis as Table 1 -- the insurance gap is a smaller share of Table 2's smaller Net Operating Result, proportionally more material."
+      status_detail: "RECALCULATED 2026-08-09 for superannuation (item 46) -- same basis as Table 1, insurance gap now a larger proportional share of Table 2's smaller (post-super) Net Operating Result."
       source: {file: "tools/master_financial_model.py output, 2026-08-09", section: "compute_sensitivity_insurance(scenario_table_2)"}
 
   scenario_comparison:
     scenario_table_1:
       client_volume_per_day: 18
       steady_state_revenue: 155215.80
-      steady_state_payroll: 81034.18
+      steady_state_payroll: 84654.10
       steady_state_opex: 13980.00
-      steady_state_total_operating_costs: 95014.18
-      steady_state_net_operating_result: 60201.62
+      steady_state_total_operating_costs: 98634.10
+      steady_state_net_operating_result: 56581.70
       annualised_revenue: 1862589.60
-      annualised_net_operating_result: 722419.44
+      annualised_net_operating_result: 678980.40
     scenario_table_2:
       client_volume_per_day: 12
       steady_state_revenue: 115720.80
-      steady_state_payroll: 77483.24
+      steady_state_payroll: 80684.16
       steady_state_opex: 13980.00
-      steady_state_total_operating_costs: 91463.24
-      steady_state_net_operating_result: 24257.56
+      steady_state_total_operating_costs: 94664.16
+      steady_state_net_operating_result: 21056.64
       annualised_revenue: 1388649.60
-      annualised_net_operating_result: 291090.72
+      annualised_net_operating_result: 252679.68
     status: CALCULATED
+    status_detail: "RECALCULATED 2026-08-09 -- payroll now includes superannuation, per docs/VERIFICATION-TRACKER.md item 46 (resolved)."
     source: {file: "tools/master_financial_model.py output, 2026-08-09", section: "compute_scenario_comparison"}
     notes: "Neither scenario is marked primary -- see docs/VERIFICATION-TRACKER.md item 1m, unresolved."
 
@@ -336,7 +360,7 @@ historical_reconciliation:
     label: "Table 1 Monthly NET P&L (historical) -- NOT revenue, do not relabel"
     value: 63028.75
     status: SUPERSEDED
-    what_it_is: "Historical Net P&L (Total Revenue A$157,792.16 minus Total Costs A$94,763.41), NOT a revenue figure -- confirmed in docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md §7 and docs/VERIFICATION-TRACKER.md item 40. This model's own comparable canonical figure is steady_state_summary's net_operating_result (A$60,201.62 for Table 1) -- a DIFFERENT figure again, since this model's Net Operating Result is built on canonical (not historical) revenue AND cost_ramp.yml's own, slightly different payroll total (see conflict_direct_labor_reconciliation_gap) -- three genuinely different numbers (A$63,028.75 historical, and A$60,201.62 canonical), not a typo."
+    what_it_is: "Historical Net P&L (Total Revenue A$157,792.16 minus Total Costs A$94,763.41, no superannuation), NOT a revenue figure -- confirmed in docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md §7 and docs/VERIFICATION-TRACKER.md item 40. This model's own comparable canonical figure is steady_state_summary's net_operating_result (A$56,581.70 for Table 1, RECALCULATED 2026-08-09 to include superannuation per item 46 -- was A$60,201.62 before) -- a DIFFERENT figure again, since this model's Net Operating Result is built on canonical (not historical) revenue, cost_ramp.yml's own, slightly different payroll total (see conflict_direct_labor_reconciliation_gap), AND now superannuation (never included in the historical figure at all) -- genuinely different numbers, not a typo."
     source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, PRIMARY -- Table 1"}
 
 # ============================================================
@@ -360,6 +384,8 @@ traceability:
       "data/canonical/cost_ramp.yml#cost_table1_m5plus.payroll_breakdown",
       "data/canonical/staffing.yml (headcount) + data/canonical/wages.yml (rates)",
       "data/canonical/wages.yml#wage_casual_minimum_engagement (the 3-hour floor governing PM labor)",
+      "data/canonical/wages.yml#wage_superannuation_rate (12% OTE, added 2026-08-09, item 46 resolved)",
+      "docs/financial-break-even-staff.md Award Wage Summary lines 29-37 (inclusive/exclusive super treatment per role)",
     ]
   - id: trace_table1_m12_insurance
     output: "Table 1 Month 12 Insurance"
@@ -395,19 +421,20 @@ traceability:
 conflicts:
   - id: conflict_superannuation_not_in_cost_ramp
     description: >
-      Superannuation (wages.yml#wage_superannuation_rate, 12% of OTE, MODELLED) is not included
-      anywhere in cost_ramp.yml's own payroll_costs total, and was not included in any historical
-      P&L figure in this repo either (docs/CURRENT-STATE.md §5's own Total Direct Labor + Opening
-      Costs / Workers Comp / Total Costs lines make no mention of superannuation). This appears to
-      be a genuine, previously-unnoticed gap across this venture's entire financial modelling
-      history, not something newly introduced this phase -- surfaced here because this phase
-      specifically built out the full payroll breakdown the coordinator requested.
-    affected_records: [assumption_superannuation_supplementary, "outputs.steady_state_summary (both scenarios)"]
+      RESOLVED 2026-08-09 (docs/VERIFICATION-TRACKER.md item 46). Superannuation
+      (wages.yml#wage_superannuation_rate, 12% of OTE) was not included anywhere in
+      cost_ramp.yml's own payroll_costs total when this conflict was first logged, and was not
+      included in any historical P&L figure in this repo's history either. Now implemented at
+      the canonical cost/wage layer (data/canonical/wages.yml + data/canonical/cost_ramp.yml)
+      -- see data/canonical/cost_ramp.yml#conflict_superannuation_partial_coverage for the
+      remaining, narrower unresolved portion (Opening-Time Increment, Receptionist/Relief Pool
+      -- not role-specific enough to apply super to confidently).
+    affected_records: [assumption_superannuation_canonical, "outputs.steady_state_summary (both scenarios)"]
     sources:
       - {file: data/canonical/wages.yml, section: "wage_superannuation_rate"}
-      - {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L"}
-    resolution_status: UNRESOLVED
-    notes: "If superannuation should be included as a genuine cost (near-certain under Australian law for any employee/casual earning above the SG threshold), every historical AND canonical Net P&L / Net Operating Result figure in this repo understates the venture's true cost base by ~A$9,100-9,560/month depending on scenario -- a materially significant, newly-surfaced finding. See the new tracker item this phase adds."
+      - {file: docs/financial-break-even-staff.md, section: "Award Wage Summary (Effective 1 July 2025), lines 29-37"}
+    resolution_status: "RESOLVED 2026-08-09 -- superannuation now correctly included, per docs/VERIFICATION-TRACKER.md item 46. See data/canonical/cost_ramp.yml#conflict_superannuation_partial_coverage for the narrower remaining gap."
+    notes: "Every historical AND pre-2026-08-09-canonical Net P&L / Net Operating Result figure in this repo understated the venture's true cost base by ~A$3,200-3,620/month depending on scenario (the portion of super that WAS applicable) -- now corrected in the canonical layer. Historical figures themselves are preserved unaltered, per this repo's never-rewrite-history convention -- see historical_reconciliation above."
 
   - id: conflict_funding_requirement_not_established
     description: >
@@ -416,9 +443,12 @@ conflicts:
       6-9 distinct historical ranges), no canonical opening cash figure exists, and no canonical
       per-month startup-expenditure or capex timing schedule exists to sequence against the
       operating cash flow. The cash-flow trough figures in cash_flow_summary above (Table 1:
-      -A$27,276.98 at Month 1; Table 2: -A$57,316.39 at Month 2) are OPERATING cash movements
-      only -- they do NOT include startup capital deployment, and must not be read as "the
-      venture needs only this much funding."
+      -A$30,885.75 at Month 1; Table 2: -A$66,335.12 at Month 3 -- both updated 2026-08-09 to
+      include superannuation, per item 46) are OPERATING cash movements only -- they do NOT
+      include startup capital deployment, and must not be read as "the venture needs only this
+      much funding." Item 47 itself remains untouched this phase, per explicit instruction --
+      only the cross-referenced trough figures were kept numerically consistent with
+      cash_flow_summary above.
     affected_records: ["cash_flow_summary (both scenarios)", "startup_capex_section"]
     sources:
       - {file: docs/architecture/STARTUP-COST-RECONCILIATION.md, section: "full document"}

@@ -169,12 +169,21 @@ Checks performed:
       rejected. `fixed_costs`, `variable_costs`, `payroll_costs`, and
       `total_operating_costs` are checked for malformed numeric shape, and
       `fixed_costs + variable_costs + payroll_costs` must sum to
-      `total_operating_costs`. Where present, `payroll_breakdown`'s 6
+      `total_operating_costs`. Where present, `payroll_breakdown`'s 6 core
       components must sum to its own `direct_labor_and_opening_total`, and
-      `direct_labor_and_opening_total + workers_comp` must sum to the
+      `direct_labor_and_opening_total + workers_comp + superannuation`
+      (§27, `superannuation` defaults to 0 if absent) must sum to the
       record's own `payroll_costs` -- a cross-check ensuring every payroll
       component is genuinely recurring labor cost, not a smuggled-in
       startup/capex figure. Status-vs-value consistency mirrors §25.
+  27. (Phase 9 resume, cost_ramp.yml, 2026-08-09) Superannuation --
+      `payroll_breakdown.am_weekday_treatment_staff` +
+      `.am_weekday_phlebotomist` must sum to `.am_weekday_direct_labor`,
+      where all three are present (the split required to correctly apply
+      superannuation only to the phlebotomist portion, per
+      docs/financial-break-even-staff.md's own "incl. super" labelling
+      asymmetry -- see tools/cost_ramp_model.py's SUPERANNUATION_RATE_PCT
+      docstring for the full sourced reasoning).
 
 Exit code: 0 if all checks pass across all validated files, 1 if any check
 fails in any file. Usable in CI / pre-commit, same convention as
@@ -1032,11 +1041,14 @@ def check_cost_ramp_schema(data, f: Findings):
                 )
 
         # payroll_breakdown, when present, must itself be internally consistent:
-        # its 6 components sum to direct_labor_and_opening_total, and
-        # direct_labor_and_opening_total + workers_comp sums to this record's
-        # own payroll_costs (a real cross-check that STARTUP/CAPEX values
-        # cannot silently be smuggled into recurring payroll -- every field
-        # here is a genuine recurring labor cost, by construction).
+        # its 6 core components sum to direct_labor_and_opening_total, and
+        # direct_labor_and_opening_total + workers_comp + superannuation (added
+        # Phase 9 resume, 2026-08-09 -- defaults to 0 if absent, for
+        # backward compatibility with any record predating this field) sums to
+        # this record's own payroll_costs (a real cross-check that
+        # STARTUP/CAPEX values cannot silently be smuggled into recurring
+        # payroll -- every field here is a genuine recurring labor cost, by
+        # construction).
         breakdown = rec.get("payroll_breakdown")
         if isinstance(breakdown, dict):
             component_fields = (
@@ -1046,6 +1058,7 @@ def check_cost_ramp_schema(data, f: Findings):
             components = [breakdown.get(cf) for cf in component_fields]
             direct_labor_total = breakdown.get("direct_labor_and_opening_total")
             workers_comp = breakdown.get("workers_comp")
+            superannuation = breakdown.get("superannuation", 0)
             if all(_is_number(c) for c in components) and _is_number(direct_labor_total):
                 expected_dl = sum(components)
                 if abs(expected_dl - direct_labor_total) > COST_RAMP_TOLERANCE:
@@ -1053,13 +1066,23 @@ def check_cost_ramp_schema(data, f: Findings):
                         f"records[{i}] (id={rid!r}): payroll_breakdown's 6 components sum to "
                         f"{expected_dl:.2f}, does not match direct_labor_and_opening_total {direct_labor_total:.2f}"
                     )
-            if _is_number(direct_labor_total) and _is_number(workers_comp) and _is_number(payroll):
-                expected_payroll = direct_labor_total + workers_comp
+            if _is_number(direct_labor_total) and _is_number(workers_comp) and _is_number(superannuation) and _is_number(payroll):
+                expected_payroll = direct_labor_total + workers_comp + superannuation
                 if abs(expected_payroll - payroll) > COST_RAMP_TOLERANCE:
                     f.error(
                         f"records[{i}] (id={rid!r}): payroll_breakdown's direct_labor_and_opening_total + "
-                        f"workers_comp = {expected_payroll:.2f}, does not match this record's own "
+                        f"workers_comp + superannuation = {expected_payroll:.2f}, does not match this record's own "
                         f"payroll_costs {payroll:.2f}"
+                    )
+            # am_weekday_treatment_staff + am_weekday_phlebotomist, where present, must sum to am_weekday_direct_labor.
+            treatment = breakdown.get("am_weekday_treatment_staff")
+            phlebotomist = breakdown.get("am_weekday_phlebotomist")
+            am_weekday = breakdown.get("am_weekday_direct_labor")
+            if _is_number(treatment) and _is_number(phlebotomist) and _is_number(am_weekday):
+                if abs((treatment + phlebotomist) - am_weekday) > COST_RAMP_TOLERANCE:
+                    f.error(
+                        f"records[{i}] (id={rid!r}): am_weekday_treatment_staff + am_weekday_phlebotomist = "
+                        f"{treatment + phlebotomist:.2f}, does not match am_weekday_direct_labor {am_weekday:.2f}"
                     )
 
         status = rec.get("status")

@@ -18,18 +18,25 @@ data/canonical/cost_ramp.yml by id -- both already-validated, already-tested
 canonical data products of prior phases. The only NEW calculations this
 module performs are: (a) extending Month 5+ flat through Month 24 (an
 explicit, disclosed, cited assumption -- no growth is invented past Month 5,
-per the coordinator's explicit instruction), (b) superannuation (12% of OTE,
-data/canonical/wages.yml#wage_superannuation_rate, a genuinely new line not
-present in cost_ramp.yml's own payroll total -- disclosed as a supplementary,
-non-primary figure, not silently folded into the authoritative total), (c)
-Gross Contribution / Operating Expenses / Net Operating Profit-or-Loss (this
-model's own defined P&L structure, per the coordinator's explicit line-item
-instruction), (d) a basic cash-flow view (cumulative net operating result,
-explicitly NOT a true cash-basis forecast -- no debtor/creditor timing data
-exists anywhere in this repo), and (e) a break-even calculation, clearly
-scoped to what the underlying cost classification actually supports (see
+per the coordinator's explicit instruction), (b) Gross Contribution /
+Operating Expenses / Net Operating Profit-or-Loss (this model's own defined
+P&L structure, per the coordinator's explicit line-item instruction), (c) a
+basic cash-flow view (cumulative net operating result, explicitly NOT a true
+cash-basis forecast -- no debtor/creditor timing data exists anywhere in this
+repo), and (d) a break-even calculation, clearly scoped to what the
+underlying cost classification actually supports (see
 docs/architecture/MASTER-FINANCIAL-MODEL-METHODOLOGY.md §9 for the full
 disclosed reasoning).
+
+SUPERANNUATION (2026-08-09 resume, docs/VERIFICATION-TRACKER.md item 46,
+resolved): now flows through this model automatically via
+data/canonical/cost_ramp.yml's own payroll_costs total -- NOT a special case
+here. Previously (Phase 9, first pass) this module bolted on a supplementary,
+non-primary superannuation line because cost_ramp.yml did not yet include
+it; that bolt-on has been REMOVED now that superannuation is canonically
+correct at the cost_ramp.yml layer itself (see
+tools/cost_ramp_model.py#SUPERANNUATION_RATE_PCT for the full sourced
+inclusive/exclusive treatment). payroll_costs below already includes it.
 
 Does NOT calculate: EBITDA, EBIT (undefined terms in this repo -- not used),
 opening funding requirement (startup-cost reconciliation stays unresolved,
@@ -79,16 +86,6 @@ def ramp_month_for_forecast_month(forecast_month: int) -> str:
     return "M5plus"
 
 
-# Superannuation rate -- data/canonical/wages.yml#wage_superannuation_rate,
-# MODELLED, 12% of Ordinary Time Earnings. NOT currently included anywhere in
-# cost_ramp.yml's own payroll_costs total -- see
-# docs/architecture/MASTER-FINANCIAL-MODEL-METHODOLOGY.md §6 and the new
-# tracker item this phase adds. Applied here to direct_labor_and_opening_total
-# (the wage-earning base) only, NOT to Workers Comp (an employer on-cost, not
-# itself OTE).
-SUPERANNUATION_RATE_PCT = 12.0
-
-
 def load_yaml(filename, directory=CANON_DIR):
     path = directory / filename
     with path.open(encoding="utf-8") as fh:
@@ -111,7 +108,6 @@ class CanonicalModelInputs:
         revenue_ramp = load_yaml("revenue_ramp.yml")
         cost_ramp = load_yaml("cost_ramp.yml")
         scenarios = load_yaml("scenarios.yml")
-        wages = load_yaml("wages.yml")
 
         self.revenue_records = {}
         for rec in revenue_ramp["records"]:
@@ -122,11 +118,6 @@ class CanonicalModelInputs:
             self.cost_records[(rec["scenario_id"], rec["month"])] = rec
 
         self.scenario_records = {r["id"]: r for r in scenarios["records"]}
-        self.superannuation_rate = find_record(wages["records"], "wage_superannuation_rate")["value_pct"]
-        assert self.superannuation_rate == SUPERANNUATION_RATE_PCT, (
-            "wages.yml#wage_superannuation_rate has changed -- update SUPERANNUATION_RATE_PCT "
-            "or re-derive it from this record directly rather than silently diverging"
-        )
 
     def revenue(self, scenario_id, ramp_month):
         return self.revenue_records[(scenario_id, ramp_month)]
@@ -160,11 +151,6 @@ def compute_month_pnl(scenario_id, forecast_month, inputs: CanonicalModelInputs)
     net_operating_result = round(revenue_total - total_operating_costs, 2)
 
     payroll_breakdown = cost.get("payroll_breakdown", {})
-    direct_labor_and_opening = payroll_breakdown.get("direct_labor_and_opening_total")
-    superannuation = round(direct_labor_and_opening * inputs.superannuation_rate / 100, 2) if direct_labor_and_opening else None
-    net_operating_result_incl_super = (
-        round(net_operating_result - superannuation, 2) if superannuation is not None else None
-    )
 
     return {
         "scenario_id": scenario_id,
@@ -177,15 +163,13 @@ def compute_month_pnl(scenario_id, forecast_month, inputs: CanonicalModelInputs)
             "ancillary_revenue": ancillary_revenue,
             "total_revenue": revenue_total,
         },
-        "payroll": payroll,
+        "payroll": payroll,  # already includes superannuation, per cost_ramp.yml (item 46, resolved)
         "payroll_breakdown": payroll_breakdown,
         "gross_contribution": gross_contribution,
         "operating_expenses": operating_expenses,
         "operating_expenses_breakdown": {"fixed_costs": fixed_costs, "variable_costs": variable_costs},
         "total_operating_costs": total_operating_costs,
         "net_operating_result": net_operating_result,
-        "superannuation_supplementary": superannuation,
-        "net_operating_result_incl_super_supplementary": net_operating_result_incl_super,
     }
 
 

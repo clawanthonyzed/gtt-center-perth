@@ -1,4 +1,5 @@
 # GTT Center Perth -- Canonical Cost Ramp (Month 1-5+), proof of concept, Phase 8
+# (superannuation added Phase 9 resume, 2026-08-09 -- see below)
 #
 # The cost-side counterpart to revenue_ramp.yml. Deterministically computed by
 # tools/cost_ramp_model.py from canonical inputs (client_assumptions.yml,
@@ -8,6 +9,16 @@
 # Calculated" and docs/CURRENT-STATE.md §5 -- reproduced exactly by
 # tests/test_cost_ramp.py. Full investigation, methodology, and every
 # disclosed conflict/limitation: docs/architecture/COST-RAMP-METHODOLOGY.md.
+#
+# SUPERANNUATION (added 2026-08-09, resolving docs/VERIFICATION-TRACKER.md item
+# 46): wages.yml#wage_superannuation_rate (12% of OTE) is now applied to every
+# payroll_breakdown below -- but NOT uniformly. docs/financial-break-even-staff.md's
+# own Award Wage Summary table explicitly labels 6 of 7 roles' annual salary
+# figures "incl. super" (the 8 treatment staff) but NOT the Phlebotomist row --
+# a real, disclosed asymmetry in the source, not invented here. See
+# tools/cost_ramp_model.py's SUPERANNUATION_RATE_PCT constant for the full
+# sourced reasoning, and conflict_superannuation_partial_coverage below for the
+# remaining unresolved portion (Opening-Time Increment, Receptionist/Relief).
 #
 # Does NOT calculate Net P&L, break-even, or any figure requiring revenue to
 # be netted against costs -- cost side only, per the coordinator's explicit
@@ -64,24 +75,27 @@ records:
     month: M1
     fixed_costs: 12480.00
     variable_costs: 600.00
-    payroll_costs: 80939.77
-    total_operating_costs: 94019.77
+    payroll_costs: 84548.54
+    total_operating_costs: 97628.54
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48254.67
+      am_weekday_treatment_staff: 41076.67
+      am_weekday_phlebotomist: 7178.00
       am_saturday_direct_labor: 10474.75
       pm_weekday_direct_labor: 9587.16
       pm_saturday_direct_labor: 2833.21
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
       direct_labor_and_opening_total: 79586.79
+      superannuation: 3608.77
       workers_comp: 1352.98
     status: CALCULATED
     status_detail: "Deterministically computed by tools/cost_ramp_model.py -- reproduced exactly by tests/test_cost_ramp.py. PM weekday labor floor-constrained at 3.0hrs/role/day (4 sessions/day, well below the 16-session steady-state ceiling)."
     scenario_applicability: scenario_table_1
     ramp_behaviour: "Fixed AM/opening/receptionist components (do not ramp) + floor-constrained PM weekday labor (identical M1-M4) + fixed Non-Wage Overhead + ramped marketing"
     calculation_basis: "am_weekday_direct_labor (FTE, docs/CURRENT-STATE.md §5) + am_saturday_direct_labor (docs/profit-loss-tables.md PRIMARY REBASED MODEL, x operating_saturdays_per_month) + pm_weekday_direct_labor (session-count ramp x 3hr floor x blended casual rate x operating_days_per_month_weekday) + pm_saturday_direct_labor (floor-constrained, x operating_saturdays_per_month) + opening_time_increment (x operating_days_per_month_weekday) + receptionist_relief (x operating_days_per_month_weekday), then Workers Comp = 1.7% of that subtotal"
-    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap, conflict_superannuation_partial_coverage]
     source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_1, M1)"}
     notes: null
 
@@ -90,24 +104,27 @@ records:
     month: M2
     fixed_costs: 12480.00
     variable_costs: 800.00
-    payroll_costs: 80939.77
-    total_operating_costs: 94219.77
+    payroll_costs: 84548.54
+    total_operating_costs: 97828.54
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48254.67
+      am_weekday_treatment_staff: 41076.67
+      am_weekday_phlebotomist: 7178.00
       am_saturday_direct_labor: 10474.75
       pm_weekday_direct_labor: 9587.16
       pm_saturday_direct_labor: 2833.21
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
       direct_labor_and_opening_total: 79586.79
+      superannuation: 3608.77
       workers_comp: 1352.98
     status: CALCULATED
     status_detail: "Identical payroll to cost_table1_m1 -- 8 PM sessions/day is still below the 3-hour casual-minimum floor. Only variable_costs (marketing ramp) differs from M1."
     scenario_applicability: scenario_table_1
     ramp_behaviour: "Same as cost_table1_m1"
     calculation_basis: "Same formula as cost_table1_m1, month_2 marketing ramp value"
-    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap, conflict_superannuation_partial_coverage]
     source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_1, M2)"}
     notes: null
 
@@ -116,24 +133,27 @@ records:
     month: M3
     fixed_costs: 12480.00
     variable_costs: 1000.00
-    payroll_costs: 80939.77
-    total_operating_costs: 94419.77
+    payroll_costs: 84548.54
+    total_operating_costs: 98028.54
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48254.67
+      am_weekday_treatment_staff: 41076.67
+      am_weekday_phlebotomist: 7178.00
       am_saturday_direct_labor: 10474.75
       pm_weekday_direct_labor: 9587.16
       pm_saturday_direct_labor: 2833.21
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
       direct_labor_and_opening_total: 79586.79
+      superannuation: 3608.77
       workers_comp: 1352.98
     status: CALCULATED
     status_detail: "Identical payroll to cost_table1_m1/m2 -- 12 PM sessions/day is still below the 3-hour casual-minimum floor."
     scenario_applicability: scenario_table_1
     ramp_behaviour: "Same as cost_table1_m1"
     calculation_basis: "Same formula as cost_table1_m1, month_3 marketing ramp value"
-    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap, conflict_superannuation_partial_coverage]
     source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_1, M3)"}
     notes: null
 
@@ -142,24 +162,27 @@ records:
     month: M4
     fixed_costs: 12480.00
     variable_costs: 1200.00
-    payroll_costs: 80939.77
-    total_operating_costs: 94619.77
+    payroll_costs: 84548.54
+    total_operating_costs: 98228.54
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48254.67
+      am_weekday_treatment_staff: 41076.67
+      am_weekday_phlebotomist: 7178.00
       am_saturday_direct_labor: 10474.75
       pm_weekday_direct_labor: 9587.16
       pm_saturday_direct_labor: 2833.21
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
       direct_labor_and_opening_total: 79586.79
+      superannuation: 3608.77
       workers_comp: 1352.98
     status: CALCULATED
     status_detail: "Identical payroll to cost_table1_m1-m3 -- 15 PM sessions/day (2.885hrs/role) is STILL just below the 3-hour floor -- a thin margin, same finding docs/profit-loss-tables.md's own Appendix already noted for the weekday steady-state figure."
     scenario_applicability: scenario_table_1
     ramp_behaviour: "Same as cost_table1_m1"
     calculation_basis: "Same formula as cost_table1_m1, month_4 marketing ramp value"
-    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap, conflict_superannuation_partial_coverage]
     source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_1, M4)"}
     notes: null
 
@@ -168,17 +191,20 @@ records:
     month: M5plus
     fixed_costs: 12480.00
     variable_costs: 1500.00
-    payroll_costs: 81034.18
-    total_operating_costs: 95014.18
+    payroll_costs: 84654.10
+    total_operating_costs: 98634.10
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48254.67
+      am_weekday_treatment_staff: 41076.67
+      am_weekday_phlebotomist: 7178.00
       am_saturday_direct_labor: 10474.75
       pm_weekday_direct_labor: 9680.00
       pm_saturday_direct_labor: 2833.21
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
       direct_labor_and_opening_total: 79679.63
+      superannuation: 3619.92
       workers_comp: 1354.55
     status: CALCULATED
     status_detail: >
@@ -186,19 +212,29 @@ records:
       canonical anchored figure. RECONCILIATION, disclosed not hidden: this record's
       direct_labor_and_opening_total (A$79,679.63) does NOT match docs/CURRENT-STATE.md §5's own
       stated Table 1 Direct Labor + Opening Costs figure (A$79,433.05) -- a A$246.58/month
-      (0.31%) gap. Consequently this record's payroll_total (A$81,034.18, after this record's own
-      1.7% Workers Comp of A$1,354.55) also does not match CURRENT-STATE.md's own payroll total
-      (A$79,433.05 + A$1,350.36 = A$80,783.41). Same root cause docs/profit-loss-tables.md's own
-      Appendix already discloses for AM Direct Labor ("the specific per-staff-member hour
-      allocation behind the exact total is not saved as a standalone worksheet in this repo").
-      NOT forced to reconcile, per this repo's established practice (same treatment as the
-      A$2,576.36 revenue gap). See conflict_direct_labor_reconciliation_gap.
+      (0.31%) gap. Same root cause docs/profit-loss-tables.md's own Appendix already discloses
+      for AM Direct Labor ("the specific per-staff-member hour allocation behind the exact total
+      is not saved as a standalone worksheet in this repo"). NOT forced to reconcile, per this
+      repo's established practice (same treatment as the A$2,576.36 revenue gap). See
+      conflict_direct_labor_reconciliation_gap. SUPERANNUATION ADDED 2026-08-09 (tracker item
+      46, resolved): A$3,619.92/month, applied only to the phlebotomist AM-weekday portion
+      (A$7,178.00, does NOT include super per docs/financial-break-even-staff.md's own table),
+      AM Saturday, and both PM Direct Labor components -- the 8 treatment staff's AM-weekday
+      portion (A$41,076.67) already includes super per that same source table's explicit
+      "incl. super" labelling, so no super is added there (adding it would double-count). This
+      record's payroll_total (A$84,654.10) is therefore A$3,870.69/month higher than
+      docs/CURRENT-STATE.md's own historical payroll total (A$80,783.41 = A$79,433.05 + Workers
+      Comp A$1,350.36) -- A$246.58 of that gap is the pre-existing, disclosed reconciliation gap
+      above; the remaining A$3,619.92 (previously A$0, since super was never applied in this
+      repo's history) is superannuation now correctly included for the first time. See
+      conflict_superannuation_partial_coverage for the remaining unresolved portion (opening-time
+      increment and Receptionist/Relief Pool, no super applied to either).
     scenario_applicability: scenario_table_1
     ramp_behaviour: "100% -- full canonical steady-state payroll and Non-Wage Overhead"
-    calculation_basis: "Same formula as cost_table1_m1, PM weekday anchored to the canonical A$440.00/day figure, month_5_plus (steady-state) marketing value"
-    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    calculation_basis: "Same formula as cost_table1_m1, PM weekday anchored to the canonical A$440.00/day figure, month_5_plus (steady-state) marketing value, superannuation applied per SUPERANNUATION_RATE_PCT's sourced treatment"
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap, conflict_superannuation_partial_coverage]
     source: {file: docs/architecture/COST-RAMP-METHODOLOGY.md, section: "§7 Table 1 Results"}
-    notes: "This is the closest this file comes to docs/CURRENT-STATE.md's own Total Costs figure (A$94,763.41) -- this record's total_operating_costs is A$95,014.18, a A$250.77/month (0.26%) disclosed gap, carrying the same A$246.58 payroll gap plus rounding."
+    notes: "docs/CURRENT-STATE.md's own Total Costs figure (A$94,763.41, no super) vs. this record's total_operating_costs (A$98,634.10, super included) -- a A$3,870.69/month disclosed gap, combining the pre-existing A$250.77 reconciliation gap with the newly-added A$3,619.92 superannuation."
 
   # ============================================================
   # TABLE 2 (12-client/day) -- Month 1 through Month 5+ (steady state)
@@ -208,24 +244,27 @@ records:
     month: M1
     fixed_costs: 12480.00
     variable_costs: 600.00
-    payroll_costs: 77388.82
-    total_operating_costs: 90468.82
+    payroll_costs: 80578.60
+    total_operating_costs: 93658.60
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48254.67
+      am_weekday_treatment_staff: 41076.67
+      am_weekday_phlebotomist: 7178.00
       am_saturday_direct_labor: 6983.16
       pm_weekday_direct_labor: 9587.16
       pm_saturday_direct_labor: 2833.21
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
       direct_labor_and_opening_total: 76095.20
+      superannuation: 3189.78
       workers_comp: 1293.62
     status: CALCULATED
     status_detail: "Deterministically computed -- see cost_table1_m1 for the identical method. AM Saturday labor uses Table 2's own committed-volume figure (A$1,612.74/day), materially lower than Table 1's (A$2,419.11/day) -- the only payroll component that differs between the two scenarios."
     scenario_applicability: scenario_table_2
     ramp_behaviour: "Same as cost_table1_m1, scenario_table_2's own AM Saturday labor rate"
     calculation_basis: "Same formula as cost_table1_m1, scenario_table_2 inputs"
-    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap, conflict_superannuation_partial_coverage]
     source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_2, M1)"}
     notes: null
 
@@ -234,24 +273,27 @@ records:
     month: M2
     fixed_costs: 12480.00
     variable_costs: 800.00
-    payroll_costs: 77388.82
-    total_operating_costs: 90668.82
+    payroll_costs: 80578.60
+    total_operating_costs: 93858.60
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48254.67
+      am_weekday_treatment_staff: 41076.67
+      am_weekday_phlebotomist: 7178.00
       am_saturday_direct_labor: 6983.16
       pm_weekday_direct_labor: 9587.16
       pm_saturday_direct_labor: 2833.21
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
       direct_labor_and_opening_total: 76095.20
+      superannuation: 3189.78
       workers_comp: 1293.62
     status: CALCULATED
     status_detail: "Identical payroll to cost_table2_m1 -- floor-constrained PM weekday labor."
     scenario_applicability: scenario_table_2
     ramp_behaviour: "Same as cost_table2_m1"
     calculation_basis: "Same formula as cost_table2_m1, month_2 marketing ramp value"
-    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap, conflict_superannuation_partial_coverage]
     source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_2, M2)"}
     notes: null
 
@@ -260,24 +302,27 @@ records:
     month: M3
     fixed_costs: 12480.00
     variable_costs: 1000.00
-    payroll_costs: 77388.82
-    total_operating_costs: 90868.82
+    payroll_costs: 80578.60
+    total_operating_costs: 94058.60
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48254.67
+      am_weekday_treatment_staff: 41076.67
+      am_weekday_phlebotomist: 7178.00
       am_saturday_direct_labor: 6983.16
       pm_weekday_direct_labor: 9587.16
       pm_saturday_direct_labor: 2833.21
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
       direct_labor_and_opening_total: 76095.20
+      superannuation: 3189.78
       workers_comp: 1293.62
     status: CALCULATED
     status_detail: "Identical payroll to cost_table2_m1/m2 -- floor-constrained PM weekday labor."
     scenario_applicability: scenario_table_2
     ramp_behaviour: "Same as cost_table2_m1"
     calculation_basis: "Same formula as cost_table2_m1, month_3 marketing ramp value"
-    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap, conflict_superannuation_partial_coverage]
     source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_2, M3)"}
     notes: null
 
@@ -286,24 +331,27 @@ records:
     month: M4
     fixed_costs: 12480.00
     variable_costs: 1200.00
-    payroll_costs: 77388.82
-    total_operating_costs: 91068.82
+    payroll_costs: 80578.60
+    total_operating_costs: 94258.60
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48254.67
+      am_weekday_treatment_staff: 41076.67
+      am_weekday_phlebotomist: 7178.00
       am_saturday_direct_labor: 6983.16
       pm_weekday_direct_labor: 9587.16
       pm_saturday_direct_labor: 2833.21
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
       direct_labor_and_opening_total: 76095.20
+      superannuation: 3189.78
       workers_comp: 1293.62
     status: CALCULATED
     status_detail: "Identical payroll to cost_table2_m1-m3 -- floor-constrained PM weekday labor (thin margin at 15 sessions/day, same finding as Table 1)."
     scenario_applicability: scenario_table_2
     ramp_behaviour: "Same as cost_table2_m1"
     calculation_basis: "Same formula as cost_table2_m1, month_4 marketing ramp value"
-    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap, conflict_superannuation_partial_coverage]
     source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_2, M4)"}
     notes: null
 
@@ -312,17 +360,20 @@ records:
     month: M5plus
     fixed_costs: 12480.00
     variable_costs: 1500.00
-    payroll_costs: 77483.24
-    total_operating_costs: 91463.24
+    payroll_costs: 80684.16
+    total_operating_costs: 94664.16
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48254.67
+      am_weekday_treatment_staff: 41076.67
+      am_weekday_phlebotomist: 7178.00
       am_saturday_direct_labor: 6983.16
       pm_weekday_direct_labor: 9680.00
       pm_saturday_direct_labor: 2833.21
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
       direct_labor_and_opening_total: 76188.04
+      superannuation: 3200.92
       workers_comp: 1295.20
     status: CALCULATED
     status_detail: >
@@ -334,13 +385,22 @@ records:
       opening-time increment, sourced specifically to a 07:00 start, should still apply at
       Table 2's 08:00 start) -- this record includes it unchanged, matching how
       docs/CURRENT-STATE.md's own Table 2 figure already treats it, not independently resolved
-      here. See conflict_direct_labor_reconciliation_gap.
+      here. See conflict_direct_labor_reconciliation_gap. SUPERANNUATION ADDED 2026-08-09
+      (tracker item 46, resolved): A$3,200.92/month, same treatment and sourced reasoning as
+      cost_table1_m5plus -- applied to the phlebotomist AM-weekday portion, AM Saturday, and
+      both PM Direct Labor components; NOT applied to the 8 treatment staff's AM-weekday portion
+      (already includes super per docs/financial-break-even-staff.md), the opening-time
+      increment, or the Receptionist/Relief Pool (see conflict_superannuation_partial_coverage).
+      This record's payroll_total (A$80,684.16) is A$3,451.69/month higher than
+      docs/CURRENT-STATE.md's own historical payroll total (A$77,232.47 = A$75,941.47 + Workers
+      Comp A$1,291.00) -- A$246.57 pre-existing reconciliation gap + A$3,200.92 newly-included
+      superannuation.
     scenario_applicability: scenario_table_2
     ramp_behaviour: "100% -- full canonical steady-state payroll and Non-Wage Overhead"
-    calculation_basis: "Same formula as cost_table2_m1, PM weekday anchored to the canonical A$440.00/day figure, month_5_plus marketing value"
-    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap, conflict_table2_opening_increment_unresolved]
+    calculation_basis: "Same formula as cost_table2_m1, PM weekday anchored to the canonical A$440.00/day figure, month_5_plus marketing value, superannuation applied per SUPERANNUATION_RATE_PCT's sourced treatment"
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap, conflict_table2_opening_increment_unresolved, conflict_superannuation_partial_coverage]
     source: {file: docs/architecture/COST-RAMP-METHODOLOGY.md, section: "§8 Table 2 Results"}
-    notes: "This file's total_operating_costs (A$91,463.24) vs. docs/CURRENT-STATE.md's own Total Costs (A$91,212.47) -- a A$250.77/month (0.27%) disclosed gap, same root cause as Table 1."
+    notes: "docs/CURRENT-STATE.md's own Total Costs figure (A$91,212.47, no super) vs. this record's total_operating_costs (A$94,664.16, super included) -- a A$3,451.69/month disclosed gap, combining the pre-existing A$250.77 reconciliation gap with the newly-added A$3,200.92 superannuation."
 
 # ============================================================
 # GTT supplies variable-alternative -- exploratory, NOT part of any
@@ -466,3 +526,27 @@ conflicts:
       - {file: docs/unit-economics.md, section: "Variable Cost Per Visit"}
     resolution_status: UNRESOLVED
     notes: "See docs/architecture/COST-RAMP-METHODOLOGY.md §6 for the full investigation and why consumables/laundry could not safely be migrated to a variable alternative this phase."
+
+  - id: conflict_superannuation_partial_coverage
+    description: >
+      Superannuation (12% of OTE, wages.yml#wage_superannuation_rate) is now applied to the
+      phlebotomist AM-weekday portion, AM Saturday, and both PM Direct Labor components (all
+      built from raw hourly award rates, which docs/financial-break-even-staff.md's own Award
+      Wage Summary table treats as EXCLUSIVE of super) -- added 2026-08-09 (tracker item 46,
+      resolved). It is NOT applied to the 8 treatment staff's AM-weekday portion (already
+      includes super, per that same table's explicit "incl. super" labelling on 6 of 7 roles),
+      and NOT applied to the Opening-Time Increment or Receptionist/Relief Pool components,
+      since neither is a role-specific wage figure with a known super treatment -- the
+      Receptionist/Relief figure in particular is itself only an approximate, bundled
+      "~A$339.00/day" figure (see conflict_direct_labor_reconciliation_gap), not cleanly
+      decomposable back to the Receptionist's own "incl. super" annual salary. This remaining
+      gap is disclosed, not resolved: if the Receptionist's own wage component (embedded
+      somewhere inside the bundled Receptionist/Relief figure) does NOT already include super
+      via that bundling, this file's superannuation total would still be a modest
+      underestimate.
+    affected_records: [cost_table1_m1, cost_table1_m2, cost_table1_m3, cost_table1_m4, cost_table1_m5plus, cost_table2_m1, cost_table2_m2, cost_table2_m3, cost_table2_m4, cost_table2_m5plus]
+    sources:
+      - {file: docs/financial-break-even-staff.md, section: "Award Wage Summary (Effective 1 July 2025)"}
+      - {file: data/canonical/wages.yml, section: "wage_superannuation_rate"}
+    resolution_status: UNRESOLVED
+    notes: "Eligibility rule (e.g. any minimum-earnings threshold) is also not stated anywhere in this repo -- the 12% rate is applied universally to every super-exclusive wage component above, not independently verified against current Australian SG eligibility rules. See docs/architecture/COST-RAMP-METHODOLOGY.md §5a and docs/VERIFICATION-TRACKER.md item 46."

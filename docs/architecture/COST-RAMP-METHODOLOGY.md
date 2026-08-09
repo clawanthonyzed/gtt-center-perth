@@ -32,13 +32,39 @@ Payroll is modelled separately from ordinary opex, per the coordinator's instruc
 
 | Component | Ramp behaviour | Why |
 |---|---|---|
-| AM Weekday Direct Labor (A$48,254.67/month) | **Fixed from Month 1** | Explicitly FTE/fixed-salary, "UNCHANGED... same 8+2 headcount" per `docs/CURRENT-STATE.md` §5 — these staff are on payroll regardless of actual daily booking volume. |
+| AM Weekday Direct Labor (A$48,254.67/month total, split A$41,076.67 treatment staff + A$7,178.00 phlebotomist — see §4a) | **Fixed from Month 1** | Explicitly FTE/fixed-salary, "UNCHANGED... same 8+2 headcount" per `docs/CURRENT-STATE.md` §5 — these staff are on payroll regardless of actual daily booking volume. |
 | AM Saturday Direct Labor (scenario-specific: A$2,419.11/day Table 1, A$1,612.74/day Table 2) | **Fixed from Month 1**, at the scenario's own committed level | "Scales with volume" language in this repo refers to scaling between committed scenarios (12→18 clients), not a month-to-month ramp-up methodology, which does not exist anywhere in this repo. A genuine reduced-headcount option exists for lower-volume days (7 staff instead of 8) but `staffing.yml`'s own `staff_treatment_massage_beauty_pool` record explicitly flags this has NOT been re-verified against Table 1/Table 2's cadence — cannot be safely applied without inventing an unconfirmed methodology. **Disclosed limitation, not a discovered fact** — see `conflict_am_labor_ramp_unmodelled`. |
 | PM Weekday Direct Labor | **Ramps**, per the session-count curve + 3-hour floor (§5) | Directly tied to session count via `docs/pm-staffing-roster.md`'s own hours-based costing formula. |
 | PM Saturday Direct Labor (A$654.32/day) | **Fixed**, mathematically, regardless of ramp | Even at full 8-session steady state, hours/role/day (1.54hrs) is already below the 3-hour casual-minimum floor — the cost cannot fall below the floor amount at any session-count assumption. |
 | Opening-time increment (A$44.50/day) | **Fixed from Month 1** | A per-trading-day operational cost, not booking-volume-dependent. |
 | Receptionist/Relief Pool (A$339.00/day) | **Fixed from Month 1** | Receptionist is a committed Day-1 hire, not session-dependent. |
 | Workers Comp (1.7%) | **Ramps automatically** | A percentage of Direct Labor + Opening Costs — moves with whatever that total is each month. |
+| Superannuation (12%) | **Ramps automatically, per §4a** | Applied to the super-exclusive components only — see below. |
+
+---
+
+## 4a. Superannuation (added 2026-08-09, resolving `docs/VERIFICATION-TRACKER.md` item 46)
+
+**Source/evidence:** `docs/financial-break-even-staff.md`'s "Award Wage Summary (Effective 1 July 2025)" table (lines 29-37) explicitly labels 6 of 7 roles' annual salary figures **"incl. super"** — Receptionist/Manager, Beauty therapist, Nail technician, Hairdresser, Massage therapist, PM Service Therapist — but does **not** apply that label to the Phlebotomist row ("A$43,068 (25hr/wk each)", no "incl. super" text). This is a real, disclosed asymmetry read directly off the source table, not an inference. Rate: 12% of Ordinary Time Earnings (`wages.yml#wage_superannuation_rate`, MODELLED, well-corroborated across 3 internal documents — `financial-break-even-staff.md`, `hr-framework.md`, `docs/01_conflicts_log.md`'s own consistency sweep).
+
+**Treatment (rate × base × formula):**
+
+| Component | Super treatment | Reasoning |
+|---|---|---|
+| AM Weekday — Treatment Staff (A$41,076.67/month, 8 staff) | **No super added** | Already included in the source's "incl. super" annual salary figures — adding it again would double-count. |
+| AM Weekday — Phlebotomist (A$7,178.00/month, 2 staff) | **+12% added** = A$861.36/month | Source table does not label this role "incl. super" — the only role with this asymmetry. |
+| AM Saturday Direct Labor (scenario-specific) | **+12% added** | Built from the raw hourly `casual_loaded` award rate, which the source table's own structure treats as exclusive of super (super only appears once annualised into a "incl. super" package figure). |
+| PM Weekday Direct Labor | **+12% added** | Same reasoning — hourly-rate-based. |
+| PM Saturday Direct Labor | **+12% added** | Same reasoning. |
+| Opening-Time Increment, Receptionist/Relief Pool | **No super added — genuinely UNRESOLVED**, not guessed | Neither is a role-specific wage figure with a known super treatment; the Receptionist/Relief figure is itself only an approximate, bundled "~A$339.00/day" figure (see `conflict_direct_labor_reconciliation_gap`), not cleanly decomposable back to the Receptionist's own "incl. super" annual salary. See `conflict_superannuation_partial_coverage`. |
+
+**Eligibility rule:** not stated anywhere in this repo (no minimum-earnings threshold, no age threshold mentioned) — the 12% rate is applied universally to every super-exclusive component above, not independently verified against current Australian SG eligibility rules.
+
+**Monthly impact:** Table 1 steady state: A$3,619.92/month (Months 1-4: A$3,608.77/month, slightly lower since PM weekday labor is floor-constrained and lower pre-Month-5). Table 2 steady state: A$3,200.92/month (Months 1-4: A$3,189.78/month).
+
+**Implementation:** `tools/cost_ramp_model.py`'s `SUPERANNUATION_RATE_PCT` constant and `compute_payroll()` — NOT a special case in `tools/master_financial_model.py`, which reads the already-super-inclusive `payroll_costs` from `cost_ramp.yml` automatically. Confirmed by `tests/test_master_financial_model.py`'s `SuperannuationRegressionTests.test_master_financial_model_has_no_special_case_superannuation_code`.
+
+**Remaining uncertainty:** if the Receptionist's own wage component (embedded somewhere inside the bundled Opening-Time Increment / Receptionist-Relief figure) does NOT already include super via that bundling, this file's superannuation total is a modest underestimate — disclosed, not resolved (`conflict_superannuation_partial_coverage`).
 
 ---
 
@@ -79,29 +105,33 @@ Per the coordinator's explicit instruction, the 43/64/79/93/100% revenue curve w
 
 ## 8. Table 1 Results (18 clients/day)
 
-| Month | Fixed | Variable | Payroll | Total Operating Costs |
-|---|---|---|---|---|
-| M1 | A$12,480.00 | A$600.00 | A$80,939.77 | A$94,019.77 |
-| M2 | A$12,480.00 | A$800.00 | A$80,939.77 | A$94,219.77 |
-| M3 | A$12,480.00 | A$1,000.00 | A$80,939.77 | A$94,419.77 |
-| M4 | A$12,480.00 | A$1,200.00 | A$80,939.77 | A$94,619.77 |
-| M5+ | A$12,480.00 | A$1,500.00 | A$81,034.18 | **A$95,014.18** |
+**Figures below RECALCULATED 2026-08-09 to include superannuation (§4a, `docs/VERIFICATION-TRACKER.md` item 46, resolved). Was Payroll A$80,939.77 (M1-4) / A$81,034.18 (M5+) before super was added.**
 
-**Reconciliation, disclosed not hidden:** `docs/CURRENT-STATE.md` §5's own stated Table 1 Total Costs is A$94,763.41. This file's Month 5+ Total Operating Costs (A$95,014.18) differs by A$250.77/month (0.26%) — traced to a A$246.58/month gap in the Direct Labor + Opening Costs component (§4's "Receptionist/Relief" figure is taken at face value from the source's own "≈" approximate figure, not back-solved to force an exact match, consistent with this repo's established practice of disclosing rather than force-reconciling small gaps — see `conflict_direct_labor_reconciliation_gap`).
+| Month | Fixed | Variable | Payroll (incl. super) | Total Operating Costs |
+|---|---|---|---|---|
+| M1 | A$12,480.00 | A$600.00 | A$84,548.54 | A$97,628.54 |
+| M2 | A$12,480.00 | A$800.00 | A$84,548.54 | A$97,828.54 |
+| M3 | A$12,480.00 | A$1,000.00 | A$84,548.54 | A$98,028.54 |
+| M4 | A$12,480.00 | A$1,200.00 | A$84,548.54 | A$98,228.54 |
+| M5+ | A$12,480.00 | A$1,500.00 | A$84,654.10 | **A$98,634.10** |
+
+**Reconciliation, disclosed not hidden:** `docs/CURRENT-STATE.md` §5's own stated Table 1 Total Costs is A$94,763.41 (no superannuation — never included in this repo's history). This file's Month 5+ Total Operating Costs (A$98,634.10) differs by A$3,870.69/month (4.1%) — A$250.77/month of that is the pre-existing, disclosed Direct Labor + Opening Costs reconciliation gap (§4's "Receptionist/Relief" figure taken at face value, not back-solved — see `conflict_direct_labor_reconciliation_gap`); the remaining A$3,619.92/month is the newly-included superannuation (§4a).
 
 ---
 
 ## 9. Table 2 Results (12 clients/day)
 
-| Month | Fixed | Variable | Payroll | Total Operating Costs |
-|---|---|---|---|---|
-| M1 | A$12,480.00 | A$600.00 | A$77,388.82 | A$90,468.82 |
-| M2 | A$12,480.00 | A$800.00 | A$77,388.82 | A$90,668.82 |
-| M3 | A$12,480.00 | A$1,000.00 | A$77,388.82 | A$90,868.82 |
-| M4 | A$12,480.00 | A$1,200.00 | A$77,388.82 | A$91,068.82 |
-| M5+ | A$12,480.00 | A$1,500.00 | A$77,483.24 | **A$91,463.24** |
+**Figures below RECALCULATED 2026-08-09 to include superannuation (§4a). Was Payroll A$77,388.82 (M1-4) / A$77,483.24 (M5+) before super was added.**
 
-Same disclosed A$250.77/month (0.27%) gap against `docs/CURRENT-STATE.md`'s own stated Table 2 Total Costs (A$91,212.47), same root cause as Table 1. Also carries `docs/VERIFICATION-TRACKER.md` item 1o's own open question (whether the A$44.50/day opening increment should apply to Table 2's 08:00 start) — included unchanged, not independently resolved.
+| Month | Fixed | Variable | Payroll (incl. super) | Total Operating Costs |
+|---|---|---|---|---|
+| M1 | A$12,480.00 | A$600.00 | A$80,578.60 | A$93,658.60 |
+| M2 | A$12,480.00 | A$800.00 | A$80,578.60 | A$93,858.60 |
+| M3 | A$12,480.00 | A$1,000.00 | A$80,578.60 | A$94,058.60 |
+| M4 | A$12,480.00 | A$1,200.00 | A$80,578.60 | A$94,258.60 |
+| M5+ | A$12,480.00 | A$1,500.00 | A$80,684.16 | **A$94,664.16** |
+
+A$3,451.69/month gap against `docs/CURRENT-STATE.md`'s own stated Table 2 Total Costs (A$91,212.47) — A$250.77 pre-existing reconciliation gap + A$3,200.92 newly-included superannuation, same composition as Table 1. Also carries `docs/VERIFICATION-TRACKER.md` item 1o's own open question (whether the A$44.50/day opening increment should apply to Table 2's 08:00 start) — included unchanged, not independently resolved.
 
 **GTT supplies variable alternative (exploratory, not in the totals above):** Table 1 ranges A$340.56 (M1) → A$792.00 (M5+, matching the already-disclosed estimate exactly); Table 2 ranges A$227.04 (M1) → A$528.00 (M5+) — both materially higher than the current flat A$400.00/month modelled figure at steady state, consistent with `docs/VERIFICATION-TRACKER.md` item 22's existing finding.
 
@@ -117,12 +147,14 @@ Both tables generated deterministically by `tools/cost_ramp_model.py` and record
 4. Whether consumables/laundry can ever be safely expressed as a per-visit variable cost without a canonical "total visits" definition — genuinely blocked, not just undecided.
 5. The three unresolved MA000005 penalty-rate conflicts (items 16-18) — **not touched, not resolved, not silently picked** — this model does not reference weekend/PH penalty rates at all (Saturday costing uses the already-established, separately-sourced A$654.32/day and A$2,419.11 (or A$1,612.74)/day figures, not a fresh penalty-rate calculation).
 6. Whether the historical Fixed-Costs-flat-from-Month-1 simplification in the old 12-client Year 1 Monthly Ramp table (`docs/profit-loss-tables.md`) should be considered superseded now that this file provides an actual payroll ramp — a modelling-authority decision for Anthony/whoever builds the eventual P&L, not decided here.
+7. **New 2026-08-09:** whether superannuation should also apply to the Opening-Time Increment and Receptionist/Relief Pool components — genuinely unresolved, since neither is a role-specific wage figure with a known super treatment (`conflict_superannuation_partial_coverage`). If the Receptionist's own wage is not already super-inclusive via that bundling, this file's superannuation total is a modest underestimate.
+8. **New 2026-08-09:** the eligibility rule for superannuation (any minimum-earnings threshold) is not stated anywhere in this repo — applied universally, not independently verified against current Australian SG eligibility rules.
 
 ---
 
 ## 11. Conflicts
 
-Four declared in `data/canonical/cost_ramp.yml`'s `conflicts` list: `conflict_am_labor_ramp_unmodelled`, `conflict_direct_labor_reconciliation_gap`, `conflict_table2_opening_increment_unresolved`, `conflict_variable_vs_fixed_classification_carried_forward`. Full detail in each record, not repeated here.
+Five declared in `data/canonical/cost_ramp.yml`'s `conflicts` list: `conflict_am_labor_ramp_unmodelled`, `conflict_direct_labor_reconciliation_gap`, `conflict_table2_opening_increment_unresolved`, `conflict_variable_vs_fixed_classification_carried_forward`, and (added 2026-08-09) `conflict_superannuation_partial_coverage`. Full detail in each record, not repeated here.
 
 ---
 
