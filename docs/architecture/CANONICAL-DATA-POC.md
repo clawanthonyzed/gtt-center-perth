@@ -8,7 +8,9 @@
 
 **Phase 3 scope (2026-08-09, follow-on):** one new canonical domain, `data/canonical/opex.yml` (non-payroll operating expenses), with matching validator extensions and 6 new tracker items. See §20-§25 below for full Phase 3 detail.
 
-**Not built any phase so far:** the Master Financial Model, the Master Operations Model, any XLSX/PDF/DOCX generation, the remaining canonical domains from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch (payroll_costs, startup_costs, capex, revenue_assumptions, financial_assumptions, risks, decisions, sources, verification_status), and — deliberately, across every phase so far — a resolution of Table 1 vs. Table 2 as primary.
+**Phase 4 scope (2026-08-09, same day, follow-on):** two new canonical domains, `data/canonical/startup_costs.yml` and `data/canonical/capex.yml`, plus a dedicated narrative reconciliation document (`docs/architecture/STARTUP-COST-RECONCILIATION.md`), matching validator extensions, and 6 new tracker items. See §28-§34 below for full Phase 4 detail.
+
+**Not built any phase so far:** the Master Financial Model, the Master Operations Model, any XLSX/PDF/DOCX generation, the remaining canonical domains from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch (payroll_costs, revenue_assumptions, financial_assumptions, risks, decisions, sources, verification_status), and — deliberately, across every phase so far — a resolution of Table 1 vs. Table 2 as primary, or of the startup-capital reconciliation problem.
 
 ---
 
@@ -21,11 +23,14 @@ data/canonical/
 ├── scenarios.yml            Table 1 and Table 2, both explicit, neither marked primary                    [Phase 1]
 ├── staffing.yml             every role, headcount, category, skills, shift assumptions                    [Phase 2]
 ├── wages.yml                hourly rates, super, workers comp, casual-minimum rule, penalty-rate conflicts [Phase 2]
-└── opex.yml                 non-payroll operating expenses -- premises/tech/professional/insurance/        [Phase 3]
-                              marketing/consumables, 28 records, 3 conflicts
+├── opex.yml                 non-payroll operating expenses -- premises/tech/professional/insurance/        [Phase 3]
+│                             marketing/consumables, 28 records, 3 conflicts
+├── startup_costs.yml        pre-opening cash outlay, working capital (kept separate), contingency,         [Phase 4]
+│                             9 historical total-figure estimates, 12 records + 2 conflicts
+└── capex.yml                durable physical/IT assets, 11 records + 2 conflicts                           [Phase 4]
 ```
 
-All five files live under `data/canonical/` — real content in the `data/` layer proposed in `docs/architecture/TARGET-ARCHITECTURE.md` Layer 2. `docs/CURRENT-STATE.md` remains the authoritative human-readable canonical file; these YAML files are a machine-readable **subset** of it (plus, for staffing/wages, of `docs/financial-break-even-staff.md`, `docs/hr-framework.md`, `docs/pm-staffing-roster.md`, and `docs/HANDOFF.md`), not a replacement, and not (yet) auto-generated from it or vice versa — a human (this session) transcribed values from source documents into YAML, checking each one against the source rather than re-deriving anything.
+All eight files live under `data/canonical/` — real content in the `data/` layer proposed in `docs/architecture/TARGET-ARCHITECTURE.md` Layer 2. `docs/CURRENT-STATE.md` remains the authoritative human-readable canonical file; these YAML files are a machine-readable **subset** of it (plus, for staffing/wages, of `docs/financial-break-even-staff.md`, `docs/hr-framework.md`, `docs/pm-staffing-roster.md`, and `docs/HANDOFF.md`; and for startup_costs/capex, of `docs/floor-plan-concept.md`, `docs/equipment-costs.md`, `docs/grace-startup-plan.md`, `docs/financial-setup.md`, `docs/investor-memorandum.md`), not a replacement, and not (yet) auto-generated from it or vice versa — a human (this session) transcribed values from source documents into YAML, checking each one against the source rather than re-deriving anything.
 
 ---
 
@@ -369,17 +374,85 @@ validate_canonical_data: 1 file(s) checked, 8 error(s), 0 warning(s).
 
 All 8 required test cases (invalid status, duplicate ID, missing source, invalid frequency, invalid cost type, malformed numeric value, incorrect monthly/annual calc, invalid scenario reference) confirmed caught. Fixture deleted after the test run, not committed.
 
-## 26. Recommended Next Canonical Migration Domain
+## 26. Recommended Next Canonical Migration Domain (Phase 3 recommendation — actioned in Phase 4, see §28-§34)
 
 **`data/canonical/startup_costs.yml` / `data/canonical/capex.yml`**, tackled together, for two reasons:
 
 1. They are the last major domain directly feeding the Master Financial Model's cost side (`docs/architecture/MODEL-ARCHITECTURE.md` §1) — with `staffing.yml`, `wages.yml`, and `opex.yml` now built, startup/capex is what remains before a real P&L/cash-flow model could theoretically be assembled from canonical data alone (still not attempted — out of scope).
 2. `docs/CURRENT-STATE.md` §6/§7 already documents, in its own words, an explicit "financial model moved 5+ times" startup-capital reconciliation failure (3-6 unreconciled ranges, an adopted figure that doesn't exactly match its own component sum) — this is the single most consequential unresolved numeric question in the entire repo, and canonicalising it (WITHOUT resolving it — preserving every range, exactly as `opex.yml`/`wages.yml` preserved their own conflicts) would make that reconciliation problem visible to any future automated check, rather than only living in prose.
 
-`services.yml` (the full a-la-carte catalog, deferred three times now) remains the next-best lower-risk, non-financial alternative if a smaller domain is preferred first.
+`services.yml` (the full a-la-carte catalog, deferred three times now) remained the next-best lower-risk, non-financial alternative if a smaller domain was preferred first — not chosen; Anthony approved the startup-costs/capex route instead. **See §34 for the Phase 4 recommendation of what comes after.**
 
 ---
 
-## 27. What This Document Does Not Do (as of Phase 3)
+# PHASE 4 (2026-08-09, same day) — Startup Costs & Capex
 
-It does not build the Master Financial Model, Master Operations Model, any Excel/XLSX workbook, P&L, cash-flow model, chart, PDF, or DOCX. It does not migrate `startup_costs.yml`, `capex.yml`, `services.yml` (full a-la-carte catalog), `payroll_costs.yml` (a derived/model-layer domain, not yet built), or any other remaining domain from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch. It does not resolve Table 1 vs. Table 2 as primary. It does not resolve any of the wage conflicts (tracker items 16-18) or the opex conflicts/gaps added this phase (tracker items 19-24) — all six are recorded, sourced, and left open. It does not touch or resolve `docs/CURRENT-STATE.md` §6/§7's startup-capital reconciliation problem, beyond confirming (not re-litigating) that one specific cross-reference within it (the A$400/month insurance figure) is a deliberate, already-disclosed linkage rather than a new duplication.
+## 28. Startup-Cost Data Migrated (`data/canonical/startup_costs.yml`)
+
+12 `records` + 2 `funding_requirements` (kept structurally separate, per the coordinator's explicit Part 5 instruction: working capital is a cash requirement, not an expense) + 9 `historical_total_estimates` + 1 `contingency_assumptions` entry + 2 declared conflicts.
+
+| List | Contents |
+|---|---|
+| `records` | Fit-out construction (2 independently-derived current estimates), landlord contribution (explicitly not netted), legal/entity/lease bond, accountant brief, Food Safety Supervisor cert, `grace-startup-plan.md`'s own legal/lease/fit-out-staged-payment/equipment lines, opening consumables stock |
+| `funding_requirements` | Working capital reserve, first-year insurance (cross-referenced to opex.yml, not duplicated in full) |
+| `historical_total_estimates` | Every top-level "total startup capital" figure found in this repo (9 records) -- see §30 |
+| `contingency_assumptions` | The single 15% fit-out contingency found anywhere in this repo |
+
+**PART 5 boundary enforced throughout:** no final "opening funding requirement" figure (startup expenditure + capex + opening inventory + pre-opening payroll + working capital + contingency) was calculated anywhere in this file, per the coordinator's explicit instruction not to compute one unless the repo already supports it directly (it doesn't).
+
+**Sources used:** `docs/CURRENT-STATE.md` §6/§7 (primary for the current adopted/component figures), `docs/floor-plan-concept.md` (fit-out cost estimate), `docs/grace-startup-plan.md` (an older, independent itemised breakdown — a genuinely new source this pass), `docs/financial-setup.md` (accountant brief, Food Safety cert), `docs/equipment-costs.md` §12 (opening consumables), `docs/investor-memorandum.md` (the 15% contingency, and the now-untraceable original A$363K itemisation).
+
+## 29. Capex Data Migrated (`data/canonical/capex.yml`)
+
+11 records + 2 declared conflicts, at the same section-level granularity `docs/CURRENT-STATE.md` §7.1 already treats as canonical (sourced from `docs/equipment-costs.md`'s own Summary Budget structure), plus 3 individually-broken-out high-value/compliance-critical items (centrifuge, vasovagal recovery chair, AED — each already included within their section total, not additional cost).
+
+**Capital-vs-consumable split, disclosed honestly:** only `docs/equipment-costs.md` §5A (Beauty/Brows) carries an explicit per-line Type column distinguishing Capital from Recurring/consumable -- for that section only, `capex.yml` uses the isolated capital-only subtotal (A$1,550-3,340, computed directly from the source's own tagged rows: 4 chairs of arithmetic, not an invented split). Every other section bundles a small consumable component into its total without a line-by-line tag -- those section totals are used as-is, with the ambiguity disclosed in each record's own notes, rather than inventing a finer split the source doesn't provide.
+
+**Useful life / depreciation:** genuinely absent from this repo for every asset -- every record has `useful_life_years: null` and `depreciation_method: null`, per the coordinator's explicit "do NOT invent" instruction. The validator (§32) now enforces that if either field is ever populated in a future edit, it must carry a `status_detail` explaining its basis, or fail.
+
+**Sources used:** `docs/equipment-costs.md` §1, §3, §4, §5, §5A, §6, §8, §11 (primary), `docs/CURRENT-STATE.md` §7.1 (cross-check, confirms the figures this file already treats as canonical), `docs/floor-plan-concept.md` (surfaced the IT/AV overlap finding).
+
+## 30. Historical Startup-Capital Figures Found (Verified Directly Against the Repo)
+
+The 4 figures the coordinator asked to specifically re-verify (not assumed still correct) plus every additional figure found this pass:
+
+| Figure | Source | This pass's verification result |
+|---|---|---|
+| ~A$144.5K-242.5K | `HANDOFF.md` | Confirmed: no itemised build anywhere in that document, as previously believed. |
+| ~A$209K-431K | `business-plan.md` §9, cited to `cash-flow.md` | **Citation confirmed broken, not just suspected** -- `cash-flow.md`'s current content was read in full this pass; its "Pre-Launch Capital Deployment" section explicitly says "Not rebuilt in this round" and contains category names only, zero dollar figures. |
+| ~A$292K-594.9K | `CURRENT-STATE.md` §7.4 adopted total | Confirmed current -- the figure `CURRENT-STATE.md`'s own governance points to for present use, still explicitly disclosed as not matching its own component sum. |
+| ~A$357.39K-577.18K | `CURRENT-STATE.md` §7.4, this agent's own component sum | Confirmed current -- straightforward arithmetic on `CURRENT-STATE.md`'s own 7.1+7.2+7.3 ranges, re-verified by direct recalculation this pass, not just re-quoted. |
+| A$363,000 mid / A$292-493K | `investor-memorandum.md` original build | **NEW finding: the itemisation behind this figure no longer exists anywhere in the document's current content** -- it was overwritten in the 2026-07-29 rewrite, leaving only the summary numbers as a historical reference, genuinely untraceable to components from this repo alone. |
+| A$228,142-457,559 (fit-out only) | `floor-plan-concept.md` | Confirmed current, but flagged as narrower scope (fit-out only, not full startup capital) than every other figure in this list -- not directly comparable without adjustment. |
+| A$268,142-583,559 | `CURRENT-STATE.md` §7, original same-day rebuild | Confirmed explicitly retired the same day it was built, per `CURRENT-STATE.md`'s own text. |
+| A$276,635-554,900 | `CURRENT-STATE.md` §7.4, stated starting point | Confirmed as the pre-correction reference point both 2026-07-31 corrections pushed up from. |
+| **A$140,000-260,000** | **`grace-startup-plan.md` FINANCIAL GATES table** | **Genuinely new finding this pass -- not previously counted in this repo's own "3 unreconciled ranges" framing anywhere.** Dated 2026-06-05, no staleness banner, remarkably close to (but not confirmed identical to) the HANDOFF.md figure. |
+
+**Bottom line: this repo's own governance files ("3 different ranges," `CURRENT-STATE.md` §6 / `investor-memorandum.md` §8) undercount the problem** — at least 6-9 distinct figures exist depending on counting method. Full detail: `docs/architecture/STARTUP-COST-RECONCILIATION.md`.
+
+## 31. Reconciliation Findings (Why the Figures Differ, Not Just That They Differ)
+
+Full narrative in `docs/architecture/STARTUP-COST-RECONCILIATION.md` §2 — six distinct, disclosed drivers: (1) scope differences (full startup capital vs. fit-out-only vs. a different staged-payment decomposition), (2) methodology differences (two independently-derived construction estimates, both retained), (3) temporal drift (the underlying model kept changing — client volume, fixture counts, construction type — and older figures predate some or all of these), (4) working-capital inclusion/exclusion (some totals include it, at least one apparently doesn't), (5) landlord-contribution treatment (netted in one figure, explicitly excluded from the headline in others), (6) contingency — present in principle (15%, one source), absent in visible practice (no build shows it actually applied).
+
+## 32. Conflicts Discovered
+
+4 declared across the two files:
+
+1. **`conflict_lease_cost_overlap`** (startup_costs.yml) — `CURRENT-STATE.md` §7.3's legal/lease-bond line may substantially overlap with `grace-startup-plan.md`'s separate legal-fees and lease-deposit lines.
+2. **`conflict_fitout_staged_payments_vs_construction_total`** (startup_costs.yml) — `grace-startup-plan.md`'s 2-stage fit-out payment schedule sums to materially less than either current construction estimate.
+3. **`conflict_summary_budget_vs_section_totals`** (capex.yml) — `equipment-costs.md`'s own Summary Budget doesn't match its own section totals for 4 categories (1 already disclosed by the source, 3 new findings this pass).
+4. **`conflict_it_av_overlap`** (capex.yml) — a possible double-count between `floor-plan-concept.md`'s standalone IT/AV line and `equipment-costs.md`'s Technology section.
+
+## 33. Verification Items Added
+
+`docs/VERIFICATION-TRACKER.md` items **25, 26, 27, 28, 29, 30** (FINANCIAL — NEEDS ACCOUNTANT CONFIRMATION section, continuing the sequential numbering from item 24) — full detail in that file and in `docs/architecture/STARTUP-COST-RECONCILIATION.md`.
+
+## 34. Recommended Next Canonical Migration Domain
+
+**`data/canonical/services.yml`** (the full a-la-carte service catalog, deferred four times now across Phases 1, 3, and this recommendation) — the last clearly-scoped, lower-risk, non-financial domain remaining from the original `CANONICAL-DATA-SCHEMA.md` sketch. Alternatively, **`data/canonical/revenue_assumptions.yml`** (ancillary revenue lines — spray tan, retail, cafe — already flagged throughout this repo as unverified planning placeholders with no bottom-up derivation) would complete the P&L's revenue side to match how thoroughly the cost side (staffing/wages/opex/startup/capex) has now been canonicalised. Either is a smaller, bounded next step than attempting the Master Financial Model itself, which remains explicitly out of scope until Anthony authorises that phase directly.
+
+---
+
+## 35. What This Document Does Not Do (as of Phase 4)
+
+It does not build the Master Financial Model, Master Operations Model, any Excel/XLSX workbook, P&L, cash-flow model, balance sheet, chart, PDF, or DOCX. It does not migrate `services.yml`, `payroll_costs.yml`, `revenue_assumptions.yml`, `financial_assumptions.yml`, `risks.yml`, `decisions.yml`, `sources.yml`, `verification_status.yml`, or any other remaining domain from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch. It does not resolve Table 1 vs. Table 2 as primary. It does not resolve any of the wage conflicts (tracker items 16-18), the opex conflicts/gaps (items 19-24), or the startup-cost/capex conflicts and gaps added this phase (items 25-30) — all eighteen are recorded, sourced, and left open. It does not choose a single authoritative startup-capital figure, obtain real quotes, or engage an accountant/quantity surveyor — `docs/architecture/STARTUP-COST-RECONCILIATION.md` §4 states plainly what that would actually require, without attempting it.
