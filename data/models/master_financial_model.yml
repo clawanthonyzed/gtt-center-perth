@@ -326,8 +326,170 @@ startup_capex_section:
     status_detail: "capex.yml's own asset-level detail exists but this model does not aggregate it into a single figure this phase -- doing so would risk implying a false precision the startup-cost reconciliation itself does not have. See data/canonical/capex.yml directly for itemised asset detail."
     source: {file: data/canonical/capex.yml, section: "records"}
   working_capital:
-    status_detail: "docs/CURRENT-STATE.md §7.3's working capital reserve (A$85,000-110,000) is itself flagged stale (docs/VERIFICATION-TRACKER.md item 30 -- based on a pre-rebase Month 1-3 loss figure). This model's own Month 1-2 cumulative cash trough (see cash_flow_summary above: -A$27,276.98 Table 1, -A$57,316.39 Table 2) is a NEW, more current data point -- both scenarios' actual troughs are LOWER in magnitude than the existing A$85,000-110,000 working capital reserve figure, but this model does NOT conclude the existing reserve is therefore oversized, since the reserve figure's own basis (a 3-month ramp-loss estimate, not a 24-month model) is not directly comparable without further work -- flagged, not resolved."
+    status_detail: "docs/CURRENT-STATE.md §7.3's working capital reserve (A$85,000-110,000) is itself flagged stale (docs/VERIFICATION-TRACKER.md item 30 -- based on a pre-rebase Month 1-3 loss figure). This model's own operating cash trough (see cash_flow_summary above: -A$30,885.75 Table 1 at M1, -A$66,335.12 Table 2 at M3) is a NEW, more current data point -- both scenarios' actual troughs are LOWER in magnitude than the existing A$85,000-110,000 working capital reserve figure, but this model does NOT conclude the existing reserve is therefore oversized, since the reserve figure's own basis (a 3-month ramp-loss estimate, not a 24-month model) is not directly comparable without further work -- see funding_requirement_investigation below for the bounded treatment (item 47, resolved as OUTCOME 2 -- bounded, not exact)."
     source: {file: docs/CURRENT-STATE.md, section: "§7.3 Working Capital & Pre-Launch Costs"}
+
+# ============================================================
+# FUNDING REQUIREMENT INVESTIGATION -- docs/VERIFICATION-TRACKER.md item 47,
+# investigated 2026-08-09. OUTCOME: 2 (BOUNDED, not exact) -- a defensible
+# lower/upper range IS calculable entirely from already-canonical figures
+# (no new dollar amount invented), but a single exact funding-requirement
+# figure is NOT established, per the pre-existing, unresolved 6-9-range
+# startup-cost reconciliation problem (docs/architecture/STARTUP-COST-RECONCILIATION.md).
+# Full investigation: docs/architecture/FUNDING-REQUIREMENT-INVESTIGATION.md.
+#
+# Does NOT recalculate revenue/cost methodology, does NOT invent an opening
+# cash balance, does NOT invent startup/capex payment timing beyond what
+# docs/grace-startup-plan.md's own (stale) FINANCIAL GATES table already
+# states, does NOT assume operating cash can fund startup costs, and does
+# NOT choose a primary scenario.
+# ============================================================
+funding_requirement_investigation:
+  outcome: "OUTCOME_2_BOUNDED"
+  status: CALCULATED
+  source: {file: docs/architecture/FUNDING-REQUIREMENT-INVESTIGATION.md, section: "full document"}
+  status_detail: >
+    A defensible range is calculable by cleanly decomposing docs/CURRENT-STATE.md §7.4's own
+    already-canonical component-sum figure (data/canonical/startup_costs.yml#total_current_state_component_sum,
+    A$357,390-577,180) into (A) Pre-Opening Capital and (B) Working Capital, using its own
+    disclosed §7.1/§7.2/§7.3 sub-totals -- confirmed to decompose exactly (7.3's own components,
+    legal/lease A$19,600-27,600 + working capital reserve A$85,000-110,000 + insurance
+    A$400-400, sum to exactly A$105,000-138,000, matching CURRENT-STATE.md's own stated 7.3
+    total to the dollar). No new figure was invented -- this is a re-partition of an existing,
+    already-canonical total, not a new calculation. A single EXACT figure is NOT established,
+    because the underlying startup-cost reconciliation itself remains genuinely unresolved
+    (6-9 distinct historical ranges, none singularly authoritative) -- see
+    docs/architecture/STARTUP-COST-RECONCILIATION.md, unchanged by this investigation.
+
+  pre_opening_capital:
+    # (A) Money needed BEFORE normal operations begin -- construction, equipment/furniture/
+    # signage, legal/entity setup, lease bond. EXCLUDES working capital reserve (component B
+    # below) and EXCLUDES capex.yml's own itemised detail (not separately re-aggregated here,
+    # to avoid a second, competing equipment total -- see capex note below).
+    scenario_applicability: universal
+    range_low: 272390.00
+    range_high: 467180.00
+    currency: AUD
+    status: CALCULATED
+    status_detail: >
+      = startup_costs.yml's own 7.1 (Equipment/Furniture/Signage, A$61,190-140,430) + 7.2
+      (Construction, startup_construction_current_state_recompute, A$191,200-298,750) +
+      7.3's legal/lease-bond-only sub-component (startup_legal_entity_lease_bond,
+      A$19,600-27,600) + embedded insurance (A$400-400) -- explicitly EXCLUDING 7.3's working
+      capital reserve component (funding_working_capital_reserve, kept as component B below,
+      per the coordinator's Part 5 boundary already established in this file).
+    derived_from: [startup_construction_current_state_recompute, startup_legal_entity_lease_bond]
+    timing_classification: "TIMING PARTIALLY VERIFIED"
+    timing_evidence: >
+      docs/grace-startup-plan.md's FINANCIAL GATES table (dated 2026-06-05, STALE dollar
+      figures, but the WEEK-based timing structure itself is real, sourced evidence) confirms
+      all pre-opening capital items (legal fees Week 1, lease deposit Week 10, fit-out deposit
+      Week 10, fit-out completion Week 15, equipment/FF&E Week 14-15) occur BEFORE "Week 19
+      Soft Launch"/"Week 20 Full Launch" (the first revenue event, per that document's own
+      Phase 4). This confirms pre-opening capital is genuinely sequential to, not overlapping
+      with, the Master Financial Model's Month 1-24 operating P&L. PARTIALLY (not fully)
+      verified because this week-by-week timing is only attached to the STALE 2026-06-05
+      dollar figures (A$140,000-260,000), not independently re-confirmed against the CURRENT,
+      larger dollar figures (A$272,390-467,180) used in this record -- no document re-derives
+      the timing schedule against the current, rebased fit-out/equipment figures.
+    source: {file: docs/CURRENT-STATE.md, section: "§7.1/§7.2/§7.3, Full Picture"}
+
+  opening_working_capital:
+    # (B) Cash reserve to survive the ramp until cash-positive -- TWO methods shown, neither
+    # chosen as correct, per the coordinator's explicit "don't just add every historical range
+    # to the operating cash trough" instruction.
+    historical_reserve_method:
+      scenario_applicability: universal
+      range_low: 85000.00
+      range_high: 110000.00
+      currency: AUD
+      status: MODELLED
+      status_detail: "data/canonical/startup_costs.yml#funding_working_capital_reserve -- basis is a pre-2026-08-05-rebase Month 1-3 loss estimate, itself flagged stale (docs/VERIFICATION-TRACKER.md item 30). NOT recalculated by this investigation, per the explicit instruction not to alter cost/revenue methodology."
+      timing_classification: "TIMING VERIFIED (conceptually -- funds Months 1-3 post-opening, per its own stated purpose), dollar basis STALE"
+      source: {file: docs/CURRENT-STATE.md, section: "§7.3 Working Capital & Pre-Launch Costs"}
+    operating_cash_trough_cross_check:
+      # An ALTERNATIVE, more current data point -- NOT substituted for the historical reserve
+      # above, NOT auto-labelled as the funding requirement, per explicit instruction.
+      status_detail: >
+        Both scenarios' current operating-cash-trough figures (results below) are LOWER in
+        magnitude than the historical A$85,000-110,000 reserve -- this investigation does NOT
+        conclude the historical reserve is therefore oversized (different bases: a pre-rebase
+        3-month flat estimate vs. this model's own 24-month, ramp-aware calculation, not
+        directly comparable without further reconciliation work). Shown as a disclosed
+        alternative only.
+      results:
+        - scenario_id: scenario_table_1
+          trough_value: 30885.75
+          trough_month: 1
+          status: CALCULATED
+          source: {file: "data/models/master_financial_model.yml#cash_flow_summary", section: "scenario_table_1"}
+        - scenario_id: scenario_table_2
+          trough_value: 66335.12
+          trough_month: 3
+          status: CALCULATED
+          source: {file: "data/models/master_financial_model.yml#cash_flow_summary", section: "scenario_table_2"}
+
+  combined_funding_requirement_bounded:
+    # (C) Combined -- ONLY the historical-reserve method is summed with pre-opening capital by
+    # default, since working capital's own stated purpose already covers "Months 1-3 operating
+    # losses" -- the SAME conceptual thing the operating cash trough measures. Summing
+    # pre-opening capital + working capital reserve + operating cash trough would double-count.
+    primary_method:
+      description: "Pre-Opening Capital + historical Working Capital Reserve (both universal, non-scenario-specific -- no canonical startup-cost figure varies by Table 1 vs Table 2)"
+      range_low: 357390.00
+      range_high: 577180.00
+      currency: AUD
+      status: CALCULATED
+      status_detail: "Exact match to data/canonical/startup_costs.yml#total_current_state_component_sum -- confirms this decomposition is arithmetically consistent with the repo's own existing figures, not a new calculation producing a different number."
+      applies_to: "both scenarios identically"
+      source: {file: data/canonical/startup_costs.yml, section: "total_current_state_component_sum"}
+    alternative_cross_check_method:
+      description: "Pre-Opening Capital + scenario-specific operating cash trough (NOT the historical reserve) -- an illustrative alternative only, not chosen as more correct"
+      status: CALCULATED
+      status_detail: "Shown for comparison only -- both methods retained side by side, per this repo's established 'disclose, don't force reconcile' practice."
+      source: {file: "data/models/master_financial_model.yml output, 2026-08-09", section: "funding_requirement_investigation"}
+      results:
+        - scenario_id: scenario_table_1
+          range_low: 303275.75
+          range_high: 498065.75
+        - scenario_id: scenario_table_2
+          range_low: 338725.12
+          range_high: 533515.12
+    note_on_anthonys_adopted_total: >
+      docs/CURRENT-STATE.md §7.4's own adopted, reconciled total (A$292,335-594,900,
+      total_current_state_adopted) is CLOSE to but NOT identical to combined_funding_requirement_bounded's
+      primary_method range above (A$357,390-577,180) -- CURRENT-STATE.md itself already
+      discloses this gap ("a few percent gap on both ends... reconciliation choices... not
+      fully visible in this repo"). The adopted total's own internal A/B split is not
+      independently traceable, so it could not be used as the basis for this investigation's
+      A/B decomposition -- the cleanly-decomposable component-sum figure was used instead.
+      Both figures remain valid, disclosed, side by side -- neither superseded by this
+      investigation.
+
+  timing_findings:
+    - item: "Pre-opening capital (construction, equipment, legal, lease)"
+      classification: "TIMING PARTIALLY VERIFIED"
+      notes: "Week-based sequencing (Weeks 1-15, before Week 19-20 revenue start) confirmed via docs/grace-startup-plan.md's FINANCIAL GATES table, but only against that table's own stale dollar figures, not independently re-confirmed against current, larger figures."
+    - item: "Working capital reserve"
+      classification: "TIMING VERIFIED (conceptually), dollar basis STALE"
+      notes: "Stated purpose ('funds Months 1-3 operating losses') is itself a timing statement -- post-opening, not pre-opening -- confirmed non-overlapping with pre-opening capital by definition."
+    - item: "capex.yml individual asset line items"
+      classification: "TIMING UNKNOWN"
+      notes: "No payment-timing, deposit-schedule, or milestone field exists anywhere in data/canonical/capex.yml -- confirmed by direct inspection, not assumed. Retained as a cost requirement without a manufactured payment date, per explicit instruction."
+    - item: "Landlord fit-out contribution (startup_landlord_fitout_contribution)"
+      classification: "NOT APPLICABLE -- optional upside, not a funding requirement"
+      notes: "Already excluded from every headline total in this repo, per Anthony's direct instruction -- not re-included here."
+    - item: "Lease overlap, fit-out staged payments vs. construction total, budget vs. section totals, IT/AV overlap conflicts"
+      classification: "UNRESOLVED, unchanged by this investigation"
+      notes: "See data/canonical/startup_costs.yml#conflicts and data/canonical/capex.yml#conflicts -- not touched, not resolved, per explicit instruction not to close unrelated items."
+
+  deliberate_non_assumptions:
+    - "No opening cash balance invented -- data/models/master_financial_model.yml#assumption_opening_cash_not_invented remains PLACEHOLDER/null, unchanged."
+    - "No startup/capex payment timing invented beyond what docs/grace-startup-plan.md's own (stale) table already states -- capex.yml items remain TIMING UNKNOWN, not assigned a manufactured date."
+    - "Operating cash is NOT assumed able to fund startup costs -- pre-opening capital and working capital are kept as external funding needs, structurally separate from the operating P&L/cash flow."
+    - "No financing, debt, or equity assumption used -- consistent with this venture's existing self-funded (Anthony + Imara joint savings) status, already established elsewhere in this repo, not re-derived or extended here."
+    - "The operating cash trough is NOT added on top of the working capital reserve in the primary combined figure -- both represent the same underlying 'survive the ramp' concept computed by two different methods, not two additive components."
+    - "Neither Table 1 nor Table 2 is chosen as primary for any figure in this section."
 
 # ============================================================
 # HISTORICAL RECONCILIATION -- preserved, not altered, per the coordinator's
@@ -438,19 +600,25 @@ conflicts:
 
   - id: conflict_funding_requirement_not_established
     description: >
-      This model does NOT establish a funding requirement. The startup-cost reconciliation
-      remains genuinely unresolved (docs/architecture/STARTUP-COST-RECONCILIATION.md -- at least
-      6-9 distinct historical ranges), no canonical opening cash figure exists, and no canonical
-      per-month startup-expenditure or capex timing schedule exists to sequence against the
-      operating cash flow. The cash-flow trough figures in cash_flow_summary above (Table 1:
-      -A$30,885.75 at Month 1; Table 2: -A$66,335.12 at Month 3 -- both updated 2026-08-09 to
-      include superannuation, per item 46) are OPERATING cash movements only -- they do NOT
-      include startup capital deployment, and must not be read as "the venture needs only this
-      much funding." Item 47 itself remains untouched this phase, per explicit instruction --
-      only the cross-referenced trough figures were kept numerically consistent with
-      cash_flow_summary above.
-    affected_records: ["cash_flow_summary (both scenarios)", "startup_capex_section"]
+      UPDATED 2026-08-09 (docs/VERIFICATION-TRACKER.md item 47, investigated -- OUTCOME 2,
+      BOUNDED). This model still does NOT establish a single EXACT funding requirement -- the
+      underlying startup-cost reconciliation remains genuinely unresolved
+      (docs/architecture/STARTUP-COST-RECONCILIATION.md -- at least 6-9 distinct historical
+      ranges), no canonical opening cash figure exists, and no canonical per-month
+      startup-expenditure or capex timing schedule exists beyond the coarse, stale week-level
+      structure in docs/grace-startup-plan.md. A DEFENSIBLE BOUNDED RANGE was established,
+      however, entirely from already-canonical figures (see funding_requirement_investigation
+      above) -- A$357,390-577,180 (Pre-Opening Capital + historical Working Capital Reserve,
+      both universal/non-scenario-specific), or A$303,275.75-533,515.12 spanning both scenarios
+      if the current operating-cash-trough is used as an illustrative alternative to the
+      historical Working Capital Reserve instead. The cash-flow trough figures in
+      cash_flow_summary above (Table 1: -A$30,885.75 at Month 1; Table 2: -A$66,335.12 at Month
+      3) remain OPERATING cash movements ONLY -- they are NOT the funding requirement on their
+      own, and were not summed on top of the working capital reserve (that would double-count
+      the same "survive the ramp" concept).
+    affected_records: ["cash_flow_summary (both scenarios)", "startup_capex_section", "funding_requirement_investigation"]
     sources:
       - {file: docs/architecture/STARTUP-COST-RECONCILIATION.md, section: "full document"}
-    resolution_status: UNRESOLVED
-    notes: "Explicitly flagged per the coordinator's instruction: 'Don't invent funding or claim the model has established a funding requirement unless the assumptions actually support that conclusion' -- they do not, this phase."
+      - {file: docs/architecture/FUNDING-REQUIREMENT-INVESTIGATION.md, section: "full document"}
+    resolution_status: "PARTIALLY RESOLVED 2026-08-09 -- bounded range established (OUTCOME 2), exact figure remains UNRESOLVED, per the pre-existing unresolved startup-cost reconciliation"
+    notes: "The underlying 6-9-range startup-cost reconciliation problem (docs/architecture/STARTUP-COST-RECONCILIATION.md) is UNCHANGED by this investigation -- not resolved, not re-litigated. Only the funding-requirement QUESTION (item 47) moved from fully open to bounded."

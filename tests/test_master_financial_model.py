@@ -295,6 +295,8 @@ class UnresolvedAssumptionsVisibleTests(unittest.TestCase):
         for c in data["conflicts"]:
             if c["id"] == "conflict_superannuation_not_in_cost_ramp":
                 self.assertTrue(str(c["resolution_status"]).startswith("RESOLVED"))
+            elif c["id"] == "conflict_funding_requirement_not_established":
+                self.assertTrue(str(c["resolution_status"]).startswith("PARTIALLY RESOLVED"))
             else:
                 self.assertEqual(c["resolution_status"], "UNRESOLVED")
 
@@ -467,6 +469,144 @@ class SuperannuationRegressionTests(unittest.TestCase):
         self.assertIn("assumption_superannuation_canonical", assumption_ids)
         rec = find_record(data["assumptions"], "assumption_superannuation_canonical")
         self.assertIn("financial-break-even-staff.md", rec["source"]["file"])
+
+
+class FundingRequirementInvestigationTests(unittest.TestCase):
+    """Tests for docs/VERIFICATION-TRACKER.md item 47 (funding requirement
+    investigation, resolved as OUTCOME 2 -- bounded, not exact). Confirms the
+    bounded range is arithmetically consistent, does not double-count, does
+    not invent an opening cash balance, and keeps Table 1/Table 2 separate
+    where scenario-specific data is used."""
+
+    def _funding_data(self):
+        data = load_model_yaml("master_financial_model.yml")
+        return data["funding_requirement_investigation"]
+
+    def test_outcome_is_bounded_not_exact(self):
+        funding = self._funding_data()
+        self.assertEqual(funding["outcome"], "OUTCOME_2_BOUNDED")
+
+    def test_pre_opening_capital_is_universal_not_scenario_specific(self):
+        funding = self._funding_data()
+        pre_opening = funding["pre_opening_capital"]
+        self.assertEqual(pre_opening["scenario_applicability"], "universal")
+        self.assertLess(pre_opening["range_low"], pre_opening["range_high"])
+
+    def test_pre_opening_capital_sums_from_canonical_startup_cost_components(self):
+        """(A) = 7.1 + 7.2 + legal/lease-only + insurance, EXCLUDING working
+        capital -- verified against the actual canonical records, not just
+        re-reading the stored total."""
+        startup_records = load_canonical_yaml("startup_costs.yml")
+        c72 = find_record(startup_records["records"], "startup_construction_current_state_recompute")
+        legal_lease = find_record(startup_records["records"], "startup_legal_entity_lease_bond")
+        funding = self._funding_data()
+        pre_opening = funding["pre_opening_capital"]
+
+        # 7.1 (Equipment/Furniture/Signage) is not an individually-tagged single
+        # record in startup_costs.yml (it's CURRENT-STATE.md's own sub-total) --
+        # so this test checks the two components that ARE directly traceable:
+        # construction and legal/lease, both of which must be less than the
+        # combined pre_opening_capital total (sanity bound, not exact equality,
+        # since 7.1 + insurance are not separately id'd records in this file).
+        combined_traceable = c72["total_cost"]["low"] + legal_lease["total_cost"]["low"]
+        self.assertLess(combined_traceable, pre_opening["range_low"])
+
+    def test_working_capital_has_two_disclosed_methods_neither_forced(self):
+        funding = self._funding_data()
+        wc = funding["opening_working_capital"]
+        self.assertIn("historical_reserve_method", wc)
+        self.assertIn("operating_cash_trough_cross_check", wc)
+        historical = wc["historical_reserve_method"]
+        self.assertEqual(historical["range_low"], 85000.00)
+        self.assertEqual(historical["range_high"], 110000.00)
+        cross_check_results = wc["operating_cash_trough_cross_check"]["results"]
+        self.assertEqual(len(cross_check_results), 2)
+        scenario_ids = {r["scenario_id"] for r in cross_check_results}
+        self.assertEqual(scenario_ids, {"scenario_table_1", "scenario_table_2"})
+
+    def test_operating_cash_trough_cross_check_matches_cash_flow_summary(self):
+        """The funding investigation's trough cross-check values must exactly
+        match the Master Financial Model's own cash_flow_summary -- not a
+        second, independently-computed figure."""
+        data = load_model_yaml("master_financial_model.yml")
+        cash_flow_summary = data["outputs"]["cash_flow_summary"]
+        cash_flow_by_scenario = {r["scenario_id"]: r for r in cash_flow_summary}
+        cross_check_results = data["funding_requirement_investigation"]["opening_working_capital"]["operating_cash_trough_cross_check"]["results"]
+        for cc in cross_check_results:
+            cf = cash_flow_by_scenario[cc["scenario_id"]]
+            self.assertAlmostEqual(cc["trough_value"], abs(cf["trough_cumulative_position"]), places=2)
+            self.assertEqual(cc["trough_month"], cf["trough_month"])
+
+    def test_combined_primary_method_equals_pre_opening_plus_historical_reserve(self):
+        """(C) primary method must equal (A) + (B historical), not (A) +
+        operating cash trough -- the primary combined figure must NOT
+        double-count by summing the trough on top of the reserve."""
+        funding = self._funding_data()
+        pre_opening = funding["pre_opening_capital"]
+        historical_wc = funding["opening_working_capital"]["historical_reserve_method"]
+        combined = funding["combined_funding_requirement_bounded"]["primary_method"]
+        self.assertAlmostEqual(
+            combined["range_low"], pre_opening["range_low"] + historical_wc["range_low"], places=2
+        )
+        self.assertAlmostEqual(
+            combined["range_high"], pre_opening["range_high"] + historical_wc["range_high"], places=2
+        )
+
+    def test_combined_primary_method_matches_existing_canonical_component_sum(self):
+        """The primary combined figure must be an EXACT match to the
+        already-canonical total_current_state_component_sum -- proving no new
+        dollar figure was invented, only a re-partition of an existing one."""
+        startup_records = load_canonical_yaml("startup_costs.yml")
+        existing_sum = find_record(startup_records["historical_total_estimates"], "total_current_state_component_sum")
+        funding = self._funding_data()
+        combined = funding["combined_funding_requirement_bounded"]["primary_method"]
+        self.assertAlmostEqual(combined["range_low"], existing_sum["total_cost"]["low"], places=2)
+        self.assertAlmostEqual(combined["range_high"], existing_sum["total_cost"]["high"], places=2)
+
+    def test_alternative_cross_check_method_is_scenario_specific_and_distinct(self):
+        funding = self._funding_data()
+        alt_results = funding["combined_funding_requirement_bounded"]["alternative_cross_check_method"]["results"]
+        alt_by_scenario = {r["scenario_id"]: r for r in alt_results}
+        t1 = alt_by_scenario["scenario_table_1"]
+        t2 = alt_by_scenario["scenario_table_2"]
+        self.assertNotAlmostEqual(t1["range_low"], t2["range_low"], places=2)
+        # Table 2's alternative range must be higher than Table 1's, since
+        # Table 2's operating-cash trough is deeper.
+        self.assertGreater(t2["range_low"], t1["range_low"])
+
+    def test_opening_cash_still_not_invented(self):
+        """This investigation must not have introduced an opening cash value
+        anywhere -- assumption_opening_cash_not_invented must remain
+        PLACEHOLDER/null."""
+        data = load_model_yaml("master_financial_model.yml")
+        rec = find_record(data["assumptions"], "assumption_opening_cash_not_invented")
+        self.assertEqual(rec["status"], "PLACEHOLDER")
+        cf = mfm.compute_cash_flow("scenario_table_1", mfm.CanonicalModelInputs())
+        self.assertIsNone(cf["opening_cash_assumption"])
+
+    def test_capex_records_carry_no_timing_field(self):
+        """Confirms the TIMING UNKNOWN classification for capex.yml is
+        accurate, not asserted without checking."""
+        capex_records = load_canonical_yaml("capex.yml")["records"]
+        timing_keys = {"payment_timing", "payment_schedule", "milestone", "timing"}
+        for rec in capex_records:
+            self.assertFalse(timing_keys & set(rec.keys()), f"{rec.get('id')} unexpectedly has a timing field")
+
+    def test_item_47_tracker_entry_reflects_bounded_not_full_resolution(self):
+        tracker_text = (REPO_ROOT / "docs" / "VERIFICATION-TRACKER.md").read_text(encoding="utf-8")
+        self.assertIn("PARTIALLY RESOLVED (bounded) 2026-08-09", tracker_text)
+
+    def test_funding_investigation_does_not_alter_revenue_or_cost_methodology(self):
+        """Sanity check: canonical revenue/cost steady-state figures must be
+        byte-identical to their pre-investigation values -- this phase must
+        not have touched revenue_ramp.yml or cost_ramp.yml's payroll figures."""
+        inputs = mfm.CanonicalModelInputs()
+        m5_t1 = mfm.compute_month_pnl("scenario_table_1", 5, inputs)
+        m5_t2 = mfm.compute_month_pnl("scenario_table_2", 5, inputs)
+        self.assertAlmostEqual(m5_t1["revenue"]["total_revenue"], 155215.80, places=2)
+        self.assertAlmostEqual(m5_t2["revenue"]["total_revenue"], 115720.80, places=2)
+        self.assertAlmostEqual(m5_t1["payroll"], 84654.10, places=2)
+        self.assertAlmostEqual(m5_t2["payroll"], 80684.16, places=2)
 
 
 if __name__ == "__main__":
