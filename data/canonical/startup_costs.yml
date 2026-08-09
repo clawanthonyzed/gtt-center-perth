@@ -1,0 +1,445 @@
+# GTT Center Perth -- Canonical Startup Costs (proof of concept, Phase 4)
+#
+# Non-capex, pre-opening cash outlay: fit-out CONSTRUCTION (leasehold improvement, not an
+# individually-depreciable asset the way furniture/equipment is -- see data/canonical/
+# capex.yml's own header for that boundary), legal/entity setup, lease-related costs,
+# professional fees, opening inventory, and working capital. Sourced from
+# docs/CURRENT-STATE.md §6/§7, docs/floor-plan-concept.md, docs/grace-startup-plan.md,
+# docs/financial-setup.md, docs/equipment-costs.md, docs/investor-memorandum.md.
+#
+# PART 5 BOUNDARY, enforced throughout this file: startup EXPENDITURE (this file's `records`)
+# is money spent to establish the business. WORKING CAPITAL (a distinct list below,
+# `funding_requirements`, NOT `records`) is cash held in reserve to survive ramp-up -- a
+# funding/cash requirement, not an expense line, per the coordinator's explicit instruction
+# not to treat it as a cost automatically. CAPEX (durable assets) lives in capex.yml, not here.
+# No final "total opening funding requirement" figure is calculated anywhere in this file --
+# that would require combining startup expenditure + capex + opening inventory + pre-opening
+# payroll + working capital + contingency, which the coordinator's Part 5 explicitly says not
+# to do unless the repo already supports it directly (it doesn't -- see
+# docs/architecture/STARTUP-COST-RECONCILIATION.md).
+#
+# Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
+# PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+
+schema_version: 1
+dataset: startup_costs
+last_updated: "2026-08-09"
+
+records:
+  # ============================================================
+  # PROPERTY/PREMISES
+  # ============================================================
+  - id: startup_fitout_construction
+    category: property_premises
+    subcategory: fitout_construction
+    item: "Fit-out construction (partitions, electrical, plumbing, HVAC, flooring)"
+    description: "239sqm day-one footprint, open-plan/curtain layout -- 2026-07-31 recompute, current"
+    quantity: 239
+    unit_cost: {low: 679.72, high: 1280.46}
+    total_cost: {low: 162452.00, high: 306029.00}
+    currency: AUD
+    cost_type: STARTUP
+    required_optional: required
+    scenario_applicability: universal
+    effective_date: "2026-07-31"
+    status: MODELLED
+    status_detail: "independently re-derived bottom-up build (base shell rate reverse-derived from this document's own prior figures, minus a confirmed A$10,736-17,256 wall-to-curtain/open-plan saving) -- not a quote"
+    source: {file: docs/floor-plan-concept.md, section: "Fit-Out Cost Estimate table"}
+    notes: "unit_cost is in AUD/sqm, back-calculated from total_cost/quantity for reference -- the source states the total range directly, this per-sqm figure is CALCULATED, not independently sourced. This is the CURRENT figure feeding docs/CURRENT-STATE.md §7.2 (which recomputes construction independently at A$800-1,250/sqm x 239sqm = A$191,200-298,750 -- the two land close but not identical, both retained per that document's own disclosure, not forced to agree)."
+
+  - id: startup_construction_current_state_recompute
+    category: property_premises
+    subcategory: fitout_construction
+    item: "Fit-out construction -- CURRENT-STATE.md's own independent recompute"
+    description: "239sqm x A$800-1,250/sqm, this document's own established rate -- a second, independently-derived construction estimate, not identical to startup_fitout_construction above"
+    quantity: 239
+    unit_cost: {low: 800.00, high: 1250.00}
+    total_cost: {low: 191200.00, high: 298750.00}
+    currency: AUD
+    cost_type: STARTUP
+    required_optional: required
+    scenario_applicability: universal
+    effective_date: "2026-07-31"
+    status: MODELLED
+    status_detail: "explicitly acknowledged by its own source as landing 'close but not identical' to startup_fitout_construction's floor-plan-concept.md figure -- both retained side by side, neither picked, per that document's own stated policy"
+    source: {file: docs/CURRENT-STATE.md, section: "§7.2 Fit-out/Construction"}
+    notes: "This is the figure actually used in CURRENT-STATE.md §7.4's adopted headline total -- see docs/architecture/STARTUP-COST-RECONCILIATION.md for how the two construction estimates relate."
+
+  - id: startup_landlord_fitout_contribution
+    category: property_premises
+    subcategory: fitout_construction
+    item: "Landlord fit-out contribution (potential offset, NOT netted into any headline total)"
+    description: "Perth commercial leasing market 2026 -- new tenancies in non-prime locations regularly attract this range in landlord fit-out contributions or equivalent rent-free periods, per the source's general market observation"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 20000.00, high: 60000.00}
+    currency: AUD
+    cost_type: STARTUP
+    required_optional: optional
+    scenario_applicability: universal
+    effective_date: "2026-07-31"
+    status: MODELLED
+    status_detail: "REMOVED from CURRENT-STATE.md's headline entirely, per Anthony's direct instruction -- 'Anthony is skeptical a landlord will actually contribute and does not want it assumed in the best-case figure.' Recorded here as a real possible upside only, explicitly NOT subtracted from startup_fitout_construction or any other record's total_cost in this file."
+    source: {file: docs/floor-plan-concept.md, section: "Fit-Out Cost Estimate, 'Landlord contribution' note"}
+    notes: "First negotiating position on any lease, per the source -- a negotiation target, not a confirmed reduction."
+
+  - id: startup_legal_entity_lease_bond
+    category: property_premises
+    subcategory: legal_lease
+    item: "Legal/entity setup, lease bond (~2 months' rent)"
+    description: null
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 19600.00, high: 27600.00}
+    currency: AUD
+    cost_type: STARTUP
+    required_optional: required
+    scenario_applicability: universal
+    effective_date: "2026-07-31"
+    status: MODELLED
+    status_detail: "sourced from Anthony's partner-brief working session -- not independently re-derived in this repo"
+    source: {file: docs/CURRENT-STATE.md, section: "§7.3 Working Capital & Pre-Launch Costs"}
+    notes: "Potential overlap, not resolved -- see conflict_lease_cost_overlap below, comparing this record against grace-startup-plan.md's separate 'Legal and professional fees' and 'Lease deposit + first month' lines."
+
+  # ============================================================
+  # PROFESSIONAL/REGULATORY
+  # ============================================================
+  - id: startup_accountant_initial_brief
+    category: professional_regulatory
+    subcategory: accounting
+    item: "Accountant initial brief and structure confirmation"
+    description: "One-off engagement, Week 1, before any other financial setup step"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 500.00, high: 1500.00}
+    currency: AUD
+    cost_type: STARTUP
+    required_optional: required
+    scenario_applicability: universal
+    effective_date: null
+    status: MODELLED
+    source: {file: docs/financial-setup.md, section: "STEP 1 -- ENGAGE ACCOUNTANT"}
+    notes: "Also recorded in data/canonical/opex.yml as opex_accountant_initial_brief (added Phase 3, before this file existed) -- this file is the more correct long-term home for this record given its explicitly one-off, pre-opening nature; both records carry the same figure, not a conflict, just a continuity note across phases."
+
+  - id: startup_food_safety_supervisor_cert
+    category: professional_regulatory
+    subcategory: compliance_training
+    item: "Food Safety Supervisor (FSS) certificate"
+    description: "Online course, ~4 hours -- renewal frequency not stated anywhere in this repo"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 100.00, high: 200.00}
+    currency: AUD
+    cost_type: STARTUP
+    required_optional: required
+    scenario_applicability: universal
+    effective_date: null
+    status: MODELLED
+    status_detail: "renewal cadence unknown -- PLACEHOLDER on whether this recurs, same caveat as opex.yml's copy of this record"
+    source: {file: docs/financial-setup.md, section: "STEP 9 -- FOOD BUSINESS NOTIFICATION"}
+    notes: "Also recorded in data/canonical/opex.yml as opex_food_safety_supervisor_cert (Phase 3) -- same continuity note as startup_accountant_initial_brief above."
+
+  - id: startup_legal_professional_fees_gsp
+    category: professional_regulatory
+    subcategory: legal
+    item: "Legal and professional fees"
+    description: "Week 1 financial gate, per docs/grace-startup-plan.md's own FINANCIAL GATES table"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 3000.00, high: 6000.00}
+    currency: AUD
+    cost_type: STARTUP
+    required_optional: required
+    scenario_applicability: universal
+    effective_date: "2026-06-05"
+    status: MODELLED
+    status_detail: "SOURCE IS OLD (2026-06-05, no staleness banner on this specific table) -- predates every subsequent client-volume/fixture-count/fit-out rebase. Retained as a distinct, currently-live (not archived) data point, not asserted as still accurate."
+    source: {file: docs/grace-startup-plan.md, section: "FINANCIAL GATES table"}
+    notes: "Potential overlap with startup_legal_entity_lease_bond above -- see conflict_lease_cost_overlap below."
+
+  # ============================================================
+  # PRE-OPENING (property-adjacent: deposits, staged fit-out payments -- an alternative,
+  # older decomposition of the same fit-out/lease spend already captured above)
+  # ============================================================
+  - id: startup_lease_deposit_first_month_gsp
+    category: pre_opening
+    subcategory: lease
+    item: "Lease deposit + first month"
+    description: "Week 10 financial gate"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 5000.00, high: 15000.00}
+    currency: AUD
+    cost_type: STARTUP
+    required_optional: required
+    scenario_applicability: universal
+    effective_date: "2026-06-05"
+    status: MODELLED
+    status_detail: "same 2026-06-05 staleness caveat as startup_legal_professional_fees_gsp"
+    source: {file: docs/grace-startup-plan.md, section: "FINANCIAL GATES table"}
+    notes: "Potential overlap with startup_legal_entity_lease_bond's '~2 months' rent' lease bond figure -- see conflict_lease_cost_overlap below. Neither document cross-references the other."
+
+  - id: startup_fitout_deposit_stage1_gsp
+    category: pre_opening
+    subcategory: fitout_payment_schedule
+    item: "Fit-out deposit (Stage 1)"
+    description: "Week 10 financial gate"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 50000.00, high: 80000.00}
+    currency: AUD
+    cost_type: STARTUP
+    required_optional: required
+    scenario_applicability: universal
+    effective_date: "2026-06-05"
+    status: MODELLED
+    status_detail: "same 2026-06-05 staleness caveat"
+    source: {file: docs/grace-startup-plan.md, section: "FINANCIAL GATES table"}
+    notes: "See conflict_fitout_staged_payments_vs_construction_total below -- Stage 1 + Stage 2 combined (A$100,000-180,000) is materially LOWER than startup_fitout_construction's current A$162,452-306,029 total at both ends."
+
+  - id: startup_fitout_completion_stage2_gsp
+    category: pre_opening
+    subcategory: fitout_payment_schedule
+    item: "Fit-out completion (Stage 2)"
+    description: "Week 15 financial gate"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 50000.00, high: 100000.00}
+    currency: AUD
+    cost_type: STARTUP
+    required_optional: required
+    scenario_applicability: universal
+    effective_date: "2026-06-05"
+    status: MODELLED
+    status_detail: "same 2026-06-05 staleness caveat"
+    source: {file: docs/grace-startup-plan.md, section: "FINANCIAL GATES table"}
+    notes: "See conflict_fitout_staged_payments_vs_construction_total below."
+
+  - id: startup_equipment_ffe_stock_gsp
+    category: pre_opening
+    subcategory: equipment_summary
+    item: "Equipment, FF&E, stock"
+    description: "Week 14-15 financial gate -- a single lump-sum figure covering what data/canonical/capex.yml itemises across 11 records plus this file's opening-inventory records"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 30000.00, high: 60000.00}
+    currency: AUD
+    cost_type: STARTUP
+    required_optional: required
+    scenario_applicability: universal
+    effective_date: "2026-06-05"
+    status: MODELLED
+    status_detail: "same 2026-06-05 staleness caveat -- also materially LOWER than the current equipment-costs.md Summary Budget total (A$43,190-97,430) at the high end (A$60,000 vs A$97,430), consistent with predating the 2026-07-31 4-chair/4-station fixture-count expansion"
+    source: {file: docs/grace-startup-plan.md, section: "FINANCIAL GATES table"}
+    notes: null
+
+  - id: startup_opening_consumables_stock
+    category: pre_opening
+    subcategory: opening_inventory
+    item: "Opening consumables stock (§12 aggregate)"
+    description: "Massage oil, gel polish, hair/facial products, pathology consumables, spray-tan kits, lounge snacks, printed forms, cleaning supplies -- the dedicated §12 aggregate only; additional smaller opening-stock lines are scattered inline within equipment-costs.md §1-§7A (e.g. nail polish stock in §3, hair product stock in §5) and are NOT separately re-summed into this record, to avoid double-counting against those sections' own totals in capex.yml"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 2035.00, high: 3650.00}
+    currency: AUD
+    cost_type: STARTUP
+    required_optional: required
+    scenario_applicability: universal
+    effective_date: null
+    status: MODELLED
+    source: {file: docs/equipment-costs.md, section: "§12 Opening Consumables Stock"}
+    notes: "This is a genuine undercount of TOTAL opening inventory spend if the scattered per-section opening-stock lines (e.g. §5A's tint/wax stock, §3's polish stock) are also counted -- flagged rather than summed, since summing them here would risk double-counting against capex.yml's section-total records, which bundle those same consumable lines in without a clean split (see capex.yml's own header note)."
+
+  # ============================================================
+  # WORKING CAPITAL -- kept structurally separate from `records` above,
+  # per the coordinator's explicit Part 5 instruction: a funding/cash
+  # requirement, not a startup expense line.
+  # ============================================================
+funding_requirements:
+  - id: funding_working_capital_reserve
+    name: "Working capital reserve (funds Months 1-3 operating losses)"
+    total_cost: {low: 85000.00, high: 110000.00}
+    currency: AUD
+    status: MODELLED
+    status_detail: >
+      Basis stated as "Section 6's ~A$84,468 combined Month 1-3 loss, plus a buffer" -- but
+      that Month 1-3 ramp figure was built against the PRE-2026-08-05-rebase model (10- or
+      12-client, not Table 1's 18-client or Table 2's 12-client g=25 figures). Not
+      independently rebuilt against the current committed model -- docs/CURRENT-STATE.md's
+      own changelog already flags the Year 1 Monthly Ramp as "not yet done, flagged as an
+      open follow-up" for the 2026-08-05 rebase generally; this working-capital figure
+      inherits the same staleness.
+    source: {file: docs/CURRENT-STATE.md, section: "§7.3 Working Capital & Pre-Launch Costs"}
+    notes: "NOT a startup expense -- this is cash held in reserve, not spent to establish the business. Kept in this separate list per the coordinator's explicit Part 5 instruction, not merged into `records` above."
+
+  - id: funding_first_year_insurance_embedded
+    name: "First-year insurance (embedded in the working capital range above)"
+    total_cost: {low: 400.00, high: 400.00}
+    currency: AUD
+    status: MODELLED
+    status_detail: "figure is AUD/month basis. Carries a real number under a round-planning-estimate caveat (source: 'never an actual insurance quote') -- MODELLED, not PLACEHOLDER, per docs/architecture/DATA-GOVERNANCE.md's own distinction (a PLACEHOLDER record must not carry a concrete value)"
+    source: {file: docs/CURRENT-STATE.md, section: "§7.3 Working Capital & Pre-Launch Costs"}
+    notes: "Same figure as data/canonical/opex.yml's opex_insurance_modelled record -- a deliberate, already-disclosed cross-reference between the recurring-opex line and the working-capital reserve it's embedded in, not a duplication error. Subject to the same conflict_insurance_estimate finding already tracked in opex.yml/VERIFICATION-TRACKER item 19 -- not re-litigated here."
+
+# ============================================================
+# HISTORICAL TOTAL ESTIMATES -- every top-level "total startup capital" figure found
+# in this repo, minimally populated (this is a pointer/index, not a duplicate migration --
+# full narrative reconciliation lives in docs/architecture/STARTUP-COST-RECONCILIATION.md).
+# NONE marked as canonical/authoritative here -- per the coordinator's explicit instruction,
+# this phase does not resolve which (if any) of these is correct.
+# ============================================================
+historical_total_estimates:
+  - id: total_investor_memorandum_original
+    name: "investor-memorandum.md original itemised build (fit-out/equipment/IT/working capital/legal)"
+    total_cost: {mid: 363000.00, low: 292000.00, high: 493000.00}
+    currency: AUD
+    status: SUPERSEDED
+    superseded_by: total_current_state_adopted
+    source: {file: docs/investor-memorandum.md, section: "§8 Capital Requirement, Capital Stack table"}
+    notes: "The itemisation behind this figure no longer exists in this document's current content -- investor-memorandum.md was rewritten 2026-07-29 and now only references this range historically, pointing to CURRENT-STATE.md instead. Cannot be independently re-verified/re-traced from this repo's current content."
+
+  - id: total_handoff
+    name: "HANDOFF.md realistic range"
+    total_cost: {low: 144500.00, high: 242500.00}
+    currency: AUD
+    status: SUPERSEDED
+    superseded_by: total_current_state_adopted
+    source: {file: docs/HANDOFF.md, section: "referenced from docs/CURRENT-STATE.md §6, no itemised build in HANDOFF.md itself"}
+    notes: "No itemised build shown anywhere in HANDOFF.md -- cannot be traced to specific components. NEW FINDING this pass: remarkably close to startup_total_prerevenue_capital_gsp (grace-startup-plan.md's own A$140,000-260,000 'Total pre-revenue capital') -- plausibly the same underlying estimate or a closely related calculation, but NOT confirmed as identical (different rounding, no cross-reference between the two documents)."
+
+  - id: total_business_plan_cashflow_citation
+    name: "business-plan.md §9, attributed to cash-flow.md"
+    total_cost: {low: 209000.00, high: 431000.00, mid: 305000.00}
+    currency: AUD
+    status: MODELLED
+    status_detail: "the figure itself is a real, directly-quoted number from business-plan.md -- but its cited source is broken (see notes), so this status reflects 'a stated figure with an unconfirmed/untraceable basis' rather than a genuine PLACEHOLDER absence of any figure at all"
+    source: {file: docs/business-plan.md, section: "§9 Financial Overview"}
+    notes: "RE-VERIFIED directly this pass, per the coordinator's explicit instruction not to assume still correct: docs/cash-flow.md's own current content (read in full) contains NO startup-capital breakdown matching or supporting this figure anywhere -- its own 'Pre-Launch Capital Deployment' section explicitly states 'Not rebuilt in this round' and lists only category names (entity setup, lease bond, fit-out, equipment, WDP setup, pre-launch marketing, staff training, pre-open operating costs, contingency), no dollar figures. This citation is confirmed broken/untraceable, not merely suspected."
+
+  - id: total_floorplan_fitout_only
+    name: "floor-plan-concept.md Fit-Out Cost Estimate (narrower scope -- fit-out only, not full startup capital)"
+    total_cost: {low: 228142.00, high: 457559.00, mid: 341851.00, net_mid_after_landlord: 311851.00}
+    currency: AUD
+    status: MODELLED
+    source: {file: docs/floor-plan-concept.md, section: "Fit-Out Cost Estimate table"}
+    notes: "NOT directly comparable to the other totals in this list -- this figure covers construction + equipment + furniture + signage + IT/AV only. It excludes working capital, legal/entity setup, and lease costs that the other 'full startup capital' ranges include. Comparing it apples-to-apples to e.g. total_current_state_adopted requires adding CURRENT-STATE.md §7.3's working-capital/legal figures on top -- not done automatically here, see docs/architecture/STARTUP-COST-RECONCILIATION.md."
+
+  - id: total_section7_original_rebuild_retired
+    name: "CURRENT-STATE.md §7 original same-day rebuild (2026-07-31, RETIRED same day)"
+    total_cost: {low: 268142.00, high: 583559.00}
+    currency: AUD
+    status: SUPERSEDED
+    superseded_by: total_current_state_component_sum
+    source: {file: docs/CURRENT-STATE.md, section: "§7 Startup Capital Range, banner above 'Section 7 Build -- RECONCILED'"}
+    notes: "Explicitly retired the same day it was built, after Anthony reviewed it directly and applied 2 corrections (landlord contribution removed from headline, insurance relabelled PLACEHOLDER) -- retained here for trace only, per CURRENT-STATE.md's own explicit statement that this figure 'is retired, not left standing alongside' the reconciled version."
+
+  - id: total_section7_reference_starting_point
+    name: "CURRENT-STATE.md §7's own stated starting-point reference range (pre-2026-07-31 corrections)"
+    total_cost: {low: 276635.00, high: 554900.00}
+    currency: AUD
+    status: SUPERSEDED
+    superseded_by: total_current_state_adopted
+    source: {file: docs/CURRENT-STATE.md, section: "§7.4, closing note"}
+    notes: "'The original reference range this whole Section 7 exercise started from' -- both 2026-07-31 corrections (landlord contribution removed, construction recomputed at the higher rate) pushed the range up from this starting point, per CURRENT-STATE.md's own disclosure."
+
+  - id: total_current_state_component_sum
+    name: "CURRENT-STATE.md §7.4 -- this agent's own component-by-component sum (7.1+7.2+7.3)"
+    total_cost: {low: 357390.00, high: 577180.00}
+    currency: AUD
+    status: CALCULATED
+    status_detail: "7.1 (A$61,190-140,430) + 7.2 (A$191,200-298,750) + 7.3 (A$105,000-138,000) -- straightforward arithmetic on CURRENT-STATE.md's own component ranges"
+    derived_from: [startup_construction_current_state_recompute, startup_legal_entity_lease_bond]
+    source: {file: docs/CURRENT-STATE.md, section: "§7.4 Full Picture"}
+    notes: "Explicitly disclosed by CURRENT-STATE.md itself as NOT matching total_current_state_adopted below exactly (a few percent gap on both ends) -- shown side by side with the adopted figure, not forced to reconcile."
+
+  - id: total_current_state_adopted
+    name: "CURRENT-STATE.md §7.4 -- Anthony's own reconciled/adopted total"
+    total_cost: {low: 292335.00, high: 594900.00}
+    currency: AUD
+    status: DECIDED
+    status_detail: "Anthony's own reconciliation, adopted as instructed -- the figure CURRENT-STATE.md itself says should be quoted in any client-facing document, per its explicit statement, even though it does not exactly match total_current_state_component_sum's arithmetic"
+    source: {file: docs/CURRENT-STATE.md, section: "§7.4 Full Picture"}
+    notes: >
+      This is the MOST RECENT figure in this list and the one CURRENT-STATE.md's own governance
+      points to for current use -- but CURRENT-STATE.md itself still frames the overall §6/§7
+      startup-capital question as UNRECONCILED at the file level (multiple historical ranges
+      retained, none declared the single canonical figure for all purposes). This canonical-data
+      pass does not change that framing or elevate this record above the others structurally --
+      it is recorded with a DECIDED status (a real founder decision) rather than MODELLED,
+      which is a more confident status than the other historical entries in this list, but is
+      NOT the same as this file declaring the startup-capital question resolved.
+
+  - id: total_prerevenue_capital_gsp
+    name: "grace-startup-plan.md's own 'Total pre-revenue capital' bottom line"
+    total_cost: {low: 140000.00, high: 260000.00}
+    currency: AUD
+    status: SUPERSEDED
+    superseded_by: total_current_state_adopted
+    source: {file: docs/grace-startup-plan.md, section: "FINANCIAL GATES table"}
+    notes: >
+      NEW FINDING this pass -- not previously included in CURRENT-STATE.md §6's "three
+      different ranges" framing, or in investor-memorandum.md's "three different ranges"
+      cross-reference. This repo's own governance files undercount the true number of
+      unreconciled historical ranges by at least one. Dated 2026-06-05, no staleness banner
+      on this specific table -- treated as SUPERSEDED by inference (predates every later
+      fit-out/fixture-count rebase), not by an explicit banner in the source itself.
+
+# ============================================================
+# CONTINGENCY -- the one assumption found in this repo, recorded distinctly.
+# ============================================================
+contingency_assumptions:
+  - id: contingency_fitout_15pct
+    name: "Fit-out cost blowout contingency"
+    value_pct: 15
+    applies_to: "Mid-range fit-out budget (unspecified which mid-range figure exactly -- floor-plan-concept.md's mid A$341,851, or CURRENT-STATE.md's own 7.2 range, not stated)"
+    status: VERIFIED
+    status_detail: >
+      The 15% figure itself is VERIFIED as literally, directly stated in its source (a primary
+      textual fact, not modelled or estimated by any agent) -- it is the ONLY contingency
+      percentage found anywhere in this repo after a full search, so no competing figure exists
+      to conflict with. What is NOT resolved (a separate question from the value's own status)
+      is whether/how this 15% is actually incorporated into any of the current headline fit-out
+      or startup-capital ranges (startup_fitout_construction, startup_construction_current_state_recompute,
+      or docs/CURRENT-STATE.md §7's adopted total) -- none of those figures' own build
+      methodology mentions a contingency uplift being applied. Flagged as an open application
+      question, not resolved either way.
+    source: {file: docs/investor-memorandum.md, section: "§7 risk table, 'Fit-out cost blowout' row"}
+    notes: "docs/opex.yml's separate 'Miscellaneous / contingency A$500.00/month' record is an OPERATING contingency (a small recurring monthly buffer), a different concept entirely -- not related to this fit-out contingency percentage, not conflated here."
+
+# ============================================================
+# Genuine, disclosed conflicts -- none silently resolved.
+# ============================================================
+conflicts:
+  - id: conflict_lease_cost_overlap
+    description: >
+      docs/CURRENT-STATE.md §7.3's "Legal/entity setup, lease bond (~2 months' rent)"
+      (A$19,600-27,600) may substantially overlap with docs/grace-startup-plan.md's separate
+      "Legal and professional fees" (A$3,000-6,000) and "Lease deposit + first month"
+      (A$5,000-15,000) lines -- combined, the grace-startup-plan.md pair (A$8,000-21,000) is
+      close to but not identical to the CURRENT-STATE.md figure, and it is not clear whether
+      these are the same underlying cost described two different ways, or genuinely additive
+      (i.e. total lease-related startup cash need could be as high as A$27,600 + A$21,000 =
+      A$48,600 at the combined high end). Neither document cross-references the other.
+    affected_records: [startup_legal_entity_lease_bond, startup_legal_professional_fees_gsp, startup_lease_deposit_first_month_gsp]
+    sources:
+      - {file: docs/CURRENT-STATE.md, section: "§7.3 Working Capital & Pre-Launch Costs"}
+      - {file: docs/grace-startup-plan.md, section: "FINANCIAL GATES table"}
+    resolution_status: UNRESOLVED
+    notes: "See docs/architecture/STARTUP-COST-RECONCILIATION.md for full discussion."
+
+  - id: conflict_fitout_staged_payments_vs_construction_total
+    description: >
+      docs/grace-startup-plan.md's "Fit-out deposit (Stage 1)" + "Fit-out completion (Stage 2)"
+      sum to A$100,000-180,000 -- materially LOWER than the current
+      startup_fitout_construction total (A$162,452-306,029) at both ends, and lower again than
+      startup_construction_current_state_recompute (A$191,200-298,750). Most plausibly
+      explained by grace-startup-plan.md predating the 2026-07-31 fixture-count/construction-
+      type rebase (it is dated 2026-06-05, before every subsequent fit-out revision) -- but
+      this is an inference, not confirmed, since grace-startup-plan.md carries no staleness
+      banner on this specific table.
+    affected_records: [startup_fitout_deposit_stage1_gsp, startup_fitout_completion_stage2_gsp, startup_fitout_construction, startup_construction_current_state_recompute]
+    sources:
+      - {file: docs/grace-startup-plan.md, section: "FINANCIAL GATES table"}
+      - {file: docs/floor-plan-concept.md, section: "Fit-Out Cost Estimate table"}
+    resolution_status: UNRESOLVED
+    notes: null

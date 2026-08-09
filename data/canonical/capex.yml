@@ -1,0 +1,252 @@
+# GTT Center Perth -- Canonical Capital Expenditure (proof of concept, Phase 4)
+#
+# Durable physical/IT assets only -- furniture, equipment, technology hardware. Does NOT
+# include fit-out CONSTRUCTION (walls, partitions, electrical, plumbing, HVAC, flooring
+# installation -- a leasehold-improvement cost, recorded in data/canonical/startup_costs.yml
+# instead, per that file's own header note on the startup-vs-capex boundary), and does NOT
+# include consumable/opening-stock supplies (oils, polish, forms -- recorded in
+# startup_costs.yml's opening-inventory records instead).
+#
+# Sourced primarily from docs/equipment-costs.md, at the SAME section-level granularity
+# already established as canonical in this repo (docs/CURRENT-STATE.md §7.1 sources its own
+# "Equipment" line directly from docs/equipment-costs.md's own Summary Budget, which is
+# itself organised by room/service section, not itemised down to every sharps-container
+# bracket) -- this file mirrors that granularity rather than inventing a finer split the
+# source repo doesn't itself maintain.
+#
+# CAPITAL-VS-CONSUMABLE SPLIT, disclosed honestly: only docs/equipment-costs.md §5A (Beauty/
+# Brows) carries an explicit per-line "Type" column distinguishing Capital from Recurring/
+# consumable -- for that section only, this file uses the isolated capital-only subtotal
+# (computed directly from the source's own tagged rows, not invented: A$800+160+120+120+150+
+# 200 = A$1,550 low; A$1,800+300+250+240+350+400 = A$3,340 high). Every other section
+# (§1, §3, §4, §5, §6, §8, §11) bundles a small amount of consumable/opening-stock spend into
+# one section total WITHOUT a line-by-line capital/consumable tag -- this file uses those
+# section totals as-is (predominantly capital, per the source's own top-level "Capital vs
+# Recurring Summary" framing) rather than inventing a line-by-line re-split the source itself
+# does not provide.
+#
+# USEFUL LIFE / DEPRECIATION: not stated anywhere in this repo for any asset -- every record
+# below has useful_life_years: null and depreciation_method: null, genuinely, not from
+# oversight. Flagged once here rather than repeated as per-record noise.
+#
+# Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
+# PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+
+schema_version: 1
+dataset: capex
+last_updated: "2026-08-09"
+
+records:
+  - id: capex_pathology_collection_room_equipment
+    asset_category: clinical_equipment
+    asset_name: "Pathology Collection Room equipment (section total)"
+    description: "Phlebotomy chairs x2, vasovagal recovery chair, centrifuge, sharps/biohazard fittings, documentation cabinet, thermal label printer -- see capex_centrifuge and capex_vasovagal_chair below for 2 individually broken-out high-value items also included in this section total (not double-counted in the file's own summed total, cross-referenced only)"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 6330.00, high: 10240.00}
+    currency: AUD
+    useful_life_years: null
+    depreciation_method: null
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "GAP/CONFLICT, not silently resolved -- docs/equipment-costs.md's own Summary Budget row for this same category states A$8,300-14,100, which does NOT match this section's own itemised total (A$6,330-10,240) -- a ~A$1,970-3,860 gap the source document itself discloses as 'pre-existing, not investigated or reconciled.' This record uses the itemised §1 total, not the Summary Budget row -- both are shown in conflicts below, neither picked as more authoritative."
+    source: {file: docs/equipment-costs.md, section: "§1 Pathology Collection Room, itemised TOTAL row"}
+    notes: "Excludes the medical waste disposal contract (A$600-1,200/yr) -- that is a recurring service, already correctly recorded as data/canonical/opex.yml's opex_medical_waste record, not capex."
+
+  - id: capex_centrifuge
+    asset_category: clinical_equipment
+    asset_name: "Tabletop centrifuge (refrigerated)"
+    description: "Hettich Universal 320R or equivalent -- 'the most critical piece of equipment in the venue,' GDM underdiagnosis risk without centrifugation within 10 minutes per the ORCHID study, per the source's own note"
+    quantity: 1
+    unit_cost: {low: 3500.00, high: 5000.00}
+    total_cost: {low: 3500.00, high: 5000.00}
+    currency: AUD
+    useful_life_years: null
+    depreciation_method: null
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "market-research estimate, not a confirmed quote -- same basis as every other line in the source table"
+    source: {file: docs/equipment-costs.md, section: "§1 Pathology Collection Room"}
+    notes: "Already included within capex_pathology_collection_room_equipment's section total above -- broken out individually here because of its compliance-critical status, not as an additional cost."
+
+  - id: capex_vasovagal_recovery_chair
+    asset_category: clinical_equipment
+    asset_name: "Reclining chair or examination couch (vasovagal recovery)"
+    description: "Separate from the 2 active phlebotomy chairs -- for a client feeling faint or having a vasovagal reaction during/after venepuncture. Added 2026-08-07 after being found missing during a cross-check against WDP's (Carole Rivers) detailed ACC/NPAAC room spec."
+    quantity: 1
+    unit_cost: {low: 500.00, high: 900.00}
+    total_cost: {low: 500.00, high: 900.00}
+    currency: AUD
+    useful_life_years: null
+    depreciation_method: null
+    scenario_applicability: universal
+    status: MODELLED
+    source: {file: docs/equipment-costs.md, section: "§1 Pathology Collection Room, added 2026-08-07"}
+    notes: "Already included within capex_pathology_collection_room_equipment's section total above -- broken out individually since it was a real, disclosed gap-fill (docs/VERIFICATION-TRACKER.md item 30), not original scope."
+
+  - id: capex_nail_station_equipment
+    asset_category: treatment_equipment
+    asset_name: "Nail station equipment (4 stations)"
+    description: "Nail tables with dust collectors, shared LEV unit, UV/LED lamps, manicure chairs, pedicure spa chairs, tool trolleys -- section total, includes a small bundled consumable/opening-stock component (polish, files, disinfectant) not separately broken out by the source"
+    quantity: 4
+    unit_cost: null
+    total_cost: {low: 9340.00, high: 20280.00}
+    currency: AUD
+    useful_life_years: null
+    depreciation_method: null
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "was A$5,840-12,880 at the prior 2-station count -- corrected 2026-07-31 to 4 stations, per Anthony's direct instruction. Headcount unaffected -- 4 physical stations does not require 4 nail technicians, per the source's own explicit note."
+    source: {file: docs/equipment-costs.md, section: "§3 Nail Station"}
+    notes: null
+
+  - id: capex_massage_room_equipment
+    asset_category: treatment_equipment
+    asset_name: "Massage rooms equipment (x2 rooms)"
+    description: "Pregnancy massage tables, bolster sets, heated blankets, oil warmers, diffusers, linen -- section total, includes bundled consumables (oil stock, linen)"
+    quantity: 2
+    unit_cost: null
+    total_cost: {low: 2925.00, high: 7400.00}
+    currency: AUD
+    useful_life_years: null
+    depreciation_method: null
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "CONFLICT, not silently resolved -- docs/equipment-costs.md's own Summary Budget row states A$4,000-10,000 for this same category, which does not match this section's own itemised total (A$2,925-7,400). Same pattern as the Pathology Collection Room gap above, not previously flagged anywhere in this repo -- a new finding this pass."
+    source: {file: docs/equipment-costs.md, section: "§4 Massage Rooms"}
+    notes: "Unaffected by the wall-to-curtain construction-type change -- equipment count/cost unchanged, only the room's construction method changed (see startup_costs.yml's fit-out construction record)."
+
+  - id: capex_hair_station_equipment
+    asset_category: treatment_equipment
+    asset_name: "Hair station equipment (4 styling chairs, 2 backwash)"
+    description: "Styling chairs, backwash basin+chair combos, hair dryers, straightening irons, salon mirror, tool trolleys -- section total, includes bundled consumables (hair products, gowns/towels)"
+    quantity: 4
+    unit_cost: null
+    total_cost: {low: 6750.00, high: 15350.00}
+    currency: AUD
+    useful_life_years: null
+    depreciation_method: null
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "was A$3,650-8,250 at the prior 2-chair/1-backwash count -- corrected 2026-07-31 to 4 chairs/2 backwash, per Anthony's direct instruction. If the 3rd backwash station (upper end of the source's stated 2-3 range) is added, total rises to A$7,750-17,850 (+A$1,000-2,500) -- not adopted here, source itself treats 2 as the conservative default."
+    source: {file: docs/equipment-costs.md, section: "§5 Hair Station"}
+    notes: "Headcount unaffected -- 4 physical chairs does not require 4 hairdressers, per the source's own explicit note (peak concurrent demand solver-verified at 2, unchanged by fixture count)."
+
+  - id: capex_beauty_brows_equipment
+    asset_category: treatment_equipment
+    asset_name: "Beauty/Brows station equipment (capital-only subset)"
+    description: "Facial/beauty treatment beds x2, magnifying lamps x2, wax heater, brow/lash tool kits, facial steamer, trolleys -- CAPITAL rows only, isolated from the source's own explicit Type column (the full §5A section total, A$2,800-7,190, also includes consumable opening-stock rows for tint/wax/disposables, excluded here and recorded in startup_costs.yml instead)"
+    quantity: 2
+    unit_cost: null
+    total_cost: {low: 1550.00, high: 3340.00}
+    currency: AUD
+    useful_life_years: null
+    depreciation_method: null
+    scenario_applicability: universal
+    status: CALCULATED
+    status_detail: "Sum of the source's own rows explicitly tagged 'Capital' in its Type column: facial bed (800-1800) + magnifying lamp (160-300) + wax heater (120-250) + brow/lash tool kit (120-240) + facial steamer (150-350) + trolley (200-400) = 1,550-3,340. Arithmetic on the source's own tagged values, not an invented split -- the only section in equipment-costs.md where this level of precision is possible without guessing."
+    derived_from: []
+    source: {file: docs/equipment-costs.md, section: "§5A Beauty/Brows Station"}
+    notes: "This section was found MISSING entirely during a 2026-07-19 Phase 6 review (Beauty Therapist is a staffed role, but no equipment section existed for it) -- added that session, not part of the original equipment list."
+
+  - id: capex_lounge_furniture
+    asset_category: furniture
+    asset_name: "Lounge and common area furniture"
+    description: "Pregnancy-friendly lounge chairs x8, side tables, coffee tables, floor lamps, small TV, snack display, water/tea stations, mini fridge -- section total, includes a small bundled consumable component (throw blankets, eye masks, reading material)"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 8620.00, high: 19850.00}
+    currency: AUD
+    useful_life_years: null
+    depreciation_method: null
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "GAP, not previously flagged -- docs/equipment-costs.md's own Summary Budget row states A$5,000-15,000 for 'Lounge and common area,' lower than this section's own itemised total (A$8,620-19,850) at BOTH ends -- a new finding this pass, same unreconciled-Summary-Budget-vs-section-total pattern as the Pathology and Massage records above."
+    source: {file: docs/equipment-costs.md, section: "§6 Lounge and Common Areas"}
+    notes: "The source explicitly flags lounge chair quality as critical: 'pregnant women spend 2+ hours here... test before buying in bulk.'"
+
+  - id: capex_technology_hardware
+    asset_category: it_hardware
+    asset_name: "Technology hardware (section total)"
+    description: "iPads x3 + kiosk stands, POS terminal, B&W + colour printers, WiFi router, reception computer/laptop -- excludes the Fresha booking software SUBSCRIPTION, which is a recurring cost already in data/canonical/opex.yml's opex_booking_software record, not capex"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 3240.00, high: 7920.00}
+    currency: AUD
+    useful_life_years: null
+    depreciation_method: null
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "CONFLICT, not silently resolved -- docs/equipment-costs.md's own Summary Budget row states A$3,000-7,000 for 'Technology,' slightly different from this section's own itemised total (A$3,240-7,920) at both ends. Separately, a POTENTIAL OVERLAP was found this pass: docs/floor-plan-concept.md's Fit-Out Cost Estimate carries its own separate 'IT / AV (POS, booking tablets, TVs, music system)' line at A$5,000-12,000, which may double-count some of the same items (POS, tablets) this record already covers, or may be a genuinely separate technology line -- neither confirmed, see conflict_it_av_overlap below and docs/architecture/STARTUP-COST-RECONCILIATION.md."
+    source: {file: docs/equipment-costs.md, section: "§8 Technology"}
+    notes: "China-sourcing alternatives not itemised separately here -- see docs/hire-purchase-china.md for general China-sourcing guidance, not specific to this exact equipment list."
+
+  - id: capex_emergency_safety_equipment
+    asset_category: safety_equipment
+    asset_name: "Emergency and safety equipment (section total)"
+    description: "First aid kits x2, AED, emergency call button system, exit signs/fire extinguisher -- section total, includes a small bundled consumable component (smelling salts)"
+    quantity: null
+    unit_cost: null
+    total_cost: {low: 2360.00, high: 4320.00}
+    currency: AUD
+    useful_life_years: null
+    depreciation_method: null
+    scenario_applicability: universal
+    status: MODELLED
+    source: {file: docs/equipment-costs.md, section: "§11 Emergency and Safety Equipment"}
+    notes: "AED explicitly recommended given the clinical nature of the venue (blood draws, 12+ hour fasted patients) -- 'may save a life,' per the source's own note. Leasing option noted (A$40-60/month) but not adopted as the modelled figure here -- purchase price used."
+
+  - id: capex_aed
+    asset_category: safety_equipment
+    asset_name: "AED (Automated External Defibrillator)"
+    description: "Individually broken out given its compliance/safety significance -- already included within capex_emergency_safety_equipment's section total above, not an additional cost"
+    quantity: 1
+    unit_cost: {low: 1500.00, high: 2500.00}
+    total_cost: {low: 1500.00, high: 2500.00}
+    currency: AUD
+    useful_life_years: null
+    depreciation_method: null
+    scenario_applicability: universal
+    status: MODELLED
+    status_detail: "purchase price used as the modelled figure; a leasing alternative exists (A$40-60/month per the source) but is not itemised as a recurring cost anywhere in this repo's canonical data -- flagged, not migrated, since the purchase option is what the section total above assumes"
+    source: {file: docs/equipment-costs.md, section: "§11 Emergency and Safety Equipment"}
+    notes: null
+
+# ============================================================
+# Genuine, disclosed conflicts -- none silently resolved.
+# ============================================================
+conflicts:
+  - id: conflict_summary_budget_vs_section_totals
+    description: >
+      docs/equipment-costs.md's own Summary Budget table does not exactly match its own
+      per-section itemised totals for at least 3 categories: Pathology Collection Room
+      (Summary Budget A$8,300-14,100 vs §1's own A$6,330-10,240, a pre-existing gap the source
+      document itself discloses as "not investigated or reconciled this round"), Massage Rooms
+      (Summary Budget A$4,000-10,000 vs §4's own A$2,925-7,400, NOT previously flagged anywhere
+      in this repo), Lounge (Summary Budget A$5,000-15,000 vs §6's own A$8,620-19,850, also NOT
+      previously flagged), and Technology (Summary Budget A$3,000-7,000 vs §8's own
+      A$3,240-7,920, a smaller gap). This canonical-data pass used each section's own itemised
+      total, not the Summary Budget row, for every record above -- consistent, but not
+      resolving which figure (if either) is actually correct.
+    affected_records: [capex_pathology_collection_room_equipment, capex_massage_room_equipment, capex_lounge_furniture, capex_technology_hardware]
+    sources:
+      - {file: docs/equipment-costs.md, section: "Summary Budget table"}
+      - {file: docs/equipment-costs.md, section: "§1, §4, §6, §8 (individual section TOTAL rows)"}
+    resolution_status: UNRESOLVED
+    notes: "The Pathology gap was already disclosed by the source document itself; the Massage/Lounge/Technology gaps are new findings from this pass, not previously logged anywhere."
+
+  - id: conflict_it_av_overlap
+    description: >
+      docs/floor-plan-concept.md's Fit-Out Cost Estimate carries a standalone "IT / AV (POS,
+      booking tablets, TVs, music system)" line at A$5,000-12,000, itemised separately from
+      its own "Equipment" line (which itself sources from docs/equipment-costs.md's Summary
+      Budget, including that document's own Technology section). Whether this IT/AV line is
+      genuinely additional technology spend (TVs, music system -- not itemised anywhere in
+      equipment-costs.md) or a partial double-count of POS/tablet costs already counted once
+      inside capex_technology_hardware is not resolved by either source document.
+    affected_records: [capex_technology_hardware]
+    sources:
+      - {file: docs/floor-plan-concept.md, section: "Fit-Out Cost Estimate table"}
+      - {file: docs/equipment-costs.md, section: "§8 Technology"}
+    resolution_status: UNRESOLVED
+    notes: "See docs/architecture/STARTUP-COST-RECONCILIATION.md for the full reconciliation-level discussion of this overlap and its effect on the overall startup-capital range."
