@@ -12,7 +12,9 @@
 
 **Phase 5 scope (2026-08-09, same day, follow-on):** one new canonical domain, `data/canonical/services.yml` (the complete service catalogue — 99 services, up from Phase 1's 7-item representative slice), plus a dedicated completeness audit document (`docs/architecture/SERVICE-CATALOGUE-AUDIT.md`), matching validator extensions, and 5 new tracker items. See §36-§43 below for full Phase 5 detail.
 
-**Not built any phase so far:** the Master Financial Model, the Master Operations Model, any XLSX/PDF/DOCX generation, the remaining canonical domains from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch (payroll_costs, revenue_assumptions, financial_assumptions, risks, decisions, sources, verification_status), and — deliberately, across every phase so far — a resolution of Table 1 vs. Table 2 as primary, of the startup-capital reconciliation problem, or of any of the 6 service-pricing conflicts.
+**Phase 6 scope (2026-08-09, same day, follow-on):** one new canonical domain, `data/canonical/revenue_assumptions.yml` (the assumptions layer connecting services+pricing+client volume+scenarios into a traceable revenue picture, including an independent reconstruction of the venture's own headline monthly revenue figures), plus a dedicated audit document (`docs/architecture/REVENUE-ASSUMPTION-AUDIT.md`), matching validator extensions, and 4 new tracker items. See §44-§51 below for full Phase 6 detail.
+
+**Not built any phase so far:** the Master Financial Model, the Master Operations Model, any XLSX/PDF/DOCX generation, the remaining canonical domains from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch (payroll_costs, financial_assumptions, risks, decisions, sources, verification_status), and — deliberately, across every phase so far — a resolution of Table 1 vs. Table 2 as primary, of the startup-capital reconciliation problem, of any of the 6 service-pricing conflicts, or of the A$2,576.36/month revenue-reconciliation gap.
 
 ---
 
@@ -20,18 +22,20 @@
 
 ```
 data/canonical/
-├── pricing.yml              AM/PM headline pricing + a representative slice of individual services       [Phase 1]
-├── client_assumptions.yml   universal + scenario-dependent operational assumptions                        [Phase 1]
-├── scenarios.yml            Table 1 and Table 2, both explicit, neither marked primary                    [Phase 1]
-├── staffing.yml             every role, headcount, category, skills, shift assumptions                    [Phase 2]
-├── wages.yml                hourly rates, super, workers comp, casual-minimum rule, penalty-rate conflicts [Phase 2]
-├── opex.yml                 non-payroll operating expenses -- premises/tech/professional/insurance/        [Phase 3]
-│                             marketing/consumables, 28 records, 3 conflicts
-├── startup_costs.yml        pre-opening cash outlay, working capital (kept separate), contingency,         [Phase 4]
-│                             9 historical total-figure estimates, 12 records + 2 conflicts
-├── capex.yml                durable physical/IT assets, 11 records + 2 conflicts                           [Phase 4]
-└── services.yml             complete service catalogue -- 99 services (88 records + 6 historical +         [Phase 5]
-                              5 future), 13 referencing pricing.yml by id, 6 conflicts
+├── pricing.yml               AM/PM headline pricing + a representative slice of individual services       [Phase 1]
+├── client_assumptions.yml    universal + scenario-dependent operational assumptions                        [Phase 1]
+├── scenarios.yml             Table 1 and Table 2, both explicit, neither marked primary                    [Phase 1]
+├── staffing.yml              every role, headcount, category, skills, shift assumptions                    [Phase 2]
+├── wages.yml                 hourly rates, super, workers comp, casual-minimum rule, penalty-rate conflicts [Phase 2]
+├── opex.yml                  non-payroll operating expenses -- premises/tech/professional/insurance/        [Phase 3]
+│                              marketing/consumables, 28 records, 3 conflicts
+├── startup_costs.yml         pre-opening cash outlay, working capital (kept separate), contingency,         [Phase 4]
+│                              9 historical total-figure estimates, 12 records + 2 conflicts
+├── capex.yml                 durable physical/IT assets, 11 records + 2 conflicts                           [Phase 4]
+├── services.yml              complete service catalogue -- 99 services (88 records + 6 historical +         [Phase 5]
+│                              5 future), 13 referencing pricing.yml by id, 6 conflicts
+└── revenue_assumptions.yml   client volume/mix/capacity/ramp/ancillary/discount assumptions + 2 revenue-    [Phase 6]
+                               reconstruction traceability records, 17 records, 2 conflicts
 ```
 
 All eight files live under `data/canonical/` — real content in the `data/` layer proposed in `docs/architecture/TARGET-ARCHITECTURE.md` Layer 2. `docs/CURRENT-STATE.md` remains the authoritative human-readable canonical file; these YAML files are a machine-readable **subset** of it (plus, for staffing/wages, of `docs/financial-break-even-staff.md`, `docs/hr-framework.md`, `docs/pm-staffing-roster.md`, and `docs/HANDOFF.md`; and for startup_costs/capex, of `docs/floor-plan-concept.md`, `docs/equipment-costs.md`, `docs/grace-startup-plan.md`, `docs/financial-setup.md`, `docs/investor-memorandum.md`), not a replacement, and not (yet) auto-generated from it or vice versa — a human (this session) transcribed values from source documents into YAML, checking each one against the source rather than re-deriving anything.
@@ -498,12 +502,52 @@ None found representing the *same* service twice under different IDs. The closes
 
 `docs/VERIFICATION-TRACKER.md` items **31, 32, 33, 34, 35** (FINANCIAL — NEEDS ACCOUNTANT CONFIRMATION section, continuing the sequential numbering from item 30) — full detail in that file and in `docs/architecture/SERVICE-CATALOGUE-AUDIT.md`.
 
-## 42. Recommended Next Canonical Migration Domain
+## 42. Recommended Next Canonical Migration Domain (Phase 5 recommendation — actioned in Phase 6, see §44-§51)
 
 **`data/canonical/revenue_assumptions.yml`** (ancillary revenue lines — spray tan, retail, café totals — already flagged throughout this repo, including newly by this phase, as unverified planning placeholders) would now complete the P&L revenue side to match how thoroughly the cost side has been canonicalised across Phases 2-4. Alternatively, a **consolidation pass migrating `services.yml`'s 75 directly-priced records into `pricing.yml` proper** (converting them to `pricing_ref`, matching the original 13) would tighten the "one authoritative price per service" architecture from "one canonical record, currently in services.yml" to "one canonical record, in the file literally named for pricing" — a smaller, more mechanical task than a new domain, worth considering before the Master Financial Model is ever attempted.
 
+`revenue_assumptions.yml` was chosen; the `pricing.yml` consolidation pass remains not attempted, still the next-best lower-risk alternative — **see §50 for the Phase 6 recommendation of what comes after.**
+
 ---
 
-## 43. What This Document Does Not Do (as of Phase 5)
+# PHASE 6 (2026-08-09, same day) — Revenue Assumptions
 
-It does not build the Master Financial Model, Master Operations Model, any Excel/XLSX workbook, P&L, cash-flow model, balance sheet, chart, PDF, or DOCX, or any revenue forecast. It does not migrate `payroll_costs.yml`, `revenue_assumptions.yml`, `financial_assumptions.yml`, `risks.yml`, `decisions.yml`, `sources.yml`, `verification_status.yml`, or any other remaining domain from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch. It does not resolve Table 1 vs. Table 2 as primary. It does not resolve any of the wage conflicts (tracker items 16-18), opex conflicts/gaps (items 19-24), startup-cost/capex conflicts and gaps (items 25-30), or the service-catalogue conflicts and gaps added this phase (items 31-35) — all twenty-three are recorded, sourced, and left open. It does not decide PM package pricing, resolve the spray-tan status/price question, or migrate `services.yml`'s 75 directly-priced records into `pricing.yml` proper.
+## 44. Revenue-Assumption Data Migrated (`data/canonical/revenue_assumptions.yml`)
+
+17 records + 2 declared conflicts. Per the coordinator's explicit Part 2 instruction, this file **references** already-canonical facts (client volume in `scenarios.yml`/`client_assumptions.yml`, price in `pricing.yml`/`services.yml`) rather than restating them — of the 21 total facts represented in this domain (see `docs/architecture/REVENUE-ASSUMPTION-AUDIT.md` §1), 4 are pure references with no new data, and 17 are genuinely new records (13 substantive assumptions never previously captured anywhere in the canonical layer, plus 2 revenue-reconstruction traceability records and 2 boundary/policy notes).
+
+**Notable new captures, none previously canonical anywhere:** PM Saturday session count (8/day, used in `CURRENT-STATE.md`'s own revenue walkthrough but never recorded as a standalone fact before); PM theoretical maximum capacity (~31/day); the historical 3-tier package mix (30/40/30); the full Month 1-5+ ramp curve and PM session ramp; all 3 ancillary-revenue historical figures plus the current A$0.00/month baseline treatment; the 10% PM pre-booking discount; and the cancellation/no-show policy's revenue-retention effect.
+
+**Sources used:** `docs/CURRENT-STATE.md` §5 (primary, for the Table 1/Table 2 revenue walkthroughs), `docs/pm-staffing-roster.md` (PM capacity/ramp), `docs/financial-break-even-staff.md` (historical package mix), `docs/profit-loss-tables.md` (ramp curve, ancillary exclusion), `docs/cash-flow.md` (ancillary sourcing, PM package exclusion), `docs/services-pricing-locked.md` (pre-booking discount), `docs/onboarding.md`/`docs/financial-setup.md` (cancellation policy, merchant-fee boundary).
+
+## 45. Revenue Scenarios Identified
+
+Table 1 and Table 2, both preserved, neither selected as primary — matching every prior phase. Revenue figures scenario-specific via `scenario_applicability` (`scenario_table_1`/`scenario_table_2`/`universal`), validated against `scenarios.yml`'s registry (§17 of the validator).
+
+## 46. Client-Volume and Service-Mix Assumptions
+
+Client volume: referenced from `scenarios.yml`/`client_assumptions.yml` (already canonical), plus the new PM Saturday session count. Service mix: the real AM package split remains genuinely unknown (`PLACEHOLDER`, unchanged from Phase 1) — this phase adds the explicit distinction between that real unknown and the separate, decided *revenue-calculation convention* (100% Package 1 price) used regardless of the real mix, a distinction the repo's prose made informally but had never stated as two separate canonical facts before.
+
+## 47. Ramp-Up Assumptions
+
+Both found ramp curves (the 43/64/79/93/100% AM/PM percentage shape, and the PM-specific 4/8/12/15/16 session count) are recorded `SUPERSEDED`/historical-basis-only — neither has been rebuilt against Table 1/Table 2, per `CURRENT-STATE.md`'s own disclosed gap. A genuinely new finding this phase: two documents apply the *same* percentage shape to two *different* base ceilings (see `conflict_ramp_base_ceiling_mismatch`, §48).
+
+## 48. Ancillary Revenue Assumptions
+
+All 3 historical component figures (spray tan, retail, café) captured as `MODELLED` (real, sourced figures with disclosed unreliable bases — not `PLACEHOLDER`, since a number does exist), alongside the current baseline treatment (`A$0.00/month`, `VERIFIED`, per Anthony's 2026-07-30 exclusion instruction). Per the coordinator's explicit Part 6 instruction, no revenue contribution was assumed for any of the three.
+
+## 49. Revenue Conflicts and Gaps Discovered
+
+**2 declared conflicts:** `conflict_ramp_base_ceiling_mismatch` (two ramp tables, two different base ceilings, never cross-compared before) and `conflict_ancillary_aggregate_vs_itemised` (no volume bridge between ancillary aggregates and per-item prices).
+
+**The central finding — not a conflict, a precisely-identified traceability gap:** independently reconstructing Table 1 and Table 2's monthly revenue from canonical inputs alone lands A$2,576.36 below `CURRENT-STATE.md`'s own stated totals, for **both** scenarios exactly. This confirms (does not newly discover) `CURRENT-STATE.md`'s own disclosure that this is a fixed-size, volume-independent artifact — but pins it down precisely, from the canonical data layer, for the first time. Full detail: `docs/architecture/REVENUE-ASSUMPTION-AUDIT.md` §5.
+
+## 50. Recommended Next Canonical Migration Domain
+
+**A consolidation pass migrating `services.yml`'s 75 directly-priced records into `pricing.yml` proper** (deferred twice now, Phases 5 and 6) is the most mechanical, lowest-risk remaining task — no new domain, just tightening the existing architecture. Alternatively, tracing the exact "weekly-to-monthly revenue-scaling" mechanism behind the A$2,576.36 gap (§49) would be a smaller, targeted investigation rather than a full canonical-data migration, and would close the single most consequential open question this phase surfaced.
+
+---
+
+## 51. What This Document Does Not Do (as of Phase 6)
+
+It does not build the Master Financial Model, Master Operations Model, any Excel/XLSX workbook, P&L, cash-flow model, balance sheet, chart, PDF, DOCX, or revenue forecast. It does not migrate `payroll_costs.yml`, `financial_assumptions.yml`, `risks.yml`, `decisions.yml`, `sources.yml`, `verification_status.yml`, or any other remaining domain from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch. It does not resolve Table 1 vs. Table 2 as primary. It does not resolve any of the wage conflicts (items 16-18), opex conflicts/gaps (items 19-24), startup-cost/capex conflicts and gaps (items 25-30), service-catalogue conflicts and gaps (items 31-35), or the revenue-assumption conflicts and gaps added this phase (items 36-39) — all twenty-seven are recorded, sourced, and left open. It does not close the A$2,576.36 revenue-reconciliation gap, rebuild the ramp curve, apply the 10% PM discount to any figure, or reconstruct the full Net P&L (payroll + opex layered on top of revenue) — revenue only was reconstructed, not the bottom line.
