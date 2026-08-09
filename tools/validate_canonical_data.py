@@ -4,10 +4,10 @@ GTT Center Perth -- Canonical data validator (proof of concept).
 Validates data/canonical/*.yml files against the schema/governance conventions
 established in docs/architecture/CANONICAL-DATA-SCHEMA.md and
 docs/architecture/DATA-GOVERNANCE.md. This is a proof-of-concept validator for
-eight files (pricing.yml, client_assumptions.yml, scenarios.yml, staffing.yml,
+nine files (pricing.yml, client_assumptions.yml, scenarios.yml, staffing.yml,
 wages.yml -- Phase 2; opex.yml -- Phase 3; startup_costs.yml, capex.yml --
-Phase 4) -- it is not a general schema engine and does not validate every
-field type strictly.
+Phase 4; services.yml -- Phase 5) -- it is not a general schema engine and
+does not validate every field type strictly.
 
 Checks performed:
   1. YAML validity (parse error -> hard failure)
@@ -105,6 +105,25 @@ Checks performed:
       capex.yml, alongside the existing `staffing_scenario`/`scenario_id`
       fields from Phase 2) is now also validated against the scenario
       registry (§10) -- must be `universal` or a real id from scenarios.yml.
+  18. (Phase 5, services.yml) Required fields per `records` entry (id,
+      category, name, status, lifecycle); `lifecycle` restricted to
+      current/proposed/historical/superseded -- a field distinct from the
+      governance `status`, per the coordinator's explicit instruction not to
+      invent an 8th governance status for this.
+  19. (Phase 5) Pricing-reference validity -- any `pricing_ref` field must be
+      an id that actually exists in data/canonical/pricing.yml's own
+      `records` list (loaded automatically, regardless of which files are
+      targeted, same pattern as the scenario-registry check). A record with
+      a `pricing_ref` is exempted from needing its own `price`/`price_range`
+      (the price lives in pricing.yml, referenced not restated -- see
+      services.yml's own header for the full architecture rationale).
+  20. (Phase 5) Status-vs-value consistency, adapted for services.yml's
+      dual price representation (`price`, a number, OR `price_range`, a
+      free-text range string, since several source documents state prices as
+      hyphenated ranges rather than clean bounds) -- a `PLACEHOLDER` record
+      must have both `price` and `price_range` null; a non-`PLACEHOLDER`/
+      non-`SUPERSEDED` record must have at least one of `price`,
+      `price_range`, or `pricing_ref` set.
 
 Exit code: 0 if all checks pass across all validated files, 1 if any check
 fails in any file. Usable in CI / pre-commit, same convention as
@@ -137,6 +156,7 @@ RECORD_LIST_KEYS = {
     "records", "universal", "scenario_dependent", "historical_scenarios",
     "operational_buffers", "open_items", "historical_staffing_scenarios",
     "funding_requirements", "historical_total_estimates", "contingency_assumptions",
+    "historical_services", "future_services",
 }
 
 # staffing.yml -- category vocabulary the coordinator asked to be preserved,
@@ -178,6 +198,11 @@ STARTUP_CAPEX_VALUE_FIELDS = ("total_cost", "unit_cost", "value_pct")
 # looser than NUMERIC_TOLERANCE's flat AUD amount, since these figures often
 # involve back-calculated per-unit rates with real (not error) rounding.
 QUANTITY_UNIT_COST_RELATIVE_TOLERANCE = 0.005  # 0.5%
+
+# services.yml -- required fields, lifecycle vocabulary (a field distinct
+# from the 7 governance statuses, per the coordinator's explicit instruction).
+SERVICES_RECORD_REQUIRED_FIELDS = {"id", "category", "name", "status", "lifecycle"}
+ALLOWED_SERVICE_LIFECYCLES = {"current", "proposed", "historical", "superseded"}
 
 # scenario_dependent intentionally repeats `id` once per scenario_id -- see
 # data/canonical/client_assumptions.yml's own header comment.
@@ -609,6 +634,74 @@ def check_quantity_unit_cost_consistency(rec, i, list_key, f: Findings):
                 _check_pair(uc[key], tc[key], label=f".{key}")
 
 
+def load_valid_pricing_ids() -> set:
+    """Load data/canonical/pricing.yml (if present) to build the set of valid
+    pricing_ref ids. Mirrors load_valid_scenario_ids -- returns an empty set
+    (no error raised here) if pricing.yml is missing or unparseable."""
+    valid = set()
+    pricing_path = CANON_DIR / "pricing.yml"
+    if not pricing_path.exists():
+        return valid
+    try:
+        pdata = yaml.safe_load(pricing_path.read_text(encoding="utf-8"))
+    except yaml.YAMLError:
+        return valid
+    if not isinstance(pdata, dict):
+        return valid
+    for rec in pdata.get("records", []) or []:
+        if isinstance(rec, dict) and rec.get("id"):
+            valid.add(rec["id"])
+    return valid
+
+
+def check_services_schema(data, f: Findings):
+    if data.get("dataset") != "services":
+        return
+    valid_pricing_ids = load_valid_pricing_ids()
+    records = data.get("records", [])
+    for i, rec in enumerate(records):
+        if not isinstance(rec, dict):
+            f.error(f"records[{i}]: not a mapping -- cannot check required fields")
+            continue
+        rid = rec.get("id")
+
+        missing = SERVICES_RECORD_REQUIRED_FIELDS - set(rec.keys())
+        if missing:
+            f.error(f"records[{i}] (id={rid!r}): missing required services field(s): {sorted(missing)}")
+
+        lifecycle = rec.get("lifecycle")
+        if lifecycle not in ALLOWED_SERVICE_LIFECYCLES:
+            f.error(
+                f"records[{i}] (id={rid!r}): lifecycle {lifecycle!r} is not one of "
+                f"the known lifecycle states {sorted(ALLOWED_SERVICE_LIFECYCLES)}"
+            )
+
+        pricing_ref = rec.get("pricing_ref")
+        if pricing_ref is not None and pricing_ref not in valid_pricing_ids:
+            f.error(
+                f"records[{i}] (id={rid!r}): pricing_ref {pricing_ref!r} does not exist in "
+                f"data/canonical/pricing.yml's records -- malformed pricing reference"
+            )
+
+        status = rec.get("status")
+        price = rec.get("price")
+        price_range = rec.get("price_range")
+        for field_name, val in (("price", price), ("price_range", price_range)):
+            if val is not None and not (_is_number(val) if field_name == "price" else isinstance(val, str)):
+                f.error(f"records[{i}] (id={rid!r}): '{field_name}' has an unexpected type ({val!r})")
+        if status == "PLACEHOLDER" and (price is not None or price_range is not None):
+            f.error(
+                f"records[{i}] (id={rid!r}): status=PLACEHOLDER but price/price_range is set "
+                f"-- a PLACEHOLDER record must not assert a concrete value"
+            )
+        if status not in ("PLACEHOLDER", "SUPERSEDED"):
+            if price is None and price_range is None and pricing_ref is None:
+                f.error(
+                    f"records[{i}] (id={rid!r}): status={status} but none of price/price_range/"
+                    f"pricing_ref is set -- a non-PLACEHOLDER/SUPERSEDED record needs a value or a reference"
+                )
+
+
 def load_valid_scenario_ids() -> set:
     """Load data/canonical/scenarios.yml (if present) to build the set of valid
     scenario ids ('universal' plus every id in records/historical_scenarios).
@@ -688,6 +781,7 @@ def validate_file(path: Path):
         check_opex_schema(data, f)
         check_startup_costs_schema(data, f)
         check_capex_schema(data, f)
+        check_services_schema(data, f)
         check_scenario_references(data, f, load_valid_scenario_ids())
 
     return f, data

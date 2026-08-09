@@ -1,0 +1,630 @@
+# GTT Center Perth -- Canonical Service Catalogue (proof of concept, Phase 5)
+#
+# Complete service/treatment/product catalogue, not a representative slice. Sourced primarily
+# from docs/services-pricing-locked.md ("locked pricing," Part A-E) and docs/services-master-table.md
+# (Parts A-E, a more complete staff/qualification/price source that fills real gaps the
+# "locked" document leaves unpriced), cross-checked against docs/extended-wellness-services.md,
+# docs/pm-package-structure.md, docs/pm-staffing-roster.md, docs/hire-purchase-china.md,
+# docs/market-research-findings.md.
+#
+# ARCHITECTURE DECISION (Part 6, "explain the relationship explicitly"): services.yml is the
+# service catalogue/identity/commercial-definition layer; data/canonical/pricing.yml is the
+# canonical PRICING layer. Where a service already has a canonical price record in pricing.yml
+# (the 7 individual services + AM packages + PM packages/average migrated in Phase 1), this
+# file references it via `pricing_ref` and does NOT restate the price -- one authoritative
+# price, per the coordinator's explicit end-state goal. For the ~85 additional services found
+# this phase that pricing.yml never covered (pricing.yml's own Phase 1 header explicitly
+# deferred "the full a-la-carte menu, all durations/add-ons" to a later pass -- this is that
+# pass), this file carries the price directly under each record's own `price` field, as the
+# FIRST canonicalisation of that fact -- there is exactly one canonical record for each such
+# service (here), just not yet homed in the file literally named pricing.yml. A future
+# consolidation pass could migrate these `price` fields into pricing.yml proper and convert
+# them to `pricing_ref` here, matching the original 7 -- flagged as a known follow-up, not
+# attempted this phase (would not change any value, only which file stores it).
+#
+# LIFECYCLE field (Part 4, a NEW field, not a 7th governance status): current | proposed |
+# historical | superseded. Governance `status` still uses the existing 7-value vocabulary for
+# how confidently a FACT is known; `lifecycle` separately answers whether the SERVICE ITSELF is
+# currently offered, proposed, historical, or superseded -- a current, actively-sold service can
+# still have a MODELLED (not VERIFIED) price, and a historical/removed service can have a
+# VERIFIED price (it really was priced at that figure, once).
+#
+# Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
+# PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+
+schema_version: 1
+dataset: services
+last_updated: "2026-08-09"
+
+records:
+  # ============================================================
+  # AM PACKAGES -- reference pricing.yml, do not restate price
+  # ============================================================
+  - id: svc_am_package_1
+    category: am_package
+    subcategory: fixed_composition
+    name: "AM Package 1"
+    description: "Fixed composition: 2 x 30-min services from the GTT window menu"
+    customer_type: gtt_client
+    duration_min: 60
+    pricing_ref: am_package_1
+    price: null
+    currency: AUD
+    pricing_unit: per_visit
+    inclusions: ["venue + lounge access (free, bundled)"]
+    exclusions: ["pathology fee (billed separately by WDP/PathWest)"]
+    capacity_staffing_requirement: "2 service slots, any GTT-window-eligible service line"
+    required_role: null
+    treatment_or_phlebotomy: treatment
+    consumable_requirement: null
+    revenue_type: am_package
+    status: MODELLED
+    lifecycle: current
+    scenario_applicability: universal
+    source: {file: docs/services-pricing-locked.md, section: "GTT PACKAGES table"}
+    effective_date: "2026-07-20"
+    notes: "Price is canonical in data/canonical/pricing.yml (am_package_1) -- not restated here."
+
+  - id: svc_am_package_2
+    category: am_package
+    subcategory: flexible_composition
+    name: "AM Package 2"
+    description: "Client's choice: 2x45min, OR 1x45min+1x30min, OR 2x30min, from the GTT window menu"
+    customer_type: gtt_client
+    duration_min: null
+    pricing_ref: am_package_2
+    price: null
+    currency: AUD
+    pricing_unit: per_visit
+    inclusions: ["venue + lounge access (free, bundled)"]
+    exclusions: ["pathology fee (billed separately by WDP/PathWest)"]
+    capacity_staffing_requirement: "2 service slots, any GTT-window-eligible service line"
+    required_role: null
+    treatment_or_phlebotomy: treatment
+    consumable_requirement: null
+    revenue_type: am_package
+    status: MODELLED
+    lifecycle: current
+    scenario_applicability: universal
+    source: {file: docs/services-pricing-locked.md, section: "GTT PACKAGES table"}
+    effective_date: "2026-07-20"
+    notes: "Price is canonical in data/canonical/pricing.yml (am_package_2) -- not restated here."
+
+  # ============================================================
+  # PM -- reference pricing.yml
+  # ============================================================
+  - id: svc_pm_alacarte
+    category: pm_service
+    subcategory: individual_service_model
+    name: "PM individual a-la-carte services (umbrella)"
+    description: "Any single GTT-window-menu service booked standalone in the afternoon -- see the gtt_window_services records below for the individual services this umbrella covers; PM a-la-carte pricing is the same per-service prices as those AM records, per docs/services-master-table.md's own note ('this table's existing service prices are the components used to build proposed package combos')"
+    customer_type: pm_standalone_client
+    duration_min: null
+    pricing_ref: pm_alacarte_average
+    price: null
+    currency: AUD
+    pricing_unit: per_session_average
+    inclusions: []
+    exclusions: []
+    capacity_staffing_requirement: "1 of 4 PM dedicated casual roles (massage/hair/nail/beauty)"
+    required_role: null
+    treatment_or_phlebotomy: treatment
+    consumable_requirement: null
+    revenue_type: pm_individual
+    status: MODELLED
+    lifecycle: current
+    scenario_applicability: universal
+    source: {file: docs/pm-staffing-roster.md, section: "Recalculated Financials, PM Revenue"}
+    effective_date: null
+    notes: "Average price is canonical in data/canonical/pricing.yml (pm_alacarte_average) -- not restated here. This is an aggregate planning figure, not a single named service."
+
+  - id: svc_pm_package_duo
+    category: pm_package
+    subcategory: proposed_fixed_combo
+    name: "PM Duo (proposed)"
+    description: "Blowdry (30min) + Express Glow Facial (30min)"
+    customer_type: pm_standalone_client
+    duration_min: null
+    pricing_ref: pm_package_duo
+    price: null
+    currency: AUD
+    pricing_unit: per_visit
+    inclusions: null
+    exclusions: null
+    capacity_staffing_requirement: "single-therapist package if a Hair+Nail cross-trained hire exists, otherwise 2 staff (per docs/pm-package-structure.md Staffing Effect section)"
+    required_role: null
+    treatment_or_phlebotomy: treatment
+    consumable_requirement: null
+    revenue_type: pm_package
+    status: PLACEHOLDER
+    lifecycle: proposed
+    scenario_applicability: universal
+    source: {file: docs/pm-package-structure.md, section: "Proposed Package Options table"}
+    effective_date: "2026-07-20"
+    notes: "Two proposed discount-tier prices exist in pricing.yml (pm_package_duo, 10%/15% off), neither finalised -- not restated here, referenced only."
+
+  - id: svc_pm_package_refresh
+    category: pm_package
+    subcategory: proposed_fixed_combo
+    name: "PM Refresh (proposed)"
+    description: "Standard Pregnancy Massage (45min) + Signature Pregnancy Facial (45min)"
+    customer_type: pm_standalone_client
+    duration_min: null
+    pricing_ref: pm_package_refresh
+    price: null
+    currency: AUD
+    pricing_unit: per_visit
+    inclusions: null
+    exclusions: null
+    capacity_staffing_requirement: "single-therapist package (Massage+Beauty cross-trained pairing)"
+    required_role: null
+    treatment_or_phlebotomy: treatment
+    consumable_requirement: null
+    revenue_type: pm_package
+    status: PLACEHOLDER
+    lifecycle: proposed
+    scenario_applicability: universal
+    source: {file: docs/pm-package-structure.md, section: "Proposed Package Options table"}
+    effective_date: "2026-07-20"
+    notes: "Recommended for initial launch (single-therapist, per docs/pm-package-structure.md Staffing Effect). Price not restated -- see pricing.yml pm_package_refresh."
+
+  - id: svc_pm_package_glow
+    category: pm_package
+    subcategory: proposed_fixed_combo
+    name: "PM Glow (proposed)"
+    description: "Gel Manicure (45min) + Express Glow Facial (30min)"
+    customer_type: pm_standalone_client
+    duration_min: null
+    pricing_ref: pm_package_glow
+    price: null
+    currency: AUD
+    pricing_unit: per_visit
+    inclusions: null
+    exclusions: null
+    capacity_staffing_requirement: "single-therapist package if a Nail+Beauty cross-trained hire exists"
+    required_role: null
+    treatment_or_phlebotomy: treatment
+    consumable_requirement: null
+    revenue_type: pm_package
+    status: PLACEHOLDER
+    lifecycle: proposed
+    scenario_applicability: universal
+    source: {file: docs/pm-package-structure.md, section: "Proposed Package Options table"}
+    effective_date: "2026-07-20"
+    notes: "Recommended for initial launch alongside PM Refresh. Price not restated -- see pricing.yml pm_package_glow."
+
+  # ============================================================
+  # GTT-WINDOW SERVICES (Part A) -- the components of AM Package 1/2 and PM a-la-carte.
+  # Two of these (massage_express, massage_standard, facial_express, facial_signature) already
+  # have their own pricing.yml records from Phase 1 -- referenced, not restated. The remaining
+  # 19 GTT-window services are canonicalised here for the first time (see file header).
+  # ============================================================
+  - {id: svc_massage_express, category: gtt_window_service, subcategory: massage, name: "Express pregnancy massage", description: "Back, neck, shoulders", customer_type: gtt_or_pm_client, duration_min: 30, pricing_ref: service_massage_express, price: null, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Massage Therapist stations", required_role: massage_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "massage oil", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 1. PREGNANCY MASSAGE"}, effective_date: "2026-06-09", notes: "Price canonical in pricing.yml."}
+  - {id: svc_massage_standard, category: gtt_window_service, subcategory: massage, name: "Standard pregnancy massage", description: null, customer_type: gtt_or_pm_client, duration_min: 45, pricing_ref: service_massage_standard, price: null, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Massage Therapist stations", required_role: massage_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "massage oil", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 1. PREGNANCY MASSAGE"}, effective_date: "2026-06-09", notes: "Price canonical in pricing.yml."}
+  - {id: svc_facial_express, category: gtt_window_service, subcategory: facial, name: "Express glow facial", description: null, customer_type: gtt_or_pm_client, duration_min: 30, pricing_ref: service_facial_express, price: null, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Beauty Therapist stations", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "facial products", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: "Price canonical in pricing.yml."}
+  - {id: svc_facial_signature, category: gtt_window_service, subcategory: facial, name: "Signature pregnancy facial", description: null, customer_type: gtt_or_pm_client, duration_min: 45, pricing_ref: service_facial_signature, price: null, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Beauty Therapist stations", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "facial products", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: "Price canonical in pricing.yml."}
+  - {id: svc_nails_classic_mani, category: gtt_window_service, subcategory: nails, name: "Classic manicure", description: "Regular polish", customer_type: gtt_or_pm_client, duration_min: 30, pricing_ref: service_manicure_classic, price: null, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Nail Technician stations", required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "polish, files", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 3. NAIL SERVICES"}, effective_date: "2026-06-09", notes: "Price canonical in pricing.yml."}
+  - {id: svc_nails_gel_mani, category: gtt_window_service, subcategory: nails, name: "Gel manicure", description: null, customer_type: gtt_or_pm_client, duration_min: 45, price: 75, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Nail Technician stations", required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "9-free gel polish", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 3. NAIL SERVICES"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part A."}
+  - {id: svc_nails_french_gel_mani, category: gtt_window_service, subcategory: nails, name: "French gel manicure", description: null, customer_type: gtt_or_pm_client, duration_min: 50, price: 85, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Nail Technician stations", required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "9-free gel polish", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 3. NAIL SERVICES"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part A."}
+  - {id: svc_nails_express_pedi, category: gtt_window_service, subcategory: nails, name: "Express pedicure", description: null, customer_type: gtt_or_pm_client, duration_min: 30, price: 55, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Nail Technician stations", required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "polish", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 3. NAIL SERVICES"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part A."}
+  - {id: svc_nails_spa_pedi, category: gtt_window_service, subcategory: nails, name: "Spa pedicure (regular polish)", description: null, customer_type: gtt_or_pm_client, duration_min: 45, price: 65, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Nail Technician stations", required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "polish", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 3. NAIL SERVICES"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part A."}
+  - {id: svc_nails_gel_pedi, category: gtt_window_service, subcategory: nails, name: "Gel pedicure", description: null, customer_type: gtt_or_pm_client, duration_min: 50, price: 80, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Nail Technician stations", required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "9-free gel polish", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 3. NAIL SERVICES"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part A."}
+  - {id: svc_nails_french_gel_pedi, category: gtt_window_service, subcategory: nails, name: "French gel pedicure", description: null, customer_type: gtt_or_pm_client, duration_min: 55, price: 90, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Nail Technician stations", required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "9-free gel polish", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 3. NAIL SERVICES"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part A."}
+  - {id: svc_brow_wax_reshape, category: gtt_window_service, subcategory: brows_lashes, name: "Brow wax + reshape", description: null, customer_type: gtt_or_pm_client, duration_min: 20, pricing_ref: service_brow_wax_reshape, price: null, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Beauty Therapist stations", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "wax", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 4. BROWS & LASHES"}, effective_date: "2026-06-09", notes: "Price canonical in pricing.yml."}
+  - {id: svc_brow_wax_tint, category: gtt_window_service, subcategory: brows_lashes, name: "Brow wax + tint", description: null, customer_type: gtt_or_pm_client, duration_min: 25, price: 55, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Beauty Therapist stations", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "wax, PPD-free tint", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 4. BROWS & LASHES"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part A."}
+  - {id: svc_brow_thread_reshape, category: gtt_window_service, subcategory: brows_lashes, name: "Brow thread + reshape", description: null, customer_type: gtt_or_pm_client, duration_min: 15, price: 38, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Beauty Therapist stations", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: null, revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 4. BROWS & LASHES"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part A."}
+  - {id: svc_brow_lamination, category: gtt_window_service, subcategory: brows_lashes, name: "Brow lamination", description: null, customer_type: gtt_or_pm_client, duration_min: 45, price: 75, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Beauty Therapist stations", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: null, revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 4. BROWS & LASHES"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part A. Informed consent required (limited T1 safety data)."}
+  - {id: svc_lash_tint, category: gtt_window_service, subcategory: brows_lashes, name: "Lash tint", description: null, customer_type: gtt_or_pm_client, duration_min: 20, price: 30, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Beauty Therapist / Lash Tech stations", required_role: beauty_therapist_or_lash_tech, treatment_or_phlebotomy: treatment, consumable_requirement: "PPD-free tint", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 4. BROWS & LASHES"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md and docs/extended-wellness-services.md."}
+  - {id: svc_brow_lash_tint_combo, category: gtt_window_service, subcategory: brows_lashes, name: "Brow + lash tint combo", description: null, customer_type: gtt_or_pm_client, duration_min: 35, price: 80, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Beauty Therapist stations", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "PPD-free tint", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 4. BROWS & LASHES"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part A."}
+  - {id: svc_lash_lift_tint, category: gtt_window_service, subcategory: brows_lashes, name: "Lash lift + tint", description: "Tight fit within the GTT window per docs/services-master-table.md", customer_type: gtt_or_pm_client, duration_min: 45, price: 95, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Beauty Therapist / Lash Tech stations", required_role: beauty_therapist_or_lash_tech, treatment_or_phlebotomy: treatment, consumable_requirement: null, revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 4. BROWS & LASHES"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md and docs/extended-wellness-services.md."}
+  - {id: svc_blowdry_short_medium, category: gtt_window_service, subcategory: hair, name: "Blowdry (short-medium hair)", description: null, customer_type: gtt_or_pm_client, duration_min: 30, pricing_ref: service_blowdry_short_medium, price: null, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Hairdresser stations", required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: "hair products", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 5. HAIRDRESSING"}, effective_date: "2026-06-09", notes: "Price canonical in pricing.yml."}
+  - {id: svc_blowdry_long, category: gtt_window_service, subcategory: hair, name: "Blowdry (long hair)", description: null, customer_type: gtt_or_pm_client, duration_min: 45, price: 80, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Hairdresser stations", required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: "hair products", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 5. HAIRDRESSING"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part A."}
+  - {id: svc_haircut_excl_colour, category: gtt_window_service, subcategory: hair, name: "Haircut (excluding colour)", description: null, customer_type: gtt_or_pm_client, duration_min: null, duration_range: "30-45 min", price: null, price_range: "60-85", currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Hairdresser stations", required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: null, revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 5. HAIRDRESSING"}, effective_date: "2026-06-09", notes: "Range figure, not a point price -- recorded as stated, not averaged. Agrees exactly with docs/services-master-table.md Part A."}
+  - {id: svc_hair_mask_blowdry, category: gtt_window_service, subcategory: hair, name: "Pregnancy-safe hair mask + blowdry", description: null, customer_type: gtt_or_pm_client, duration_min: 45, price: 85, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Hairdresser stations", required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: "hair mask product", revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 5. HAIRDRESSING"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part A (there named 'Hair mask + blowdry')."}
+  - {id: svc_braiding_hair_up, category: gtt_window_service, subcategory: hair, name: "Braiding / hair up", description: null, customer_type: gtt_or_pm_client, duration_min: null, duration_range: "30-45 min", price: null, price_range: "60-75", currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "2 Hairdresser stations", required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: null, revenue_type: gtt_window_component, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 5. HAIRDRESSING"}, effective_date: "2026-06-09", notes: "Range figure, not a point price. Agrees exactly with docs/services-master-table.md Part A."}
+
+  # ============================================================
+  # FACIAL ADD-ONS (Part B, facial add-ons) -- available as additions to the 45-min facial only.
+  # Not independently bookable services -- all VERIFIED, single-source, no conflicts found.
+  # ============================================================
+  - {id: addon_facial_led, category: addon, subcategory: facial_addon, name: "LED light therapy add-on", description: "Red 630-660nm, face/neck. T2+ only, not on abdomen.", customer_type: gtt_or_pm_client, duration_min: 15, price: 35, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Beauty Therapist station as the base facial", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "LED device", revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: null}
+  - {id: addon_facial_scalp_massage, category: addon, subcategory: facial_addon, name: "Scalp massage add-on", description: "Avoid rosemary products", customer_type: gtt_or_pm_client, duration_min: 15, price: 25, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Beauty Therapist station", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: null, revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: null}
+  - {id: addon_facial_decolletage, category: addon, subcategory: facial_addon, name: "Decolletage treatment add-on", description: "HA + niacinamide, no retinoids", customer_type: gtt_or_pm_client, duration_min: 15, price: 30, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Beauty Therapist station", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "HA/niacinamide product", revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: null}
+  - {id: addon_facial_hand_arm_massage, category: addon, subcategory: facial_addon, name: "Hand and arm massage add-on", description: "Effleurage, avoid PC6/Hegu pressure points", customer_type: gtt_or_pm_client, duration_min: 10, price: 20, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Beauty Therapist station", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: null, revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: null}
+  - {id: addon_facial_jade_roller, category: addon, subcategory: facial_addon, name: "Jade roller / gua sha add-on", description: null, customer_type: gtt_or_pm_client, duration_min: 10, price: 20, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Beauty Therapist station", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: null, revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: null}
+  - {id: addon_facial_eye_mask, category: addon, subcategory: facial_addon, name: "Hydrating eye mask add-on", description: "No retinol/caffeine", customer_type: gtt_or_pm_client, duration_min: 10, price: 15, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Beauty Therapist station", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: null, revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: null}
+  - {id: addon_facial_lymphatic_drainage, category: addon, subcategory: facial_addon, name: "Lymphatic drainage facial massage add-on", description: "Beneficial for pregnancy puffiness", customer_type: gtt_or_pm_client, duration_min: 15, price: 30, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Beauty Therapist station", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: null, revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: null}
+  - {id: addon_facial_ha_serum, category: addon, subcategory: facial_addon, name: "HA serum infusion add-on", description: null, customer_type: gtt_or_pm_client, duration_min: 10, price: 20, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Beauty Therapist station", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "HA serum", revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: null}
+  - {id: addon_facial_collagen_mask, category: addon, subcategory: facial_addon, name: "Collagen sheet mask add-on", description: "Topical only", customer_type: gtt_or_pm_client, duration_min: 15, price: 25, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Beauty Therapist station", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "collagen sheet mask", revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: null}
+  - {id: addon_facial_aromatherapy, category: addon, subcategory: facial_addon, name: "Aromatherapy add-on", description: "T2+ only. Lavender/citrus/chamomile only -- avoid clary sage, rosemary.", customer_type: gtt_or_pm_client, duration_min: null, duration_note: "throughout", price: 15, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Beauty Therapist station", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "pregnancy-safe essential oils", revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: null}
+  - {id: addon_brow_wax_tint_during_facial, category: addon, subcategory: facial_addon, name: "Brow wax + tint (during facial) add-on", description: "PPD-free dye", customer_type: gtt_or_pm_client, duration_min: 25, price: 45, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Beauty Therapist station", required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "wax, PPD-free tint", revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 2. FACIALS"}, effective_date: "2026-06-09", notes: "Distinct record from svc_brow_wax_tint (a standalone GTT-window service, same price A$45 but a different duration when bundled as a facial add-on -- 25min here vs the standalone service's own separate timing)."}
+
+  # ============================================================
+  # NAIL ADD-ONS (Part C) -- all VERIFIED, single-source, no conflicts found.
+  # ============================================================
+  - {id: addon_nail_paraffin_hands, category: addon, subcategory: nail_addon, name: "Paraffin wax (hands) add-on", description: "Safe throughout pregnancy", customer_type: gtt_or_pm_client, duration_min: 20, price: 30, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Nail Technician station", required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "paraffin wax", revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 3. NAIL SERVICES"}, effective_date: "2026-06-09", notes: null}
+  - {id: addon_nail_paraffin_feet, category: addon, subcategory: nail_addon, name: "Paraffin wax (feet) add-on", description: null, customer_type: gtt_or_pm_client, duration_min: 25, price: 35, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Nail Technician station", required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "paraffin wax", revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 3. NAIL SERVICES"}, effective_date: "2026-06-09", notes: null}
+  - {id: addon_nail_art, category: addon, subcategory: nail_addon, name: "Nail art (per nail) add-on", description: null, customer_type: gtt_or_pm_client, duration_min: null, duration_note: "+5 min/nail", price: 5, price_unit_note: "per nail", currency: AUD, pricing_unit: per_nail, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Nail Technician station", required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "nail art supplies", revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 3. NAIL SERVICES"}, effective_date: "2026-06-09", notes: "Per-nail pricing, not a flat add-on fee."}
+  - {id: addon_nail_strengthening, category: addon, subcategory: nail_addon, name: "Nail strengthening treatment add-on", description: null, customer_type: gtt_or_pm_client, duration_min: 10, price: 15, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "same Nail Technician station", required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "strengthening treatment", revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART A, 3. NAIL SERVICES"}, effective_date: "2026-06-09", notes: null}
+
+  # ============================================================
+  # AFTERNOON / STANDALONE SERVICES (Part B/D) -- not GTT-window eligible, PM-only.
+  # ============================================================
+  - {id: svc_pm_cut_blowdry, category: pm_standalone_service, subcategory: hair, name: "Cut + blowdry", description: "Exceeds the 45-min GTT cap", customer_type: pm_standalone_client, duration_min: 60, price: 95, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: null, revenue_type: pm_standalone, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "Hairdressing -- Afternoon Extras"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part D."}
+  - {id: svc_pm_scalp_treatment_blowdry, category: pm_standalone_service, subcategory: hair, name: "Scalp treatment + blowdry", description: "Exceeds the 45-min GTT cap", customer_type: pm_standalone_client, duration_min: 50, price: 90, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: "scalp treatment product", revenue_type: pm_standalone, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "Hairdressing -- Afternoon Extras"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md Part D."}
+  - {id: svc_pm_full_massage_60, category: pm_standalone_service, subcategory: massage, name: "Full pregnancy massage (60 min)", description: "Afternoon only", customer_type: pm_standalone_client, duration_min: 60, price: 145, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: massage_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "massage oil", revenue_type: pm_standalone, status: MODELLED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-master-table.md, section: "PART D"}, effective_date: "2026-06-11", notes: "COMPLETENESS GAP, not a conflict -- docs/services-pricing-locked.md (the document titled 'LOCKED pricing') only says '60-min massage available as standalone afternoon booking only' with NO price stated; docs/services-master-table.md is the only source in this repo that actually prices this service."}
+  - {id: svc_pm_hydration_facial_60, category: pm_standalone_service, subcategory: facial, name: "Hydration facial (60 min)", description: null, customer_type: pm_standalone_client, duration_min: 60, price: 145, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "facial products", revenue_type: pm_standalone, status: MODELLED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-master-table.md, section: "PART D"}, effective_date: "2026-06-11", notes: "Same completeness gap as svc_pm_full_massage_60 -- docs/services-pricing-locked.md only says '60-min and 75-min facials available as standalone afternoon bookings' with no price."}
+  - {id: svc_pm_signature_facial_75, category: pm_standalone_service, subcategory: facial, name: "Signature facial (75 min)", description: null, customer_type: pm_standalone_client, duration_min: 75, price: 175, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: beauty_therapist, treatment_or_phlebotomy: treatment, consumable_requirement: "facial products", revenue_type: pm_standalone, status: MODELLED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-master-table.md, section: "PART D"}, effective_date: "2026-06-11", notes: "Same completeness gap as svc_pm_full_massage_60."}
+  - {id: svc_pm_mani_pedi_combo, category: pm_standalone_service, subcategory: nails, name: "Mani + pedi combo (gel)", description: "Too long for GTT window", customer_type: pm_standalone_client, duration_min: 80, price: 140, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "gel polish", revenue_type: pm_standalone, status: MODELLED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-master-table.md, section: "PART D"}, effective_date: "2026-06-11", notes: "COMPLETENESS GAP -- docs/services-pricing-locked.md notes '(80+ min): afternoon/standalone booking only' with no price."}
+  - {id: svc_pm_acrylic_full_set, category: pm_standalone_service, subcategory: nails, name: "Acrylic full set", description: null, customer_type: pm_standalone_client, duration_min: null, duration_range: "75-90 min", price: null, price_range: "90-120", currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "acrylic set", revenue_type: pm_standalone, status: MODELLED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-master-table.md, section: "PART D"}, effective_date: "2026-06-11", notes: "COMPLETENESS GAP -- docs/services-pricing-locked.md says 'afternoon only (75-90 min)' with no price."}
+  - {id: svc_pm_acrylic_infill, category: pm_standalone_service, subcategory: nails, name: "Acrylic infill", description: null, customer_type: pm_standalone_client, duration_min: null, duration_range: "45-60 min", price: null, price_range: "60-80", currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "acrylic infill materials", revenue_type: pm_standalone, status: MODELLED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-master-table.md, section: "PART D"}, effective_date: "2026-06-11", notes: "Not priced anywhere else in this repo."}
+  - {id: svc_pm_sns_dip_full_set, category: pm_standalone_service, subcategory: nails, name: "SNS/dip powder full set", description: null, customer_type: pm_standalone_client, duration_min: null, duration_range: "60-75 min", price: null, price_range: "85-110", currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: nail_technician, treatment_or_phlebotomy: treatment, consumable_requirement: "SNS/dip powder", revenue_type: pm_standalone, status: MODELLED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-master-table.md, section: "PART D"}, effective_date: "2026-06-11", notes: "COMPLETENESS GAP -- docs/services-pricing-locked.md lists 'SNS/dip powder: afternoon only (75-90 min)' with no price and a slightly different duration range (75-90 vs services-master-table.md's 60-75) -- a minor, undisclosed duration discrepancy, not resolved here."}
+  - {id: svc_pm_lash_classic_full, category: pm_standalone_service, subcategory: lash_extensions, name: "Classic lash extensions (full set)", description: null, customer_type: pm_standalone_client, duration_min: 90, price: 140, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: lash_tech, treatment_or_phlebotomy: treatment, consumable_requirement: "lash extension materials, adhesive", revenue_type: pm_standalone, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 9. EYELASH EXTENSIONS"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md and docs/extended-wellness-services.md."}
+  - {id: svc_pm_lash_hybrid_full, category: pm_standalone_service, subcategory: lash_extensions, name: "Hybrid lash extensions (full set)", description: null, customer_type: pm_standalone_client, duration_min: null, duration_range: "2-2.5 hr", price: 200, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: lash_tech, treatment_or_phlebotomy: treatment, consumable_requirement: "lash extension materials, adhesive", revenue_type: pm_standalone, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 9. EYELASH EXTENSIONS"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md and docs/extended-wellness-services.md."}
+  - {id: svc_pm_lash_volume_full, category: pm_standalone_service, subcategory: lash_extensions, name: "Volume lash extensions (full set)", description: null, customer_type: pm_standalone_client, duration_min: null, duration_range: "2-2.5 hr", price: 280, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: lash_tech, treatment_or_phlebotomy: treatment, consumable_requirement: "lash extension materials, adhesive", revenue_type: pm_standalone, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 9. EYELASH EXTENSIONS"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/services-master-table.md and docs/extended-wellness-services.md."}
+  - {id: svc_pm_lash_classic_infill, category: pm_standalone_service, subcategory: lash_extensions, name: "Classic lash infill", description: null, customer_type: pm_standalone_client, duration_min: 50, price: 99, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: lash_tech, treatment_or_phlebotomy: treatment, consumable_requirement: "lash extension materials", revenue_type: pm_standalone, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 9. EYELASH EXTENSIONS"}, effective_date: "2026-06-09", notes: "Agrees exactly across all 3 sources."}
+  - {id: svc_pm_lash_hybrid_volume_infill, category: pm_standalone_service, subcategory: lash_extensions, name: "Hybrid/volume lash infill", description: null, customer_type: pm_standalone_client, duration_min: 75, price: null, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: lash_tech, treatment_or_phlebotomy: treatment, consumable_requirement: "lash extension materials", revenue_type: pm_standalone, status: PLACEHOLDER, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 9. EYELASH EXTENSIONS"}, effective_date: "2026-06-09", notes: "CONFLICT, not silently resolved -- docs/services-pricing-locked.md and docs/services-master-table.md both state A$125; docs/extended-wellness-services.md states A$120. Price left null (PLACEHOLDER) rather than picking one -- see conflict_lash_infill_price below."}
+  - {id: svc_pm_single_process_colour, category: pm_standalone_service, subcategory: hair_colour, name: "Single process colour", description: "T2+ safe, informed consent required", customer_type: pm_standalone_client, duration_min: null, duration_range: "60-90 min", price: null, price_range: "130-200", currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: "hair colour product", revenue_type: pm_standalone, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 8. HAIR COLOUR SERVICES"}, effective_date: "2026-06-09", notes: "Agrees exactly across all 3 sources -- the one hair colour service with no conflict."}
+  - {id: svc_pm_half_foil_highlights, category: pm_standalone_service, subcategory: hair_colour, name: "Half foil highlights", description: null, customer_type: pm_standalone_client, duration_min: null, duration_range: "90-120 min", price: null, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: "hair colour product", revenue_type: pm_standalone, status: PLACEHOLDER, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 8. HAIR COLOUR SERVICES"}, effective_date: "2026-06-09", notes: "CONFLICT -- docs/services-pricing-locked.md and docs/services-master-table.md both state A$200; docs/extended-wellness-services.md states A$180. See conflict_haircolour_prices below."}
+  - {id: svc_pm_full_foil_highlights, category: pm_standalone_service, subcategory: hair_colour, name: "Full foil highlights", description: null, customer_type: pm_standalone_client, duration_min: null, duration_range: "2-3 hr", price: null, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: "hair colour product", revenue_type: pm_standalone, status: PLACEHOLDER, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 8. HAIR COLOUR SERVICES"}, effective_date: "2026-06-09", notes: "CONFLICT -- docs/services-pricing-locked.md/docs/services-master-table.md state A$280-350; docs/extended-wellness-services.md states A$250-350 (lower end differs). See conflict_haircolour_prices below."}
+  - {id: svc_pm_balayage_half, category: pm_standalone_service, subcategory: hair_colour, name: "Balayage (half head)", description: null, customer_type: pm_standalone_client, duration_min: null, duration_range: "2-3 hr", price: 270, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: "hair colour product", revenue_type: pm_standalone, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 8. HAIR COLOUR SERVICES"}, effective_date: "2026-06-09", notes: "Agrees exactly across all 3 sources."}
+  - {id: svc_pm_balayage_full, category: pm_standalone_service, subcategory: hair_colour, name: "Balayage (full head)", description: null, customer_type: pm_standalone_client, duration_min: null, duration_range: "3-4 hr", price: null, price_range: "360-400", currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: "hair colour product", revenue_type: pm_standalone, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 8. HAIR COLOUR SERVICES"}, effective_date: "2026-06-09", notes: "Agrees exactly across all 3 sources."}
+  - {id: svc_pm_toner_gloss, category: pm_standalone_service, subcategory: hair_colour, name: "Toner / gloss", description: null, customer_type: pm_standalone_client, duration_min: 30, price: null, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: "toner product", revenue_type: pm_standalone, status: PLACEHOLDER, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 8. HAIR COLOUR SERVICES"}, effective_date: "2026-06-09", notes: "CONFLICT -- docs/services-pricing-locked.md/docs/services-master-table.md state a point price A$65; docs/extended-wellness-services.md states a range A$50-80 (A$65 falls within it, but stated differently). See conflict_haircolour_prices below."}
+  - {id: svc_pm_colour_blowdry, category: pm_standalone_service, subcategory: hair_colour, name: "Colour + blowdry (single process)", description: null, customer_type: pm_standalone_client, duration_min: null, duration_range: "2-3 hr", price: null, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: null, required_role: hairdresser, treatment_or_phlebotomy: treatment, consumable_requirement: "hair colour product", revenue_type: pm_standalone, status: PLACEHOLDER, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 8. HAIR COLOUR SERVICES"}, effective_date: "2026-06-09", notes: "CONFLICT -- docs/services-pricing-locked.md/docs/services-master-table.md state A$230-280; docs/extended-wellness-services.md states A$200-280 (lower end differs). See conflict_haircolour_prices below."}
+  - id: svc_pm_spray_tan
+    category: pm_standalone_service
+    subcategory: spray_tan
+    name: "Spray tan (automated booth)"
+    description: "NOT on GTT test day for pregnant clients -- offer as next visit or standalone booking. Fully automated, zero staff."
+    customer_type: pm_standalone_or_general_public
+    duration_min: 15
+    price: null
+    currency: AUD
+    pricing_unit: per_session
+    inclusions: null
+    exclusions: null
+    capacity_staffing_requirement: "zero staff (self-service booth)"
+    required_role: null
+    treatment_or_phlebotomy: neither
+    consumable_requirement: "DHA solution, protective kit"
+    revenue_type: pm_standalone
+    status: PLACEHOLDER
+    lifecycle: proposed
+    scenario_applicability: universal
+    source: {file: docs/services-pricing-locked.md, section: "PART B, 7. SPRAY TAN"}
+    effective_date: "2026-06-09"
+    notes: >
+      TWO SEPARATE ISSUES, neither resolved here: (1) PRICE CONFLICT -- docs/services-pricing-locked.md
+      states two tiers (booth only A$55; +protective kit A$60), noting the protective kit is
+      "INCLUDED in all pregnant client bookings... non-negotiable" elsewhere in the same document
+      (implying the A$55 no-kit tier may not actually apply to GTT's own client base). docs/services-master-table.md
+      states a single A$60 price with the kit bundled in as standard, matching that same-document
+      constraint more closely -- but the two documents were never reconciled. (2) LIFECYCLE CONFLICT,
+      not previously disclosed anywhere -- docs/equipment-costs.md explicitly moved the spray tan
+      booth to "PHASE 2 / POST-LAUNCH EXPANSION" (2026-07-31), excluded from the day-one committed
+      budget and every P&L figure -- but NEITHER docs/services-pricing-locked.md NOR
+      docs/services-master-table.md have been updated to reflect this: both still present spray tan
+      as a current, priced, in-scope service. `lifecycle: proposed` reflects the equipment-costs.md
+      status (the more recent, more specific instruction); the pricing documents' own "current"
+      framing is flagged as stale, not followed. See conflict_spraytan_status_and_price below.
+
+  - {id: svc_pm_belly_cast_white, category: pm_standalone_service, subcategory: belly_casting, name: "Belly cast (white, unpainted)", description: "Standalone booking only, not on GTT test day. Optimal 32-36 weeks.", customer_type: pm_standalone_client, duration_min: 60, price: 250, currency: AUD, pricing_unit: per_session, inclusions: ["take-home cast"], exclusions: null, capacity_staffing_requirement: "1 trained staff member (any role, 1-day training)", required_role: trained_staff_any_role, treatment_or_phlebotomy: treatment, consumable_requirement: "plaster gauze, Vaseline barrier", revenue_type: pm_standalone, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 10. BELLY CASTING"}, effective_date: "2026-06-09", notes: "Agrees exactly across all 3 sources (services-pricing-locked.md, services-master-table.md, extended-wellness-services.md). Perth market comparison: Natural Beginnings Perth charges A$770 for a premium belly bowl (includes stand+mosaic) -- not a like-for-like comparison to this basic take-home cast."}
+  - {id: svc_pm_belly_cast_painted, category: pm_standalone_service, subcategory: belly_casting, name: "Belly cast + basic painted finish", description: null, customer_type: pm_standalone_client, duration_min: 75, price: 310, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "1 trained staff member", required_role: trained_staff_any_role, treatment_or_phlebotomy: treatment, consumable_requirement: "plaster gauze, paint", revenue_type: pm_standalone, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 10. BELLY CASTING"}, effective_date: "2026-06-09", notes: "Agrees exactly across all 3 sources."}
+  - {id: svc_pm_belly_breast_cast, category: pm_standalone_service, subcategory: belly_casting, name: "Belly + breast cast", description: null, customer_type: pm_standalone_client, duration_min: 75, price: 330, currency: AUD, pricing_unit: per_session, inclusions: null, exclusions: null, capacity_staffing_requirement: "1 trained staff member", required_role: trained_staff_any_role, treatment_or_phlebotomy: treatment, consumable_requirement: "plaster gauze", revenue_type: pm_standalone, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 10. BELLY CASTING"}, effective_date: "2026-06-09", notes: "Agrees exactly across all 3 sources."}
+  - {id: addon_belly_cast_decoration, category: addon, subcategory: belly_casting_addon, name: "Decoration/art upgrade (return visit)", description: "Return visit for painting/decoration", customer_type: pm_standalone_client, duration_min: 45, price: 75, currency: AUD, pricing_unit: per_addon, inclusions: null, exclusions: null, capacity_staffing_requirement: "1 trained staff member", required_role: trained_staff_any_role, treatment_or_phlebotomy: treatment, consumable_requirement: "paint", revenue_type: addon, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART B, 10. BELLY CASTING"}, effective_date: "2026-06-09", notes: "Agrees exactly across all 3 sources."}
+
+  # ============================================================
+  # SELF-SERVICE / TABLET-BASED (Part C) -- free/near-free, included in lounge access
+  # ============================================================
+  - {id: svc_birth_plan_digital, category: self_service, subcategory: birth_plan, name: "Digital birth plan (emailed)", description: null, customer_type: gtt_client, duration_min: null, price: 0, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "self-service, iPad in lounge", required_role: null, treatment_or_phlebotomy: neither, consumable_requirement: null, revenue_type: bundled_free, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART C, 12. BIRTH PLAN CREATION"}, effective_date: "2026-06-09", notes: "Free, included in lounge access -- not a revenue line."}
+  - {id: svc_birth_plan_bw_print, category: self_service, subcategory: birth_plan, name: "Birth plan -- B&W print", description: null, customer_type: gtt_client, duration_min: null, price: 2, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "reception printer", required_role: null, treatment_or_phlebotomy: neither, consumable_requirement: "paper, toner", revenue_type: ancillary, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART C, 12. BIRTH PLAN CREATION"}, effective_date: "2026-06-09", notes: null}
+  - {id: svc_birth_plan_colour_print, category: self_service, subcategory: birth_plan, name: "Birth plan -- Colour print", description: null, customer_type: gtt_client, duration_min: null, price: 5, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "reception printer", required_role: null, treatment_or_phlebotomy: neither, consumable_requirement: "paper, colour ink", revenue_type: ancillary, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART C, 12. BIRTH PLAN CREATION"}, effective_date: "2026-06-09", notes: null}
+  - {id: svc_birth_plan_premium_card, category: self_service, subcategory: birth_plan, name: "Birth plan -- Premium card + sleeve", description: null, customer_type: gtt_client, duration_min: null, price: 15, currency: AUD, pricing_unit: per_item, inclusions: ["card stock print", "sleeve"], exclusions: null, capacity_staffing_requirement: "reception printer", required_role: null, treatment_or_phlebotomy: neither, consumable_requirement: "card stock, sleeve", revenue_type: ancillary, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART C, 12. BIRTH PLAN CREATION"}, effective_date: "2026-06-09", notes: null}
+
+  # ============================================================
+  # CAFE (Part D) -- ancillary, not core GTT service. Revenue included in the
+  # already-flagged ancillary-revenue placeholder figures (see conflicts note).
+  # ============================================================
+  - {id: ancillary_cafe_still_water, category: ancillary, subcategory: cafe, name: "Still water (500mL)", description: null, customer_type: general, duration_min: null, price: 3, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "Receptionist/Manager serves", required_role: receptionist_manager, treatment_or_phlebotomy: neither, consumable_requirement: "bottled water", revenue_type: ancillary_cafe, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART D, CAFE"}, effective_date: "2026-06-09", notes: "NOT served while GTT active (T=0 to T=120), per the source's own note."}
+  - {id: ancillary_cafe_sparkling_water, category: ancillary, subcategory: cafe, name: "Sparkling water", description: null, customer_type: general, duration_min: null, price: 4, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "Receptionist/Manager serves", required_role: receptionist_manager, treatment_or_phlebotomy: neither, consumable_requirement: "bottled water", revenue_type: ancillary_cafe, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART D, CAFE"}, effective_date: "2026-06-09", notes: null}
+  - {id: ancillary_cafe_herbal_tea, category: ancillary, subcategory: cafe, name: "Herbal tea", description: "Non-caffeinated only during GTT", customer_type: general, duration_min: null, price: 4, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "Receptionist/Manager serves", required_role: receptionist_manager, treatment_or_phlebotomy: neither, consumable_requirement: "tea stock", revenue_type: ancillary_cafe, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART D, CAFE"}, effective_date: "2026-06-09", notes: null}
+  - {id: ancillary_cafe_protein_bar, category: ancillary, subcategory: cafe, name: "Protein bar (pregnancy-safe)", description: null, customer_type: general, duration_min: null, price: null, price_range: "5-7", currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "Receptionist/Manager serves", required_role: receptionist_manager, treatment_or_phlebotomy: neither, consumable_requirement: "protein bar stock", revenue_type: ancillary_cafe, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART D, CAFE"}, effective_date: "2026-06-09", notes: null}
+  - {id: ancillary_cafe_fruit_cup, category: ancillary, subcategory: cafe, name: "Fresh fruit cup", description: null, customer_type: general, duration_min: null, price: 5, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "Receptionist/Manager serves", required_role: receptionist_manager, treatment_or_phlebotomy: neither, consumable_requirement: "fresh fruit", revenue_type: ancillary_cafe, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART D, CAFE"}, effective_date: "2026-06-09", notes: null}
+  - {id: ancillary_cafe_coconut_water, category: ancillary, subcategory: cafe, name: "Coconut water / electrolyte drink", description: null, customer_type: general, duration_min: null, price: null, price_range: "5-6", currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "Receptionist/Manager serves", required_role: receptionist_manager, treatment_or_phlebotomy: neither, consumable_requirement: "coconut water/electrolyte stock", revenue_type: ancillary_cafe, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART D, CAFE"}, effective_date: "2026-06-09", notes: null}
+  - {id: ancillary_cafe_snack_pack, category: ancillary, subcategory: cafe, name: "Snack pack (nuts + bar + water)", description: null, customer_type: general, duration_min: null, price: 12, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "Receptionist/Manager serves", required_role: receptionist_manager, treatment_or_phlebotomy: neither, consumable_requirement: "nuts, bar, water stock", revenue_type: ancillary_cafe, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART D, CAFE"}, effective_date: "2026-06-09", notes: null}
+
+  # ============================================================
+  # RETAIL (Part E) -- ancillary
+  # ============================================================
+  - {id: ancillary_retail_libre_sensor, category: ancillary, subcategory: retail, name: "Freestyle Libre 2 sensor (14-day CGM)", description: null, customer_type: general, duration_min: null, price: 105, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "Receptionist/Manager sells", required_role: receptionist_manager, treatment_or_phlebotomy: neither, consumable_requirement: null, revenue_type: ancillary_retail, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART E, RETAIL"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/extended-wellness-services.md's GDM Retail table (also gives a 20-30% margin figure, not restated here -- see that document for margin detail not itself a pricing fact)."}
+  - {id: ancillary_retail_lowgi_book, category: ancillary, subcategory: retail, name: "Low-GI recipe book (pregnancy)", description: null, customer_type: general, duration_min: null, price: 30, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "Receptionist/Manager sells", required_role: receptionist_manager, treatment_or_phlebotomy: neither, consumable_requirement: null, revenue_type: ancillary_retail, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART E, RETAIL"}, effective_date: "2026-06-09", notes: "Agrees exactly with docs/extended-wellness-services.md."}
+  - {id: ancillary_retail_gdm_snack_pack, category: ancillary, subcategory: retail, name: "GDM snack pack", description: null, customer_type: general, duration_min: null, price: null, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "Receptionist/Manager sells", required_role: receptionist_manager, treatment_or_phlebotomy: neither, consumable_requirement: null, revenue_type: ancillary_retail, status: PLACEHOLDER, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART E, RETAIL"}, effective_date: "2026-06-09", notes: "CONFLICT -- docs/services-pricing-locked.md states a point price A$20; docs/extended-wellness-services.md states a range A$18-25 (A$20 falls within it, but not identical). See conflict_gdm_snack_pack_price below."}
+  - {id: ancillary_retail_nail_polish, category: ancillary, subcategory: retail, name: "Pregnancy-safe nail polish (take-home)", description: null, customer_type: general, duration_min: null, price: 18, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "Receptionist/Manager sells", required_role: receptionist_manager, treatment_or_phlebotomy: neither, consumable_requirement: null, revenue_type: ancillary_retail, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART E, RETAIL"}, effective_date: "2026-06-09", notes: null}
+  - {id: ancillary_retail_gdm_resource_pack, category: ancillary, subcategory: retail, name: "GDM resource pack (printed)", description: "Free, from NDSS and Baker Institute handouts obtained in bulk", customer_type: general, duration_min: null, price: 0, currency: AUD, pricing_unit: per_item, inclusions: null, exclusions: null, capacity_staffing_requirement: "Receptionist/Manager hands out", required_role: receptionist_manager, treatment_or_phlebotomy: neither, consumable_requirement: null, revenue_type: bundled_free, status: VERIFIED, lifecycle: current, scenario_applicability: universal, source: {file: docs/services-pricing-locked.md, section: "PART E, RETAIL"}, effective_date: "2026-06-09", notes: "Not a revenue line -- goodwill/education material."}
+
+  # ============================================================
+  # GDM INFORMATION SESSION -- new find this phase, not in
+  # services-pricing-locked.md or services-master-table.md at all.
+  # ============================================================
+  - id: svc_gdm_info_session
+    category: ancillary
+    subcategory: group_session
+    name: "Monthly/Fortnightly GDM Information Session"
+    description: "External presenter (APD, diabetes educator, or pharmacist) runs a group session in the lounge/multi-purpose room for GDM-diagnosed return clients. Content: what GDM is, blood glucose management, food basics, CGM device demonstration."
+    customer_type: gdm_diagnosed_return_client
+    duration_min: null
+    duration_range: "45-60 min"
+    price: null
+    price_note: "A$0 (included in GTT package goodwill) or A$20-30 optional -- not decided, both options recorded"
+    currency: AUD
+    pricing_unit: per_session
+    inclusions: null
+    exclusions: ["diagnosis, dietary advice, medication recommendation -- all explicitly out of staff scope"]
+    capacity_staffing_requirement: "external contractor presenter, group format"
+    required_role: external_contractor_apd_or_diabetes_educator_or_pharmacist
+    treatment_or_phlebotomy: neither
+    consumable_requirement: "GDM resource packs, CGM demonstration device"
+    revenue_type: ancillary_uncertain
+    status: PLACEHOLDER
+    lifecycle: proposed
+    scenario_applicability: universal
+    source: {file: docs/extended-wellness-services.md, section: "1. GDM (Gestational Diabetes) Awareness, Monthly/Fortnightly GDM Information Session"}
+    effective_date: "2026-06-09"
+    notes: >
+      NEW FIND THIS PHASE -- not previously canonicalised anywhere; does not appear in
+      docs/services-pricing-locked.md or docs/services-master-table.md at all. Cost TO THE VENUE
+      is A$150-300/session (contractor fee) -- this is a cost, not the client-facing price, not
+      migrated to data/canonical/opex.yml this pass (out of this phase's scope; flagged as a
+      follow-up). Planned launch: "Month 3+ when there is an established pool of GDM-diagnosed
+      return clients" -- explicitly proposed/future, not current, per the source's own framing.
+
+  # ============================================================
+  # 3D KEEPSAKE ULTRASOUND -- future/Phase 2 income stream, never a startup/launch decision.
+  # ============================================================
+  - id: svc_3d_keepsake_scan
+    category: future_service
+    subcategory: 3d_scan
+    name: "3D Keepsake Ultrasound Scan"
+    description: "Future income stream, to be considered once the venue is established -- explicitly NOT part of startup/launch capital or scope. Legal and unregulated in WA. Never framed as diagnostic -- keepsake/entertainment only, per the empire-wide hard rule."
+    customer_type: general_or_gtt_client
+    duration_min: null
+    price: null
+    currency: AUD
+    pricing_unit: null
+    inclusions: null
+    exclusions: ["diagnostic interpretation -- never offered"]
+    capacity_staffing_requirement: null
+    required_role: null
+    treatment_or_phlebotomy: neither
+    consumable_requirement: null
+    revenue_type: future_uncertain
+    status: PLACEHOLDER
+    lifecycle: proposed
+    scenario_applicability: universal
+    source: {file: docs/hire-purchase-china.md, section: "1C. 3D Keepsake Ultrasound Scanner"}
+    effective_date: "2026-07-19"
+    notes: >
+      No client-facing service price has ever been set anywhere in this repo -- only equipment
+      cost exists (A$12,000-25,000, refurbished AU distributor, per docs/hire-purchase-china.md --
+      a capex figure, not migrated to data/canonical/capex.yml this pass since the service itself
+      is not committed, flagged as a follow-up if/when this is revisited). Reframed 2026-07-19 from
+      an earlier same-day "removed from scope entirely" flag to "future consideration, not current
+      startup scope" -- this record reflects the current (corrected) framing.
+
+# ============================================================
+# HISTORICAL / REMOVED SERVICES -- explicitly researched and rejected, or explicitly removed
+# from the menu. Retained for trace, per this repo's "never delete, mark superseded" convention
+# -- NOT restated as full commercial records (duration/staffing/price were mostly never set for
+# these, since they were rejected before being priced).
+# ============================================================
+historical_services:
+  - id: hist_svc_hot_stone_massage
+    name: "Hot stone massage"
+    lifecycle: historical
+    status: SUPERSEDED
+    source: {file: docs/extended-wellness-services.md, section: "5. Day Spa Expansion Services, Day 49 note"}
+    notes: "Removed from the menu entirely (Day 49) -- not offered at all. No price was ever set."
+
+  - id: hist_svc_full_body_scrub
+    name: "Full body scrub"
+    lifecycle: historical
+    status: SUPERSEDED
+    source: {file: docs/extended-wellness-services.md, section: "5. Day Spa Expansion Services, Day 49 note"}
+    notes: "Removed from the menu entirely (Day 49) -- not offered at all. No price was ever set."
+
+  - id: hist_svc_pregnancy_body_wrap
+    name: "Pregnancy body wrap"
+    lifecycle: historical
+    status: SUPERSEDED
+    source: {file: docs/extended-wellness-services.md, section: "5. Day Spa Expansion Services, Day 49 note"}
+    notes: "Removed from the menu entirely (Day 49) -- not offered at all. No price was ever set."
+
+  - id: hist_svc_perinatal_mental_health_screening
+    name: "Perinatal mental health screening (EPDS/iCOPE)"
+    lifecycle: historical
+    status: SUPERSEDED
+    source: {file: docs/extended-wellness-services.md, section: "Removed Services (Not Offered)"}
+    notes: "Researched, not offered -- staff not qualified to manage positive screens."
+
+  - id: hist_svc_mens_preconception_health
+    name: "Men's preconception health"
+    lifecycle: historical
+    status: SUPERSEDED
+    source: {file: docs/extended-wellness-services.md, section: "Removed Services (Not Offered)"}
+    notes: "Researched, not offered -- outside scope and target market."
+
+  - id: hist_svc_maternity_photography
+    name: "Maternity photography"
+    lifecycle: historical
+    status: SUPERSEDED
+    source: {file: docs/extended-wellness-services.md, section: "Removed Services (Not Offered)"}
+    notes: "Researched, not offered."
+
+# ============================================================
+# FUTURE SERVICES (5) -- not at launch, Month 3+ to Month 6+ per docs/services-master-table.md
+# ============================================================
+future_services:
+  - id: future_svc_lactation_consultation
+    name: "IBCLC lactation consultation"
+    category: future_service
+    duration_min: 60
+    price: null
+    price_range: "150-200"
+    currency: AUD
+    target_month: "Month 4+"
+    required_role: ibclc_contractor
+    status: MODELLED
+    lifecycle: proposed
+    source: {file: docs/services-master-table.md, section: "PART E, FUTURE SERVICES"}
+    notes: "docs/extended-wellness-services.md §4 adds a follow-up-visit tier not in services-master-table.md: Follow-up 30-45min A$90-130. Model: contractor/room hire -- IBCLC brings own clients, accepts GTT postnatal referrals. Medicare rebatable if the IBCLC is also an endorsed midwife (within 7 weeks post-birth)."
+
+  - id: future_svc_gdm_dietitian_consultation
+    name: "GDM dietitian consultation"
+    category: future_service
+    duration_min: 60
+    price: 180
+    currency: AUD
+    target_month: "Month 6+"
+    required_role: apd_contractor
+    status: PLACEHOLDER
+    lifecycle: proposed
+    source: {file: docs/services-master-table.md, section: "PART E, FUTURE SERVICES"}
+    notes: >
+      LIFECYCLE CONFLICT, new finding this phase -- docs/services-master-table.md and
+      docs/services-pricing-locked.md both list this as a planned future service (Month 6+),
+      but docs/extended-wellness-services.md's own "Removed Services (Not Offered)" section
+      explicitly lists "APD-led dietary services (meal plans, NDSS registration) — deferred
+      indefinitely." "Planned for Month 6+" and "deferred indefinitely" are materially
+      different framings of the same service's status, never reconciled between the two
+      documents. See conflict_dietitian_service_status below.
+
+  - id: future_svc_prenatal_yoga
+    name: "Prenatal yoga class"
+    category: future_service
+    duration_min: null
+    duration_range: "60-75 min"
+    price: null
+    price_range: "25-35 per person"
+    currency: AUD
+    target_month: "Month 3+"
+    required_role: qualified_yoga_instructor
+    status: MODELLED
+    lifecycle: proposed
+    source: {file: docs/services-master-table.md, section: "PART E, FUTURE SERVICES"}
+    notes: "docs/extended-wellness-services.md's Removed Services list frames this as 'future consideration only' -- consistent with, not contradicting, this record's proposed lifecycle."
+
+  - id: future_svc_pelvic_floor_physio
+    name: "Pelvic floor physiotherapy"
+    category: future_service
+    duration_min: null
+    duration_range: "45-60 min"
+    price: null
+    price_range: "160-200"
+    currency: AUD
+    target_month: "Month 6+"
+    required_role: pelvic_floor_physio
+    status: MODELLED
+    lifecycle: proposed
+    source: {file: docs/services-master-table.md, section: "PART E, FUTURE SERVICES"}
+    notes: null
+
+  - id: future_svc_hypnobirthing_course
+    name: "Hypnobirthing course"
+    category: future_service
+    duration_min: null
+    duration_range: "2-3 hr"
+    price: null
+    price_range: "150-300"
+    currency: AUD
+    target_month: "Month 6+"
+    required_role: accredited_provider
+    status: MODELLED
+    lifecycle: proposed
+    source: {file: docs/services-master-table.md, section: "PART E, FUTURE SERVICES"}
+    notes: "docs/extended-wellness-services.md's Removed Services list frames this as 'future consideration only' -- consistent with, not contradicting, this record's proposed lifecycle."
+
+# ============================================================
+# Genuine, disclosed conflicts -- none silently resolved.
+# ============================================================
+conflicts:
+  - id: conflict_spraytan_status_and_price
+    description: >
+      Spray tan has two unresolved issues: (1) price -- docs/services-pricing-locked.md states
+      two tiers (A$55 booth-only, A$60 with protective kit), while docs/services-master-table.md
+      states a single A$60 price with the kit bundled as standard; (2) lifecycle -- neither
+      pricing document has been updated to reflect docs/equipment-costs.md's 2026-07-31 move of
+      spray tan to "PHASE 2 / POST-LAUNCH EXPANSION," excluded from the day-one budget and every
+      P&L figure.
+    affected_records: [svc_pm_spray_tan]
+    sources:
+      - {file: docs/services-pricing-locked.md, section: "PART B, 7. SPRAY TAN"}
+      - {file: docs/services-master-table.md, section: "PART D"}
+      - {file: docs/equipment-costs.md, section: "§2 Spray Tan Booth, Summary Budget"}
+    resolution_status: UNRESOLVED
+    notes: "The lifecycle half of this finding is new this phase -- not previously disclosed anywhere despite equipment-costs.md's own Phase-2 reclassification being nearly 2 weeks old at the time of this migration."
+
+  - id: conflict_haircolour_prices
+    description: >
+      4 hair colour services disagree between docs/services-pricing-locked.md/docs/services-master-table.md
+      (identical to each other) and docs/extended-wellness-services.md: Half foil highlights
+      (A$200 vs A$180), Full foil highlights (A$280-350 vs A$250-350), Toner/gloss (A$65 point vs
+      A$50-80 range), Colour+blowdry (A$230-280 vs A$200-280). Single process colour and both
+      Balayage services agree exactly across all 3 sources -- not every hair colour line is
+      affected, only these 4.
+    affected_records: [svc_pm_half_foil_highlights, svc_pm_full_foil_highlights, svc_pm_toner_gloss, svc_pm_colour_blowdry]
+    sources:
+      - {file: docs/services-pricing-locked.md, section: "PART B, 8. HAIR COLOUR SERVICES"}
+      - {file: docs/services-master-table.md, section: "PART D"}
+      - {file: docs/extended-wellness-services.md, section: "5. Day Spa Expansion Services, Hair Colour Services"}
+    resolution_status: UNRESOLVED
+    notes: null
+
+  - id: conflict_lash_infill_price
+    description: "Hybrid/volume lash infill: docs/services-pricing-locked.md and docs/services-master-table.md both state A$125; docs/extended-wellness-services.md states A$120."
+    affected_records: [svc_pm_lash_hybrid_volume_infill]
+    sources:
+      - {file: docs/services-pricing-locked.md, section: "PART B, 9. EYELASH EXTENSIONS"}
+      - {file: docs/extended-wellness-services.md, section: "5. Day Spa Expansion Services, Eyelash Services"}
+    resolution_status: UNRESOLVED
+    notes: "Smallest-magnitude conflict found this phase (A$5) -- retained per the coordinator's 'do not silently pick one' instruction regardless of size."
+
+  - id: conflict_gdm_snack_pack_price
+    description: "docs/services-pricing-locked.md states a point price A$20; docs/extended-wellness-services.md states a range A$18-25."
+    affected_records: [ancillary_retail_gdm_snack_pack]
+    sources:
+      - {file: docs/services-pricing-locked.md, section: "PART E, RETAIL"}
+      - {file: docs/extended-wellness-services.md, section: "1. GDM Awareness, GDM Retail"}
+    resolution_status: UNRESOLVED
+    notes: null
+
+  - id: conflict_dietitian_service_status
+    description: >
+      docs/services-master-table.md and docs/services-pricing-locked.md both list "GDM dietitian
+      consultation" as a planned future service (Month 6+). docs/extended-wellness-services.md's
+      own "Removed Services (Not Offered)" section states "APD-led dietary services (meal plans,
+      NDSS registration) — deferred indefinitely." These are materially different framings of the
+      same service's status (a committed future timeline vs. an indefinite deferral/effective
+      removal) -- never reconciled between the documents.
+    affected_records: [future_svc_gdm_dietitian_consultation]
+    sources:
+      - {file: docs/services-master-table.md, section: "PART E, FUTURE SERVICES"}
+      - {file: docs/services-pricing-locked.md, section: "FUTURE SERVICES table"}
+      - {file: docs/extended-wellness-services.md, section: "Removed Services (Not Offered)"}
+    resolution_status: UNRESOLVED
+    notes: "Highest-materiality conflict in this file relative to its size -- affects whether a whole future revenue line should be planned for at all, not just its price."
+
+  - id: conflict_locked_pricing_completeness_gap
+    description: >
+      docs/services-pricing-locked.md (the document explicitly titled "Services Menu: Locked
+      Pricing & Durations") does not itself state a price for at least 6 services it otherwise
+      describes as bookable (full 60-min massage, hydration facial, signature 75-min facial,
+      mani+pedi combo, acrylic sets, SNS/dip powder) -- docs/services-master-table.md is the only
+      source in this repo that actually prices them. Not a disagreement between sources (only one
+      source has a number at all), but a genuine completeness gap in the document positioned as
+      authoritative on pricing specifically.
+    affected_records: [svc_pm_full_massage_60, svc_pm_hydration_facial_60, svc_pm_signature_facial_75, svc_pm_mani_pedi_combo, svc_pm_acrylic_full_set, svc_pm_sns_dip_full_set]
+    sources:
+      - {file: docs/services-pricing-locked.md, section: "PART B intro + individual service notes"}
+      - {file: docs/services-master-table.md, section: "PART D"}
+    resolution_status: UNRESOLVED
+    notes: "Not scored as UNRESOLVED in the same sense as a genuine price disagreement -- there is no second number to disagree with, just a documented gap in the 'locked' document."
