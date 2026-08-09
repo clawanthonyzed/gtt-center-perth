@@ -4,10 +4,11 @@ GTT Center Perth -- Canonical data validator (proof of concept).
 Validates data/canonical/*.yml files against the schema/governance conventions
 established in docs/architecture/CANONICAL-DATA-SCHEMA.md and
 docs/architecture/DATA-GOVERNANCE.md. This is a proof-of-concept validator for
-ten files (pricing.yml, client_assumptions.yml, scenarios.yml, staffing.yml,
+eleven files (pricing.yml, client_assumptions.yml, scenarios.yml, staffing.yml,
 wages.yml -- Phase 2; opex.yml -- Phase 3; startup_costs.yml, capex.yml --
-Phase 4; services.yml -- Phase 5; revenue_assumptions.yml -- Phase 6) -- it is
-not a general schema engine and does not validate every field type strictly.
+Phase 4; services.yml -- Phase 5; revenue_assumptions.yml -- Phase 6;
+revenue_ramp.yml -- Phase 7) -- it is not a general schema engine and does not
+validate every field type strictly.
 
 Checks performed:
   1. YAML validity (parse error -> hard failure)
@@ -148,6 +149,19 @@ Checks performed:
       or represent a single modelling convention, not a complete
       mutually-exclusive split). Where `mix_complete: true`, every `_pct`-
       suffixed key in the record's `value` dict must sum to 100 (+/- 0.5).
+  25. (Phase 7, revenue_ramp.yml) Required fields per `records` entry (id,
+      scenario_id, month, status); `month` restricted to M1/M2/M3/M4/M5plus;
+      duplicate (scenario_id, month) pairs are rejected. `am_revenue`,
+      `pm_revenue`, `ancillary_revenue`, `total_revenue`, and
+      `steady_state_revenue` are checked for malformed numeric shape, and
+      `am_revenue + pm_revenue + ancillary_revenue` must sum to
+      `total_revenue`. `pct_of_steady_state` must arithmetically match
+      `total_revenue / steady_state_revenue x 100`. At Month 5plus (100%),
+      `pm_revenue` must not exceed the canonical PM capacity revenue ceiling
+      (`pm_steady_state_capacity` + `rev_pm_saturday_sessions`, priced at
+      `pm_alacarte_average`, scaled by the canonical operating-day
+      assumptions) -- PM session volume cannot silently exceed canonical
+      capacity. Status-vs-value consistency mirrors §23.
 
 Exit code: 0 if all checks pass across all validated files, 1 if any check
 fails in any file. Usable in CI / pre-commit, same convention as
@@ -180,7 +194,7 @@ RECORD_LIST_KEYS = {
     "records", "universal", "scenario_dependent", "historical_scenarios",
     "operational_buffers", "open_items", "historical_staffing_scenarios",
     "funding_requirements", "historical_total_estimates", "contingency_assumptions",
-    "historical_services", "future_services",
+    "historical_services", "future_services", "historical_ramp_reference",
 }
 
 # staffing.yml -- category vocabulary the coordinator asked to be preserved,
@@ -231,6 +245,16 @@ ALLOWED_SERVICE_LIFECYCLES = {"current", "proposed", "historical", "superseded"}
 
 # revenue_assumptions.yml -- required fields per `records` entry.
 REVENUE_ASSUMPTIONS_RECORD_REQUIRED_FIELDS = {"id", "category", "name", "status"}
+
+# revenue_ramp.yml (Phase 7) -- required fields per `records` entry, and the
+# controlled month vocabulary (Month 1-4 individually, Month 5+ combined into
+# one steady-state label, matching every historical ramp table's own shape).
+REVENUE_RAMP_RECORD_REQUIRED_FIELDS = {"id", "scenario_id", "month", "status"}
+ALLOWED_RAMP_MONTHS = {"M1", "M2", "M3", "M4", "M5plus"}
+# Fields subject to the malformed-numeric-value check (same rule as opex.yml's
+# `amount`, capex.yml's `total_cost`, etc.).
+REVENUE_RAMP_VALUE_FIELDS = ("am_revenue", "pm_revenue", "ancillary_revenue", "total_revenue", "steady_state_revenue")
+REVENUE_RAMP_TOLERANCE = 0.02  # AUD, floating-point/rounding slack -- same as NUMERIC_TOLERANCE
 
 # scenario_dependent intentionally repeats `id` once per scenario_id -- see
 # data/canonical/client_assumptions.yml's own header comment.
@@ -815,6 +839,126 @@ def check_revenue_assumptions_schema(data, f: Findings):
                 )
 
 
+def check_revenue_ramp_schema(data, f: Findings):
+    if data.get("dataset") != "revenue_ramp":
+        return
+    records = data.get("records", [])
+    seen_scenario_months = {}
+    for i, rec in enumerate(records):
+        if not isinstance(rec, dict):
+            f.error(f"records[{i}]: not a mapping -- cannot check required fields")
+            continue
+        rid = rec.get("id")
+
+        missing = REVENUE_RAMP_RECORD_REQUIRED_FIELDS - set(rec.keys())
+        if missing:
+            f.error(f"records[{i}] (id={rid!r}): missing required revenue_ramp field(s): {sorted(missing)}")
+
+        month = rec.get("month")
+        if month is not None and month not in ALLOWED_RAMP_MONTHS:
+            f.error(
+                f"records[{i}] (id={rid!r}): month {month!r} is not one of "
+                f"the known ramp months {sorted(ALLOWED_RAMP_MONTHS)}"
+            )
+
+        scenario_id = rec.get("scenario_id")
+        if scenario_id is not None and month is not None:
+            key = (scenario_id, month)
+            if key in seen_scenario_months:
+                f.error(
+                    f"records[{i}] (id={rid!r}): duplicate (scenario_id, month) pair {key} -- "
+                    f"already used by {seen_scenario_months[key]!r}"
+                )
+            else:
+                seen_scenario_months[key] = rid
+
+        for vf in REVENUE_RAMP_VALUE_FIELDS:
+            if vf in rec and not _is_valid_amount_shape(rec[vf]):
+                f.error(f"records[{i}] (id={rid!r}): '{vf}' is a malformed numeric value ({rec[vf]!r})")
+
+        # am_revenue + pm_revenue + ancillary_revenue must sum to total_revenue.
+        am_rev, pm_rev, anc_rev, total_rev = (
+            rec.get("am_revenue"), rec.get("pm_revenue"), rec.get("ancillary_revenue"), rec.get("total_revenue"),
+        )
+        if all(_is_number(v) for v in (am_rev, pm_rev, anc_rev, total_rev)):
+            expected_total = am_rev + pm_rev + anc_rev
+            if abs(expected_total - total_rev) > REVENUE_RAMP_TOLERANCE:
+                f.error(
+                    f"records[{i}] (id={rid!r}): am_revenue + pm_revenue + ancillary_revenue = "
+                    f"{expected_total:.2f}, does not match total_revenue {total_rev:.2f}"
+                )
+
+        # total_revenue / steady_state_revenue x 100 must match pct_of_steady_state.
+        steady_state = rec.get("steady_state_revenue")
+        pct = rec.get("pct_of_steady_state")
+        if _is_number(total_rev) and _is_number(steady_state) and _is_number(pct) and steady_state:
+            expected_pct = total_rev / steady_state * 100
+            if abs(expected_pct - pct) > 0.1:
+                f.error(
+                    f"records[{i}] (id={rid!r}): total_revenue/steady_state_revenue x 100 = "
+                    f"{expected_pct:.2f}%, does not match pct_of_steady_state {pct}"
+                )
+
+        # PM revenue at 100% (Month 5+) must not exceed the canonical PM steady-state capacity's
+        # own revenue value -- i.e. the ramp cannot silently invent PM capacity beyond
+        # pm_steady_state_capacity + rev_pm_saturday_sessions's own combined revenue ceiling.
+        if month == "M5plus" and _is_number(pm_rev):
+            pm_capacity_ceiling = _load_pm_capacity_revenue_ceiling()
+            if pm_capacity_ceiling is not None and pm_rev - pm_capacity_ceiling > REVENUE_RAMP_TOLERANCE:
+                f.error(
+                    f"records[{i}] (id={rid!r}): pm_revenue {pm_rev:.2f} at M5plus (100%) exceeds "
+                    f"the canonical PM capacity revenue ceiling {pm_capacity_ceiling:.2f} -- PM "
+                    f"session volume cannot silently exceed pm_steady_state_capacity + "
+                    f"rev_pm_saturday_sessions"
+                )
+
+        status = rec.get("status")
+        has_something = total_rev is not None or bool(rec.get("am_utilisation_assumption")) or bool(rec.get("pm_utilisation_assumption"))
+        if status == "PLACEHOLDER" and total_rev is not None:
+            f.error(f"records[{i}] (id={rid!r}): status=PLACEHOLDER but 'total_revenue' is {total_rev!r}, not null")
+        if status not in ("PLACEHOLDER", "SUPERSEDED") and not has_something:
+            f.error(
+                f"records[{i}] (id={rid!r}): status={status} but nothing is actually asserted "
+                f"(no total_revenue, am_utilisation_assumption, or pm_utilisation_assumption)"
+            )
+
+
+_PM_CAPACITY_REVENUE_CEILING_CACHE = None
+
+
+def _load_pm_capacity_revenue_ceiling():
+    """PM Weekday capacity (client_assumptions.yml#pm_steady_state_capacity) x
+    pricing.yml#pm_alacarte_average x operating_days_per_month_weekday, plus PM
+    Saturday capacity (revenue_assumptions.yml#rev_pm_saturday_sessions) x the
+    same price x operating_saturdays_per_month -- the canonical PM revenue
+    ceiling a ramp's M5plus PM revenue must not exceed. Returns None (skip the
+    check) if any required canonical file/record is missing, rather than
+    erroring on an unrelated file's absence."""
+    global _PM_CAPACITY_REVENUE_CEILING_CACHE
+    if _PM_CAPACITY_REVENUE_CEILING_CACHE is not None:
+        return _PM_CAPACITY_REVENUE_CEILING_CACHE
+    try:
+        client_assumptions = yaml.safe_load((CANON_DIR / "client_assumptions.yml").read_text(encoding="utf-8"))
+        pricing = yaml.safe_load((CANON_DIR / "pricing.yml").read_text(encoding="utf-8"))
+        revenue_assumptions = yaml.safe_load((CANON_DIR / "revenue_assumptions.yml").read_text(encoding="utf-8"))
+        universal = {r["id"]: r for r in client_assumptions.get("universal", []) if isinstance(r, dict) and r.get("id")}
+        pricing_by_id = {r["id"]: r for r in pricing.get("records", []) if isinstance(r, dict) and r.get("id")}
+        rev_by_id = {r["id"]: r for r in revenue_assumptions.get("records", []) if isinstance(r, dict) and r.get("id")}
+        pm_weekday_sessions = universal["pm_steady_state_capacity"]["value"]
+        operating_days_weekday = universal["operating_days_per_month_weekday"]["value"]
+        operating_saturdays = universal["operating_saturdays_per_month"]["value"]
+        pm_price = pricing_by_id["pm_alacarte_average"]["price"]
+        pm_saturday_sessions = rev_by_id["rev_pm_saturday_sessions"]["value"]
+        ceiling = (
+            pm_weekday_sessions * pm_price * operating_days_weekday
+            + pm_saturday_sessions * pm_price * operating_saturdays
+        )
+        _PM_CAPACITY_REVENUE_CEILING_CACHE = ceiling
+        return ceiling
+    except (OSError, yaml.YAMLError, KeyError, TypeError):
+        return None
+
+
 def load_valid_service_ids() -> set:
     """Load data/canonical/services.yml (if present) to build the set of
     valid service_ref ids. Mirrors load_valid_pricing_ids."""
@@ -915,6 +1059,7 @@ def validate_file(path: Path):
         check_capex_schema(data, f)
         check_services_schema(data, f)
         check_revenue_assumptions_schema(data, f)
+        check_revenue_ramp_schema(data, f)
         check_scenario_references(data, f, load_valid_scenario_ids())
 
     return f, data
