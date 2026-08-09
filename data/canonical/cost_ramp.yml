@@ -1,0 +1,468 @@
+# GTT Center Perth -- Canonical Cost Ramp (Month 1-5+), proof of concept, Phase 8
+#
+# The cost-side counterpart to revenue_ramp.yml. Deterministically computed by
+# tools/cost_ramp_model.py from canonical inputs (client_assumptions.yml,
+# scenarios.yml, opex.yml, staffing.yml, wages.yml) plus a small set of named,
+# individually-cited payroll constants sourced directly to
+# docs/profit-loss-tables.md's own "Appendix -- How Every Figure Is
+# Calculated" and docs/CURRENT-STATE.md §5 -- reproduced exactly by
+# tests/test_cost_ramp.py. Full investigation, methodology, and every
+# disclosed conflict/limitation: docs/architecture/COST-RAMP-METHODOLOGY.md.
+#
+# Does NOT calculate Net P&L, break-even, or any figure requiring revenue to
+# be netted against costs -- cost side only, per the coordinator's explicit
+# financial-model boundary for this phase.
+#
+# Both Table 1 and Table 2 are represented in full. Neither is marked
+# primary, per docs/VERIFICATION-TRACKER.md item 1m (still unresolved) and
+# this repo's existing scenarios.yml convention (is_primary: false for both).
+#
+# Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
+# PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+
+schema_version: 1
+dataset: cost_ramp
+last_updated: "2026-08-09"
+
+# The one genuine ramp-methodology choice this file makes for PAYROLL:
+# reusing the PM session-count ramp (already-canonical
+# revenue_assumptions.yml#rev_pm_session_ramp_historical), NOT the blanket
+# revenue-ramp curve -- see docs/architecture/COST-RAMP-METHODOLOGY.md §5.
+payroll_ramp_curve:
+  id: payroll_ramp_pm_session_count
+  name: "PM Direct Labor ramp -- session-count based, 3-hour casual-minimum-engagement floor applied"
+  value: {month_1: 4, month_2: 8, month_3: 12, month_4: 15, month_5_plus: 16}
+  unit: "PM sessions/day, feeding the hours-based casual costing formula"
+  status: MODELLED
+  status_detail: >
+    Reused from revenue_assumptions.yml#rev_pm_session_ramp_historical (docs/pm-staffing-roster.md's
+    own PM staffing table), NOT the blanket 43/64/79/93/100% revenue-ramp curve reused in
+    revenue_ramp.yml. Justified because PM labor cost is a DIRECT function of session count via
+    docs/pm-staffing-roster.md's own hours-based costing formula (hours/role/day = sessions/day
+    / 4 roles / 1.3 sessions/hr throughput), whereas the blanket curve was built for, and matches,
+    PM REVENUE specifically (docs/profit-loss-tables.md's own P&L ramp table) -- confirmed in
+    docs/architecture/REVENUE-RAMP-METHODOLOGY.md §5 to be a mutually-inconsistent, not
+    interchangeable, curve for PM revenue. Applying the session-count curve to PM LABOR
+    specifically (its most plausible original purpose, per that same investigation) is a
+    disclosed, reasoned choice, not an arbitrary substitution.
+  applies_to: ["pm_weekday_direct_labor"]
+  does_not_apply_to: [
+    "am_weekday_direct_labor -- FTE/fixed-salary, does not ramp, see conflict_am_labor_ramp_unmodelled",
+    "am_saturday_direct_labor -- fixed at the scenario's committed level throughout, see conflict_am_labor_ramp_unmodelled",
+    "pm_saturday_direct_labor -- already below the 3-hour floor at full steady-state volume, so mathematically constant regardless of any session-count assumption",
+    "opening_time_increment, receptionist_relief -- fixed operational costs, not session-volume-dependent",
+  ]
+  source: {file: docs/pm-staffing-roster.md, section: "PM Revenue -- Individual Services"}
+  notes: "The 3-hour casual-minimum-engagement floor (wages.yml#wage_casual_minimum_engagement, VERIFIED) means Months 1-4 all produce the IDENTICAL PM weekday labor cost (A$435.78/day) -- 4, 8, 12, and 15 sessions/day are all below the floor threshold (16 sessions/4 roles/1.3 throughput = 3.08hrs/role, barely above; anything less falls under 3.0hrs and is floored). Only Month 5+ (16 sessions) clears the floor and reaches the higher, canonical A$440.00/day figure. This is a genuine, disclosed finding, not previously computed anywhere in this repo -- see COST-RAMP-METHODOLOGY.md §5."
+
+records:
+  # ============================================================
+  # TABLE 1 (18-client/day) -- Month 1 through Month 5+ (steady state)
+  # ============================================================
+  - id: cost_table1_m1
+    scenario_id: scenario_table_1
+    month: M1
+    fixed_costs: 12480.00
+    variable_costs: 600.00
+    payroll_costs: 80939.77
+    total_operating_costs: 94019.77
+    currency: AUD
+    payroll_breakdown:
+      am_weekday_direct_labor: 48254.67
+      am_saturday_direct_labor: 10474.75
+      pm_weekday_direct_labor: 9587.16
+      pm_saturday_direct_labor: 2833.21
+      opening_time_increment: 979.00
+      receptionist_relief: 7458.00
+      direct_labor_and_opening_total: 79586.79
+      workers_comp: 1352.98
+    status: CALCULATED
+    status_detail: "Deterministically computed by tools/cost_ramp_model.py -- reproduced exactly by tests/test_cost_ramp.py. PM weekday labor floor-constrained at 3.0hrs/role/day (4 sessions/day, well below the 16-session steady-state ceiling)."
+    scenario_applicability: scenario_table_1
+    ramp_behaviour: "Fixed AM/opening/receptionist components (do not ramp) + floor-constrained PM weekday labor (identical M1-M4) + fixed Non-Wage Overhead + ramped marketing"
+    calculation_basis: "am_weekday_direct_labor (FTE, docs/CURRENT-STATE.md §5) + am_saturday_direct_labor (docs/profit-loss-tables.md PRIMARY REBASED MODEL, x operating_saturdays_per_month) + pm_weekday_direct_labor (session-count ramp x 3hr floor x blended casual rate x operating_days_per_month_weekday) + pm_saturday_direct_labor (floor-constrained, x operating_saturdays_per_month) + opening_time_increment (x operating_days_per_month_weekday) + receptionist_relief (x operating_days_per_month_weekday), then Workers Comp = 1.7% of that subtotal"
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_1, M1)"}
+    notes: null
+
+  - id: cost_table1_m2
+    scenario_id: scenario_table_1
+    month: M2
+    fixed_costs: 12480.00
+    variable_costs: 800.00
+    payroll_costs: 80939.77
+    total_operating_costs: 94219.77
+    currency: AUD
+    payroll_breakdown:
+      am_weekday_direct_labor: 48254.67
+      am_saturday_direct_labor: 10474.75
+      pm_weekday_direct_labor: 9587.16
+      pm_saturday_direct_labor: 2833.21
+      opening_time_increment: 979.00
+      receptionist_relief: 7458.00
+      direct_labor_and_opening_total: 79586.79
+      workers_comp: 1352.98
+    status: CALCULATED
+    status_detail: "Identical payroll to cost_table1_m1 -- 8 PM sessions/day is still below the 3-hour casual-minimum floor. Only variable_costs (marketing ramp) differs from M1."
+    scenario_applicability: scenario_table_1
+    ramp_behaviour: "Same as cost_table1_m1"
+    calculation_basis: "Same formula as cost_table1_m1, month_2 marketing ramp value"
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_1, M2)"}
+    notes: null
+
+  - id: cost_table1_m3
+    scenario_id: scenario_table_1
+    month: M3
+    fixed_costs: 12480.00
+    variable_costs: 1000.00
+    payroll_costs: 80939.77
+    total_operating_costs: 94419.77
+    currency: AUD
+    payroll_breakdown:
+      am_weekday_direct_labor: 48254.67
+      am_saturday_direct_labor: 10474.75
+      pm_weekday_direct_labor: 9587.16
+      pm_saturday_direct_labor: 2833.21
+      opening_time_increment: 979.00
+      receptionist_relief: 7458.00
+      direct_labor_and_opening_total: 79586.79
+      workers_comp: 1352.98
+    status: CALCULATED
+    status_detail: "Identical payroll to cost_table1_m1/m2 -- 12 PM sessions/day is still below the 3-hour casual-minimum floor."
+    scenario_applicability: scenario_table_1
+    ramp_behaviour: "Same as cost_table1_m1"
+    calculation_basis: "Same formula as cost_table1_m1, month_3 marketing ramp value"
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_1, M3)"}
+    notes: null
+
+  - id: cost_table1_m4
+    scenario_id: scenario_table_1
+    month: M4
+    fixed_costs: 12480.00
+    variable_costs: 1200.00
+    payroll_costs: 80939.77
+    total_operating_costs: 94619.77
+    currency: AUD
+    payroll_breakdown:
+      am_weekday_direct_labor: 48254.67
+      am_saturday_direct_labor: 10474.75
+      pm_weekday_direct_labor: 9587.16
+      pm_saturday_direct_labor: 2833.21
+      opening_time_increment: 979.00
+      receptionist_relief: 7458.00
+      direct_labor_and_opening_total: 79586.79
+      workers_comp: 1352.98
+    status: CALCULATED
+    status_detail: "Identical payroll to cost_table1_m1-m3 -- 15 PM sessions/day (2.885hrs/role) is STILL just below the 3-hour floor -- a thin margin, same finding docs/profit-loss-tables.md's own Appendix already noted for the weekday steady-state figure."
+    scenario_applicability: scenario_table_1
+    ramp_behaviour: "Same as cost_table1_m1"
+    calculation_basis: "Same formula as cost_table1_m1, month_4 marketing ramp value"
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_1, M4)"}
+    notes: null
+
+  - id: cost_table1_m5plus
+    scenario_id: scenario_table_1
+    month: M5plus
+    fixed_costs: 12480.00
+    variable_costs: 1500.00
+    payroll_costs: 81034.18
+    total_operating_costs: 95014.18
+    currency: AUD
+    payroll_breakdown:
+      am_weekday_direct_labor: 48254.67
+      am_saturday_direct_labor: 10474.75
+      pm_weekday_direct_labor: 9680.00
+      pm_saturday_direct_labor: 2833.21
+      opening_time_increment: 979.00
+      receptionist_relief: 7458.00
+      direct_labor_and_opening_total: 79679.63
+      workers_comp: 1354.55
+    status: CALCULATED
+    status_detail: >
+      Steady state -- 16 PM sessions/day clears the 3-hour floor (3.08hrs/role), reaching the
+      canonical anchored figure. RECONCILIATION, disclosed not hidden: this record's
+      direct_labor_and_opening_total (A$79,679.63) does NOT match docs/CURRENT-STATE.md §5's own
+      stated Table 1 Direct Labor + Opening Costs figure (A$79,433.05) -- a A$246.58/month
+      (0.31%) gap. Consequently this record's payroll_total (A$81,034.18, after this record's own
+      1.7% Workers Comp of A$1,354.55) also does not match CURRENT-STATE.md's own payroll total
+      (A$79,433.05 + A$1,350.36 = A$80,783.41). Same root cause docs/profit-loss-tables.md's own
+      Appendix already discloses for AM Direct Labor ("the specific per-staff-member hour
+      allocation behind the exact total is not saved as a standalone worksheet in this repo").
+      NOT forced to reconcile, per this repo's established practice (same treatment as the
+      A$2,576.36 revenue gap). See conflict_direct_labor_reconciliation_gap.
+    scenario_applicability: scenario_table_1
+    ramp_behaviour: "100% -- full canonical steady-state payroll and Non-Wage Overhead"
+    calculation_basis: "Same formula as cost_table1_m1, PM weekday anchored to the canonical A$440.00/day figure, month_5_plus (steady-state) marketing value"
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    source: {file: docs/architecture/COST-RAMP-METHODOLOGY.md, section: "§7 Table 1 Results"}
+    notes: "This is the closest this file comes to docs/CURRENT-STATE.md's own Total Costs figure (A$94,763.41) -- this record's total_operating_costs is A$95,014.18, a A$250.77/month (0.26%) disclosed gap, carrying the same A$246.58 payroll gap plus rounding."
+
+  # ============================================================
+  # TABLE 2 (12-client/day) -- Month 1 through Month 5+ (steady state)
+  # ============================================================
+  - id: cost_table2_m1
+    scenario_id: scenario_table_2
+    month: M1
+    fixed_costs: 12480.00
+    variable_costs: 600.00
+    payroll_costs: 77388.82
+    total_operating_costs: 90468.82
+    currency: AUD
+    payroll_breakdown:
+      am_weekday_direct_labor: 48254.67
+      am_saturday_direct_labor: 6983.16
+      pm_weekday_direct_labor: 9587.16
+      pm_saturday_direct_labor: 2833.21
+      opening_time_increment: 979.00
+      receptionist_relief: 7458.00
+      direct_labor_and_opening_total: 76095.20
+      workers_comp: 1293.62
+    status: CALCULATED
+    status_detail: "Deterministically computed -- see cost_table1_m1 for the identical method. AM Saturday labor uses Table 2's own committed-volume figure (A$1,612.74/day), materially lower than Table 1's (A$2,419.11/day) -- the only payroll component that differs between the two scenarios."
+    scenario_applicability: scenario_table_2
+    ramp_behaviour: "Same as cost_table1_m1, scenario_table_2's own AM Saturday labor rate"
+    calculation_basis: "Same formula as cost_table1_m1, scenario_table_2 inputs"
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_2, M1)"}
+    notes: null
+
+  - id: cost_table2_m2
+    scenario_id: scenario_table_2
+    month: M2
+    fixed_costs: 12480.00
+    variable_costs: 800.00
+    payroll_costs: 77388.82
+    total_operating_costs: 90668.82
+    currency: AUD
+    payroll_breakdown:
+      am_weekday_direct_labor: 48254.67
+      am_saturday_direct_labor: 6983.16
+      pm_weekday_direct_labor: 9587.16
+      pm_saturday_direct_labor: 2833.21
+      opening_time_increment: 979.00
+      receptionist_relief: 7458.00
+      direct_labor_and_opening_total: 76095.20
+      workers_comp: 1293.62
+    status: CALCULATED
+    status_detail: "Identical payroll to cost_table2_m1 -- floor-constrained PM weekday labor."
+    scenario_applicability: scenario_table_2
+    ramp_behaviour: "Same as cost_table2_m1"
+    calculation_basis: "Same formula as cost_table2_m1, month_2 marketing ramp value"
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_2, M2)"}
+    notes: null
+
+  - id: cost_table2_m3
+    scenario_id: scenario_table_2
+    month: M3
+    fixed_costs: 12480.00
+    variable_costs: 1000.00
+    payroll_costs: 77388.82
+    total_operating_costs: 90868.82
+    currency: AUD
+    payroll_breakdown:
+      am_weekday_direct_labor: 48254.67
+      am_saturday_direct_labor: 6983.16
+      pm_weekday_direct_labor: 9587.16
+      pm_saturday_direct_labor: 2833.21
+      opening_time_increment: 979.00
+      receptionist_relief: 7458.00
+      direct_labor_and_opening_total: 76095.20
+      workers_comp: 1293.62
+    status: CALCULATED
+    status_detail: "Identical payroll to cost_table2_m1/m2 -- floor-constrained PM weekday labor."
+    scenario_applicability: scenario_table_2
+    ramp_behaviour: "Same as cost_table2_m1"
+    calculation_basis: "Same formula as cost_table2_m1, month_3 marketing ramp value"
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_2, M3)"}
+    notes: null
+
+  - id: cost_table2_m4
+    scenario_id: scenario_table_2
+    month: M4
+    fixed_costs: 12480.00
+    variable_costs: 1200.00
+    payroll_costs: 77388.82
+    total_operating_costs: 91068.82
+    currency: AUD
+    payroll_breakdown:
+      am_weekday_direct_labor: 48254.67
+      am_saturday_direct_labor: 6983.16
+      pm_weekday_direct_labor: 9587.16
+      pm_saturday_direct_labor: 2833.21
+      opening_time_increment: 979.00
+      receptionist_relief: 7458.00
+      direct_labor_and_opening_total: 76095.20
+      workers_comp: 1293.62
+    status: CALCULATED
+    status_detail: "Identical payroll to cost_table2_m1-m3 -- floor-constrained PM weekday labor (thin margin at 15 sessions/day, same finding as Table 1)."
+    scenario_applicability: scenario_table_2
+    ramp_behaviour: "Same as cost_table2_m1"
+    calculation_basis: "Same formula as cost_table2_m1, month_4 marketing ramp value"
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap]
+    source: {file: "tools/cost_ramp_model.py output, 2026-08-09", section: "compute_ramp(scenario_table_2, M4)"}
+    notes: null
+
+  - id: cost_table2_m5plus
+    scenario_id: scenario_table_2
+    month: M5plus
+    fixed_costs: 12480.00
+    variable_costs: 1500.00
+    payroll_costs: 77483.24
+    total_operating_costs: 91463.24
+    currency: AUD
+    payroll_breakdown:
+      am_weekday_direct_labor: 48254.67
+      am_saturday_direct_labor: 6983.16
+      pm_weekday_direct_labor: 9680.00
+      pm_saturday_direct_labor: 2833.21
+      opening_time_increment: 979.00
+      receptionist_relief: 7458.00
+      direct_labor_and_opening_total: 76188.04
+      workers_comp: 1295.20
+    status: CALCULATED
+    status_detail: >
+      Steady state -- 16 PM sessions/day clears the 3-hour floor. RECONCILIATION, disclosed not
+      hidden: this record's direct_labor_and_opening_total (A$76,188.04) does NOT match
+      docs/CURRENT-STATE.md §5's own stated Table 2 figure (A$75,941.47) -- a A$246.57/month
+      (0.32%) gap, same disclosed cause as cost_table1_m5plus. Also carries
+      docs/VERIFICATION-TRACKER.md item 1o's own open question (whether the A$44.50/day
+      opening-time increment, sourced specifically to a 07:00 start, should still apply at
+      Table 2's 08:00 start) -- this record includes it unchanged, matching how
+      docs/CURRENT-STATE.md's own Table 2 figure already treats it, not independently resolved
+      here. See conflict_direct_labor_reconciliation_gap.
+    scenario_applicability: scenario_table_2
+    ramp_behaviour: "100% -- full canonical steady-state payroll and Non-Wage Overhead"
+    calculation_basis: "Same formula as cost_table2_m1, PM weekday anchored to the canonical A$440.00/day figure, month_5_plus marketing value"
+    conflicts: [conflict_am_labor_ramp_unmodelled, conflict_direct_labor_reconciliation_gap, conflict_table2_opening_increment_unresolved]
+    source: {file: docs/architecture/COST-RAMP-METHODOLOGY.md, section: "§8 Table 2 Results"}
+    notes: "This file's total_operating_costs (A$91,463.24) vs. docs/CURRENT-STATE.md's own Total Costs (A$91,212.47) -- a A$250.77/month (0.27%) disclosed gap, same root cause as Table 1."
+
+# ============================================================
+# GTT supplies variable-alternative -- exploratory, NOT part of any
+# fixed_costs/total_operating_costs figure above. Investigates (does not
+# resolve) opex.yml's conflict_variable_vs_fixed_classification, per the
+# coordinator's explicit "investigate ... don't assume fixed" instruction.
+# Uses opex_gtt_supplies' own stated per-test rate (A$2.00), applied to the
+# ramp-period's implied client volume x weekday operating days only --
+# matching that record's own already-disclosed "~A$792/month at 396 tests"
+# methodology exactly.
+# ============================================================
+gtt_supplies_variable_alternative:
+  - {scenario_id: scenario_table_1, month: M1, implied_client_volume: 7.74, variable_cost: 340.56}
+  - {scenario_id: scenario_table_1, month: M2, implied_client_volume: 11.52, variable_cost: 506.88}
+  - {scenario_id: scenario_table_1, month: M3, implied_client_volume: 14.22, variable_cost: 625.68}
+  - {scenario_id: scenario_table_1, month: M4, implied_client_volume: 16.74, variable_cost: 736.56}
+  - {scenario_id: scenario_table_1, month: M5plus, implied_client_volume: 18.00, variable_cost: 792.00}
+  - {scenario_id: scenario_table_2, month: M1, implied_client_volume: 5.16, variable_cost: 227.04}
+  - {scenario_id: scenario_table_2, month: M2, implied_client_volume: 7.68, variable_cost: 337.92}
+  - {scenario_id: scenario_table_2, month: M3, implied_client_volume: 9.48, variable_cost: 417.12}
+  - {scenario_id: scenario_table_2, month: M4, implied_client_volume: 11.16, variable_cost: 491.04}
+  - {scenario_id: scenario_table_2, month: M5plus, implied_client_volume: 12.00, variable_cost: 528.00}
+
+# ============================================================
+# Marketing ramp reference -- NOT duplicated, pointer only, per this repo's
+# established "reference, don't restate" convention. The actual figures live
+# in opex.yml#opex_marketing_ads_ramp / opex_marketing_ads_steady_state and
+# are read directly from there by tools/cost_ramp_model.py.
+# ============================================================
+marketing_ramp_reference:
+  - id: marketing_ramp_pointer
+    description: "Variable Costs above = opex.yml#opex_marketing_ads_ramp (Months 1-4) / opex_marketing_ads_steady_state (Month 5+) -- the ONE opex.yml component with a documented, sourced Month 1-4 ramp anywhere in this repo."
+    source: {file: docs/profit-loss-tables.md, section: "Marketing Spend Ramp"}
+
+# ============================================================
+# Historical cost figures -- deliberately NOT re-migrated into this file's
+# `records` list, per this repo's established "pointer, not duplicate
+# migration" convention (see revenue_ramp.yml's own historical_ramp_reference
+# for the same pattern).
+# ============================================================
+historical_cost_reference:
+  - id: historical_cost_12client_23min_fixed_costs
+    name: "12-client/23-min-cadence model's own Year 1 Monthly Ramp 'Fixed Costs' column (now historical)"
+    status: SUPERSEDED
+    superseded_by: null  # no 1:1 replacement -- that table used a flat, un-ramped A$89,808.74-A$89,808.74/month figure across all 5 months, a materially different methodology (no payroll ramp at all, not even a PM session-based one) from this file's approach
+    source: {file: docs/profit-loss-tables.md, section: "Year 1 Monthly Ramp"}
+    notes: "That table's own 'Fixed Costs' column was flat A$89,808.74/month from Month 1 -- i.e. it did NOT ramp payroll at all, a known, disclosed simplification the source document itself flags ('Fixed costs are shown flat... as a conservative simplification -- real fixed costs also ramp somewhat during Months 1-4, since fewer PM casual hours are worked at lower volume'). This file's PM-session-based payroll ramp is the first attempt in this repo to actually model that acknowledged-but-never-built simplification."
+
+# ============================================================
+# Genuine, disclosed conflicts -- none silently resolved.
+# ============================================================
+conflicts:
+  - id: conflict_am_labor_ramp_unmodelled
+    description: >
+      AM Direct Labor (weekday FTE, A$48,254.67/month) and AM Saturday Direct Labor
+      (hours-based, scenario-specific) are both treated as FIXED from Month 1 in this file --
+      i.e. NOT ramped down during Months 1-4 despite lower actual booking volume during ramp-up.
+      This is because (a) weekday AM staff are explicitly FTE/fixed-salary roles, hired for
+      DESIGN CEILING capacity regardless of actual daily volume (docs/CURRENT-STATE.md §5:
+      "UNCHANGED... FTE-based, same 8+2 headcount"), and (b) while a genuine "daily rostering"
+      reduced-headcount option exists in this repo (7 staff instead of 8, Massage+Beauty pool
+      capped at 3) for lower-volume days, staffing.yml's own staff_treatment_massage_beauty_pool
+      record explicitly flags this has NOT been independently re-verified against Table 1/Table
+      2's 25-min cadence -- so it cannot safely be applied here without inventing an unconfirmed
+      staffing methodology. Saturday AM labor's "scales with volume" language in this repo refers
+      to scaling between DIFFERENT COMMITTED SCENARIOS (12-client vs 18-client), not a
+      month-to-month ramp-up methodology within one scenario, which does not exist anywhere in
+      this repo.
+    affected_records: [cost_table1_m1, cost_table1_m2, cost_table1_m3, cost_table1_m4, cost_table1_m5plus, cost_table2_m1, cost_table2_m2, cost_table2_m3, cost_table2_m4, cost_table2_m5plus]
+    sources:
+      - {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L"}
+      - {file: data/canonical/staffing.yml, section: "staff_treatment_massage_beauty_pool"}
+    resolution_status: UNRESOLVED
+    notes: "A conservative treatment (overstates Months 1-4 payroll cost relative to a hypothetical reduced-headcount ramp) -- flagged explicitly, not silently assumed to be the only possible or most accurate treatment. See docs/architecture/COST-RAMP-METHODOLOGY.md §4."
+
+  - id: conflict_direct_labor_reconciliation_gap
+    description: >
+      This file's from-first-principles Direct Labor + Opening Costs total at Month 5+
+      (A$79,679.63 Table 1 / A$76,188.04 Table 2) does not exactly match
+      docs/CURRENT-STATE.md §5's own stated headline figures (A$79,433.05 / A$75,941.47) -- a
+      consistent A$246.57-246.58/month (~0.3%) gap, identical in both scenarios. Root cause:
+      this file's "Receptionist/relief/workers comp" component is taken at face value from
+      docs/profit-loss-tables.md's own Appendix (~A$339.00/day, itself marked "~=" approximate
+      in the source, not an exact figure) rather than back-solved to force an exact match --
+      consistent with this repo's established "do not force reconciliation to the old numbers"
+      practice (same treatment already applied to the A$2,576.36 revenue-reconciliation gap).
+    affected_records: [cost_table1_m5plus, cost_table2_m5plus]
+    sources:
+      - {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L"}
+      - {file: docs/profit-loss-tables.md, section: "Appendix -- How Every Figure Is Calculated"}
+    resolution_status: UNRESOLVED
+    notes: "Small in magnitude (~0.3%) but disclosed per this repo's established governance practice, not silently absorbed. See docs/architecture/COST-RAMP-METHODOLOGY.md §7-8."
+
+  - id: conflict_table2_opening_increment_unresolved
+    description: >
+      docs/VERIFICATION-TRACKER.md item 1o (pre-existing, not newly found) -- whether the
+      A$44.50/day opening-time increment (sourced specifically to a 07:00 start) should still
+      apply to Table 2's 08:00 start remains unresolved. This file includes it unchanged for
+      Table 2, matching docs/CURRENT-STATE.md's own current treatment, not independently
+      resolving the question.
+    affected_records: [cost_table2_m1, cost_table2_m2, cost_table2_m3, cost_table2_m4, cost_table2_m5plus]
+    sources:
+      - {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, Open item note below Table 2"}
+    resolution_status: UNRESOLVED
+    notes: "If resolved in Table 2's favour (increment does not apply), Table 2's true costs would be A$979.00/month lower than shown here in every month -- not applied, per the existing open tracker item."
+
+  - id: conflict_variable_vs_fixed_classification_carried_forward
+    description: >
+      opex.yml's own conflict_variable_vs_fixed_classification (GTT supplies, general
+      consumables, laundry/linen -- FIXED per docs/profit-loss-tables.md vs. VARIABLE per
+      docs/unit-economics.md, historical) is carried forward into this file's fixed_costs
+      total UNCHANGED (i.e. this file follows the status-quo FIXED classification for the
+      PRIMARY calculation) -- not resolved here. See gtt_supplies_variable_alternative above
+      for an exploratory, non-primary investigation of the VARIABLE alternative for GTT
+      supplies specifically (the one component of the three with an unambiguous per-unit
+      volume denominator -- AM client/test count). Consumables and laundry's own per-visit
+      rates (docs/unit-economics.md) are tied to an ambiguous "total visits" denominator not
+      cleanly defined anywhere in this repo's current canonical data -- NOT computed as a
+      variable alternative this phase, to avoid inventing an undefined denominator.
+    affected_records: [cost_table1_m1, cost_table1_m2, cost_table1_m3, cost_table1_m4, cost_table1_m5plus, cost_table2_m1, cost_table2_m2, cost_table2_m3, cost_table2_m4, cost_table2_m5plus]
+    sources:
+      - {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+      - {file: docs/unit-economics.md, section: "Variable Cost Per Visit"}
+    resolution_status: UNRESOLVED
+    notes: "See docs/architecture/COST-RAMP-METHODOLOGY.md §6 for the full investigation and why consumables/laundry could not safely be migrated to a variable alternative this phase."

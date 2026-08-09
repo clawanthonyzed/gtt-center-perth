@@ -4,11 +4,11 @@ GTT Center Perth -- Canonical data validator (proof of concept).
 Validates data/canonical/*.yml files against the schema/governance conventions
 established in docs/architecture/CANONICAL-DATA-SCHEMA.md and
 docs/architecture/DATA-GOVERNANCE.md. This is a proof-of-concept validator for
-eleven files (pricing.yml, client_assumptions.yml, scenarios.yml, staffing.yml,
+twelve files (pricing.yml, client_assumptions.yml, scenarios.yml, staffing.yml,
 wages.yml -- Phase 2; opex.yml -- Phase 3; startup_costs.yml, capex.yml --
 Phase 4; services.yml -- Phase 5; revenue_assumptions.yml -- Phase 6;
-revenue_ramp.yml -- Phase 7) -- it is not a general schema engine and does not
-validate every field type strictly.
+revenue_ramp.yml -- Phase 7; cost_ramp.yml -- Phase 8) -- it is not a general
+schema engine and does not validate every field type strictly.
 
 Checks performed:
   1. YAML validity (parse error -> hard failure)
@@ -163,6 +163,19 @@ Checks performed:
       assumptions) -- PM session volume cannot silently exceed canonical
       capacity. Status-vs-value consistency mirrors §23.
 
+  26. (Phase 8, cost_ramp.yml) Required fields per `records` entry (id,
+      scenario_id, month, status); `month` restricted to M1/M2/M3/M4/M5plus
+      (§25's vocabulary, reused); duplicate (scenario_id, month) pairs are
+      rejected. `fixed_costs`, `variable_costs`, `payroll_costs`, and
+      `total_operating_costs` are checked for malformed numeric shape, and
+      `fixed_costs + variable_costs + payroll_costs` must sum to
+      `total_operating_costs`. Where present, `payroll_breakdown`'s 6
+      components must sum to its own `direct_labor_and_opening_total`, and
+      `direct_labor_and_opening_total + workers_comp` must sum to the
+      record's own `payroll_costs` -- a cross-check ensuring every payroll
+      component is genuinely recurring labor cost, not a smuggled-in
+      startup/capex figure. Status-vs-value consistency mirrors §25.
+
 Exit code: 0 if all checks pass across all validated files, 1 if any check
 fails in any file. Usable in CI / pre-commit, same convention as
 tools/check_consistency.py.
@@ -195,6 +208,7 @@ RECORD_LIST_KEYS = {
     "operational_buffers", "open_items", "historical_staffing_scenarios",
     "funding_requirements", "historical_total_estimates", "contingency_assumptions",
     "historical_services", "future_services", "historical_ramp_reference",
+    "historical_cost_reference", "marketing_ramp_reference",
 }
 
 # staffing.yml -- category vocabulary the coordinator asked to be preserved,
@@ -255,6 +269,13 @@ ALLOWED_RAMP_MONTHS = {"M1", "M2", "M3", "M4", "M5plus"}
 # `amount`, capex.yml's `total_cost`, etc.).
 REVENUE_RAMP_VALUE_FIELDS = ("am_revenue", "pm_revenue", "ancillary_revenue", "total_revenue", "steady_state_revenue")
 REVENUE_RAMP_TOLERANCE = 0.02  # AUD, floating-point/rounding slack -- same as NUMERIC_TOLERANCE
+
+# cost_ramp.yml (Phase 8) -- required fields per `records` entry, reusing
+# revenue_ramp.yml's month vocabulary (§25) since both files share the same
+# Month 1-5+ shape.
+COST_RAMP_RECORD_REQUIRED_FIELDS = {"id", "scenario_id", "month", "status"}
+COST_RAMP_VALUE_FIELDS = ("fixed_costs", "variable_costs", "payroll_costs", "total_operating_costs")
+COST_RAMP_TOLERANCE = 0.02  # AUD, floating-point/rounding slack
 
 # scenario_dependent intentionally repeats `id` once per scenario_id -- see
 # data/canonical/client_assumptions.yml's own header comment.
@@ -959,6 +980,97 @@ def _load_pm_capacity_revenue_ceiling():
         return None
 
 
+def check_cost_ramp_schema(data, f: Findings):
+    if data.get("dataset") != "cost_ramp":
+        return
+    records = data.get("records", [])
+    seen_scenario_months = {}
+    for i, rec in enumerate(records):
+        if not isinstance(rec, dict):
+            f.error(f"records[{i}]: not a mapping -- cannot check required fields")
+            continue
+        rid = rec.get("id")
+
+        missing = COST_RAMP_RECORD_REQUIRED_FIELDS - set(rec.keys())
+        if missing:
+            f.error(f"records[{i}] (id={rid!r}): missing required cost_ramp field(s): {sorted(missing)}")
+
+        month = rec.get("month")
+        if month is not None and month not in ALLOWED_RAMP_MONTHS:
+            f.error(
+                f"records[{i}] (id={rid!r}): month {month!r} is not one of "
+                f"the known ramp months {sorted(ALLOWED_RAMP_MONTHS)}"
+            )
+
+        scenario_id = rec.get("scenario_id")
+        if scenario_id is not None and month is not None:
+            key = (scenario_id, month)
+            if key in seen_scenario_months:
+                f.error(
+                    f"records[{i}] (id={rid!r}): duplicate (scenario_id, month) pair {key} -- "
+                    f"already used by {seen_scenario_months[key]!r}"
+                )
+            else:
+                seen_scenario_months[key] = rid
+
+        for vf in COST_RAMP_VALUE_FIELDS:
+            if vf in rec and not _is_valid_amount_shape(rec[vf]):
+                f.error(f"records[{i}] (id={rid!r}): '{vf}' is a malformed numeric value ({rec[vf]!r})")
+
+        # fixed_costs + variable_costs + payroll_costs must sum to total_operating_costs.
+        fixed, variable, payroll, total = (
+            rec.get("fixed_costs"), rec.get("variable_costs"), rec.get("payroll_costs"), rec.get("total_operating_costs"),
+        )
+        if all(_is_number(v) for v in (fixed, variable, payroll, total)):
+            expected_total = fixed + variable + payroll
+            if abs(expected_total - total) > COST_RAMP_TOLERANCE:
+                f.error(
+                    f"records[{i}] (id={rid!r}): fixed_costs + variable_costs + payroll_costs = "
+                    f"{expected_total:.2f}, does not match total_operating_costs {total:.2f}"
+                )
+
+        # payroll_breakdown, when present, must itself be internally consistent:
+        # its 6 components sum to direct_labor_and_opening_total, and
+        # direct_labor_and_opening_total + workers_comp sums to this record's
+        # own payroll_costs (a real cross-check that STARTUP/CAPEX values
+        # cannot silently be smuggled into recurring payroll -- every field
+        # here is a genuine recurring labor cost, by construction).
+        breakdown = rec.get("payroll_breakdown")
+        if isinstance(breakdown, dict):
+            component_fields = (
+                "am_weekday_direct_labor", "am_saturday_direct_labor", "pm_weekday_direct_labor",
+                "pm_saturday_direct_labor", "opening_time_increment", "receptionist_relief",
+            )
+            components = [breakdown.get(cf) for cf in component_fields]
+            direct_labor_total = breakdown.get("direct_labor_and_opening_total")
+            workers_comp = breakdown.get("workers_comp")
+            if all(_is_number(c) for c in components) and _is_number(direct_labor_total):
+                expected_dl = sum(components)
+                if abs(expected_dl - direct_labor_total) > COST_RAMP_TOLERANCE:
+                    f.error(
+                        f"records[{i}] (id={rid!r}): payroll_breakdown's 6 components sum to "
+                        f"{expected_dl:.2f}, does not match direct_labor_and_opening_total {direct_labor_total:.2f}"
+                    )
+            if _is_number(direct_labor_total) and _is_number(workers_comp) and _is_number(payroll):
+                expected_payroll = direct_labor_total + workers_comp
+                if abs(expected_payroll - payroll) > COST_RAMP_TOLERANCE:
+                    f.error(
+                        f"records[{i}] (id={rid!r}): payroll_breakdown's direct_labor_and_opening_total + "
+                        f"workers_comp = {expected_payroll:.2f}, does not match this record's own "
+                        f"payroll_costs {payroll:.2f}"
+                    )
+
+        status = rec.get("status")
+        has_something = total is not None or bool(rec.get("ramp_behaviour")) or bool(rec.get("calculation_basis"))
+        if status == "PLACEHOLDER" and total is not None:
+            f.error(f"records[{i}] (id={rid!r}): status=PLACEHOLDER but 'total_operating_costs' is {total!r}, not null")
+        if status not in ("PLACEHOLDER", "SUPERSEDED") and not has_something:
+            f.error(
+                f"records[{i}] (id={rid!r}): status={status} but nothing is actually asserted "
+                f"(no total_operating_costs, ramp_behaviour, or calculation_basis)"
+            )
+
+
 def load_valid_service_ids() -> set:
     """Load data/canonical/services.yml (if present) to build the set of
     valid service_ref ids. Mirrors load_valid_pricing_ids."""
@@ -1060,6 +1172,7 @@ def validate_file(path: Path):
         check_services_schema(data, f)
         check_revenue_assumptions_schema(data, f)
         check_revenue_ramp_schema(data, f)
+        check_cost_ramp_schema(data, f)
         check_scenario_references(data, f, load_valid_scenario_ids())
 
     return f, data
