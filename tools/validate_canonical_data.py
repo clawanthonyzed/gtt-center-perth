@@ -196,6 +196,7 @@ except ImportError:
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CANON_DIR = REPO_ROOT / "data" / "canonical"
+MODELS_DIR = REPO_ROOT / "data" / "models"  # Phase 9 -- Layer 3 (MODELS), generic checks only
 
 ALLOWED_STATUSES = {
     "VERIFIED", "DECIDED", "CALCULATED", "MODELLED", "SCENARIO",
@@ -209,6 +210,7 @@ RECORD_LIST_KEYS = {
     "funding_requirements", "historical_total_estimates", "contingency_assumptions",
     "historical_services", "future_services", "historical_ramp_reference",
     "historical_cost_reference", "marketing_ramp_reference",
+    "assumptions", "historical_reconciliation", "traceability", "conflicts",
 }
 
 # staffing.yml -- category vocabulary the coordinator asked to be preserved,
@@ -1191,6 +1193,15 @@ def main(argv):
             print(f"ERROR: {CANON_DIR} not found.")
             return 2
         targets = sorted(CANON_DIR.glob("*.yml"))
+        # Phase 9 -- also validate data/models/*.yml (Layer 3, MODEL-ARCHITECTURE.md) with
+        # the same generic status/source/structure/scenario-reference checks. Model-layer
+        # files are a genuinely different shape from canonical-layer files (nested
+        # outputs/assumptions rather than a flat records list), so the dataset-specific
+        # schema checks (§8-26 above) do NOT run against them -- only the checks that walk
+        # the tree generically regardless of top-level structure (check_statuses,
+        # check_sources, check_scenario_references) apply.
+        if MODELS_DIR.exists():
+            targets += sorted(MODELS_DIR.glob("*.yml"))
 
     if not targets:
         print("No files to validate.")
