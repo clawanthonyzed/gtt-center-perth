@@ -6,7 +6,9 @@
 
 **Phase 2 scope (2026-08-08, same day, follow-on):** a fix to a real bug found in `tools/check_consistency.py` during Phase 1 (§8 below, now resolved — see §11), a new regression test suite (`tests/test_check_consistency.py`), and two new canonical domains: `data/canonical/staffing.yml` and `data/canonical/wages.yml`, with matching validator extensions. See §10-§16 below for full Phase 2 detail.
 
-**Not built either phase:** the Master Financial Model, the Master Operations Model, any XLSX/PDF/DOCX generation, the remaining canonical domains from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch (payroll_costs, opex, startup_costs, capex, revenue_assumptions, financial_assumptions, risks, decisions, sources, verification_status), and — deliberately, in both phases — a resolution of Table 1 vs. Table 2 as primary.
+**Phase 3 scope (2026-08-09, follow-on):** one new canonical domain, `data/canonical/opex.yml` (non-payroll operating expenses), with matching validator extensions and 6 new tracker items. See §20-§25 below for full Phase 3 detail.
+
+**Not built any phase so far:** the Master Financial Model, the Master Operations Model, any XLSX/PDF/DOCX generation, the remaining canonical domains from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch (payroll_costs, startup_costs, capex, revenue_assumptions, financial_assumptions, risks, decisions, sources, verification_status), and — deliberately, across every phase so far — a resolution of Table 1 vs. Table 2 as primary.
 
 ---
 
@@ -18,7 +20,9 @@ data/canonical/
 ├── client_assumptions.yml   universal + scenario-dependent operational assumptions                        [Phase 1]
 ├── scenarios.yml            Table 1 and Table 2, both explicit, neither marked primary                    [Phase 1]
 ├── staffing.yml             every role, headcount, category, skills, shift assumptions                    [Phase 2]
-└── wages.yml                hourly rates, super, workers comp, casual-minimum rule, penalty-rate conflicts [Phase 2]
+├── wages.yml                hourly rates, super, workers comp, casual-minimum rule, penalty-rate conflicts [Phase 2]
+└── opex.yml                 non-payroll operating expenses -- premises/tech/professional/insurance/        [Phase 3]
+                              marketing/consumables, 28 records, 3 conflicts
 ```
 
 All five files live under `data/canonical/` — real content in the `data/` layer proposed in `docs/architecture/TARGET-ARCHITECTURE.md` Layer 2. `docs/CURRENT-STATE.md` remains the authoritative human-readable canonical file; these YAML files are a machine-readable **subset** of it (plus, for staffing/wages, of `docs/financial-break-even-staff.md`, `docs/hr-framework.md`, `docs/pm-staffing-roster.md`, and `docs/HANDOFF.md`), not a replacement, and not (yet) auto-generated from it or vice versa — a human (this session) transcribed values from source documents into YAML, checking each one against the source rather than re-deriving anything.
@@ -277,19 +281,105 @@ All 6 required test cases (invalid status, duplicate ID, missing source, conflic
 - **The 7-vs-8 treatment-staff daily-rostering finding** (staffing.yml's `staff_treatment_massage_beauty_pool` note) — valid at the historical 12-client/23-min model, not independently re-verified against Table 1/Table 2's 25-min cadence.
 - **Receptionist/Manager's AM 07:00-12:00 shift block** — written against the pre-rebase 07:00 start assumption, not re-checked against Table 2's 08:00 start.
 - **MA000027 Saturday ordinary-hours carve-out** (item 11) — still unconfirmed, same status as before this pass; no external verification attempted.
-- **Payroll tax** — genuinely absent from this repo's documents entirely; recorded as `PLACEHOLDER`, not assumed either way.
+- **Payroll tax** — recorded as `PLACEHOLDER` in `wages.yml` on the basis that "not addressed anywhere in this repo's documents" (checked `hr-framework.md` and `financial-setup.md`'s Payroll Setup/Superannuation sections at the time). **Correction, 2026-08-09 (Phase 3):** this was incomplete, not wrong in spirit — `docs/financial-setup.md` STEP 1's accountant-brief checklist *does* address it: "Payroll tax threshold advice (WA: A$1M/year threshold — not triggered at launch but confirm)." Found while researching `opex.yml` sources, outside `wages.yml`'s own scope to fix this pass (see the coordinator's Phase 3 scope limits) — flagged here rather than silently left uncorrected. `data/canonical/wages.yml`'s `wage_payroll_tax` record was NOT edited this pass; a future session touching `wages.yml` should update it to reflect this finding (WA's A$1M/yr threshold, current total payroll ~A$700-900K/yr, genuinely not triggered at launch — reassuring, not concerning, but still worth recording accurately).
 
-## 18. Recommended Next Canonical Migration Domain
+## 18. Recommended Next Canonical Migration Domain (Phase 1 recommendation — actioned in Phase 3, see §20-§25)
 
 **`data/canonical/opex.yml`** (non-wage operating expenses — rent, utilities, insurance, Fresha/Resend/marketing, GTT supplies, laundry, cleaning, accounting, consumables), for two reasons:
 
 1. It's the other direct input the Master Financial Model's P&L module needs alongside `staffing.yml`/`wages.yml` (per `docs/architecture/MODEL-ARCHITECTURE.md` §1's dependency graph) — completing it means the P&L's cost side is fully sourced from canonical data, not just payroll.
 2. `docs/CURRENT-STATE.md` §6/§7's startup-capital reconciliation gap (3-6 unreconciled ranges, explicitly disclosed as never resolved) sits directly adjacent to opex — migrating opex first would surface whether the same "which source document is authoritative" question recurs there too, before attempting the harder `startup_costs.yml`/`capex.yml` domains.
 
-`services.yml` (the full a-la-carte catalog, deferred twice now — Phase 1 §7 and Phase 1 §9) remains the next-best lower-risk alternative if a non-financial domain is preferred.
+`services.yml` (the full a-la-carte catalog, deferred twice now — Phase 1 §7 and Phase 1 §9) remained the next-best lower-risk alternative if a non-financial domain was preferred — not chosen; Anthony approved the opex route instead. **See §26 for the Phase 3 recommendation of what comes after opex.**
 
 ---
 
-## 19. What This Document Does Not Do
+# PHASE 3 (2026-08-09) — Non-Payroll Operating Expenses (`opex.yml`)
 
-It does not build the Master Financial Model, Master Operations Model, any document generator, or any output format. It does not migrate `payroll_costs.yml`, `opex.yml`, `startup_costs.yml`, `services.yml` (full catalog), or any other remaining domain from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch. It does not resolve Table 1 vs. Table 2. It does not add tracker rows to `docs/VERIFICATION-TRACKER.md` for the new conflicts found this phase (§17) — flagged as a recommended follow-up, not actioned, to stay within this phase's authorised scope.
+## 20. Opex Data Migrated (`data/canonical/opex.yml`)
+
+28 records + 3 declared conflicts, covering every category the coordinator asked to be searched for, where the repo actually supported a finding:
+
+| Category | Records | Notable finding |
+|---|---|---|
+| `premises` | Rent, rent-outgoings ambiguity, utilities, cleaning, laundry, medical waste | Medical waste contract real and sourced but missing from the modelled total (item 21) |
+| `technology` | Fresha booking software, internet+phone, Resend, Xero (bundled, not itemised), EFTPOS software fee, EFTPOS transaction fee | Booking software cost conflict (item 20); EFTPOS entirely un-modelled (item 23) |
+| `professional` | Accounting/bookkeeping, accountant initial brief (STARTUP), ASIC business name, Food Safety Supervisor cert (STARTUP), commercial lease solicitor (PLACEHOLDER) | Correctly separates recurring opex from one-off STARTUP costs within the same category, per Part 6's instruction |
+| `insurance` | Modelled flat PL+PI line, itemised PL, itemised PI, workers-comp cross-reference, property/contents, business interruption | The single highest-materiality finding this phase (item 19) |
+| `marketing` | Meta/Instagram ads (steady state + Month 1-4 ramp) | Ramp recorded as per-month values, no single `monthly_equivalent` manufactured |
+| `consumables` | GTT supplies, general consumables, misc/contingency | Stale volume basis + FIXED-vs-VARIABLE classification disagreement (item 22) |
+
+**Cross-checked arithmetically, not assumed:** the 13 line items that sum to `docs/profit-loss-tables.md`'s canonical A$13,980.00/month Non-Wage Overhead total were individually transcribed and re-summed — they total exactly A$13,980.00, confirming no transcription error before any conflict analysis began.
+
+**Sources used:** `docs/profit-loss-tables.md` §4 (primary, for the 13-line canonical breakdown), `docs/cash-flow.md` (cross-check, agrees), `docs/rent-budget-2026-07-28.md` (rent cross-check, agrees exactly), `docs/financial-setup.md` (STEP 1, 2, 5, 6, 8, 9 — the richest single source of previously-unmigrated real cost figures), `docs/equipment-costs.md` §1/§8 (medical waste, stale booking-software alternative), `docs/ivy-booking-system.md` (actual Fresha pricing detail), `docs/unit-economics.md` (historical, cited only for the FIXED-vs-VARIABLE classification finding), `docs/external-resources-and-advisors.md` (professional-services context), `docs/grace-startup-plan.md` and `docs/property-links-2026-07-28.md` (rent/outgoings context).
+
+## 21. Conflicts Discovered
+
+Three declared in `opex.yml`'s own `conflicts` list, all also formalised into `docs/VERIFICATION-TRACKER.md` (§23 below):
+
+1. **`conflict_insurance_estimate`** — modelled A$400/month vs. itemised A$11,700-19,000/year (2.4-4x higher, 3 missing policy types). The single highest-materiality finding across all three phases of this canonical-data effort so far.
+2. **`conflict_booking_software_cost`** — three figures for the same platform (Fresha), with the modelled figure likely the least accurate of the three and, unusually, on the *high* side (the model may currently overstate this specific cost).
+3. **`conflict_variable_vs_fixed_classification`** — GTT supplies, general consumables, and laundry are FIXED per the current model but VARIABLE per `unit-economics.md` (historical). A genuine either-or, not a numeric disagreement.
+
+## 22. Unresolved Items / Gaps Found (Beyond the 3 Declared Conflicts)
+
+- **Medical waste disposal contract** (A$50-100/month) — real, sourced, never incorporated into the canonical total (a gap, not a conflict — nothing to disagree with, it's simply absent).
+- **EFTPOS terminal/software/transaction-fee costs** — entirely absent from the modelled total; provider choice (Tyro vs. Square) not made.
+- **Rent outgoings** — whether the modelled A$8,000/month is net or gross of outgoings is unstated anywhere; a general (not venture-specific) Perth-market note suggests outgoings could add 15-25%.
+- **GTT supplies' stale volume basis** — "200 tests/month" predates both current committed scenarios (Table 1: 396, Table 2: 264).
+
+## 23. Verification Items Added
+
+`docs/VERIFICATION-TRACKER.md` items **19, 20, 21, 22, 23, 24** (FINANCIAL — NEEDS ACCOUNTANT CONFIRMATION section, continuing the sequential numbering from item 18) — full detail in that file. Each includes: issue, affected data/model, source documents, current status, required verification/action, and impact if unresolved, matching the tracker's existing dense-entry convention.
+
+## 24. Startup vs. Opex Classification Issues
+
+Handled per Part 6's instruction — classified from the repo itself, not general accounting assumptions:
+
+- **Accountant initial brief** (A$500-1,500) — correctly `cost_type: STARTUP`, not recurring opex, despite living in the same "Professional" category as the genuinely recurring `opex_accounting_bookkeeping` record. No `monthly_equivalent`/`annual_equivalent` computed for it (would misrepresent a one-off as recurring).
+- **Food Safety Supervisor certificate** (A$100-200) — same treatment, `cost_type: STARTUP`; renewal cadence genuinely unknown (not stated anywhere), flagged rather than assumed one-off-forever.
+- **EFTPOS terminal purchase** (Square's A$299 one-off) — explicitly noted as CAPEX, NOT itemised as its own opex.yml record (only the ongoing software fee and transaction-fee percentage are recorded here).
+- **Workers compensation** — the one deliberate `cost_type: PAYROLL` record in this file (`opex_insurance_workers_comp_estimate`), included only because `financial-setup.md` itself bundles it inside an "Insurance" cost table alongside genuine opex lines — explicitly marked cross-reference-only, not a second source of truth competing with `wages.yml`'s `wage_workers_comp_rate`.
+- **`docs/CURRENT-STATE.md` §6/§7's startup-capital reconciliation problem** was not touched or re-opened — the one deliberate overlap point (`opex_insurance_modelled`'s note referencing §7.3's "First-year insurance" line using the same A$400/month figure) was confirmed as an intentional, already-disclosed cross-reference in the source repo, not a new duplication error.
+
+## 25. Validator Extensions and Test Result
+
+`tools/validate_canonical_data.py` extended with `opex.yml`-specific checks (full detail in the script's own docstring, checks 11-13): required-field validation, `frequency`/`cost_type` controlled-vocabulary checks, numeric-value-shape validation (`amount`/`monthly_equivalent`/`annual_equivalent` must be null, a number, or a dict of numbers), status-vs-value consistency (reusing the wages.yml pattern), and — new this phase — monthly/annual normalisation-correctness checking against the actual `amount` at the record's stated `frequency`.
+
+**Real-data result** (all 6 files):
+```
+validate_canonical_data: 6 file(s) checked, 0 error(s), 6 warning(s).
+All checks passed.
+```
+
+**Deliberately-broken test result** (scratch fixture, not committed):
+```
+bad_opex.yml: FAIL
+  ERROR: disallowed status value 'NOT_A_REAL_STATUS' ...
+  ERROR: status=MODELLED but no 'source' key present ...
+  ERROR: duplicate key 'opex_dup' ...
+  ERROR: frequency 'fortnightly' is not one of the known frequencies ...
+  ERROR: cost_type 'NOT_A_TYPE' is not one of the known cost types ...
+  ERROR: 'amount' is a malformed numeric value ('not a number') ...
+  ERROR: annual_equivalent=5000 does not match amount=100 at frequency=monthly (expected ~1200.00) ...
+  ERROR: scenario_id references unknown scenario id 'scenario_table_999' ...
+
+validate_canonical_data: 1 file(s) checked, 8 error(s), 0 warning(s).
+```
+
+All 8 required test cases (invalid status, duplicate ID, missing source, invalid frequency, invalid cost type, malformed numeric value, incorrect monthly/annual calc, invalid scenario reference) confirmed caught. Fixture deleted after the test run, not committed.
+
+## 26. Recommended Next Canonical Migration Domain
+
+**`data/canonical/startup_costs.yml` / `data/canonical/capex.yml`**, tackled together, for two reasons:
+
+1. They are the last major domain directly feeding the Master Financial Model's cost side (`docs/architecture/MODEL-ARCHITECTURE.md` §1) — with `staffing.yml`, `wages.yml`, and `opex.yml` now built, startup/capex is what remains before a real P&L/cash-flow model could theoretically be assembled from canonical data alone (still not attempted — out of scope).
+2. `docs/CURRENT-STATE.md` §6/§7 already documents, in its own words, an explicit "financial model moved 5+ times" startup-capital reconciliation failure (3-6 unreconciled ranges, an adopted figure that doesn't exactly match its own component sum) — this is the single most consequential unresolved numeric question in the entire repo, and canonicalising it (WITHOUT resolving it — preserving every range, exactly as `opex.yml`/`wages.yml` preserved their own conflicts) would make that reconciliation problem visible to any future automated check, rather than only living in prose.
+
+`services.yml` (the full a-la-carte catalog, deferred three times now) remains the next-best lower-risk, non-financial alternative if a smaller domain is preferred first.
+
+---
+
+## 27. What This Document Does Not Do (as of Phase 3)
+
+It does not build the Master Financial Model, Master Operations Model, any Excel/XLSX workbook, P&L, cash-flow model, chart, PDF, or DOCX. It does not migrate `startup_costs.yml`, `capex.yml`, `services.yml` (full a-la-carte catalog), `payroll_costs.yml` (a derived/model-layer domain, not yet built), or any other remaining domain from `docs/architecture/CANONICAL-DATA-SCHEMA.md`'s original ~20-domain sketch. It does not resolve Table 1 vs. Table 2 as primary. It does not resolve any of the wage conflicts (tracker items 16-18) or the opex conflicts/gaps added this phase (tracker items 19-24) — all six are recorded, sourced, and left open. It does not touch or resolve `docs/CURRENT-STATE.md` §6/§7's startup-capital reconciliation problem, beyond confirming (not re-litigating) that one specific cross-reference within it (the A$400/month insurance figure) is a deliberate, already-disclosed linkage rather than a new duplication.
