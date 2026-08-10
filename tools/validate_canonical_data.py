@@ -216,7 +216,8 @@ REQUIRED_TOP_KEYS = {"schema_version", "dataset"}
 RECORD_LIST_KEYS = {
     "records", "universal", "scenario_dependent", "historical_scenarios",
     "operational_buffers", "open_items", "historical_staffing_scenarios",
-    "funding_requirements", "historical_total_estimates", "contingency_assumptions",
+    "funding_requirements", "historical_total_estimates", "adopted_planning_scenarios",
+    "contingency_assumptions",
     "historical_services", "future_services", "historical_ramp_reference",
     "historical_cost_reference", "marketing_ramp_reference",
     "assumptions", "historical_reconciliation", "traceability", "conflicts",

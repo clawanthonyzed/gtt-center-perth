@@ -227,6 +227,8 @@
 
 **Up from A$276,635-554,900 (the original reference range this whole Section 7 exercise started from) — both corrections (landlord contribution removed, construction recomputed at the higher established rate) push the range up. Disclosed plainly, not smoothed over.**
 
+**UPDATE 2026-08-10 — a newer, more current planning figure exists alongside all ranges above, not replacing any of them.** Following a bottom-up reconstruction (`docs/architecture/startup-cost-reconstruction.md`), a cost-optimisation pass (`docs/architecture/STARTUP-COST-OPTIMISATION.md`), and a founder risk-acceptance review (`docs/architecture/MVP-OPENING-DECISION-REVIEW.md`), Anthony approved a Revised Recommended Opening Strategy of **A$251,198** (Pre-Opening Capital scope, same scope as this section) "in principle" as the current planning assumption — explicitly a planning figure, not a locked final cost, pending venue confirmation and final supplier/quote validation (`docs/VERIFICATION-TRACKER.md` item 49, OPEN). See `data/canonical/startup_costs.yml#adopted_planning_scenarios` for the full itemised record and `data/models/master_financial_model.yml#funding_requirement_investigation.updated_planning_case_2026_08_10` for the updated combined funding-requirement case. None of the historical ranges above are altered or superseded by this update.
+
 ---
 
 ## 7. AM/GTT Segment Profitability — Delta Table (Old Model vs Current Model)

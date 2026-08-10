@@ -385,6 +385,75 @@ historical_total_estimates:
       fit-out/fixture-count rebase), not by an explicit banner in the source itself.
 
 # ============================================================
+# ADOPTED PLANNING SCENARIO -- Founder Risk Acceptance Review, 2026-08-10.
+# Anthony approved this scenario "in principle" as the CURRENT PLANNING
+# ASSUMPTION for pre-opening capital -- explicitly NOT a locked/guaranteed
+# final project cost, subject to venue confirmation and final supplier/
+# quote validation (see docs/VERIFICATION-TRACKER.md item 49, OPEN). Kept
+# structurally separate from `historical_total_estimates` above (those are
+# either SUPERSEDED trace records or Anthony's own prior §7.4 reconciliation)
+# -- this is the newest, most current planning figure, not a historical one.
+# Does NOT delete, supersede, or overwrite any existing historical_total_
+# estimates record -- every one of those is retained unchanged, per the
+# coordinator's explicit instruction to preserve previous scenarios.
+# ============================================================
+adopted_planning_scenarios:
+  - id: startup_mvp_adopted_planning_2026_08_10
+    name: "Revised Recommended Opening Strategy -- Founder Risk Acceptance Review (Pre-Opening Capital only)"
+    total_cost: 251198.00
+    currency: AUD
+    status: DECIDED
+    status_detail: >
+      Anthony approved this figure "in principle" as the CURRENT PLANNING ASSUMPTION,
+      2026-08-10 -- NOT a guaranteed final project cost. Subject to venue confirmation
+      and final supplier/quote validation (see docs/VERIFICATION-TRACKER.md item 49,
+      OPEN). Derives from docs/architecture/STARTUP-COST-OPTIMISATION.md's Minimum
+      Viable Opening scenario (A$243,912), with 5 restorations applied by
+      docs/architecture/MVP-OPENING-DECISION-REVIEW.md after founder risk review:
+      (1) acoustic-rated curtain fabric funded now (+A$1,350, partial restoration of
+      the deferred acoustic-treatment line -- see changed_assumptions below); (2) a
+      A$1,000 marketing contingency reserve restored (from a near-zero MVP figure);
+      (3) Receptionist training restored to the full 3 weeks docs/staff-plan.md
+      already specifies (+A$1,201 -- the MVP's 1.5-week compression was REJECTED,
+      not accepted, per the founder risk review); (4) Venue Manager pre-opening
+      period partially restored to 7 weeks, from MVP's 6 (+A$1,562); (5)
+      treatment-staff trial restored to a minimum 1 week, from MVP's 4 days
+      (+A$1,392). Subtotal (A-J) A$224,284 + 12% contingency A$26,914 = A$251,198.
+    scope: "Pre-Opening Capital only -- same scope as pre_opening_capital in data/models/master_financial_model.yml#funding_requirement_investigation and total_current_state_component_sum above. Does NOT include the Working Capital Reserve (funding_working_capital_reserve, A$85,000-110,000 above), which remains a separate, untouched component, per the coordinator's explicit instruction not to fold the two together."
+    source: {file: docs/architecture/MVP-OPENING-DECISION-REVIEW.md, section: "full document -- founder risk acceptance review and Revised Recommended Opening Strategy"}
+    additional_source: {file: docs/architecture/STARTUP-COST-OPTIMISATION.md, section: "full document -- item-by-item timing reclassification and Minimum Viable Opening scenario"}
+    component_breakdown:
+      premises_acquisition: 19000.00
+      design_and_approvals: 4100.00
+      fitout: 139678.00
+      furniture_fixtures_fittings: 14160.00
+      equipment: 19280.00
+      opening_inventory_consumables: 2585.00
+      technology_systems: 820.00
+      staffing_before_opening: 22872.00
+      marketing_and_launch: 1250.00
+      professional_services: 539.00
+      subtotal_before_contingency: 224284.00
+      contingency_12pct: 26914.00
+      total: 251198.00
+    changed_assumptions:
+      - "Acoustic treatment for curtain-partitioned Massage/Facial-Beauty rooms: FULL deferral (MVP) changed to PARTIAL fund now (acoustic-rated curtain fabric, +A$1,350) + remainder deferred pending real client feedback -- see docs/architecture/MVP-OPENING-DECISION-REVIEW.md §1."
+      - "Launch marketing: near-zero (MVP, A$250) changed to a A$1,000 contingency reserve, held not necessarily spent, released on a real Week 1-4 booking-vs-ramp trigger -- see §2."
+      - "Receptionist training: 1.5-week MVP compression REJECTED, restored to the full 3 weeks docs/staff-plan.md already specifies -- see §3.1."
+      - "Venue Manager pre-opening period: 6-week MVP compression partially restored to 7 weeks, given the cascading-hiring-timeline risk identified -- see §3.2."
+      - "Treatment staff trial: 4-day MVP compression restored to a minimum 1 week, matching the source documents' own 'test operations week' framing -- see §3.3."
+      - "2-of-4 nail/hair station staging: ACCEPTED as proposed, with an added condition -- stations 3-4 purchased by Month 4, tied to the existing PM revenue ramp reaching 93%+ of steady state, not a vague calendar window -- see §4.3. No cost change to this total; captured as a deferred-expenditure timing commitment, not a startup-capital line."
+    notes: >
+      This record does NOT supersede, replace, or delete total_current_state_adopted,
+      total_current_state_component_sum, or any other historical_total_estimates
+      record above -- all retained per the coordinator's explicit instruction. This
+      is the newest, most current PLANNING figure specifically, distinct from those
+      historical/reconciled totals, which remain as-is. Still requires: venue
+      confirmation, 3 real builder quotes, and final supplier/quote validation
+      before this figure could be treated as a locked project cost -- see
+      docs/VERIFICATION-TRACKER.md item 49.
+
+# ============================================================
 # CONTINGENCY -- the one assumption found in this repo, recorded distinctly.
 # ============================================================
 contingency_assumptions:

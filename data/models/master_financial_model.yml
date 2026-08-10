@@ -466,6 +466,65 @@ funding_requirement_investigation:
       Both figures remain valid, disclosed, side by side -- neither superseded by this
       investigation.
 
+  updated_planning_case_2026_08_10:
+    # NEW 2026-08-10, Canonical Startup Cost Adoption phase. Does NOT replace or
+    # collapse combined_funding_requirement_bounded.primary_method above -- that
+    # figure (A$357,390-577,180) remains fully intact, unaltered, retained side by
+    # side. This is an ADDITIONAL, more current planning case, reflecting Anthony's
+    # in-principle approval of the Founder Risk Acceptance Review's Revised
+    # Recommended Opening Strategy -- itself explicitly a PLANNING ASSUMPTION, not
+    # a locked final cost (see data/canonical/startup_costs.yml#adopted_planning_scenarios,
+    # docs/VERIFICATION-TRACKER.md item 49, OPEN).
+    status: DECIDED
+    source: {file: docs/architecture/MVP-OPENING-DECISION-REVIEW.md, section: "Revised Recommended Opening Strategy / Funding requirement reconciliation"}
+    status_detail: >
+      Anthony approved the Founder Risk Acceptance Review's Revised Recommended
+      Opening Strategy "in principle" as the current pre-opening-capital PLANNING
+      figure -- explicitly not a guaranteed final project cost, subject to venue
+      confirmation and final supplier/quote validation. This case combines that
+      single-point pre-opening-capital figure with the SAME, UNTOUCHED
+      opening_working_capital.historical_reserve_method range above -- the working
+      capital reserve is NOT recalculated, NOT reduced, and NOT folded into a single
+      collapsed number here, per explicit instruction. No operating-cash-trough
+      figure was artificially reduced -- those figures (opening_working_capital.
+      operating_cash_trough_cross_check above) come from the Master Financial
+      Model's own cash flow computation, entirely untouched by this update.
+    revised_pre_opening_capital:
+      value: 251198.00
+      currency: AUD
+      status: DECIDED
+      status_detail: "A single planning figure, not a range -- Anthony's in-principle approval of a specific, itemised bottom-up budget, not a market-research range like pre_opening_capital above. See data/canonical/startup_costs.yml#adopted_planning_scenarios for full component traceability."
+      source: {file: data/canonical/startup_costs.yml, section: "adopted_planning_scenarios"}
+      supersedes: "Nothing -- pre_opening_capital (A$272,390-467,180, above) remains fully retained, unaltered, shown side by side, per explicit instruction not to delete previous scenarios."
+    combined_updated_planning_case:
+      description: "Revised Pre-Opening Capital (A$251,198, single planning figure) + historical Working Capital Reserve (A$85,000-110,000, unchanged) -- kept as two separate components, not collapsed"
+      range_low: 336198.00
+      range_high: 361198.00
+      currency: AUD
+      status: DECIDED
+      status_detail: "251198.00 + 85000.00 = 336198.00 (low); 251198.00 + 110000.00 = 361198.00 (high). Arithmetic only -- neither the pre-opening-capital planning figure nor the working-capital reserve range was independently recalculated or reduced for this combination."
+      source: {file: docs/architecture/MVP-OPENING-DECISION-REVIEW.md, section: "Revised Recommended Opening Strategy / Funding requirement reconciliation"}
+    comparison_to_previous_bounded_range:
+      previous_primary_method: {range_low: 357390.00, range_high: 577180.00}
+      updated_planning_case: {range_low: 336198.00, range_high: 361198.00}
+      notes: >
+        The updated planning case's low end (A$336,198) and high end (A$361,198) both
+        sit close to the previous range's own low end (A$357,390) -- NOT a
+        like-for-like comparison of low-to-low and high-to-high, since the updated
+        case reflects a single-point planning figure (not a market-research range)
+        combined with the working-capital range, producing a narrower band than the
+        previous range's own wide low-to-high spread. This is NOT presented as a
+        replacement for the previous bounded range -- both are retained, side by
+        side, per explicit instruction not to collapse the range into a single
+        number. The previous range remains the wider, more conservative planning
+        band; the updated case reflects Anthony's own in-principle-approved,
+        itemised, bottom-up figure specifically.
+    still_requires_before_final:
+      - "Venue confirmation -- rent, bond, fit-out condition, landlord requirements, WDP room-spec requirements (see docs/VERIFICATION-TRACKER.md item 49, OPEN)."
+      - "3 real builder quotes against a confirmed floor plate, per docs/architecture/STARTUP-COST-RECONCILIATION.md §4's own pre-existing recommendation, unchanged."
+      - "Final supplier/quote validation for every fit-out trade, furniture, and equipment line -- the component_breakdown in data/canonical/startup_costs.yml#adopted_planning_scenarios remains MEDIUM/LOW confidence on several lines (see that file's own status_detail)."
+      - "This figure is NOT yet wired as the primary funding requirement -- combined_funding_requirement_bounded.primary_method above remains this file's own primary, wider bounded range."
+
   timing_findings:
     - item: "Pre-opening capital (construction, equipment, legal, lease)"
       classification: "TIMING PARTIALLY VERIFIED"

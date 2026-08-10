@@ -135,3 +135,16 @@ None new. `data/models/master_financial_model.yml#conflict_funding_requirement_n
 ## 11. What This Investigation Does Not Do
 
 It does not choose a single exact funding requirement. It does not resolve the startup-cost reconciliation's 6-9 competing ranges. It does not obtain real quotes, engage an accountant/quantity surveyor, or confirm a venue. It does not build Excel, PDF, or investor-facing material. It does not alter the canonical revenue or cost methodology, the Master Financial Model's P&L/cash-flow calculations, or any existing unresolved tracker item other than 47.
+
+---
+
+## 12. Update 2026-08-10 — Updated Planning Case Added, Previous Range Unchanged
+
+Following the Founder Risk Acceptance Review (`docs/architecture/MVP-OPENING-DECISION-REVIEW.md`), Anthony approved a Revised Recommended Opening Strategy (A$251,198, Pre-Opening Capital scope) "in principle" as the current planning assumption — explicitly not a locked final cost. `data/models/master_financial_model.yml#funding_requirement_investigation` now carries a new `updated_planning_case_2026_08_10` section alongside (not replacing) `combined_funding_requirement_bounded.primary_method` above:
+
+| | Range low | Range high |
+|---|---|---|
+| Previous bounded range (§6 above, unchanged) | A$357,390 | A$577,180 |
+| Updated planning case (new, A$251,198 pre-opening capital + the same, untouched A$85,000–110,000 working capital reserve) | A$336,198 | A$361,198 |
+
+Both figures are retained side by side — the previous range remains this file's own primary, wider bounded range; the updated case is Anthony's specific, itemised, in-principle-approved figure. Neither the working capital reserve nor the Master Financial Model's own operating-cash-trough figures were recalculated or reduced for this update — see `data/canonical/startup_costs.yml#adopted_planning_scenarios` for full component traceability, and `docs/VERIFICATION-TRACKER.md` item 49 (venue validation required before this could be treated as final).
