@@ -1,0 +1,88 @@
+/*
+  GTT Center Perth (WORKING PLACEHOLDER NAME — see docs/brand-guide.md and
+  docs/architecture/MINIMUM-VIABLE-BRAND-IDENTITY.md §1. The business name
+  used throughout this file and its consuming pages is NOT final. Anthony
+  has not selected a name — this is deliberately swappable, see the
+  --business-name custom property and the .wordmark-text elements in
+  wordmark.svg / index.html for the single points to edit when a real
+  name is chosen.
+
+  Brand Tokens — single source of truth for colour, type, and spacing.
+  Sourced from docs/brand-guide.md §2/§3, with ONE deliberate, disclosed
+  correction: docs/brand-guide.md's own email-button spec (Pearl text on
+  a Sage background) fails WCAG AA contrast when actually tested
+  (2.31:1 — needs 4.5:1 for normal text, or at minimum 3.0:1 for large/UI
+  text; it fails both). This file uses Deep Slate text on Sage instead
+  (5.03:1, passes) for every interactive Sage surface. See
+  outputs/brand/BRAND-SYSTEM.md §6 for the full contrast audit and the
+  reasoning behind this correction.
+*/
+
+:root {
+  /* ---- Business name (placeholder, single edit point) ---- */
+  --business-name: "GTT Center Perth";
+
+  /* ---- Primary palette (docs/brand-guide.md §2) ---- */
+  --lounge-white: #FAF8F4;
+  --sage: #8FA98A;
+  --terracotta: #C47A5A;
+  --deep-slate: #2E3330;
+
+  /* ---- Secondary palette ---- */
+  --morning-blush: #F0E0D6;
+  --forest: #5C7A57;
+  --parchment: #EDE8DF;
+  --pearl: #F5F3EF;
+
+  /* ---- Corrected, accessibility-tested interactive colours ----
+     Deep Slate on Sage = 5.03:1 (passes WCAG AA for normal text).
+     Do not use Pearl-on-Sage for any text — it fails contrast testing. */
+  --cta-bg: var(--sage);
+  --cta-text: var(--deep-slate);
+  --cta-bg-hover: var(--forest);
+  --cta-text-hover: var(--pearl);
+
+  /* ---- Typography (docs/brand-guide.md §3) ----
+     Both are free Google Fonts. Loaded via <link> in the consuming HTML
+     document — this file does not embed @font-face, since a standalone
+     CSS token file has no reliable way to guarantee font licensing/
+     hosting context; the landing page's own <head> handles font loading. */
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', -apple-system, 'Segoe UI', system-ui, sans-serif;
+
+  --weight-display-light: 300;
+  --weight-display-regular: 400;
+  --weight-display-semibold: 600;
+  --weight-body-regular: 400;
+  --weight-body-medium: 500;
+
+  /* Type scale — web sizes, docs/brand-guide.md §3 */
+  --size-hero: 56px;
+  --size-h2: 40px;
+  --size-h3: 28px;
+  --size-body: 16px;
+  --size-caption: 13px;
+  --size-button: 15px;
+  --size-nav: 15px;
+
+  --line-height-body: 1.6;
+  --line-height-heading: 1.2;
+  --letter-spacing-body: 0.02em;
+  --letter-spacing-heading: 0;
+  --letter-spacing-wordmark: 0.09em; /* wide tracking for the wordmark specifically, see BRAND-SYSTEM.md */
+
+  /* ---- Spacing scale — a simple 8px-base system, not previously
+     specified in docs/brand-guide.md; introduced here for the landing
+     page build, disclosed as new rather than silently added. ---- */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+
+  --radius-button: 4px; /* docs/brand-guide.md §8 email CTA spec, applied consistently to web buttons */
+  --max-content-width: 1120px;
+  --max-narrow-width: 640px; /* for reading-width text blocks, e.g. the "how it works" copy */
+}

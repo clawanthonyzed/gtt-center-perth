@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Favicon / tiny-size mark. At 16-32px even "GTT" in a light serif with
+  wide tracking becomes illegible, so this uses a single bold initial —
+  the same fallback logic docs/brand-guide.md already establishes for its
+  own small-size logo variant ("Wordmark only... where mark is too small
+  to render clearly"). WORKING PLACEHOLDER — the initial should be
+  re-checked once a real name is chosen (it may no longer start with G).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="G — favicon mark">
+  <rect width="64" height="64" rx="10" fill="#2E3330" />
+  <text x="32" y="45"
+        text-anchor="middle"
+        font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+        font-weight="600"
+        font-size="40"
+        fill="#FAF8F4">G</text>
+</svg>

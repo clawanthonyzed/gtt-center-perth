@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Compact square mark, for contexts where the full horizontal wordmark
+  won't fit legibly: favicon, Instagram profile image, app icon. Uses
+  "GTT" — the same three letters already visible in the working
+  placeholder name, and the genuine clinical abbreviation this venture's
+  entire positioning is built around — not an arbitrary monogram choice.
+  Deliberately typographic, not a pictorial icon (leaf/flower/womb/baby
+  symbols were explicitly avoided, see outputs/brand/BRAND-SYSTEM.md §2).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="GTT — compact mark">
+  <rect width="200" height="200" fill="#FAF8F4" />
+  <text x="100" y="112"
+        text-anchor="middle"
+        font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+        font-weight="400"
+        font-size="72"
+        letter-spacing="6"
+        fill="#2E3330">GTT</text>
+  <line x1="62" y1="132" x2="138" y2="132" stroke="#8FA98A" stroke-width="3" />
+</svg>

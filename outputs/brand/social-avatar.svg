@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Social profile avatar (Instagram etc.) — square, brand-guide.md §4/§6
+  spec (profile image on Lounge White). Uses the same "GTT" compact mark
+  as mark-square.svg, centred with generous padding since social platforms
+  crop avatars into a circle — the visible content must survive that crop.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" role="img" aria-label="GTT — social profile avatar">
+  <rect width="1080" height="1080" fill="#FAF8F4" />
+  <!-- Safe-zone circle guide (not rendered, for designer reference only): a 1080px canvas cropped to a circle keeps roughly the centre 900px diameter fully visible. -->
+  <text x="540" y="600"
+        text-anchor="middle"
+        font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+        font-weight="400"
+        font-size="340"
+        letter-spacing="20"
+        fill="#2E3330">GTT</text>
+  <line x1="330" y1="660" x2="750" y2="660" stroke="#8FA98A" stroke-width="10" />
+</svg>

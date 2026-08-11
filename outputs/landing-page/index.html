@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GTT Center Perth — Your GTT morning, reimagined (waitlist)</title>
+<meta name="description" content="Perth's first GTT wellness lounge. Join the waitlist to be first to know when bookings open." />
+
+<!--
+  WORKING PLACEHOLDER NAME. "GTT Center Perth" is not a final business
+  name -- see outputs/brand/BRAND-SYSTEM.md and docs/brand-guide.md.
+  To swap once a real name is chosen: update the <title>, every
+  .wordmark-text element's text content, the meta description above,
+  and the footer entity line -- these are the only places the name
+  appears in this file.
+-->
+
+<!-- Google Fonts: Cormorant Garamond (display) + DM Sans (body), per docs/brand-guide.md §3 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/svg+xml" href="../brand/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../brand/favicon-32.png">
+<link rel="stylesheet" href="../brand/brand-tokens.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#waitlist-form">Skip to waitlist form</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a href="#top" class="wordmark" aria-label="GTT Center Perth, home">
+      <span class="wordmark-text">GTT Center Perth</span>
+      <span class="wordmark-rule" aria-hidden="true"></span>
+    </a>
+    <a href="#waitlist-form" class="btn btn--small">Join the waitlist</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <p class="eyebrow">Perth's first GTT wellness lounge</p>
+      <h1 class="hero__headline">Your GTT morning deserves to be calm, cared for, and genuinely yours.</h1>
+      <p class="hero__sub">The Glucose Tolerance Test is a mandatory 2&ndash;3 hour wait for every pregnant woman in WA. We built a place to spend it &mdash; not just endure it.</p>
+      <div class="hero__cta">
+        <a href="#waitlist-form" class="btn btn--primary">Join the waitlist</a>
+        <p class="hero__cta-note">Opening date not yet confirmed &mdash; waitlist members hear first.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how-it-works">
+    <div class="wrap wrap--narrow">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>
+          <span class="steps__num">01</span>
+          <div>
+            <h3>Your blood collection</h3>
+            <p>Delivered alongside a licensed pathology collection service, in a private, purpose-built room &mdash; the one part of the venue built to full clinical spec.</p>
+          </div>
+        </li>
+        <li>
+          <span class="steps__num">02</span>
+          <div>
+            <h3>The wait, reimagined</h3>
+            <p>Between draws, you move to a warm, open lounge for a wellness service of your choice &mdash; massage, nails, hair, or brows &mdash; instead of sitting in a waiting room.</p>
+          </div>
+        </li>
+        <li>
+          <span class="steps__num">03</span>
+          <div>
+            <h3>Your privacy, designed in</h3>
+            <p>Full-length, opaque, lockable privacy curtains for every treatment space &mdash; no client ever sees another client mid-treatment. It's a design principle here, not an afterthought.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section--tint" id="services">
+    <div class="wrap">
+      <h2>What's on offer</h2>
+      <p class="section__intro">A morning package built around your GTT appointment, plus afternoon wellness services for anyone &mdash; pregnant or not.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Massage</h3>
+          <p>Pregnancy-safe massage, designed for comfort at any stage.</p>
+        </div>
+        <div class="service-card">
+          <h3>Nails</h3>
+          <p>Manicure and pedicure services in a dedicated, ventilated space.</p>
+        </div>
+        <div class="service-card">
+          <h3>Hair</h3>
+          <p>Styling and treatments while you wait between draws.</p>
+        </div>
+        <div class="service-card">
+          <h3>Brows</h3>
+          <p>Brow shaping and tinting with pregnancy-safe products.</p>
+        </div>
+      </div>
+      <p class="section__footnote">Full service menu and pricing will be confirmed closer to opening.</p>
+    </div>
+  </section>
+
+  <!-- TRUST / PRIVACY -->
+  <section class="section" id="trust">
+    <div class="wrap wrap--narrow">
+      <h2>Built around one idea: you shouldn't have to just get through it</h2>
+      <p>We're not a pathology lab, and we're not a day spa. The clinical part of your visit is handled properly, by a licensed pathology partner &mdash; and everything else is built for how it actually feels to be 24&ndash;28 weeks pregnant and told to sit still for two hours.</p>
+      <p>We haven't opened yet, and we're not going to promise a date we can't keep. What we can promise: if you join the waitlist, you'll be the first to know when bookings open &mdash; before anyone else.</p>
+    </div>
+  </section>
+
+  <!-- WAITLIST FORM -->
+  <section class="section section--tint" id="waitlist-form">
+    <div class="wrap wrap--narrow">
+      <h2>Join the waitlist</h2>
+      <p class="section__intro">Whether you're expecting now or planning ahead, we'd love to have you on the list. Takes about 30 seconds.</p>
+
+      <form id="waitlistForm" class="form" novalidate>
+        <!--
+          Fields per docs/architecture/WAITLIST-VALIDATION-FRAMEWORK.md and
+          docs/architecture/MVP-BRAND-LAUNCH-PACKAGE.md §1.4: name, email,
+          suburb, due date, referral source ONLY. The optional validation
+          survey (service interest, package preference, etc.) is a
+          deliberately SEPARATE flow, sent as a follow-up after signup --
+          not bundled here, to protect primary-form conversion, per that
+          document's own explicit finding.
+        -->
+        <div class="form__row">
+          <label for="firstName">First name</label>
+          <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
+        </div>
+
+        <div class="form__row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+        </div>
+
+        <div class="form__row">
+          <label for="suburb">Suburb</label>
+          <input type="text" id="suburb" name="suburb" autocomplete="address-level2" placeholder="e.g. Subiaco" required />
+        </div>
+
+        <fieldset class="form__row form__row--fieldset">
+          <legend>Due date</legend>
+          <div class="form__due-date-group">
+            <input type="date" id="dueDate" name="dueDate" />
+            <label class="form__checkbox" for="notYetPregnant">
+              <input type="checkbox" id="notYetPregnant" name="notYetPregnant" />
+              <span>Not pregnant yet &mdash; planning ahead</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form__row">
+          <label for="referralSource">How did you hear about us?</label>
+          <select id="referralSource" name="referralSource" required>
+            <option value="" disabled selected>Please select</option>
+            <option value="instagram">Instagram</option>
+            <option value="midwife_ob">My midwife or OB</option>
+            <option value="friend_family">Friend or family</option>
+            <option value="search">Google / online search</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full">Join the waitlist</button>
+
+        <p class="form__privacy-note">We'll only use your details to contact you about GTT Center Perth. No spam, no sharing with third parties. You can unsubscribe at any time.</p>
+      </form>
+
+      <div id="formConfirmation" class="form-confirmation" hidden>
+        <h3>You're on the list.</h3>
+        <p>We'll contact you first when bookings open. Thank you for being part of this from the start.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p>GTT Center Perth (working name) &mdash; a YETI Holding Trust venture, Perth, Western Australia.</p>
+    <p class="site-footer__fine">This page is a pre-launch information page only. No services are currently available to book. Nothing on this page is medical advice &mdash; for guidance about your own GTT test, speak with your midwife or obstetrician.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

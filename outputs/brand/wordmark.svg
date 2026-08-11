@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Primary horizontal wordmark. WORKING PLACEHOLDER NAME — "GTT Center Perth"
+  is not a final business name (see docs/brand-guide.md, docs/architecture/
+  MINIMUM-VIABLE-BRAND-IDENTITY.md §1). To swap once a real name is chosen,
+  edit only the two <text> elements below — no other structural change
+  needed. Font: Cormorant Garamond (Google Fonts, free), falls back to
+  Georgia/serif if the web font is unavailable in the viewing context
+  (e.g. this file opened standalone, outside a page that has loaded the
+  Google Font). Deliberately wordmark-only, no pictorial mark — see
+  outputs/brand/BRAND-SYSTEM.md for the full rationale.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 150" width="720" height="150" role="img" aria-label="GTT Center Perth — wordmark (working placeholder name)">
+  <text x="360" y="78"
+        text-anchor="middle"
+        font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+        font-weight="400"
+        font-size="46"
+        letter-spacing="4.2"
+        fill="#2E3330">GTT CENTER PERTH</text>
+  <!-- Horizon rule: a single, restrained inset line beneath the wordmark.
+       Rationale (not decorative-without-purpose): evokes rest and a
+       settled horizon — a quiet visual echo of "the wait, reimagined" —
+       and gives the type a stable anchor so it reads as a mark, not
+       unstyled text. Inset from the wordmark's own edges (asymmetric,
+       not full-bleed) is a deliberate editorial-print convention for a
+       more considered, less "underlined" feel. -->
+  <line x1="260" y1="102" x2="460" y2="102" stroke="#8FA98A" stroke-width="2" />
+</svg>

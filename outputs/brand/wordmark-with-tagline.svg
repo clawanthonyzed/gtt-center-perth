@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Secondary lockup: wordmark + short descriptor line, for contexts where
+  the business needs a one-line explanation alongside the name (e.g. a
+  referral document header, a print flyer, an email signature). WORKING
+  PLACEHOLDER NAME — see wordmark.svg's own header comment; the same two
+  edit points apply here plus the descriptor line if it should change.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 190" width="720" height="190" role="img" aria-label="GTT Center Perth — Perth's first GTT wellness lounge (working placeholder name and descriptor)">
+  <text x="360" y="78"
+        text-anchor="middle"
+        font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+        font-weight="400"
+        font-size="46"
+        letter-spacing="4.2"
+        fill="#2E3330">GTT CENTER PERTH</text>
+  <line x1="260" y1="102" x2="460" y2="102" stroke="#8FA98A" stroke-width="2" />
+  <text x="360" y="140"
+        text-anchor="middle"
+        font-family="'DM Sans', -apple-system, 'Segoe UI', system-ui, sans-serif"
+        font-weight="400"
+        font-size="16"
+        letter-spacing="0.6"
+        fill="#5C7A57">Perth&#8217;s first GTT wellness lounge</text>
+</svg>
