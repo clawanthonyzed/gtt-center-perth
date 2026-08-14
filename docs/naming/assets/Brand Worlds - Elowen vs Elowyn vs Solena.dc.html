@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Archivo:wght@300;400;500&family=Italiana&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#E8E5DE; }
+  a { color:#4A3B30; text-decoration:none; border-bottom:1px solid rgba(74,59,48,.35); }
+  a:hover { color:#23241F; border-bottom-color:#23241F; }
+</style>
+</helmet>
+
+<div style="width:1720px; padding:88px 60px 140px; font-family:'Jost',sans-serif; color:#23241F; background:#E8E5DE; box-sizing:border-box">
+
+  <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid rgba(35,36,31,.25); padding-bottom:26px">
+    <div>
+      <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#6E6A61">Brand strategy + identity exploration · Phase 1</div>
+      <h1 style="font-family:'Marcellus',serif; font-size:64px; font-weight:400; line-height:1.02; margin:18px 0 0; letter-spacing:-0.01em">Three brand worlds<br>for one premium house</h1>
+    </div>
+    <div style="text-align:right; font-size:13px; line-height:1.7; color:#6E6A61; max-width:330px">
+      Working name: GTT Center Perth<br>
+      Finalists: Elowen · Elowyn · Solena<br>
+      Purpose: make the name choice obvious
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1.15fr 1fr 1fr; gap:56px; margin-top:44px">
+    <div>
+      <div style="font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:#6E6A61; margin-bottom:14px">The strategic problem</div>
+      <p style="font-family:'Newsreader',serif; font-size:21px; line-height:1.55; margin:0 0 16px; text-wrap:pretty">The business has a pathology engine and a beauty soul. Every competitor in the category has branded the engine — GTT, lounge, clinic, test. That is the whole opportunity: the house that gets named after the engine can never grow past it.</p>
+      <p style="font-size:15px; line-height:1.75; color:#4A463E; margin:0; text-wrap:pretty">So the master brand is built as a premium women's wellness house first, and the GTT is expressed as one of its <em>experiences</em> — a named morning, not a category. The morning is the wedge. The house is the asset.</p>
+    </div>
+    <div>
+      <div style="font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:#6E6A61; margin-bottom:14px">What all three share</div>
+      <div style="font-size:15px; line-height:1.9; color:#4A463E">
+        A wordmark-led identity, not a symbol-led one.<br>
+        Warm neutral grounds, one committed accent.<br>
+        Editorial layout: generous margins, small type, few words.<br>
+        Photography of light, hands, materials and faces — never bellies, never equipment.<br>
+        Service names that could belong to a beauty house, not a pathology form.
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:#6E6A61; margin-bottom:14px">How the three differ</div>
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <div style="border-left:2px solid #7E8C82; padding-left:14px"><span style="font-family:'Marcellus',serif; font-size:19px; letter-spacing:.12em">ELOWEN</span><div style="font-size:14px; line-height:1.65; color:#4A463E">Considered. A quiet house of expertise — Cornish-English restraint, gallery calm, tactile.</div></div>
+        <div style="border-left:2px solid #3A2233; padding-left:14px"><span style="font-family:'Bodoni Moda',serif; font-size:19px; letter-spacing:.06em">ELOWYN</span><div style="font-size:14px; line-height:1.65; color:#4A463E">Maison. Sharp fashion typography, cool composure, the Y as the brand's signature.</div></div>
+        <div style="border-left:2px solid #A9654E; padding-left:14px"><span style="font-family:'Italiana',serif; font-size:21px; letter-spacing:.16em">SOLENA</span><div style="font-size:14px; line-height:1.65; color:#4A463E">Sunlit. Mediterranean warmth, plaster and clay, the most product-and-retail-ready of the three.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════ ELOWEN ══════════════════════════ -->
+  <sc-if value="{{ showElowen }}" hint-placeholder-val="{{ true }}">
+  <div style="margin-top:96px; background:#F3F0EA; padding:64px 60px 72px; border:1px solid rgba(35,36,31,.12)">
+
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid rgba(35,36,31,.18); padding-bottom:28px">
+      <div style="display:flex; align-items:baseline; gap:28px">
+        <span style="font-size:12px; letter-spacing:.3em; color:#7E8C82">01</span>
+        <h2 style="font-family:'Marcellus',serif; font-size:52px; font-weight:400; margin:0; letter-spacing:.24em">ELOWEN</h2>
+        <span style="font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#6E6A61">EL-oh-wen</span>
+      </div>
+      <div style="font-family:'Newsreader',serif; font-size:24px; font-style:italic; color:#4A3B30">The considered house</div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:48px; margin-top:40px">
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:12px">Interpretation</div>
+        <p style="font-family:'Newsreader',serif; font-size:19px; line-height:1.6; margin:0 0 14px; text-wrap:pretty">A real name with a real history, so the brand inherits credibility instead of asking for it. Elowen sounds like somewhere that has always been there — an independent house, not a launch.</p>
+        <p style="font-size:14px; line-height:1.75; color:#4A463E; margin:0">The elm etymology stays buried. What we take from the word is its evenness: three soft syllables, no hard edges, nothing decorative. That evenness becomes the design principle — restraint as the luxury signal.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:12px">Personality</div>
+        <div style="font-size:15px; line-height:2.1; color:#3A3730">Considered · Knowing · Tactile<br>Understated · Warm-grey · Precise<br>Unhurried</div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin:26px 0 12px">Emotional territory</div>
+        <p style="font-size:14px; line-height:1.75; color:#4A463E; margin:0">Relief, then quiet pleasure. She was braced for fluorescent light and a plastic chair. Instead the room is soft, the staff know her name, and nobody is performing hospitality at her.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:12px">Positioning</div>
+        <p style="font-size:14px; line-height:1.75; color:#4A463E; margin:0 0 22px">Owns <strong style="font-weight:500">care that is beautifully organised</strong>. Not the prettiest room in Perth — the best-run one that happens to be beautiful.</p>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:12px">Promise</div>
+        <div style="font-family:'Newsreader',serif; font-size:30px; line-height:1.25; color:#23241F">Time, well spent.</div>
+      </div>
+    </div>
+
+    <!-- wordmark studies -->
+    <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin:56px 0 16px">Wordmark studies</div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px">
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:46px 30px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between">
+        <div style="font-family:'Marcellus',serif; font-size:34px; letter-spacing:.3em; color:#23241F">ELOWEN</div>
+        <div style="font-size:12px; line-height:1.6; color:#6E6A61">01 · Primary. Inscriptional roman caps, +0.30em. Quiet authority; reads at 40m on a façade and at 24px in an email.</div>
+      </div>
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:46px 30px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between">
+        <div>
+          <div style="font-family:'Marcellus',serif; font-size:30px; letter-spacing:.26em; color:#23241F">ELOWEN</div>
+          <div style="height:1px; background:rgba(35,36,31,.3); margin:12px 0 10px"></div>
+          <div style="font-size:11px; letter-spacing:.42em; color:#6E6A61">PERTH</div>
+        </div>
+        <div style="font-size:12px; line-height:1.6; color:#6E6A61">02 · Locked lockup with hairline rule. Signage, documents, stationery. The rule does the work a symbol would.</div>
+      </div>
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:46px 30px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between">
+        <div style="font-family:'Newsreader',serif; font-size:44px; font-weight:300; letter-spacing:-0.01em; color:#23241F">Elowen</div>
+        <div style="font-size:12px; line-height:1.6; color:#6E6A61">03 · Editorial lowercase. Softer, more human — for social, packaging seals and copy-led moments. Secondary, not primary.</div>
+      </div>
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:46px 30px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between">
+        <div style="display:flex; align-items:center; gap:18px">
+          <div style="width:62px; height:62px; border:1px solid #7E8C82; display:flex; align-items:center; justify-content:center; font-family:'Marcellus',serif; font-size:26px; color:#4A3B30">E</div>
+          <div style="font-size:12px; color:#6E6A61; line-height:1.5">Blind-emboss<br>seal only</div>
+        </div>
+        <div style="font-size:12px; line-height:1.6; color:#6E6A61">04 · Optional device. Deliberately not a logo — an embossed initial for card backs and towel edges. <strong style="font-weight:500">Recommendation: no symbol.</strong></div>
+      </div>
+    </div>
+
+    <!-- palette + type -->
+    <div style="display:grid; grid-template-columns:1fr 1.25fr; gap:20px; margin-top:20px">
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:34px 30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:20px">Colour</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px">
+          <div><div style="height:88px; background:#F3F0EA; border:1px solid rgba(35,36,31,.12)"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Limewash<br><span style="color:#8C877D">#F3F0EA</span></div></div>
+          <div><div style="height:88px; background:#E2DCCE"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Oat<br><span style="color:#8C877D">#E2DCCE</span></div></div>
+          <div><div style="height:88px; background:#7E8C82"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Sea holly<br><span style="color:#8C877D">#7E8C82</span></div></div>
+          <div><div style="height:88px; background:#4A3B30"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Bracken<br><span style="color:#8C877D">#4A3B30</span></div></div>
+          <div><div style="height:88px; background:#23241F"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Ink<br><span style="color:#8C877D">#23241F</span></div></div>
+          <div><div style="height:88px; background:#C8543C"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Cinnabar<br><span style="color:#8C877D">#C8543C</span></div></div>
+        </div>
+        <p style="font-size:13px; line-height:1.7; color:#4A463E; margin:20px 0 0">Limewash and oat carry 85% of every surface. Sea holly is a grey-green with no wellness sweetness in it — it reads as a paint colour, not a leaf. Bracken and ink do the typography. Cinnabar appears once per composition, at postage-stamp size: a stitched detail, a booking button, a wax seal. It is what stops the palette becoming beige luxury.</p>
+      </div>
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:34px 30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:20px">Typography</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:34px">
+          <div>
+            <div style="font-family:'Marcellus',serif; font-size:52px; line-height:1; color:#23241F">Aa</div>
+            <div style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#6E6A61; margin:14px 0 8px">Display · Marcellus</div>
+            <div style="font-family:'Marcellus',serif; font-size:26px; line-height:1.3; color:#23241F">The morning, unhurried</div>
+            <div style="font-size:13px; line-height:1.6; color:#6E6A61; margin-top:10px">Roman proportions, low contrast, no fashion glamour. Used only in caps or sentence case, never italic.</div>
+          </div>
+          <div>
+            <div style="font-family:'Newsreader',serif; font-weight:300; font-size:52px; line-height:1; color:#23241F">Aa</div>
+            <div style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#6E6A61; margin:14px 0 8px">Editorial · Newsreader Light</div>
+            <p style="font-family:'Newsreader',serif; font-weight:300; font-size:18px; line-height:1.55; margin:0; color:#3A3730">Two and a half hours is a long time to be told to sit still. We use it differently: a massage, a manicure, a proper breakfast, and three small blood draws you will barely notice.</p>
+          </div>
+        </div>
+        <div style="height:1px; background:rgba(35,36,31,.12); margin:26px 0 22px"></div>
+        <div style="display:flex; gap:40px; align-items:flex-start">
+          <div style="flex:1">
+            <div style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#6E6A61; margin-bottom:10px">Interface · Jost 300/400</div>
+            <div style="font-size:15px; line-height:1.8; color:#3A3730">Book a morning &nbsp;·&nbsp; Services &nbsp;·&nbsp; The GTT morning<br><span style="font-size:11px; letter-spacing:.3em">SUITES · MEMBERSHIP · CONTACT</span></div>
+          </div>
+          <div style="flex:1; font-size:13px; line-height:1.7; color:#4A463E">Personality: <strong style="font-weight:500">edited</strong>. Small type, wide margins, one idea per surface. Nothing is centred except the wordmark. No italics in interface, no bold in headlines.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- website hero -->
+    <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:20px; margin-top:20px">
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:0; overflow:hidden">
+        <div style="padding:22px 34px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(35,36,31,.08)">
+          <div style="font-family:'Marcellus',serif; font-size:19px; letter-spacing:.26em">ELOWEN</div>
+          <div style="display:flex; gap:26px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#4A463E">
+            <span>The house</span><span>Mornings</span><span>Afternoons</span><span>Membership</span>
+            <span style="border-bottom:1px solid #C8543C; padding-bottom:2px">Book</span>
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1.05fr 1fr; min-height:330px">
+          <div style="padding:52px 34px; display:flex; flex-direction:column; justify-content:center; background:#F3F0EA">
+            <div style="font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:#7E8C82; margin-bottom:20px">Perth · Opening 2027</div>
+            <div style="font-family:'Marcellus',serif; font-size:44px; line-height:1.12; color:#23241F">A house for the hours<br>you didn't choose.</div>
+            <p style="font-family:'Newsreader',serif; font-weight:300; font-size:17px; line-height:1.6; color:#3A3730; margin:20px 0 26px; max-width:340px">Your glucose test takes two and a half hours. Spend them in a treatment room instead of a waiting room.</p>
+            <div style="display:flex; gap:14px; align-items:center">
+              <div style="background:#23241F; color:#F3F0EA; font-size:11px; letter-spacing:.24em; text-transform:uppercase; padding:14px 26px">Book a morning</div>
+              <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#4A3B30; border-bottom:1px solid rgba(74,59,48,.4); padding-bottom:3px">Afternoons at Elowen</div>
+            </div>
+          </div>
+          <div style="background:#E2DCCE; display:flex; align-items:flex-end; padding:22px">
+            <div style="font-size:11px; line-height:1.7; color:#6E6A61; letter-spacing:.04em">PHOTOGRAPHY · Full-height, north-facing daylight. A woman in her own clothes, three-quarter turned away, hand resting on a limewashed wall. Grain visible, no retouching of skin texture. Cropped so the room is as much the subject as she is.</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:34px 30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:18px">Art direction</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:18px">
+          <div style="aspect-ratio:4/5; background:#E2DCCE; display:flex; align-items:flex-end; padding:12px; font-size:10px; line-height:1.5; color:#6E6A61">Hands, unmanicured, holding a warm ceramic cup</div>
+          <div style="aspect-ratio:4/5; background:#D6CFC0; display:flex; align-items:flex-end; padding:12px; font-size:10px; line-height:1.5; color:#6E6A61">Corner of a room, linen curtain, hard afternoon shadow</div>
+        </div>
+        <div style="font-size:13px; line-height:1.75; color:#4A463E">
+          <strong style="font-weight:500">Light:</strong> single-source daylight, long shadows, never fill-flash.<br>
+          <strong style="font-weight:500">Subjects:</strong> women 25–45, mixed ethnicities, minimal makeup, no eye contact with camera in half the set.<br>
+          <strong style="font-weight:500">Materials:</strong> limewash plaster, oiled oak, unglazed stoneware, undyed linen, brushed steel.<br>
+          <strong style="font-weight:500">Composition:</strong> off-centre, room-forward, generous empty space above the subject.<br>
+          <strong style="font-weight:500">Grade:</strong> warm-neutral, slightly desaturated greens, no orange skin.<br>
+          <strong style="font-weight:500">Never:</strong> bellies, robes, cucumber-eye clichés, hands-on-heart poses, clinical equipment.
+        </div>
+      </div>
+    </div>
+
+    <!-- instagram + signage -->
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin-top:20px">
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:16px">Instagram · @elowen</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:4px">
+          <div style="aspect-ratio:1; background:#E2DCCE"></div>
+          <div style="aspect-ratio:1; background:#F3F0EA; display:flex; align-items:center; justify-content:center; font-family:'Marcellus',serif; font-size:13px; letter-spacing:.2em; color:#4A3B30">ELOWEN</div>
+          <div style="aspect-ratio:1; background:#D6CFC0"></div>
+          <div style="aspect-ratio:1; background:#7E8C82"></div>
+          <div style="aspect-ratio:1; background:#E2DCCE"></div>
+          <div style="aspect-ratio:1; background:#F3F0EA; display:flex; align-items:center; justify-content:center; text-align:center; font-family:'Newsreader',serif; font-style:italic; font-size:12px; line-height:1.4; color:#3A3730; padding:8px">Mornings,<br>Tues–Sat</div>
+          <div style="aspect-ratio:1; background:#D6CFC0"></div>
+          <div style="aspect-ratio:1; background:#4A3B30"></div>
+          <div style="aspect-ratio:1; background:#E2DCCE"></div>
+        </div>
+        <div style="font-size:12px; line-height:1.7; color:#6E6A61; margin-top:14px">Tonal rhythm, never a template. One type tile per row of three. Captions are two sentences of plain English, no emoji, no hashtag block in the caption body.</div>
+      </div>
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:16px">Exterior · signage</div>
+        <div style="background:#DAD3C6; padding:34px 24px; min-height:214px; display:flex; flex-direction:column; justify-content:space-between">
+          <div style="background:#C9C1B2; height:64px; display:flex; align-items:center; justify-content:center; font-size:10px; color:#6E6A61; letter-spacing:.1em">RENDERED FAÇADE · warm grey, deep reveal</div>
+          <div style="text-align:center">
+            <div style="font-family:'Marcellus',serif; font-size:26px; letter-spacing:.3em; color:#3A3730">ELOWEN</div>
+            <div style="height:1px; background:rgba(35,36,31,.35); margin:9px auto; width:120px"></div>
+            <div style="font-size:9px; letter-spacing:.4em; color:#5C5A52">PERTH</div>
+          </div>
+          <div style="font-size:10px; line-height:1.6; color:#5F5C54">Solid brass, unlacquered, pin-mounted 12mm off the render so the letters cast shadow. No box, no lightbox, no window vinyl beyond a single line of address type.</div>
+        </div>
+        <div style="font-size:12px; line-height:1.7; color:#6E6A61; margin-top:14px">Deliberately under-signed. The street cue is a deep doorway, a linen blind and one brass line — closer to a Fitzrovia atelier than a Perth salon strip.</div>
+      </div>
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:16px">Reception · interior</div>
+        <div style="display:grid; grid-template-rows:auto auto; gap:8px">
+          <div style="height:120px; background:#E2DCCE; display:flex; align-items:flex-end; padding:12px; font-size:10px; line-height:1.5; color:#6E6A61">Reception: a 2.4m oiled-oak table, no counter, no glass screen. One chair on the guest side.</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px">
+            <div style="height:84px; background:#7E8C82"></div>
+            <div style="height:84px; background:#D6CFC0"></div>
+          </div>
+        </div>
+        <div style="font-size:13px; line-height:1.75; color:#4A463E; margin-top:14px">
+          Limewashed walls in oat; oak joinery; sisal floor in the lounge, honed limestone in the wet areas. Lighting is lamps and wall sconces only — no downlights anywhere a guest reclines. Uniform: sea-holly linen apron over the therapist's own black or ivory, no branded polo. The collection room is styled as a study: a desk lamp, a linen blind, a single framed print.
+        </div>
+      </div>
+    </div>
+
+    <!-- menu / booking / welcome card -->
+    <div style="display:grid; grid-template-columns:.85fr 1.15fr 1fr; gap:20px; margin-top:20px">
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:16px">Service menu</div>
+        <div style="background:#F3F0EA; border:1px solid rgba(35,36,31,.1); padding:30px 26px">
+          <div style="text-align:center; font-family:'Marcellus',serif; font-size:16px; letter-spacing:.28em; color:#23241F">ELOWEN</div>
+          <div style="height:1px; background:rgba(35,36,31,.2); margin:20px 0"></div>
+          <div style="font-size:10px; letter-spacing:.32em; text-transform:uppercase; color:#7E8C82; margin-bottom:14px">The morning</div>
+          <div style="font-family:'Newsreader',serif; font-size:15px; line-height:1.8; color:#3A3730">
+            <div style="display:flex; justify-content:space-between"><span>Essential</span><span>$80</span></div>
+            <div style="font-size:12px; color:#8C877D; font-family:'Jost',sans-serif; margin-bottom:8px">Collection, lounge, breakfast</div>
+            <div style="display:flex; justify-content:space-between"><span>Considered</span><span>$145</span></div>
+            <div style="font-size:12px; color:#8C877D; font-family:'Jost',sans-serif; margin-bottom:8px">Add massage or manicure</div>
+            <div style="display:flex; justify-content:space-between"><span>Complete</span><span>$210</span></div>
+            <div style="font-size:12px; color:#8C877D; font-family:'Jost',sans-serif">Two treatments, hair finish</div>
+          </div>
+          <div style="height:1px; background:rgba(35,36,31,.2); margin:20px 0"></div>
+          <div style="font-size:10px; letter-spacing:.32em; text-transform:uppercase; color:#7E8C82; margin-bottom:12px">The afternoon</div>
+          <div style="font-family:'Newsreader',serif; font-size:15px; line-height:1.8; color:#3A3730">
+            <div style="display:flex; justify-content:space-between"><span>Massage · 60</span><span>$135</span></div>
+            <div style="display:flex; justify-content:space-between"><span>Hands</span><span>$75</span></div>
+            <div style="display:flex; justify-content:space-between"><span>Brows</span><span>$65</span></div>
+            <div style="display:flex; justify-content:space-between"><span>Hair, finish</span><span>$85</span></div>
+          </div>
+        </div>
+        <div style="font-size:12px; line-height:1.65; color:#6E6A61; margin-top:12px">Illustrative prices only — replace from <code style="font-size:11px">CURRENT-STATE.md</code>. Note the structural move: one card, two halves. The morning and the afternoon are the same house.</div>
+      </div>
+
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:16px">Booking confirmation</div>
+        <div style="border:1px solid rgba(35,36,31,.1)">
+          <div style="background:#F3F0EA; padding:26px; text-align:center"><span style="font-family:'Marcellus',serif; font-size:17px; letter-spacing:.28em">ELOWEN</span></div>
+          <div style="padding:30px 28px; background:#fff">
+            <div style="font-family:'Newsreader',serif; font-size:26px; line-height:1.25; color:#23241F">Thursday 14 August, 7.40am.</div>
+            <p style="font-size:14px; line-height:1.75; color:#3A3730; margin:16px 0 20px">Your morning is booked. Come having eaten nothing since 10pm — water is fine. You'll be with us until about 10.15am, so bring nothing you'd need before then.</p>
+            <div style="border-top:1px solid rgba(35,36,31,.12); border-bottom:1px solid rgba(35,36,31,.12); padding:16px 0; margin-bottom:20px; font-size:13px; line-height:1.9; color:#3A3730">
+              <div style="display:flex; justify-content:space-between"><span style="color:#8C877D">Included</span><span>Collection · Lounge · Breakfast</span></div>
+              <div style="display:flex; justify-content:space-between"><span style="color:#8C877D">Chosen</span><span>60-minute massage, 8.20am</span></div>
+              <div style="display:flex; justify-content:space-between"><span style="color:#8C877D">Referral</span><span>Received from your midwife</span></div>
+            </div>
+            <div style="display:inline-block; background:#23241F; color:#F3F0EA; font-size:11px; letter-spacing:.24em; text-transform:uppercase; padding:13px 24px">Add to calendar</div>
+            <div style="font-size:12px; line-height:1.7; color:#8C877D; margin-top:22px">Anything to tell us before Thursday? Reply to this note — it reaches the front desk, not a system.</div>
+          </div>
+        </div>
+        <div style="font-size:12px; line-height:1.65; color:#6E6A61; margin-top:12px">Voice test: fasting instructions delivered as hospitality, not compliance. No reference numbers, no "patient", no "test results".</div>
+      </div>
+
+      <div style="background:#FBFAF7; border:1px solid rgba(35,36,31,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:16px">GTT morning welcome card</div>
+        <div style="background:#4A3B30; color:#F3F0EA; padding:34px 30px; min-height:300px; display:flex; flex-direction:column; justify-content:space-between">
+          <div>
+            <div style="font-size:10px; letter-spacing:.36em; text-transform:uppercase; color:rgba(243,240,234,.6)">Your morning</div>
+            <div style="font-family:'Newsreader',serif; font-weight:300; font-size:30px; line-height:1.2; margin-top:14px">Three small draws.<br>Everything else<br>is yours.</div>
+          </div>
+          <div style="font-size:13px; line-height:2; border-top:1px solid rgba(243,240,234,.25); padding-top:16px">
+            <div style="display:flex; justify-content:space-between"><span>7.40</span><span style="color:rgba(243,240,234,.7)">Arrive, first draw</span></div>
+            <div style="display:flex; justify-content:space-between"><span>8.00</span><span style="color:rgba(243,240,234,.7)">The glucose drink</span></div>
+            <div style="display:flex; justify-content:space-between"><span>8.20</span><span style="color:rgba(243,240,234,.7)">Massage, room two</span></div>
+            <div style="display:flex; justify-content:space-between"><span>9.00</span><span style="color:rgba(243,240,234,.7)">Second draw</span></div>
+            <div style="display:flex; justify-content:space-between"><span>9.20</span><span style="color:rgba(243,240,234,.7)">Hands, lounge</span></div>
+            <div style="display:flex; justify-content:space-between"><span>10.00</span><span style="color:rgba(243,240,234,.7)">Third draw, then breakfast</span></div>
+          </div>
+        </div>
+        <div style="font-size:13px; line-height:1.75; color:#4A463E; margin-top:14px">Handed over at the oak table, not printed on A4. This card is the single most important brand object in the business: it is where the clinical protocol becomes an itinerary. Same object, letterpressed, for afternoon guests — the timeline simply lists treatments.</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:48px; margin-top:44px; padding-top:36px; border-top:1px solid rgba(35,36,31,.18)">
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:12px">Voice test</div>
+        <div style="font-family:'Newsreader',serif; font-size:20px; line-height:1.85; color:#3A3730">"I'm going to Elowen."<br>"An afternoon at Elowen."<br>"Book me in at Elowen."</div>
+        <p style="font-size:13px; line-height:1.7; color:#4A463E; margin:14px 0 0">All three land. It behaves like a place name because it is one — no preposition awkwardness, no article needed.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:12px">Both sides of the business</div>
+        <p style="font-size:13px; line-height:1.7; color:#4A463E; margin:0 0 10px"><strong style="font-weight:500">Morning:</strong> she reads "a house for the hours you didn't choose" and understands instantly that the brand is on her side of the appointment.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4A463E; margin:0"><strong style="font-weight:500">Afternoon:</strong> nothing in the identity references pregnancy, so a 29-year-old booking brows sees a wellness house. Elowen's risk is the opposite one — it is so quiet it needs strong photography to feel desirable rather than merely tasteful.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#7E8C82; margin-bottom:12px">Scalability</div>
+        <p style="font-size:13px; line-height:1.7; color:#4A463E; margin:0">Scales as a house of addresses — <em>Elowen Subiaco</em>, <em>Elowen Claremont</em> — which is the most credible multi-venue architecture of the three. Membership reads naturally (<em>The Elowen Year</em>). Retail is the weak axis: "Elowen" on a serum bottle is plausible but not compelling; it wants to sell towels, robes and candles more than skincare.</p>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ══════════════════════════ ELOWYN ══════════════════════════ -->
+  <sc-if value="{{ showElowyn }}" hint-placeholder-val="{{ true }}">
+  <div style="margin-top:64px; background:#F5F2EE; padding:64px 60px 72px; border:1px solid rgba(43,43,47,.14)">
+
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid rgba(43,43,47,.2); padding-bottom:28px">
+      <div style="display:flex; align-items:baseline; gap:28px">
+        <span style="font-size:12px; letter-spacing:.3em; color:#3A2233">02</span>
+        <h2 style="font-family:'Bodoni Moda',serif; font-size:54px; font-weight:400; margin:0; letter-spacing:.1em; color:#2B2B2F">ELOWYN</h2>
+        <span style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#6E6A61">EL-oh-win</span>
+      </div>
+      <div style="font-family:'Bodoni Moda',serif; font-size:24px; font-style:italic; color:#3A2233">The maison</div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:48px; margin-top:40px; font-family:'Archivo',sans-serif">
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:12px">Interpretation</div>
+        <p style="font-family:'Bodoni Moda',serif; font-size:19px; line-height:1.55; margin:0 0 14px; text-wrap:pretty">The Y changes everything. It makes the word constructed rather than inherited — and a constructed word is a fashion word. Elowyn doesn't want to be an old English house; it wants to be a maison founded last decade with couture discipline.</p>
+        <p style="font-size:14px; line-height:1.75; color:#45454B; margin:0">So we design it cooler and sharper than Elowen: high-contrast didone, near-black graphite, plum ink, one blush. The Y descender becomes the only piece of ornament the brand ever uses.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:12px">Personality</div>
+        <div style="font-size:15px; line-height:2.1; color:#33333A">Composed · Exacting · Cool<br>Fashion-literate · Discreet<br>Modern · Self-possessed</div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin:26px 0 12px">Emotional territory</div>
+        <p style="font-size:14px; line-height:1.75; color:#45454B; margin:0">Flattery, in the good sense. Being somewhere with taste sharper than your own and being treated as though you belong there.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:12px">Positioning</div>
+        <p style="font-size:14px; line-height:1.75; color:#45454B; margin:0 0 22px">Owns <strong style="font-weight:500">the most beautiful appointment in your week</strong> — beauty-house standards applied to hours that are usually functional.</p>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:12px">Promise</div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:30px; line-height:1.25; color:#2B2B2F">The hours that are yours.</div>
+      </div>
+    </div>
+
+    <div style="font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin:56px 0 16px">Wordmark studies</div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px; font-family:'Archivo',sans-serif">
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:46px 30px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between">
+        <div style="font-family:'Bodoni Moda',serif; font-size:34px; letter-spacing:.1em; color:#2B2B2F">ELOWYN</div>
+        <div style="font-size:12px; line-height:1.6; color:#6E6A61">01 · Primary. Didone caps, tight +0.10em, hairline serifs. Masthead energy; needs to be set large or it disappears.</div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:46px 30px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between">
+        <div style="font-family:'Bodoni Moda',serif; font-size:38px; letter-spacing:.02em; color:#2B2B2F; line-height:1">Elowyn<span style="color:#3A2233">.</span></div>
+        <div style="font-size:12px; line-height:1.6; color:#6E6A61">02 · Sentence case with a plum full stop. The descending y gives the word a signature line — the closest thing to custom lettering here.</div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:46px 30px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between">
+        <div style="font-family:'Archivo',sans-serif; font-weight:300; font-size:24px; letter-spacing:.42em; color:#2B2B2F">ELOWYN</div>
+        <div style="font-size:12px; line-height:1.6; color:#6E6A61">03 · Grotesque alternate, extreme tracking. For signage, app icons and anywhere the didone would break down. Contemporary rather than glamorous.</div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:46px 30px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between">
+        <div style="display:flex; align-items:center; gap:16px">
+          <div style="width:64px; height:64px; background:#3A2233; color:#F5F2EE; display:flex; align-items:center; justify-content:center; font-family:'Bodoni Moda',serif; font-size:27px; letter-spacing:-0.04em">EY</div>
+          <div style="font-size:12px; color:#6E6A61; line-height:1.5">Tight EY<br>monogram</div>
+        </div>
+        <div style="font-size:12px; line-height:1.6; color:#6E6A61">04 · This is the one name that earns a monogram — EY is unusual enough to be ownable. <strong style="font-weight:500">Recommendation: wordmark + EY, no symbol.</strong></div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1.25fr; gap:20px; margin-top:20px; font-family:'Archivo',sans-serif">
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:34px 30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:20px">Colour</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px">
+          <div><div style="height:88px; background:#F5F2EE; border:1px solid rgba(43,43,47,.12)"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Bone<br><span style="color:#8C877D">#F5F2EE</span></div></div>
+          <div><div style="height:88px; background:#E7D9D6"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Pale blush<br><span style="color:#8C877D">#E7D9D6</span></div></div>
+          <div><div style="height:88px; background:#A9AAA6"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Steel<br><span style="color:#8C877D">#A9AAA6</span></div></div>
+          <div><div style="height:88px; background:#3A2233"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Plum ink<br><span style="color:#8C877D">#3A2233</span></div></div>
+          <div><div style="height:88px; background:#2B2B2F"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Graphite<br><span style="color:#8C877D">#2B2B2F</span></div></div>
+          <div><div style="height:88px; background:#B9A48C"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Bronze<br><span style="color:#8C877D">#B9A48C</span></div></div>
+        </div>
+        <p style="font-size:13px; line-height:1.7; color:#45454B; margin:20px 0 0">Cooler than Elowen by design. Bone and steel are the neutrals; plum ink replaces black in all typography, which is what keeps the palette feminine without pink. Blush is used as a large calm field, never as an accent — the moment blush becomes a highlight, the brand slides toward salon. Bronze appears only as material: hardware, foiling, a plinth edge.</p>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:34px 30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:20px">Typography</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:34px">
+          <div>
+            <div style="font-family:'Bodoni Moda',serif; font-size:54px; line-height:1; color:#2B2B2F">Aa</div>
+            <div style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#6E6A61; margin:14px 0 8px">Display · Bodoni Moda</div>
+            <div style="font-family:'Bodoni Moda',serif; font-size:26px; line-height:1.25; color:#2B2B2F">An afternoon,<br><span style="font-style:italic">entirely composed</span></div>
+            <div style="font-size:13px; line-height:1.6; color:#6E6A61; margin-top:10px">High contrast, optical sizing. Only ever large. The italic is the brand's expressive register.</div>
+          </div>
+          <div>
+            <div style="font-family:'Archivo',sans-serif; font-weight:300; font-size:54px; line-height:1; color:#2B2B2F">Aa</div>
+            <div style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#6E6A61; margin:14px 0 8px">Text · Archivo 300/400</div>
+            <p style="font-size:15px; line-height:1.7; margin:0; color:#33333A">Two hours and thirty minutes. A massage, a manicure, a room of your own, and three brief moments with a phlebotomist who has done this ten thousand times.</p>
+          </div>
+        </div>
+        <div style="height:1px; background:rgba(43,43,47,.12); margin:26px 0 22px"></div>
+        <div style="display:flex; gap:40px; align-items:flex-start">
+          <div style="flex:1">
+            <div style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#6E6A61; margin-bottom:10px">Interface · Archivo tracked caps</div>
+            <div style="font-size:11px; letter-spacing:.34em; line-height:2.2; color:#33333A">APPOINTMENTS &nbsp; TREATMENTS<br>THE MORNING &nbsp; THE HOUSE &nbsp; JOURNAL</div>
+          </div>
+          <div style="flex:1; font-size:13px; line-height:1.7; color:#45454B">Personality: <strong style="font-weight:500">exacting</strong>. Two type sizes per surface, hard left alignment, hairline rules instead of boxes. Sans does all the work; the serif appears once per page and is always the largest thing on it.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:20px; margin-top:20px; font-family:'Archivo',sans-serif">
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); overflow:hidden">
+        <div style="padding:22px 34px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(43,43,47,.08)">
+          <div style="font-family:'Bodoni Moda',serif; font-size:21px; letter-spacing:.1em">ELOWYN</div>
+          <div style="display:flex; gap:26px; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:#45454B">
+            <span>House</span><span>Morning</span><span>Treatments</span><span>Journal</span>
+            <span style="color:#3A2233; border-bottom:1px solid #3A2233; padding-bottom:2px">Appointments</span>
+          </div>
+        </div>
+        <div style="min-height:330px; background:#E7D9D6; display:grid; grid-template-columns:1fr 1fr">
+          <div style="padding:54px 34px; display:flex; flex-direction:column; justify-content:center">
+            <div style="font-family:'Bodoni Moda',serif; font-size:52px; line-height:1.05; color:#2B2B2F">The hours<br>that are<br><span style="font-style:italic">yours.</span></div>
+            <p style="font-size:15px; line-height:1.7; color:#3A3438; margin:22px 0 26px; max-width:320px">A women's house in Perth. Mornings are given to the glucose test. Afternoons are given to everyone else.</p>
+            <div style="display:flex; gap:14px; align-items:center">
+              <div style="background:#3A2233; color:#F5F2EE; font-size:10px; letter-spacing:.3em; text-transform:uppercase; padding:15px 28px">Make an appointment</div>
+            </div>
+          </div>
+          <div style="background:#D9C7C4; display:flex; align-items:flex-end; padding:22px">
+            <div style="font-size:11px; line-height:1.7; color:#5F5257">PHOTOGRAPHY · Editorial portrait, hard side light, 85mm, tight crop at the collarbone. Bare shoulder, wet-look hair, no smile. Shot on blush plaster so the image and the page share one colour. Fashion casting, not wellness casting.</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:34px 30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:18px">Art direction</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:18px">
+          <div style="aspect-ratio:4/5; background:#A9AAA6; display:flex; align-items:flex-end; padding:12px; font-size:10px; line-height:1.5; color:#33333A">Nails, close, graphite polish against blush plaster</div>
+          <div style="aspect-ratio:4/5; background:#3A2233; display:flex; align-items:flex-end; padding:12px; font-size:10px; line-height:1.5; color:rgba(245,242,238,.8)">Still life: bronze tray, glass carafe, single stem — one hard shadow</div>
+        </div>
+        <div style="font-size:13px; line-height:1.75; color:#45454B">
+          <strong style="font-weight:500">Light:</strong> directional and unafraid of shadow — the only one of the three worlds that uses contrast.<br>
+          <strong style="font-weight:500">Subjects:</strong> composed, unsmiling, cast for bone structure and presence across ages 25–50.<br>
+          <strong style="font-weight:500">Materials:</strong> blush plaster, honed travertine, bronze, smoked glass, heavy cotton.<br>
+          <strong style="font-weight:500">Composition:</strong> centred and symmetrical, subject filling the frame, minimal negative space.<br>
+          <strong style="font-weight:500">Grade:</strong> cool shadows, neutral skin, plum in the blacks.<br>
+          <strong style="font-weight:500">Risk to manage:</strong> at this contrast the world can read cold. Warmth must come from what staff say and how the room smells, not from the palette.
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin-top:20px; font-family:'Archivo',sans-serif">
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:16px">Instagram · @elowyn</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:4px">
+          <div style="aspect-ratio:1; background:#E7D9D6"></div>
+          <div style="aspect-ratio:1; background:#3A2233; display:flex; align-items:center; justify-content:center; font-family:'Bodoni Moda',serif; font-size:15px; letter-spacing:.08em; color:#F5F2EE">ELOWYN</div>
+          <div style="aspect-ratio:1; background:#A9AAA6"></div>
+          <div style="aspect-ratio:1; background:#D9C7C4"></div>
+          <div style="aspect-ratio:1; background:#F5F2EE; display:flex; align-items:center; justify-content:center; font-family:'Bodoni Moda',serif; font-style:italic; font-size:17px; color:#2B2B2F">no. 04</div>
+          <div style="aspect-ratio:1; background:#E7D9D6"></div>
+          <div style="aspect-ratio:1; background:#2B2B2F"></div>
+          <div style="aspect-ratio:1; background:#B9A48C"></div>
+          <div style="aspect-ratio:1; background:#D9C7C4"></div>
+        </div>
+        <div style="font-size:12px; line-height:1.7; color:#6E6A61; margin-top:14px">Runs as a numbered series rather than a content calendar — <em>no. 01</em> through <em>no. 12</em>. Captions of six words or fewer. The most fashion-fluent grid of the three, and the most demanding to keep supplied.</div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:16px">Exterior · signage</div>
+        <div style="background:#CFCBC6; padding:34px 24px; min-height:214px; display:flex; flex-direction:column; justify-content:space-between">
+          <div style="background:#BEB9B3; height:64px; display:flex; align-items:center; justify-content:center; font-size:10px; color:#55534F; letter-spacing:.1em">SMOKED GLASS SHOPFRONT</div>
+          <div style="text-align:center">
+            <div style="font-family:'Archivo',sans-serif; font-weight:300; font-size:19px; letter-spacing:.46em; color:#2B2B2F">ELOWYN</div>
+          </div>
+          <div style="font-size:10px; line-height:1.6; color:#55534F">Tracked grotesque, etched into the glass rather than applied over it. A bronze EY plaque at door height. Interior glows plum at night through the smoked glazing — the night signature.</div>
+        </div>
+        <div style="font-size:12px; line-height:1.7; color:#6E6A61; margin-top:14px">More retail than residential. Confident on a Claremont or Perth CBD frontage; slightly severe on a suburban strip.</div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:16px">Reception · interior</div>
+        <div style="display:grid; gap:8px">
+          <div style="height:120px; background:#E7D9D6; display:flex; align-items:flex-end; padding:12px; font-size:10px; line-height:1.5; color:#5F5257">Reception: monolithic travertine plinth, bronze rail, one long blush-plaster wall.</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px">
+            <div style="height:84px; background:#3A2233"></div>
+            <div style="height:84px; background:#B9A48C"></div>
+          </div>
+        </div>
+        <div style="font-size:13px; line-height:1.75; color:#45454B; margin-top:14px">
+          Blush polished plaster, travertine, smoked mirror, plum-lacquered joinery in the treatment rooms. Lighting is concealed and warm, aimed at walls. Uniform: a single tailored plum-ink shift dress or shirt, bronze name pin. Menus are printed on heavy grey board, blind-debossed. The collection room reads as a fitting room — mirror, stool, curtain on a bronze track.
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:.85fr 1.15fr 1fr; gap:20px; margin-top:20px; font-family:'Archivo',sans-serif">
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:16px">Service menu</div>
+        <div style="background:#2B2B2F; color:#F5F2EE; padding:30px 26px">
+          <div style="text-align:center; font-family:'Bodoni Moda',serif; font-size:17px; letter-spacing:.12em">ELOWYN</div>
+          <div style="height:1px; background:rgba(245,242,238,.25); margin:20px 0"></div>
+          <div style="font-size:10px; letter-spacing:.34em; text-transform:uppercase; color:rgba(245,242,238,.55); margin-bottom:14px">Morning</div>
+          <div style="font-size:14px; line-height:1.9">
+            <div style="display:flex; justify-content:space-between"><span>No. 1 &nbsp;Essential</span><span>$80</span></div>
+            <div style="display:flex; justify-content:space-between"><span>No. 2 &nbsp;Composed</span><span>$145</span></div>
+            <div style="display:flex; justify-content:space-between"><span>No. 3 &nbsp;Complete</span><span>$210</span></div>
+          </div>
+          <div style="height:1px; background:rgba(245,242,238,.25); margin:20px 0"></div>
+          <div style="font-size:10px; letter-spacing:.34em; text-transform:uppercase; color:rgba(245,242,238,.55); margin-bottom:14px">Afternoon</div>
+          <div style="font-size:14px; line-height:1.9">
+            <div style="display:flex; justify-content:space-between"><span>Massage · 60</span><span>$135</span></div>
+            <div style="display:flex; justify-content:space-between"><span>Hands</span><span>$75</span></div>
+            <div style="display:flex; justify-content:space-between"><span>Brows</span><span>$65</span></div>
+            <div style="display:flex; justify-content:space-between"><span>Hair</span><span>$85</span></div>
+          </div>
+        </div>
+        <div style="font-size:12px; line-height:1.65; color:#6E6A61; margin-top:12px">Numbered packages suit this world — they sound like a fragrance line. Illustrative prices only.</div>
+      </div>
+
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:16px">Booking confirmation</div>
+        <div style="border:1px solid rgba(43,43,47,.1)">
+          <div style="background:#3A2233; padding:26px; text-align:center"><span style="font-family:'Bodoni Moda',serif; font-size:18px; letter-spacing:.12em; color:#F5F2EE">ELOWYN</span></div>
+          <div style="padding:30px 28px">
+            <div style="font-family:'Bodoni Moda',serif; font-size:27px; line-height:1.2; color:#2B2B2F">Thursday 14 August<br><span style="font-style:italic">7.40 in the morning</span></div>
+            <p style="font-size:14px; line-height:1.75; color:#3A3438; margin:16px 0 20px">Confirmed. Nothing to eat after 10pm; water as you like. You are with us until 10.15.</p>
+            <div style="border-top:1px solid rgba(43,43,47,.12); border-bottom:1px solid rgba(43,43,47,.12); padding:16px 0; margin-bottom:20px; font-size:12px; letter-spacing:.06em; line-height:2; color:#33333A">
+              <div style="display:flex; justify-content:space-between"><span style="color:#8C877D">APPOINTMENT</span><span>No. 2 · Composed</span></div>
+              <div style="display:flex; justify-content:space-between"><span style="color:#8C877D">TREATMENT</span><span>Massage, 60 minutes</span></div>
+              <div style="display:flex; justify-content:space-between"><span style="color:#8C877D">ROOM</span><span>Two</span></div>
+            </div>
+            <div style="display:inline-block; border:1px solid #3A2233; color:#3A2233; font-size:10px; letter-spacing:.3em; text-transform:uppercase; padding:13px 24px">Add to calendar</div>
+            <div style="font-size:12px; line-height:1.7; color:#8C877D; margin-top:22px">Change anything: reply, or call the house.</div>
+          </div>
+        </div>
+        <div style="font-size:12px; line-height:1.65; color:#6E6A61; margin-top:12px">Terse by design. The voice is a concierge who assumes competence — elegant, and one degree short of warm.</div>
+      </div>
+
+      <div style="background:#fff; border:1px solid rgba(43,43,47,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:16px">GTT morning welcome card</div>
+        <div style="background:#E7D9D6; padding:34px 30px; min-height:300px; display:flex; flex-direction:column; justify-content:space-between">
+          <div>
+            <div style="font-size:10px; letter-spacing:.36em; text-transform:uppercase; color:#8A6F77">Your morning · no. 2</div>
+            <div style="font-family:'Bodoni Moda',serif; font-size:31px; line-height:1.15; margin-top:14px; color:#2B2B2F">Composed<br><span style="font-style:italic">in six parts.</span></div>
+          </div>
+          <div style="font-size:12px; letter-spacing:.04em; line-height:2.1; border-top:1px solid rgba(43,43,47,.25); padding-top:16px; color:#3A3438">
+            <div style="display:flex; justify-content:space-between"><span>I</span><span>7.40 · Arrive · first draw</span></div>
+            <div style="display:flex; justify-content:space-between"><span>II</span><span>8.00 · The drink</span></div>
+            <div style="display:flex; justify-content:space-between"><span>III</span><span>8.20 · Massage · room two</span></div>
+            <div style="display:flex; justify-content:space-between"><span>IV</span><span>9.00 · Second draw</span></div>
+            <div style="display:flex; justify-content:space-between"><span>V</span><span>9.20 · Hands · lounge</span></div>
+            <div style="display:flex; justify-content:space-between"><span>VI</span><span>10.00 · Third draw · breakfast</span></div>
+          </div>
+        </div>
+        <div style="font-size:13px; line-height:1.75; color:#45454B; margin-top:14px">Roman numerals turn a clinical protocol into a programme, like courses at a restaurant. Strong device — but it is also the moment the identity is most at risk of feeling performative to a woman who is nervous about a needle.</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:48px; margin-top:44px; padding-top:36px; border-top:1px solid rgba(43,43,47,.2); font-family:'Archivo',sans-serif">
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:12px">Voice test</div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:20px; line-height:1.85; color:#33333A">"I'm going to Elowyn."<br>"An afternoon at Elowyn."<br>"E-L-O-W-Y-N."</div>
+        <p style="font-size:13px; line-height:1.7; color:#45454B; margin:14px 0 0">The first two are fine. The third is the problem, and it recurs on every phone call, every referral pad and every Google search for the rest of the brand's life.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:12px">Both sides of the business</div>
+        <p style="font-size:13px; line-height:1.7; color:#45454B; margin:0 0 10px"><strong style="font-weight:500">Morning:</strong> the weakest fit of the three. Didone glamour and unsmiling casting are a slightly odd greeting for a 28-week pregnant woman who has been fasting since 10pm.</p>
+        <p style="font-size:13px; line-height:1.7; color:#45454B; margin:0"><strong style="font-weight:500">Afternoon:</strong> the strongest of the three. This is a brand you would book a facial at to feel good about yourself, and its Instagram would outperform both others.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#3A2233; margin-bottom:12px">Scalability</div>
+        <p style="font-size:13px; line-height:1.7; color:#45454B; margin:0">Scales as a fashion house does — numbered collections, a journal, retail products, a members' tier. The EY monogram is a genuine long-term asset. What limits it is spoken word-of-mouth, which is the primary acquisition channel for this business: a name that must be spelled out loses referral velocity, and referral velocity is the whole growth model.</p>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ══════════════════════════ SOLENA ══════════════════════════ -->
+  <sc-if value="{{ showSolena }}" hint-placeholder-val="{{ true }}">
+  <div style="margin-top:64px; background:#FAF6EE; padding:64px 60px 72px; border:1px solid rgba(51,38,30,.14)">
+
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid rgba(51,38,30,.2); padding-bottom:28px">
+      <div style="display:flex; align-items:baseline; gap:28px">
+        <span style="font-size:12px; letter-spacing:.3em; color:#A9654E">03</span>
+        <h2 style="font-family:'Italiana',serif; font-size:60px; font-weight:400; margin:0; letter-spacing:.22em; color:#33261E">SOLENA</h2>
+        <span style="font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#6E6A61">soh-LEE-na</span>
+      </div>
+      <div style="font-family:'EB Garamond',serif; font-size:25px; font-style:italic; color:#A9654E">Sunlit</div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:48px; margin-top:40px">
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:12px">Interpretation</div>
+        <p style="font-family:'EB Garamond',serif; font-size:20px; line-height:1.55; margin:0 0 14px; text-wrap:pretty">Sol is right there at the front of the word, and it does the work of a whole strategy: warmth, light, the Mediterranean afternoon. Solena is the only one of the three that sounds like it has weather.</p>
+        <p style="font-size:14px; line-height:1.75; color:#4A4038; margin:0">That makes it the most immediately likeable and the most obviously beauty-industry — which is both its strength and its exposure. It is warm enough to carry an anxious morning, and commercial enough to put on a bottle. It is also the most familiar-sounding, so distinctiveness must be manufactured by the design rather than supplied by the name.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:12px">Personality</div>
+        <div style="font-size:15px; line-height:2.1; color:#3D352D">Warm · Generous · Sunlit<br>Unhurried · Sensory<br>European · Hospitable</div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin:26px 0 12px">Emotional territory</div>
+        <p style="font-size:14px; line-height:1.75; color:#4A4038; margin:0">Being looked after. Not flattered, not soothed — <em>fed, warmed, unhurried</em>. The nearest emotional reference is a long lunch, not a treatment.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:12px">Positioning</div>
+        <p style="font-size:14px; line-height:1.75; color:#4A4038; margin:0 0 22px">Owns <strong style="font-weight:500">warmth as the luxury</strong> — the house where being cared for feels like generosity rather than service.</p>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:12px">Promise</div>
+        <div style="font-family:'EB Garamond',serif; font-size:31px; line-height:1.25; color:#33261E">Hours in the light.</div>
+      </div>
+    </div>
+
+    <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin:56px 0 16px">Wordmark studies</div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px">
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:46px 30px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between">
+        <div style="font-family:'Italiana',serif; font-size:36px; letter-spacing:.26em; color:#33261E">SOLENA</div>
+        <div style="font-size:12px; line-height:1.6; color:#6E6A61">01 · Primary. Wide, high-waisted Italian caps, +0.26em. Couture proportions with none of Bodoni's coldness.</div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:46px 30px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between">
+        <div style="font-family:'EB Garamond',serif; font-size:46px; letter-spacing:.01em; color:#33261E; line-height:1">Solena</div>
+        <div style="font-size:12px; line-height:1.6; color:#6E6A61">02 · Garamond lowercase. Warmer, bookish, humane — the register for long-form copy, packaging and the journal.</div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:46px 30px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between">
+        <div>
+          <div style="width:78px; height:39px; border:1px solid #A9654E; border-bottom:none; border-radius:78px 78px 0 0; margin-bottom:12px"></div>
+          <div style="font-family:'Italiana',serif; font-size:24px; letter-spacing:.24em; color:#33261E">SOLENA</div>
+        </div>
+        <div style="font-size:12px; line-height:1.6; color:#6E6A61">03 · Arc device — a risen half-sun drawn as a single hairline. The one defensible symbol across all three names.</div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:46px 30px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between">
+        <div style="display:flex; align-items:center; gap:16px">
+          <div style="width:64px; height:64px; border-radius:50%; background:#A9654E; color:#FAF6EE; display:flex; align-items:center; justify-content:center; font-family:'Italiana',serif; font-size:27px">S</div>
+          <div style="font-size:12px; color:#6E6A61; line-height:1.5">Clay disc,<br>debossed S</div>
+        </div>
+        <div style="font-size:12px; line-height:1.6; color:#6E6A61">04 · Disc for retail and app. <strong style="font-weight:500">Recommendation: wordmark + arc.</strong> The arc is the asset that makes future product packaging work.</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1.25fr; gap:20px; margin-top:20px">
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:34px 30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:20px">Colour</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px">
+          <div><div style="height:88px; background:#FAF6EE; border:1px solid rgba(51,38,30,.12)"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Sunlight<br><span style="color:#8C877D">#FAF6EE</span></div></div>
+          <div><div style="height:88px; background:#E8DAC5"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Sand<br><span style="color:#8C877D">#E8DAC5</span></div></div>
+          <div><div style="height:88px; background:#A9654E"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Clay<br><span style="color:#8C877D">#A9654E</span></div></div>
+          <div><div style="height:88px; background:#5E5F45"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Olive shadow<br><span style="color:#8C877D">#5E5F45</span></div></div>
+          <div><div style="height:88px; background:#33261E"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Espresso<br><span style="color:#8C877D">#33261E</span></div></div>
+          <div><div style="height:88px; background:#D9A08C"></div><div style="font-size:12px; margin-top:8px; line-height:1.5">Apricot<br><span style="color:#8C877D">#D9A08C</span></div></div>
+        </div>
+        <p style="font-size:13px; line-height:1.7; color:#4A4038; margin:20px 0 0">The trap here is generic earthy wellness, and the escape is saturation discipline: clay is used at full strength on large surfaces — a whole wall, a whole page, a whole uniform — rather than as a decorative accent. Olive shadow replaces black in shaded areas. Apricot exists only in photography and in the ink on a menu, never as a fill. No sage anywhere; that reads naturopathy.</p>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:34px 30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:20px">Typography</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:34px">
+          <div>
+            <div style="font-family:'Italiana',serif; font-size:56px; line-height:1; color:#33261E">Aa</div>
+            <div style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#6E6A61; margin:14px 0 8px">Display · Italiana</div>
+            <div style="font-family:'Italiana',serif; font-size:27px; line-height:1.3; letter-spacing:.04em; color:#33261E">THE LONG MORNING</div>
+            <div style="font-size:13px; line-height:1.6; color:#6E6A61; margin-top:10px">Airy, wide, unmistakably Italian. Caps only, always tracked, never below 22px.</div>
+          </div>
+          <div>
+            <div style="font-family:'EB Garamond',serif; font-size:56px; line-height:1; color:#33261E">Aa</div>
+            <div style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#6E6A61; margin:14px 0 8px">Editorial · EB Garamond</div>
+            <p style="font-family:'EB Garamond',serif; font-size:19px; line-height:1.6; margin:0; color:#3D352D">You will be here for two and a half hours. We suggest you let us take most of them — a massage, then your hands, then breakfast in the light.</p>
+          </div>
+        </div>
+        <div style="height:1px; background:rgba(51,38,30,.12); margin:26px 0 22px"></div>
+        <div style="display:flex; gap:40px; align-items:flex-start">
+          <div style="flex:1">
+            <div style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#6E6A61; margin-bottom:10px">Interface · Jost 300/400</div>
+            <div style="font-size:15px; line-height:1.9; color:#3D352D">Book &nbsp;·&nbsp; Mornings &nbsp;·&nbsp; Treatments &nbsp;·&nbsp; The house<br><span style="font-size:11px; letter-spacing:.3em">RETAIL · MEMBERSHIP · JOURNAL</span></div>
+          </div>
+          <div style="flex:1; font-size:13px; line-height:1.7; color:#4A4038">Personality: <strong style="font-weight:500">generous</strong>. Larger type than the other two worlds, longer sentences, warmer measure. The only world where centred type is allowed.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:20px; margin-top:20px">
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); overflow:hidden">
+        <div style="padding:22px 34px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(51,38,30,.08)">
+          <div style="font-family:'Italiana',serif; font-size:21px; letter-spacing:.26em">SOLENA</div>
+          <div style="display:flex; gap:26px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#4A4038">
+            <span>Mornings</span><span>Afternoons</span><span>The house</span><span>Journal</span>
+            <span style="border-bottom:1px solid #A9654E; padding-bottom:2px">Book</span>
+          </div>
+        </div>
+        <div style="min-height:330px; display:grid; grid-template-columns:1fr 1fr">
+          <div style="padding:54px 34px; display:flex; flex-direction:column; justify-content:center; background:#FAF6EE">
+            <div style="width:66px; height:33px; border:1px solid #A9654E; border-bottom:none; border-radius:66px 66px 0 0; margin-bottom:22px"></div>
+            <div style="font-family:'Italiana',serif; font-size:42px; line-height:1.15; letter-spacing:.03em; color:#33261E">HOURS IN<br>THE LIGHT</div>
+            <p style="font-family:'EB Garamond',serif; font-size:19px; line-height:1.55; color:#3D352D; margin:20px 0 26px; max-width:330px">A women's house in Perth. Your glucose test takes two and a half hours; we think they should be the best hours of your week.</p>
+            <div style="display:flex; gap:14px; align-items:center">
+              <div style="background:#A9654E; color:#FAF6EE; font-size:11px; letter-spacing:.24em; text-transform:uppercase; padding:14px 26px">Book a morning</div>
+              <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#33261E; border-bottom:1px solid rgba(51,38,30,.4); padding-bottom:3px">Afternoons</div>
+            </div>
+          </div>
+          <div style="background:#E8DAC5; display:flex; align-items:flex-end; padding:22px">
+            <div style="font-size:11px; line-height:1.7; color:#6B5E4C">PHOTOGRAPHY · Late-afternoon sun raking across a clay wall, with the window frame's shadow falling over a woman's shoulder and a cup on a table. Sun flare permitted. The light is the hero; the person is the second subject.</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:34px 30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:18px">Art direction</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:18px">
+          <div style="aspect-ratio:4/5; background:#E8DAC5; display:flex; align-items:flex-end; padding:12px; font-size:10px; line-height:1.5; color:#6B5E4C">Breakfast table, hard sun stripe, figs and a glass of water</div>
+          <div style="aspect-ratio:4/5; background:#A9654E; display:flex; align-items:flex-end; padding:12px; font-size:10px; line-height:1.5; color:rgba(250,246,238,.85)">Back of a linen dress against clay plaster, arm raised into the light</div>
+        </div>
+        <div style="font-size:13px; line-height:1.75; color:#4A4038">
+          <strong style="font-weight:500">Light:</strong> low, warm, raking — shadows of window frames and foliage used as graphic elements.<br>
+          <strong style="font-weight:500">Subjects:</strong> women 25–55, sun on skin, visible freckles and lines, half-smiles, often mid-movement.<br>
+          <strong style="font-weight:500">Materials:</strong> clay plaster, terracotta tile, cane, raw silk, olive wood, aged brass.<br>
+          <strong style="font-weight:500">Composition:</strong> loose, documentary, slightly imperfect framing; food and drink present in a third of the set.<br>
+          <strong style="font-weight:500">Grade:</strong> warm highlights, olive-cast shadows, never orange-crushed.<br>
+          <strong style="font-weight:500">Never:</strong> palm leaves, terrazzo, "Mediterranean summer" travel clichés, sunglasses.
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin-top:20px">
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:16px">Instagram · @solena</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:4px">
+          <div style="aspect-ratio:1; background:#E8DAC5"></div>
+          <div style="aspect-ratio:1; background:#A9654E; display:flex; align-items:center; justify-content:center; font-family:'Italiana',serif; font-size:14px; letter-spacing:.2em; color:#FAF6EE">SOLENA</div>
+          <div style="aspect-ratio:1; background:#D9A08C"></div>
+          <div style="aspect-ratio:1; background:#5E5F45"></div>
+          <div style="aspect-ratio:1; background:#FAF6EE; display:flex; align-items:center; justify-content:center; text-align:center; font-family:'EB Garamond',serif; font-style:italic; font-size:14px; line-height:1.4; color:#33261E; padding:8px">Open till<br>eight, Thursdays</div>
+          <div style="aspect-ratio:1; background:#E8DAC5"></div>
+          <div style="aspect-ratio:1; background:#D9A08C"></div>
+          <div style="aspect-ratio:1; background:#33261E"></div>
+          <div style="aspect-ratio:1; background:#E8DAC5"></div>
+        </div>
+        <div style="font-size:12px; line-height:1.7; color:#6E6A61; margin-top:14px">The most feed-native of the three: light, food, skin, texture. Warmth photographs easily, which matters for a business whose marketing budget is small.</div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:16px">Exterior · signage</div>
+        <div style="background:#C9B79C; padding:34px 24px; min-height:214px; display:flex; flex-direction:column; justify-content:space-between">
+          <div style="background:#B9A588; height:64px; display:flex; align-items:center; justify-content:center; font-size:10px; color:#5B4E3C; letter-spacing:.1em">CLAY-RENDERED FAÇADE · arched reveal</div>
+          <div style="text-align:center">
+            <div style="width:60px; height:30px; border:1px solid #6B5334; border-bottom:none; border-radius:60px 60px 0 0; margin:0 auto 10px"></div>
+            <div style="font-family:'Italiana',serif; font-size:26px; letter-spacing:.28em; color:#3B2C1E">SOLENA</div>
+          </div>
+          <div style="font-size:10px; line-height:1.6; color:#5B4E3C">Aged brass letters on clay render, with the arc set above as a shallow relief in the plaster itself. One arched window, linen curtain, olive tree in a terracotta pot.</div>
+        </div>
+        <div style="font-size:12px; line-height:1.7; color:#6E6A61; margin-top:14px">Reads warmly on a suburban strip and holds up in a laneway. The most immediately inviting frontage of the three — and the one closest to existing category aesthetics, so the render and the arch must be executed properly to avoid looking like a nail bar.</div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:16px">Reception · interior</div>
+        <div style="display:grid; gap:8px">
+          <div style="height:120px; background:#E8DAC5; display:flex; align-items:flex-end; padding:12px; font-size:10px; line-height:1.5; color:#6B5E4C">Reception: a curved clay-plaster desk, cane stools, a bowl of fruit that is actually eaten.</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px">
+            <div style="height:84px; background:#A9654E"></div>
+            <div style="height:84px; background:#5E5F45"></div>
+          </div>
+        </div>
+        <div style="font-size:13px; line-height:1.75; color:#4A4038; margin-top:14px">
+          Clay plaster in sand, terracotta floor tile, cane and olive wood, raw-silk curtains, aged brass. Arched openings between lounge and treatment rooms. Lighting: uplights and a single pendant per room, warm 2400K. Uniform: clay linen wrap top over ivory trousers. The collection room is the sunniest room in the building, which is a deliberate operational decision as much as a design one.
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:.85fr 1.15fr 1fr; gap:20px; margin-top:20px">
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:16px">Service menu</div>
+        <div style="background:#E8DAC5; padding:30px 26px">
+          <div style="text-align:center">
+            <div style="width:48px; height:24px; border:1px solid #A9654E; border-bottom:none; border-radius:48px 48px 0 0; margin:0 auto 10px"></div>
+            <div style="font-family:'Italiana',serif; font-size:17px; letter-spacing:.26em; color:#33261E">SOLENA</div>
+          </div>
+          <div style="height:1px; background:rgba(51,38,30,.22); margin:20px 0"></div>
+          <div style="font-size:10px; letter-spacing:.32em; text-transform:uppercase; color:#8A6A4E; margin-bottom:12px">Mornings</div>
+          <div style="font-family:'EB Garamond',serif; font-size:16px; line-height:1.85; color:#3D352D">
+            <div style="display:flex; justify-content:space-between"><span>The Short Morning</span><span>$80</span></div>
+            <div style="display:flex; justify-content:space-between"><span>The Long Morning</span><span>$145</span></div>
+            <div style="display:flex; justify-content:space-between"><span>The Whole Morning</span><span>$210</span></div>
+          </div>
+          <div style="height:1px; background:rgba(51,38,30,.22); margin:20px 0"></div>
+          <div style="font-size:10px; letter-spacing:.32em; text-transform:uppercase; color:#8A6A4E; margin-bottom:12px">Afternoons</div>
+          <div style="font-family:'EB Garamond',serif; font-size:16px; line-height:1.85; color:#3D352D">
+            <div style="display:flex; justify-content:space-between"><span>Massage · 60</span><span>$135</span></div>
+            <div style="display:flex; justify-content:space-between"><span>Hands</span><span>$75</span></div>
+            <div style="display:flex; justify-content:space-between"><span>Brows</span><span>$65</span></div>
+            <div style="display:flex; justify-content:space-between"><span>Hair, finished</span><span>$85</span></div>
+          </div>
+        </div>
+        <div style="font-size:12px; line-height:1.65; color:#6E6A61; margin-top:12px">"The Long Morning" is the strongest package naming of the three worlds — it sells duration as a benefit, which is exactly the business's trick. Illustrative prices only.</div>
+      </div>
+
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:16px">Booking confirmation</div>
+        <div style="border:1px solid rgba(51,38,30,.1)">
+          <div style="background:#FAF6EE; padding:26px; text-align:center; border-bottom:1px solid rgba(51,38,30,.1)"><span style="font-family:'Italiana',serif; font-size:18px; letter-spacing:.26em; color:#33261E">SOLENA</span></div>
+          <div style="padding:30px 28px">
+            <div style="font-family:'EB Garamond',serif; font-size:28px; line-height:1.25; color:#33261E">We'll see you Thursday at twenty to eight.</div>
+            <p style="font-size:14px; line-height:1.75; color:#3D352D; margin:16px 0 20px">Nothing to eat after 10pm, and water whenever you want it. You'll leave around a quarter past ten, and breakfast is waiting at the end.</p>
+            <div style="background:#FAF6EE; padding:16px 18px; margin-bottom:20px; font-size:13px; line-height:1.9; color:#3D352D">
+              <div style="display:flex; justify-content:space-between"><span style="color:#8C877D">Your morning</span><span>The Long Morning</span></div>
+              <div style="display:flex; justify-content:space-between"><span style="color:#8C877D">Treatment</span><span>Massage, 60 minutes</span></div>
+              <div style="display:flex; justify-content:space-between"><span style="color:#8C877D">Breakfast</span><span>Chosen on the day</span></div>
+            </div>
+            <div style="display:inline-block; background:#A9654E; color:#FAF6EE; font-size:11px; letter-spacing:.24em; text-transform:uppercase; padding:13px 24px">Add to calendar</div>
+            <div style="font-size:12px; line-height:1.7; color:#8C877D; margin-top:22px">If mornings are hard at the moment, tell us and we'll make it easier.</div>
+          </div>
+        </div>
+        <div style="font-size:12px; line-height:1.65; color:#6E6A61; margin-top:12px">The warmest voice of the three, and the only one that would say "breakfast is waiting". Watch for over-familiarity: the line between generous and gushing is thin here.</div>
+      </div>
+
+      <div style="background:#fff; border:1px solid rgba(51,38,30,.1); padding:30px">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:16px">GTT morning welcome card</div>
+        <div style="background:#FAF6EE; border:1px solid rgba(51,38,30,.15); padding:34px 30px; min-height:300px; display:flex; flex-direction:column; justify-content:space-between">
+          <div>
+            <div style="width:54px; height:27px; border:1px solid #A9654E; border-bottom:none; border-radius:54px 54px 0 0; margin-bottom:18px"></div>
+            <div style="font-size:10px; letter-spacing:.36em; text-transform:uppercase; color:#8A6A4E">The Long Morning</div>
+            <div style="font-family:'Italiana',serif; font-size:29px; line-height:1.25; letter-spacing:.03em; margin-top:12px; color:#33261E">FROM TWENTY<br>TO EIGHT, UNTIL<br>A QUARTER<br>PAST TEN</div>
+          </div>
+          <div style="font-family:'EB Garamond',serif; font-size:14px; line-height:2; border-top:1px solid rgba(51,38,30,.2); padding-top:16px; color:#3D352D">
+            <div style="display:flex; justify-content:space-between"><span>7.40</span><span style="color:#7A6E5E">The first draw</span></div>
+            <div style="display:flex; justify-content:space-between"><span>8.00</span><span style="color:#7A6E5E">The drink</span></div>
+            <div style="display:flex; justify-content:space-between"><span>8.20</span><span style="color:#7A6E5E">Massage</span></div>
+            <div style="display:flex; justify-content:space-between"><span>9.00</span><span style="color:#7A6E5E">The second draw</span></div>
+            <div style="display:flex; justify-content:space-between"><span>9.20</span><span style="color:#7A6E5E">Your hands, in the lounge</span></div>
+            <div style="display:flex; justify-content:space-between"><span>10.00</span><span style="color:#7A6E5E">The last draw, then breakfast</span></div>
+          </div>
+        </div>
+        <div style="font-size:13px; line-height:1.75; color:#4A4038; margin-top:14px">Time written out in words rather than numerals — the softest handling of the clinical schedule of the three, and the least likely to raise a pulse. This card would also work verbatim as an afternoon itinerary.</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:48px; margin-top:44px; padding-top:36px; border-top:1px solid rgba(51,38,30,.2)">
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:12px">Voice test</div>
+        <div style="font-family:'EB Garamond',serif; font-size:21px; line-height:1.85; color:#3D352D">"I've booked Solena."<br>"An afternoon at Solena."<br>"Solena, in Subiaco."</div>
+        <p style="font-size:13px; line-height:1.7; color:#4A4038; margin:14px 0 0">Effortless in an Australian mouth, spelled correctly first time by almost everyone. The best-performing name of the three in spoken referral.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:12px">Both sides of the business</div>
+        <p style="font-size:13px; line-height:1.7; color:#4A4038; margin:0 0 10px"><strong style="font-weight:500">Morning:</strong> the best of the three. Warmth is exactly what a fasting, nervous woman responds to, and "the long morning" reframes the wait as the product.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4A4038; margin:0"><strong style="font-weight:500">Afternoon:</strong> completely detached from pregnancy — no one would guess the morning business exists. Its weakness is category proximity: this is the world most likely to be mistaken for an existing skin clinic.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#A9654E; margin-bottom:12px">Scalability</div>
+        <p style="font-size:13px; line-height:1.7; color:#4A4038; margin:0">The broadest runway. Solena works on a venue, a candle, an oil, a robe and a membership with equal ease, and the arc gives packaging a mark that survives at 8mm. Interstate expansion is easy because the name carries no regional accent. This is the only one of the three that could plausibly become a products business as well as a venue business.</p>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ══════════════════════════ SCORING ══════════════════════════ -->
+  <div style="margin-top:96px; border-top:1px solid rgba(35,36,31,.25); padding-top:40px">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end">
+      <h2 style="font-family:'Marcellus',serif; font-size:42px; font-weight:400; margin:0">Comparative scoring</h2>
+      <div style="font-size:13px; line-height:1.6; color:#6E6A61; max-width:520px; text-align:right">Creative/brand score only, judged on the work above. Trademark and commercial findings are held separately below and were not allowed to move these numbers.</div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1.4fr repeat(3, .8fr) 2fr; gap:0; margin-top:32px; background:#F3F0EA; border:1px solid rgba(35,36,31,.14); font-size:14px">
+      <div style="padding:16px 20px; font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#6E6A61; border-bottom:1px solid rgba(35,36,31,.14)">Criterion</div>
+      <div style="padding:16px 12px; text-align:center; font-family:'Marcellus',serif; font-size:15px; letter-spacing:.14em; border-bottom:1px solid rgba(35,36,31,.14)">ELOWEN</div>
+      <div style="padding:16px 12px; text-align:center; font-family:'Bodoni Moda',serif; font-size:15px; letter-spacing:.08em; border-bottom:1px solid rgba(35,36,31,.14)">ELOWYN</div>
+      <div style="padding:16px 12px; text-align:center; font-family:'Italiana',serif; font-size:16px; letter-spacing:.16em; border-bottom:1px solid rgba(35,36,31,.14)">SOLENA</div>
+      <div style="padding:16px 20px; font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#6E6A61; border-bottom:1px solid rgba(35,36,31,.14)">Note</div>
+
+      <sc-for list="{{ scores }}" as="row" hint-placeholder-count="17">
+        <div style="padding:13px 20px; border-bottom:1px solid rgba(35,36,31,.08)">{{ row.c }}</div>
+        <div style="padding:13px 12px; text-align:center; border-bottom:1px solid rgba(35,36,31,.08); background:{{ row.bg1 }}">{{ row.a }}</div>
+        <div style="padding:13px 12px; text-align:center; border-bottom:1px solid rgba(35,36,31,.08); background:{{ row.bg2 }}">{{ row.b }}</div>
+        <div style="padding:13px 12px; text-align:center; border-bottom:1px solid rgba(35,36,31,.08); background:{{ row.bg3 }}">{{ row.s }}</div>
+        <div style="padding:13px 20px; border-bottom:1px solid rgba(35,36,31,.08); font-size:13px; color:#4A463E; line-height:1.55">{{ row.n }}</div>
+      </sc-for>
+
+      <div style="padding:20px; font-size:12px; letter-spacing:.24em; text-transform:uppercase; background:#E2DCCE">Total · 170</div>
+      <div style="padding:20px 12px; text-align:center; font-family:'Marcellus',serif; font-size:26px; background:#E2DCCE">146</div>
+      <div style="padding:20px 12px; text-align:center; font-family:'Marcellus',serif; font-size:26px; background:#E2DCCE">127</div>
+      <div style="padding:20px 12px; text-align:center; font-family:'Marcellus',serif; font-size:26px; background:#E2DCCE">141</div>
+      <div style="padding:20px; font-size:13px; line-height:1.55; color:#4A463E; background:#E2DCCE">Elowen and Solena are a genuine contest. Elowyn is not — it is Elowen with friction added and warmth removed.</div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin-top:20px">
+      <div style="background:#F3F0EA; border:1px solid rgba(35,36,31,.14); padding:26px 28px">
+        <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#6E6A61; margin-bottom:12px">Commercial / risk · research only, not legal advice</div>
+        <div style="font-family:'Marcellus',serif; font-size:20px; letter-spacing:.16em; margin-bottom:8px">ELOWEN</div>
+        <p style="font-size:13px; line-height:1.7; color:#4A463E; margin:0">Highest apparent friction: an active WA Elowen Counselling business using the exact name, the .com.au occupied, existing marks in unrelated classes plus a recent Class 42 device mark. Different category, adjacent enough to matter for search. Practical mitigation exists — a suffixed domain and a distinct visual register — but expect to share the name in Google.</p>
+      </div>
+      <div style="background:#F3F0EA; border:1px solid rgba(35,36,31,.14); padding:26px 28px">
+        <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#6E6A61; margin-bottom:12px">Commercial / risk · research only, not legal advice</div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:20px; letter-spacing:.08em; margin-bottom:8px">ELOWYN</div>
+        <p style="font-size:13px; line-height:1.7; color:#4A463E; margin:0">Cleanest picture in the research: no direct Australian marks found in the search performed, no beauty or wellness competitor identified, .com.au held by an unrelated accounting company. This is Elowyn's real argument — and it is a commercial argument, not a creative one.</p>
+      </div>
+      <div style="background:#F3F0EA; border:1px solid rgba(35,36,31,.14); padding:26px 28px">
+        <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#6E6A61; margin-bottom:12px">Commercial / risk · research only, not legal advice</div>
+        <div style="font-family:'Italiana',serif; font-size:22px; letter-spacing:.16em; margin-bottom:8px">SOLENA</div>
+        <p style="font-size:13px; line-height:1.7; color:#4A463E; margin:0">The most category-adjacent findings: a 2022 Class 3 SOLENA mark over cosmetics, skin, hair and fragrance, plus Solena Skin Spa (Griffith) and Solena Skin &amp; Beauty (Morisset). Same industry, different states. This is the one place where the risk column should genuinely temper enthusiasm — particularly for the retail/product runway that is Solena's biggest creative advantage.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════ RECOMMENDATION ══════════════════════════ -->
+  <div style="margin-top:80px; background:#23241F; color:#F3F0EA; padding:64px 60px 68px">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid rgba(243,240,234,.22); padding-bottom:26px">
+      <h2 style="font-family:'Marcellus',serif; font-size:44px; font-weight:400; margin:0; letter-spacing:.01em">The recommendation</h2>
+      <div style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:rgba(243,240,234,.6)">As lead designer</div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1.1fr 1fr; gap:64px; margin-top:40px">
+      <div>
+        <div style="font-family:'Marcellus',serif; font-size:34px; line-height:1.3; margin-bottom:22px">Build <span style="letter-spacing:.16em">ELOWEN</span>. Keep <span style="font-family:'Italiana',serif; letter-spacing:.18em">SOLENA</span> as the product brand it wants to be. Drop <span style="font-family:'Bodoni Moda',serif; letter-spacing:.06em">ELOWYN</span>.</div>
+        <p style="font-family:'Newsreader',serif; font-weight:300; font-size:19px; line-height:1.65; color:rgba(243,240,234,.9); margin:0 0 16px">This agrees with your instinct, and I want to be clear about why, because agreeing with the founder is the easiest mistake in this exercise.</p>
+        <p style="font-size:14px; line-height:1.8; color:rgba(243,240,234,.78); margin:0 0 14px">Elowen wins on the one dimension the business cannot buy later: it sounds like a place that already exists. Everything about this venture is asking a woman to trust an unfamiliar operator with a real medical appointment. A name with lineage does quiet credibility work at the exact moment she is deciding whether this is legitimate or gimmicky. Solena, by contrast, sounds like a brand — attractive, but a brand that had to be created. In a category where two skin spas already carry the word, "sounds like a beauty brand" is closer to a liability than an asset.</p>
+        <p style="font-size:14px; line-height:1.8; color:rgba(243,240,234,.78); margin:0 0 14px">Elowen also survives the harder of the two audience tests. The morning customer is the anxious one, and Elowen's restraint reads as competence. The afternoon customer meets a house with taste and no maternity residue whatsoever. And it scales the way this business will actually scale — by address, not by product line.</p>
+        <p style="font-size:14px; line-height:1.8; color:rgba(243,240,234,.78); margin:0">The honest cost: Elowen is the hardest of the three to execute. Quiet luxury with a weak photography budget is just plain. If you choose it, the photography and the physical materials are not the last line item — they are the identity.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:rgba(243,240,234,.55); margin-bottom:18px">Direct answers</div>
+        <div style="font-size:14px; line-height:1.7">
+          <div style="display:flex; gap:16px; padding:11px 0; border-bottom:1px solid rgba(243,240,234,.14)"><span style="color:rgba(243,240,234,.5); min-width:200px">Strongest visual identity</span><span>Elowyn — the didone and the EY monogram are the most striking pages here.</span></div>
+          <div style="display:flex; gap:16px; padding:11px 0; border-bottom:1px solid rgba(243,240,234,.14)"><span style="color:rgba(243,240,234,.5); min-width:200px">Strongest complete master brand</span><span>Elowen.</span></div>
+          <div style="display:flex; gap:16px; padding:11px 0; border-bottom:1px solid rgba(243,240,234,.14)"><span style="color:rgba(243,240,234,.5); min-width:200px">Most premium</span><span>Elowen, narrowly. Restraint outranks contrast at this price point.</span></div>
+          <div style="display:flex; gap:16px; padding:11px 0; border-bottom:1px solid rgba(243,240,234,.14)"><span style="color:rgba(243,240,234,.5); min-width:200px">Most established</span><span>Elowen, decisively. It is the only one that doesn't sound launched.</span></div>
+          <div style="display:flex; gap:16px; padding:11px 0; border-bottom:1px solid rgba(243,240,234,.14)"><span style="color:rgba(243,240,234,.5); min-width:200px">Most distinctive</span><span>Elowen as a word; Elowyn as a mark. Solena is the least distinctive.</span></div>
+          <div style="display:flex; gap:16px; padding:11px 0; border-bottom:1px solid rgba(243,240,234,.14)"><span style="color:rgba(243,240,234,.5); min-width:200px">Best for the venue</span><span>Solena. Clay, arches and raking light make the warmest room.</span></div>
+          <div style="display:flex; gap:16px; padding:11px 0; border-bottom:1px solid rgba(243,240,234,.14)"><span style="color:rgba(243,240,234,.5); min-width:200px">Best beyond pregnancy</span><span>Solena, with Elowen a close second. Elowyn is strong here too.</span></div>
+          <div style="display:flex; gap:16px; padding:11px 0; border-bottom:1px solid rgba(243,240,234,.14)"><span style="color:rgba(243,240,234,.5); min-width:200px">Closest to your original brief</span><span>Elowen. Warm, European, established, quiet.</span></div>
+          <div style="display:flex; gap:16px; padding:11px 0; border-bottom:1px solid rgba(243,240,234,.14)"><span style="color:rgba(243,240,234,.5); min-width:200px">My choice</span><span>Elowen.</span></div>
+          <div style="display:flex; gap:16px; padding:11px 0"><span style="color:rgba(243,240,234,.5); min-width:200px">Agrees or challenges you</span><span>Agrees on the name, challenges the execution: this identity lives or dies on photography and materials, not on the logo.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:44px; padding-top:36px; border-top:1px solid rgba(243,240,234,.22)">
+      <div>
+        <div style="font-family:'Marcellus',serif; font-size:19px; letter-spacing:.16em; margin-bottom:10px">ELOWEN</div>
+        <p style="font-size:13px; line-height:1.75; color:rgba(243,240,234,.78); margin:0 0 10px"><strong style="font-weight:400; color:#F3F0EA">For:</strong> an inherited name with genuine lineage; the only candidate that already sounds like an established house; strongest at the anxious morning; scales by address.</p>
+        <p style="font-size:13px; line-height:1.75; color:rgba(243,240,234,.6); margin:0"><strong style="font-weight:400; color:rgba(243,240,234,.85)">Against:</strong> an exact-name WA business and the occupied .com.au mean permanent search-sharing; and the aesthetic is unforgiving of a cheap fit-out.</p>
+      </div>
+      <div>
+        <div style="font-family:'Bodoni Moda',serif; font-size:19px; letter-spacing:.06em; margin-bottom:10px">ELOWYN</div>
+        <p style="font-size:13px; line-height:1.75; color:rgba(243,240,234,.78); margin:0 0 10px"><strong style="font-weight:400; color:#F3F0EA">For:</strong> the cleanest research picture, the sharpest typography, an ownable monogram, and the best afternoon-only brand of the three.</p>
+        <p style="font-size:13px; line-height:1.75; color:rgba(243,240,234,.6); margin:0"><strong style="font-weight:400; color:rgba(243,240,234,.85)">Against:</strong> it must be spelled out forever in a referral-driven business, and the -wyn spelling reads as a modern baby name rather than a European house. It buys legal comfort with brand equity.</p>
+      </div>
+      <div>
+        <div style="font-family:'Italiana',serif; font-size:21px; letter-spacing:.18em; margin-bottom:10px">SOLENA</div>
+        <p style="font-size:13px; line-height:1.75; color:rgba(243,240,234,.78); margin:0 0 10px"><strong style="font-weight:400; color:#F3F0EA">For:</strong> warmest, easiest to say, best venue, best packaging runway, and the strongest single line of copy in this document — "The Long Morning".</p>
+        <p style="font-size:13px; line-height:1.75; color:rgba(243,240,234,.6); margin:0"><strong style="font-weight:400; color:rgba(243,240,234,.85)">Against:</strong> two existing Australian skin-and-beauty businesses and a Class 3 cosmetics mark sit in precisely the territory it is best at, and the word itself is the least distinctive of the three.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:40px; padding-top:28px; border-top:1px solid rgba(243,240,234,.22); display:grid; grid-template-columns:1fr 1fr; gap:64px">
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:rgba(243,240,234,.55); margin-bottom:12px">If you overrule me</div>
+        <p style="font-size:14px; line-height:1.8; color:rgba(243,240,234,.78); margin:0">Choose Solena, not Elowyn. There is a real strategic case for it: if you expect the afternoon business and a future product line to out-earn the GTT mornings within five years, warmth and retail-readiness matter more than inherited credibility, and Solena wins on both. Elowyn is the only one of the three I would argue against outright.</p>
+      </div>
+      <div>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:rgba(243,240,234,.55); margin-bottom:12px">What this phase deliberately hasn't done</div>
+        <p style="font-size:14px; line-height:1.8; color:rgba(243,240,234,.78); margin:0">No final logo, palette or type system is locked — the wordmarks here are treatments, not artwork, and the fonts are stand-ins chosen to demonstrate a register. Prices are illustrative. Pick the name and the next phase builds the full identity properly from this direction.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;spotlight&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;All three&quot;,&quot;Elowen only&quot;,&quot;Elowyn only&quot;,&quot;Solena only&quot;],&quot;default&quot;:&quot;All three&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Board&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const only = this.props.spotlight ?? "All three";
+    const rows = [
+      ["Beauty / fashion feel", 8, 8, 9, "Solena is the most natively beauty-industry; Elowyn the most fashion-editorial."],
+      ["Luxury", 9, 8, 8, "Elowen's restraint reads more expensive than Elowyn's contrast."],
+      ["Femininity", 9, 9, 8, "All three land. Elowen and Elowyn achieve it without warmth cues."],
+      ["Warmth", 8, 6, 9, "Elowyn's cool palette is its clearest weakness for a fasting morning guest."],
+      ["Sophistication", 9, 8, 8, "Elowen's evenness; Solena risks familiarity; Elowyn risks severity."],
+      ["Memorability", 8, 7, 8, "Solena is easy to recall, Elowen easy to recognise, Elowyn easy to mishear."],
+      ["Pronunciation", 9, 8, 9, "Solena and Elowen are unambiguous in an Australian mouth."],
+      ["Spelling on first hearing", 8, 5, 8, "Elowyn will be spelled out on every phone call for the life of the brand."],
+      ["Distinctiveness", 8, 7, 6, "Solena's Latinate familiarity is its real creative cost, not its trademark file."],
+      ["Emotional appeal", 9, 7, 8, "Elowen earns trust; Solena earns affection; Elowyn earns admiration."],
+      ["Standalone brand strength", 9, 7, 9, "Elowen and Solena both stand fully clear of pregnancy."],
+      ["GTT compatibility", 9, 8, 8, "Elowen's calm and Solena's warmth both suit the morning; Elowyn least."],
+      ["Broader wellness fit", 9, 8, 9, "All viable. Solena stretches furthest into products."],
+      ["Scalability", 8, 7, 9, "Solena scales by product; Elowen by address; Elowyn by collection."],
+      ["Visual identity potential", 9, 9, 8, "Elowyn's didone and monogram are the most striking assets on the board."],
+      ["Premium perception", 9, 8, 8, "Inherited-name credibility is worth a point here."],
+      ["Australian market suitability", 8, 7, 9, "Solena is effortless locally; Elowyn needs constant clarification."]
+    ];
+    const bg = (v, max) => v === max ? "rgba(126,140,130,.22)" : "transparent";
+    return {
+      showElowen: only === "All three" || only === "Elowen only",
+      showElowyn: only === "All three" || only === "Elowyn only",
+      showSolena: only === "All three" || only === "Solena only",
+      scores: rows.map(([c, a, b, s, n]) => {
+        const max = Math.max(a, b, s);
+        return { c, a, b, s, n, bg1: bg(a, max), bg2: bg(b, max), bg3: bg(s, max) };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>
