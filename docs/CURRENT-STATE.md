@@ -118,6 +118,8 @@
 ## 5. Monthly Net P&L
 
 > **REBASED 2026-08-05 — the 25-min-cadence tables are now the actual basis, per Anthony's direct instruction (see §1 REBASE banner).** New PRIMARY committed steady-state figure: **+A$63,028.75/month** (Table 1, 18-client/07:00). New SECONDARY reference: **+A$27,084.69/month** (Table 2, 12-client/08:00 — numerically unchanged from the old committed baseline, since client volume and headcount are identical; see the flagged open item below). The old 12-client/23-min-cadence Month 1-5+ ramp table is HISTORICAL, retained beneath for trace — Month 1-4 ramp has NOT yet been independently rebuilt against the new, higher Table 1 ceiling, flagged as an open follow-up rather than fabricated (see `docs/VERIFICATION-TRACKER.md`).
+>
+> **SUPERANNUATION CORRECTION, 2026-08-14 — narrow headline-figure fix only.** The two PRIMARY/SECONDARY figures immediately above (A$63,028.75 / A$27,084.69) predate the 2026-08-09 superannuation fix (`docs/VERIFICATION-TRACKER.md` item 46) and are now stale. The canonical model's current, superannuation-corrected steady-state Net Operating Result is **A$56,581.70/month (Table 1)** and **A$21,056.64/month (Table 2)** — `data/models/master_financial_model.yml#outputs.steady_state_summary`, RECALCULATED 2026-08-09. **Only the two headline Net P&L numbers below (§5's PRIMARY/SECONDARY table rows) have been corrected to match.** The surrounding Total Costs, Quarterly, Half-Yearly, and Yearly rows in both tables below, the Fourth Delta table (§7), and every dated changelog entry elsewhere in this file are, deliberately, **NOT** recomputed here — they remain on the pre-superannuation historical/inherited-revenue basis, flagged as a real, open follow-up rather than silently left inconsistent or guessed at. Do not quote the Total Costs/Quarterly/Half-Yearly/Yearly rows below as superannuation-corrected; only the two Net P&L headline figures are.
 
 ### PRIMARY — Table 1 (18-client/07:00/g=25), steady state
 
@@ -132,7 +134,7 @@
 | Workers Comp (1.7%) | **A$1,350.36** (was A$1,291.00 — delta +A$59.36, 1.7% of the Saturday labor delta above) | `[MODELED — same 1.7% convention]` |
 | Non-Wage Overhead | A$13,980.00 (unchanged — rent/utilities not client-volume-driven) | `[MODELED — unchanged]` |
 | **Total Costs** | **A$94,763.41** | |
-| **Net P&L — NEW PRIMARY COMMITTED STEADY-STATE FIGURE** | **+A$63,028.75/month** | `[MODELED — full recompute, delta-from-baseline method]` |
+| **Net P&L — NEW PRIMARY COMMITTED STEADY-STATE FIGURE** | ~~+A$63,028.75/month~~ **+A$56,581.70/month (superannuation-corrected, 2026-08-14 — see banner above; A$63,028.75 was the pre-superannuation figure, retained struck-through for trace, not deleted)** | `[MODELED — full recompute, delta-from-baseline method; headline figure only, RECALCULATED 2026-08-09 per data/models/master_financial_model.yml, see banner above for what has and hasn't been propagated]` |
 | Quarterly | +A$189,086.25 | `[MODELED — Monthly × 3]` |
 | Half-Yearly | +A$378,172.51 | `[MODELED — Monthly × 6]` |
 | Yearly | +A$756,345.01 | `[MODELED — Monthly × 12]` |
@@ -143,7 +145,7 @@
 |---|---|---|
 | Total Revenue (Monthly) — **HISTORICAL/INHERITED figure, not the canonical methodology as of 2026-08-09 — see banner above §5** | A$118,297.16 — identical to the old committed model's revenue, since Table 2 also serves 12 clients/day | `[MODELED — same arithmetic as the old 12-client baseline]` |
 | Total Direct Labor + Opening Costs | A$75,941.47 — identical, same headcount, same client volume | `[MODELED — same]` |
-| **Net P&L — SECONDARY REFERENCE FIGURE** | **+A$27,084.69/month — numerically unchanged from the old 23-min-cadence committed baseline** | `[MODELED]` |
+| **Net P&L — SECONDARY REFERENCE FIGURE** | ~~+A$27,084.69/month~~ **+A$21,056.64/month (superannuation-corrected, 2026-08-14 — see banner above; A$27,084.69 was the pre-superannuation figure, retained struck-through for trace, not deleted)** | `[MODELED, RECALCULATED 2026-08-09 per data/models/master_financial_model.yml]` |
 
 **Open item, flagged not assumed:** the Weekday P&L's "Opening-time increment" line (A$44.50/day, `profit-loss-tables.md` §1) is sourced specifically to the incremental cost of a **07:00** start vs a later one. Table 2 starts at 08:00, not 07:00 — this increment may not apply, which would make Table 2's true Net P&L slightly HIGHER than A$27,084.69/month. Not quantified or baked into the headline above, since the source document does not state the increment's exact mechanism (staff arrival penalty vs something else) precisely enough to re-derive with confidence — logged as an open item in `docs/VERIFICATION-TRACKER.md` rather than guessed at.
 
