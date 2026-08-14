@@ -1,0 +1,311 @@
+/*
+  Warm Stone landing page reskin -- exploratory identity test (name TBD).
+  Consumes outputs/brand/warm-stone-tokens.css for every colour/type/
+  spacing value -- no hard-coded brand colours in this file. Same
+  architecture as the original outputs/landing-page/ build; only the
+  visual system and copy changed.
+
+  CTA contrast note: the palette's own usage rule (Aged Terracotta,
+  5-8% max, never a field colour) plus a direct WCAG check (Terracotta-
+  fill buttons land at ~3.2-4.1:1 with either light or dark text, below
+  the 4.5:1 AA threshold for normal text) means the CTA button uses
+  Deep Walnut fill + Warm Ivory text instead (13.28:1, passes AA/AAA
+  comfortably) -- the same fix pattern already applied once this session
+  to the original palette's own CTA. Terracotta is reserved for thin
+  rules, underlines, and small accent moments only.
+*/
+
+/* ---------- Reset / base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { max-width: 100%; overflow-x: hidden; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-body);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-serif-regular);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-heading);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2);
+}
+h1 { font-size: 34px; font-weight: var(--weight-serif-light); }
+h2 { font-size: 28px; }
+h3 { font-size: 20px; font-weight: var(--weight-serif-semibold); }
+p { margin: 0 0 var(--space-2); }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+
+@media (min-width: 720px) {
+  h1 { font-size: var(--size-hero); }
+  h2 { font-size: var(--size-h2); }
+  h3 { font-size: var(--size-h3); }
+}
+
+/* ---------- Layout helpers ---------- */
+.wrap {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+}
+.wrap--narrow { max-width: var(--max-narrow-width); }
+.section { padding: var(--space-6) 0; }
+.section--tint { background: var(--bg-secondary); }
+.section__intro { max-width: 640px; color: var(--text-primary); }
+.section__footnote {
+  font-size: var(--size-caption);
+  color: var(--text-primary);
+  opacity: 0.68;
+  margin-top: var(--space-3);
+}
+
+/* ---------- Accessibility utility ---------- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background: var(--text-primary);
+  color: var(--text-reversed);
+  padding: 12px 20px;
+  z-index: 100;
+  font-family: var(--font-sans);
+}
+.skip-link:focus {
+  left: var(--space-2);
+  top: var(--space-2);
+}
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.site-header__inner {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+.wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  gap: 6px;
+  min-width: 0;
+  flex-shrink: 1;
+}
+.wordmark-text {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-serif-regular);
+  font-size: 15px;
+  letter-spacing: var(--letter-spacing-wordmark);
+  text-transform: uppercase;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.site-header .btn--small {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+@media (min-width: 480px) {
+  .wordmark-text { font-size: 19px; }
+  .site-header .btn--small { padding: 10px 18px; font-size: 14px; }
+}
+.wordmark-rule {
+  display: block;
+  width: 46px;
+  height: 1px;
+  background: var(--accent-detail);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-sans-medium);
+  font-size: var(--size-button);
+  letter-spacing: var(--letter-spacing-body);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-button);
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+.btn--primary {
+  background: var(--text-primary);
+  color: var(--text-reversed);
+  padding: 14px 28px;
+}
+.btn--primary:hover, .btn--primary:focus-visible {
+  opacity: 0.85;
+}
+.btn--small { padding: 10px 18px; font-size: 14px; background: var(--text-primary); color: var(--text-reversed); }
+.btn--full { width: 100%; text-align: center; padding: 16px; font-size: 16px; }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: var(--space-6) 0 var(--space-5);
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+.hero__inner { max-width: 720px; }
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-sans-medium);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-cta);
+  margin-bottom: var(--space-2);
+}
+.hero__headline { margin-bottom: var(--space-3); }
+.hero__sub {
+  font-size: 18px;
+  max-width: 560px;
+  color: var(--text-primary);
+  opacity: 0.85;
+}
+.hero__cta { margin-top: var(--space-4); }
+.hero__cta-note {
+  font-size: var(--size-caption);
+  color: var(--text-primary);
+  opacity: 0.68;
+  margin-top: var(--space-2);
+  margin-bottom: 0;
+}
+
+/* ---------- How it works ---------- */
+.steps {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+.steps li {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: var(--space-2);
+  align-items: start;
+}
+.steps__num {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-serif-light);
+  font-size: 28px;
+  color: var(--accent-detail);
+}
+
+/* ---------- Services ---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+@media (min-width: 640px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  .services-grid { grid-template-columns: repeat(4, 1fr); }
+}
+.service-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--bg-secondary);
+  border-radius: var(--radius-button);
+  padding: var(--space-3);
+}
+.service-card h3 { margin-bottom: 6px; }
+.service-card p { margin-bottom: 0; font-size: 15px; opacity: 0.85; }
+
+/* ---------- Form ---------- */
+.form { margin-top: var(--space-4); }
+.form__row { margin-bottom: var(--space-3); }
+.form__row--fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 var(--space-3);
+}
+.form__row--fieldset legend {
+  font-weight: var(--weight-sans-medium);
+  padding: 0 0 6px;
+}
+label {
+  display: block;
+  font-weight: var(--weight-sans-medium);
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+input[type="text"], input[type="email"], input[type="date"], select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--bg-secondary);
+  border-radius: var(--radius-button);
+  font-family: var(--font-sans);
+  font-size: 16px; /* prevents iOS zoom-on-focus below 16px */
+  color: var(--text-primary);
+  background: var(--bg-primary);
+}
+input:focus, select:focus { border-color: var(--accent-cta); }
+.form__due-date-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: var(--weight-sans-regular);
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.form__checkbox input { width: auto; }
+.form__privacy-note {
+  font-size: var(--size-caption);
+  color: var(--text-primary);
+  opacity: 0.68;
+  margin-top: var(--space-2);
+  margin-bottom: 0;
+}
+
+.form-confirmation {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  background: var(--bg-primary);
+  border: 1px solid var(--accent-detail);
+  border-radius: var(--radius-button);
+}
+.form-confirmation h3 { color: var(--text-primary); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--text-primary);
+  color: var(--text-reversed);
+  padding: var(--space-4) 0;
+}
+.site-footer p { margin-bottom: var(--space-1); font-size: 14px; }
+.site-footer__fine { color: var(--text-reversed); opacity: 0.62; font-size: 12px; max-width: 640px; }

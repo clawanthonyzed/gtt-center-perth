@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SOLENA -- Wordmark Exploration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../warm-stone-tokens.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg-primary); font-family: var(--font-sans); color: var(--text-primary); padding: 64px 48px; }
+  h1.sheet-title { font-family: var(--font-sans); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-detail); margin-bottom: 48px; }
+  .variant { border-bottom: 1px solid var(--bg-secondary); padding: 40px 0; display: flex; align-items: center; gap: 48px; }
+  .variant:last-child { border-bottom: none; }
+  .variant-label { width: 260px; flex-shrink: 0; font-size: 12px; letter-spacing: 0.05em; line-height: 1.6; color: var(--text-primary); opacity: 0.72; }
+  .variant-label strong { display: block; font-size: 13px; letter-spacing: 0.02em; opacity: 1; margin-bottom: 6px; text-transform: uppercase; }
+  .variant-mark { flex-grow: 1; }
+  .selected { background: var(--bg-secondary); margin: 0 -32px; padding: 40px 32px; border-radius: 2px; }
+  .selected .variant-label strong::after { content: " -- SELECTED"; color: var(--accent-cta); font-weight: 500; }
+
+  .v1 { font-family: var(--font-serif); font-weight: 300; font-size: 64px; letter-spacing: 0.22em; text-transform: uppercase; font-optical-sizing: auto; }
+  .v2 { font-family: var(--font-serif); font-weight: 400; font-size: 64px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .v3 { font-family: var(--font-serif); font-weight: 600; font-size: 60px; letter-spacing: 0.10em; text-transform: uppercase; }
+  .v4 { font-family: var(--font-serif); font-weight: 400; font-size: 60px; letter-spacing: 0.01em; }
+  .v5 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 58px; letter-spacing: 0.01em; }
+  .v6 { font-family: var(--font-serif); font-weight: 400; font-size: 64px; letter-spacing: 0.14em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<h1 class="sheet-title">SOLENA -- Wordmark Exploration -- Fraunces, weight / tracking / case / optical size</h1>
+
+<div class="variant">
+  <div class="variant-label"><strong>V1 -- Light, wide-tracked caps</strong>Fraunces 300, tracking 0.22em, uppercase. Very spacious, quietest option -- risks reading slightly thin at small sizes.</div>
+  <div class="variant-mark"><div class="v1">SOLENA</div></div>
+</div>
+
+<div class="variant">
+  <div class="variant-label"><strong>V2 -- Regular, moderate tracking, caps</strong>Fraunces 400, tracking 0.06em, uppercase. Grounded and confident, still legible small -- the balance point.</div>
+  <div class="variant-mark"><div class="v2">SOLENA</div></div>
+</div>
+
+<div class="variant">
+  <div class="variant-label"><strong>V3 -- SemiBold caps</strong>Fraunces 600, tracking 0.10em, uppercase. Bolder, more assertive -- reads closer to a fashion-house wordmark than a wellness house.</div>
+  <div class="variant-mark"><div class="v3">SOLENA</div></div>
+</div>
+
+<div class="variant">
+  <div class="variant-label"><strong>V4 -- Title case, regular</strong>Fraunces 400, sentence/title case, tight tracking. Softer, more editorial -- loses some of the confident "wordmark as signage" quality.</div>
+  <div class="variant-mark"><div class="v4">Solena</div></div>
+</div>
+
+<div class="variant">
+  <div class="variant-label"><strong>V5 -- Italic, title case</strong>Fraunces Italic 400. Genuinely elegant on its own, but italics read less confidently at exterior-signage scale and small print -- a real legibility trade-off, not just a look.</div>
+  <div class="variant-mark"><div class="v5">Solena</div></div>
+</div>
+
+<div class="variant selected">
+  <div class="variant-label"><strong>V6 -- Regular, generous tracking, caps</strong>Fraunces 400, tracking 0.14em, uppercase, optical size tuned to display. Combines V2's legibility with V1's spaciousness -- confident without V3's weight, legible without V5's italic trade-off. Selected as the primary wordmark.</div>
+  <div class="variant-mark"><div class="v6">SOLENA</div></div>
+</div>
+
+</body>
+</html>

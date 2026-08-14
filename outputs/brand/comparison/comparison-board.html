@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Solena vs Elowen -- Visual Identity Comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../warm-stone-tokens.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg-primary); font-family: var(--font-sans); color: var(--text-primary); padding: 56px; }
+  .masthead { margin-bottom: 56px; max-width: 760px; }
+  .masthead .kicker { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-detail); margin-bottom: 10px; }
+  .masthead h1 { font-family: var(--font-serif); font-size: 30px; font-weight: 400; margin-bottom: 14px; }
+  .masthead p { font-size: 14px; line-height: 1.7; opacity: 0.8; }
+
+  .compare-section { margin-bottom: 56px; }
+  .compare-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.55; margin-bottom: 16px; }
+  .compare-row { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .col-header { font-family: var(--font-serif); font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--bg-secondary); }
+
+  .wm-pair { display: flex; flex-direction: column; gap: 12px; }
+  .wm-box { height: 130px; display: flex; align-items: center; justify-content: center; border-radius: 2px; }
+  .wm-box.light { background: var(--bg-secondary); }
+  .wm-box.dark { background: var(--text-primary); }
+  .wm-text { font-family: var(--font-serif); font-weight: 400; letter-spacing: 10px; text-transform: uppercase; font-size: 34px; }
+  .wm-box.light .wm-text { color: var(--text-primary); }
+  .wm-box.dark .wm-text { color: var(--text-reversed); }
+
+  .card-preview { width: 100%; height: 170px; background: var(--bg-primary); border-radius: 4px; box-shadow: 0 10px 26px rgba(46,36,28,0.16); display: flex; align-items: center; justify-content: center; }
+  .card-preview .wm-text { font-size: 22px; color: var(--text-primary); }
+
+  .facade-mini { width: 100%; height: 190px; border-radius: 3px; background: linear-gradient(180deg, #3a2f24 0%, #241c15 100%); display: flex; align-items: center; justify-content: center; }
+  .facade-mini .wm-text { font-size: 26px; color: var(--warm-brass); }
+
+  .avatar-mini-row { display: flex; gap: 20px; align-items: center; }
+  .avatar-mini { width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .avatar-mini.light { background: var(--bg-secondary); }
+  .avatar-mini.dark { background: var(--text-primary); }
+  .avatar-mini .wm-text-sm { font-family: var(--font-serif); font-size: 16px; letter-spacing: 2px; color: var(--text-primary); text-align: center; }
+  .avatar-mini.dark .wm-text-sm, .avatar-mini.dark .mono-sm { color: var(--text-reversed); }
+  .avatar-mini .mono-sm { font-family: var(--font-serif); font-weight: 500; font-size: 42px; }
+
+  .assessment { background: var(--bg-secondary); border-radius: 3px; padding: 40px; margin-top: 24px; }
+  .assessment h2 { font-family: var(--font-serif); font-size: 22px; font-weight: 400; margin-bottom: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(46,36,28,0.1); }
+  th { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; font-weight: 500; }
+  td.dim { width: 260px; font-weight: 500; }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="kicker">Visual Identity Comparison -- Neither Name Selected</div>
+  <h1>Solena vs. Elowen</h1>
+  <p>Identical typography (Fraunces + DM Sans), identical Warm Stone palette, identical layout and application treatment across both. The only variable below is the name itself -- exactly as instructed, so the comparison tests the names, not the design work.</p>
+</div>
+
+<div class="compare-section">
+  <div class="compare-label">Wordmark -- light and reversed</div>
+  <div class="compare-row">
+    <div>
+      <div class="col-header">Solena</div>
+      <div class="wm-pair">
+        <div class="wm-box light"><div class="wm-text">SOLENA</div></div>
+        <div class="wm-box dark"><div class="wm-text">SOLENA</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="col-header">Elowen</div>
+      <div class="wm-pair">
+        <div class="wm-box light"><div class="wm-text">ELOWEN</div></div>
+        <div class="wm-box dark"><div class="wm-text">ELOWEN</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="compare-section">
+  <div class="compare-label">Business card, front</div>
+  <div class="compare-row">
+    <div><div class="card-preview"><div class="wm-text">SOLENA</div></div></div>
+    <div><div class="card-preview"><div class="wm-text">ELOWEN</div></div></div>
+  </div>
+</div>
+
+<div class="compare-section">
+  <div class="compare-label">Exterior signage concept</div>
+  <div class="compare-row">
+    <div><div class="facade-mini"><div class="wm-text">SOLENA</div></div></div>
+    <div><div class="facade-mini"><div class="wm-text">ELOWEN</div></div></div>
+  </div>
+</div>
+
+<div class="compare-section">
+  <div class="compare-label">Social avatar -- wordmark vs. monogram (Solena only; no monogram recommended for Elowen)</div>
+  <div class="compare-row">
+    <div class="avatar-mini-row">
+      <div class="avatar-mini light"><div class="wm-text-sm">SOLENA</div></div>
+      <div class="avatar-mini dark"><div class="mono-sm">S</div></div>
+    </div>
+    <div class="avatar-mini-row">
+      <div class="avatar-mini light"><div class="wm-text-sm">ELOWEN</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="assessment">
+  <h2>Assessment, grounded in what's shown above</h2>
+  <table>
+    <tr><th>Dimension</th><th>Solena</th><th>Elowen</th></tr>
+    <tr><td class="dim">Elegance</td><td>High -- soft, rounded letterforms sit comfortably in Fraunces at this tracking</td><td>High -- equally comfortable once the W has the room the selected tracking gives it</td></tr>
+    <tr><td class="dim">Memorability</td><td>High -- short, phonetically simple, repeats easily</td><td>High -- equally distinctive, one more syllable-adjacent beat</td></tr>
+    <tr><td class="dim">Femininity (not stereotypical)</td><td>Warm, soft-consonant sound -- reads feminine without any visual cue doing the work</td><td>Same -- the visual system carries this equally for both, as intended</td></tr>
+    <tr><td class="dim">Premium perception</td><td>Strong in this system</td><td>Equally strong in this system -- confirms the palette/type, not the name, is carrying the premium read</td></tr>
+    <tr><td class="dim">Warmth</td><td>Strong</td><td>Strong</td></tr>
+    <tr><td class="dim">Distinctiveness as a word</td><td>Slightly softer/rounder on the page -- blends a little more into the warm palette</td><td>The W gives it one more point of visual anchor on a page full of round letterforms</td></tr>
+    <tr><td class="dim">Pronunciation / readability</td><td>Effectively zero ambiguity</td><td>Effectively zero ambiguity in this visual context (spoken-referral spelling friction is a separate, already-documented finding, not a visual-design finding)</td></tr>
+    <tr><td class="dim">Suits a women's wellness house</td><td>Yes, cleanly</td><td>Yes, cleanly</td></tr>
+    <tr><td class="dim">Extends to future locations/services</td><td>Yes -- nothing about the mark ties it to Perth or to GTT specifically</td><td>Yes -- same</td></tr>
+    <tr><td class="dim">Optional monogram</td><td>A genuinely ownable S monogram is available if wanted</td><td>No monogram earns its place (monogram-test.html) -- wordmark-only is the correct, more disciplined outcome, not a deficiency</td></tr>
+  </table>
+</div>
+
+</body>
+</html>

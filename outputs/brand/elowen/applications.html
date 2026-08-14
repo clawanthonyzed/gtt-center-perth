@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ELOWEN -- Brand Applications</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../warm-stone-tokens.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg-secondary); font-family: var(--font-sans); color: var(--text-primary); padding: 56px; }
+  .name-tag { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-detail); margin-bottom: 4px; }
+  .page-title { font-family: var(--font-serif); font-size: 32px; margin-bottom: 48px; }
+  .section { margin-bottom: 64px; }
+  .section-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-primary); opacity: 0.55; margin-bottom: 16px; }
+  .wordmark-block { font-family: var(--font-serif); font-weight: 400; letter-spacing: 10px; text-transform: uppercase; }
+
+  .ab-row { display: flex; gap: 24px; }
+  .swatch { width: 460px; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 2px; }
+  .swatch.light { background: var(--bg-primary); }
+  .swatch.dark { background: var(--text-primary); }
+  .swatch.light .wordmark-block { font-size: 44px; color: var(--text-primary); }
+  .swatch.dark .wordmark-block { font-size: 44px; color: var(--text-reversed); }
+  .rule { width: 80px; height: 1px; background: var(--accent-detail); margin-top: 18px; }
+
+  .card-row { display: flex; gap: 32px; }
+  .card { width: 340px; height: 200px; border-radius: 4px; box-shadow: 0 12px 32px rgba(46,36,28,0.18); position: relative; overflow: hidden; }
+  .card.front { background: var(--bg-primary); display: flex; align-items: center; justify-content: center; }
+  .card.front .wordmark-block { font-size: 26px; color: var(--text-primary); }
+  .card.back { background: var(--text-primary); color: var(--text-reversed); padding: 24px; display: flex; flex-direction: column; justify-content: space-between; }
+  .card.back .cb-name { font-family: var(--font-serif); font-size: 16px; letter-spacing: 3px; text-transform: uppercase; }
+  .card.back .cb-detail { font-size: 11px; letter-spacing: 0.03em; line-height: 1.9; opacity: 0.82; }
+  .card.back .cb-line { width: 36px; height: 1px; background: var(--accent-detail); margin: 10px 0; }
+
+  .facade { width: 100%; max-width: 940px; height: 320px; border-radius: 3px; position: relative; overflow: hidden;
+    background: linear-gradient(180deg, #3a2f24 0%, #241c15 100%); }
+  .facade::before { content: ""; position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 64px);
+  }
+  .facade-entry { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 220px; height: 180px; background: rgba(245,239,230,0.06); border-top: 2px solid rgba(156,122,70,0.5); }
+  .facade-wordmark { position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%); font-family: var(--font-serif); font-weight: 400; font-size: 38px; letter-spacing: 12px; color: var(--warm-brass); text-transform: uppercase; }
+  .facade-note { position: absolute; bottom: 16px; left: 16px; font-size: 10px; color: rgba(245,239,230,0.5); letter-spacing: 0.06em; }
+
+  .reception-panel { width: 100%; max-width: 640px; height: 220px; border-radius: 3px; background: var(--bg-primary);
+    box-shadow: inset 0 0 0 1px rgba(46,36,28,0.06), 0 2px 24px rgba(46,36,28,0.1);
+    display: flex; align-items: center; justify-content: center; position: relative; }
+  .reception-panel .wordmark-block { font-size: 32px; color: var(--text-primary); }
+  .reception-panel::after { content: "RECEPTION -- ENGRAVED / CUT LETTER TREATMENT, WARM STONE FIELD"; position: absolute; bottom: 14px; font-size: 9px; letter-spacing: 0.08em; color: var(--accent-detail); text-transform: uppercase; }
+
+  .avatar-row { display: flex; gap: 32px; align-items: center; }
+  .avatar { width: 160px; height: 160px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .avatar.wordmark-only { background: var(--bg-primary); }
+  .avatar.wordmark-only .wm { font-family: var(--font-serif); font-size: 26px; letter-spacing: 4px; color: var(--text-primary); text-align: center; line-height: 1.3; }
+  .avatar-note { font-size: 11px; opacity: 0.6; max-width: 320px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<div class="name-tag">ELOWEN -- EXPLORATORY IDENTITY TEST -- NOT A FINAL NAME SELECTION</div>
+<div class="page-title">Brand Applications</div>
+
+<div class="section">
+  <div class="section-label">A + B -- Wordmark, light and reversed</div>
+  <div class="ab-row">
+    <div class="swatch light"><div><div class="wordmark-block">ELOWEN</div><div class="rule"></div></div></div>
+    <div class="swatch dark"><div><div class="wordmark-block">ELOWEN</div><div class="rule"></div></div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">C -- Appointment / business card, front and back</div>
+  <div class="card-row">
+    <div class="card front"><div class="wordmark-block">ELOWEN</div></div>
+    <div class="card back">
+      <div>
+        <div class="cb-name">Elowen</div>
+        <div class="cb-line"></div>
+        <div class="cb-detail">Women's House &middot; Perth</div>
+      </div>
+      <div class="cb-detail">hello@elowen.com.au<br>+61 8 xxxx xxxx<br>By appointment</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">D -- Exterior signage concept (graphic mockup, not a photographic render -- honest about medium)</div>
+  <div class="facade">
+    <div class="facade-entry"></div>
+    <div class="facade-wordmark">ELOWEN</div>
+    <div class="facade-note">DELIBERATELY UNDER-SIGNED ENTRANCE -- ENGRAVED/CUT LETTERING, WARM BRASS ON DARK TIMBER-TONE FIELD</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">E -- Reception / interior signage concept</div>
+  <div class="reception-panel"><div class="wordmark-block">ELOWEN</div></div>
+</div>
+
+<div class="section">
+  <div class="section-label">F -- Digital / social avatar -- wordmark alone (no monogram recommended, see monogram-test.html)</div>
+  <div class="avatar-row">
+    <div class="avatar wordmark-only"><div class="wm">ELOWEN</div></div>
+    <div class="avatar-note">No monogram tested well for this name (monogram-test.html) -- the wordmark set small, still legible at this size due to Fraunces' text-optical range, is the correct avatar treatment. One real, disclosed trade-off: at true 32px favicon scale, six tracked letters read less crisply than Solena's single-letter monogram does -- worth testing a tighter-cropped partial wordmark at favicon scale specifically if this name is chosen.</div>
+  </div>
+</div>
+
+</body>
+</html>

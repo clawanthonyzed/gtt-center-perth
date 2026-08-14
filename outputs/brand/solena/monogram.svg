@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- SOLENA monogram  -  optional secondary asset only (favicon, social avatar).
+       Never used as a co-primary mark alongside the wordmark. See monogram-test.html for the reasoning. -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&amp;display=swap');
+    .mono { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 108px; fill: #F5EFE6; }
+  </style>
+  <circle cx="100" cy="100" r="100" fill="#2E241C"/>
+  <text x="100" y="140" text-anchor="middle" class="mono">S</text>
+</svg>

@@ -1,0 +1,63 @@
+/* ============================================================
+   Warm Stone -- Approved Palette (docs/strategy/VISUAL-BRAND-DIRECTION.md SS3, Option 1)
+   Exact values only. Do not introduce additional colours.
+   ============================================================ */
+
+:root {
+  /* Neutrals -- dominate the system, ~85-90% of any surface */
+  --warm-ivory:   #F5EFE6; /* primary background */
+  --soft-stone:   #E7DECD; /* secondary surface / cards / panels */
+  --deep-walnut:  #2E241C; /* primary text / ink -- never pure black */
+
+  /* Accents -- restrained, minority use only */
+  --aged-terracotta: #A8623F; /* single accent -- CTA / one moment only, 5-8% max usage */
+  --warm-brass:       #9C7A46; /* hardware / fine detail / signage line-work only -- not a fabric or field colour */
+
+  /* Semantic aliases, so application files read by role, not by raw colour name */
+  --bg-primary:   var(--warm-ivory);
+  --bg-secondary: var(--soft-stone);
+  --text-primary: var(--deep-walnut);
+  --text-reversed: var(--warm-ivory);
+  --accent-cta:   var(--aged-terracotta);
+  --accent-detail: var(--warm-brass);
+
+  /* Typography -- docs/strategy/VISUAL-BRAND-DIRECTION.md SS4 */
+  --font-serif: 'Fraunces', 'Georgia', serif;       /* wordmark / headings -- variable font, optical size + soft axis */
+  --font-sans:  'DM Sans', 'Helvetica Neue', sans-serif; /* body / UI / signage support text */
+
+  /* Type scale -- shared across every Warm Stone application */
+  --size-hero: 56px;
+  --size-h2: 34px;
+  --size-h3: 20px;
+  --size-body: 16px;
+  --size-button: 15px;
+  --size-caption: 13px;
+  --weight-serif-light: 300;
+  --weight-serif-regular: 400;
+  --weight-serif-semibold: 600;
+  --weight-sans-regular: 400;
+  --weight-sans-medium: 500;
+  --line-height-heading: 1.15;
+  --line-height-body: 1.6;
+  --letter-spacing-heading: 0.01em;
+  --letter-spacing-body: 0.01em;
+  --letter-spacing-wordmark: 0.14em; /* the selected exploration treatment, SS5 */
+
+  /* Layout */
+  --max-content-width: 1120px;
+  --max-narrow-width: 760px;
+  --radius-button: 3px; /* restrained -- not the rounded-corner "Instagram luxury" default */
+
+  /* Spacing -- restrained, 8px base */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 40px;
+  --space-5: 64px;
+  --space-6: 96px;
+
+  /* Colour role aliases -- still only the 5 approved Warm Stone values, no new hex introduced.
+     Interactive states use filter/opacity on the existing colours, never a 6th colour. */
+  --border-subtle: var(--soft-stone);
+  --focus-ring: var(--aged-terracotta);
+}

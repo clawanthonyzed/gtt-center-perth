@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 160" width="720" height="160">
+  <!-- ELOWEN primary wordmark  -  light background  -  Warm Stone system.
+       Selected treatment: Fraunces 400, letter-spacing 0.14em, uppercase, display optical size.
+       Identical parameters to solena/wordmark.svg by design  -  the only variable is the name.
+       See wordmark-exploration.html for the full 6-variant exploration this was selected from.
+       Name status: exploratory identity test only  -  not a final name selection. -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&amp;display=swap');
+    .wordmark { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 72px; letter-spacing: 10px; fill: #2E241C; }
+    .rule { stroke: #9C7A46; stroke-width: 1; }
+  </style>
+  <rect width="720" height="160" fill="#F5EFE6"/>
+  <text x="360" y="95" text-anchor="middle" class="wordmark">ELOWEN</text>
+  <line x1="280" y1="120" x2="440" y2="120" class="rule"/>
+</svg>
