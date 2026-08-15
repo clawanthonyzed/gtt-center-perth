@@ -1,9 +1,22 @@
 /*
-  GTT Center Perth (working placeholder name) — Waitlist landing page.
-  Mobile-first. Consumes outputs/brand/brand-tokens.css for all colour/
-  type/spacing values — no hard-coded brand colours in this file, so a
-  future brand refresh (e.g. once a real name/logo is chosen) only ever
-  needs to touch the token file, not this stylesheet.
+  GTT Center Perth (neutral working name, public-ready demand-validation
+  page) -- Waitlist landing page, canonical version at outputs/landing-page/.
+  Consumes outputs/brand/warm-stone-tokens.css for every colour/type/
+  spacing value -- no hard-coded brand colours in this file, so the founder-
+  locked 7-colour palette (Warm Ivory/Warm Stone/Deep Brown/Earthy
+  Terracotta/Muted Olive/Soft Dusty Rose/Warm Brass) is the single source
+  of truth. Deliberately name-neutral -- does not commit publicly to
+  SOLENA or ELOWEN ahead of trademark clearance. See outputs/brand/
+  {solena,elowen}/landing-page/ for the two named variants built for
+  internal comparison only, not for public deployment.
+
+  CTA contrast note: the locked palette's own usage rule (Earthy
+  Terracotta, real presence but never a field colour) plus a direct WCAG
+  check (Terracotta-fill buttons land at ~3.2-4.2:1 with either light or
+  dark text, below the 4.5:1 AA threshold for normal text) means the CTA
+  button uses Deep Brown fill + Warm Ivory text instead (13.56:1, passes
+  AA/AAA comfortably). Terracotta is reserved for thin rules, underlines,
+  and small accent moments only.
 */
 
 /* ---------- Reset / base ---------- */
@@ -12,25 +25,25 @@ html { scroll-behavior: smooth; }
 html, body { max-width: 100%; overflow-x: hidden; }
 body {
   margin: 0;
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
   font-size: var(--size-body);
   line-height: var(--line-height-body);
   letter-spacing: var(--letter-spacing-body);
-  color: var(--deep-slate);
-  background: var(--lounge-white);
+  color: var(--text-primary);
+  background: var(--bg-primary);
   -webkit-font-smoothing: antialiased;
 }
 h1, h2, h3 {
-  font-family: var(--font-display);
-  font-weight: var(--weight-display-regular);
+  font-family: var(--font-serif);
+  font-weight: var(--weight-serif-regular);
   line-height: var(--line-height-heading);
   letter-spacing: var(--letter-spacing-heading);
-  color: var(--deep-slate);
+  color: var(--text-primary);
   margin: 0 0 var(--space-2);
 }
-h1 { font-size: 34px; font-weight: var(--weight-display-light); }
+h1 { font-size: 34px; font-weight: var(--weight-serif-light); }
 h2 { font-size: 28px; }
-h3 { font-size: 20px; font-weight: var(--weight-display-semibold); }
+h3 { font-size: 20px; font-weight: var(--weight-serif-semibold); }
 p { margin: 0 0 var(--space-2); }
 a { color: inherit; }
 img { max-width: 100%; display: block; }
@@ -49,11 +62,12 @@ img { max-width: 100%; display: block; }
 }
 .wrap--narrow { max-width: var(--max-narrow-width); }
 .section { padding: var(--space-6) 0; }
-.section--tint { background: var(--parchment); }
-.section__intro { max-width: 640px; color: var(--deep-slate); }
+.section--tint { background: var(--bg-secondary); }
+.section__intro { max-width: 640px; color: var(--text-primary); }
 .section__footnote {
   font-size: var(--size-caption);
-  color: var(--forest);
+  color: var(--text-primary);
+  opacity: 0.68;
   margin-top: var(--space-3);
 }
 
@@ -62,25 +76,25 @@ img { max-width: 100%; display: block; }
   position: absolute;
   left: -999px;
   top: auto;
-  background: var(--deep-slate);
-  color: var(--pearl);
+  background: var(--text-primary);
+  color: var(--text-reversed);
   padding: 12px 20px;
   z-index: 100;
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
 }
 .skip-link:focus {
   left: var(--space-2);
   top: var(--space-2);
 }
 :focus-visible {
-  outline: 3px solid var(--terracotta);
+  outline: 3px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
 /* ---------- Header ---------- */
 .site-header {
-  background: var(--lounge-white);
-  border-bottom: 1px solid var(--parchment);
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-subtle);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -104,12 +118,12 @@ img { max-width: 100%; display: block; }
   flex-shrink: 1;
 }
 .wordmark-text {
-  font-family: var(--font-display);
-  font-weight: var(--weight-display-regular);
+  font-family: var(--font-serif);
+  font-weight: var(--weight-serif-regular);
   font-size: 15px;
   letter-spacing: var(--letter-spacing-wordmark);
   text-transform: uppercase;
-  color: var(--deep-slate);
+  color: var(--text-primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -123,66 +137,67 @@ img { max-width: 100%; display: block; }
 }
 
 @media (min-width: 480px) {
-  .wordmark-text { font-size: 18px; }
+  .wordmark-text { font-size: 19px; }
   .site-header .btn--small { padding: 10px 18px; font-size: 14px; }
 }
 .wordmark-rule {
   display: block;
   width: 46px;
-  height: 2px;
-  background: var(--sage);
+  height: 1px;
+  background: var(--accent-detail);
 }
 
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;
-  font-family: var(--font-body);
-  font-weight: var(--weight-body-medium);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-sans-medium);
   font-size: var(--size-button);
   letter-spacing: var(--letter-spacing-body);
   text-decoration: none;
   border: none;
   border-radius: var(--radius-button);
   cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: opacity 0.15s ease;
 }
 .btn--primary {
-  background: var(--cta-bg);
-  color: var(--cta-text);
+  background: var(--text-primary);
+  color: var(--text-reversed);
   padding: 14px 28px;
 }
 .btn--primary:hover, .btn--primary:focus-visible {
-  background: var(--cta-bg-hover);
-  color: var(--cta-text-hover);
+  opacity: 0.85;
 }
-.btn--small { padding: 10px 18px; font-size: 14px; }
+.btn--small { padding: 10px 18px; font-size: 14px; background: var(--text-primary); color: var(--text-reversed); }
 .btn--full { width: 100%; text-align: center; padding: 16px; font-size: 16px; }
 
 /* ---------- Hero ---------- */
 .hero {
   padding: var(--space-6) 0 var(--space-5);
-  background: linear-gradient(180deg, var(--morning-blush) 0%, var(--lounge-white) 100%);
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--dusty-rose) 55%, var(--bg-primary) 100%); /* Dusty Rose placed at the headline band (Deep Brown text, 6.51:1) not behind the eyebrow -- Terracotta eyebrow text on Dusty Rose measured only 2.0:1, rejected */
 }
 .hero__inner { max-width: 720px; }
 .eyebrow {
-  font-family: var(--font-body);
-  font-weight: var(--weight-body-medium);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-sans-medium);
   font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--forest);
+  color: var(--accent-cta);
   margin-bottom: var(--space-2);
 }
 .hero__headline { margin-bottom: var(--space-3); }
 .hero__sub {
   font-size: 18px;
   max-width: 560px;
-  color: var(--deep-slate);
+  color: var(--text-primary);
+  opacity: 0.85;
 }
 .hero__cta { margin-top: var(--space-4); }
 .hero__cta-note {
   font-size: var(--size-caption);
-  color: var(--forest);
+  color: var(--text-primary);
+  opacity: 0.68;
   margin-top: var(--space-2);
   margin-bottom: 0;
 }
@@ -202,10 +217,10 @@ img { max-width: 100%; display: block; }
   align-items: start;
 }
 .steps__num {
-  font-family: var(--font-display);
-  font-weight: var(--weight-display-light);
+  font-family: var(--font-serif);
+  font-weight: var(--weight-serif-light);
   font-size: 28px;
-  color: var(--sage);
+  color: var(--accent-detail);
 }
 
 /* ---------- Services ---------- */
@@ -222,13 +237,13 @@ img { max-width: 100%; display: block; }
   .services-grid { grid-template-columns: repeat(4, 1fr); }
 }
 .service-card {
-  background: var(--lounge-white);
-  border: 1px solid var(--morning-blush);
+  background: var(--bg-primary);
+  border: 1px solid var(--bg-secondary);
   border-radius: var(--radius-button);
   padding: var(--space-3);
 }
 .service-card h3 { margin-bottom: 6px; }
-.service-card p { margin-bottom: 0; font-size: 15px; }
+.service-card p { margin-bottom: 0; font-size: 15px; opacity: 0.85; }
 
 /* ---------- Form ---------- */
 .form { margin-top: var(--space-4); }
@@ -239,26 +254,26 @@ img { max-width: 100%; display: block; }
   margin: 0 0 var(--space-3);
 }
 .form__row--fieldset legend {
-  font-weight: var(--weight-body-medium);
+  font-weight: var(--weight-sans-medium);
   padding: 0 0 6px;
 }
 label {
   display: block;
-  font-weight: var(--weight-body-medium);
+  font-weight: var(--weight-sans-medium);
   margin-bottom: 6px;
   font-size: 15px;
 }
 input[type="text"], input[type="email"], input[type="date"], select {
   width: 100%;
   padding: 12px 14px;
-  border: 1px solid var(--morning-blush);
+  border: 1px solid var(--bg-secondary);
   border-radius: var(--radius-button);
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
   font-size: 16px; /* prevents iOS zoom-on-focus below 16px */
-  color: var(--deep-slate);
-  background: var(--lounge-white);
+  color: var(--text-primary);
+  background: var(--bg-primary);
 }
-input:focus, select:focus { border-color: var(--sage); }
+input:focus, select:focus { border-color: var(--accent-cta); }
 .form__due-date-group {
   display: flex;
   flex-direction: column;
@@ -268,14 +283,15 @@ input:focus, select:focus { border-color: var(--sage); }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: var(--weight-body-regular);
+  font-weight: var(--weight-sans-regular);
   margin-bottom: 0;
   cursor: pointer;
 }
 .form__checkbox input { width: auto; }
 .form__privacy-note {
   font-size: var(--size-caption);
-  color: var(--forest);
+  color: var(--text-primary);
+  opacity: 0.68;
   margin-top: var(--space-2);
   margin-bottom: 0;
 }
@@ -283,17 +299,17 @@ input:focus, select:focus { border-color: var(--sage); }
 .form-confirmation {
   margin-top: var(--space-4);
   padding: var(--space-3);
-  background: var(--lounge-white);
-  border: 1px solid var(--sage);
+  background: var(--bg-primary);
+  border: 1px solid var(--accent-detail);
   border-radius: var(--radius-button);
 }
-.form-confirmation h3 { color: var(--forest); }
+.form-confirmation h3 { color: var(--text-primary); }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--deep-slate);
-  color: var(--pearl);
+  background: var(--text-primary);
+  color: var(--text-reversed);
   padding: var(--space-4) 0;
 }
 .site-footer p { margin-bottom: var(--space-1); font-size: 14px; }
-.site-footer__fine { color: var(--parchment); font-size: 12px; max-width: 640px; }
+.site-footer__fine { color: var(--text-reversed); opacity: 0.62; font-size: 12px; max-width: 640px; }

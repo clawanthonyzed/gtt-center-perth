@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Favicon / tiny-size mark for the neutral "GTT Center Perth" public page.
+  Same fallback logic as every other favicon in this project: at 16-32px
+  a tracked wordmark is illegible, so this uses a single bold initial.
+  WORKING PLACEHOLDER -- the initial is tied to the current working name,
+  not to SOLENA or ELOWEN, and should be revisited once a final name is
+  chosen and cleared. Locked palette values (Deep Brown / Warm Ivory).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="G -- favicon mark">
+  <rect width="64" height="64" rx="10" fill="#33261E" />
+  <text x="32" y="45"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-weight="600"
+        font-size="40"
+        fill="#FAF6EE">G</text>
+</svg>
