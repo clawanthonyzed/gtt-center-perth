@@ -37,12 +37,13 @@
 
   /* D -- exterior signage */
   .facade { width: 100%; max-width: 940px; height: 320px; border-radius: 3px; position: relative; overflow: hidden;
-    background: linear-gradient(180deg, #3a2f24 0%, #241c15 100%); }
+    background: linear-gradient(180deg, #33261E 0%, #221a14 100%); }
   .facade::before { content: ""; position: absolute; inset: 0;
     background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 64px);
   }
   .facade-entry { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 220px; height: 180px; background: rgba(245,239,230,0.06); border-top: 2px solid rgba(156,122,70,0.5); }
-  .facade-wordmark { position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%); font-family: var(--font-serif); font-weight: 400; font-size: 40px; letter-spacing: 12px; color: var(--warm-brass); text-transform: uppercase; }
+  .facade-wordmark { position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%); font-family: var(--font-serif); font-weight: 400; font-size: 40px; letter-spacing: 12px; color: var(--earthy-terracotta); text-transform: uppercase; }
+  .facade-rule { position: absolute; top: 58%; left: 50%; transform: translateX(-50%); width: 90px; height: 1px; background: var(--warm-brass); opacity: 0.8; }
   .facade-note { position: absolute; bottom: 16px; left: 16px; font-size: 10px; color: rgba(245,239,230,0.5); letter-spacing: 0.06em; }
 
   /* E -- reception signage */
@@ -95,7 +96,8 @@
   <div class="facade">
     <div class="facade-entry"></div>
     <div class="facade-wordmark">SOLENA</div>
-    <div class="facade-note">DELIBERATELY UNDER-SIGNED ENTRANCE -- ENGRAVED/CUT LETTERING, WARM BRASS ON DARK TIMBER-TONE FIELD</div>
+    <div class="facade-rule"></div>
+    <div class="facade-note">DELIBERATELY UNDER-SIGNED ENTRANCE -- ENGRAVED/CUT LETTERING IN EARTHY TERRACOTTA, WARM BRASS RESERVED FOR THE FINE THRESHOLD LINE AND ENTRY EDGE</div>
   </div>
 </div>
 

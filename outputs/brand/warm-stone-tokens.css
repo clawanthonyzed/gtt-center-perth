@@ -1,31 +1,55 @@
 /* ============================================================
-   Warm Stone -- Approved Palette (docs/strategy/VISUAL-BRAND-DIRECTION.md SS3, Option 1)
-   Exact values only. Do not introduce additional colours.
+   LOCKED PALETTE -- 7 colours, applied exactly as specified by founder
+   decision (2026-08-15). Supersedes the earlier 5-colour "Warm Stone"
+   exploration palette in this same file -- filename kept unchanged so
+   every existing application file's reference path still resolves;
+   content below is the new locked system, not a variant of the old one.
+   Do not substitute, lighten, darken, or "improve" any of the 7 hex
+   values below -- they are locked exactly as given.
    ============================================================ */
 
 :root {
-  /* Neutrals -- dominate the system, ~85-90% of any surface */
-  --warm-ivory:   #F5EFE6; /* primary background */
-  --soft-stone:   #E7DECD; /* secondary surface / cards / panels */
-  --deep-walnut:  #2E241C; /* primary text / ink -- never pure black */
+  /* Primary -- dominant surfaces + primary text, ~85-90% of any surface */
+  --warm-ivory:  #FAF6EE; /* dominant background */
+  --warm-stone:  #E8DAC5; /* dominant secondary surface / cards / panels */
+  --deep-brown:  #33261E; /* primary dark / text -- never pure black */
 
-  /* Accents -- restrained, minority use only */
-  --aged-terracotta: #A8623F; /* single accent -- CTA / one moment only, 5-8% max usage */
-  --warm-brass:       #9C7A46; /* hardware / fine detail / signage line-work only -- not a fabric or field colour */
+  /* Earth accents -- supporting, used with real presence, not timidly */
+  --earthy-terracotta: #A9654E; /* supporting accent -- eyebrow/label text, focus/interactive accents, signage wordmark colour, avatar accent */
+  --muted-olive:       #5E5F45; /* supporting accent -- callout/verdict panel fills (with warm-ivory text, contrast-checked), secondary structural accent */
+  --dusty-rose:        #D9A08C; /* very restrained soft accent -- single soft highlight moments only (hero tint, one selected-state wash) */
+
+  /* Detail only -- fine-line graphic work, hardware, signage detail. Must
+     NEVER become a dominant colour or a large colour block (e.g. must not
+     be the primary wordmark colour on exterior signage -- see applications). */
+  --warm-brass: #9C7A46;
 
   /* Semantic aliases, so application files read by role, not by raw colour name */
-  --bg-primary:   var(--warm-ivory);
-  --bg-secondary: var(--soft-stone);
-  --text-primary: var(--deep-walnut);
+  --bg-primary:    var(--warm-ivory);
+  --bg-secondary:  var(--warm-stone);
+  --text-primary:  var(--deep-brown);
   --text-reversed: var(--warm-ivory);
-  --accent-cta:   var(--aged-terracotta);
-  --accent-detail: var(--warm-brass);
+  --accent-cta:    var(--earthy-terracotta); /* text/interactive accent role -- NOT the CTA button fill, see note below */
+  --accent-secondary: var(--muted-olive);
+  --accent-soft:   var(--dusty-rose);
+  --accent-detail: var(--warm-brass); /* fine-line/hardware/signage detail only */
 
-  /* Typography -- docs/strategy/VISUAL-BRAND-DIRECTION.md SS4 */
-  --font-serif: 'Fraunces', 'Georgia', serif;       /* wordmark / headings -- variable font, optical size + soft axis */
-  --font-sans:  'DM Sans', 'Helvetica Neue', sans-serif; /* body / UI / signage support text */
+  /* CTA button fill note (contrast-checked, unchanged reasoning from the
+     prior palette): Earthy Terracotta as a full button fill measures
+     ~3.2:1 (Deep Brown text) to ~4.2:1 (Warm Ivory text) -- both below the
+     4.5:1 AA threshold for normal-size button text, and using it as a
+     large field fill would also exceed the "supporting accent, not a
+     field colour for large blocks" spirit of the brief for Warm Brass's
+     sibling accents. CTA buttons keep the same safe pattern as before:
+     Deep Brown fill + Warm Ivory text (13.56:1, verified). Terracotta
+     still gets real, highly visible presence elsewhere (signage wordmark,
+     eyebrow text, focus rings, avatar accent) -- see applications. */
 
-  /* Type scale -- shared across every Warm Stone application */
+  /* Typography -- unchanged, not part of this colour-only update */
+  --font-serif: 'Fraunces', 'Georgia', serif;
+  --font-sans:  'DM Sans', 'Helvetica Neue', sans-serif;
+
+  /* Type scale -- unchanged */
   --size-hero: 56px;
   --size-h2: 34px;
   --size-h3: 20px;
@@ -41,14 +65,14 @@
   --line-height-body: 1.6;
   --letter-spacing-heading: 0.01em;
   --letter-spacing-body: 0.01em;
-  --letter-spacing-wordmark: 0.14em; /* the selected exploration treatment, SS5 */
+  --letter-spacing-wordmark: 0.14em;
 
-  /* Layout */
+  /* Layout -- unchanged */
   --max-content-width: 1120px;
   --max-narrow-width: 760px;
-  --radius-button: 3px; /* restrained -- not the rounded-corner "Instagram luxury" default */
+  --radius-button: 3px;
 
-  /* Spacing -- restrained, 8px base */
+  /* Spacing -- unchanged, restrained 8px base */
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
@@ -56,8 +80,8 @@
   --space-5: 64px;
   --space-6: 96px;
 
-  /* Colour role aliases -- still only the 5 approved Warm Stone values, no new hex introduced.
-     Interactive states use filter/opacity on the existing colours, never a 6th colour. */
-  --border-subtle: var(--soft-stone);
-  --focus-ring: var(--aged-terracotta);
+  /* Role aliases -- only the 7 locked values above, no new hex introduced.
+     Interactive states use filter/opacity on the existing colours. */
+  --border-subtle: var(--warm-stone);
+  --focus-ring: var(--earthy-terracotta);
 }

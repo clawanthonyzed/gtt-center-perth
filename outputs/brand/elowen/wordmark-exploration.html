@@ -16,7 +16,7 @@
   .variant-label { width: 260px; flex-shrink: 0; font-size: 12px; letter-spacing: 0.05em; line-height: 1.6; color: var(--text-primary); opacity: 0.72; }
   .variant-label strong { display: block; font-size: 13px; letter-spacing: 0.02em; opacity: 1; margin-bottom: 6px; text-transform: uppercase; }
   .variant-mark { flex-grow: 1; }
-  .selected { background: var(--bg-secondary); margin: 0 -32px; padding: 40px 32px; border-radius: 2px; }
+  .selected { background: var(--bg-primary); border-left: 4px solid var(--dusty-rose); margin: 0 -32px; padding: 40px 32px 40px 28px; border-radius: 2px; } /* Dusty Rose as a restrained accent bar, not a full background wash -- a full rose block failed contrast for this row's body/label text on direct testing */
   .selected .variant-label strong::after { content: " -- SELECTED"; color: var(--accent-cta); font-weight: 500; }
 
   .v1 { font-family: var(--font-serif); font-weight: 300; font-size: 64px; letter-spacing: 0.22em; text-transform: uppercase; font-optical-sizing: auto; }

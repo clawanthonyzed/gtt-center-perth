@@ -3,8 +3,8 @@
        Never used as a co-primary mark alongside the wordmark. See monogram-test.html for the reasoning. -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&amp;display=swap');
-    .mono { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 108px; fill: #F5EFE6; }
+    .mono { font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-size: 108px; fill: #FAF6EE; }
   </style>
-  <circle cx="100" cy="100" r="100" fill="#2E241C"/>
+  <circle cx="100" cy="100" r="100" fill="#33261E"/>
   <text x="100" y="140" text-anchor="middle" class="mono">S</text>
 </svg>

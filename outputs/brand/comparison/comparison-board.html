@@ -31,8 +31,9 @@
   .card-preview { width: 100%; height: 170px; background: var(--bg-primary); border-radius: 4px; box-shadow: 0 10px 26px rgba(46,36,28,0.16); display: flex; align-items: center; justify-content: center; }
   .card-preview .wm-text { font-size: 22px; color: var(--text-primary); }
 
-  .facade-mini { width: 100%; height: 190px; border-radius: 3px; background: linear-gradient(180deg, #3a2f24 0%, #241c15 100%); display: flex; align-items: center; justify-content: center; }
-  .facade-mini .wm-text { font-size: 26px; color: var(--warm-brass); }
+  .facade-mini { width: 100%; height: 190px; border-radius: 3px; background: linear-gradient(180deg, #33261E 0%, #221a14 100%); display: flex; align-items: center; justify-content: center; position: relative; }
+  .facade-mini::after { content: ""; position: absolute; bottom: 34px; left: 50%; transform: translateX(-50%); width: 60px; height: 1px; background: var(--warm-brass); opacity: 0.8; }
+  .facade-mini .wm-text { font-size: 26px; color: var(--earthy-terracotta); }
 
   .avatar-mini-row { display: flex; gap: 20px; align-items: center; }
   .avatar-mini { width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
@@ -55,7 +56,7 @@
 <div class="masthead">
   <div class="kicker">Visual Identity Comparison -- Neither Name Selected</div>
   <h1>Solena vs. Elowen</h1>
-  <p>Identical typography (Fraunces + DM Sans), identical Warm Stone palette, identical layout and application treatment across both. The only variable below is the name itself -- exactly as instructed, so the comparison tests the names, not the design work.</p>
+  <p>Identical typography (Fraunces + DM Sans), identical locked 7-colour palette, identical layout and application treatment across both. The only variable below is the name itself -- exactly as instructed, so the comparison tests the names, not the design work.</p>
 </div>
 
 <div class="compare-section">

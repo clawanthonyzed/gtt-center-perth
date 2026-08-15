@@ -1,5 +1,5 @@
 /*
-  Warm Stone landing page reskin -- exploratory identity test (name TBD).
+  Locked-palette landing page reskin -- exploratory identity test (name TBD).
   Consumes outputs/brand/warm-stone-tokens.css for every colour/type/
   spacing value -- no hard-coded brand colours in this file. Same
   architecture as the original outputs/landing-page/ build; only the
@@ -170,7 +170,7 @@ img { max-width: 100%; display: block; }
 /* ---------- Hero ---------- */
 .hero {
   padding: var(--space-6) 0 var(--space-5);
-  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--dusty-rose) 55%, var(--bg-primary) 100%); /* Dusty Rose placed at the headline band (Deep Brown text, 6.51:1) not behind the eyebrow -- Terracotta eyebrow text on Dusty Rose measured only 2.0:1, rejected */
 }
 .hero__inner { max-width: 720px; }
 .eyebrow {

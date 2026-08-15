@@ -5,10 +5,10 @@
        Name status: exploratory identity test only  -  not a final name selection. -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&amp;display=swap');
-    .wordmark { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 72px; letter-spacing: 10px; fill: #2E241C; }
+    .wordmark { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 72px; letter-spacing: 10px; fill: #33261E; }
     .rule { stroke: #9C7A46; stroke-width: 1; }
   </style>
-  <rect width="720" height="160" fill="#F5EFE6"/>
+  <rect width="720" height="160" fill="#FAF6EE"/>
   <text x="360" y="95" text-anchor="middle" class="wordmark">SOLENA</text>
   <line x1="290" y1="120" x2="430" y2="120" class="rule"/>
 </svg>

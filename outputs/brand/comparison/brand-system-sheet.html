@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Locked Palette -- Brand System Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../warm-stone-tokens.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg-primary); font-family: var(--font-sans); color: var(--text-primary); padding: 56px; }
+  h1.page-title { font-family: var(--font-serif); font-size: 28px; font-weight: 400; margin-bottom: 6px; }
+  .kicker { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-detail); margin-bottom: 40px; }
+  .section-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.55; margin-bottom: 14px; margin-top: 44px; }
+
+  .swatch-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .swatch { width: 154px; }
+  .swatch-block { height: 110px; border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(46,36,28,0.08); }
+  .swatch-name { font-family: var(--font-sans); font-weight: 500; font-size: 13px; margin-top: 10px; }
+  .swatch-hex { font-family: var(--font-sans); font-size: 12px; opacity: 0.6; }
+  .swatch-role { font-size: 11px; opacity: 0.55; margin-top: 2px; line-height: 1.4; }
+
+  .type-sample-serif { font-family: var(--font-serif); font-weight: 400; }
+  .type-sample-serif.hero { font-size: 48px; margin-bottom: 6px; }
+  .type-sample-serif.h2 { font-size: 30px; margin-bottom: 6px; }
+  .type-sample-serif.h3 { font-size: 19px; font-weight: 600; margin-bottom: 6px; }
+  .type-sample-sans { font-family: var(--font-sans); font-size: 16px; line-height: 1.6; max-width: 620px; }
+  .type-meta { font-size: 11px; opacity: 0.55; margin-top: 4px; margin-bottom: 18px; }
+
+  .material-block { font-size: 13px; line-height: 1.8; max-width: 760px; opacity: 0.85; }
+  .material-block strong { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; opacity: 1; margin-top: 14px; margin-bottom: 4px; }
+  .honest-note { background: var(--bg-secondary); padding: 16px 20px; border-radius: 2px; font-size: 12px; margin-top: 16px; max-width: 760px; }
+</style>
+</head>
+<body>
+
+<div class="kicker">Locked Palette (2026-08-15) -- Brand System Reference</div>
+<h1 class="page-title">Palette, Typography &amp; Material Direction</h1>
+
+<div class="section-label">Colour -- 7 colours, locked exactly as specified, no additions (outputs/brand/warm-stone-tokens.css)</div>
+<div class="swatch-row">
+  <div class="swatch">
+    <div class="swatch-block" style="background:#FAF6EE;"></div>
+    <div class="swatch-name">Warm Ivory</div>
+    <div class="swatch-hex">#FAF6EE</div>
+    <div class="swatch-role">Dominant background</div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-block" style="background:#E8DAC5;"></div>
+    <div class="swatch-name">Warm Stone</div>
+    <div class="swatch-hex">#E8DAC5</div>
+    <div class="swatch-role">Dominant secondary surface</div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-block" style="background:#33261E;"></div>
+    <div class="swatch-name">Deep Brown</div>
+    <div class="swatch-hex">#33261E</div>
+    <div class="swatch-role">Primary dark / text -- never pure black</div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-block" style="background:#A9654E;"></div>
+    <div class="swatch-name">Earthy Terracotta</div>
+    <div class="swatch-hex">#A9654E</div>
+    <div class="swatch-role">Supporting accent -- real presence, not timid</div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-block" style="background:#5E5F45;"></div>
+    <div class="swatch-name">Muted Olive</div>
+    <div class="swatch-hex">#5E5F45</div>
+    <div class="swatch-role">Supporting accent -- real presence, not timid</div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-block" style="background:#D9A08C;"></div>
+    <div class="swatch-name">Soft Dusty Rose</div>
+    <div class="swatch-hex">#D9A08C</div>
+    <div class="swatch-role">Very restrained soft accent -- single moments only</div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-block" style="background:#9C7A46;"></div>
+    <div class="swatch-name">Warm Brass</div>
+    <div class="swatch-hex">#9C7A46</div>
+    <div class="swatch-role">Fine-line / hardware / signage detail only -- never dominant</div>
+  </div>
+</div>
+
+<div class="material-block" style="margin-top:16px;">
+  <strong>Where each accent actually appears in this build</strong>
+  Earthy Terracotta -- eyebrow/label text, focus rings, exterior signage wordmark, social avatar accent ring. Muted Olive -- verdict/callout panel fills (paired with Warm Ivory text, contrast-checked at 6.1:1). Soft Dusty Rose -- the landing-page hero background wash and the selected-variant highlight in the wordmark exploration sheets, restrained to those two moments only. Warm Brass -- wordmark rules/underlines, card back dividers, the signage entry threshold line and the fine rule beneath the exterior wordmark, small caption labels. Deep Brown remains the CTA button fill (paired with Warm Ivory text, 13.56:1) -- Earthy Terracotta measures below WCAG AA at typical button-text sizes as a fill colour, so it is used at full strength everywhere else instead of the button itself.
+</div>
+
+<div class="section-label">Typography -- Fraunces (serif, wordmark/headings) + DM Sans (sans, body/UI)</div>
+<div class="type-sample-serif hero">The wait, reimagined.</div>
+<div class="type-meta">Fraunces, weight 300-400, hero/H1 scale (56px desktop)</div>
+<div class="type-sample-serif h2">How it works</div>
+<div class="type-meta">Fraunces, weight 400, H2 scale (34px)</div>
+<div class="type-sample-serif h3">Your privacy, designed in</div>
+<div class="type-meta">Fraunces, weight 600, H3 scale (20px)</div>
+<div class="type-sample-sans">DM Sans, body copy. The Glucose Tolerance Test is a mandatory 2&ndash;3 hour wait for every pregnant woman in WA. We built a place to spend it &mdash; not just endure it.</div>
+<div class="type-meta">DM Sans, weight 400, body scale (16px) -- also used for UI, forms, signage support text</div>
+
+<div class="section-label">Material direction (docs/strategy/VISUAL-BRAND-DIRECTION.md SS6/SS20 -- written direction, quoted directly)</div>
+<div class="material-block">
+  <strong>Preferred</strong>
+  Limestone / travertine (honed, not tumbled), a single considered warm-mid-tone timber species used consistently, textured plaster/render in a warm neutral, natural-fibre textiles (linen, wool, cotton bouclé), brushed brass or bronze hardware, reeded/fluted glass used sparingly, one well-placed specimen plant per zone.
+  <strong>Avoid</strong>
+  Marble with heavy veining, gold hardware, chrome/polished nickel/brushed steel, raw or reclaimed timber, exposed concrete, velvet in saturated jewel tones, distributed generic planters.
+  <strong>Target</strong>
+  Natural + luxurious -- explicitly not rustic + boho. Refined-matte finish throughout, present but calm texture, clean confident joinery, understated solid-feeling hardware.
+</div>
+<div class="honest-note">No visual material board (physical swatches, rendered interior) has been produced -- this is the written direction only, presented here as text rather than invented as a new visual concept, consistent with this task's packaging-only scope.</div>
+
+</body>
+</html>
