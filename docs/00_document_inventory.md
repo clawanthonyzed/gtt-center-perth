@@ -3,9 +3,62 @@
 **Compiled:** 2026-07-19 | **Compiled by:** Grace (Operations Manager, audit pass — updated through Phase 6/7 pass, same day)
 **Purpose:** Single reference listing every file in `docs/`, its status, and its role in the corpus. Companion to [reading-order.md](reading-order.md) (which orders reading, not status) and [01_conflicts_log.md](01_conflicts_log.md) (which details specific conflicts).
 
+> **CORRECTED 2026-08-15 — this file omitted an entire, current, actively-maintained layer of the repository.** Everything below this banner (all pre-2026-08-08 content) covers only `docs/*.md` — it never listed `docs/strategy/`, `docs/naming/`, `docs/experience/`, `docs/DECISION-LOG.md`, or `outputs/brand/`, which together are the most current strategic/brand/venue work in the repo (built 2026-08-05 through 2026-08-15). This was identified as the root cause of "flying blind" in a dedicated execution audit and is fixed here with a new section (jump to **## Strategy / Brand / Venue / Naming Layer** below) rather than a full rewrite of the rest of this file, which otherwise still accurately describes the `docs/*.md` layer's July/early-August state. Read the new section first for anything strategic, brand, venue, or naming-related — the old sections below remain correct for financial/operational/clinical/legal detail.
+
 > **Correction, 2026-08-08 (F-2, per `docs/architecture/REPOSITORY-AUDIT.md`):** this file's per-row status descriptions had gone stale relative to `docs/CURRENT-STATE.md`'s 2026-07-30 and 2026-08-05 rebases in several places (see the corrected rows for `HANDOFF.md`, `operations-manual.md`, `scenario-c-sync-timetables.md`, `cash-flow.md` below, each individually marked with this date). **The file count below (80) and the Summary Counts table near the end of this file were NOT independently recounted or re-verified this pass** — a genuine current count is given in `docs/reading-order.md`'s header (110+, as of 2026-08-08); flagged here rather than silently republished as still-accurate, since re-verifying every row's status individually is a larger task than this correction pass covers.
 
 **Total files:** 80 (70 markdown in `docs/` + 12 new Phase 6/7 documents listed below, 8 staff-profile markdown files in `docs/staff-profiles/`, 6 non-markdown visual/export files) — **stale as of 2026-08-08, see correction note above; do not treat as current**
+
+## Strategy / Brand / Venue / Naming Layer (2026-08-05 to 2026-08-15) — Read This Section First
+
+This layer sits on top of everything else in this file — it translates the canonical financial/operating model (`docs/CURRENT-STATE.md`, `data/canonical/`) into strategy, brand identity, venue requirements, and customer experience. **Status vocabulary used only in this section** (distinct from the legacy CURRENT/SUPERSEDED/ARCHIVED legend below, per the 2026-08-15 consolidation instruction): **COMPLETE**, **CURRENT/CANONICAL**, **IN PROGRESS**, **WAITING (WDP/Carole)**, **BLOCKED (genuine dependency)**, **FOUNDER ACTION**, **EXTERNAL ACTION**, **DEFERRED**, **SUPERSEDED**.
+
+### Strategy (`docs/strategy/`)
+
+| File | Status | Notes |
+|---|---|---|
+| [STRATEGIC-REPORT.md](strategy/STRATEGIC-REPORT.md) | CURRENT/CANONICAL | Consolidated synthesis of the business/experience/naming state as of 2026-08-14 — good starting point for the whole layer. |
+| [OPERATING-COMMERCIAL-ARCHITECTURE.md](strategy/OPERATING-COMMERCIAL-ARCHITECTURE.md) | CURRENT/CANONICAL | Translates 18/day into operating + commercial architecture — AM/PM structure, staffing, replicability. |
+| [18-CLIENT-OPERATIONAL-STRESS-TEST.md](strategy/18-CLIENT-OPERATIONAL-STRESS-TEST.md) | CURRENT/CANONICAL | Minute-by-minute schedule reconstruction, resolved the AM/PM transition and nail-duration questions. |
+| [18-CLIENT-COMMERCIAL-STRESS-TEST.md](strategy/18-CLIENT-COMMERCIAL-STRESS-TEST.md) | CURRENT/CANONICAL | Break-even, margin-of-safety, 12-vs-18 resilience comparison — canonical-sourced throughout. |
+| [BRAND-EXPERIENCE-FOUNDATION.md](strategy/BRAND-EXPERIENCE-FOUNDATION.md) | COMPLETE | Strategic brand foundation — positioning, naming territory, AM/PM brand architecture, A/B/C/D-classified recommendations. |
+| [VISUAL-BRAND-DIRECTION.md](strategy/VISUAL-BRAND-DIRECTION.md) | COMPLETE | Colour/type/logo-territory creative brief. **Colour palette section is SUPERSEDED by the founder-locked palette** — see the outputs/brand/ row below; typography (Fraunces + DM Sans) and wordmark-led logo territory remain current. |
+| [VENUE-FUNCTIONAL-BRIEF.md](strategy/VENUE-FUNCTIONAL-BRIEF.md) | CURRENT/CANONICAL | Venue requirements validated against 18/day — room counts, floor-area tiers, A/B/C/D-tagged requirements. |
+| [PROPERTY-SEARCH-FRAMEWORK.md](strategy/PROPERTY-SEARCH-FRAMEWORK.md) | CURRENT/CANONICAL | Screening framework applied to real listings — hard requirements, scoring model. |
+| [PERTH-PROPERTY-SHORTLIST.md](strategy/PERTH-PROPERTY-SHORTLIST.md) | IN PROGRESS | Real candidates found (2 Tier-1), zero inspected. **FOUNDER ACTION required to move this forward** — see report §5. |
+| [BRAND-ARCHITECTURE.md](strategy/BRAND-ARCHITECTURE.md), [BRAND-STRATEGY-NAME-AGNOSTIC.md](strategy/BRAND-STRATEGY-NAME-AGNOSTIC.md), [PREMIUM-POSITIONING.md](strategy/PREMIUM-POSITIONING.md) | CURRENT/CANONICAL | Name-agnostic brand strategy, architecture, and cost-discipline principles — feed into BRAND-EXPERIENCE-FOUNDATION.md, still individually referenced throughout. |
+
+### Naming (`docs/naming/`)
+
+| File | Status | Notes |
+|---|---|---|
+| [NAMING-DECISION-STATE.md](naming/NAMING-DECISION-STATE.md) | CURRENT/CANONICAL | The single current-status file for naming — read this one, not the others, for "where does naming stand." |
+| [NAMING-FINAL-COMPARISON.md](naming/NAMING-FINAL-COMPARISON.md) | CURRENT/CANONICAL | SOLENA 71.6% / ELOWEN 68.8% / ELOWYN 65.9% — the weighted comparison the decision state summarises. |
+| [AUSTRALIAN-TRADEMARK-CLEARANCE-BRIEF.md](naming/AUSTRALIAN-TRADEMARK-CLEARANCE-BRIEF.md) | WAITING (FOUNDER ACTION) | Ready to send to an attorney. Not sent — deliberately deferred by Anthony to a later funding/validation milestone. Not legal advice. |
+| [SOLENA-ELOWEN-STRATEGIC-HANDOVER-DECISION-AUDIT.md](naming/SOLENA-ELOWEN-STRATEGIC-HANDOVER-DECISION-AUDIT.md), [NAME-INVESTIGATION-REPORT.md](naming/NAME-INVESTIGATION-REPORT.md), [CLAUDE-NAMING-INVESTIGATION.md](naming/CLAUDE-NAMING-INVESTIGATION.md) | CURRENT/CANONICAL (historical reasoning trail) | The full evidence trail behind the current decision state — read only if you want the "why," not the "what." |
+| `naming/assets/` (Claude Design boards) | CURRENT | Visual exploration boards referenced by the naming reports. |
+
+**Naming status in one sentence:** SOLENA and ELOWEN both remain live candidates; no name is selected; trademark clearance is the only real blocker and it is a founder-timing decision, not a research gap.
+
+### Experience (`docs/experience/`) + Governance
+
+| File | Status | Notes |
+|---|---|---|
+| [CUSTOMER-JOURNEY.md](experience/CUSTOMER-JOURNEY.md) | CURRENT/CANONICAL | Full AM/PM journey map, name-agnostic. |
+| [RETURN-LOOP.md](experience/RETURN-LOOP.md) | CURRENT/CANONICAL | The AM→PM retention mechanism — the single highest-priority unmodelled financial gap traces back to this document. |
+| [DECISION-LOG.md](../DECISION-LOG.md) | CURRENT/CANONICAL | Append-only record of major decisions (naming leader, retail strategy, etc.) — check here before assuming a decision is still open. |
+
+### Brand Output (`outputs/brand/`)
+
+| Item | Status | Notes |
+|---|---|---|
+| `warm-stone-tokens.css` | CURRENT/CANONICAL | **Founder-locked palette** (2026-08-15): Warm Ivory #FAF6EE, Warm Stone #E8DAC5, Deep Brown #33261E, Earthy Terracotta #A9654E, Muted Olive #5E5F45, Soft Dusty Rose #D9A08C, Warm Brass #9C7A46 (fine-line/hardware/signage detail only). Typography: Fraunces + DM Sans. Logo direction: wordmark-led. Do not reopen without a new founder decision. |
+| `solena/`, `elowen/` (wordmarks, applications, monogram tests, landing pages) | COMPLETE (first pass) | Real, viewable assets for both names, identical treatment, built to let Anthony judge visually. Not final production art. |
+| `comparison/` (comparison board, brand-system sheet, print-review) | COMPLETE | Side-by-side Solena/Elowen comparison; `SOLENA-vs-ELOWEN-VISUAL-REVIEW.pdf` is the offline-review export. |
+| `BRAND-SYSTEM.md`, `brand-tokens.css`, top-level `wordmark.svg`/`favicon.svg`/etc. | SUPERSEDED | The original sage/terracotta placeholder-name system, predates the naming split and the palette lock. Kept for trace, not current. |
+| `outputs/landing-page/` (top-level, "GTT Center Perth" branded) | SUPERSEDED | Predates the Solena/Elowen split and the palette lock — the two named versions under `outputs/brand/{solena,elowen}/landing-page/` are current. |
+
+---
 
 ## New Documents Created This Session (Phase 7 + audit deliverables)
 
@@ -218,5 +271,7 @@
 **2026-07-20 (cash-flow.md status updated)** — Updated the `cash-flow.md` status-table entry to reflect its full rebuild this session (v2.0) — no longer flagged as carrying a stale 3-way figure discrepancy, since that discrepancy has now been fixed at the source rather than just flagged.
 
 **2026-07-29 (external audit response — archive, don't flag)** — An outside reviewer found that this repo's process of adding a "SUPERSEDED"/"ARCHIVED" banner without physically moving the file (see [operations-manual.md](operations-manual.md)'s Scenario B section, left in place for 10 days after being flagged) had itself caused a real staff-training risk. Actioned this session: every file already marked SUPERSEDED/ARCHIVED in this inventory as of 2026-07-19 has now been physically moved to `docs/archive/` via `git mv` (history preserved) — [inhouse-gtt-research.md](archive/inhouse-gtt-research.md), [research-supplement-day48-ARCHIVED.md](archive/research-supplement-day48-ARCHIVED.md), [research-supplement-day48.md](archive/research-supplement-day48.md), [bloom-baby-case-study.md](archive/bloom-baby-case-study.md), [floor-plan-visual.html](archive/floor-plan-visual.html), [floor-plan-visual.pdf](archive/floor-plan-visual.pdf). All in-repo links/references to these 6 files updated to the new path (verified via grep sweep, [research.md](research.md) left untouched — protected file, its one reference is a historical "supersedes" note, not a live pointer). **Update 2026-07-29 (later same session):** [financial-model.md](financial-model.md) was initially left as an open, unresolved conflict (it met the literal archive criteria but was also one of 3 files marked out-of-scope/untouched per an earlier session's instruction). Anthony directly instructed this be checked and resolved rather than left open — opened the file, confirmed it mixed stale P&L content with still-relevant trust/tax-treatment content, and **split it**: stale P&L archived to `archive/financial-model-superseded-pnl-section-2026-06-11.md`, trust/tax content kept live in `financial-model.md` v3.0. See that document's own row above and changelog for full detail. [operations-manual.md](operations-manual.md)'s Scenario B section (the file the review specifically named) was not archived as a separate file — it was rewritten in place with the current Scenario C model inlined, since it's one section of an otherwise-current document, not a standalone stale file. See `docs/CURRENT-STATE.md` (new this session) for the single canonical numbers file every other document now points to instead of re-stating figures independently.
+
+**2026-08-15 (repository consolidation — the strategy/brand/venue/naming layer added, root cause of "flying blind" fixed)** — A dedicated execution audit found this file had no entry anywhere for `docs/strategy/`, `docs/naming/`, `docs/experience/`, `docs/DECISION-LOG.md`, or `outputs/brand/` — a real, current, actively-maintained ~30-file layer built 2026-08-05 through 2026-08-15, entirely invisible to anyone using this inventory as their map. Added the new "Strategy / Brand / Venue / Naming Layer" section above (with its own, more actionable status vocabulary: COMPLETE / CURRENT-CANONICAL / IN PROGRESS / WAITING / BLOCKED / FOUNDER ACTION / EXTERNAL ACTION / DEFERRED / SUPERSEDED) rather than rewriting the rest of this file, which still accurately describes the `docs/*.md` layer. Also flagged (not rewritten in place) that `docs/executive-summary.md` and `docs/investor-memorandum.md` cited a Net P&L figure two model-generations stale — both corrected directly at their specific figure locations only, see those files' own 2026-08-15 changelog/banner entries.
 
 **2026-08-08 (F-2 correction — this file's own status rows brought back in line with `docs/CURRENT-STATE.md`)** — `docs/architecture/REPOSITORY-AUDIT.md` found this file's rows for `HANDOFF.md`, `operations-manual.md`, `scenario-c-sync-timetables.md`, and `cash-flow.md` still described the 2026-07-19/20 model (8- or 10-client, HANDOFF.md as "most recent"/"authoritative"), two rebases behind `CURRENT-STATE.md`'s current figures. Corrected each row individually (see the rows themselves for full detail); notably, `operations-manual.md`'s status improved from "STALE / NEEDS REWRITE" to "CURRENT (with caveats)" because its scheduling section actually was rewritten 2026-07-30 (the file itself was accurate, this inventory's description of it was not) — it is however now one rebase behind in turn (not yet updated for the 2026-08-05 Table 1/Table 2 change). The file-count header and the Summary Counts table were flagged as unverified rather than recounted, in the interest of a bounded correction pass rather than a full re-audit. **No decision was made on the still-open Table 1 vs. Table 2 primary/secondary question** — nothing in this file states a preference either way.

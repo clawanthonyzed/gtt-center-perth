@@ -72,11 +72,13 @@ Per [HANDOFF.md](HANDOFF.md) (2026-07-17, the most recent session summary and so
 
 **All figures are planning estimates, not audited or trading-confirmed.**
 
+> **CORRECTED 2026-08-15 — the table below is now two model-generations stale.** It shows the pre-18-client, pre-superannuation figures. **Current canonical figure (`data/models/master_financial_model.yml`, RECALCULATED 2026-08-09): Monthly Net Operating Result +A$56,581.70/month (Table 1, 18-client/day, PRIMARY) or +A$21,056.64/month (Table 2, 12-client/day, SECONDARY) — both include 12% superannuation.** The table below is retained unaltered for historical trace, per this repo's own never-rewrite-history convention — do not quote it as current. Always defer to `docs/CURRENT-STATE.md` §5 for the live figure.
+
 | Metric | Figure | Source |
 |---|---|---|
 | Startup capital (estimate range) | **UNRECONCILED — 3 conflicting ranges exist across this repo's own documents, see `docs/CURRENT-STATE.md` §6** | Do not quote a single figure — see `docs/VERIFICATION-TRACKER.md` |
-| Monthly steady-state Net P&L (Month 5+) | **+A$16,507.07/month** (ancillary revenue excluded 2026-07-30 — was +A$25,087.07/month) | [profit-loss-tables.md](profit-loss-tables.md) v2.1, `docs/CURRENT-STATE.md` §5 |
-| Yearly run-rate (Month 5+ steady state) | **+A$198,084.84/year** (ancillary excluded — was +A$301,044.84/year) | [profit-loss-tables.md](profit-loss-tables.md) v2.1 |
+| Monthly steady-state Net P&L (Month 5+) — **HISTORICAL, superseded 2026-08-05 then 2026-08-09, see banner above** | ~~+A$16,507.07/month~~ (ancillary revenue excluded 2026-07-30 — was +A$25,087.07/month) | [profit-loss-tables.md](profit-loss-tables.md) v2.1, `docs/CURRENT-STATE.md` §5 |
+| Yearly run-rate (Month 5+ steady state) — **HISTORICAL, superseded, see banner above** | ~~+A$198,084.84/year~~ (ancillary excluded — was +A$301,044.84/year) | [profit-loss-tables.md](profit-loss-tables.md) v2.1 |
 | Break-even (revenue, not headcount) | ~A$88,625/month in total costs to cover | [profit-loss-tables.md](profit-loss-tables.md) v2.1 |
 | Break-even (illustrative segment bookends — not the real mix) | ~355 Package 1 sales/month if 100% AM GTT packages (A$250 avg) OR ~933 services/month if 100% PM standalone services (A$95 avg) — the real plan blends both, see below | [profit-loss-tables.md](profit-loss-tables.md), [unit-economics.md](unit-economics.md) |
 | Marginal break-even reached | Month 4 (approximate) | [HANDOFF.md](HANDOFF.md), [cash-flow.md](cash-flow.md) |

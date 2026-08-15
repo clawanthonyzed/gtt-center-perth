@@ -1,16 +1,41 @@
 # GTT Center Perth — Reading Order & Big-Picture Status
 
-**Last updated:** 2026-07-20 (full rebuild — see changelog) | **Figures refreshed 2026-08-08** to match `docs/CURRENT-STATE.md`'s current model (structure/changelog below otherwise unchanged from the 2026-07-20 rebuild — see the F-2 correction note at the very bottom of this file for what changed and why)
-**Total documents:** 110+ (98 markdown directly in `docs/`, 8 staff-profile files, 4 non-markdown visual files — up from 92 at the 2026-07-20 count; excludes `docs/archive/`'s 10 files and `docs/architecture/`'s 7 new design docs, both listed/counted separately, consistent with this file's existing convention)
-**Purpose:** Read this ONE document to see the current, accurate, big-picture state of the venture — what's been fixed this session, what's still open, and what order to read everything else in. This is the entry point; `docs/00_document_inventory.md` is the full per-file status list if you need more detail on any specific document. **For the current canonical model (pricing, capacity, headcount, P&L), always defer to [docs/CURRENT-STATE.md](CURRENT-STATE.md) over any figure stated in this file.**
+**Last updated:** 2026-08-15 (reassessed — see changelog) | Structure below the 60-second version is otherwise unchanged from the 2026-07-20 rebuild except where individually flagged.
+**Total documents:** 110+ in `docs/*.md` alone, plus a further ~40 across `docs/strategy/`, `docs/naming/`, `docs/experience/`, `docs/architecture/`, and `outputs/brand/` — see `docs/00_document_inventory.md`'s new "Strategy / Brand / Venue / Naming Layer" section for that part of the corpus, which this file did not cover before 2026-08-15.
+**Purpose:** Read this ONE document to see the current, accurate, big-picture state of the venture and what order to read everything else in. `docs/00_document_inventory.md` is the full per-file status list. **For the current canonical model (pricing, capacity, headcount, P&L), always defer to [docs/CURRENT-STATE.md](CURRENT-STATE.md) over any figure stated in this file.**
 
 ---
 
 ## THE 60-SECOND VERSION
 
-GTT Center Perth is a concept for WA's first premium wellness venue built around the mandatory Glucose Tolerance Test — patients spend the ~2-2.5 hour test wait getting massage/nails/hair/brows instead of sitting in a bare pathology room. **No venue location is secured yet — that is the single blocking gate on everything else** (staff recruitment, fit-out, everything downstream). **Current committed operational model (per `docs/CURRENT-STATE.md`, rebased 2026-08-05 — supersedes the 10-client/A$25,087 figures previously stated here):** PRIMARY reference is Table 1, 18 clients/day, 07:00 start, 25-min pair cadence, projected +A$63,028.75/month at Month 5+ steady state; SECONDARY reference is Table 2, 12 clients/day, 08:00 start, same cadence, +A$27,084.69/month — **which of the two is "the" committed daily target is an open framing question, not yet confirmed by Anthony (`docs/VERIFICATION-TRACKER.md` item 1m).** Both are planning estimates, not real trading data. Two package prices (A$250/A$300), full payment collected at booking. Pathology partner (WDP, priority 1) has been in active correspondence since 2026-07-27, several regulatory/commercial questions resolved, the commercial rental figure still outstanding (item 1c). Self-funded (Anthony + Imara joint savings), no external investor, no launch date set.
+GTT Center Perth is a concept for WA's first premium wellness venue built around the mandatory Glucose Tolerance Test — patients spend the ~2-2.5 hour test wait getting massage/nails/hair/brows instead of sitting in a bare pathology room. **No venue location is secured yet — that is the single blocking gate on everything else** (staff recruitment, fit-out, everything downstream), though a real property shortlist with two strong Tier-1 candidates now exists (`docs/strategy/PERTH-PROPERTY-SHORTLIST.md`), unactioned. **Current committed operational model (per `docs/CURRENT-STATE.md`, RECALCULATED 2026-08-09 for superannuation — corrects the figures previously stated here):** PRIMARY reference is Table 1, 18 clients/day, 07:00 start, 25-min pair cadence, projected **+A$56,581.70/month** at Month 5+ steady state; SECONDARY reference is Table 2, 12 clients/day, 08:00 start, same cadence, **+A$21,056.64/month**. Both are planning estimates, not real trading data. Two package prices (A$250/A$300), full payment collected at booking. Pathology partner (WDP, priority 1) has been in active correspondence since 2026-07-27 — several regulatory/commercial questions resolved, the commercial rental figure still outstanding, status is simply **waiting on Carole/WDP**, not a research gap. **Naming is narrowed to two live candidates, SOLENA and ELOWEN, neither selected** — trademark clearance is written and ready, deliberately deferred by Anthony to a later funding milestone (`docs/naming/NAMING-DECISION-STATE.md`). **A full visual brand system is built and locked** (palette, typography, wordmark-led logo direction — `outputs/brand/warm-stone-tokens.css`), applied identically to both names, viewable in `outputs/brand/SOLENA-vs-ELOWEN-VISUAL-REVIEW.pdf`. Self-funded (Anthony + Imara joint savings), no external investor, no launch date set.
 
-**For a presentation to a non-technical stakeholder (e.g., Anthony's partner Imara): read [gtt-center-perth-overview-for-imara.md](gtt-center-perth-overview-for-imara.md).** It's a plain-language, story-format walkthrough built specifically for this purpose. [executive-summary.md](executive-summary.md) is the fuller, more technically-sourced standalone summary if more detail is needed.
+**For a presentation to a non-technical stakeholder (e.g., Anthony's partner Imara): read [gtt-center-perth-overview-for-imara.md](gtt-center-perth-overview-for-imara.md).** It's a plain-language, story-format walkthrough built specifically for this purpose. [executive-summary.md](executive-summary.md) is the fuller, more technically-sourced standalone summary if more detail is needed (figures corrected 2026-08-15).
+
+---
+
+## ANTHONY'S READING PATH — REASSESSED 2026-08-15, SMALLEST USEFUL SET
+
+Nine documents genuinely cover the venture as it stands today. Everything else in this file is detail, reference, or historical trace — read on demand, not linearly.
+
+**READ FIRST (essential — the current picture, ~30 min total):**
+1. [CURRENT-STATE.md](CURRENT-STATE.md) — the one file every number in the venture traces back to. Read this before trusting any figure anywhere else.
+2. [strategy/STRATEGIC-REPORT.md](strategy/STRATEGIC-REPORT.md) — the consolidated synthesis of business, experience, and naming state as of 2026-08-14; the fastest way to get current on everything at once.
+3. [naming/NAMING-DECISION-STATE.md](naming/NAMING-DECISION-STATE.md) — exactly where naming stands (SOLENA conditional leader, ELOWEN live fallback, why neither is locked yet).
+4. [strategy/PERTH-PROPERTY-SHORTLIST.md](strategy/PERTH-PROPERTY-SHORTLIST.md) — the real, actionable item: two Tier-1 property candidates exist and are waiting on a phone call.
+5. [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) — the single prioritised list of what's actually still open and who can resolve it.
+
+**READ SECOND (important — the brand/venue/experience picture, ~20 min):**
+6. `outputs/brand/SOLENA-vs-ELOWEN-VISUAL-REVIEW.pdf` — see the actual brand work rather than reading about it; both names, side by side, real applications.
+7. [strategy/VENUE-FUNCTIONAL-BRIEF.md](strategy/VENUE-FUNCTIONAL-BRIEF.md) — what a real venue needs to provide, validated against the 18/day model.
+8. [experience/RETURN-LOOP.md](experience/RETURN-LOOP.md) — the AM→PM mechanism the whole growth thesis depends on, and the single biggest unmodelled financial gap.
+
+**READ THIRD (operational/financial detail — only if you need the underlying number):**
+9. [business-plan.md](business-plan.md) — full detail behind everything summarised above.
+
+**READ ONLY WHEN NEEDED (reference, not narrative):** `docs/00_document_inventory.md` (full file-by-file status), `docs/01_conflicts_log.md` (why a figure changed), individual financial breakdowns (`profit-loss-tables.md`, `data/canonical/*.yml`), legal drafts (`privacy-policy.md`, `consent-form.md` — both still solicitor-review-pending).
+
+**DO NOT READ YET / DEFER:** `HANDOFF.md` (superseded twice, historical trace only), `capacity-pricing-audit.md` (superseded), anything in `docs/archive/`, the older sage-palette `outputs/brand/BRAND-SYSTEM.md`/`outputs/landing-page/` (superseded by the locked palette and the named landing pages).
 
 ---
 
@@ -28,7 +53,9 @@ This was a large consolidation session. If you read nothing else in this section
 
 ---
 
-## THE CORE STATUS DOCUMENTS (Read These First, In This Order)
+## THE CORE STATUS DOCUMENTS (Legacy Index — Superseded as the "Read First" List by the Reassessed Path Above)
+
+**This table is retained for its still-useful Phase 1-12 detailed operational index below (PHASE 1 through PHASE 12 sections) — but as a *first* reading list it has been superseded by "ANTHONY'S READING PATH" above, which reflects everything now in the repository, not just `docs/*.md`.** Use this table only if you want the original July reading sequence for the operational/financial/clinical layer specifically.
 
 | # | Document | What it's for | Time |
 |---|---|---|---|
@@ -222,5 +249,7 @@ This was a large consolidation session. If you read nothing else in this section
 **2026-07-20 (AM staffing-by-volume added)** — Added row 31a for [am-staffing-by-volume.md](am-staffing-by-volume.md), new this session. Updated row 31's description to note it also answers the specific 11th-client-at-09:55 question.
 
 **2026-07-20 (PM packages committed)** — Updated row 17a: `pm-package-exploration.md` deleted and replaced by [pm-package-structure.md](pm-package-structure.md), reflecting Anthony's confirmation that PM packages are now a committed direction, not exploratory.
+
+**2026-08-15 (reassessed reading path — the strategy/brand/venue/naming layer added, root cause of "flying blind" fixed)** — A dedicated execution audit found this file's "60-second version" still cited the pre-superannuation figures (+A$63,028.75/+A$27,084.69) and, more significantly, that neither this file nor `docs/00_document_inventory.md` referenced any of `docs/strategy/`, `docs/naming/`, `docs/experience/`, or `outputs/brand/` — a real, current, ~40-file layer built 2026-08-05 through 2026-08-15. Corrected the 60-second version's figures to the current canonical ones (+A$56,581.70/+A$21,056.64, RECALCULATED 2026-08-09 for superannuation). Added a new "ANTHONY'S READING PATH — REASSESSED 2026-08-15" section — a genuinely reassessed, 9-document smallest-useful-set covering the whole venture as it stands today, superseding the old "CORE STATUS DOCUMENTS" table as the first-read list (that table is retained below for its still-useful Phase 1-12 detailed index, now explicitly marked as secondary). No prose in the Phase 1-12 body was rewritten — only the entry points above it changed.
 
 **2026-08-08 (F-2 correction — this file's own "current model" references brought back in line with docs/CURRENT-STATE.md)** — `docs/architecture/REPOSITORY-AUDIT.md` (part of an architecture-only planning phase) found this file's headline "60-second version," its HANDOFF.md row, its `operations-manual.md` gap notes, and its `capacity-pricing-audit.md` reference row all still described the 2026-07-20 model (10 clients/day, +A$25,087/month) — two rebases behind `CURRENT-STATE.md`'s current figures (12-client rebase, 2026-07-30; Table 1/Table 2 18-/12-client rebase, 2026-08-05). This is the exact class of drift `CURRENT-STATE.md` was built to prevent at the figures layer, recurring one layer up in this navigation document. Corrected the specific stale claims listed above; did not rewrite the rest of this document's historical "what changed 2026-07-19 to 2026-07-20" narrative, which remains an accurate record of that specific session. **No decision was made here on the still-open Table 1 vs. Table 2 framing question (`VERIFICATION-TRACKER.md` item 1m)** — both are presented, PRIMARY/SECONDARY, matching `CURRENT-STATE.md`'s own current framing exactly, not resolved further.
