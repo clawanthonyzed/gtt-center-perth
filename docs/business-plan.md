@@ -1,29 +1,30 @@
 # GTT Center Perth — Business Plan
 
-**Version:** 3.0 | **Date:** 2026-07-19 (full currency rewrite — see changelog)
+**Version:** 4.0 | **Date:** 2026-08-16 (K — full currency refresh, see changelog. Was stale since 2026-07-31, over 2 weeks/2 model-generations behind [docs/CURRENT-STATE.md](CURRENT-STATE.md))
 **Entity:** YETI Holding Trust trading as GTT Center Perth
 **Trustee:** YETI Tipi Holdings PTY LTD
 **Founders:** Anthony Zed + Imara (funding partner — see [financial-model.md](financial-model.md)/[research.md](research.md) for ownership structure)
 **Status:** Pre-launch, planning/feasibility stage. **No launch date set — sequence by dependency only, per standing instruction.**
+**Working/brand name:** "GTT Center Perth" remains the descriptive working name — the naming decision is narrowed to two finalists, SOLENA (conditional leader, 71.6%) and ELOWEN (68.8%), neither locked; trademark clearance deliberately deferred to a later funding milestone. See [naming/NAMING-DECISION-STATE.md](naming/NAMING-DECISION-STATE.md) for current status.
 
-> **All financial figures in this document are estimates and planning assumptions, not confirmed facts.** Each figure is sourced to its origin document below. See `docs/05_open_questions_for_founder.md` for items still awaiting founder or third-party (WDP, accountant, solicitor) confirmation before they can be treated as settled.
+> **All financial figures in this document are estimates and planning assumptions, not confirmed facts.** Each figure is sourced to its origin document below and cross-checked against [docs/CURRENT-STATE.md](CURRENT-STATE.md), this venture's single canonical source for package prices, client capacity, headcount, and P&L. See [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) for every item still awaiting founder or third-party (WDP, accountant, solicitor) confirmation before it can be treated as settled.
 
 ---
 
 ## 1. EXECUTIVE SUMMARY
 
-GTT Center Perth is a concept for Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT) — a mandatory ~2.5-hour pregnancy screening test undergone by an estimated **~33,570 WA women per year (corrected 2026-07-31, was ~14,000-18,000 — see §4 for derivation and sourcing)**. Instead of a bare pathology waiting room while fasting, patients would book into GTT Center Perth and spend the test window receiving massage, nails, brows, or hairdressing, priced as one of two fixed packages with venue/lounge access bundled free ([services-pricing-locked.md](services-pricing-locked.md)).
+GTT Center Perth is a concept for Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT) — a mandatory ~2.5-hour pregnancy screening test undergone by an estimated **~33,570 WA women per year** (KPMG analysis of ABS Births, Australia 2024). Instead of a bare pathology waiting room while fasting, patients would book into GTT Center Perth and spend the test window receiving massage, nails, brows, or hairdressing, priced as one of two fixed packages with venue/lounge access bundled free ([services-pricing-locked.md](services-pricing-locked.md)).
 
-The current committed operational model (per [HANDOFF.md](HANDOFF.md), 2026-07-17 — the most recent session summary and source of truth for the active plan) is:
-- **AM GTT:** 10 clients/day, 07:00 start, 2 chairs, 2 phlebotomists, synchronized-start schedule (Scenario C — see `docs/scenario-c-sync-timetables.md`)
-- **Packages:** 2 tiers only — Package 1 (A$250, fixed 2×30-min composition) and Package 2 (A$300, flexible choice of 2×45min / 1×45min+1×30min / 2×30min) — renamed/renumbered 2026-07-20, same 2 price points as before, not a re-opening of the earlier decision to drop the old A$200 tier ([services-pricing-locked.md](services-pricing-locked.md))
-- **PM:** Individual standalone a-la-carte services PLUS set/fixed PM packages (committed 2026-07-20 — bundled combos, no client-choice, the opposite flexibility model from AM's Package 2), 4 dedicated casual hires, costed on actual hours worked. Active sales strategy to steer clients toward the package option since it drives higher revenue per visit — see `pm-package-structure.md` for the proposed package menu (pricing requires Anthony's sign-off). **The PM shift operates as a standalone wellness venue in its own right** — any woman can book a PM appointment directly, not only clients who attended a GTT test that morning.
-- **Saturday:** Reuses the AM model + PM standalone, costed as a bolt-on shift
+**The current committed operational model (per [CURRENT-STATE.md](CURRENT-STATE.md), the single canonical source for these figures) is:**
+- **AM GTT — planning model:** **18 clients/day (Table 1), 07:00 start**, 2 chairs, 2 phlebotomists, 25-minute synchronized pair cadence, 8 dual-qualified treatment staff — see [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) §0.6a. **12 clients/day (Table 2, 08:00 start) is the downside/backup reference model only**, pending information from WDP/Carole that could change which operating model is more beneficial — not an open question to keep re-litigating.
+- **Packages:** 2 tiers only — Package 1 (A$250, fixed 2×30-min composition) and Package 2 (A$300, flexible choice of 2×45min / 1×45min+1×30min / 2×30min) ([services-pricing-locked.md](services-pricing-locked.md))
+- **PM:** Individual standalone a-la-carte services PLUS set/fixed PM packages (bundled combos, no client-choice, the opposite flexibility model from AM's Package 2), 4 dedicated casual hires, costed on actual hours worked. Active sales strategy to steer clients toward the package option since it drives higher revenue per visit — see `pm-package-structure.md` for the proposed package menu (pricing requires Anthony's sign-off). **The PM shift operates as a standalone wellness venue in its own right** — any woman can book a PM appointment directly, not only clients who attended a GTT test that morning.
+- **Saturday:** Reuses the AM planning model + PM standalone, costed as a bolt-on shift
 - **Sunday:** Closed until standalone PM service demand is proven and profitable enough to justify the added penalty-rate staffing cost — a conditional business choice, not a fixed-forever position and not a legal requirement (WA Retail Trading Hours Act exempts this business type from restriction)
 
 **The only comparable business found in market research is MIWM in Melbourne** (see [market-research-findings.md](market-research-findings.md)) — reported fully booked 3-4 weeks in advance. No direct WA competitor has been identified in the research conducted for this venture.
 
-**Financial baseline (historical, conservative, steady-state, Month 5+, per [profit-loss-tables.md](profit-loss-tables.md) v2.0 and [HANDOFF.md](HANDOFF.md)):** was +A$25,087.07/month, +A$301,044.84/year at the time — since superseded, see `docs/CURRENT-STATE.md` for the current +A$63,028.75/month primary figure. **This figure is a planning estimate based on assumed booking volumes and no real trading data — see §9 for the full breakdown and sourcing.**
+**Financial baseline (steady state, Month 5+, superannuation-corrected 2026-08-09, per [CURRENT-STATE.md](CURRENT-STATE.md) §5):** **+A$56,581.70/month (Table 1, planning model)** or **+A$21,056.64/month (Table 2, downside/backup)**, same headcount either way. **This figure is a planning estimate based on assumed booking volumes and no real trading data — see §9 for the full breakdown and sourcing.**
 
 ---
 
@@ -50,7 +51,7 @@ GTT Center Perth is a concept for a purpose-built venue where:
 ### Pathology Model (Option A — confirmed approach)
 GTT Center Perth pursues **Option A**: partnering with an already-NATA-accredited pathology provider (WDP is priority 1; PathWest and Clinipath are contingency options — see [reed-partnerships.md](reed-partnerships.md)) for collection oversight, rather than **Option B** (building an in-house NATA/RCPA-accredited collection centre from scratch). Option B was investigated and rejected — see [option-b-collection-centre.md](option-b-collection-centre.md) and [inhouse-gtt-research.md](archive/inhouse-gtt-research.md) — primarily due to the 12-18 month accreditation timeline being incompatible with a faster path to operating. **Under Option A, GTT Center Perth employs the phlebotomist and provides the collection room; the pathology partner provides the NATA accreditation umbrella, credentialing, specimen processing, and result reporting to the referring doctor.** GTT Center Perth does not diagnose, interpret, or communicate results.
 
-**Status of pathology partnership (2026-07-19):** WDP has been emailed and a reply is awaited. PathWest and Clinipath have not yet been contacted (1 of 3 potential partners approached so far) — see [reed-partnerships.md](reed-partnerships.md) "Outreach Status" for the live tracker.
+**Status of pathology partnership (updated 2026-08-16):** All 3 potential partners have been contacted. **WDP is in active, ongoing back-and-forth** (Carole Rivers, Customer & Commercial Manager) — several regulatory/operational questions resolved directly, a full collection-room specification received, the commercial rental figure actively progressing via WDP's State Business Manager. **This is a WAITING status, not a research gap** — do not keep investigating around it internally. PathWest and Clinipath were emailed 2026-07-27, both still awaiting reply. See [reed-partnerships.md](reed-partnerships.md) "Outreach Status" for the live tracker.
 
 ### No-Interrupt Rule
 Wellness services fill the gaps between blood draws and are never interrupted by a draw — the phlebotomist waits for a service to reach a natural break point ([services-pricing-locked.md](services-pricing-locked.md) Part A, [operations-manual.md](operations-manual.md)).
@@ -91,13 +92,18 @@ All GTT-window wellness services are 45 minutes or under, delivered by employed 
 | Perth metro GTT tests/week | ~515/week | Derived: ~26,790 tests/year ÷ 52 weeks `[VERIFIED — KPMG analysis of ABS Births, Australia 2024, 17 July 2025; ABS figures noted as preliminary/subject to revision]` |
 
 ### Addressable Market
-GTT Center Perth's committed capacity model is **12 GTT clients/day** (see [docs/CURRENT-STATE.md](CURRENT-STATE.md) §1, superseding the 10-client Scenario C figure this section previously cited), operating **6 days/week (Monday-Saturday) — Sunday is closed** (see §5, [am-capacity-weekend.md](am-capacity-weekend.md)), giving **72 AM GTT slots/week**. Against the corrected Perth metro market of ~515 GTT tests/week, this represents roughly **~14% of the addressable weekly market at full AM capacity** — down from the previously-stated ~22-26%, not because the venue's capacity shrank, but because the real market is nearly double what the old, unsourced estimate assumed. A **14-client/day PROVEN CEILING** also exists (84 slots/week, ~16% of the corrected market) — documented as growth headroom, not the committed daily target, see [docs/CURRENT-STATE.md](CURRENT-STATE.md) §1.
 
-### Scheduling — Latest AM Start Time and Whether 2 Extra Clients Fit (Checked, Not Guessed)
+GTT Center Perth's **planning capacity model is 18 GTT clients/day (Table 1)** (see [CURRENT-STATE.md](CURRENT-STATE.md) §1), operating **6 days/week (Monday-Saturday) — Sunday is closed** (see §5, [am-capacity-weekend.md](am-capacity-weekend.md)), giving **108 AM GTT slots/week**. Against the Perth metro market of ~515 GTT tests/week, this represents roughly **~21% of the addressable weekly market at full AM planning capacity**. The 12-client/day Table 2 model (downside/backup only) would represent ~14% (72 slots/week) — both figures are ceilings, not guarantees; actual fill rate depends entirely on the referral pipeline (§13).
 
-**Question: what is the latest AM start time that still gets all 10 package clients seen?** Per the verified Scenario C timetable ([scenario-c-sync-timetables.md](scenario-c-sync-timetables.md)), the 10th (last) client's Draw 1 is scheduled at **09:40** in the current committed synchronized-start model — comfortably inside the King Edward/PathWest "preferably before 10:00am" guidance ([king-edward-start-time-constraint.md](king-edward-start-time-constraint.md)) with a genuine margin, not a tight squeeze. Separately, [draw-event-scheduler-findings.md](draw-event-scheduler-findings.md)'s constraint solver has modelled a theoretical outer boundary of 10:05 for the latest a *new* Draw 1 could start within the current 07:00-opening window assumption — this is a structural ceiling the solver uses as a parameter, not the actual 10th client's scheduled time, and it is itself provisional pending WDP's specimen-processing cutoff confirmation (`docs/05_open_questions_for_founder.md`).
+**Four distinct concepts, not to be blurred (per direct founder instruction):**
+1. **Design capacity** — the maximum the venue's chairs/phlebotomists/schedule can physically handle (18/day, solver-verified, Table 1).
+2. **Opening/planning target** — 18 clients/day from Day 1, supported by pre-opening waitlist/demand generation, not a slow ramp-up assumption (see §8).
+3. **Downside scenario** — 12 clients/day (Table 2), the reference model if WDP/Carole's information changes which operating model is more beneficial.
+4. **Actual realised demand** — genuinely unknown pre-operational, gated entirely by the referral pipeline (§13) filling booked slots — not assumed to equal either of the above.
 
-**Question: can 2 EXTRA clients be started at 09:55 — i.e. does this add capacity beyond the current 10-client ceiling, not just shift the last existing slot?** **No — checked directly against the real scheduling model, not assumed.** [draw-event-scheduler-findings.md](draw-event-scheduler-findings.md)'s constraint solver tested tighter packing within the same window explicitly and found it produces **worse** throughput, not more clients — bursts of draws followed by dead time once each client's clinical tolerance windows (±5min Draw 2, ±10min Draw 3) are used up. The solver's own conclusion, stated directly: **"10 clients/day is the genuine maximum on 2 chairs within the current window... Tighter packing was tested directly and produces worse throughput, not better."** The only verified lever to exceed 10/day is a 3rd phlebotomist/chair (Scenario D, 15 clients/day, already verified — [am-capacity-weekend.md](am-capacity-weekend.md)), or WDP confirming the specimen-cutoff window can extend beyond the current ~185-minute assumption (which would raise the ceiling to ~16/day on the existing 2 chairs without a 3rd hire, per [draw-event-scheduler-findings.md](draw-event-scheduler-findings.md)'s extended-window test) — neither is what "start 2 more clients at 09:55" alone would achieve.
+### Scheduling — Verified Capacity, Not Guessed
+
+Per the solver-verified Table 1 timetable ([scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) §0.6a), the 18th (last) client's Draw 1 is scheduled at **10:20** — inside WDP's own directly-stated guidance that they "would not normally commence a GTT after 10:30am" (Carole Rivers, WDP, verified 2026-07-30), with a real, checked margin. This capacity figure — 18 clients/day at 8 dual-qualified treatment staff + 2 phlebotomists — was independently verified via two different scheduling methods (sweep-line peak concurrency and greedy first-fit assignment), which agreed exactly. A 3rd phlebotomist/chair beyond this ceiling is a genuine future strategic question (reframed 2026-08-16 as a real capacity decision — 3rd chair at this venue vs. a second location — see [scenario-d-investigation.md](scenario-d-investigation.md)), not a committed plan.
 
 ### Secondary Market — Afternoon Wellness
 All pregnant women in the broader gestational window (not just GTT week) plus postnatal clients, per the afternoon standalone service model ([extended-wellness-services.md](extended-wellness-services.md)).
@@ -115,11 +121,11 @@ All pregnant women in the broader gestational window (not just GTT week) plus po
 
 ## 5. OPERATIONS
 
-### Current Committed Model — Scenario C (historical, 10 clients/day, 07:00 start — superseded, see docs/CURRENT-STATE.md for the current 18-client Table 1 primary model)
+### Current Planning Model — Table 1 (18 clients/day, 07:00 start)
 
-Per [HANDOFF.md](HANDOFF.md) and `docs/scenario-c-sync-timetables.md` (fully verified, zero double-bookings): 2 collection chairs, 2 phlebotomists, synchronized start at 07:00, 5 clients per chair.
+Per [CURRENT-STATE.md](CURRENT-STATE.md) §1 and [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) §0.6a (fully verified, zero double-bookings): 2 collection chairs, 2 phlebotomists, synchronized start at 07:00, 25-minute pair cadence, 9 pairs.
 
-GTT collection follows ADIPS-guideline timing (fasting draw, 75g glucose drink, then further draws at approximately +1hr and +2hr from the glucose drink). A commonly cited best-practice guideline is to start the test before 10:00am — **this guideline is recorded as general clinical knowledge from internet research, not a specific cited source document; see [king-edward-start-time-constraint.md](king-edward-start-time-constraint.md).** The current Scenario C model comfortably starts its last client at 09:40, within this guideline.
+GTT collection follows ADIPS-guideline timing (fasting draw, 75g glucose drink, then further draws at approximately +1hr and +2hr from the glucose drink). WDP has directly confirmed they "would not normally commence a GTT after 10:30am" (Carole Rivers, verified 2026-07-30) — the current Table 1 model's last client starts at 10:20, inside this guidance with a real, checked margin.
 
 ### Afternoon (PM) Shift
 12:00pm-6:00pm, no GTT testing, no fasting requirement. 4 dedicated casual hires (1 each: massage, hair, nail, beauty) deliver individual standalone services PLUS set/fixed PM packages (committed 2026-07-20 — `pm-package-structure.md`), cross-shift qualified with AM staff, costed on actual hours worked ([pm-staffing-roster.md](pm-staffing-roster.md), [HANDOFF.md](HANDOFF.md)).
@@ -133,14 +139,21 @@ Saturday reuses the AM Scenario C timetable (10 clients) plus PM standalone, cos
 |---|---|---|
 | Venue Manager (Managing Director) | 1 | **Critical-path hire — recruitment does not begin until a physical venue location is confirmed** (see `docs/venue-manager-job-posting.md`, [staff-plan.md](staff-plan.md) §7) |
 | Phlebotomist | 2 | AM-only, credentialed under the pathology partner's NATA accreditation |
-| Massage Therapist, Nail Technician, Hairdresser, Beauty Therapist | 2 each (8 total) — **at least 2 of the 8 are dual-qualified across Massage and Beauty** (both Cert IV under MA000005), not single-role specialists; this cross-qualification is what makes a 7-staff (not 8) minimum achievable at current 10-client/day volume, see [multirole-CORRECTION.md](multirole-CORRECTION.md) and [profit-loss-tables.md](profit-loss-tables.md)'s Treatment Headcount section | AM GTT window |
-| Receptionist/Manager | 1 | Split shift covering AM open + PM administrative window |
-| PM Service roster | 4 dedicated casual hires | 1 each: massage, hair, nail, beauty — PM standalone shift |
-| Relief/backup pool | 3 dual/cross-trained roles (Massage+Beauty, Nail, Hair) + 1 relief phlebotomist | Added 2026-07-20 — covers sick leave/annual leave without reducing same-day capacity below the safe minimum, for both AM/PM treatment staff and phlebotomists; see [staff-plan.md](staff-plan.md) §7B and [hr-framework.md](hr-framework.md) §12A for the full policy |
+| Massage Therapist, Nail Technician, Hairdresser, Beauty Therapist | **8 dual-qualified staff (4 Massage+Beauty pool + 2 Nails + 2 Hair)** — confirmed identical headcount at both 18-client (Table 1) and 12-client (Table 2) volumes, verified via two independent scheduling methods. All treatment staff form one common pool, rostered AM or PM interchangeably (A10, 2026-08-16) — the role doesn't change by shift. | AM/PM, common pool |
+| Receptionist/Manager | 1 | Split shift covering AM open + PM administrative window — see A8 note below on whether Venue Manager coverage of reception is sufficient with one VM or eventually needs an AM/PM split |
+| PM Service roster | 4 dedicated casual hires | 1 each: massage, hair, nail, beauty — drawn from the same common treatment-staff pool as AM (A10), not a separate roster |
+| Relief/backup pool | 3 dual/cross-trained roles (Massage+Beauty, Nail, Hair) + 1 relief phlebotomist | Covers sick leave/annual leave without reducing same-day capacity below the safe minimum; see [staff-plan.md](staff-plan.md) §7B and [hr-framework.md](hr-framework.md) §12A for the full policy. **A3/A5 (2026-08-16): consider ~3-4 phlebotomists on the books (not all rostered every day) so one can be absent without compromising operations, under the "only pay for actual rostered/worked hours" principle — a larger pool for coverage, reflected in [staff-plan.md](staff-plan.md), not yet a headcount commitment.** |
 
-**Recruitment sequencing (2026-07-19, direct founder instruction):** GTT Center Perth is not recruiting or looking for any staff, including the Venue Manager, until a physical venue location is confirmed. The Venue Manager remains the first hire once recruitment does begin.
+**Recruitment sequencing:** GTT Center Perth is not recruiting or looking for any staff, including the Venue Manager, until a physical venue location is confirmed. The Venue Manager remains the first hire once recruitment does begin.
 
 **Staff growth is volume-triggered, not a fixed headcount:** as PM standalone demand grows, additional PM-line hires are added against a specific booking-volume/turned-away-booking trigger, not a calendar date — see [staff-plan.md](staff-plan.md) §7A.
+
+**Operating model notes, added 2026-08-16 (Section A) — reflected in full in [staff-plan.md](staff-plan.md), summarised here:**
+- **A1 — Roster-gap standalone bookings (POTENTIAL/CONDITIONAL, no dollar figure invented):** where AM treatment staff have genuine gaps between clients, those gaps are bookable for standalone appointments — already the existing policy per [CURRENT-STATE.md](CURRENT-STATE.md) §1's downtime-fill/early-release framework, restated here as a staffing-model note, not a new revenue commitment.
+- **A4 — Dual-qualification desirable, not mandatory** for AM treatment staff generally (beyond the already-confirmed Massage+Beauty pairing).
+- **A6 — Venue Manager treatment-qualification** is desirable (able to step into service work if needed) — a recruitment preference, not a hard requirement.
+- **A7 — Rostering follows pre-booked demand**, not a fixed daily-headcount assumption — already the existing "Rostering policy" in [CURRENT-STATE.md](CURRENT-STATE.md) §1, restated here explicitly.
+- **A9 — All staff casual initially**, reviewed for part-time/full-time conversion once demand proves regular hours per role — likely exception for the Venue Manager (salaried from Day 1, per [hr-framework.md](hr-framework.md)'s critical-path treatment).
 
 ### Space Requirements
 Per [floor-plan-v3.svg](floor-plan-v3.svg)/`.pdf` (current, 2026-07-10) and [floor-plan-concept.md](floor-plan-concept.md): approximately 239sqm day-one footprint, covering reception, GTT lounge (open-plan), blood collection room, 4 treatment rooms, nail station with mandatory LEV ventilation, hairdressing area, cafe/refreshments, staff room, and accessible facilities. **Spray tan removed from the concept entirely, 2026-08-16, per Anthony's explicit instruction — too many things in one location. Not deferred to a future phase; not part of this venture's scope at all.** See the floor plan documents for the detailed room schedule — not duplicated here to avoid drift between two copies of the same figures.
@@ -153,7 +166,7 @@ Per [floor-plan-v3.svg](floor-plan-v3.svg)/`.pdf` (current, 2026-07-10) and [flo
 
 | Stream | Description | Driver |
 |---|---|---|
-| AM GTT package sales | Package 1 (A$250) / Package 2 (A$300) per GTT client, venue/lounge bundled free | Up to 10 packages sold/day (Scenario C cap) |
+| AM GTT package sales | Package 1 (A$250) / Package 2 (A$300) per GTT client, venue/lounge bundled free | Up to 18 packages sold/day (Table 1 planning capacity) |
 | PM standalone services | Individual a-la-carte services, ~A$95/service average, confirmed compatible with the current AM model | 4-line PM roster capacity |
 | PM set/fixed packages (committed 2026-07-20) | Bundled 2-service combos (e.g. "PM Refresh") at a set price, actively steered/upsold to clients — see `pm-package-structure.md` for proposed pricing (not yet final) and revenue modelling | Same 4-line PM roster; revenue per package visit modelled at 1.5-2.4x the standalone average |
 | Ancillary (cafe/retail) | Snacks, drinks, retail products (Gaia, Weleda, Mustela) | Per-client ancillary spend |
@@ -164,7 +177,7 @@ Per [floor-plan-v3.svg](floor-plan-v3.svg)/`.pdf` (current, 2026-07-10) and [flo
 
 Financial models in this venture use **A$250 (Package 1, the lower of the two current packages) as the standard planning price per AM GTT package sold** — a deliberate conservative safety margin, per standing instruction, not a blended average across both packages. See [services-pricing-locked.md](services-pricing-locked.md) for the full locked structure and `docs/price-increase-comparison.md` for analysis of when/whether to raise prices.
 
-**Sourcing note on PM average (~A$95/service):** [profit-loss-tables.md](profit-loss-tables.md)'s whole-venture profitability figure was, at the time this was written, +A$25,087.07/month (matching [HANDOFF.md](HANDOFF.md)) — historical, since superseded twice (see docs/CURRENT-STATE.md for the current +A$63,028.75/month primary figure), incorporating this PM average alongside the then-current, now-historical 10-client Scenario C AM model.
+**Sourcing note on PM average (~A$95/service):** incorporated into the current whole-venture profitability figure — **+A$56,581.70/month (Table 1, planning model), superannuation-corrected, per [CURRENT-STATE.md](CURRENT-STATE.md) §5.**
 
 ---
 
@@ -183,10 +196,12 @@ Financial models in this venture use **A$250 (Package 1, the lower of the two cu
 
 ## 8. GO-TO-MARKET
 
-**No calendar dates are used below — sequencing is by dependency/phase, per standing instruction that no launch date is set.** See `docs/04_roadmap_next_steps.md` for the current tiered roadmap and [venture-timeline.md](venture-timeline.md) for the fuller phase-by-phase plan (which does still carry some illustrative calendar dates from an earlier planning pass — treat those as illustrative, not committed).
+**No calendar dates are used below — sequencing is by dependency/phase, per standing instruction that no launch date is set.** See [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) for the current prioritised action list and [venture-timeline.md](venture-timeline.md) for the fuller phase-by-phase plan (which does still carry some illustrative calendar dates from an earlier planning pass — treat those as illustrative, not committed).
+
+**Customer acquisition is not organic-only (F7, 2026-08-16 update):** an aggressive marketing push during fit-out runs alongside, not instead of, midwife/OB/GP referral partnerships — both channels are active simultaneously, not sequenced one-after-the-other. Referral partnerships remain the only channel that fills AM/GTT slots specifically (a clinical referral is required for the test itself); paid marketing and organic content drive PM standalone awareness and pre-launch waitlist volume.
 
 ### Phase 1 — Pre-Launch (during fit-out)
-Waitlist-building via Instagram (behind-the-scenes fit-out content, educational GTT content), referral card distribution to midwife/OB practices, waitlist capture on the website. Target discussed in earlier planning passes: 300+ waitlist names before opening — not re-verified this session as a committed target.
+Waitlist-building via Instagram (behind-the-scenes fit-out content, educational GTT content) **plus an aggressive paid marketing push during the fit-out window** (F7) — not deferred to post-opening. Referral card distribution to midwife/OB practices runs in parallel. **Waitlist target: 500-700 signups before opening** (revised 2026-08-10, per [docs/architecture/PRE-LAUNCH-DEMAND-VALIDATION-PLAN.md](architecture/PRE-LAUNCH-DEMAND-VALIDATION-PLAN.md) — the previous "300+" target was tested against the current 18-client planning model's actual Month 1 volume requirement and found insufficient; this is the current, correct target).
 
 ### Phase 2 — Soft Launch
 Waitlist-only bookings initially, test operations runs (friends/family, end-to-end GTT + services) before public opening.
@@ -195,7 +210,11 @@ Waitlist-only bookings initially, test operations runs (friends/family, end-to-e
 Public bookings open, paid social campaign, Google Business Profile live, PR outreach, referral card distribution ongoing.
 
 ### Phase 4 — Growth
-SEO content strategy, referral reward programme, quarterly referring-practice visits by the Venue Manager, Scenario D (15-client growth model) as a documented but not-yet-committed capacity expansion.
+SEO content strategy, referral reward programme, quarterly referring-practice visits by the Venue Manager. A 3rd phlebotomist/chair vs. a second location is a genuine future strategic capacity decision (reframed 2026-08-16, see [scenario-d-investigation.md](scenario-d-investigation.md)), neither committed.
+
+### AM→PM Conversion Incentive (F8, added 2026-08-16)
+
+A percentage-discount mechanism for AM clients booking a PM treatment is worth investigating as a potential retention lever, once the venue is operating — e.g. a modest discount on a first self-directed PM booking for a recent AM/GTT client. **This is a mechanism to consider, not a modelled conversion rate.** Per standing instruction, the actual AM→PM conversion rate cannot be known pre-operational and should not be modelled as fact — see [docs/experience/AM-TO-PM-DATA-CAPTURE-SPECIFICATION.md](experience/AM-TO-PM-DATA-CAPTURE-SPECIFICATION.md) for how this will become measurable once trading starts, and [docs/experience/RETURN-LOOP.md](experience/RETURN-LOOP.md) for the retention mechanism this incentive would support.
 
 ---
 
@@ -203,45 +222,48 @@ SEO content strategy, referral reward programme, quarterly referring-practice vi
 
 **All figures below are planning estimates, sourced to their origin document. None are confirmed by actual trading data — there is no venue open yet.**
 
-### Startup Capital Required (estimate range, per [cash-flow.md](cash-flow.md))
+### Startup Capital Required (per [CURRENT-STATE.md](CURRENT-STATE.md) §6/§7, the single canonical source — supersedes the historical ranges previously quoted here)
 
-| Range | Amount | Source |
+| Figure | Amount | Status |
 |---|---|---|
-| Low (historical, one of 3+ unreconciled ranges) | ~A$209,000 | [cash-flow.md](cash-flow.md) |
-| Mid | ~A$305,000 | [cash-flow.md](cash-flow.md) |
-| High | ~A$431,000 | [cash-flow.md](cash-flow.md) |
+| **Adopted planning figure (2026-08-10)** | **A$251,198** (Pre-Opening Capital) | `[DECIDED]` — Anthony approved this "in principle" as the current planning assumption, following a cost-optimisation review; explicitly not a locked final cost, pending venue confirmation and real supplier quotes |
+| Combined with Working Capital Reserve | A$336,198-361,198 | Same status — the adopted figure plus the unchanged A$85,000-110,000 working capital reserve |
+| Reconciled historical range (Anthony's own reconciliation) | A$292,335-594,900 | `[DECIDED]` — an earlier, wider reconciliation, retained alongside the newer adopted figure, not deleted |
+| Bounded funding-requirement range (Pre-Opening + Working Capital) | A$357,390-577,180 | `[CALCULATED]` — component-by-component sum, a few percent different from the adopted total, both shown side by side per [CURRENT-STATE.md](CURRENT-STATE.md)'s own disclosure |
 
-**Note (historical, unreconciled range, one of 3+ conflicting historical figures):** [HANDOFF.md](HANDOFF.md) (2026-07-17) cites a "more realistic range" of A$144,500-242,500, described as "down from an inflated A$363,000 original figure" — **this venture's startup capital estimate has moved materially across different documents and sessions; [cash-flow.md](cash-flow.md)'s figures above should be treated as the most detailed breakdown available, but the overall range itself has not settled and should be reconciled before being used in any funding conversation.** See `docs/CURRENT-STATE.md` §6 for the full, current, still-unreconciled comparison.
+**This venture's startup-capital estimate previously moved across 6+ different documents with conflicting figures — [CURRENT-STATE.md](CURRENT-STATE.md) §6/§7 is now the single place this is tracked, with every historical range retained for trace, not silently replaced.** A real itemised purchase list exists at [docs/architecture/ITEMISED-PURCHASE-LIST.md](architecture/ITEMISED-PURCHASE-LIST.md) (C2) to further refine this figure — trades/structural costs remain ballpark pending a confirmed venue.
 
-### Monthly P&L Snapshot — Stable Operations, Month 5+ (per [profit-loss-tables.md](profit-loss-tables.md) v2.0, current canonical baseline)
+### Monthly P&L Snapshot — Stable Operations, Month 5+ (per [CURRENT-STATE.md](CURRENT-STATE.md) §5, the single canonical source)
 
-| Line | Amount |
-|---|---|
-| Total Revenue | A$113,712.16 (per [cash-flow.md](cash-flow.md)) — **note: [profit-loss-tables.md](profit-loss-tables.md) v2.0's own monthly total is derived differently; see that document directly for its full breakdown rather than relying on this summary line alone** |
-| Total Costs (payroll, workers comp, non-wage overhead) | A$88,625.09 |
-| **Net P&L (historical conservative baseline, superseded, see docs/CURRENT-STATE.md)** | **+A$25,087.07/month** |
+| Line | Table 1 (18/day, planning model) | Table 2 (12/day, downside/backup) |
+|---|---|---|
+| Total Revenue | A$155,215.80 | A$115,720.80 |
+| Total Costs | A$98,634.10 | A$94,664.16 |
+| **Net P&L (superannuation-corrected, 2026-08-09)** | **+A$56,581.70/month** | **+A$21,056.64/month** |
 
-**Break-even:** ~A$88,625/month in total costs to cover (revenue basis) — or, as an illustrative single-segment bookend only, approximately 298 Package 1 sales/month (13.5/day) *if every single sale were an AM GTT package at A$250 and nothing else*, which is not the real mix ([profit-loss-tables.md](profit-loss-tables.md), [unit-economics.md](unit-economics.md), [gtt-center-perth-overview-for-imara.md](gtt-center-perth-overview-for-imara.md) for the full two-segment breakdown). **Full break-even reached Month 5+; Month 4 is marginally profitable, per [profit-loss-tables.md](profit-loss-tables.md)'s corrected Year 1 Monthly Ramp table.**
+**Break-even:** 9.404 clients/day (Table 1) — 52.2% of the 18/day planning target, a real margin of safety, not a knife-edge. See [docs/strategy/18-CLIENT-COMMERCIAL-STRESS-TEST.md](strategy/18-CLIENT-COMMERCIAL-STRESS-TEST.md) for the full break-even/margin-of-safety analysis.
 
-**Yearly (12 months, steady-state run rate):** +A$301,044.84/year ([profit-loss-tables.md](profit-loss-tables.md) v2.0). This is a run-rate figure, not a Year 1 actual — see [profit-loss-tables.md](profit-loss-tables.md)'s Years 1-3 Annual Projection for the corrected Year 1 estimate, which includes ramp-up in the early months.
+**Yearly (12 months, steady-state run rate):** +A$678,980.40/year (Table 1) or +A$252,679.68/year (Table 2). This is a run-rate figure, not a Year 1 actual — Year 1 ramp-up has not yet been independently rebuilt against Table 1's higher ceiling, flagged as an open follow-up in [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md).
+
+**A human-readable financial summary, covering revenue/costs/profit/margin/break-even/startup-capital/assumptions/sensitivity in one place, with a direct link to the canonical machine-readable model, exists at [docs/architecture/FINANCIAL-MODEL-SUMMARY.md](architecture/FINANCIAL-MODEL-SUMMARY.md).**
 
 ---
 
-## 10. LEGAL AND COMPLIANCE (see full regulatory tracker: `docs/regulatory-accreditation-tracker.md`)
+## 10. LEGAL AND COMPLIANCE (see full regulatory tracker: [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md))
 
 Key items — **none of the below should be treated as legal advice; a solicitor and accountant must review before any action is taken:**
 - ABN + GST registration for GTT Center Perth trading activity
-- Business/trading name registration (current name "GTT Center Perth" is a working placeholder, not a locked final brand — see [brand-guide.md](brand-guide.md))
-- Pathology partnership agreement (Option A — WDP priority, PathWest/Clinipath contingency)
-- Commercial lease review (solicitor)
-- Employment contracts per applicable Modern Award (solicitor/HR templates — [hr-framework.md](hr-framework.md))
-- WorkCover WA registration before first hire
+- Business/trading name registration (current name "GTT Center Perth" is a working placeholder, not a locked final brand — naming narrowed to SOLENA/ELOWEN, see [naming/NAMING-DECISION-STATE.md](naming/NAMING-DECISION-STATE.md); trademark attorney question addressed plainly in [naming/TRADEMARK-ATTORNEY-DECISION-BRIEF.md](naming/TRADEMARK-ATTORNEY-DECISION-BRIEF.md))
+- Pathology partnership agreement (Option A — WDP in active dialogue, PathWest/Clinipath contingency, both awaiting reply)
+- Commercial lease review (solicitor) — a draft accountant/insurance/Fair Work outreach pack is already prepared, see [accountant-engagement-email-draft.md](accountant-engagement-email-draft.md), [insurance-broker-quote-request-draft.md](insurance-broker-quote-request-draft.md)
+- Employment contracts per applicable Modern Award (solicitor/HR templates — [hr-framework.md](hr-framework.md), current wage/penalty-rate research as of 2026-08-16)
+- WorkCover WA registration before first hire — confirmed mandatory for all workers including casuals, employer-paid, purchased through a licensed private insurer (researched 2026-08-16, [financial-setup.md](financial-setup.md) Step 6)
 - Council planning/health-use permit for the eventual venue
-- Food business notification (low-risk, packaged snacks only)
-- Public liability + professional indemnity insurance
+- Food business notification — packaged snacks/drinks are low-risk; a sandwich/toastie upgrade would push to Medium Risk classification, see [docs/architecture/CAFE-FOOD-SERVICE-INVESTIGATION.md](architecture/CAFE-FOOD-SERVICE-INVESTIGATION.md)
+- Public liability + professional indemnity insurance — quote request drafted, [insurance-broker-quote-request-draft.md](insurance-broker-quote-request-draft.md)
 - Privacy Act / health-information handling compliance for the collection room ([privacy-policy.md](privacy-policy.md), draft, solicitor review required)
 
-**Full detail, status tracking, and explicit "requires verification" flags on clinical/regulatory items: see `docs/regulatory-accreditation-tracker.md` (new document, 2026-07-19).**
+**Full detail, status tracking, and explicit "requires verification" flags on clinical/regulatory items: see [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md).**
 
 ---
 
@@ -268,6 +290,7 @@ YETI Holding Trust (discretionary trust)
 
 **General knowledge, not specific legal or financial advice — a solicitor and accountant must advise on any specific transaction before it proceeds.** A discretionary trust purchasing commercial property and leasing it to its own trading operation is a recognised, generally tax-efficient structure in Australia, but the specific numbers below are illustrative, not quoted commercial terms:
 
+- **Active search (2026-08-16):** metro Perth, Osborne Park through Cockburn/Cannington — Anthony's own ongoing search, the single highest-leverage unblock in the whole venture (blocks Venue Manager recruitment, fit-out, hiring, council permits). Real Tier-1 candidates identified, none yet inspected — see [docs/strategy/PERTH-PROPERTY-SHORTLIST.md](strategy/PERTH-PROPERTY-SHORTLIST.md).
 - **Year 1 recommendation:** lease under a standard commercial lease — confirm the operating model works before committing capital to a property purchase
 - **Year 2-3 (if proven):** the trust could consider purchasing commercial property and leasing it back to the trading operation, subject to accountant/solicitor advice on the specific transaction, lending terms, and tax treatment at the time
 
@@ -290,6 +313,8 @@ YETI Holding Trust (discretionary trust)
 ---
 
 ## Changelog
+
+**2026-08-16 (K — full currency refresh, v4.0)** — This document was over 2 weeks and 2 model-generations stale (still describing the 10-client Scenario C model, superseded by the 12-client rebase 2026-07-30 and the 18-client Table 1 rebase 2026-08-05; still using pre-superannuation P&L figures superseded 2026-08-09). Audited against [CURRENT-STATE.md](CURRENT-STATE.md), `data/models/master_financial_model.yml`, current canonical data, current strategy/naming/venue status. Updated: §1 (18-client Table 1 planning model, current P&L), §3 (WDP status — active dialogue, not "awaiting reply"), §4 (18-client market share ~21%, the four-concepts framing: design capacity/opening target/downside scenario/actual demand), §5 (Table 1 timetable, common treatment pool, Section A operating-model notes), §6 (18-package/day revenue driver), §8 (aggressive marketing during fit-out alongside referrals, revised 500-700 waitlist target, AM→PM incentive mechanism), §9 (current startup-capital and P&L figures, human-readable financial summary link), §10 (fixed 2 dead document references — `docs/05_open_questions_for_founder.md` and `docs/regulatory-accreditation-tracker.md` were both merged into [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) weeks ago and no longer exist as separate files — replaced with working links; added naming/trademark-brief and outreach-draft cross-references), §12 (added the actual active venue search area, Osborne Park through Cockburn/Cannington). Preserved all still-accurate structural content (entity structure, pathology model rationale, package structure, competitive analysis) unchanged, per instruction not to rewrite unnecessarily.
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced operational/on-site references to "Imara" (Managing Director day-to-day role) with "Venue Manager" (new hire, not yet in place). Imara's founder/funder status is unaffected — see [financial-model.md](financial-model.md)/[research.md](research.md) for the ownership structure.
 
