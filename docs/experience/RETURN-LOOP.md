@@ -2,6 +2,8 @@
 
 **Status:** Current, name-agnostic. Companion to `docs/experience/CUSTOMER-JOURNEY.md`. This is the single highest-priority strategic mechanism in the current phase of work, per direct instruction — the business must not rely on GTT volume alone, and this document maps exactly how a referred, one-off AM visit becomes a self-directed, ongoing relationship.
 
+**The ambition, stated plainly (F9, 2026-08-16):** this is not "make the AM appointment a pleasant one." The actual goal is a genuinely 5-star experience that makes this venue her regular destination for hair, nails, massage, beauty, and whatever else she needs — the place she thinks of first, not a nice memory of one good morning. **This ambition cannot be proven, mathematically justified, or modelled as a conversion rate before the venue is actually operating** — per standing instruction, do not try to force a retention percentage into the financial model pre-launch (see `docs/experience/AM-TO-PM-DATA-CAPTURE-SPECIFICATION.md` for how this becomes measurable once trading starts). What follows is the mechanism designed to earn that ambition, not a guarantee it will be achieved.
+
 ---
 
 ## The Loop

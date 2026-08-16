@@ -95,6 +95,19 @@ Downtime between AM bookings (17-33% utilisation) follows the Staff Downtime Pro
 - Quality: customer feedback review, service standard enforcement
 - Incident management: first response for any clinical or customer incident
 
+### A8 — Venue Manager Covering Reception: Modelled, Not Assumed (added 2026-08-16)
+
+**Anthony's ask:** the Venue Manager should also cover reception personally. Question: is one VM sufficient across the full operating day, or will two (AM/PM split) eventually be needed? **Modelled directly against the already-established operating hours and handover window, not assumed either way.**
+
+**The real constraint:** the venue's full trading window is **07:00-18:00 (AM 07:00-13:00 + PM 12:00-18:00, with a 1-hour 12:00-13:00 handover overlap)** — an 11-hour span. The VM's own currently-modelled hours (above) are 7:00am-3:00pm, an 8-hour shift that already stops 3 hours before the PM close. A single person personally staffing reception across the full 11-hour window, every trading day, is not a sustainable single shift under any normal rostering practice — it exceeds standard full-time daily hours by a wide margin and isn't something one person should be asked to do as a matter of course.
+
+**Conclusion: one VM is NOT sufficient to personally cover reception across the entire 07:00-18:00 operating day.** This does not automatically mean two full Venue Managers are needed, though — two structurally sound alternatives exist, neither committed here:
+
+1. **VM personally covers AM reception (absorbing the existing Receptionist/Customer Experience Coordinator's morning duties, roughly 07:00-13:00), while PM reception is covered by a lighter-hours role** — not necessarily a second full VM. This could be a PM-specific admin/reception function, or one of the PM treatment-staff pool handling front-of-house duties during quieter PM moments (consistent with A10's common-pool principle) — genuinely cheaper than two full VM salaries, but needs the actual PM booking pattern to size correctly, not assumed here.
+2. **The existing two-role model continues** — VM (operations, AM-weighted) + a separate Receptionist/Customer Experience Coordinator (already modelled in this document, currently only covering AM hours through "last AM client leaves") — with the Receptionist role's own hours extended to cover the PM window, a genuine, currently-unmodelled gap this analysis surfaces (the existing Receptionist section above stops at AM, never addresses PM reception coverage at all).
+
+**What this analysis does not do:** commit to Option 1 or 2, or size a second VM/receptionist role in dollars — both require real PM booking-volume data this venture doesn't have yet. **The one thing it does establish with confidence: "one VM does it all" is not a safe assumption to plan around, and the currently-unaddressed PM reception coverage gap (regardless of which option is chosen) is a real, previously-unflagged staffing gap, not just an AM/PM-split question about the VM specifically.**
+
 ---
 
 ### Phlebotomist (x2 — Chair A and Chair B)
