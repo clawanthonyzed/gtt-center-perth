@@ -28,6 +28,13 @@
 - ~~Founder decision: is a name-branded retail/product line a real 1–3 year ambition?~~ **ANSWERED 2026-08-14: NO / not a priority.** Third-party resale (Gaia, Weleda, Mustela) remains the retail strategy. Per the founder's own instruction, this question is not to be reopened unless the business model changes. See `docs/naming/NAMING-FINAL-COMPARISON.md` §0 for the updated weighting this produces.
 - **Git/repository access** — see §Environment Note below. New naming and strategy documents exist locally and are not yet committed/pushed.
 
+## CONFIRMATIONS — I5/I6, 2026-08-16 (simple confirmations, not new work)
+
+- **I5 — name-agnostic strategy is the actual approach, confirmed.** Brand/experience work (`docs/strategy/`, `docs/experience/`) is genuinely built to apply to either SOLENA or ELOWEN unchanged — it is not being quietly rebuilt around one name. Naming itself is narrowed to these two finalists (ELOWYN evaluated fairly and set aside, per §3/§THIRD above), not reopened.
+- **I6 — reaffirmed:** any local working material belongs in this repository — already the standing rule (see the Environment Note below for the one historical exception, now resolved).
+- **I3 answered separately, in full:** `docs/naming/NAMING-SCORE-IMPROVEMENT-ANALYSIS.md` — how the current percentages could move, whether a stronger already-investigated name exists (yes, SOLENNE, correctly excluded for a real Adelaide conflict), whether higher-scoring uninvestigated names exist (not evaluated, no basis to reopen the search).
+- **G9/I1/I2/I4 answered together:** `docs/naming/TRADEMARK-ATTORNEY-DECISION-BRIEF.md` — what the existing research establishes, what genuinely remains uncertain, the actual SOLENA risk level in plain terms, and the useful-certainty-vs-mandatory-requirement distinction, left for the founder to decide.
+
 ## COMPLETED
 
 - Naming exploration (frozen seven-candidate shortlist)
