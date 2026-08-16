@@ -136,7 +136,7 @@ The three names that survived to a full, fair comparison (`docs/naming/NAMING-FI
 | **DEPARTURE** | "That was unexpectedly lovely," not "my appointment is finished" — food and a considered small gesture at the exact point she's fasted and just had blood drawn | A rushed or generic send-off | The lowest-cost, highest-emotional-effect moment in the entire visit |
 | **POST-VISIT** | A genuinely useful follow-up (when results reach her doctor) before any PM mention, riding alongside it once, briefly | Leading with an upsell before the outstanding clinical question is addressed | Usefulness first, invitation second |
 | **PM RETURN** | Discovery of the PM business at the leaving moment, not during the clinical visit; a specific single next-booking suggestion, not a menu | A sales pitch during the AM visit itself | The invitation is folded into the same gesture that ends the visit, not a separate ask |
-| **ADVOCACY** | A specific, one-sentence-describable experience — "they gave me breakfast and did my nails while I waited for blood results" | Asking directly for reviews/referrals before the experience has earned them | Advocacy is a byproduct of specificity, never requested |
+| **ADVOCACY** | A specific, one-sentence-describable experience — "they gave me breakfast and did my nails after my last blood draw" (corrected 2026-08-16 — the client remains fasting throughout the GTT and receives no results at the venue; food/treatment happen after the final draw, not "while waiting for results," and results are never given on-site — see `docs/gtt-clinical-protocol.md`) | Asking directly for reviews/referrals before the experience has earned them | Advocacy is a byproduct of specificity, never requested |
 
 ## 15. Tone of Voice
 

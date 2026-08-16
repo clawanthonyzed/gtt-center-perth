@@ -52,7 +52,7 @@ To be the premium women's house Perth women think of first — for the test they
 
 **What makes her return:** the second visit has to be chosen, not owed. She returns because the massage was good, the room was calm, and nobody made her feel like a patient on the way out.
 
-**What makes her recommend a place:** an experience specific enough to describe in one sentence to a friend ("they gave me breakfast and did my nails while I waited for blood results" is a sentence people actually say) — genericness doesn't travel by word of mouth, specificity does.
+**What makes her recommend a place:** an experience specific enough to describe in one sentence to a friend ("they gave me breakfast and did my nails after my last blood draw" is a sentence people actually say — corrected 2026-08-16, see changelog: the client is fasting throughout the GTT and never receives results at the venue, so the food/treatment happen after her final draw, not "while waiting for results") — genericness doesn't travel by word of mouth, specificity does.
 
 **What signals luxury to her:** restraint, quiet materials, staff who are calm rather than eager, an environment that doesn't need to explain itself.
 
