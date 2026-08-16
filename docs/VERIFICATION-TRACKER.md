@@ -10,6 +10,54 @@
 
 ---
 
+# TOP-LEVEL VIEW (H, restructured 2026-08-16) — Read This First
+
+**The detailed item-by-item audit trail below (BLOCKING/FINANCIAL/REGULATORY/PROPERTY/OTHER sections) is fully preserved, unchanged — this section is a new presentation layer on top of it, not a replacement.** Every item below links to its detail row further down by number.
+
+## 1. ACTION REQUIRED FROM ANTHONY (one sentence each, answerable directly)
+
+| # | Question | Option(s), where possible |
+|---|---|---|
+| 1d | Should Anthony ask Carole directly whether WDP will supply the phlebotomist under the rental model, or GTT Center Perth keeps hiring in-house? | Ask now, or wait until the commercial rental figure (item 1c) arrives so both questions are answered together. |
+| 3 | Confirm current venue-search progress (Osborne Park through Cockburn/Cannington) — any candidate ready to inspect? | N/A — status check, not a pick-one decision. |
+| G9 | Engage a trademark attorney now, or continue deferring? | See `docs/naming/TRADEMARK-ATTORNEY-DECISION-BRIEF.md` — not a "yes/no default," genuinely Anthony's call once he's read the plain-terms treatment there. |
+| 36 | When (if ever) should package prices increase from A$250/A$300? | See `docs/price-increase-comparison.md` — no timing decision needed yet, flagged for whenever it becomes relevant. |
+| 38 | Final brand name — SOLENA or ELOWEN (or hold)? | Deliberately deferred pending trademark clearance timing (item G9) — not a decision to force now. |
+| 50 | Send the drafted WDP client-volume correction (18/day, not the 12/day figure Carole was last told)? | Substance already drafted in `docs/architecture/WDP-COMMERCIAL-ALIGNMENT-REVIEW.md` §4 — Anthony's to send. |
+| 9c | Revisit YETI Holding Trust structure once the 30% trust-distribution tax legislates, or by Year 3, whichever first? | Already a dated trigger, not an action needed now — listed here only so it isn't forgotten. |
+
+## 2. WAITING ON THIRD PARTY (no internal action closes these)
+
+| # | What | Who | Status |
+|---|---|---|---|
+| 1c | WDP commercial/rental figure | Carole Rivers, WDP — actively progressing via WDP's State Business Manager | Not stalled, just not arrived yet |
+| 4 | PathWest/Clinipath replies | Both emailed 2026-07-27 | Awaiting reply |
+| 21 / F22 | Medical waste disposal — does WDP's own collection-centre setup already cover this? | WDP | **Explicitly marked WAITING 2026-08-16 — not a research target, do not keep investigating around it internally (see `data/canonical/opex.yml#opex_medical_waste`)** |
+| 1j (sub-question) | Sightline/shared-area vs separate-room-with-quick-response for collector supervision | WDP/Carole | Narrower open sub-question, everything else in this item settled |
+| 19 (REGULATORY) | Medicare bulk-billing arrangement for the GTT pathology component | WDP/Medicare | Unconfirmed in writing |
+
+## 3. GRACE-AI TO INVESTIGATE (research-answerable — closed this round where possible, not punted)
+
+| # | What | Status |
+|---|---|---|
+| 17/18 | Real current wage rates (was 13+ months stale) | **CLOSED this round (2026-08-16, F18/F19)** — researched via 2 cross-referencing third-party sources, `docs/financial-break-even-staff.md`/`docs/hr-framework.md` updated. Professional payroll confirmation still recommended before contracts (not the same as "still open"). |
+| 19 (FINANCIAL) | Insurance placeholder too low | **CLOSED this round (F20)** — revised to A$1,279/month (this repo's own itemised midpoint), still provisional pending real quotes (already drafted, `docs/insurance-broker-quote-request-draft.md`). |
+| 22 | GTT supplies stale volume basis | **CLOSED this round (F21)** — recalculated for the 18-client model, A$792/month. |
+| 11 | MA000027 Saturday phlebotomist ordinary-hours carve-out | **Still OPEN** — this session's tools cannot fetch the primary award text. Fair Work Infoline script ready to use: `docs/fairwork-infoline-query-script.md`. Upside-only if resolved. |
+| 23 | EFTPOS/card-payment processing costs | Still OPEN — genuinely researchable, not attempted this round |
+| 20 | Booking software cost conflict (3 disagreeing figures for the same decided platform, Fresha) | Still OPEN — an internal document-reconciliation task, not external research |
+| B3 | WA workers' comp requirement/rate | **CLOSED this round (2026-08-16)** — confirmed mandatory for all workers including casuals, `financial-setup.md` Step 6 updated. Exact premium rate for this venture's classification still a real quote, not researched further. |
+
+## 4. CLOSED (resolved, kept below for traceability only — no action needed)
+
+Items 1, 1b, 1f, 1j (main question), 1k, 1l, 1n, 2, 5, 15, 24, 25, 29/29b/29c/29d, and every REGULATORY item marked RESOLVED in its own detail row below. **Also closed this round (2026-08-16), status updated in the detail table below where the underlying model changed:** item 31 (spray tan pricing — moot, spray tan removed from the concept entirely per F14) and item 10 (ancillary revenue aggregate's spray tan component — same reason).
+
+## 5. HISTORICAL/SUPERSEDED (only where genuinely necessary to keep for trace)
+
+Item 1e (old 12-client/14-ceiling model) — superseded by item 1m (Table 1/Table 2), which is now itself **settled, not a live framing flag**: 18 clients/day (Table 1) is confirmed the planning model, 12 clients/day (Table 2) is downside/backup only — per direct founder confirmation, 2026-08-16 (see `docs/CURRENT-STATE.md` §1 and `docs/strategy/STRATEGIC-REPORT.md`). Item 1o (Table 2's opening-time increment) is now lower priority given Table 2's downside-only status.
+
+---
+
 ## BLOCKING
 
 | # | Item | Who can confirm | Status | Detail |
@@ -146,6 +194,8 @@
 ---
 
 ## Changelog
+
+**2026-08-16 (H — top-level restructure; several items closed via research)** — Added a new "TOP-LEVEL VIEW" section at the very top of this file (ACTION REQUIRED FROM ANTHONY / WAITING ON THIRD PARTY / GRACE-AI TO INVESTIGATE / CLOSED / HISTORICAL-SUPERSEDED), per direct instruction that the presentation was hard to navigate with 53+ detailed items in one flat structure. **The detailed BLOCKING/FINANCIAL/REGULATORY/PROPERTY/OTHER sections below are unchanged, not deleted** — the new section is a navigation layer on top. Also closed via real research this round rather than left punted to Anthony: items 17/18 (current wage rates), 19 (revised insurance placeholder), 22 (GTT supplies recalculated for the 18-client model), B3 (WA workers' comp confirmed mandatory). Items 1m/1o reframed as settled/lower-priority now that Table 1 (18-client) is confirmed the planning model, not an open framing flag. Items 31/10 (spray tan) reframed as moot given spray tan's full removal from the concept (F14). Item 21/F22 (medical waste) explicitly marked WAITING ON WDP, not a research target.
 
 **2026-08-09 (Item 47 investigated — funding requirement BOUNDED, not resolved to an exact figure)** — Investigated `docs/grace-startup-plan.md`'s FINANCIAL GATES table (stale dollar figures, real WEEK-based timing structure) and confirmed pre-opening cash outlays occur before the first revenue event, non-overlapping with the operating P&L. `data/canonical/capex.yml` confirmed to have no payment-timing field on any record — capex items remain TIMING UNKNOWN, no date invented. Cleanly decomposed `docs/CURRENT-STATE.md` §7.4's own already-canonical component build (not recalculated) into (A) Pre-Opening Capital (A$272,390-467,180, universal) and (B) Working Capital (A$85,000-110,000 historical reserve, or Table 1 A$30,885.75/Table 2 A$66,335.12 via the current operating-cash-trough as a disclosed alternative, not chosen). Primary combined method (A)+(B) = **A$357,390-577,180** — an exact match to the already-canonical `total_current_state_component_sum`, confirming no new dollar figure was invented. New `docs/architecture/FUNDING-REQUIREMENT-INVESTIGATION.md` documents the full investigation; new `funding_requirement_investigation` section added to `data/models/master_financial_model.yml`; `conflict_funding_requirement_not_established` updated (not newly created). **OUTCOME 2 (bounded), not Outcome 1 (exact)** — the underlying 6-9-range startup-cost reconciliation (`docs/architecture/STARTUP-COST-RECONCILIATION.md`) remains genuinely unresolved, unchanged, not re-litigated. The operating cash trough was deliberately NOT summed on top of the working capital reserve (would double-count). No opening cash balance invented, no financing/debt/equity assumption used, neither scenario chosen as primary, no Excel/PDF/document-generation work performed.
 
