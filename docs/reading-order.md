@@ -1,6 +1,6 @@
 # GTT Center Perth — Reading Order & Big-Picture Status
 
-**Last updated:** 2026-08-15 (reassessed — see changelog) | Structure below the 60-second version is otherwise unchanged from the 2026-07-20 rebuild except where individually flagged.
+**Last updated:** 2026-08-16 (Founder Correction Round — business-plan.md refreshed to v4.0, CURRENT-STATE.md/VERIFICATION-TRACKER.md restructured, see `docs/00_document_inventory.md`'s new "Founder Correction Round" section for the full list) | Structure below the 60-second version is otherwise unchanged from the 2026-07-20 rebuild except where individually flagged.
 **Total documents:** 110+ in `docs/*.md` alone, plus a further ~40 across `docs/strategy/`, `docs/naming/`, `docs/experience/`, `docs/architecture/`, and `outputs/brand/` — see `docs/00_document_inventory.md`'s new "Strategy / Brand / Venue / Naming Layer" section for that part of the corpus, which this file did not cover before 2026-08-15.
 **Purpose:** Read this ONE document to see the current, accurate, big-picture state of the venture and what order to read everything else in. `docs/00_document_inventory.md` is the full per-file status list. **For the current canonical model (pricing, capacity, headcount, P&L), always defer to [docs/CURRENT-STATE.md](CURRENT-STATE.md) over any figure stated in this file.**
 

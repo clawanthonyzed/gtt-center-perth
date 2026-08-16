@@ -3,7 +3,9 @@
 **Compiled:** 2026-07-19 | **Compiled by:** Grace (Operations Manager, audit pass — updated through Phase 6/7 pass, same day)
 **Purpose:** Single reference listing every file in `docs/`, its status, and its role in the corpus. Companion to [reading-order.md](reading-order.md) (which orders reading, not status) and [01_conflicts_log.md](01_conflicts_log.md) (which details specific conflicts).
 
-> **NEW 2026-08-15/16 — External Execution Round outputs added.** Five new, committed (not yet pushed) deliverables exist from a "build, don't just recommend" execution round: a public-ready demand-validation landing page, an external-facing venture overview pack, three professional outreach drafts, a startup-cost-reduction action table, and an AM->PM data-capture specification. See the new **## External Execution Round (2026-08-15/16)** section below (placed directly after the Strategy/Brand/Venue/Naming Layer section) for the full list with status and what to look at.
+> **NEW 2026-08-15/16 — External Execution Round outputs added.** Five new, committed deliverables exist from a "build, don't just recommend" execution round: a public-ready demand-validation landing page, an external-facing venture overview pack, three professional outreach drafts, a startup-cost-reduction action table, and an AM->PM data-capture specification. See the new **## External Execution Round (2026-08-15/16)** section below (placed directly after the Strategy/Brand/Venue/Naming Layer section) for the full list with status and what to look at.
+
+> **NEW 2026-08-16 — Founder Correction Round outputs added.** A large, direct-founder-notes execution round produced: `business-plan.md` v4.0 (full currency refresh), real current wage/super/workers-comp/insurance/GTT-supplies research, a human-readable financial-model summary and startup-costs companion, a full real-Perth service catalogue, an itemised purchase list, an Asia-sourcing investigation, a café food-service investigation, a construction-cost-basis investigation, a trademark-attorney decision brief, a naming-score-improvement analysis, `docs/CURRENT-STATE.md`'s historical-clutter removal (D1), and `docs/VERIFICATION-TRACKER.md`'s top-level restructure (H). See the new **## Founder Correction Round (2026-08-16)** section below for the full list.
 
 > **CORRECTED 2026-08-15 — this file omitted an entire, current, actively-maintained layer of the repository.** Everything below this banner (all pre-2026-08-08 content) covers only `docs/*.md` — it never listed `docs/strategy/`, `docs/naming/`, `docs/experience/`, `docs/DECISION-LOG.md`, or `outputs/brand/`, which together are the most current strategic/brand/venue work in the repo (built 2026-08-05 through 2026-08-15). This was identified as the root cause of "flying blind" in a dedicated execution audit and is fixed here with a new section (jump to **## Strategy / Brand / Venue / Naming Layer** below) rather than a full rewrite of the rest of this file, which otherwise still accurately describes the `docs/*.md` layer's July/early-August state. Read the new section first for anything strategic, brand, venue, or naming-related — the old sections below remain correct for financial/operational/clinical/legal detail.
 
@@ -57,6 +59,26 @@ This layer sits on top of everything else in this file — it translates the can
 | [`docs/experience/AM-TO-PM-DATA-CAPTURE-SPECIFICATION.md`](experience/AM-TO-PM-DATA-CAPTURE-SPECIFICATION.md) | COMPLETE (design spec, not yet implemented) | What data (Fresha tags/fields + one roster-sheet column) needs capturing to eventually measure whether `RETURN-LOOP.md`'s AM->PM conversion mechanism is working. No new software, no client-facing change. Implementation gated on the Venue Manager being hired (§5 of the spec). |
 
 **Nothing above requires Anthony to write anything from scratch** — every outreach draft is genuinely send-ready pending a recipient choice (accountant/insurance) or is usable immediately (Fair Work call, curtain supplier enquiry in `STARTUP-COST-REDUCTION-ACTIONS.md` Appendix B).
+
+## Founder Correction Round (2026-08-16) — New Outputs
+
+**Context:** a large, direct-founder-notes execution round (sections A-L, ~60 sub-items) correcting the operating model, financial figures, startup costs, naming clarity, and experience narrative. All below are committed.
+
+| Item | Status | What it is |
+|---|---|---|
+| [`business-plan.md`](../business-plan.md) v4.0 | COMPLETE | Full currency refresh — was 2+ weeks/2 model-generations stale. Now reflects the 18-client Table 1 planning model throughout. |
+| [`CURRENT-STATE.md`](../CURRENT-STATE.md) | UPDATED (D1) | Historical clutter removed — see the new archive below. |
+| [`docs/archive/CURRENT-STATE-HISTORICAL-ARCHIVE.md`](archive/CURRENT-STATE-HISTORICAL-ARCHIVE.md) | COMPLETE (D1) | Every superseded table/changelog entry relocated from `CURRENT-STATE.md`, not deleted. |
+| [`VERIFICATION-TRACKER.md`](../VERIFICATION-TRACKER.md) | UPDATED (H) | New top-level navigation view (ACTION REQUIRED FROM ANTHONY / WAITING ON THIRD PARTY / GRACE-AI TO INVESTIGATE / CLOSED / HISTORICAL-SUPERSEDED) added above the preserved detailed audit trail. |
+| [`docs/architecture/FINANCIAL-MODEL-SUMMARY.md`](architecture/FINANCIAL-MODEL-SUMMARY.md) | COMPLETE (E1) | Human-readable companion to `data/models/master_financial_model.yml`, direct-linked. |
+| [`docs/architecture/HUMAN-READABLE-STARTUP-COSTS.md`](architecture/HUMAN-READABLE-STARTUP-COSTS.md) | COMPLETE (J) | Human-readable companion to `data/canonical/startup_costs.yml`. |
+| [`docs/architecture/ITEMISED-PURCHASE-LIST.md`](architecture/ITEMISED-PURCHASE-LIST.md) | COMPLETE (C2) | Real brand/supplier/GST/confidence detail for every purchasable item. |
+| [`docs/architecture/ASIA-SOURCING-INVESTIGATION.md`](architecture/ASIA-SOURCING-INVESTIGATION.md) | COMPLETE (C3) | Real investigation, category-by-category, four hard boundaries never compromised. |
+| [`docs/architecture/CONSTRUCTION-COST-BASIS-INVESTIGATION.md`](architecture/CONSTRUCTION-COST-BASIS-INVESTIGATION.md) | COMPLETE (C5) | What the A$800-1,250/sqm rate does/doesn't include. |
+| [`docs/architecture/CAFE-FOOD-SERVICE-INVESTIGATION.md`](architecture/CAFE-FOOD-SERVICE-INVESTIGATION.md) | COMPLETE (F15) | Real WA food-business-risk finding (Medium Risk consequence of sandwiches/toasties). |
+| [`docs/architecture/SERVICE-CATALOGUE.md`](architecture/SERVICE-CATALOGUE.md) | COMPLETE (A2/F1/F10/F11/F12/F13) | Real Perth market research, a-la-carte/AM/PM package lists, retail-brand research. |
+| [`docs/naming/TRADEMARK-ATTORNEY-DECISION-BRIEF.md`](naming/TRADEMARK-ATTORNEY-DECISION-BRIEF.md) | COMPLETE (G9/I1/I2/I4) | Plain-terms treatment of the attorney question — does not default to "engage one." |
+| [`docs/naming/NAMING-SCORE-IMPROVEMENT-ANALYSIS.md`](naming/NAMING-SCORE-IMPROVEMENT-ANALYSIS.md) | COMPLETE (I3) | How the current percentages could move; SOLENNE identified as a stronger-scoring already-investigated name, correctly excluded. |
 
 ### Experience (`docs/experience/`) + Governance
 
