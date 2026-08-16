@@ -64,7 +64,7 @@
 - [ ] Submit development/building application to local council (if required)
 - [ ] Begin advertising for Receptionist/Manager role (Seek, LinkedIn, beauty industry boards)
 - [ ] Begin advertising for practitioners (2 massage therapists, 2 nail techs, 2 hairdressers, 2 beauty therapists)
-- [ ] Order equipment (lead times: phlebotomy chairs 2-4 weeks; centrifuge 1-2 weeks; spray tan booth 4-8 weeks from China)
+- [ ] Order equipment (lead times: phlebotomy chairs 2-4 weeks; centrifuge 1-2 weeks) — spray tan booth removed from this list, 2026-08-16, see changelog
 - [ ] Register food business with local council (low-risk notification)
 - [ ] Engage bookkeeping/payroll service (A$200-400/month — essential with 10+ casual staff)
 - [ ] Option B: Submit NATA application (if pursuing)
@@ -87,7 +87,7 @@
 - [ ] Soft launch: invite 20-30 women from Perth maternity Facebook groups for free/discounted preview
 - [ ] Test run: 5 mock GTT "patients" walk through full experience
 - [ ] PathWest/WDP: final room inspection for Option A collection point approval
-- [ ] Install equipment: spray tan booth, 3D scanner (or confirm Bloom Baby arrival date)
+- [ ] Install equipment: 3D scanner (or confirm Bloom Baby arrival date) — spray tan booth removed from this list, 2026-08-16, see changelog
 - [ ] Food business: stock first delivery of snacks, teas, water
 - [ ] Set up EFTPOS, booking system, patient documentation
 - [ ] Pre-launch marketing: Instagram teaser campaign, Poppy to run pre-launch lead capture
@@ -194,6 +194,8 @@ See team-startup.md for full team roles.
 ---
 
 ## Changelog
+
+**2026-08-16** — Spray tan removed from the concept entirely, per Anthony's explicit instruction (too many things in one location). Removed from the equipment-ordering and equipment-installation checklists above. Not deferred to a future phase.
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): the Week 1 question "is Imara the operational manager?" is resolved NO — a dedicated Venue Manager (new hire, not yet in place) fills this role instead. Imara remains the funding partner/trust beneficiary, unaffected — see `financial-model.md`/`research.md`. Added Venue Manager recruitment as a Week 1 critical-path task in the "Who Is Doing What" table, alongside existing critical-path items.
 

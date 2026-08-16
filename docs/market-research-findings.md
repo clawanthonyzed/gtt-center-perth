@@ -34,7 +34,6 @@ MIWM (Maternal & Infant Wellbeing Melbourne) is the only direct national competi
 |------|-----------------|
 | Single client at a time | Multi-client concurrent (10 simultaneously, Scenario C) |
 | 60-min or 2-hr spa included | Clients choose and pay for services individually |
-| No spray tan | Automated spray tan booth |
 | No hairdressing | Full hairdressing (cut, blowdry, colour) |
 | GP-led clinical feel | Premium day spa feel |
 | Victoria only | WA — no competition |
@@ -73,7 +72,9 @@ Contact PathWest AND Western Diagnostics Pathology (WDP) to confirm:
 
 ---
 
-## 3. Spray Tan — WA Regulatory Requirements
+## 3. Spray Tan — WA Regulatory Requirements (HISTORICAL — spray tan removed from the concept entirely, 2026-08-16)
+
+> **Removed from the concept entirely, 2026-08-16, per Anthony's explicit instruction — too many things in one location. Not a Phase 2/future item; not part of this venture's scope at all.** The regulatory research below is retained for trace only, per this repo's disclose-don't-delete convention — do not treat spray tan as a current or future service anywhere in this venture's planning.
 
 **Source:** WA Department of Health (health.wa.gov.au/Articles/A_E/Advice-for-the-beauty-therapy-industry)
 

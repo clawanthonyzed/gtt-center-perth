@@ -38,7 +38,7 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 | Consumables (opening stock) | A$3,000 | A$6,000 | Day-one |
 | **TOTAL EQUIPMENT (DAY-ONE ONLY, 2026-08-07 recompute — was A$42,690-96,530, +A$500-900 for the vasovagal reclining chair/couch)** | **A$43,190** | **A$97,430** | |
 | **Pre-existing, disclosed, not-newly-introduced gap:** this Summary Budget's "Pathology collection room" row (A$7,800-13,200 before this update) never exactly matched §1's own itemized total (A$5,830-9,340 before this update) — a ~A$1,970-3,860 unexplained gap predating this session. Not investigated or reconciled this round (out of this specific task's scope); the same delta (+A$500-900) was applied to both rows to preserve whatever that pre-existing buffer represents, rather than silently closing it. Flagged for a future consistency pass. | | | |
-| Spray tan booth | A$2,500 | A$6,000 | **PHASE 2** |
+| Spray tan booth | ~~A$2,500~~ | ~~A$6,000~~ | **REMOVED FROM THE CONCEPT ENTIRELY, 2026-08-16 — not Phase 2, not costed anywhere, see §2** |
 | Cafe / partner area | A$2,000 | A$6,000 | **PHASE 2** |
 | Hire fleet (TENS + wellness items) | A$8,000 | A$18,000 | **PHASE 2** |
 | China sourced branded wellness items (stock) | A$5,000 | A$10,000 | **PHASE 2** |
@@ -76,9 +76,11 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 
 ---
 
-## 2. Spray Tan Booth — PHASE 2 / POST-LAUNCH EXPANSION (2026-07-31, not day-one)
+## 2. Spray Tan Booth — REMOVED FROM THE CONCEPT ENTIRELY (2026-08-16, supersedes the 2026-07-31 "Phase 2" reclassification below)
 
-> **Excluded from the day-one committed budget and every P&L figure, per Anthony's direct instruction.** This is a legitimate expansion idea kept on the roadmap, not a mistake — content retained in full below, not deleted. Do not cost this into the day-one Summary Budget total or the floor plan's day-one room schedule going forward.
+> **REMOVED FROM THE CONCEPT ENTIRELY, 2026-08-16, per Anthony's explicit instruction — too many things in one location.** This is a real change from the prior "Phase 2/post-launch expansion, kept on the roadmap" framing immediately below — spray tan is no longer a future possibility for this venture at all, not just excluded from day-one. Content retained in full below, not deleted, per this repo's disclose-don't-delete convention — do not cost this into any budget, current or future, and do not reintroduce it without a fresh, explicit founder decision.
+>
+> ~~Excluded from the day-one committed budget and every P&L figure, per Anthony's direct instruction. This is a legitimate expansion idea kept on the roadmap, not a mistake — content retained in full below, not deleted. Do not cost this into the day-one Summary Budget total or the floor plan's day-one room schedule going forward.~~ (2026-07-31 framing, superseded above)
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
