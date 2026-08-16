@@ -12,6 +12,22 @@ GTT Center Perth is a concept for WA's first premium wellness venue built around
 
 **For a presentation to a non-technical stakeholder (e.g., Anthony's partner Imara): read [gtt-center-perth-overview-for-imara.md](gtt-center-perth-overview-for-imara.md).** It's a plain-language, story-format walkthrough built specifically for this purpose. [executive-summary.md](executive-summary.md) is the fuller, more technically-sourced standalone summary if more detail is needed (figures corrected 2026-08-15).
 
+**For a document to actually hand a property agent, WDP, a pathology partner, a bank, an accountant, or a solicitor: read [`outputs/GTT-CENTER-PERTH-VENTURE-OVERVIEW.md`](../outputs/GTT-CENTER-PERTH-VENTURE-OVERVIEW.md).** New 2026-08-15/16 — built specifically for external professional handoff, existing figures only.
+
+---
+
+## WHAT'S NEW — 2026-08-15/16 EXTERNAL EXECUTION ROUND
+
+An execution round focused on BUILT, committed outputs rather than more recommendations. Five new deliverables — all committed locally, not yet pushed (see `docs/00_document_inventory.md`'s new "External Execution Round" section for the full table with status):
+
+1. **[`outputs/landing-page/`](../outputs/landing-page/index.html)** — public-ready, neutral-name demand-validation landing page, reskinned to the locked brand palette. Repo-ready, not internet-live — see `outputs/landing-page/qa/QA-NOTES.md` for exactly what deploying it publicly would still require.
+2. **[`outputs/GTT-CENTER-PERTH-VENTURE-OVERVIEW.md`](../outputs/GTT-CENTER-PERTH-VENTURE-OVERVIEW.md)** — the external-facing pack, see above.
+3. **Three ready-now outreach drafts** — [accountant](accountant-engagement-email-draft.md), [insurance broker](insurance-broker-quote-request-draft.md), [Fair Work Infoline script](fairwork-infoline-query-script.md).
+4. **[`docs/architecture/STARTUP-COST-REDUCTION-ACTIONS.md`](architecture/STARTUP-COST-REDUCTION-ACTIONS.md)** — concrete DO NOW / WAIT FOR VENUE / WAIT FOR WDP action table, no new analysis.
+5. **[`docs/experience/AM-TO-PM-DATA-CAPTURE-SPECIFICATION.md`](experience/AM-TO-PM-DATA-CAPTURE-SPECIFICATION.md)** — what data needs capturing to eventually measure the RETURN-LOOP.md mechanism.
+
+**What Anthony can action immediately from this round, with zero further drafting needed:** send the accountant/insurance emails (once he picks a firm/broker), call the Fair Work Infoline, send the curtain-supplier pricing enquiry (`STARTUP-COST-REDUCTION-ACTIONS.md` Appendix B), and decide whether/when to take the landing page live (5 concrete pre-conditions listed in its own QA notes).
+
 ---
 
 ## ANTHONY'S READING PATH — REASSESSED 2026-08-15, SMALLEST USEFUL SET
@@ -251,5 +267,7 @@ This was a large consolidation session. If you read nothing else in this section
 **2026-07-20 (PM packages committed)** — Updated row 17a: `pm-package-exploration.md` deleted and replaced by [pm-package-structure.md](pm-package-structure.md), reflecting Anthony's confirmation that PM packages are now a committed direction, not exploratory.
 
 **2026-08-15 (reassessed reading path — the strategy/brand/venue/naming layer added, root cause of "flying blind" fixed)** — A dedicated execution audit found this file's "60-second version" still cited the pre-superannuation figures (+A$63,028.75/+A$27,084.69) and, more significantly, that neither this file nor `docs/00_document_inventory.md` referenced any of `docs/strategy/`, `docs/naming/`, `docs/experience/`, or `outputs/brand/` — a real, current, ~40-file layer built 2026-08-05 through 2026-08-15. Corrected the 60-second version's figures to the current canonical ones (+A$56,581.70/+A$21,056.64, RECALCULATED 2026-08-09 for superannuation). Added a new "ANTHONY'S READING PATH — REASSESSED 2026-08-15" section — a genuinely reassessed, 9-document smallest-useful-set covering the whole venture as it stands today, superseding the old "CORE STATUS DOCUMENTS" table as the first-read list (that table is retained below for its still-useful Phase 1-12 detailed index, now explicitly marked as secondary). No prose in the Phase 1-12 body was rewritten — only the entry points above it changed.
+
+**2026-08-15/16 (External Execution Round outputs added)** — Added a new "For a document to actually hand a property agent..." pointer near the top, and a new "WHAT'S NEW — 2026-08-15/16 EXTERNAL EXECUTION ROUND" section listing all 5 new deliverables (landing page, venture overview pack, 3 outreach drafts, cost-reduction action table, AM->PM data-capture spec) with what Anthony can action immediately. All 5 are committed locally, not yet pushed.
 
 **2026-08-08 (F-2 correction — this file's own "current model" references brought back in line with docs/CURRENT-STATE.md)** — `docs/architecture/REPOSITORY-AUDIT.md` (part of an architecture-only planning phase) found this file's headline "60-second version," its HANDOFF.md row, its `operations-manual.md` gap notes, and its `capacity-pricing-audit.md` reference row all still described the 2026-07-20 model (10 clients/day, +A$25,087/month) — two rebases behind `CURRENT-STATE.md`'s current figures (12-client rebase, 2026-07-30; Table 1/Table 2 18-/12-client rebase, 2026-08-05). This is the exact class of drift `CURRENT-STATE.md` was built to prevent at the figures layer, recurring one layer up in this navigation document. Corrected the specific stale claims listed above; did not rewrite the rest of this document's historical "what changed 2026-07-19 to 2026-07-20" narrative, which remains an accurate record of that specific session. **No decision was made here on the still-open Table 1 vs. Table 2 framing question (`VERIFICATION-TRACKER.md` item 1m)** — both are presented, PRIMARY/SECONDARY, matching `CURRENT-STATE.md`'s own current framing exactly, not resolved further.
