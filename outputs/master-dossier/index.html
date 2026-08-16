@@ -959,6 +959,111 @@ Real current casual rates researched via two independent, cross-referencing thir
 </section>
 <!-- ============================================================ END CHAPTER 9 ============================================================ -->
 
+<!-- ============================================================ CHAPTER 10 ============================================================ -->
+<section class="chapter" id="ch10">
+<span class="chapter-num">Chapter 10 — Critical Chapter</span>
+<h2>Financial Model</h2>
+
+<div class="callout">
+<b class="label">Canonical hierarchy for this chapter</b>
+Every figure below traces to <a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/CURRENT-STATE.md">docs/CURRENT-STATE.md</a> and <a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/data/models/master_financial_model.yml">data/models/master_financial_model.yml</a> — the venture's own single sources of truth. Table 1 is the <b>design/planning target</b>. Table 2 is shown throughout as a <b>HISTORICAL COMPARISON / SENSITIVITY REFERENCE ONLY</b> — never treat it as an alternative current plan.
+</div>
+
+<h3>Revenue — Table 1 (planning target) vs Table 2 (downside comparison)</h3>
+<div class="chart-wrap">
+<div class="chart-title">Monthly revenue, steady state</div>
+<svg viewBox="0 0 500 140" width="100%" height="140" role="img" aria-label="Bar chart comparing Table 1 and Table 2 monthly revenue">
+<g font-family="DM Sans" font-size="12" fill="#33261E">
+<text x="4" y="30">Table 1<tspan x="4" dy="14" font-size="10" fill="#5E5F45">(18/day, target)</tspan></text>
+<rect x="140" y="14" width="340" height="26" fill="#A9654E" rx="3"/><text x="470" y="32" text-anchor="end" fill="#FAF6EE" font-weight="700">A$155,215.80</text>
+<text x="4" y="90">Table 2<tspan x="4" dy="14" font-size="10" fill="#5E5F45">(12/day, HISTORICAL COMPARISON)</tspan></text>
+<rect x="140" y="74" width="253" height="26" fill="#E8DAC5" stroke="#9C7A46" stroke-dasharray="3,3" rx="3"/><text x="398" y="92" fill="#33261E" font-weight="700">A$115,720.80</text>
+</g>
+</svg>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Revenue stream</th><th class="num">Table 1 (target)</th><th class="num">Table 2 (comparison)</th><th>Calculation</th></tr></thead>
+<tbody>
+<tr><td>AM GTT packages</td><td class="num">18 &times; A$250 &times; 22 days = A$99,000/mo</td><td class="num">12 &times; A$250 &times; 22 = A$66,000/mo</td><td>Package 1 conservative price</td></tr>
+<tr><td>PM standalone + set packages</td><td class="num">Included in total</td><td class="num">Included in total</td><td>~A$95/session average <span class="tag tag-estimate">ESTIMATE</span></td></tr>
+<tr><td>Ancillary (retail/cafe)</td><td class="num">A$0</td><td class="num">A$0</td><td>Excluded from every P&amp;L figure — placeholder, no derivation</td></tr>
+<tr><td><b>Total Monthly Revenue</b></td><td class="num"><b>A$155,215.80</b></td><td class="num"><b>A$115,720.80</b></td><td>Canonical revenue methodology</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Costs</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Line</th><th class="num">Table 1</th><th class="num">Table 2</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>AM Direct Labor (weekday, FTE)</td><td class="num">A$48,254.67/mo</td><td class="num">A$48,254.67/mo</td><td>Identical headcount both scenarios</td></tr>
+<tr><td>Saturday AM labor</td><td class="num">Scales with the longer AM day</td><td class="num">Lower (shorter day)</td><td></td></tr>
+<tr><td>Workers Comp (1.7%)</td><td class="num">of Direct Labor</td><td class="num">of Direct Labor</td><td><span class="tag tag-estimate">Planning rate</span></td></tr>
+<tr><td>Non-Wage Overhead</td><td class="num">A$13,980.00/mo</td><td class="num">A$13,980.00/mo</td><td>Rent/utilities, not volume-driven</td></tr>
+<tr><td><b>Total Costs</b></td><td class="num"><b>A$98,634.10</b></td><td class="num"><b>A$94,664.16</b></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<p class="callout brass"><b class="label">Not yet in these cost figures</b>Real 2026-08-16-researched wage rates (Ch9), the revised insurance placeholder (A$1,279/mo, Ch12), recalculated GTT supplies (A$792/mo) — all researched, none yet propagated through this recompute. A distinct, scoped follow-up, not silently ignored.</p>
+
+<h3>Profitability</h3>
+<div class="grid grid-3">
+<div class="card"><h4>Net Operating Result — Table 1</h4><div class="figure">+A$56,582<span style="font-size:0.85rem">/mo</span></div><div class="caption">36.5% net margin</div></div>
+<div class="card"><h4>Quarterly — Table 1</h4><div class="figure small">+A$169,745</div><div class="caption"></div></div>
+<div class="card"><h4>Yearly — Table 1</h4><div class="figure small">+A$678,980</div><div class="caption">Steady-state run rate, not a Year 1 actual</div></div>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th></th><th class="num">Table 1 (target)</th><th class="num">Table 2 (comparison)</th></tr></thead>
+<tbody>
+<tr><td>Monthly Net Operating Result</td><td class="num">+A$56,581.70</td><td class="num">+A$21,056.64</td></tr>
+<tr><td>Net margin</td><td class="num">36.5%</td><td class="num">18.2%</td></tr>
+<tr><td>Quarterly</td><td class="num">+A$169,745.10</td><td class="num">+A$63,169.92</td></tr>
+<tr><td>Yearly (steady-state run rate)</td><td class="num">+A$678,980.40</td><td class="num">+A$252,679.68</td></tr>
+</tbody>
+</table>
+</div>
+<p><span class="tag tag-verified">SUPERANNUATION-CORRECTED 2026-08-09</span> These are the current headline figures — the pre-superannuation figures (+A$63,028.75 / +A$27,084.69) are stale and retired.</p>
+
+<h3>AM standalone weekday contribution</h3>
+<p>AM revenue minus weekday AM direct labor only: <b>+A$50,745.33/month (Table 1)</b> vs +A$17,745.33/month (Table 2). This is the central finding behind adopting Table 1 as the planning target — 50% more daily clients at literally zero extra weekday labour cost, because these are fixed-salary FTE roles.</p>
+
+<h3>Capacity</h3>
+<div class="grid grid-4">
+<div class="card"><h4>Clients/day (target)</h4><div class="figure">18</div></div>
+<div class="card"><h4>Operating days/month</h4><div class="figure">22</div></div>
+<div class="card"><h4>Weekly AM slots</h4><div class="figure">108</div><div class="caption">18 &times; 6 days</div></div>
+<div class="card"><h4>Market share at target</h4><div class="figure">~21%</div><div class="caption">of ~515/week Perth GTT tests</div></div>
+</div>
+
+<h3>Startup capital &amp; funding requirement</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Figure</th><th class="num">Amount</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Adopted planning figure (Pre-Opening Capital)</td><td class="num">A$251,198</td><td><span class="tag tag-estimate">"IN PRINCIPLE," NOT FINAL</span></td></tr>
+<tr><td>+ Working Capital Reserve</td><td class="num">A$85,000-110,000</td><td><span class="tag tag-estimate">ESTIMATE</span></td></tr>
+<tr><td><b>Combined funding-requirement case</b></td><td class="num"><b>A$336,198-361,198</b></td><td>Current planning basis</td></tr>
+<tr><td>Founder contribution</td><td class="num">Self-funded (Anthony + Imara)</td><td>No external investor to date</td></tr>
+<tr><td>Remaining requirement</td><td class="num">Not quantified against a confirmed funding source</td><td><span class="tag tag-placeholder">OPEN</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="source-block">
+<b>Source &amp; Verification</b>
+<ul>
+<li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/CURRENT-STATE.md">docs/CURRENT-STATE.md</a> §5, §6, §7</li>
+<li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/data/models/master_financial_model.yml">data/models/master_financial_model.yml</a></li>
+<li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/FINANCIAL-MODEL-SUMMARY.md">docs/architecture/FINANCIAL-MODEL-SUMMARY.md</a> — human-readable companion</li>
+<li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md">docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md</a></li>
+</ul>
+</div>
+</section>
+<!-- ============================================================ END CHAPTER 10 ============================================================ -->
+
 </main>
 </div>
 </body>
