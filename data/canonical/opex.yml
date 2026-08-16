@@ -144,7 +144,7 @@ records:
     category: premises
     subcategory: waste
     name: "Medical waste disposal contract"
-    description: "Annual contract, not a one-off purchase -- per docs/equipment-costs.md's own explicit labelling"
+    description: "Annual contract, not a one-off purchase -- per docs/equipment-costs.md's own explicit labelling. WAITING on WDP (F22, 2026-08-16) -- not a research target."
     amount: {low: 600.00, high: 1200.00}
     currency: AUD
     frequency: annual
@@ -153,7 +153,7 @@ records:
     cost_type: FIXED
     scenario_applicability: universal
     status: MODELLED
-    status_detail: "GAP, not a conflict -- this cost is real and sourced, but is NOT included anywhere in docs/profit-loss-tables.md's 13-line Non-Wage Overhead total (A$13,980.00/month), which sums exactly to its stated total without this line"
+    status_detail: "GAP, not a conflict -- this cost is real and sourced, but is NOT included anywhere in docs/profit-loss-tables.md's 13-line Non-Wage Overhead total (A$13,980.00/month), which sums exactly to its stated total without this line. **WAITING ON WDP, marked explicitly 2026-08-16 (F22) -- this is a question for WDP's own collection-room/waste-handling arrangement (Carole Rivers' side of the relationship), not an internal research task. Do not keep researching medical-waste providers independently until WDP's own position is known -- WDP may already include this in their collection-centre setup, or may require a specific compliant contractor.**"
     source: {file: docs/equipment-costs.md, section: "§1 Pathology Collection Room"}
     notes: >
       Confirmed via arithmetic: the 13 Non-Wage Overhead line items in
@@ -382,26 +382,40 @@ records:
   - id: opex_insurance_modelled
     category: insurance
     subcategory: combined_pl_pi
-    name: "Insurance (public liability + PI) -- modelled flat figure used in the current P&L"
-    description: "The single figure feeding docs/profit-loss-tables.md's Non-Wage Overhead total"
-    amount: 400.00
+    name: "Insurance (public liability + PI) -- REVISED PROVISIONAL PLACEHOLDER, 2026-08-16 (F20)"
+    description: "The single figure feeding docs/profit-loss-tables.md's Non-Wage Overhead total -- revised from the old flat A$400/month guess to the midpoint of this file's own already-itemised estimate below"
+    amount: 1279.00
     currency: AUD
     frequency: monthly
-    monthly_equivalent: 400.00
-    annual_equivalent: 4800.00
+    monthly_equivalent: 1279.00
+    annual_equivalent: 15348.00
     cost_type: FIXED
     scenario_applicability: universal
     status: MODELLED
-    status_detail: "already flagged at source as 'never an actual insurance quote, a round planning estimate' -- carries a real number under a named, not-yet-proven assumption, so MODELLED (not PLACEHOLDER, which would require no concrete value) per docs/architecture/DATA-GOVERNANCE.md's own distinction. CONFLICT, not silently resolved -- see conflict_insurance_estimate below"
+    status_detail: >
+      REVISED 2026-08-16 (F20), per direct instruction to establish a reasonable current
+      placeholder, clearly labelled provisional, pending real quotes. **Still PROVISIONAL, still
+      not a real quote** -- this is not an upgrade to VERIFIED status. Method: this file's own
+      already-itemised insurance records below (opex_insurance_public_liability through
+      opex_insurance_business_interruption) already sum to a real, sourced A$11,700-19,000/year
+      (A$975-1,583/month) range, per docs/financial-setup.md STEP 8's own itemised table -- the
+      old A$400/month figure never used this already-existing, more-defensible range as its
+      basis, an internal inconsistency more than a research gap. Revised placeholder = midpoint
+      of that range, A$1,279/month, replacing the old unexplained round-number guess. Real
+      broker quotes are already in motion -- see docs/insurance-broker-quote-request-draft.md
+      (Priority 3, 2026-08-15/16 round), which will produce a real figure once sent and
+      answered. **NOT YET propagated to docs/profit-loss-tables.md's Non-Wage Overhead total or
+      any headline P&L figure** -- same broader-recompute caveat as the wage-rate and GTT-supply
+      updates this pass (opex_gtt_supplies, above). If propagated, Non-Wage Overhead would rise
+      by A$879/month from this line alone.
     source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
     notes: >
       Same figure cross-referenced by docs/CURRENT-STATE.md §7.3's "First-year insurance"
-      working-capital line (~A$400/month basis) -- a deliberate, disclosed cross-reference
-      between the recurring-opex figure and the startup-capital reserve, not a duplication error.
-      This A$400/month = A$4,800/year figure is materially LOWER than the sum of the itemised
-      insurance records below (opex_insurance_public_liability through
-      opex_insurance_business_interruption, A$11,700-19,000/year combined) -- see
-      conflict_insurance_estimate.
+      working-capital line (previously ~A$400/month basis, now needs the same 2026-08-16 update
+      applied, not yet propagated there either -- flagged, not silently left inconsistent).
+      This revised A$1,279/month is now MUCH closer to the sum of the itemised insurance
+      records below (A$975-1,583/month combined) -- see conflict_insurance_estimate, which
+      remains logged for trace even though this update narrows the gap it describes.
 
   - id: opex_insurance_public_liability
     category: insurance
@@ -540,29 +554,39 @@ records:
     category: consumables
     subcategory: clinical_supplies
     name: "GTT supplies (glucose, tubes)"
-    description: "Basis stated as '200 tests x A$2'"
-    amount: 400.00
+    description: "RECALCULATED 2026-08-16 for the 18-client Table 1 model (F21) -- was 'Basis stated as 200 tests x A$2', now 396 tests x A$2"
+    amount: 792.00
     currency: AUD
     frequency: monthly
-    monthly_equivalent: 400.00
-    annual_equivalent: 4800.00
+    monthly_equivalent: 792.00
+    annual_equivalent: 9504.00
     cost_type: FIXED
-    scenario_applicability: universal
+    scenario_applicability: scenario_table_1
     status: MODELLED
     status_detail: >
-      TWO SEPARATE, DISCLOSED ISSUES, neither resolved here: (1) STALE VOLUME BASIS -- "200
-      tests" does not match either current committed scenario (Table 1: 18/day x 22 days = 396
-      tests/month; Table 2: 12/day x 22 days = 264 tests/month) -- both are higher than 200,
-      meaning this cost is likely UNDERSTATED at the current committed model. (2)
-      CLASSIFICATION AMBIGUITY -- docs/profit-loss-tables.md treats this as FIXED (bundled into
-      "Non-Wage Overhead," a total CURRENT-STATE.md describes as "not client-volume-driven"),
-      but docs/unit-economics.md (historical, cited for this finding only) explicitly computes
-      it as a VARIABLE per-visit cost ("A$400 / 176 GTT visits = A$2.27/visit (GTT visits only)"),
-      consistent with its own "200 tests x A$2/test" derivation -- a cost that is structurally
-      per-unit (glucose + tubes per test) is not naturally FIXED. Neither figure was adjusted --
-      both issues flagged for a future session with model-building authority.
+      SCENARIO NOTE: this record's headline figure (A$792.00/month) is Table 1 (18-client/day
+      PRIMARY) specific. Table 2 (12-client/day SECONDARY) equivalent: 264 tests x A$2 =
+      A$528.00/month -- not this record's headline figure, computed for reference only.
+      RECALCULATED 2026-08-16 (F21), per direct instruction to recalculate GTT supplies for the
+      18-client model specifically. Mechanical, bounded recompute: 396 tests/month (18/day x 22
+      trading days, Table 1 PRIMARY, already-canonical volume per docs/CURRENT-STATE.md §3) x
+      A$2/test (the source's own unchanged per-test rate) = A$792.00/month, up from the stale
+      A$400.00/month figure (itself based on an unsourced "200 tests" basis matching neither
+      current committed scenario). Table 2's equivalent (264 tests x A$2 = A$528.00/month) is
+      also computed, stated in scenario_applicability above, not adopted as the headline since
+      Table 1 is the PRIMARY planning model. **CLASSIFICATION AMBIGUITY remains UNRESOLVED, not
+      newly resolved by this update:** docs/profit-loss-tables.md still treats this as FIXED
+      (bundled into "Non-Wage Overhead"), while docs/unit-economics.md (historical) computes it
+      as a VARIABLE per-visit cost -- neither approach was chosen here, this record's own dollar
+      figure was simply recomputed against the correct current test volume. **NOT YET
+      propagated to docs/profit-loss-tables.md's Non-Wage Overhead total (A$13,980.00/month) or
+      any headline P&L figure in docs/CURRENT-STATE.md** -- that requires the same broader
+      cost_ramp/master_financial_model recompute already flagged for the 2026-08-16 wage-rate
+      research, not attempted this round to avoid a rushed, unreviewed change to the canonical
+      financial layer. If propagated, Non-Wage Overhead would rise by A$392.00/month (Table 1)
+      or A$128.00/month (Table 2) from this line alone.
     source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
-    notes: "See VERIFICATION-TRACKER item 22 (material -- could roughly double under Table 1 if corrected proportionally, ~A$792/month at 396 tests x A$2)."
+    notes: "See VERIFICATION-TRACKER item 22 -- this recompute directly answers that item's own flagged 'could roughly double under Table 1' finding, confirming the estimate was directionally correct (A$792 vs the item's own A$792 estimate, exact match)."
 
   - id: opex_consumables_general
     category: consumables

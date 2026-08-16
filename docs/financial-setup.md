@@ -159,11 +159,14 @@ GTT Center Perth is a mixed supply business. Every transaction must be coded cor
 
 ## STEP 6 — WORKCOVER WA REGISTRATION (Week 10 — before first hire)
 
+> **B3 — researched 2026-08-16, confirmed not guessed.** Workers' compensation insurance is a legal requirement in WA for any employer with at least one worker — full-time, part-time, **and casual** (per the Workers' Compensation and Injury Management Act 2023, `workcover.wa.gov.au`) — this venture's all-casual-initially staffing model (Section A, A9 below) does NOT reduce or remove this requirement. Coverage must be purchased through a WorkCover WA-licensed private insurer (Allianz, GIO, CGU, QBE, Zurich, Guild, WFI) — WorkCover WA itself is the scheme regulator, not the insurer, unlike some other states' monopoly models. The employer (GTT Center Perth / YETI Holding Trust) is responsible for arranging and paying the premium — not the employee, not split. The exact premium rate for this venture's specific industry classification (health and beauty services) was not independently re-verified against a live WorkCover WA premium-rate schedule this pass — the 1.5-2.0% estimate below remains a planning figure, not a confirmed rate.
+
 - [ ] Register at workcover.wa.gov.au as an employer
-- [ ] Confirm industry classification (health and beauty services — approximate rate 1.5–2.0% of wages)
-- [ ] Calculate estimated annual premium based on projected wages (A$22,575 gross wages × ~1.7% = ~A$384/month)
+- [ ] Confirm industry classification (health and beauty services — approximate rate 1.5–2.0% of wages, not independently re-verified against a live WorkCover WA rate schedule)
+- [ ] Calculate estimated annual premium based on projected wages (A$22,575 gross wages × ~1.7% = ~A$384/month) — this is a planning estimate; obtain a real quote from a licensed insurer once staff numbers and wage totals are confirmed
 - [ ] Payment: annual premium, can pay by monthly instalment
 - [ ] Certificate of registration: keep on file and make available to employees
+- [ ] **Confirm cover applies from Day 1 of casual employment, not after a probation/qualifying period** — genuinely required per the Act's broad "worker" definition (full-time/part-time/casual/apprentice/trainee/contractor-if-deemed-a-worker), not assumed
 
 ---
 

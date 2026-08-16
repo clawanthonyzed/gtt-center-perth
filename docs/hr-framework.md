@@ -67,50 +67,53 @@ Each employee receives a written contract before Day 1 containing:
 
 ---
 
-## 4. AWARD WAGE RATES (CURRENT — VERIFY BEFORE ISSUING CONTRACTS)
+## 4. AWARD WAGE RATES (RESEARCHED CURRENT, 2026-08-16 — F18/F19 — VERIFY BEFORE ISSUING CONTRACTS)
 
-Fair Work Commission increases minimum wages annually (typically July 1). Confirm rates at time of hiring.
+Fair Work Commission increases minimum wages annually (typically July 1). **Researched 2026-08-16** against two independent third-party payroll-calculator sources (FairWorkMate, RosterElf), which agree with each other, reflecting the 1 July 2026 Annual Wage Review — the primary Fair Work Commission PDF award text could not be extracted as readable text this session (a genuine tool limitation, flagged not silently worked around). **Still recommend confirming at time of hiring** via a payroll advisor or the Fair Work Infoline (13 13 94, script ready at `docs/fairwork-infoline-query-script.md`) — this is real, current, cross-referenced research, not a guess, but it is not a substitute for professional payroll confirmation before contracts are issued.
 
 ### Hair & Beauty Industry Award MA000005
 
-| Level | Classification | Example roles | Indicative rate (2026) |
-|---|---|---|---|
-| Level 1 | First year apprentice / trainee | — | ~A$14.50/hr |
-| Level 2 | Second year apprentice | — | ~A$16.50/hr |
-| Level 3 | Certificate III qualified | Nail tech, brows/beauty, junior massage | ~A$23.49/hr |
-| Level 4 | Cert IV or 2+ yrs experience | Senior beauty therapist | ~A$24.89/hr |
-| Level 5 | Cert IV + specialisation or 3+ yrs | Pregnancy massage (specialised) | ~A$26.56/hr |
-| Level 6 | Diploma or 5+ yrs | Senior practitioner | ~A$28.11/hr |
+| Level | Classification | Example roles | ~~Indicative rate (2025-era)~~ | **Casual rate, researched 2026-08-16** |
+|---|---|---|---|---|
+| Level 1 | First year apprentice / trainee | — | ~~~A$14.50/hr~~~ | **$34.76/hr (casual)** |
+| Level 2 | Second year apprentice | — | ~~~A$16.50/hr~~~ | **$35.56/hr (casual)** |
+| Level 3 | Certificate III qualified | Nail tech, brows/beauty, junior massage | ~~~A$23.49/hr~~~ | **$36.81/hr (casual)** |
+| Level 4 | Cert IV or 2+ yrs experience | Senior beauty therapist, massage therapist | ~~~A$24.89/hr~~~ | **$37.50/hr (casual)** |
 
-**Penalty rates (MA000005):**
+**Note on the jump from the old table:** the 2025-era "indicative" figures in this document were themselves lower-confidence estimates (already flagged "Indicative," "confirm before issuing contracts") than `docs/financial-break-even-staff.md`'s own Award Wage Summary — the 2026-08-16 researched casual rates above are closer to (though not identical to) that document's own base rates once the 25% casual loading is applied, which is reassuring, not a new conflict. See `data/canonical/wages.yml`'s `conflict_base_hourly_rates_vs_hr_framework` for the full disclosed history of this gap — not fully resolved by this update, but narrowed.
+
+**Penalty rates (MA000005) — UNCHANGED, still not independently re-verified against a primary source this pass:**
 - Saturday: 150% of ordinary rate
 - Sunday: 175%
 - Public holiday: 250%
-- GTT Center Perth operates Mon–Fri only — Saturday/Sunday penalties not currently applicable
+- GTT Center Perth now operates Mon–Sat (Saturday reuses the same AM volume as weekdays, per `docs/CURRENT-STATE.md` §1) — Saturday penalties ARE applicable, unlike this section's prior "Mon-Fri only" note, which is now stale and corrected here.
 
 **Overtime:** After 38 hours/week — 150% first 2 hours, 200% thereafter. Part-time employees: no OT unless rostered above contracted hours.
 
 **Casual loading:** 25% on top of base rate in lieu of leave entitlements.
 
-### Clerks Award MA000002
+### Clerks Award MA000002 — RESEARCHED CURRENT, 2026-08-16
 
-| Level | Classification | Indicative rate (2026) |
+| Level | Classification | ~~Indicative rate (2025-era)~~ | **Casual rate, researched 2026-08-16** |
+|---|---|---|---|
+| Level 1 | Receptionist, data entry | ~~~A$26.17/hr~~~ | **$33.71/hr (casual)** |
+| Level 2 | Senior admin, 12 months+ | ~~~A$27.42/hr~~~ | **$36.81/hr (casual)** |
+
+**Penalty rates (MA000002) — a genuine, disclosed discrepancy found this pass, not silently resolved:**
+- Saturday: this document previously stated 125%; the 2026-08-16 research (FairWorkMate) states 150% (1.5x base) — **UNRESOLVED conflict, flagged not picked.**
+- Sunday: 150% (unchanged, not re-verified this pass)
+- Public holiday: 250% (unchanged, not re-verified this pass)
+
+### Health Professionals and Support Services Award MA000027 (Phlebotomist) — RESEARCHED CURRENT, 2026-08-16
+
+| Classification | ~~Indicative rate (2025-era)~~ | **Casual rate, researched 2026-08-16** |
 |---|---|---|
-| Level 1 Grade 1 | Receptionist, data entry | ~A$26.17/hr |
-| Level 2 | Senior admin, 12 months+ | ~A$27.42/hr |
+| Support Services Level 1 | ~~~A$25.43/hr~~~ | **$33.71/hr (casual)** |
+| Support Services Level 2 | — | **$35.04/hr (casual)** |
+| Support Services Level 3 | — | **$36.39/hr (casual)** |
+| Health Professional Level 1 (Cert IV) | ~~~A$27.85/hr~~~ | **$38.61/hr (casual)** |
 
-**Penalty rates (MA000002):**
-- Saturday: 125%
-- Sunday: 150%
-- Public holiday: 250%
-
-### Health Professionals and Support Services Award MA000027 (Phlebotomist)
-
-| Classification | Indicative rate (2026) |
-|---|---|
-| Support Level 2 (Cert III HLT) | ~A$25.43/hr |
-| Health Professional Level 1 (Cert IV) | ~A$27.85/hr |
-| Health Professional Level 2 (experience) | ~A$30.51/hr |
+**Classification-mapping caveat, disclosed:** this venture's phlebotomist role ("Pathology Collector, Cert III/IV") does not map to an exact single classification in the researched source's own level breakdown — Support Services Level 1-2 is the closest plausible match to a Cert III/IV collector role, not a confirmed exact mapping. Recommend the Fair Work Infoline query (`docs/fairwork-infoline-query-script.md`) confirm the exact classification alongside the Saturday-ordinary-hours question it's already built to ask.
 
 *Phlebotomists in Perth private pathology typically earn A$26–32/hr. Benchmark against WDP/Sonic Healthcare advertised rates at hire time.*
 
@@ -133,10 +136,11 @@ Fair Work Commission increases minimum wages annually (typically July 1). Confir
 
 ## 5. SUPERANNUATION
 
-**Rate:** 12% of Ordinary Time Earnings (OTE), effective 1 July 2025 — the final scheduled Superannuation Guarantee increase. This is the current rate (FY2026).  
-*(Confirm current rate with accountant at hire — rate increases annually.)*
+**Rate:** 12% of Ordinary Time Earnings (OTE), effective 1 July 2025 — the final scheduled Superannuation Guarantee increase. **CONFIRMED CURRENT for FY2026-27, researched 2026-08-16 (B2)** — multiple independent sources (Industry Super, Superannuation Warehouse, ATO-referencing summaries) agree 12% remains unchanged for 2026-27, with no further scheduled increase. `[VERIFIED via third-party sources cross-referenced, not a direct ATO/legislation fetch]` — still recommend accountant confirmation at hire, per standing practice, but this is not a stale figure like the wage rates were.
 
-**Payment:** Super must be paid at least quarterly; monthly via Xero preferred (cash flow better, avoids large quarterly hits).
+**New finding, 2026-08-16 (B2) — Payday Super, a process/timing change, not a rate change:** from 1 July 2026, employers must pay superannuation contributions on a "payday" basis — within 7 business days of each pay run — rather than quarterly or this venture's own planned monthly cadence. A genuinely new compliance requirement, not previously flagged anywhere in this repo. `financial-setup.md` Step 7's "monthly, 28th of following month" schedule and Step 10's monthly rhythm need updating to this new timing — flagged here, not yet propagated (a timing/cash-flow change, not a cost change, so no P&L figure is affected).
+
+**Payment:** Super must be paid at least quarterly; monthly via Xero preferred (cash flow better, avoids large quarterly hits). **Superseded by Payday Super from 1 July 2026 (see above) — this section needs updating to the new 7-business-day-per-payday requirement, not yet actioned this pass.**
 
 **Fund choice:** Offer employees a choice of fund. If they don't choose within 2 weeks, use the employer's default fund. Confirm default fund with accountant.
 

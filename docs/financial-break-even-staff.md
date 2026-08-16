@@ -22,21 +22,26 @@ GTT Center Perth employs all practitioners directly. Venue sets pricing, hours, 
 
 ---
 
-## Award Wage Summary (Effective 1 July 2025)
+## Award Wage Summary (Effective 1 July 2025) — RESEARCHED CURRENT, 2026-08-16 (F18/F19)
 
-### Hair & Beauty Industry Award MA000005 + Clerks Award MA000002
+> **2026-08-16 — real current rates researched, per F18/F19/B2.** The 1 July 2025 table below is 13+ months stale. Researched current (1 July 2026 Annual Wage Review) rates via two independent third-party payroll-calculator sources (FairWorkMate, RosterElf), which agree with each other — the primary Fair Work Commission PDF award text could not be extracted as readable text this session (binary/compressed PDF, flagged as a genuine tool limitation, not silently worked around). **Recommend a payroll advisor or Fair Work Infoline (13 13 94) confirmation before issuing contracts** — same standing caveat this repo already applies to every award-rate figure, per `docs/fairwork-infoline-query-script.md`. **Not yet propagated through `tools/cost_ramp_model.py`/`tools/master_financial_model.py`'s hardcoded payroll constants or any headline P&L figure in `docs/CURRENT-STATE.md` — that is a distinct, larger recompute task, flagged as the next financial-recompute phase, not attempted this round to avoid a rushed, unreviewed change to the entire canonical financial layer.**
 
-| Role | Award | Level | Base/hr | Casual Rate (+25%) | Annual (30hr/wk) |
-|------|-------|-------|---------|-------------------|-----------------|
-| Receptionist/Manager | Clerks MA000002 | Level 2 | $26.70 | $33.38/hr | A$56,237 incl. super |
-| Beauty therapist | MA000005 | Level 4 | $29.60 | $37.00/hr | A$62,774 incl. super |
-| Nail technician | MA000005 | Level 3 | $28.50 | $35.63/hr | A$60,456 incl. super |
-| Hairdresser | MA000005 | Level 3 | $28.50 | $35.63/hr | A$60,456 incl. super |
-| Massage therapist | MA000005 | Level 4 | $29.60 | $37.00/hr | A$62,774 incl. super |
-| PM Service Therapist (new hire) | MA000005 | Level 4 | $29.60 | $37.00/hr | A$62,774 incl. super |
-| Phlebotomist (x2 — Chair A / Chair B) | Health Professionals MA000027 | Pathology Collector, Cert III/IV | $24.50 | $30.63/hr | A$43,068 (25hr/wk each) |
+### Hair & Beauty Industry Award MA000005 + Clerks Award MA000002 — CURRENT (1 July 2026)
 
-*Super: 12% on ordinary time earnings. Penalty rates: Saturday 1.33x; Sunday 2.0x; Public Holiday 2.5x.*
+| Role | Award | Level | Casual Rate (researched 2026-08-16) | ~~Casual Rate (1 July 2025, stale)~~ | Change |
+|------|-------|-------|---|---|---|
+| Receptionist/Manager | Clerks MA000002 | Level 2 | **$36.81/hr** | ~~$33.38/hr~~ | +10.3% |
+| Beauty therapist | MA000005 | Level 4 | **$37.50/hr** | ~~$37.00/hr~~ | +1.4% |
+| Nail technician | MA000005 | Level 3 | **$36.81/hr** | ~~$35.63/hr~~ | +3.3% |
+| Hairdresser | MA000005 | Level 3 | **$36.81/hr** | ~~$35.63/hr~~ | +3.3% |
+| Massage therapist | MA000005 | Level 4 | **$37.50/hr** | ~~$37.00/hr~~ | +1.4% |
+| PM Service Therapist (new hire) | MA000005 | Level 4 | **$37.50/hr** | ~~$37.00/hr~~ | +1.4% |
+| Phlebotomist (x2 — Chair A / Chair B) | Health Professionals MA000027 | SS Level 1-2 (Cert III/IV Pathology Collector — closest current classification match, not an exact one) | **$33.71-35.04/hr** | ~~$30.63/hr~~ | +10-14% |
+
+*Annual salary figures (A$56,237/A$62,774/A$60,456/A$43,068 etc.) above are NOT yet recomputed against these new casual rates — they remain the 1 July 2025-basis figures until the full payroll recompute (see banner above) is actioned. Do not silently blend an old annual figure with a new hourly rate.*
+
+*Super: 12% on ordinary time earnings — CONFIRMED CURRENT for FY2026-27, see `hr-framework.md` §5 for the 2026-08-16 research update (B2). Note: Payday Super (paying super within 7 business days of each pay run, not quarterly) becomes mandatory from 1 July 2026 — a timing/process change, not a rate change, newly flagged this pass.*
+*Penalty rates: Saturday 1.33x; Sunday 2.0x; Public Holiday 2.5x — UNCHANGED, still unconfirmed against a primary source (see `data/canonical/wages.yml`'s 3-way conflict, unresolved).*
 *2 phlebotomists employed from Day 1 — 1 per collection chair (Chair A / Chair B), Mon-Fri 7:30am-12:30pm. See operations-manual.md and staff-plan.md.*
 *PM Service Therapist: cross-trained massage + facials (Cert IV), delivers PM Spa Packages 12:00-18:00. Same award level/rate as Massage/Beauty therapist.*
 
