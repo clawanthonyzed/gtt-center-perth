@@ -6,6 +6,12 @@
 
 ---
 
+## READ THIS FIRST — THE MASTER VENTURE DOSSIER (2026-08-16)
+
+**[`outputs/master-dossier/index.html`](../outputs/master-dossier/index.html)** — a single, standalone, self-contained HTML document covering the entire venture in 18 chapters: business idea, brand, customer/market, services/pricing, operating model, venue, startup costs, staffing, wages, financial model, sensitivity, legal/compliance, operations, marketing, expansion, execution status, and a master action plan. Real tables, real SVG charts, full source traceability per chapter, print-ready for A4/PDF (a pre-generated PDF also exists at `outputs/master-dossier/GTT-Center-Perth-Master-Dossier.pdf`). Built to be opened once a day and understood without reading anything else — read this before any other document in this repository if you're new to the venture or need a full refresh.
+
+---
+
 ## THE 60-SECOND VERSION
 
 GTT Center Perth is a concept for WA's first premium wellness venue built around the mandatory Glucose Tolerance Test — patients spend the ~2-2.5 hour test wait getting massage/nails/hair/brows instead of sitting in a bare pathology room. **No venue location is secured yet — that is the single blocking gate on everything else** (staff recruitment, fit-out, everything downstream), though a real property shortlist with two strong Tier-1 candidates now exists (`docs/strategy/PERTH-PROPERTY-SHORTLIST.md`), unactioned. **Current committed operational model (per `docs/CURRENT-STATE.md`, RECALCULATED 2026-08-09 for superannuation — corrects the figures previously stated here):** PRIMARY reference is Table 1, 18 clients/day, 07:00 start, 25-min pair cadence, projected **+A$56,581.70/month** at Month 5+ steady state; SECONDARY reference is Table 2, 12 clients/day, 08:00 start, same cadence, **+A$21,056.64/month**. Both are planning estimates, not real trading data. Two package prices (A$250/A$300), full payment collected at booking. Pathology partner (WDP, priority 1) has been in active correspondence since 2026-07-27 — several regulatory/commercial questions resolved, the commercial rental figure still outstanding, status is simply **waiting on Carole/WDP**, not a research gap. **Naming is narrowed to two live candidates, SOLENA and ELOWEN, neither selected** — trademark clearance is written and ready, deliberately deferred by Anthony to a later funding milestone (`docs/naming/NAMING-DECISION-STATE.md`). **A full visual brand system is built and locked** (palette, typography, wordmark-led logo direction — `outputs/brand/warm-stone-tokens.css`), applied identically to both names, viewable in `outputs/brand/SOLENA-vs-ELOWEN-VISUAL-REVIEW.pdf`. Self-funded (Anthony + Imara joint savings), no external investor, no launch date set.
@@ -32,7 +38,9 @@ An execution round focused on BUILT, committed outputs rather than more recommen
 
 ## ANTHONY'S READING PATH — REASSESSED 2026-08-15, SMALLEST USEFUL SET
 
-Nine documents genuinely cover the venture as it stands today. Everything else in this file is detail, reference, or historical trace — read on demand, not linearly.
+Nine documents genuinely cover the venture as it stands today, plus the new Master Dossier below, which is now the actual #1 starting point. Everything else in this file is detail, reference, or historical trace — read on demand, not linearly.
+
+**READ THE MASTER DOSSIER FIRST, ALWAYS:** [`outputs/master-dossier/index.html`](../outputs/master-dossier/index.html) — see the "READ THIS FIRST" callout above. Everything below remains valid as source-level detail underneath it.
 
 **READ FIRST (essential — the current picture, ~30 min total):**
 1. [CURRENT-STATE.md](CURRENT-STATE.md) — the one file every number in the venture traces back to. Read this before trusting any figure anywhere else.
