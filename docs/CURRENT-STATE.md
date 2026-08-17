@@ -102,7 +102,7 @@
 
 > **REBASED 2026-08-05 — the 25-min-cadence tables are now the actual basis, per Anthony's direct instruction (see §1 REBASE banner).** New PRIMARY committed steady-state figure: **+A$63,028.75/month** (Table 1, 18-client/07:00). New SECONDARY reference: **+A$27,084.69/month** (Table 2, 12-client/08:00 — numerically unchanged from the old committed baseline, since client volume and headcount are identical; see the flagged open item below). The old 12-client/23-min-cadence Month 1-5+ ramp table is HISTORICAL, retained beneath for trace — Month 1-4 ramp has NOT yet been independently rebuilt against the new, higher Table 1 ceiling, flagged as an open follow-up rather than fabricated (see `docs/VERIFICATION-TRACKER.md`).
 >
-> **SUPERANNUATION CORRECTION, 2026-08-14 — narrow headline-figure fix only.** The two PRIMARY/SECONDARY figures immediately above (A$63,028.75 / A$27,084.69) predate the 2026-08-09 superannuation fix (`docs/VERIFICATION-TRACKER.md` item 46) and are now stale. The canonical model's current, superannuation-corrected steady-state Net Operating Result is **A$56,581.70/month (Table 1)** and **A$21,056.64/month (Table 2)** — `data/models/master_financial_model.yml#outputs.steady_state_summary`, RECALCULATED 2026-08-09. **Only the two headline Net P&L numbers below (§5's PRIMARY/SECONDARY table rows) have been corrected to match.** The surrounding Total Costs, Quarterly, Half-Yearly, and Yearly rows in both tables below, the Fourth Delta table (§7), and every dated changelog entry elsewhere in this file are, deliberately, **NOT** recomputed here — they remain on the pre-superannuation historical/inherited-revenue basis, flagged as a real, open follow-up rather than silently left inconsistent or guessed at. Do not quote the Total Costs/Quarterly/Half-Yearly/Yearly rows below as superannuation-corrected; only the two Net P&L headline figures are.
+> **WAGE-RATE RECOMPUTE, 2026-08-17 — the current, authoritative figures.** The 2026-08-16 current-wage/insurance research is now fully propagated through the canonical model (`data/canonical/cost_ramp.yml`, `data/models/master_financial_model.yml`) — see those files' own 2026-08-17 header banners for the full method. **Current steady-state Net Operating Result: A$53,837.02/month (Table 1) and A$18,462.37/month (Table 2)** — both DOWN from the previous superannuation-corrected figures (A$56,581.70 / A$21,056.64, 2026-08-09), because the wage increases outweigh the small saving from other inputs. The A$63,028.75/A$27,084.69 pre-superannuation figures remain the oldest historical reference, retained struck-through below for trace. **Every row in both tables below (Total Costs, Quarterly, Half-Yearly, Yearly) IS now recomputed and current** — this is a full propagation, not a narrow headline-only fix like the 2026-08-14 pass was.
 
 ### PRIMARY — Table 1 (18-client/07:00/g=25), steady state
 
@@ -113,26 +113,32 @@
 | Line | Amount | Tag |
 |---|---|---|
 | Total Revenue (Monthly) — **HISTORICAL/INHERITED figure, not the canonical methodology as of 2026-08-09 — see banner above** | **A$157,792.16** (was A$118,297.16 at the old 12-client/23-min model — delta +A$39,495.00, all from AM: +A$33,000.00 weekday (6 extra clients × A$250 × 22 days) + A$6,495.00 Saturday (6 extra clients × A$250 × 4.33 Saturdays), PM/ancillary unchanged) | `[MODELED — delta-reconciliation build from the validated 12-client baseline in profit-loss-tables.md, same methodology as every prior model-change round in this file]` |
-| Total Direct Labor + Opening Costs | **A$79,433.05** (was A$75,941.47 — delta +A$3,491.58, entirely Saturday AM labor: hours-based costing scales proportionally with the longer 18-client AM day, A$1,612.74/day → A$2,419.11/day, a 1.5× scale-up matching the 12→18 client ratio; weekday AM labor UNCHANGED at A$48,254.67/month, FTE-based, same 8+2 headcount) | `[MODELED — proportional-scaling estimate for Saturday, same caveat as every prior Saturday-labor scaling in this file: not an independently rebuilt Saturday-specific solver schedule]` |
-| Workers Comp (1.7%) | **A$1,350.36** (was A$1,291.00 — delta +A$59.36, 1.7% of the Saturday labor delta above) | `[MODELED — same 1.7% convention]` |
+| Total Direct Labor + Opening Costs | **A$82,193.88** (2026-08-17 recompute — includes the current researched wage rates, superannuation, opening-time increment, receptionist/relief; see `data/canonical/cost_ramp.yml#cost_table1_m5plus`) | `[CALCULATED — data/canonical/cost_ramp.yml, deterministic output of tools/cost_ramp_model.py]` |
+| Workers Comp (1.7%) | **A$1,397.30** | `[MODELED — 1.7% convention, applied to the recomputed Direct Labor total]` |
 | Non-Wage Overhead | A$13,980.00 (unchanged — rent/utilities not client-volume-driven) | `[MODELED — unchanged]` |
-| **Total Costs** | **A$94,763.41** | |
-| **Net P&L — NEW PRIMARY COMMITTED STEADY-STATE FIGURE** | ~~+A$63,028.75/month~~ **+A$56,581.70/month (superannuation-corrected, 2026-08-14 — see banner above; A$63,028.75 was the pre-superannuation figure, retained struck-through for trace, not deleted)** | `[MODELED — full recompute, delta-from-baseline method; headline figure only, RECALCULATED 2026-08-09 per data/models/master_financial_model.yml, see banner above for what has and hasn't been propagated]` |
-| Quarterly | +A$189,086.25 | `[MODELED — Monthly × 3]` |
-| Half-Yearly | +A$378,172.51 | `[MODELED — Monthly × 6]` |
-| Yearly | +A$756,345.01 | `[MODELED — Monthly × 12]` |
+| **Total Costs** | **A$101,378.78** | `[CALCULATED — 2026-08-17 recompute]` |
+| **Net P&L — PRIMARY COMMITTED STEADY-STATE FIGURE** | ~~+A$63,028.75/month~~ ~~+A$56,581.70/month~~ **+A$53,837.02/month (recomputed 2026-08-17 for current wage rates — see banner above; both older figures retained struck-through for trace, not deleted)** | `[CALCULATED — data/models/master_financial_model.yml#outputs.steady_state_summary, 2026-08-17]` |
+| Quarterly | +A$161,511.06 | `[CALCULATED — Monthly × 3]` |
+| Half-Yearly | +A$323,022.12 | `[CALCULATED — Monthly × 6]` |
+| Yearly | +A$646,044.24 | `[CALCULATED — Monthly × 12]` |
 
-### SECONDARY — Table 2 (12-client/08:00/g=25), steady state
+### SECONDARY — Table 2 (12-client/08:00/g=25), steady state — DOWNSIDE/SENSITIVITY REFERENCE ONLY, not a planning alternative
 
 | Line | Amount | Tag |
 |---|---|---|
-| Total Revenue (Monthly) — **HISTORICAL/INHERITED figure, not the canonical methodology as of 2026-08-09 — see banner above §5** | A$118,297.16 — identical to the old committed model's revenue, since Table 2 also serves 12 clients/day | `[MODELED — same arithmetic as the old 12-client baseline]` |
-| Total Direct Labor + Opening Costs | A$75,941.47 — identical, same headcount, same client volume | `[MODELED — same]` |
-| **Net P&L — SECONDARY REFERENCE FIGURE** | ~~+A$27,084.69/month~~ **+A$21,056.64/month (superannuation-corrected, 2026-08-14 — see banner above; A$27,084.69 was the pre-superannuation figure, retained struck-through for trace, not deleted)** | `[MODELED, RECALCULATED 2026-08-09 per data/models/master_financial_model.yml]` |
+| Total Revenue (Monthly) | A$115,720.80 (canonical revenue methodology) | `[VERIFIED — data/models/master_financial_model.yml]` |
+| Total Direct Labor + Opening Costs | A$78,570.01 (2026-08-17 recompute) | `[CALCULATED — data/canonical/cost_ramp.yml#cost_table2_m5plus]` |
+| Workers Comp (1.7%) | A$1,335.69 | `[MODELED]` |
+| Non-Wage Overhead | A$13,980.00 | `[MODELED — unchanged]` |
+| **Total Costs** | **A$97,258.43** | `[CALCULATED]` |
+| **Net P&L — DOWNSIDE/SENSITIVITY REFERENCE FIGURE** | ~~+A$27,084.69/month~~ ~~+A$21,056.64/month~~ **+A$18,462.37/month (recomputed 2026-08-17)** | `[CALCULATED, data/models/master_financial_model.yml, 2026-08-17]` |
+| Quarterly | +A$55,387.11 | `[CALCULATED]` |
+| Half-Yearly | +A$110,774.22 | `[CALCULATED]` |
+| Yearly | +A$221,548.44 | `[CALCULATED]` |
 
-**Open item, flagged not assumed:** the Weekday P&L's "Opening-time increment" line (A$44.50/day, `profit-loss-tables.md` §1) is sourced specifically to the incremental cost of a **07:00** start vs a later one. Table 2 starts at 08:00, not 07:00 — this increment may not apply, which would make Table 2's true Net P&L slightly HIGHER than A$27,084.69/month. Not quantified or baked into the headline above, since the source document does not state the increment's exact mechanism (staff arrival penalty vs something else) precisely enough to re-derive with confidence — logged as an open item in `docs/VERIFICATION-TRACKER.md` rather than guessed at.
+**Open item, flagged not assumed:** the Weekday P&L's "Opening-time increment" line (A$44.50/day, `profit-loss-tables.md` §1) is sourced specifically to the incremental cost of a **07:00** start vs a later one. Table 2 starts at 08:00, not 07:00 — this increment may not apply, which would make Table 2's true Net P&L slightly HIGHER than the figure above. Not quantified or baked into the headline above, since the source document does not state the increment's exact mechanism (staff arrival penalty vs something else) precisely enough to re-derive with confidence — logged as an open item in `docs/VERIFICATION-TRACKER.md` rather than guessed at.
 
-**AM Direct Labor, both models — UNCHANGED at A$48,254.67/month (weekday, FTE-based):** 2 phlebotomists (A$86,136/yr) + 8 treatment staff (A$492,920/yr) = A$579,056/yr ÷ 12. Headcount is identical (8 dual-qualified + 2 phlebotomists) at both 18-client Table 1 and 12-client Table 2 — see §4. This is the central finding of the rebase: **Table 1 serves 50% more daily clients than the old committed model at literally zero extra weekday labor cost**, because these are fixed-salary FTE roles and the extended day still fits the shift budget.
+**AM Direct Labor, both models — RECOMPUTED 2026-08-17 to A$50,082.52/month (weekday, FTE-based, was A$48,254.67):** 2 phlebotomists + 8 treatment staff, current researched casual rates (`docs/financial-break-even-staff.md`). Headcount is identical (8 dual-qualified + 2 phlebotomists) at both 18-client Table 1 and 12-client Table 2 — see §4. This remains the central finding of the 2026-08-05 rebase: **Table 1 serves 50% more daily clients than Table 2 at literally zero extra weekday labor cost**, because these are fixed-salary FTE roles and the extended day still fits the shift budget — that finding is unaffected by the wage-rate recompute, only the absolute dollar figures moved.
 
 **Also not included in any figure above:** the Between-Client Downtime-Fill Revenue and Early-Release Cost Saving — both recomputed fresh against each table's own actual gap pattern (not carried over from the old 12-client/23-min figures), see §8 below.
 
@@ -223,7 +229,7 @@
 
 **Bottom line: the new Table 1 primary model is a strict improvement over the old committed baseline at zero extra weekday labor cost — same 8 treatment staff + 2 phlebotomists, 50% more daily clients, +A$35,944.06/month whole-venture.** This dominates every prior "12 vs 14" tradeoff analysis below, which is now retained for historical trace only — the 14-client proven-ceiling figure (+A$36,726.23/month, needing 9 staff) is itself now beaten by Table 1's +A$63,028.75/month at 8 staff.
 
-**Framing flag, per the brief that requested this rebase:** the above adopts Table 1 (18-client/07:00) as "the committed daily target" because it strictly dominates Table 2 (same headcount, more revenue) — this is the most natural reading of "these tables become the actual basis for financial calculations." **If Anthony instead means the venue should keep aiming for a 12-client/day operating rhythm and only wants the underlying schedule shape corrected (not the target volume raised to 18), Table 2's secondary figures (§5 above, +A$27,084.69/month, numerically unchanged from the old baseline) are the ones to use instead.** Flagged explicitly rather than assumed either way.
+**SETTLED, 2026-08-17 — no longer an open framing question.** Table 1 (18-client/07:00) is confirmed the planning model for all staffing, venue, and operational decisions. Table 2 (12-client/08:00) is retained only as a downside/sensitivity comparison, never an alternate current plan — see §5 above for the current recomputed figures for both.
 
 **Anthony's belief, per the task brief:** a revised model now shows the AM segment profitable on its own, versus the previously-modeled loss (revenue A$44,000/mo vs direct labor A$48,255/mo, per `pm-staffing-roster.md`).
 
