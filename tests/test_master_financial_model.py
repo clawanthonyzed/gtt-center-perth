@@ -438,8 +438,11 @@ class SuperannuationRegressionTests(unittest.TestCase):
 
     def test_am_weekday_split_sums_to_original_total(self):
         """am_weekday_treatment_staff + am_weekday_phlebotomist must equal
-        am_weekday_direct_labor exactly (A$48,254.67, unchanged from before
-        the split was introduced)."""
+        am_weekday_direct_labor exactly. RECALCULATED 2026-08-17 to propagate
+        the 2026-08-16 current-wage-rate research (docs/FOUNDER-FEEDBACK-
+        IMPLEMENTATION-MATRIX.md point 5) -- was A$48,254.67 before this
+        recompute; the sum-equals-total property itself is unchanged, only
+        the absolute figure moved."""
         inputs = crm.CanonicalCostInputs()
         payroll = crm.compute_payroll("scenario_table_1", "M1", inputs)
         self.assertAlmostEqual(
@@ -447,7 +450,7 @@ class SuperannuationRegressionTests(unittest.TestCase):
             payroll["am_weekday_direct_labor"],
             places=2,
         )
-        self.assertAlmostEqual(payroll["am_weekday_direct_labor"], 48254.67, places=2)
+        self.assertAlmostEqual(payroll["am_weekday_direct_labor"], 50082.52, places=2)
 
     def test_superannuation_flows_through_master_model_automatically(self):
         """The Master Financial Model's payroll figure must exactly match
@@ -597,16 +600,19 @@ class FundingRequirementInvestigationTests(unittest.TestCase):
         self.assertIn("PARTIALLY RESOLVED (bounded) 2026-08-09", tracker_text)
 
     def test_funding_investigation_does_not_alter_revenue_or_cost_methodology(self):
-        """Sanity check: canonical revenue/cost steady-state figures must be
-        byte-identical to their pre-investigation values -- this phase must
-        not have touched revenue_ramp.yml or cost_ramp.yml's payroll figures."""
+        """Sanity check: canonical revenue steady-state figures must remain
+        byte-identical (revenue was never wage-driven, unaffected by the
+        2026-08-17 wage-rate recompute). Payroll figures RECALCULATED
+        2026-08-17 (docs/FOUNDER-FEEDBACK-IMPLEMENTATION-MATRIX.md point 5)
+        -- were 84654.10/80684.16 before propagating the 2026-08-16 current-
+        wage-rate research through the canonical model."""
         inputs = mfm.CanonicalModelInputs()
         m5_t1 = mfm.compute_month_pnl("scenario_table_1", 5, inputs)
         m5_t2 = mfm.compute_month_pnl("scenario_table_2", 5, inputs)
         self.assertAlmostEqual(m5_t1["revenue"]["total_revenue"], 155215.80, places=2)
         self.assertAlmostEqual(m5_t2["revenue"]["total_revenue"], 115720.80, places=2)
-        self.assertAlmostEqual(m5_t1["payroll"], 84654.10, places=2)
-        self.assertAlmostEqual(m5_t2["payroll"], 80684.16, places=2)
+        self.assertAlmostEqual(m5_t1["payroll"], 87398.78, places=2)
+        self.assertAlmostEqual(m5_t2["payroll"], 83278.43, places=2)
 
 
 if __name__ == "__main__":

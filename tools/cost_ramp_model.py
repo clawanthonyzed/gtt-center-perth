@@ -63,18 +63,46 @@ MONTHS = ["M1", "M2", "M3", "M4", "M5plus"]
 # inference -- the 8 treatment staff's annual salaries already include
 # superannuation; the 2 phlebotomists' annual salary (A$86,136/yr total)
 # does not.
-AM_WEEKDAY_TREATMENT_STAFF_MONTHLY = 492920 / 12  # A$41,076.67 -- 8 treatment staff, already INCLUDES super
-AM_WEEKDAY_PHLEBOTOMIST_MONTHLY = 86136 / 12       # A$7,178.00 -- 2 phlebotomists, does NOT include super
-AM_WEEKDAY_DIRECT_LABOR_MONTHLY = round(AM_WEEKDAY_TREATMENT_STAFF_MONTHLY + AM_WEEKDAY_PHLEBOTOMIST_MONTHLY, 2)  # A$48,254.67 -- unchanged total
+# RECOMPUTED 2026-08-17, per direct instruction to propagate the 2026-08-16
+# wage/award research through the canonical model, not leave it researched-
+# but-unpropagated. METHOD: proportional scaling -- the exact per-staff-
+# member hour allocation behind the old A$41,076.67/A$7,178.00 figures is
+# NOT preserved as a rebuildable worksheet anywhere in this repo (confirmed
+# directly, docs/profit-loss-tables.md's own Appendix: "the specific per-
+# staff-member hour allocation behind the exact total is not saved as a
+# standalone worksheet in this repo"). Rebuilding it from scratch against
+# scenario-c-sync-timetables.md's per-client service-time entries is a
+# genuinely separate, larger task, not attempted here (would risk silently
+# inventing a schedule reconstruction not independently verified this pass).
+# Instead: each role's OLD casual rate -> NEW casual rate (financial-break-
+# even-staff.md, researched 2026-08-16) gives a defensible, disclosed scale
+# factor, applied to the existing dollar total. This is the SAME proportional-
+# scaling method this file already uses elsewhere (e.g. AM_SATURDAY_DAILY_LABOR
+# below), not a new methodology invented for this recompute.
+#   Treatment staff (8): 4x Massage+Beauty (old $37.00/hr -> new $37.50/hr)
+#     + 2x Nails (old $35.63/hr -> new $36.81/hr) + 2x Hair (same as Nails).
+#     Old weighted-hourly sum = 4(37.00)+2(35.63)+2(35.63) = 290.52
+#     New weighted-hourly sum = 4(37.50)+2(36.81)+2(36.81) = 297.24
+#     Scale factor = 297.24 / 290.52 = 1.023133
+#   Phlebotomists (2): old $30.63/hr -> new SS Level 1-2 range $33.71-35.04/hr,
+#     midpoint $34.375/hr used as the single defensible new rate (the old
+#     figure was also a single rate, not a range).
+#     Scale factor = 34.375 / 30.63 = 1.122266
+AM_WEEKDAY_TREATMENT_STAFF_MONTHLY = round((492920 / 12) * 1.023133, 2)  # was A$41,076.67 -> A$42,027.66
+AM_WEEKDAY_PHLEBOTOMIST_MONTHLY = round((86136 / 12) * 1.122266, 2)       # was A$7,178.00 -> A$8,055.97
+AM_WEEKDAY_DIRECT_LABOR_MONTHLY = round(AM_WEEKDAY_TREATMENT_STAFF_MONTHLY + AM_WEEKDAY_PHLEBOTOMIST_MONTHLY, 2)  # was A$48,254.67 -> A$50,083.63
 
 # AM Direct Labor (Saturday) -- hours-based, scales with the scenario's
 # COMMITTED client volume (not the ramp-period actual volume, which has no
 # documented rostering methodology anywhere in this repo -- see COST-RAMP-
 # METHODOLOGY.md §4). Source: docs/profit-loss-tables.md §2 (old model, now
 # historical) and the PRIMARY REBASED MODEL section (Table 1).
+# RECOMPUTED 2026-08-17 -- same roster/rate mix as AM_WEEKDAY_DIRECT_LABOR_
+# MONTHLY above, so the same blended scale factor (new/old weekday total =
+# 50083.63/48254.67 = 1.037896) is applied here, not a separately-derived one.
 AM_SATURDAY_DAILY_LABOR = {
-    "scenario_table_1": 2419.11,
-    "scenario_table_2": 1612.74,
+    "scenario_table_1": round(2419.11 * 1.037896, 2),  # was 2,419.11 -> 2,510.80
+    "scenario_table_2": round(1612.74 * 1.037896, 2),  # was 1,612.74 -> 1,673.87
 }
 
 # Opening-time increment (07:00 start) -- fixed per trading day, sourced to
@@ -101,14 +129,19 @@ RECEPTIONIST_RELIEF_WORKERS_COMP_DAILY = 339.00
 # specific cost. Source: docs/profit-loss-tables.md §2's 3-hour-minimum
 # correction note (A$654.32/day, backed-out blended Saturday casual rate
 # A$54.53/hr).
-PM_SATURDAY_DAILY_LABOR = 654.32
+# RECOMPUTED 2026-08-17 -- built from the same blended weekday casual rate
+# as PM_WEEKDAY_BLENDED_CASUAL_RATE below; scale factor = new/old blended
+# rate = 37.155/36.315 = 1.023127.
+PM_SATURDAY_DAILY_LABOR = round(654.32 * 1.023127, 2)  # was 654.32 -> 669.46
 
 # PM Direct Labor (weekday) -- genuinely ramps, per the session-count curve
 # below and the 3-hour casual-minimum-engagement floor. Blended weekday
 # casual rate = average of the 4 PM roles' casual rates
 # (wages.yml#wage_massage_therapist/wage_beauty_therapist = A$37.00/hr,
 # wages.yml#wage_nail_technician/wage_hairdresser = A$35.63/hr).
-PM_WEEKDAY_BLENDED_CASUAL_RATE = (37.00 + 37.00 + 35.63 + 35.63) / 4  # = 36.315
+# RECOMPUTED 2026-08-17 -- current researched casual rates (financial-break-
+# even-staff.md, 2026-08-16): Massage/Beauty $37.50/hr, Nails/Hair $36.81/hr.
+PM_WEEKDAY_BLENDED_CASUAL_RATE = (37.50 + 37.50 + 36.81 + 36.81) / 4  # was 36.315 -> 37.155
 PM_ROLES = 4
 PM_THROUGHPUT_SESSIONS_PER_HOUR = 1.3  # docs/pm-staffing-roster.md, established elsewhere in this repo
 CASUAL_MINIMUM_ENGAGEMENT_HOURS = 3.0  # wages.yml#wage_casual_minimum_engagement, VERIFIED
@@ -129,7 +162,10 @@ PM_SESSION_RAMP = {"M1": 4, "M2": 8, "M3": 12, "M4": 15, "M5plus": 16}
 # repo's own Appendix already discloses this exact "within rounding, not
 # exact" gap for the identical calculation, a pre-existing imprecision, not
 # introduced here).
-PM_WEEKDAY_M5PLUS_DAILY_LABOR_CANONICAL_ANCHOR = 440.00
+# RECOMPUTED 2026-08-17 -- proportionally scaled by the same PM blended-rate
+# factor (37.155/36.315 = 1.023127) applied above, since this anchor figure
+# was itself built from the old blended rate.
+PM_WEEKDAY_M5PLUS_DAILY_LABOR_CANONICAL_ANCHOR = round(440.00 * 1.023127, 2)  # was 440.00 -> 450.18
 
 WORKERS_COMP_RATE_PCT = 1.7  # wages.yml#wage_workers_comp_rate, MODELLED
 

@@ -100,12 +100,14 @@ class Table1Tests(unittest.TestCase):
         self.assertAlmostEqual(m5["payroll_costs"], rec["payroll_costs"], places=2)
 
     def test_table1_total_operating_costs_m5plus_value(self):
-        """RECALCULATED 2026-08-09 for superannuation (docs/VERIFICATION-TRACKER.md
-        item 46, resolved) -- was 95014.18 before super was added."""
+        """RECALCULATED 2026-08-17 to propagate the 2026-08-16 current-wage-rate
+        research (docs/FOUNDER-FEEDBACK-IMPLEMENTATION-MATRIX.md point 5) -- was
+        98634.10 before this recompute (itself recalculated 2026-08-09 for
+        superannuation -- was 95014.18 before super was added)."""
         inputs = cost_model.CanonicalCostInputs()
         computed = cost_model.compute_ramp("scenario_table_1", inputs, cost_model.DEFAULT_REVENUE_RAMP_CURVE)
         m5 = next(m for m in computed if m["month"] == "M5plus")
-        self.assertAlmostEqual(m5["total_operating_costs"], 98634.10, places=2)
+        self.assertAlmostEqual(m5["total_operating_costs"], 101378.78, places=2)
 
 
 class Table2Tests(unittest.TestCase):
@@ -120,12 +122,14 @@ class Table2Tests(unittest.TestCase):
         self.assertAlmostEqual(m5["total_operating_costs"], rec["total_operating_costs"], places=2)
 
     def test_table2_total_operating_costs_m5plus_value(self):
-        """RECALCULATED 2026-08-09 for superannuation (docs/VERIFICATION-TRACKER.md
-        item 46, resolved) -- was 91463.24 before super was added."""
+        """RECALCULATED 2026-08-17 to propagate the 2026-08-16 current-wage-rate
+        research (docs/FOUNDER-FEEDBACK-IMPLEMENTATION-MATRIX.md point 5) -- was
+        94664.16 before this recompute (itself recalculated 2026-08-09 for
+        superannuation -- was 91463.24 before super was added)."""
         inputs = cost_model.CanonicalCostInputs()
         computed = cost_model.compute_ramp("scenario_table_2", inputs, cost_model.DEFAULT_REVENUE_RAMP_CURVE)
         m5 = next(m for m in computed if m["month"] == "M5plus")
-        self.assertAlmostEqual(m5["total_operating_costs"], 94664.16, places=2)
+        self.assertAlmostEqual(m5["total_operating_costs"], 97258.43, places=2)
 
 
 class Month1To5PlusTests(unittest.TestCase):

@@ -33,7 +33,26 @@
 
 schema_version: 1
 dataset: cost_ramp
-last_updated: "2026-08-09"
+last_updated: "2026-08-17"
+
+# RECOMPUTED 2026-08-17 -- the 2026-08-16 current-wage-rate research
+# (financial-break-even-staff.md/hr-framework.md) is now propagated through
+# to this file's numeric fields (payroll_costs, total_operating_costs, every
+# payroll_breakdown sub-field), via tools/cost_ramp_model.py's proportional-
+# scaling method (see that file's own header comments on each recomputed
+# constant for the exact old-rate -> new-rate scale factor used per role).
+# VERIFIED against a fresh run of tools/cost_ramp_model.py -- these numeric
+# fields match its live output exactly, not hand-derived separately.
+# DISCLOSED, NOT SILENTLY LEFT INCONSISTENT: the prose `notes`/`status_detail`
+# fields on individual records below were written before this recompute and
+# still quote the PRE-RECOMPUTE dollar figures in their reconciliation
+# narratives (e.g. "this record's payroll_total (A$84,654.10)..." -- now
+# A$87,398.78). The narratives' own REASONING (why a reconciliation gap
+# exists, why superannuation is split the way it is) remains accurate: only
+# the specific dollar figures quoted within that prose are now stale. Not
+# rewritten sentence-by-sentence this pass -- flagged here rather than
+# silently left looking authoritative. The numeric fields above each note
+# (payroll_costs, total_operating_costs, payroll_breakdown) ARE current.
 
 # The one genuine ramp-methodology choice this file makes for PAYROLL:
 # reusing the PM session-count ramp (already-canonical
@@ -75,21 +94,21 @@ records:
     month: M1
     fixed_costs: 12480.00
     variable_costs: 600.00
-    payroll_costs: 84548.54
-    total_operating_costs: 97628.54
+    payroll_costs: 87290.71
+    total_operating_costs: 100370.71
     currency: AUD
     payroll_breakdown:
-      am_weekday_direct_labor: 48254.67
-      am_weekday_treatment_staff: 41076.67
-      am_weekday_phlebotomist: 7178.00
-      am_saturday_direct_labor: 10474.75
-      pm_weekday_direct_labor: 9587.16
-      pm_saturday_direct_labor: 2833.21
+      am_weekday_direct_labor: 50082.52
+      am_weekday_treatment_staff: 42026.89
+      am_weekday_phlebotomist: 8055.63
+      am_saturday_direct_labor: 10871.68
+      pm_weekday_direct_labor: 9808.92
+      pm_saturday_direct_labor: 2898.72
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
-      direct_labor_and_opening_total: 79586.79
-      superannuation: 3608.77
-      workers_comp: 1352.98
+      direct_labor_and_opening_total: 82098.84
+      superannuation: 3796.19
+      workers_comp: 1395.68
     status: CALCULATED
     status_detail: "Deterministically computed by tools/cost_ramp_model.py -- reproduced exactly by tests/test_cost_ramp.py. PM weekday labor floor-constrained at 3.0hrs/role/day (4 sessions/day, well below the 16-session steady-state ceiling)."
     scenario_applicability: scenario_table_1
@@ -104,21 +123,21 @@ records:
     month: M2
     fixed_costs: 12480.00
     variable_costs: 800.00
-    payroll_costs: 84548.54
-    total_operating_costs: 97828.54
+    payroll_costs: 87290.71
+    total_operating_costs: 100570.71
     currency: AUD
     payroll_breakdown:
-      am_weekday_direct_labor: 48254.67
-      am_weekday_treatment_staff: 41076.67
-      am_weekday_phlebotomist: 7178.00
-      am_saturday_direct_labor: 10474.75
-      pm_weekday_direct_labor: 9587.16
-      pm_saturday_direct_labor: 2833.21
+      am_weekday_direct_labor: 50082.52
+      am_weekday_treatment_staff: 42026.89
+      am_weekday_phlebotomist: 8055.63
+      am_saturday_direct_labor: 10871.68
+      pm_weekday_direct_labor: 9808.92
+      pm_saturday_direct_labor: 2898.72
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
-      direct_labor_and_opening_total: 79586.79
-      superannuation: 3608.77
-      workers_comp: 1352.98
+      direct_labor_and_opening_total: 82098.84
+      superannuation: 3796.19
+      workers_comp: 1395.68
     status: CALCULATED
     status_detail: "Identical payroll to cost_table1_m1 -- 8 PM sessions/day is still below the 3-hour casual-minimum floor. Only variable_costs (marketing ramp) differs from M1."
     scenario_applicability: scenario_table_1
@@ -133,21 +152,21 @@ records:
     month: M3
     fixed_costs: 12480.00
     variable_costs: 1000.00
-    payroll_costs: 84548.54
-    total_operating_costs: 98028.54
+    payroll_costs: 87290.71
+    total_operating_costs: 100770.71
     currency: AUD
     payroll_breakdown:
-      am_weekday_direct_labor: 48254.67
-      am_weekday_treatment_staff: 41076.67
-      am_weekday_phlebotomist: 7178.00
-      am_saturday_direct_labor: 10474.75
-      pm_weekday_direct_labor: 9587.16
-      pm_saturday_direct_labor: 2833.21
+      am_weekday_direct_labor: 50082.52
+      am_weekday_treatment_staff: 42026.89
+      am_weekday_phlebotomist: 8055.63
+      am_saturday_direct_labor: 10871.68
+      pm_weekday_direct_labor: 9808.92
+      pm_saturday_direct_labor: 2898.72
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
-      direct_labor_and_opening_total: 79586.79
-      superannuation: 3608.77
-      workers_comp: 1352.98
+      direct_labor_and_opening_total: 82098.84
+      superannuation: 3796.19
+      workers_comp: 1395.68
     status: CALCULATED
     status_detail: "Identical payroll to cost_table1_m1/m2 -- 12 PM sessions/day is still below the 3-hour casual-minimum floor."
     scenario_applicability: scenario_table_1
@@ -162,21 +181,21 @@ records:
     month: M4
     fixed_costs: 12480.00
     variable_costs: 1200.00
-    payroll_costs: 84548.54
-    total_operating_costs: 98228.54
+    payroll_costs: 87290.71
+    total_operating_costs: 100970.71
     currency: AUD
     payroll_breakdown:
-      am_weekday_direct_labor: 48254.67
-      am_weekday_treatment_staff: 41076.67
-      am_weekday_phlebotomist: 7178.00
-      am_saturday_direct_labor: 10474.75
-      pm_weekday_direct_labor: 9587.16
-      pm_saturday_direct_labor: 2833.21
+      am_weekday_direct_labor: 50082.52
+      am_weekday_treatment_staff: 42026.89
+      am_weekday_phlebotomist: 8055.63
+      am_saturday_direct_labor: 10871.68
+      pm_weekday_direct_labor: 9808.92
+      pm_saturday_direct_labor: 2898.72
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
-      direct_labor_and_opening_total: 79586.79
-      superannuation: 3608.77
-      workers_comp: 1352.98
+      direct_labor_and_opening_total: 82098.84
+      superannuation: 3796.19
+      workers_comp: 1395.68
     status: CALCULATED
     status_detail: "Identical payroll to cost_table1_m1-m3 -- 15 PM sessions/day (2.885hrs/role) is STILL just below the 3-hour floor -- a thin margin, same finding docs/profit-loss-tables.md's own Appendix already noted for the weekday steady-state figure."
     scenario_applicability: scenario_table_1
@@ -191,21 +210,21 @@ records:
     month: M5plus
     fixed_costs: 12480.00
     variable_costs: 1500.00
-    payroll_costs: 84654.10
-    total_operating_costs: 98634.10
+    payroll_costs: 87398.78
+    total_operating_costs: 101378.78
     currency: AUD
     payroll_breakdown:
-      am_weekday_direct_labor: 48254.67
-      am_weekday_treatment_staff: 41076.67
-      am_weekday_phlebotomist: 7178.00
-      am_saturday_direct_labor: 10474.75
-      pm_weekday_direct_labor: 9680.00
-      pm_saturday_direct_labor: 2833.21
+      am_weekday_direct_labor: 50082.52
+      am_weekday_treatment_staff: 42026.89
+      am_weekday_phlebotomist: 8055.63
+      am_saturday_direct_labor: 10871.68
+      pm_weekday_direct_labor: 9903.96
+      pm_saturday_direct_labor: 2898.72
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
-      direct_labor_and_opening_total: 79679.63
-      superannuation: 3619.92
-      workers_comp: 1354.55
+      direct_labor_and_opening_total: 82193.88
+      superannuation: 3807.60
+      workers_comp: 1397.30
     status: CALCULATED
     status_detail: >
       Steady state -- 16 PM sessions/day clears the 3-hour floor (3.08hrs/role), reaching the
@@ -244,21 +263,21 @@ records:
     month: M1
     fixed_costs: 12480.00
     variable_costs: 600.00
-    payroll_costs: 80578.60
-    total_operating_costs: 93658.60
+    payroll_costs: 83170.37
+    total_operating_costs: 96250.37
     currency: AUD
     payroll_breakdown:
-      am_weekday_direct_labor: 48254.67
-      am_weekday_treatment_staff: 41076.67
-      am_weekday_phlebotomist: 7178.00
-      am_saturday_direct_labor: 6983.16
-      pm_weekday_direct_labor: 9587.16
-      pm_saturday_direct_labor: 2833.21
+      am_weekday_direct_labor: 50082.52
+      am_weekday_treatment_staff: 42026.89
+      am_weekday_phlebotomist: 8055.63
+      am_saturday_direct_labor: 7247.81
+      pm_weekday_direct_labor: 9808.92
+      pm_saturday_direct_labor: 2898.72
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
-      direct_labor_and_opening_total: 76095.20
-      superannuation: 3189.78
-      workers_comp: 1293.62
+      direct_labor_and_opening_total: 78474.97
+      superannuation: 3361.33
+      workers_comp: 1334.07
     status: CALCULATED
     status_detail: "Deterministically computed -- see cost_table1_m1 for the identical method. AM Saturday labor uses Table 2's own committed-volume figure (A$1,612.74/day), materially lower than Table 1's (A$2,419.11/day) -- the only payroll component that differs between the two scenarios."
     scenario_applicability: scenario_table_2
@@ -273,21 +292,21 @@ records:
     month: M2
     fixed_costs: 12480.00
     variable_costs: 800.00
-    payroll_costs: 80578.60
-    total_operating_costs: 93858.60
+    payroll_costs: 83170.37
+    total_operating_costs: 96450.37
     currency: AUD
     payroll_breakdown:
-      am_weekday_direct_labor: 48254.67
-      am_weekday_treatment_staff: 41076.67
-      am_weekday_phlebotomist: 7178.00
-      am_saturday_direct_labor: 6983.16
-      pm_weekday_direct_labor: 9587.16
-      pm_saturday_direct_labor: 2833.21
+      am_weekday_direct_labor: 50082.52
+      am_weekday_treatment_staff: 42026.89
+      am_weekday_phlebotomist: 8055.63
+      am_saturday_direct_labor: 7247.81
+      pm_weekday_direct_labor: 9808.92
+      pm_saturday_direct_labor: 2898.72
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
-      direct_labor_and_opening_total: 76095.20
-      superannuation: 3189.78
-      workers_comp: 1293.62
+      direct_labor_and_opening_total: 78474.97
+      superannuation: 3361.33
+      workers_comp: 1334.07
     status: CALCULATED
     status_detail: "Identical payroll to cost_table2_m1 -- floor-constrained PM weekday labor."
     scenario_applicability: scenario_table_2
@@ -302,21 +321,21 @@ records:
     month: M3
     fixed_costs: 12480.00
     variable_costs: 1000.00
-    payroll_costs: 80578.60
-    total_operating_costs: 94058.60
+    payroll_costs: 83170.37
+    total_operating_costs: 96650.37
     currency: AUD
     payroll_breakdown:
-      am_weekday_direct_labor: 48254.67
-      am_weekday_treatment_staff: 41076.67
-      am_weekday_phlebotomist: 7178.00
-      am_saturday_direct_labor: 6983.16
-      pm_weekday_direct_labor: 9587.16
-      pm_saturday_direct_labor: 2833.21
+      am_weekday_direct_labor: 50082.52
+      am_weekday_treatment_staff: 42026.89
+      am_weekday_phlebotomist: 8055.63
+      am_saturday_direct_labor: 7247.81
+      pm_weekday_direct_labor: 9808.92
+      pm_saturday_direct_labor: 2898.72
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
-      direct_labor_and_opening_total: 76095.20
-      superannuation: 3189.78
-      workers_comp: 1293.62
+      direct_labor_and_opening_total: 78474.97
+      superannuation: 3361.33
+      workers_comp: 1334.07
     status: CALCULATED
     status_detail: "Identical payroll to cost_table2_m1/m2 -- floor-constrained PM weekday labor."
     scenario_applicability: scenario_table_2
@@ -331,21 +350,21 @@ records:
     month: M4
     fixed_costs: 12480.00
     variable_costs: 1200.00
-    payroll_costs: 80578.60
-    total_operating_costs: 94258.60
+    payroll_costs: 83170.37
+    total_operating_costs: 96850.37
     currency: AUD
     payroll_breakdown:
-      am_weekday_direct_labor: 48254.67
-      am_weekday_treatment_staff: 41076.67
-      am_weekday_phlebotomist: 7178.00
-      am_saturday_direct_labor: 6983.16
-      pm_weekday_direct_labor: 9587.16
-      pm_saturday_direct_labor: 2833.21
+      am_weekday_direct_labor: 50082.52
+      am_weekday_treatment_staff: 42026.89
+      am_weekday_phlebotomist: 8055.63
+      am_saturday_direct_labor: 7247.81
+      pm_weekday_direct_labor: 9808.92
+      pm_saturday_direct_labor: 2898.72
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
-      direct_labor_and_opening_total: 76095.20
-      superannuation: 3189.78
-      workers_comp: 1293.62
+      direct_labor_and_opening_total: 78474.97
+      superannuation: 3361.33
+      workers_comp: 1334.07
     status: CALCULATED
     status_detail: "Identical payroll to cost_table2_m1-m3 -- floor-constrained PM weekday labor (thin margin at 15 sessions/day, same finding as Table 1)."
     scenario_applicability: scenario_table_2
@@ -360,21 +379,21 @@ records:
     month: M5plus
     fixed_costs: 12480.00
     variable_costs: 1500.00
-    payroll_costs: 80684.16
-    total_operating_costs: 94664.16
+    payroll_costs: 83278.43
+    total_operating_costs: 97258.43
     currency: AUD
     payroll_breakdown:
-      am_weekday_direct_labor: 48254.67
-      am_weekday_treatment_staff: 41076.67
-      am_weekday_phlebotomist: 7178.00
-      am_saturday_direct_labor: 6983.16
-      pm_weekday_direct_labor: 9680.00
-      pm_saturday_direct_labor: 2833.21
+      am_weekday_direct_labor: 50082.52
+      am_weekday_treatment_staff: 42026.89
+      am_weekday_phlebotomist: 8055.63
+      am_saturday_direct_labor: 7247.81
+      pm_weekday_direct_labor: 9903.96
+      pm_saturday_direct_labor: 2898.72
       opening_time_increment: 979.00
       receptionist_relief: 7458.00
-      direct_labor_and_opening_total: 76188.04
-      superannuation: 3200.92
-      workers_comp: 1295.20
+      direct_labor_and_opening_total: 78570.01
+      superannuation: 3372.73
+      workers_comp: 1335.69
     status: CALCULATED
     status_detail: >
       Steady state -- 16 PM sessions/day clears the 3-hour floor. RECONCILIATION, disclosed not

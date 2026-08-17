@@ -108,14 +108,20 @@ class UpdatedPlanningCaseModelTests(unittest.TestCase):
         self.assertEqual(combined["range_high"], 251198.00 + 110000.00)
 
     def test_operating_cash_trough_figures_untouched(self):
-        """The updated planning case must not have altered the Master Financial
-        Model's own cash-flow trough figures -- those remain sourced only from
-        cash_flow_summary, never recalculated by this phase."""
+        """The updated planning case (this phase) must not itself have altered
+        the Master Financial Model's cash-flow trough figures -- those remain
+        sourced only from cash_flow_summary, never recalculated by THIS phase.
+        RECALCULATED 2026-08-17: a separate, later, authorised phase (the
+        2026-08-16 current-wage-rate research propagated through the
+        canonical model, docs/FOUNDER-FEEDBACK-IMPLEMENTATION-MATRIX.md point
+        5) legitimately moved the trough figures -- was 30885.75/66335.12
+        before that recompute. This test's own guard (this phase didn't
+        touch them) is unaffected by that later, different phase's change."""
         results = self.fri["opening_working_capital"]["operating_cash_trough_cross_check"]["results"]
         t1 = next(r for r in results if r["scenario_id"] == "scenario_table_1")
         t2 = next(r for r in results if r["scenario_id"] == "scenario_table_2")
-        self.assertEqual(t1["trough_value"], 30885.75)
-        self.assertEqual(t2["trough_value"], 66335.12)
+        self.assertEqual(t1["trough_value"], 34860.52)
+        self.assertEqual(t2["trough_value"], 74110.43)
 
 
 if __name__ == "__main__":
