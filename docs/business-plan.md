@@ -24,7 +24,7 @@ GTT Center Perth is a concept for Western Australia's first premium wellness ven
 
 **The only comparable business found in market research is MIWM in Melbourne** (see [market-research-findings.md](market-research-findings.md)) — reported fully booked 3-4 weeks in advance. No direct WA competitor has been identified in the research conducted for this venture.
 
-**Financial baseline (steady state, Month 5+, superannuation-corrected 2026-08-09, per [CURRENT-STATE.md](CURRENT-STATE.md) §5):** **+A$56,581.70/month (Table 1, planning model)** or **+A$21,056.64/month (Table 2, downside/backup)**, same headcount either way. **This figure is a planning estimate based on assumed booking volumes and no real trading data — see §9 for the full breakdown and sourcing.**
+**Financial baseline (steady state, Month 5+, current as of 2026-08-18, per [CURRENT-STATE.md](CURRENT-STATE.md) §5):** **+A$32,576.80/month (Table 1, planning model)** or **-A$1,513.21/month (Table 2, downside/backup — now loss-making at steady state, see §9)**. **This figure is a planning estimate based on assumed booking volumes and no real trading data — see §9 for the full breakdown and sourcing.**
 
 ---
 
@@ -177,7 +177,7 @@ Per [floor-plan-v3.svg](floor-plan-v3.svg)/`.pdf` (current, 2026-07-10) and [flo
 
 Financial models in this venture use **A$250 (Package 1, the lower of the two current packages) as the standard planning price per AM GTT package sold** — a deliberate conservative safety margin, per standing instruction, not a blended average across both packages. See [services-pricing-locked.md](services-pricing-locked.md) for the full locked structure and `docs/price-increase-comparison.md` for analysis of when/whether to raise prices.
 
-**Sourcing note on PM average (~A$95/service):** incorporated into the current whole-venture profitability figure — **+A$56,581.70/month (Table 1, planning model), superannuation-corrected, per [CURRENT-STATE.md](CURRENT-STATE.md) §5.**
+**Sourcing note on PM average (A$117/transaction, real derived figure — see [PM-PACKAGES.md](architecture/PM-PACKAGES.md) §5):** incorporated into the current whole-venture profitability figure — **+A$32,576.80/month (Table 1, planning model), current as of 2026-08-18, per [CURRENT-STATE.md](CURRENT-STATE.md) §5.**
 
 ---
 
@@ -233,17 +233,17 @@ A percentage-discount mechanism for AM clients booking a PM treatment is worth i
 
 **This venture's startup-capital estimate previously moved across 6+ different documents with conflicting figures — [CURRENT-STATE.md](CURRENT-STATE.md) §6/§7 is now the single place this is tracked, with every historical range retained for trace, not silently replaced.** A real itemised purchase list exists at [docs/architecture/ITEMISED-PURCHASE-LIST.md](architecture/ITEMISED-PURCHASE-LIST.md) (C2) to further refine this figure — trades/structural costs remain ballpark pending a confirmed venue.
 
-### Monthly P&L Snapshot — Stable Operations, Month 5+ (per [CURRENT-STATE.md](CURRENT-STATE.md) §5, the single canonical source)
+### Monthly P&L Snapshot — Stable Operations, Month 5+ (current as of 2026-08-18, per [CURRENT-STATE.md](CURRENT-STATE.md) §5 and [docs/architecture/FINANCIAL-POSITION-CURRENT.md](architecture/FINANCIAL-POSITION-CURRENT.md), the canonical current-state sources)
 
 | Line | Table 1 (18/day, planning model) | Table 2 (12/day, downside/backup) |
 |---|---|---|
-| Total Revenue | A$155,215.80 | A$115,720.80 |
-| Total Costs | A$98,634.10 | A$94,664.16 |
-| **Net P&L (superannuation-corrected, 2026-08-09)** | **+A$56,581.70/month** | **+A$21,056.64/month** |
+| Total Revenue | A$154,710.69 | A$115,215.69 |
+| Total Operating Costs | A$122,133.89 | A$116,728.90 |
+| **Operating Result** | **+A$32,576.80/month** | **-A$1,513.21/month (now loss-making at steady state)** |
 
-**Break-even:** 9.404 clients/day (Table 1) — 52.2% of the 18/day planning target, a real margin of safety, not a knife-edge. See [docs/strategy/18-CLIENT-COMMERCIAL-STRESS-TEST.md](strategy/18-CLIENT-COMMERCIAL-STRESS-TEST.md) for the full break-even/margin-of-safety analysis.
+**Break-even:** 13.051 clients/day (Table 1) — 72.5% of the 18/day planning target, margin of safety 4.949 clients/day (27.5%). See [docs/architecture/FINANCIAL-POSITION-CURRENT.md](architecture/FINANCIAL-POSITION-CURRENT.md) §3 for the full break-even/margin-of-safety analysis in both dollar and client-volume forms.
 
-**Yearly (12 months, steady-state run rate):** +A$678,980.40/year (Table 1) or +A$252,679.68/year (Table 2). This is a run-rate figure, not a Year 1 actual — Year 1 ramp-up has not yet been independently rebuilt against Table 1's higher ceiling, flagged as an open follow-up in [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md).
+**Yearly (12 months, steady-state run rate):** +A$390,921.60/year (Table 1) or -A$18,158.52/year (Table 2). This is a run-rate figure, not a Year 1 actual — Year 1 ramp-up has not yet been independently rebuilt against Table 1's higher ceiling, flagged as an open follow-up in [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md).
 
 **A human-readable financial summary, covering revenue/costs/profit/margin/break-even/startup-capital/assumptions/sensitivity in one place, with a direct link to the canonical machine-readable model, exists at [docs/architecture/FINANCIAL-MODEL-SUMMARY.md](architecture/FINANCIAL-MODEL-SUMMARY.md).**
 

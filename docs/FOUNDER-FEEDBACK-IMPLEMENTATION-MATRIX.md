@@ -70,7 +70,21 @@
 
 ---
 
-## Status Summary (updated, financial-transparency pass, 2026-08-18)
+## Status Summary (updated, Financial Finalisation pass, 2026-08-18)
+
+**COMPLETE this pass -- both open financial items resolved by investigation, not left as unactioned discrepancies:**
+
+1. **Insurance conflict RESOLVED.** Traced both A$400/month and A$1,279/month to their origins. A$400 was an unexplained round guess. A$1,279 (a "revised placeholder") was found this round to double-count workers compensation (already charged separately, 1.7% of payroll) and include an explicitly-optional business-interruption line as if committed. Corrected to A$708.34/month (Public Liability + Professional Indemnity + Property/Contents only), externally sanity-checked against real 2026 Australian small-business premium research. Propagated through the full canonical chain -- `data/canonical/opex.yml`, `cost_ramp.yml`, `master_financial_model.yml`, `docs/CURRENT-STATE.md`, `docs/architecture/FINANCIAL-FIGURE-REFERENCE.md`, `docs/architecture/FINANCIAL-POSITION-CURRENT.md`, `docs/business-plan.md`. Status: MODELLED/BALLPARK-ESTIMATE, real broker quotes in motion.
+
+2. **Relief/absence staffing cost RESOLVED, not left as a ballpark.** Built a real, defensible cost model (full-shift replacement, not the bare 3-hour casual-minimum floor) covering treatment, phlebotomy, and PM Reception -- A$6,128.53/month, quantified per Anthony's explicit Step 2/3 brief. Decided treatment (Option B: a distinct, separately-labelled recurring opex line, not blended into Direct Labour, not a one-off contingency) with reasoning shown. PROPAGATED into the canonical model this round -- `tools/cost_ramp_model.py`'s `relief_absence_allowance` field, flowing through every downstream output.
+
+3. **New document: `docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md`** -- every material financial assumption in one table with consistent VERIFIED/RESEARCHED-BEST-EVIDENCED/MODELLED/BALLPARK-ESTIMATE/PLACEHOLDER/WAITING-ON-THIRD-PARTY labelling, including an explicit Employment-Pool-vs-Simultaneous-Roster distinction section.
+
+4. **Full recompute through the actual model** (source assumption -> calculation -> canonical model -> financial outputs, all connected via code) -- new steady-state Net Operating Result: Table 1 +A$32,576.80/month (was +A$39,013.67 pre-correction), Table 2 -A$1,513.21/month (was +A$4,923.66 -- **Table 2 is now genuinely loss-making at steady state**, its 24-month cumulative position falls every month with no recovery). Table 1 remains solidly net-positive and the sole planning case. 124/124 tests pass (2 new tests added, none weakened), validator 0 errors, consistency checker 0 findings.
+
+5. **Repo-wide stale-figure audit performed.** `docs/business-plan.md` found to contain multiple materially stale figures (from before Phase C entirely) -- corrected this round (financial baseline, PM average sourcing note, Monthly P&L Snapshot table, break-even, yearly run-rate). `outputs/master-dossier/index.html` also found to contain stale figures (A$53,837/mo, break-even 9.821/day, the flawed A$1,279 insurance figure presented uncritically) -- **flagged, NOT edited this round**, per the explicit standing "hard stop, do not touch the dossier this round" instruction repeated throughout this whole engagement; corrected content is ready and waiting for the dedicated future dossier rebuild round.
+
+**NOT started this pass, per explicit instruction to stop after the financial phase:** Master Dossier visual rebuild, GTT Dash prototype.
 
 **COMPLETE this pass:** `docs/architecture/FINANCIAL-FIGURE-REFERENCE.md` (new) -- the calculation dictionary every financial figure traces back to, full derivation chains for AM revenue, PM revenue (re-audited, Step 10, confirmed holding with one disclosed remaining uncertainty), labour per position, non-wage overhead, break-even, cash flow. `docs/architecture/FINANCIAL-POSITION-CURRENT.md` (new) -- current-state-only financial position: headline 18-client summary, real 6/12/18 sensitivity table with actual dollar figures throughout (no words-as-numbers), break-even in both forms with plain-English explanation and dollar/percentage buffers, a full P&L table (visually inspected, reconciles to the cent against the canonical model), a 24-month cash-flow table, and an SVG cumulative-cash-position chart (rendered and visually verified via Playwright screenshot).
 

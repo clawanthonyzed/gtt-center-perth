@@ -65,9 +65,11 @@
 | **TOTAL MONTHLY PAYROLL COST** | | | | | | | **A$101,717.02** | | **CALCULATED** |
 | **ANNUAL PAYROLL COST** | | | | | | | **A$1,220,604.24** | Monthly × 12 | CALCULATED |
 
-**IMPORTANT — what this payroll figure does and does NOT include (Step 8 audit finding this round):** the figure above prices ONLY the committed simultaneous headcount (8 treatment + 2 phlebotomists + 1 VM + 1 PM Reception) working their full rostered shift, every trading day, with no absence. It does **NOT** include any cost for the recommended relief/backup EMPLOYMENT POOL (12 treatment / 4 phlebotomists on the books, `docs/architecture/STAFFING-COVERAGE-VALIDATION.md`) actually being called in to cover an absence. See §5 below for the quantified gap this represents.
+**IMPORTANT — what this payroll figure does and does NOT include:** the figure above prices ONLY the committed simultaneous headcount (8 treatment + 2 phlebotomists + 1 VM + 1 PM Reception) working their full rostered shift, every trading day, with no absence. It does **NOT** include the relief/absence cost — that is now a SEPARATE, quantified line (§5 below), not blended into payroll, so the committed-roster figure is never confused with the full realistic cost base.
 
-## 4. Non-Wage Overhead — 13-Line Breakdown
+## 4. Non-Wage Overhead — 13-Line Breakdown, Insurance Corrected
+
+**Insurance resolved 2026-08-18 (Financial Finalisation round), investigated not chosen between two existing figures.** Both prior figures were traced and found flawed: A$400/month was an unexplained round guess; A$1,279/month (a "revised placeholder," 2026-08-16) was found this round to double-count workers compensation (already charged separately, §3 above) and include an optional business-interruption line as if committed. Corrected: Public Liability (A$2,500-4,500/yr) + Professional Indemnity (A$2,000-4,000/yr) + Property/Contents (A$1,500-2,500/yr) only = A$6,000-11,000/year = **A$500.00-916.67/month, midpoint A$708.34/month** — externally sanity-checked against real 2026 Australian small-business PL/PI premium research (this venture's higher-risk client profile, pregnant clients + health-adjacent services, justifies sitting above generic small-business averages). Full investigation: `docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md`.
 
 | Component | Monthly | Source | Label |
 |---|---|---|---|
@@ -80,39 +82,44 @@
 | GTT supplies (glucose, tubes) | A$400.00 | Same source | MODELLED — NOTE: `data/canonical/opex.yml#opex_gtt_supplies` shows a different figure (A$792.00) for this same line — a pre-existing, disclosed cross-document discrepancy, not resolved this round |
 | Laundry/linen service | A$350.00 | Same source | MODELLED |
 | Cleaning service | A$600.00 | Same source | MODELLED |
-| Insurance (public liability + PI) | A$400.00 (the figure actually embedded in the A$13,980.00 total below) | `docs/profit-loss-tables.md` §4 | PLACEHOLDER — never an actual quote |
+| **Insurance (Public Liability + Professional Indemnity + Property/Contents)** | **A$708.34** (CORRECTED 2026-08-18 — was A$400.00) | `data/canonical/opex.yml#opex_insurance_modelled` | **MODELLED/BALLPARK-ESTIMATE** — real broker quotes already in motion, `docs/insurance-broker-quote-request-draft.md` |
 | Accounting/bookkeeping | A$500.00 | Same source | MODELLED |
 | Consumables (wax, nail products, skincare) | A$800.00 | Same source | MODELLED |
 | Miscellaneous/contingency | A$500.00 | Same source | MODELLED |
-| **TOTAL NON-WAGE OVERHEAD** | **A$13,980.00/month** | Sum of the above | CALCULATED |
+| **TOTAL NON-WAGE OVERHEAD** | **A$14,288.34/month** (was A$13,980.00) | Sum of the above | CALCULATED |
 
-**Discrepancy, disclosed not resolved:** `data/canonical/opex.yml#opex_insurance_modelled` was separately revised 2026-08-16 to A$1,279.00/month, but this revision was never propagated into the A$13,980.00 total that actually flows through every P&L/payroll figure in the canonical model — that total still uses A$400.00. If propagated, non-wage overhead would rise to A$14,859.00/month (+A$879.00). See `docs/architecture/FINANCIAL-POSITION-CURRENT.md` §4 for the full disclosure and financial impact — not corrected this round, requires Anthony's decision on which insurance figure is current.
+## 5. Relief/Absence Coverage Allowance — Real Cost Model, Not a Ballpark
 
-## 5. The Un-Modelled Relief/Absence Cost Gap — Quantified, Not Silently Fixed
+**Resolved 2026-08-18 (Financial Finalisation round), replacing the prior round's rough estimate with a real, methodologically-defensible cost model.** The payroll figure in §3 prices only the committed simultaneous headcount — the recommended relief/backup EMPLOYMENT POOL (12 treatment / 4 phlebotomists on the books, `docs/architecture/STAFFING-COVERAGE-VALIDATION.md`) is a genuinely different concept from the daily roster, and relief staff are only paid when an absence actually occurs and they are called in to cover it. Previously, this implicitly assumed ZERO absences, ever — unrealistic over any extended trading period.
 
-**Finding (Step 8 audit, this round):** the payroll figure in §3 prices only the committed simultaneous headcount. The recommended relief/backup EMPLOYMENT POOL (`docs/architecture/STAFFING-COVERAGE-VALIDATION.md` §1-2) is genuinely a DIFFERENT concept from the daily roster — relief staff are only paid when an absence actually occurs and they are called in to cover it. **This means the steady-state payroll figure above (A$101,717.02/month) implicitly assumes ZERO absences, ever** — which is not realistic over any extended trading period.
+**Method, full-shift replacement (not the bare 3-hour casual-minimum floor):** a relief person covering a colleague's absence realistically works that colleague's FULL rostered shift (6hr AM for treatment/phlebotomy, 5hr PM for reception), not the bare legal minimum engagement. Using the same 8% per-person per-shift unavailability planning assumption (`STAFFING-COVERAGE-VALIDATION.md` §1a, a commonly-cited casual-hospitality/beauty planning range, NOT independently verified against real data for this pre-opening venture):
 
-**Ballpark quantification, using the same 8% per-person absence-rate planning assumption from `STAFFING-COVERAGE-VALIDATION.md` §1a:**
+| Line | Expected relief shifts/month (weekday + Saturday, 8% × 26.33 trading days) | Full-shift cost/month |
+|---|---|---|
+| Treatment (8 committed) | 16.85 shifts × 6hr × A$37.155/hr weekday blended (A$55.7325/hr Saturday) | A$4,065.53 |
+| Phlebotomists (2 committed) | 4.21 shifts × 6hr × A$34.375/hr weekday (A$51.5625/hr Saturday) | A$940.34 |
+| PM Reception (1 committed) | 2.11 shifts × 5hr × A$33.71/hr weekday (A$50.565/hr Saturday) | A$384.23 |
+| **Subtotal, before on-costs** | | **A$5,390.09** |
+| Superannuation (12%) | | A$646.81 |
+| Workers compensation (1.7%) | | A$91.63 |
+| **TOTAL RELIEF/ABSENCE COVERAGE ALLOWANCE** | | **A$6,128.53/month** |
 
-| Line | Expected relief shifts/month | Assumed relief engagement | Ballpark cost/month |
-|---|---|---|---|
-| Treatment (8 committed × 8% × 26.33 trading days) | ~16.85 shifts | 3-hour casual minimum engagement × blended A$37.155/hr rate | ~A$1,878/month |
-| Phlebotomists (2 committed × 8% × 26.33 trading days) | ~4.21 shifts | 3-hour minimum × A$34.375/hr | ~A$434/month |
-| **TOTAL, before on-costs** | | | **~A$2,313/month** |
-| **TOTAL, with super + workers comp** | | | **~A$2,630/month** |
+**Decision on how this appears in the model, per Anthony's explicit Step 3 instruction:** modelled as its OWN recurring opex line (Option B — a distinct, separately-labelled allowance), not blended into Direct Labour (Option A) and not treated as a one-off contingency (Option C). Reasoning: real absences are individually stochastic (unpredictable which day, which person) but statistically real and recurring IN AGGREGATE over any extended trading period — the same defensible planning convention used for budgeting a maintenance/contingency reserve. Keeping it as its own line (not blended into Direct Labour) ensures the committed-roster payroll figure is never confused with the full realistic cost base, and Anthony can see exactly what this allowance represents and adjust the underlying 8% assumption independently if better data emerges. **Status: MODELLED/BALLPARK-ESTIMATE** — propagated into `data/canonical/cost_ramp.yml` as `relief_absence_allowance`, a new field distinct from `payroll_costs`.
 
-**Status: BALLPARK-ESTIMATE. NOT propagated into the canonical payroll model this round.** This figure depends on an undecided operational policy question (exactly how long a relief engagement actually runs when called in — the 3-hour casual-minimum-engagement floor is used here as the most defensible lower bound, but a real relief call-in might run longer, e.g. the rest of the affected person's shift) and the underlying 8% absence-rate assumption is itself a disclosed planning estimate, not verified data for this specific venture. Per Anthony's explicit instruction this round ("if a change is genuinely required: show current model → proposed model → financial impact → reason, THEN update the canonical model, in that order") — this section shows the current model (no relief cost) and the financial impact of a proposed change (~A$2,313-2,630/month), and stops there, pending Anthony's decision on the relief-engagement-length policy before propagating any change to `data/canonical/cost_ramp.yml`.
+**PROPAGATED this round** (unlike the prior round's un-actioned finding) — `data/canonical/cost_ramp.yml`'s `total_operating_costs` now includes this line for every scenario/month. Impact: Total Operating Costs A$115,697.02 → A$122,133.89/month (Table 1); A$110,292.03 → A$116,728.90/month (Table 2).
 
-## 6. Break-Even — Full Calculation
+## 6. Break-Even — Full Calculation, Recomputed
 
-See `docs/architecture/FINANCIAL-POSITION-CURRENT.md` §3 for the full break-even table and plain-English explanation. Summary derivation: Total Costs (A$115,697.02/month) − PM Revenue (A$36,225.69/month, held fixed, capacity-constrained not AM-volume-linear) = AM revenue needed (A$79,471.33/month) → solved against the AM revenue formula (§1 above) for the client-volume figure that produces exactly that AM revenue, weighted across weekday and Saturday operating days = **12.073 clients/day**, equivalently **A$115,696.21/month** total revenue.
+See `docs/architecture/FINANCIAL-POSITION-CURRENT.md` §3 for the full break-even table and plain-English explanation. Summary derivation: Total Costs (A$122,133.89/month, now including the corrected insurance figure and the relief/absence allowance) − PM Revenue (A$36,225.69/month, held fixed, capacity-constrained not AM-volume-linear) = AM revenue needed (A$85,908.20/month) → solved against the AM revenue formula (§1 above) for the client-volume figure that produces exactly that AM revenue, weighted across weekday and Saturday operating days = **13.051 clients/day**, equivalently **A$122,133.90/month** total revenue. **Table 2's own break-even (12.230 clients/day) now exceeds its own committed volume (12/day) — Table 2 no longer clears break-even at steady state, a real, disclosed finding.**
 
-## 7. Cash Flow and Funding — Full Chain
+## 7. Cash Flow and Funding — Full Chain, Recomputed
 
-See `docs/architecture/FINANCIAL-POSITION-CURRENT.md` §5 for the full 24-month table and chart. Key derivation: Monthly Net Operating Cash Movement = Total Revenue − Total Operating Costs (an accrual-basis proxy, `assumption_cashflow_accrual_proxy` in `master_financial_model.yml` — NOT a true cash-basis forecast with real debtor/creditor timing, and does NOT reflect real weekly-granularity payroll timing, see `FIRST-PRINCIPLES-FINANCIAL-MODEL.md` §1). Cumulative Cash Position = running sum of Monthly Net Operating Cash Movement from Month 1. **This is operating cash flow only — it does NOT include startup expenditure (a separate, one-off capital outlay, `docs/architecture/HUMAN-READABLE-STARTUP-COSTS.md`) or the working capital reserve (a separate buffer figure) — these three concepts are not interchangeable, see the explicit distinction in §5 of the companion document.**
+See `docs/architecture/FINANCIAL-POSITION-CURRENT.md` §5 for the full 24-month table and chart. Key derivation: Monthly Net Operating Cash Movement = Total Revenue − Total Operating Costs (now including the corrected insurance and relief-allowance lines) — an accrual-basis proxy, `assumption_cashflow_accrual_proxy` in `master_financial_model.yml` — NOT a true cash-basis forecast with real debtor/creditor timing, and does NOT reflect real weekly-granularity payroll timing, see `FIRST-PRINCIPLES-FINANCIAL-MODEL.md` §1. Cumulative Cash Position = running sum of Monthly Net Operating Cash Movement from Month 1. **This is operating cash flow only — it does NOT include startup expenditure (a separate, one-off capital outlay) or the working capital reserve (a separate buffer figure) — these three concepts are not interchangeable.** Table 1's trough deepened to -A$76,532.52 (Month 2, unchanged month); Table 2's cumulative position now falls every month with no recovery (trough at Month 24, -A$172,138.34), since its steady state is now loss-making.
 
 ---
 
 ## Changelog
 
-**2026-08-18** — Created per Anthony's explicit instruction (Priority 4/Step 6) to build a single calculation dictionary every other financial figure traces back to. Re-audited the full PM revenue chain (Step 10) and confirmed it reconciles, with one disclosed remaining uncertainty (individual-service average duration). Quantified, for the first time, the previously-unexamined relief/absence cost gap (Step 8) as a labelled ballpark estimate, not silently fixed or propagated.
+**2026-08-18 (Financial Finalisation round)** — Resolved both open items from the prior round by investigation, not by asking Anthony to pick. Insurance corrected to A$708.34/month (was A$400 unexplained guess vs. a methodologically-flawed A$1,279 figure that double-counted workers comp and included an optional line) — propagated into §4's non-wage overhead total. Relief/absence coverage upgraded from a rough ballpark to a real, defensible cost model (full-shift replacement, not the bare 3-hour minimum) and PROPAGATED into the canonical model this round (§5), not left un-actioned. Break-even and cash-flow sections (§6-7) recomputed against the new total operating costs.
+
+**2026-08-18 (earlier this date)** — Created per Anthony's explicit instruction (Priority 4/Step 6) to build a single calculation dictionary every other financial figure traces back to. Re-audited the full PM revenue chain (Step 10) and confirmed it reconciles, with one disclosed remaining uncertainty (individual-service average duration). Quantified, for the first time, the previously-unexamined relief/absence cost gap as a labelled ballpark estimate, not silently fixed or propagated.
