@@ -70,7 +70,17 @@
 
 ---
 
-## Status Summary (updated, Priority 2/3 pass, 2026-08-18)
+## Status Summary (updated, financial-transparency pass, 2026-08-18)
+
+**COMPLETE this pass:** `docs/architecture/FINANCIAL-FIGURE-REFERENCE.md` (new) -- the calculation dictionary every financial figure traces back to, full derivation chains for AM revenue, PM revenue (re-audited, Step 10, confirmed holding with one disclosed remaining uncertainty), labour per position, non-wage overhead, break-even, cash flow. `docs/architecture/FINANCIAL-POSITION-CURRENT.md` (new) -- current-state-only financial position: headline 18-client summary, real 6/12/18 sensitivity table with actual dollar figures throughout (no words-as-numbers), break-even in both forms with plain-English explanation and dollar/percentage buffers, a full P&L table (visually inspected, reconciles to the cent against the canonical model), a 24-month cash-flow table, and an SVG cumulative-cash-position chart (rendered and visually verified via Playwright screenshot).
+
+**Real discrepancy found and disclosed, NOT silently patched:** the non-wage overhead total (A$13,980.00/month, embedded in every P&L figure) still uses the original A$400.00/month insurance placeholder -- `opex.yml`'s separately-revised A$1,279.00/month insurance figure (2026-08-16) was never propagated into that total. Quantified impact if corrected: +A$879.00/month non-wage overhead, Operating Result would fall to A$38,134.67/month (from A$39,013.67). Flagged as a DECISION REQUIRED, not resolved unilaterally this round -- consistent with "show current model, proposed model, financial impact, then update, don't patch silently."
+
+**Real gap quantified, NOT silently fixed:** the payroll model prices only the committed simultaneous headcount, with zero cost for relief/absence coverage actually being used -- a ballpark A$2,313-2,630/month gap, not propagated into the canonical model pending Anthony's decision on relief-engagement-length policy.
+
+**Certainty labelling made consistent:** VM wage stays RESEARCHED-BEST-EVIDENCE/NOT VERIFIED; workers comp stays PLACEHOLDER/UNVERIFIED -- neither upgraded. Staff profiles and the financial model confirmed using the same current wage assumptions, no drift found.
+
+**NOT started this pass, per explicit instruction to stop after the financial phase:** Master Dossier visual rebuild, GTT Dash prototype.
 
 **Priority 1 COMPLETE (from the immediately preceding round, PM capacity/transaction reconciliation)** -- confirmed still holding this round, no drift (PM revenue A$36,225.69/month verified consistent across revenue_assumptions.yml, revenue_ramp.yml, master_financial_model.yml).
 
