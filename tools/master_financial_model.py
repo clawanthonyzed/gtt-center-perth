@@ -144,7 +144,13 @@ def compute_month_pnl(scenario_id, forecast_month, inputs: CanonicalModelInputs)
     payroll = cost["payroll_costs"]
     fixed_costs = cost["fixed_costs"]
     variable_costs = cost["variable_costs"]
-    operating_expenses = round(fixed_costs + variable_costs, 2)
+    # NEW 2026-08-18 (Financial Finalisation round) -- relief_absence_allowance,
+    # a new cost_ramp.yml field (see that file's own 2026-08-18 banner).
+    # Included in operating_expenses so gross_contribution - operating_expenses
+    # reconciles exactly to net_operating_result -- previously this field did
+    # not exist and total_operating_costs was fixed+variable+payroll only.
+    relief_absence_allowance = cost.get("relief_absence_allowance", 0) or 0
+    operating_expenses = round(fixed_costs + variable_costs + relief_absence_allowance, 2)
     total_operating_costs = cost["total_operating_costs"]
 
     gross_contribution = round(revenue_total - payroll, 2)
@@ -167,7 +173,11 @@ def compute_month_pnl(scenario_id, forecast_month, inputs: CanonicalModelInputs)
         "payroll_breakdown": payroll_breakdown,
         "gross_contribution": gross_contribution,
         "operating_expenses": operating_expenses,
-        "operating_expenses_breakdown": {"fixed_costs": fixed_costs, "variable_costs": variable_costs},
+        "operating_expenses_breakdown": {
+            "fixed_costs": fixed_costs,
+            "variable_costs": variable_costs,
+            "relief_absence_allowance": relief_absence_allowance,
+        },
         "total_operating_costs": total_operating_costs,
         "net_operating_result": net_operating_result,
     }

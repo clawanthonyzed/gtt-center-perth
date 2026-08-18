@@ -1,5 +1,23 @@
 # GTT Center Perth -- Master Financial Model, Phase 9
 #
+# RESOLVED 2026-08-18 (Financial Finalisation round) -- two open items closed
+# by investigation this round, per Anthony's explicit "investigate, don't ask
+# Anthony to pick" instruction. (1) INSURANCE: traced both A$400/month and
+# A$1,279/month back to their origins -- the A$1,279 figure was found to be
+# methodologically flawed (double-counted workers compensation, included an
+# optional business-interruption line). Corrected to A$708.34/month (the
+# genuinely-needed, non-double-counted Public Liability + Professional
+# Indemnity + Property/Contents components, externally sanity-checked).
+# (2) RELIEF/ABSENCE COVERAGE: added a new, quantified recurring line
+# (A$6,128.53/month) representing the real expected cost of relief staff
+# covering absences -- the payroll model previously priced only the
+# committed roster with zero absences, ever. Full investigation:
+# docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md. New steady-state Net
+# Operating Result: Table 1 +A$32,576.80/month (was +A$39,013.67), Table 2
+# -A$1,513.21/month (was +A$4,923.66) -- **Table 2 is now genuinely loss-
+# making at steady state**, reported plainly. Table 1 remains solidly
+# net-positive and is the sole planning case.
+#
 # RECOMPUTED 2026-08-17 (Phase C, second recompute this date -- SUPERSEDES
 # the same-day proportional-wage-scaling recompute described immediately
 # below in this banner) -- the labour cost base was rebuilt from FIRST
@@ -231,11 +249,12 @@ outputs:
       total_revenue: 154710.69
       payroll: 101717.02
       gross_contribution: 52993.67
-      operating_expenses: 13980.00
-      total_operating_costs: 115697.02
-      net_operating_result: 39013.67
+      operating_expenses: 20416.87
+      operating_expenses_breakdown: {fixed_costs: 12788.34, variable_costs: 1500.00, relief_absence_allowance: 6128.53}
+      total_operating_costs: 122133.89
+      net_operating_result: 32576.80
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- pm_revenue was A$45,236.88 (16 staff-sessions/day used directly as a transaction multiplier, incorrectly), now A$36,225.69 (12.8128 transactions/day, correcting for package bookings consuming more than one staff-session each -- docs/architecture/PM-CAPACITY-RECONCILIATION.md). net_operating_result was A$48,024.86 (2026-08-18 audit round, VM reclassification), now A$39,013.67. payroll UNCHANGED at A$101,717.02 (same underlying staff-hours capacity drives both the corrected revenue and the unchanged payroll). Prior history: was A$36,730.80 PM revenue (A$95 placeholder) before the 2026-08-17 first-principles rebuild; A$87,398.78 payroll before that."
+      status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round -- insurance corrected A$400->A$708.34/month embedded in fixed_costs; relief_absence_allowance A$6,128.53/month added as a new line) -- operating_expenses was A$13,980.00, now A$20,416.87. total_operating_costs was A$115,697.02, now A$122,133.89. net_operating_result was A$39,013.67 (2026-08-18, PM capacity/transaction reconciliation), now A$32,576.80 -- a genuine cost realism increase, not an error. payroll UNCHANGED at A$101,717.02. Prior history: pm_revenue was A$45,236.88 before the PM capacity/transaction reconciliation (16 staff-sessions/day used directly as a transaction multiplier, incorrectly), now A$36,225.69 (12.8128 transactions/day) -- docs/architecture/PM-CAPACITY-RECONCILIATION.md."
       source: {file: data/canonical/revenue_ramp.yml, section: "ramp_table1_m5plus"}
     - scenario_id: scenario_table_2
       month: M5plus
@@ -245,115 +264,116 @@ outputs:
       total_revenue: 115215.69
       payroll: 96312.03
       gross_contribution: 18903.66
-      operating_expenses: 13980.00
-      total_operating_costs: 110292.03
-      net_operating_result: 4923.66
+      operating_expenses: 20416.87
+      operating_expenses_breakdown: {fixed_costs: 12788.34, variable_costs: 1500.00, relief_absence_allowance: 6128.53}
+      total_operating_costs: 116728.90
+      net_operating_result: -1513.21
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- pm_revenue was A$45,236.88, now A$36,225.69 (same correction as Table 1). net_operating_result was A$13,934.85, now A$4,923.66 -- Table 2's margin of safety has narrowed materially (0.748 clients/day, see breakeven below); still marginally positive at steady state but genuinely thin. payroll UNCHANGED at A$96,312.03."
+      status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round) -- operating_expenses was A$13,980.00, now A$20,416.87. total_operating_costs was A$110,292.03, now A$116,728.90. net_operating_result was A$4,923.66 (2026-08-18, PM capacity/transaction reconciliation), now **-A$1,513.21 -- Table 2 is now genuinely loss-making at steady state**, reported plainly, not smoothed over. Table 2 remains sensitivity/downside-only, never the planning case. Fuller history: pm_revenue was A$45,236.88 before the PM capacity/transaction reconciliation, now A$36,225.69 (same correction as Table 1); net_operating_result was A$13,934.85 before that. payroll UNCHANGED at A$96,312.03."
       source: {file: data/canonical/revenue_ramp.yml, section: "ramp_table2_m5plus"}
 
   totals_24mo:
     - scenario_id: scenario_table_1
       total_revenue_24mo: 3525856.63
-      total_operating_costs_24mo: 2773138.84
-      total_net_operating_result_24mo: 752717.79
+      total_operating_costs_24mo: 2927623.72
+      total_net_operating_result_24mo: 598232.91
       annualised_revenue_steady_state: 1856528.28
-      annualised_operating_costs_steady_state: 1388364.24
-      annualised_net_operating_result_steady_state: 468164.04
+      annualised_operating_costs_steady_state: 1465606.68
+      annualised_net_operating_result_steady_state: 390921.60
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was total_revenue_24mo=3731221.65/total_net_operating_result_24mo=958082.81 pre-reconciliation (2026-08-18 audit round). Total_operating_costs_24mo UNCHANGED at 2773138.84 (PM labour cost not affected). M1-M4 individual + M5plus x 20 (Months 5-24) -- per assumption_24month_extension_flat"
+      status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round -- insurance corrected + relief/absence allowance added) -- total_operating_costs_24mo was 2773138.84, now 2927623.72. total_net_operating_result_24mo was 752717.79, now 598232.91. total_revenue_24mo UNCHANGED at 3525856.63 (revenue side unaffected). M1-M4 individual + M5plus x 20 (Months 5-24) -- per assumption_24month_extension_flat"
       source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_24_month_totals(scenario_table_1)"}
     - scenario_id: scenario_table_2
       total_revenue_24mo: 2625765.58
-      total_operating_costs_24mo: 2643419.04
-      total_net_operating_result_24mo: -17653.46
+      total_operating_costs_24mo: 2797903.92
+      total_net_operating_result_24mo: -172138.34
       annualised_revenue_steady_state: 1382588.28
-      annualised_operating_costs_steady_state: 1323504.36
-      annualised_net_operating_result_steady_state: 59083.92
+      annualised_operating_costs_steady_state: 1400746.80
+      annualised_net_operating_result_steady_state: -18158.52
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was total_revenue_24mo=2831130.60/total_net_operating_result_24mo=187711.56 pre-reconciliation. Table 2's 24-month cumulative result is now NEGATIVE (-A$17,653.46) -- reported plainly, this does not change Table 2's status as sensitivity-only, never the planning case (Table 1 remains solidly positive throughout)."
+      status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round) -- total_operating_costs_24mo was 2643419.04, now 2797903.92. total_net_operating_result_24mo was -17653.46, now -172138.34 -- Table 2's 24-month cumulative loss has deepened substantially, and it no longer has any positive months at all (steady-state itself is now loss-making, -A$1,513.21/month). Reported plainly -- this does not change Table 2's status as sensitivity-only, never the planning case (Table 1 remains solidly positive throughout, annualised +A$390,921.60)."
       source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_24_month_totals(scenario_table_2)"}
 
   cash_flow_summary:
     - scenario_id: scenario_table_1
       opening_cash: null
       opening_cash_status: PLACEHOLDER
-      cumulative_position_m1: -47974.01
-      cumulative_position_m4: -27555.61
-      cumulative_position_m12: 284553.75
-      cumulative_position_m24: 752717.79
+      cumulative_position_m1: -54410.88
+      cumulative_position_m4: -53303.09
+      cumulative_position_m12: 207311.31
+      cumulative_position_m24: 598232.91
       trough_month: 2
-      trough_cumulative_position: -63658.78
+      trough_cumulative_position: -76532.52
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was cumulative_position_m1=-44099.20/m4=-2414.39/m12=381784.49/m24=958082.81, trough=-54016.81 pre-reconciliation. Trough month unchanged (Month 2), deepened materially. Table 1 still turns cumulatively positive at Month 5 (unchanged), though the margin by which it does so is thinner than before this correction. Accrual-basis proxy (assumption_cashflow_accrual_proxy) -- NOT a true cash-basis forecast."
+      status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round -- insurance corrected + relief/absence allowance added) -- was cumulative_position_m1=-47974.01/m4=-27555.61/m12=284553.75/m24=752717.79, trough=-63658.78 pre-correction. Trough month unchanged (Month 2), deepened. **Table 1 now turns cumulatively positive at Month 6 (was Month 5)** -- a real, disclosed one-month delay from the more realistic cost base. Accrual-basis proxy (assumption_cashflow_accrual_proxy) -- NOT a true cash-basis forecast."
       source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_cash_flow(scenario_table_1)"}
     - scenario_id: scenario_table_2
       opening_cash: null
       opening_cash_status: PLACEHOLDER
-      cumulative_position_m1: -59551.86
-      cumulative_position_m4: -116126.66
-      cumulative_position_m12: -76737.38
-      cumulative_position_m24: -17653.46
-      trough_month: 4
-      trough_cumulative_position: -116126.66
+      cumulative_position_m1: -65988.73
+      cumulative_position_m4: -141874.14
+      cumulative_position_m12: -153979.82
+      cumulative_position_m24: -172138.34
+      trough_month: 24
+      trough_cumulative_position: -172138.34
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was cumulative_position_m1=-55677.05/m4=-90985.44/m12=20493.36/m24=187711.56, trough=-96821.83 (Month 3) pre-reconciliation. Table 2's cumulative position is now NEGATIVE at every checkpoint through Month 24 -- it never turns cumulatively positive within the 24-month window under the corrected PM revenue basis. Trough month moved from Month 3 to Month 4 and deepened substantially. Reported plainly -- Table 2 remains sensitivity-only, this finding does not change the planning case (Table 1)."
+      status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round) -- was cumulative_position_m1=-59551.86/m4=-116126.66/m12=-76737.38/m24=-17653.46, trough=-116126.66 (Month 4) pre-correction. **Table 2's cumulative position now deteriorates every single month through Month 24 -- the trough IS Month 24, since steady-state itself is loss-making (-A$1,513.21/month) under the corrected cost base.** Table 2 never turns cumulatively positive within the 24-month window at all. Reported plainly -- Table 2 remains sensitivity-only, this finding does not change the planning case (Table 1)."
       source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_cash_flow(scenario_table_2)"}
 
   breakeven:
     - scenario_id: scenario_table_1
-      breakeven_am_client_volume_per_day: 12.073
-      breakeven_monthly_revenue: 115696.21
+      breakeven_am_client_volume_per_day: 13.051
+      breakeven_monthly_revenue: 122133.90
       committed_client_volume_per_day: 18
-      margin_of_safety_clients_per_day: 5.927
+      margin_of_safety_clients_per_day: 4.949
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was 10.704 clients/day (margin 7.296; breakeven_monthly_revenue A$115,695.96) pre-reconciliation. Break-even volume rose materially (lower PM revenue means AM must cover more of the fixed cost base); margin of safety narrowed to 5.927/18 = ~33% of committed volume (was ~41%). Still below committed volume, but a genuinely thinner buffer. See assumption_breakeven_am_volume_only for the full defensibility reasoning, and docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md §6 / docs/architecture/PM-CAPACITY-RECONCILIATION.md for the full explanation."
+      status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round) -- was 12.073 clients/day (margin 5.927; breakeven_monthly_revenue A$115,696.21) pre-correction. Break-even volume rose further with the more realistic cost base (insurance + relief allowance); margin of safety narrowed to 4.949/18 = ~27.5% of committed volume (was ~33%). Still below committed volume, but a genuinely thinner buffer than every prior round showed. See docs/architecture/FINANCIAL-POSITION-CURRENT.md §3 for the full plain-English explanation."
       source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_breakeven(scenario_table_1)"}
     - scenario_id: scenario_table_2
-      breakeven_am_client_volume_per_day: 11.252
-      breakeven_monthly_revenue: 110291.98
+      breakeven_am_client_volume_per_day: 12.230
+      breakeven_monthly_revenue: 116729.67
       committed_client_volume_per_day: 12
-      margin_of_safety_clients_per_day: 0.748
+      margin_of_safety_clients_per_day: -0.230
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was 9.883 clients/day (margin 2.117) pre-reconciliation. Margin of safety has narrowed to just 0.748 clients/day (~6% of committed volume) -- Table 2 is now only marginally above its own break-even point. Reported plainly; this remains a sensitivity/downside reference only, never the planning case."
+      status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round) -- was 11.252 clients/day (margin 0.748) pre-correction. **Table 2's break-even volume (12.230/day) now EXCEEDS its own committed volume (12/day) -- margin of safety is NEGATIVE (-0.230 clients/day).** Table 2 no longer clears its own break-even point at steady state under the corrected cost base -- consistent with its now-negative net_operating_result above. Reported plainly; this remains a sensitivity/downside reference only, never the planning case."
       source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_breakeven(scenario_table_2)"}
 
   sensitivity_client_volume:
     - scenario_id: scenario_table_1
       results:
-        - {pct_of_committed: 50, client_volume_per_day: 9.00, total_revenue: 95468.19, net_operating_result: -20228.83}
-        - {pct_of_committed: 75, client_volume_per_day: 13.50, total_revenue: 125089.44, net_operating_result: 9392.42}
-        - {pct_of_committed: 100, client_volume_per_day: 18.00, total_revenue: 154710.69, net_operating_result: 39013.67}
-        - {pct_of_committed: 125, client_volume_per_day: 22.50, total_revenue: 184331.94, net_operating_result: 68634.92}
+        - {pct_of_committed: 50, client_volume_per_day: 9.00, total_revenue: 95468.19, net_operating_result: -26665.70}
+        - {pct_of_committed: 75, client_volume_per_day: 13.50, total_revenue: 125089.44, net_operating_result: 2955.55}
+        - {pct_of_committed: 100, client_volume_per_day: 18.00, total_revenue: 154710.69, net_operating_result: 32576.80}
+        - {pct_of_committed: 125, client_volume_per_day: 22.50, total_revenue: 184331.94, net_operating_result: 62198.05}
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was net_operating_result -11217.64/18403.61/48024.86/77646.11 at 50/75/100/125% pre-reconciliation. The corrected, lower PM revenue widens the loss at 50% of committed volume and narrows the surplus at every other level. See assumption_sensitivity_payroll_not_flexed."
+      status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round) -- was net_operating_result -20228.83/9392.42/39013.67/68634.92 at 50/75/100/125% pre-correction. The more realistic cost base (corrected insurance + relief allowance) widens the loss at 50% and narrows the surplus at every other level. See assumption_sensitivity_payroll_not_flexed."
       source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_sensitivity_client_volume(scenario_table_1)"}
     - scenario_id: scenario_table_2
       results:
-        - {pct_of_committed: 50, client_volume_per_day: 6.00, total_revenue: 75720.69, net_operating_result: -34571.34}
-        - {pct_of_committed: 75, client_volume_per_day: 9.00, total_revenue: 95468.19, net_operating_result: -14823.84}
-        - {pct_of_committed: 100, client_volume_per_day: 12.00, total_revenue: 115215.69, net_operating_result: 4923.66}
-        - {pct_of_committed: 125, client_volume_per_day: 15.00, total_revenue: 134963.19, net_operating_result: 24671.16}
+        - {pct_of_committed: 50, client_volume_per_day: 6.00, total_revenue: 75720.69, net_operating_result: -41008.21}
+        - {pct_of_committed: 75, client_volume_per_day: 9.00, total_revenue: 95468.19, net_operating_result: -21260.71}
+        - {pct_of_committed: 100, client_volume_per_day: 12.00, total_revenue: 115215.69, net_operating_result: -1513.21}
+        - {pct_of_committed: 125, client_volume_per_day: 15.00, total_revenue: 134963.19, net_operating_result: 18234.29}
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was net_operating_result -25560.15/-5812.65/13934.85/33682.35 at 50/75/100/125% pre-reconciliation. Table 2 remains loss-making at 50% and 75% of committed volume, and is now only marginally positive (+A$4,923.66) at 100%."
+      status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round) -- was net_operating_result -34571.34/-14823.84/4923.66/24671.16 at 50/75/100/125% pre-correction. **Table 2 is now loss-making at 50%, 75%, AND 100% (committed volume) of its own target** -- only clearing profitability at 125%. Reported plainly, this remains sensitivity-only, never the planning case."
       source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_sensitivity_client_volume(scenario_table_2)"}
 
   sensitivity_insurance:
     - scenario_id: scenario_table_1
       results:
-        - {label: "modelled (current, revised placeholder 2026-08-16)", monthly_insurance: 1279.00, adjusted_net_operating_result: 39013.67}
-        - {label: "itemised low (mandatory policies only)", monthly_insurance: 500.00, adjusted_net_operating_result: 39792.67}
-        - {label: "itemised high (mandatory policies only)", monthly_insurance: 916.66, adjusted_net_operating_result: 39376.01}
+        - {label: "modelled (current, corrected 2026-08-18)", monthly_insurance: 708.34, adjusted_net_operating_result: 32576.80}
+        - {label: "itemised low (mandatory policies only)", monthly_insurance: 500.00, adjusted_net_operating_result: 32785.14}
+        - {label: "itemised high (mandatory policies only)", monthly_insurance: 916.66, adjusted_net_operating_result: 32368.48}
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was adjusted_net_operating_result 48024.86/48803.86/48387.20 pre-reconciliation. The A$400-916.66/month insurance delta itself is unchanged, only the base Net Operating Result shifted. References opex.yml's own conflict_insurance_estimate -- mandatory policies only; optional business interruption excluded. Neither figure is chosen as correct. NOTE: workers compensation (1.7%) remains PLACEHOLDER, not upgraded to VERIFIED -- see wages.yml#wage_workers_comp_rate."
+      status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round) -- 'modelled' is now the CORRECTED A$708.34/month figure (was the flawed A$1,279.00/month figure, which double-counted workers compensation and included an optional business-interruption line -- see docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md). Was adjusted_net_operating_result 39013.67/39792.67/39376.01 pre-correction. References opex.yml's own opex_insurance_public_liability/professional_indemnity/property_contents records -- mandatory policies only; optional business interruption and the double-counted workers-comp cross-reference both excluded. NOTE: workers compensation (1.7% of payroll, charged separately) remains PLACEHOLDER, not upgraded to VERIFIED -- see wages.yml#wage_workers_comp_rate."
       source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_sensitivity_insurance(scenario_table_1)"}
     - scenario_id: scenario_table_2
       results:
-        - {label: "modelled (current, revised placeholder 2026-08-16)", monthly_insurance: 1279.00, adjusted_net_operating_result: 4923.66}
-        - {label: "itemised low (mandatory policies only)", monthly_insurance: 500.00, adjusted_net_operating_result: 5702.66}
-        - {label: "itemised high (mandatory policies only)", monthly_insurance: 916.66, adjusted_net_operating_result: 5286.00}
+        - {label: "modelled (current, corrected 2026-08-18)", monthly_insurance: 708.34, adjusted_net_operating_result: -1513.21}
+        - {label: "itemised low (mandatory policies only)", monthly_insurance: 500.00, adjusted_net_operating_result: -1304.87}
+        - {label: "itemised high (mandatory policies only)", monthly_insurance: 916.66, adjusted_net_operating_result: -1721.53}
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was adjusted_net_operating_result 13934.85/14713.85/14297.19 pre-reconciliation. Same basis as Table 1."
+      status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round) -- was adjusted_net_operating_result 4923.66/5702.66/5286.00 pre-correction. Table 2 is now loss-making across every insurance scenario shown. Same basis as Table 1."
       source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_sensitivity_insurance(scenario_table_2)"}
 
   scenario_comparison:
@@ -361,22 +381,22 @@ outputs:
       client_volume_per_day: 18
       steady_state_revenue: 154710.69
       steady_state_payroll: 101717.02
-      steady_state_opex: 13980.00
-      steady_state_total_operating_costs: 115697.02
-      steady_state_net_operating_result: 39013.67
+      steady_state_opex: 20416.87
+      steady_state_total_operating_costs: 122133.89
+      steady_state_net_operating_result: 32576.80
       annualised_revenue: 1856528.28
-      annualised_net_operating_result: 468164.04
+      annualised_net_operating_result: 390921.60
     scenario_table_2:
       client_volume_per_day: 12
       steady_state_revenue: 115215.69
       steady_state_payroll: 96312.03
-      steady_state_opex: 13980.00
-      steady_state_total_operating_costs: 110292.03
-      steady_state_net_operating_result: 4923.66
+      steady_state_opex: 20416.87
+      steady_state_total_operating_costs: 116728.90
+      steady_state_net_operating_result: -1513.21
       annualised_revenue: 1382588.28
-      annualised_net_operating_result: 59083.92
+      annualised_net_operating_result: -18158.52
     status: CALCULATED
-    status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was steady_state_revenue 163721.88/124226.88, steady_state_net_operating_result 48024.86/13934.85, annualised_net_operating_result 576298.32/167218.20 pre-reconciliation (2026-08-18 audit round). steady_state_payroll UNCHANGED (PM labour cost not affected by this correction, only PM revenue). New annualised_net_operating_result figures DO equal steady_state_net_operating_result x 12 exactly (39013.67x12=468164.04; 4923.66x12=59083.92) -- verified, not hand-derived. Table 2's steady-state margin has narrowed to near break-even (see breakeven above, margin of safety 0.748 clients/day)."
+    status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round -- insurance corrected + relief/absence allowance added, docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md) -- steady_state_opex was 13980.00, now 20416.87 (both scenarios, same fixed cost base). steady_state_net_operating_result was 39013.67/4923.66, now 32576.80/-1513.21. **Table 2 is now loss-making at steady state.** steady_state_payroll UNCHANGED. New annualised_net_operating_result figures DO equal steady_state_net_operating_result x 12 exactly (32576.80x12=390921.60; -1513.21x12=-18158.52) -- verified, not hand-derived."
     source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_scenario_comparison"}
     notes: "Neither scenario is marked primary -- see docs/VERIFICATION-TRACKER.md item 1m, unresolved."
 
@@ -496,16 +516,16 @@ funding_requirement_investigation:
         historical reserve range).
       results:
         - scenario_id: scenario_table_1
-          trough_value: 63658.78
+          trough_value: 76532.52
           trough_month: 2
           status: CALCULATED
-          status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was 54016.81 pre-reconciliation (52363.17 before the VM audit correction, 34860.52 before the original first-principles rebuild). Trough month unchanged."
+          status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round) -- was 63658.78 pre-correction (54016.81 before the VM audit correction, 52363.17 before that, 34860.52 before the original first-principles rebuild). Trough month unchanged, deepened further -- now within A$10,000 of the historical reserve's own upper bound (A$110,000)."
           source: {file: "data/models/master_financial_model.yml#cash_flow_summary", section: "scenario_table_1"}
         - scenario_id: scenario_table_2
-          trough_value: 116126.66
-          trough_month: 4
+          trough_value: 172138.34
+          trough_month: 24
           status: CALCULATED
-          status_detail: "RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was 96821.83 (Month 3) pre-reconciliation. Trough month moved to Month 4 and now exceeds the historical working capital reserve's own upper bound (A$110,000) -- see the status_detail above this results block."
+          status_detail: "RECALCULATED 2026-08-18 (Financial Finalisation round) -- was 116126.66 (Month 4) pre-correction. Trough month moved to Month 24 (the cumulative position now falls every month, never recovering, since steady state itself is loss-making) and now substantially exceeds the historical working capital reserve's own upper bound (A$110,000) -- see the status_detail above this results block."
           source: {file: "data/models/master_financial_model.yml#cash_flow_summary", section: "scenario_table_2"}
 
   combined_funding_requirement_bounded:
@@ -525,15 +545,15 @@ funding_requirement_investigation:
     alternative_cross_check_method:
       description: "Pre-Opening Capital + scenario-specific operating cash trough (NOT the historical reserve) -- an illustrative alternative only, not chosen as more correct"
       status: CALCULATED
-      status_detail: "Shown for comparison only -- both methods retained side by side, per this repo's established 'disclose, don't force reconcile' practice. RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- was range_low 326406.81/369211.83, range_high 521196.81/564001.83 pre-reconciliation, using the same pre_opening_capital range (A$272,390-467,180, unchanged) plus the new, deeper operating-cash trough figures above."
+      status_detail: "Shown for comparison only -- both methods retained side by side, per this repo's established 'disclose, don't force reconcile' practice. RECALCULATED 2026-08-18 (Financial Finalisation round) -- was range_low 336048.78/388516.66, range_high 530838.78/583306.66 pre-correction, using the same pre_opening_capital range (A$272,390-467,180, unchanged) plus the new, deeper operating-cash trough figures above."
       source: {file: "data/models/master_financial_model.yml output, 2026-08-18", section: "funding_requirement_investigation"}
       results:
         - scenario_id: scenario_table_1
-          range_low: 336048.78
-          range_high: 530838.78
+          range_low: 348922.78
+          range_high: 543712.78
         - scenario_id: scenario_table_2
-          range_low: 388516.66
-          range_high: 583306.66
+          range_low: 444528.34
+          range_high: 639318.34
     note_on_anthonys_adopted_total: >
       docs/CURRENT-STATE.md §7.4's own adopted, reconciled total (A$292,335-594,900,
       total_current_state_adopted) is CLOSE to but NOT identical to combined_funding_requirement_bounded's
@@ -748,14 +768,15 @@ conflicts:
       however, entirely from already-canonical figures (see funding_requirement_investigation
       above) -- A$357,390-577,180 (Pre-Opening Capital + historical Working Capital Reserve,
       both universal/non-scenario-specific, unchanged by the Phase C labour/revenue rebuild),
-      or A$336,048.78-583,306.66 spanning both scenarios (RECALCULATED 2026-08-18, Priority 1
-      PM capacity/transaction reconciliation -- was A$326,406.81-564,001.83 pre-reconciliation,
-      A$324,753.17-561,521.40 before the VM audit correction, A$303,275.75-533,515.12 before the
-      original first-principles rebuild) if the current operating-cash-trough is used as an
-      illustrative alternative to the historical Working Capital Reserve instead. The cash-flow
-      trough figures in cash_flow_summary above (Table 1: -A$63,658.78 at Month 2; Table 2:
-      -A$116,126.66 at Month 4 -- RECALCULATED 2026-08-18 for the PM capacity/transaction
-      reconciliation; Table 2's trough now exceeds the historical working capital reserve's own
+      or A$348,922.78-639,318.34 spanning both scenarios (RECALCULATED 2026-08-18, Financial
+      Finalisation round -- was A$336,048.78-583,306.66 pre-correction, A$326,406.81-564,001.83
+      before that, A$324,753.17-561,521.40 before the VM audit correction, A$303,275.75-533,515.12
+      before the original first-principles rebuild) if the current operating-cash-trough is used
+      as an illustrative alternative to the historical Working Capital Reserve instead. The
+      cash-flow trough figures in cash_flow_summary above (Table 1: -A$76,532.52 at Month 2;
+      Table 2: -A$172,138.34 at Month 24, the trough IS the final month since Table 2's cumulative
+      position now falls every month with no recovery -- RECALCULATED 2026-08-18 for the
+      Financial Finalisation round; Table 2's trough now substantially exceeds the historical working capital reserve's own
       upper bound, A$110,000, for the first time)
       remain OPERATING
       cash movements ONLY -- they are NOT the funding requirement on their own, and were not

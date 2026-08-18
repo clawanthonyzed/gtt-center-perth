@@ -356,13 +356,32 @@ class CashFlowTests(unittest.TestCase):
 class BreakEvenDefensibilityTests(unittest.TestCase):
     """Break-even is scoped/disclosed appropriately, not manufactured."""
 
-    def test_breakeven_below_committed_volume_for_both_scenarios(self):
+    def test_breakeven_below_committed_volume_for_table1_planning_case(self):
+        """RECALCULATED 2026-08-18 (Financial Finalisation round -- insurance
+        corrected + relief/absence allowance added). Table 1 (the sole
+        planning case) still clears its own break-even with a real margin.
+        Table 2 (sensitivity-only) no longer does -- see the dedicated test
+        below, split out rather than silently weakened, since the two
+        scenarios now have genuinely different break-even outcomes and a
+        single shared assertion would hide that real finding."""
         inputs = mfm.CanonicalModelInputs()
-        for scenario_id in ("scenario_table_1", "scenario_table_2"):
-            be = mfm.compute_breakeven(scenario_id, inputs)
-            self.assertLess(be["breakeven_am_client_volume_per_day"], be["committed_client_volume_per_day"])
-            self.assertIn("defensibility_note", be)
-            self.assertIn("NOT computed", be["defensibility_note"])
+        be = mfm.compute_breakeven("scenario_table_1", inputs)
+        self.assertLess(be["breakeven_am_client_volume_per_day"], be["committed_client_volume_per_day"])
+        self.assertIn("defensibility_note", be)
+        self.assertIn("NOT computed", be["defensibility_note"])
+
+    def test_breakeven_table2_now_exceeds_committed_volume(self):
+        """NEW 2026-08-18 (Financial Finalisation round) -- a real, disclosed
+        finding: Table 2's break-even client volume (12.230/day) now EXCEEDS
+        its own committed volume (12/day), i.e. Table 2 no longer clears its
+        own break-even point at steady state under the corrected cost base
+        (insurance + relief/absence allowance). This is reported plainly,
+        not hidden -- Table 2 remains sensitivity-only, never the planning
+        case, so this does not affect Table 1's own viability."""
+        inputs = mfm.CanonicalModelInputs()
+        be = mfm.compute_breakeven("scenario_table_2", inputs)
+        self.assertGreater(be["breakeven_am_client_volume_per_day"], be["committed_client_volume_per_day"])
+        self.assertLess(be["margin_of_safety_clients_per_day"], 0)
 
 
 class SuperannuationRegressionTests(unittest.TestCase):

@@ -324,8 +324,62 @@ class CanonicalCostInputs:
         # coordinator's explicit "don't resolve just to make the model run"
         # instruction. See gtt_supplies_variable_alternative() below for the
         # disclosed, non-primary exploratory alternative.
-        total_nonwage = 13980.00  # docs/profit-loss-tables.md §4 Monthly total -- cross-checked against the 13-line sum in opex.yml's own header comment
+        # CORRECTED 2026-08-18 (Financial Finalisation round) -- insurance
+        # line investigated, not blindly preserved. The old A$400.00/month
+        # figure (docs/profit-loss-tables.md §4) was an unexplained round
+        # guess. A later "revised placeholder" of A$1,279.00/month
+        # (opex.yml#opex_insurance_modelled, 2026-08-16) was found this round
+        # to be methodologically flawed: it was the midpoint of an $11,700-
+        # 19,000/year sum that DOUBLE-COUNTS workers compensation (already
+        # charged separately as 1.7% of direct labour below -- the insurance-
+        # bucket's own workers-comp cross-reference line is explicitly
+        # labelled "NOT the modelled figure" in opex.yml, yet was summed in
+        # anyway) and includes an explicitly-OPTIONAL business-interruption
+        # line as if it were committed. CORRECTED: Public Liability
+        # (A$2,500-4,500/yr) + Professional Indemnity (A$2,000-4,000/yr) +
+        # Property/Contents (A$1,500-2,500/yr) = A$6,000-11,000/yr =
+        # A$500.00-916.67/month, midpoint A$708.34/month -- externally
+        # sanity-checked against real 2026 Australian small-business PL/PI
+        # premium research (this venture's higher-risk client profile,
+        # pregnant clients + health-adjacent services, justifies sitting
+        # above generic small-business averages). STATUS: MODELLED/BALLPARK-
+        # ESTIMATE, NOT VERIFIED -- real broker quotes already in motion,
+        # docs/insurance-broker-quote-request-draft.md. Old total A$13,980.00
+        # (embedding A$400 insurance) -> new A$14,288.34 (embedding A$708.34).
+        total_nonwage = 14288.34  # docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md -- insurance corrected, was 13980.00 (embedded A$400 insurance placeholder)
         self.fixed_nonwage_excl_marketing = round(total_nonwage - self.marketing_steady_state, 2)
+
+        # NEW 2026-08-18 (Financial Finalisation round) -- Relief/Absence
+        # Coverage Allowance. Previously, this cost model priced ONLY the
+        # committed simultaneous roster (8 treatment + 2 phlebotomists + 1 VM
+        # + 1 PM Reception) working every trading day with zero absences --
+        # unrealistic. This allowance is a real, quantified, disclosed
+        # planning figure for the EXPECTED cost of relief staff actually
+        # covering absences, using an 8% per-person per-shift unavailability
+        # planning assumption (STATUS: MODELLED/BALLPARK-ESTIMATE -- a
+        # commonly-cited casual-hospitality/beauty planning range, NOT
+        # independently verified against real data for this pre-opening
+        # venture -- docs/architecture/STAFFING-COVERAGE-VALIDATION.md §1a)
+        # and FULL-SHIFT replacement (not the bare 3-hour casual-minimum-
+        # engagement floor -- a relief person covering a colleague's full
+        # rostered shift realistically works the full shift, not the legal
+        # minimum). Treatment: 8 committed x 8% x (22 weekday + 4.33
+        # Saturday) = 16.85 expected relief-shifts/month x 6hrs x blended
+        # A$37.155/hr (weekday) / A$55.7325/hr (Saturday, x1.5) =
+        # A$4,065.53/month. Phlebotomists: 2 x 8% x same days = 4.21 shifts
+        # x 6hrs x A$34.375/hr (A$51.5625 Saturday) = A$940.34/month. PM
+        # Reception: 1 x 8% x same days = 2.11 shifts x 5hrs x A$33.71/hr
+        # (A$50.565 Saturday) = A$384.23/month. Subtotal A$5,390.09/month +
+        # 12% super (A$646.81) + 1.7% workers comp (A$91.63) = TOTAL
+        # A$6,128.53/month. Modelled as its OWN recurring opex line (not
+        # blended into Direct Labour), per the explicit decision in
+        # docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md: an expected-
+        # value planning allowance is the defensible treatment for a real,
+        # recurring-in-aggregate (even though individually stochastic) cost,
+        # same convention as budgeting a maintenance/contingency reserve --
+        # kept visibly separate so the committed-roster Direct Labour figure
+        # is never confused with the full realistic cost base.
+        self.relief_absence_allowance = 6128.53
 
 
 def compute_pm_weekday_daily_labor(month):
@@ -431,7 +485,12 @@ def compute_ramp(scenario_id, inputs: CanonicalCostInputs, revenue_ramp_curve):
     for month in MONTHS:
         payroll = compute_payroll(scenario_id, month, inputs)
         fixed, variable = compute_fixed_and_variable_opex(month, inputs)
-        total = round(fixed + variable + payroll["payroll_total"], 2)
+        relief = inputs.relief_absence_allowance
+        # NEW 2026-08-18 -- relief_absence_allowance included in fixed_costs
+        # (it is a recurring, non-wage-driven planning line, not part of
+        # payroll_costs proper -- kept separately traceable via its own
+        # dict key below, not silently merged in).
+        total = round(fixed + variable + payroll["payroll_total"] + relief, 2)
         months_out.append(
             {
                 "scenario_id": scenario_id,
@@ -439,6 +498,7 @@ def compute_ramp(scenario_id, inputs: CanonicalCostInputs, revenue_ramp_curve):
                 "fixed_costs": fixed,
                 "variable_costs": variable,
                 "payroll_costs": payroll["payroll_total"],
+                "relief_absence_allowance": relief,
                 "total_operating_costs": total,
                 "payroll_detail": payroll,
                 "gtt_supplies_variable_alternative": gtt_supplies_variable_alternative(

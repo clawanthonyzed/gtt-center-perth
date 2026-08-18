@@ -1029,16 +1029,19 @@ def check_cost_ramp_schema(data, f: Findings):
             if vf in rec and not _is_valid_amount_shape(rec[vf]):
                 f.error(f"records[{i}] (id={rid!r}): '{vf}' is a malformed numeric value ({rec[vf]!r})")
 
-        # fixed_costs + variable_costs + payroll_costs must sum to total_operating_costs.
+        # fixed_costs + variable_costs + payroll_costs + relief_absence_allowance
+        # (added 2026-08-18, Financial Finalisation round -- defaults to 0 for
+        # any record predating this field) must sum to total_operating_costs.
         fixed, variable, payroll, total = (
             rec.get("fixed_costs"), rec.get("variable_costs"), rec.get("payroll_costs"), rec.get("total_operating_costs"),
         )
-        if all(_is_number(v) for v in (fixed, variable, payroll, total)):
-            expected_total = fixed + variable + payroll
+        relief = rec.get("relief_absence_allowance", 0) or 0
+        if all(_is_number(v) for v in (fixed, variable, payroll, total)) and _is_number(relief):
+            expected_total = fixed + variable + payroll + relief
             if abs(expected_total - total) > COST_RAMP_TOLERANCE:
                 f.error(
-                    f"records[{i}] (id={rid!r}): fixed_costs + variable_costs + payroll_costs = "
-                    f"{expected_total:.2f}, does not match total_operating_costs {total:.2f}"
+                    f"records[{i}] (id={rid!r}): fixed_costs + variable_costs + payroll_costs + "
+                    f"relief_absence_allowance = {expected_total:.2f}, does not match total_operating_costs {total:.2f}"
                 )
 
         # payroll_breakdown, when present, must itself be internally consistent:

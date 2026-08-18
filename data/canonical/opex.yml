@@ -381,41 +381,52 @@ records:
   # ============================================================
   - id: opex_insurance_modelled
     category: insurance
-    subcategory: combined_pl_pi
-    name: "Insurance (public liability + PI) -- REVISED PROVISIONAL PLACEHOLDER, 2026-08-16 (F20)"
-    description: "The single figure feeding docs/profit-loss-tables.md's Non-Wage Overhead total -- revised from the old flat A$400/month guess to the midpoint of this file's own already-itemised estimate below"
-    amount: 1279.00
+    subcategory: public_liability_professional_indemnity_property
+    name: "Insurance (Public Liability + Professional Indemnity + Property/Contents) -- CORRECTED 2026-08-18, Financial Finalisation round"
+    description: "The single figure feeding docs/architecture/FINANCIAL-FIGURE-REFERENCE.md's Non-Wage Overhead total -- corrected from a methodologically-flawed A$1,279/month midpoint (which double-counted workers compensation and included an optional line) to the midpoint of only the genuinely-needed, non-double-counted components below"
+    amount: 708.34
     currency: AUD
     frequency: monthly
-    monthly_equivalent: 1279.00
-    annual_equivalent: 15348.00
+    monthly_equivalent: 708.34
+    annual_equivalent: 8500.08
     cost_type: FIXED
     scenario_applicability: universal
     status: MODELLED
     status_detail: >
-      REVISED 2026-08-16 (F20), per direct instruction to establish a reasonable current
-      placeholder, clearly labelled provisional, pending real quotes. **Still PROVISIONAL, still
-      not a real quote** -- this is not an upgrade to VERIFIED status. Method: this file's own
-      already-itemised insurance records below (opex_insurance_public_liability through
-      opex_insurance_business_interruption) already sum to a real, sourced A$11,700-19,000/year
-      (A$975-1,583/month) range, per docs/financial-setup.md STEP 8's own itemised table -- the
-      old A$400/month figure never used this already-existing, more-defensible range as its
-      basis, an internal inconsistency more than a research gap. Revised placeholder = midpoint
-      of that range, A$1,279/month, replacing the old unexplained round-number guess. Real
-      broker quotes are already in motion -- see docs/insurance-broker-quote-request-draft.md
-      (Priority 3, 2026-08-15/16 round), which will produce a real figure once sent and
-      answered. **NOT YET propagated to docs/profit-loss-tables.md's Non-Wage Overhead total or
-      any headline P&L figure** -- same broader-recompute caveat as the wage-rate and GTT-supply
-      updates this pass (opex_gtt_supplies, above). If propagated, Non-Wage Overhead would rise
-      by A$879/month from this line alone.
-    source: {file: docs/profit-loss-tables.md, section: "§4 Monthly, Non-Wage Overhead Component breakdown"}
+      CORRECTED 2026-08-18 (Financial Finalisation round), investigated rather than a founder
+      pick between the two prior figures, per Anthony's explicit instruction. Both prior figures
+      were flawed: the original A$400/month (2026-07-30 era) was an unexplained round guess,
+      never derived from this file's own itemised records. The 2026-08-16 "revised placeholder"
+      of A$1,279/month was ALSO wrong -- traced back to its own stated method ("this file's own
+      already-itemised insurance records... sum to A$11,700-19,000/year"), that sum was found
+      this round to include opex_insurance_workers_comp_estimate (A$4,500-6,000/yr), a record
+      EXPLICITLY labelled "cross-reference, NOT the modelled figure" in this same file -- workers
+      compensation is already charged separately and correctly as 1.7% of direct labour in the
+      payroll model (data/canonical/cost_ramp.yml), so including it here would have double-
+      counted it. The sum ALSO included opex_insurance_business_interruption (A$1,200-2,000/yr),
+      explicitly labelled "optional" -- treating an optional cover as committed inflated the
+      estimate further. CORRECTED: sum only opex_insurance_public_liability (A$2,500-4,500/yr)
+      + opex_insurance_professional_indemnity (A$2,000-4,000/yr) +
+      opex_insurance_property_contents (A$1,500-2,500/yr) = A$6,000-11,000/year =
+      A$500.00-916.67/month, midpoint A$708.34/month. Externally sanity-checked (2026-08-18 web
+      research) against real 2026 Australian small-business PL/PI premium benchmarks -- generic
+      small-business averages run somewhat lower (PL ~A$480-960/yr, PI ~A$600-2,640/yr), but this
+      venture's higher-risk client profile (pregnant clients, health-adjacent services) justifies
+      sitting above generic averages, making this file's own itemised range directionally
+      reasonable, not implausible. STATUS: MODELLED/BALLPARK-ESTIMATE, NOT VERIFIED -- real
+      broker quotes already in motion, docs/insurance-broker-quote-request-draft.md, will
+      supersede this figure once received. PROPAGATED this round to
+      data/canonical/cost_ramp.yml's fixed_costs (A$12,480.00 -> A$12,788.34) and every
+      downstream P&L/break-even/cash-flow figure -- see
+      docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md for the full record.
+    source: {file: docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md, section: "Insurance"}
     notes: >
-      Same figure cross-referenced by docs/CURRENT-STATE.md §7.3's "First-year insurance"
-      working-capital line (previously ~A$400/month basis, now needs the same 2026-08-16 update
-      applied, not yet propagated there either -- flagged, not silently left inconsistent).
-      This revised A$1,279/month is now MUCH closer to the sum of the itemised insurance
-      records below (A$975-1,583/month combined) -- see conflict_insurance_estimate, which
-      remains logged for trace even though this update narrows the gap it describes.
+      docs/CURRENT-STATE.md §7.3's "First-year insurance" working-capital line still uses the
+      original ~A$400/month basis -- flagged for a future pass to align with this corrected
+      figure, not yet propagated there (a working-capital-range document, lower priority than
+      the P&L-facing figures corrected this round). conflict_insurance_estimate (below) remains
+      logged for trace -- this correction narrows but does not fully close that conflict, since
+      no real broker quote exists yet.
 
   - id: opex_insurance_public_liability
     category: insurance

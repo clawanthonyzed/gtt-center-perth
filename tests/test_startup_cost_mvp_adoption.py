@@ -111,20 +111,24 @@ class UpdatedPlanningCaseModelTests(unittest.TestCase):
         """The updated planning case (this phase) must not itself have altered
         the Master Financial Model's cash-flow trough figures -- those remain
         sourced only from cash_flow_summary, never recalculated by THIS phase.
-        RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction
-        reconciliation) -- was 54016.81/96821.83 under the 2026-08-18 VM
-        wage audit correction (itself was 52363.17/94341.40 under the
-        2026-08-17 first-principles rebuild, 34860.52/74110.43 under the
-        same-day proportional-wage-scaling recompute before that). Legitimately
-        moved again by this round's real, sourced correction (a separate,
-        later, authorised phase) -- this test's own guard (this specific
-        phase didn't touch them) is unaffected by that different phase's
-        change."""
+        RECALCULATED 2026-08-18 (Financial Finalisation round -- insurance
+        corrected + relief/absence allowance added) -- was 63658.78/116126.66
+        under the Priority 1 PM capacity/transaction reconciliation (itself
+        was 54016.81/96821.83 under the 2026-08-18 VM wage audit correction,
+        52363.17/94341.40 under the 2026-08-17 first-principles rebuild,
+        34860.52/74110.43 under the same-day proportional-wage-scaling
+        recompute before that). Legitimately moved again by this round's
+        real, sourced correction (a separate, later, authorised phase) --
+        this test's own guard (this specific phase didn't touch them) is
+        unaffected by that different phase's change. Table 2's trough is
+        now at Month 24 (the final month), not an earlier month -- its
+        cumulative position falls every month with no recovery, since
+        steady state itself is now loss-making."""
         results = self.fri["opening_working_capital"]["operating_cash_trough_cross_check"]["results"]
         t1 = next(r for r in results if r["scenario_id"] == "scenario_table_1")
         t2 = next(r for r in results if r["scenario_id"] == "scenario_table_2")
-        self.assertEqual(t1["trough_value"], 63658.78)
-        self.assertEqual(t2["trough_value"], 116126.66)
+        self.assertEqual(t1["trough_value"], 76532.52)
+        self.assertEqual(t2["trough_value"], 172138.34)
 
 
 if __name__ == "__main__":

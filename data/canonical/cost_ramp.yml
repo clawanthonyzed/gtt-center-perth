@@ -35,6 +35,45 @@ schema_version: 1
 dataset: cost_ramp
 last_updated: "2026-08-18"
 
+# RESOLVED 2026-08-18 (Financial Finalisation round) -- two open items closed
+# by investigation, not by asking Anthony to pick between existing numbers.
+#
+# (1) INSURANCE, corrected: the A$400.00/month figure embedded in
+# fixed_costs (via the A$13,980.00 non-wage-overhead total) was an
+# unexplained round guess. A later "revised placeholder" of A$1,279.00/month
+# (opex.yml#opex_insurance_modelled) was investigated this round and found
+# methodologically flawed -- it was the midpoint of a sum that double-counts
+# workers compensation (already charged separately as 1.7% of payroll below)
+# and includes an explicitly-optional business-interruption line. Corrected,
+# using only the genuinely-needed, non-double-counted components (Public
+# Liability + Professional Indemnity + Property/Contents,
+# opex.yml#opex_insurance_public_liability/professional_indemnity/
+# property_contents): A$500.00-916.67/month, midpoint A$708.34/month --
+# externally sanity-checked against real 2026 Australian small-business
+# PL/PI premium research. fixed_costs: A$12,480.00 -> A$12,788.34/month
+# (+A$308.34). STATUS: MODELLED/BALLPARK-ESTIMATE, NOT VERIFIED -- real
+# broker quotes already in motion, docs/insurance-broker-quote-request-draft.md.
+#
+# (2) RELIEF/ABSENCE COVERAGE, added as a new recurring line: the payroll
+# figures below price ONLY the committed simultaneous roster (8 treatment +
+# 2 phlebotomists + 1 VM + 1 PM Reception) working every trading day with
+# zero absences -- unrealistic. New relief_absence_allowance field
+# (A$6,128.53/month) quantifies the EXPECTED cost of relief staff actually
+# covering absences (8% per-person unavailability planning assumption,
+# FULL-SHIFT replacement not the bare 3hr casual-minimum floor, +12%
+# super +1.7% workers comp). Full derivation:
+# docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md. Kept as its own
+# separately-traceable field, not blended into payroll_costs, so the
+# committed-roster payroll figure is never confused with the full realistic
+# cost base.
+#
+# total_operating_costs = fixed_costs + variable_costs + payroll_costs +
+# relief_absence_allowance (was fixed_costs + variable_costs + payroll_costs
+# only). Table 1 (18/day) M5plus total_operating_costs: was A$115,697.02,
+# now A$122,133.89. Table 2 (12/day) M5plus: was A$110,292.03, now
+# A$116,728.90. See data/models/master_financial_model.yml's own 2026-08-18
+# banner for the full downstream P&L/break-even/cash-flow impact.
+
 # AUDITED AND CORRECTED 2026-08-18 (Phase C audit round -- Anthony's explicit
 # sanity-audit request, "verify, don't assume the existing figure is
 # correct"). Finding: the Venue Manager wage rate used throughout Phase C
@@ -126,10 +165,11 @@ records:
   - id: cost_table1_m1
     scenario_id: scenario_table_1
     month: M1
-    fixed_costs: 12480.00
+    fixed_costs: 12788.34
     variable_costs: 600.00
     payroll_costs: 101419.61
-    total_operating_costs: 114499.61
+    relief_absence_allowance: 6128.53
+    total_operating_costs: 120936.48
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -155,10 +195,11 @@ records:
   - id: cost_table1_m2
     scenario_id: scenario_table_1
     month: M2
-    fixed_costs: 12480.00
+    fixed_costs: 12788.34
     variable_costs: 800.00
     payroll_costs: 101419.61
-    total_operating_costs: 114699.61
+    relief_absence_allowance: 6128.53
+    total_operating_costs: 121136.48
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -184,10 +225,11 @@ records:
   - id: cost_table1_m3
     scenario_id: scenario_table_1
     month: M3
-    fixed_costs: 12480.00
+    fixed_costs: 12788.34
     variable_costs: 1000.00
     payroll_costs: 101419.61
-    total_operating_costs: 114899.61
+    relief_absence_allowance: 6128.53
+    total_operating_costs: 121336.48
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -213,10 +255,11 @@ records:
   - id: cost_table1_m4
     scenario_id: scenario_table_1
     month: M4
-    fixed_costs: 12480.00
+    fixed_costs: 12788.34
     variable_costs: 1200.00
     payroll_costs: 101419.61
-    total_operating_costs: 115099.61
+    relief_absence_allowance: 6128.53
+    total_operating_costs: 121536.48
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -242,10 +285,11 @@ records:
   - id: cost_table1_m5plus
     scenario_id: scenario_table_1
     month: M5plus
-    fixed_costs: 12480.00
+    fixed_costs: 12788.34
     variable_costs: 1500.00
     payroll_costs: 101717.02
-    total_operating_costs: 115697.02
+    relief_absence_allowance: 6128.53
+    total_operating_costs: 122133.89
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -295,10 +339,11 @@ records:
   - id: cost_table2_m1
     scenario_id: scenario_table_2
     month: M1
-    fixed_costs: 12480.00
+    fixed_costs: 12788.34
     variable_costs: 600.00
     payroll_costs: 96014.61
-    total_operating_costs: 109094.61
+    relief_absence_allowance: 6128.53
+    total_operating_costs: 115531.48
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -324,10 +369,11 @@ records:
   - id: cost_table2_m2
     scenario_id: scenario_table_2
     month: M2
-    fixed_costs: 12480.00
+    fixed_costs: 12788.34
     variable_costs: 800.00
     payroll_costs: 96014.61
-    total_operating_costs: 109294.61
+    relief_absence_allowance: 6128.53
+    total_operating_costs: 115731.48
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -353,10 +399,11 @@ records:
   - id: cost_table2_m3
     scenario_id: scenario_table_2
     month: M3
-    fixed_costs: 12480.00
+    fixed_costs: 12788.34
     variable_costs: 1000.00
     payroll_costs: 96014.61
-    total_operating_costs: 109494.61
+    relief_absence_allowance: 6128.53
+    total_operating_costs: 115931.48
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -382,10 +429,11 @@ records:
   - id: cost_table2_m4
     scenario_id: scenario_table_2
     month: M4
-    fixed_costs: 12480.00
+    fixed_costs: 12788.34
     variable_costs: 1200.00
     payroll_costs: 96014.61
-    total_operating_costs: 109694.61
+    relief_absence_allowance: 6128.53
+    total_operating_costs: 116131.48
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -411,10 +459,11 @@ records:
   - id: cost_table2_m5plus
     scenario_id: scenario_table_2
     month: M5plus
-    fixed_costs: 12480.00
+    fixed_costs: 12788.34
     variable_costs: 1500.00
     payroll_costs: 96312.03
-    total_operating_costs: 110292.03
+    relief_absence_allowance: 6128.53
+    total_operating_costs: 116728.90
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68

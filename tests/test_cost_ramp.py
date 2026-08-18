@@ -100,16 +100,17 @@ class Table1Tests(unittest.TestCase):
         self.assertAlmostEqual(m5["payroll_costs"], rec["payroll_costs"], places=2)
 
     def test_table1_total_operating_costs_m5plus_value(self):
-        """RECALCULATED 2026-08-18 (Phase C audit round, Venue Manager wage
-        reclassification: Clerks Award L2 -> Hair & Beauty Award MA000005 L6)
-        to 115697.02 -- was 114870.20 under the 2026-08-17 first-principles
-        rebuild (itself was 101378.78 under the proportional-wage-scaling
-        recompute, 98634.10 before that, 95014.18 before super was added).
-        See docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md sec3c/sec15."""
+        """RECALCULATED 2026-08-18 (Financial Finalisation round -- insurance
+        corrected A$400->A$708.34/month + relief/absence allowance
+        A$6,128.53/month added) to 122133.89 -- was 115697.02 pre-correction
+        (114870.20 under the 2026-08-17 first-principles rebuild, 101378.78
+        under the proportional-wage-scaling recompute, 98634.10 before that,
+        95014.18 before super was added). See
+        docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md."""
         inputs = cost_model.CanonicalCostInputs()
         computed = cost_model.compute_ramp("scenario_table_1", inputs, cost_model.DEFAULT_REVENUE_RAMP_CURVE)
         m5 = next(m for m in computed if m["month"] == "M5plus")
-        self.assertAlmostEqual(m5["total_operating_costs"], 115697.02, places=2)
+        self.assertAlmostEqual(m5["total_operating_costs"], 122133.89, places=2)
 
 
 class Table2Tests(unittest.TestCase):
@@ -124,15 +125,15 @@ class Table2Tests(unittest.TestCase):
         self.assertAlmostEqual(m5["total_operating_costs"], rec["total_operating_costs"], places=2)
 
     def test_table2_total_operating_costs_m5plus_value(self):
-        """RECALCULATED 2026-08-18 (Phase C audit round, Venue Manager wage
-        reclassification) to 110292.03 -- was 109465.22 under the 2026-08-17
-        first-principles rebuild (itself was 97258.43 under the proportional-
-        wage-scaling recompute, 94664.16 before that, 91463.24 before super
-        was added)."""
+        """RECALCULATED 2026-08-18 (Financial Finalisation round) to
+        116728.90 -- was 110292.03 pre-correction (109465.22 under the
+        2026-08-17 first-principles rebuild, 97258.43 under the
+        proportional-wage-scaling recompute, 94664.16 before that, 91463.24
+        before super was added)."""
         inputs = cost_model.CanonicalCostInputs()
         computed = cost_model.compute_ramp("scenario_table_2", inputs, cost_model.DEFAULT_REVENUE_RAMP_CURVE)
         m5 = next(m for m in computed if m["month"] == "M5plus")
-        self.assertAlmostEqual(m5["total_operating_costs"], 110292.03, places=2)
+        self.assertAlmostEqual(m5["total_operating_costs"], 116728.90, places=2)
 
 
 class Month1To5PlusTests(unittest.TestCase):
@@ -174,8 +175,12 @@ class FixedCostsTests(unittest.TestCase):
         self.assertEqual(t1[0]["fixed_costs"], t2[0]["fixed_costs"])
 
     def test_fixed_costs_value(self):
+        """RECALCULATED 2026-08-18 (Financial Finalisation round) -- was
+        12480.00 (embedding the old A$400/month insurance placeholder), now
+        12788.34 (embedding the corrected A$708.34/month insurance figure,
+        docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md)."""
         inputs = cost_model.CanonicalCostInputs()
-        self.assertAlmostEqual(inputs.fixed_nonwage_excl_marketing, 12480.00, places=2)
+        self.assertAlmostEqual(inputs.fixed_nonwage_excl_marketing, 12788.34, places=2)
 
 
 class VariableCostsTests(unittest.TestCase):
@@ -305,12 +310,15 @@ class NoStartupCostLeakageTests(unittest.TestCase):
 
     def test_fixed_costs_total_does_not_include_any_one_off_amount(self):
         """Direct arithmetic check: opex.yml's one_off/STARTUP records'
-        amounts must not appear summed into this model's fixed_nonwage_excl_marketing."""
+        amounts must not appear summed into this model's fixed_nonwage_excl_marketing.
+        RECALCULATED 2026-08-18 (Financial Finalisation round) -- was 12480.00,
+        now 12788.34 (corrected insurance figure)."""
         inputs = cost_model.CanonicalCostInputs()
         # opex_accountant_initial_brief's low estimate (500.00) must not be
         # part of the fixed total -- confirm the fixed total equals the known
-        # 13-line Non-Wage Overhead minus marketing, not that plus a startup line.
-        self.assertAlmostEqual(inputs.fixed_nonwage_excl_marketing, 12480.00, places=2)
+        # 13-line Non-Wage Overhead (insurance corrected) minus marketing,
+        # not that plus a startup line.
+        self.assertAlmostEqual(inputs.fixed_nonwage_excl_marketing, 12788.34, places=2)
 
 
 class NoCapexLeakageTests(unittest.TestCase):
