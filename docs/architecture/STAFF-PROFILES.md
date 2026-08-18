@@ -56,6 +56,18 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Leave/relief considerations:** As a salaried role, standard NES annual/personal leave entitlements apply once converted from casual — genuinely requires either a second trained VM-capable staff member or an external relief arrangement before the venue can safely cover a VM's own leave, not resolved in this document.
 
+**Reporting line:** Reports directly to Anthony Zed/YETI Tipi Holdings (the ownership layer) — no intermediate management tier exists at this venture's scale. Every other position (§Positions 02-06 below) reports to the Venue Manager.
+
+**Experience:** No minimum years specified anywhere in this repo's prior research — genuinely unresolved, not assumed. A defensible planning assumption (2+ years in a supervisory beauty/wellness/hospitality role) is suggested here for hiring-brief purposes only, explicitly flagged as NOT independently researched or sourced this round.
+
+**Super/workers comp:** 12% superannuation (universal, `wages.yml#wage_superannuation_rate`) + 1.7% workers compensation (`wages.yml#wage_workers_comp_rate`, PLACEHOLDER — not upgraded to VERIFIED this round, see `docs/architecture/OPERATING-MODEL-18-CLIENTS.md` §10) — both applied identically to every position in this document, not restated per-position below.
+
+**Skills:** Staff rostering/Fair Work compliance literacy; Fresha (or equivalent booking platform) administration; basic P&L literacy (weekly review); incident-management composure; genuine hands-on service delivery capability (per the required qualification above).
+
+**Compliance:** First Aid/CPR certification (mandatory, `docs/emergency-plan.md`); Fire Warden certification (mandatory); WA Working with Children Check NOT required (no unsupervised minors in this venture's service model); RSA not required (no licensed premises).
+
+**Cross-training/substitution capability:** The VM's own required service qualification (Cert III/IV) means the VM CAN step into a treatment-staff shift in a genuine emergency — but this leaves reception/management duties uncovered simultaneously (see `docs/architecture/OPERATING-MODEL-18-CLIENTS.md` §6), so it is not a free substitution. No other position can substitute for the VM's own management/compliance responsibilities.
+
 ### Position 02 — Phlebotomist (×2 committed, ×3-4 on the books)
 
 **Role purpose:** Perform GTT blood collection under the pathology partner's accreditation umbrella.
@@ -80,6 +92,18 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Leave/relief considerations:** Genuinely the tightest coverage constraint in the whole staffing model, given the credentialing lead time — the relief pool size recommendation above exists specifically to address this.
 
+**Reporting line:** Reports to the Venue Manager (Position 01). No dedicated clinical-lead position exists above the phlebotomist role at this venture's scale — clinical protocol authority sits with the pathology partner (WDP or equivalent), not an internal role, per the partner-credentialed accreditation model.
+
+**Experience:** Not independently researched this round — genuinely unresolved. Real-world pathology collection centres typically expect prior collection-centre experience alongside the Cert III/IV, but this venture has not sourced a specific minimum from WDP or an equivalent partner.
+
+**Skills:** Venepuncture proficiency across a range of patient presentations (including pregnancy-specific considerations); calm, reassuring bedside manner (the single highest-anxiety point in the client journey, per the job description above); precise specimen labelling and chain-of-custody discipline.
+
+**Compliance:** Pathology partner's own Licensed Collection Centre QMS (Quality Management System) induction and ongoing compliance — this is the credentialing umbrella itself, not a separate requirement. First Aid/CPR desirable but not the primary compliance requirement (the partner accreditation supersedes it clinically).
+
+**Cross-training/substitution capability:** **None** — phlebotomy cannot be cross-covered by any other position in this venture (`docs/architecture/OPERATING-MODEL-18-CLIENTS.md` §7). This is the one position in the whole staffing model with zero substitution capability from any other role, which is precisely why its own relief-pool sizing (§1 above) is the most conservative (proportionally) of any position.
+
+**Employment-arrangement dependency, flagged not assumed:** whether phlebotomists are ultimately employed directly by this venture or supplied/employed by the pathology partner under a service-fee arrangement is a still-open commercial question, waiting on WDP/Carole Rivers — see `docs/architecture/OPERATING-MODEL-18-CLIENTS.md` §7 for the full disclosure. This profile's wage figure assumes direct employment; that assumption may not hold.
+
 ### Position 03 — Treatment Staff, Massage+Beauty pool (×4 committed, common AM/PM pool)
 
 **Role purpose:** Deliver massage and beauty/facial services across both the AM window (as part of GTT packages and gap-fill) and the PM window (standalone and package bookings) — one role, not two, per the venue's common-pool staffing model.
@@ -100,6 +124,16 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Coverage requirements:** Part of the 10-11-strong common treatment pool (§1).
 
+**Reporting line:** Reports to the Venue Manager (Position 01).
+
+**Experience:** Not independently researched this round — genuinely unresolved, no minimum years sourced.
+
+**Skills:** Pregnancy-safe technique adaptation (positioning, pressure, product selection) across both massage and beauty/facial modalities; time-discipline within the fixed 45-minute AM service blocks (a real constraint per the exact-clinical-mark timetable, `docs/architecture/OPERATING-MODEL-18-CLIENTS.md` §2).
+
+**Compliance:** Standard beauty-industry infection-control/hygiene practice; product safety awareness for pregnancy-safe formulations (no accreditation body governs this specifically — an internal training/induction requirement, not an external certification).
+
+**Cross-training/substitution capability:** Massage and Beauty are dual-qualification-paired as ONE shared pool (the venue's own confirmed common-pool model) — this pairing IS the cross-cover mechanism between these two specific service lines. NOT confirmed cross-qualified with Nails or Hair (`scenario-c-sync-timetables.md` §0.4 — no confirmed Nails+Hair pairing either).
+
 ### Position 04 — Treatment Staff, Nail Technician (×2 committed, common AM/PM pool)
 
 **Role purpose, hours, roster pattern, employment type:** Same structure as Position 03.
@@ -110,6 +144,16 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Operational note:** 4 physical nail stations exist day-one (Chapter 7), but only 2 are staffed at the committed 18-client volume — the extra 2 stations provide rostering flexibility and PM standalone-booking headroom, not a mandatory extra hire.
 
+**Reporting line:** Reports to the Venue Manager (Position 01).
+
+**Experience:** Not independently researched this round — genuinely unresolved.
+
+**Skills:** Gel/SNS/acrylic application proficiency (per the service catalogue); time-discipline within fixed AM service blocks (same 45-minute constraint as Position 03).
+
+**Compliance:** Standard nail-industry infection-control (tool sterilisation, single-use files where applicable) — an internal training/induction requirement, no external accreditation body specific to this role in WA beyond the Cert III itself.
+
+**Cross-training/substitution capability:** NOT confirmed cross-qualified with any other line (Massage+Beauty pool, or Hair) — `scenario-c-sync-timetables.md` §0.4 explicitly flags no confirmed Nails+Hair pairing. The 2 Nail Technicians can only substitute for each other.
+
 ### Position 05 — Treatment Staff, Hairdresser (×2 committed, common AM/PM pool)
 
 **Role purpose, hours, roster pattern, employment type:** Same structure as Position 03.
@@ -119,6 +163,16 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 **Required qualifications:** Cert III in Hairdressing.
 
 **Operational note:** Same 2-of-4-stations principle as Nails, above.
+
+**Reporting line:** Reports to the Venue Manager (Position 01).
+
+**Experience:** Not independently researched this round — genuinely unresolved.
+
+**Skills:** Blow-dry/styling proficiency matching the service catalogue's PM Restore package component and standalone offerings; time-discipline within fixed AM service blocks.
+
+**Compliance:** Standard hairdressing hygiene/sanitation practice — internal training/induction requirement, no external accreditation body specific to this role in WA beyond the Cert III itself.
+
+**Cross-training/substitution capability:** NOT confirmed cross-qualified with any other line (same disclosed gap as Nails, above). The 2 Hairdressers can only substitute for each other.
 
 ### Position 06 — Reception/Coordinator (PM-hours role)
 
@@ -134,6 +188,16 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Required qualifications:** Beauty/wellness-industry customer service experience (not solely admin/medical reception background, per the venue's existing hiring preference).
 
+**Reporting line:** Reports to the Venue Manager (Position 01) — overlaps with the VM's own rostered hours 13:00-15:00 only (`docs/architecture/OPERATING-MODEL-18-CLIENTS.md` §4); no VM presence 15:00-18:00, a genuine, disclosed reporting/coverage gap for the back half of the PM shift.
+
+**Experience:** Not independently researched this round — genuinely unresolved.
+
+**Skills:** Fresha (or equivalent) booking-platform proficiency; payment processing; phone/email customer service; basic retail/upsell conversation ability (per the venue's ancillary-retail offering).
+
+**Compliance:** No external accreditation required — an internal training/induction role.
+
+**Cross-training/substitution capability:** No confirmed backup — see §1's relief-pool gap and `docs/architecture/OPERATING-MODEL-18-CLIENTS.md` §8 for the full disclosure (genuinely unresolved, not assumed zero-risk). The Venue Manager could plausibly cover a SHORT absence during the 13:00-15:00 overlap window only, not during 15:00-18:00.
+
 ## 3. Reception Coverage — the 07:00 vs 07:15 Inconsistency, Corrected
 
 **Previous inconsistency (corrected this round):** an earlier document had reception "opening" at 07:15, 15 minutes after the first client's 07:00 arrival — a real, disclosed inconsistency, now fixed. **The Venue Manager personally covers reception from the venue's actual 07:00 opening**, per Position 01's corrected job description above — there is no gap between the first client's arrival and reception being staffed. The separate Reception/Coordinator role (Position 06) covers the PM window, not the AM open.
@@ -141,6 +205,8 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 ---
 
 ## Changelog
+
+**2026-08-18 (Phase D)** — Completed the full field list Anthony specified: reporting line, experience (honestly flagged as not independently researched where genuinely unresolved, not invented), skills, compliance, cross-training/substitution capability added to all 6 positions. Cross-referenced against `docs/architecture/OPERATING-MODEL-18-CLIENTS.md` (new this round) rather than duplicating its timetable/reconciliation content. Every position's substitution capability is now stated explicitly, including the genuine gaps (Phlebotomy: none; Nails/Hair: only within their own line; PM Reception: none confirmed, VM can only partially cover a 13:00-15:00 window). **Now COMPLETE** for the field list itself — the underlying open items (VM wage professional confirmation, PM Reception relief sizing, phlebotomist WDP-employment dependency) remain genuinely open and are cross-referenced, not hidden by marking this document complete.
 
 **2026-08-18 (audit round)** — Corrected Venue Manager wage from Clerks Award MA000002 L2 ($36.81/hr, audited and found likely misclassified) to Hair & Beauty Industry Award MA000005 L6 ($40.00/hr, the role's own real award match) — flagged MODELLED/CORRECTED, not VERIFIED, professional confirmation still needed. Added the five-distinct-staffing-concepts cross-reference and flagged PM Reception's own relief pool as a genuinely unresolved open item (was previously silent on this). Full reasoning: `docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md` §3c/§9/§10/§15. **Still not done this pass (disclosed gap, not silently deferred):** the full field list Anthony specified (reporting line, years of experience, explicit super/workers-comp fields per role, detailed skills/compliance/cross-training matrix) is only partially present in the profiles below — hours, wage, qualifications, and coverage are present for every position; reporting line, experience level, and a dedicated skills/compliance/cross-training matrix are NOT yet built out. Flagged as PARTIAL, not COMPLETE.
 
