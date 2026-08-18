@@ -10,21 +10,22 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Phlebotomists (highest coverage risk — only 2 committed, both required simultaneously for both chairs to run):**
 - Committed: 2, both rostered every trading day.
-- **Recommended coverage pool: 3-4 phlebotomists on the books**, not all rostered every day — only paid for actual worked hours, consistent with the venture's own casual/"pay for actual hours" principle. This allows one to be absent (leave, sick, or simply unavailable that day) without either chair going unstaffed.
-- Rationale: phlebotomy requires a specific pathology-partner credential (Chapter 12) — a same-day replacement cannot be sourced casually the way a beauty therapist shift gap might be covered; the lead time to get a new phlebotomist credentialed under the partner's accreditation is real and non-trivial. A standing pool of 1-2 extra credentialed phlebotomists is the only realistic mitigation.
+- **RECALCULATED 2026-08-18 — recommended coverage pool: 4 phlebotomists on the books** (was "3-4", now a single recommended figure, quantitatively derived — see `docs/architecture/STAFFING-COVERAGE-VALIDATION.md` §2 for the full binomial reliability calculation: n=4 gives 99.81% reliability against a 92% per-person availability assumption, deliberately held above the 95% minimum given zero cross-training capability and the WDP credentialing lead time). Not all 4 rostered every day — only paid for actual worked hours.
+- Rationale: phlebotomy requires a specific pathology-partner credential (Chapter 12) — a same-day replacement cannot be sourced casually the way a beauty therapist shift gap might be covered; the lead time to get a new phlebotomist credentialed under the partner's accreditation is real and non-trivial. A standing pool of extra credentialed phlebotomists is the only realistic mitigation.
+- **WDP employment-arrangement dependency, restated:** whether phlebotomists are ultimately employed directly by this venture or supplied by WDP under a service-fee arrangement remains open, waiting on Carole Rivers — this headcount/wage figure assumes direct employment; not actioned further this round.
 
 **Treatment staff (common AM/PM pool):**
 - Committed: 8 (4 Massage+Beauty pool + 2 Nails + 2 Hair).
-- A larger pool than 8 on the books is warranted for the same reason as phlebotomists, but with lower urgency since treatment roles have more available casual labour market depth than phlebotomy in Perth (per the real Perth market research already done — many named comparable businesses employ multiple staff in each of these categories, suggesting a workable local labour pool exists).
-- **Recommended: 10-11 on the books** (2-3 above the committed 8), rostered across both AM and PM as the common pool already established, so that any single day's roster can absorb 1-2 absences without cancelling bookings.
+- **RECALCULATED 2026-08-18 — recommended: 12 on the books** (was "10-11", now quantitatively derived via binomial reliability targeting ≥95% of trading days fully staffed per line — see `docs/architecture/STAFFING-COVERAGE-VALIDATION.md` §1 for the full calculation: 6 Massage+Beauty + 3 Nails + 3 Hair). An 11-person alternative (5+3+3, ~94.6% reliability on the Massage+Beauty line) is disclosed as a defensible lower-reliability option if a smaller pool is preferred. Rostered across both AM and PM as the common pool already established.
+- This is a reliability-driven recommendation, not a cost-minimisation exercise, per Anthony's explicit objective (`docs/architecture/STAFFING-COVERAGE-VALIDATION.md` intro).
 
 **Venue Manager:**
 - Committed: 1, covering AM operations and reception (see §3 below).
-- No relief pool of a second full Venue Manager is proposed at launch — genuinely a single point of failure at this stage, flagged honestly rather than smoothed over. A lighter-hours PM management/reception role (§3) provides partial mitigation for the PM half of the day specifically, not for the VM's own absence.
+- **RECALCULATED 2026-08-18 — confirmed no permanent relief VM is recommended at launch scale** (`docs/architecture/STAFFING-COVERAGE-VALIDATION.md` §3: the cost of a second salaried, dual-qualified, service-capable manager is disproportionate to a single-site venue at this stage). Genuinely a single point of failure, flagged honestly rather than smoothed over. Realistic mitigation: cross-train at least one senior treatment staff member or the PM Reception coordinator in basic opening/reception procedures as an emergency fallback (not full VM capability); accept the disclosed residual risk of an ad hoc arrangement for a genuine VM absence until scale justifies a second hire.
 
 **Reception/Coordinator (PM-hours role, distinct from the VM's own AM reception coverage):**
 - 1 role, lighter hours, covering the PM window specifically (see §3 for the reasoning this role exists at all).
-- **Relief/backup pool: NOT sized this pass — a genuine, disclosed open item, not assumed to be zero-risk.** §2a's justification is for why ONE person is sufficient on a normal trading day, not who covers that one person's own sick leave or absence. Flagged for the eventual Venue Manager to establish once trading, per `docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md` §10.
+- **RECALCULATED 2026-08-18 — a small on-call relief pool (1 additional person, cross-trained on Fresha/payment administration) is now recommended**, closing the previously-disclosed 15:00-18:00 no-coverage gap. Compared against 3 structural alternatives (VM extending hours, treatment staff assisting, a rotating relief-only model) — dedicated PM Reception with this small backup remains the recommended structure. Full comparison: `docs/architecture/STAFFING-COVERAGE-VALIDATION.md` §4.
 
 **2026-08-18 audit round addendum — five distinct staffing concepts, not to be conflated:** required operating positions (the functional roles), actual scheduled weekly hours (per the solver-verified timetable), employment headcount required (real people employed), relief/backup pool (additional people, only paid when covering an absence), and paid hours actually included in the financial model (committed headcount's full rostered shift only, relief pool excluded from steady-state payroll unless an absence actually occurs) are five different numbers and must not be used interchangeably. Full structural breakdown: `docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md` §9.
 
@@ -68,7 +69,7 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Cross-training/substitution capability:** The VM's own required service qualification (Cert III/IV) means the VM CAN step into a treatment-staff shift in a genuine emergency — but this leaves reception/management duties uncovered simultaneously (see `docs/architecture/OPERATING-MODEL-18-CLIENTS.md` §6), so it is not a free substitution. No other position can substitute for the VM's own management/compliance responsibilities.
 
-### Position 02 — Phlebotomist (×2 committed, ×3-4 on the books)
+### Position 02 — Phlebotomist (×2 committed, ×4 on the books, RECALCULATED 2026-08-18)
 
 **Role purpose:** Perform GTT blood collection under the pathology partner's accreditation umbrella.
 
@@ -80,7 +81,7 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Hours:** 07:00-13:00 (AM window only — phlebotomists are not rostered for any PM/general-venue duties, a settled, non-negotiable scope boundary).
 
-**Roster pattern:** Monday-Saturday, 2 rostered per trading day (Chair A/Chair B), drawn from a pool of 3-4.
+**Roster pattern:** Monday-Saturday, 2 rostered per trading day (Chair A/Chair B), drawn from a pool of 4.
 
 **Wage:** Current researched Health Professionals and Support Services Award MA000027, Support Services Level 1-2 casual rate, A$33.71-35.04/hr (2026-08-16 research; the venue's specific "Pathology Collector Cert III/IV" role does not map to an exact single classification, closest-match caveat disclosed).
 
@@ -88,7 +89,7 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Required qualifications:** Cert III/IV in Pathology Collection, credentialed under the pathology partner's own NATA-accredited umbrella (not an independent accreditation held by the venue).
 
-**Coverage requirements:** See §1 above — 3-4 on the books, not all rostered daily.
+**Coverage requirements:** See §1 above — 4 on the books (recalculated, binomial reliability method), not all rostered daily.
 
 **Leave/relief considerations:** Genuinely the tightest coverage constraint in the whole staffing model, given the credentialing lead time — the relief pool size recommendation above exists specifically to address this.
 
@@ -122,7 +123,7 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Desirable qualifications:** Pregnancy-massage-specific specialisation.
 
-**Coverage requirements:** Part of the 10-11-strong common treatment pool (§1).
+**Coverage requirements:** Part of the 12-strong common treatment pool (§1, recalculated 2026-08-18 via binomial reliability method).
 
 **Reporting line:** Reports to the Venue Manager (Position 01).
 
