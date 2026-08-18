@@ -70,7 +70,9 @@
 
 ---
 
-## Status Summary (updated, Financial Finalisation pass, 2026-08-18)
+## Status Summary (updated, Dossier/Dash Rebuild Phase 1, 2026-08-18)
+
+**Phase 1 (repository audit + information map) COMPLETE.** New doc: `docs/architecture/DOSSIER-DASH-PHASE1-INFORMATION-MAP.md` -- full chapter-by-chapter source map (all 35 chapters), do-not-lose checklist cross-check, source-of-truth tier assignment, financial figures re-verified live against canonical (found and corrected a stale figure in the round's own brief). Two genuine findings requiring attention before Phase 2: (1) a real contradiction between `docs/experience/CUSTOMER-JOURNEY.md`/`docs/strategy/STRATEGIC-REPORT.md` (both promote the "leaving box"/leaving-moment gesture as validated) and the standing "never Anthony's idea, do not include" constraint -- flagged for Anthony's decision, not resolved either way; (2) genuine content gaps found: children/companion policy (not found anywhere in the repo), lounge iPads/tablets (not confirmed present), PM-OPERATIONS-MODEL.md cross-check against OPERATING-MODEL-18-CLIENTS.md (not yet done), waitlist/6-factor-100-point signup framework (not yet verified present). **Phases 2-12 (dossier architecture, rebuild, visual QA, Dash prototype, final audit) NOT started** -- per Anthony's explicit instruction to work through Phase 1 first and report back, this is a multi-round build.
 
 **COMPLETE this pass -- both open financial items resolved by investigation, not left as unactioned discrepancies:**
 
