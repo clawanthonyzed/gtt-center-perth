@@ -57,7 +57,23 @@
 
 schema_version: 1
 dataset: master_financial_model
-last_updated: "2026-08-17"
+last_updated: "2026-08-18"
+
+# AUDITED AND CORRECTED 2026-08-18 (Phase C audit round). Anthony requested
+# an independent sanity audit of the Phase C first-principles rebuild before
+# proceeding to Phase D. Finding: the Venue Manager wage rate ($36.81/hr,
+# Clerks Award MA000002 L2) was a likely misclassification -- STAFF-
+# PROFILES.md's own VM job description matches Hair & Beauty Industry Award
+# MA000005 Level 6 ("salon manager responsible for staff and operations")
+# far more closely. Corrected to MA000005 L6 casual ($40.00/hr) --
+# see data/canonical/cost_ramp.yml's own 2026-08-18 banner and
+# tools/cost_ramp_model.py's OPENING_TIME_INCREMENT_DAILY constant for the
+# full sourced reasoning and explicit MODELLED/CORRECTED-NOT-VERIFIED status.
+# Every output block below regenerated via a fresh live run against the
+# corrected cost_ramp.yml. New steady-state Net Operating Result: Table 1
+# +A$48,024.86/month (was +A$48,851.68 pre-audit), Table 2 +A$13,934.85/month
+# (was +A$14,761.66) -- both down further, a genuine cost increase from
+# correcting a real misclassification, not an error introduced by this audit.
 
 model_config:
   canonical_inputs_consumed:
@@ -191,13 +207,13 @@ outputs:
       pm_revenue: 45236.88
       ancillary_revenue: 0.00
       total_revenue: 163721.88
-      payroll: 100890.20
-      gross_contribution: 62831.68
+      payroll: 101717.02
+      gross_contribution: 62004.86
       operating_expenses: 13980.00
-      total_operating_costs: 114870.20
-      net_operating_result: 48851.68
+      total_operating_costs: 115697.02
+      net_operating_result: 48024.86
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- pm_revenue was A$36,730.80 (A$95 placeholder average), now A$45,236.88 (real A$117 derived average, docs/architecture/PM-PACKAGES.md §5). payroll was A$87,398.78 (proportional-scaled), now A$100,890.20 (first-principles: position x headcount x hours x wage x Saturday penalty x super x workers comp, docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md §3). net_operating_result was A$53,837.02, now A$48,851.68 -- DOWN, the labour-cost increase outweighs the revenue increase."
+      status_detail: "RECALCULATED 2026-08-18 (Phase C audit round) -- Venue Manager wage corrected from Clerks Award L2 (A$36.81/hr, likely misclassified) to Hair & Beauty Industry Award MA000005 L6 (A$40.00/hr, real award match for a salon-manager role). payroll was A$100,890.20, now A$101,717.02. net_operating_result was A$48,851.68 (2026-08-17 Phase C), now A$48,024.86. Prior history: pm_revenue was A$36,730.80 (A$95 placeholder average), now A$45,236.88 (real A$117 derived average, docs/architecture/PM-PACKAGES.md §5); payroll was A$87,398.78 (proportional-scaled) before the 2026-08-17 first-principles rebuild."
       source: {file: data/canonical/revenue_ramp.yml, section: "ramp_table1_m5plus"}
     - scenario_id: scenario_table_2
       month: M5plus
@@ -205,141 +221,141 @@ outputs:
       pm_revenue: 45236.88
       ancillary_revenue: 0.00
       total_revenue: 124226.88
-      payroll: 95485.22
-      gross_contribution: 28741.66
+      payroll: 96312.03
+      gross_contribution: 27914.85
       operating_expenses: 13980.00
-      total_operating_costs: 109465.22
-      net_operating_result: 14761.66
+      total_operating_costs: 110292.03
+      net_operating_result: 13934.85
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- pm_revenue was A$36,730.80, now A$45,236.88 (same real A$117 average as Table 1). payroll was A$83,278.43, now A$95,485.22 (first-principles labour cost -- Table 2's Saturday AM figure derived via the disclosed Table1:Table2 ratio approximation, see docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md §3, since Table 2's own distinct 08:00-start Saturday schedule was not independently re-derived this pass). net_operating_result was A$18,462.37, now A$14,761.66 -- DOWN."
+      status_detail: "RECALCULATED 2026-08-18 (Phase C audit round) -- Venue Manager wage corrected from Clerks Award L2 to MA000005 L6 (same correction as Table 1, identical VM headcount both scenarios). payroll was A$95,485.22, now A$96,312.03. net_operating_result was A$14,761.66 (2026-08-17 Phase C), now A$13,934.85. Prior history: pm_revenue was A$36,730.80, now A$45,236.88 (real A$117 average); payroll was A$83,278.43 before the 2026-08-17 first-principles rebuild (Table 2's Saturday AM figure derived via the disclosed Table1:Table2 ratio approximation, see docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md §3, since Table 2's own distinct 08:00-start Saturday schedule was not independently re-derived this pass)."
       source: {file: data/canonical/revenue_ramp.yml, section: "ramp_table2_m5plus"}
 
   totals_24mo:
     - scenario_id: scenario_table_1
       total_revenue_24mo: 3731221.65
-      total_operating_costs_24mo: 2753295.16
-      total_net_operating_result_24mo: 977926.49
+      total_operating_costs_24mo: 2773138.84
+      total_net_operating_result_24mo: 958082.81
       annualised_revenue_steady_state: 1964662.56
-      annualised_operating_costs_steady_state: 1378442.40
-      annualised_net_operating_result_steady_state: 586220.16
+      annualised_operating_costs_steady_state: 1388364.24
+      annualised_net_operating_result_steady_state: 576298.32
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was total_revenue_24mo=3537368.07/total_operating_costs_24mo=2430258.44/total_net_operating_result_24mo=1107109.63 under the proportional-scaling recompute. M1-M4 individual + M5plus x 20 (Months 5-24) -- per assumption_24month_extension_flat"
-      source: {file: "tools/master_financial_model.py output, 2026-08-17", section: "compute_24_month_totals(scenario_table_1)"}
+      status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was total_operating_costs_24mo=2753295.16/total_net_operating_result_24mo=977926.49 pre-audit. Was total_revenue_24mo=3537368.07/total_operating_costs_24mo=2430258.44/total_net_operating_result_24mo=1107109.63 under the original proportional-scaling recompute. M1-M4 individual + M5plus x 20 (Months 5-24) -- per assumption_24month_extension_flat"
+      source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_24_month_totals(scenario_table_1)"}
     - scenario_id: scenario_table_2
       total_revenue_24mo: 2831130.60
-      total_operating_costs_24mo: 2623575.60
-      total_net_operating_result_24mo: 207555.00
+      total_operating_costs_24mo: 2643419.04
+      total_net_operating_result_24mo: 187711.56
       annualised_revenue_steady_state: 1490722.56
-      annualised_operating_costs_steady_state: 1313582.64
-      annualised_net_operating_result_steady_state: 177139.92
+      annualised_operating_costs_steady_state: 1323504.36
+      annualised_net_operating_result_steady_state: 167218.20
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was total_revenue_24mo=2637277.02/total_operating_costs_24mo=2331370.08/total_net_operating_result_24mo=305906.94. Same method as Table 1."
-      source: {file: "tools/master_financial_model.py output, 2026-08-17", section: "compute_24_month_totals(scenario_table_2)"}
+      status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was total_operating_costs_24mo=2623575.60/total_net_operating_result_24mo=207555.00 pre-audit. Was total_revenue_24mo=2637277.02/total_operating_costs_24mo=2331370.08/total_net_operating_result_24mo=305906.94 under the original proportional-scaling recompute. Same method as Table 1."
+      source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_24_month_totals(scenario_table_2)"}
 
   cash_flow_summary:
     - scenario_id: scenario_table_1
       opening_cash: null
       opening_cash_status: PLACEHOLDER
-      cumulative_position_m1: -43272.38
-      cumulative_position_m4: 892.89
-      cumulative_position_m12: 391706.33
-      cumulative_position_m24: 977926.49
+      cumulative_position_m1: -44099.20
+      cumulative_position_m4: -2414.39
+      cumulative_position_m12: 381784.49
+      cumulative_position_m24: 958082.81
       trough_month: 2
-      trough_cumulative_position: -52363.17
+      trough_cumulative_position: -54016.81
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was cumulative_position_m1=-33627.92/m4=30369.23/m12=461065.39/m24=1107109.63, trough=-34860.52. Trough deepened (higher first-principles labour cost, particularly Months 1-4 where the lighter PM revenue ramp has not yet reached steady state) but trough month unchanged (Month 2), and Table 1 still turns cumulatively positive by Month 4. Accrual-basis proxy (assumption_cashflow_accrual_proxy) -- NOT a true cash-basis forecast."
-      source: {file: "tools/master_financial_model.py output, 2026-08-17", section: "compute_cash_flow(scenario_table_1)"}
+      status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was cumulative_position_m1=-43272.38/m4=892.89/m12=391706.33/m24=977926.49, trough=-52363.17 pre-audit. Trough month unchanged (Month 2), Table 1 now turns cumulatively positive slightly later (Month 5 instead of Month 4, since Month 4 is now marginally negative at -A$2,414.39). Accrual-basis proxy (assumption_cashflow_accrual_proxy) -- NOT a true cash-basis forecast."
+      source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_cash_flow(scenario_table_1)"}
     - scenario_id: scenario_table_2
       opening_cash: null
       opening_cash_status: PLACEHOLDER
-      cumulative_position_m1: -54850.24
-      cumulative_position_m4: -87678.20
-      cumulative_position_m12: 30415.08
-      cumulative_position_m24: 207555.00
+      cumulative_position_m1: -55677.05
+      cumulative_position_m4: -90985.44
+      cumulative_position_m12: 20493.36
+      cumulative_position_m24: 187711.56
       trough_month: 3
-      trough_cumulative_position: -94341.40
+      trough_cumulative_position: -96821.83
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was cumulative_position_m1=-46490.43/m4=-63340.46/m12=84358.50/m24=305906.94, trough=-74110.43. Trough deepened materially (higher first-principles labour cost) but trough month unchanged (Month 3)."
-      source: {file: "tools/master_financial_model.py output, 2026-08-17", section: "compute_cash_flow(scenario_table_2)"}
+      status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was cumulative_position_m1=-54850.24/m4=-87678.20/m12=30415.08/m24=207555.00, trough=-94341.40 pre-audit. Trough month unchanged (Month 3), deepened further."
+      source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_cash_flow(scenario_table_2)"}
 
   breakeven:
     - scenario_id: scenario_table_1
-      breakeven_am_client_volume_per_day: 10.579
-      breakeven_monthly_revenue: 114873.15
+      breakeven_am_client_volume_per_day: 10.704
+      breakeven_monthly_revenue: 115695.96
       committed_client_volume_per_day: 18
-      margin_of_safety_clients_per_day: 7.421
+      margin_of_safety_clients_per_day: 7.296
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was 9.821 clients/day (margin 8.179; breakeven_monthly_revenue A$101,377.53). Break-even volume rose further (higher first-principles labour cost base); margin of safety narrowed to 7.421/18 = ~41% of committed volume (was 8.179/18 = ~45%), but remains below committed volume. See assumption_breakeven_am_volume_only for the full defensibility reasoning."
-      source: {file: "tools/master_financial_model.py output, 2026-08-17", section: "compute_breakeven(scenario_table_1)"}
+      status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was 10.579 clients/day (margin 7.421; breakeven_monthly_revenue A$114,873.15) pre-audit. Break-even volume rose further; margin of safety narrowed to 7.296/18 = ~41% of committed volume. See assumption_breakeven_am_volume_only for the full defensibility reasoning, and §6 of docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md for the full break-even explanation (both forms, assumptions stated)."
+      source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_breakeven(scenario_table_1)"}
     - scenario_id: scenario_table_2
-      breakeven_am_client_volume_per_day: 9.757
-      breakeven_monthly_revenue: 109462.33
+      breakeven_am_client_volume_per_day: 9.883
+      breakeven_monthly_revenue: 110291.73
       committed_client_volume_per_day: 12
-      margin_of_safety_clients_per_day: 2.243
+      margin_of_safety_clients_per_day: 2.117
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was 9.195 clients/day (margin 2.805; breakeven_monthly_revenue A$97,256.89). Margin of safety narrowed further to ~19% of committed volume (from ~23%), materially thinner than Table 1's ~41%."
-      source: {file: "tools/master_financial_model.py output, 2026-08-17", section: "compute_breakeven(scenario_table_2)"}
+      status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was 9.757 clients/day (margin 2.243) pre-audit. Margin of safety narrowed further to ~18% of committed volume, materially thinner than Table 1's ~41%."
+      source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_breakeven(scenario_table_2)"}
 
   sensitivity_client_volume:
     - scenario_id: scenario_table_1
       results:
-        - {pct_of_committed: 50, client_volume_per_day: 9.00, total_revenue: 104479.38, net_operating_result: -10390.82}
-        - {pct_of_committed: 75, client_volume_per_day: 13.50, total_revenue: 134100.63, net_operating_result: 19230.43}
-        - {pct_of_committed: 100, client_volume_per_day: 18.00, total_revenue: 163721.88, net_operating_result: 48851.68}
-        - {pct_of_committed: 125, client_volume_per_day: 22.50, total_revenue: 193343.13, net_operating_result: 78472.93}
+        - {pct_of_committed: 50, client_volume_per_day: 9.00, total_revenue: 104479.38, net_operating_result: -11217.64}
+        - {pct_of_committed: 75, client_volume_per_day: 13.50, total_revenue: 134100.63, net_operating_result: 18403.61}
+        - {pct_of_committed: 100, client_volume_per_day: 18.00, total_revenue: 163721.88, net_operating_result: 48024.86}
+        - {pct_of_committed: 125, client_volume_per_day: 22.50, total_revenue: 193343.13, net_operating_result: 77646.11}
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was total_revenue 95973.30/125594.55/155215.80/184837.05 and net_operating_result -5405.48/24215.77/53837.02/83458.27 at 50/75/100/125%. Higher revenue (real A$117 PM average) at every volume level, but the higher first-principles labour cost widens the loss at 50% of committed volume (-A$10,390.82/month, was -A$5,405.48/month). See assumption_sensitivity_payroll_not_flexed."
-      source: {file: "tools/master_financial_model.py output, 2026-08-17", section: "compute_sensitivity_client_volume(scenario_table_1)"}
+      status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was net_operating_result -10390.82/19230.43/48851.68/78472.93 at 50/75/100/125% pre-audit. The corrected, higher VM cost widens the loss at 50% of committed volume further. See assumption_sensitivity_payroll_not_flexed."
+      source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_sensitivity_client_volume(scenario_table_1)"}
     - scenario_id: scenario_table_2
       results:
-        - {pct_of_committed: 50, client_volume_per_day: 6.00, total_revenue: 84731.88, net_operating_result: -24733.34}
-        - {pct_of_committed: 75, client_volume_per_day: 9.00, total_revenue: 104479.38, net_operating_result: -4985.84}
-        - {pct_of_committed: 100, client_volume_per_day: 12.00, total_revenue: 124226.88, net_operating_result: 14761.66}
-        - {pct_of_committed: 125, client_volume_per_day: 15.00, total_revenue: 143974.38, net_operating_result: 34509.16}
+        - {pct_of_committed: 50, client_volume_per_day: 6.00, total_revenue: 84731.88, net_operating_result: -25560.15}
+        - {pct_of_committed: 75, client_volume_per_day: 9.00, total_revenue: 104479.38, net_operating_result: -5812.65}
+        - {pct_of_committed: 100, client_volume_per_day: 12.00, total_revenue: 124226.88, net_operating_result: 13934.85}
+        - {pct_of_committed: 125, client_volume_per_day: 15.00, total_revenue: 143974.38, net_operating_result: 33682.35}
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was total_revenue 76225.80/95973.30/115720.80/135468.30 and net_operating_result -21032.63/-1285.13/18462.37/38209.87 at 50/75/100/125%. Table 2 was already marginally loss-making at 75% of committed volume (-A$1,285.13/month) before this recompute; the loss deepened to -A$4,985.84/month under the higher first-principles labour cost base."
-      source: {file: "tools/master_financial_model.py output, 2026-08-17", section: "compute_sensitivity_client_volume(scenario_table_2)"}
+      status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was net_operating_result -24733.34/-4985.84/14761.66/34509.16 at 50/75/100/125% pre-audit. Table 2 remains loss-making at both 50% and 75% of committed volume."
+      source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_sensitivity_client_volume(scenario_table_2)"}
 
   sensitivity_insurance:
     - scenario_id: scenario_table_1
       results:
-        - {label: "modelled (current, revised placeholder 2026-08-16)", monthly_insurance: 1279.00, adjusted_net_operating_result: 48851.68}
-        - {label: "itemised low (mandatory policies only)", monthly_insurance: 500.00, adjusted_net_operating_result: 49630.68}
-        - {label: "itemised high (mandatory policies only)", monthly_insurance: 916.66, adjusted_net_operating_result: 49214.02}
+        - {label: "modelled (current, revised placeholder 2026-08-16)", monthly_insurance: 1279.00, adjusted_net_operating_result: 48024.86}
+        - {label: "itemised low (mandatory policies only)", monthly_insurance: 500.00, adjusted_net_operating_result: 48803.86}
+        - {label: "itemised high (mandatory policies only)", monthly_insurance: 916.66, adjusted_net_operating_result: 48387.20}
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was adjusted_net_operating_result 53837.02/54616.02/54199.36. The A$400-916.66/month insurance delta itself is unchanged, only the base Net Operating Result shifted (higher labour cost, higher PM revenue). References opex.yml's own conflict_insurance_estimate -- mandatory policies only; optional business interruption excluded. Neither figure is chosen as correct."
-      source: {file: "tools/master_financial_model.py output, 2026-08-17", section: "compute_sensitivity_insurance(scenario_table_1)"}
+      status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was adjusted_net_operating_result 48851.68/49630.68/49214.02 pre-audit. The A$400-916.66/month insurance delta itself is unchanged, only the base Net Operating Result shifted. References opex.yml's own conflict_insurance_estimate -- mandatory policies only; optional business interruption excluded. Neither figure is chosen as correct. NOTE: workers compensation (1.7%) was RE-INVESTIGATED this round and remains PLACEHOLDER, not upgraded to VERIFIED (WorkCover WA's rate documents blocked automated fetch) -- see wages.yml#wage_workers_comp_rate."
+      source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_sensitivity_insurance(scenario_table_1)"}
     - scenario_id: scenario_table_2
       results:
-        - {label: "modelled (current, revised placeholder 2026-08-16)", monthly_insurance: 1279.00, adjusted_net_operating_result: 14761.66}
-        - {label: "itemised low (mandatory policies only)", monthly_insurance: 500.00, adjusted_net_operating_result: 15540.66}
-        - {label: "itemised high (mandatory policies only)", monthly_insurance: 916.66, adjusted_net_operating_result: 15124.00}
+        - {label: "modelled (current, revised placeholder 2026-08-16)", monthly_insurance: 1279.00, adjusted_net_operating_result: 13934.85}
+        - {label: "itemised low (mandatory policies only)", monthly_insurance: 500.00, adjusted_net_operating_result: 14713.85}
+        - {label: "itemised high (mandatory policies only)", monthly_insurance: 916.66, adjusted_net_operating_result: 14297.19}
       status: CALCULATED
-      status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was adjusted_net_operating_result 18462.37/19241.37/18824.71. Same basis as Table 1, insurance gap now a larger proportional share of Table 2's smaller Net Operating Result."
-      source: {file: "tools/master_financial_model.py output, 2026-08-17", section: "compute_sensitivity_insurance(scenario_table_2)"}
+      status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was adjusted_net_operating_result 14761.66/15540.66/15124.00 pre-audit. Same basis as Table 1."
+      source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_sensitivity_insurance(scenario_table_2)"}
 
   scenario_comparison:
     scenario_table_1:
       client_volume_per_day: 18
       steady_state_revenue: 163721.88
-      steady_state_payroll: 100890.20
+      steady_state_payroll: 101717.02
       steady_state_opex: 13980.00
-      steady_state_total_operating_costs: 114870.20
-      steady_state_net_operating_result: 48851.68
+      steady_state_total_operating_costs: 115697.02
+      steady_state_net_operating_result: 48024.86
       annualised_revenue: 1964662.56
-      annualised_net_operating_result: 586220.16
+      annualised_net_operating_result: 576298.32
     scenario_table_2:
       client_volume_per_day: 12
       steady_state_revenue: 124226.88
-      steady_state_payroll: 95485.22
+      steady_state_payroll: 96312.03
       steady_state_opex: 13980.00
-      steady_state_total_operating_costs: 109465.22
-      steady_state_net_operating_result: 14761.66
+      steady_state_total_operating_costs: 110292.03
+      steady_state_net_operating_result: 13934.85
       annualised_revenue: 1490722.56
-      annualised_net_operating_result: 177139.92
+      annualised_net_operating_result: 167218.20
     status: CALCULATED
-    status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was steady_state_revenue 155215.80/115720.80, steady_state_payroll 87398.78/83278.43, steady_state_net_operating_result 53837.02/18462.37, annualised_net_operating_result 678980.40/252679.68. NOTE: the prior annualised_net_operating_result figures (678980.40/252679.68) did not arithmetically equal steady_state_net_operating_result x 12 (53837.02x12=646044.24, not 678980.40) -- an unexplained discrepancy in the prior static file, not reproduced here. The new annualised_net_operating_result figures (586220.16/177139.92) are the live tools/master_financial_model.py#compute_scenario_comparison output and DO equal steady_state_net_operating_result x 12 exactly (48851.68x12=586220.16; 14761.66x12=177139.92)."
-    source: {file: "tools/master_financial_model.py output, 2026-08-17", section: "compute_scenario_comparison"}
+    status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification -- Clerks Award L2 to MA000005 L6) -- was steady_state_payroll 100890.20/95485.22, steady_state_net_operating_result 48851.68/14761.66, annualised_net_operating_result 586220.16/177139.92 pre-audit (2026-08-17 Phase C first-principles rebuild). Before that: steady_state_revenue 155215.80/115720.80, steady_state_payroll 87398.78/83278.43, steady_state_net_operating_result 53837.02/18462.37 (proportional-scaling recompute). New annualised_net_operating_result figures DO equal steady_state_net_operating_result x 12 exactly (48024.86x12=576298.32; 13934.85x12=167218.20) -- verified, not hand-derived."
+    source: {file: "tools/master_financial_model.py output, 2026-08-18", section: "compute_scenario_comparison"}
     notes: "Neither scenario is marked primary -- see docs/VERIFICATION-TRACKER.md item 1m, unresolved."
 
 # ============================================================
@@ -454,16 +470,16 @@ funding_requirement_investigation:
         alternative only.
       results:
         - scenario_id: scenario_table_1
-          trough_value: 52363.17
+          trough_value: 54016.81
           trough_month: 2
           status: CALCULATED
-          status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was 34860.52. Trough deepened (higher first-principles labour cost base), trough month unchanged."
+          status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was 52363.17 pre-audit (34860.52 before the original first-principles rebuild). Trough month unchanged."
           source: {file: "data/models/master_financial_model.yml#cash_flow_summary", section: "scenario_table_1"}
         - scenario_id: scenario_table_2
-          trough_value: 94341.40
+          trough_value: 96821.83
           trough_month: 3
           status: CALCULATED
-          status_detail: "RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was 74110.43. Trough deepened, trough month unchanged."
+          status_detail: "RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was 94341.40 pre-audit (74110.43 before the original first-principles rebuild). Trough month unchanged."
           source: {file: "data/models/master_financial_model.yml#cash_flow_summary", section: "scenario_table_2"}
 
   combined_funding_requirement_bounded:
@@ -483,15 +499,15 @@ funding_requirement_investigation:
     alternative_cross_check_method:
       description: "Pre-Opening Capital + scenario-specific operating cash trough (NOT the historical reserve) -- an illustrative alternative only, not chosen as more correct"
       status: CALCULATED
-      status_detail: "Shown for comparison only -- both methods retained side by side, per this repo's established 'disclose, don't force reconcile' practice. RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was range_low 303275.75/338725.12, range_high 498065.75/533515.12 (Table 1/Table 2 respectively), using the same pre_opening_capital range (A$272,390-467,180, unchanged by Phase C) plus the new, deeper operating-cash trough figures above."
-      source: {file: "data/models/master_financial_model.yml output, 2026-08-17", section: "funding_requirement_investigation"}
+      status_detail: "Shown for comparison only -- both methods retained side by side, per this repo's established 'disclose, don't force reconcile' practice. RECALCULATED 2026-08-18 (Phase C audit round, VM wage reclassification) -- was range_low 324753.17/366731.40, range_high 519543.17/561521.40 pre-audit, using the same pre_opening_capital range (A$272,390-467,180, unchanged) plus the new, deeper operating-cash trough figures above."
+      source: {file: "data/models/master_financial_model.yml output, 2026-08-18", section: "funding_requirement_investigation"}
       results:
         - scenario_id: scenario_table_1
-          range_low: 324753.17
-          range_high: 519543.17
+          range_low: 326406.81
+          range_high: 521196.81
         - scenario_id: scenario_table_2
-          range_low: 366731.40
-          range_high: 561521.40
+          range_low: 369211.83
+          range_high: 564001.83
     note_on_anthonys_adopted_total: >
       docs/CURRENT-STATE.md §7.4's own adopted, reconciled total (A$292,335-594,900,
       total_current_state_adopted) is CLOSE to but NOT identical to combined_funding_requirement_bounded's
@@ -706,12 +722,13 @@ conflicts:
       however, entirely from already-canonical figures (see funding_requirement_investigation
       above) -- A$357,390-577,180 (Pre-Opening Capital + historical Working Capital Reserve,
       both universal/non-scenario-specific, unchanged by the Phase C labour/revenue rebuild),
-      or A$324,753.17-561,521.40 spanning both scenarios (RECALCULATED 2026-08-17, Phase C --
-      was A$303,275.75-533,515.12) if the current operating-cash-trough is used as an
+      or A$326,406.81-564,001.83 spanning both scenarios (RECALCULATED 2026-08-18, Phase C
+      audit round -- was A$324,753.17-561,521.40 pre-audit, A$303,275.75-533,515.12 before the
+      original first-principles rebuild) if the current operating-cash-trough is used as an
       illustrative alternative to the historical Working Capital Reserve instead. The cash-flow
-      trough figures in cash_flow_summary above (Table 1: -A$52,363.17 at Month 2; Table 2:
-      -A$94,341.40 at Month 3 -- RECALCULATED 2026-08-17, deeper than the prior
-      -A$34,860.52/-A$74,110.43 under the first-principles labour rebuild) remain OPERATING
+      trough figures in cash_flow_summary above (Table 1: -A$54,016.81 at Month 2; Table 2:
+      -A$96,821.83 at Month 3 -- RECALCULATED 2026-08-18 for the VM wage reclassification)
+      remain OPERATING
       cash movements ONLY -- they are NOT the funding requirement on their own, and were not
       summed on top of the working capital reserve (that would double-count the same "survive
       the ramp" concept).

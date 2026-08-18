@@ -620,21 +620,24 @@ class FundingRequirementInvestigationTests(unittest.TestCase):
         self.assertIn("PARTIALLY RESOLVED (bounded) 2026-08-09", tracker_text)
 
     def test_funding_investigation_does_not_alter_revenue_or_cost_methodology(self):
-        """Sanity check: canonical revenue steady-state figures RECALCULATED
-        2026-08-17 (Phase C, first-principles rebuild) -- PM revenue rebuilt
-        from the real A$117 blended average (docs/architecture/
-        PM-PACKAGES.md §5), NOT wage-driven, but genuinely changed this
-        phase because the revenue methodology itself was rebuilt (was
-        155215.80/115720.80 under the 2026-08-17 wage-rate recompute; before
-        that, payroll figures alone moved -- were 84654.10/80684.16 prior to
-        the 2026-08-16 current-wage-rate research)."""
+        """Sanity check: canonical revenue steady-state figures unaffected by
+        this audit round's payroll correction (revenue is not wage-driven).
+        Payroll RECALCULATED 2026-08-18 (Phase C audit round, Venue Manager
+        wage reclassification: Clerks Award L2 -> Hair & Beauty Award
+        MA000005 L6) -- was 100890.20/95485.22 under the 2026-08-17 first-
+        principles rebuild. Revenue was rebuilt 2026-08-17 to the real A$117
+        PM blended average (docs/architecture/PM-PACKAGES.md §5), NOT wage-
+        driven, unaffected by this round (was 155215.80/115720.80 under the
+        2026-08-17 wage-rate recompute before that; payroll figures alone
+        moved before that too -- were 84654.10/80684.16 prior to the
+        2026-08-16 current-wage-rate research)."""
         inputs = mfm.CanonicalModelInputs()
         m5_t1 = mfm.compute_month_pnl("scenario_table_1", 5, inputs)
         m5_t2 = mfm.compute_month_pnl("scenario_table_2", 5, inputs)
         self.assertAlmostEqual(m5_t1["revenue"]["total_revenue"], 163721.88, places=2)
         self.assertAlmostEqual(m5_t2["revenue"]["total_revenue"], 124226.88, places=2)
-        self.assertAlmostEqual(m5_t1["payroll"], 100890.20, places=2)
-        self.assertAlmostEqual(m5_t2["payroll"], 95485.22, places=2)
+        self.assertAlmostEqual(m5_t1["payroll"], 101717.02, places=2)
+        self.assertAlmostEqual(m5_t2["payroll"], 96312.03, places=2)
 
 
 if __name__ == "__main__":

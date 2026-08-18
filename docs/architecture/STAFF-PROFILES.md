@@ -24,6 +24,9 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Reception/Coordinator (PM-hours role, distinct from the VM's own AM reception coverage):**
 - 1 role, lighter hours, covering the PM window specifically (see §3 for the reasoning this role exists at all).
+- **Relief/backup pool: NOT sized this pass — a genuine, disclosed open item, not assumed to be zero-risk.** §2a's justification is for why ONE person is sufficient on a normal trading day, not who covers that one person's own sick leave or absence. Flagged for the eventual Venue Manager to establish once trading, per `docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md` §10.
+
+**2026-08-18 audit round addendum — five distinct staffing concepts, not to be conflated:** required operating positions (the functional roles), actual scheduled weekly hours (per the solver-verified timetable), employment headcount required (real people employed), relief/backup pool (additional people, only paid when covering an absence), and paid hours actually included in the financial model (committed headcount's full rostered shift only, relief pool excluded from steady-state payroll unless an absence actually occurs) are five different numbers and must not be used interchangeably. Full structural breakdown: `docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md` §9.
 
 ## 2. Staff Profiles
 
@@ -41,7 +44,7 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Roster pattern:** Monday-Saturday, fixed (not rotating), since this is the one role the venue's operational continuity depends on most directly.
 
-**Wage:** Current researched Clerks Award MA000002 Level 2 casual rate, A$36.81/hr (2026-08-16 research) — or a salaried equivalent once converted from casual, per the venture's own "casual initially, review for conversion" policy; a salaried Venue Manager figure should be confirmed with the accountant against this current award rate, not the stale 1 July 2025 figure previously used.
+**Wage:** **CORRECTED 2026-08-18 (Phase C audit round)** — this role was previously priced against the Clerks Award MA000002 Level 2 casual rate (A$36.81/hr), audited and found to be a likely misclassification. This role's own job description below (runs daily venue operations, manages staff rostering/performance, requires a genuine service qualification) matches the Hair & Beauty Industry Award MA000005's own Level 6 classification ("Diploma-qualified beauty therapist or salon manager responsible for staff and operations") far more closely than a generic clerical award. Current best-evidenced rate: **A$40.00/hr** (MA000005 Level 6 casual, 2026/27, includes 25% casual loading) — or a salaried equivalent once converted from casual, per the venture's own "casual initially, review for conversion" policy. **Status: MODELLED/CORRECTED, NOT VERIFIED** — a specific real employment contract's award classification should still be confirmed with an accountant or Fair Work professional before being treated as final. Full reasoning: `docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md` §3c/§15.
 
 **Employment type:** Salaried from Day 1 (the one confirmed exception to the "all staff casual initially" rule, given the critical-path, safety-and-compliance-adjacent nature of the role).
 
@@ -138,5 +141,7 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 ---
 
 ## Changelog
+
+**2026-08-18 (audit round)** — Corrected Venue Manager wage from Clerks Award MA000002 L2 ($36.81/hr, audited and found likely misclassified) to Hair & Beauty Industry Award MA000005 L6 ($40.00/hr, the role's own real award match) — flagged MODELLED/CORRECTED, not VERIFIED, professional confirmation still needed. Added the five-distinct-staffing-concepts cross-reference and flagged PM Reception's own relief pool as a genuinely unresolved open item (was previously silent on this). Full reasoning: `docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md` §3c/§9/§10/§15. **Still not done this pass (disclosed gap, not silently deferred):** the full field list Anthony specified (reporting line, years of experience, explicit super/workers-comp fields per role, detailed skills/compliance/cross-training matrix) is only partially present in the profiles below — hours, wage, qualifications, and coverage are present for every position; reporting line, experience level, and a dedicated skills/compliance/cross-training matrix are NOT yet built out. Flagged as PARTIAL, not COMPLETE.
 
 **2026-08-17** — Created per the founder's explicit instruction for comprehensive staff profiles (all listed fields), a real coverage/relief-pool analysis, and correction of the Venue Manager role (no "Managing Director" framing, requires a service qualification, covers AM reception personally, current researched wage rate) and the 07:00/07:15 reception-opening inconsistency.

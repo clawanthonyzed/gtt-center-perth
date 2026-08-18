@@ -100,18 +100,16 @@ class Table1Tests(unittest.TestCase):
         self.assertAlmostEqual(m5["payroll_costs"], rec["payroll_costs"], places=2)
 
     def test_table1_total_operating_costs_m5plus_value(self):
-        """RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) to
-        114870.20 -- was 101378.78 under the 2026-08-17 proportional-wage-
-        scaling recompute (itself recalculated 2026-08-09 for superannuation
-        -- was 98634.10 before that, and 95014.18 before super was added).
-        Phase C replaces proportional scaling with a genuine first-principles
-        labour build (position -> headcount -> hours/shift -> wage rate ->
-        Saturday penalty -> super -> workers comp), see
-        docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md."""
+        """RECALCULATED 2026-08-18 (Phase C audit round, Venue Manager wage
+        reclassification: Clerks Award L2 -> Hair & Beauty Award MA000005 L6)
+        to 115697.02 -- was 114870.20 under the 2026-08-17 first-principles
+        rebuild (itself was 101378.78 under the proportional-wage-scaling
+        recompute, 98634.10 before that, 95014.18 before super was added).
+        See docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md sec3c/sec15."""
         inputs = cost_model.CanonicalCostInputs()
         computed = cost_model.compute_ramp("scenario_table_1", inputs, cost_model.DEFAULT_REVENUE_RAMP_CURVE)
         m5 = next(m for m in computed if m["month"] == "M5plus")
-        self.assertAlmostEqual(m5["total_operating_costs"], 114870.20, places=2)
+        self.assertAlmostEqual(m5["total_operating_costs"], 115697.02, places=2)
 
 
 class Table2Tests(unittest.TestCase):
@@ -126,14 +124,15 @@ class Table2Tests(unittest.TestCase):
         self.assertAlmostEqual(m5["total_operating_costs"], rec["total_operating_costs"], places=2)
 
     def test_table2_total_operating_costs_m5plus_value(self):
-        """RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) to
-        109465.22 -- was 97258.43 under the 2026-08-17 proportional-wage-
-        scaling recompute (itself recalculated 2026-08-09 for superannuation
-        -- was 94664.16 before that, and 91463.24 before super was added)."""
+        """RECALCULATED 2026-08-18 (Phase C audit round, Venue Manager wage
+        reclassification) to 110292.03 -- was 109465.22 under the 2026-08-17
+        first-principles rebuild (itself was 97258.43 under the proportional-
+        wage-scaling recompute, 94664.16 before that, 91463.24 before super
+        was added)."""
         inputs = cost_model.CanonicalCostInputs()
         computed = cost_model.compute_ramp("scenario_table_2", inputs, cost_model.DEFAULT_REVENUE_RAMP_CURVE)
         m5 = next(m for m in computed if m["month"] == "M5plus")
-        self.assertAlmostEqual(m5["total_operating_costs"], 109465.22, places=2)
+        self.assertAlmostEqual(m5["total_operating_costs"], 110292.03, places=2)
 
 
 class Month1To5PlusTests(unittest.TestCase):

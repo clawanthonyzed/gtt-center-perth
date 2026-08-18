@@ -180,7 +180,7 @@ records:
     basis: "% of Direct Labor"
     status: MODELLED
     source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L"}
-    notes: "Applied consistently across CURRENT-STATE.md's Table 1/Table 2 P&L figures. No external WorkCover WA premium-schedule citation found in this repo for this specific rate -- MODELLED, not VERIFIED."
+    notes: "Applied consistently across CURRENT-STATE.md's Table 1/Table 2 P&L figures. No external WorkCover WA premium-schedule citation found in this repo for this specific rate -- MODELLED, not VERIFIED. RE-ATTEMPTED 2026-08-18 (Phase C audit round): tried to fetch WorkCover WA's official 2025/26 and 2026/27 Recommended Premium Rates documents (workcover.wa.gov.au) directly to find the actual Premium Rating Classification (PRC) percentage for hairdressing/beauty/personal-care services -- BLOCKED, the site returned HTTP 403 Forbidden to automated fetch on every attempt (a genuine tooling limitation, not a skipped step). Could not confirm whether 1.7% is close to, above, or below WA's real PRC rate for this venture's actual classification. STILL PLACEHOLDER/MODELLED, not upgraded to VERIFIED. Anthony or a broker/accountant should obtain the actual current WorkCover WA PRC percentage directly from workcover.wa.gov.au or an insurance broker before this figure is treated as final -- it materially affects the payroll on-cost total (currently ~A$1,500-1,540/month depending on scenario)."
 
   # --- Casual minimum engagement (the specific item the coordinator asked to be investigated) ---
   - id: wage_casual_minimum_engagement

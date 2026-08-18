@@ -135,11 +135,36 @@ AM_SATURDAY_DAILY_LABOR = {
 # structural compatibility, but its VALUE and MEANING are now the Venue
 # Manager's real, first-principles daily labour cost (position 01,
 # docs/architecture/STAFF-PROFILES.md), not the old vague "opening-time
-# increment" concept. VM: 1 x 8hrs x $36.81/hr (MA000002 L2, current
-# researched rate) = $294.48/day (weekday basis; Saturday handled separately
-# in compute_payroll via the same x1.5 penalty pattern as other roles).
-OPENING_TIME_INCREMENT_DAILY = 294.48   # was A$44.50 (undocumented mechanism) -> A$294.48 (Venue Manager, first-principles)
-VENUE_MANAGER_SATURDAY_DAILY = round(294.48 * 1.5, 2)  # $441.72/day, x1.5 Saturday penalty
+# increment" concept.
+#
+# CORRECTED 2026-08-18 (Phase C audit round) -- AWARD RECLASSIFICATION.
+# The Phase C figure ($36.81/hr, Clerks Award MA000002 Level 2) was audited
+# and found to be a likely misclassification, not verified against the
+# actual duties. STAFF-PROFILES.md's own Position 01 job description
+# ("runs daily venue operations, manages staff rostering and performance...
+# a genuine service qualification required") matches the Hair & Beauty
+# Industry Award MA000005's OWN Level 6 classification far more closely --
+# MA000005 Level 6 is explicitly "Diploma-qualified beauty therapist or
+# salon manager responsible for staff and operations" (researched
+# 2026-08-18, rosterelf.com/guides/award-rates/hair-beauty, cross-checked
+# against fairwork.gov.au's MA000005 award-classification framework; NOT
+# independently confirmed against the primary Fair Work Ombudsman award
+# text itself this pass -- WorkCover/FWO PDF sources returned 403 Forbidden
+# to automated fetch, a genuine tooling limitation, not skipped). MA000005
+# Level 6 casual rate: $40.00/hr (2026/27, includes 25% casual loading) --
+# HIGHER than the previously-used Clerks Award L2 rate ($36.81/hr).
+# STATUS: MODELLED/CORRECTED, NOT VERIFIED -- this is the best-evidenced
+# classification found this pass, applied because the VM's own real duties
+# (service-qualified, salon-operations-managing) match MA000005 L6's
+# definition far better than a generic clerical award, but a Fair Work
+# award-classification decision for a specific real employment contract
+# should still be confirmed with an accountant/HR professional before being
+# treated as final -- flagged explicitly, not silently upgraded to VERIFIED.
+# VM: 1 x 8hrs x $40.00/hr (MA000005 L6 casual) = $320.00/day (weekday
+# basis; Saturday handled separately in compute_payroll via the same x1.5
+# penalty pattern as other roles).
+OPENING_TIME_INCREMENT_DAILY = 320.00   # was A$44.50 (undocumented) -> A$294.48 (Phase C, Clerks Award L2, likely misclassified) -> A$320.00 (Phase C audit, MA000005 L6, corrected classification)
+VENUE_MANAGER_SATURDAY_DAILY = round(320.00 * 1.5, 2)  # $480.00/day, x1.5 Saturday penalty
 
 # RENAMED IN SUBSTANCE 2026-08-17 (Phase C, first principles) -- retains its
 # original YAML key name ("receptionist_relief") for backward structural
