@@ -258,7 +258,7 @@ records:
     pricing_ref: null
     status: VERIFIED
     source: {file: docs/services-pricing-locked.md, section: "Model Confirmation"}
-    notes: "NOT applied anywhere in any current revenue figure -- the reconstruction exercise below (rev_reconstruction_table1_monthly) uses the full, undiscounted PM average (A$95/session per pricing.yml's pm_alacarte_average), meaning current PM revenue figures may be a slight overstatement if this discount applies broadly to GTT-paired PM bookings. Flagged as a genuine gap, not corrected here."
+    notes: "NOT applied anywhere in any current revenue figure -- the reconstruction exercise below (rev_reconstruction_table1_monthly) uses the full, undiscounted PM average (A$117/session per pricing.yml's pm_alacarte_average, RECALCULATED 2026-08-17, Phase C -- was A$95/session placeholder), meaning current PM revenue figures may be a slight overstatement if this discount applies broadly to GTT-paired PM bookings. Flagged as a genuine gap, not corrected here."
 
   - id: rev_cancellation_noshow_policy
     category: discount_leakage
@@ -309,15 +309,17 @@ records:
     name: "Table 1 (18-client) monthly revenue -- CANONICAL first-principles methodology (adopted 2026-08-09)"
     methodology: canonical_first_principles
     description: >
-      Weekday AM: scenarios.yml#scenario_table_1.client_volume (18) x pricing.yml#am_price_used_for_revenue
+      RECALCULATED 2026-08-17 (Phase C) -- PM average rebuilt from A$95 placeholder to A$117
+      real derived figure (docs/architecture/PM-PACKAGES.md §5). Weekday AM:
+      scenarios.yml#scenario_table_1.client_volume (18) x pricing.yml#am_price_used_for_revenue
       (A$250) x client_assumptions.yml#operating_days_per_month_weekday (22) = A$99,000.00.
       Saturday AM: 18 x A$250 x client_assumptions.yml#operating_saturdays_per_month (4.33) = A$19,485.00.
       Weekday PM: client_assumptions.yml#pm_steady_state_capacity (16) x pricing.yml#pm_alacarte_average
-      (A$95) x 22 days = A$33,440.00.
-      Saturday PM: rev_pm_saturday_sessions (8) x A$95 x 4.33 = A$3,290.80.
+      (A$117) x 22 days = A$41,184.00.
+      Saturday PM: rev_pm_saturday_sessions (8) x A$117 x 4.33 = A$4,052.88.
       Ancillary: rev_ancillary_excluded_from_baseline (A$0.00).
-      SUM = A$155,215.80.
-    value: 155215.80
+      SUM = A$163,721.88.
+    value: 163721.88
     currency: AUD
     unit: "AUD/month"
     frequency: monthly
@@ -331,16 +333,22 @@ records:
       superseding docs/CURRENT-STATE.md §5's inherited delta-built total (A$157,792.16,
       preserved below as rev_historical_table1_monthly_inherited) for future modelling
       purposes. This record was originally built (previous phase) as a reconciliation CHECK
-      against that historical figure, which surfaced a A$2,576.36 gap traced in
-      docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md to an untraceable original
-      A$113,712.16 baseline predating this repo's saved working -- since that baseline's exact
-      derivation cannot be reproduced, and this first-principles formula IS fully reproducible
-      from canonical inputs alone, Anthony decided to adopt this methodology going forward
-      rather than continue carrying the unexplained historical figure. Full formula and worked
-      example: docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md §6.
+      against that historical figure, which surfaced a A$2,576.36 gap (at the old A$95 PM
+      placeholder average) traced in docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md
+      to an untraceable original A$113,712.16 baseline predating this repo's saved working --
+      since that baseline's exact derivation cannot be reproduced, and this first-principles
+      formula IS fully reproducible from canonical inputs alone, Anthony decided to adopt this
+      methodology going forward rather than continue carrying the unexplained historical
+      figure. RECALCULATED 2026-08-17 (Phase C, first-principles financial rebuild) -- value
+      was A$155,215.80 at the A$95 PM placeholder average, now A$163,721.88 at the real,
+      derived A$117 PM average (individual a-la-carte + 2 locked packages, 60/25/15 disclosed
+      mix -- see docs/architecture/PM-PACKAGES.md §5). The gap to the historical inherited
+      figure changed correspondingly (was +A$2,576.36 historical-over-canonical, now
+      -A$5,929.72 canonical-over-historical -- canonical is now the LARGER figure). Full
+      formula and worked example: docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md §6.
     derived_from: [rev_pm_saturday_sessions, rev_ancillary_excluded_from_baseline]
     source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, Monthly -- Table 1 (PRIMARY), 9-step walkthrough"}
-    notes: "Full derivation and independent verification arithmetic in docs/architecture/REVENUE-ASSUMPTION-AUDIT.md §5 (original reconciliation check) and docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md (canonical adoption, worked examples, daily/weekly/quarterly/annualised figures)."
+    notes: "Full derivation and independent verification arithmetic in docs/architecture/REVENUE-ASSUMPTION-AUDIT.md §5 (original reconciliation check) and docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md (canonical adoption, worked examples, daily/weekly/quarterly/annualised figures). PM average recompute: docs/architecture/PM-PACKAGES.md §5 and docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md §4b."
 
   - id: rev_historical_table1_monthly_inherited
     category: revenue_reconstruction
@@ -367,11 +375,15 @@ records:
     status_detail: >
       Preserved for trace, per rules/CLAUDE.md companion rule 1 (never delete/rewrite history)
       -- NOT deleted despite no longer being the canonical methodology as of 2026-08-09. The
-      A$2,576.36 gap between this figure and the canonical first-principles figure
-      (rev_reconstruction_table1_monthly) is real and was not forced to reconcile -- see
-      docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md for the full trace. This
-      record's own historical origin (the A$113,712.16 baseline) remains permanently
-      unresolved -- see docs/VERIFICATION-TRACKER.md item 36.
+      original A$2,576.36 gap between this figure and the canonical first-principles figure
+      (rev_reconstruction_table1_monthly, at the time still using the A$95 PM placeholder
+      average) is real and was not forced to reconcile -- see
+      docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md for the full trace. RECALCULATED
+      2026-08-17 (Phase C): the canonical figure moved to A$163,721.88 (real A$117 PM average),
+      so the gap is now -A$5,929.72 (this historical figure is now A$5,929.72 LOWER than the
+      canonical figure, not higher) -- this historical record's own value is unchanged, only the
+      comparison point moved. This record's own historical origin (the A$113,712.16 baseline)
+      remains permanently unresolved -- see docs/VERIFICATION-TRACKER.md item 36.
     source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, PRIMARY -- Table 1"}
     notes: "Do not use this figure for any future revenue modelling -- use rev_reconstruction_table1_monthly instead, per Anthony's 2026-08-09 decision."
 
@@ -381,14 +393,16 @@ records:
     name: "Table 2 (12-client) monthly revenue -- CANONICAL first-principles methodology (adopted 2026-08-09)"
     methodology: canonical_first_principles
     description: >
-      Weekday AM: scenarios.yml#scenario_table_2.client_volume (12) x pricing.yml#am_price_used_for_revenue
+      RECALCULATED 2026-08-17 (Phase C) -- PM average rebuilt from A$95 placeholder to A$117
+      real derived figure (docs/architecture/PM-PACKAGES.md §5). Weekday AM:
+      scenarios.yml#scenario_table_2.client_volume (12) x pricing.yml#am_price_used_for_revenue
       (A$250) x client_assumptions.yml#operating_days_per_month_weekday (22) = A$66,000.00.
       Saturday AM: 12 x A$250 x client_assumptions.yml#operating_saturdays_per_month (4.33) = A$12,990.00.
-      Weekday PM: 16 x A$95 x 22 = A$33,440.00 (same as Table 1 -- PM is AM-volume-independent).
-      Saturday PM: 8 x A$95 x 4.33 = A$3,290.80 (same as Table 1).
+      Weekday PM: 16 x A$117 x 22 = A$41,184.00 (same as Table 1 -- PM is AM-volume-independent).
+      Saturday PM: 8 x A$117 x 4.33 = A$4,052.88 (same as Table 1).
       Ancillary: A$0.00.
-      SUM = A$115,720.80.
-    value: 115720.80
+      SUM = A$124,226.88.
+    value: 124226.88
     currency: AUD
     unit: "AUD/month"
     frequency: monthly
@@ -400,7 +414,9 @@ records:
       CANONICAL AS OF 2026-08-09, per Anthony's direct decision -- same basis as
       rev_reconstruction_table1_monthly above. Supersedes docs/CURRENT-STATE.md §5's inherited
       Table 2 total (A$118,297.16, preserved below as rev_historical_table2_monthly_inherited)
-      for future modelling purposes. Full formula: docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md §7.
+      for future modelling purposes. RECALCULATED 2026-08-17 (Phase C) -- value was
+      A$115,720.80 at the A$95 PM placeholder average, now A$124,226.88 at the real, derived
+      A$117 PM average. Full formula: docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md §7.
     derived_from: [rev_pm_saturday_sessions, rev_ancillary_excluded_from_baseline]
     source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, Monthly -- Table 2 (secondary)"}
     notes: "Full detail in docs/architecture/REVENUE-ASSUMPTION-AUDIT.md §5 and docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md."

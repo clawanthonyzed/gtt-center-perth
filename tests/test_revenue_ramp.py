@@ -60,19 +60,23 @@ class SteadyStateConvergenceTests(unittest.TestCase):
     """(2) Month 5+ equals steady-state when ramp=100%."""
 
     def test_table1_m5plus_equals_canonical_steady_state(self):
+        """RECALCULATED 2026-08-17 (Phase C) -- was 155215.80 (A$95 PM
+        placeholder average), now 163721.88 (real A$117 PM average,
+        docs/architecture/PM-PACKAGES.md §5)."""
         inputs = ramp_model.CanonicalRevenueInputs()
         months = ramp_model.compute_ramp("scenario_table_1", inputs)
         m5 = next(m for m in months if m["month"] == "M5plus")
         self.assertEqual(m5["ramp_pct"], 100)
-        self.assertAlmostEqual(m5["total_revenue"], 155215.80, places=2)
+        self.assertAlmostEqual(m5["total_revenue"], 163721.88, places=2)
         self.assertAlmostEqual(m5["total_revenue"], m5["steady_state_total_revenue"], places=2)
 
     def test_table2_m5plus_equals_canonical_steady_state(self):
+        """RECALCULATED 2026-08-17 (Phase C) -- was 115720.80, now 124226.88."""
         inputs = ramp_model.CanonicalRevenueInputs()
         months = ramp_model.compute_ramp("scenario_table_2", inputs)
         m5 = next(m for m in months if m["month"] == "M5plus")
         self.assertEqual(m5["ramp_pct"], 100)
-        self.assertAlmostEqual(m5["total_revenue"], 115720.80, places=2)
+        self.assertAlmostEqual(m5["total_revenue"], 124226.88, places=2)
         self.assertAlmostEqual(m5["total_revenue"], m5["steady_state_total_revenue"], places=2)
 
     def test_m5plus_matches_canonical_revenue_methodology_records(self):

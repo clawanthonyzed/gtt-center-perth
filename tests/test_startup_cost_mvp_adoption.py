@@ -111,17 +111,18 @@ class UpdatedPlanningCaseModelTests(unittest.TestCase):
         """The updated planning case (this phase) must not itself have altered
         the Master Financial Model's cash-flow trough figures -- those remain
         sourced only from cash_flow_summary, never recalculated by THIS phase.
-        RECALCULATED 2026-08-17: a separate, later, authorised phase (the
-        2026-08-16 current-wage-rate research propagated through the
-        canonical model, docs/FOUNDER-FEEDBACK-IMPLEMENTATION-MATRIX.md point
-        5) legitimately moved the trough figures -- was 30885.75/66335.12
-        before that recompute. This test's own guard (this phase didn't
-        touch them) is unaffected by that later, different phase's change."""
+        RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- was
+        34860.52/74110.43 under the same-day proportional-wage-scaling
+        recompute (itself was 30885.75/66335.12 before that recompute).
+        Legitimately moved again by the Phase C labour/revenue rebuild (a
+        separate, later, authorised phase) -- this test's own guard (this
+        specific phase didn't touch them) is unaffected by that different
+        phase's change."""
         results = self.fri["opening_working_capital"]["operating_cash_trough_cross_check"]["results"]
         t1 = next(r for r in results if r["scenario_id"] == "scenario_table_1")
         t2 = next(r for r in results if r["scenario_id"] == "scenario_table_2")
-        self.assertEqual(t1["trough_value"], 34860.52)
-        self.assertEqual(t2["trough_value"], 74110.43)
+        self.assertEqual(t1["trough_value"], 52363.17)
+        self.assertEqual(t2["trough_value"], 94341.40)
 
 
 if __name__ == "__main__":

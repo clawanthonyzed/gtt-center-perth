@@ -88,37 +88,67 @@ MONTHS = ["M1", "M2", "M3", "M4", "M5plus"]
 #     midpoint $34.375/hr used as the single defensible new rate (the old
 #     figure was also a single rate, not a range).
 #     Scale factor = 34.375 / 30.63 = 1.122266
-AM_WEEKDAY_TREATMENT_STAFF_MONTHLY = round((492920 / 12) * 1.023133, 2)  # was A$41,076.67 -> A$42,027.66
-AM_WEEKDAY_PHLEBOTOMIST_MONTHLY = round((86136 / 12) * 1.122266, 2)       # was A$7,178.00 -> A$8,055.97
-AM_WEEKDAY_DIRECT_LABOR_MONTHLY = round(AM_WEEKDAY_TREATMENT_STAFF_MONTHLY + AM_WEEKDAY_PHLEBOTOMIST_MONTHLY, 2)  # was A$48,254.67 -> A$50,083.63
+# RECOMPUTED 2026-08-17 (Phase C) -- REPLACES the 2026-08-17-earlier
+# proportional-scaling method entirely, per explicit instruction to stop
+# scaling and rebuild from first principles instead. Full derivation:
+# docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md §3. Method: position
+# -> headcount -> hours/shift (07:00-13:00 = 6hrs, AM window) -> operating
+# days (22 weekdays/month) -> current researched casual rate -> monthly
+# total. No early-release saving assumed in this headline figure (the
+# conservative, full-shift planning basis) -- early-release remains a
+# separate, disclosed, tagged upside (docs/CURRENT-STATE.md §8), not blended
+# in here.
+#   Treatment (8): 4x Massage+Beauty @ $37.50/hr x 6hrs x 22 days = $19,800.00
+#     + 2x Nails @ $36.81/hr x 6hrs x 22 days = $9,717.84
+#     + 2x Hair @ $36.81/hr x 6hrs x 22 days = $9,717.84
+#     = $39,235.68/month
+#   Phlebotomists (2): $34.375/hr (SS Level 1-2 midpoint) x 6hrs x 22 days
+#     x 2 people = $9,075.00/month
+AM_WEEKDAY_TREATMENT_STAFF_MONTHLY = 39235.68   # was A$42,027.66 (proportional-scaled) -> first-principles A$39,235.68
+AM_WEEKDAY_PHLEBOTOMIST_MONTHLY = 9075.00        # was A$8,055.97 (proportional-scaled) -> first-principles A$9,075.00
+AM_WEEKDAY_DIRECT_LABOR_MONTHLY = round(AM_WEEKDAY_TREATMENT_STAFF_MONTHLY + AM_WEEKDAY_PHLEBOTOMIST_MONTHLY, 2)  # was A$50,083.63 -> A$48,310.68
 
 # AM Direct Labor (Saturday) -- hours-based, scales with the scenario's
 # COMMITTED client volume (not the ramp-period actual volume, which has no
 # documented rostering methodology anywhere in this repo -- see COST-RAMP-
 # METHODOLOGY.md §4). Source: docs/profit-loss-tables.md §2 (old model, now
 # historical) and the PRIMARY REBASED MODEL section (Table 1).
-# RECOMPUTED 2026-08-17 -- same roster/rate mix as AM_WEEKDAY_DIRECT_LABOR_
-# MONTHLY above, so the same blended scale factor (new/old weekday total =
-# 50083.63/48254.67 = 1.037896) is applied here, not a separately-derived one.
+# RECOMPUTED 2026-08-17 (Phase C, first principles). Table 1: 8 treatment
+# staff + 2 phlebotomists, same 6hr shift as weekday, x1.5 Saturday penalty
+# (MA000005/MA000027 casual Saturday rate, researched 2026-08-16):
+#   Treatment Saturday: (4x$56.25 + 2x$55.215 + 2x$55.215)/hr x 6hrs = $2,675.16/day
+#   Phlebotomist Saturday: 2 x $51.5625/hr x 6hrs = $618.75/day
+#   Table 1 combined = $3,293.91/day
+# Table 2: no separately-rebuilt Saturday schedule exists for the shorter
+# 08:00-start cadence this pass -- the OLD model's own disclosed Table1:
+# Table2 Saturday ratio (1612.74/2419.11 = 0.6667, reflecting Table 2's
+# shorter Saturday schedule) is reapplied to the new Table 1 figure as a
+# disclosed, reused approximation, not a fresh derivation -- flagged as a
+# genuine simplification, not fabricated precision.
 AM_SATURDAY_DAILY_LABOR = {
-    "scenario_table_1": round(2419.11 * 1.037896, 2),  # was 2,419.11 -> 2,510.80
-    "scenario_table_2": round(1612.74 * 1.037896, 2),  # was 1,612.74 -> 1,673.87
+    "scenario_table_1": 3293.91,                          # was 2,510.80 (proportional-scaled) -> first-principles 3,293.91
+    "scenario_table_2": round(3293.91 * 0.6667, 2),        # was 1,673.87 -> 2,196.05 (reused ratio, disclosed approximation)
 }
 
-# Opening-time increment (07:00 start) -- fixed per trading day, sourced to
-# docs/profit-loss-tables.md's Appendix. Applies to Table 1 (07:00 start)
-# without ambiguity. Table 2 (08:00 start) carries this figure UNCHANGED from
-# the pre-rebase model per docs/VERIFICATION-TRACKER.md item 1o, which
-# explicitly flags -- not resolves -- whether it should still apply at 08:00.
-OPENING_TIME_INCREMENT_DAILY = 44.50
+# RENAMED IN SUBSTANCE 2026-08-17 (Phase C, first principles) -- this field
+# retains its original YAML key name ("opening_time_increment") for backward
+# structural compatibility, but its VALUE and MEANING are now the Venue
+# Manager's real, first-principles daily labour cost (position 01,
+# docs/architecture/STAFF-PROFILES.md), not the old vague "opening-time
+# increment" concept. VM: 1 x 8hrs x $36.81/hr (MA000002 L2, current
+# researched rate) = $294.48/day (weekday basis; Saturday handled separately
+# in compute_payroll via the same x1.5 penalty pattern as other roles).
+OPENING_TIME_INCREMENT_DAILY = 294.48   # was A$44.50 (undocumented mechanism) -> A$294.48 (Venue Manager, first-principles)
+VENUE_MANAGER_SATURDAY_DAILY = round(294.48 * 1.5, 2)  # $441.72/day, x1.5 Saturday penalty
 
-# "Receptionist/relief/workers comp (Weekday pro-rated)" -- docs/profit-loss-
-# tables.md's Appendix states this ~A$339.00/day figure with its own "~="
-# approximation marker (not an exact stated total) -- reused here at face
-# value, not back-solved to force reconciliation with any other total (see
-# COST-RAMP-METHODOLOGY.md §7 for the resulting, disclosed, unreconciled
-# ~A$246.57/month gap against docs/CURRENT-STATE.md's own headline figure).
-RECEPTIONIST_RELIEF_WORKERS_COMP_DAILY = 339.00
+# RENAMED IN SUBSTANCE 2026-08-17 (Phase C, first principles) -- retains its
+# original YAML key name ("receptionist_relief") for backward structural
+# compatibility, but its VALUE and MEANING are now the PM Reception/
+# Coordinator's real, first-principles daily labour cost (position 06,
+# docs/architecture/STAFF-PROFILES.md), replacing the old unclear "~A$339/day"
+# approximation. PM Reception: 1 x 5hrs x $33.71/hr (MA000002 L1) = $168.55/day.
+RECEPTIONIST_RELIEF_WORKERS_COMP_DAILY = 168.55   # was ~A$339.00 (unclear approximation) -> A$168.55 (PM Reception, first-principles)
+PM_RECEPTION_SATURDAY_DAILY = round(168.55 * 1.5, 2)  # $252.83/day, x1.5 Saturday penalty
 
 # PM Direct Labor (Saturday) -- fixed regardless of ramp, because even at the
 # full 8-session/day steady-state PM Saturday volume, hours/role/day
@@ -129,10 +159,11 @@ RECEPTIONIST_RELIEF_WORKERS_COMP_DAILY = 339.00
 # specific cost. Source: docs/profit-loss-tables.md §2's 3-hour-minimum
 # correction note (A$654.32/day, backed-out blended Saturday casual rate
 # A$54.53/hr).
-# RECOMPUTED 2026-08-17 -- built from the same blended weekday casual rate
-# as PM_WEEKDAY_BLENDED_CASUAL_RATE below; scale factor = new/old blended
-# rate = 37.155/36.315 = 1.023127.
-PM_SATURDAY_DAILY_LABOR = round(654.32 * 1.023127, 2)  # was 654.32 -> 669.46
+# RECOMPUTED 2026-08-17 (Phase C, first principles) -- 4 PM roles x 3hr
+# minimum-engagement floor (8 Saturday sessions/4 roles/1.3 throughput =
+# 1.54hrs, below the floor) x $55.7325/hr (blended current rate x1.5
+# Saturday penalty) = docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md §3e.
+PM_SATURDAY_DAILY_LABOR = 668.78  # was 669.46 (proportional-scaled) -> first-principles 668.78, materially unchanged
 
 # PM Direct Labor (weekday) -- genuinely ramps, per the session-count curve
 # below and the 3-hour casual-minimum-engagement floor. Blended weekday
@@ -162,10 +193,11 @@ PM_SESSION_RAMP = {"M1": 4, "M2": 8, "M3": 12, "M4": 15, "M5plus": 16}
 # repo's own Appendix already discloses this exact "within rounding, not
 # exact" gap for the identical calculation, a pre-existing imprecision, not
 # introduced here).
-# RECOMPUTED 2026-08-17 -- proportionally scaled by the same PM blended-rate
-# factor (37.155/36.315 = 1.023127) applied above, since this anchor figure
-# was itself built from the old blended rate.
-PM_WEEKDAY_M5PLUS_DAILY_LABOR_CANONICAL_ANCHOR = round(440.00 * 1.023127, 2)  # was 440.00 -> 450.18
+# RECOMPUTED 2026-08-17 (Phase C, first principles) -- 4 PM roles x 3.08hrs/role
+# (16 weekday sessions/4 roles/1.3 throughput, clears the 3hr floor) x
+# $37.155/hr (blended current rate) = docs/architecture/FIRST-PRINCIPLES-
+# FINANCIAL-MODEL.md §3e.
+PM_WEEKDAY_M5PLUS_DAILY_LABOR_CANONICAL_ANCHOR = 457.75  # was 450.18 (proportional-scaled) -> first-principles 457.75
 
 WORKERS_COMP_RATE_PCT = 1.7  # wages.yml#wage_workers_comp_rate, MODELLED
 
@@ -286,29 +318,46 @@ def compute_pm_weekday_daily_labor(month):
 
 
 def compute_payroll(scenario_id, month, inputs: CanonicalCostInputs):
-    """Returns a dict of payroll components for one (scenario, month)."""
-    am_weekday_treatment = AM_WEEKDAY_TREATMENT_STAFF_MONTHLY  # already includes super -- no super added
-    am_weekday_phlebotomist = AM_WEEKDAY_PHLEBOTOMIST_MONTHLY   # does NOT include super -- super added below
+    """Returns a dict of payroll components for one (scenario, month).
+
+    RESTRUCTURED 2026-08-17 (Phase C, first principles). Two methodology
+    changes from the pre-2026-08-17 version, both disclosed:
+    (1) opening_increment/receptionist_relief now carry real Saturday-penalty
+        components (Venue Manager / PM Reception, docs/architecture/
+        STAFF-PROFILES.md), not just a flat weekday-only figure.
+    (2) Superannuation is now applied UNIVERSALLY (12%) to every wage
+        component, not just the previously-confirmed-exclusive subset -- a
+        cleaner, more defensible treatment than the prior partial-coverage
+        approach, per docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md
+        §3g. This is a genuine methodology simplification, disclosed, not a
+        silent change -- see conflict_superannuation_partial_coverage in
+        cost_ramp.yml for the historical partial-coverage record, retained
+        for trace.
+    """
+    am_weekday_treatment = AM_WEEKDAY_TREATMENT_STAFF_MONTHLY
+    am_weekday_phlebotomist = AM_WEEKDAY_PHLEBOTOMIST_MONTHLY
     am_weekday = round(am_weekday_treatment + am_weekday_phlebotomist, 2)
     am_saturday = round(AM_SATURDAY_DAILY_LABOR[scenario_id] * inputs.operating_saturdays, 2)
     pm_weekday_daily = compute_pm_weekday_daily_labor(month)
     pm_weekday = round(pm_weekday_daily * inputs.operating_days_weekday, 2)
     pm_saturday = round(PM_SATURDAY_DAILY_LABOR * inputs.operating_saturdays, 2)
-    opening_increment = round(OPENING_TIME_INCREMENT_DAILY * inputs.operating_days_weekday, 2)
-    receptionist_relief = round(RECEPTIONIST_RELIEF_WORKERS_COMP_DAILY * inputs.operating_days_weekday, 2)
+    opening_increment = round(
+        OPENING_TIME_INCREMENT_DAILY * inputs.operating_days_weekday
+        + VENUE_MANAGER_SATURDAY_DAILY * inputs.operating_saturdays, 2
+    )
+    receptionist_relief = round(
+        RECEPTIONIST_RELIEF_WORKERS_COMP_DAILY * inputs.operating_days_weekday
+        + PM_RECEPTION_SATURDAY_DAILY * inputs.operating_saturdays, 2
+    )
 
     direct_labor_and_opening = round(
         am_weekday + am_saturday + pm_weekday + pm_saturday + opening_increment + receptionist_relief, 2
     )
     workers_comp = round(direct_labor_and_opening * WORKERS_COMP_RATE_PCT / 100, 2)
 
-    # Superannuation -- applied ONLY to the components confirmed super-exclusive
-    # (see SUPERANNUATION_RATE_PCT's own docstring for the full, source-based
-    # reasoning). Opening-time increment and Receptionist/Relief are excluded --
-    # genuinely unresolved, not guessed at.
-    superannuation = round(
-        (am_weekday_phlebotomist + am_saturday + pm_weekday + pm_saturday) * SUPERANNUATION_RATE_PCT / 100, 2
-    )
+    # Superannuation -- applied universally (12%) to every wage component,
+    # per the methodology change disclosed in this function's own docstring.
+    superannuation = round(direct_labor_and_opening * SUPERANNUATION_RATE_PCT / 100, 2)
 
     payroll_total = round(direct_labor_and_opening + workers_comp + superannuation, 2)
 

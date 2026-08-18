@@ -136,17 +136,21 @@ class CanonicalRevenueMethodologyTests(unittest.TestCase):
 
     def test_table1_matches_canonical_value(self):
         """Table 1 (18 clients/day) computed purely from canonical inputs must equal
-        the recorded rev_reconstruction_table1_monthly value exactly (to the cent)."""
+        the recorded rev_reconstruction_table1_monthly value exactly (to the cent).
+        RECALCULATED 2026-08-17 (Phase C) -- was 155215.80 (A$95 PM placeholder
+        average), now 163721.88 (real A$117 PM average, docs/architecture/
+        PM-PACKAGES.md §5)."""
         result = self._table1_result()
         self.assertAlmostEqual(result, self.inputs.canonical_table1_monthly, places=2)
-        self.assertAlmostEqual(result, 155215.80, places=2)
+        self.assertAlmostEqual(result, 163721.88, places=2)
 
     def test_table2_matches_canonical_value(self):
         """Table 2 (12 clients/day) computed purely from canonical inputs must equal
-        the recorded rev_reconstruction_table2_monthly value exactly (to the cent)."""
+        the recorded rev_reconstruction_table2_monthly value exactly (to the cent).
+        RECALCULATED 2026-08-17 (Phase C) -- was 115720.80, now 124226.88."""
         result = self._table2_result()
         self.assertAlmostEqual(result, self.inputs.canonical_table2_monthly, places=2)
-        self.assertAlmostEqual(result, 115720.80, places=2)
+        self.assertAlmostEqual(result, 124226.88, places=2)
 
     def test_deterministic(self):
         """Calling the formula twice with the same canonical inputs must produce the
@@ -216,14 +220,20 @@ class CanonicalRevenueMethodologyTests(unittest.TestCase):
         """Per the coordinator's explicit instruction (Part 5, methodology-adoption
         phase): the new canonical figures must NOT be forced to equal the old
         inherited figures. This test pins down that the two are deliberately,
-        provably different -- by exactly the A$2,576.36 gap documented in
-        docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md -- and that both
-        values remain readable from the canonical data (neither was deleted)."""
+        provably different. RECALCULATED 2026-08-17 (Phase C) -- the original gap
+        was +A$2,576.36 (historical figure higher than canonical, at the A$95 PM
+        placeholder average, docs/architecture/REVENUE-RECONCILIATION-
+        INVESTIGATION.md). Since the canonical PM average was rebuilt to the real
+        A$117 figure (docs/architecture/PM-PACKAGES.md §5), the canonical revenue
+        figure is now LARGER than the historical figure -- the gap is
+        -A$5,929.72 (canonical exceeds historical), a sign flip, not an error.
+        Both values remain readable from the canonical data (neither was
+        deleted)."""
         i = self.inputs
         table1_gap = i.historical_table1_monthly - self._table1_result()
         table2_gap = i.historical_table2_monthly - self._table2_result()
-        self.assertAlmostEqual(table1_gap, 2576.36, places=2)
-        self.assertAlmostEqual(table2_gap, 2576.36, places=2)
+        self.assertAlmostEqual(table1_gap, -5929.72, places=2)
+        self.assertAlmostEqual(table2_gap, -5929.72, places=2)
         self.assertAlmostEqual(table1_gap, table2_gap, places=2)
 
 

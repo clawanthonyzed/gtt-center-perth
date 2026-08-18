@@ -179,6 +179,10 @@ class HistoricalRevenueNotCanonicalTests(unittest.TestCase):
     """Historical revenue can't accidentally become canonical."""
 
     def test_canonical_output_differs_from_historical_figures(self):
+        """RECALCULATED 2026-08-17 (Phase C, first-principles rebuild) -- PM
+        revenue rebuilt from the real A$117 blended average (was the A$95
+        placeholder), see docs/architecture/PM-PACKAGES.md §5. Canonical
+        total_revenue was 155215.80/115720.80 before this recompute."""
         inputs = mfm.CanonicalModelInputs()
         t1 = mfm.compute_month_pnl("scenario_table_1", 5, inputs)
         t2 = mfm.compute_month_pnl("scenario_table_2", 5, inputs)
@@ -186,8 +190,8 @@ class HistoricalRevenueNotCanonicalTests(unittest.TestCase):
         self.assertNotAlmostEqual(t1["revenue"]["total_revenue"], 157792.16, places=2)
         self.assertNotAlmostEqual(t2["revenue"]["total_revenue"], 118297.16, places=2)
         # Canonical figures -- must match exactly.
-        self.assertAlmostEqual(t1["revenue"]["total_revenue"], 155215.80, places=2)
-        self.assertAlmostEqual(t2["revenue"]["total_revenue"], 115720.80, places=2)
+        self.assertAlmostEqual(t1["revenue"]["total_revenue"], 163721.88, places=2)
+        self.assertAlmostEqual(t2["revenue"]["total_revenue"], 124226.88, places=2)
 
     def test_historical_net_pnl_not_confused_with_revenue_anywhere(self):
         """A$63,028.75 is historical Net P&L, not revenue -- must not appear
@@ -275,14 +279,18 @@ class UnresolvedAssumptionsVisibleTests(unittest.TestCase):
         """The 10% PM pre-booking discount must not silently appear in
         revenue_ramp.yml's PM figures (already established in Phase 6/7 --
         this model must not accidentally apply it either, since it reads
-        revenue_ramp.yml's figures verbatim)."""
+        revenue_ramp.yml's figures verbatim). RECALCULATED 2026-08-17 (Phase
+        C) -- pm_revenue was 36730.80 (A$95 placeholder average), now
+        45236.88 (real A$117 derived average, docs/architecture/
+        PM-PACKAGES.md §5) -- the discount-not-applied property itself is
+        unaffected, only the absolute figure moved."""
         rev_assumptions = load_canonical_yaml("revenue_assumptions.yml")["records"]
         discount_rec = find_record(rev_assumptions, "rev_discount_pm_prebooking")
         self.assertEqual(discount_rec["value"], 10)
         # PM revenue at steady state must equal the full undiscounted figure.
         inputs = mfm.CanonicalModelInputs()
         m5 = mfm.compute_month_pnl("scenario_table_1", 5, inputs)
-        self.assertAlmostEqual(m5["revenue"]["pm_revenue"], 36730.80, places=2)
+        self.assertAlmostEqual(m5["revenue"]["pm_revenue"], 45236.88, places=2)
 
     def test_model_yaml_declares_its_own_new_conflicts(self):
         data = load_model_yaml("master_financial_model.yml")
@@ -415,34 +423,46 @@ class SuperannuationRegressionTests(unittest.TestCase):
             without_super = bd["direct_labor_and_opening_total"] + bd["workers_comp"]
             self.assertAlmostEqual(rec["payroll_costs"], without_super + bd["superannuation"], places=2)
 
-    def test_superannuation_not_double_counted_on_treatment_staff_am_weekday(self):
-        """The AM-weekday treatment-staff sub-component must NOT have super
-        added on top (it's already included in the source annual salary) --
-        verified by confirming superannuation is computed only from
-        phlebotomist + hours-based components, not the full am_weekday figure."""
+    def test_superannuation_applied_universally_2026_08_17(self):
+        """SUPERSEDES the pre-2026-08-17 partial-coverage test (was
+        test_superannuation_not_double_counted_on_treatment_staff_am_weekday
+        -- asserted super was computed ONLY from phlebotomist + AM Saturday +
+        PM weekday + PM Saturday, explicitly EXCLUDING am_weekday_treatment_
+        staff, opening_time_increment, and receptionist_relief). Phase C
+        (2026-08-17, docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md
+        §3g) deliberately changed this to UNIVERSAL 12% application on the
+        full direct_labor_and_opening total -- a disclosed simplification,
+        not a silent change (see cost_ramp.yml#conflict_superannuation_
+        partial_coverage for the retained historical partial-coverage
+        record). This test verifies the NEW, current methodology: super is
+        computed on 100% of direct_labor_and_opening, not a subset."""
         inputs = crm.CanonicalCostInputs()
         payroll = crm.compute_payroll("scenario_table_1", "M5plus", inputs)
-        expected_super_base = (
+        expected_super = round(
+            payroll["direct_labor_and_opening_total"] * crm.SUPERANNUATION_RATE_PCT / 100, 2
+        )
+        self.assertAlmostEqual(payroll["superannuation"], expected_super, places=2)
+        # Confirm it does NOT equal super computed on only the pre-2026-08-17
+        # partial-coverage subset (phlebotomist + AM Saturday + PM weekday +
+        # PM Saturday, excluding treatment staff/opening increment/reception).
+        partial_coverage_base = (
             payroll["am_weekday_phlebotomist"]
             + payroll["am_saturday_direct_labor"]
             + payroll["pm_weekday_direct_labor"]
             + payroll["pm_saturday_direct_labor"]
         )
-        expected_super = round(expected_super_base * crm.SUPERANNUATION_RATE_PCT / 100, 2)
-        self.assertAlmostEqual(payroll["superannuation"], expected_super, places=2)
-        # Confirm it does NOT equal super computed on the FULL am_weekday_direct_labor
-        # (which would double-count the treatment-staff portion).
-        double_counted_base = expected_super_base + payroll["am_weekday_treatment_staff"]
-        double_counted_super = round(double_counted_base * crm.SUPERANNUATION_RATE_PCT / 100, 2)
-        self.assertNotAlmostEqual(payroll["superannuation"], double_counted_super, places=2)
+        partial_coverage_super = round(partial_coverage_base * crm.SUPERANNUATION_RATE_PCT / 100, 2)
+        self.assertNotAlmostEqual(payroll["superannuation"], partial_coverage_super, places=2)
 
     def test_am_weekday_split_sums_to_original_total(self):
         """am_weekday_treatment_staff + am_weekday_phlebotomist must equal
-        am_weekday_direct_labor exactly. RECALCULATED 2026-08-17 to propagate
-        the 2026-08-16 current-wage-rate research (docs/FOUNDER-FEEDBACK-
-        IMPLEMENTATION-MATRIX.md point 5) -- was A$48,254.67 before this
-        recompute; the sum-equals-total property itself is unchanged, only
-        the absolute figure moved."""
+        am_weekday_direct_labor exactly. RECALCULATED 2026-08-17 (Phase C,
+        first-principles rebuild) to A$48,310.68 -- was A$50,082.52 under the
+        2026-08-17 proportional-wage-scaling recompute, A$48,254.67 before
+        that; the sum-equals-total property itself is unchanged, only the
+        absolute figure moved. Full derivation: docs/architecture/
+        FIRST-PRINCIPLES-FINANCIAL-MODEL.md §3a/3b (4 Massage+Beauty +
+        2 Nails + 2 Hair @ 6hr/22days + 2 Phlebotomists @ 6hr/22days)."""
         inputs = crm.CanonicalCostInputs()
         payroll = crm.compute_payroll("scenario_table_1", "M1", inputs)
         self.assertAlmostEqual(
@@ -450,7 +470,7 @@ class SuperannuationRegressionTests(unittest.TestCase):
             payroll["am_weekday_direct_labor"],
             places=2,
         )
-        self.assertAlmostEqual(payroll["am_weekday_direct_labor"], 50082.52, places=2)
+        self.assertAlmostEqual(payroll["am_weekday_direct_labor"], 48310.68, places=2)
 
     def test_superannuation_flows_through_master_model_automatically(self):
         """The Master Financial Model's payroll figure must exactly match
@@ -600,19 +620,21 @@ class FundingRequirementInvestigationTests(unittest.TestCase):
         self.assertIn("PARTIALLY RESOLVED (bounded) 2026-08-09", tracker_text)
 
     def test_funding_investigation_does_not_alter_revenue_or_cost_methodology(self):
-        """Sanity check: canonical revenue steady-state figures must remain
-        byte-identical (revenue was never wage-driven, unaffected by the
-        2026-08-17 wage-rate recompute). Payroll figures RECALCULATED
-        2026-08-17 (docs/FOUNDER-FEEDBACK-IMPLEMENTATION-MATRIX.md point 5)
-        -- were 84654.10/80684.16 before propagating the 2026-08-16 current-
-        wage-rate research through the canonical model."""
+        """Sanity check: canonical revenue steady-state figures RECALCULATED
+        2026-08-17 (Phase C, first-principles rebuild) -- PM revenue rebuilt
+        from the real A$117 blended average (docs/architecture/
+        PM-PACKAGES.md §5), NOT wage-driven, but genuinely changed this
+        phase because the revenue methodology itself was rebuilt (was
+        155215.80/115720.80 under the 2026-08-17 wage-rate recompute; before
+        that, payroll figures alone moved -- were 84654.10/80684.16 prior to
+        the 2026-08-16 current-wage-rate research)."""
         inputs = mfm.CanonicalModelInputs()
         m5_t1 = mfm.compute_month_pnl("scenario_table_1", 5, inputs)
         m5_t2 = mfm.compute_month_pnl("scenario_table_2", 5, inputs)
-        self.assertAlmostEqual(m5_t1["revenue"]["total_revenue"], 155215.80, places=2)
-        self.assertAlmostEqual(m5_t2["revenue"]["total_revenue"], 115720.80, places=2)
-        self.assertAlmostEqual(m5_t1["payroll"], 87398.78, places=2)
-        self.assertAlmostEqual(m5_t2["payroll"], 83278.43, places=2)
+        self.assertAlmostEqual(m5_t1["revenue"]["total_revenue"], 163721.88, places=2)
+        self.assertAlmostEqual(m5_t2["revenue"]["total_revenue"], 124226.88, places=2)
+        self.assertAlmostEqual(m5_t1["payroll"], 100890.20, places=2)
+        self.assertAlmostEqual(m5_t2["payroll"], 95485.22, places=2)
 
 
 if __name__ == "__main__":

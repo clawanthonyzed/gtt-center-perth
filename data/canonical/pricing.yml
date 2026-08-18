@@ -87,18 +87,26 @@ records:
 
   # --- PM pricing (canonical, CURRENT-STATE.md §2) ---
   - id: pm_alacarte_average
-    name: "PM individual a-la-carte average"
+    name: "PM blended average transaction value (individual a-la-carte + 2 locked packages)"
     category: service_average
-    price: 95
+    price: 117
     currency: AUD
     duration: null
     inclusions: []
     exclusions: []
     status: MODELLED
-    status_detail: "pm-staffing-roster.md planning estimate, no real booking data exists yet"
-    source: {file: docs/CURRENT-STATE.md, section: "§2 Package Prices"}
-    source_date: "2026-07-14"
-    notes: "This is an aggregate planning average across all PM a-la-carte services, not a single service's price -- see docs/services-pricing-locked.md Part B for individual PM service prices (not migrated this pass, see file header)."
+    status_detail: >
+      RECALCULATED 2026-08-17 (Phase C) -- was A$95, an unexplained round-number placeholder
+      with no stated derivation anywhere in this repo's history. New figure genuinely
+      calculated from the real service catalogue and the two locked PM packages
+      (docs/architecture/PM-PACKAGES.md): individual a-la-carte average A$84.11 (average of 9
+      real catalogue service-price midpoints) blended with PM Refresh (A$185, 25% assumed mix
+      share) and PM Restore (A$135, 15% assumed mix share) at a disclosed 60/25/15 mix
+      assumption = A$116.97, rounded to A$117. The mix assumption itself remains a planning
+      estimate, not real booking data -- flagged, not hidden.
+    source: {file: docs/architecture/PM-PACKAGES.md, section: "§5 Calculating the Real PM Average Transaction Value"}
+    source_date: "2026-08-17"
+    notes: "Formerly labelled 'a-la-carte average' -- renamed to 'blended average transaction value' since it now includes the two locked packages' contribution, not individual services alone. See docs/architecture/PM-PACKAGES.md for the full derivation and docs/services-pricing-locked.md Part B for individual PM service prices."
 
   - id: pm_package_direction
     name: "PM set/fixed package direction"
