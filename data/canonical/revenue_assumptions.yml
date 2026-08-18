@@ -40,8 +40,8 @@ records:
   - id: rev_pm_saturday_sessions
     category: client_volume
     subcategory: pm_volume
-    name: "PM Saturday session count"
-    description: "Distinct from PM weekday volume (16 sessions/day) -- half the weekday figure"
+    name: "PM Saturday STAFF-SESSION count (labour-hours input) -- SUPERSEDED FOR REVENUE PURPOSES 2026-08-18"
+    description: "Distinct from PM weekday volume (16 sessions/day) -- half the weekday figure. This is a STAFF-SESSION count (an individual service delivered by one staff member), the correct unit for labour-hours costing (tools/cost_ramp_model.py). It is NOT a client-transaction count -- see rev_pm_saturday_transactions below for the corrected revenue-calculation input."
     value: 8
     unit: "sessions/day"
     frequency: daily
@@ -49,9 +49,69 @@ records:
     service_ref: null
     pricing_ref: pm_alacarte_average
     status: MODELLED
-    status_detail: "used directly in CURRENT-STATE.md §5's own Table 1 first-principles revenue walkthrough ('Saturday 8 sessions x A$95 x 4.33 = A$3,290.80/month') but never previously captured as its own standalone canonical fact anywhere in data/canonical/ -- genuinely new find this phase, not an invented figure (directly transcribed from the cited source's own arithmetic)."
+    status_detail: "used directly in CURRENT-STATE.md §5's own Table 1 first-principles revenue walkthrough ('Saturday 8 sessions x A$95 x 4.33 = A$3,290.80/month') but never previously captured as its own standalone canonical fact anywhere in data/canonical/ -- genuinely new find this phase, not an invented figure (directly transcribed from the cited source's own arithmetic). SUPERSEDED FOR REVENUE PURPOSES 2026-08-18: this figure was incorrectly multiplied directly by the PM average transaction price in the revenue formula, which conflates a staff-session count with a client-transaction count once package bookings (which consume more than one staff-session per transaction) entered the mix -- see rev_pm_saturday_transactions and docs/architecture/PM-CAPACITY-RECONCILIATION.md for the full investigation. This record's own VALUE (8 staff-sessions/day) remains correct and unchanged for its original, still-valid purpose (labour-hours costing input) -- only its reuse as a revenue-multiplier input is superseded."
     source: {file: docs/CURRENT-STATE.md, section: "§5 Monthly Net P&L, Monthly -- Table 1 (PRIMARY), step 3"}
     notes: "Stated as 'unchanged by the AM rebase' in the source, i.e. applies identically regardless of Table 1 vs Table 2 -- recorded as scenario_applicability: universal, matching client_assumptions.yml's own pm_steady_state_capacity record."
+
+  - id: rev_pm_weekday_transactions
+    category: client_volume
+    subcategory: pm_volume
+    name: "PM weekday CLIENT-TRANSACTION capacity -- CORRECTED 2026-08-18, distinct from staff-session capacity"
+    description: >
+      RESOLVED 2026-08-18, per Anthony's explicit Priority 1 instruction to reconcile the PM
+      session/transaction contradiction before touching the financial model further (see
+      docs/architecture/OPERATING-MODEL-18-CLIENTS.md §3b for the original finding and
+      docs/architecture/PM-CAPACITY-RECONCILIATION.md for the full investigation and staffing-
+      model research). client_assumptions.yml#pm_steady_state_capacity (16 sessions/day) is a
+      STAFF-SESSION count -- an individual service delivered by one staff member -- and remains
+      the correct input for PM labour-hours costing. It is NOT the same as the number of CLIENT
+      TRANSACTIONS the venue can serve, because PM Refresh and PM Restore packages consume more
+      than one staff-session per single client transaction. Researched staffing-model resolution:
+      PM Refresh (Massage+Beauty) is delivered by ONE dual-qualified Massage+Beauty-pool
+      therapist (consistent with the AM common-pool design, where Massage+Beauty is already one
+      shared pool) -- a single continuous 75-minute booking, not two separate specialist
+      sessions. PM Restore (Nails+Hair) genuinely requires TWO different specialists (no
+      confirmed dual Nails+Hair qualification, scenario-c-sync-timetables.md §0.4) -- 45min
+      Nails + 30min Hair, two people's time. Using a staff-MINUTES capacity model (4 treatment
+      lines x 3.08hrs/role weekday = 739.2 minutes/day total capacity) and the disclosed 60/25/15
+      transaction mix (individual 46.15min-equivalent / PM Refresh 75min-one-therapist / PM
+      Restore 75min-two-specialists), weighted average minutes-per-transaction = 57.69, giving
+      739.2 / 57.69 = **12.8128 transactions/day** weekday -- NOT 16.
+    value: 12.8128
+    unit: "client transactions/day"
+    frequency: daily
+    scenario_applicability: universal
+    service_ref: null
+    pricing_ref: pm_alacarte_average
+    status: MODELLED
+    status_detail: "Best-evidenced resolution this round, using a real, defensible staff-minutes capacity model and a researched (not assumed) staffing pattern for each package. The individual-service average duration (46.15min, 60/1.3hrs) is INHERITED from the existing throughput assumption (docs/pm-staffing-roster.md), not independently re-verified against the actual weighted-average duration of the 9 specific catalogue services used to build the A$84.11 individual-average price -- a disclosed, bounded remaining uncertainty, not claimed as exact."
+    source: {file: docs/architecture/PM-CAPACITY-RECONCILIATION.md, section: "full document"}
+    notes: "Supersedes the direct use of pm_steady_state_capacity (16) as a revenue-formula multiplier. tools/revenue_ramp_model.py now reads this record for PM weekday revenue, NOT pm_steady_state_capacity directly."
+
+  - id: rev_pm_saturday_transactions
+    category: client_volume
+    subcategory: pm_volume
+    name: "PM Saturday CLIENT-TRANSACTION capacity -- CORRECTED 2026-08-18"
+    description: >
+      Same correction as rev_pm_weekday_transactions above, applied to Saturday. Saturday demand
+      is preserved at the original 50% ratio to weekday (rev_pm_saturday_sessions = 8, exactly
+      half of the weekday 16 staff-session figure) -- NOT re-derived from Saturday's own paid
+      labour capacity (which is inflated by the 3-hour casual-minimum-engagement floor,
+      wages.yml#wage_casual_minimum_engagement, a COST mechanism, not a demand increase). Using
+      the paid-capacity figure for Saturday revenue would incorrectly imply Saturday demand
+      doubles to match the floor -- it does not; the floor exists precisely because Saturday
+      demand is genuinely lower. Value = rev_pm_weekday_transactions x 0.5 = 12.8128 x 0.5 =
+      **6.4064 transactions/day**.
+    value: 6.4064
+    unit: "client transactions/day"
+    frequency: daily
+    scenario_applicability: universal
+    service_ref: null
+    pricing_ref: pm_alacarte_average
+    status: MODELLED
+    status_detail: "Derived from rev_pm_weekday_transactions using the original, already-canonical 50% weekday-to-Saturday demand ratio -- not an independent re-derivation, a disclosed, reasoned application of an existing ratio to the corrected weekday figure."
+    source: {file: docs/architecture/PM-CAPACITY-RECONCILIATION.md, section: "full document"}
+    notes: "Supersedes the direct use of rev_pm_saturday_sessions (8) as a revenue-formula multiplier."
 
   # ============================================================
   # SERVICE MIX
@@ -309,17 +369,23 @@ records:
     name: "Table 1 (18-client) monthly revenue -- CANONICAL first-principles methodology (adopted 2026-08-09)"
     methodology: canonical_first_principles
     description: >
-      RECALCULATED 2026-08-17 (Phase C) -- PM average rebuilt from A$95 placeholder to A$117
-      real derived figure (docs/architecture/PM-PACKAGES.md §5). Weekday AM:
-      scenarios.yml#scenario_table_1.client_volume (18) x pricing.yml#am_price_used_for_revenue
+      RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- PM weekday/
+      Saturday volume corrected from raw STAFF-SESSION counts (16/8, incorrect as a revenue-
+      transaction multiplier once package bookings entered the mix) to CLIENT-TRANSACTION
+      capacity (rev_pm_weekday_transactions 12.8128/day, rev_pm_saturday_transactions 6.4064/day)
+      -- see docs/architecture/PM-CAPACITY-RECONCILIATION.md for the full investigation. Weekday
+      AM: scenarios.yml#scenario_table_1.client_volume (18) x pricing.yml#am_price_used_for_revenue
       (A$250) x client_assumptions.yml#operating_days_per_month_weekday (22) = A$99,000.00.
       Saturday AM: 18 x A$250 x client_assumptions.yml#operating_saturdays_per_month (4.33) = A$19,485.00.
-      Weekday PM: client_assumptions.yml#pm_steady_state_capacity (16) x pricing.yml#pm_alacarte_average
-      (A$117) x 22 days = A$41,184.00.
-      Saturday PM: rev_pm_saturday_sessions (8) x A$117 x 4.33 = A$4,052.88.
+      Weekday PM: rev_pm_weekday_transactions (12.8128) x pricing.yml#pm_alacarte_average
+      (A$117) x 22 days = A$32,980.15.
+      Saturday PM: rev_pm_saturday_transactions (6.4064) x A$117 x 4.33 = A$3,245.55.
       Ancillary: rev_ancillary_excluded_from_baseline (A$0.00).
-      SUM = A$163,721.88.
-    value: 163721.88
+      SUM = A$154,710.69. Prior history (retained for trace, not deleted): was A$163,721.88
+      (2026-08-17, using the raw 16/8 staff-session counts directly -- the A$95-to-A$117 PM
+      average correction that phase was itself correct, but the session/transaction conflation
+      was not yet identified); A$155,215.80 before that (A$95 PM placeholder average).
+    value: 154710.69
     currency: AUD
     unit: "AUD/month"
     frequency: monthly
@@ -393,16 +459,17 @@ records:
     name: "Table 2 (12-client) monthly revenue -- CANONICAL first-principles methodology (adopted 2026-08-09)"
     methodology: canonical_first_principles
     description: >
-      RECALCULATED 2026-08-17 (Phase C) -- PM average rebuilt from A$95 placeholder to A$117
-      real derived figure (docs/architecture/PM-PACKAGES.md §5). Weekday AM:
+      RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) -- same
+      correction as rev_reconstruction_table1_monthly above. Weekday AM:
       scenarios.yml#scenario_table_2.client_volume (12) x pricing.yml#am_price_used_for_revenue
       (A$250) x client_assumptions.yml#operating_days_per_month_weekday (22) = A$66,000.00.
       Saturday AM: 12 x A$250 x client_assumptions.yml#operating_saturdays_per_month (4.33) = A$12,990.00.
-      Weekday PM: 16 x A$117 x 22 = A$41,184.00 (same as Table 1 -- PM is AM-volume-independent).
-      Saturday PM: 8 x A$117 x 4.33 = A$4,052.88 (same as Table 1).
-      Ancillary: A$0.00.
-      SUM = A$124,226.88.
-    value: 124226.88
+      Weekday PM: rev_pm_weekday_transactions (12.8128) x A$117 x 22 = A$32,980.15 (same as
+      Table 1 -- PM is AM-volume-independent). Saturday PM: rev_pm_saturday_transactions
+      (6.4064) x A$117 x 4.33 = A$3,245.55 (same as Table 1). Ancillary: A$0.00.
+      SUM = A$115,215.69. Prior history (retained for trace): was A$124,226.88 (2026-08-17,
+      raw 16/8 staff-session counts); A$115,720.80 before that (A$95 PM placeholder average).
+    value: 115215.69
     currency: AUD
     unit: "AUD/month"
     frequency: monthly

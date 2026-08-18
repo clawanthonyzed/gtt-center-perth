@@ -1,5 +1,18 @@
 # GTT Center Perth -- Canonical Revenue Ramp (Month 1-5+), proof of concept, Phase 7
 #
+# RECOMPUTED 2026-08-18 (PM capacity/transaction reconciliation, Priority 1) --
+# pm_revenue and total_revenue/steady_state_revenue across all 10 records now
+# use rev_pm_weekday_transactions/rev_pm_saturday_transactions (12.8128/
+# 6.4064 client-transaction capacity, corrected) instead of the raw
+# pm_steady_state_capacity/rev_pm_saturday_sessions STAFF-SESSION counts
+# (16/8), which had been directly multiplied by the average transaction
+# price -- overstating PM revenue, because package bookings (PM Refresh, PM
+# Restore) consume more than one staff-session per transaction. See
+# docs/architecture/PM-CAPACITY-RECONCILIATION.md for the full investigation
+# and staffing-model research. PM revenue (M5plus): was A$45,236.88/month,
+# now A$36,225.69/month (-19.9%). Verified against a fresh live run of
+# tools/revenue_ramp_model.py, not hand-derived separately.
+#
 # RECOMPUTED 2026-08-17 (Phase C) -- pm_revenue and total_revenue/
 # steady_state_revenue across all 10 records now reflect the real, calculated
 # PM blended average transaction value (A$117, data/canonical/pricing.yml#
@@ -73,10 +86,10 @@ records:
     am_utilisation_assumption: "43% of steady-state AM revenue -- implied client volume ~7.74/day (continuous utilisation modelling, not a claim of a literal fractional client count)"
     pm_utilisation_assumption: "43% of steady-state PM revenue (weekday + Saturday combined) -- implied ~6.88 weekday sessions/day equivalent"
     am_revenue: 50948.55
-    pm_revenue: 19451.86
+    pm_revenue: 15577.05
     ancillary_revenue: 0.00
-    total_revenue: 70400.41
-    steady_state_revenue: 163721.88
+    total_revenue: 66525.60
+    steady_state_revenue: 154710.69
     pct_of_steady_state: 43.00
     currency: AUD
     status: CALCULATED
@@ -92,10 +105,10 @@ records:
     am_utilisation_assumption: "64% of steady-state AM revenue -- implied client volume ~11.52/day"
     pm_utilisation_assumption: "64% of steady-state PM revenue -- implied ~10.24 weekday sessions/day equivalent"
     am_revenue: 75830.40
-    pm_revenue: 28951.60
+    pm_revenue: 23184.44
     ancillary_revenue: 0.00
-    total_revenue: 104782.00
-    steady_state_revenue: 163721.88
+    total_revenue: 99014.84
+    steady_state_revenue: 154710.69
     pct_of_steady_state: 64.00
     currency: AUD
     status: CALCULATED
@@ -111,10 +124,10 @@ records:
     am_utilisation_assumption: "79% of steady-state AM revenue -- implied client volume ~14.22/day"
     pm_utilisation_assumption: "79% of steady-state PM revenue -- implied ~12.64 weekday sessions/day equivalent"
     am_revenue: 93603.15
-    pm_revenue: 35737.14
+    pm_revenue: 28618.30
     ancillary_revenue: 0.00
-    total_revenue: 129340.29
-    steady_state_revenue: 163721.88
+    total_revenue: 122221.45
+    steady_state_revenue: 154710.69
     pct_of_steady_state: 79.00
     currency: AUD
     status: CALCULATED
@@ -130,10 +143,10 @@ records:
     am_utilisation_assumption: "93% of steady-state AM revenue -- implied client volume ~16.74/day"
     pm_utilisation_assumption: "93% of steady-state PM revenue -- implied ~14.88 weekday sessions/day equivalent"
     am_revenue: 110191.05
-    pm_revenue: 42070.30
+    pm_revenue: 33689.89
     ancillary_revenue: 0.00
-    total_revenue: 152261.35
-    steady_state_revenue: 163721.88
+    total_revenue: 143880.94
+    steady_state_revenue: 154710.69
     pct_of_steady_state: 93.00
     currency: AUD
     status: CALCULATED
@@ -149,10 +162,10 @@ records:
     am_utilisation_assumption: "100% -- full canonical steady-state AM revenue, 18 clients/day"
     pm_utilisation_assumption: "100% -- full canonical steady-state PM revenue, 16 weekday + 8 Saturday sessions/day"
     am_revenue: 118485.00
-    pm_revenue: 45236.88
+    pm_revenue: 36225.69
     ancillary_revenue: 0.00
-    total_revenue: 163721.88
-    steady_state_revenue: 163721.88
+    total_revenue: 154710.69
+    steady_state_revenue: 154710.69
     pct_of_steady_state: 100.00
     currency: AUD
     status: CALCULATED
@@ -171,10 +184,10 @@ records:
     am_utilisation_assumption: "43% of steady-state AM revenue -- implied client volume ~5.16/day"
     pm_utilisation_assumption: "43% of steady-state PM revenue -- implied ~6.88 weekday sessions/day equivalent (identical to Table 1 -- PM is AM-volume-independent)"
     am_revenue: 33965.70
-    pm_revenue: 19451.86
+    pm_revenue: 15577.05
     ancillary_revenue: 0.00
-    total_revenue: 53417.56
-    steady_state_revenue: 124226.88
+    total_revenue: 49542.75
+    steady_state_revenue: 115215.69
     pct_of_steady_state: 43.00
     currency: AUD
     status: CALCULATED
@@ -190,10 +203,10 @@ records:
     am_utilisation_assumption: "64% of steady-state AM revenue -- implied client volume ~7.68/day"
     pm_utilisation_assumption: "64% of steady-state PM revenue -- implied ~10.24 weekday sessions/day equivalent"
     am_revenue: 50553.60
-    pm_revenue: 28951.60
+    pm_revenue: 23184.44
     ancillary_revenue: 0.00
-    total_revenue: 79505.20
-    steady_state_revenue: 124226.88
+    total_revenue: 73738.04
+    steady_state_revenue: 115215.69
     pct_of_steady_state: 64.00
     currency: AUD
     status: CALCULATED
@@ -209,10 +222,10 @@ records:
     am_utilisation_assumption: "79% of steady-state AM revenue -- implied client volume ~9.48/day"
     pm_utilisation_assumption: "79% of steady-state PM revenue -- implied ~12.64 weekday sessions/day equivalent"
     am_revenue: 62402.10
-    pm_revenue: 35737.14
+    pm_revenue: 28618.30
     ancillary_revenue: 0.00
-    total_revenue: 98139.24
-    steady_state_revenue: 124226.88
+    total_revenue: 91020.40
+    steady_state_revenue: 115215.69
     pct_of_steady_state: 79.00
     currency: AUD
     status: CALCULATED
@@ -228,10 +241,10 @@ records:
     am_utilisation_assumption: "93% of steady-state AM revenue -- implied client volume ~11.16/day"
     pm_utilisation_assumption: "93% of steady-state PM revenue -- implied ~14.88 weekday sessions/day equivalent"
     am_revenue: 73460.70
-    pm_revenue: 42070.30
+    pm_revenue: 33689.89
     ancillary_revenue: 0.00
-    total_revenue: 115531.00
-    steady_state_revenue: 124226.88
+    total_revenue: 107150.59
+    steady_state_revenue: 115215.69
     pct_of_steady_state: 93.00
     currency: AUD
     status: CALCULATED
@@ -247,10 +260,10 @@ records:
     am_utilisation_assumption: "100% -- full canonical steady-state AM revenue, 12 clients/day"
     pm_utilisation_assumption: "100% -- full canonical steady-state PM revenue, 16 weekday + 8 Saturday sessions/day (identical to Table 1)"
     am_revenue: 78990.00
-    pm_revenue: 45236.88
+    pm_revenue: 36225.69
     ancillary_revenue: 0.00
-    total_revenue: 124226.88
-    steady_state_revenue: 124226.88
+    total_revenue: 115215.69
+    steady_state_revenue: 115215.69
     pct_of_steady_state: 100.00
     currency: AUD
     status: CALCULATED

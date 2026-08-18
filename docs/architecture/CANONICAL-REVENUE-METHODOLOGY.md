@@ -2,6 +2,8 @@
 
 **Adopted:** 2026-08-09, per Anthony's direct decision. **Status:** the days-based first-principles formula below is now the canonical revenue-calculation methodology for GTT Center Perth going forward. **Not a Master Financial Model** — this document defines and reproduces revenue only. No P&L, cash-flow forecast, balance sheet, Excel, PDF, or chart is built here.
 
+**CORRECTED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation) — the PM weekday/Saturday "session volume" inputs referenced in §4's table below (`pm_steady_state_capacity`, `rev_pm_saturday_sessions`) are STAFF-SESSION counts (correct for labour-hours costing) and were incorrectly multiplied directly by the PM average transaction price — package bookings consume more than one staff-session per client transaction. PM revenue now uses `rev_pm_weekday_transactions` (12.8128/day) and `rev_pm_saturday_transactions` (6.4064/day) instead — see `docs/architecture/PM-CAPACITY-RECONCILIATION.md` for the full investigation and derivation. The table below is retained as originally written for trace (showing the superseded inputs), with this banner as the authoritative correction notice — not silently edited in place.
+
 ---
 
 ## 1. Purpose
@@ -191,10 +193,12 @@ Table 1 and Table 2 differ **only** in `client_volume` (18 vs. 12), which affect
 
 ## 17. Reconciliation Against Historical Figures
 
-| Scenario | Canonical (this methodology) | Historical/inherited (`docs/CURRENT-STATE.md` §5) | Difference |
+| Scenario | Canonical (this methodology, AS ORIGINALLY WRITTEN 2026-08-09, now stale) | Historical/inherited (`docs/CURRENT-STATE.md` §5) | Difference |
 |---|---|---|---|
 | Table 1 | A$155,215.80/month | A$157,792.16/month | **−A$2,576.36** (canonical is lower) |
 | Table 2 | A$115,720.80/month | A$118,297.16/month | **−A$2,576.36** (canonical is lower) |
+
+**STALE, retained for trace, per this repo's never-rewrite-history convention -- NOT the current canonical figures.** This worked example predates two subsequent, real corrections: (1) 2026-08-17, the PM average transaction price moved from a A$95 placeholder to the real, derived A$117 figure (`docs/architecture/PM-PACKAGES.md`); (2) 2026-08-18, the PM session/transaction capacity reconciliation (`docs/architecture/PM-CAPACITY-RECONCILIATION.md`). **Current, authoritative canonical revenue figures: Table 1 = A$154,710.69/month, Table 2 = A$115,215.69/month** (`data/models/master_financial_model.yml#outputs.steady_state_summary`, 2026-08-18) -- always defer to that file's own live-verified output over this worked example.
 
 **No reconciliation was forced.** Per the explicit instruction for this phase, these figures do not need to equal the historical totals — the goal is a methodology that is traceable and reproducible from canonical inputs, not agreement with a number whose own origin cannot be verified (§2). The A$2,576.36 gap is the same one identified and traced in `docs/architecture/REVENUE-RECONCILIATION-INVESTIGATION.md` — its ultimate historical origin remains unresolved (`docs/VERIFICATION-TRACKER.md` item 36), but it no longer blocks this methodology from being treated as canonical going forward.
 

@@ -53,7 +53,12 @@ class CanonicalInputs:
         revenue_assumptions = load_yaml("revenue_assumptions.yml")
 
         universal = client_assumptions["universal"]
-        self.pm_weekday_sessions = find_record(universal, "pm_steady_state_capacity")["value"]
+        # NOTE 2026-08-18 (Priority 1, PM capacity/transaction reconciliation):
+        # pm_steady_state_capacity (16, this file's universal STAFF-SESSION
+        # capacity) is intentionally NOT used here for self.pm_weekday_sessions
+        # -- see the corrected assignment below (rev_pm_weekday_transactions),
+        # sourced from revenue_assumptions.yml instead. Retained as a comment,
+        # not a dead variable, so the correction is visible in context.
         self.operating_days_weekday = find_record(universal, "operating_days_per_month_weekday")["value"]
         self.operating_saturdays = find_record(universal, "operating_saturdays_per_month")["value"]
 
@@ -66,7 +71,15 @@ class CanonicalInputs:
         self.pm_price = find_record(pricing_records, "pm_alacarte_average")["price"]
 
         rev_records = revenue_assumptions["records"]
-        self.pm_saturday_sessions = find_record(rev_records, "rev_pm_saturday_sessions")["value"]
+        # CORRECTED 2026-08-18 (Priority 1, PM capacity/transaction reconciliation)
+        # -- was rev_pm_saturday_sessions (8, a staff-session count, incorrect as
+        # a revenue-transaction multiplier once package bookings entered the mix).
+        # See docs/architecture/PM-CAPACITY-RECONCILIATION.md for the full
+        # investigation. pm_weekday_sessions (used in compute_monthly_revenue
+        # below) is likewise now sourced from rev_pm_weekday_transactions, not
+        # client_assumptions.yml#pm_steady_state_capacity directly.
+        self.pm_weekday_sessions = find_record(rev_records, "rev_pm_weekday_transactions")["value"]
+        self.pm_saturday_sessions = find_record(rev_records, "rev_pm_saturday_transactions")["value"]
         self.ancillary_monthly = find_record(rev_records, "rev_ancillary_excluded_from_baseline")["value"]
 
         # Canonical/expected outputs and preserved historical figures, also read
@@ -137,20 +150,25 @@ class CanonicalRevenueMethodologyTests(unittest.TestCase):
     def test_table1_matches_canonical_value(self):
         """Table 1 (18 clients/day) computed purely from canonical inputs must equal
         the recorded rev_reconstruction_table1_monthly value exactly (to the cent).
-        RECALCULATED 2026-08-17 (Phase C) -- was 155215.80 (A$95 PM placeholder
-        average), now 163721.88 (real A$117 PM average, docs/architecture/
-        PM-PACKAGES.md §5)."""
+        RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction
+        reconciliation) -- was 163721.88 (raw 16/8 staff-session counts used
+        directly, incorrect), now 154710.69 (12.8128/6.4064 corrected
+        transaction capacity, docs/architecture/PM-CAPACITY-RECONCILIATION.md).
+        Was 155215.80 (A$95 PM placeholder average) before the 2026-08-17
+        PM-PACKAGES.md rebuild."""
         result = self._table1_result()
         self.assertAlmostEqual(result, self.inputs.canonical_table1_monthly, places=2)
-        self.assertAlmostEqual(result, 163721.88, places=2)
+        self.assertAlmostEqual(result, 154710.69, places=2)
 
     def test_table2_matches_canonical_value(self):
         """Table 2 (12 clients/day) computed purely from canonical inputs must equal
         the recorded rev_reconstruction_table2_monthly value exactly (to the cent).
-        RECALCULATED 2026-08-17 (Phase C) -- was 115720.80, now 124226.88."""
+        RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction
+        reconciliation) -- was 124226.88, now 115215.69. Was 115720.80 before
+        the 2026-08-17 PM-PACKAGES.md rebuild."""
         result = self._table2_result()
         self.assertAlmostEqual(result, self.inputs.canonical_table2_monthly, places=2)
-        self.assertAlmostEqual(result, 124226.88, places=2)
+        self.assertAlmostEqual(result, 115215.69, places=2)
 
     def test_deterministic(self):
         """Calling the formula twice with the same canonical inputs must produce the
@@ -220,20 +238,24 @@ class CanonicalRevenueMethodologyTests(unittest.TestCase):
         """Per the coordinator's explicit instruction (Part 5, methodology-adoption
         phase): the new canonical figures must NOT be forced to equal the old
         inherited figures. This test pins down that the two are deliberately,
-        provably different. RECALCULATED 2026-08-17 (Phase C) -- the original gap
-        was +A$2,576.36 (historical figure higher than canonical, at the A$95 PM
-        placeholder average, docs/architecture/REVENUE-RECONCILIATION-
-        INVESTIGATION.md). Since the canonical PM average was rebuilt to the real
-        A$117 figure (docs/architecture/PM-PACKAGES.md §5), the canonical revenue
-        figure is now LARGER than the historical figure -- the gap is
-        -A$5,929.72 (canonical exceeds historical), a sign flip, not an error.
-        Both values remain readable from the canonical data (neither was
-        deleted)."""
+        provably different. RECALCULATED 2026-08-18 (Priority 1, PM capacity/
+        transaction reconciliation) -- the gap was -A$5,929.72 (canonical
+        exceeded historical, at the raw 16/8 staff-session PM figure, now
+        known to have been overstated) before this round's correction. Now
+        that PM revenue is corrected down, the canonical figure is again
+        LOWER than the historical figure -- gap = +A$3,081.47 (historical
+        higher than canonical), a second sign flip, not an error. Before the
+        2026-08-17 PM-PACKAGES.md rebuild the original gap was +A$2,576.36
+        (also historical-higher-than-canonical, coincidentally close but not
+        identical to this round's figure -- both anchored to the same
+        historical inherited total, A$157,792.16, but via different
+        canonical bases). Both values remain readable from the canonical
+        data (neither was deleted)."""
         i = self.inputs
         table1_gap = i.historical_table1_monthly - self._table1_result()
         table2_gap = i.historical_table2_monthly - self._table2_result()
-        self.assertAlmostEqual(table1_gap, -5929.72, places=2)
-        self.assertAlmostEqual(table2_gap, -5929.72, places=2)
+        self.assertAlmostEqual(table1_gap, 3081.47, places=2)
+        self.assertAlmostEqual(table2_gap, 3081.47, places=2)
         self.assertAlmostEqual(table1_gap, table2_gap, places=2)
 
 

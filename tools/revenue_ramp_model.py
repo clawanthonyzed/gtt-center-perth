@@ -103,7 +103,6 @@ class CanonicalRevenueInputs:
         revenue_assumptions = load_yaml("revenue_assumptions.yml")
 
         universal = client_assumptions["universal"]
-        self.pm_weekday_sessions = find_record(universal, "pm_steady_state_capacity")["value"]
         self.operating_days_weekday = find_record(universal, "operating_days_per_month_weekday")["value"]
         self.operating_saturdays = find_record(universal, "operating_saturdays_per_month")["value"]
 
@@ -118,7 +117,17 @@ class CanonicalRevenueInputs:
         self.pm_price = find_record(pricing_records, "pm_alacarte_average")["price"]
 
         rev_records = revenue_assumptions["records"]
-        self.pm_saturday_sessions = find_record(rev_records, "rev_pm_saturday_sessions")["value"]
+        # CORRECTED 2026-08-18 (PM capacity/transaction reconciliation, Priority 1) --
+        # PM revenue must be driven by CLIENT-TRANSACTION capacity, not raw
+        # STAFF-SESSION capacity (client_assumptions.yml#pm_steady_state_capacity,
+        # still correctly used for labour-hours costing in
+        # tools/cost_ramp_model.py, UNCHANGED). A package transaction consumes
+        # more than one staff-session, so multiplying the raw session count by
+        # the average transaction price overstated PM revenue. See
+        # docs/architecture/PM-CAPACITY-RECONCILIATION.md for the full
+        # investigation and derivation of these two new records.
+        self.pm_weekday_sessions = find_record(rev_records, "rev_pm_weekday_transactions")["value"]
+        self.pm_saturday_sessions = find_record(rev_records, "rev_pm_saturday_transactions")["value"]
         self.ancillary_monthly = find_record(rev_records, "rev_ancillary_excluded_from_baseline")["value"]
 
 

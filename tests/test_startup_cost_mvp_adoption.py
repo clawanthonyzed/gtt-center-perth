@@ -111,19 +111,20 @@ class UpdatedPlanningCaseModelTests(unittest.TestCase):
         """The updated planning case (this phase) must not itself have altered
         the Master Financial Model's cash-flow trough figures -- those remain
         sourced only from cash_flow_summary, never recalculated by THIS phase.
-        RECALCULATED 2026-08-18 (Phase C audit round, Venue Manager wage
-        reclassification) -- was 52363.17/94341.40 under the 2026-08-17
-        first-principles rebuild (itself was 34860.52/74110.43 under the
-        same-day proportional-wage-scaling recompute, 30885.75/66335.12
-        before that). Legitimately moved again by the audit round's real,
-        sourced correction (a separate, later, authorised phase) -- this
-        test's own guard (this specific phase didn't touch them) is
-        unaffected by that different phase's change."""
+        RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction
+        reconciliation) -- was 54016.81/96821.83 under the 2026-08-18 VM
+        wage audit correction (itself was 52363.17/94341.40 under the
+        2026-08-17 first-principles rebuild, 34860.52/74110.43 under the
+        same-day proportional-wage-scaling recompute before that). Legitimately
+        moved again by this round's real, sourced correction (a separate,
+        later, authorised phase) -- this test's own guard (this specific
+        phase didn't touch them) is unaffected by that different phase's
+        change."""
         results = self.fri["opening_working_capital"]["operating_cash_trough_cross_check"]["results"]
         t1 = next(r for r in results if r["scenario_id"] == "scenario_table_1")
         t2 = next(r for r in results if r["scenario_id"] == "scenario_table_2")
-        self.assertEqual(t1["trough_value"], 54016.81)
-        self.assertEqual(t2["trough_value"], 96821.83)
+        self.assertEqual(t1["trough_value"], 63658.78)
+        self.assertEqual(t2["trough_value"], 116126.66)
 
 
 if __name__ == "__main__":
