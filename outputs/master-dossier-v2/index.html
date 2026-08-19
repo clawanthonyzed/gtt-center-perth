@@ -116,6 +116,7 @@ tr:nth-child(even) td{background:rgba(232,218,197,0.35);}
 .tag-founder{background:var(--earthy-terracotta); color:var(--warm-ivory);}
 .tag-open{background:transparent; color:var(--deep-brown); border:1.5px solid var(--deep-brown);}
 .tag-research{background:transparent; color:var(--earthy-terracotta); border:1.5px dashed var(--earthy-terracotta);}
+.tag-researched{background:transparent; color:var(--muted-olive); border:1.5px solid var(--muted-olive);}
 
 .callout{
   background:var(--white); border-left:4px solid var(--earthy-terracotta);
@@ -257,13 +258,18 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       <a href="#ch9">9. PM Model</a>
       <a href="#ch10">10. Catalogue</a>
       <a href="#ch11">11. PM Packages</a>
+      <a href="#ch12">12. F&amp;B</a>
+      <a href="#ch13">13. Retail</a>
+      <a href="#ch14">14. Staffing</a>
+      <a href="#ch15">15. Staff Profiles</a>
+      <a href="#ch16">16. Coverage</a>
     </nav>
   </div>
 </div>
 
 <div class="build-banner">
   <div class="container">
-    <strong>Build status:</strong> Chapters 1&ndash;11 built (Group A: 1&ndash;6, 2026-08-19; Group B: 7&ndash;11, 2026-08-19), reconciled against the live canonical model. Chapters 12&ndash;35 (Groups C&ndash;F) not yet built &mdash; see the index at the foot of this page. This is a static, in-repo prototype only. Not deployed, not password-protected, not for external circulation.
+    <strong>Build status:</strong> Chapters 1&ndash;16 built (Group A: 1&ndash;6, Group B: 7&ndash;11, Group C: 12&ndash;16, all 2026-08-19), reconciled against the live canonical model. Chapters 17&ndash;35 (Groups D&ndash;F) not yet built &mdash; see the index at the foot of this page. This is a static, in-repo prototype only. Not deployed, not password-protected, not for external circulation.
   </div>
 </div>
 
@@ -1048,18 +1054,440 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
 </section>
 
 <!-- ================================================================
+     CHAPTER 12 — FOOD & BEVERAGE
+     ================================================================ -->
+<section class="chapter" id="ch12">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 12</div>
+      <h1 class="chapter-title">Food &amp; Beverage</h1>
+      <p class="chapter-dek">A real client need, a concept-stage offering, and one genuine regulatory decision point not yet resolved.</p>
+    </div>
+
+    <h2>Why it exists</h2>
+    <p>Clients have fasted 8+ hours by the time the final draw completes. Food and drink after Draw 3 addresses a genuine, real physiological need &mdash; not a hospitality flourish. This is a distinct topic from the departure-experience design question in Chapter 6, which remains open and unrelated to this chapter's scope.</p>
+
+    <h2>What's currently offered &mdash; the locked, low-risk scope</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Item</th><th>Price</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Still water (500mL)</td><td>A$3</td><td rowspan="7">Served by Receptionist/Manager &mdash; no dedicated F&amp;B staff role exists. Herbal tea only, not caffeinated tea/coffee, while a client's GTT is active (T=0 to T=120) &mdash; a real clinical constraint, not a service preference.</td></tr>
+        <tr><td>Sparkling water</td><td>A$4</td></tr>
+        <tr><td>Herbal tea</td><td>A$4</td></tr>
+        <tr><td>Protein bar (pregnancy-safe)</td><td>A$5&ndash;7</td></tr>
+        <tr><td>Fresh fruit cup</td><td>A$5</td></tr>
+        <tr><td>Coconut water / electrolyte drink</td><td>A$5&ndash;6</td></tr>
+        <tr><td>Snack pack (nuts + bar + water)</td><td>A$12</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">All <span class="tag tag-verified">Verified</span> against <code>data/canonical/services.yml</code>. This is the current, deliberately narrow scope: pre-packaged snacks and cold drinks only &mdash; explicitly not a hot-food/sandwich offering. This scoping is itself the reason the venue's current food-business compliance requirements are as light as they are (below).</p>
+
+    <h2>The upgrade under consideration &mdash; a concept, not a locked model</h2>
+    <p>A step up has been raised: coffee, tea, other hot drinks, and real food &mdash; sandwiches, toasties, rolls &mdash; available the moment the final draw completes, from a small fridge/display concept rather than a full commercial kitchen. <strong>This is a genuine investigation, not a decision.</strong> No menu, supplier, or equipment list beyond what is described below has been researched or committed.</p>
+
+    <h2>The regulatory finding this upgrade triggers</h2>
+    <div class="callout">
+      <span class="callout-label">Genuine finding, not previously flagged elsewhere in this repo</span>
+      Under WA's Food Business Risk Classification System, pre-packaged snacks with intact packaging and beverages-only sit at <strong>Low Risk</strong> &mdash; minimal requirements, no council inspection. <strong>Assembling or handling potentially hazardous fillings (meat, cheese, egg &mdash; exactly the sandwich/toastie/roll category) moves the business into Medium Risk</strong>, the same tier most cafes and restaurants sit in. This is not a small distinction: Medium Risk means more frequent council inspections, a higher annual food-business fee (council-specific, not quantified &mdash; genuinely unconfirmed), real food-prep infrastructure (a designated prep surface, correct cold-chain refrigeration, hand-washing facilities separate from any clinical station), and a Food Safety Supervisor certificate that now carries real accountability (temperature logs, allergen labelling) rather than covering a low-risk snack operation nominally.
+    </div>
+
+    <h2>Two realistic options, not "cafe: yes or no"</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>Option A &mdash; pre-made, externally supplied</th><th>Option B &mdash; on-site assembly</th></tr></thead>
+      <tbody>
+        <tr><td>Compliance tier</td><td>Closer to the current Low-Risk-adjacent model &mdash; nothing assembled on-site</td><td>Medium Risk &mdash; the full compliance consequence above applies</td></tr>
+        <tr><td>Experience</td><td>Faster to implement, lower ongoing burden</td><td>Warmer, more "made for you" &mdash; consistent with the venue's hospitality positioning</td></tr>
+        <tr><td>Cost</td><td>Lower ongoing compliance cost</td><td>Real, disclosed ongoing compliance cost (fee + inspection cadence)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p><strong>Recommendation for further investigation, not a decision made here:</strong> Option A is very likely sufficient to meet the real client need (something substantial to eat immediately after fasting) without the Medium Risk step-up, and is worth costing first. This single choice &mdash; pre-made vs. on-site assembly &mdash; is the actual decision point, not whether to offer food at all.</p>
+
+    <h2>Where it happens</h2>
+    <div class="journey-track">
+      <div class="journey-row">
+        <div class="journey-node"><span class="phase">During GTT</span><span class="stage">Herbal tea/water only</span><span class="emotion">No caffeinated drinks while a draw sequence is active (T=0&ndash;120)</span></div>
+        <div class="journey-node"><span class="phase">Post-Draw 3</span><span class="stage">Snacks offered</span><span class="emotion">Mandatory offer per the clinical protocol (Chapter 7)</span></div>
+        <div class="journey-node"><span class="phase">Lounge</span><span class="stage">Cafe/Refreshments Counter</span><span class="emotion">8sqm, solid-walled &mdash; glucose-drink dispensing is a GTT protocol requirement here, not an amenity</span></div>
+        <div class="journey-node"><span class="phase">If upgraded</span><span class="stage">Hot food/drink service</span><span class="emotion">Concept stage &mdash; Option A/B not yet decided</span></div>
+      </div>
+    </div>
+
+    <h2>Equipment and staffing, honestly stated</h2>
+    <p>Current equipment line: a mini fridge (sparkling water, coconut water, electrolytes) &mdash; a genuine step down from what either upgrade option would require. A commercial-grade small fridge/display unit is needed for either option; a toastie press is needed only if hot food is offered, and is itself the one element most likely to tip the venue further toward a food-preparation classification &mdash; worth confirming with the council directly before committing to it. No dedicated F&amp;B staff role exists or is proposed &mdash; service is currently modelled as a Receptionist/Manager task, not a separate hire.</p>
+
+    <div class="callout brown">
+      <span class="callout-label">What remains open &mdash; not filled with assumptions</span>
+      <span class="tag tag-research">Needs research</span> The exact council fee for Medium Risk classification (genuinely council-specific, unconfirmed). <span class="tag tag-open">Open</span> Option A vs Option B &mdash; not decided. This chapter adds no new figure to <code>data/canonical/startup_costs.yml</code> and does not change the ancillary/cafe revenue line's existing placeholder status (Chapter 13 covers that line's treatment) &mdash; this is a service-design investigation, not a revenue re-derivation.
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/architecture/CAFE-FOOD-SERVICE-INVESTIGATION.md</code> (regulatory finding, options), <code>data/canonical/services.yml</code> (current priced offering), <code>docs/gtt-clinical-protocol.md</code> (mandatory post-draw snack offer, herbal-tea-only-during-test rule).
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 13 — RETAIL
+     ================================================================ -->
+<section class="chapter" id="ch13">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 13</div>
+      <h1 class="chapter-title">Retail</h1>
+      <p class="chapter-dek">Third-party resale only &mdash; a convenience/amenity line, not a merchandised boutique and not an in-house product line.</p>
+    </div>
+
+    <h2>The proposition</h2>
+    <p>Retail exists as a convenience/amenity offering bundled alongside cafe snacks, browsed by AM clients during dwell time &mdash; an impulse/small-basket mode, not a curated destination-retail strategy. <strong>This is exclusively third-party resale of established brands.</strong> GTT Center Perth does not manufacture, formulate, or brand its own retail products.</p>
+
+    <h2>Current brands</h2>
+    <div class="svc-cards">
+      <div class="svc-card"><h4>GAIA Skin Naturals</h4><div class="meta">Australian-made natural/organic baby and pregnancy skincare</div><div class="price" style="font-size:0.95rem;">Confirmed wholesale program <span class="tag tag-researched">Researched</span></div></div>
+      <div class="svc-card"><h4>Weleda</h4><div class="meta">Swiss, established global natural/organic pregnancy/baby range</div><div class="price" style="font-size:0.95rem;">Wholesale channel exists, not independently re-verified <span class="tag tag-researched">Researched</span></div></div>
+      <div class="svc-card"><h4>Mustela</h4><div class="meta">French pediatric/maternity skincare, sold in major AU pharmacies</div><div class="price" style="font-size:0.95rem;">Wholesale channel exists, not independently re-verified <span class="tag tag-researched">Researched</span></div></div>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;"><strong>GAIA is the most directly justified of the three</strong> &mdash; Australian-made, pregnancy/baby-specific, with a confirmed real wholesale program. Weleda and Mustela are both real, legitimate, widely-available brands with plausible wholesale access, but their specific wholesale terms were not independently re-verified to the same depth &mdash; flagged, not assumed identical.</p>
+
+    <h2>Candidate additional/WA suppliers &mdash; researched, not adopted</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Brand</th><th>Origin</th><th>What it offers</th></tr></thead>
+      <tbody>
+        <tr><td>Aromababy</td><td>Australian (est. 1994)</td><td>Natural baby skincare, supplied to select maternity hospitals &mdash; confirmed wholesale page</td></tr>
+        <tr><td>Pod Organics</td><td>Australian</td><td>Organic skincare for pregnancy, postpartum, and baby</td></tr>
+        <tr><td>ONEA Organic</td><td>Australian, allergen-free</td><td>Organic baby skincare</td></tr>
+        <tr><td>Mama &amp; Bird Skincare</td><td>Australian, certified vegan/cruelty-free</td><td>Pregnancy belly butter/oil</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;"><strong>Recommendation, not a decision:</strong> Aromababy's existing maternity-hospital supply relationships make it a plausible, well-justified addition &mdash; worth Anthony's consideration, not adopted here. Genuinely WA-headquartered (not just Australian-wide) suppliers were <span class="tag tag-research">Needs research</span> not confirmed this pass &mdash; a real, disclosed gap, not resolved with a guess.</p>
+
+    <h2>Specific priced items already in the catalogue</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Item</th><th>Price</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Freestyle Libre 2 sensor (14-day CGM)</td><td>A$105</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Low-GI recipe book (pregnancy)</td><td>A$30</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Pregnancy-safe nail polish (take-home)</td><td>A$18</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>GDM snack pack</td><td>A$20</td><td><span class="tag tag-modelled">Modelled</span> &mdash; resolved by investigation, Chapter 10</td></tr>
+        <tr><td>GDM resource pack (printed)</td><td>Free</td><td><span class="tag tag-verified">Verified</span> &mdash; goodwill/education material, not a revenue line</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>What's explicitly ruled out or parked</h2>
+    <ul>
+      <li><strong>A name-branded retail/cosmetics product line</strong> (e.g. venue-branded body oil) &mdash; explicitly ruled out by the founder (2026-08-14, <code>DECISION-LOG.md</code>). Third-party resale remains the model, not disturbed by any analysis in this chapter.</li>
+      <li><strong>A branded practical maternity-aid product line</strong> (TENS machines, maternity/exercise balls, nasal aspirators, thermal thermometers) &mdash; a genuinely different, non-cosmetic category, parked as a future opportunity, not ruled out, not built out beyond this note.</li>
+    </ul>
+
+    <h2>Display, location, and revenue treatment</h2>
+    <p>Retail is displayed as wall shelving in the reception/lounge area, visible to arriving and waiting clients &mdash; not a separate shop. <strong>Revenue treatment: A$0 in the current financial-model baseline</strong> (<code>data/canonical/revenue_assumptions.yml#rev_ancillary_excluded_from_baseline</code>) &mdash; retail is treated as pure upside if it materialises, not forecast. A historical modelled figure (~A$25,000/yr) exists in earlier planning documents with, per the venture's own verification tracker, "no real derivation found" &mdash; <span class="tag tag-placeholder">Placeholder</span>, not to be treated as a revenue commitment anywhere in this dossier.</p>
+
+    <div class="callout">
+      <span class="callout-label">What remains open</span>
+      <span class="tag tag-research">Needs research</span> Purchasing/replenishment cadence, minimum order quantities, and margin are not specified anywhere in this repo. <span class="tag tag-research">Needs research</span> Retail-specific compliance beyond standard retail sale (the venue is not a pharmacy and does not dispense) was not independently verified this round.
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/strategy/STRATEGIC-REPORT.md</code> §7 (retail strategy, founder decision), <code>docs/architecture/SERVICE-CATALOGUE.md</code> §3a/§3b (brand research), <code>docs/floor-plan-concept.md</code> (display location), <code>data/canonical/services.yml</code> (priced items), <code>data/canonical/revenue_assumptions.yml</code> (baseline exclusion).
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 14 — STAFFING
+     ================================================================ -->
+<section class="chapter" id="ch14">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 14</div>
+      <h1 class="chapter-title">Staffing</h1>
+      <p class="chapter-dek">The overall staffing structure &mdash; and the one distinction that must never blur: who is on the floor every day versus who is on the books.</p>
+    </div>
+
+    <div class="callout">
+      <span class="callout-label">Two numbers, never the same number</span>
+      This venture has two genuinely different staffing figures, and this dossier keeps them visually and structurally separate everywhere they appear.
+    </div>
+    <div class="cap-compare">
+      <div class="cap-box"><span class="n">10</span><span class="lbl">Simultaneous operating headcount &mdash; 8 treatment + 2 phlebotomists, solver-required, every trading day</span></div>
+      <div class="cap-box"><span class="n">16</span><span class="lbl">Recommended employment pool &mdash; 12 treatment + 4 phlebotomists, sized for reliability, not all rostered daily</span></div>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Plus 1 Venue Manager and 1 PM Reception in both counts &mdash; both roles have a committed headcount of 1, with different coverage treatments (Chapter 16). <strong>The employment pool is a recruitment/coverage recommendation, not a daily roster count and not an additional payroll line</strong> &mdash; see the financial-integrity note below.</p>
+
+    <h2>Five distinct staffing concepts &mdash; not interchangeable</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Concept</th><th>Definition</th><th>Treatment (common pool)</th><th>Phlebotomists</th><th>Venue Manager</th><th>PM Reception</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1. Required operating positions</strong></td><td>Distinct job roles/functions, regardless of headcount</td><td>3 roles (Massage+Beauty, Nails, Hair)</td><td>1 role</td><td>1 role</td><td>1 role</td></tr>
+        <tr><td><strong>2. Actual scheduled hours</strong></td><td>Real rostered hours/week at 18-client volume</td><td>~36hrs/week per rostered AM staff member (PM hours separate, session-driven)</td><td>~36hrs/week per rostered phlebotomist</td><td>~48hrs/week</td><td>~30hrs/week</td></tr>
+        <tr><td><strong>3. Simultaneous employment headcount</strong></td><td>People required on the floor every trading day</td><td>8, rostered daily</td><td>2, rostered daily</td><td>1</td><td>1</td></tr>
+        <tr><td><strong>4. Recommended employment pool</strong></td><td>Additional people on the books, not rostered daily &mdash; sized for reliability (Chapter 16)</td><td><strong>12 total</strong> (or 11, disclosed lower-reliability alternative) &mdash; <span class="tag tag-founder">Founder decision required</span></td><td><strong>4 total</strong> (or 3, disclosed lower bound) &mdash; <span class="tag tag-founder">Founder decision required</span></td><td>1, no relief recommended</td><td>1 + a small on-call relief pool</td></tr>
+        <tr><td><strong>5. Paid hours in the financial model</strong></td><td>What the payroll build actually prices</td><td>ONLY the committed 8, full rostered shift, every trading day</td><td>ONLY the committed 2, full rostered shift</td><td>1 person, full shift</td><td>1 person, full shift</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Framework: <code>docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md</code> §9. Note: that document's own worked example (concept #4) still shows the pre-recalculation "10-11"/"3-4" figures &mdash; superseded by <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code>'s later, same-day recalculation to 12/4, shown here instead. The five-concept framework itself remains current; only its example numbers needed updating.</p>
+
+    <h2>Positions and reporting structure</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Position</th><th>Reports to</th><th>Coverage mechanism</th></tr></thead>
+      <tbody>
+        <tr><td>Venue Manager</td><td>Anthony Zed / YETI Tipi Holdings &mdash; no intermediate management tier</td><td>None &mdash; single point of failure, disclosed, not hidden</td></tr>
+        <tr><td>Phlebotomist (&times;2 simultaneous)</td><td>Venue Manager</td><td>Employment pool of 4 (recommended), zero cross-cover from any other role</td></tr>
+        <tr><td>Treatment &mdash; Massage+Beauty (&times;4 simultaneous)</td><td>Venue Manager</td><td>Cross-covers within its own dual-qualified pool only</td></tr>
+        <tr><td>Treatment &mdash; Nails (&times;2 simultaneous)</td><td>Venue Manager</td><td>Isolated &mdash; no confirmed cross-qualification with any other line</td></tr>
+        <tr><td>Treatment &mdash; Hair (&times;2 simultaneous)</td><td>Venue Manager</td><td>Isolated &mdash; no confirmed cross-qualification with any other line</td></tr>
+        <tr><td>PM Reception (&times;1)</td><td>Venue Manager (overlaps 13:00&ndash;15:00 only)</td><td>Small on-call relief pool recommended for 15:00&ndash;18:00</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>Substitution capability, stated explicitly</h2>
+    <ul>
+      <li><strong>Phlebotomy has zero substitution capability outside its own credentialed pool.</strong> No other position in this venture can cross-cover a phlebotomist &mdash; the role requires the pathology partner's own specific accreditation, and a same-day replacement cannot be casually sourced the way a treatment-staff gap might be.</li>
+      <li>Massage and Beauty are dual-qualification-paired as one shared pool &mdash; this pairing IS the cross-cover mechanism between these two lines, already load-bearing in the AM headcount model (Chapter 8).</li>
+      <li>Nails and Hair each have no confirmed cross-qualification with any other line, including each other &mdash; each can only substitute within its own 2-person (simultaneous) / 3-person (recommended pool) line.</li>
+      <li>The Venue Manager's own required service qualification means the VM can step into a treatment shift in genuine emergency &mdash; but this leaves reception/management duties uncovered simultaneously, so it is not a free substitution.</li>
+      <li>PM Reception has no confirmed backup beyond the newly-recommended small relief pool (Chapter 16).</li>
+    </ul>
+
+    <h2>Relief Venue Manager &mdash; explicitly not recommended</h2>
+    <p>A permanent relief VM is <strong>not recommended at launch scale</strong>: the cost of a second salaried, dual-qualified, service-capable manager is disproportionate to a single-site venue at this stage. This is a genuine single point of failure, disclosed rather than smoothed over. The realistic mitigation is cross-training at least one senior treatment staff member or the PM Reception coordinator in basic opening/reception procedures as an emergency fallback (not full VM capability), accepting the residual risk of an ad hoc arrangement for a genuine VM absence until scale justifies a second hire.</p>
+
+    <div class="callout brown">
+      <span class="callout-label">Financial integrity &mdash; read before citing any staffing figure alongside a dollar figure</span>
+      The steady-state payroll model prices <strong>only the simultaneous operating requirement</strong> (8 treatment + 2 phlebotomists + 1 Venue Manager + 1 PM Reception, full rostered shift, every trading day) &mdash; A$101,717.02/month direct labour (Chapter 27, not yet built). The recommended employment pools (12 treatment, 4 phlebotomists) are coverage/recruitment recommendations, not an additional payroll line &mdash; relief staff are only paid when they actually work a shift covering an absence. <strong>The A$6,128.53/month Relief/Absence Coverage Allowance already in the financial model is the cost of that actual usage</strong> &mdash; it is not to be added to, duplicated, or recalculated anywhere in this dossier on the basis of the 12/4 employment-pool figures in this chapter.
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/architecture/STAFF-PROFILES.md</code> §1, <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> (current recalculated pool sizes), <code>docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md</code> §9 (five-concepts framework).
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 15 — STAFF PROFILES
+     ================================================================ -->
+<section class="chapter" id="ch15">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 15</div>
+      <h1 class="chapter-title">Staff Profiles</h1>
+      <p class="chapter-dek">Every position, full field set &mdash; no invented credentials, no requirement presented as more certain than its source states.</p>
+    </div>
+
+    <h3>Position 01 &mdash; Venue Manager</h3>
+    <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th style="width:220px;">Role purpose</th><td>Operational leadership of the venue and its people &mdash; covers reception duties personally during the AM window. <strong>Not a "Managing Director" role</strong> &mdash; operational, hands-on, reception-facing.</td></tr>
+        <tr><th>Reports to</th><td>Anthony Zed / YETI Tipi Holdings directly &mdash; no intermediate management tier. Every other position reports to the Venue Manager.</td></tr>
+        <tr><th>Hours / roster</th><td>07:00&ndash;15:00, Monday&ndash;Saturday, fixed (not rotating)</td></tr>
+        <tr><th>Employment type</th><td>Salaried from Day 1 &mdash; the one confirmed exception to the "casual initially" rule, given the critical-path, safety-and-compliance-adjacent nature of the role</td></tr>
+        <tr><th>Required qualifications</th><td>A genuine service qualification &mdash; Cert III/IV in Beauty Therapy, Massage, or Hairdressing (or dual) &mdash; so the VM can step into treatment/service work if genuinely needed, not just supervise</td></tr>
+        <tr><th>Desirable qualifications</th><td>Prior venue/salon/day-spa management experience; First Aid/Fire Warden certification</td></tr>
+        <tr><th>Wage</th><td>A$40.00/hr (Hair &amp; Beauty Industry Award MA000005, Level 6 "salon manager") <span class="tag tag-modelled">Researched-best-evidenced</span> &mdash; corrected from an earlier Clerks Award misclassification. Not legally verified &mdash; a real employment contract's classification still needs accountant/Fair Work confirmation.</td></tr>
+        <tr><th>Experience</th><td>No minimum sourced anywhere in this repo &mdash; genuinely unresolved. 2+ years supervisory experience is a suggested planning assumption only, explicitly not independently researched.</td></tr>
+        <tr><th>Skills</th><td>Rostering/Fair Work compliance literacy; Fresha administration; weekly P&amp;L review literacy; incident-management composure; hands-on service delivery capability</td></tr>
+        <tr><th>Compliance</th><td>First Aid/CPR (mandatory), Fire Warden (mandatory). Working with Children Check not required (no unsupervised minors in this venture's service model). RSA not required (no licensed premises).</td></tr>
+        <tr><th>Cross-training/substitution</th><td>Can step into a treatment shift in genuine emergency, but this leaves reception/management uncovered simultaneously &mdash; not a free substitution. No other position can cover the VM's own management/compliance responsibilities.</td></tr>
+        <tr><th>Coverage</th><td>No dedicated relief VM &mdash; a genuine single point of failure (Chapter 16)</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Position 02 &mdash; Phlebotomist</h3>
+    <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th style="width:220px;">Role purpose</th><td>Perform GTT blood collection under the pathology partner's accreditation umbrella</td></tr>
+        <tr><th>Reports to</th><td>Venue Manager. No internal clinical-lead position exists &mdash; clinical protocol authority sits with the pathology partner.</td></tr>
+        <tr><th>Hours / roster</th><td>07:00&ndash;13:00, AM window only &mdash; not rostered for any PM/general-venue duties, a settled scope boundary. 2 rostered per day (Chair A/B), drawn from a pool of 4 (recommended).</td></tr>
+        <tr><th>Employment type</th><td>Casual initially, reviewed for conversion once regular hours are proven</td></tr>
+        <tr><th>Required qualifications</th><td>Cert III/IV Pathology Collection, credentialed under the pathology partner's own NATA-accredited umbrella</td></tr>
+        <tr><th>Wage</th><td>A$34.375/hr midpoint (Health Professionals and Support Services Award MA000027, closest-match caveat disclosed) <span class="tag tag-modelled">Researched-best-evidenced</span></td></tr>
+        <tr><th>Experience</th><td>Not independently researched &mdash; genuinely unresolved. Real collection centres typically expect prior experience alongside the Cert III/IV, not sourced from WDP specifically.</td></tr>
+        <tr><th>Skills</th><td>Venepuncture proficiency across patient presentations (incl. pregnancy-specific); calm bedside manner at the journey's highest-anxiety point; precise specimen labelling/chain-of-custody discipline</td></tr>
+        <tr><th>Compliance</th><td>Pathology partner's own Licensed Collection Centre QMS induction &mdash; the credentialing umbrella itself, not a separate requirement</td></tr>
+        <tr><th>Cross-training/substitution</th><td><strong>None.</strong> Zero substitution capability from any other position &mdash; the one role in the entire staffing model with none.</td></tr>
+        <tr><th>Third-party dependency</th><td><span class="tag tag-waiting">Waiting on third party</span> Whether phlebotomists are ultimately employed directly by this venture or supplied/employed by WDP under a service-fee arrangement remains genuinely open, waiting on Carole Rivers. This profile's wage figure assumes direct employment &mdash; that assumption may not hold.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Position 03 &mdash; Treatment Staff, Massage+Beauty pool</h3>
+    <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th style="width:220px;">Role purpose</th><td>Delivers massage and beauty/facial services across AM and PM &mdash; one role, not two, per the venue's common-pool model</td></tr>
+        <tr><th>Reports to</th><td>Venue Manager</td></tr>
+        <tr><th>Hours / roster</th><td>Staggered per first-client service time, minimum 3-hour engagement, booking-driven (not a fixed daily headcount)</td></tr>
+        <tr><th>Employment type</th><td>Casual, reviewed for conversion once regular hours are proven</td></tr>
+        <tr><th>Required qualifications</th><td>Cert IV Massage Therapy and/or Beauty Therapy (dual-qualification preferred)</td></tr>
+        <tr><th>Wage</th><td>A$37.50/hr (MA000005 Level 4) <span class="tag tag-modelled">Researched-best-evidenced</span></td></tr>
+        <tr><th>Skills</th><td>Pregnancy-safe technique adaptation across both modalities; time-discipline within fixed 45-minute AM service blocks</td></tr>
+        <tr><th>Compliance</th><td>Standard beauty-industry infection control; pregnancy-safe product awareness (internal induction, no external accreditation body specific to this)</td></tr>
+        <tr><th>Cross-training/substitution</th><td>Massage+Beauty dual-qualification IS the cross-cover mechanism between these two lines. NOT cross-qualified with Nails or Hair.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Position 04 &mdash; Treatment Staff, Nail Technician</h3>
+    <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th style="width:220px;">Structure</th><td>Same hours/roster/employment pattern as Position 03</td></tr>
+        <tr><th>Required qualifications</th><td>Cert III Nail Technology</td></tr>
+        <tr><th>Wage</th><td>A$36.81/hr (MA000005 Level 3) <span class="tag tag-modelled">Researched-best-evidenced</span></td></tr>
+        <tr><th>Operational note</th><td>4 physical nail stations exist day-one; only 2 are staffed at 18-client volume &mdash; the extra 2 provide rostering flexibility and PM headroom, not a mandatory extra hire</td></tr>
+        <tr><th>Skills</th><td>Gel/SNS/acrylic application proficiency; time-discipline within fixed AM blocks</td></tr>
+        <tr><th>Cross-training/substitution</th><td>NOT confirmed cross-qualified with Massage+Beauty or Hair &mdash; the 2 Nail Technicians can only substitute for each other</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Position 05 &mdash; Treatment Staff, Hairdresser</h3>
+    <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th style="width:220px;">Structure</th><td>Same hours/roster/employment pattern as Position 03</td></tr>
+        <tr><th>Required qualifications</th><td>Cert III Hairdressing</td></tr>
+        <tr><th>Wage</th><td>A$36.81/hr (MA000005 Level 3) <span class="tag tag-modelled">Researched-best-evidenced</span></td></tr>
+        <tr><th>Operational note</th><td>Same 2-of-4-stations principle as Nails</td></tr>
+        <tr><th>Skills</th><td>Blow-dry/styling proficiency matching PM Restore and standalone offerings; time-discipline within fixed AM blocks</td></tr>
+        <tr><th>Cross-training/substitution</th><td>NOT confirmed cross-qualified with any other line &mdash; the 2 Hairdressers can only substitute for each other</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Position 06 &mdash; PM Reception/Coordinator</h3>
+    <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th style="width:220px;">Role purpose</th><td>Reception, booking management, customer-facing coordination for the PM window &mdash; exists because the VM's own hours (07:00&ndash;15:00) do not extend to 18:00 close</td></tr>
+        <tr><th>Reports to</th><td>Venue Manager &mdash; overlaps VM's own hours 13:00&ndash;15:00 only; no VM presence 15:00&ndash;18:00</td></tr>
+        <tr><th>Hours</th><td>~13:00&ndash;18:00, to be confirmed against real PM booking volume once trading</td></tr>
+        <tr><th>Employment type</th><td>Casual</td></tr>
+        <tr><th>Required qualifications</th><td>Beauty/wellness-industry customer service experience, not solely admin/medical reception background</td></tr>
+        <tr><th>Wage</th><td>A$33.71/hr (Clerks Award MA000002, Level 1) <span class="tag tag-modelled">Researched-best-evidenced</span></td></tr>
+        <tr><th>Skills</th><td>Fresha proficiency; payment processing; phone/email customer service; basic retail/upsell conversation</td></tr>
+        <tr><th>Cross-training/substitution</th><td>No confirmed backup beyond the newly-recommended small on-call relief pool (Chapter 16). VM can cover only the 13:00&ndash;15:00 overlap window.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/architecture/STAFF-PROFILES.md</code> §2, full field set, cross-checked against <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> §6 for current wage-label status. No credential, requirement, or wage figure in this chapter goes beyond what these two documents state.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 16 — STAFFING COVERAGE
+     ================================================================ -->
+<section class="chapter" id="ch16">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 16</div>
+      <h1 class="chapter-title">Staffing Coverage</h1>
+      <p class="chapter-dek">The reliability model behind the recommended employment pools &mdash; quantified, not a round-number guess. Two founder decisions presented, not resolved.</p>
+    </div>
+
+    <h2>Coverage matrix</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Position</th><th>Required simultaneous</th><th>Employed pool</th><th>Relief mechanism</th><th>Cross-cover</th><th>Reliability</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Massage+Beauty</td><td>4</td><td><strong>6</strong> (recommended)</td><td>Pool absorbs 1&ndash;2 absences</td><td>Dual-qualified with each other</td><td>99.15% at n=6</td><td><span class="tag tag-founder">Founder decision</span> within the 12-total figure</td></tr>
+        <tr><td>Nails</td><td>2</td><td><strong>3</strong></td><td>Pool absorbs 1 absence</td><td>None &mdash; own line only</td><td>98.18% at n=3</td><td>Part of the 12-total recommendation</td></tr>
+        <tr><td>Hair</td><td>2</td><td><strong>3</strong></td><td>Pool absorbs 1 absence</td><td>None &mdash; own line only</td><td>98.18% at n=3</td><td>Part of the 12-total recommendation</td></tr>
+        <tr><td>Phlebotomists</td><td>2</td><td><strong>4</strong></td><td>Pool absorbs 1&ndash;2 absences</td><td><strong>None</strong> &mdash; zero cross-cover from any role</td><td>99.81% at n=4</td><td><span class="tag tag-founder">Founder decision required</span>, 4 vs 3</td></tr>
+        <tr><td>Venue Manager</td><td>1</td><td>1</td><td><strong>None recommended</strong></td><td>None &mdash; single point of failure</td><td>n/a</td><td>Disclosed, not solved</td></tr>
+        <tr><td>PM Reception</td><td>1</td><td>1 + small on-call relief</td><td>Newly recommended, closes 15:00&ndash;18:00 gap</td><td>None confirmed beyond relief pool</td><td>n/a</td><td>Resolved this session (see below)</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>Treatment staff &mdash; the reliability calculation, shown</h2>
+    <p>Method: binomial reliability, P(at least k of n available), assuming each staff member is independently unavailable on ~8% of rostered shifts &mdash; a disclosed planning assumption (commonly-cited casual hospitality/beauty-industry range), not independently sourced against real WA industry data, and not verifiable against this venture's own history since it has not opened yet.</p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Line</th><th>Required (k)</th><th>n=k</th><th>n=k+1</th><th>n=k+2</th><th>Minimum n for &ge;95%</th></tr></thead>
+      <tbody>
+        <tr><td>Massage+Beauty</td><td>4</td><td>71.64%</td><td>94.56%</td><td>99.15%</td><td><strong>n=6</strong> (99.15%) &mdash; n=5 (94.56%) narrowly misses the bar</td></tr>
+        <tr><td>Nails</td><td>2</td><td>84.64%</td><td>98.18%</td><td>99.81%</td><td><strong>n=3</strong> (98.18%)</td></tr>
+        <tr><td>Hair</td><td>2</td><td>84.64%</td><td>98.18%</td><td>99.81%</td><td><strong>n=3</strong> (98.18%)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="callout">
+      <span class="callout-label">Founder decision, presented not resolved</span>
+      <strong>Recommended: 6+3+3 = 12 treatment staff on the books.</strong> A defensible lower-reliability alternative exists: 5+3+3 = 11 (94.56% on the Massage+Beauty line, roughly 1 short-staffed AM day in every 18 trading days, about 3 weeks). <span class="tag tag-founder">Founder decision outstanding</span> &mdash; both figures shown, neither decided by this dossier.
+    </div>
+    <p><strong>What the reliability figure actually means:</strong> 12 (or 11) is the recommended <em>employment pool</em> &mdash; not the simultaneous daily headcount, which remains 8 regardless of which pool size is chosen. On any normal trading day, 8 people work; the pool exists so that when 1&ndash;2 of the 12 are unavailable, 8 are still reliably available. One absence on any line: fully covered (every line keeps at least 1 spare at n=12). Two absences on the same line (Nails or Hair specifically, 1 spare each): a real, quantified residual risk at the 98.18% level &mdash; roughly 1 day in 55 trading days that line runs short by one person. Not eliminated, bounded and disclosed.</p>
+
+    <h2>Phlebotomists &mdash; held to a higher bar deliberately</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>n</th><th>Reliability (at least 2 of n, p=92%)</th></tr></thead>
+      <tbody>
+        <tr><td>2 (bare committed)</td><td>84.64%</td></tr>
+        <tr><td>3</td><td>98.18%</td></tr>
+        <tr><td>4</td><td>99.81%</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="callout">
+      <span class="callout-label">Founder decision, presented not resolved</span>
+      <strong>Recommended: 4 phlebotomists on the books</strong> &mdash; deliberately above the 95% minimum (which n=3 already clears at 98.18%), because phlebotomy is the single highest-consequence, zero-substitution role in the model, and the WDP credentialing lead time to add a replacement mid-crisis is real and non-trivial. <span class="tag tag-founder">Founder decision outstanding</span> &mdash; 3 remains a defensible lower bound if a smaller pool is preferred; this dossier does not decide between them.
+    </div>
+    <p><span class="tag tag-waiting">Waiting on third party</span> Whether phlebotomists are ultimately employed directly or supplied by WDP under a service-fee arrangement remains open (Chapter 15) &mdash; not re-litigated in full here.</p>
+
+    <h2>Venue Manager &mdash; single point of failure, accepted not solved</h2>
+    <p>No permanent relief VM is recommended at launch scale &mdash; the cost of a second salaried, dual-qualified, service-capable manager is disproportionate to a single-site venue at this stage. Mitigation: cross-train at least one senior treatment staff member or the PM Reception coordinator in basic opening/reception procedures as an emergency fallback (not full VM capability); accept the residual risk of an ad hoc arrangement for a genuine VM absence.</p>
+
+    <h2>PM Reception &mdash; resolved this session, earlier framing superseded</h2>
+    <p><code>docs/architecture/OPERATING-MODEL-18-CLIENTS.md</code> §8 originally flagged the 15:00&ndash;18:00 coverage gap as "genuinely unresolved." That framing is <strong>superseded</strong> by <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> §4a (same day, later): a small on-call relief pool (1 additional person, cross-trained on Fresha/payment administration) is now the recommended structure, closing the gap without adding to steady-state payroll &mdash; relief is only paid when actually covering an absence. This dossier cites the resolved position throughout; the earlier "unresolved" framing is not repeated as current anywhere in Chapters 1&ndash;16.</p>
+
+    <h2>Cross-coverage summary</h2>
+    <ul>
+      <li><strong>Massage+Beauty:</strong> cross-cover within their own dual-qualified pool.</li>
+      <li><strong>Nails, Hair, Phlebotomy:</strong> each fully isolated &mdash; no confirmed cross-qualification with any other line or role. Phlebotomy specifically has zero substitution capability from any position in the venture.</li>
+    </ul>
+
+    <div class="callout brown">
+      <span class="callout-label">Financial integrity, restated from Chapter 14</span>
+      Nothing in this chapter changes the steady-state payroll figure. The 12/4 recommended pools are headcount-establishment recommendations; the A$6,128.53/month Relief/Absence Coverage Allowance already in the financial model is the correctly-modelled cost of actual relief usage &mdash; not duplicated or added to here.
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> (primary, full reliability derivation), <code>docs/architecture/STAFF-PROFILES.md</code> §1, <code>docs/architecture/OPERATING-MODEL-18-CLIENTS.md</code> §8 (superseded framing, cited for trace only).
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
      REMAINING CHAPTERS INDEX
      ================================================================ -->
 <section class="chapter">
   <div class="container">
-    <h2 style="margin-top:0;">Chapters not yet built (Groups C&ndash;F)</h2>
+    <h2 style="margin-top:0;">Chapters not yet built (Groups D&ndash;F)</h2>
     <div class="remaining">
-      <ol start="12">
-        <li>Food &amp; Beverage</li>
-        <li>Retail</li>
-        <li>Staffing</li>
-        <li>Staff Profiles</li>
-        <li>Staffing Coverage</li>
+      <ol start="17">
         <li>Rostering</li>
         <li>Customer Timetable</li>
         <li>Venue</li>
@@ -1087,7 +1515,7 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
 
 <footer>
   <div class="container">
-    <p>GTT Center Perth &mdash; Master Venture Dossier. Static in-repo prototype, not deployed. Built from <a href="../../docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md">docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md</a>. Group A (Chapters 1&ndash;6) and Group B (Chapters 7&ndash;11) built 2026-08-19.</p>
+    <p>GTT Center Perth &mdash; Master Venture Dossier. Static in-repo prototype, not deployed. Built from <a href="../../docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md">docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md</a>. Group A (Chapters 1&ndash;6), Group B (Chapters 7&ndash;11), and Group C (Chapters 12&ndash;16) built 2026-08-19.</p>
   </div>
 </footer>
 
