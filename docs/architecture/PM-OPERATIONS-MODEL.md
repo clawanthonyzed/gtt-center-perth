@@ -6,6 +6,19 @@
 
 ---
 
+> **CROSS-CHECK, 2026-08-19 (Phase 3D, per Anthony's explicit instruction) — this document's figures are STALE, discrepancies flagged and explained below, not silently resolved:**
+>
+> 1. **PM revenue figure (§1, A$36,730.80/month) does not match the current canonical figure (A$36,225.69/month, `docs/architecture/PM-CAPACITY-RECONCILIATION.md`).** The two are close but NOT identical, and critically, arrived at via a genuinely different, now-invalidated methodology — a "right answer for the wrong reason" situation worth flagging explicitly rather than treating as close-enough-so-equivalent. This document's figure used the pre-`PM-PACKAGES.md` A$95 individual-service placeholder average multiplied directly by 16 sessions/day. The current figure uses the real A$117 blended package/individual average, multiplied by a corrected 12.8128 TRANSACTION capacity (not the raw 16 STAFF-SESSION figure). **`docs/architecture/PM-CAPACITY-RECONCILIATION.md` is the current, authoritative source — this document's §1 is superseded.**
+> 2. **This document's own §1/§2/§5 use "16 sessions/day" as if it were directly the client-transaction/revenue-driving figure** — this is exactly the STAFF-SESSION vs. CLIENT-TRANSACTION conflation that `PM-CAPACITY-RECONCILIATION.md` (2026-08-18) later identified and corrected elsewhere in the canonical model. This document was never updated to reflect that fix. **Any station-purchase timing or revenue-headroom conclusion in §4/§5 that depends on "16 sessions/day = 16 transactions/day" should be treated as unverified against the current model, not re-derived here — flagged, not silently corrected, since re-deriving the Month-4 station-purchase timing against the corrected transaction-capacity figure is a genuinely separate task not completed this pass.**
+> 3. **§3's specific PM labour cost figures (A$9,587.16/month Months 1-4, A$9,680.00 Month 5+) are stale** relative to the current canonical PM labour figures in `docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md` §3e (A$10,070.72/A$2,895.83 weekday/Saturday at current wage rates) — this document predates the 2026-08-17 first-principles wage rebuild entirely.
+> 4. **What remains structurally valid, not stale:** the underlying METHOD described in §3 (hours-based costing formula, subject to the 3-hour casual-minimum floor) is still the correct, current approach — only the specific dollar figures computed from it are outdated. The qualitative finding that PM labour cost does not meaningfully ramp down with lower early-month volume (§3, §6) also remains directionally correct under the current model.
+>
+> **Recommendation: this document needs a full re-derivation against the current canonical model before being used as a source for the dossier rebuild — not attempted in this pass, given the size of that task. Use `docs/architecture/PM-CAPACITY-RECONCILIATION.md`, `docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md`, and `docs/architecture/OPERATING-MODEL-18-CLIENTS.md` as the current, authoritative sources for the dossier instead of this document's specific figures.**
+
+---
+
+---
+
 ## 1. PM Revenue Model — Scenario-Independent
 
 `docs/architecture/REVENUE-RAMP-METHODOLOGY.md` §6 confirms PM revenue is genuinely identical regardless of which AM scenario (Table 1 or Table 2) is committed — PM revenue does not depend on AM client volume at all. Steady state: A$36,730.80/month (PM weekday + PM Saturday A$3,290.80). Ramp (both tables): M1 A$15,794.24 → M2 A$23,507.71 → M3 A$29,017.33 → M4 A$34,159.64 → M5+ A$36,730.80.
