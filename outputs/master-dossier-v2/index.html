@@ -263,13 +263,18 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       <a href="#ch14">14. Staffing</a>
       <a href="#ch15">15. Staff Profiles</a>
       <a href="#ch16">16. Coverage</a>
+      <a href="#ch17">17. Rostering</a>
+      <a href="#ch18">18. Timetable</a>
+      <a href="#ch19">19. Venue</a>
+      <a href="#ch20">20. Floor Plan</a>
+      <a href="#ch21">21. Compliance</a>
     </nav>
   </div>
 </div>
 
 <div class="build-banner">
   <div class="container">
-    <strong>Build status:</strong> Chapters 1&ndash;16 built (Group A: 1&ndash;6, Group B: 7&ndash;11, Group C: 12&ndash;16, all 2026-08-19), reconciled against the live canonical model. Chapters 17&ndash;35 (Groups D&ndash;F) not yet built &mdash; see the index at the foot of this page. This is a static, in-repo prototype only. Not deployed, not password-protected, not for external circulation.
+    <strong>Build status:</strong> Chapters 1&ndash;21 built (Group A: 1&ndash;6, Group B: 7&ndash;11, Group C: 12&ndash;16, Group D: 17&ndash;21, all 2026-08-19), reconciled against the live canonical model. Chapters 22&ndash;35 (Groups E&ndash;F) not yet built &mdash; see the index at the foot of this page. This is a static, in-repo prototype only. Not deployed, not password-protected, not for external circulation.
   </div>
 </div>
 
@@ -696,9 +701,9 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     <p>ACSQHC-compliant: minimum 10&ndash;12sqm, 2 adjustable patient chairs, hand hygiene station, approved sharps container, biohazard waste bin, specimen refrigerator (2&ndash;8&deg;C, temperature logged), a door that closes with no public-facing window, minimum 900mm wheelchair clearance, and an emergency call button to reception. This is the one room in the venue genuinely built to look and operate as a clinical space &mdash; see Chapter 6's experience principle on why every other room deliberately does not.</p>
 
     <div class="callout">
-      <span class="callout-label">Contradiction found this build round &mdash; specimen dispatch timing, not resolved here</span>
-      <span class="tag tag-waiting">Waiting on third party</span>
-      <code>docs/gtt-clinical-protocol.md</code> states specimens are dispatched to the lab "at agreed time (latest: 11:30am daily &mdash; confirm with WDP)." That figure predates the 2026-08-05 volume rebase to 18 clients/day: the current solver-verified AM schedule's own last Draw 3 lands at <strong>12:20&ndash;12:25pm</strong> (Chapter 8, Pair 9) &mdash; nearly an hour after the clinical protocol's own stated courier cutoff. This is a genuine scheduling/logistics contradiction surfaced while building this chapter, not previously flagged anywhere in this repo against the current 18-client volume. Not resolved here: specimen courier/dispatch timing depends on the still-open WDP/Carole Rivers commercial conversation (already tracked elsewhere in this venture's third-party dependencies) &mdash; re-confirming the actual achievable cutoff against the current, higher-volume schedule is a genuine open item for that conversation, not assumed either way in this dossier.
+      <span class="callout-label">Specimen dispatch timing &mdash; resolved, not a hard cutoff</span>
+      <span class="tag tag-verified">Verified</span>
+      An early draft of <code>docs/gtt-clinical-protocol.md</code> stated a specimen-dispatch deadline of "11:30am daily" &mdash; this figure was never confirmed by the pathology partner (per <code>docs/cutoff-time-CORRECTION.md</code>'s own 2026-07-17 finding, it was one of two conflicting, unconfirmed internal placeholder numbers, the other being 12:30pm, neither sourced from an actual WDP reply). <strong>This is now resolved by real, written correspondence:</strong> Carole Rivers (WDP), email, 2026-07-30 &mdash; fluoride-oxalate GTT tubes are stable approximately 24 hours, overnight storage is viable "in some circumstances," and "a late booking would not necessarily prevent collection, although specimen type and storage requirements would always need to be considered." There is no single fixed courier cutoff &mdash; the current 18-client schedule's last draw at 12:20&ndash;12:25pm (Chapter 8, Pair 9) does not breach any confirmed deadline. What remains genuinely open, narrower than the old framing: the exact storage/handling setup GTT Center Perth would need in place to reliably use the late-booking/overnight option on any given day &mdash; tracked in <code>docs/VERIFICATION-TRACKER.md</code>, distinct from the now-answered "is there a hard cutoff" question.
     </div>
 
     <div class="callout olive">
@@ -1481,18 +1486,453 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
 </section>
 
 <!-- ================================================================
+     CHAPTER 17 — ROSTERING
+     ================================================================ -->
+<section class="chapter" id="ch17">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 17</div>
+      <h1 class="chapter-title">Rostering</h1>
+      <p class="chapter-dek">Who works when, across the full 07:00&ndash;18:00 trading day &mdash; and where coverage and handovers actually sit.</p>
+    </div>
+
+    <p>This chapter renders the full-day roster as a real staff-lane diagram, extending Chapter 8's AM-only lanes and Chapter 9's PM window into one continuous picture. <strong>Two headcount concepts remain distinct throughout</strong> (Chapter 14): 8 treatment + 2 phlebotomists is who is on the floor every trading day; 12 treatment + 4 phlebotomists (or 11/3, founder decision outstanding) is the recommended employment pool this roster draws from.</p>
+
+    <h2>Full-day staff-lane diagram</h2>
+    <div class="lane-wrap">
+    <table class="lane-table">
+      <thead><tr><th>Lane</th><th>07:00</th><th>08:00</th><th>09:00</th><th>10:00</th><th>11:00</th><th>12:00</th><th>13:00</th><th>14:00</th><th>15:00</th><th>16:00</th><th>17:00</th><th>18:00</th></tr></thead>
+      <tbody>
+        <tr><td class="lane-label">Venue Manager</td><td class="active-cell">START, AM reception</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">wind-down/admin</td><td>admin/rostering/P&amp;L</td><td>admin</td><td class="end-cell">END 15:00</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+        <tr><td class="lane-label">Phlebotomist A</td><td class="active-cell">START, Chair A draws</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active (last ~12:25)</td><td class="end-cell">END ~12:33</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+        <tr><td class="lane-label">Phlebotomist B</td><td class="active-cell">START, Chair B draws</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="end-cell">END ~12:33</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+        <tr><td class="lane-label">Massage+Beauty (4)</td><td class="active-cell">START</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active (last ~12:10)</td><td>END AM / early release or PM</td><td>if PM: active</td><td>active</td><td>active</td><td>active</td><td>active</td><td class="end-cell">END by 18:00 if rostered</td></tr>
+        <tr><td class="lane-label">Nails (2)</td><td class="active-cell">START</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td>END AM</td><td>if PM: active</td><td>active</td><td>active</td><td>active</td><td>active</td><td class="end-cell">END by 18:00 if rostered</td></tr>
+        <tr><td class="lane-label">Hair (2)</td><td class="active-cell">START</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td>END AM</td><td>if PM: active</td><td>active</td><td>active</td><td>active</td><td>active</td><td class="end-cell">END by 18:00 if rostered</td></tr>
+        <tr><td class="lane-label">PM Reception</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td class="active-cell">START 13:00</td><td class="active-cell">active</td><td class="active-cell">active (VM overlap ends 15:00)</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="end-cell">END 18:00</td></tr>
+        <tr><td class="lane-label">Relief/backup pool</td><td colspan="12" style="color:var(--muted-olive); font-style:italic;">On-call, not rostered by default &mdash; activated only to cover an actual absence (treatment/phlebotomy pools, and the newly-recommended small PM Reception relief for 15:00&ndash;18:00)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Source: <code>docs/architecture/OPERATING-MODEL-18-CLIENTS.md</code> §4. Every treatment-staff AM block is fully occupied by the solver-verified 18-client schedule (Chapter 8) &mdash; no idle AM capacity is claimed twice against the PM lanes here.</p>
+
+    <h2>Where the handovers actually are</h2>
+    <div class="card-grid">
+      <div class="metric-card"><span class="label">AM open</span><div class="value" style="font-size:1.3rem;">No gap</div><div class="note">VM personally covers reception from the venue's actual 07:00 opening &mdash; the earlier 07:00/07:15 inconsistency is corrected, not current.</div></div>
+      <div class="metric-card"><span class="label">AM&ndash;PM transition</span><div class="value" style="font-size:1.3rem;">13:00, overlapped</div><div class="note">PM Reception starts at 13:00, inside the VM's own 07:00&ndash;15:00 shift &mdash; a genuine 2-hour overlap, not a handoff meeting.</div></div>
+      <div class="metric-card"><span class="label">PM close</span><div class="value" style="font-size:1.3rem;">15:00&ndash;18:00 gap</div><div class="note">No VM presence after 15:00 &mdash; the small on-call PM Reception relief pool (Chapter 16) is the mitigation, not a second manager.</div></div>
+    </div>
+
+    <h2>Early release, shown against the real roster</h2>
+    <p>Treatment staff not rostered for any PM bookings can be released as soon as their last AM client departs (as early as ~10:03 for the earliest-finishing rotation), rather than held to a fixed clock-off time &mdash; subject to the minimum 3-hour casual engagement. This upside is <strong>not included in the headline payroll figure</strong>, which prices the full-shift, no-early-release conservative basis &mdash; early release remains a separate, disclosed, tagged saving elsewhere in the financial model, not blended into Chapter 14's staffing figures.</p>
+
+    <div class="callout brown">
+      <span class="callout-label">Founder decisions this chapter does not resolve</span>
+      Treatment employment pool: <strong>12 recommended, 11 disclosed lower-reliability alternative</strong> &mdash; <span class="tag tag-founder">Founder decision outstanding</span>. Phlebotomist pool: <strong>4 recommended, 3 disclosed lower bound</strong> &mdash; <span class="tag tag-founder">Founder decision outstanding</span>. Both are employment-pool decisions, not roster changes &mdash; the daily roster above (8 treatment + 2 phlebotomists on the floor) is unaffected by which pool size is eventually chosen.
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/architecture/OPERATING-MODEL-18-CLIENTS.md</code> §4 (full-day staff-lane source table), <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> (current relief-pool recommendations, Chapter 16).
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 18 — CUSTOMER TIMETABLE
+     ================================================================ -->
+<section class="chapter" id="ch18">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 18</div>
+      <h1 class="chapter-title">Customer Timetable</h1>
+      <p class="chapter-dek">The 18-client AM day, rendered as a real timing chart &mdash; not just Chapter 8's table repeated.</p>
+    </div>
+
+    <p>Every one of the 9 pairs follows the identical fixed-block shape: a 5-minute draw at the exact clinical mark, a 45-minute treatment service, and a 10-minute transition buffer &mdash; twice, then a final draw. The chart below plots all 9 pairs on the same clock, exactly as solver-verified in Chapter 8, not redrawn or adjusted for visual neatness.</p>
+
+    <div class="chart-wrap">
+      <svg viewBox="0 0 1000 400" width="100%" height="400" role="img" aria-label="Gantt-style chart of the 9 synchronised AM pairs, 07:00 to 12:25, showing draws and treatment services per pair">
+      <rect x="0" y="0" width="1000" height="400" fill="#FCFBF7"/>
+      <line x1="100.0" y1="40" x2="100.0" y2="348" stroke="#E8DAC5" stroke-width="1"/>
+      <text x="100.0" y="34" font-size="11" fill="#5E5F45" text-anchor="middle">07:00</text>
+      <line x1="260.0" y1="40" x2="260.0" y2="348" stroke="#E8DAC5" stroke-width="1"/>
+      <text x="260.0" y="34" font-size="11" fill="#5E5F45" text-anchor="middle">08:00</text>
+      <line x1="420.0" y1="40" x2="420.0" y2="348" stroke="#E8DAC5" stroke-width="1"/>
+      <text x="420.0" y="34" font-size="11" fill="#5E5F45" text-anchor="middle">09:00</text>
+      <line x1="580.1" y1="40" x2="580.1" y2="348" stroke="#E8DAC5" stroke-width="1"/>
+      <text x="580.1" y="34" font-size="11" fill="#5E5F45" text-anchor="middle">10:00</text>
+      <line x1="740.1" y1="40" x2="740.1" y2="348" stroke="#E8DAC5" stroke-width="1"/>
+      <text x="740.1" y="34" font-size="11" fill="#5E5F45" text-anchor="middle">11:00</text>
+      <line x1="900.1" y1="40" x2="900.1" y2="348" stroke="#E8DAC5" stroke-width="1"/>
+      <text x="900.1" y="34" font-size="11" fill="#5E5F45" text-anchor="middle">12:00</text>
+      <text x="90" y="75.0" font-size="11" fill="#33261E" text-anchor="end" font-weight="600">Pair 1</text>
+      <rect x="100.0" y="61.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <rect x="113.3" y="61.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="233.3" y="61.0" width="26.7" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="260.0" y="61.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <rect x="273.4" y="61.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="393.4" y="61.0" width="26.6" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="420.0" y="61.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <text x="90" y="107.0" font-size="11" fill="#33261E" text-anchor="end" font-weight="600">Pair 2</text>
+      <rect x="166.7" y="93.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <rect x="180.0" y="93.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="300.0" y="93.0" width="26.7" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="326.7" y="93.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <rect x="340.0" y="93.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="460.0" y="93.0" width="26.7" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="486.7" y="93.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <text x="90" y="139.0" font-size="11" fill="#33261E" text-anchor="end" font-weight="600">Pair 3</text>
+      <rect x="233.3" y="125.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <rect x="246.7" y="125.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="366.7" y="125.0" width="26.7" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="393.4" y="125.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <rect x="406.7" y="125.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="526.7" y="125.0" width="26.7" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="553.4" y="125.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <text x="90" y="171.0" font-size="11" fill="#33261E" text-anchor="end" font-weight="600">Pair 4</text>
+      <rect x="300.0" y="157.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <rect x="313.4" y="157.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="433.4" y="157.0" width="26.6" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="460.0" y="157.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <rect x="473.4" y="157.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="593.4" y="157.0" width="26.7" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="620.1" y="157.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <text x="90" y="203.0" font-size="11" fill="#33261E" text-anchor="end" font-weight="600">Pair 5</text>
+      <rect x="366.7" y="189.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <rect x="380.0" y="189.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="500.0" y="189.0" width="26.7" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="526.7" y="189.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <rect x="540.1" y="189.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="660.1" y="189.0" width="26.6" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="686.7" y="189.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <text x="90" y="235.0" font-size="11" fill="#33261E" text-anchor="end" font-weight="600">Pair 6</text>
+      <rect x="433.4" y="221.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <rect x="446.7" y="221.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="566.7" y="221.0" width="26.7" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="593.4" y="221.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <rect x="606.7" y="221.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="726.7" y="221.0" width="26.7" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="753.4" y="221.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <text x="90" y="267.0" font-size="11" fill="#33261E" text-anchor="end" font-weight="600">Pair 7</text>
+      <rect x="500.0" y="253.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <rect x="513.4" y="253.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="633.4" y="253.0" width="26.7" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="660.1" y="253.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <rect x="673.4" y="253.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="793.4" y="253.0" width="26.7" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="820.1" y="253.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <text x="90" y="299.0" font-size="11" fill="#33261E" text-anchor="end" font-weight="600">Pair 8</text>
+      <rect x="566.7" y="285.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <rect x="580.1" y="285.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="700.1" y="285.0" width="26.6" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="726.7" y="285.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <rect x="740.1" y="285.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="860.1" y="285.0" width="26.7" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="886.8" y="285.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <text x="90" y="331.0" font-size="11" fill="#33261E" text-anchor="end" font-weight="600">Pair 9</text>
+      <rect x="633.4" y="317.0" width="13.3" height="20" fill="#A9654E" rx="2"/>
+      <rect x="646.7" y="317.0" width="120.1" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="766.8" y="317.0" width="26.6" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="793.4" y="317.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <rect x="806.8" y="317.0" width="120.0" height="20" fill="#5E5F45" rx="2"/>
+      <rect x="926.8" y="317.0" width="26.6" height="20" fill="#E8DAC5" rx="2"/>
+      <rect x="953.4" y="317.0" width="13.4" height="20" fill="#A9654E" rx="2"/>
+      <text x="100" y="365" font-size="10" fill="#5E5F45">07:00</text>
+      <text x="980.1" y="365" font-size="10" fill="#5E5F45" text-anchor="end">12:30</text>
+      <rect x="100" y="383" width="14" height="14" fill="#A9654E"/><text x="120" y="394" font-size="11" fill="#33261E">Draw (5min, exact clinical mark)</text>
+      <rect x="360" y="383" width="14" height="14" fill="#5E5F45"/><text x="380" y="394" font-size="11" fill="#33261E">Treatment service (45min)</text>
+      <rect x="620" y="383" width="14" height="14" fill="#E8DAC5"/><text x="640" y="394" font-size="11" fill="#33261E">Transition buffer (10min)</text>
+      </svg>
+      <p class="chart-caption">Each row is one pair (2 clients, Chair A + Chair B). The diagonal stagger is the 25-minute cadence between pairs &mdash; the same data as Chapter 8's table, plotted rather than tabulated. Draw 2 and Draw 3 land at exactly +60 and +120 minutes from each pair's own Draw 1, never approximate.</p>
+    </div>
+
+    <h2>Reading the chart against the staff-lane view</h2>
+    <p>At any vertical slice through the chart, the number of terracotta (draw) segments crossing that line is at most 2 &mdash; Chair A and Chair B, never more, confirming zero collisions across all 9 pairs. The number of olive (treatment) segments crossing any vertical line is the real-time concurrent treatment demand &mdash; this is what Chapter 8's peak-concurrency finding (4 Massage+Beauty, 2 Nails, 2 Hair, 8 total) is drawn from, visible here directly rather than asserted.</p>
+
+    <div class="callout brown">
+      <span class="callout-label">Not altered for visual neatness</span>
+      Every timing value in this chart is taken directly from the solver-verified schedule in Chapter 8 &mdash; the same 07:00 start, 25-minute cadence, 5-minute draws, 45-minute services, and 10-minute buffers. No pair's timing was adjusted, rounded, or simplified to make the chart look cleaner.
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/scenario-c-sync-timetables.md</code> §0.6a (solver-verified source data), <code>docs/architecture/OPERATING-MODEL-18-CLIENTS.md</code> §2 (the same table this chart visualises).
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 19 — VENUE
+     ================================================================ -->
+<section class="chapter" id="ch19">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 19</div>
+      <h1 class="chapter-title">Venue</h1>
+      <p class="chapter-dek">What the venue must have, honestly weighed against what's actually on the market today.</p>
+    </div>
+
+    <h2>Founder decisions already locked</h2>
+    <p>18 clients/day is the design target (12/day downside only); every AM service is 45 minutes or less, absolute; GTT is the core business, PM is the secondary revenue and retention engine; the venue must read as a premium women's wellness destination that happens to deliver an exceptional GTT experience, not a clinic with beauty services attached.</p>
+
+    <h2>Room requirements, validated against 18/day</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Category</th><th>Minimum</th><th>Basis</th></tr></thead>
+      <tbody>
+        <tr><td>Blood Collection Room</td><td>1 room, 2 chairs, solid walls</td><td>Confirmed</td></tr>
+        <tr><td>Treatment rooms (massage/beauty)</td><td>4, curtain-partitioned</td><td>Confirmed count; peak concurrency at 18/day is identical to 12/day (2 concurrent per line) since headcount doesn't change with volume</td></tr>
+        <tr><td>Nail stations</td><td>4, open-plan, LEV extraction</td><td>Confirmed count; LEV method vs. open-plan adjacency is a genuine open item</td></tr>
+        <tr><td>Hair chairs</td><td>4, open-plan, 2 backwash</td><td>Confirmed count; 3rd backwash a design recommendation</td></tr>
+        <tr><td>GTT Lounge seating</td><td>8 reclining chairs (existing design floor)</td><td><span class="tag tag-research">Needs research</span> up to 5 pairs (10 clients) can be simultaneously on-site at mid-morning peak, but most of that time is spent in the Collection Room or a treatment station, not the Lounge itself &mdash; the Lounge's real peak occupancy has not been simulated precisely. Treat "8" as a floor, not a confirmed ceiling.</td></tr>
+        <tr><td>Reception</td><td>2 workstations</td><td>Confirmed; a dedicated Venue Manager back-office nook is a design recommendation, not itemised in the existing plan</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>Floor area</h2>
+    <div class="card-grid">
+      <div class="metric-card"><span class="label">Minimum functional</span><div class="value">~239&ndash;242sqm</div><div class="note">Day-one committed room schedule, validated against 18/day peak concurrency</div></div>
+      <div class="metric-card"><span class="label">Preferred</span><div class="value">~262sqm</div><div class="note">Day-one + 2 Massage/Beauty growth-reservation shells (space only, not staffed/costed)</div></div>
+      <div class="metric-card"><span class="label">Ideal flagship</span><div class="value">~280&ndash;290sqm</div><div class="note">Business-planning estimate, not architectural &mdash; adds a VM back-office nook and Lounge/staff-room headroom</div></div>
+    </div>
+
+    <h2>Parking</h2>
+    <p><strong>Ample parking is a non-negotiable selection criterion</strong> &mdash; clients are 24&ndash;28 weeks pregnant and drive; minimum 8&ndash;10 dedicated or immediately adjacent off-street parking spaces, street parking alone not acceptable. <strong>Real-world caveat, not glossed over: property listings do not always disclose an exact parking count</strong> &mdash; one of the two current Tier-1 candidates below states parking exists in its listing description without a confirmed number.</p>
+
+    <h2>Current property context</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>6/325 Harborne Street, Osborne Park</th><th>25 Mills Street, Cannington</th></tr></thead>
+      <tbody>
+        <tr><td>Size</td><td>268sqm &mdash; inside the Preferred band</td><td>Up to 302sqm, flexible from 14sqm</td></tr>
+        <tr><td>Rent</td><td>~A$6,565/month + GST &mdash; below the A$7,000&ndash;9,000 budget band</td><td><span class="tag tag-research">Needs research</span> not disclosed for lease</td></tr>
+        <tr><td>Parking</td><td>On-site parking exists per listing, exact count not disclosed</td><td>11&ndash;14 exclusive on-site bays + street parking &mdash; comfortably inside the preferred band</td></tr>
+        <tr><td>Current fit-out</td><td>Retail shell, open-plan &mdash; everything built from scratch</td><td>Existing medical fitout: 2&ndash;4 consulting rooms + 1 minor theatre/treatment room + 2 change rooms &mdash; the closest existing match to the Treatment Room + Blood Collection Room need found in this search</td></tr>
+        <tr><td>Zoning</td><td colspan="2"><span class="tag tag-research">Needs research</span> Neither candidate has confirmed zoning/permitted-use status for a health/beauty/wellness operation &mdash; council confirmation required before either is treated as viable</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Both remain <span class="tag tag-open">Open</span> Tier-1 candidates pending agent-level verification of the gaps above &mdash; not yet finalised, not yet inspected. Source: <code>docs/strategy/PERTH-PROPERTY-SHORTLIST.md</code>, dated 2026-08-14.</p>
+
+    <div class="callout brown">
+      <span class="callout-label">Stale reference corrected, not carried forward</span>
+      <code>docs/strategy/VENUE-FUNCTIONAL-BRIEF.md</code> (2026-08-14) states "PM standard bookings begin 12:30, with 12:00-12:30 a soft (not closed) transition" &mdash; this predates the later, current operating-model rebuild (<code>OPERATING-MODEL-18-CLIENTS.md</code>, 2026-08-18), which establishes a clean AM/PM split at 13:00 (last AM departure ~12:33, PM Reception starts 13:00, no soft-transition window), used throughout Chapters 7&ndash;18 of this dossier. This chapter uses the current 13:00 split; the venue brief's own 12:30 reference should be treated as superseded, not reopened.
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/strategy/VENUE-FUNCTIONAL-BRIEF.md</code> (room requirements, floor area, functional program), <code>docs/location-scouting.md</code> (parking requirement), <code>docs/strategy/PERTH-PROPERTY-SHORTLIST.md</code> (current property candidates), <code>docs/floor-plan-concept.md</code> (underlying room schedule, PARKED pending a real architect).
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 20 — FLOOR PLAN
+     ================================================================ -->
+<section class="chapter" id="ch20">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 20</div>
+      <h1 class="chapter-title">Floor Plan</h1>
+      <p class="chapter-dek">A rebuilt functional-zone diagram, not the stale existing SVG &mdash; and not an architectural drawing either.</p>
+    </div>
+
+    <div class="callout">
+      <span class="callout-label">What this chapter is, and what it deliberately is not</span>
+      <code>docs/floor-plan-concept.md</code> was explicitly parked 2026-07-29: "this team lacks real architectural/spatial design capability to produce a workable circulation layout... the room-box arrangement itself should not be used as a real layout." The diagram below respects that boundary &mdash; it is a functional zoning diagram (which rooms exist, their construction type, and their approximate relative size), not a circulation layout, not to scale, and not a substitute for a professional architect once a venue is confirmed.
+    </div>
+
+    <h2>Functional zone diagram</h2>
+    <div class="chart-wrap">
+<svg viewBox="0 0 1000 650" width="100%" height="650" role="img" aria-label="Illustrative functional floor-plan zone diagram, not to scale">
+<rect x="0" y="0" width="1000" height="650" fill="#FCFBF7"/>
+<text x="20" y="50" font-size="13" font-weight="700" fill="#5E5F45" style="text-transform:uppercase; letter-spacing:0.03em;">Client-facing</text>
+<rect x="20" y="64" width="75" height="56" fill="#E8DAC5" stroke="#33261E" stroke-width="3" rx="6"/>
+<text x="57.5" y="92.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Reception</text>
+<text x="57.5" y="114" font-size="9.5" fill="#A9654E" text-anchor="middle">15sqm</text>
+<rect x="109" y="64" width="106" height="56" fill="#FAF6EE" stroke="#5E5F45" stroke-width="2" stroke-dasharray="2,2" rx="6"/>
+<text x="162.0" y="86.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">GTT</text>
+<text x="162.0" y="99.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Lounge</text>
+<text x="162.0" y="114" font-size="9.5" fill="#A9654E" text-anchor="middle">35sqm</text>
+<rect x="229" y="64" width="115" height="56" fill="#E8DAC5" stroke="#33261E" stroke-width="3" rx="6"/>
+<text x="286.5" y="86.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Blood</text>
+<text x="286.5" y="99.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Collection Room</text>
+<text x="286.5" y="114" font-size="9.5" fill="#A9654E" text-anchor="middle">18sqm</text>
+<rect x="358" y="64" width="95" height="56" fill="#E8DAC5" stroke="#33261E" stroke-width="3" rx="6"/>
+<text x="405.5" y="86.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Cafe /</text>
+<text x="405.5" y="99.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Refreshments</text>
+<text x="405.5" y="114" font-size="9.5" fill="#A9654E" text-anchor="middle">8sqm</text>
+<text x="20" y="154" font-size="13" font-weight="700" fill="#5E5F45" style="text-transform:uppercase; letter-spacing:0.03em;">Treatment -- curtain-partitioned (day-one)</text>
+<rect x="20" y="168" width="95" height="56" fill="#FAF6EE" stroke="#A9654E" stroke-width="2" stroke-dasharray="6,3" rx="6"/>
+<text x="67.5" y="190.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Treatment Rm</text>
+<text x="67.5" y="203.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">1 (Massage)</text>
+<text x="67.5" y="218" font-size="9.5" fill="#A9654E" text-anchor="middle">12sqm</text>
+<rect x="129" y="168" width="95" height="56" fill="#FAF6EE" stroke="#A9654E" stroke-width="2" stroke-dasharray="6,3" rx="6"/>
+<text x="176.5" y="190.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Treatment Rm</text>
+<text x="176.5" y="203.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">2 (Massage)</text>
+<text x="176.5" y="218" font-size="9.5" fill="#A9654E" text-anchor="middle">12sqm</text>
+<rect x="238" y="168" width="115" height="56" fill="#FAF6EE" stroke="#A9654E" stroke-width="2" stroke-dasharray="6,3" rx="6"/>
+<text x="295.5" y="190.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Treatment Rm 3</text>
+<text x="295.5" y="203.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">(Facial/Beauty)</text>
+<text x="295.5" y="218" font-size="9.5" fill="#A9654E" text-anchor="middle">11sqm</text>
+<rect x="367" y="168" width="141" height="56" fill="#FAF6EE" stroke="#A9654E" stroke-width="2" stroke-dasharray="6,3" rx="6"/>
+<text x="437.5" y="190.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Treatment Rm 4</text>
+<text x="437.5" y="203.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">(Facial/Brows/Lash)</text>
+<text x="437.5" y="218" font-size="9.5" fill="#A9654E" text-anchor="middle">11sqm</text>
+<text x="20" y="258" font-size="13" font-weight="700" fill="#5E5F45" style="text-transform:uppercase; letter-spacing:0.03em;">Open-plan service zones</text>
+<rect x="20" y="272" width="128" height="56" fill="#FAF6EE" stroke="#5E5F45" stroke-width="2" stroke-dasharray="2,2" rx="6"/>
+<text x="84.0" y="294.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Nail Station Area</text>
+<text x="84.0" y="307.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">(4 stations, LEV)</text>
+<text x="84.0" y="322" font-size="9.5" fill="#A9654E" text-anchor="middle">32sqm</text>
+<rect x="162" y="272" width="130" height="56" fill="#FAF6EE" stroke="#5E5F45" stroke-width="2" stroke-dasharray="2,2" rx="6"/>
+<text x="227.0" y="294.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Hairdressing</text>
+<text x="227.0" y="307.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Area (4 chairs)</text>
+<text x="227.0" y="322" font-size="9.5" fill="#A9654E" text-anchor="middle">52sqm</text>
+<text x="20" y="362" font-size="13" font-weight="700" fill="#5E5F45" style="text-transform:uppercase; letter-spacing:0.03em;">Back of house, solid walls</text>
+<rect x="20" y="376" width="70" height="56" fill="#E8DAC5" stroke="#33261E" stroke-width="3" rx="6"/>
+<text x="55.0" y="398.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Staff</text>
+<text x="55.0" y="411.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Room</text>
+<text x="55.0" y="426" font-size="9.5" fill="#A9654E" text-anchor="middle">10sqm</text>
+<rect x="104" y="376" width="82" height="56" fill="#E8DAC5" stroke="#33261E" stroke-width="3" rx="6"/>
+<text x="145.0" y="398.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Patient WC</text>
+<text x="145.0" y="411.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">(Access)</text>
+<text x="145.0" y="426" font-size="9.5" fill="#A9654E" text-anchor="middle">7sqm</text>
+<rect x="200" y="376" width="70" height="56" fill="#E8DAC5" stroke="#33261E" stroke-width="3" rx="6"/>
+<text x="235.0" y="398.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Patient</text>
+<text x="235.0" y="411.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">WC (Std)</text>
+<text x="235.0" y="426" font-size="9.5" fill="#A9654E" text-anchor="middle">4sqm</text>
+<rect x="284" y="376" width="70" height="56" fill="#E8DAC5" stroke="#33261E" stroke-width="3" rx="6"/>
+<text x="319.0" y="398.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Staff</text>
+<text x="319.0" y="411.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">WC</text>
+<text x="319.0" y="426" font-size="9.5" fill="#A9654E" text-anchor="middle">4sqm</text>
+<rect x="368" y="376" width="70" height="56" fill="#E8DAC5" stroke="#33261E" stroke-width="3" rx="6"/>
+<text x="403.0" y="398.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Clean</text>
+<text x="403.0" y="411.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Linen</text>
+<text x="403.0" y="426" font-size="9.5" fill="#A9654E" text-anchor="middle">6sqm</text>
+<rect x="452" y="376" width="115" height="56" fill="#E8DAC5" stroke="#33261E" stroke-width="3" rx="6"/>
+<text x="509.5" y="398.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Dirty</text>
+<text x="509.5" y="411.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Linen/Biohazard</text>
+<text x="509.5" y="426" font-size="9.5" fill="#A9654E" text-anchor="middle">4sqm</text>
+<rect x="581" y="376" width="89" height="56" fill="#E8DAC5" stroke="#33261E" stroke-width="3" rx="6"/>
+<text x="625.5" y="404.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Circulation</text>
+<text x="625.5" y="426" font-size="9.5" fill="#A9654E" text-anchor="middle">16sqm</text>
+<text x="20" y="466" font-size="13" font-weight="700" fill="#5E5F45" style="text-transform:uppercase; letter-spacing:0.03em;">Growth reservations -- space only, not staffed/costed</text>
+<rect x="20" y="480" width="95" height="56" fill="#FAF6EE" stroke="#9C7A46" stroke-width="1.5" stroke-dasharray="4,4" rx="6"/>
+<text x="67.5" y="502.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Treatment Rm</text>
+<text x="67.5" y="515.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">5 (Massage)</text>
+<text x="67.5" y="530" font-size="9.5" fill="#A9654E" text-anchor="middle">12sqm</text>
+<rect x="129" y="480" width="95" height="56" fill="#FAF6EE" stroke="#9C7A46" stroke-width="1.5" stroke-dasharray="4,4" rx="6"/>
+<text x="176.5" y="502.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">Treatment Rm</text>
+<text x="176.5" y="515.0" font-size="10.3" fill="#33261E" text-anchor="middle" font-weight="600">6 (Beauty)</text>
+<text x="176.5" y="530" font-size="9.5" fill="#A9654E" text-anchor="middle">11sqm</text>
+<rect x="20" y="580" width="22" height="16" fill="#E8DAC5" stroke="#33261E" stroke-width="3" rx="3"/>
+<text x="48" y="592" font-size="11" fill="#33261E">Solid walls</text>
+<rect x="139.3" y="580" width="22" height="16" fill="#FAF6EE" stroke="#A9654E" stroke-width="2" stroke-dasharray="6,3" rx="3"/>
+<text x="167.3" y="592" font-size="11" fill="#33261E">Curtain partition</text>
+<rect x="296.4" y="580" width="22" height="16" fill="#FAF6EE" stroke="#5E5F45" stroke-width="2" stroke-dasharray="2,2" rx="3"/>
+<text x="324.4" y="592" font-size="11" fill="#33261E">Open plan</text>
+<rect x="403.09999999999997" y="580" width="22" height="16" fill="#FAF6EE" stroke="#9C7A46" stroke-width="1.5" stroke-dasharray="4,4" rx="3"/>
+<text x="431.09999999999997" y="592" font-size="11" fill="#33261E">Growth reservation, space only</text>
+<text x="20" y="612" font-size="10.3" fill="#5E5F45" font-style="italic">Block size loosely reflects relative floor area and label length -- illustrative functional zoning only, not to scale, not a circulation layout. Day-one subtotal ~239sqm + ~23sqm growth reservations = ~262sqm.</text>
+</svg>
+      <p class="chart-caption">Rebuilt from the current (2026-07-31) room schedule &mdash; 4 treatment rooms, 4 nail stations, 4 hair chairs, the corrected construction types (only the Blood Collection Room is solid-walled; Massage/Beauty rooms use curtain partitions; Lounge/Nails/Hair are open-plan). The dated <code>floor-plan-v3.svg</code> (2026-07-08, predates this correction) is not reused here.</p>
+    </div>
+
+    <h2>Design principles this diagram respects</h2>
+    <ul>
+      <li><strong>Only the Blood Collection Room needs solid walls</strong> &mdash; venepuncture is the one genuinely clinical, privacy-critical activity. Every other client-facing space is deliberately not built to read as clinical.</li>
+      <li>Massage and Beauty treatment rooms use curtain partitions, not stud-wall construction &mdash; a genuine fit-out cost reduction, not a compromise.</li>
+      <li>Nail Station Area and Hairdressing Area are open-plan, sharing space with the Lounge.</li>
+    </ul>
+
+    <div class="callout">
+      <span class="callout-label">Genuine open tension, not resolved here</span>
+      <span class="tag tag-research">Needs research</span> The Nail Station Area's mandatory LEV (extraction) requirement and its open-plan adjacency to the Lounge are flagged, not confirmed compatible. Many real nail salons achieve WorkSafe-compliant air separation via per-station downdraft/capture-hood LEV rather than full room enclosure &mdash; but this needs confirmation from a WorkSafe WA-familiar fit-out contractor or LEV supplier before fit-out, not assumed either way in this diagram.
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/floor-plan-concept.md</code> (2026-07-31 room schedule revision &mdash; the current basis, PARKED pending a real architect), <code>docs/strategy/VENUE-FUNCTIONAL-BRIEF.md</code> §4 (validation against 18/day).
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 21 — COMPLIANCE
+     ================================================================ -->
+<section class="chapter" id="ch21">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 21</div>
+      <h1 class="chapter-title">Compliance</h1>
+      <p class="chapter-dek">Three distinct compliance regimes, kept separate &mdash; plus what genuinely still needs a professional sign-off.</p>
+    </div>
+
+    <h2>Three regimes, not one</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Regime</th><th>Scope</th><th>Who governs it</th></tr></thead>
+      <tbody>
+        <tr><td>Pathology/GTT collection</td><td>The Blood Collection Room, phlebotomist credentialing, specimen handling</td><td>ACSQHC Guidelines for Approved Pathology Collection Centres (3rd Ed 2013), NATA, the pathology partner's own Licensed Collection Centre QMS</td></tr>
+        <tr><td>WA Skin Penetration Code</td><td>Treatment rooms (massage/beauty/nails/hair) &mdash; 2-sink requirement, tool sterilisation</td><td>WA Department of Health</td></tr>
+        <tr><td>General workplace/food safety</td><td>WorkSafe WA (LEV, general safety), WA Food Business Risk Classification (Chapter 12)</td><td>WorkSafe WA, local council</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>Pathology/GTT collection requirements</h2>
+    <p>GTT Center Perth employs its own phlebotomists and provides the collection room; the pathology partner (WDP, priority) provides the NATA accreditation umbrella, credentialing, specimen processing, and result reporting. A phlebotomist must be registered as an approved collector under the partner's own accreditation before performing any collection &mdash; a precondition, not a formality. <strong>Specimen dispatch timing is resolved, not a hard cutoff</strong> (Chapter 7) &mdash; per Carole Rivers' (WDP) verified 2026-07-30 email, overnight storage is viable in some circumstances and a late booking would not necessarily prevent collection.</p>
+
+    <h2>Infection control / clinical requirements</h2>
+    <ul>
+      <li>Collection room: hand hygiene station with elbow-operated or sensor taps, approved sharps disposal, biohazard waste, specimen refrigeration (2&ndash;8&deg;C, temperature logged), non-slip/seamless flooring, no carpet.</li>
+      <li>Treatment rooms: 2-sink requirement per the WA Skin Penetration Code (already reflected in the current room schedule's Facial/Beauty rooms, Chapter 20).</li>
+      <li>Records retention: 7 years (collection log, dispatch log, adverse event register) &mdash; GTT results themselves are never retained by the venue (Chapter 7).</li>
+    </ul>
+
+    <h2>Workplace safety</h2>
+    <p>First Aid/CPR and Fire Warden certification are mandatory for the Venue Manager, with backup certification recommended in at least one other staff member. The Nail Station Area's LEV extraction requirement against its open-plan Lounge adjacency remains a genuine open item (Chapter 20), needing WorkSafe WA-familiar contractor confirmation before fit-out.</p>
+
+    <h2>Food/beverage requirements</h2>
+    <p>Covered in full in Chapter 12. Current scope (pre-packaged snacks, cold drinks) sits at Low Risk under WA's Food Business Risk Classification System; any move to hot food/on-site sandwich assembly would move the venue to Medium Risk, with real (unconfirmed) fee and inspection consequences.</p>
+
+    <h2>Privacy and consent</h2>
+    <p>Patient data is stored on Fresha (booking details) and paper collection logs (locked cabinet, access restricted to the Venue Manager and phlebotomist). No patient data is shared with third parties except the pathology partner, covered by referral-form consent. The referral form itself (GP/midwife pathology referral + Medicare card) is the primary consent instrument for the clinical process (Chapter 7).</p>
+
+    <h2>Companion/children policy interface</h2>
+    <p>The Blood Collection Room companion exception, lounge-device audience, and AM-peak companion rule are addressed in full in Chapter 22 (not yet built, Group E) &mdash; this chapter does not restate or pre-empt those open items, only notes that any eventual policy must sit consistently within the three compliance regimes above (particularly patient privacy in the Collection Room).</p>
+
+    <h2>Outstanding regulatory/professional sign-offs</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Item</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Venue Manager wage classification (MA000005 Level 6)</td><td><span class="tag tag-modelled">Researched-best-evidenced</span>, not legally verified &mdash; accountant/Fair Work confirmation still needed</td></tr>
+        <tr><td>Workers compensation rate (currently 1.7%)</td><td><span class="tag tag-placeholder">Placeholder</span>, unresolved after two genuine research attempts (WorkCover WA 403 error, Safe Work Australia connection error)</td></tr>
+        <tr><td>Nail Station LEV vs. open-plan adjacency</td><td><span class="tag tag-research">Needs research</span> WorkSafe WA-familiar contractor confirmation required before fit-out</td></tr>
+        <tr><td>Zoning/permitted-use for a health/beauty/wellness operation</td><td><span class="tag tag-research">Needs research</span> Not confirmed for either current Tier-1 venue candidate (Chapter 19)</td></tr>
+        <tr><td>Phlebotomist employment arrangement (in-house vs. WDP-supplied)</td><td><span class="tag tag-waiting">Waiting on third party</span> Genuinely open, waiting on Carole Rivers/WDP</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/gtt-clinical-protocol.md</code>, <code>docs/pathology-collection-room.md</code>, <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> §6 (wage/comp labels), <code>docs/floor-plan-concept.md</code> (Skin Penetration Code, LEV tension), <code>docs/architecture/CAFE-FOOD-SERVICE-INVESTIGATION.md</code>.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
      REMAINING CHAPTERS INDEX
      ================================================================ -->
 <section class="chapter">
   <div class="container">
-    <h2 style="margin-top:0;">Chapters not yet built (Groups D&ndash;F)</h2>
+    <h2 style="margin-top:0;">Chapters not yet built (Groups E&ndash;F)</h2>
     <div class="remaining">
-      <ol start="17">
-        <li>Rostering</li>
-        <li>Customer Timetable</li>
-        <li>Venue</li>
-        <li>Floor Plan</li>
-        <li>Compliance</li>
+      <ol start="22">
         <li>Children/Companion Policy</li>
         <li>Lounge</li>
         <li>Startup Requirements</li>
@@ -1515,7 +1955,7 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
 
 <footer>
   <div class="container">
-    <p>GTT Center Perth &mdash; Master Venture Dossier. Static in-repo prototype, not deployed. Built from <a href="../../docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md">docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md</a>. Group A (Chapters 1&ndash;6), Group B (Chapters 7&ndash;11), and Group C (Chapters 12&ndash;16) built 2026-08-19.</p>
+    <p>GTT Center Perth &mdash; Master Venture Dossier. Static in-repo prototype, not deployed. Built from <a href="../../docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md">docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md</a>. Group A (Chapters 1&ndash;6), Group B (Chapters 7&ndash;11), Group C (Chapters 12&ndash;16), and Group D (Chapters 17&ndash;21) built 2026-08-19.</p>
   </div>
 </footer>
 
