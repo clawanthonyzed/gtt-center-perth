@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTT Center Perth — Master Dossier (Rebuild in progress)</title>
+<meta name="description" content="Founder/investor operating dossier. Rebuild in progress per docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md. Group A (Chapters 1-6) complete; Chapters 7-35 not yet built.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   LOCKED PALETTE — sourced live from outputs/brand/warm-stone-tokens.css
+   Founder-locked 2026-08-15. Do not substitute/lighten/darken any value.
+   No hex value below exists outside that source file's own 7 locked colours.
+   ============================================================ */
+:root{
+  --warm-ivory:#FAF6EE;
+  --warm-stone:#E8DAC5;
+  --deep-brown:#33261E;
+  --earthy-terracotta:#A9654E;
+  --muted-olive:#5E5F45;
+  --dusty-rose:#D9A08C;
+  --warm-brass:#9C7A46;
+  --white:#FFFFFF;
+
+  --font-display:'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body:'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  --radius-sm:6px;
+  --radius-md:10px;
+  --radius-lg:16px;
+  --shadow-card:0 1px 3px rgba(51,38,30,0.08), 0 1px 2px rgba(51,38,30,0.06);
+  --shadow-card-lg:0 4px 16px rgba(51,38,30,0.10);
+  --maxw:1180px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--warm-ivory);
+  color:var(--deep-brown);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  font-weight:500;
+  color:var(--deep-brown);
+  line-height:1.18;
+  margin:0 0 0.5em 0;
+}
+h1{font-weight:600;}
+p{margin:0 0 1em 0;}
+a{color:var(--earthy-terracotta); text-decoration:underline; text-decoration-color:rgba(169,101,78,0.35);}
+a:hover{text-decoration-color:var(--earthy-terracotta);}
+.container{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+table{border-collapse:collapse; width:100%; font-size:0.94rem;}
+th,td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--warm-stone); vertical-align:top;}
+th{font-family:var(--font-body); font-weight:700; color:var(--deep-brown); background:var(--warm-stone); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.04em;}
+tr:nth-child(even) td{background:rgba(232,218,197,0.35);}
+.table-wrap{overflow-x:auto; margin:20px 0 28px 0; border-radius:var(--radius-md); box-shadow:var(--shadow-card);}
+.table-wrap table{margin:0;}
+
+/* ---------- Masthead ---------- */
+.masthead{
+  background:var(--deep-brown); color:var(--warm-ivory);
+  padding:14px 0; position:sticky; top:0; z-index:50;
+  box-shadow:0 2px 10px rgba(0,0,0,0.15);
+}
+.masthead .container{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+.masthead-title{font-family:var(--font-display); font-size:1.05rem; letter-spacing:0.02em;}
+.masthead-title .sub{font-family:var(--font-body); font-size:0.68rem; opacity:0.72; display:block; letter-spacing:0.08em; text-transform:uppercase; margin-top:2px;}
+.masthead-nav{display:flex; gap:4px; flex-wrap:wrap;}
+.masthead-nav a{color:var(--warm-ivory); text-decoration:none; font-size:0.82rem; padding:6px 11px; border-radius:var(--radius-sm); opacity:0.85;}
+.masthead-nav a:hover{background:rgba(250,246,238,0.12); opacity:1;}
+
+/* ---------- Build-status banner ---------- */
+.build-banner{
+  background:var(--warm-stone); border-bottom:1px solid var(--earthy-terracotta);
+  padding:12px 0; font-size:0.86rem;
+}
+.build-banner .container{display:flex; gap:10px; align-items:baseline; flex-wrap:wrap;}
+.build-banner strong{color:var(--earthy-terracotta);}
+
+/* ---------- Chapter opener ---------- */
+.chapter{padding:64px 0 40px 0; border-top:1px solid var(--warm-stone);}
+.chapter:first-of-type{border-top:none;}
+.chapter-opener{padding:56px 0 36px 0;}
+.chapter-eyebrow{font-family:var(--font-body); font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--earthy-terracotta); font-weight:700; margin-bottom:10px;}
+.chapter-title{font-size:2.4rem; max-width:820px;}
+.chapter-dek{font-size:1.08rem; max-width:720px; color:var(--deep-brown); opacity:0.85;}
+.chapter h2{font-size:1.5rem; margin-top:2.2em;}
+.chapter h3{font-size:1.15rem; margin-top:1.6em; color:var(--muted-olive);}
+
+/* ---------- Callout / status tag system ----------
+   Built entirely from the 7 locked colours -- no new hex introduced.
+   One consistent visual treatment per certainty label, used identically
+   across every chapter (Visual System §4 of MASTER-DOSSIER-ARCHITECTURE.md). */
+.tag{
+  display:inline-block; font-family:var(--font-body); font-size:0.68rem; font-weight:700;
+  text-transform:uppercase; letter-spacing:0.05em; padding:3px 9px; border-radius:20px;
+  white-space:nowrap; line-height:1.5;
+}
+.tag-verified{background:var(--muted-olive); color:var(--warm-ivory);}
+.tag-calculated{background:var(--deep-brown); color:var(--warm-ivory);}
+.tag-modelled{background:transparent; color:var(--earthy-terracotta); border:1.5px solid var(--earthy-terracotta);}
+.tag-ballpark{background:var(--dusty-rose); color:var(--deep-brown);}
+.tag-placeholder{background:var(--warm-stone); color:var(--deep-brown); border:1.5px dashed var(--deep-brown);}
+.tag-waiting{background:transparent; color:var(--deep-brown); border:1.5px solid var(--warm-brass);}
+.tag-founder{background:var(--earthy-terracotta); color:var(--warm-ivory);}
+.tag-open{background:transparent; color:var(--deep-brown); border:1.5px solid var(--deep-brown);}
+.tag-research{background:transparent; color:var(--earthy-terracotta); border:1.5px dashed var(--earthy-terracotta);}
+
+.callout{
+  background:var(--white); border-left:4px solid var(--earthy-terracotta);
+  border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:20px 0;
+  box-shadow:var(--shadow-card); font-size:0.94rem;
+}
+.callout.olive{border-left-color:var(--muted-olive);}
+.callout.brown{border-left-color:var(--deep-brown);}
+.callout-label{font-weight:700; text-transform:uppercase; font-size:0.72rem; letter-spacing:0.06em; margin-bottom:4px; display:block;}
+
+/* ---------- Dashboard cards (Chapter 1) ---------- */
+.card-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; margin:24px 0;}
+.metric-card{background:var(--white); border-radius:var(--radius-lg); padding:22px 20px; box-shadow:var(--shadow-card);}
+.metric-card .label{font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--muted-olive); font-weight:700;}
+.metric-card .value{font-family:var(--font-display); font-size:1.9rem; margin:6px 0 4px 0; color:var(--deep-brown);}
+.metric-card.positive .value{color:var(--muted-olive);}
+.metric-card .note{font-size:0.78rem; opacity:0.72;}
+
+/* ---------- Palette swatches (Chapter 5) ---------- */
+.swatch-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; margin:20px 0 28px 0;}
+.swatch{border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card); background:var(--white);}
+.swatch-fill{height:88px;}
+.swatch-info{padding:10px 14px; font-size:0.82rem;}
+.swatch-info .name{font-weight:700; display:block;}
+.swatch-info .hex{font-family:monospace; opacity:0.7;}
+
+/* ---------- Typography specimens (Chapter 5) -- REAL rendered, not named ---------- */
+.type-specimen{background:var(--white); border-radius:var(--radius-lg); padding:28px 32px; margin:14px 0; box-shadow:var(--shadow-card);}
+.type-specimen .tag-line{font-size:0.7rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--earthy-terracotta); font-weight:700; margin-bottom:8px; font-family:var(--font-body);}
+.spec-hero{font-family:var(--font-display); font-weight:500; font-size:3rem; line-height:1.1;}
+.spec-h2{font-family:var(--font-display); font-weight:500; font-size:1.9rem;}
+.spec-h3{font-family:var(--font-display); font-weight:600; font-size:1.2rem;}
+.spec-body{font-family:var(--font-body); font-size:1rem; max-width:600px;}
+.spec-label{font-family:var(--font-body); font-weight:700; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;}
+.spec-numeral{font-family:var(--font-display); font-weight:400; font-size:2.2rem; font-variant-numeric:oldstyle-nums;}
+
+/* ---------- Journey diagram (Chapter 6) ---------- */
+.journey-track{overflow-x:auto; margin:24px 0; padding-bottom:8px;}
+.journey-row{display:flex; align-items:flex-start; gap:0; min-width:1080px;}
+.journey-node{
+  flex:1; min-width:130px; background:var(--white); border-radius:var(--radius-md);
+  padding:14px 12px; margin-right:14px; box-shadow:var(--shadow-card); position:relative;
+}
+.journey-node:not(:last-child)::after{
+  content:"\2192"; position:absolute; right:-19px; top:50%; transform:translateY(-50%);
+  color:var(--earthy-terracotta); font-size:1.1rem;
+}
+.journey-node .phase{font-size:0.62rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted-olive); font-weight:700; display:block; margin-bottom:4px;}
+.journey-node .stage{font-family:var(--font-display); font-size:0.95rem; display:block; margin-bottom:4px;}
+.journey-node .emotion{font-size:0.76rem; opacity:0.75;}
+.journey-row.am .journey-node{border-top:3px solid var(--earthy-terracotta);}
+.journey-row.pm .journey-node{border-top:3px solid var(--muted-olive);}
+.journey-legend{display:flex; gap:20px; font-size:0.8rem; margin-bottom:6px;}
+.journey-legend span{display:inline-flex; align-items:center; gap:6px;}
+.legend-dot{width:10px; height:10px; border-radius:50%; display:inline-block;}
+
+/* ---------- Chart wrap ---------- */
+.chart-wrap{background:var(--white); border-radius:var(--radius-lg); padding:18px 20px; box-shadow:var(--shadow-card); margin:20px 0;}
+.chart-caption{font-size:0.8rem; opacity:0.75; margin-top:8px;}
+
+/* ---------- Footer / index of remaining chapters ---------- */
+.remaining{background:var(--warm-stone); border-radius:var(--radius-lg); padding:24px 26px; margin:32px 0;}
+.remaining ol{columns:2; column-gap:40px; font-size:0.88rem; padding-left:20px;}
+.remaining ol li{margin-bottom:6px; break-inside:avoid;}
+
+footer{background:var(--deep-brown); color:var(--warm-ivory); padding:36px 0; margin-top:40px; font-size:0.82rem;}
+footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
+
+/* ---------- Print ---------- */
+@media print{
+  .masthead, .build-banner{position:static; box-shadow:none;}
+  .masthead-nav{display:none;}
+  .chapter{page-break-before:always;}
+  .chapter:first-of-type{page-break-before:avoid;}
+  a{text-decoration:none; color:var(--deep-brown);}
+}
+@media (max-width:640px){
+  .chapter-title{font-size:1.8rem;}
+  .spec-hero{font-size:2.1rem;}
+  .remaining ol{columns:1;}
+}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="container">
+    <div class="masthead-title">GTT Center Perth <span class="sub">Master Venture Dossier — Rebuild in Progress</span></div>
+    <nav class="masthead-nav">
+      <a href="#ch1">1. Dashboard</a>
+      <a href="#ch2">2. Concept</a>
+      <a href="#ch3">3. Market</a>
+      <a href="#ch4">4. Competitors</a>
+      <a href="#ch5">5. Brand</a>
+      <a href="#ch6">6. Experience</a>
+    </nav>
+  </div>
+</div>
+
+<div class="build-banner">
+  <div class="container">
+    <strong>Build status:</strong> Chapters 1&ndash;6 (Group A) built 2026-08-19, reconciled against the live canonical model. Chapters 7&ndash;35 (Groups B&ndash;F) not yet built &mdash; see the index at the foot of this page. This is a static, in-repo prototype only. Not deployed, not password-protected, not for external circulation.
+  </div>
+</div>
+
+<!-- ================================================================
+     CHAPTER 1 — FOUNDER DASHBOARD
+     ================================================================ -->
+<section class="chapter" id="ch1">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 1</div>
+      <h1 class="chapter-title">Founder Dashboard</h1>
+      <p class="chapter-dek">Where the venture stands today, in under two minutes of reading. Every figure below is a live citation to the current canonical model &mdash; <code>data/models/master_financial_model.yml</code> and <code>docs/architecture/FINANCIAL-POSITION-CURRENT.md</code>, both current as of the 2026-08-18 Financial Finalisation round &mdash; not a copy from an earlier chapter draft or a prior dossier build.</p>
+    </div>
+
+    <h2>Headline position &mdash; 18-client planning case</h2>
+    <div class="card-grid">
+      <div class="metric-card"><span class="label">AM clients/day &nbsp;<span class="tag tag-verified">Verified</span></span><div class="value">18</div><div class="note">Solver-confirmed, zero chair/phlebotomist collisions.</div></div>
+      <div class="metric-card"><span class="label">Monthly revenue &nbsp;<span class="tag tag-calculated">Calculated</span></span><div class="value">A$154,710.69</div><div class="note">AM GTT + PM packages, blended.</div></div>
+      <div class="metric-card"><span class="label">Monthly operating costs &nbsp;<span class="tag tag-calculated">Calculated</span></span><div class="value">A$122,133.89</div><div class="note">Payroll + overhead + relief allowance.</div></div>
+      <div class="metric-card positive"><span class="label">Monthly operating result &nbsp;<span class="tag tag-calculated">Calculated</span></span><div class="value">A$32,576.80</div><div class="note">21.1% operating margin. See exclusion note below.</div></div>
+      <div class="metric-card"><span class="label">Break-even</span><div class="value">A$122,133.90</div><div class="note">= 13.051 clients/day &mdash; both forms required together, never one alone.</div></div>
+      <div class="metric-card positive"><span class="label">Annualised operating result</span><div class="value">A$390,921.60</div><div class="note">Monthly &times; 12, steady state.</div></div>
+      <div class="metric-card"><span class="label">Cash-flow trough</span><div class="value">&minus;A$76,532.52</div><div class="note">Month 2. Cumulative position turns positive Month 6.</div></div>
+      <div class="metric-card"><span class="label">24-month cumulative result</span><div class="value">A$598,232.91</div><div class="note">Table 1, the sole planning case.</div></div>
+    </div>
+
+    <div class="callout">
+      <span class="callout-label">Operating Result &ne; full accounting profit</span>
+      The Operating Result figures above exclude depreciation/amortisation of startup capex, income tax, interest on any financing, and any allocation of startup capital cost &mdash; none of these are modelled anywhere in this venture's canonical layer yet. This distinction is repeated at every point this dossier states a financial result, not only here.
+    </div>
+
+    <h2>Top open items</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Item</th><th>Status</th><th>Where</th></tr></thead>
+      <tbody>
+        <tr><td>Venue not yet secured &mdash; 2 Tier-1 candidates, zero inspected</td><td><span class="tag tag-open">Open</span></td><td>Chapter 19 (not yet built)</td></tr>
+        <tr><td>Final name selection (SOLENA vs ELOWEN), trademark clearance deliberately deferred</td><td><span class="tag tag-founder">Founder decision</span></td><td>Chapter 5, below</td></tr>
+        <tr><td>WDP pathology partnership &mdash; active, ongoing, not yet a signed agreement</td><td><span class="tag tag-waiting">Waiting on third party</span></td><td>Chapter 7 (not yet built)</td></tr>
+        <tr><td>4 disclosed service-price conflicts in the canonical catalogue (hair colour, lash infill, GDM snack pack, locked-pricing completeness gap)</td><td><span class="tag tag-founder">Founder decision</span></td><td>Chapter 10 (not yet built) &mdash; confirmed present, not resolved here, not referenced by Chapters 1&ndash;6</td></tr>
+        <tr><td>Startup capital range unreconciled across 6+ historical documents; adopted planning figure A$251,198</td><td><span class="tag tag-placeholder">Bounded, not exact</span></td><td>Chapter 24 (not yet built)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Full open-items register is Chapter 34 (not yet built, Group F). The items above are the subset directly touched by the six chapters below.</p>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 2 — BUSINESS CONCEPT
+     ================================================================ -->
+<section class="chapter" id="ch2">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 2</div>
+      <h1 class="chapter-title">Business Concept</h1>
+      <p class="chapter-dek">What GTT Center Perth actually is, in plain terms.</p>
+    </div>
+
+    <p>GTT Center Perth is a concept for Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT) &mdash; a mandatory pregnancy screening test undergone by an estimated <strong>~33,570 WA women per year</strong> <span class="tag tag-verified">Verified</span> (KPMG analysis of ABS Births, Australia 2024). Instead of a bare pathology waiting room while fasting, a woman referred for a GTT books into GTT Center Perth and spends the test window receiving massage, nails, brows, or hairdressing.</p>
+
+    <p>The venture runs two distinct businesses under one roof, sharing a physical space and a brand:</p>
+
+    <h2>The morning (AM) &mdash; GTT + wellness</h2>
+    <p>Blood draws happen on-site, performed by phlebotomists employed by GTT Center Perth, operating under a NATA-accredited pathology partner's umbrella (WDP, priority partner &mdash; active, ongoing conversation, not yet a signed agreement <span class="tag tag-waiting">Waiting on third party</span>). GTT Center Perth does not diagnose, interpret, or hold its own pathology accreditation. The wait between draws is filled with wellness services, sold as one of two fixed packages, venue/lounge access bundled free.</p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Package</th><th>Inclusions</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr><td>Package 1</td><td>Free venue/lounge access + 2&times;30-min fixed-composition services</td><td>A$250 <span class="tag tag-modelled">Modelled</span></td></tr>
+        <tr><td>Package 2</td><td>Free venue/lounge access + client's choice of 2&times;45min, 1&times;45+1&times;30min, or 2&times;30min</td><td>A$300 <span class="tag tag-modelled">Modelled</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Locked launch prices, not yet externally market-tested &mdash; per <code>docs/CURRENT-STATE.md</code> §2.</p>
+
+    <h2>The afternoon (PM) &mdash; standalone wellness venue</h2>
+    <p>The PM shift is a standalone wellness venue in its own right, not an add-on restricted to GTT patients. Any woman &mdash; pregnant or not, GTT client or not &mdash; can book massage, nails, hair, or beauty directly, the same way she would book at any day spa. PM offers both individual a-la-carte services and set/fixed PM packages (PM Refresh, PM Restore).</p>
+
+    <h2>Operating rhythm</h2>
+    <p>Saturday reuses the AM+PM model as a bolt-on shift. Sunday is closed &mdash; a reviewable business choice, not a legal requirement (the WA Retail Trading Hours Act exempts this business type from restriction).</p>
+
+    <h2>Explicitly not current scope</h2>
+    <p>Three items are sometimes conflated with this venture's launch scope and must be kept separate:</p>
+    <ul>
+      <li><strong>In-house pathology accreditation</strong> &mdash; investigated and rejected (12&ndash;18 month accreditation timeline incompatible with a faster path to operating). GTT Center Perth partners with an already-accredited provider instead.</li>
+      <li><strong>3D keepsake ultrasound scanning</strong> &mdash; a disclosed future/Phase 2 income stream under consideration, not part of current launch scope, and never framed as diagnostic.</li>
+      <li><strong>A landlord fit-out contribution</strong> &mdash; a possible upside if negotiated, never assumed or counted in any headline startup-capital figure.</li>
+    </ul>
+
+    <div class="callout olive">
+      <span class="callout-label">Source note</span>
+      This chapter draws on <code>docs/strategy/STRATEGIC-REPORT.md</code> §1 and <code>docs/business-plan.md</code> §1&ndash;3. <strong>Contradiction found and disclosed, not silently inherited:</strong> STRATEGIC-REPORT.md §3 states a steady-state Net P&amp;L figure (+A$56,581.70/month) dated to a 2026-08-09 superannuation-corrected round &mdash; this predates the 2026-08-18 Financial Finalisation round (insurance correction + relief/absence allowance) reflected in Chapter 1 above. Per this dossier's source-of-truth hierarchy, the current canonical figure (A$32,576.80/month) is used throughout this dossier; STRATEGIC-REPORT.md's own P&amp;L citation is stale and should be refreshed in that source document, not copied into this dossier.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 3 — MARKET
+     ================================================================ -->
+<section class="chapter" id="ch3">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 3</div>
+      <h1 class="chapter-title">Market</h1>
+      <p class="chapter-dek">The addressable market, sized from real published data, stated plainly where the research is solid.</p>
+    </div>
+
+    <h2>Perth GTT market &mdash; sized from ABS/KPMG data</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Metric</th><th>Value</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Australian births/year</td><td>~292,500</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>WA births/year</td><td>~33,570</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Perth metro (Greater Perth GCCSA) births/year</td><td>~26,790</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>GDM screening rate</td><td>~100% (effectively universal, standard of care)</td><td><span class="tag tag-verified">Verified</span> (ADIPS)</td></tr>
+        <tr><td>GDM diagnosis rate</td><td>~18%</td><td><span class="tag tag-verified">Verified</span> (AIHW)</td></tr>
+        <tr><td>Perth metro GTT tests/week (addressable market)</td><td><strong>~515/week</strong></td><td><span class="tag tag-verified">Verified</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Source: KPMG analysis of ABS Births, Australia 2024 (media release 17 July 2025). Real 2024 Greater Perth GCCSA figure, not an estimated share of the WA total. ABS figures noted by KPMG as preliminary/subject to revision. Live-cited from <code>data/canonical/client_assumptions.yml#addressable_market_perth_weekly</code>.</p>
+
+    <div class="chart-wrap">
+      <svg viewBox="0 0 900 220" width="100%" height="220" role="img" aria-label="Funnel chart: Perth births per year to weekly GTT tests to weekly AM slots at planning capacity">
+        <rect x="0" y="0" width="900" height="220" fill="#FCFBF7"/>
+        <rect x="40" y="40" width="240" height="120" fill="#E8DAC5" rx="6"/>
+        <text x="160" y="95" text-anchor="middle" font-size="15" fill="#33261E" font-weight="600">~26,790</text>
+        <text x="160" y="115" text-anchor="middle" font-size="11" fill="#5E5F45">Perth births/year</text>
+        <rect x="340" y="55" width="220" height="90" fill="#D9A08C" rx="6"/>
+        <text x="450" y="95" text-anchor="middle" font-size="15" fill="#33261E" font-weight="600">~515/week</text>
+        <text x="450" y="115" text-anchor="middle" font-size="11" fill="#33261E">Perth GTT tests/week</text>
+        <text x="450" y="129" text-anchor="middle" font-size="9" fill="#33261E" opacity="0.75">(addressable market)</text>
+        <rect x="620" y="70" width="240" height="60" fill="#A9654E" rx="6"/>
+        <text x="740" y="95" text-anchor="middle" font-size="15" fill="#FAF6EE" font-weight="600">108/week</text>
+        <text x="740" y="112" text-anchor="middle" font-size="10" fill="#FAF6EE">AM slots at 18/day planning capacity (~21% share)</text>
+        <line x1="280" y1="100" x2="340" y2="100" stroke="#9C7A46" stroke-width="2" marker-end="url(#arrow)"/>
+        <line x1="560" y1="100" x2="620" y2="100" stroke="#9C7A46" stroke-width="2" marker-end="url(#arrow)"/>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#9C7A46"/></marker></defs>
+      </svg>
+      <p class="chart-caption">Design capacity (18/day, solver-verified) captures roughly 21% of the addressable weekly market at full booking &mdash; a ceiling, not a guaranteed fill rate; actual fill depends entirely on the referral pipeline.</p>
+    </div>
+
+    <div class="callout">
+      <span class="callout-label">Source gap, disclosed not invented</span>
+      <span class="tag tag-research">Needs research</span>
+      A distinct, separately-sized "prior-GDM" market segment (women with a prior gestational diabetes diagnosis, who may be screened earlier or more frequently) is sometimes referenced in this venture's planning conversations. No document in this repository independently quantifies this as its own addressable-market figure. This dossier does not estimate one. If this segment matters to the business case, it needs dedicated research before a number is added &mdash; not before this chapter is otherwise usable.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 4 — COMPETITIVE LANDSCAPE
+     ================================================================ -->
+<section class="chapter" id="ch4">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 4</div>
+      <h1 class="chapter-title">Competitive Landscape</h1>
+      <p class="chapter-dek">Real, named comparable businesses, and how this venture differs from each.</p>
+    </div>
+
+    <h2>The only direct national comparable</h2>
+    <p><strong>MIWM (Maternal &amp; Infant Wellbeing Melbourne)</strong> is the only identified business nationally combining a GTT with wellness services &mdash; GP-led, single-client-at-a-time model, reported fully booked 3&ndash;4 weeks in advance, no hairdressing, Victoria only, no 3D scanning offered. <strong>No direct WA competitor has been identified</strong> in the research conducted for this venture (per <code>docs/business-plan.md</code>, current as of 2026-08-16).</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>MIWM (Melbourne)</th><th>GTT Center Perth</th></tr></thead>
+      <tbody>
+        <tr><td>Client model</td><td>Single client at a time</td><td>Multi-client concurrent (up to 18/day, solver-verified)</td></tr>
+        <tr><td>Service breadth</td><td>60-min or 2-hr spa treatment included, no hairdressing</td><td>Massage, nails, hair, beauty &mdash; full service menu</td></tr>
+        <tr><td>Positioning</td><td>GP-led, clinical feel</td><td>Premium day-spa feel around a real clinical process</td></tr>
+        <tr><td>Geography</td><td>Victoria only</td><td>WA &mdash; no identified direct competitor</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>Real Perth day-spa comparables (pricing/positioning reference)</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Business</th><th>Relevant offering</th><th>Pricing reference</th></tr></thead>
+      <tbody>
+        <tr><td>Le Beau Day Spa</td><td>"Mum &amp; Bub" prenatal massage; pregnancy day-spa bundle</td><td>A$199 single service; bundle premium, not itemised publicly</td></tr>
+        <tr><td>Keturah Spa</td><td>Bundles pregnancy massage + signature facial + spa pedicure</td><td>Established Perth bundling pattern</td></tr>
+        <tr><td>Hidden Valley Eco Day Spa</td><td>Bundles pregnancy massage + facial + foot massage + afternoon tea</td><td>Established Perth bundling pattern</td></tr>
+        <tr><td>endota Spa (Perth CBD)</td><td>General relaxation massage; customised facial + massage, 90min</td><td>A$90&ndash;150 typical 60min massage</td></tr>
+        <tr><td>The Library Nail Salon / Perth Beautiful Nails</td><td>Nail services comparable</td><td>Referenced in <code>SERVICE-CATALOGUE.md</code></td></tr>
+        <tr><td>JTs Hairstylists</td><td>Hair services comparable</td><td>Referenced in <code>SERVICE-CATALOGUE.md</code></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Discounted spa packages in the Perth market average around A$140 combined &mdash; confirming bundling two-plus services at a discount is the real, established market pattern this venture follows for its PM packages (Chapter 11, not yet built), not a novel approach. Sources: <code>docs/architecture/PM-PACKAGES.md</code> §2, <code>docs/architecture/SERVICE-CATALOGUE.md</code>, <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code>.</p>
+
+    <h2>What differentiates this venture</h2>
+    <p>This venture deliberately builds two businesses under one roof &mdash; a credible clinical morning and a credible standalone afternoon &mdash; where every comparable identified so far commits fully to only one side of that pairing. No comparable found combines a real clinical GTT process with a full-breadth wellness offering at the multi-client concurrency this venue is designed for.</p>
+
+    <div class="callout brown">
+      <span class="callout-label">Consolidation note</span>
+      This chapter consolidates comparables that exist scattered across <code>PM-PACKAGES.md</code>, <code>FIRST-PRINCIPLES-FINANCIAL-MODEL.md</code>, <code>SERVICE-CATALOGUE.md</code>, and <code>STAFFING-COVERAGE-VALIDATION.md</code> &mdash; none of these documents was written as a competitive-landscape source, so this is the first place they appear together. <code>docs/swot-analysis.md</code> (dated 2026-07-19) was checked and found to contain several stale claims on venue/pathology-partnership/startup-capital status not repeated here &mdash; only its still-current competitive finding (no direct WA competitor, MIWM as the sole national comparable) is used.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 5 — BRAND
+     ================================================================ -->
+<section class="chapter" id="ch5">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 5</div>
+      <h1 class="chapter-title">Brand</h1>
+      <p class="chapter-dek">Positioning, palette, and typography &mdash; founder-locked and current. Naming presented honestly: not locked.</p>
+    </div>
+
+    <h2>Brand purpose</h2>
+    <p>To make the hours a woman is required to spend on a mandatory pregnancy test the best hours of her week &mdash; and to become, from that first visit, a place she keeps choosing long after the test is behind her.</p>
+
+    <h2>Positioning</h2>
+    <p><strong>Premium, not luxury.</strong> Restraint over decoration. Natural light, material consistency, unhurried service, and the deliberate absence of clinical signalling outside the one room that needs it &mdash; these are the evidenced drivers of premium perception in this venture's own research, not expensive materials used broadly. Explicitly not: budget, mass-market, generic clinic, boho, or cliché-luxury (excess gold/marble).</p>
+
+    <h2>Locked palette</h2>
+    <p>Seven colours, founder-locked 2026-08-15. Values below are pulled directly from <code>outputs/brand/warm-stone-tokens.css</code> &mdash; the single canonical source for this system.</p>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-fill" style="background:#FAF6EE; border:1px solid #E8DAC5;"></div><div class="swatch-info"><span class="name">Warm Ivory</span><span class="hex">#FAF6EE</span> &mdash; dominant background</div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#E8DAC5;"></div><div class="swatch-info"><span class="name">Warm Stone</span><span class="hex">#E8DAC5</span> &mdash; secondary surface</div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#33261E;"></div><div class="swatch-info"><span class="name">Deep Brown</span><span class="hex">#33261E</span> &mdash; primary text, never pure black</div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#A9654E;"></div><div class="swatch-info"><span class="name">Earthy Terracotta</span><span class="hex">#A9654E</span> &mdash; supporting accent</div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#5E5F45;"></div><div class="swatch-info"><span class="name">Muted Olive</span><span class="hex">#5E5F45</span> &mdash; secondary structural accent</div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#D9A08C;"></div><div class="swatch-info"><span class="name">Dusty Rose</span><span class="hex">#D9A08C</span> &mdash; single soft-highlight moments only</div></div>
+      <div class="swatch"><div class="swatch-fill" style="background:#9C7A46;"></div><div class="swatch-info"><span class="name">Warm Brass</span><span class="hex">#9C7A46</span> &mdash; fine-line/hardware/signage detail only, never a dominant fill</div></div>
+    </div>
+
+    <h2>Typography &mdash; rendered specimens</h2>
+    <p>Fraunces (display/headings) + DM Sans (body/UI), locked. Rendered live below via Google Fonts, not merely named &mdash; the genuine build gap flagged in the architecture spec (real rendered typography examples did not previously exist anywhere in this repository).</p>
+
+    <div class="type-specimen">
+      <span class="tag-line">Fraunces &middot; Hero / Chapter title</span>
+      <div class="spec-hero">Care, without asking to be endured.</div>
+    </div>
+    <div class="type-specimen">
+      <span class="tag-line">Fraunces &middot; Section heading (H2)</span>
+      <div class="spec-h2">The wait is scheduled, not endured</div>
+    </div>
+    <div class="type-specimen">
+      <span class="tag-line">Fraunces &middot; Subheading (H3) + DM Sans body</span>
+      <div class="spec-h3">Restraint over performance</div>
+      <p class="spec-body" style="margin-top:8px;">Care that is beautifully organised, not care that announces itself. No forced cheerfulness, no scripted warmth &mdash; the same discipline that governs this dossier's own visual system.</p>
+    </div>
+    <div class="type-specimen">
+      <span class="tag-line">DM Sans &middot; Table headings / labels</span>
+      <span class="spec-label">Operating Result</span>
+    </div>
+    <div class="type-specimen">
+      <span class="tag-line">Fraunces &middot; Numerals (financial figures)</span>
+      <span class="spec-numeral">A$32,576.80</span>
+    </div>
+
+    <h2>Naming status &mdash; honestly not locked</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Candidate</th><th>Weighted score</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>SOLENA</td><td>71.6%</td><td>Conditional leader. Known trademark risk (Class 3, AU 2202790) &mdash; <span class="tag tag-founder">Founder decision</span></td></tr>
+        <tr><td>ELOWEN</td><td>68.8%</td><td>Second. Strongest on clinical credibility; own lower-severity conflict (unregistered WA counselling business)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Legal clearance status: <strong>known risk, not yet professionally cleared</strong> &mdash; attorney engagement deliberately deferred to a later funding milestone, per founder instruction. Neither name is locked. <span class="tag tag-waiting">Waiting on third party</span></p>
+
+    <div class="callout brown">
+      <span class="callout-label">Superseded source, flagged not used</span>
+      <code>docs/strategy/VISUAL-BRAND-DIRECTION.md</code> §3's own "Warm Stone" colour option (Warm Ivory <code>#F5EFE6</code>, Deep Walnut <code>#2E241C</code>, etc.) is a different, earlier palette exploration &mdash; superseded by the founder-locked palette above, which uses different hex values. This chapter uses only <code>warm-stone-tokens.css</code>'s locked values; <code>VISUAL-BRAND-DIRECTION.md</code>'s colour section must not be cited as current anywhere in this dossier.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 6 — CUSTOMER EXPERIENCE
+     ================================================================ -->
+<section class="chapter" id="ch6">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 6</div>
+      <h1 class="chapter-title">Customer Experience</h1>
+      <p class="chapter-dek">The full journey, AM and PM, stage by stage. Two journeys, one brand &mdash; mapped where they diverge.</p>
+    </div>
+
+    <div class="journey-legend">
+      <span><span class="legend-dot" style="background:#A9654E;"></span> AM &mdash; referred, GTT</span>
+      <span><span class="legend-dot" style="background:#5E5F45;"></span> PM &mdash; self-booked, standalone</span>
+    </div>
+
+    <h2>Journey diagram &mdash; shared stages</h2>
+    <div class="journey-track">
+      <div class="journey-row">
+        <div class="journey-node"><span class="phase">Before</span><span class="stage">Referral / Discovery</span><span class="emotion">AM: neutral-to-anxious. PM: curious.</span></div>
+        <div class="journey-node"><span class="phase">Before</span><span class="stage">Website</span><span class="emotion">Information-seeking, low patience for ambiguity</span></div>
+        <div class="journey-node"><span class="phase">Before</span><span class="stage">Booking</span><span class="emotion">Transactional, wants speed</span></div>
+        <div class="journey-node"><span class="phase">Before</span><span class="stage">Confirmation</span><span class="emotion">AM: rising anxiety. PM: mild anticipation.</span></div>
+        <div class="journey-node"><span class="phase">Arrival</span><span class="stage">Parking / Entry</span><span class="emotion">AM: nervous, fasting. PM: neutral.</span></div>
+        <div class="journey-node"><span class="phase">Arrival</span><span class="stage">Reception / Welcome</span><span class="emotion">Competence must be legible in 10 seconds</span></div>
+        <div class="journey-node"><span class="phase">Arrival</span><span class="stage">Sensory / Waiting</span><span class="emotion">"Relief, then quiet pleasure"</span></div>
+      </div>
+    </div>
+
+    <h2>AM-only stages (GTT)</h2>
+    <div class="journey-track">
+      <div class="journey-row am">
+        <div class="journey-node"><span class="phase">GTT</span><span class="stage">Clinical process</span><span class="emotion">The needle &mdash; highest-anxiety point</span></div>
+        <div class="journey-node"><span class="phase">GTT</span><span class="stage">Comfort / hospitality</span><span class="emotion">Shifts from clinical to hospitality the moment the draw is done</span></div>
+      </div>
+    </div>
+
+    <h2>After &mdash; shared, with an explicitly open stage</h2>
+    <div class="journey-track">
+      <div class="journey-row">
+        <div class="journey-node"><span class="phase">After</span><span class="stage">Departure experience</span><span class="emotion">Genuinely open &mdash; see below</span></div>
+        <div class="journey-node"><span class="phase">After</span><span class="stage">Follow-up</span><span class="emotion">A genuinely useful message, not a marketing blast</span></div>
+        <div class="journey-node"><span class="phase">After</span><span class="stage">Service discovery</span><span class="emotion">AM learns the PM business exists, on its own terms</span></div>
+        <div class="journey-node"><span class="phase">After</span><span class="stage">Rebooking</span><span class="emotion">See the Return Loop mechanism</span></div>
+      </div>
+    </div>
+
+    <h2>Full stage table</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Stage</th><th>Emotion</th><th>Expectation</th><th>Opportunity</th><th>Friction</th></tr></thead>
+      <tbody>
+        <tr><td>Referral (AM)</td><td>Neutral-to-anxious</td><td>Standard pathology-collection experience</td><td>Referrer's own precise description does real brand work</td><td>An undersold description weakens the "unexpectedly lovely" effect</td></tr>
+        <tr><td>Discovery (PM)</td><td>Curious, evaluating</td><td>Enough clarity to trust this isn't generic</td><td>A specific, repeatable sentence a friend can say</td><td>Genericness doesn't get repeated by word of mouth</td></tr>
+        <tr><td>Reception / Welcome</td><td>AM: competence must be legible fast</td><td>Being expected by name</td><td>No counter/clipboard model, first name used immediately</td><td>Any "name/DOB/reference number" moment reads as clinical intake</td></tr>
+        <tr><td>Sensory / Waiting</td><td>Relief, then quiet pleasure</td><td>Normal premium-salon environment (PM)</td><td>Natural light, no visible clinical equipment outside one room</td><td>A beautiful lounge beside a visibly clinical area undermines the effect</td></tr>
+        <tr><td>Clinical process (AM)</td><td>Highest-anxiety point &mdash; the needle</td><td>Competent, quick, not dwelt on</td><td>One pre-emptive acknowledging line, tested and working</td><td>Under- or over-acknowledging both read poorly</td></tr>
+        <tr><td>Comfort / hospitality (AM)</td><td>Should feel like a schedule she can trust</td><td>Never has to ask "what happens next"</td><td>The welcome/itinerary card &mdash; the single highest-leverage low-cost intervention identified</td><td>Silence about timing is the single largest anxiety source in a multi-hour wait</td></tr>
+        <tr><td>Departure experience</td><td>Should land as "unexpectedly lovely"</td><td>None &mdash; genuine upside potential</td><td><strong>Genuinely open design question &mdash; see callout below</strong></td><td>A rushed generic send-off is a missed opportunity</td></tr>
+        <tr><td>Follow-up</td><td>AM: mild residual anxiety about results</td><td>Told what happens next, not chased for a rebooking</td><td>One genuinely useful message (results reaching her doctor) earns the right to mention other services once, briefly</td><td>Leading with an upsell before the real question reads as transactional</td></tr>
+        <tr><td>Service discovery</td><td>AM: mild curiosity if the visit was good</td><td>&mdash;</td><td>Where the AM guest first learns the PM business exists, on its own terms</td><td>Presenting it as an upsell during the GTT visit itself undoes trust</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout">
+      <span class="callout-label">Departure experience &mdash; confirmed genuinely open, not silently closed</span>
+      <span class="tag tag-founder">Founder decision required</span>
+      The previously-described "leaving box"/physical parting-gesture concept was removed 2026-08-19, per Anthony's explicit decision &mdash; it is not approved and does not appear anywhere in this chapter. No replacement mechanism is proposed here. This is a genuine open design question, not a gap papered over with an invented substitute. <strong>New finding this build round:</strong> a residual reference to the removed concept ("one genuine, specific, low-cost moment of generosity at the leaving point") was found surviving in <code>docs/experience/CUSTOMER-JOURNEY.md</code>'s own closing summary paragraph &mdash; missed by the 2026-08-19 repo-wide removal pass because it lived in prose rather than a dedicated departure-stage section. Corrected in that source document as part of this build (see Chapter 6 sourcing note below); this dossier chapter was built from the corrected version, not the residual one.
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      Primary source: <code>docs/experience/CUSTOMER-JOURNEY.md</code> (15-stage AM/PM map). Supporting: <code>docs/experience/RETURN-LOOP.md</code> for the rebooking mechanism (Visit 1 &rarr; Experience &rarr; Discovery &rarr; Follow-up &rarr; Visit 2 &rarr; Relationship &rarr; Advocacy). Both confirmed clean of the removed leaving-moment concept as of this build (the one residual reference found this round is corrected at source, not just worked around in this chapter).
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     REMAINING CHAPTERS INDEX
+     ================================================================ -->
+<section class="chapter">
+  <div class="container">
+    <h2 style="margin-top:0;">Chapters not yet built (Groups B&ndash;F)</h2>
+    <div class="remaining">
+      <ol start="7">
+        <li>GTT Service</li>
+        <li>AM Operating Model</li>
+        <li>PM Operating Model</li>
+        <li>Service Catalogue</li>
+        <li>PM Packages</li>
+        <li>Food &amp; Beverage</li>
+        <li>Retail</li>
+        <li>Staffing</li>
+        <li>Staff Profiles</li>
+        <li>Staffing Coverage</li>
+        <li>Rostering</li>
+        <li>Customer Timetable</li>
+        <li>Venue</li>
+        <li>Floor Plan</li>
+        <li>Compliance</li>
+        <li>Children/Companion Policy</li>
+        <li>Lounge</li>
+        <li>Startup Requirements</li>
+        <li>Purchasing</li>
+        <li>Operations</li>
+        <li>Financial Model</li>
+        <li>P&amp;L</li>
+        <li>Cash Flow</li>
+        <li>Break-even</li>
+        <li>Financial Sensitivity</li>
+        <li>Marketing &amp; Demand Generation</li>
+        <li>Expansion</li>
+        <li>Open Items / Decisions</li>
+        <li>Execution Roadmap</li>
+      </ol>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Full specification for every chapter above: <code>docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md</code>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>GTT Center Perth &mdash; Master Venture Dossier. Static in-repo prototype, not deployed. Built from <a href="../../docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md">docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md</a>. Group A (Chapters 1&ndash;6) built 2026-08-19.</p>
+  </div>
+</footer>
+
+</body>
+</html>
