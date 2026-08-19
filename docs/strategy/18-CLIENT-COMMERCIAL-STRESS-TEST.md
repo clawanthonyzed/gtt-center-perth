@@ -191,7 +191,7 @@ Explicit, not implied:
 - **Maximum appointment count beyond 18/day.** The 18-client target is already the headcount-neutral ceiling (§8's finding) — going beyond it would require new staff, breaking the exact cost-neutrality that makes 18/day attractive in the first place.
 - **Maximum AM add-on stacking (Scenario C, §2) as a default sales push.** Real, priced upside exists, but treating "stack every add-on" as a target risks the pacing pressure flagged in §2, for revenue that isn't even quantified as a real assumption yet.
 - **Maximum PM occupancy toward its ~28-31 session theoretical ceiling.** PM is already materially contributing to revenue at roughly half that ceiling (§3, §7) — chasing the ceiling is chasing a number the model doesn't need to hit, at direct cost to the calm PM experience the return-loop thesis depends on.
-- **Aggressive same-visit AM upselling.** Already flagged in `docs/experience/RETURN-LOOP.md`: upselling during the clinical visit itself undoes trust at exactly the point it's being built — the add-on revenue in §2 should be offered, not pushed, and never at the cost of the leaving-moment mechanism the whole flywheel depends on.
+- **Aggressive same-visit AM upselling.** Already flagged in `docs/experience/RETURN-LOOP.md`: upselling during the clinical visit itself undoes trust at exactly the point it's being built — the add-on revenue in §2 should be offered, not pushed, and never at the cost of the departure experience the whole flywheel depends on (see `CUSTOMER-JOURNEY.md`'s Departure Experience stage — the specific mechanism there is still an open design question, not yet solved).
 
 ---
 

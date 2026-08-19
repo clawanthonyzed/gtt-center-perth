@@ -12,7 +12,7 @@
 Per the prior audit round's own framing, restated here as the concrete measurement targets:
 
 1. **Which AM service (if any) preceded a given PM booking?** — tests whether trying a wellness service during the AM visit (Massage/Nails/Hair/Brows, alongside the GTT draw) makes a guest more likely to book that same category again standalone, or whether PM bookings mostly come from guests who had no wellness service at all during their AM visit.
-2. **Time-to-first-booking** — the gap between a guest's AM/GTT visit date and her first self-directed PM booking date (if any). A short gap suggests the leaving-moment/follow-up mechanism (`RETURN-LOOP.md`'s Experience→Discovery→Follow-up→Visit 2 stages) is working; a long gap or no PM booking at all suggests it isn't.
+2. **Time-to-first-booking** — the gap between a guest's AM/GTT visit date and her first self-directed PM booking date (if any). A short gap suggests the departure/follow-up mechanism (`RETURN-LOOP.md`'s Experience→Discovery→Follow-up→Visit 2 stages) is working; a long gap or no PM booking at all suggests it isn't.
 3. **Second-booking rate** — of all AM/GTT guests, what percentage ever make a second booking of any kind (PM standalone, or a later pregnancy's AM visit)? This is the single top-line number that tells the business whether the loop is real or aspirational.
 
 ---
@@ -31,7 +31,7 @@ Mapped directly to `CUSTOMER-JOURNEY.md`'s stages and `RETURN-LOOP.md`'s six-sta
 | **Visit type tag: "AM-GTT-Visit-1"** | **NEW — Fresha client tag** | Marks this client's first-ever AM visit, distinct from any repeat AM or PM visit later. Without this, a client's Nth visit looks identical to her 1st in any later report. | Fresha (client tag) |
 | AM wellness service booked alongside GTT (if any): Massage / Nails / Hair / Brows / None | Derived from the booked service line items already in Fresha (Step 3 of `ivy-booking-system.md`) — no new field needed, just needs to be reportable, see §3 | Fresha (existing service line) |
 
-### 2.2 At Leaving Moment (per `CUSTOMER-JOURNEY.md`'s "Leaving experience" stage)
+### 2.2 At Departure (per `CUSTOMER-JOURNEY.md`'s "Departure Experience" stage — the specific gift/parcel mechanism previously described in that stage is REMOVED, not approved; the PM-mention data capture below is unaffected, since it tracks a verbal mention only, not any physical item)
 
 | Field | Type | Purpose | Where it lives |
 |---|---|---|---|

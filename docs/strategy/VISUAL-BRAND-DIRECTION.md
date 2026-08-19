@@ -161,7 +161,7 @@ Per `docs/strategy/VENUE-FUNCTIONAL-BRIEF.md` §10's already-confirmed zoning: o
 
 Builds on, does not replace, the already-approved direction (`docs/strategy/BRAND-EXPERIENCE-FOUNDATION.md` §19): natural diffused light, real Perth-representative women, unhurried and intimate rather than posed-corporate, no clinical equipment visible outside the one room that needs it, documentary-style over staged.
 
-- **Subject matter:** real moments within the actual customer journey (arrival, the Lounge, a treatment in progress, the leaving moment) — not generic stock "pregnant woman touching belly" imagery.
+- **Subject matter:** real moments within the actual customer journey (arrival, the Lounge, a treatment in progress, departure) — not generic stock "pregnant woman touching belly" imagery.
 - **People:** genuine diversity of age (within the target range), body type, and ethnicity reflective of real Perth demographics — never a single narrow beauty-standard cast.
 - **Styling:** natural, unstyled-looking hair and makeup — she should look like herself, not like she's been styled for a shoot.
 - **Skin tones:** photographed and colour-graded accurately across all represented skin tones — no single "brand grade" that flatters one skin tone at the expense of others.
@@ -201,7 +201,7 @@ Restraint applies here more than anywhere — luxury comes from consistency and 
 | Staff uniforms | Tailored, natural-fibre, muted tonal palette consistent with §3 — not clinical scrubs, not a branded polo. Phlebotomist uniform remains a flagged open item pending WDP/occupational input (`docs/strategy/BRAND-EXPERIENCE-FOUNDATION.md` §23) |
 | Appointment cards / welcome card | The single highest-leverage branded object in the business (`docs/experience/CUSTOMER-JOURNEY.md`) — considered card stock, Fraunces for the client's name, minimal wordmark, no border decoration |
 | Business cards | Simple, restrained, wordmark + essential contact information only |
-| Packaging (the leaving box) | Natural kraft/uncoated stock, minimal wordmark treatment, one structural detail rather than printed decoration — per `docs/strategy/BRAND-EXPERIENCE-FOUNDATION.md` §25, unchanged |
+| Packaging (departure moment) | **REMOVED 2026-08-19** — the "leaving box" concept this row referenced is NOT approved; see `docs/strategy/BRAND-EXPERIENCE-FOUNDATION.md` §25 for the full removal note. No replacement packaging direction proposed. |
 | Retail products (third-party) | No GTT Center Perth branding overlaid onto third-party stock (Gaia, Weleda, Mustela) — curation is the brand statement, not badging |
 | Gift cards (physical) | Same restrained wordmark treatment as the digital version (§10), on a considered card stock |
 | Printed client info (fasting instructions etc.) | Warm, plain-language, DM Sans body text — never a clinical-form look, consistent with §15 of the Brand + Experience Foundation |

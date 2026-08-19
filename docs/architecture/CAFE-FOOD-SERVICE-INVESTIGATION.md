@@ -6,7 +6,7 @@
 
 ## 1. Why This Matters — the Real Client Need
 
-Per `docs/experience/CUSTOMER-JOURNEY.md`'s "Leaving experience" stage, the moment food arrives after the final draw is described as "the single most emotionally effective, lowest-cost luxury moment available to this business." Clients have fasted 8+ hours by the time the last draw completes — a genuine, real physiological need, not just a nice touch. The existing plan (per `financial-setup.md` Step 9, `equipment-costs.md` §6/§12) is currently scoped narrowly: pre-packaged snacks, herbal tea, coconut water — explicitly **not** a hot-food/sandwich offering.
+Per `docs/experience/CUSTOMER-JOURNEY.md`'s "Departure Experience" stage, food/beverage after the final draw addresses a genuine, real physiological need — clients have fasted 8+ hours by the time the last draw completes. (Note: an earlier framing of this moment referenced a separate "leaving box" departure-gesture concept — REMOVED 2026-08-19, not approved; this document's own scope, pre-packaged snacks/herbal tea/coconut water, is unaffected by that removal, since it was never that gesture mechanic.) The existing plan (per `financial-setup.md` Step 9, `equipment-costs.md` §6/§12) is currently scoped narrowly: pre-packaged snacks, herbal tea, coconut water — explicitly **not** a hot-food/sandwich offering.
 
 ## 2. What Anthony Is Asking For, Specifically
 

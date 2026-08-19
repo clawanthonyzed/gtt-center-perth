@@ -29,8 +29,9 @@ Every physical/design/experience recommendation surfaced across this project's w
 ### HIGH IMPACT / LOW COST
 - Natural light prioritisation in room/venue selection and layout (a site-selection criterion, not a spend)
 - The welcome/itinerary card (both boards costed this at roughly $1–2 per card, called "the single most important brand object in the business")
-- The leaving box/gesture (costed at roughly $9–10 per guest in the design work reviewed — food plus one small item)
 - Removing clinical signalling from guest-facing areas (a discipline, not a purchase)
+
+**REMOVED 2026-08-19, per Anthony's explicit decision:** a previously-listed "leaving box/gesture" item (costed at roughly $9-10/guest in the design work reviewed) is NOT approved and must not appear in any forward-facing material.
 - First-name-based reception model, no clipboard/counter intake process (an operations decision, not a spend)
 - Staff continuity policy supporting the return loop (`docs/experience/RETURN-LOOP.md`) — an HR/rostering decision, largely cost-neutral against current staffing
 

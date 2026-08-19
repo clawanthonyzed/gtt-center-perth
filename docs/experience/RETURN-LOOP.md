@@ -35,8 +35,8 @@ Advocacy (she recommends it to friends/family — this is where the growth model
 **What breaks it:** Any friction at the anxious points (unclear timing, clinical-feeling reception, an underwhelming environment) resets her expectations back to "this was just a medical appointment," and the rest of the loop doesn't get a chance to start.
 
 ### Experience → Discovery
-**Mechanism:** The leaving moment (`CUSTOMER-JOURNEY.md`'s "leaving experience" stage) is where discovery of the PM business should first happen — not as a sales pitch during her GTT visit, but folded into the same physical object/gesture that ends the visit. A single line on the leaving card/box naming one specific thing she could book next (not a generic services list) outperforms a menu handed over at reception.
-**What breaks it:** Upselling during the clinical visit itself, before the leaving moment — this reads as transactional at exactly the point trust is still being built, and undoes more than it gains.
+**Mechanism:** The departure moment (`CUSTOMER-JOURNEY.md`'s "Departure Experience" stage) is where discovery of the PM business should first happen — not as a sales pitch during her GTT visit. **REMOVED 2026-08-19: the previously-described "leaving card/box" physical-object mechanism is NOT approved.** A single specific line naming one thing she could book next (not a generic services list) is the valid underlying principle — outperforms a menu handed over at reception — but the exact delivery mechanism (how/when this line is communicated) is not yet designed.
+**What breaks it:** Upselling during the clinical visit itself, before she departs — this reads as transactional at exactly the point trust is still being built, and undoes more than it gains.
 
 ### Discovery → Follow-up
 **Mechanism:** A single, genuinely useful follow-up message (when her results reach her doctor — a real, non-marketing piece of information) is the vehicle. The PM mention rides alongside it once, briefly, not as the message's main purpose.

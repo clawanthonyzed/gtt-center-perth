@@ -1,6 +1,6 @@
 # Customer Journey
 
-**Status:** Current, name-agnostic. Companion to `docs/strategy/BRAND-STRATEGY-NAME-AGNOSTIC.md`. Grounded in `docs/business-plan.md`'s confirmed operating model (AM GTT + PM standalone) and both Phase 1/Phase 2 design explorations' welcome-card and leaving-box concepts, which are treated here as validated ideas worth carrying forward regardless of which name wins — not name-specific creative.
+**Status:** Current, name-agnostic. Companion to `docs/strategy/BRAND-STRATEGY-NAME-AGNOSTIC.md`. Grounded in `docs/business-plan.md`'s confirmed operating model (AM GTT + PM standalone) and the welcome-card concept from both Phase 1/Phase 2 design explorations, which is treated here as a validated idea worth carrying forward regardless of which name wins — not name-specific creative. **UPDATED 2026-08-19: the "leaving box" departure-gesture concept previously referenced here was REMOVED per Anthony's explicit decision (not approved, must not appear in forward-facing material) — see the Departure Experience section below.**
 
 Two journeys exist in parallel: **AM (GTT, referred)** and **PM (standalone, self-booked)**. They share a physical space and a brand but start from different emotional positions — the AM guest didn't choose to be here today; the PM guest did. Both are mapped below where they diverge.
 
@@ -92,18 +92,18 @@ Two journeys exist in parallel: **AM (GTT, referred)** and **PM (standalone, sel
 
 ## AFTER
 
-### Leaving experience
+### Departure experience
 **Emotion:** Should land as "that was unexpectedly lovely," not "my appointment is finished."
-**Expectation:** Nothing — this is a moment of genuine upside surprise if done well.
-**Brand opportunity:** The single most emotionally effective, lowest-cost luxury moment available to this business — food and a small, specific gesture at the exact point she has been fasting and just had blood drawn. See `RETURN-LOOP.md` for how this feeds repeat-visit behaviour directly.
-**Design opportunity:** A considered small box/parcel (not a plastic bag), a warm item to eat immediately, something small to take home. Both design explorations converged on this independently and both costed it as genuinely low-cost relative to its emotional effect.
-**Friction:** A rushed or generic send-off ("thanks, see you next time!") wastes the single highest-leverage moment in the whole visit.
+**Expectation:** Nothing — this is a moment of genuine upside potential if done well.
+**Brand opportunity:** A genuine design priority — the departure moment, once she is no longer fasting, is a real opportunity for the visit to end well. **REMOVED 2026-08-19, per Anthony's explicit decision: the previously-described "leaving box"/physical parting-gesture concept (a small considered parcel handed to the client at departure) is NOT approved and must not appear in any forward-facing material.** No replacement mechanism is proposed here — this remains an open design question.
+**Design opportunity:** Not yet designed. See `docs/architecture/CAFE-FOOD-SERVICE-INVESTIGATION.md` for the separate, legitimate question of on-site food/beverage service generally (a distinct topic from the removed departure-gesture concept).
+**Friction:** A rushed or generic send-off ("thanks, see you next time!") is a missed opportunity, though the specific fix is not yet designed.
 
 ### Refreshments
-Covered above — folded into the leaving moment rather than treated as a separate transactional step.
+A separate, legitimate food/beverage topic — see `docs/architecture/CAFE-FOOD-SERVICE-INVESTIGATION.md`. Not tied to any departure-gesture mechanic (see above — that concept is removed).
 
-### Gift / touchpoint (if justified)
-See leaving experience above — the same object, not a separate one. Do not stack multiple "gift moments"; one considered gesture outperforms several small ones.
+### Gift / touchpoint
+**REMOVED 2026-08-19** — no gift/parting-item mechanic is currently approved. If a future design solution is proposed for the departure moment (see above), it should be evaluated fresh, not by reference to the removed concept.
 
 ### Follow-up
 **Emotion:** AM: mild residual anxiety about results. PM: neutral-positive.

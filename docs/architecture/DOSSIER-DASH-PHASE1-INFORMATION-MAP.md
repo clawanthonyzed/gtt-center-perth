@@ -90,7 +90,7 @@ Every item on Anthony's own do-not-lose list has been checked for a genuine sour
 | VM wage / workers comp / PM service duration / GTT supplies / WDP dependency unresolved | YES, all correctly labelled | `FINANCIAL-ASSUMPTION-REGISTER.md` |
 | Entity structure open | YES | `financial-setup.md`/`research.md`, framing preserved |
 | No 3D ultrasound / no in-house accreditation / no landlord contribution / no em dashes | Confirmed as standing exclusions, not present in Tier 1 current docs | — |
-| **No leaving-moment gesture** | **CONTRADICTION FOUND** — `CUSTOMER-JOURNEY.md` and `STRATEGIC-REPORT.md` both actively promote this concept as validated | **Flagged for Anthony's explicit decision — not resolved either way in this document** |
+| **No leaving-moment gesture** | **RESOLVED 2026-08-19** — Anthony's decision: REMOVE, not approved, must not appear anywhere. Actioned repo-wide across all 10 forward-facing documents that referenced it (see `FOUNDER-FEEDBACK-IMPLEMENTATION-MATRIX.md` item 17c for the full file list), each replaced with an explicit removal disclosure, not silently deleted or renamed | **CLOSED** |
 | No historical figures in the dossier | Will be enforced during the actual rebuild (Phase 2/3) | — |
 
 ## 5. Financial Source-of-Truth Cross-Check

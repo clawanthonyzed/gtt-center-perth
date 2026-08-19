@@ -86,7 +86,7 @@ Not an arbitrary number — derived from the existing, itemised room schedule (`
 
 ## 7. Customer Flow
 
-**GTT customer:** Arrive → Check in (name-based) → Orient (welcome/itinerary card, `CUSTOMER-JOURNEY.md`) → Wait/prepare (Lounge) → Draw 1 → Service 1 → Draw 2 → Service 2 → Draw 3 → Recovery/hospitality (leaving moment) → Depart. Then, separately, on her own timeline: Discovers PM (at the leaving moment, not during the clinical visit, `docs/experience/RETURN-LOOP.md`) → Books PM → Returns.
+**GTT customer:** Arrive → Check in (name-based) → Orient (welcome/itinerary card, `CUSTOMER-JOURNEY.md`) → Wait/prepare (Lounge) → Draw 1 → Service 1 → Draw 2 → Service 2 → Draw 3 → Recovery/hospitality (departure experience — mechanism not yet designed, the previously-described departure-gesture concept is REMOVED, not approved) → Depart. Then, separately, on her own timeline: Discovers PM (at departure, not during the clinical visit, `docs/experience/RETURN-LOOP.md`) → Books PM → Returns.
 
 **PM customer:** Arrive → Reception → Lounge (shorter wait, different register) → Treatment → Refresh/depart → Rebook.
 

@@ -111,7 +111,7 @@ See `docs/experience/CUSTOMER-JOURNEY.md` for the full stage-by-stage map.
 
 ## Repeat-Visit Strategy
 
-See `docs/experience/RETURN-LOOP.md` for the full mechanism. Summary: the return visit is earned in the first visit's final ten minutes (the leaving moment) and confirmed by a follow-up that offers something specific and personal, not generic marketing.
+See `docs/experience/RETURN-LOOP.md` for the full mechanism. Summary: the return visit is earned in the first visit's final ten minutes (the departure experience — the specific mechanism there remains an open design question, the previously-described "leaving box" gesture is REMOVED, not approved) and confirmed by a follow-up that offers something specific and personal, not generic marketing.
 
 ## Referral Strategy
 
