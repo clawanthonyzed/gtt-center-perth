@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GTT Center Perth — Master Dossier (Rebuild in progress)</title>
-<meta name="description" content="Founder/investor operating dossier. Rebuild in progress per docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md. Group A (Chapters 1-6) complete; Chapters 7-35 not yet built.">
+<meta name="description" content="Founder/investor operating dossier. Rebuild in progress per docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md. Chapters 1-11 complete (Groups A-B); Chapters 12-35 not yet built.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -176,6 +176,47 @@ tr:nth-child(even) td{background:rgba(232,218,197,0.35);}
 .chart-wrap{background:var(--white); border-radius:var(--radius-lg); padding:18px 20px; box-shadow:var(--shadow-card); margin:20px 0;}
 .chart-caption{font-size:0.8rem; opacity:0.75; margin-top:8px;}
 
+/* ---------- Timetable grid (Chapter 8/9) ---------- */
+.timetable-wrap{overflow-x:auto; margin:22px 0; border-radius:var(--radius-md); box-shadow:var(--shadow-card);}
+.timetable{border-collapse:collapse; width:100%; min-width:980px; font-size:0.82rem; background:var(--white);}
+.timetable th{background:var(--deep-brown); color:var(--warm-ivory); text-transform:uppercase; letter-spacing:0.03em; font-size:0.68rem; padding:9px 10px; text-align:left; position:sticky; top:0;}
+.timetable td{padding:8px 10px; border-bottom:1px solid var(--warm-stone); vertical-align:top;}
+.timetable tr:nth-child(even) td{background:rgba(232,218,197,0.3);}
+.timetable td.pair-num{font-family:var(--font-display); font-weight:600; color:var(--earthy-terracotta);}
+.timetable .buffer{color:var(--muted-olive); font-size:0.76rem; opacity:0.85;}
+
+/* ---------- Staff-lane grid ---------- */
+.lane-wrap{overflow-x:auto; margin:22px 0; border-radius:var(--radius-md); box-shadow:var(--shadow-card);}
+.lane-table{border-collapse:collapse; width:100%; min-width:920px; font-size:0.78rem; background:var(--white);}
+.lane-table th{background:var(--warm-stone); color:var(--deep-brown); text-transform:uppercase; font-size:0.66rem; letter-spacing:0.03em; padding:8px 8px; text-align:left;}
+.lane-table td{padding:7px 8px; border-bottom:1px solid var(--warm-stone);}
+.lane-table td.lane-label{font-weight:700; white-space:nowrap;}
+.lane-table td.active-cell{background:rgba(169,101,78,0.14);}
+.lane-table td.end-cell{background:rgba(94,95,69,0.18); font-weight:600;}
+
+/* ---------- Package / card comparison (Chapter 10/11) ---------- */
+.pkg-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:22px 0;}
+.pkg-card{background:var(--white); border-radius:var(--radius-lg); padding:22px 24px; box-shadow:var(--shadow-card-lg); border-top:4px solid var(--earthy-terracotta);}
+.pkg-card h3{margin-top:0; font-size:1.3rem;}
+.pkg-card .price{font-family:var(--font-display); font-size:2rem; color:var(--deep-brown); margin:4px 0 10px 0;}
+.pkg-card .price .was{font-size:0.9rem; text-decoration:line-through; opacity:0.5; font-family:var(--font-body); margin-right:6px;}
+.pkg-card ul{padding-left:20px; margin:10px 0; font-size:0.9rem;}
+.pkg-card .staffing-note{font-size:0.82rem; background:var(--warm-ivory); border-radius:var(--radius-sm); padding:9px 12px; margin-top:12px; border:1px solid var(--warm-stone);}
+
+.svc-cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin:20px 0;}
+.svc-card{background:var(--white); border-radius:var(--radius-md); padding:16px 18px; box-shadow:var(--shadow-card);}
+.svc-card h4{margin:0 0 6px 0; font-size:1rem;}
+.svc-card .meta{font-size:0.78rem; opacity:0.75;}
+.svc-card .price{font-family:var(--font-display); font-size:1.3rem; color:var(--earthy-terracotta); margin-top:6px;}
+
+.cap-compare{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:18px 0;}
+.cap-box{background:var(--white); border-radius:var(--radius-md); padding:16px; text-align:center; box-shadow:var(--shadow-card);}
+.cap-box .n{font-family:var(--font-display); font-size:1.7rem; display:block;}
+.cap-box .lbl{font-size:0.7rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted-olive); font-weight:700;}
+.cap-box.wrong{opacity:0.55;}
+.cap-box.wrong .n{text-decoration:line-through;}
+.cap-box.right{border:2px solid var(--muted-olive);}
+
 /* ---------- Footer / index of remaining chapters ---------- */
 .remaining{background:var(--warm-stone); border-radius:var(--radius-lg); padding:24px 26px; margin:32px 0;}
 .remaining ol{columns:2; column-gap:40px; font-size:0.88rem; padding-left:20px;}
@@ -211,13 +252,18 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       <a href="#ch4">4. Competitors</a>
       <a href="#ch5">5. Brand</a>
       <a href="#ch6">6. Experience</a>
+      <a href="#ch7">7. GTT Service</a>
+      <a href="#ch8">8. AM Model</a>
+      <a href="#ch9">9. PM Model</a>
+      <a href="#ch10">10. Catalogue</a>
+      <a href="#ch11">11. PM Packages</a>
     </nav>
   </div>
 </div>
 
 <div class="build-banner">
   <div class="container">
-    <strong>Build status:</strong> Chapters 1&ndash;6 (Group A) built 2026-08-19, reconciled against the live canonical model. Chapters 7&ndash;35 (Groups B&ndash;F) not yet built &mdash; see the index at the foot of this page. This is a static, in-repo prototype only. Not deployed, not password-protected, not for external circulation.
+    <strong>Build status:</strong> Chapters 1&ndash;11 built (Group A: 1&ndash;6, 2026-08-19; Group B: 7&ndash;11, 2026-08-19), reconciled against the live canonical model. Chapters 12&ndash;35 (Groups C&ndash;F) not yet built &mdash; see the index at the foot of this page. This is a static, in-repo prototype only. Not deployed, not password-protected, not for external circulation.
   </div>
 </div>
 
@@ -574,18 +620,441 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
 </section>
 
 <!-- ================================================================
+     CHAPTER 7 — GTT SERVICE
+     ================================================================ -->
+<section class="chapter" id="ch7">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 7</div>
+      <h1 class="chapter-title">GTT Service</h1>
+      <p class="chapter-dek">What the test is, who is responsible for what, and exactly how a client moves through it. The clinical process this whole venture is built around.</p>
+    </div>
+
+    <h2>What the GTT is</h2>
+    <p>The Oral Glucose Tolerance Test (OGTT/GTT) screens for gestational diabetes mellitus (GDM). It is offered to all pregnant women at 24&ndash;28 weeks' gestation as the Australian standard of care, per the ADIPS 2014 Consensus Guidelines and FIGO 2015 (75g glucose, 2-hour test). <span class="tag tag-verified">Verified</span> This mandatory, non-discretionary demand &mdash; roughly 2&ndash;2.5 hours of fasting waiting time per test, undergone by an estimated ~33,570 WA women per year (Chapter 3) &mdash; is the market gap this venture exists to fill.</p>
+
+    <h2>Who is responsible for what</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>GTT Center Perth provides</th><th>Pathology partner (WDP, priority) provides</th></tr></thead>
+      <tbody>
+        <tr><td>Venue, ACSQHC-compliant collection room</td><td>NATA accreditation umbrella (Licensed Collection Centre)</td></tr>
+        <tr><td>Employed phlebotomists (Cert III/IV Pathology Collection)</td><td>Phlebotomist credentialing as an approved collector under the partner's accreditation</td></tr>
+        <tr><td>Patient scheduling and the wellness experience around the draws</td><td>Specimen processing and laboratory analysis</td></tr>
+        <tr><td>Collection room equipment, sharps/biohazard disposal, specimen refrigeration</td><td>Result reporting to the referring doctor/midwife, Medicare billing</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="callout brown">
+      <span class="callout-label">Operational boundary, stated plainly</span>
+      GTT Center Perth does not diagnose, interpret, or communicate results to the patient &mdash; all clinical decisions are made by the referring doctor or midwife. GTT Center Perth also earns <strong>zero revenue from pathology billing</strong>; every dollar of AM revenue comes from the wellness packages sold alongside the test, not the test itself. A phlebotomist must be registered as an approved collector under the partner's own NATA accreditation <em>before</em> performing any collection &mdash; a credentialing precondition, not a formality.
+    </div>
+
+    <h2>Referral requirement</h2>
+    <p>Every client brings a GP or midwife's pathology referral form (paper or eReferral) and her Medicare card. Reception collects and copies both at check-in; the phlebotomist verifies patient name, date of birth, and gestational age against the referral before the first draw. <span class="tag tag-research">Needs research</span> The specific WA regulatory basis for this requirement (beyond standard pathology-collection practice) was not re-confirmed with a primary citation this round &mdash; carried forward from <code>docs/gtt-clinical-protocol.md</code> as an established operational practice, not independently re-sourced against current WA Health guidance this pass.</p>
+
+    <h2>Fasting requirement</h2>
+    <p><strong>10&ndash;12 hours fasted, water only</strong> &mdash; sourced from PathWest's own 2024 patient instructions (the current version; an earlier 2019 PathWest document stated a 16-hour maximum, superseded). <span class="tag tag-verified">Verified</span> No food, tea, coffee, juice, soft drink, gum, or nicotine from the fasting start time; no exercise the morning of. Communicated via booking confirmation, 48-hour and 24-hour SMS reminders (personalised fasting cutoff), and a 1-hour day-of SMS.</p>
+
+    <h2>The clinical timeline</h2>
+    <div class="journey-track">
+      <div class="journey-row">
+        <div class="journey-node"><span class="phase">Before</span><span class="stage">Fasting</span><span class="emotion">10&ndash;12hrs, water only, from personalised cutoff</span></div>
+        <div class="journey-node"><span class="phase">Arrival</span><span class="stage">Check-in</span><span class="emotion">Referral form + Medicare card collected; identity verified</span></div>
+        <div class="journey-node"><span class="phase">T=0</span><span class="stage">Draw 1 + glucose drink</span><span class="emotion">Fasting sample, then 75g glucose solution over 5 min</span></div>
+        <div class="journey-node"><span class="phase">T=0&ndash;60</span><span class="stage">Wellness Service 1</span><span class="emotion">45-min treatment</span></div>
+        <div class="journey-node"><span class="phase">T=+60</span><span class="stage">Draw 2</span><span class="emotion">Exact clinical mark, 5 min</span></div>
+        <div class="journey-node"><span class="phase">T=60&ndash;120</span><span class="stage">Wellness Service 2</span><span class="emotion">45-min treatment</span></div>
+        <div class="journey-node"><span class="phase">T=+120</span><span class="stage">Draw 3 + departure</span><span class="emotion">Exact clinical mark, snacks offered, may leave after</span></div>
+      </div>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Draw 2 and Draw 3 occur at <strong>exactly</strong> +60 and +120 minutes from each client's own Draw 1 &mdash; never approximate, per the pathology partner's own hard clinical-mark requirement. Every draw is exactly 5 minutes. The full 9-pair, 18-client solver-verified AM schedule that operationalises this timeline is Chapter 8, not duplicated here.</p>
+
+    <h2>Adverse events &mdash; summary</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Event</th><th>Response</th></tr></thead>
+      <tbody>
+        <tr><td>Vasovagal / feels unwell</td><td>Keep seated or reclining, do not allow standing if dizzy, escalate to the Venue Manager immediately, call 000 if unconscious/unresponsive</td></tr>
+        <tr><td>Difficult venepuncture</td><td>Maximum 2 attempts per arm; if unsuccessful, escalate to the pathology partner's phlebotomy supervisor &mdash; never more than 3 total attempts without senior clinical input</td></tr>
+        <tr><td>Glucose drink refusal/intolerance</td><td>Cannot substitute with food (not clinically equivalent); document and notify the referring doctor; never pressure the patient</td></tr>
+        <tr><td>Anaphylaxis</td><td>Phlebotomist holds current anaphylaxis training; venue holds an EpiPen; Venue Manager is the trained first aider</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>Records and what the centre does not retain</h2>
+    <p><strong>Retained 7 years:</strong> collection log (name, DOB, gestational age, draw times, collector ID), specimen dispatch log, adverse event register, fridge temperature log, referral form copies. <strong>Not retained:</strong> GTT results themselves &mdash; results travel lab &rarr; referring doctor &rarr; patient, and GTT Center Perth does not communicate results to the patient at any point.</p>
+
+    <h2>Collection room requirements</h2>
+    <p>ACSQHC-compliant: minimum 10&ndash;12sqm, 2 adjustable patient chairs, hand hygiene station, approved sharps container, biohazard waste bin, specimen refrigerator (2&ndash;8&deg;C, temperature logged), a door that closes with no public-facing window, minimum 900mm wheelchair clearance, and an emergency call button to reception. This is the one room in the venue genuinely built to look and operate as a clinical space &mdash; see Chapter 6's experience principle on why every other room deliberately does not.</p>
+
+    <div class="callout">
+      <span class="callout-label">Contradiction found this build round &mdash; specimen dispatch timing, not resolved here</span>
+      <span class="tag tag-waiting">Waiting on third party</span>
+      <code>docs/gtt-clinical-protocol.md</code> states specimens are dispatched to the lab "at agreed time (latest: 11:30am daily &mdash; confirm with WDP)." That figure predates the 2026-08-05 volume rebase to 18 clients/day: the current solver-verified AM schedule's own last Draw 3 lands at <strong>12:20&ndash;12:25pm</strong> (Chapter 8, Pair 9) &mdash; nearly an hour after the clinical protocol's own stated courier cutoff. This is a genuine scheduling/logistics contradiction surfaced while building this chapter, not previously flagged anywhere in this repo against the current 18-client volume. Not resolved here: specimen courier/dispatch timing depends on the still-open WDP/Carole Rivers commercial conversation (already tracked elsewhere in this venture's third-party dependencies) &mdash; re-confirming the actual achievable cutoff against the current, higher-volume schedule is a genuine open item for that conversation, not assumed either way in this dossier.
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/gtt-clinical-protocol.md</code> (clinical timeline, fasting window, adverse events, records, collection room spec), <code>docs/pathology-partnership-brief.md</code> (partner role, Option A model, zero pathology revenue), <code>docs/architecture/OPERATING-MODEL-18-CLIENTS.md</code> §2 (current +60/+120 exact timing at 18-client volume). The clinical protocol document's own stale client-volume references (10/day, superseded start-time tables) were not carried into this chapter &mdash; only its still-current clinical-process content was used.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 8 — AM OPERATING MODEL
+     ================================================================ -->
+<section class="chapter" id="ch8">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 8</div>
+      <h1 class="chapter-title">AM Operating Model</h1>
+      <p class="chapter-dek">How the 07:00&ndash;13:00 GTT window actually runs, minute by minute &mdash; solver-verified, not asserted.</p>
+    </div>
+
+    <div class="card-grid">
+      <div class="metric-card"><span class="label">AM clients/day</span><div class="value">18</div><div class="note">9 synchronised pairs</div></div>
+      <div class="metric-card"><span class="label">Cadence</span><div class="value">25min</div><div class="note">Uniform pair-to-pair start interval</div></div>
+      <div class="metric-card"><span class="label">Treatment headcount</span><div class="value">8</div><div class="note">4 Massage+Beauty + 2 Nails + 2 Hair</div></div>
+      <div class="metric-card"><span class="label">Last Draw 1 / last departure</span><div class="value">10:20</div><div class="note">Last departure ~12:33, inside the 07:00&ndash;13:00 shift</div></div>
+    </div>
+
+    <h2>Full AM timetable &mdash; 9 pairs, solver-verified</h2>
+    <div class="timetable-wrap">
+    <table class="timetable">
+      <thead><tr><th>Pair</th><th>Clients</th><th>Draw 1</th><th>Service 1 (45min)</th><th>Draw 2 (+60)</th><th>Service 2 (45min)</th><th>Draw 3 (+120)</th><th>Chair A room</th><th>Chair B room</th><th>Lounge status</th></tr></thead>
+      <tbody>
+        <tr><td class="pair-num">1</td><td>C1/C2</td><td>07:00&ndash;07:05</td><td>07:05&ndash;07:50</td><td>08:00&ndash;08:05</td><td>08:05&ndash;08:50</td><td>09:00&ndash;09:05</td><td>Massage (M1) &rarr; Beauty (B1)</td><td>Nails (N1) &rarr; Hair (H1)</td><td class="buffer">Buffer only</td></tr>
+        <tr><td class="pair-num">2</td><td>C3/C4</td><td>07:25&ndash;07:30</td><td>07:30&ndash;08:15</td><td>08:25&ndash;08:30</td><td>08:30&ndash;09:15</td><td>09:25&ndash;09:30</td><td>Massage (M2) &rarr; Beauty (B2)</td><td>Nails (N2) &rarr; Hair (H2)</td><td class="buffer">Buffer only</td></tr>
+        <tr><td class="pair-num">3</td><td>C5/C6</td><td>07:50&ndash;07:55</td><td>07:55&ndash;08:40</td><td>08:50&ndash;08:55</td><td>08:55&ndash;09:40</td><td>09:50&ndash;09:55</td><td>Massage (M1)</td><td>Nails (N1)</td><td class="buffer">Buffer &mdash; C1/C2 depart ~09:13</td></tr>
+        <tr><td class="pair-num">4</td><td>C7/C8</td><td>08:15&ndash;08:20</td><td>08:20&ndash;09:05</td><td>09:15&ndash;09:20</td><td>09:20&ndash;10:05</td><td>10:15&ndash;10:20</td><td>Massage (M2)</td><td>Nails (N2)</td><td class="buffer">Buffer &mdash; C3/C4 depart ~09:38</td></tr>
+        <tr><td class="pair-num">5</td><td>C9/C10</td><td>08:40&ndash;08:45</td><td>08:45&ndash;09:30</td><td>09:40&ndash;09:45</td><td>09:45&ndash;10:30</td><td>10:40&ndash;10:45</td><td>Massage (M1)</td><td>Nails (N1)</td><td class="buffer">Buffer &mdash; C5/C6 depart ~10:03</td></tr>
+        <tr><td class="pair-num">6</td><td>C11/C12</td><td>09:05&ndash;09:10</td><td>09:10&ndash;09:55</td><td>10:05&ndash;10:10</td><td>10:10&ndash;10:55</td><td>11:05&ndash;11:10</td><td>Massage (M2)</td><td>Nails (N2)</td><td class="buffer">Buffer &mdash; C7/C8 depart ~10:28</td></tr>
+        <tr><td class="pair-num">7</td><td>C13/C14</td><td>09:30&ndash;09:35</td><td>09:35&ndash;10:20</td><td>10:30&ndash;10:35</td><td>10:35&ndash;11:20</td><td>11:30&ndash;11:35</td><td>Massage (M1)</td><td>Nails (N1)</td><td class="buffer">Buffer &mdash; C9/C10 depart ~10:53</td></tr>
+        <tr><td class="pair-num">8</td><td>C15/C16</td><td>09:55&ndash;10:00</td><td>10:00&ndash;10:45</td><td>10:55&ndash;11:00</td><td>11:00&ndash;11:45</td><td>11:55&ndash;12:00</td><td>Massage (M2)</td><td>Nails (N2)</td><td class="buffer">Buffer &mdash; C11/C12 depart ~11:18</td></tr>
+        <tr><td class="pair-num">9</td><td>C17/C18</td><td>10:20&ndash;10:25</td><td>10:25&ndash;11:10</td><td>11:20&ndash;11:25</td><td>11:25&ndash;12:10</td><td>12:20&ndash;12:25</td><td>Massage (M1)</td><td>Nails (N1)</td><td class="buffer">Last pair; C13/C14 depart ~11:38</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Room/staff rotation shown is an illustrative, reasonable rotation consistent with the pattern established at lower volume &mdash; the specific client-to-staff assignment is a day-to-day Venue Manager rostering decision, not independently re-solved by the scheduling solver at 18 clients specifically. What <strong>is</strong> solver-verified: zero draw/chair collisions across all 153 pairwise comparisons, peak concurrent demand within committed capacity on every line, and the 8+2 total headcount. Source: <code>docs/scenario-c-sync-timetables.md</code> §0.6a.</p>
+
+    <h2>Staff-lane view, AM window</h2>
+    <div class="lane-wrap">
+    <table class="lane-table">
+      <thead><tr><th>Lane</th><th>07:00</th><th>08:00</th><th>09:00</th><th>10:00</th><th>11:00</th><th>12:00</th><th>13:00</th></tr></thead>
+      <tbody>
+        <tr><td class="lane-label">Venue Manager</td><td class="active-cell">START &mdash; AM reception</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td>wind-down/admin</td><td>admin</td></tr>
+        <tr><td class="lane-label">Phlebotomist A</td><td class="active-cell">START</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active (last ~12:25)</td><td class="end-cell">END ~12:33</td><td>&mdash;</td></tr>
+        <tr><td class="lane-label">Phlebotomist B</td><td class="active-cell">START</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="end-cell">END ~12:33</td><td>&mdash;</td></tr>
+        <tr><td class="lane-label">Massage+Beauty (4)</td><td class="active-cell">START</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active (last ~12:10)</td><td class="end-cell">END (AM) / early-release or PM</td><td>&mdash;</td></tr>
+        <tr><td class="lane-label">Nails (2)</td><td class="active-cell">START</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="end-cell">END (AM)</td><td>&mdash;</td></tr>
+        <tr><td class="lane-label">Hair (2)</td><td class="active-cell">START</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="active-cell">active</td><td class="end-cell">END (AM)</td><td>&mdash;</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">PM lanes (PM Reception, treatment staff continuing into the PM window) continue in Chapter 9 &mdash; not duplicated here. Source: <code>docs/architecture/OPERATING-MODEL-18-CLIENTS.md</code> §4.</p>
+
+    <h2>Three findings this model establishes</h2>
+    <div class="card-grid">
+      <div class="metric-card"><span class="label">Why 18/day is feasible</span><div class="value" style="font-size:1.1rem;">8 = peak concurrency</div><div class="note">4 Massage+Beauty + 2 Nails + 2 Hair, confirmed by two independent methods (sweep-line, greedy first-fit) &mdash; not a naive clients&divide;slots estimate.</div></div>
+      <div class="metric-card"><span class="label">AM gap-fill capacity at full volume</span><div class="value" style="font-size:1.6rem;">Zero</div><div class="note">Every treatment slot is already allocated to a Service 1 or Service 2 booking &mdash; no idle capacity to sell as standalone at the 18-client design ceiling.</div></div>
+      <div class="metric-card"><span class="label">Lounge idle time</span><div class="value" style="font-size:1.3rem;">None scheduled</div><div class="note">Two 10-minute transition buffers per client (walk to/from treatment) plus a brief post-Draw-3 farewell &mdash; not an extended relaxed wait, per the timetable itself.</div></div>
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      Primary source: <code>docs/architecture/OPERATING-MODEL-18-CLIENTS.md</code> §1&ndash;§2, §4, §6, reproducing timing solver-verified in <code>docs/scenario-c-sync-timetables.md</code> §0.6a. Not redesigned here &mdash; every figure above is a direct citation, not a new schedule.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 9 — PM OPERATING MODEL
+     ================================================================ -->
+<section class="chapter" id="ch9">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 9</div>
+      <h1 class="chapter-title">PM Operating Model</h1>
+      <p class="chapter-dek">The 13:00&ndash;18:00 standalone wellness window &mdash; capacity, staffing, and the corrected revenue model. This chapter was recently corrected; the distinction below matters.</p>
+    </div>
+
+    <div class="callout">
+      <span class="callout-label">PM-OPERATIONS-MODEL.md is explicitly excluded as a source for this chapter</span>
+      That document carries its own 2026-08-19 stale-figure banner and must not be used for current PM revenue, capacity, or labour-cost figures. This chapter is built from <code>docs/architecture/PM-CAPACITY-RECONCILIATION.md</code>, <code>docs/architecture/PM-PACKAGES.md</code>, <code>docs/architecture/OPERATING-MODEL-18-CLIENTS.md</code> §3, and <code>docs/architecture/FINANCIAL-FIGURE-REFERENCE.md</code> §2 instead, per the dossier's source-of-truth hierarchy.
+    </div>
+
+    <h2>PM window overview</h2>
+    <p>Four treatment lines &mdash; Massage, Beauty, Nails, Hair &mdash; share the 13:00&ndash;18:00 window, staffed from the same pool that works the AM shift. Total available PM staff-minutes, weekday: 4 roles &times; 3.08hrs/role &times; 60 = <strong>739.2 minutes/day</strong>. This staff-hours figure is unchanged by the correction described below &mdash; it is the same labour capacity the payroll model already correctly prices; only how many client transactions it converts into was wrong.</p>
+
+    <h2>How PM Refresh and PM Restore are actually staffed</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Package</th><th>Composition</th><th>Staffing</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><strong>PM Refresh</strong></td><td>Massage 45min + Mini facial 30min (75 continuous min)</td><td>ONE dual-qualified Massage+Beauty-pool therapist</td><td>Matches the venue's existing AM common-pool design; real Perth comparables (Keturah, Hidden Valley, endota) bundle massage+facial as one continuous booking, with no evidence of a mid-service staff handover</td></tr>
+        <tr><td><strong>PM Restore</strong></td><td>Gel manicure 45min + Blow-dry 30min (75 total staff-min)</td><td>TWO specialists (1 Nail Technician + 1 Hairdresser)</td><td>Nails and Hair are explicitly NOT a confirmed dual-qualification pairing anywhere in this repo &mdash; genuinely distinct trade certifications (Cert III Nail Technology vs. Cert III Hairdressing)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">This is an asymmetric finding, not a blanket "packages consume 2 sessions" rule &mdash; the two packages behave differently because the underlying qualification-pairing reality differs. Whether PM Restore's two components run concurrently (2 staff at once) or sequentially remains a genuinely open operational decision for the eventual Venue Manager &mdash; it does not change the total staff-minutes consumed either way.</p>
+
+    <h2>Sessions vs. transactions &mdash; the distinction that was previously conflated</h2>
+    <p>The 16-"sessions"/day figure (<code>client_assumptions.yml#pm_steady_state_capacity</code>) is a <strong>staff-session capacity</strong> unit, correct for labour-hours costing. It is <strong>not</strong> a client-transaction count. A PM Refresh or PM Restore booking is one client transaction but consumes more than one staff-session's worth of time &mdash; multiplying 16 directly by the average transaction price overstated achievable daily revenue.</p>
+    <div class="cap-compare">
+      <div class="cap-box wrong"><span class="n">16</span><span class="lbl">Old figure &mdash; sessions/day, wrongly treated as transactions</span></div>
+      <div class="cap-box right"><span class="n">12.8128</span><span class="lbl">Corrected &mdash; weekday transactions/day</span></div>
+      <div class="cap-box right"><span class="n">6.4064</span><span class="lbl">Corrected &mdash; Saturday transactions/day</span></div>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;"><strong>The old 16-session figure must never be presented as equivalent to transaction capacity anywhere in this dossier</strong> &mdash; it remains correct only as the labour-hours input that drives PM payroll cost, shown above crossed out specifically to make that distinction visible, not to imply the number itself was fabricated.</p>
+
+    <h3>How the corrected capacity is calculated</h3>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Transaction type</th><th>Share of mix</th><th>Minutes consumed</th><th>Weighted contribution</th></tr></thead>
+      <tbody>
+        <tr><td>Individual a-la-carte</td><td>60%</td><td>46.15 (60&divide;1.3 sessions/hr throughput)</td><td>27.69</td></tr>
+        <tr><td>PM Refresh (1 therapist)</td><td>25%</td><td>75</td><td>18.75</td></tr>
+        <tr><td>PM Restore (2 specialists)</td><td>15%</td><td>75</td><td>11.25</td></tr>
+        <tr><td><strong>Weighted average</strong></td><td>100%</td><td></td><td><strong>57.69 min/transaction</strong></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Weekday capacity: 739.2 &divide; 57.69 = <strong>12.8128 transactions/day</strong>. Saturday demand is preserved at the original 50% weekday ratio (not re-derived from Saturday's own floor-inflated paid labour capacity) = <strong>6.4064 transactions/day</strong>.</p>
+
+    <h2>PM revenue derivation</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>Transactions/day</th><th>Avg. value</th><th>Days/month</th><th>Revenue/month</th></tr></thead>
+      <tbody>
+        <tr><td>Weekday</td><td>12.8128</td><td>A$117.00</td><td>22</td><td>A$32,980.15</td></tr>
+        <tr><td>Saturday</td><td>6.4064</td><td>A$117.00</td><td>4.33</td><td>A$3,245.55</td></tr>
+        <tr><td><strong>Total PM revenue</strong></td><td></td><td></td><td></td><td><strong>A$36,225.69/month</strong> <span class="tag tag-calculated">Calculated</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">This is the same A$36,225.69/month figure used in Chapters 1 and 2 &mdash; consistent throughout this dossier. The blended average transaction value (A$117.00, precisely A$116.97) is unaffected by this correction; only the daily transaction count was wrong, not the per-transaction price. Verified against a live run of <code>tools/revenue_ramp_model.py</code>, matching exactly.</p>
+
+    <h2>PM operating timetable &mdash; illustrative, not solver-verified</h2>
+    <div class="callout brown">
+      <span class="callout-label">Stated plainly, not implied</span>
+      No scheduling solver has been run against the PM window the way it has for the AM window. The table below shows the <em>shape</em> of a plausible day (4 sessions/role/day, spread with real gaps for staggered/early-release rostering) that the financial model's own hours-based costing formula already assumes &mdash; it does not independently verify a specific booking sequence, and must not be presented as validated.
+    </div>
+    <div class="timetable-wrap">
+    <table class="timetable">
+      <thead><tr><th>Time</th><th>Massage line</th><th>Beauty line</th><th>Nails line</th><th>Hair line</th><th>PM Reception</th></tr></thead>
+      <tbody>
+        <tr><td>13:00&ndash;13:46</td><td>Session 1</td><td>Session 1</td><td>Session 1</td><td>Session 1</td><td>Check-in, Fresha, payment</td></tr>
+        <tr><td>13:46&ndash;14:32</td><td>Session 2</td><td>Session 2</td><td>Session 2</td><td>Session 2</td><td>Ongoing check-in/checkout</td></tr>
+        <tr><td>14:32&ndash;15:18</td><td class="buffer">gap</td><td>Session 3</td><td class="buffer">gap</td><td>Session 3</td><td>Ongoing</td></tr>
+        <tr><td>15:18&ndash;16:04</td><td>Session 3</td><td class="buffer">gap</td><td>Session 3</td><td class="buffer">gap</td><td>Ongoing</td></tr>
+        <tr><td>16:04&ndash;16:50</td><td>Session 4</td><td>Session 4</td><td>Session 4</td><td>Session 4</td><td>Ongoing</td></tr>
+        <tr><td>16:50&ndash;18:00</td><td colspan="4">Wind-down / early-release window if no further bookings</td><td>Closing, last checkout ~17:50</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>Reception coverage</h2>
+    <p>One PM Reception role, 13:00&ndash;18:00, sized to a modelled ~3.2 sessions/hour workload &mdash; a normal single-reception-desk load by real Perth day-spa comparable standards (Le Beau, Keturah, endota). <strong>15:00&ndash;18:00 coverage gap, resolved this session:</strong> a small on-call relief pool (1 additional person, cross-trained on Fresha/payment administration) is now recommended per <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> §4a &mdash; this closes the previously-disclosed gap noted in <code>OPERATING-MODEL-18-CLIENTS.md</code> §8 (that document's own "genuinely unresolved" framing is superseded by this later, same-day resolution and is not repeated here as current). No added steady-state payroll cost &mdash; relief is only paid when actually covering an absence.</p>
+
+    <h2>Known limitations, disclosed</h2>
+    <ul>
+      <li>The PM timetable above is illustrative, not solver-verified &mdash; restated because it matters.</li>
+      <li>The individual-service average duration (46.15 min) is an inherited throughput assumption, not independently re-verified against the real weighted-average duration of the 9 specific catalogue services used to build the A$84.11 individual-transaction price. If those real durations differ materially, the capacity figures above would shift somewhat &mdash; the direction of the correction (PM revenue was previously overstated) would not.</li>
+      <li>Whether PM Restore's two components run concurrently or sequentially remains open for the eventual Venue Manager to decide operationally.</li>
+    </ul>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/architecture/PM-CAPACITY-RECONCILIATION.md</code> (full reconciliation), <code>docs/architecture/PM-PACKAGES.md</code> (package research/pricing), <code>docs/architecture/OPERATING-MODEL-18-CLIENTS.md</code> §3 (illustrative timetable, staffing findings), <code>docs/architecture/FINANCIAL-FIGURE-REFERENCE.md</code> §2 (full revenue derivation chain), <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> §4a (PM Reception relief resolution).
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 10 — SERVICE CATALOGUE
+     ================================================================ -->
+<section class="chapter" id="ch10">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 10</div>
+      <h1 class="chapter-title">Service Catalogue</h1>
+      <p class="chapter-dek">Every current service, AM and PM, with real duration, price, and staffing requirements &mdash; plus a genuine investigation of the 4 known price conflicts, not a silent pick.</p>
+    </div>
+
+    <h2>AM/GTT-window services (45 minutes or under, GTT-package eligible)</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Service</th><th>Category</th><th>Duration</th><th>Price</th><th>Role required</th></tr></thead>
+      <tbody>
+        <tr><td>Express pregnancy massage</td><td>Massage</td><td>30min</td><td>A$75</td><td>Massage+Beauty pool</td></tr>
+        <tr><td>Standard pregnancy massage</td><td>Massage</td><td>45min</td><td>A$120</td><td>Massage+Beauty pool</td></tr>
+        <tr><td>Express glow facial</td><td>Facial</td><td>30min</td><td>A$95</td><td>Massage+Beauty pool</td></tr>
+        <tr><td>Signature pregnancy facial</td><td>Facial</td><td>45min</td><td>A$130</td><td>Massage+Beauty pool</td></tr>
+        <tr><td>Classic manicure</td><td>Nails</td><td>30min</td><td>A$55</td><td>Nail technician</td></tr>
+        <tr><td>Gel manicure</td><td>Nails</td><td>45min</td><td>A$75</td><td>Nail technician</td></tr>
+        <tr><td>French gel manicure</td><td>Nails</td><td>50min</td><td>A$85</td><td>Nail technician</td></tr>
+        <tr><td>Express pedicure</td><td>Nails</td><td>30min</td><td>A$55</td><td>Nail technician</td></tr>
+        <tr><td>Spa pedicure</td><td>Nails</td><td>45min</td><td>A$65</td><td>Nail technician</td></tr>
+        <tr><td>Gel pedicure</td><td>Nails</td><td>50min</td><td>A$80</td><td>Nail technician</td></tr>
+        <tr><td>Brow wax + reshape</td><td>Brows/Lashes</td><td>20min</td><td>A$45</td><td>Beauty therapist</td></tr>
+        <tr><td>Brow thread + reshape</td><td>Brows/Lashes</td><td>15min</td><td>A$38</td><td>Beauty therapist</td></tr>
+        <tr><td>Brow wax + tint</td><td>Brows/Lashes</td><td>25min</td><td>A$55</td><td>Beauty therapist</td></tr>
+        <tr><td>Lash tint</td><td>Brows/Lashes</td><td>20min</td><td>A$30</td><td>Beauty therapist / lash tech</td></tr>
+        <tr><td>Brow + lash tint combo</td><td>Brows/Lashes</td><td>35min</td><td>A$80</td><td>Beauty therapist</td></tr>
+        <tr><td>Lash lift + tint</td><td>Brows/Lashes</td><td>45min</td><td>A$95</td><td>Beauty therapist / lash tech</td></tr>
+        <tr><td>Blowdry (short&ndash;medium hair)</td><td>Hair</td><td>30min</td><td>A$65</td><td>Hairdresser</td></tr>
+        <tr><td>Blowdry (long hair)</td><td>Hair</td><td>45min</td><td>A$80</td><td>Hairdresser</td></tr>
+        <tr><td>Haircut (excl. colour)</td><td>Hair</td><td>30&ndash;45min</td><td>A$60&ndash;85</td><td>Hairdresser</td></tr>
+        <tr><td>Pregnancy-safe hair mask + blowdry</td><td>Hair</td><td>45min</td><td>A$85</td><td>Hairdresser</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">All VERIFIED against <code>data/canonical/services.yml</code>/<code>pricing.yml</code>, sourced to <code>docs/services-pricing-locked.md</code>. These are the services eligible for AM Package 1/2 composition (Chapter 2) and AM gap-fill slots &mdash; though at full 18-client volume, no AM gap-fill capacity exists (Chapter 8).</p>
+
+    <h2>PM-only standalone services (over 45 minutes, afternoon-only)</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Service</th><th>Duration</th><th>Price</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Full pregnancy massage</td><td>60min</td><td>A$145</td><td><span class="tag tag-modelled">Modelled</span> completeness gap &mdash; priced only in services-master-table.md</td></tr>
+        <tr><td>Hydration facial</td><td>60min</td><td>A$145</td><td><span class="tag tag-modelled">Modelled</span> same gap</td></tr>
+        <tr><td>Signature facial</td><td>75min</td><td>A$175</td><td><span class="tag tag-modelled">Modelled</span> same gap</td></tr>
+        <tr><td>Cut + blowdry</td><td>60min</td><td>A$95</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Scalp treatment + blowdry</td><td>50min</td><td>A$90</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Mani + pedi combo (gel)</td><td>80min</td><td>A$140</td><td><span class="tag tag-modelled">Modelled</span> completeness gap</td></tr>
+        <tr><td>Acrylic full set</td><td>75&ndash;90min</td><td>A$90&ndash;120</td><td><span class="tag tag-modelled">Modelled</span> completeness gap</td></tr>
+        <tr><td>Acrylic infill</td><td>45&ndash;60min</td><td>A$60&ndash;80</td><td><span class="tag tag-modelled">Modelled</span></td></tr>
+        <tr><td>SNS/dip powder full set</td><td>60&ndash;75min</td><td>A$85&ndash;110</td><td><span class="tag tag-modelled">Modelled</span> completeness gap</td></tr>
+        <tr><td>Classic lash extensions (full set)</td><td>90min</td><td>A$140</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Hybrid lash extensions (full set)</td><td>2&ndash;2.5hr</td><td>A$200</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Volume lash extensions (full set)</td><td>2&ndash;2.5hr</td><td>A$280</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Classic lash infill</td><td>50min</td><td>A$99</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Single process colour</td><td>60&ndash;90min</td><td>A$130&ndash;200</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Balayage (half head)</td><td>2&ndash;3hr</td><td>A$270</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Balayage (full head)</td><td>3&ndash;4hr</td><td>A$360&ndash;400</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Spray tan</td><td>&mdash;</td><td>&mdash;</td><td><span class="tag tag-open">Not current scope</span> moved to Phase 2/post-launch, excluded from day-one budget and every P&amp;L figure in this dossier</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>The 4 known price conflicts &mdash; investigated, not silently resolved</h2>
+    <p>Three source documents price parts of this catalogue: <code>docs/services-pricing-locked.md</code> (2026-06-09, the document explicitly titled "Locked Pricing"), <code>docs/services-master-table.md</code> (2026-06-11, the most recently dated of the three), and <code>docs/extended-wellness-services.md</code> (2026-06-09). Four genuine conflicts exist, all disclosed in <code>data/canonical/services.yml#conflicts</code>, none silently picked before this investigation.</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Conflict</th><th>Pricing-locked / master-table say</th><th>Extended-wellness-services says</th><th>Investigation finding</th></tr></thead>
+      <tbody>
+        <tr><td>Half foil highlights</td><td>A$200</td><td>A$180</td><td rowspan="4"><strong>RESOLVED, recommended:</strong> use the pricing-locked/master-table figures. Two independent documents agree with each other against one dissenting document; master-table.md is also the most recently dated of the three (2026-06-11 vs 2026-06-09); pricing-locked.md is the document explicitly positioned as the authoritative pricing source by its own title. This is a document-authority resolution, not a new price decision &mdash; recommended for Anthony's final confirmation before <code>services.yml</code> itself is updated from PLACEHOLDER to locked, not treated as locked by this dossier alone.</td></tr>
+        <tr><td>Full foil highlights</td><td>A$280&ndash;350</td><td>A$250&ndash;350</td></tr>
+        <tr><td>Toner / gloss</td><td>A$65</td><td>A$50&ndash;80</td></tr>
+        <tr><td>Colour + blowdry</td><td>A$230&ndash;280</td><td>A$200&ndash;280</td></tr>
+        <tr><td>Hybrid/volume lash infill</td><td>A$125</td><td>A$120</td><td><strong>RESOLVED, recommended:</strong> A$125, same document-authority reasoning as above (2 of 3 sources agree, on the more-authoritatively-titled document). Smallest-magnitude conflict found (A$5), retained per the standing "do not silently pick one regardless of size" instruction &mdash; shown with reasoning, not just picked.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout brown">
+      <span class="callout-label">GDM snack pack &mdash; compatible, not contradictory</span>
+      <code>services-pricing-locked.md</code> states a point price of A$20; <code>extended-wellness-services.md</code> states a range of A$18&ndash;25. A$20 falls within the stated range &mdash; this is not a genuine disagreement, only a difference in specificity. <strong>Resolved: A$20</strong>, the more specific figure, with A$18&ndash;25 disclosed as the outer bound.
+    </div>
+
+    <div class="callout">
+      <span class="callout-label">Locked-pricing completeness gap &mdash; not a conflict, a gap</span>
+      Six PM standalone services (full 60-min massage, hydration facial, signature 75-min facial, mani+pedi combo, acrylic full set, SNS/dip powder full set &mdash; all shown in the table above) have no price at all in <code>services-pricing-locked.md</code>, despite that document describing them as bookable. <code>services-master-table.md</code> is the only source with a number for any of them. There is no second figure to disagree with &mdash; the table above already uses the only available source, flagged <span class="tag tag-modelled">Modelled</span>, not <span class="tag tag-verified">Verified</span>, throughout.
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing and what remains genuinely open</span>
+      <code>data/canonical/services.yml</code> and <code>data/canonical/pricing.yml</code> (primary), cross-checked against <code>docs/architecture/SERVICE-CATALOGUE.md</code> §1 (real Perth comparable research, still current) &mdash; that same document's own §3&ndash;4 AM/PM package lists are <strong>superseded</strong> by <code>docs/architecture/PM-PACKAGES.md</code> (2026-08-17, Chapter 11) and were not used here. <span class="tag tag-founder">Founder decision required</span> The 4 resolved-by-investigation conflicts above are recommendations, not locked prices &mdash; <code>services.yml</code> itself still carries them as PLACEHOLDER pending Anthony's confirmation, a deliberate, disclosed non-sync between this dossier's reasoning and the canonical source's conservative unlocked status, not an error.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 11 — PM PACKAGES
+     ================================================================ -->
+<section class="chapter" id="ch11">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 11</div>
+      <h1 class="chapter-title">PM Packages</h1>
+      <p class="chapter-dek">The two locked PM packages, the real bundle-pricing derivation, and why they consume different amounts of staffing capacity.</p>
+    </div>
+
+    <div class="pkg-grid">
+      <div class="pkg-card">
+        <h3>PM Refresh</h3>
+        <div class="price">A$185.00</div>
+        <p>Massage + Beauty pairing, delivered as one continuous 75-minute booking.</p>
+        <ul>
+          <li>Pregnancy or relaxation massage &mdash; 45 min</li>
+          <li>Mini facial &mdash; 30 min</li>
+          <li>A-la-carte sum: A$212.00 (13% bundle discount)</li>
+        </ul>
+        <div class="staffing-note"><strong>Staffing:</strong> ONE dual-qualified Massage+Beauty-pool therapist &mdash; the same shared pool that runs the AM window. No staff handover mid-booking.</div>
+      </div>
+      <div class="pkg-card" style="border-top-color:var(--muted-olive);">
+        <h3>PM Restore</h3>
+        <div class="price">A$135.00</div>
+        <p>Nails + Hair pairing, run concurrently or sequentially depending on room layout.</p>
+        <ul>
+          <li>Gel manicure &mdash; 45 min</li>
+          <li>Blow-dry / styling &mdash; 30 min</li>
+          <li>A-la-carte sum: A$150.00 (10% bundle discount)</li>
+        </ul>
+        <div class="staffing-note"><strong>Staffing:</strong> TWO specialists (1 Nail Technician + 1 Hairdresser) &mdash; 75 total staff-minutes, not 75 minutes of one person's time. No confirmed dual Nails+Hair qualification exists in this repo.</div>
+      </div>
+    </div>
+
+    <h2>Why the staffing requirement differs</h2>
+    <p>PM Refresh pairs services from the venue's own already-established Massage+Beauty common pool &mdash; the same dual-qualification that is load-bearing for the AM headcount model (Chapter 8). Real Perth comparables (Keturah Spa, Hidden Valley Eco Day Spa, endota Spa Perth CBD) bundle massage with a facial/beauty component as a single continuous booking with no evidence of a mid-service handover. PM Restore pairs Nails and Hair &mdash; genuinely distinct trade qualifications (Cert III Nail Technology vs. Cert III Hairdressing) with no confirmed cross-training pairing anywhere in this venture's staffing research. <strong>A package is never described as consuming one "session" if it actually requires two specialist staff-sessions</strong> &mdash; PM Restore's true capacity cost (2 people, 75 combined staff-minutes) is carried through into the transaction-capacity model in Chapter 9, not simplified away here.</p>
+
+    <h2>Real Perth comparable bundle pricing</h2>
+    <p>Keturah Spa bundles a pregnancy massage, signature facial, and spa pedicure; Hidden Valley Eco Day Spa bundles a pregnancy massage, facial, foot massage, and afternoon tea; endota Spa Perth CBD bundles a customised facial and massage across 90 minutes. Discounted spa packages in the Perth market average around A$140 combined &mdash; confirming bundling two-plus services at a genuine discount is the established market pattern this venture follows, not a novel approach.</p>
+
+    <h2>The blended PM average transaction value</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Mix component</th><th>Assumed share</th><th>Price</th><th>Contribution</th></tr></thead>
+      <tbody>
+        <tr><td>Individual a-la-carte (average of 9 real catalogue services)</td><td>60%</td><td>A$84.11</td><td>A$50.47</td></tr>
+        <tr><td>PM Refresh</td><td>25%</td><td>A$185.00</td><td>A$46.25</td></tr>
+        <tr><td>PM Restore</td><td>15%</td><td>A$135.00</td><td>A$20.25</td></tr>
+        <tr><td><strong>Blended average transaction value</strong></td><td>100%</td><td></td><td><strong>A$116.97 &asymp; A$117.00</strong></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>This figure replaced the previous ~A$95/session placeholder, which had no stated derivation anywhere in this repo &mdash; A$117 is genuinely calculated from the real service catalogue and these two real packages. <strong>The 60/25/15 mix assumption itself remains a planning estimate</strong>, disclosed as such, not real booking data (no venue is trading yet). If the actual booking mix differs materially once trading begins, this figure should be revisited against real data.</p>
+
+    <div class="callout">
+      <span class="callout-label">How this reconciles with Chapter 9's capacity model</span>
+      A$117 is the correct <em>price</em> per transaction &mdash; it was never wrong. What was wrong was multiplying it by 16 "sessions" as if that were 16 transactions. Chapter 9 shows the corrected transaction count (12.8128 weekday / 6.4064 Saturday) that this price should actually be multiplied by. Do not use A$117 &times; 16 anywhere in this dossier &mdash; that arithmetic produces the superseded A$45,236.88/month figure, not the current A$36,225.69/month.
+    </div>
+
+    <h2>Still requiring confirmation</h2>
+    <ul>
+      <li>Anthony's final sign-off on both packages and their pricing <span class="tag tag-founder">Founder decision required</span></li>
+      <li>The 60/25/15 mix assumption &mdash; a planning estimate, not evidenced by real bookings</li>
+      <li>Whether PM Restore's two components should run concurrently or sequentially &mdash; an operational decision for the eventual Venue Manager, does not affect total staff-minutes consumed</li>
+    </ul>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/architecture/PM-PACKAGES.md</code> (package selection, pricing, staffing research), <code>docs/architecture/PM-CAPACITY-RECONCILIATION.md</code> (capacity reconciliation this chapter conceptually depends on), <code>docs/architecture/FINANCIAL-FIGURE-REFERENCE.md</code> §2 (full derivation chain).
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
      REMAINING CHAPTERS INDEX
      ================================================================ -->
 <section class="chapter">
   <div class="container">
-    <h2 style="margin-top:0;">Chapters not yet built (Groups B&ndash;F)</h2>
+    <h2 style="margin-top:0;">Chapters not yet built (Groups C&ndash;F)</h2>
     <div class="remaining">
-      <ol start="7">
-        <li>GTT Service</li>
-        <li>AM Operating Model</li>
-        <li>PM Operating Model</li>
-        <li>Service Catalogue</li>
-        <li>PM Packages</li>
+      <ol start="12">
         <li>Food &amp; Beverage</li>
         <li>Retail</li>
         <li>Staffing</li>
@@ -618,7 +1087,7 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
 
 <footer>
   <div class="container">
-    <p>GTT Center Perth &mdash; Master Venture Dossier. Static in-repo prototype, not deployed. Built from <a href="../../docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md">docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md</a>. Group A (Chapters 1&ndash;6) built 2026-08-19.</p>
+    <p>GTT Center Perth &mdash; Master Venture Dossier. Static in-repo prototype, not deployed. Built from <a href="../../docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md">docs/architecture/MASTER-DOSSIER-ARCHITECTURE.md</a>. Group A (Chapters 1&ndash;6) and Group B (Chapters 7&ndash;11) built 2026-08-19.</p>
   </div>
 </footer>
 
