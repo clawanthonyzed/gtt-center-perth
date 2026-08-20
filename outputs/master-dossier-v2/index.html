@@ -278,6 +278,10 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       <a href="#ch29">29. Cash Flow</a>
       <a href="#ch30">30. Break-even</a>
       <a href="#ch31">31. Sensitivity</a>
+      <a href="#ch32">32. Marketing</a>
+      <a href="#ch33">33. Expansion</a>
+      <a href="#ch34">34. Open Items</a>
+      <a href="#ch35">35. Roadmap</a>
     </nav>
   </div>
 </div>
@@ -2692,6 +2696,158 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     <div class="callout olive">
       <span class="callout-label">Sourcing</span>
       <code>docs/architecture/FINANCIAL-POSITION-CURRENT.md</code> §2, live-pulled from <code>data/models/master_financial_model.yml</code>.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 32 — MARKETING & DEMAND GENERATION
+     ================================================================ -->
+<section class="chapter" id="ch32">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 32</div>
+      <h1 class="chapter-title">Marketing &amp; Demand Generation</h1>
+      <p class="chapter-dek">A real, current, honestly-weighted plan &mdash; not a generic launch playbook. The direct-to-consumer waitlist is the primary Month 1 lever; clinical referral is a Month 2+ contributor, not overclaimed.</p>
+    </div>
+
+    <div class="callout brown">
+      <span class="callout-label">Source currency, checked before writing this chapter</span>
+      Three documents dated 2026-08-10 (<code>EARLY-DEMAND-VALIDATION-STRATEGY.md</code>, <code>PRE-LAUNCH-DEMAND-VALIDATION-PLAN.md</code>, <code>WAITLIST-VALIDATION-FRAMEWORK.md</code>) are the current, mutually-consistent core of this chapter &mdash; each cross-references the others and none has been superseded by anything later found in this repo. <code>docs/poppy-marketing.md</code> (2026-06-05) supplies the still-current named-practice list, itself flagged by its own later citing document as "not independently verified for accuracy/currency" &mdash; disclosed, not silently upgraded. <code>docs/afternoon-marketing-plan.md</code> (June 2026) and <code>docs/business-plan.md</code> §5's own PM-hours reference are <strong>stale on operating hours specifically</strong> (both describe a 12:00pm start) &mdash; superseded by the current 13:00 AM/PM split (Chapter 9). This chapter uses only their still-valid channel/positioning content, never their hours.
+    </div>
+
+    <h2>Positioning and target customer</h2>
+    <p>Two personas, not restated in full here (Chapter 5): the AM client (referred, 24&ndash;28 weeks' gestation, didn't choose the appointment) and the PM client (self-booked, zero patience for anything medical or maternal). Perth positioning: no direct WA competitor identified for the GTT-integrated wellness model (Chapter 4). Premium-not-luxury brand positioning, restraint over decoration (Chapter 5) &mdash; the marketing content itself should read the same way, not a generic wellness-brand voice.</p>
+
+    <h2>The primary Month 1 lever &mdash; direct-to-consumer waitlist</h2>
+    <p><strong>Why this is the right primary lever, stated plainly by the source material:</strong> a consumer waitlist requires no pre-existing trust with a third-party practice &mdash; only awareness and a real reason to book. A clinical referral relationship does require that trust, and this venture has zero trading history and zero prior relationship with any of the named referring practices. <span class="tag tag-verified">Current</span></p>
+    <ul>
+      <li>Start waitlist-building the moment fit-out begins, not at soft-launch &mdash; behind-the-scenes fit-out content is genuinely engaging for an expecting audience.</li>
+      <li>Convert the waitlist into real Month 1 bookings deliberately: a structured pre-booking priority-access window in the final weeks before opening, a scheduling tactic, not a pricing incentive (any pricing incentive would require separate approval, not modelled here).</li>
+      <li>Track a real conversion rate from Day 1 &mdash; <span class="tag tag-research">Needs research</span> no conversion-rate evidence exists anywhere in this repository for any channel; this is flagged as the single cheapest way to start closing that gap, not a confirmed figure.</li>
+    </ul>
+
+    <h2>Waitlist quality &mdash; the 6-factor, 100-point framework</h2>
+    <p>A genuine, sourced scoring framework exists &mdash; not invented for this dossier. Six factors, each measurable from the existing lean signup form and its optional follow-up survey:</p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Factor</th><th>Max points</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Due date / GTT-window timing alignment</td><td>30</td><td>The single most important factor &mdash; a genuinely counter-intuitive finding: given the realistic ~28&ndash;32 week gap from waitlist campaign start to venue opening, a woman already 20&ndash;27 weeks pregnant at signup will, in almost every case, need to test elsewhere before this venue opens. The highest-value signups are not-yet-pregnant or early first-trimester.</td></tr>
+        <tr><td>Suburb/location relevance</td><td>15</td><td>Explicitly provisional pre-venue &mdash; cannot be scored against a real catchment yet, to be recalculated once a venue is confirmed</td></tr>
+        <tr><td>Engagement level</td><td>20</td><td>Welcome-email open + further engagement vs. signup only</td></tr>
+        <tr><td>Willingness to book / explicit intent</td><td>20</td><td>Completed the optional validation survey vs. signup only</td></tr>
+        <tr><td>Service/package interest alignment</td><td>10</td><td>In-launch-scope services vs. out-of-scope interest (e.g. 3D scan)</td></tr>
+        <tr><td>Referral source quality</td><td>5</td><td>Named-practice/community-partner referral vs. unknown source</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Quality tiers: High (&ge;70), Medium (40&ndash;69), Low (&lt;40). <strong>Weighted Qualified Size (WQS)</strong> = (High &times; 1.0) + (Medium &times; 0.5) + (Low &times; 0.1) &mdash; a reasoned judgement weighting, not evidenced data, disclosed as such.</p>
+
+    <h2>Go/no-go thresholds &mdash; concrete, not vague</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Gate</th><th>Threshold</th><th>What it measures</th></tr></thead>
+      <tbody>
+        <tr><td>Gate 1 &mdash; Demand signal</td><td>500&ndash;700 raw signups <strong>AND</strong> &ge;40% Medium/High quality</td><td>Refines, does not replace, the existing 500&ndash;700 target &mdash; a quality qualifier, added because a genuinely poor-quality waitlist could otherwise be mistaken for real demand</td></tr>
+        <tr><td>Gate 2 &mdash; Referral engagement</td><td>Positive engagement from 3&ndash;5 of the 22 named practices</td><td>A leading indicator the channel is viable at all, not a Month 1 volume source &mdash; deliberately a low bar</td></tr>
+        <tr><td>Gate 3 &mdash; Dependency readiness</td><td>Accountant engagement underway, proof-of-funds prepared, WDP status unchanged or improved</td><td>Cross-referenced from other tracked dependencies, not re-derived here</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">The old "300+ waitlist names" reference (<code>docs/business-plan.md</code> §8, itself flagged unverified) was tested directly against the current Month 1 target and found likely insufficient &mdash; at even a generous 30% conversion rate, 300 signups produces only ~90 bookings, short of the 190&ndash;221 total AM clients Month 1 needs. This is not presented as an error in the original number, only as a finding that it was never tested against the current, post-rebase volume target.</p>
+
+    <h2>Acquisition channels, honestly ranked</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Channel</th><th>Priority</th><th>Realistic timing</th></tr></thead>
+      <tbody>
+        <tr><td>Direct-to-consumer waitlist (Instagram, referral cards)</td><td>Primary</td><td>Month 1 &mdash; the only channel genuinely capable of influencing Month 1 specifically</td></tr>
+        <tr><td>Midwife/OB-GYN referral (22 named practices: 12 midwifery, 10 OB/GYN)</td><td>Secondary</td><td>Month 2+ &mdash; cold-contacted practices will not meaningfully refer to an unproven, unbranded venue within weeks of opening; outreach should begin the moment a venue is confirmed, treating the first 1&ndash;2 months as trust-building, not a volume source</td></tr>
+        <tr><td>Community partnerships (pregnancy photographers, prenatal yoga, maternity retail)</td><td>Tertiary</td><td>Lower-friction than clinical referral &mdash; requires only mutual commercial benefit, not professional trust. <span class="tag tag-research">Needs research</span> No named contacts identified yet, a genuine gap.</td></tr>
+        <tr><td>Maternal-Child-Health (MCH) nurses, public sector</td><td>Parallel, lower priority</td><td>Likely slower-moving (government process) than private-practice outreach, broader reach once established</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>Marketing budget</h2>
+    <p>A$1,000 marketing contingency reserve, held rather than spent immediately, released on a real Week 1&ndash;4 booking-vs-ramp trigger &mdash; targeted at Perth-metro social advertising aimed specifically at the 24&ndash;28-week-gestation window once released, not a generic brand-awareness campaign. Consistent with Chapter 24's A$1,250 startup marketing/launch line.</p>
+
+    <h2>Retention / repeat-visit strategy</h2>
+    <p>Covered in full in Chapter 6 (the Return Loop) &mdash; not restated here. The commercial logic: AM capacity is a hard daily ceiling gated by referral volume; PM demand is uncapped, bounded only by the business's own ability to generate bookings. This is the strategic argument for why the return loop is a first-order priority, not a nice-to-have.</p>
+
+    <h2>What this chapter does not claim</h2>
+    <div class="callout">
+      <span class="callout-label">No invented metrics</span>
+      This chapter does not state a CAC, conversion rate, ROAS, or lead-volume figure beyond what is explicitly sourced above (the 10%/20%/30% conversion scenarios and 500&ndash;700 signup target, both disclosed as generic planning assumptions, not evidenced data). No document in this repository provides real acquisition-cost or conversion data for this venture &mdash; it has not opened yet.
+    </div>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/architecture/EARLY-DEMAND-VALIDATION-STRATEGY.md</code>, <code>docs/architecture/PRE-LAUNCH-DEMAND-VALIDATION-PLAN.md</code>, <code>docs/architecture/WAITLIST-VALIDATION-FRAMEWORK.md</code> (primary, all 2026-08-10), <code>docs/poppy-marketing.md</code> (named practice list), <code>docs/referral-partnership-plan.md</code>, <code>docs/business-plan.md</code> §8.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CHAPTER 33 — EXPANSION
+     ================================================================ -->
+<section class="chapter" id="ch33">
+  <div class="container">
+    <div class="chapter-opener">
+      <div class="chapter-eyebrow">Chapter 33</div>
+      <h1 class="chapter-title">Expansion</h1>
+      <p class="chapter-dek">Two structurally different growth shapes, honestly unquantified &mdash; neither committed, neither recommended yet.</p>
+    </div>
+
+    <div class="callout brown">
+      <span class="callout-label">Current business vs. future opportunity, stated plainly</span>
+      <strong>Current business: a single Perth flagship, not yet open.</strong> Everything in this chapter is future opportunity or founder aspiration, not a committed plan. No expansion economics are modelled anywhere in this repository.
+    </div>
+
+    <h2>What must be proven at the flagship first</h2>
+    <ul>
+      <li>The venue actually open and trading &mdash; no expansion decision is possible before this.</li>
+      <li>Real operating data on referral-pipeline fill rate &mdash; the single largest source of AM revenue risk in the current model, currently unquantified (Chapter 32).</li>
+      <li>WDP's commercial terms settled &mdash; the rental figure, phlebotomist employment model, and specimen-handling conditions all still open (Chapter 34).</li>
+      <li>A period of stable trading, of no specific committed duration &mdash; not yet defined anywhere in this repository.</li>
+    </ul>
+
+    <h2>Two structurally different options, not one decision at two sizes</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>Option A &mdash; 3rd phlebotomist chair, same venue</th><th>Option B &mdash; second venue</th></tr></thead>
+      <tbody>
+        <tr><td>Cost structure</td><td>Marginal &mdash; existing venue's fixed-cost base absorbs it. No new rent, lease, reception, or Venue Manager.</td><td>Full replication &mdash; a new A$251,198&ndash;594,900 startup-capital range, full 8+2 headcount, a new Venue Manager, no shared fixed costs with the first venue</td></tr>
+        <tr><td>Pathology partner</td><td>Same relationship, re-checked at a 3-chair draw pattern &mdash; WDP's collection-room spec and ~10:30am guidance need re-verifying against the new pattern, a real, not-yet-resolved dependency separate from the still-open commercial rental figure</td><td>An entirely new, independent pathology-partner relationship</td></tr>
+        <tr><td>Referral pipeline</td><td>Same pipeline, higher volume required from it</td><td>A fresh, unproven local referral pipeline in a new market &mdash; the single largest source of AM revenue risk, doubled, not incrementally added to</td></tr>
+        <tr><td>What's actually needed to answer this</td><td>A fresh solver re-run (3 chairs, 25-min cadence, testing 20&ndash;24+ clients/day) &mdash; the same dual-method verification (sweep-line + greedy first-fit) used for every other capacity finding in this repo. <span class="tag tag-research">Needs research</span> Not yet done.</td><td>A confirmed first venue actually trading, real referral-pipeline data, and WDP's commercial terms settled first &mdash; none of which exist yet</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>What should not expand before the flagship is proven</h2>
+    <div class="callout">
+      <span class="callout-label">Neither option is committed or recommended here</span>
+      This is not a decision that can be made yet. It depends on the still-outstanding WDP commercial terms, a confirmed first venue actually opening and trading, and real operating data on referral-pipeline fill rate &mdash; none of which exist today. This chapter frames the choice correctly (two structurally different growth shapes, not one decision at two sizes) so that when the venture is ready to have this conversation, it asks the right question rather than defaulting to "just add a chair" without considering the alternative.
+    </div>
+
+    <h2>Brand scalability</h2>
+    <p>The name-agnostic brand strategy (Chapter 5) is already built to work identically for either surviving naming candidate and, by the same design principle, is not tied to a single physical site &mdash; nothing in the brand/experience layer (Chapters 5&ndash;6) would need rebuilding for a second location. This is a structural readiness observation, not a claim that expansion is planned or timed.</p>
+
+    <h2>Second-venue timing</h2>
+    <p>Per Anthony's direct confirmation: timing is set only after Venue 1 is running smoothly &mdash; no earlier estimate exists, and none is implied here. The related growth model (Scenario D, a 15-client/day variant with a 3rd phlebotomist) is gated on real demand data and on resolving the WDP start-time guidance question specifically for that variant &mdash; not yet triggered.</p>
+
+    <h2>Expansion risks, stated directly</h2>
+    <ul>
+      <li>Doubling the largest source of AM revenue risk (referral-pipeline fill rate) without proof it works reliably once.</li>
+      <li>A second, fully independent pathology-partner relationship &mdash; no guarantee WDP (or any partner) offers the same terms a second time.</li>
+      <li>Full startup-capital replication, not a marginal addition &mdash; a second venue is not de-risked by the first one's existence in a dollar-cost sense, only in a playbook/experience sense.</li>
+    </ul>
+
+    <div class="callout olive">
+      <span class="callout-label">Sourcing</span>
+      <code>docs/scenario-d-investigation.md</code> (current reframed content, 2026-08-16 &mdash; the document's own earlier 2026-07-17 investigation is explicitly marked historical/stale within that same file and not used here), <code>docs/business-plan.md</code> (second-venue framing), <code>docs/project-timeline-milestones.md</code> (growth-stage gating).
     </div>
   </div>
 </section>
