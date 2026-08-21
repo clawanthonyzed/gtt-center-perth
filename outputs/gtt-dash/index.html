@@ -131,7 +131,7 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
       <div class="metric-card"><span class="label">Break-even</span><div class="value">13.051/day</div><div class="note">= A$122,133.90/month</div></div>
       <div class="metric-card"><span class="label">18-client buffer</span><div class="value">+4.949/day</div><div class="note">+37.9% above break-even, or 27.5% of the 18-client target itself &mdash; two different, both-correct readings</div></div>
       <div class="metric-card"><span class="label">Venue status</span><div class="value" style="font-size:1.2rem;">Not secured</div><div class="note">2 Tier-1 candidates, zero inspected <span class="tag tag-founder">Founder decision</span></div></div>
-      <div class="metric-card"><span class="label">WDP status</span><div class="value" style="font-size:1.2rem;">Active, ongoing</div><div class="note">8 Aug 2026 response logged, 4 items outstanding, shortened follow-up ready (not sent) <span class="tag tag-thirdparty">Third-party</span></div></div>
+      <div class="metric-card"><span class="label">WDP status</span><div class="value" style="font-size:1.2rem;">Active, ongoing</div><div class="note">8 Aug 2026 response logged, follow-up SENT 21 Aug 2026 by Anthony directly, awaiting reply <span class="tag tag-thirdparty">Third-party</span></div></div>
     </div>
 
     <h3>Founder decisions outstanding</h3>
@@ -142,7 +142,7 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
 
     <h3>Next critical actions</h3>
     <ol>
-      <li><strong>Send the WDP follow-up</strong> &mdash; draft ready, not sent. See <a href="#wdp">WDP Action</a>.</li>
+      <li><strong>WDP follow-up</strong> &mdash; sent by Anthony directly 21 Aug 2026, awaiting Carole's reply. See <a href="#wdp">WDP Action</a>.</li>
       <li>Progress venue selection between the two Tier-1 candidates (or a new one) &mdash; the single most consequential dependency on the entire execution roadmap.</li>
       <li>Confirm the 18-client volume was actually communicated to WDP &mdash; still unconfirmed as sent.</li>
     </ol>
@@ -237,7 +237,7 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
     <div class="callout">
       <span class="callout-label">ACTION &mdash; SEND BY COB THURSDAY 20 AUGUST 2026</span>
       <span class="tag tag-thirdparty">Third-party dependency</span>
-      Draft prepared at <code>docs/wdp-followup-draft-2026-08-20.md</code>, marked READY TO SEND. <strong>Not sent by this Dash or any agent</strong> &mdash; awaiting Anthony's own review and send action.
+      Sent at <code>docs/wdp-followup-draft-2026-08-20.md</code>. <strong>Sent by Anthony directly on 2026-08-21, outside this repository's workflow</strong> &mdash; not sent by this Dash or any agent. Content: volume correction (18/day, Mon-Sat), a check-in on the commercial/rental figure, and the medical waste disposal question. The phlebotomist-employment question was deliberately dropped from this send. Awaiting Carole's reply, none received yet.
       <ul>
         <li>18-client volume correction &mdash; the only confirmed-sent email told Carole 12/day; live commercial risk against her in-progress rental quote</li>
         <li>Commercial/rental figure request</li>
@@ -378,7 +378,7 @@ document.getElementById('searchInput').addEventListener('input', e => renderSear
 // ===================== AI ASSISTANT MOCK =====================
 const AI_QA = [
   {q:"What's our current break-even?", a:"A$122,133.90/month, or 13.051 clients/day. At the 18-client planning case, the buffer above break-even is +4.949 clients/day -- that's +37.9% above the break-even volume itself, or 27.5% of the 18-client target (two correct but different ways of expressing the same buffer -- both are used in the dossier, never mixed without labelling which one).", source:"Dossier Chapter 30 -- Break-even, live-pulled from FINANCIAL-POSITION-CURRENT.md §3"},
-  {q:"What are the remaining WDP questions?", a:"The shortened follow-up draft (2026-08-21, ready to send, not sent) covers four items: (1) a correction that morning volume has settled at 18/day, Mon-Sat -- the only confirmed-sent email told Carole 12/day; (2) a check-in on the indicative annual rental/commercial figure, already confirmed actively progressing with WDP's State Business Manager; (3) whether WDP would supply/employ the collector(s) or GTT would employ phlebotomist(s) under WDP's accreditation; (4) whether medical waste disposal is covered under WDP's collection-centre arrangement. A fifth item, the sightline/observation requirement, remains a real, separately tracked open dependency but was deliberately left out of this particular bump email at Anthony's request -- not resolved, just not asked here. The courier cutoff is NOT on either list -- resolved by Carole's verified 2026-07-30 email.", source:"docs/wdp-followup-draft-2026-08-20.md, Dossier Chapter 34 Category B"},
+  {q:"What are the remaining WDP questions?", a:"Anthony sent a follow-up to Carole directly on 2026-08-21 (outside this repo's workflow) covering three items: (1) a correction that morning volume has settled at 18/day, Mon-Sat -- the only previously-sent email told Carole 12/day; (2) a check-in on the indicative annual rental/commercial figure, already confirmed actively progressing with WDP's State Business Manager; (3) whether medical waste disposal is covered under WDP's collection-centre arrangement. No reply yet. Two items remain genuinely open but were NOT asked in this email: the phlebotomist employment model (WDP-supplied vs GTT-employed under WDP's accreditation) -- deliberately dropped by Anthony from this particular send -- and the sightline/observation requirement, a separately tracked open dependency. The courier cutoff is NOT on either list -- resolved by Carole's verified 2026-07-30 email.", source:"docs/wdp-followup-draft-2026-08-20.md, Dossier Chapter 34 Category B"},
   {q:"What decisions do I need to make?", a:"13 founder decisions are currently open, including: the final name (SOLENA vs ELOWEN), the treatment staff pool size (12 vs 11), the phlebotomist pool size (4 vs 3), the Blood Collection Room companion/needle-phobia exception, the Lounge device audience, venue selection between the two Tier-1 candidates, and PM package pricing sign-off. Full list with recommendations: the Decisions section of this Dash.", source:"Dossier Chapter 34 Category A"},
   {q:"What's already resolved?", a:"The WDP specimen-dispatch courier cutoff, the PM Reception 15:00-18:00 coverage gap, the leaving-moment/leaving-box gesture (removed, stays removed), the old 10-11/3-4 staffing estimates (superseded by 12/4), the old 16-session PM revenue methodology and its A$45,236.88 figure, the old 12.073 break-even figure, the old A$400/A$1,279 insurance guesses, the GP/FTE-doctors-on-site site-assessment criterion, the name-branded retail question, phlebotomist collector work scope, and the collection-centre policy basis. None of these are presented as open anywhere in the dossier.", source:"Dossier Chapter 34, 'Confirmed resolved' callout"},
   {q:"How many treatment staff do we need?", a:"8 treatment staff work simultaneously every trading day (4 Massage+Beauty, 2 Nails, 2 Hair) -- solver-verified, not the same number as the employment pool. The recommended employment pool for coverage/reliability is 12 (or 11 as a disclosed lower-reliability alternative) -- a founder decision, not yet made.", source:"Dossier Chapter 14 Staffing, Chapter 16 Staffing Coverage"},
@@ -452,10 +452,10 @@ document.getElementById('decisionTable').innerHTML = DECISIONS.map(d => `
 
 // ===================== DEPENDENCY REGISTER =====================
 const DEPENDENCIES = [
-  ["WDP commercial/rental figure", "WDP (Carole Rivers / State Business Manager)", "Actively progressing, not stalled, not yet arrived (confirmed 2026-08-08)"],
-  ["WDP phlebotomist employment model", "WDP", "In-house vs WDP-supplied -- genuinely not decided"],
-  ["WDP sightline/observation requirement", "WDP", "Narrower sub-question of the now-resolved 'remain at the collection centre' policy -- deliberately left out of the shortened 2026-08-21 bump email, not resolved"],
-  ["WDP medical waste disposal responsibility", "WDP", "Whether WDP's own collection-centre setup already covers it"],
+  ["WDP commercial/rental figure", "WDP (Carole Rivers / State Business Manager)", "Actively progressing, not stalled, not yet arrived (confirmed 2026-08-08); Anthony's 2026-08-21 sent follow-up checked in on this, no reply yet"],
+  ["WDP phlebotomist employment model", "WDP", "In-house vs WDP-supplied -- genuinely not decided; deliberately not asked in the 2026-08-21 sent follow-up, still unasked"],
+  ["WDP sightline/observation requirement", "WDP", "Narrower sub-question of the now-resolved 'remain at the collection centre' policy -- deliberately left out of the 2026-08-21 sent email, not resolved"],
+  ["WDP medical waste disposal responsibility", "WDP", "Whether WDP's own collection-centre setup already covers it; asked directly in Anthony's 2026-08-21 sent follow-up, no reply yet"],
   ["Landlord occupancy conditions / fit-out contribution", "Landlord (once a venue is under negotiation)", "Cannot be confirmed until a specific venue is chosen; A$20k-60k potential contribution not counted anywhere"],
   ["Zoning / permitted-use confirmation", "Local council", "Not confirmed for either current Tier-1 venue candidate"],
   ["Venue Manager wage classification", "Accountant / Fair Work", "Researched-best-evidenced (A$40/hr, MA000005 L6), needs professional confirmation"],

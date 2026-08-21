@@ -18,21 +18,20 @@
 
 | # | Question | Option(s), where possible |
 |---|---|---|
-| 1d | Should Anthony ask Carole directly whether WDP will supply the phlebotomist under the rental model, or GTT Center Perth keeps hiring in-house? | Ask now, or wait until the commercial rental figure (item 1c) arrives so both questions are answered together. |
+| 1d | Should Anthony ask Carole directly whether WDP will supply the phlebotomist under the rental model, or GTT Center Perth keeps hiring in-house? | **Still open — deliberately not asked in the 2026-08-21 follow-up.** Anthony chose to drop this question from that email rather than ask it alongside the others; still worth asking, on its own or once the commercial rental figure (item 1c) arrives. |
 | 3 | Confirm current venue-search progress (Osborne Park through Cockburn/Cannington) — any candidate ready to inspect? | N/A — status check, not a pick-one decision. |
 | G9 | Engage a trademark attorney now, or continue deferring? | See `docs/naming/TRADEMARK-ATTORNEY-DECISION-BRIEF.md` — not a "yes/no default," genuinely Anthony's call once he's read the plain-terms treatment there. |
 | 36 | When (if ever) should package prices increase from A$250/A$300? | See `docs/price-increase-comparison.md` — no timing decision needed yet, flagged for whenever it becomes relevant. |
 | 38 | Final brand name — SOLENA or ELOWEN (or hold)? | Deliberately deferred pending trademark clearance timing (item G9) — not a decision to force now. |
-| 50 | Send the drafted WDP client-volume correction (18/day, not the 12/day figure Carole was last told)? | Substance already drafted in `docs/architecture/WDP-COMMERCIAL-ALIGNMENT-REVIEW.md` §4 — Anthony's to send. |
 | 9c | Revisit YETI Holding Trust structure once the 30% trust-distribution tax legislates, or by Year 3, whichever first? | Already a dated trigger, not an action needed now — listed here only so it isn't forgotten. |
 
 ## 2. WAITING ON THIRD PARTY (no internal action closes these)
 
 | # | What | Who | Status |
 |---|---|---|---|
-| 1c | WDP commercial/rental figure | Carole Rivers, WDP — actively progressing via WDP's State Business Manager | Not stalled, just not arrived yet |
+| 1c | WDP commercial/rental figure | Carole Rivers, WDP — actively progressing via WDP's State Business Manager | Not stalled, just not arrived yet. **2026-08-21: Anthony sent a follow-up checking in on this figure and correcting the volume basis to 18/day — no reply yet.** |
 | 4 | PathWest/Clinipath replies | Both emailed 2026-07-27 | Awaiting reply |
-| 21 / F22 | Medical waste disposal — does WDP's own collection-centre setup already cover this? | WDP | **Explicitly marked WAITING 2026-08-16 — not a research target, do not keep investigating around it internally (see `data/canonical/opex.yml#opex_medical_waste`)** |
+| 21 / F22 | Medical waste disposal — does WDP's own collection-centre setup already cover this? | WDP | **Now actually asked — Anthony's 2026-08-21 follow-up to Carole includes this question directly. No reply yet. Previously marked WAITING 2026-08-16 (see `data/canonical/opex.yml#opex_medical_waste`).** |
 | 1j (sub-question) | Sightline/shared-area vs separate-room-with-quick-response for collector supervision | WDP/Carole | Narrower open sub-question, everything else in this item settled |
 | 19 (REGULATORY) | Medicare bulk-billing arrangement for the GTT pathology component | WDP/Medicare | Unconfirmed in writing |
 
@@ -50,7 +49,7 @@
 
 ## 4. CLOSED (resolved, kept below for traceability only — no action needed)
 
-Items 1, 1b, 1f, 1j (main question), 1k, 1l, 1n, 2, 5, 15, 24, 25, 29/29b/29c/29d, and every REGULATORY item marked RESOLVED in its own detail row below. **Also closed this round (2026-08-16), status updated in the detail table below where the underlying model changed:** item 31 (spray tan pricing — moot, spray tan removed from the concept entirely per F14) and item 10 (ancillary revenue aggregate's spray tan component — same reason).
+Items 1, 1b, 1f, 1j (main question), 1k, 1l, 1n, 2, 5, 15, 24, 25, 29/29b/29c/29d, and every REGULATORY item marked RESOLVED in its own detail row below. **Also closed this round (2026-08-16), status updated in the detail table below where the underlying model changed:** item 31 (spray tan pricing — moot, spray tan removed from the concept entirely per F14) and item 10 (ancillary revenue aggregate's spray tan component — same reason). **Item 50 closed 2026-08-21** — Anthony sent the client-volume correction directly to Carole (`docs/wdp-followup-draft-2026-08-20.md`, status SENT); the communication gap this item tracked is closed. Note this does not resolve item 1c (rental figure, still awaited) or item 1d (phlebotomist employment model, still unasked) — only the volume-correction send action itself.
 
 ## 5. HISTORICAL/SUPERSEDED (only where genuinely necessary to keep for trace)
 
@@ -194,6 +193,8 @@ Item 1e (old 12-client/14-ceiling model) — superseded by item 1m (Table 1/Tabl
 ---
 
 ## Changelog
+
+**2026-08-21 (WDP follow-up SENT by Anthony directly — tracker updated to match, not sent by any agent)** — Anthony sent the drafted follow-up (`docs/wdp-followup-draft-2026-08-20.md`) to Carole Rivers directly, outside this repository's workflow; this update records that fact accurately. Sent content: client-volume correction (18/day Mon-Sat, not the earlier 12/day), a check-in on the commercial/rental figure, and the medical waste disposal question. **Item 50 closed** — the communication gap it tracked (volume correction never confirmed sent) is resolved by this send; moved out of the ACTION REQUIRED list into CLOSED. **Item 1c** — still open (no rental figure yet), noted the check-in was sent, no reply yet. **Item 1d** — still open; noted explicitly that Anthony chose not to ask this question in the 2026-08-21 email, so it remains genuinely unasked, not merely unanswered. **Item 21/F22** — updated from "waiting, not a research target" to "now actually asked," no reply yet. No response from Carole invented or assumed; nothing else marked resolved on this basis. `docs/reed-partnerships.md`'s WDP tracker row, `outputs/gtt-dash/index.html`, and `outputs/master-dossier-v2/index.html` Chapter 34 updated in the same pass to match.
 
 **2026-08-16 (H — top-level restructure; several items closed via research)** — Added a new "TOP-LEVEL VIEW" section at the very top of this file (ACTION REQUIRED FROM ANTHONY / WAITING ON THIRD PARTY / GRACE-AI TO INVESTIGATE / CLOSED / HISTORICAL-SUPERSEDED), per direct instruction that the presentation was hard to navigate with 53+ detailed items in one flat structure. **The detailed BLOCKING/FINANCIAL/REGULATORY/PROPERTY/OTHER sections below are unchanged, not deleted** — the new section is a navigation layer on top. Also closed via real research this round rather than left punted to Anthony: items 17/18 (current wage rates), 19 (revised insurance placeholder), 22 (GTT supplies recalculated for the 18-client model), B3 (WA workers' comp confirmed mandatory). Items 1m/1o reframed as settled/lower-priority now that Table 1 (18-client) is confirmed the planning model, not an open framing flag. Items 31/10 (spray tan) reframed as moot given spray tan's full removal from the concept (F14). Item 21/F22 (medical waste) explicitly marked WAITING ON WDP, not a research target.
 
