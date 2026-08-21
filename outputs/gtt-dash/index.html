@@ -126,10 +126,10 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
     <div class="card-grid">
       <div class="metric-card"><span class="label">Dossier completion</span><div class="value">35 / 35</div><div class="note">All chapters built. Venture itself is not finished &mdash; see Decisions below.</div></div>
       <div class="metric-card"><span class="label">Monthly revenue</span><div class="value">A$154,710.69</div><div class="note">18-client planning case <span class="tag tag-current">Current truth</span></div></div>
-      <div class="metric-card"><span class="label">Monthly opex</span><div class="value">A$116,005.36</div><div class="note">Payroll + overhead. Relief allowance reverted to A$0.00, 2026-08-21 <span class="tag tag-current">Current truth</span></div></div>
-      <div class="metric-card positive"><span class="label">Operating result</span><div class="value">A$38,705.33</div><div class="note">25.0% margin</div></div>
-      <div class="metric-card"><span class="label">Break-even</span><div class="value">12.120/day</div><div class="note">= A$116,005.59/month</div></div>
-      <div class="metric-card"><span class="label">18-client buffer</span><div class="value">+5.880/day</div><div class="note">+48.5% above break-even, or 32.7% of the 18-client target itself &mdash; two different, both-correct readings</div></div>
+      <div class="metric-card"><span class="label">Monthly opex</span><div class="value">A$110,544.52</div><div class="note">Payroll + overhead. Relief allowance A$0.00; Position 06/RCO01 dedicated PM Reception removed, 2026-08-21 founder decision <span class="tag tag-current">Current truth</span></div></div>
+      <div class="metric-card positive"><span class="label">Operating result</span><div class="value">A$44,166.17</div><div class="note">28.5% margin</div></div>
+      <div class="metric-card"><span class="label">Break-even</span><div class="value">11.290/day</div><div class="note">= A$110,542.11/month</div></div>
+      <div class="metric-card"><span class="label">18-client buffer</span><div class="value">+6.710/day</div><div class="note">+59.4% above break-even, or 37.3% of the 18-client target itself &mdash; two different, both-correct readings</div></div>
       <div class="metric-card"><span class="label">Venue status</span><div class="value" style="font-size:1.2rem;">Not secured</div><div class="note">2 Tier-1 candidates, zero inspected <span class="tag tag-founder">Founder decision</span></div></div>
       <div class="metric-card"><span class="label">WDP status</span><div class="value" style="font-size:1.2rem;">Active, ongoing</div><div class="note">8 Aug 2026 response logged, follow-up SENT 21 Aug 2026 by Anthony directly, awaiting reply <span class="tag tag-thirdparty">Third-party</span></div></div>
     </div>
@@ -215,13 +215,13 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
       <thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead>
       <tbody>
         <tr><td>Monthly revenue</td><td>A$154,710.69</td><td rowspan="8"><code>FINANCIAL-POSITION-CURRENT.md</code>, live-pulled from <code>master_financial_model.yml</code></td></tr>
-        <tr><td>Monthly opex</td><td>A$116,005.36 (relief allowance reverted to A$0.00, 2026-08-21)</td></tr>
-        <tr><td>Monthly operating result</td><td>A$38,705.33 (25.0% margin)</td></tr>
-        <tr><td>Annualised operating result</td><td>A$464,463.96</td></tr>
-        <tr><td>Break-even revenue / clients-per-day</td><td>A$116,005.59/mo / 12.120/day</td></tr>
-        <tr><td>Cash-flow trough</td><td>-A$64,275.46 (Month 2)</td></tr>
+        <tr><td>Monthly opex</td><td>A$110,544.52 (relief allowance A$0.00; Position 06/RCO01 removed, 2026-08-21)</td></tr>
+        <tr><td>Monthly operating result</td><td>A$44,166.17 (28.5% margin)</td></tr>
+        <tr><td>Annualised operating result</td><td>A$529,994.04</td></tr>
+        <tr><td>Break-even revenue / clients-per-day</td><td>A$110,542.11/mo / 11.290/day</td></tr>
+        <tr><td>Cash-flow trough</td><td>-A$53,353.76 (Month 2)</td></tr>
         <tr><td>Cumulative cash turns positive</td><td>Month 5</td></tr>
-        <tr><td>24-month cumulative result</td><td>+A$745,317.63</td></tr>
+        <tr><td>24-month cumulative result</td><td>+A$876,377.83</td></tr>
       </tbody>
     </table>
     </div>
@@ -306,9 +306,9 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
 const SEARCH_INDEX = [
   {title:"AM clients/day", chapter:"Ch1 Dashboard / Ch8 AM Model", excerpt:"18 clients/day, solver-confirmed zero chair/phlebotomist collisions. The sole planning case; 12/6 are sensitivity-only.", link:"../master-dossier-v2/index.html#ch8"},
   {title:"Monthly revenue", chapter:"Ch1 Dashboard / Ch28 P&L", excerpt:"A$154,710.69/month -- AM GTT (A$118,485) + PM packages (A$36,225.69), blended. Ancillary A$0, excluded from baseline.", link:"../master-dossier-v2/index.html#ch28"},
-  {title:"Break-even", chapter:"Ch30 Break-even", excerpt:"A$116,005.59/month = 12.120 clients/day. 18-client buffer: +5.880/day, +48.5% above break-even, or 32.7% of the 18-client target.", link:"../master-dossier-v2/index.html#ch30"},
+  {title:"Break-even", chapter:"Ch30 Break-even", excerpt:"A$110,542.11/month = 11.290 clients/day. 18-client buffer: +6.710/day, +59.4% above break-even, or 37.3% of the 18-client target.", link:"../master-dossier-v2/index.html#ch30"},
   {title:"Operating Result vs profit", chapter:"Ch28 P&L", excerpt:"Operating Result excludes depreciation, tax, interest, and startup-capital amortisation -- not a full accounting profit figure.", link:"../master-dossier-v2/index.html#ch28"},
-  {title:"Cash-flow trough", chapter:"Ch29 Cash Flow", excerpt:"-A$64,275.46 at Month 2. Cumulative position turns positive Month 5. +A$745,317.63 by Month 24.", link:"../master-dossier-v2/index.html#ch29"},
+  {title:"Cash-flow trough", chapter:"Ch29 Cash Flow", excerpt:"-A$53,353.76 at Month 2. Cumulative position turns positive Month 5. +A$876,377.83 by Month 24.", link:"../master-dossier-v2/index.html#ch29"},
   {title:"6/12/18 sensitivity", chapter:"Ch31 Financial Sensitivity", excerpt:"18/day is the sole planning case. 6/day and 12/day are downside sensitivity comparisons only, both loss-making at steady state.", link:"../master-dossier-v2/index.html#ch31"},
   {title:"Simultaneous headcount vs employment pool", chapter:"Ch14 Staffing", excerpt:"8 treatment + 2 phlebotomists work every trading day (simultaneous). 12 treatment + 4 phlebotomists is the recommended employment pool for coverage -- not the same number.", link:"../master-dossier-v2/index.html#ch14"},
   {title:"Treatment staff pool size", chapter:"Ch16 Staffing Coverage", excerpt:"12 recommended (>=95% reliability) vs 11 lower-reliability alternative (94.56%). Founder decision, not resolved.", link:"../master-dossier-v2/index.html#ch16"},
@@ -377,7 +377,7 @@ document.getElementById('searchInput').addEventListener('input', e => renderSear
 
 // ===================== AI ASSISTANT MOCK =====================
 const AI_QA = [
-  {q:"What's our current break-even?", a:"A$116,005.59/month, or 12.120 clients/day (2026-08-21, after the relief_absence_allowance line was reverted to A$0.00 per direct founder instruction -- was 13.051 clients/day under the 2026-08-18 version). At the 18-client planning case, the buffer above break-even is +5.880 clients/day -- that's +48.5% above the break-even volume itself, or 32.7% of the 18-client target (two correct but different ways of expressing the same buffer -- both are used in the dossier, never mixed without labelling which one).", source:"Dossier Chapter 30 -- Break-even, live-pulled from data/models/master_financial_model.yml"},
+  {q:"What's our current break-even?", a:"A$110,542.11/month, or 11.290 clients/day (2026-08-21, after Position 06/RCO01 dedicated PM Reception was removed per direct founder decision, Model C confirmed -- was 12.120 clients/day earlier the same day after the relief_absence_allowance reversal alone, 13.051 clients/day under the 2026-08-18 version). At the 18-client planning case, the buffer above break-even is +6.710 clients/day -- that's +59.4% above the break-even volume itself, or 37.3% of the 18-client target (two correct but different ways of expressing the same buffer -- both are used in the dossier, never mixed without labelling which one).", source:"Dossier Chapter 30 -- Break-even, live-pulled from data/models/master_financial_model.yml"},
   {q:"What are the remaining WDP questions?", a:"Anthony sent a follow-up to Carole directly on 2026-08-21 (outside this repo's workflow) covering three items: (1) a correction that morning volume has settled at 18/day, Mon-Sat -- the only previously-sent email told Carole 12/day; (2) a check-in on the indicative annual rental/commercial figure, already confirmed actively progressing with WDP's State Business Manager; (3) whether medical waste disposal is covered under WDP's collection-centre arrangement. No reply yet. Two items remain genuinely open but were NOT asked in this email: the phlebotomist employment model (WDP-supplied vs GTT-employed under WDP's accreditation) -- deliberately dropped by Anthony from this particular send -- and the sightline/observation requirement, a separately tracked open dependency. The courier cutoff is NOT on either list -- resolved by Carole's verified 2026-07-30 email.", source:"docs/wdp-followup-draft-2026-08-20.md, Dossier Chapter 34 Category B"},
   {q:"What decisions do I need to make?", a:"13 founder decisions are currently open, including: the final name (SOLENA vs ELOWEN), the treatment staff pool size (12 vs 11), the phlebotomist pool size (4 vs 3), the Blood Collection Room companion/needle-phobia exception, the Lounge device audience, venue selection between the two Tier-1 candidates, and PM package pricing sign-off. Full list with recommendations: the Decisions section of this Dash.", source:"Dossier Chapter 34 Category A"},
   {q:"What's already resolved?", a:"The WDP specimen-dispatch courier cutoff, the PM Reception 15:00-18:00 coverage gap, the leaving-moment/leaving-box gesture (removed, stays removed), the old 10-11/3-4 staffing estimates (superseded by 12/4), the old 16-session PM revenue methodology and its A$45,236.88 figure, the old 12.073 break-even figure, the old A$400/A$1,279 insurance guesses, the GP/FTE-doctors-on-site site-assessment criterion, the name-branded retail question, phlebotomist collector work scope, and the collection-centre policy basis. None of these are presented as open anywhere in the dossier.", source:"Dossier Chapter 34, 'Confirmed resolved' callout"},
