@@ -348,7 +348,7 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       <p class="chapter-dek">What GTT Center Perth actually is, in plain terms.</p>
     </div>
 
-    <p>GTT Center Perth is a concept for Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT) &mdash; a mandatory pregnancy screening test undergone by an estimated <strong>~33,570 WA women per year</strong> <span class="tag tag-verified">Verified</span> (KPMG analysis of ABS Births, Australia 2024). Instead of a bare pathology waiting room while fasting, a woman referred for a GTT books into GTT Center Perth and spends the test window receiving massage, nails, brows, or hairdressing.</p>
+    <p>GTT Center Perth is a concept for Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT) &mdash; a mandatory pregnancy screening test undergone by an estimated <strong>~30,516 WA women per year</strong> <span class="tag tag-verified">Verified</span> (ABS, Births Australia, 2024, the latest published year). Instead of a bare pathology waiting room while fasting, a woman referred for a GTT books into GTT Center Perth and spends the test window receiving massage, nails, brows, or hairdressing.</p>
 
     <p>The venture runs two distinct businesses under one roof, sharing a physical space and a brand:</p>
 
@@ -397,27 +397,28 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       <p class="chapter-dek">The addressable market, sized from real published data, stated plainly where the research is solid.</p>
     </div>
 
-    <h2>Perth GTT market &mdash; sized from ABS/KPMG data</h2>
+    <h2>Perth GTT market, sized from published ABS/AIHW data</h2>
     <div class="table-wrap">
     <table>
       <thead><tr><th>Metric</th><th>Value</th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td>Australian births/year</td><td>~292,500</td><td><span class="tag tag-verified">Verified</span></td></tr>
-        <tr><td>WA births/year</td><td>~33,570</td><td><span class="tag tag-verified">Verified</span></td></tr>
-        <tr><td>Perth metro (Greater Perth GCCSA) births/year</td><td>~26,790</td><td><span class="tag tag-verified">Verified</span></td></tr>
-        <tr><td>GDM screening rate</td><td>~100% (effectively universal, standard of care)</td><td><span class="tag tag-verified">Verified</span> (ADIPS)</td></tr>
-        <tr><td>GDM diagnosis rate</td><td>~18%</td><td><span class="tag tag-verified">Verified</span> (AIHW)</td></tr>
-        <tr><td>Perth metro GTT tests/week (addressable market)</td><td><strong>~515/week</strong></td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>Australian births, 2024 (latest published year)</td><td>292,318</td><td><span class="tag tag-verified">Verified</span> (ABS, published 15 October 2025)</td></tr>
+        <tr><td>WA births, 2024</td><td>30,516</td><td><span class="tag tag-verified">Verified</span> (ABS)</td></tr>
+        <tr><td>Perth births, 2024 (capital-city breakdown)</td><td>approximately 27,000</td><td><span class="tag tag-verified">Verified</span> (ABS), up 5.7% on 2023, the highest recovery rate of any Australian capital that year</td></tr>
+        <tr><td>GDM screening rate</td><td>Effectively universal (standard of care, RANZCOG/ADIPS guidance)</td><td><span class="tag tag-verified">Verified</span></td></tr>
+        <tr><td>GDM diagnosis rate</td><td>18% (almost 1 in 5 women giving birth in an Australian hospital, 2023-24)</td><td><span class="tag tag-verified">Verified</span> (AIHW)</td></tr>
+        <tr><td>Perth metro GTT tests/week (addressable market)</td><td><strong>~515/week</strong></td><td><span class="tag tag-verified">Verified</span>, derived from the Perth births figure above</td></tr>
       </tbody>
     </table>
     </div>
-    <p style="font-size:0.85rem; opacity:0.75;">Source: KPMG analysis of ABS Births, Australia 2024 (media release 17 July 2025). Real 2024 Greater Perth GCCSA figure, not an estimated share of the WA total. ABS figures noted by KPMG as preliminary/subject to revision. Live-cited from <code>data/canonical/client_assumptions.yml#addressable_market_perth_weekly</code>.</p>
+    <p style="font-size:0.85rem; opacity:0.75;">Sources: Australian Bureau of Statistics, <em>Births, Australia</em>, 2024 release (published 15 October 2025) for all birth counts; Australian Institute of Health and Welfare for the GDM diagnosis rate. <strong>No 2025 or 2026 ABS birth data exists yet</strong> &mdash; the next release, covering 2025, is scheduled for 6 November 2026; 2024 is the most current published year and is used throughout this chapter, not a projection. Live-cited from <code>data/canonical/client_assumptions.yml#addressable_market_perth_weekly</code>. Full sourcing and method: <code>docs/architecture/MARKET-RESEARCH-BIRTHS-GDM-REFERRAL-2026.md</code>.</p>
+    <p style="font-size:0.85rem; opacity:0.75;"><strong>Note on an earlier WA births figure:</strong> a prior version of this chapter cited approximately 33,570 WA births/year, sourced to a KPMG analysis of the same ABS release. Direct research against the ABS release itself (2026-08-21) found the ABS's own published 2024 WA figure is 30,516 &mdash; a real, material difference, not a rounding variation. The figure above uses the ABS's own primary figure rather than the secondary KPMG citation. This does not change the Perth-specific addressable-market figure below, which was already sourced to the capital-city breakdown directly.</p>
 
     <div class="chart-wrap">
       <svg viewBox="0 0 900 220" width="100%" height="220" role="img" aria-label="Funnel chart: Perth births per year to weekly GTT tests to weekly AM slots at planning capacity">
         <rect x="0" y="0" width="900" height="220" fill="#FCFBF7"/>
         <rect x="40" y="40" width="240" height="120" fill="#E8DAC5" rx="6"/>
-        <text x="160" y="95" text-anchor="middle" font-size="15" fill="#33261E" font-weight="600">~26,790</text>
+        <text x="160" y="95" text-anchor="middle" font-size="15" fill="#33261E" font-weight="600">~27,000</text>
         <text x="160" y="115" text-anchor="middle" font-size="11" fill="#5E5F45">Perth births/year</text>
         <rect x="340" y="55" width="220" height="90" fill="#D9A08C" rx="6"/>
         <text x="450" y="95" text-anchor="middle" font-size="15" fill="#33261E" font-weight="600">~515/week</text>
@@ -433,11 +434,13 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       <p class="chart-caption">Design capacity (18/day, solver-verified) captures roughly 21% of the addressable weekly market at full booking &mdash; a ceiling, not a guaranteed fill rate; actual fill depends entirely on the referral pipeline.</p>
     </div>
 
+    <h2>Prior-GDM market segment, researched 2026-08-21</h2>
+    <p>Published recurrence-rate literature finds that women with a prior gestational diabetes diagnosis face a materially elevated chance of a repeat positive test in a subsequent pregnancy &mdash; individual studies report recurrence rates of 30-41%, with a systematic review finding a wider 30-84% range depending on population (lower in non-Hispanic white populations, higher in some minority populations). Strongest independent predictors of recurrence: pre-pregnancy BMI &ge;25, weight gain between pregnancies, higher maternal age/parity, and family history of diabetes.</p>
     <div class="callout">
-      <span class="callout-label">Source gap, disclosed not invented</span>
-      <span class="tag tag-research">Needs research</span>
-      A distinct, separately-sized "prior-GDM" market segment (women with a prior gestational diabetes diagnosis, who may be screened earlier or more frequently) is sometimes referenced in this venture's planning conversations. No document in this repository independently quantifies this as its own addressable-market figure. This dossier does not estimate one. If this segment matters to the business case, it needs dedicated research before a number is added &mdash; not before this chapter is otherwise usable.
+      <span class="callout-label">What this does and does not resolve</span>
+      This confirms prior-GDM clients are a real, elevated-probability repeat-engagement segment &mdash; a directional finding, not a specific addressable-market number. No document, including this research, independently quantifies "how many Perth women with a prior GDM history will become pregnant again in a given year" as its own separate figure from the general Perth-births addressable market above. Producing that number would require combining the general birth-rate data above with a same-woman-multiple-pregnancy dataset this repository does not have access to. <strong>Not estimated here to avoid inventing a compound statistic from two real but separately-scoped data sources.</strong> If a specific repeat-client volume projection is needed for planning, it should come from this venture's own booking data once trading, not a modelled estimate.
     </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Full research and sourcing: <code>docs/architecture/MARKET-RESEARCH-BIRTHS-GDM-REFERRAL-2026.md</code> §2.</p>
   </div>
 </section>
 
@@ -656,7 +659,14 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     </div>
 
     <h2>What the GTT is</h2>
-    <p>The Oral Glucose Tolerance Test (OGTT/GTT) screens for gestational diabetes mellitus (GDM). It is offered to all pregnant women at 24&ndash;28 weeks' gestation as the Australian standard of care, per the ADIPS 2014 Consensus Guidelines and FIGO 2015 (75g glucose, 2-hour test). <span class="tag tag-verified">Verified</span> This mandatory, non-discretionary demand &mdash; roughly 2&ndash;2.5 hours of fasting waiting time per test, undergone by an estimated ~33,570 WA women per year (Chapter 3) &mdash; is the market gap this venture exists to fill.</p>
+    <p>The Oral Glucose Tolerance Test (OGTT/GTT) screens for gestational diabetes mellitus (GDM). It is offered to all pregnant women at 24&ndash;28 weeks' gestation as the Australian standard of care, per the ADIPS 2014 Consensus Guidelines and FIGO 2015 (75g glucose, 2-hour test). <span class="tag tag-verified">Verified</span> This mandatory, non-discretionary demand &mdash; roughly 2&ndash;2.5 hours of fasting waiting time per test, undergone by an estimated ~30,516 WA women per year (Chapter 3) &mdash; is the market gap this venture exists to fill.</p>
+    <h2>How a GTT referral actually reaches a collection site, researched 2026-08-21</h2>
+    <p>A valid pathology request form from a GP, obstetrician/specialist, or a midwife with a Medicare provider number is the standard requirement, consistent across every Australian pathology provider's own patient information (PathWest, Clinpath, NSW Health Pathology). The client brings a Medicare card and the completed request form; the general Australian pathology-industry norm is that a provider accepts a valid request form regardless of whose letterhead it carries, since the form identifies the ordering practitioner and required test, not a specific collection-centre brand.</p>
+    <div class="callout">
+      <span class="callout-label">One genuine dependency remains, not resolved by this research</span>
+      Whether WDP's own venue-based Licensed Collection Centre model at GTT Center Perth has any site-specific intake requirement beyond this general industry-standard process (for example, a preference for referrals to name WDP specifically, or a particular onsite paperwork step) was not found in any WDP correspondence reviewed in this repository. This should be confirmed directly with Carole Rivers as part of the operational handover, not assumed either way.
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">Full research and sourcing: <code>docs/architecture/MARKET-RESEARCH-BIRTHS-GDM-REFERRAL-2026.md</code> §3.</p>
 
     <h2>Who is responsible for what</h2>
     <div class="table-wrap">
@@ -1713,8 +1723,8 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     <table>
       <thead><tr><th>Category</th><th>Minimum</th><th>Basis</th></tr></thead>
       <tbody>
-        <tr><td>Blood Collection Room</td><td>1 room, 2 chairs, solid walls</td><td>Confirmed</td></tr>
-        <tr><td>Treatment rooms (massage/beauty)</td><td>4, curtain-partitioned</td><td>Confirmed count; peak concurrency at 18/day is identical to 12/day (2 concurrent per line) since headcount doesn't change with volume</td></tr>
+        <tr><td>Blood Collection Room</td><td>1 room, 2 chairs, solid walls (day-one committed and costed model)</td><td><span class="tag tag-founder">Founder decision required</span> a later fit-out brief specifies 2 rooms &mdash; no repository precedent for a literal 2nd room exists, and a real, documented growth lever (a 3rd chair in the same room) already covers higher AM volume. Full decision analysis: <code>docs/architecture/FIT-OUT-PROGRAM-DECISION-ANALYSIS.md</code> Part B, Chapter 34.</td></tr>
+        <tr><td>Treatment rooms (massage/beauty)</td><td>4, curtain-partitioned, day-one; 6 total (3 Massage + 3 Beauty) including the documented growth reservation</td><td>Massage's day-one-plus-reservation total (3) is confirmed reconciled with a later fit-out brief's own figure. Beauty's fit-out-brief figure of 4 has no traceable basis against the same logic (which predicts 3) &mdash; <span class="tag tag-founder">Founder decision required</span>, see <code>docs/architecture/FIT-OUT-PROGRAM-DECISION-ANALYSIS.md</code> Part C.</td></tr>
         <tr><td>Nail stations</td><td>4, open-plan, LEV extraction</td><td>Confirmed count; LEV method vs. open-plan adjacency is a genuine open item</td></tr>
         <tr><td>Hair chairs</td><td>4, open-plan, 2 backwash</td><td>Confirmed count; 3rd backwash a design recommendation</td></tr>
         <tr><td>GTT Lounge seating</td><td>8 reclining chairs (existing design floor)</td><td><span class="tag tag-research">Needs research</span> up to 5 pairs (10 clients) can be simultaneously on-site at mid-morning peak, but most of that time is spent in the Collection Room or a treatment station, not the Lounge itself &mdash; the Lounge's real peak occupancy has not been simulated precisely. Treat "8" as a floor, not a confirmed ceiling.</td></tr>
@@ -1731,22 +1741,23 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     </div>
 
     <h2>Parking</h2>
-    <p><strong>Ample parking is a non-negotiable selection criterion</strong> &mdash; clients are 24&ndash;28 weeks pregnant and drive; minimum 8&ndash;10 dedicated or immediately adjacent off-street parking spaces, street parking alone not acceptable. <strong>Real-world caveat, not glossed over: property listings do not always disclose an exact parking count</strong> &mdash; one of the two current Tier-1 candidates below states parking exists in its listing description without a confirmed number.</p>
+    <p><strong>Ample parking is a non-negotiable selection criterion</strong>, not a preference: clients are 24&ndash;28 weeks pregnant and drive. Minimum 8&ndash;10 dedicated or immediately adjacent off-street parking spaces; street parking alone is not acceptable. <strong>Real-world caveat, not glossed over:</strong> property listings do not always disclose an exact parking count, so this figure needs direct confirmation for any specific candidate, not an assumption drawn from a listing's general description.</p>
 
-    <h2>Current property context</h2>
+    <h2>Venue evaluation framework, used to assess any candidate property</h2>
+    <p>No specific property is named in this chapter. Two candidate sites have been reviewed by this venture at various points and are tracked as open items in Chapter 34's decision register (venue selection remains a live founder decision); neither has been inspected or confirmed, and naming a specific address here risks this chapter reading as more settled than it is. The framework below is the requirement set any candidate, present or future, is assessed against.</p>
     <div class="table-wrap">
     <table>
-      <thead><tr><th></th><th>6/325 Harborne Street, Osborne Park</th><th>25 Mills Street, Cannington</th></tr></thead>
+      <thead><tr><th>Requirement</th><th>Standard</th><th>Why</th></tr></thead>
       <tbody>
-        <tr><td>Size</td><td>268sqm &mdash; inside the Preferred band</td><td>Up to 302sqm, flexible from 14sqm</td></tr>
-        <tr><td>Rent</td><td>~A$6,565/month + GST &mdash; below the A$7,000&ndash;9,000 budget band</td><td><span class="tag tag-research">Needs research</span> not disclosed for lease</td></tr>
-        <tr><td>Parking</td><td>On-site parking exists per listing, exact count not disclosed</td><td>11&ndash;14 exclusive on-site bays + street parking &mdash; comfortably inside the preferred band</td></tr>
-        <tr><td>Current fit-out</td><td>Retail shell, open-plan &mdash; everything built from scratch</td><td>Existing medical fitout: 2&ndash;4 consulting rooms + 1 minor theatre/treatment room + 2 change rooms &mdash; the closest existing match to the Treatment Room + Blood Collection Room need found in this search</td></tr>
-        <tr><td>Zoning</td><td colspan="2"><span class="tag tag-research">Needs research</span> Neither candidate has confirmed zoning/permitted-use status for a health/beauty/wellness operation &mdash; council confirmation required before either is treated as viable</td></tr>
+        <tr><td>Floor area</td><td>~239&ndash;290sqm (see Floor area card-grid above)</td><td>Matches the room-requirements table, from minimum functional through ideal flagship</td></tr>
+        <tr><td>Rent</td><td>A$7,000&ndash;9,000/month budget band (real WA market range, not a single fixed figure)</td><td>Sourced against comparable Perth commercial/retail rents for this floor-area range</td></tr>
+        <tr><td>Parking</td><td>Minimum 8&ndash;10 dedicated or immediately adjacent off-street bays</td><td>Clients are 24&ndash;28 weeks pregnant and drive &mdash; a non-negotiable selection criterion, not a preference</td></tr>
+        <tr><td>Zoning/permitted use</td><td>Confirmed health/beauty/wellness permitted use with the relevant local council</td><td><span class="tag tag-founder">Council confirmation required for any specific candidate before it is treated as viable</span> &mdash; not assumed favourable for any address</td></tr>
+        <tr><td>Existing fit-out</td><td>Either a retail/open-plan shell (built from scratch) or an existing medical/consulting fit-out (a genuine head-start on the Treatment Room + Blood Collection Room requirement, subject to compliance re-verification)</td><td>Both fit-out starting points are viable; neither is preferred by this framework alone &mdash; cost/timeline trade-offs depend on the specific building</td></tr>
       </tbody>
     </table>
     </div>
-    <p style="font-size:0.85rem; opacity:0.75;">Both remain <span class="tag tag-open">Open</span> Tier-1 candidates pending agent-level verification of the gaps above &mdash; not yet finalised, not yet inspected. Source: <code>docs/strategy/PERTH-PROPERTY-SHORTLIST.md</code>, dated 2026-08-14.</p>
+    <p style="font-size:0.85rem; opacity:0.75;">Venue selection is an open founder decision (Chapter 34) &mdash; this chapter states the requirements a candidate must meet, not which candidate is chosen. Source: <code>docs/strategy/VENUE-FUNCTIONAL-BRIEF.md</code>, <code>docs/location-scouting.md</code>.</p>
 
     <div class="callout brown">
       <span class="callout-label">Stale reference corrected, not carried forward</span>
@@ -1755,7 +1766,7 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
 
     <div class="callout olive">
       <span class="callout-label">Sourcing</span>
-      <code>docs/strategy/VENUE-FUNCTIONAL-BRIEF.md</code> (room requirements, floor area, functional program), <code>docs/location-scouting.md</code> (parking requirement), <code>docs/strategy/PERTH-PROPERTY-SHORTLIST.md</code> (current property candidates), <code>docs/floor-plan-concept.md</code> (underlying room schedule, PARKED pending a real architect).
+      <code>docs/strategy/VENUE-FUNCTIONAL-BRIEF.md</code> (room requirements, floor area, functional program), <code>docs/location-scouting.md</code> (parking requirement), <code>docs/floor-plan-concept.md</code> (underlying room schedule, PARKED pending a real architect). Specific property candidates, where tracked at all, live in Chapter 34's decision register and <code>docs/strategy/PERTH-PROPERTY-SHORTLIST.md</code>, not repeated here as settled.
     </div>
   </div>
 </section>
