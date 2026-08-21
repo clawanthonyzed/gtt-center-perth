@@ -1,0 +1,123 @@
+# Fit-Out Program — Decision Analysis (Blood Collection Rooms, Beauty Stations, Consolidated Program, Procurement Readiness)
+
+**Status: analysis complete, no decision made, no external contact made.** This document performs the formal decision-analysis requested for the two genuinely open station/room-count questions identified in `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §3.2 and traced with evidence in `CHINA-AUSTRALIA-SOURCING-STRATEGY.md` §2. It does not resolve either decision — both remain **FOUNDER DECISION REQUIRED**. It also consolidates the current venue program into one authoritative table, reviews the brief for over-specification, and summarises procurement readiness. No supplier, sourcing agent, manufacturer, or WDP contact was made in producing this document.
+
+Source basis: `docs/architecture/CHINA-AUSTRALIA-SOURCING-STRATEGY.md` (primary evidence trail), `docs/architecture/FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md`, `docs/architecture/FIT-OUT-EQUIPMENT-SCHEDULE.md`, `docs/floor-plan-concept.md`, `docs/scenario-d-investigation.md`, `docs/architecture/ITEMISED-PURCHASE-LIST.md` §1, `docs/am-capacity-weekend.md`, `docs/VERIFICATION-TRACKER.md`, `docs/DECISION-LOG.md`, Chapter 34 of `outputs/master-dossier-v2/index.html`.
+
+---
+
+## Part B — Blood Collection Room Count: Decision Analysis
+
+**Question:** does the venue genuinely require 2 physical Blood Collection Rooms, or does it remain 1 room with capacity for the required chairs (with a documented precedent for a 3rd chair via Scenario D)?
+
+**Governance check performed first:** searched `VERIFICATION-TRACKER.md`, `DECISION-LOG.md`, Chapter 34, `scenario-d-investigation.md`, `am-capacity-weekend.md`, `floor-plan-concept.md` — no document anywhere in this repository, at any point in its history, proposes a second physical Blood Collection Room. Every existing reference to growth capacity in this function (Scenario D) describes adding a 3rd chair to the one room, never adding a room. This is not a stale source being misread; it is the absence of any prior basis for "2 rooms" anywhere except the fit-out brief's own §3.1 program line, which restates Anthony's instruction for that specific document without independent derivation.
+
+| | **Option 1 — One room, appropriate chair capacity (2 chairs now, 3rd chair via Scenario D if needed)** | **Option 2 — Two physical Blood Collection Rooms** |
+|---|---|---|
+| **Operational case** | Matches every clinical/staffing/financial model built to date. 2 phlebotomists, 1 solid-walled room, Chair A/B, 18 clients/day at 25-min cadence (`docs/CURRENT-STATE.md`). Scenario D adds a 3rd chair inside the same room to reach ~15 clients in the AM block if volume grows further, at labour cost only — no new lease footprint, reception, or Venue Manager overhead. | No operational model has ever been built around 2 rooms. Would presumably let two clients be drawn fully privately in parallel rather than two chairs in one shared room, or separate the AM high-volume flow from a lower-volume PM/overflow flow. Neither rationale is stated anywhere in the repository — this is a plausible interpretation, not a documented one. |
+| **Space impact** | Currently-costed room: 18sqm (`CURRENT-STATE.md` changelog 2026-08-07), plus ~2-3sqm allowance for a vasovagal recliner not yet folded in. Fits the existing floor-plan concept without re-derivation. | A second room at the same ~18-20sqm minimum floor area (`FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §4.2, itself A-tagged from `pathology-collection-room.md`) would add roughly 18-20sqm to the venue's required footprint — a material change to total leasable area required, not yet tested against either Tier-1 venue candidate's floor plate. |
+| **Fit-out impact** | Already the basis for the current costed fit-out range (A$228,142-457,559, `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §24). Solid walls, door, soundproofing, lighting, ventilation (6 ACH), hand hygiene, sharps/waste, power/data — one instance of each. | Doubles every clinical-room fit-out line item: a second solid-walled enclosure, second door, second full lighting/ventilation/hand-hygiene/sharps-and-waste/power-data build-out, second WDP room-spec sign-off. Not costed anywhere — `FIT-OUT-EQUIPMENT-SCHEDULE.md` explicitly marks the phlebotomy-chair quantity "PENDING §3.2 RECONCILIATION" rather than assuming doubled quantities. |
+| **Advantages** | Financially and operationally proven; no re-derivation of the P&L, staffing model, or lease-size requirement needed; matches WDP's own room-spec correspondence to date (`docs/pathology-collection-room.md`, Carole Rivers' 2026-08-06 reply). | Could offer greater privacy/separation if that is genuinely the intent (e.g. two clients never share a room even briefly); could allow independent scheduling of two draws without any shared-room coordination. |
+| **Disadvantages** | If "2 rooms" was intended to mean materially more privacy or genuinely doubled physical capacity, Option 1 alone does not deliver that. | Unbudgeted, unstaffed (no model exists with more than 2 phlebotomists), unrequested by WDP in any correspondence to date, and expands the venue's required floor plate before a venue is even secured — directly conflicts with the "do not over-specify before the venue" principle (Part E below). |
+| **Evidence** | `docs/scenario-d-investigation.md`, `docs/am-capacity-weekend.md`, `docs/floor-plan-concept.md`, `docs/CURRENT-STATE.md` §1/§3/§4/§5/§7/§8, `docs/pathology-collection-room.md`. All internally consistent with each other. | `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §3.1 only — a single instruction line in a single document, with no supporting operational, staffing, or WDP-correspondence basis found anywhere else. |
+| **Outstanding confirmation needed** | Whether Scenario D's 3rd-chair lever is even needed yet — gated on WDP's specimen-cutoff/window confirmation for a 15-client AM schedule (a pre-existing, still-open third-party dependency, not new). | Whether "2 rooms" was shorthand for wanting more phlebotomy capacity (in which case Scenario D already answers it) or a genuinely new, doubled-capacity intent, and if the latter, what operational/financial case supports it. |
+
+**RECOMMENDATION — FOUNDER DECISION STILL REQUIRED.** The evidence weighs toward Option 1 (one room, Scenario D as the documented growth lever) being the interpretation consistent with everything else built for this venture, but this document does not lock that reading. Anthony's own §3.1 instruction says "2 rooms" in a live, current document, and a founder instruction is not overridden by the absence of prior paperwork. This is presented as an evidenced choice, not decided here.
+
+---
+
+## Part C — Beauty Station Count: Decision Analysis
+
+**Question:** is 4 Beauty stations correct, or 3 — and is there any basis for the 4th, or does Beauty share rooms with Massage?
+
+**Governance check performed first:** searched `floor-plan-concept.md`'s Room Schedule, `ITEMISED-PURCHASE-LIST.md`, service-catalogue and staffing documents, Chapter 34, `VERIFICATION-TRACKER.md`, `DECISION-LOG.md`. No document proposes a 4th Beauty station or room. This was not assumed to be a typo — it was searched for directly and not found.
+
+| | **Option 1 — 3 Beauty stations** | **Option 2 — 4 Beauty stations** |
+|---|---|---|
+| **Operational case** | Matches `floor-plan-concept.md`'s Room Schedule exactly: day-one committed (Treatment Room 3, Treatment Room 4 — Facial/Beauty = 2) plus one Growth Reservation (Treatment Room 6 — Facial/Beauty = 1), total 3. This is the same day-one-plus-reservation logic that independently explains Massage's figure of 3 in the fit-out brief (2 day-one + 1 reservation = 3, an exact match). Applying identical logic to Beauty predicts 3, not 4. | No document anywhere proposes a 4th Beauty room, station, or reservation. Staffing model (`CURRENT-STATE.md`) uses 4 dual-qualified Massage+Beauty pool staff sharing rooms via curtain partitions, not 4 dedicated Beauty-only stations — headcount does not independently support a 4th physical station either. |
+| **Space impact** | Fits the existing floor-plan concept and its already-documented growth reservation — no new floor area beyond what is already planned for the venue's own full build-out. | Would require an additional treatment-room footprint beyond what `floor-plan-concept.md`'s Room Schedule currently reserves for Beauty — not modelled in that document. |
+| **Fit-out impact** | Consistent with the currently-costed model (`FIT-OUT-EQUIPMENT-SCHEDULE.md`: 2 facial/beauty treatment beds currently costed, "up to 4 PENDING §3.2 RECONCILIATION" only because the brief's own §3.1 asked for 4, not because a 4th is independently evidenced). | Adds one facial/beauty treatment bed and associated fit-out (partition curtain run, power/data, lighting) beyond the day-one-plus-reservation total — a genuine incremental cost with no documented rationale. |
+| **Advantages** | Internally consistent with every other planning document; uses the exact same evidentiary logic that already explains Massage's figure; no unexplained cost added. | If genuinely intended (e.g. Anthony wants a larger long-term Beauty capacity than Massage), it front-loads that ambition into the current brief rather than requiring a second reconciliation exercise later. |
+| **Disadvantages** | If 4 was a deliberate, considered instruction (not a slip), Option 1 under-builds against that intent. | No repository evidence supports it; risks being carried forward into supplier-facing documents as though it were confirmed, when it is not. |
+| **Evidence** | `docs/floor-plan-concept.md` Room Schedule, `docs/architecture/CHINA-AUSTRALIA-SOURCING-STRATEGY.md` §2.3 (side-by-side Massage/Beauty reconciliation). | None found. `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §3.1 only. |
+| **Outstanding confirmation needed** | None beyond the founder decision itself — the day-one-plus-reservation figure is already fully documented elsewhere. | Whether Anthony intends a genuinely larger Beauty capacity than Massage, and if so, on what operational or demand basis (service-catalogue mix, projected Beauty-vs-Massage booking split, or similar) — no such basis currently exists in any document. |
+
+**Beauty sharing rooms with Massage:** already the current, costed model for day-one (4 combined, curtain-partitioned "treatment rooms" usable by any of the 4 pool staff, per `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §3.2's own comparison table) — this is not a new option, it is the status quo interpretation, and is compatible with either 3 or 4 as a total dedicated-Beauty count once the room-schedule reservation question is settled.
+
+**RECOMMENDATION — FOUNDER DECISION REQUIRED.** Evidence points to 3 (day-one + growth reservation, matching the same logic that explains Massage), with no traceable basis anywhere for a 4th. This is not manufactured into a false certainty — it is reported as the strongest evidenced reading, pending Anthony's confirmation.
+
+---
+
+## Part D — Consolidated Current Venue Program (Single Authoritative Version)
+
+One table, replacing any impression that multiple station-count versions are equally current. Classification: **Confirmed** (matches costed/staffed model, no open question) / **Founder decision** (genuinely unresolved, evidence stated above) / **Professional verification** (dimension/compliance figure needs an Australian specialist) / **Site-dependent** (cannot be finalised until a venue is secured) / **Procurement-dependent** (depends on the China/Australia sourcing decision, Part G).
+
+| Area | Current program | Classification | Basis |
+|---|---|---|---|
+| Blood Collection Room(s) | 1 room, 2 chairs (Chair A/B), Scenario D 3rd chair as documented growth lever | **Founder decision** (brief's §3.1 says 2 rooms — see Part B) | `CURRENT-STATE.md`, `scenario-d-investigation.md` |
+| Massage stations | 3 (2 day-one + 1 growth reservation) | **Confirmed** — figure reconciled with evidence this round | `floor-plan-concept.md`, `CHINA-AUSTRALIA-SOURCING-STRATEGY.md` §2.3 |
+| Massage station format (table/bed vs chair-based) | Not decided | **Founder decision** | `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §6 |
+| Beauty stations | 3 by the same evidenced logic as Massage; brief's "4" has no traceable basis | **Founder decision** (see Part C) | `floor-plan-concept.md`, `CHINA-AUSTRALIA-SOURCING-STRATEGY.md` §2.3 |
+| Nail stations | 4 | **Confirmed** | `ITEMISED-PURCHASE-LIST.md` §1 |
+| Pedicure chairs | 4, same zone as the 4 nail stations, not a separate expansion | **Confirmed** — reconciled with evidence this round | `ITEMISED-PURCHASE-LIST.md` §1, `CHINA-AUSTRALIA-SOURCING-STRATEGY.md` §2.4 |
+| Hair Wash stations | 2 | **Confirmed** | `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §8 |
+| Hairdresser stations | 4 | **Confirmed** | `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §8 |
+| Construction type (solid walls vs curtain partition per area) | Confirmed regardless of station-count outcome | **Confirmed** | `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §3.3 |
+| Blood Collection Room clinical dimensions/finishes/lighting/ventilation | Ranges and standards stated, exact figures not locked | **Professional verification** | `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §4 |
+| Café/F&B model | Pre-made vs on-site assembly, not decided | **Founder decision** | Chapter 34, `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §28 item 16 |
+| Total leasable floor area required | Depends on Blood Collection Room and Beauty outcomes above | **Site-dependent** (also gated on Part B/C) | Derived |
+| Which items are China-sourced vs Australia-only | Category A/B/C classification exists, no supplier selected | **Procurement-dependent** | `CHINA-AUSTRALIA-SOURCING-STRATEGY.md` §6 |
+| Fit-out total cost | A$228,142-457,559 currently costed against the currently-costed model only, not the expanded §3.1 program | **Founder decision + site-dependent** (moves once Part B/C are resolved) | `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §24 |
+
+No station-count figure above is presented as simultaneously "confirmed" in one place and "open" in another within this repository as of this update — the brief's §3.1 figures for Blood Collection Rooms and Beauty remain visibly flagged as founder decisions in §3.2/§28, not silently superseded by this document.
+
+---
+
+## Part E — Over-Specification Review
+
+Reviewed `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` specifically for false architectural certainty. Finding: the brief is already highly disciplined on this point.
+
+- **Dimensions** — every room/clearance figure is tagged A (confirmed), B (strongly implied), C (design recommendation), or "AUSTRALIAN [DISCIPLINE] VERIFICATION REQUIRED." No dimension is stated as final without a tag (§4.2, §16-19 spot-checked).
+- **Cabinetry/joinery** — described at the level of function and material language (§2, §17), not shop-drawing detail; no joinery dimensions invented.
+- **Plumbing/electrical/HVAC/LEV routing** — explicitly not routed. §16-19 state requirements (circuit counts, ACH targets, LEV pre-application need) without claiming to route services, consistent with "not manufacture-ready" status (§F below).
+- **Drainage** — sink/handwash requirements stated per the WA Skin Penetration Code's 2-sink interpretation; no drainage layout invented.
+- **Accessibility circulation** — AS 1428.1 referenced by name, exact clearances flagged "AUSTRALIAN ACCESSIBILITY VERIFICATION REQUIRED" rather than guessed (§4.2).
+- **Toilet configuration, BOH, equipment clearances** — described functionally (§10-13), not dimensioned to shop-drawing precision.
+
+No changes required to the brief as a result of this review — it was already built to avoid this failure mode, per its own §30 "What This Document Does Not Do."
+
+---
+
+## Part F — Procurement Readiness (Ready vs Remaining Gaps)
+
+From `CHINA-AUSTRALIA-SOURCING-STRATEGY.md` §8-9, reported without new research.
+
+**Ready today:** brand/design direction (7-colour palette, typography, material language), Hair area (the one area with no open item), construction-type philosophy (§3.3), Nail/Pedicure program, the compliance-standard names that apply (even where exact figures need verification), the landed-cost framework's known components (inspection fee US$149-350/day, agent commission 3-10%).
+
+**Remaining gaps before an RFQ could realistically be issued:**
+1. Blood Collection Room count (Part B) and Beauty station count (Part C) — both founder decisions, directly change quantities on every affected line item.
+2. Massage station format (table/bed vs chair-based) — changes the entire product spec for that category.
+3. A confirmed venue with a measured floor plate — nothing above can be finalised as a floor plan until a venue is secured (site-dependent).
+4. Exact Australian compliance figures currently flagged "VERIFICATION REQUIRED" (accessibility clearances, LEV pre-application outcome, electrical circuit certification detail).
+5. A procurement model decision (Part G) — determines who (if anyone) is approached for quoting, and what information package they need.
+6. Full freight/landed-cost modelling beyond the existing FOB×1.55 placeholder, which is explicitly flagged inadequate for a whole-project shipment.
+
+This is a "prepare for the next stage" gap list, not a blocker list — none of these gaps require external contact to close except the venue search itself (already in motion separately) and the two founder decisions.
+
+---
+
+## Part G — China/Australia Procurement Strategy (Summary, No New Research, No Contact)
+
+Restating `CHINA-AUSTRALIA-SOURCING-STRATEGY.md` §5 and §9-11 — not repeating the underlying research.
+
+**Recommendation on record (a recommendation, not a founder decision):** Model C, Hybrid — an Australian-based sourcing agent for China-sourceable categories, independent third-party pre-shipment inspection (SGS/Bureau Veritas/Intertek/QIMA/V-Trust, all evidenced with real day-rate figures), and Australian sourcing retained unchanged for clinical/regulated items. **Epic Sourcing Australia** (Alexandria NSW, furniture-specific, explicit hospitality-sector claim) is the strongest candidate found to date, with FBM Sourcing (Guangzhou, real hospitality FF&E evidence, no local AU entity) as an alternative. Neither has been contacted. Ali Baba Furniture (Adelaide) is confirmed, this round, to be a retail store, not a commercial sourcing partner — the earlier characterisation in `ASIA-SOURCING-INVESTIGATION.md` is a superseded source on this specific point, not new evidence of anything having changed.
+
+**Minimum information package needed before any agent could realistically quote** (per §9 of the sourcing strategy, restated, not re-derived): a secured venue, a measured floor plan, the final station/room program (Parts B-D above resolved), design intent per area, a materials/finish schedule, firm quantities per item, equipment specifications for clinical items, applicable Australian compliance requirements per item, installation-responsibility split (supplier vs local trades), freight assumptions, and landed-cost requirements (duty/GST/ChAFTA treatment). None of this package is assembled yet in a form ready to send, and nothing has been sent.
+
+**Recommended sequencing** (from §11's 15-stage pathway, restated): lock the station/room program first (Parts B-D), then venue selection, then measure/survey, then Australian compliance review, then room-by-room design finalisation, then China/Australia classification, then Australian benchmark pricing obtained first, then a scoping conversation with a sourcing agent — in that order. No step beyond "lock the program" has been actioned.
+
+---
+
+## Changelog
+
+**2026-08-21 (created)** — Written to persist the Part B-G decision-analysis work (blood collection room decision table, beauty station evidence trail, consolidated venue program, over-specification review, procurement readiness summary, procurement strategy summary) that had previously only been produced in-session and not committed to the repository, per the standing project rule that nothing stays session-only. Draws entirely on evidence already gathered in `CHINA-AUSTRALIA-SOURCING-STRATEGY.md`, `FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md`, `FIT-OUT-EQUIPMENT-SCHEDULE.md`, and independently-verified prior reading of `floor-plan-concept.md`, `scenario-d-investigation.md`, and `ITEMISED-PURCHASE-LIST.md` §1 — no new research performed, no supplier/agent/WDP contact made. Both founder decisions (Blood Collection Room count, Beauty station count) remain open; this document does not resolve either.

@@ -1,53 +1,44 @@
-# GTT Center Perth — Draft Follow-Up to Carole Rivers (WDP), 2026-08-20
+# GTT Center Perth — Follow-Up to Carole Rivers (WDP)
 
-**Status: READY TO SEND — drafted for Anthony's review and his own send action. Not sent by this agent.** Same standing rule as every other external-facing communication in this repo: no email is sent from this repo or by any agent. Carole correspondence goes through Anthony only.
+**Status: READY TO SEND — NOT SENT.** Drafted for Anthony's own review and send action. No email is sent from this repository or by any agent.
 
-**Why this draft exists now:** Carole's 2026-08-08 reply (`docs/VERIFICATION-TRACKER.md` item 29d, `docs/reed-partnerships.md` WDP tracker row) said her fuller response was expected "during the coming week." As of this draft, no further reply is logged anywhere in this repo. This is a reasonable, light-touch follow-up — not a chase, not a re-ask of anything already answered.
-
-**Deliberately does NOT include:** the specimen-dispatch/courier-cutoff question — resolved (Carole's 2026-07-30 email, `docs/cutoff-time-CORRECTION.md`). Does not re-litigate the collector work-scope question (settled), the "remain at the collection centre" policy-vs-NPAAC point (confirmed in her own words, item 29d), or the GP/FTE-doctors-on-site site-assessment point (resolved favourably, item 29d). Does not mention this venture's dossier or any internal document.
+**Revised 2026-08-21:** shortened at Anthony's request. This is a polite bump, not a new information request. No em dashes used, per instruction.
 
 ---
 
-**Subject:** RE: Western Diagnostic Pathology - glucose testing — a correction and a few open items
+**Subject:** Quick follow-up
 
 Hi Carole,
 
-Hope the internal Quality Department conversation is progressing well on your end — no rush from us on that.
+Just a quick note to follow up on a couple of things since we last spoke.
 
-A few things from our side, one of which is a genuine correction I want to flag directly rather than let sit:
+First, a correction on my end: our morning clinic volume has settled at 18 clients each weekday morning, Monday to Saturday, not the 12 I mentioned earlier. I wanted to flag this in case it affects the commercial figure you're scoping with your State Business Manager.
 
-1. **A correction on our client volume.** When I first wrote to you, I mentioned we were planning around 12 clients each weekday morning. Since then, our planning has settled on a higher committed model — **18 clients each weekday morning**, Monday to Saturday, still using the same two phlebotomist chairs and still finishing within your 10:30am guidance. I wanted to make sure you have the correct figure before it factors into anything on your side, particularly the commercial range you're chasing with your State Business Manager — if that's being scoped against the 12/day figure I mentioned earlier, it should be revised to 18/day instead. Everything else we've discussed (the schedule structure, the collection-centre boundary question, the room specification) is unaffected by this — it's the volume figure specifically that needs correcting.
+Any update on the indicative annual rental figure for the collection clinic? No rush, just checking in.
 
-2. **The commercial/rental figure.** No rush, but wanted to check in — is there anything further on the indicative annual rental range for a venue-based collection clinic? Happy to provide any additional detail your State Business Manager needs to firm it up, including against the corrected 18/day volume above.
+Also, could you clarify whether WDP would supply and employ the collector(s) under the rental arrangement, or whether we'd continue employing our own phlebotomist(s) under WDP's accreditation and oversight?
 
-3. **Phlebotomist employment.** To help us plan properly on our side: under the rental arrangement, would WDP supply and employ the collector(s), or would we continue employing our own phlebotomist(s) under your accreditation umbrella? I know you mentioned safety, wellbeing and employment responsibilities would sit with WDP under the rental model — I just want to confirm whether that means WDP supplies the person, or whether it's describing WDP's oversight of a collector we employ ourselves.
+Lastly, is medical waste disposal something covered under WDP's own collection-centre arrangement, or would we need to organise that separately?
 
-4. **The sightline/observation question.** Following on from your point about clients needing to "remain at the collection centre" — does that require the client to stay within a collector's direct sightline or immediate reach the whole time, or is being on the premises and quickly reachable sufficient? We want to build the right check-in points into our schedule rather than guess.
-
-5. **Medical waste disposal.** Is this something that's typically covered under WDP's own collection-centre arrangement, or would that be on us to organise separately?
-
-No rush on any of this — happy to keep working through it over email.
+Happy to send through anything else that's useful on our end.
 
 Regards,
 Anthony
 
 ---
 
-## Cross-references and sourcing for each point
+## Verification (checked before this revision)
 
-1. **Volume correction** — the only confirmed-**SENT** email to Carole (`docs/wdp-reply-carole-2026-07-30.md`, SENT 2026-07-31) states: *"we're aiming to run at the maximum volume our two phlebotomist chairs can support within your 10:30am guidance — currently landing at 12 clients each morning, Monday to Saturday."* This is the only client-volume figure ever confirmed sent to WDP. A correction was drafted (`docs/wdp-reply-carole-2026-08-03.md`) reframing this to the two-table (18/12) model, but **no confirmation exists anywhere in this repo that this draft was ever sent** — `docs/reed-partnerships.md`'s own tracker states it "remains DRAFT, NOT YET SENT — superseded in practice by the 08-07 reply, not independently actioned." The 2026-08-07 SENT reply covers three unrelated topics (waiting-room wording, staffing cost/term questions, site-assessment criteria) and does not mention client volume at all. **Full analysis: `docs/architecture/WDP-COMMERCIAL-ALIGNMENT-REVIEW.md`**, whose §4 "Draft Clarification Substance" this email's point 1 is built from directly, not paraphrased from memory.
-2. **Commercial/rental figure** — `docs/VERIFICATION-TRACKER.md` item 1c: "OPEN — no figure exists yet, but ACTIVELY PROGRESSING, not stalled... 2026-08-08 update: Carole confirmed she is now chasing this commercial figure directly with WDP's State Business Manager."
-3. **Phlebotomist employment model** — `docs/VERIFICATION-TRACKER.md` item 1d: "HIGH PRIORITY... OPEN, NOT DECIDED... Carole's email states phlebotomist 'safety, wellbeing and employment responsibilities... would remain with Western Diagnostic Pathology' under the rental model." Anthony's explicit instruction on record: "NOT DECIDED, do not assume either way — ask Carole to clarify."
-4. **Sightline/observation** — `docs/VERIFICATION-TRACKER.md` item 1j: "the only genuinely still-open sub-question... does 'under observation' require the client staying within the collector's own sightline/shared area, or can the client be in a separate treatment room elsewhere with staff able to respond quickly?" Wording anchored to Carole's own 2026-08-08 phrase, "remain at the collection centre" (item 29d), not the earlier "waiting room" paraphrase.
-5. **Medical waste disposal** — `docs/VERIFICATION-TRACKER.md` item 21/F22: "Medical waste disposal — does WDP's own collection-centre setup already cover this? — WDP. Explicitly marked WAITING 2026-08-16 — not a research target, do not keep investigating around it internally."
+Carole's 8 August 2026 response is real, logged, and not reopened here: `docs/VERIFICATION-TRACKER.md` item 29d, `docs/reed-partnerships.md`'s WDP tracker row. That response: WDP's internal Quality Department escalation on collection-centre boundaries was unresolved at the time; the "remain at the collection centre" wording was confirmed as WDP's own policy layered on NPAAC, not an NPAAC mandate; the GP/FTE-doctors site-assessment point was resolved favourably; the commercial figure was confirmed actively progressing via WDP's own State Business Manager, with a fuller response expected "during the coming week." No further reply has been logged since. The commercial-figure ask above is worded as a check-in on a matter already confirmed in progress, not as if it had never been addressed.
 
-## What this draft deliberately leaves out, and why
+**Deliberately not included, per Anthony's instruction:** the sightline/observation sub-question (still a real, tracked open item, just not part of this particular bump email — see Chapter 34/Dash dependency register), and the specimen-dispatch courier cutoff (resolved, Carole's 2026-07-30 email, not reopened).
 
-- **Specimen dispatch/courier cutoff** — resolved by Carole's 2026-07-30 email (overnight storage viable in some circumstances, late bookings not automatically rejected, no single hard cutoff). Not mentioned here; re-raising it would contradict the standing instruction not to re-litigate settled questions.
-- **Collector work scope** — `docs/VERIFICATION-TRACKER.md` item 1j: "SETTLED, reconfirmed 2026-08 — not open, do not re-flag."
-- **GP/FTE-doctors-on-site site-assessment criteria** — resolved favourably per item 29d, folded into item 1c, not a separate open item.
-- **"Remain at the collection centre" — policy vs. NPAAC mandate** — confirmed in Carole's own words (item 29d) as WDP's own policy layered on NPAAC, not an NPAAC requirement. Not re-asked; only the narrower sightline sub-question (point 4 above) remains genuinely open.
+## Cross-references
+
+`docs/architecture/WDP-COMMERCIAL-ALIGNMENT-REVIEW.md` (full analysis behind the volume-correction point), `docs/VERIFICATION-TRACKER.md` items 1c (commercial figure), 1d (phlebotomist employment model), 21/F22 (medical waste), 29d (8 August response), `docs/reed-partnerships.md`.
 
 ## Changelog
 
-**2026-08-20 (drafted)** — Created per the coordinator's Priority 0 instruction. Full correspondence trail re-read before drafting (`docs/architecture/WDP-COMMERCIAL-ALIGNMENT-REVIEW.md`, `docs/VERIFICATION-TRACKER.md` items 1c/1d/1d-be/1j/21/29/29b/29d, `docs/wdp-reply-carole-2026-07-30.md`, `docs/wdp-reply-carole-2026-08-03.md`, `docs/wdp-reply-carole-2026-08-07.md`, `docs/reed-partnerships.md`) — wording and context drawn from these sources directly, not paraphrased from memory. Marked READY TO SEND, not sent, awaiting Anthony's own review and send action.
+**2026-08-21 (shortened)** — Rewritten at Anthony's request: the prior draft (2026-08-20) was accurate but too long and read like five unresolved demands rather than a bump email. Cut to a ~150-word note covering only the volume correction, a check-in on the commercial figure, the phlebotomist-employment question, and medical waste. Dropped the sightline/observation question and the long collection-centre-boundary explanation from the email body — both remain tracked separately, not deleted from the venture's records. No em dashes. Verified against the actual 8 August correspondence before rewriting — the commercial-figure ask is framed as a check-in, not a repeat question.
+
+**2026-08-20 (original draft)** — Created per the coordinator's Priority 0 instruction, full correspondence trail read before drafting. Superseded in length only by the revision above; the underlying facts were correct and are carried forward unchanged.
