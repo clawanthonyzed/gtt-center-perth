@@ -105,6 +105,7 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
       <a href="#dependencies">Dependencies</a>
       <a href="#financial">Financial</a>
       <a href="#wdp">WDP Action</a>
+      <a href="#fitout">Fit-Out</a>
     </nav>
   </div>
 </div>
@@ -134,7 +135,7 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
     </div>
 
     <h3>Founder decisions outstanding</h3>
-    <p>13 items currently open &mdash; final name, treatment/phlebotomy pool sizes, companion-policy exceptions, venue selection, PM package sign-off, 4 service-price conflicts, GTT supplies discrepancy, expansion path, and more. Full register: <a href="#decisions">Decisions</a> below, or <a href="../master-dossier-v2/index.html#ch34">Dossier Chapter 34</a>.</p>
+    <p>15 items currently open &mdash; final name, treatment/phlebotomy pool sizes, companion-policy exceptions, venue selection, PM package sign-off, 4 service-price conflicts, GTT supplies discrepancy, expansion path, the new fit-out station-count reconciliation, massage station format, and more. Full register: <a href="#decisions">Decisions</a> below, or <a href="../master-dossier-v2/index.html#ch34">Dossier Chapter 34</a>.</p>
 
     <h3>Third-party dependencies outstanding</h3>
     <p>9 items &mdash; WDP commercial figure, phlebotomist employment model, sightline requirement, medical waste responsibility, landlord terms, zoning confirmation, builder quotes, supplier quotes, LEV contractor. Full register: <a href="#dependencies">Dependencies</a> below.</p>
@@ -249,6 +250,49 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
   </div>
 </section>
 
+<!-- ================= FIT-OUT / PROCUREMENT ================= -->
+<section id="fitout">
+  <div class="container">
+    <div class="eyebrow">Procurement</div>
+    <h2 class="sec-title">Fit-Out / Design / Procurement Brief</h2>
+    <p><span class="tag tag-current">Current truth</span> Presentation layer only &mdash; this Dash does not restate the brief's own content as a second source of truth. Full document: <a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md" target="_blank" rel="noopener">FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md</a>, plus <a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/FIT-OUT-EQUIPMENT-SCHEDULE.md" target="_blank" rel="noopener">FIT-OUT-EQUIPMENT-SCHEDULE.md</a> and <a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/FIT-OUT-SUPPLIER-RFQ-TEMPLATE.md" target="_blank" rel="noopener">FIT-OUT-SUPPLIER-RFQ-TEMPLATE.md</a>.</p>
+
+    <div class="callout olive">
+      <span class="callout-label">Why this exists</span>
+      Triggered by two Made-in-China commercial-interior suppliers found for reference (Guangzhou XERA Display, Guangzhou Brutalist Store Display Products) &mdash; <strong>neither contacted, neither assumed suitable, no work awarded.</strong> The brief exists so a real supplier conversation can happen against actual requirements, not a generic salon package.
+    </div>
+
+    <h3>Venue program this brief is built around</h3>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Category</th><th>Count (this brief)</th><th>Currently-costed model</th></tr></thead>
+      <tbody>
+        <tr><td>Blood Collection Rooms</td><td>2</td><td>1 room, 2 chairs</td></tr>
+        <tr><td>Hair Wash Stations</td><td>2</td><td>2 (consistent)</td></tr>
+        <tr><td>Hairdresser Stations</td><td>4</td><td>4 (consistent)</td></tr>
+        <tr><td>Beauty Stations</td><td>4</td><td rowspan="2">4 combined treatment rooms (Massage+Beauty)</td></tr>
+        <tr><td>Massage Stations</td><td>3</td></tr>
+        <tr><td>Nail Stations</td><td>4</td><td rowspan="2">4 nail stations, pedicure chairs already included</td></tr>
+        <tr><td>Pedicure Stations</td><td>4</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.8;"><strong>Not silently resolved:</strong> this program is larger/more segmented than the currently financially- and operationally-validated model. Reconciling the two (floor area, cost, staffing) is a new open founder decision &mdash; see the Decisions register above and the brief's own §3.2/§29.</p>
+
+    <div class="card-grid">
+      <div class="metric-card"><span class="label">Brief status</span><div class="value" style="font-size:1.2rem;">Draft, ready for review</div><div class="note">Not sent to any supplier</div></div>
+      <div class="metric-card"><span class="label">Supplier candidates</span><div class="value" style="font-size:1.1rem;">2 found, 0 contacted</div><div class="note">Guangzhou XERA Display; Guangzhou Brutalist Store Display Products &mdash; neither evaluated or ranked</div></div>
+      <div class="metric-card"><span class="label">RFQ readiness</span><div class="value" style="font-size:1.2rem;">Template ready</div><div class="note">36-item checklist, not yet sent</div></div>
+      <div class="metric-card"><span class="label">Design decisions open</span><div class="value">2 new</div><div class="note">Station-count reconciliation; massage station format</div></div>
+      <div class="metric-card"><span class="label">Australian verification items</span><div class="value">12+</div><div class="note">Accessibility, electrical, hydraulic, HVAC, LEV &mdash; none fabricated</div></div>
+      <div class="metric-card"><span class="label">Purchases / manufacturing authorised</span><div class="value" style="font-size:1.2rem;">None</div><div class="note">No commitment made</div></div>
+    </div>
+
+    <h3>Design/brand basis (locked, do not substitute)</h3>
+    <p>7-colour palette (<code>outputs/brand/warm-stone-tokens.css</code>, locked 2026-08-15): Warm Ivory <code>#FAF6EE</code>, Warm Stone <code>#E8DAC5</code>, Deep Brown <code>#33261E</code>, Earthy Terracotta <code>#A9654E</code>, Muted Olive <code>#5E5F45</code>, Dusty Rose <code>#D9A08C</code>, Warm Brass <code>#9C7A46</code>. Typography: Fraunces (serif) + DM Sans. Name (SOLENA/ELOWEN) deliberately NOT designed around &mdash; still open.</p>
+  </div>
+</section>
+
 <footer>
   <div class="container">
     <p>GTT Center Perth Dash &mdash; static functional prototype. Data source: the 35-chapter <a href="../master-dossier-v2/index.html">Master Dossier</a> and underlying repository truth documents. Built 2026-08-21.</p>
@@ -294,6 +338,11 @@ const SEARCH_INDEX = [
   {title:"Waitlist quality framework", chapter:"Ch32 Marketing", excerpt:"6-factor, 100-point scoring. Due-date/GTT-window alignment is the highest-weighted factor (30 pts) -- most currently-pregnant signups won't remain in-window by realistic opening.", link:"../master-dossier-v2/index.html#ch32"},
   {title:"Expansion options", chapter:"Ch33 Expansion", excerpt:"3rd phlebotomist chair vs second venue -- two structurally different growth shapes, neither committed, neither quantified.", link:"../master-dossier-v2/index.html#ch33"},
   {title:"Execution critical path", chapter:"Ch35 Execution Roadmap", excerpt:"Venue location search is the single most consequential dependency -- nothing in the next stage begins until it completes. No calendar dates, dependency-based sequencing only.", link:"../master-dossier-v2/index.html#ch35"},
+  {title:"Fit-out design/procurement brief", chapter:"Fit-Out / Procurement", excerpt:"Supplier-facing brief for overseas OEM/ODM commercial interior suppliers. Triggered by 2 Made-in-China suppliers found for reference, neither contacted or assumed suitable. Draft, not sent.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md"},
+  {title:"Fit-out equipment schedule", chapter:"Fit-Out / Procurement", excerpt:"Master procurement schedule -- area, item, quantity, spec, sourcing, compliance, status. Reformats existing researched figures, no new dollar figure invented.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/FIT-OUT-EQUIPMENT-SCHEDULE.md"},
+  {title:"Supplier RFQ template", chapter:"Fit-Out / Procurement", excerpt:"36-item RFQ checklist plus supplier comparison matrix, itemised landed-cost requirement. Not yet sent to any supplier.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/FIT-OUT-SUPPLIER-RFQ-TEMPLATE.md"},
+  {title:"China vs Australia sourcing categories", chapter:"Fit-Out / Procurement", excerpt:"Category A (China OEM/ODM good candidates), B (China possible, needs AU verification), C (prefer AU/locally certified -- phlebotomy chairs, curtain fabric, Lounge seating, clinical equipment).", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md"},
+  {title:"Blood Collection Room clinical spec", chapter:"Fit-Out / Procurement", excerpt:"Room purpose, dimensions, finishes, lighting (Ra>90), ventilation (6 ACH), hand hygiene, power/data, sharps/waste, emergency provisions. No fabricated standards -- gaps marked AUSTRALIAN VERIFICATION REQUIRED.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md"},
 ];
 
 function renderSearchResults(query){
@@ -330,6 +379,7 @@ const AI_QA = [
   {q:"What's already resolved?", a:"The WDP specimen-dispatch courier cutoff, the PM Reception 15:00-18:00 coverage gap, the leaving-moment/leaving-box gesture (removed, stays removed), the old 10-11/3-4 staffing estimates (superseded by 12/4), the old 16-session PM revenue methodology and its A$45,236.88 figure, the old 12.073 break-even figure, the old A$400/A$1,279 insurance guesses, the GP/FTE-doctors-on-site site-assessment criterion, the name-branded retail question, phlebotomist collector work scope, and the collection-centre policy basis. None of these are presented as open anywhere in the dossier.", source:"Dossier Chapter 34, 'Confirmed resolved' callout"},
   {q:"How many treatment staff do we need?", a:"8 treatment staff work simultaneously every trading day (4 Massage+Beauty, 2 Nails, 2 Hair) -- solver-verified, not the same number as the employment pool. The recommended employment pool for coverage/reliability is 12 (or 11 as a disclosed lower-reliability alternative) -- a founder decision, not yet made.", source:"Dossier Chapter 14 Staffing, Chapter 16 Staffing Coverage"},
   {q:"Which venue requirements are mandatory?", a:"Minimum functional floor area ~239-242sqm; the Blood Collection Room must have solid walls (the only room that does); parking is non-negotiable, minimum 8-10 dedicated or immediately adjacent off-street spaces; 4 treatment rooms, 4 nail stations, 4 hair chairs at day-one commitment. Neither current Tier-1 venue candidate has confirmed zoning/permitted-use status yet.", source:"Dossier Chapter 19 Venue, Chapter 20 Floor Plan"},
+  {q:"What's the status of the fit-out procurement brief?", a:"Draft, ready for internal review, not sent to any supplier. Triggered by 2 Made-in-China suppliers found for reference (Guangzhou XERA Display, Guangzhou Brutalist Store Display Products) -- neither contacted, neither assumed suitable, no work awarded. The brief's own station program (2 Blood Collection Rooms, 3 Massage + 4 Beauty stations) is larger than the currently-costed venue model -- flagged as a new open founder decision, not silently resolved either way.", source:"docs/architecture/FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md §3.2, §28"},
 ];
 
 function renderAiExamples(){
@@ -386,6 +436,8 @@ const DECISIONS = [
   ["4 disclosed service-price conflicts", "tag-founder", "Open", "Hair colour (4 lines), lash infill -- a reasoned recommendation exists, not locked; services.yml still Placeholder", "Yes"],
   ["GTT supplies discrepancy", "tag-founder", "Open", "A$400/month (P&L) vs A$792/month (opex.yml's own basis) -- disclosed, lower materiality than insurance", "Eventually"],
   ["3rd phlebotomist chair vs second venue", "tag-founder", "Open, future", "Two structurally different growth shapes, neither committed or recommended", "Not yet -- post-launch"],
+  ["Fit-out station-count reconciliation", "tag-founder", "Open, new 2026-08-21", "The fit-out brief's own 2-Blood-Collection-Room / 7-Massage-Beauty-station program vs the currently-costed 1-room / 4-treatment-room model -- floor area, cost, staffing not re-run", "Yes"],
+  ["Massage station format", "tag-founder", "Open, new 2026-08-21", "Treatment table/bed (currently costed) vs chair-based station (fit-out brief's own spatial-intent instruction) -- no existing spec either way", "Yes"],
 ];
 document.getElementById('decisionTable').innerHTML = DECISIONS.map(d => `
   <tr><td>${d[0]}</td><td><span class="tag ${d[1]}">${d[2]}</span></td><td>${d[3]}</td><td>${d[4]}</td></tr>
