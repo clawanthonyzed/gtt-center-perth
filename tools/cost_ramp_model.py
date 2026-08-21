@@ -379,7 +379,20 @@ class CanonicalCostInputs:
         # same convention as budgeting a maintenance/contingency reserve --
         # kept visibly separate so the committed-roster Direct Labour figure
         # is never confused with the full realistic cost base.
-        self.relief_absence_allowance = 6128.53
+        # REVERTED 2026-08-21 (Financial Model Rebuild round), per direct
+        # founder instruction: absence/relief coverage is treated as already
+        # absorbed within normal payroll (the committed roster's own casual/
+        # relief hiring, not a separate expected-value planning line stacked
+        # on top of it) unless a genuine, itemised cost basis for a SEPARATE
+        # line is identified. No such separate basis has been identified --
+        # the A$6,128.53/month figure above was itself a modelled planning
+        # allowance (8% per-person unavailability x full-shift replacement),
+        # not a real invoiced or contracted cost. Kept here, at 0.00, rather
+        # than deleted, so the full prior derivation (still printed in the
+        # comment block above this line) remains readable for trace, per
+        # this repo's "never delete history, mark superseded" convention.
+        # See conflict_relief_absence_allowance_reverted in cost_ramp.yml.
+        self.relief_absence_allowance = 0.00
 
 
 def compute_pm_weekday_daily_labor(month):
@@ -486,10 +499,13 @@ def compute_ramp(scenario_id, inputs: CanonicalCostInputs, revenue_ramp_curve):
         payroll = compute_payroll(scenario_id, month, inputs)
         fixed, variable = compute_fixed_and_variable_opex(month, inputs)
         relief = inputs.relief_absence_allowance
-        # NEW 2026-08-18 -- relief_absence_allowance included in fixed_costs
-        # (it is a recurring, non-wage-driven planning line, not part of
-        # payroll_costs proper -- kept separately traceable via its own
-        # dict key below, not silently merged in).
+        # REVERTED 2026-08-21 -- relief_absence_allowance is now 0.00 (see
+        # CanonicalCostInputs.relief_absence_allowance's own comment for the
+        # full reasoning). Was added 2026-08-18 as a separate expected-value
+        # planning line; removed per direct founder instruction that normal
+        # payroll/rostering should absorb absence coverage unless a genuine,
+        # itemised separate cost basis exists. The dict key is kept (at 0.00)
+        # for schema stability and trace, not deleted.
         total = round(fixed + variable + payroll["payroll_total"] + relief, 2)
         months_out.append(
             {

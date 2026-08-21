@@ -54,25 +54,41 @@ last_updated: "2026-08-18"
 # (+A$308.34). STATUS: MODELLED/BALLPARK-ESTIMATE, NOT VERIFIED -- real
 # broker quotes already in motion, docs/insurance-broker-quote-request-draft.md.
 #
-# (2) RELIEF/ABSENCE COVERAGE, added as a new recurring line: the payroll
-# figures below price ONLY the committed simultaneous roster (8 treatment +
-# 2 phlebotomists + 1 VM + 1 PM Reception) working every trading day with
-# zero absences -- unrealistic. New relief_absence_allowance field
-# (A$6,128.53/month) quantifies the EXPECTED cost of relief staff actually
+# (2) RELIEF/ABSENCE COVERAGE, added 2026-08-18 as a new recurring line, then
+# REVERTED 2026-08-21 (Financial Model Rebuild round) -- see below.
+#
+# 2026-08-18 addition (superseded, kept for trace): the payroll figures
+# price ONLY the committed simultaneous roster (8 treatment + 2
+# phlebotomists + 1 VM + 1 PM Reception) working every trading day with zero
+# absences -- unrealistic. A relief_absence_allowance field (A$6,128.53/
+# month) was added to quantify the EXPECTED cost of relief staff actually
 # covering absences (8% per-person unavailability planning assumption,
-# FULL-SHIFT replacement not the bare 3hr casual-minimum floor, +12%
-# super +1.7% workers comp). Full derivation:
-# docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md. Kept as its own
-# separately-traceable field, not blended into payroll_costs, so the
-# committed-roster payroll figure is never confused with the full realistic
-# cost base.
+# FULL-SHIFT replacement not the bare 3hr casual-minimum floor, +12% super
+# +1.7% workers comp). Full derivation: docs/architecture/
+# FINANCIAL-ASSUMPTION-REGISTER.md.
+#
+# 2026-08-21 REVERSAL, per direct founder instruction: relief_absence_allowance
+# is now 0.00 on every record below. Reasoning: this was a modelled,
+# expected-value planning allowance, not a real invoiced or contracted cost
+# -- absence coverage is treated as already absorbed within normal
+# rostering/casual-relief hiring practice (the standard way any small
+# hospitality/beauty business handles staff absence -- call in a casual, or
+# a colleague picks up an extra shift, both already inside the existing
+# payroll structure) rather than a separate line stacked on top of it. The
+# field is kept (not deleted) at 0.00 for schema stability and audit trail
+# -- see conflict_relief_absence_allowance_reverted below for the full
+# disclosure. If a genuine, itemised, real cost basis for a separate relief
+# line is identified in future (e.g. an actual relief-staffing agency
+# contract with a real quoted rate), it should be re-added on that basis,
+# not this one.
 #
 # total_operating_costs = fixed_costs + variable_costs + payroll_costs +
-# relief_absence_allowance (was fixed_costs + variable_costs + payroll_costs
-# only). Table 1 (18/day) M5plus total_operating_costs: was A$115,697.02,
-# now A$122,133.89. Table 2 (12/day) M5plus: was A$110,292.03, now
-# A$116,728.90. See data/models/master_financial_model.yml's own 2026-08-18
-# banner for the full downstream P&L/break-even/cash-flow impact.
+# relief_absence_allowance. Table 1 (18/day) M5plus total_operating_costs:
+# was A$115,697.02 (pre-2026-08-18), then A$122,133.89 (2026-08-18-2026-08-20),
+# now A$116,005.36 (2026-08-21, reverted). Table 2 (12/day) M5plus: was
+# A$110,292.03, then A$116,728.90, now A$110,600.37. See
+# data/models/master_financial_model.yml's own 2026-08-21 banner for the
+# full downstream P&L/break-even/cash-flow impact.
 
 # AUDITED AND CORRECTED 2026-08-18 (Phase C audit round -- Anthony's explicit
 # sanity-audit request, "verify, don't assume the existing figure is
@@ -168,8 +184,8 @@ records:
     fixed_costs: 12788.34
     variable_costs: 600.00
     payroll_costs: 101419.61
-    relief_absence_allowance: 6128.53
-    total_operating_costs: 120936.48
+    relief_absence_allowance: 0.00
+    total_operating_costs: 114807.95
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -198,8 +214,8 @@ records:
     fixed_costs: 12788.34
     variable_costs: 800.00
     payroll_costs: 101419.61
-    relief_absence_allowance: 6128.53
-    total_operating_costs: 121136.48
+    relief_absence_allowance: 0.00
+    total_operating_costs: 115007.95
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -228,8 +244,8 @@ records:
     fixed_costs: 12788.34
     variable_costs: 1000.00
     payroll_costs: 101419.61
-    relief_absence_allowance: 6128.53
-    total_operating_costs: 121336.48
+    relief_absence_allowance: 0.00
+    total_operating_costs: 115207.95
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -258,8 +274,8 @@ records:
     fixed_costs: 12788.34
     variable_costs: 1200.00
     payroll_costs: 101419.61
-    relief_absence_allowance: 6128.53
-    total_operating_costs: 121536.48
+    relief_absence_allowance: 0.00
+    total_operating_costs: 115407.95
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -288,8 +304,8 @@ records:
     fixed_costs: 12788.34
     variable_costs: 1500.00
     payroll_costs: 101717.02
-    relief_absence_allowance: 6128.53
-    total_operating_costs: 122133.89
+    relief_absence_allowance: 0.00
+    total_operating_costs: 116005.36
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -342,8 +358,8 @@ records:
     fixed_costs: 12788.34
     variable_costs: 600.00
     payroll_costs: 96014.61
-    relief_absence_allowance: 6128.53
-    total_operating_costs: 115531.48
+    relief_absence_allowance: 0.00
+    total_operating_costs: 109402.95
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -372,8 +388,8 @@ records:
     fixed_costs: 12788.34
     variable_costs: 800.00
     payroll_costs: 96014.61
-    relief_absence_allowance: 6128.53
-    total_operating_costs: 115731.48
+    relief_absence_allowance: 0.00
+    total_operating_costs: 109602.95
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -402,8 +418,8 @@ records:
     fixed_costs: 12788.34
     variable_costs: 1000.00
     payroll_costs: 96014.61
-    relief_absence_allowance: 6128.53
-    total_operating_costs: 115931.48
+    relief_absence_allowance: 0.00
+    total_operating_costs: 109802.95
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -432,8 +448,8 @@ records:
     fixed_costs: 12788.34
     variable_costs: 1200.00
     payroll_costs: 96014.61
-    relief_absence_allowance: 6128.53
-    total_operating_costs: 116131.48
+    relief_absence_allowance: 0.00
+    total_operating_costs: 110002.95
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -462,8 +478,8 @@ records:
     fixed_costs: 12788.34
     variable_costs: 1500.00
     payroll_costs: 96312.03
-    relief_absence_allowance: 6128.53
-    total_operating_costs: 116728.90
+    relief_absence_allowance: 0.00
+    total_operating_costs: 110600.37
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -550,6 +566,34 @@ historical_cost_reference:
     superseded_by: null  # no 1:1 replacement -- that table used a flat, un-ramped A$89,808.74-A$89,808.74/month figure across all 5 months, a materially different methodology (no payroll ramp at all, not even a PM session-based one) from this file's approach
     source: {file: docs/profit-loss-tables.md, section: "Year 1 Monthly Ramp"}
     notes: "That table's own 'Fixed Costs' column was flat A$89,808.74/month from Month 1 -- i.e. it did NOT ramp payroll at all, a known, disclosed simplification the source document itself flags ('Fixed costs are shown flat... as a conservative simplification -- real fixed costs also ramp somewhat during Months 1-4, since fewer PM casual hours are worked at lower volume'). This file's PM-session-based payroll ramp is the first attempt in this repo to actually model that acknowledged-but-never-built simplification."
+
+# ============================================================
+# Resolved changes -- kept separate from `conflicts` below (which this
+# file's own test suite, tests/test_cost_ramp.py, treats as an always-
+# UNRESOLVED list -- a resolved founder decision does not belong there).
+# ============================================================
+resolved_changes:
+  - id: change_relief_absence_allowance_reverted
+    description: >
+      A separate relief_absence_allowance line (A$6,128.53/month, an 8%-
+      unavailability expected-value planning figure) was added 2026-08-18 and
+      REVERTED to 0.00 on 2026-08-21, per direct founder instruction: normal
+      payroll/rostering (casual relief hiring, colleagues picking up extra
+      shifts) is treated as already absorbing absence coverage, and no
+      separate line should exist unless a genuine, itemised, real cost basis
+      is identified (e.g. an actual relief-staffing agency contract). The
+      2026-08-18 derivation remains fully documented in this file's header
+      comments and in docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md for
+      trace -- not deleted, reverted. Every downstream figure (total_operating_costs
+      on all 10 records, plus data/models/master_financial_model.yml's P&L,
+      cash flow, and break-even outputs) has been recomputed to reflect the
+      reversal, not left stale.
+    affected_records: [cost_table1_m1, cost_table1_m2, cost_table1_m3, cost_table1_m4, cost_table1_m5plus, cost_table2_m1, cost_table2_m2, cost_table2_m3, cost_table2_m4, cost_table2_m5plus]
+    sources:
+      - {file: docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md, section: "Relief/Absence Coverage derivation"}
+      - {file: tools/cost_ramp_model.py, section: "CanonicalCostInputs.relief_absence_allowance"}
+    resolution_status: "RESOLVED (reverted, 2026-08-21, founder instruction)"
+    notes: "Not a research finding -- a direct founder policy instruction. Recorded here per this repo's governance convention of disclosing every change to a canonical cost line, not silently editing the numbers."
 
 # ============================================================
 # Genuine, disclosed conflicts -- none silently resolved.
