@@ -868,20 +868,21 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     </div>
     <div class="timetable-wrap">
     <table class="timetable">
-      <thead><tr><th>Time</th><th>Massage line</th><th>Beauty line</th><th>Nails line</th><th>Hair line</th><th>PM Reception</th></tr></thead>
+      <thead><tr><th>Time</th><th>Massage line</th><th>Beauty line</th><th>Nails line</th><th>Hair line</th></tr></thead>
       <tbody>
-        <tr><td>13:00&ndash;13:46</td><td>Session 1</td><td>Session 1</td><td>Session 1</td><td>Session 1</td><td>Check-in, Fresha, payment</td></tr>
-        <tr><td>13:46&ndash;14:32</td><td>Session 2</td><td>Session 2</td><td>Session 2</td><td>Session 2</td><td>Ongoing check-in/checkout</td></tr>
-        <tr><td>14:32&ndash;15:18</td><td class="buffer">gap</td><td>Session 3</td><td class="buffer">gap</td><td>Session 3</td><td>Ongoing</td></tr>
-        <tr><td>15:18&ndash;16:04</td><td>Session 3</td><td class="buffer">gap</td><td>Session 3</td><td class="buffer">gap</td><td>Ongoing</td></tr>
-        <tr><td>16:04&ndash;16:50</td><td>Session 4</td><td>Session 4</td><td>Session 4</td><td>Session 4</td><td>Ongoing</td></tr>
-        <tr><td>16:50&ndash;18:00</td><td colspan="4">Wind-down / early-release window if no further bookings</td><td>Closing, last checkout ~17:50</td></tr>
+        <tr><td>13:00&ndash;13:46</td><td>Session 1</td><td>Session 1</td><td>Session 1</td><td>Session 1</td></tr>
+        <tr><td>13:46&ndash;14:32</td><td>Session 2</td><td>Session 2</td><td>Session 2</td><td>Session 2</td></tr>
+        <tr><td>14:32&ndash;15:18</td><td class="buffer">gap &mdash; covers reception</td><td>Session 3</td><td class="buffer">gap &mdash; covers reception</td><td>Session 3</td></tr>
+        <tr><td>15:18&ndash;16:04</td><td>Session 3</td><td class="buffer">gap &mdash; covers reception</td><td>Session 3</td><td class="buffer">gap &mdash; covers reception</td></tr>
+        <tr><td>16:04&ndash;16:50</td><td>Session 4</td><td>Session 4</td><td>Session 4</td><td>Session 4</td></tr>
+        <tr><td>16:50&ndash;18:00</td><td colspan="4">Wind-down / early-release window if no further bookings &mdash; whichever PM staff member is between clients covers closing/last checkout</td></tr>
       </tbody>
     </table>
     </div>
+    <p style="font-size:0.85rem; opacity:0.75;"><strong>No dedicated "PM Reception" column, per the 2026-08-21 founder decision (Model C, below):</strong> check-in, Fresha administration, and payment processing are covered by whichever PM staff member is currently between clients (the "gap" cells above), not a separate role. This is a genuine, disclosed trade-off, not a free change &mdash; during a gap slot, that staff member is not available to pick up a walk-in a-la-carte booking, and the customer experience is a rotating face rather than one consistent point of contact for the whole window.</p>
 
-    <h2>Reception coverage</h2>
-    <p>One PM Reception role, 13:00&ndash;18:00, sized to a modelled ~3.2 sessions/hour workload &mdash; a normal single-reception-desk load by real Perth day-spa comparable standards (Le Beau, Keturah, endota). <strong>15:00&ndash;18:00 coverage gap, resolved this session:</strong> a small on-call relief pool (1 additional person, cross-trained on Fresha/payment administration) is now recommended per <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> §4a &mdash; this closes the previously-disclosed gap noted in <code>OPERATING-MODEL-18-CLIENTS.md</code> §8 (that document's own "genuinely unresolved" framing is superseded by this later, same-day resolution and is not repeated here as current). No added steady-state payroll cost &mdash; relief is only paid when actually covering an absence.</p>
+    <h2>Reception coverage &mdash; Model C, confirmed 2026-08-21 by founder decision</h2>
+    <p><strong>PM Reception is no longer a dedicated position.</strong> Position 06/RCO01 (the single-person, 13:00&ndash;18:00 dedicated reception role this chapter previously described) has been removed from the committed payroll and rostering model. Anthony confirmed directly: service-staff coverage during PM booking gaps (Model C) is the model, overriding <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> §4's original Model A recommendation (that original comparison and reasoning is retained there in full, marked superseded, not deleted). Each of the 3 real concerns that original analysis raised about Model C is addressed here, not hidden: (1) <strong>Fresha/payment training</strong> is now an explicit, real requirement on the PM dedicated-casual roles' own skill profiles (<code>data/canonical/staffing.yml</code>, PMM01/PMH01/PMN01/PMB01), not assumed; (2) <strong>reduced PM treatment capacity during covering gaps</strong> is accepted as a genuine, disclosed trade-off, not resolved away &mdash; a staff member covering reception during their own gap is, for those minutes, unavailable for an unscheduled a-la-carte booking; (3) <strong>less consistent customer experience</strong> (no single point of contact for the whole PM window) is likewise accepted, not eliminated. Full resolution: <code>docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md</code> §5. Financial effect: removing Position 06's real cost (was A$168.55/day weekday, A$252.83/day Saturday) improves steady-state Net Operating Result materially &mdash; Chapter 27.</p>
 
     <h2>Known limitations, disclosed</h2>
     <ul>
@@ -892,7 +893,7 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
 
     <div class="callout olive">
       <span class="callout-label">Sourcing</span>
-      <code>docs/architecture/PM-CAPACITY-RECONCILIATION.md</code> (full reconciliation), <code>docs/architecture/PM-PACKAGES.md</code> (package research/pricing), <code>docs/architecture/OPERATING-MODEL-18-CLIENTS.md</code> §3 (illustrative timetable, staffing findings), <code>docs/architecture/FINANCIAL-FIGURE-REFERENCE.md</code> §2 (full revenue derivation chain), <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> §4a (PM Reception relief resolution).
+      <code>docs/architecture/PM-CAPACITY-RECONCILIATION.md</code> (full reconciliation), <code>docs/architecture/PM-PACKAGES.md</code> (package research/pricing), <code>docs/architecture/OPERATING-MODEL-18-CLIENTS.md</code> §3 (illustrative timetable, staffing findings), <code>docs/architecture/FINANCIAL-FIGURE-REFERENCE.md</code> §2 (full revenue derivation chain), <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> §4 (Model C confirmed by founder decision, superseding the original Model A recommendation), <code>docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md</code> §5 (full resolution and financial impact).
     </div>
   </div>
 </section>
