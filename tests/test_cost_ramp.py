@@ -100,20 +100,23 @@ class Table1Tests(unittest.TestCase):
         self.assertAlmostEqual(m5["payroll_costs"], rec["payroll_costs"], places=2)
 
     def test_table1_total_operating_costs_m5plus_value(self):
-        """RECALCULATED 2026-08-21 (Financial Model Rebuild round -- relief/
-        absence allowance REVERTED to 0.00, per direct founder instruction
-        that normal payroll/rostering absorbs absence coverage) to 116005.36
-        -- was 122133.89 under the 2026-08-18 relief-allowance-added version,
-        115697.02 pre-2026-08-18-correction (114870.20 under the 2026-08-17
+        """RECALCULATED 2026-08-21 (later same day -- Position 06/RCO01
+        dedicated PM Reception REMOVED, per Anthony's direct founder
+        decision overriding STAFFING-COVERAGE-VALIDATION.md section 4's
+        prior Model A recommendation) to 110544.52 -- was 116005.36 earlier
+        the same day (relief/absence allowance reverted to 0.00), 122133.89
+        under the 2026-08-18 relief-allowance-added version, 115697.02
+        pre-2026-08-18-correction (114870.20 under the 2026-08-17
         first-principles rebuild, 101378.78 under the proportional-wage-
         scaling recompute, 98634.10 before that, 95014.18 before super was
         added). See docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md and
-        cost_ramp.yml#conflict_relief_absence_allowance_reverted."""
+        cost_ramp.yml#change_pm_reception_dedicated_role_removed."""
         inputs = cost_model.CanonicalCostInputs()
         computed = cost_model.compute_ramp("scenario_table_1", inputs, cost_model.DEFAULT_REVENUE_RAMP_CURVE)
         m5 = next(m for m in computed if m["month"] == "M5plus")
-        self.assertAlmostEqual(m5["total_operating_costs"], 116005.36, places=2)
+        self.assertAlmostEqual(m5["total_operating_costs"], 110544.52, places=2)
         self.assertAlmostEqual(m5["relief_absence_allowance"], 0.00, places=2)
+        self.assertAlmostEqual(m5["payroll_detail"]["receptionist_relief"], 0.00, places=2)
 
 
 class Table2Tests(unittest.TestCase):
@@ -128,18 +131,20 @@ class Table2Tests(unittest.TestCase):
         self.assertAlmostEqual(m5["total_operating_costs"], rec["total_operating_costs"], places=2)
 
     def test_table2_total_operating_costs_m5plus_value(self):
-        """RECALCULATED 2026-08-21 (Financial Model Rebuild round -- relief/
-        absence allowance REVERTED to 0.00) to 110600.37 -- was 116728.90
-        under the 2026-08-18 relief-allowance-added version, 110292.03
-        pre-2026-08-18-correction (109465.22 under the 2026-08-17
-        first-principles rebuild, 97258.43 under the proportional-wage-
-        scaling recompute, 94664.16 before that, 91463.24 before super was
-        added)."""
+        """RECALCULATED 2026-08-21 (later same day -- Position 06/RCO01
+        dedicated PM Reception REMOVED) to 105139.53 -- was 110600.37
+        earlier the same day (relief/absence allowance reverted to 0.00),
+        116728.90 under the 2026-08-18 relief-allowance-added version,
+        110292.03 pre-2026-08-18-correction (109465.22 under the
+        2026-08-17 first-principles rebuild, 97258.43 under the
+        proportional-wage-scaling recompute, 94664.16 before that, 91463.24
+        before super was added)."""
         inputs = cost_model.CanonicalCostInputs()
         computed = cost_model.compute_ramp("scenario_table_2", inputs, cost_model.DEFAULT_REVENUE_RAMP_CURVE)
         m5 = next(m for m in computed if m["month"] == "M5plus")
-        self.assertAlmostEqual(m5["total_operating_costs"], 110600.37, places=2)
+        self.assertAlmostEqual(m5["total_operating_costs"], 105139.53, places=2)
         self.assertAlmostEqual(m5["relief_absence_allowance"], 0.00, places=2)
+        self.assertAlmostEqual(m5["payroll_detail"]["receptionist_relief"], 0.00, places=2)
 
 
 class Month1To5PlusTests(unittest.TestCase):

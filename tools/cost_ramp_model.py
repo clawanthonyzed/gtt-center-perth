@@ -166,14 +166,31 @@ AM_SATURDAY_DAILY_LABOR = {
 OPENING_TIME_INCREMENT_DAILY = 320.00   # was A$44.50 (undocumented) -> A$294.48 (Phase C, Clerks Award L2, likely misclassified) -> A$320.00 (Phase C audit, MA000005 L6, corrected classification)
 VENUE_MANAGER_SATURDAY_DAILY = round(320.00 * 1.5, 2)  # $480.00/day, x1.5 Saturday penalty
 
-# RENAMED IN SUBSTANCE 2026-08-17 (Phase C, first principles) -- retains its
-# original YAML key name ("receptionist_relief") for backward structural
+# REMOVED 2026-08-21 (Founder Decision round), per Anthony's direct
+# instruction, overriding docs/architecture/STAFFING-COVERAGE-VALIDATION.md
+# section 4's prior Model A recommendation: PM Reception is no longer a
+# dedicated position (Position 06/RCO01). The confirmed model is Model C
+# ("service-staff coverage during booking gaps") -- rostered PM treatment
+# staff (PMM01/PMH01/PMN01/PMB01) handle check-in/payment/Fresha admin
+# during natural gaps in their own PM session bookings, already paid for
+# via pm_weekday_direct_labor/pm_saturday_direct_labor below -- no separate
+# payroll line. Kept at 0.00, not deleted, for schema stability and trace.
+# See docs/architecture/STAFFING-COVERAGE-VALIDATION.md section 4 (updated,
+# not rewritten) for the full superseded reasoning and the founder-decision
+# override, and docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md section 5
+# for this round's full disclosure.
+#
+# PRE-2026-08-21 VALUE (retained for trace, not deleted): "RENAMED IN
+# SUBSTANCE 2026-08-17 (Phase C, first principles) -- retains its original
+# YAML key name ("receptionist_relief") for backward structural
 # compatibility, but its VALUE and MEANING are now the PM Reception/
 # Coordinator's real, first-principles daily labour cost (position 06,
 # docs/architecture/STAFF-PROFILES.md), replacing the old unclear "~A$339/day"
-# approximation. PM Reception: 1 x 5hrs x $33.71/hr (MA000002 L1) = $168.55/day.
-RECEPTIONIST_RELIEF_WORKERS_COMP_DAILY = 168.55   # was ~A$339.00 (unclear approximation) -> A$168.55 (PM Reception, first-principles)
-PM_RECEPTION_SATURDAY_DAILY = round(168.55 * 1.5, 2)  # $252.83/day, x1.5 Saturday penalty
+# approximation. PM Reception: 1 x 5hrs x $33.71/hr (MA000002 L1) = $168.55/day."
+# Was 168.55/day weekday (was ~A$339.00 unclear approximation before that),
+# 253.83/day Saturday (x1.5 penalty).
+RECEPTIONIST_RELIEF_WORKERS_COMP_DAILY = 0.00   # was A$168.55/day (Position 06/RCO01, first-principles) -> A$0.00 (Position 06 removed, 2026-08-21 founder decision)
+PM_RECEPTION_SATURDAY_DAILY = 0.00   # was A$252.83/day (x1.5 Saturday penalty on A$168.55) -> A$0.00, same reason
 
 # PM Direct Labor (Saturday) -- fixed regardless of ramp, because even at the
 # full 8-session/day steady-state PM Saturday volume, hours/role/day
@@ -417,6 +434,14 @@ def compute_payroll(scenario_id, month, inputs: CanonicalCostInputs):
     (1) opening_increment/receptionist_relief now carry real Saturday-penalty
         components (Venue Manager / PM Reception, docs/architecture/
         STAFF-PROFILES.md), not just a flat weekday-only figure.
+        UPDATED 2026-08-21: receptionist_relief is now 0.00 -- Position 06/
+        RCO01 (dedicated PM Reception) was removed per Anthony's direct
+        founder decision, superseding STAFFING-COVERAGE-VALIDATION.md
+        section 4's prior Model A recommendation. PM reception duties are
+        now covered by rostered PM treatment staff during booking gaps
+        (already paid for via pm_weekday_direct_labor/pm_saturday_direct_labor),
+        not a separate payroll line. opening_increment (Venue Manager) is
+        unaffected -- AM reception remains VM01's role.
     (2) Superannuation is now applied UNIVERSALLY (12%) to every wage
         component, not just the previously-confirmed-exclusive subset -- a
         cleaner, more defensible treatment than the prior partial-coverage

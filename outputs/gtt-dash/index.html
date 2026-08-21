@@ -135,7 +135,7 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
     </div>
 
     <h3>Founder decisions outstanding</h3>
-    <p>19 items currently open &mdash; final name, treatment/phlebotomy pool sizes, companion-policy exceptions, venue selection, PM package sign-off, 4 service-price conflicts, GTT supplies discrepancy, expansion path, Blood Collection Room count, Beauty station count, massage station format, China/Australia procurement model, 6-client widened-cadence staffing, PM Reception service-staff-coverage conflict, and more. Full register: <a href="#decisions">Decisions</a> below, or <a href="../master-dossier-v2/index.html#ch34">Dossier Chapter 34</a>.</p>
+    <p>18 items currently open &mdash; final name, treatment/phlebotomy pool sizes, companion-policy exceptions, venue selection, PM package sign-off, 4 service-price conflicts, GTT supplies discrepancy, expansion path, Blood Collection Room count, Beauty station count, massage station format, China/Australia procurement model, 6-client widened-cadence staffing, and more. Full register: <a href="#decisions">Decisions</a> below, or <a href="../master-dossier-v2/index.html#ch34">Dossier Chapter 34</a>. (PM Reception via service-staff coverage RESOLVED 2026-08-21 -- retained in the register below, marked resolved, not removed.)</p>
 
     <h3>Third-party dependencies outstanding</h3>
     <p>9 items &mdash; WDP commercial figure, phlebotomist employment model, sightline requirement, medical waste responsibility, landlord terms, zoning confirmation, builder quotes, supplier quotes, LEV contractor. Full register: <a href="#dependencies">Dependencies</a> below.</p>
@@ -446,7 +446,7 @@ const DECISIONS = [
   ["Massage station format", "tag-founder", "Open, new 2026-08-21", "Treatment table/bed (currently costed) vs chair-based station (fit-out brief's own spatial-intent instruction) -- no existing spec either way", "Yes"],
   ["China/Australia procurement model", "tag-founder", "Open, new 2026-08-21", "Hybrid model recommended (AU sourcing agent + independent 3rd-party inspection + AU-sourced clinical items) -- a labelled recommendation only, no agent contacted", "Yes"],
   ["6-client/day widened AM cadence (demand-flexed staffing)", "tag-founder", "Open, new 2026-08-21", "Solver-verified: 6 clients/day needs only 4 treatment staff (not 8) if pair cadence widens to 45min+, inside the WDP 10:30 guidance window -- not adopted, requires client-experience confirmation and a day-ahead rostering mechanism", "Yes"],
-  ["PM Reception via service-staff coverage", "tag-founder", "Conflict flagged, not implemented", "Directly conflicts with STAFFING-COVERAGE-VALIDATION.md's existing, reasoned rejection of this exact model -- not silently overturned, dedicated PM Reception (RCO01) remains current pending explicit reconsideration", "Yes"],
+  ["PM Reception via service-staff coverage", "tag-resolved", "RESOLVED 2026-08-21, founder decision", "Confirmed by Anthony directly, overriding STAFFING-COVERAGE-VALIDATION.md's original Model A recommendation. Model C (service-staff coverage during PM booking gaps) is now the model; RCO01/Position 06 removed from committed payroll; Fresha/payment training added to PM treatment-staff profiles. Chapters 9/14-17's detailed staff-lane content still describes the superseded Model A structure -- not yet rewritten.", "Yes"],
 ];
 document.getElementById('decisionTable').innerHTML = DECISIONS.map(d => `
   <tr><td>${d[0]}</td><td><span class="tag ${d[1]}">${d[2]}</span></td><td>${d[3]}</td><td>${d[4]}</td></tr>

@@ -17,10 +17,20 @@
 #
 # Status vocabulary: VERIFIED | DECIDED | CALCULATED | MODELLED | SCENARIO |
 # PLACEHOLDER | SUPERSEDED -- see docs/architecture/DATA-GOVERNANCE.md.
+#
+# UPDATED 2026-08-21 (Founder Decision round) -- staff_receptionist_manager
+# (Position 06/RCO01, dedicated PM Reception) marked SUPERSEDED and removed
+# from the committed payroll model, per Anthony's direct instruction:
+# service-staff coverage during PM booking gaps (Model C) is now confirmed,
+# overriding docs/architecture/STAFFING-COVERAGE-VALIDATION.md section 4's
+# prior Model A recommendation. Fresha/payment-system training added as a
+# real requirement to staff_pm_massage/staff_pm_hair/staff_pm_nail/
+# staff_pm_beauty's own required_skills. Full financial propagation:
+# data/canonical/cost_ramp.yml#change_pm_reception_dedicated_role_removed.
 
 schema_version: 1
 dataset: staffing
-last_updated: "2026-08-08"
+last_updated: "2026-08-21"
 
 records:
   - id: staff_venue_manager
@@ -137,13 +147,25 @@ records:
     shift_assumptions: "AM 07:00-12:00 (opening, GTT coordination, AM checkout) + PM 15:00-18:00 (PM bookings, closing), with a midday break 12:00-15:00"
     break_assumptions: "midday break 12:00-15:00 -- source document literally states 'paid/unpaid midday break', not resolved which. Recorded as-is, not guessed."
     staffing_scenario: universal
-    status: MODELLED
+    status: SUPERSEDED
+    superseded_by: null  # no 1:1 replacement -- PM reception coverage is now distributed across staff_pm_massage/hair/nail/beauty's own Fresha/payment-training requirement, not a single position
     source: {file: docs/financial-break-even-staff.md, section: "Receptionist / Manager Role, Day 51 split-shift note (CF-01)"}
     notes: >
-      employment_type not stated in this repo (unlike the PM roster's explicit "casual for
-      first 3-6 months") -- left null rather than inferred. The AM 07:00-12:00 block was
-      written against the historical 07:00 start assumption and has NOT been independently
-      re-checked against Table 2's 08:00 start -- flagged, not silently assumed still correct.
+      REMOVED 2026-08-21, per Anthony's direct founder decision (docs/architecture/
+      STAFFING-COVERAGE-VALIDATION.md section 4, docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md
+      section 5): this record represented the dedicated PM Reception concept (also
+      documented as Position 06/RCO01 in docs/architecture/STAFF-PROFILES.md, with a
+      13:00-18:00 shift there -- a pre-existing, disclosed inconsistency with this
+      record's own 15:00-18:00 PM figure, not resolved by this change, since the role
+      itself no longer exists to reconcile). Model C (service-staff coverage during PM
+      booking gaps) is now confirmed -- see staff_pm_massage/hair/nail/beauty above for
+      the Fresha/payment-training requirement now carried by those roles instead. Kept
+      here, marked SUPERSEDED not deleted, per this repo's governance convention.
+      Historical notes retained below for trace: employment_type not stated in this
+      repo (unlike the PM roster's explicit "casual for first 3-6 months") -- left null
+      rather than inferred. The AM 07:00-12:00 block was written against the historical
+      07:00 start assumption and was never independently re-checked against Table 2's
+      08:00 start before this role was removed.
 
   - id: staff_pm_massage
     role: "Massage Therapist (PM)"
@@ -152,7 +174,7 @@ records:
     headcount: 1
     fte: null
     employment_type: "casual for first 3-6 months; review conversion to part-time at Month 3-6 for roles with proven, regular demand"
-    required_skills: ["cross-shift qualified with AM Massage+Beauty staff"]
+    required_skills: ["cross-shift qualified with AM Massage+Beauty staff", "Fresha (or equivalent) booking-platform and payment-processing proficiency -- REQUIRED, added 2026-08-21 per Anthony's direct founder decision: PM Reception is no longer a dedicated role (Position 06/RCO01 removed), this and every other PM position now covers client check-in/payment during natural gaps in their own PM session bookings, see docs/architecture/STAFFING-COVERAGE-VALIDATION.md section 4 and docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md section 5"]
     service_capabilities: ["pregnancy massage (standalone/afternoon)"]
     operating_availability: "PM, Mon-Fri 12:00-18:00 (rostered window -- actual paid hours are hours-based, not a blanket shift, see wages.yml minimum_engagement records)"
     shift_assumptions: "hours-based costing: hours/role/week = (sessions/day / 4 roles x 5 days) / 1.3 sessions/hr throughput -- not a fixed shift-length payroll"
@@ -169,7 +191,7 @@ records:
     headcount: 1
     fte: null
     employment_type: "casual for first 3-6 months; review conversion to part-time at Month 3-6 for roles with proven, regular demand"
-    required_skills: ["Cert III SHB30116"]
+    required_skills: ["Cert III SHB30116", "Fresha (or equivalent) booking-platform and payment-processing proficiency -- REQUIRED, added 2026-08-21, same reason as staff_pm_massage above (Position 06/RCO01 removed, this role now covers PM reception during its own booking gaps)"]
     service_capabilities: ["blowdry", "haircut (standalone/afternoon)"]
     operating_availability: "PM, Mon-Fri 12:00-18:00 (rostered window -- actual paid hours are hours-based)"
     shift_assumptions: "hours-based costing, same formula as staff_pm_massage"
@@ -186,7 +208,7 @@ records:
     headcount: 1
     fte: null
     employment_type: "casual for first 3-6 months; review conversion to part-time at Month 3-6 for roles with proven, regular demand"
-    required_skills: ["Cert III SHB30321"]
+    required_skills: ["Cert III SHB30321", "Fresha (or equivalent) booking-platform and payment-processing proficiency -- REQUIRED, added 2026-08-21, same reason as staff_pm_massage above (Position 06/RCO01 removed, this role now covers PM reception during its own booking gaps)"]
     service_capabilities: ["manicure", "pedicure (standalone/afternoon)"]
     operating_availability: "PM, Mon-Fri 12:00-18:00 (rostered window -- actual paid hours are hours-based)"
     shift_assumptions: "hours-based costing, same formula as staff_pm_massage"
@@ -203,7 +225,7 @@ records:
     headcount: 1
     fte: null
     employment_type: "casual for first 3-6 months; review conversion to part-time at Month 3-6 for roles with proven, regular demand"
-    required_skills: ["Diploma of Beauty Therapy"]
+    required_skills: ["Diploma of Beauty Therapy", "Fresha (or equivalent) booking-platform and payment-processing proficiency -- REQUIRED, added 2026-08-21, same reason as staff_pm_massage above (Position 06/RCO01 removed, this role now covers PM reception during its own booking gaps)"]
     service_capabilities: ["facials (standalone/afternoon)"]
     operating_availability: "PM, Mon-Fri 12:00-18:00 (rostered window -- actual paid hours are hours-based)"
     shift_assumptions: "hours-based costing, same formula as staff_pm_massage"

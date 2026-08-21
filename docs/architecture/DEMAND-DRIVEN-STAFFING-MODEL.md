@@ -1,6 +1,6 @@
 # Demand-Driven Staffing Model — Position-ID Register, AM Solver Findings, PM Scaling, VM Fill Rule
 
-**Status: new analysis, genuine solver-verified findings, one explicit conflict flagged, not silently resolved.** Built per direct instruction for a demand-driven staffing model (staggered AM starts, no-nail-clients-means-no-nail-tech-rostered logic, PM multi-staff-per-role scaling, PM reception via service-staff coverage, Venue Manager Mon-Fri emergency-only fill rule, position-ID register, solver-verified staff timetable). Every AM headcount figure below is produced by `tools/demand_driven_staffing_solver.py`, a new tool calibrated against this repo's own already-published, verified headcount figures before being trusted on any new question — not assumed or hand-derived.
+**Status: new analysis, genuine solver-verified findings. PM Reception conflict (§5) since RESOLVED by direct founder decision, 2026-08-21 — see below, not silently reopened or left stale.** Built per direct instruction for a demand-driven staffing model (staggered AM starts, no-nail-clients-means-no-nail-tech-rostered logic, PM multi-staff-per-role scaling, PM reception via service-staff coverage, Venue Manager Mon-Fri emergency-only fill rule, position-ID register, solver-verified staff timetable). Every AM headcount figure below is produced by `tools/demand_driven_staffing_solver.py`, a new tool calibrated against this repo's own already-published, verified headcount figures before being trusted on any new question — not assumed or hand-derived.
 
 ---
 
@@ -16,7 +16,7 @@ Short IDs assigned to every position already profiled in `docs/architecture/STAF
 | MBP01-MBP04 | Treatment staff, Massage+Beauty pool | Position 03 | 4 |
 | NLT01, NLT02 | Treatment staff, Nail Technician | Position 04 | 2 |
 | HRD01, HRD02 | Treatment staff, Hairdresser | Position 05 | 2 |
-| RCO01 | Reception/Coordinator (PM-hours) | Position 06 | 1 |
+| RCO01 | Reception/Coordinator (PM-hours) — **REMOVED 2026-08-21, founder decision** | Position 06 (superseded) | 0 (was 1) |
 | PMM01 | PM dedicated casual, Massage line | `staffing.yml#staff_pm_massage` | 1 |
 | PMH01 | PM dedicated casual, Hair line | `staffing.yml#staff_pm_hair` | 1 |
 | PMN01 | PM dedicated casual, Nail line | `staffing.yml#staff_pm_nail` | 1 |
@@ -79,15 +79,20 @@ The 45-minute-cadence, 4-staff model for a genuine 6-client/day is a new finding
 
 ---
 
-## 5. PM Reception via Service-Staff Coverage — CONFLICT FLAGGED, NOT IMPLEMENTED
+## 5. PM Reception via Service-Staff Coverage — RESOLVED 2026-08-21 by Direct Founder Decision
 
-**This instruction directly conflicts with an existing, reasoned, real analysis in this repository, and is not silently implemented here.** `docs/architecture/STAFFING-COVERAGE-VALIDATION.md` §4 already compared 4 structural models for PM Reception, including this exact option:
+> **This section originally flagged a conflict, unresolved, pending Anthony's explicit call. Anthony has since answered directly: his instruction stands.** Service-staff coverage during PM booking gaps (Model C) is the confirmed model, overriding `docs/architecture/STAFFING-COVERAGE-VALIDATION.md` §4's prior Model A recommendation. This is recorded here as a resolution, not a reversal of the original flag's own reasoning — the flag correctly surfaced a real conflict rather than silently picking a side, and the founder decision is exactly the kind of explicit confirmation the original flag asked for.
 
-> **Model C — Treatment staff assist with reception between clients:** No dedicated PM reception; a rostered treatment staff member handles check-in/payment during gaps. **Rejected.** Treatment staff are not trained in Fresha/payment-system administration as a primary skill, and pulling a treatment-staff member off the floor for reception duties during their own paid PM session window directly reduces the PM treatment capacity the whole PM revenue model depends on — self-defeating for a role whose entire purpose is generating PM revenue. Customer experience: inconsistent, treatment staff distracted from service delivery.
+The original conflict (retained for trace): `docs/architecture/STAFFING-COVERAGE-VALIDATION.md` §4 had compared 4 structural models for PM Reception, including this exact option —
 
-That document's conclusion: **"Model A (dedicated PM Reception) remains the recommended structure — confirmed, not just re-stated, against 3 real alternatives with their trade-offs shown."** RCO01 (Reception/Coordinator, 13:00-18:00) remains the current, reasoned model.
+> **Model C — Treatment staff assist with reception between clients:** No dedicated PM reception; a rostered treatment staff member handles check-in/payment during gaps. Was Rejected: treatment staff are not trained in Fresha/payment-system administration as a primary skill, and pulling a treatment-staff member off the floor for reception duties during their own paid PM session window directly reduces the PM treatment capacity the whole PM revenue model depends on — self-defeating for a role whose entire purpose is generating PM revenue. Customer experience: inconsistent, treatment staff distracted from service delivery.
 
-**This document does not overturn that finding.** Reversing a real, well-evidenced, already-reasoned conclusion because a later instruction restates the previously-rejected option, without new evidence addressing the original rejection reasons (Fresha/payment training gap, PM-revenue self-defeat, inconsistent customer experience), would repeat exactly the failure mode this repository's own governance exists to prevent. **If Anthony has genuinely reconsidered this trade-off (e.g., accepts the PM-capacity cost, or has a specific staff member both treatment-qualified and Fresha-trained in mind), that is his call to make explicitly** — this document flags the conflict clearly and asks for that explicit confirmation rather than silently implementing Model C, or silently ignoring the new instruction. **No change made to RCO01's status, headcount, or the PM Reception cost line pending that confirmation.**
+**What closes each of the three original rejection reasons, and what remains an accepted trade-off, not a resolved-away risk:**
+1. **Fresha/payment training gap — CLOSED.** `data/canonical/staffing.yml`'s PM dedicated-casual records (staff_pm_massage/hair/nail/beauty, i.e. PMM01/PMH01/PMN01/PMB01) each now carry an explicit "Fresha (or equivalent) booking-platform and payment-processing proficiency — REQUIRED" entry in their own `required_skills`, added 2026-08-21, not a hand-wave.
+2. **PM-revenue self-defeat (pulling a treatment staff member off a paid session to do reception) — ACCEPTED, not resolved away.** This remains a real trade-off of the founder decision: PM treatment capacity is genuinely reduced during the specific minutes a PM staff member is covering reception. Not quantified or offset in this document — a disclosed, accepted cost of the decision, not claimed to be free.
+3. **Inconsistent customer experience — ACCEPTED, not resolved away.** No single dedicated point of contact for the full PM window any more; whichever PM staff member is between clients covers reception. A real, disclosed customer-experience trade-off, accepted as part of the decision, not eliminated.
+
+**Financial and staffing consequence:** RCO01 (Position 06, dedicated PM Reception) is REMOVED from the committed payroll and rostering model, effective 2026-08-21. `data/canonical/cost_ramp.yml`'s receptionist_relief cost line (Position 06's real first-principles cost, A$168.55/day weekday + A$252.83/day Saturday) is now 0.00 — full propagation through `data/models/master_financial_model.yml`, `docs/CURRENT-STATE.md` §5, the Dash, and dossier Chapters 1/9/14-17/27-31/34. See `data/canonical/cost_ramp.yml#change_pm_reception_dedicated_role_removed` for the complete financial derivation.
 
 ---
 
@@ -96,12 +101,14 @@ That document's conclusion: **"Model A (dedicated PM Reception) remains the reco
 - **Phlebotomist headcount:** unaffected at any AM volume tested (2, structural).
 - **AM treatment headcount at 18 and 12 clients/day:** unaffected (8, confirmed not reducible within the WDP guidance window).
 - **AM treatment headcount at 6 clients/day:** a genuine, solver-verified reduction to 4 IS possible, but only if a 45-minute (or wider) pair cadence is adopted for genuine 6-client days specifically — not adopted here, presented as a finding. Chapter 31's sensitivity table (dossier) is updated to show BOTH the current committed-cadence cost (8 staff, unchanged) AND this new lower-cadence alternative at 6 clients/day, clearly labelled, not silently substituted for the existing figure.
-- **PM staffing:** unchanged (multi-staff-per-role trigger not reached at current volumes).
-- **PM Reception:** unchanged (Model A/RCO01 remains current; Model C conflict flagged above, not implemented).
+- **PM staffing:** unchanged in headcount (multi-staff-per-role trigger not reached at current volumes); **PM dedicated-casual roles gain a real, explicit Fresha/payment-training requirement (§5).**
+- **PM Reception:** **REMOVED, 2026-08-21, per direct founder decision (§5).** RCO01/Position 06 no longer exists in the committed model. Model C confirmed. Steady-state Net Operating Result improves materially as a direct result: Table 1 A$38,705.33 → A$44,166.17/month, Table 2 A$4,615.32 → A$10,076.16/month (more than doubles).
 - **Venue Manager:** unchanged financially (the emergency-fill rule adds no payroll cost, formalises an existing recommendation).
 
 ---
 
 ## Changelog
+
+**2026-08-21 (later same day — PM Reception conflict RESOLVED by direct founder decision)** — Anthony confirmed service-staff coverage during PM booking gaps (Model C) as the model, overriding STAFFING-COVERAGE-VALIDATION.md §4's prior Model A recommendation. §5 rewritten from "conflict flagged, not implemented" to "resolved" — original reasoning retained for trace, each of the 3 original rejection reasons addressed explicitly (Fresha/payment training now a real requirement, PM-capacity and customer-experience trade-offs accepted not hidden). RCO01/Position 06 removed from the committed payroll model; full financial propagation in `data/canonical/cost_ramp.yml`, `data/models/master_financial_model.yml`, `docs/CURRENT-STATE.md`, Dash, and dossier.
 
 **2026-08-21 (created)** — Built `tools/demand_driven_staffing_solver.py`, a new, calibrated solver (reproduces the published 8-staff figure for both N=12 and N=18 before being trusted on the new N=6 question). Genuine new finding: 6 clients/day needs 8 staff at the committed 25-min cadence (same as 12/18, driven by pair-overlap not client count), but only 4 staff at a widened 45-min+ cadence — verified feasible within the WDP guidance window, not adopted as policy. Independently re-confirmed 12 clients/day cannot achieve any headcount reduction within the guidance window at any cadence. Built the position-ID register (VM01/PHB01-04/MBP01-04/NLT01-02/HRD01-02/RCO01/PMM01/PMH01/PMN01/PMB01) and filled in the "same as Position 03" shortcuts in `STAFF-PROFILES.md` Positions 04-05 with their own explicit statements. Documented the PM multi-staff-per-role scaling rule (not currently triggered, no change made). Formalised the Venue Manager Mon-Fri emergency-only fill rule from the existing STAFFING-COVERAGE-VALIDATION.md §3 recommendation (no new cost). **Explicitly did NOT implement PM reception via service-staff coverage** — flagged as a direct conflict with STAFFING-COVERAGE-VALIDATION.md §4's existing, reasoned rejection of that exact model, pending Anthony's explicit reconsideration.

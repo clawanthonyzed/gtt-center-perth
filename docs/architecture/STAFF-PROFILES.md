@@ -195,7 +195,9 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Cross-training/substitution capability:** NOT confirmed cross-qualified with any other line (same disclosed gap as Nails, above). The 2 Hairdressers can only substitute for each other.
 
-### Position 06 — Reception/Coordinator (PM-hours role)
+### Position 06 — Reception/Coordinator (PM-hours role) — REMOVED 2026-08-21, retained for trace
+
+> **SUPERSEDED BY FOUNDER DECISION, 2026-08-21.** Anthony's direct instruction: service-staff coverage during PM booking gaps (Model C, `docs/architecture/STAFFING-COVERAGE-VALIDATION.md` §4) is now the confirmed model, overriding the Model A recommendation this position profile was built against. Position 06/RCO01 is removed from the committed payroll and rostering model — the PM Reception duties described below are now distributed across PMM01/PMH01/PMN01/PMB01 (the PM dedicated-casual roles, `data/canonical/staffing.yml`), each of which now carries an explicit Fresha/payment-system training requirement (added to their own `required_skills`, not a hand-wave). The profile below is retained in full for trace, not deleted — the job description remains an accurate account of what PM reception duties actually involve, now distributed rather than performed by one dedicated person. Full financial propagation: `data/canonical/cost_ramp.yml#change_pm_reception_dedicated_role_removed`.
 
 **Role purpose:** Covers reception, booking management, and customer-facing coordination during the PM window specifically — this role exists because the Venue Manager's own AM-weighted hours (07:00-15:00) do not extend to the venue's 18:00 close, a genuine coverage gap identified this round.
 
@@ -226,6 +228,8 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 ---
 
 ## Changelog
+
+**2026-08-21 (later same day -- Position 06/RCO01 removed by founder decision)** — Anthony confirmed service-staff coverage during PM booking gaps (Model C) as the model, overriding `STAFFING-COVERAGE-VALIDATION.md` §4's prior Model A recommendation. Position 06 marked SUPERSEDED above, profile retained for trace. PM dedicated-casual roles (PMM01/PMH01/PMN01/PMB01, `data/canonical/staffing.yml`) each gained an explicit Fresha/payment-training requirement. No position profile deleted -- governance convention preserved.
 
 **2026-08-21 (position-ID register + individual profiles)** — Removed the "Same structure as Position 03" shortcut from Positions 04 (Nail Technician) and 05 (Hairdresser) — both now state their own role purpose, job description, job tasks, hours, roster pattern, and employment type explicitly, per direct instruction that no position profile should be a cross-reference in place of stated content. Assigned short position IDs (VM01, PHB01-04, MBP01-04, NLT01-02, HRD01-02, RCO01, PMM01/PMH01/PMN01/PMB01) — full register in `docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md` §1. No headcount, wage, or qualification field changed — this is a documentation-completeness fix, not a staffing-model change.
 

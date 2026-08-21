@@ -85,10 +85,12 @@ last_updated: "2026-08-18"
 # total_operating_costs = fixed_costs + variable_costs + payroll_costs +
 # relief_absence_allowance. Table 1 (18/day) M5plus total_operating_costs:
 # was A$115,697.02 (pre-2026-08-18), then A$122,133.89 (2026-08-18-2026-08-20),
-# now A$116,005.36 (2026-08-21, reverted). Table 2 (12/day) M5plus: was
-# A$110,292.03, then A$116,728.90, now A$110,600.37. See
-# data/models/master_financial_model.yml's own 2026-08-21 banner for the
-# full downstream P&L/break-even/cash-flow impact.
+# then A$116,005.36 (2026-08-21, relief allowance reverted), now
+# A$110,544.52 (2026-08-21, later same day -- Position 06/RCO01 dedicated
+# PM Reception also removed, see resolved_changes#change_pm_reception_dedicated_role_removed
+# below). Table 2 (12/day) M5plus: was A$110,292.03, then A$116,728.90,
+# then A$110,600.37, now A$105,139.53. See data/models/master_financial_model.yml's
+# own 2026-08-21 banner for the full downstream P&L/break-even/cash-flow impact.
 
 # AUDITED AND CORRECTED 2026-08-18 (Phase C audit round -- Anthony's explicit
 # sanity-audit request, "verify, don't assume the existing figure is
@@ -183,9 +185,9 @@ records:
     month: M1
     fixed_costs: 12788.34
     variable_costs: 600.00
-    payroll_costs: 101419.61
+    payroll_costs: 95958.76
     relief_absence_allowance: 0.00
-    total_operating_costs: 114807.95
+    total_operating_costs: 109347.10
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -195,10 +197,10 @@ records:
       pm_weekday_direct_labor: 9808.92
       pm_saturday_direct_labor: 2895.82
       opening_time_increment: 9118.40
-      receptionist_relief: 4802.85
-      direct_labor_and_opening_total: 89199.30
-      superannuation: 10703.92
-      workers_comp: 1516.39
+      receptionist_relief: 0.00
+      direct_labor_and_opening_total: 84396.45
+      superannuation: 10127.57
+      workers_comp: 1434.74
     status: CALCULATED
     status_detail: "Deterministically computed by tools/cost_ramp_model.py -- reproduced exactly by tests/test_cost_ramp.py. PM weekday labor floor-constrained at 3.0hrs/role/day (4 sessions/day, well below the 16-session steady-state ceiling)."
     scenario_applicability: scenario_table_1
@@ -213,9 +215,9 @@ records:
     month: M2
     fixed_costs: 12788.34
     variable_costs: 800.00
-    payroll_costs: 101419.61
+    payroll_costs: 95958.76
     relief_absence_allowance: 0.00
-    total_operating_costs: 115007.95
+    total_operating_costs: 109547.10
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -225,10 +227,10 @@ records:
       pm_weekday_direct_labor: 9808.92
       pm_saturday_direct_labor: 2895.82
       opening_time_increment: 9118.40
-      receptionist_relief: 4802.85
-      direct_labor_and_opening_total: 89199.30
-      superannuation: 10703.92
-      workers_comp: 1516.39
+      receptionist_relief: 0.00
+      direct_labor_and_opening_total: 84396.45
+      superannuation: 10127.57
+      workers_comp: 1434.74
     status: CALCULATED
     status_detail: "Identical payroll to cost_table1_m1 -- 8 PM sessions/day is still below the 3-hour casual-minimum floor. Only variable_costs (marketing ramp) differs from M1."
     scenario_applicability: scenario_table_1
@@ -243,9 +245,9 @@ records:
     month: M3
     fixed_costs: 12788.34
     variable_costs: 1000.00
-    payroll_costs: 101419.61
+    payroll_costs: 95958.76
     relief_absence_allowance: 0.00
-    total_operating_costs: 115207.95
+    total_operating_costs: 109747.10
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -255,10 +257,10 @@ records:
       pm_weekday_direct_labor: 9808.92
       pm_saturday_direct_labor: 2895.82
       opening_time_increment: 9118.40
-      receptionist_relief: 4802.85
-      direct_labor_and_opening_total: 89199.30
-      superannuation: 10703.92
-      workers_comp: 1516.39
+      receptionist_relief: 0.00
+      direct_labor_and_opening_total: 84396.45
+      superannuation: 10127.57
+      workers_comp: 1434.74
     status: CALCULATED
     status_detail: "Identical payroll to cost_table1_m1/m2 -- 12 PM sessions/day is still below the 3-hour casual-minimum floor."
     scenario_applicability: scenario_table_1
@@ -273,9 +275,9 @@ records:
     month: M4
     fixed_costs: 12788.34
     variable_costs: 1200.00
-    payroll_costs: 101419.61
+    payroll_costs: 95958.76
     relief_absence_allowance: 0.00
-    total_operating_costs: 115407.95
+    total_operating_costs: 109947.10
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -285,10 +287,10 @@ records:
       pm_weekday_direct_labor: 9808.92
       pm_saturday_direct_labor: 2895.82
       opening_time_increment: 9118.40
-      receptionist_relief: 4802.85
-      direct_labor_and_opening_total: 89199.30
-      superannuation: 10703.92
-      workers_comp: 1516.39
+      receptionist_relief: 0.00
+      direct_labor_and_opening_total: 84396.45
+      superannuation: 10127.57
+      workers_comp: 1434.74
     status: CALCULATED
     status_detail: "Identical payroll to cost_table1_m1-m3 -- 15 PM sessions/day (2.885hrs/role) is STILL just below the 3-hour floor -- a thin margin, same finding docs/profit-loss-tables.md's own Appendix already noted for the weekday steady-state figure."
     scenario_applicability: scenario_table_1
@@ -303,9 +305,9 @@ records:
     month: M5plus
     fixed_costs: 12788.34
     variable_costs: 1500.00
-    payroll_costs: 101717.02
+    payroll_costs: 96256.18
     relief_absence_allowance: 0.00
-    total_operating_costs: 116005.36
+    total_operating_costs: 110544.52
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -315,10 +317,10 @@ records:
       pm_weekday_direct_labor: 10070.50
       pm_saturday_direct_labor: 2895.82
       opening_time_increment: 9118.40
-      receptionist_relief: 4802.85
-      direct_labor_and_opening_total: 89460.88
-      superannuation: 10735.31
-      workers_comp: 1520.83
+      receptionist_relief: 0.00
+      direct_labor_and_opening_total: 84658.03
+      superannuation: 10158.96
+      workers_comp: 1439.19
     status: CALCULATED
     status_detail: >
       Steady state -- 16 PM sessions/day clears the 3-hour floor (3.08hrs/role), reaching the
@@ -357,9 +359,9 @@ records:
     month: M1
     fixed_costs: 12788.34
     variable_costs: 600.00
-    payroll_costs: 96014.61
+    payroll_costs: 90553.78
     relief_absence_allowance: 0.00
-    total_operating_costs: 109402.95
+    total_operating_costs: 103942.12
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -369,10 +371,10 @@ records:
       pm_weekday_direct_labor: 9808.92
       pm_saturday_direct_labor: 2895.82
       opening_time_increment: 9118.40
-      receptionist_relief: 4802.85
-      direct_labor_and_opening_total: 84445.57
-      superannuation: 10133.47
-      workers_comp: 1435.57
+      receptionist_relief: 0.00
+      direct_labor_and_opening_total: 79642.72
+      superannuation: 9557.13
+      workers_comp: 1353.93
     status: CALCULATED
     status_detail: "Deterministically computed -- see cost_table1_m1 for the identical method. AM Saturday labor uses Table 2's own committed-volume figure (A$1,612.74/day), materially lower than Table 1's (A$2,419.11/day) -- the only payroll component that differs between the two scenarios."
     scenario_applicability: scenario_table_2
@@ -387,9 +389,9 @@ records:
     month: M2
     fixed_costs: 12788.34
     variable_costs: 800.00
-    payroll_costs: 96014.61
+    payroll_costs: 90553.78
     relief_absence_allowance: 0.00
-    total_operating_costs: 109602.95
+    total_operating_costs: 104142.12
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -399,10 +401,10 @@ records:
       pm_weekday_direct_labor: 9808.92
       pm_saturday_direct_labor: 2895.82
       opening_time_increment: 9118.40
-      receptionist_relief: 4802.85
-      direct_labor_and_opening_total: 84445.57
-      superannuation: 10133.47
-      workers_comp: 1435.57
+      receptionist_relief: 0.00
+      direct_labor_and_opening_total: 79642.72
+      superannuation: 9557.13
+      workers_comp: 1353.93
     status: CALCULATED
     status_detail: "Identical payroll to cost_table2_m1 -- floor-constrained PM weekday labor."
     scenario_applicability: scenario_table_2
@@ -417,9 +419,9 @@ records:
     month: M3
     fixed_costs: 12788.34
     variable_costs: 1000.00
-    payroll_costs: 96014.61
+    payroll_costs: 90553.78
     relief_absence_allowance: 0.00
-    total_operating_costs: 109802.95
+    total_operating_costs: 104342.12
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -429,10 +431,10 @@ records:
       pm_weekday_direct_labor: 9808.92
       pm_saturday_direct_labor: 2895.82
       opening_time_increment: 9118.40
-      receptionist_relief: 4802.85
-      direct_labor_and_opening_total: 84445.57
-      superannuation: 10133.47
-      workers_comp: 1435.57
+      receptionist_relief: 0.00
+      direct_labor_and_opening_total: 79642.72
+      superannuation: 9557.13
+      workers_comp: 1353.93
     status: CALCULATED
     status_detail: "Identical payroll to cost_table2_m1/m2 -- floor-constrained PM weekday labor."
     scenario_applicability: scenario_table_2
@@ -447,9 +449,9 @@ records:
     month: M4
     fixed_costs: 12788.34
     variable_costs: 1200.00
-    payroll_costs: 96014.61
+    payroll_costs: 90553.78
     relief_absence_allowance: 0.00
-    total_operating_costs: 110002.95
+    total_operating_costs: 104542.12
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -459,10 +461,10 @@ records:
       pm_weekday_direct_labor: 9808.92
       pm_saturday_direct_labor: 2895.82
       opening_time_increment: 9118.40
-      receptionist_relief: 4802.85
-      direct_labor_and_opening_total: 84445.57
-      superannuation: 10133.47
-      workers_comp: 1435.57
+      receptionist_relief: 0.00
+      direct_labor_and_opening_total: 79642.72
+      superannuation: 9557.13
+      workers_comp: 1353.93
     status: CALCULATED
     status_detail: "Identical payroll to cost_table2_m1-m3 -- floor-constrained PM weekday labor (thin margin at 15 sessions/day, same finding as Table 1)."
     scenario_applicability: scenario_table_2
@@ -477,9 +479,9 @@ records:
     month: M5plus
     fixed_costs: 12788.34
     variable_costs: 1500.00
-    payroll_costs: 96312.03
+    payroll_costs: 90851.19
     relief_absence_allowance: 0.00
-    total_operating_costs: 110600.37
+    total_operating_costs: 105139.53
     currency: AUD
     payroll_breakdown:
       am_weekday_direct_labor: 48310.68
@@ -489,10 +491,10 @@ records:
       pm_weekday_direct_labor: 10070.50
       pm_saturday_direct_labor: 2895.82
       opening_time_increment: 9118.40
-      receptionist_relief: 4802.85
-      direct_labor_and_opening_total: 84707.15
-      superannuation: 10164.86
-      workers_comp: 1440.02
+      receptionist_relief: 0.00
+      direct_labor_and_opening_total: 79904.30
+      superannuation: 9588.52
+      workers_comp: 1358.37
     status: CALCULATED
     status_detail: >
       Steady state -- 16 PM sessions/day clears the 3-hour floor. RECONCILIATION, disclosed not
@@ -594,6 +596,36 @@ resolved_changes:
       - {file: tools/cost_ramp_model.py, section: "CanonicalCostInputs.relief_absence_allowance"}
     resolution_status: "RESOLVED (reverted, 2026-08-21, founder instruction)"
     notes: "Not a research finding -- a direct founder policy instruction. Recorded here per this repo's governance convention of disclosing every change to a canonical cost line, not silently editing the numbers."
+
+  - id: change_pm_reception_dedicated_role_removed
+    description: >
+      Position 06/RCO01 (dedicated PM Reception, docs/architecture/
+      STAFF-PROFILES.md) is REMOVED as a separate payroll line, effective
+      2026-08-21, per Anthony's direct founder decision -- overriding
+      docs/architecture/STAFFING-COVERAGE-VALIDATION.md section 4's prior
+      recommendation of Model A (dedicated PM Reception). The confirmed
+      model is Model C (service-staff coverage during booking gaps):
+      rostered PM treatment staff (PMM01/PMH01/PMN01/PMB01) handle
+      check-in/payment/Fresha administration during natural gaps in their
+      own PM session bookings, already paid for via
+      pm_weekday_direct_labor/pm_saturday_direct_labor -- no separate
+      role or cost. receptionist_relief (was A$168.55/day weekday,
+      A$252.83/day Saturday, Position 06's real first-principles labour
+      cost) is now 0.00 on every record below. STAFFING-COVERAGE-
+      VALIDATION.md section 4 has been updated to mark the prior Model A
+      recommendation SUPERSEDED BY FOUNDER DECISION (2026-08-21) --
+      the original comparison and reasoning are retained for trace, not
+      deleted. Fresha/payment-system training has been added as a real,
+      explicit skill requirement on the PM treatment-staff position
+      profiles (staffing.yml PM records / STAFF-PROFILES.md), not a
+      hand-wave.
+    affected_records: [cost_table1_m1, cost_table1_m2, cost_table1_m3, cost_table1_m4, cost_table1_m5plus, cost_table2_m1, cost_table2_m2, cost_table2_m3, cost_table2_m4, cost_table2_m5plus]
+    sources:
+      - {file: docs/architecture/STAFFING-COVERAGE-VALIDATION.md, section: "4. PM Reception -- Structural Comparison, updated 2026-08-21"}
+      - {file: docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md, section: "5. PM Reception via Service-Staff Coverage -- RESOLVED 2026-08-21"}
+      - {file: tools/cost_ramp_model.py, section: "RECEPTIONIST_RELIEF_WORKERS_COMP_DAILY / PM_RECEPTION_SATURDAY_DAILY"}
+    resolution_status: "RESOLVED (confirmed via founder decision, 2026-08-21, overriding the prior Model A recommendation)"
+    notes: "Not a research finding -- a direct founder policy instruction. The prior Model A reasoning was real and well-evidenced (Fresha/payment training gap, PM-capacity self-defeat risk, customer-experience consistency) -- not deleted, marked superseded, and the training-gap risk is now closed by making Fresha/payment training an explicit PM staff requirement rather than left unaddressed."
 
 # ============================================================
 # Genuine, disclosed conflicts -- none silently resolved.

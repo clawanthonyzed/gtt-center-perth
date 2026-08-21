@@ -652,19 +652,22 @@ class FundingRequirementInvestigationTests(unittest.TestCase):
         was 163721.88/124226.88 (raw 16/8 staff-session PM count used
         directly, incorrect), now 154710.69/115215.69 (corrected transaction
         capacity, docs/architecture/PM-CAPACITY-RECONCILIATION.md). Payroll
-        UNCHANGED by this round -- PM labour hours are not affected, only the
-        transaction-counting used for revenue. Payroll RECALCULATED
-        2026-08-18 (Phase C audit round, Venue Manager wage reclassification)
-        -- was 100890.20/95485.22 under the 2026-08-17 first-principles
-        rebuild; were 84654.10/80684.16 prior to the 2026-08-16 current-
-        wage-rate research."""
+        RECALCULATED 2026-08-21 (later same day -- Position 06/RCO01
+        dedicated PM Reception REMOVED, per Anthony's direct founder
+        decision) -- was 101717.02/96312.03 (earlier the same day, unchanged
+        since the 2026-08-18 Phase C audit round's Venue Manager wage
+        reclassification), now 96256.18/90851.19 (Position 06's real cost,
+        A$5,460.84/month including super/workers-comp, removed). Were
+        100890.20/95485.22 under the 2026-08-17 first-principles rebuild;
+        84654.10/80684.16 prior to the 2026-08-16 current-wage-rate
+        research."""
         inputs = mfm.CanonicalModelInputs()
         m5_t1 = mfm.compute_month_pnl("scenario_table_1", 5, inputs)
         m5_t2 = mfm.compute_month_pnl("scenario_table_2", 5, inputs)
         self.assertAlmostEqual(m5_t1["revenue"]["total_revenue"], 154710.69, places=2)
         self.assertAlmostEqual(m5_t2["revenue"]["total_revenue"], 115215.69, places=2)
-        self.assertAlmostEqual(m5_t1["payroll"], 101717.02, places=2)
-        self.assertAlmostEqual(m5_t2["payroll"], 96312.03, places=2)
+        self.assertAlmostEqual(m5_t1["payroll"], 96256.18, places=2)
+        self.assertAlmostEqual(m5_t2["payroll"], 90851.19, places=2)
 
 
 if __name__ == "__main__":

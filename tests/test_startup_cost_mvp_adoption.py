@@ -111,25 +111,27 @@ class UpdatedPlanningCaseModelTests(unittest.TestCase):
         """The updated planning case (this phase) must not itself have altered
         the Master Financial Model's cash-flow trough figures -- those remain
         sourced only from cash_flow_summary, never recalculated by THIS phase.
-        RECALCULATED 2026-08-21 (Financial Model Rebuild round --
-        relief_absence_allowance REVERTED to 0.00, per direct founder
-        instruction) -- was 76532.52/172138.34 under the 2026-08-18
-        relief-allowance-added version (itself was 63658.78/116126.66 under
-        the Priority 1 PM capacity/transaction reconciliation, 54016.81/
-        96821.83 under the 2026-08-18 VM wage audit correction, 52363.17/
-        94341.40 under the 2026-08-17 first-principles rebuild, 34860.52/
-        74110.43 under the same-day proportional-wage-scaling recompute
-        before that). Legitimately moved again by this round's real,
-        founder-directed correction (a separate, later, authorised phase) --
-        this test's own guard (this specific phase didn't touch them) is
-        unaffected by that different phase's change. Table 2's trough is
-        now back at Month 4, not Month 24 -- its cumulative position
-        recovers after Month 4, since steady state is profitable again."""
+        RECALCULATED 2026-08-21 (later same day -- Position 06/RCO01
+        dedicated PM Reception REMOVED, per Anthony's direct founder
+        decision) -- was 64275.46/117360.02 earlier the same day (relief_
+        absence_allowance reverted to 0.00), 76532.52/172138.34 under the
+        2026-08-18 relief-allowance-added version before that (itself was
+        63658.78/116126.66 under the Priority 1 PM capacity/transaction
+        reconciliation, 54016.81/96821.83 under the 2026-08-18 VM wage audit
+        correction, 52363.17/94341.40 under the 2026-08-17 first-principles
+        rebuild, 34860.52/74110.43 under the same-day proportional-wage-
+        scaling recompute before that). Legitimately moved again by this
+        round's real, founder-directed correction (a separate, later,
+        authorised phase) -- this test's own guard (this specific phase
+        didn't touch them) is unaffected by that different phase's change.
+        Table 2's trough is now Month 3, within the historical reserve's
+        own upper bound for the first time under any 2026-08-18-or-later
+        cost base."""
         results = self.fri["opening_working_capital"]["operating_cash_trough_cross_check"]["results"]
         t1 = next(r for r in results if r["scenario_id"] == "scenario_table_1")
         t2 = next(r for r in results if r["scenario_id"] == "scenario_table_2")
-        self.assertEqual(t1["trough_value"], 64275.46)
-        self.assertEqual(t2["trough_value"], 117360.02)
+        self.assertEqual(t1["trough_value"], 53353.76)
+        self.assertEqual(t2["trough_value"], 98125.17)
 
 
 if __name__ == "__main__":
