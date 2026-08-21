@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTT Center Perth — Dash (Prototype)</title>
+<meta name="description" content="GTT Center Perth Dash. Static, in-repo functional prototype: dashboard, search, decision/dependency registers, financial snapshot. Not deployed. No live AI backend.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --warm-ivory:#FAF6EE; --warm-stone:#E8DAC5; --deep-brown:#33261E;
+  --earthy-terracotta:#A9654E; --muted-olive:#5E5F45; --dusty-rose:#D9A08C; --warm-brass:#9C7A46;
+  --white:#FFFFFF;
+  --font-display:'Fraunces', Georgia, serif; --font-body:'DM Sans', -apple-system, Helvetica, Arial, sans-serif;
+  --radius-sm:6px; --radius-md:10px; --radius-lg:16px;
+  --shadow-card:0 1px 3px rgba(51,38,30,0.08), 0 1px 2px rgba(51,38,30,0.06);
+  --shadow-card-lg:0 4px 16px rgba(51,38,30,0.10);
+  --maxw:1180px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0; background:var(--warm-ivory); color:var(--deep-brown); font-family:var(--font-body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{font-family:var(--font-display); font-weight:500; color:var(--deep-brown); line-height:1.18; margin:0 0 0.5em 0;}
+h1{font-weight:600;} p{margin:0 0 1em 0;}
+a{color:var(--earthy-terracotta);} .container{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+table{border-collapse:collapse; width:100%; font-size:0.92rem;}
+th,td{text-align:left; padding:9px 11px; border-bottom:1px solid var(--warm-stone); vertical-align:top;}
+th{font-weight:700; background:var(--warm-stone); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em;}
+tr:nth-child(even) td{background:rgba(232,218,197,0.3);}
+.table-wrap{overflow-x:auto; margin:16px 0 24px 0; border-radius:var(--radius-md); box-shadow:var(--shadow-card);}
+.table-wrap table{margin:0;}
+
+.masthead{background:var(--deep-brown); color:var(--warm-ivory); padding:14px 0; position:sticky; top:0; z-index:50; box-shadow:0 2px 10px rgba(0,0,0,0.15);}
+.masthead .container{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+.masthead-title{font-family:var(--font-display); font-size:1.05rem;}
+.masthead-title .sub{font-family:var(--font-body); font-size:0.66rem; opacity:0.72; display:block; letter-spacing:0.07em; text-transform:uppercase; margin-top:2px;}
+.masthead-nav{display:flex; gap:4px; flex-wrap:wrap;}
+.masthead-nav a{color:var(--warm-ivory); text-decoration:none; font-size:0.82rem; padding:6px 11px; border-radius:var(--radius-sm); opacity:0.85;}
+.masthead-nav a:hover{background:rgba(250,246,238,0.12); opacity:1;}
+
+.proto-banner{background:var(--warm-stone); border-bottom:2px solid var(--earthy-terracotta); padding:12px 0; font-size:0.86rem;}
+
+section{padding:48px 0; border-top:1px solid var(--warm-stone);}
+section:first-of-type{border-top:none;}
+.eyebrow{font-family:var(--font-body); font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--earthy-terracotta); font-weight:700; margin-bottom:8px;}
+.sec-title{font-size:1.9rem;}
+
+.tag{display:inline-block; font-family:var(--font-body); font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding:3px 9px; border-radius:20px; white-space:nowrap; line-height:1.5;}
+.tag-current{background:var(--deep-brown); color:var(--warm-ivory);}
+.tag-resolved{background:var(--muted-olive); color:var(--warm-ivory);}
+.tag-founder{background:var(--earthy-terracotta); color:var(--warm-ivory);}
+.tag-thirdparty{background:transparent; color:var(--deep-brown); border:1.5px solid var(--warm-brass);}
+.tag-superseded{background:var(--warm-stone); color:var(--deep-brown); border:1.5px dashed var(--deep-brown);}
+.tag-historical{background:transparent; color:var(--muted-olive); border:1.5px solid var(--muted-olive);}
+.tag-research{background:transparent; color:var(--earthy-terracotta); border:1.5px dashed var(--earthy-terracotta);}
+
+.callout{background:var(--white); border-left:4px solid var(--earthy-terracotta); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:18px 0; box-shadow:var(--shadow-card); font-size:0.94rem;}
+.callout.olive{border-left-color:var(--muted-olive);}
+.callout-label{font-weight:700; text-transform:uppercase; font-size:0.7rem; letter-spacing:0.06em; margin-bottom:4px; display:block;}
+
+.card-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:18px 0;}
+.metric-card{background:var(--white); border-radius:var(--radius-lg); padding:20px 18px; box-shadow:var(--shadow-card);}
+.metric-card .label{font-size:0.7rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--muted-olive); font-weight:700;}
+.metric-card .value{font-family:var(--font-display); font-size:1.7rem; margin:5px 0 3px 0;}
+.metric-card.positive .value{color:var(--muted-olive);}
+.metric-card .note{font-size:0.76rem; opacity:0.72;}
+
+.search-box{width:100%; padding:14px 18px; font-size:1rem; font-family:var(--font-body); border:2px solid var(--warm-stone); border-radius:var(--radius-md); background:var(--white); color:var(--deep-brown);}
+.search-box:focus{outline:none; border-color:var(--earthy-terracotta);}
+.search-results{margin-top:16px; display:flex; flex-direction:column; gap:10px;}
+.result-card{background:var(--white); border-radius:var(--radius-md); padding:14px 18px; box-shadow:var(--shadow-card); border-left:3px solid var(--muted-olive);}
+.result-card .rtitle{font-family:var(--font-display); font-size:1.05rem; margin-bottom:3px;}
+.result-card .rmeta{font-size:0.72rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--earthy-terracotta); font-weight:700; margin-bottom:6px;}
+.result-card .rexcerpt{font-size:0.88rem; opacity:0.85;}
+.result-card a{font-size:0.8rem; font-weight:700; text-decoration:underline;}
+.no-results{font-style:italic; opacity:0.7; padding:10px 0;}
+
+.ai-panel{background:var(--white); border-radius:var(--radius-lg); padding:22px 24px; box-shadow:var(--shadow-card-lg);}
+.ai-mock-banner{background:var(--warm-stone); border-radius:var(--radius-sm); padding:10px 14px; font-size:0.8rem; margin-bottom:16px; font-weight:600;}
+.ai-examples{display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 18px 0;}
+.ai-example-btn{background:var(--warm-ivory); border:1.5px solid var(--warm-stone); border-radius:20px; padding:7px 14px; font-size:0.82rem; cursor:pointer; font-family:var(--font-body); color:var(--deep-brown);}
+.ai-example-btn:hover{border-color:var(--earthy-terracotta);}
+.ai-answer{background:var(--warm-ivory); border-radius:var(--radius-md); padding:16px 20px; margin-top:14px; border:1px solid var(--warm-stone); display:none;}
+.ai-answer.show{display:block;}
+.ai-answer .a-source{font-size:0.74rem; color:var(--muted-olive); margin-top:10px; font-weight:600;}
+
+footer{background:var(--deep-brown); color:var(--warm-ivory); padding:32px 0; margin-top:20px; font-size:0.82rem;}
+footer a{color:var(--warm-ivory);}
+code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size:0.88em;}
+@media (max-width:640px){.sec-title{font-size:1.5rem;}}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="container">
+    <div class="masthead-title">GTT Center Perth <span class="sub">Dash — Functional Prototype</span></div>
+    <nav class="masthead-nav">
+      <a href="#home">Dashboard</a>
+      <a href="#search">Search</a>
+      <a href="#ai">Assistant</a>
+      <a href="#decisions">Decisions</a>
+      <a href="#dependencies">Dependencies</a>
+      <a href="#financial">Financial</a>
+      <a href="#wdp">WDP Action</a>
+    </nav>
+  </div>
+</div>
+
+<div class="proto-banner">
+  <div class="container">
+    <strong>Prototype notice:</strong> Static, in-repo functional prototype only. No live deployment to gtt.anthonyzed.work, no real password authentication, no live paid AI backend wiring. The Assistant panel below returns pre-written, repository-grounded answers to a fixed set of demo questions &mdash; it does not call any AI model. A real dynamic AI backend requires Anthony's explicit authorisation plus Einstein's credit-gate approval, separate from this prototype.
+  </div>
+</div>
+
+<!-- ================= DASHBOARD HOME ================= -->
+<section id="home">
+  <div class="container">
+    <div class="eyebrow">Dashboard</div>
+    <h1 class="sec-title">Venture status, at a glance</h1>
+    <p>Every figure below is a presentation of the dossier's own canonical sources &mdash; this page does not recalculate anything.</p>
+
+    <div class="card-grid">
+      <div class="metric-card"><span class="label">Dossier completion</span><div class="value">35 / 35</div><div class="note">All chapters built. Venture itself is not finished &mdash; see Decisions below.</div></div>
+      <div class="metric-card"><span class="label">Monthly revenue</span><div class="value">A$154,710.69</div><div class="note">18-client planning case <span class="tag tag-current">Current truth</span></div></div>
+      <div class="metric-card"><span class="label">Monthly opex</span><div class="value">A$122,133.89</div><div class="note">Payroll + overhead + relief allowance</div></div>
+      <div class="metric-card positive"><span class="label">Operating result</span><div class="value">A$32,576.80</div><div class="note">21.1% margin</div></div>
+      <div class="metric-card"><span class="label">Break-even</span><div class="value">13.051/day</div><div class="note">= A$122,133.90/month</div></div>
+      <div class="metric-card"><span class="label">18-client buffer</span><div class="value">+4.949/day</div><div class="note">+37.9% above break-even, or 27.5% of the 18-client target itself &mdash; two different, both-correct readings</div></div>
+      <div class="metric-card"><span class="label">Venue status</span><div class="value" style="font-size:1.2rem;">Not secured</div><div class="note">2 Tier-1 candidates, zero inspected <span class="tag tag-founder">Founder decision</span></div></div>
+      <div class="metric-card"><span class="label">WDP status</span><div class="value" style="font-size:1.2rem;">Active, ongoing</div><div class="note">8 Aug 2026 response logged, 5 items outstanding <span class="tag tag-thirdparty">Third-party</span></div></div>
+    </div>
+
+    <h3>Founder decisions outstanding</h3>
+    <p>13 items currently open &mdash; final name, treatment/phlebotomy pool sizes, companion-policy exceptions, venue selection, PM package sign-off, 4 service-price conflicts, GTT supplies discrepancy, expansion path, and more. Full register: <a href="#decisions">Decisions</a> below, or <a href="../master-dossier-v2/index.html#ch34">Dossier Chapter 34</a>.</p>
+
+    <h3>Third-party dependencies outstanding</h3>
+    <p>9 items &mdash; WDP commercial figure, phlebotomist employment model, sightline requirement, medical waste responsibility, landlord terms, zoning confirmation, builder quotes, supplier quotes, LEV contractor. Full register: <a href="#dependencies">Dependencies</a> below.</p>
+
+    <h3>Next critical actions</h3>
+    <ol>
+      <li><strong>Send the WDP follow-up</strong> &mdash; draft ready, not sent. See <a href="#wdp">WDP Action</a>.</li>
+      <li>Progress venue selection between the two Tier-1 candidates (or a new one) &mdash; the single most consequential dependency on the entire execution roadmap.</li>
+      <li>Confirm the 18-client volume was actually communicated to WDP &mdash; still unconfirmed as sent.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= SEARCH ================= -->
+<section id="search">
+  <div class="container">
+    <div class="eyebrow">Search</div>
+    <h2 class="sec-title">Search the dossier</h2>
+    <p>Real client-side search across a curated index of dossier content &mdash; financial figures, policies, decisions, staffing, venue requirements, WDP status, operating assumptions. Matches title, chapter, and excerpt text.</p>
+    <input type="text" id="searchInput" class="search-box" placeholder="Try: break-even, WDP, treatment staff, companion policy, venue&hellip;" autocomplete="off">
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</section>
+
+<!-- ================= AI ASSISTANT PANEL ================= -->
+<section id="ai">
+  <div class="container">
+    <div class="eyebrow">Assistant</div>
+    <h2 class="sec-title">Ask the dossier</h2>
+    <div class="ai-panel">
+      <div class="ai-mock-banner">This is a prototype/mock response layer, repository-grounded &mdash; it matches your question against a fixed set of pre-written, sourced answers below. It is not a live AI model and has no reasoning capability beyond this fixed demo set.</div>
+      <div class="ai-examples" id="aiExamples"></div>
+      <input type="text" id="aiInput" class="search-box" placeholder="Type or click an example question above&hellip;" autocomplete="off">
+      <div id="aiAnswer" class="ai-answer"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DECISION REGISTER ================= -->
+<section id="decisions">
+  <div class="container">
+    <div class="eyebrow">Decision Register</div>
+    <h2 class="sec-title">Founder decisions &mdash; Chapter 34, Category A</h2>
+    <p>Presentation of the dossier's own register &mdash; nothing here is decided by this Dash.</p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Decision</th><th>Status</th><th>Recommendation / options</th><th>Founder action?</th></tr></thead>
+      <tbody id="decisionTable"></tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEPENDENCY REGISTER ================= -->
+<section id="dependencies">
+  <div class="container">
+    <div class="eyebrow">Dependency Register</div>
+    <h2 class="sec-title">Third-party dependencies &mdash; Chapter 34, Categories B &amp; C</h2>
+    <p>Genuinely outstanding, separate from founder decisions &mdash; nothing here requires Anthony to decide, only for a third party to respond or a professional to confirm.</p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Dependency</th><th>Party</th><th>Status</th></tr></thead>
+      <tbody id="dependencyTable"></tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINANCIAL SNAPSHOT ================= -->
+<section id="financial">
+  <div class="container">
+    <div class="eyebrow">Financial Snapshot</div>
+    <h2 class="sec-title">Current canonical position</h2>
+    <p><span class="tag tag-current">Current truth</span> Presentation layer only &mdash; this is not a second financial model. Every figure traces to <code>data/models/master_financial_model.yml</code> via <a href="../master-dossier-v2/index.html#ch27">Dossier Chapter 27</a>.</p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>Monthly revenue</td><td>A$154,710.69</td><td rowspan="8"><code>FINANCIAL-POSITION-CURRENT.md</code>, live-pulled from <code>master_financial_model.yml</code></td></tr>
+        <tr><td>Monthly opex</td><td>A$122,133.89</td></tr>
+        <tr><td>Monthly operating result</td><td>A$32,576.80 (21.1% margin)</td></tr>
+        <tr><td>Annualised operating result</td><td>A$390,921.60</td></tr>
+        <tr><td>Break-even revenue / clients-per-day</td><td>A$122,133.90/mo / 13.051/day</td></tr>
+        <tr><td>Cash-flow trough</td><td>-A$76,532.52 (Month 2)</td></tr>
+        <tr><td>Cumulative cash turns positive</td><td>Month 6</td></tr>
+        <tr><td>24-month cumulative result</td><td>+A$598,232.91</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:0.85rem; opacity:0.75;">6/12/18 sensitivity, full P&amp;L, and cash-flow tables: <a href="../master-dossier-v2/index.html#ch28">Chapter 28</a>, <a href="../master-dossier-v2/index.html#ch29">29</a>, <a href="../master-dossier-v2/index.html#ch31">31</a>.</p>
+  </div>
+</section>
+
+<!-- ================= WDP ACTION ================= -->
+<section id="wdp">
+  <div class="container">
+    <div class="eyebrow">Action Required</div>
+    <h2 class="sec-title">WDP Follow-Up</h2>
+    <div class="callout">
+      <span class="callout-label">ACTION &mdash; SEND BY COB THURSDAY 20 AUGUST 2026</span>
+      <span class="tag tag-thirdparty">Third-party dependency</span>
+      Draft prepared at <code>docs/wdp-followup-draft-2026-08-20.md</code>, marked READY TO SEND. <strong>Not sent by this Dash or any agent</strong> &mdash; awaiting Anthony's own review and send action.
+      <ul>
+        <li>18-client volume correction &mdash; the only confirmed-sent email told Carole 12/day; live commercial risk against her in-progress rental quote</li>
+        <li>Commercial/rental figure request</li>
+        <li>Phlebotomist employment model clarification (in-house vs. WDP-supplied)</li>
+        <li>Sightline/observation requirement confirmation</li>
+        <li>Medical waste disposal responsibility</li>
+      </ul>
+      <strong>Courier cutoff is deliberately NOT included &mdash; already resolved</strong> (Carole's verified 2026-07-30 email). <strong>Carole's 8 August 2026 response is real and already logged</strong> (<code>docs/VERIFICATION-TRACKER.md</code> item 29d, <code>docs/reed-partnerships.md</code>) &mdash; her own fuller commercial response was expected "during the coming week" and has not been logged since; the 5 items above remain genuinely outstanding on that basis, not because there has been no response at all since 7 August.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>GTT Center Perth Dash &mdash; static functional prototype. Data source: the 35-chapter <a href="../master-dossier-v2/index.html">Master Dossier</a> and underlying repository truth documents. Built 2026-08-21.</p>
+  </div>
+</footer>
+
+<script>
+// ===================== SEARCH INDEX =====================
+// Curated index -- title / chapter / excerpt / anchor. Not a live scrape.
+const SEARCH_INDEX = [
+  {title:"AM clients/day", chapter:"Ch1 Dashboard / Ch8 AM Model", excerpt:"18 clients/day, solver-confirmed zero chair/phlebotomist collisions. The sole planning case; 12/6 are sensitivity-only.", link:"../master-dossier-v2/index.html#ch8"},
+  {title:"Monthly revenue", chapter:"Ch1 Dashboard / Ch28 P&L", excerpt:"A$154,710.69/month -- AM GTT (A$118,485) + PM packages (A$36,225.69), blended. Ancillary A$0, excluded from baseline.", link:"../master-dossier-v2/index.html#ch28"},
+  {title:"Break-even", chapter:"Ch30 Break-even", excerpt:"A$122,133.90/month = 13.051 clients/day. 18-client buffer: +4.949/day, +37.9% above break-even, or 27.5% of the 18-client target.", link:"../master-dossier-v2/index.html#ch30"},
+  {title:"Operating Result vs profit", chapter:"Ch28 P&L", excerpt:"Operating Result excludes depreciation, tax, interest, and startup-capital amortisation -- not a full accounting profit figure.", link:"../master-dossier-v2/index.html#ch28"},
+  {title:"Cash-flow trough", chapter:"Ch29 Cash Flow", excerpt:"-A$76,532.52 at Month 2. Cumulative position turns positive Month 6. +A$598,232.91 by Month 24.", link:"../master-dossier-v2/index.html#ch29"},
+  {title:"6/12/18 sensitivity", chapter:"Ch31 Financial Sensitivity", excerpt:"18/day is the sole planning case. 6/day and 12/day are downside sensitivity comparisons only, both loss-making at steady state.", link:"../master-dossier-v2/index.html#ch31"},
+  {title:"Simultaneous headcount vs employment pool", chapter:"Ch14 Staffing", excerpt:"8 treatment + 2 phlebotomists work every trading day (simultaneous). 12 treatment + 4 phlebotomists is the recommended employment pool for coverage -- not the same number.", link:"../master-dossier-v2/index.html#ch14"},
+  {title:"Treatment staff pool size", chapter:"Ch16 Staffing Coverage", excerpt:"12 recommended (>=95% reliability) vs 11 lower-reliability alternative (94.56%). Founder decision, not resolved.", link:"../master-dossier-v2/index.html#ch16"},
+  {title:"Phlebotomist pool size", chapter:"Ch16 Staffing Coverage", excerpt:"4 recommended (99.81% reliability) vs 3 lower bound (98.18%). Founder decision, not resolved.", link:"../master-dossier-v2/index.html#ch16"},
+  {title:"Phlebotomy substitution capability", chapter:"Ch14/15 Staffing", excerpt:"Zero substitution capability from any other role -- the only position in the whole model with none. Requires the pathology partner's own credentialing.", link:"../master-dossier-v2/index.html#ch14"},
+  {title:"Venue Manager relief", chapter:"Ch16 Staffing Coverage", excerpt:"No permanent relief VM recommended at launch scale -- a genuine, disclosed single point of failure.", link:"../master-dossier-v2/index.html#ch16"},
+  {title:"PM Reception coverage", chapter:"Ch16 Staffing Coverage", excerpt:"Resolved: a small on-call relief pool now recommended for the 15:00-18:00 gap. The earlier 'genuinely unresolved' framing is superseded.", link:"../master-dossier-v2/index.html#ch16"},
+  {title:"AM/PM operating split", chapter:"Ch8/Ch9 Operating Model", excerpt:"AM window 07:00-13:00, PM window 13:00-18:00. Clean split, no soft-transition window. Older 12:00/12:30 references are stale.", link:"../master-dossier-v2/index.html#ch9"},
+  {title:"PM transaction capacity", chapter:"Ch9 PM Operating Model", excerpt:"12.8128 transactions/day weekday, 6.4064/day Saturday. The old 16-sessions-as-transactions figure is superseded -- never use A$117 x 16.", link:"../master-dossier-v2/index.html#ch9"},
+  {title:"PM revenue", chapter:"Ch9/Ch28", excerpt:"A$36,225.69/month, corrected from the superseded A$45,236.88 figure via the session/transaction reconciliation.", link:"../master-dossier-v2/index.html#ch9"},
+  {title:"WDP courier cutoff", chapter:"Ch7 GTT Service", excerpt:"RESOLVED, not open. Carole Rivers' verified 2026-07-30 email: no single fixed cutoff, overnight storage viable in some circumstances.", link:"../master-dossier-v2/index.html#ch7"},
+  {title:"WDP commercial/rental figure", chapter:"Ch34 Open Items", excerpt:"Actively progressing via WDP's State Business Manager, not stalled, not yet arrived (confirmed 2026-08-08).", link:"../master-dossier-v2/index.html#ch34"},
+  {title:"WDP phlebotomist employment model", chapter:"Ch34 Open Items", excerpt:"In-house (current modelled assumption) vs WDP-supplied under the rental arrangement -- genuinely not decided.", link:"../master-dossier-v2/index.html#ch34"},
+  {title:"Companion policy -- Blood Collection Room", chapter:"Ch22 Children/Companion Policy", excerpt:"Children and companions not permitted, with one unresolved exception: a support person for a specific clinical reason (e.g. needle phobia).", link:"../master-dossier-v2/index.html#ch22"},
+  {title:"Companion policy -- Lounge", chapter:"Ch22 Children/Companion Policy", excerpt:"Appropriate wait space for both children and companions. Genuine capacity tension disclosed: 8 chairs vs up to 18 clients plus companions/children.", link:"../master-dossier-v2/index.html#ch22"},
+  {title:"Lounge device concept", chapter:"Ch23 Lounge", excerpt:"2 devices (ballpark), curated content only, no browser/app store. Client-facing vs companion/child-facing is a founder decision.", link:"../master-dossier-v2/index.html#ch23"},
+  {title:"Venue requirements", chapter:"Ch19 Venue", excerpt:"Minimum functional ~239-242sqm. Parking non-negotiable: 8-10 dedicated spaces minimum. Two Tier-1 candidates, neither confirmed.", link:"../master-dossier-v2/index.html#ch19"},
+  {title:"Floor plan", chapter:"Ch20 Floor Plan", excerpt:"Only the Blood Collection Room requires solid walls. Massage/Beauty rooms use curtain partitions. Nail Station LEV vs open-plan adjacency still needs contractor confirmation.", link:"../master-dossier-v2/index.html#ch20"},
+  {title:"Naming decision", chapter:"Ch5 Brand", excerpt:"SOLENA 71.6% conditional leader vs ELOWEN 68.8%. Not locked. Trademark clearance deliberately deferred.", link:"../master-dossier-v2/index.html#ch5"},
+  {title:"Leaving-moment gesture", chapter:"Ch6 Customer Experience", excerpt:"Removed 2026-08-19 per explicit founder decision. Departure-experience mechanism remains a genuinely open design question -- no replacement invented.", link:"../master-dossier-v2/index.html#ch6"},
+  {title:"GTT supplies discrepancy", chapter:"Ch25 Purchasing", excerpt:"A$400/month (P&L figure) vs A$792/month (opex.yml's own basis) -- disclosed, unresolved, lower materiality than insurance.", link:"../master-dossier-v2/index.html#ch25"},
+  {title:"Insurance", chapter:"Ch27 Financial Model", excerpt:"A$708.34/month, resolved by investigation this session (corrected from A$400/A$1,279 guesses). Still Modelled/Ballpark, real broker quotes in motion.", link:"../master-dossier-v2/index.html#ch27"},
+  {title:"Workers compensation rate", chapter:"Ch27 Financial Model", excerpt:"1.7%, Placeholder -- two genuine research attempts failed (WorkCover WA 403, Safe Work Australia connection error). Needs a real broker/WorkCover WA figure.", link:"../master-dossier-v2/index.html#ch27"},
+  {title:"Venue Manager wage", chapter:"Ch15 Staff Profiles", excerpt:"A$40.00/hr, MA000005 Level 6. Researched-best-evidenced, needs accountant/Fair Work confirmation before a real contract.", link:"../master-dossier-v2/index.html#ch15"},
+  {title:"Startup expenditure", chapter:"Ch24 Startup Requirements", excerpt:"A$251,198 adopted planning total. Distinct from the A$85k-110k working capital reserve and the -A$76,533 operating cash-flow trough -- three different concepts.", link:"../master-dossier-v2/index.html#ch24"},
+  {title:"4 service-price conflicts", chapter:"Ch10 Service Catalogue", excerpt:"Hair colour (4 lines), lash infill -- investigated with a recommended resolution, not locked. services.yml still carries them as Placeholder.", link:"../master-dossier-v2/index.html#ch10"},
+  {title:"Marketing primary lever", chapter:"Ch32 Marketing", excerpt:"Direct-to-consumer waitlist (Instagram, referral cards) is the primary Month 1 lever. Clinical referral is a Month 2+ contributor, not overclaimed.", link:"../master-dossier-v2/index.html#ch32"},
+  {title:"Waitlist quality framework", chapter:"Ch32 Marketing", excerpt:"6-factor, 100-point scoring. Due-date/GTT-window alignment is the highest-weighted factor (30 pts) -- most currently-pregnant signups won't remain in-window by realistic opening.", link:"../master-dossier-v2/index.html#ch32"},
+  {title:"Expansion options", chapter:"Ch33 Expansion", excerpt:"3rd phlebotomist chair vs second venue -- two structurally different growth shapes, neither committed, neither quantified.", link:"../master-dossier-v2/index.html#ch33"},
+  {title:"Execution critical path", chapter:"Ch35 Execution Roadmap", excerpt:"Venue location search is the single most consequential dependency -- nothing in the next stage begins until it completes. No calendar dates, dependency-based sequencing only.", link:"../master-dossier-v2/index.html#ch35"},
+];
+
+function renderSearchResults(query){
+  const el = document.getElementById('searchResults');
+  if(!query || query.trim().length < 2){ el.innerHTML=''; return; }
+  const q = query.trim().toLowerCase();
+  const matches = SEARCH_INDEX.filter(item =>
+    item.title.toLowerCase().includes(q) ||
+    item.chapter.toLowerCase().includes(q) ||
+    item.excerpt.toLowerCase().includes(q)
+  );
+  if(matches.length === 0){
+    el.innerHTML = '<div class="no-results">No matches in the search index for "'+escapeHtml(query)+'". Try a broader term, or browse the full dossier directly.</div>';
+    return;
+  }
+  el.innerHTML = matches.map(m => `
+    <div class="result-card">
+      <div class="rtitle">${escapeHtml(m.title)}</div>
+      <div class="rmeta">${escapeHtml(m.chapter)}</div>
+      <div class="rexcerpt">${escapeHtml(m.excerpt)}</div>
+      <a href="${m.link}" target="_top">Go to source &rarr;</a>
+    </div>`).join('');
+}
+function escapeHtml(s){
+  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+document.getElementById('searchInput').addEventListener('input', e => renderSearchResults(e.target.value));
+
+// ===================== AI ASSISTANT MOCK =====================
+const AI_QA = [
+  {q:"What's our current break-even?", a:"A$122,133.90/month, or 13.051 clients/day. At the 18-client planning case, the buffer above break-even is +4.949 clients/day -- that's +37.9% above the break-even volume itself, or 27.5% of the 18-client target (two correct but different ways of expressing the same buffer -- both are used in the dossier, never mixed without labelling which one).", source:"Dossier Chapter 30 -- Break-even, live-pulled from FINANCIAL-POSITION-CURRENT.md §3"},
+  {q:"What are the remaining WDP questions?", a:"Five items: (1) confirming the 18-client volume correction was actually sent -- the only confirmed-sent email told Carole 12/day; (2) the commercial/rental figure, actively progressing with WDP's State Business Manager; (3) whether phlebotomists are employed in-house or WDP-supplied; (4) the sightline/observation requirement during the wellness-service wait; (5) whether medical waste disposal is covered under WDP's arrangement. The courier cutoff is NOT on this list -- that was resolved by Carole's verified 2026-07-30 email.", source:"Dossier Chapter 34 Category B, docs/wdp-followup-draft-2026-08-20.md"},
+  {q:"What decisions do I need to make?", a:"13 founder decisions are currently open, including: the final name (SOLENA vs ELOWEN), the treatment staff pool size (12 vs 11), the phlebotomist pool size (4 vs 3), the Blood Collection Room companion/needle-phobia exception, the Lounge device audience, venue selection between the two Tier-1 candidates, and PM package pricing sign-off. Full list with recommendations: the Decisions section of this Dash.", source:"Dossier Chapter 34 Category A"},
+  {q:"What's already resolved?", a:"The WDP specimen-dispatch courier cutoff, the PM Reception 15:00-18:00 coverage gap, the leaving-moment/leaving-box gesture (removed, stays removed), the old 10-11/3-4 staffing estimates (superseded by 12/4), the old 16-session PM revenue methodology and its A$45,236.88 figure, the old 12.073 break-even figure, the old A$400/A$1,279 insurance guesses, the GP/FTE-doctors-on-site site-assessment criterion, the name-branded retail question, phlebotomist collector work scope, and the collection-centre policy basis. None of these are presented as open anywhere in the dossier.", source:"Dossier Chapter 34, 'Confirmed resolved' callout"},
+  {q:"How many treatment staff do we need?", a:"8 treatment staff work simultaneously every trading day (4 Massage+Beauty, 2 Nails, 2 Hair) -- solver-verified, not the same number as the employment pool. The recommended employment pool for coverage/reliability is 12 (or 11 as a disclosed lower-reliability alternative) -- a founder decision, not yet made.", source:"Dossier Chapter 14 Staffing, Chapter 16 Staffing Coverage"},
+  {q:"Which venue requirements are mandatory?", a:"Minimum functional floor area ~239-242sqm; the Blood Collection Room must have solid walls (the only room that does); parking is non-negotiable, minimum 8-10 dedicated or immediately adjacent off-street spaces; 4 treatment rooms, 4 nail stations, 4 hair chairs at day-one commitment. Neither current Tier-1 venue candidate has confirmed zoning/permitted-use status yet.", source:"Dossier Chapter 19 Venue, Chapter 20 Floor Plan"},
+];
+
+function renderAiExamples(){
+  const el = document.getElementById('aiExamples');
+  el.innerHTML = AI_QA.map((item,i) => `<button class="ai-example-btn" data-i="${i}">${escapeHtml(item.q)}</button>`).join('');
+  el.querySelectorAll('.ai-example-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById('aiInput').value = AI_QA[btn.dataset.i].q;
+      showAiAnswer(AI_QA[btn.dataset.i]);
+    });
+  });
+}
+function showAiAnswer(item){
+  const el = document.getElementById('aiAnswer');
+  el.innerHTML = `<div>${escapeHtml(item.a)}</div><div class="a-source">Source: ${escapeHtml(item.source)}</div>`;
+  el.classList.add('show');
+}
+function matchAiQuestion(text){
+  const q = text.trim().toLowerCase();
+  if(!q) return null;
+  let best = null, bestScore = 0;
+  AI_QA.forEach(item => {
+    const words = q.split(/\s+/).filter(w => w.length > 2);
+    let score = 0;
+    words.forEach(w => { if(item.q.toLowerCase().includes(w) || item.a.toLowerCase().includes(w)) score++; });
+    if(score > bestScore){ bestScore = score; best = item; }
+  });
+  return bestScore >= 2 ? best : null;
+}
+document.getElementById('aiInput').addEventListener('input', e => {
+  const match = matchAiQuestion(e.target.value);
+  if(match){ showAiAnswer(match); }
+  else if(e.target.value.trim().length > 3){
+    document.getElementById('aiAnswer').innerHTML = '<div><em>No prototype answer available for that exact question. This mock panel only covers the example questions above -- try one of them, or use Search for anything else in the dossier.</em></div>';
+    document.getElementById('aiAnswer').classList.add('show');
+  } else {
+    document.getElementById('aiAnswer').classList.remove('show');
+  }
+});
+renderAiExamples();
+
+// ===================== DECISION REGISTER =====================
+const DECISIONS = [
+  ["Final name", "tag-founder", "Open", "SOLENA (71.6%, conditional leader) vs ELOWEN (68.8%) -- trademark clearance deliberately deferred", "Yes"],
+  ["Treatment employment pool size", "tag-founder", "Open", "12 recommended (&ge;95% reliability) vs 11 lower-reliability alternative (94.56%)", "Yes"],
+  ["Phlebotomist employment pool size", "tag-founder", "Open", "4 recommended (99.81% reliability) vs 3 lower bound (98.18%)", "Yes"],
+  ["Blood Collection Room companion exception", "tag-founder", "Open", "Whether a support person is permitted for a specific clinical reason (e.g. needle phobia) -- not defaulted either way", "Yes"],
+  ["Lounge device audience", "tag-founder", "Open", "Client-facing vs companion/child-facing -- a reasoned inference favours companion/child-facing, not decided", "Yes"],
+  ["AM-peak 'no companions' Lounge rule", "tag-founder", "Open", "A possible future monitoring item, not a launch-day decision", "Not yet"],
+  ["Venue selection", "tag-founder", "Open", "Between 6/325 Harborne St (Osborne Park) and 25 Mills St (Cannington), or a new candidate", "Yes"],
+  ["PM package pricing sign-off", "tag-founder", "Open", "PM Refresh A$185 / PM Restore A$135 researched and priced, not yet formally signed off", "Yes"],
+  ["Leaner day-one fixture count", "tag-founder", "Open", "2+2 vs 4+4 treatment/nail/hair stations, if capital is tighter than currently planned", "If applicable"],
+  ["Departure-experience mechanism", "tag-founder", "Open", "Genuinely no proposal exists post leaving-moment removal -- an open design question", "Eventually"],
+  ["4 disclosed service-price conflicts", "tag-founder", "Open", "Hair colour (4 lines), lash infill -- a reasoned recommendation exists, not locked; services.yml still Placeholder", "Yes"],
+  ["GTT supplies discrepancy", "tag-founder", "Open", "A$400/month (P&L) vs A$792/month (opex.yml's own basis) -- disclosed, lower materiality than insurance", "Eventually"],
+  ["3rd phlebotomist chair vs second venue", "tag-founder", "Open, future", "Two structurally different growth shapes, neither committed or recommended", "Not yet -- post-launch"],
+];
+document.getElementById('decisionTable').innerHTML = DECISIONS.map(d => `
+  <tr><td>${d[0]}</td><td><span class="tag ${d[1]}">${d[2]}</span></td><td>${d[3]}</td><td>${d[4]}</td></tr>
+`).join('');
+
+// ===================== DEPENDENCY REGISTER =====================
+const DEPENDENCIES = [
+  ["WDP commercial/rental figure", "WDP (Carole Rivers / State Business Manager)", "Actively progressing, not stalled, not yet arrived (confirmed 2026-08-08)"],
+  ["WDP phlebotomist employment model", "WDP", "In-house vs WDP-supplied -- genuinely not decided"],
+  ["WDP sightline/observation requirement", "WDP", "Narrower sub-question of the now-resolved 'remain at the collection centre' policy"],
+  ["WDP medical waste disposal responsibility", "WDP", "Whether WDP's own collection-centre setup already covers it"],
+  ["Landlord occupancy conditions / fit-out contribution", "Landlord (once a venue is under negotiation)", "Cannot be confirmed until a specific venue is chosen; A$20k-60k potential contribution not counted anywhere"],
+  ["Zoning / permitted-use confirmation", "Local council", "Not confirmed for either current Tier-1 venue candidate"],
+  ["Venue Manager wage classification", "Accountant / Fair Work", "Researched-best-evidenced (A$40/hr, MA000005 L6), needs professional confirmation"],
+  ["Workers compensation rate", "WorkCover WA / insurance broker", "Placeholder (1.7%) -- two genuine research attempts failed, needs a real figure"],
+  ["Insurance broker quotes", "Insurance broker", "A$708.34/month Modelled/Ballpark, real quotes already in motion"],
+  ["Real builder quotes (&times;3)", "Perth builders", "Gated on a confirmed venue floor plate"],
+  ["Real supplier quotes, itemised purchase list", "Named salon/spa suppliers", "None contacted yet"],
+  ["WorkSafe WA-familiar LEV contractor", "LEV/HVAC contractor", "No specific supplier identified -- a genuine gap, needed before fit-out"],
+  ["Trademark clearance", "Trademark attorney", "Deliberately deferred to a later funding milestone"],
+  ["Companion/children policy sign-off", "Solicitor, insurer, landlord, WA regulation", "Four separate professional confirmations needed before the proposed policy can be treated as settled"],
+];
+document.getElementById('dependencyTable').innerHTML = DEPENDENCIES.map(d => `
+  <tr><td>${d[0]}</td><td>${d[1]}</td><td><span class="tag tag-thirdparty">Third-party</span> ${d[2]}</td></tr>
+`).join('');
+</script>
+</body>
+</html>
