@@ -135,9 +135,19 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Cross-training/substitution capability:** Massage and Beauty are dual-qualification-paired as ONE shared pool (the venue's own confirmed common-pool model) — this pairing IS the cross-cover mechanism between these two specific service lines. NOT confirmed cross-qualified with Nails or Hair (`scenario-c-sync-timetables.md` §0.4 — no confirmed Nails+Hair pairing either).
 
-### Position 04 — Treatment Staff, Nail Technician (×2 committed, common AM/PM pool)
+### Position 04 — Treatment Staff, Nail Technician (×2 committed, common AM/PM pool) — Position IDs NLT01, NLT02
 
-**Role purpose, hours, roster pattern, employment type:** Same structure as Position 03.
+**Role purpose:** Delivers manicure, pedicure, and nail-add-on services across both the AM window (as part of GTT packages and gap-fill) and the PM window (standalone and package bookings).
+
+**Job description:** Delivers manicure/pedicure/nail-add-on treatments per the service catalogue, rostered flexibly across AM and PM per actual booking demand.
+
+**Job tasks:** Full-quality nail service delivery within the fixed AM package slot times or PM booking durations; tool sterilisation between clients.
+
+**Hours:** Staggered per first-client service time, minimum 3-hour engagement, released early if the final 2-3 hours of a pencilled shift aren't needed.
+
+**Roster pattern:** Booking-driven, not a fixed daily headcount — rostered to what confirmed bookings actually require that day. See `docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md` §2 for the solver-verified headcount at 6/12/18 AM clients/day (2 stays constant at the committed 25-min cadence across all three volumes; a genuinely lower-headcount alternative exists at 6 clients/day only if the pair cadence is widened, not adopted here).
+
+**Employment type:** Casual initially; reviewed for conversion to part-time once regular, proven hours exist per role.
 
 **Wage:** MA000005 Level 3 casual rate, A$36.81/hr (2026-08-16 research).
 
@@ -155,9 +165,19 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 
 **Cross-training/substitution capability:** NOT confirmed cross-qualified with any other line (Massage+Beauty pool, or Hair) — `scenario-c-sync-timetables.md` §0.4 explicitly flags no confirmed Nails+Hair pairing. The 2 Nail Technicians can only substitute for each other.
 
-### Position 05 — Treatment Staff, Hairdresser (×2 committed, common AM/PM pool)
+### Position 05 — Treatment Staff, Hairdresser (×2 committed, common AM/PM pool) — Position IDs HRD01, HRD02
 
-**Role purpose, hours, roster pattern, employment type:** Same structure as Position 03.
+**Role purpose:** Delivers blowdry, haircut, and braiding/hair-up services across both the AM window (as part of GTT packages and gap-fill) and the PM window (standalone and package bookings).
+
+**Job description:** Delivers blowdry/haircut/hair-up treatments per the service catalogue, rostered flexibly across AM and PM per actual booking demand.
+
+**Job tasks:** Full-quality hair service delivery within the fixed AM package slot times or PM booking durations.
+
+**Hours:** Staggered per first-client service time, minimum 3-hour engagement, released early if the final 2-3 hours of a pencilled shift aren't needed.
+
+**Roster pattern:** Booking-driven, not a fixed daily headcount — rostered to what confirmed bookings actually require that day. See `docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md` §2 for the solver-verified headcount at 6/12/18 AM clients/day (2 stays constant at the committed 25-min cadence across all three volumes; a genuinely lower-headcount alternative exists at 6 clients/day only if the pair cadence is widened, not adopted here).
+
+**Employment type:** Casual initially; reviewed for conversion to part-time once regular, proven hours exist per role.
 
 **Wage:** MA000005 Level 3 casual rate, A$36.81/hr (2026-08-16 research).
 
@@ -206,6 +226,8 @@ The committed design headcount (8 treatment staff + 2 phlebotomists + 1 Venue Ma
 ---
 
 ## Changelog
+
+**2026-08-21 (position-ID register + individual profiles)** — Removed the "Same structure as Position 03" shortcut from Positions 04 (Nail Technician) and 05 (Hairdresser) — both now state their own role purpose, job description, job tasks, hours, roster pattern, and employment type explicitly, per direct instruction that no position profile should be a cross-reference in place of stated content. Assigned short position IDs (VM01, PHB01-04, MBP01-04, NLT01-02, HRD01-02, RCO01, PMM01/PMH01/PMN01/PMB01) — full register in `docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md` §1. No headcount, wage, or qualification field changed — this is a documentation-completeness fix, not a staffing-model change.
 
 **2026-08-18 (Phase D)** — Completed the full field list Anthony specified: reporting line, experience (honestly flagged as not independently researched where genuinely unresolved, not invented), skills, compliance, cross-training/substitution capability added to all 6 positions. Cross-referenced against `docs/architecture/OPERATING-MODEL-18-CLIENTS.md` (new this round) rather than duplicating its timetable/reconciliation content. Every position's substitution capability is now stated explicitly, including the genuine gaps (Phlebotomy: none; Nails/Hair: only within their own line; PM Reception: none confirmed, VM can only partially cover a 13:00-15:00 window). **Now COMPLETE** for the field list itself — the underlying open items (VM wage professional confirmation, PM Reception relief sizing, phlebotomist WDP-employment dependency) remain genuinely open and are cross-referenced, not hidden by marking this document complete.
 
