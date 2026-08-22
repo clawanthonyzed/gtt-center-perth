@@ -812,7 +812,7 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     <div class="chapter-opener">
       <div class="chapter-eyebrow">Chapter 9</div>
       <h1 class="chapter-title">PM Operating Model</h1>
-      <p class="chapter-dek">The 13:00&ndash;18:00 standalone wellness window &mdash; capacity, staffing, and the corrected revenue model. This chapter was recently corrected; the distinction below matters.</p>
+      <p class="chapter-dek">The 13:00&ndash;18:00 standalone wellness window: capacity, staffing, and the corrected revenue model. This chapter was recently corrected; the distinction below matters.</p>
     </div>
 
     <div class="callout">
@@ -821,7 +821,7 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     </div>
 
     <h2>PM window overview</h2>
-    <p>Four treatment lines &mdash; Massage, Beauty, Nails, Hair &mdash; share the 13:00&ndash;18:00 window, staffed from the same pool that works the AM shift. Total available PM staff-minutes, weekday: 4 roles &times; 3.08hrs/role &times; 60 = <strong>739.2 minutes/day</strong>. This staff-hours figure is unchanged by the correction described below &mdash; it is the same labour capacity the payroll model already correctly prices; only how many client transactions it converts into was wrong.</p>
+    <p>Four treatment lines (Massage, Beauty, Nails, Hair) share the 13:00&ndash;18:00 window, staffed from the same pool that works the AM shift. Total available PM staff-minutes, weekday: 4 roles &times; 3.08hrs/role &times; 60 = <strong>739.2 minutes/day</strong>. This staff-hours figure is unchanged by the correction described below; it is the same labour capacity the payroll model already correctly prices; only how many client transactions it converts into was wrong.</p>
 
     <h2>How PM Refresh and PM Restore are actually staffed</h2>
     <div class="table-wrap">
@@ -829,20 +829,20 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       <thead><tr><th>Package</th><th>Composition</th><th>Staffing</th><th>Why</th></tr></thead>
       <tbody>
         <tr><td><strong>PM Refresh</strong></td><td>Massage 45min + Mini facial 30min (75 continuous min)</td><td>ONE dual-qualified Massage+Beauty-pool therapist</td><td>Matches the venue's existing AM common-pool design; real Perth comparables (Keturah, Hidden Valley, endota) bundle massage+facial as one continuous booking, with no evidence of a mid-service staff handover</td></tr>
-        <tr><td><strong>PM Restore</strong></td><td>Gel manicure 45min + Blow-dry 30min (75 total staff-min)</td><td>TWO specialists (1 Nail Technician + 1 Hairdresser)</td><td>Nails and Hair are explicitly NOT a confirmed dual-qualification pairing anywhere in this repo &mdash; genuinely distinct trade certifications (Cert III Nail Technology vs. Cert III Hairdressing)</td></tr>
+        <tr><td><strong>PM Restore</strong></td><td>Gel manicure 45min + Blow-dry 30min (75 total staff-min)</td><td>TWO specialists (1 Nail Technician + 1 Hairdresser)</td><td>Nails and Hair are explicitly NOT a confirmed dual-qualification pairing anywhere in this repo, genuinely distinct trade certifications (Cert III Nail Technology vs. Cert III Hairdressing)</td></tr>
       </tbody>
     </table>
     </div>
-    <p style="font-size:0.85rem; opacity:0.75;">This is an asymmetric finding, not a blanket "packages consume 2 sessions" rule &mdash; the two packages behave differently because the underlying qualification-pairing reality differs. Whether PM Restore's two components run concurrently (2 staff at once) or sequentially remains a genuinely open operational decision for the eventual Venue Manager &mdash; it does not change the total staff-minutes consumed either way.</p>
+    <p style="font-size:0.85rem; opacity:0.75;">This is an asymmetric finding, not a blanket "packages consume 2 sessions" rule: the two packages behave differently because the underlying qualification-pairing reality differs. Whether PM Restore's two components run concurrently (2 staff at once) or sequentially remains a genuinely open operational decision for the eventual Venue Manager; it does not change the total staff-minutes consumed either way.</p>
 
-    <h2>Sessions vs. transactions &mdash; the distinction that was previously conflated</h2>
-    <p>The 16-"sessions"/day figure (<code>client_assumptions.yml#pm_steady_state_capacity</code>) is a <strong>staff-session capacity</strong> unit, correct for labour-hours costing. It is <strong>not</strong> a client-transaction count. A PM Refresh or PM Restore booking is one client transaction but consumes more than one staff-session's worth of time &mdash; multiplying 16 directly by the average transaction price overstated achievable daily revenue.</p>
+    <h2>Sessions vs. transactions: the distinction that was previously conflated</h2>
+    <p>The 16-"sessions"/day figure (<code>client_assumptions.yml#pm_steady_state_capacity</code>) is a <strong>staff-session capacity</strong> unit, correct for labour-hours costing. It is <strong>not</strong> a client-transaction count. A PM Refresh or PM Restore booking is one client transaction but consumes more than one staff-session's worth of time; multiplying 16 directly by the average transaction price overstated achievable daily revenue.</p>
     <div class="cap-compare">
-      <div class="cap-box wrong"><span class="n">16</span><span class="lbl">Old figure &mdash; sessions/day, wrongly treated as transactions</span></div>
-      <div class="cap-box right"><span class="n">12.8128</span><span class="lbl">Corrected &mdash; weekday transactions/day</span></div>
-      <div class="cap-box right"><span class="n">6.4064</span><span class="lbl">Corrected &mdash; Saturday transactions/day</span></div>
+      <div class="cap-box wrong"><span class="n">16</span><span class="lbl">Old figure: sessions/day, wrongly treated as transactions</span></div>
+      <div class="cap-box right"><span class="n">12.8128</span><span class="lbl">Corrected: weekday transactions/day</span></div>
+      <div class="cap-box right"><span class="n">6.4064</span><span class="lbl">Corrected: Saturday transactions/day</span></div>
     </div>
-    <p style="font-size:0.85rem; opacity:0.75;"><strong>The old 16-session figure must never be presented as equivalent to transaction capacity anywhere in this dossier</strong> &mdash; it remains correct only as the labour-hours input that drives PM payroll cost, shown above crossed out specifically to make that distinction visible, not to imply the number itself was fabricated.</p>
+    <p style="font-size:0.85rem; opacity:0.75;"><strong>The old 16-session figure must never be presented as equivalent to transaction capacity anywhere in this dossier</strong>; it remains correct only as the labour-hours input that drives PM payroll cost, shown above crossed out specifically to make that distinction visible, not to imply the number itself was fabricated.</p>
 
     <h3>How the corrected capacity is calculated</h3>
     <div class="table-wrap">
@@ -869,12 +869,12 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       </tbody>
     </table>
     </div>
-    <p style="font-size:0.85rem; opacity:0.75;">This is the same A$36,225.69/month figure used in Chapters 1 and 2 &mdash; consistent throughout this dossier. The blended average transaction value (A$117.00, precisely A$116.97) is unaffected by this correction; only the daily transaction count was wrong, not the per-transaction price. Verified against a live run of <code>tools/revenue_ramp_model.py</code>, matching exactly.</p>
+    <p style="font-size:0.85rem; opacity:0.75;">This is the same A$36,225.69/month figure used in Chapters 1 and 2, consistent throughout this dossier. The blended average transaction value (A$117.00, precisely A$116.97) is unaffected by this correction; only the daily transaction count was wrong, not the per-transaction price. Verified against a live run of <code>tools/revenue_ramp_model.py</code>, matching exactly.</p>
 
-    <h2>PM operating timetable &mdash; illustrative, not solver-verified</h2>
+    <h2>PM operating timetable: illustrative, not solver-verified</h2>
     <div class="callout brown">
       <span class="callout-label">Stated plainly, not implied</span>
-      No scheduling solver has been run against the PM window the way it has for the AM window. The table below shows the <em>shape</em> of a plausible day (4 sessions/role/day, spread with real gaps for staggered/early-release rostering) that the financial model's own hours-based costing formula already assumes &mdash; it does not independently verify a specific booking sequence, and must not be presented as validated.
+      No scheduling solver has been run against the PM window the way it has for the AM window. The table below shows the <em>shape</em> of a plausible day (4 sessions/role/day, spread with real gaps for staggered/early-release rostering) that the financial model's own hours-based costing formula already assumes; it does not independently verify a specific booking sequence, and must not be presented as validated.
     </div>
     <div class="timetable-wrap">
     <table class="timetable">
@@ -882,22 +882,22 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       <tbody>
         <tr><td>13:00&ndash;13:46</td><td>Session 1</td><td>Session 1</td><td>Session 1</td><td>Session 1</td></tr>
         <tr><td>13:46&ndash;14:32</td><td>Session 2</td><td>Session 2</td><td>Session 2</td><td>Session 2</td></tr>
-        <tr><td>14:32&ndash;15:18</td><td class="buffer">gap &mdash; covers reception</td><td>Session 3</td><td class="buffer">gap &mdash; covers reception</td><td>Session 3</td></tr>
-        <tr><td>15:18&ndash;16:04</td><td>Session 3</td><td class="buffer">gap &mdash; covers reception</td><td>Session 3</td><td class="buffer">gap &mdash; covers reception</td></tr>
+        <tr><td>14:32&ndash;15:18</td><td class="buffer">gap, covers reception</td><td>Session 3</td><td class="buffer">gap, covers reception</td><td>Session 3</td></tr>
+        <tr><td>15:18&ndash;16:04</td><td>Session 3</td><td class="buffer">gap, covers reception</td><td>Session 3</td><td class="buffer">gap, covers reception</td></tr>
         <tr><td>16:04&ndash;16:50</td><td>Session 4</td><td>Session 4</td><td>Session 4</td><td>Session 4</td></tr>
-        <tr><td>16:50&ndash;18:00</td><td colspan="4">Wind-down / early-release window if no further bookings &mdash; whichever PM staff member is between clients covers closing/last checkout</td></tr>
+        <tr><td>16:50&ndash;18:00</td><td colspan="4">Wind-down / early-release window if no further bookings: whichever PM staff member is between clients covers closing/last checkout</td></tr>
       </tbody>
     </table>
     </div>
-    <p style="font-size:0.85rem; opacity:0.75;"><strong>No dedicated "PM Reception" column, per the 2026-08-21 founder decision (Model C, below):</strong> check-in, Fresha administration, and payment processing are covered by whichever PM staff member is currently between clients (the "gap" cells above), not a separate role. This is a genuine, disclosed trade-off, not a free change &mdash; during a gap slot, that staff member is not available to pick up a walk-in a-la-carte booking, and the customer experience is a rotating face rather than one consistent point of contact for the whole window.</p>
+    <p style="font-size:0.85rem; opacity:0.75;"><strong>No dedicated "PM Reception" column, per the 2026-08-21 founder decision (Model C, below):</strong> check-in, Fresha administration, and payment processing are covered by whichever PM staff member is currently between clients (the "gap" cells above), not a separate role. This is a genuine, disclosed trade-off, not a free change: during a gap slot, that staff member is not available to pick up a walk-in a-la-carte booking, and the customer experience is a rotating face rather than one consistent point of contact for the whole window.</p>
 
-    <h2>Reception coverage &mdash; Model C, confirmed 2026-08-21 by founder decision</h2>
-    <p><strong>PM Reception is no longer a dedicated position.</strong> Position 06/RCO01 (the single-person, 13:00&ndash;18:00 dedicated reception role this chapter previously described) has been removed from the committed payroll and rostering model. Anthony confirmed directly: service-staff coverage during PM booking gaps (Model C) is the model, overriding <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> §4's original Model A recommendation (that original comparison and reasoning is retained there in full, marked superseded, not deleted). Each of the 3 real concerns that original analysis raised about Model C is addressed here, not hidden: (1) <strong>Fresha/payment training</strong> is now an explicit, real requirement on the PM dedicated-casual roles' own skill profiles (<code>data/canonical/staffing.yml</code>, PMM01/PMH01/PMN01/PMB01), not assumed; (2) <strong>reduced PM treatment capacity during covering gaps</strong> is accepted as a genuine, disclosed trade-off, not resolved away &mdash; a staff member covering reception during their own gap is, for those minutes, unavailable for an unscheduled a-la-carte booking; (3) <strong>less consistent customer experience</strong> (no single point of contact for the whole PM window) is likewise accepted, not eliminated. Full resolution: <code>docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md</code> §5. Financial effect: removing Position 06's real cost (was A$168.55/day weekday, A$252.83/day Saturday) improves steady-state Net Operating Result materially &mdash; Chapter 27.</p>
+    <h2>Reception coverage: Model C, confirmed 2026-08-21 by founder decision</h2>
+    <p><strong>PM Reception is no longer a dedicated position.</strong> Position 06/RCO01 (the single-person, 13:00&ndash;18:00 dedicated reception role this chapter previously described) has been removed from the committed payroll and rostering model. Anthony confirmed directly: service-staff coverage during PM booking gaps (Model C) is the model, overriding <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code> §4's original Model A recommendation (that original comparison and reasoning is retained there in full, marked superseded, not deleted). Each of the 3 real concerns that original analysis raised about Model C is addressed here, not hidden: (1) <strong>Fresha/payment training</strong> is now an explicit, real requirement on the PM dedicated-casual roles' own skill profiles (<code>data/canonical/staffing.yml</code>, PMM01/PMH01/PMN01/PMB01), not assumed; (2) <strong>reduced PM treatment capacity during covering gaps</strong> is accepted as a genuine, disclosed trade-off, not resolved away; a staff member covering reception during their own gap is, for those minutes, unavailable for an unscheduled a-la-carte booking; (3) <strong>less consistent customer experience</strong> (no single point of contact for the whole PM window) is likewise accepted, not eliminated. Full resolution: <code>docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md</code> §5. Financial effect: removing Position 06's real cost (was A$168.55/day weekday, A$252.83/day Saturday) improves steady-state Net Operating Result materially, see Chapter 27.</p>
 
     <h2>Known limitations, disclosed</h2>
     <ul>
-      <li>The PM timetable above is illustrative, not solver-verified &mdash; restated because it matters.</li>
-      <li>The individual-service average duration (46.15 min) is an inherited throughput assumption, not independently re-verified against the real weighted-average duration of the 9 specific catalogue services used to build the A$84.11 individual-transaction price. If those real durations differ materially, the capacity figures above would shift somewhat &mdash; the direction of the correction (PM revenue was previously overstated) would not.</li>
+      <li>The PM timetable above is illustrative, not solver-verified; restated because it matters.</li>
+      <li>The individual-service average duration (46.15 min) is an inherited throughput assumption, not independently re-verified against the real weighted-average duration of the 9 specific catalogue services used to build the A$84.11 individual-transaction price. If those real durations differ materially, the capacity figures above would shift somewhat; the direction of the correction (PM revenue was previously overstated) would not.</li>
       <li>Whether PM Restore's two components run concurrently or sequentially remains open for the eventual Venue Manager to decide operationally.</li>
     </ul>
 
@@ -1240,7 +1240,7 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     <div class="chapter-opener">
       <div class="chapter-eyebrow">Chapter 14</div>
       <h1 class="chapter-title">Staffing</h1>
-      <p class="chapter-dek">The overall staffing structure &mdash; and the one distinction that must never blur: who is on the floor every day versus who is on the books.</p>
+      <p class="chapter-dek">The overall staffing structure, and the one distinction that must never blur: who is on the floor every day versus who is on the books.</p>
     </div>
 
     <div class="callout">
@@ -1248,57 +1248,57 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       This venture has two genuinely different staffing figures, and this dossier keeps them visually and structurally separate everywhere they appear.
     </div>
     <div class="cap-compare">
-      <div class="cap-box"><span class="n">9</span><span class="lbl">Simultaneous operating headcount &mdash; 8 treatment + 2 phlebotomists is 10; shown here as 9 headline roles (Venue Manager + treatment + phlebotomy) since PM Reception is no longer a separate position &mdash; see below</span></div>
-      <div class="cap-box"><span class="n">16</span><span class="lbl">Recommended employment pool &mdash; 12 treatment + 4 phlebotomists, sized for reliability, not all rostered daily</span></div>
+      <div class="cap-box"><span class="n">9</span><span class="lbl">Simultaneous operating headcount: 8 treatment + 2 phlebotomists is 10; shown here as 9 headline roles (Venue Manager + treatment + phlebotomy) since PM Reception is no longer a separate position, see below</span></div>
+      <div class="cap-box"><span class="n">16</span><span class="lbl">Recommended employment pool: 12 treatment + 4 phlebotomists, sized for reliability, not all rostered daily</span></div>
     </div>
-    <p style="font-size:0.85rem; opacity:0.75;">Plus 1 Venue Manager in both counts. <strong>PM Reception is no longer a separate committed position, per the 2026-08-21 founder decision (Model C confirmed) &mdash; see the Reception coverage section below.</strong> The employment pool is a recruitment/coverage recommendation, not a daily roster count and not an additional payroll line &mdash; see the financial-integrity note below.</p>
+    <p style="font-size:0.85rem; opacity:0.75;">Plus 1 Venue Manager in both counts. <strong>PM Reception is no longer a separate committed position, per the 2026-08-21 founder decision (Model C confirmed); see the Reception coverage section below.</strong> The employment pool is a recruitment/coverage recommendation, not a daily roster count and not an additional payroll line; see the financial-integrity note below.</p>
 
-    <h2>Five distinct staffing concepts &mdash; not interchangeable</h2>
+    <h2>Five distinct staffing concepts: not interchangeable</h2>
     <div class="table-wrap">
     <table>
       <thead><tr><th>Concept</th><th>Definition</th><th>Treatment (common pool)</th><th>Phlebotomists</th><th>Venue Manager</th><th>PM Reception</th></tr></thead>
       <tbody>
-        <tr><td><strong>1. Required operating positions</strong></td><td>Distinct job roles/functions, regardless of headcount</td><td>3 roles (Massage+Beauty, Nails, Hair)</td><td>1 role</td><td>1 role</td><td><strong>0 dedicated roles</strong> &mdash; distributed across the 4 PM treatment roles (PMM01/PMH01/PMN01/PMB01), each of which now carries Fresha/payment-training as a real skill requirement</td></tr>
-        <tr><td><strong>2. Actual scheduled hours</strong></td><td>Real rostered hours/week at 18-client volume</td><td>~36hrs/week per rostered AM staff member (PM hours separate, session-driven)</td><td>~36hrs/week per rostered phlebotomist</td><td>~48hrs/week</td><td>N/A &mdash; absorbed into the 4 PM treatment roles' own existing hours, no separate line</td></tr>
-        <tr><td><strong>3. Simultaneous employment headcount</strong></td><td>People required on the floor every trading day</td><td>8, rostered daily</td><td>2, rostered daily</td><td>1</td><td><strong>0</strong> &mdash; removed 2026-08-21</td></tr>
-        <tr><td><strong>4. Recommended employment pool</strong></td><td>Additional people on the books, not rostered daily &mdash; sized for reliability (Chapter 16)</td><td><strong>12 total</strong> (or 11, disclosed lower-reliability alternative) &mdash; <span class="tag tag-founder">Founder decision required</span></td><td><strong>4 total</strong> (or 3, disclosed lower bound) &mdash; <span class="tag tag-founder">Founder decision required</span></td><td>1, no relief recommended</td><td><strong>N/A</strong> &mdash; no dedicated role left to size a relief pool for</td></tr>
-        <tr><td><strong>5. Paid hours in the financial model</strong></td><td>What the payroll build actually prices</td><td>ONLY the committed 8, full rostered shift, every trading day</td><td>ONLY the committed 2, full rostered shift</td><td>1 person, full shift</td><td><strong>A$0.00</strong> &mdash; no separate cost line; PM reception duties are covered within the 4 PM treatment roles' existing paid hours</td></tr>
+        <tr><td><strong>1. Required operating positions</strong></td><td>Distinct job roles/functions, regardless of headcount</td><td>3 roles (Massage+Beauty, Nails, Hair)</td><td>1 role</td><td>1 role</td><td><strong>0 dedicated roles</strong>, distributed across the 4 PM treatment roles (PMM01/PMH01/PMN01/PMB01), each of which now carries Fresha/payment-training as a real skill requirement</td></tr>
+        <tr><td><strong>2. Actual scheduled hours</strong></td><td>Real rostered hours/week at 18-client volume</td><td>~36hrs/week per rostered AM staff member (PM hours separate, session-driven)</td><td>~36hrs/week per rostered phlebotomist</td><td>~48hrs/week</td><td>N/A: absorbed into the 4 PM treatment roles' own existing hours, no separate line</td></tr>
+        <tr><td><strong>3. Simultaneous employment headcount</strong></td><td>People required on the floor every trading day</td><td>8, rostered daily</td><td>2, rostered daily</td><td>1</td><td><strong>0</strong>: removed 2026-08-21</td></tr>
+        <tr><td><strong>4. Recommended employment pool</strong></td><td>Additional people on the books, not rostered daily; sized for reliability (Chapter 16)</td><td><strong>12 total</strong> (or 11, disclosed lower-reliability alternative), <span class="tag tag-founder">Founder decision required</span></td><td><strong>4 total</strong> (or 3, disclosed lower bound), <span class="tag tag-founder">Founder decision required</span></td><td>1, no relief recommended</td><td><strong>N/A</strong>: no dedicated role left to size a relief pool for</td></tr>
+        <tr><td><strong>5. Paid hours in the financial model</strong></td><td>What the payroll build actually prices</td><td>ONLY the committed 8, full rostered shift, every trading day</td><td>ONLY the committed 2, full rostered shift</td><td>1 person, full shift</td><td><strong>A$0.00</strong>: no separate cost line; PM reception duties are covered within the 4 PM treatment roles' existing paid hours</td></tr>
       </tbody>
     </table>
     </div>
-    <p style="font-size:0.85rem; opacity:0.75;">Framework: <code>docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md</code> §9. Note: that document's own worked example (concept #4) still shows the pre-recalculation "10-11"/"3-4" figures &mdash; superseded by <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code>'s later, same-day recalculation to 12/4, shown here instead. The five-concept framework itself remains current; the PM Reception column reflects the 2026-08-21 founder decision (Model C), not the framework document's own original PM Reception figures, which describe the now-superseded Model A.</p>
+    <p style="font-size:0.85rem; opacity:0.75;">Framework: <code>docs/architecture/FIRST-PRINCIPLES-FINANCIAL-MODEL.md</code> §9. Note: that document's own worked example (concept #4) still shows the pre-recalculation "10-11"/"3-4" figures, superseded by <code>docs/architecture/STAFFING-COVERAGE-VALIDATION.md</code>'s later, same-day recalculation to 12/4, shown here instead. The five-concept framework itself remains current; the PM Reception column reflects the 2026-08-21 founder decision (Model C), not the framework document's own original PM Reception figures, which describe the now-superseded Model A.</p>
 
     <h2>Positions and reporting structure</h2>
     <div class="table-wrap">
     <table>
       <thead><tr><th>Position</th><th>Reports to</th><th>Coverage mechanism</th></tr></thead>
       <tbody>
-        <tr><td>Venue Manager</td><td>Anthony Zed / YETI Tipi Holdings &mdash; no intermediate management tier</td><td>None &mdash; single point of failure, disclosed, not hidden</td></tr>
+        <tr><td>Venue Manager</td><td>Anthony Zed / YETI Tipi Holdings, no intermediate management tier</td><td>None: single point of failure, disclosed, not hidden</td></tr>
         <tr><td>Phlebotomist (&times;2 simultaneous)</td><td>Venue Manager</td><td>Employment pool of 4 (recommended), zero cross-cover from any other role</td></tr>
-        <tr><td>Treatment &mdash; Massage+Beauty (&times;4 simultaneous)</td><td>Venue Manager</td><td>Cross-covers within its own dual-qualified pool only</td></tr>
-        <tr><td>Treatment &mdash; Nails (&times;2 simultaneous)</td><td>Venue Manager</td><td>Isolated &mdash; no confirmed cross-qualification with any other line</td></tr>
-        <tr><td>Treatment &mdash; Hair (&times;2 simultaneous)</td><td>Venue Manager</td><td>Isolated &mdash; no confirmed cross-qualification with any other line</td></tr>
-        <tr><td>PM dedicated-casual roles (&times;4: Massage/Hair/Nail/Beauty) &mdash; <strong>now also cover PM Reception</strong></td><td>Venue Manager</td><td>Cover check-in/Fresha/payment for each other during natural gaps between own PM sessions (Chapter 9) &mdash; Fresha/payment-processing training is now a required skill on each of these 4 roles</td></tr>
+        <tr><td>Treatment: Massage+Beauty (&times;4 simultaneous)</td><td>Venue Manager</td><td>Cross-covers within its own dual-qualified pool only</td></tr>
+        <tr><td>Treatment: Nails (&times;2 simultaneous)</td><td>Venue Manager</td><td>Isolated: no confirmed cross-qualification with any other line</td></tr>
+        <tr><td>Treatment: Hair (&times;2 simultaneous)</td><td>Venue Manager</td><td>Isolated: no confirmed cross-qualification with any other line</td></tr>
+        <tr><td>PM dedicated-casual roles (&times;4: Massage/Hair/Nail/Beauty), <strong>now also cover PM Reception</strong></td><td>Venue Manager</td><td>Cover check-in/Fresha/payment for each other during natural gaps between own PM sessions (Chapter 9); Fresha/payment-processing training is now a required skill on each of these 4 roles</td></tr>
       </tbody>
     </table>
     </div>
-    <p style="font-size:0.85rem; opacity:0.75;"><strong>Position 06/RCO01 (dedicated PM Reception) removed from this table, 2026-08-21, per founder decision</strong> &mdash; retained in full, marked superseded, in <code>docs/architecture/STAFF-PROFILES.md</code> for trace.</p>
+    <p style="font-size:0.85rem; opacity:0.75;"><strong>Position 06/RCO01 (dedicated PM Reception) removed from this table, 2026-08-21, per founder decision</strong>, retained in full, marked superseded, in <code>docs/architecture/STAFF-PROFILES.md</code> for trace.</p>
 
     <h2>Substitution capability, stated explicitly</h2>
     <ul>
-      <li><strong>Phlebotomy has zero substitution capability outside its own credentialed pool.</strong> No other position in this venture can cross-cover a phlebotomist &mdash; the role requires the pathology partner's own specific accreditation, and a same-day replacement cannot be casually sourced the way a treatment-staff gap might be.</li>
-      <li>Massage and Beauty are dual-qualification-paired as one shared pool &mdash; this pairing IS the cross-cover mechanism between these two lines, already load-bearing in the AM headcount model (Chapter 8).</li>
-      <li>Nails and Hair each have no confirmed cross-qualification with any other line, including each other &mdash; each can only substitute within its own 2-person (simultaneous) / 3-person (recommended pool) line.</li>
-      <li>The Venue Manager's own required service qualification means the VM can step into a treatment shift in genuine emergency &mdash; but this leaves reception/management duties uncovered simultaneously, so it is not a free substitution.</li>
-      <li><strong>PM Reception (2026-08-21 update):</strong> no longer a dedicated position needing a backup &mdash; each of the 4 PM roles covers reception during its own gaps, and each carries the same Fresha/payment-training requirement, so any of the 4 can absorb another's reception coverage if one is absent (subject to their own treatment-line qualification limits above).</li>
+      <li><strong>Phlebotomy has zero substitution capability outside its own credentialed pool.</strong> No other position in this venture can cross-cover a phlebotomist: the role requires the pathology partner's own specific accreditation, and a same-day replacement cannot be casually sourced the way a treatment-staff gap might be.</li>
+      <li>Massage and Beauty are dual-qualification-paired as one shared pool; this pairing IS the cross-cover mechanism between these two lines, already load-bearing in the AM headcount model (Chapter 8).</li>
+      <li>Nails and Hair each have no confirmed cross-qualification with any other line, including each other; each can only substitute within its own 2-person (simultaneous) / 3-person (recommended pool) line.</li>
+      <li>The Venue Manager's own required service qualification means the VM can step into a treatment shift in genuine emergency, but this leaves reception/management duties uncovered simultaneously, so it is not a free substitution.</li>
+      <li><strong>PM Reception (2026-08-21 update):</strong> no longer a dedicated position needing a backup: each of the 4 PM roles covers reception during its own gaps, and each carries the same Fresha/payment-training requirement, so any of the 4 can absorb another's reception coverage if one is absent (subject to their own treatment-line qualification limits above).</li>
     </ul>
 
-    <h2>Relief Venue Manager &mdash; explicitly not recommended</h2>
-    <p>A permanent relief VM is <strong>not recommended at launch scale</strong>: the cost of a second salaried, dual-qualified, service-capable manager is disproportionate to a single-site venue at this stage. This is a genuine single point of failure, disclosed rather than smoothed over. The realistic mitigation is cross-training at least one senior treatment staff member in basic opening/reception procedures as an emergency fallback (not full VM capability), Monday-Friday only, per the formalised Venue Manager emergency-only fill rule (<code>docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md</code> §4) &mdash; accepting the residual risk of an ad hoc arrangement for a genuine VM absence until scale justifies a second hire. <strong>The prior wording here referencing "the PM Reception coordinator" as a fallback option is removed, 2026-08-21 &mdash; that position no longer exists.</strong></p>
+    <h2>Relief Venue Manager: explicitly not recommended</h2>
+    <p>A permanent relief VM is <strong>not recommended at launch scale</strong>: the cost of a second salaried, dual-qualified, service-capable manager is disproportionate to a single-site venue at this stage. This is a genuine single point of failure, disclosed rather than smoothed over. The realistic mitigation is cross-training at least one senior treatment staff member in basic opening/reception procedures as an emergency fallback (not full VM capability), Monday-Friday only, per the formalised Venue Manager emergency-only fill rule (<code>docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md</code> §4), accepting the residual risk of an ad hoc arrangement for a genuine VM absence until scale justifies a second hire. <strong>The prior wording here referencing "the PM Reception coordinator" as a fallback option is removed, 2026-08-21; that position no longer exists.</strong></p>
 
     <div class="callout brown">
-      <span class="callout-label">Financial integrity &mdash; read before citing any staffing figure alongside a dollar figure</span>
-      The steady-state payroll model prices <strong>only the simultaneous operating requirement</strong> (8 treatment + 2 phlebotomists + 1 Venue Manager, full rostered shift, every trading day &mdash; PM Reception is no longer a separate line, 2026-08-21) &mdash; A$96,256.18/month direct labour (Chapter 27). The recommended employment pools (12 treatment, 4 phlebotomists) are coverage/recruitment recommendations, not an additional payroll line &mdash; relief staff are only paid when they actually work a shift covering an absence. <strong>The Relief/Absence Coverage Allowance previously carried in the financial model was reverted to A$0.00, 2026-08-21, per direct founder instruction</strong> &mdash; normal payroll/rostering is treated as already absorbing absence coverage. Neither change is to be added to, duplicated, or recalculated anywhere in this dossier on the basis of the 12/4 employment-pool figures in this chapter.
+      <span class="callout-label">Financial integrity: read before citing any staffing figure alongside a dollar figure</span>
+      The steady-state payroll model prices <strong>only the simultaneous operating requirement</strong> (8 treatment + 2 phlebotomists + 1 Venue Manager, full rostered shift, every trading day; PM Reception is no longer a separate line, 2026-08-21): A$96,256.18/month direct labour (Chapter 27). The recommended employment pools (12 treatment, 4 phlebotomists) are coverage/recruitment recommendations, not an additional payroll line; relief staff are only paid when they actually work a shift covering an absence. <strong>The Relief/Absence Coverage Allowance previously carried in the financial model was reverted to A$0.00, 2026-08-21, per direct founder instruction</strong>; normal payroll/rostering is treated as already absorbing absence coverage. Neither change is to be added to, duplicated, or recalculated anywhere in this dossier on the basis of the 12/4 employment-pool figures in this chapter.
     </div>
 
     <div class="callout olive">
