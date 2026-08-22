@@ -685,7 +685,10 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     </div>
 
     <h2>Referral requirement</h2>
-    <p>Every client brings a GP or midwife's pathology referral form (paper or eReferral) and her Medicare card. Reception collects and copies both at check-in; the phlebotomist verifies patient name, date of birth, and gestational age against the referral before the first draw. <span class="tag tag-research">Needs research</span> The specific WA regulatory basis for this requirement (beyond standard pathology-collection practice) was not re-confirmed with a primary citation this round; carried forward from <code>docs/gtt-clinical-protocol.md</code> as an established operational practice, not independently re-sourced against current WA Health guidance this pass.</p>
+    <p>Every client brings a GP or midwife's pathology referral form (paper or eReferral) and her Medicare card. Reception collects and copies both at check-in; the phlebotomist verifies patient name, date of birth, and gestational age against the referral before the first draw. <span class="tag tag-verified">Verified</span> Researched this round against Services Australia's own Medicare pathology-request rules: a pathology request must be in writing (or, if oral, confirmed in writing within 14 days) from an eligible requester, a GP, an obstetrician/specialist, or a participating midwife authorised for specific pathology item numbers. This is a Commonwealth Medicare rule, not a WA-specific one: GTT Center Perth's clients arrive with a pathology request they already hold, they are not referred by GTT Center Perth itself, which does not request or interpret pathology services.</p>
+
+    <h2>Arrival</h2>
+    <p>Clients are asked to arrive approximately 10 to 15 minutes before their scheduled appointment. There is effectively no tolerance for late arrival in the AM GTT timetable: the 25-minute pair cadence (Chapter 8) is synchronised across 2 phlebotomists and a full day of subsequent pairs, and a late arrival does not have a buffer slot to absorb into.</p>
 
     <h2>Fasting requirement</h2>
     <p><strong>10&ndash;12 hours fasted, water only:</strong> sourced from PathWest's own 2024 patient instructions (the current version; an earlier 2019 PathWest document stated a 16-hour maximum, superseded). <span class="tag tag-verified">Verified</span> No food, tea, coffee, juice, soft drink, gum, or nicotine from the fasting start time; no exercise the morning of. Communicated via booking confirmation, 48-hour and 24-hour SMS reminders (personalised fasting cutoff), and a 1-hour day-of SMS.</p>
@@ -694,12 +697,12 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     <div class="journey-track">
       <div class="journey-row">
         <div class="journey-node"><span class="phase">Before</span><span class="stage">Fasting</span><span class="emotion">10&ndash;12hrs, water only, from personalised cutoff</span></div>
-        <div class="journey-node"><span class="phase">Arrival</span><span class="stage">Check-in</span><span class="emotion">Referral form + Medicare card collected; identity verified</span></div>
-        <div class="journey-node"><span class="phase">T=0</span><span class="stage">Draw 1 + glucose drink</span><span class="emotion">Fasting sample, then 75g glucose solution over 5 min</span></div>
+        <div class="journey-node"><span class="phase">Arrival</span><span class="stage">Check-in</span><span class="emotion">10&ndash;15 min early; referral form + Medicare card collected; identity verified</span></div>
+        <div class="journey-node"><span class="phase">T=0</span><span class="stage">Draw 1 + glucose drink</span><span class="emotion">Fasting sample, then 75g glucose solution over 5 min, provided by the phlebotomist as part of the collection workflow</span></div>
         <div class="journey-node"><span class="phase">T=0&ndash;60</span><span class="stage">Wellness Service 1</span><span class="emotion">45-min treatment</span></div>
         <div class="journey-node"><span class="phase">T=+60</span><span class="stage">Draw 2</span><span class="emotion">Exact clinical mark, 5 min</span></div>
         <div class="journey-node"><span class="phase">T=60&ndash;120</span><span class="stage">Wellness Service 2</span><span class="emotion">45-min treatment</span></div>
-        <div class="journey-node"><span class="phase">T=+120</span><span class="stage">Draw 3 + departure</span><span class="emotion">Exact clinical mark, snacks offered, may leave after</span></div>
+        <div class="journey-node"><span class="phase">T=+120</span><span class="stage">Draw 3 + departure</span><span class="emotion">Exact clinical mark, client may leave after</span></div>
       </div>
     </div>
     <p style="font-size:0.85rem; opacity:0.75;">Draw 2 and Draw 3 occur at <strong>exactly</strong> +60 and +120 minutes from each client's own Draw 1, never approximate, per the pathology partner's own hard clinical-mark requirement. Every draw is exactly 5 minutes. The full 9-pair, 18-client solver-verified AM schedule that operationalises this timeline is Chapter 8, not duplicated here.</p>
@@ -710,7 +713,7 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       <thead><tr><th>Event</th><th>Response</th></tr></thead>
       <tbody>
         <tr><td>Vasovagal / feels unwell</td><td>Keep seated or reclining, do not allow standing if dizzy, escalate to the Venue Manager immediately, call 000 if unconscious/unresponsive</td></tr>
-        <tr><td>Difficult venepuncture</td><td>Maximum 2 attempts per arm; if unsuccessful, escalate to the pathology partner's phlebotomy supervisor; never more than 3 total attempts without senior clinical input</td></tr>
+        <tr><td>Difficult venepuncture</td><td>Maximum 2 attempts by the first phlebotomist; if unsuccessful, the second on-site phlebotomist attempts, using the venue's own real 2-phlebotomist structure rather than a separate role this venture has not established. If neither succeeds, the client is rescheduled or referred back to her requesting doctor/midwife, per WDP's own Licensed Collection Centre clinical protocol. The exact detail of that protocol (whether WDP provides any further escalation beyond the second collector) is a genuine, disclosed dependency on WDP to confirm, not invented here: no phlebotomy supervisor or senior clinician role has been established at this venture, and none is assumed.</td></tr>
         <tr><td>Glucose drink refusal/intolerance</td><td>Cannot substitute with food (not clinically equivalent); document and notify the referring doctor; never pressure the patient</td></tr>
         <tr><td>Anaphylaxis</td><td>Phlebotomist holds current anaphylaxis training; venue holds an EpiPen; Venue Manager is the trained first aider</td></tr>
       </tbody>

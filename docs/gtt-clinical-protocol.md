@@ -43,15 +43,19 @@ The Oral Glucose Tolerance Test (OGTT / GTT) screens for Gestational Diabetes Me
 ### GTT Timeline
 
 ```
-T=0 (Arrival — 8:00am example)
-  │   Patient arrives fasting (10-12 hours per current PathWest guidance, water only — see Fasting Requirements below)
+T=-15 to -10 (7:45-7:50am example)
+  │   Patient arrives, 10-15 minutes before her scheduled appointment (current arrival assumption, effectively no
+  │   tolerance for late arrival given the synchronised pair cadence, Chapter 8)
+
+T=0 (Arrival - 8:00am example)
+  │   Patient arrives fasting (10-12 hours per current PathWest guidance, water only, see Fasting Requirements below)
   │   Receptionist confirms fasting status, collects referral form + Medicare card
   │   Phlebotomist performs FIRST blood draw (fasting glucose)
-  │   Patient drinks 75g glucose solution over 5 minutes
+  │   Phlebotomist provides the 75g glucose solution as part of the collection workflow; patient drinks over 5 minutes
   │
 T=0+5min (8:05am)
   │   Patient escorted to lounge / treatment room for services
-  │   (Massage, nails, brows, scan — booked during this window)
+  │   (Massage, nails, brows, scan, booked during this window)
   │
 T=60 (9:00am)
   │   Phlebotomist performs SECOND blood draw (1-hour glucose)
@@ -59,7 +63,6 @@ T=60 (9:00am)
   │
 T=120 (10:00am)
   │   Phlebotomist performs THIRD blood draw (2-hour glucose)
-  │   Patient receives snacks (herbal tea, coconut water, protein bar, fruit)
   │   Patient may leave after T=120 draw is complete
   │
 T=120+30 (10:30am)
@@ -149,7 +152,6 @@ Communicated via:
 
 ### T=120 Draw (Final)
 - [ ] Same procedure as T=60
-- [ ] After draw: offer patient snacks (herbal tea, coconut water, protein bar) — MANDATORY
 - [ ] Patient may leave only AFTER T=120 draw is complete
 - [ ] Remind patient: "Your results will go directly to your doctor/midwife within 24–48 hours. Please follow up with them."
 - [ ] GTT Center Perth does NOT communicate results to patients
@@ -202,9 +204,10 @@ Communicated via:
 7. Document incident in incident register (date, time, what happened, action taken, outcome)
 
 ### Difficult Venepuncture
-- Maximum 2 attempts per arm per phlebotomist
-- If unsuccessful after 2 attempts: call WDP phlebotomy supervisor for guidance
-- Never attempt more than 3 total attempts without senior clinical input
+- Maximum 2 attempts by the first phlebotomist
+- If unsuccessful: the second on-site phlebotomist attempts (the venue's own real 2-phlebotomist structure, not a separate supervisor role this venture has not established)
+- If neither succeeds: reschedule or refer the patient back to her requesting doctor/midwife, per WDP's own Licensed Collection Centre clinical protocol
+- The exact detail of WDP's own escalation protocol beyond a second collector is a genuine, disclosed dependency to confirm directly with WDP, not assumed. No phlebotomy supervisor or senior clinician role exists at this venture and none should be invented in any client-facing or operational document.
 - Document all attempts in collection log
 
 ### Glucose Drink Refusal or Intolerance
