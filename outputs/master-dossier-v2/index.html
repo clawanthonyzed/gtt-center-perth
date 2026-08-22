@@ -1588,10 +1588,10 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     <div class="chapter-opener">
       <div class="chapter-eyebrow">Chapter 18</div>
       <h1 class="chapter-title">Customer Timetable</h1>
-      <p class="chapter-dek">The 18-client AM day, rendered as a real timing chart &mdash; not just Chapter 8's table repeated.</p>
+      <p class="chapter-dek">The 18-client AM day, rendered as a real timing chart, not just Chapter 8's table repeated.</p>
     </div>
 
-    <p>Every one of the 9 pairs follows the identical fixed-block shape: a 5-minute draw at the exact clinical mark, a 45-minute treatment service, and a 10-minute transition buffer &mdash; twice, then a final draw. The chart below plots all 9 pairs on the same clock, exactly as solver-verified in Chapter 8, not redrawn or adjusted for visual neatness.</p>
+    <p>Every one of the 9 pairs follows the identical fixed-block shape: a 5-minute draw at the exact clinical mark, a 45-minute treatment service, and a 10-minute transition buffer, twice, then a final draw. The chart below plots all 9 pairs on the same clock, exactly as solver-verified in Chapter 8, not redrawn or adjusted for visual neatness.</p>
 
     <div class="chart-wrap">
       <svg viewBox="0 0 1000 400" width="100%" height="400" role="img" aria-label="Gantt-style chart of the 9 synchronised AM pairs, 07:00 to 12:25, showing draws and treatment services per pair">
@@ -1686,15 +1686,15 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
       <rect x="360" y="383" width="14" height="14" fill="#5E5F45"/><text x="380" y="394" font-size="11" fill="#33261E">Treatment service (45min)</text>
       <rect x="620" y="383" width="14" height="14" fill="#E8DAC5"/><text x="640" y="394" font-size="11" fill="#33261E">Transition buffer (10min)</text>
       </svg>
-      <p class="chart-caption">Each row is one pair (2 clients, Chair A + Chair B). The diagonal stagger is the 25-minute cadence between pairs &mdash; the same data as Chapter 8's table, plotted rather than tabulated. Draw 2 and Draw 3 land at exactly +60 and +120 minutes from each pair's own Draw 1, never approximate.</p>
+      <p class="chart-caption">Each row is one pair (2 clients, Chair A + Chair B). The diagonal stagger is the 25-minute cadence between pairs, the same data as Chapter 8's table, plotted rather than tabulated. Draw 2 and Draw 3 land at exactly +60 and +120 minutes from each pair's own Draw 1, never approximate.</p>
     </div>
 
     <h2>Reading the chart against the staff-lane view</h2>
-    <p>At any vertical slice through the chart, the number of terracotta (draw) segments crossing that line is at most 2 &mdash; Chair A and Chair B, never more, confirming zero collisions across all 9 pairs. The number of olive (treatment) segments crossing any vertical line is the real-time concurrent treatment demand &mdash; this is what Chapter 8's peak-concurrency finding (4 Massage+Beauty, 2 Nails, 2 Hair, 8 total) is drawn from, visible here directly rather than asserted.</p>
+    <p>At any vertical slice through the chart, the number of terracotta (draw) segments crossing that line is at most 2 (Chair A and Chair B, never more), confirming zero collisions across all 9 pairs. The number of olive (treatment) segments crossing any vertical line is the real-time concurrent treatment demand: this is what Chapter 8's peak-concurrency finding (4 Massage+Beauty, 2 Nails, 2 Hair, 8 total) is drawn from, visible here directly rather than asserted.</p>
 
     <div class="callout brown">
       <span class="callout-label">Not altered for visual neatness</span>
-      Every timing value in this chart is taken directly from the solver-verified schedule in Chapter 8 &mdash; the same 07:00 start, 25-minute cadence, 5-minute draws, 45-minute services, and 10-minute buffers. No pair's timing was adjusted, rounded, or simplified to make the chart look cleaner.
+      Every timing value in this chart is taken directly from the solver-verified schedule in Chapter 8: the same 07:00 start, 25-minute cadence, 5-minute draws, 45-minute services, and 10-minute buffers. No pair's timing was adjusted, rounded, or simplified to make the chart look cleaner.
     </div>
 
     <div class="callout olive">
