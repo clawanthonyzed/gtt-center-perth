@@ -1,0 +1,13110 @@
+# Full Per-Item Procurement Specification
+
+Status: current as of 2026-08-23. A complete 42-field specification record for every one of the 281 distinct items in `docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md`, generated mechanically by `tools/generate_procurement_item_specifications.py` directly from that register (see `tools/procurement_register_parser.py` and `tools/procurement_derivations.py` for the exact derivation rules), not hand-authored, so quality and field coverage are consistent across all 281 items rather than varying by which item happened to get manual attention. Re-run the generator any time the register changes; do not hand-edit this file directly, edit the register and regenerate instead.
+
+**Honesty note on derived fields:** dimensions, material, finish, colour/brand, electrical, plumbing, HVAC, clinical, food-safety, and accessibility fields are derived only from each item's own row text in the register (description, compliance/verification, and notes columns). Some requirements exist at the venue-program level rather than being repeated in every relevant item's own row (for example, the Pedicure zone's water supply/drain requirement is stated once in `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md` rather than on every individual pedicure-chair row). Where a field below reads "N/A", check the venue program table and the relevant procurement package documents before assuming no requirement exists at all.
+
+**Cross-reference items:** 25 rows in the master register are deliberately abbreviated pointers to an item already itemised elsewhere (avoiding double-counting a shared item across multiple functional areas, e.g. staff uniforms). These are listed at the end of each section below, not given a full 42-field record, since they are not independent purchasing decisions.
+
+## How to Read Each Record
+
+Fields 1-18 identify what the item is and where it sits in the procurement system. Fields 19-36 describe what to actually look for when sourcing it. Fields 37-42 tell you exactly what to do next. Field 19 (Specification) and field 3 (Plain-English description) share the same source text in the register; they are listed separately because the founder's own field list distinguishes "what it is" from "what to buy", even where the register itself answers both with one sentence.
+
+## Section A: Venue / General Building
+
+### A01: Fire extinguishers
+
+- **1. Procurement Item ID:** A01
+- **2. Item name:** Fire extinguishers
+- **3. Plain-English description:** ABE-rated dry chemical, per venue floor area
+- **4. Business area:** Venue
+- **5. Sub-area/location:** General
+- **6. Quantity:** To be determined
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** N/A
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Venue item.
+- **19. Specification:** ABE-rated dry chemical, per venue floor area
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** ABE-rated dry chemical, per venue floor area
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Fire safety officer/building surveyor sign-off
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** Local council/building code will dictate exact count and type
+
+### A02: Emergency exit signage
+
+- **1. Procurement Item ID:** A02
+- **2. Item name:** Emergency exit signage
+- **3. Plain-English description:** Illuminated, AS 2293 compliant
+- **4. Business area:** Venue
+- **5. Sub-area/location:** General
+- **6. Quantity:** To be determined
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** N/A
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Venue item.
+- **19. Specification:** Illuminated, AS 2293 compliant
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Illuminated, AS 2293 compliant
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS 2293, building surveyor
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** Depends on venue exit configuration
+
+### A03: Smoke detectors/alarm system
+
+- **1. Procurement Item ID:** A03
+- **2. Item name:** Smoke detectors/alarm system
+- **3. Plain-English description:** Building-code compliant
+- **4. Business area:** Venue
+- **5. Sub-area/location:** General
+- **6. Quantity:** To be determined
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** N/A
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Venue item.
+- **19. Specification:** Building-code compliant
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Building-code compliant
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Building surveyor, fire safety
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** Likely landlord/base-building responsibility, confirm at lease
+
+### A04: Air conditioning/HVAC servicing
+
+- **1. Procurement Item ID:** A04
+- **2. Item name:** Air conditioning/HVAC servicing
+- **3. Plain-English description:** Ongoing service contract
+- **4. Business area:** Venue
+- **5. Sub-area/location:** General
+- **6. Quantity:** 1
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** contract
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** Yes, annual
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Venue item.
+- **19. Specification:** Ongoing service contract
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Ongoing service contract
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** HVAC contractor
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** HVAC contractor
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** Depends on existing venue plant
+
+### A05: Power outlets (GPO), general
+
+- **1. Procurement Item ID:** A05
+- **2. Item name:** Power outlets (GPO), general
+- **3. Plain-English description:** Standard double GPO, per room per the venue program
+- **4. Business area:** Venue
+- **5. Sub-area/location:** General
+- **6. Quantity:** To be determined
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** N/A
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Venue item.
+- **19. Specification:** Standard double GPO, per room per the venue program
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Standard double GPO, per room per the venue program
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Licensed electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** Exact count is an electrician's job, not a shopping-list quantity
+
+### A06: Data/network cabling
+
+- **1. Procurement Item ID:** A06
+- **2. Item name:** Data/network cabling
+- **3. Plain-English description:** Cat6, to reception, cafe POS, and any networked device location
+- **4. Business area:** Venue
+- **5. Sub-area/location:** General
+- **6. Quantity:** To be determined
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** run
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** N/A
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Venue item.
+- **19. Specification:** Cat6, to reception, cafe POS, and any networked device location
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Cat6, to reception, cafe POS, and any networked device location
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Licensed data cabler
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** Site-specific
+
+### A07: Building insurance certificate of currency
+
+- **1. Procurement Item ID:** A07
+- **2. Item name:** Building insurance certificate of currency
+- **3. Plain-English description:** Public Liability + Professional Indemnity + Property/Contents, A$708.34/month (Chapter 27)
+- **4. Business area:** Venue
+- **5. Sub-area/location:** General
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** policy
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** Yes, annual
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Venue item.
+- **19. Specification:** Public Liability + Professional Indemnity + Property/Contents, A$708.34/month (Chapter 27)
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Public Liability + Professional Indemnity + Property/Contents, A$708.34/month (Chapter 27)
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Insurance broker
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Real broker quotes already in motion
+
+### A08: Business name/lease signage (external)
+
+- **1. Procurement Item ID:** A08
+- **2. Item name:** Business name/lease signage (external)
+- **3. Plain-English description:** Design-dependent, gated on the final name decision (Chapter 5)
+- **4. Business area:** Venue
+- **5. Sub-area/location:** General
+- **6. Quantity:** 1
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** unit
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** N/A
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Venue item.
+- **19. Specification:** Design-dependent, gated on the final name decision (Chapter 5)
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Design-dependent, gated on the final name decision (Chapter 5)
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Local council signage permit
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** Cannot be finalised until SOLENA/ELOWEN is decided
+
+### A09: Floor mats (entry, wet-weather)
+
+- **1. Procurement Item ID:** A09
+- **2. Item name:** Floor mats (entry, wet-weather)
+- **3. Plain-English description:** Commercial-grade, slip-resistant
+- **4. Business area:** Venue
+- **5. Sub-area/location:** General
+- **6. Quantity:** 2-3
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Venue item.
+- **19. Specification:** Commercial-grade, slip-resistant
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Commercial-grade, slip-resistant
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS/NZS 4586 slip resistance
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### A10: Umbrella stand
+
+- **1. Procurement Item ID:** A10
+- **2. Item name:** Umbrella stand
+- **3. Plain-English description:** For wet-weather clients
+- **4. Business area:** Venue
+- **5. Sub-area/location:** General
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Venue item.
+- **19. Specification:** For wet-weather clients
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** For wet-weather clients
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Low-value, either sourcing works
+
+---
+
+## Section B: Reception
+
+### B01: Reception counter
+
+- **1. Procurement Item ID:** B01
+- **2. Item name:** Reception counter
+- **3. Plain-English description:** 900mm standard height + 750mm low accessible section, warm stone/timber finish matching the locked palette
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** 900mm standard height + 750mm low accessible section, warm stone/timber finish matching the locked palette
+- **20. Dimensions if known:** 900mm
+- **21. Material if known:** timber
+- **22. Finish if known:** LED
+- **23. Colour/brand requirements if known:** Matches the locked 7-colour palette (outputs/brand/warm-stone-tokens.css)
+- **24. Performance requirements:** 900mm standard height + 750mm low accessible section, warm stone/timber finish matching the locked palette
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Custom, site-installed local trade, not a shippable import
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Structural build, not a China-sourceable item
+
+### B02: Reception chair (Venue Manager)
+
+- **1. Procurement Item ID:** B02
+- **2. Item name:** Reception chair (Venue Manager)
+- **3. Plain-English description:** Ergonomic office chair
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Ergonomic office chair
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Ergonomic office chair
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### B03: Computer/laptop
+
+- **1. Procurement Item ID:** B03
+- **2. Item name:** Computer/laptop
+- **3. Plain-English description:** Business-grade, A$800-1,500
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Business-grade, A$800-1,500
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Business-grade, A$800-1,500
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$800-1,500, JB Hi-Fi/Officeworks business account (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$800-1,500, JB Hi-Fi/Officeworks business account
+
+### B04: Monitor
+
+- **1. Procurement Item ID:** B04
+- **2. Item name:** Monitor
+- **3. Plain-English description:** Standard business monitor
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Standard business monitor
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Standard business monitor
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### B05: Keyboard/mouse
+
+- **1. Procurement Item ID:** B05
+- **2. Item name:** Keyboard/mouse
+- **3. Plain-English description:** Standard
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1 set
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Standard
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Standard
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### B06: Phone (landline or VoIP)
+
+- **1. Procurement Item ID:** B06
+- **2. Item name:** Phone (landline or VoIP)
+- **3. Plain-English description:** Business line
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Business line
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Business line
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Telco compliance
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### B07: POS terminal
+
+- **1. Procurement Item ID:** B07
+- **2. Item name:** POS terminal
+- **3. Plain-English description:** Square/Tyro/Stripe Reader, A$0-120
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Square/Tyro/Stripe Reader, A$0-120
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Square/Tyro/Stripe Reader, A$0-120
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Payment-industry standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$0-120, Square Terminal A$299 alternative (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$0-120, Square Terminal A$299 alternative
+
+### B08: iPad (9th gen or Air), core
+
+- **1. Procurement Item ID:** B08
+- **2. Item name:** iPad (9th gen or Air), core
+- **3. Plain-English description:** Booking/check-in via Fresha
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Booking/check-in via Fresha
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Booking/check-in via Fresha
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** N/A
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$550-750 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$550-750 each
+
+### B09: iPad kiosk stand
+
+- **1. Procurement Item ID:** B09
+- **2. Item name:** iPad kiosk stand
+- **3. Plain-English description:** Lockable, charging
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 2-3
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Lockable, charging
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Lockable, charging
+- **25. Electrical requirements if applicable:** Electrical safety mark on charging module
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark on charging module
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$80-150 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$80-150 each
+
+### B10: B&W laser printer
+
+- **1. Procurement Item ID:** B10
+- **2. Item name:** B&W laser printer
+- **3. Plain-English description:** For consent forms, referral copies
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** For consent forms, referral copies
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** For consent forms, referral copies
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$200-400 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$200-400
+
+### B11: Colour inkjet printer
+
+- **1. Procurement Item ID:** B11
+- **2. Item name:** Colour inkjet printer
+- **3. Plain-English description:** Optional upgrade
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Optional upgrade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Optional upgrade
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** A$150-300, deferred in MVP scenario (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** A$150-300, deferred in MVP scenario
+
+### B12: Scanner
+
+- **1. Procurement Item ID:** B12
+- **2. Item name:** Scanner
+- **3. Plain-English description:** If separate from printer
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 0-1
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** If separate from printer
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** If separate from printer
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** Most business printers include scan function, may not be a separate purchase
+
+### B13: Booking software subscription (Fresha)
+
+- **1. Procurement Item ID:** B13
+- **2. Item name:** Booking software subscription (Fresha)
+- **3. Plain-English description:** Team plan, 1-2 seats
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** subscription
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** N/A
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Team plan, 1-2 seats
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Team plan, 1-2 seats
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** N/A
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$14.95/user/month (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$14.95/user/month
+
+### B14: Cable management (under-desk)
+
+- **1. Procurement Item ID:** B14
+- **2. Item name:** Cable management (under-desk)
+- **3. Plain-English description:** Standard
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Standard
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Standard
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### B15: Stationery (pens, notepads, staplers, folders)
+
+- **1. Procurement Item ID:** B15
+- **2. Item name:** Stationery (pens, notepads, staplers, folders)
+- **3. Plain-English description:** General office
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** General office
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** General office
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Opening stock policy TBD
+
+### B16: Filing storage (lockable, for referral forms/patient records)
+
+- **1. Procurement Item ID:** B16
+- **2. Item name:** Filing storage (lockable, for referral forms/patient records)
+- **3. Plain-English description:** Lockable cabinet
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Lockable cabinet
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Lockable cabinet
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Privacy Act record-keeping compliance
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** 7-year retention requirement (Chapter 7)
+
+### B17: Charging station (staff phones/devices)
+
+- **1. Procurement Item ID:** B17
+- **2. Item name:** Charging station (staff phones/devices)
+- **3. Plain-English description:** Multi-port USB
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Multi-port USB
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Multi-port USB
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### B18: Retail display shelving
+
+- **1. Procurement Item ID:** B18
+- **2. Item name:** Retail display shelving
+- **3. Plain-English description:** Wall-mounted, visible from Lounge
+- **4. Business area:** Reception
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Reception item.
+- **19. Specification:** Wall-mounted, visible from Lounge
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Wall-mounted, visible from Lounge
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** Retail is not currently a priority; no locked brand selected, per current direction
+
+---
+
+## Section C: Cafe / Food & Beverage
+
+### C01: Full-size beverage refrigerator
+
+- **1. Procurement Item ID:** C01
+- **2. Item name:** Full-size beverage refrigerator
+- **3. Plain-English description:** Commercial grade
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Food Service Equipment
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Commercial grade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Commercial grade
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Food-safety cold-chain requirement
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Food-safety cold-chain requirement
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$800-1,800 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$800-1,800
+
+### C02: Display refrigerator (sandwiches/rolls)
+
+- **1. Procurement Item ID:** C02
+- **2. Item name:** Display refrigerator (sandwiches/rolls)
+- **3. Plain-English description:** Temperature-controlled, customer-visible
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Refrigeration
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Temperature-controlled, customer-visible
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** LED
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Temperature-controlled, customer-visible
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Food-safety cold-chain requirement
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Food-safety cold-chain requirement
+- **32. Installation requirements:** Yes, installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$1,200-2,500 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$1,200-2,500
+
+### C03: Coffee machine
+
+- **1. Procurement Item ID:** C03
+- **2. Item name:** Coffee machine
+- **3. Plain-English description:** Espresso-capable, hot and cold drink formats
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Beverage Equipment
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Espresso-capable, hot and cold drink formats
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Espresso-capable, hot and cold drink formats
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Electrical safety mark
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$1,500-4,000 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$1,500-4,000
+
+### C04: Chilled and boiling water tap
+
+- **1. Procurement Item ID:** C04
+- **2. Item name:** Chilled and boiling water tap
+- **3. Plain-English description:** Under-counter unit
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Beverage Equipment
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Under-counter unit
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Under-counter unit
+- **25. Electrical requirements if applicable:** Plumbing, electrical safety mark
+- **26. Plumbing requirements if applicable:** Yes, licensed plumber required
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Plumbing, electrical safety mark
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Plumbing, electrical safety mark
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$800-1,800; requires plumbed water supply, site-dependent install (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$800-1,800; requires plumbed water supply, site-dependent install
+
+### C05: Toastie press
+
+- **1. Procurement Item ID:** C05
+- **2. Item name:** Toastie press
+- **3. Plain-English description:** Commercial grade
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Heating/Toasting
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Commercial grade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Commercial grade
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Electrical safety mark
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$150-350 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$150-350
+
+### C06: Food storage containers (sealed, stackable)
+
+- **1. Procurement Item ID:** C06
+- **2. Item name:** Food storage containers (sealed, stackable)
+- **3. Plain-English description:** Commercial food-grade
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Storage
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Commercial food-grade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Commercial food-grade
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Food-safety storage requirement
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Food-safety storage requirement
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### C07: Fridge/freezer thermometer
+
+- **1. Procurement Item ID:** C07
+- **2. Item name:** Fridge/freezer thermometer
+- **3. Plain-English description:** Digital, with log sheet
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Food Safety
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Digital, with log sheet
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Digital, with log sheet
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Food-safety cold-chain temperature logging
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Food-safety cold-chain temperature logging
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Low cost
+
+### C08: Food handling gloves
+
+- **1. Procurement Item ID:** C08
+- **2. Item name:** Food handling gloves
+- **3. Plain-English description:** Disposable, food-grade
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Food Safety
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Disposable, food-grade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Disposable, food-grade
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Food handling standard
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Food handling standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### C09: Chopping board/utensils (toastie assembly only, no raw-ingredient prep)
+
+- **1. Procurement Item ID:** C09
+- **2. Item name:** Chopping board/utensils (toastie assembly only, no raw-ingredient prep)
+- **3. Plain-English description:** Colour-coded, dishwasher-safe
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Food Safety
+- **6. Quantity:** 1 set
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** set
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Colour-coded, dishwasher-safe
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Colour-coded, dishwasher-safe
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Food-safety hygiene
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Food-safety hygiene
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Assembly/toasting only, not raw-ingredient cooking
+
+### C10: Cups (dine-in)
+
+- **1. Procurement Item ID:** C10
+- **2. Item name:** Cups (dine-in)
+- **3. Plain-English description:** Ceramic, branded or plain per current brand palette
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Crockery
+- **6. Quantity:** 24-36
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Ceramic, branded or plain per current brand palette
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** ceramic
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Matches the locked 7-colour palette (outputs/brand/warm-stone-tokens.css)
+- **24. Performance requirements:** Ceramic, branded or plain per current brand palette
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** None
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### C11: Plates (dine-in)
+
+- **1. Procurement Item ID:** C11
+- **2. Item name:** Plates (dine-in)
+- **3. Plain-English description:** Ceramic
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Crockery
+- **6. Quantity:** 12-24
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Ceramic
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** ceramic
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Ceramic
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** None
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### C12: Takeaway cups (hot drinks)
+
+- **1. Procurement Item ID:** C12
+- **2. Item name:** Takeaway cups (hot drinks)
+- **3. Plain-English description:** Compostable/recyclable, branded
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Takeaway Items
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Compostable/recyclable, branded
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Compostable/recyclable, branded
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Food-safe packaging standard
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Food-safe packaging standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### C13: Takeaway lids
+
+- **1. Procurement Item ID:** C13
+- **2. Item name:** Takeaway lids
+- **3. Plain-English description:** Matching takeaway cup size
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Takeaway Items
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Matching takeaway cup size
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Matching takeaway cup size
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Food-safe packaging standard
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Food-safe packaging standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### C14: Napkins
+
+- **1. Procurement Item ID:** C14
+- **2. Item name:** Napkins
+- **3. Plain-English description:** Branded or plain
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Takeaway Items
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Branded or plain
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Branded or plain
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** None
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### C15: Cutlery (disposable or reusable)
+
+- **1. Procurement Item ID:** C15
+- **2. Item name:** Cutlery (disposable or reusable)
+- **3. Plain-English description:** Food-grade
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Takeaway Items
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Food-grade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Food-grade
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Food-safe standard
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Food-safe standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Reusable preferred for the premium positioning, disposable as a fallback
+
+### C16: Customer-accessible display shelving
+
+- **1. Procurement Item ID:** C16
+- **2. Item name:** Customer-accessible display shelving
+- **3. Plain-English description:** Self-selection of packaged items
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Display
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Self-selection of packaged items
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Self-selection of packaged items
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** None
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$150-400 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$150-400
+
+### C17: Menu board/signage
+
+- **1. Procurement Item ID:** C17
+- **2. Item name:** Menu board/signage
+- **3. Plain-English description:** Design-dependent, current brand palette
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Display
+- **6. Quantity:** 1
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Design-dependent, current brand palette
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Matches the locked 7-colour palette (outputs/brand/warm-stone-tokens.css)
+- **24. Performance requirements:** Design-dependent, current brand palette
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** None
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** Gated on final naming decision
+
+### C18: Cafe POS integration
+
+- **1. Procurement Item ID:** C18
+- **2. Item name:** Cafe POS integration
+- **3. Plain-English description:** Shares reception's POS terminal (B07), not a separate purchase
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** POS
+- **6. Quantity:** 0
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Locked
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Shares reception's POS terminal (B07), not a separate purchase
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Shares reception's POS terminal (B07), not a separate purchase
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** N/A
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Locked
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** No separate cafe POS hardware required
+
+### C19: Preparation/serving counter
+
+- **1. Procurement Item ID:** C19
+- **2. Item name:** Preparation/serving counter
+- **3. Plain-English description:** Within the Cafe's existing solid-walled footprint
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Staff Equipment
+- **6. Quantity:** 1
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Within the Cafe's existing solid-walled footprint
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** LED
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Within the Cafe's existing solid-walled footprint
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Local trade, food-business fitout standard
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Local trade, food-business fitout standard
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** Custom, site-installed
+
+### C20: Handwashing station (Cafe-specific)
+
+- **1. Procurement Item ID:** C20
+- **2. Item name:** Handwashing station (Cafe-specific)
+- **3. Plain-English description:** Separate from any clinical hand-hygiene station
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Staff Equipment
+- **6. Quantity:** 1
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Separate from any clinical hand-hygiene station
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Separate from any clinical hand-hygiene station
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** WA food-business hygiene requirement
+- **29. Food-safety requirements if applicable:** WA food-business hygiene requirement
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** WA food-business hygiene requirement
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** Confirm exact requirement with local council EHO
+
+### C21: Cafe-specific waste bin (food waste, separate from general/biohazard)
+
+- **1. Procurement Item ID:** C21
+- **2. Item name:** Cafe-specific waste bin (food waste, separate from general/biohazard)
+- **3. Plain-English description:** Lidded, foot-pedal
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Waste
+- **6. Quantity:** 1-2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Lidded, foot-pedal
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Lidded, foot-pedal
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Food-safety waste segregation
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Food-safety waste segregation
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### C22: Pre-made sandwiches/rolls
+
+- **1. Procurement Item ID:** C22
+- **2. Item name:** Pre-made sandwiches/rolls
+- **3. Plain-English description:** External supplier, not yet identified
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Supplier/Food Stock
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** unit
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** PRO
+- **16. China/Australia classification:** Professional/clinical procurement channel
+- **17. Preferred procurement channel:** Named professional/clinical equipment channel, see PROCUREMENT-AUSTRALIA-PACKAGE.md Specialist Clinical Suppliers
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** External supplier, not yet identified
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** External supplier, not yet identified
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** WA food business notification, supplier's own food-safety certification
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** WA food business notification, supplier's own food-safety certification
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery via the named professional channel, not yet quoted.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** **Genuine procurement dependency: no external food supplier identified yet, not invented here**
+
+### C23: Coffee beans/milk/syrups
+
+- **1. Procurement Item ID:** C23
+- **2. Item name:** Coffee beans/milk/syrups
+- **3. Plain-English description:** Wholesale coffee supplier
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Supplier/Food Stock
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Wholesale coffee supplier
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Wholesale coffee supplier
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** Food-safety storage
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Food-safety storage
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Supplier not yet selected
+
+### C24: Herbal tea (free to all clients)
+
+- **1. Procurement Item ID:** C24
+- **2. Item name:** Herbal tea (free to all clients)
+- **3. Plain-English description:** Bulk supply
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Supplier/Food Stock
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Bulk supply
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Bulk supply
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** None
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### C25: Bottled/canned cold drinks
+
+- **1. Procurement Item ID:** C25
+- **2. Item name:** Bottled/canned cold drinks
+- **3. Plain-English description:** Wholesale beverage supplier
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Supplier/Food Stock
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Wholesale beverage supplier
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Wholesale beverage supplier
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** None
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### C26: Food Business Notification (local council)
+
+- **1. Procurement Item ID:** C26
+- **2. Item name:** Food Business Notification (local council)
+- **3. Plain-English description:** Administrative, not a physical item, required at least 14 days before trading
+- **4. Business area:** Cafe
+- **5. Sub-area/location:** Food Safety
+- **6. Quantity:** 1
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** filing
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** N/A
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cafe item.
+- **19. Specification:** Administrative, not a physical item, required at least 14 days before trading
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Administrative, not a physical item, required at least 14 days before trading
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** WA Food Act 2008, Food Business Notification Form
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** WA Food Act 2008, Food Business Notification Form
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** Council-specific, gated on venue confirmation
+
+---
+
+## Section D: Lounge / Waiting Area
+
+### D01: Three-seat couch
+
+- **1. Procurement Item ID:** D01
+- **2. Item name:** Three-seat couch
+- **3. Plain-English description:** Not reclining chairs, per current direction
+- **4. Business area:** Lounge
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 3-4
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lounge item.
+- **19. Specification:** Not reclining chairs, per current direction
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Not reclining chairs, per current direction
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS/NZS 4088 stability, upholstery flammability standard
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** A$1,200-3,000 each; final count set by venue floor area, do not lock a number before a venue is confirmed (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** A$1,200-3,000 each; final count set by venue floor area, do not lock a number before a venue is confirmed
+
+### D02: Side table with charging port
+
+- **1. Procurement Item ID:** D02
+- **2. Item name:** Side table with charging port
+- **3. Plain-English description:** USB-A/USB-C
+- **4. Business area:** Lounge
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 4-6
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Priced
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lounge item.
+- **19. Specification:** USB-A/USB-C
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** USB-A/USB-C
+- **25. Electrical requirements if applicable:** Electrical safety mark on charging module
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark on charging module
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** A$150-300 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** A$150-300 each
+
+### D03: Low coffee table
+
+- **1. Procurement Item ID:** D03
+- **2. Item name:** Low coffee table
+- **3. Plain-English description:** N/A
+- **4. Business area:** Lounge
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 3-4
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Priced
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lounge item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** A$100-250 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** A$100-250 each
+
+### D04: Floor lamp (soft, warm)
+
+- **1. Procurement Item ID:** D04
+- **2. Item name:** Floor lamp (soft, warm)
+- **3. Plain-English description:** Matches the locked palette
+- **4. Business area:** Lounge
+- **5. Sub-area/location:** Lighting
+- **6. Quantity:** 4
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lounge item.
+- **19. Specification:** Matches the locked palette
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Matches the locked 7-colour palette (outputs/brand/warm-stone-tokens.css)
+- **24. Performance requirements:** Matches the locked palette
+- **25. Electrical requirements if applicable:** SAA electrical mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** SAA electrical mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$80-150 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$80-150 each
+
+### D05: Tablet (kiosk-mounted, pregnancy/postpartum information)
+
+- **1. Procurement Item ID:** D05
+- **2. Item name:** Tablet (kiosk-mounted, pregnancy/postpartum information)
+- **3. Plain-English description:** Curated content only, no open browser, no app store, no social login
+- **4. Business area:** Lounge
+- **5. Sub-area/location:** Technology
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lounge item.
+- **19. Specification:** Curated content only, no open browser, no app store, no social login
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Curated content only, no open browser, no app store, no social login
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Kiosk-mode device management
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Content licensing and device brand not yet finalised
+
+### D06: Tablet stand/mount
+
+- **1. Procurement Item ID:** D06
+- **2. Item name:** Tablet stand/mount
+- **3. Plain-English description:** Kiosk-mode, secure, charging
+- **4. Business area:** Lounge
+- **5. Sub-area/location:** Technology
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lounge item.
+- **19. Specification:** Kiosk-mode, secure, charging
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Kiosk-mode, secure, charging
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### D07: Wi-Fi access point (Lounge zone)
+
+- **1. Procurement Item ID:** D07
+- **2. Item name:** Wi-Fi access point (Lounge zone)
+- **3. Plain-English description:** Part of venue-wide network
+- **4. Business area:** Lounge
+- **5. Sub-area/location:** Technology
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lounge item.
+- **19. Specification:** Part of venue-wide network
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Part of venue-wide network
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Shared with venue-wide IT, Section T
+
+### D08: Heated throw blankets
+
+- **1. Procurement Item ID:** D08
+- **2. Item name:** Heated throw blankets
+- **3. Plain-English description:** Complimentary for clients
+- **4. Business area:** Lounge
+- **5. Sub-area/location:** Decor
+- **6. Quantity:** 20
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lounge item.
+- **19. Specification:** Complimentary for clients
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Complimentary for clients
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$15-25 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$15-25 each
+
+### D09: Curated reading material
+
+- **1. Procurement Item ID:** D09
+- **2. Item name:** Curated reading material
+- **3. Plain-English description:** Pregnancy/postpartum information and documents
+- **4. Business area:** Lounge
+- **5. Sub-area/location:** Decor
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lounge item.
+- **19. Specification:** Pregnancy/postpartum information and documents
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Pregnancy/postpartum information and documents
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$200-400 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$200-400
+
+### D10: Signage (Lounge wayfinding)
+
+- **1. Procurement Item ID:** D10
+- **2. Item name:** Signage (Lounge wayfinding)
+- **3. Plain-English description:** Design-dependent
+- **4. Business area:** Lounge
+- **5. Sub-area/location:** Decor
+- **6. Quantity:** 1
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lounge item.
+- **19. Specification:** Design-dependent
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Design-dependent
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** Gated on naming decision
+
+### D11: Bin (general waste, Lounge zone)
+
+- **1. Procurement Item ID:** D11
+- **2. Item name:** Bin (general waste, Lounge zone)
+- **3. Plain-English description:** Lidded
+- **4. Business area:** Lounge
+- **5. Sub-area/location:** Waste
+- **6. Quantity:** 1-2
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lounge item.
+- **19. Specification:** Lidded
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Lidded
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### D12: Portable AV/PA equipment for classes/ticketed sessions
+
+- **1. Procurement Item ID:** D12
+- **2. Item name:** Portable AV/PA equipment for classes/ticketed sessions
+- **3. Plain-English description:** Only if the Lounge's future-use plan is activated
+- **4. Business area:** Lounge
+- **5. Sub-area/location:** Future Use
+- **6. Quantity:** 0 (future)
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lounge item.
+- **19. Specification:** Only if the Lounge's future-use plan is activated
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Only if the Lounge's future-use plan is activated
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** Not a day-one requirement; flagged for the venture's own growth path, Chapter 33
+
+---
+
+## Section E: Blood Collection (Core Business: Maximum Detail)
+
+### E01: Phlebotomy chair (Chair A)
+
+- **1. Procurement Item ID:** E01
+- **2. Item name:** Phlebotomy chair (Chair A)
+- **3. Plain-English description:** Reclines to flat, adjustable arm support, vinyl wipe-clean, wide/bariatric seat
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** PRO
+- **16. China/Australia classification:** Professional/clinical procurement channel
+- **17. Preferred procurement channel:** Named professional/clinical equipment channel, see PROCUREMENT-AUSTRALIA-PACKAGE.md Specialist Clinical Suppliers
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Reclines to flat, adjustable arm support, vinyl wipe-clean, wide/bariatric seat
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** vinyl
+- **22. Finish if known:** wipe-clean
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Reclines to flat, adjustable arm support, vinyl wipe-clean, wide/bariatric seat
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Clinical suitability sign-off from the pathology partner
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Clinical suitability sign-off from the pathology partner
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery via the named professional channel, not yet quoted.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$800-1,200 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$800-1,200
+
+### E02: Phlebotomy chair (Chair B)
+
+- **1. Procurement Item ID:** E02
+- **2. Item name:** Phlebotomy chair (Chair B)
+- **3. Plain-English description:** Same as E01
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** PRO
+- **16. China/Australia classification:** Professional/clinical procurement channel
+- **17. Preferred procurement channel:** Named professional/clinical equipment channel, see PROCUREMENT-AUSTRALIA-PACKAGE.md Specialist Clinical Suppliers
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Same as E01
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Same as E01
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Same as E01
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Same as E01
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery via the named professional channel, not yet quoted.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$800-1,200 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$800-1,200
+
+### E03: 3rd phlebotomy chair (growth reservation)
+
+- **1. Procurement Item ID:** E03
+- **2. Item name:** 3rd phlebotomy chair (growth reservation)
+- **3. Plain-English description:** Same spec as E01/E02, room built to accommodate but not purchased at day-one
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 0 (day-one), 1 (growth)
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** PRO
+- **16. China/Australia classification:** Professional/clinical procurement channel
+- **17. Preferred procurement channel:** Named professional/clinical equipment channel, see PROCUREMENT-AUSTRALIA-PACKAGE.md Specialist Clinical Suppliers
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Same spec as E01/E02, room built to accommodate but not purchased at day-one
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Same spec as E01/E02, room built to accommodate but not purchased at day-one
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Same as E01
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Same as E01
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery via the named professional channel, not yet quoted.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Room is built/serviced for 3 chairs from day one (Chapter 20); the 3rd chair itself is a staffing/demand-triggered purchase, not a day-one purchase
+
+### E04: Vasovagal recliner/exam couch
+
+- **1. Procurement Item ID:** E04
+- **2. Item name:** Vasovagal recliner/exam couch
+- **3. Plain-English description:** Full recline to flat, separate from the 2 active phlebotomy chairs, for fainting/vasovagal recovery
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Full recline to flat, separate from the 2 active phlebotomy chairs, for fainting/vasovagal recovery
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Full recline to flat, separate from the 2 active phlebotomy chairs, for fainting/vasovagal recovery
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Non-TGA furniture item
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Non-TGA furniture item
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$500-900 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$500-900
+
+### E05: Documentation desk/bench
+
+- **1. Procurement Item ID:** E05
+- **2. Item name:** Documentation desk/bench
+- **3. Plain-English description:** 900mm min width
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** 900mm min width
+- **20. Dimensions if known:** 900mm
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** 900mm min width
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** None
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### E06: Phlebotomist stool (adjustable height)
+
+- **1. Procurement Item ID:** E06
+- **2. Item name:** Phlebotomist stool (adjustable height)
+- **3. Plain-English description:** Wipe-clean, adjustable
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Wipe-clean, adjustable
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** wipe-clean
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Wipe-clean, adjustable
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** None
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### E07: Medical consumables cabinet (lockable)
+
+- **1. Procurement Item ID:** E07
+- **2. Item name:** Medical consumables cabinet (lockable)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Storage
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** None
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$200-400 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$200-400
+
+### E08: Patient documentation drawer (lockable)
+
+- **1. Procurement Item ID:** E08
+- **2. Item name:** Patient documentation drawer (lockable)
+- **3. Plain-English description:** Privacy Act compliant record storage
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Storage
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Privacy Act compliant record storage
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Privacy Act compliant record storage
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Privacy Act record-keeping
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Privacy Act record-keeping
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$100-200 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$100-200
+
+### E09: Sharps container, bench size (1.4L)
+
+- **1. Procurement Item ID:** E09
+- **2. Item name:** Sharps container, bench size (1.4L)
+- **3. Plain-English description:** AS/NZS 23907:2023 compliant
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Sharps Disposal
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** AS/NZS 23907:2023 compliant
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** AS/NZS 23907:2023 compliant
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** AS/NZS 23907:2023
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS/NZS 23907:2023
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$5-15 each, consumable (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$5-15 each, consumable
+
+### E10: Sharps container, room size (5L)
+
+- **1. Procurement Item ID:** E10
+- **2. Item name:** Sharps container, room size (5L)
+- **3. Plain-English description:** AS/NZS 23907:2023 compliant
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Sharps Disposal
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** AS/NZS 23907:2023 compliant
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** AS/NZS 23907:2023 compliant
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** AS/NZS 23907:2023
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS/NZS 23907:2023
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$5-15 each, consumable (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$5-15 each, consumable
+
+### E11: Wall-mounted sharps container bracket
+
+- **1. Procurement Item ID:** E11
+- **2. Item name:** Wall-mounted sharps container bracket
+- **3. Plain-English description:** N/A
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Sharps Disposal
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** AS/NZS 23907:2023
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS/NZS 23907:2023
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$20-40 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$20-40 each
+
+### E12: Biohazard waste bin (yellow, lidded)
+
+- **1. Procurement Item ID:** E12
+- **2. Item name:** Biohazard waste bin (yellow, lidded)
+- **3. Plain-English description:** AS/NZS clinical waste standard
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Clinical Waste
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** AS/NZS clinical waste standard
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** AS/NZS clinical waste standard
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Clinical waste handling standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Clinical waste handling standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$35-60 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$35-60 each
+
+### E13: Biohazard specimen pouches
+
+- **1. Procurement Item ID:** E13
+- **2. Item name:** Biohazard specimen pouches
+- **3. Plain-English description:** Box of 100
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Clinical Waste
+- **6. Quantity:** 2 boxes
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Box of 100
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Box of 100
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Clinical waste standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Clinical waste standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$25-40/box (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$25-40/box
+
+### E14: Medical waste disposal contract
+
+- **1. Procurement Item ID:** E14
+- **2. Item name:** Medical waste disposal contract
+- **3. Plain-English description:** Annual service, not a one-off purchase
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Clinical Waste
+- **6. Quantity:** 1
+- **7. Quantity basis:** WDP-DEPENDENT
+- **8. Unit of measure:** contract
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** Yes, annual
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** E. WDP DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Annual service, not a one-off purchase
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Annual service, not a one-off purchase
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Council/WorkSafe WA compliance
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Council/WorkSafe WA compliance
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. WDP confirmation required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Confirmation from the pathology partner (WDP) on their own supply/commercial arrangement for this item.
+- **41. Who must confirm it:** WDP, via Reed's partnership channel, not this venture directly.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait for WDP's confirmation before taking any procurement action on this item.
+- **Register note:** **Genuine open dependency: whether WDP's own arrangement covers this, not assumed either way (Chapter 34)**
+
+### E15: Tabletop centrifuge (refrigerated)
+
+- **1. Procurement Item ID:** E15
+- **2. Item name:** Tabletop centrifuge (refrigerated)
+- **3. Plain-English description:** 3,000 RPM min, 8+ position rotor; GDM underdiagnosis risk without centrifugation within 10 minutes
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Specimen Handling
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** E. WDP DEPENDENT
+- **14. Current status:** Priced
+- **15. Source route:** WDP
+- **16. China/Australia classification:** WDP relationship, not general retail
+- **17. Preferred procurement channel:** Pathology partner (WDP) arranged, not an open-market purchase
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** 3,000 RPM min, 8+ position rotor; GDM underdiagnosis risk without centrifugation within 10 minutes
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** 3,000 RPM min, 8+ position rotor; GDM underdiagnosis risk without centrifugation within 10 minutes
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** NATA acceptance confirmation before purchase of any non-established-brand alternative
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** NATA acceptance confirmation before purchase of any non-established-brand alternative
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Arranged via WDP, not a standard commercial delivery.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. WDP confirmation required first.
+- **38. Existing price/source if already researched:** A$1,800-5,000; the single most critical piece of equipment in the venue, do not compromise on quality (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Confirmation from the pathology partner (WDP) on their own supply/commercial arrangement for this item.
+- **41. Who must confirm it:** WDP, via Reed's partnership channel, not this venture directly.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait for WDP's confirmation before taking any procurement action on this item.
+- **Register note:** A$1,800-5,000; the single most critical piece of equipment in the venue, do not compromise on quality
+
+### E16: Specimen refrigerator
+
+- **1. Procurement Item ID:** E16
+- **2. Item name:** Specimen refrigerator
+- **3. Plain-English description:** 2-8°C, temperature logged
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Specimen Handling
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** 2-8°C, temperature logged
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** 2-8°C, temperature logged
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Cold-chain, temperature-logging requirement
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Cold-chain, temperature-logging requirement
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### E17: Insulated specimen transport bag
+
+- **1. Procurement Item ID:** E17
+- **2. Item name:** Insulated specimen transport bag
+- **3. Plain-English description:** For courier/drop-off dispatch
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Specimen Handling
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** For courier/drop-off dispatch
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** For courier/drop-off dispatch
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Cold-chain standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Cold-chain standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$40-60 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$40-60 each
+
+### E18: Ice packs (reusable, cold chain)
+
+- **1. Procurement Item ID:** E18
+- **2. Item name:** Ice packs (reusable, cold chain)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Specimen Handling
+- **6. Quantity:** 6
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** None
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$8-15 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$8-15 each
+
+### E19: Thermal label printer
+
+- **1. Procurement Item ID:** E19
+- **2. Item name:** Thermal label printer
+- **3. Plain-English description:** Zebra ZD420 or equivalent
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Specimen Handling
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Zebra ZD420, Zebra
+- **19. Specification:** Zebra ZD420 or equivalent
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Zebra ZD420, Zebra
+- **24. Performance requirements:** Zebra ZD420 or equivalent
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** None
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$350 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$350
+
+### E20: Pathology collection equipment (vacutainers, needles, tourniquets, alcohol swabs, gauze, tape)
+
+- **1. Procurement Item ID:** E20
+- **2. Item name:** Pathology collection equipment (vacutainers, needles, tourniquets, alcohol swabs, gauze, tape)
+- **3. Plain-English description:** GTT-specific (fluoride-oxalate tubes for GTT tubes)
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Pathology Equipment
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** WDP-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** E. WDP DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** WDP
+- **16. China/Australia classification:** WDP relationship, not general retail
+- **17. Preferred procurement channel:** Pathology partner (WDP) arranged, not an open-market purchase
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** GTT-specific (fluoride-oxalate tubes for GTT tubes)
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** LED
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** GTT-specific (fluoride-oxalate tubes for GTT tubes)
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** NATA Licensed Collection Centre umbrella
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** NATA Licensed Collection Centre umbrella
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Arranged via WDP, not a standard commercial delivery.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. WDP confirmation required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Confirmation from the pathology partner (WDP) on their own supply/commercial arrangement for this item.
+- **41. Who must confirm it:** WDP, via Reed's partnership channel, not this venture directly.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait for WDP's confirmation before taking any procurement action on this item.
+- **Register note:** **Do not invent pathology equipment WDP would supply beyond what current documentation establishes; final split confirmed once WDP's commercial arrangement is settled**
+
+### E21: 75g glucose solution (Polycal or equivalent)
+
+- **1. Procurement Item ID:** E21
+- **2. Item name:** 75g glucose solution (Polycal or equivalent)
+- **3. Plain-English description:** Commercially prepared, NOT home-made, one bottle per client, refrigerated
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Glucose Drink
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Commercially prepared, NOT home-made, one bottle per client, refrigerated
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Commercially prepared, NOT home-made, one bottle per client, refrigerated
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Pathology-grade product
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Pathology-grade product
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Administered by the phlebotomist as part of the collection workflow, not a separate cafe/snack item
+
+### E22: Disposable gloves (nitrile)
+
+- **1. Procurement Item ID:** E22
+- **2. Item name:** Disposable gloves (nitrile)
+- **3. Plain-English description:** Powder-free
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** PPE
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Powder-free
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** powder-free
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Powder-free
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** AS/NZS 4179/4011
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS/NZS 4179/4011
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### E23: Face masks (surgical)
+
+- **1. Procurement Item ID:** E23
+- **2. Item name:** Face masks (surgical)
+- **3. Plain-English description:** For phlebotomist use where clinically indicated
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** PPE
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** For phlebotomist use where clinically indicated
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** For phlebotomist use where clinically indicated
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** AS 4381
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS 4381
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### E24: Clinical sink + elbow/sensor tap fitout
+
+- **1. Procurement Item ID:** E24
+- **2. Item name:** Clinical sink + elbow/sensor tap fitout
+- **3. Plain-English description:** Elbow-operated or sensor tap, stainless/tiled splashback
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Hand Hygiene
+- **6. Quantity:** 1
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Elbow-operated or sensor tap, stainless/tiled splashback
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** stainless
+- **22. Finish if known:** LED
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Elbow-operated or sensor tap, stainless/tiled splashback
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** Yes, licensed plumber required
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** NSQHS Standards
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** NSQHS Standards
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** **Australian hydraulic verification required, local trade install**
+
+### E25: Alcohol-based hand rub (ABHR) dispenser
+
+- **1. Procurement Item ID:** E25
+- **2. Item name:** Alcohol-based hand rub (ABHR) dispenser
+- **3. Plain-English description:** Wall-mounted
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Hand Hygiene
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Wall-mounted
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Wall-mounted
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Infection control standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### E26: Hand soap (clinical grade)
+
+- **1. Procurement Item ID:** E26
+- **2. Item name:** Hand soap (clinical grade)
+- **3. Plain-English description:** Dispenser refill
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Hand Hygiene
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Dispenser refill
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Dispenser refill
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Infection control standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### E27: Paper towel (clinical)
+
+- **1. Procurement Item ID:** E27
+- **2. Item name:** Paper towel (clinical)
+- **3. Plain-English description:** Dispenser refill
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Hand Hygiene
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Dispenser refill
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Dispenser refill
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Infection control standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### E28: Surface disinfectant (hospital-grade)
+
+- **1. Procurement Item ID:** E28
+- **2. Item name:** Surface disinfectant (hospital-grade)
+- **3. Plain-English description:** TGA-listed disinfectant, effective against blood-borne pathogens
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Cleaning
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** TGA-listed disinfectant, effective against blood-borne pathogens
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** TGA-listed disinfectant, effective against blood-borne pathogens
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** TGA listing
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** TGA listing
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Must be TGA-listed, not a generic household disinfectant
+
+### E29: Blood spill kit
+
+- **1. Procurement Item ID:** E29
+- **2. Item name:** Blood spill kit
+- **3. Plain-English description:** N/A
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Cleaning
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Infection control standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$80-120 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$80-120 each
+
+### E30: Disposable wipes (surface, clinical-grade)
+
+- **1. Procurement Item ID:** E30
+- **2. Item name:** Disposable wipes (surface, clinical-grade)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Cleaning
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Infection control standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### E31: Solid walls, one door, no public-facing window
+
+- **1. Procurement Item ID:** E31
+- **2. Item name:** Solid walls, one door, no public-facing window
+- **3. Plain-English description:** Room construction, not a shippable product
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Construction
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** room
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Room construction, not a shippable product
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Room construction, not a shippable product
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Building surveyor, WA construction standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Building surveyor, WA construction standard
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Built and serviced for 3 chairs from day one (Fit-Out Program Decision Analysis, Round 3)
+
+### E32: Per-chair curtain/partition between the up-to-3 chair positions
+
+- **1. Procurement Item ID:** E32
+- **2. Item name:** Per-chair curtain/partition between the up-to-3 chair positions
+- **3. Plain-English description:** Washable curtain fabric
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Privacy
+- **6. Quantity:** 2-3
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Washable curtain fabric
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** fabric
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Washable curtain fabric
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Infection control (washable fabric)
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control (washable fabric)
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Matches the recommended growth-first 3-chair-ready design
+
+### E33: Biohazard symbol (room door)
+
+- **1. Procurement Item ID:** E33
+- **2. Item name:** Biohazard symbol (room door)
+- **3. Plain-English description:** AS/NZS signage standard
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Signage
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** AS/NZS signage standard
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** AS/NZS signage standard
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** AS/NZS signage standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS/NZS signage standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### E34: Hand hygiene reminder signage
+
+- **1. Procurement Item ID:** E34
+- **2. Item name:** Hand hygiene reminder signage
+- **3. Plain-English description:** At sink
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Signage
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** At sink
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** At sink
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** None
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** None
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### E35: "No entry when in use" signage
+
+- **1. Procurement Item ID:** E35
+- **2. Item name:** "No entry when in use" signage
+- **3. Plain-English description:** Door-mounted
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Signage
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Door-mounted
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Door-mounted
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** None
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### E36: Emergency call button/intercom to reception
+
+- **1. Procurement Item ID:** E36
+- **2. Item name:** Emergency call button/intercom to reception
+- **3. Plain-English description:** Wired circuit
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Emergency
+- **6. Quantity:** 1
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Wired circuit
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Wired circuit
+- **25. Electrical requirements if applicable:** Electrical, WorkSafe
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Electrical, WorkSafe
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical, WorkSafe
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** Local trade install
+
+### E38: Room ventilation
+
+- **1. Procurement Item ID:** E38
+- **2. Item name:** Room ventilation
+- **3. Plain-English description:** 6 ACH per current spec
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Ventilation
+- **6. Quantity:** 1
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** system
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** 6 ACH per current spec
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** 6 ACH per current spec
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** Australian HVAC verification required
+- **28. Clinical requirements if applicable:** Australian HVAC verification required
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Australian HVAC verification required
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** Site-specific, local HVAC contractor
+
+### E39: Phlebotomist uniform/scrubs
+
+- **1. Procurement Item ID:** E39
+- **2. Item name:** Phlebotomist uniform/scrubs
+- **3. Plain-English description:** Per staff position register (PHL01-PHL04)
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Staff Equipment
+- **6. Quantity:** 4 (employment pool)
+- **7. Quantity basis:** STAFF-DEPENDENT
+- **8. Unit of measure:** set
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** G. INFORMATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** Per staff position register (PHL01-PHL04)
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Per staff position register (PHL01-PHL04)
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** None
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Information gap must be resolved first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific, named information gap (see the item's own register note), not a vague research task.
+- **41. Who must confirm it:** Depends on the specific gap; usually the Venue Manager once hired, or Anthony in the interim.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Resolve the specific information gap noted in the register first.
+- **Register note:** 2 committed + 2 relief pool
+
+### E40: Collection log, specimen dispatch log, adverse event register (printed forms)
+
+- **1. Procurement Item ID:** E40
+- **2. Item name:** Collection log, specimen dispatch log, adverse event register (printed forms)
+- **3. Plain-English description:** 7-year retention requirement
+- **4. Business area:** Blood Collection
+- **5. Sub-area/location:** Documentation
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **19. Specification:** 7-year retention requirement
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** 7-year retention requirement
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Patient record-keeping requirement
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Patient record-keeping requirement
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+**Cross-reference items in this section (not independently specified, see the target item):**
+
+- **E37** (AED (venue-wide, not room-specific)): See Section R Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+
+---
+
+## Section F: Massage
+
+### F01a: Pregnancy massage table
+
+- **1. Procurement Item ID:** F01a
+- **2. Item name:** Pregnancy massage table
+- **3. Plain-English description:** Face hole + side cutouts, vinyl
+- **4. Business area:** Massage
+- **5. Sub-area/location:** Furniture (OPTION A: table/bed)
+- **6. Quantity:** 2 (day-one), up to 3 (growth)
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** Face hole + side cutouts, vinyl
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** vinyl
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Face hole + side cutouts, vinyl
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** General consumer product safety
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$800-2,500 AU / A$300-800 China-sourced (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$800-2,500 AU / A$300-800 China-sourced
+
+### F01b: Massage station chair
+
+- **1. Procurement Item ID:** F01b
+- **2. Item name:** Massage station chair
+- **3. Plain-English description:** Format and spec not previously modelled anywhere in this repository
+- **4. Business area:** Massage
+- **5. Sub-area/location:** Furniture (OPTION B: chair-based)
+- **6. Quantity:** Qty TBC if adopted
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** Open
+- **16. China/Australia classification:** Not yet determined, sourcing route not classified in the register
+- **17. Preferred procurement channel:** Not yet determined
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** Format and spec not previously modelled anywhere in this repository
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** LED
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Format and spec not previously modelled anywhere in this repository
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None established
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Not yet determined
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** **Genuinely unlocked, no existing spec: if Anthony adopts chair-based format, this line requires fresh research before quoting**
+
+### F02: Bolster/positioning pillow set
+
+- **1. Procurement Item ID:** F02
+- **2. Item name:** Bolster/positioning pillow set
+- **3. Plain-English description:** N/A
+- **4. Business area:** Massage
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 2-3 sets
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** set
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$80-150/set (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$80-150/set
+
+### F03: Heated blanket
+
+- **1. Procurement Item ID:** F03
+- **2. Item name:** Heated blanket
+- **3. Plain-English description:** Electric, machine-washable
+- **4. Business area:** Massage
+- **5. Sub-area/location:** Linen
+- **6. Quantity:** 4
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** Electric, machine-washable
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Electric, machine-washable
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$80-150 each, 2 per room including wash rotation (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$80-150 each, 2 per room including wash rotation
+
+### F04: Massage oil warming unit
+
+- **1. Procurement Item ID:** F04
+- **2. Item name:** Massage oil warming unit
+- **3. Plain-English description:** Optional comfort upgrade
+- **4. Business area:** Massage
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 2-3
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** Optional comfort upgrade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Optional comfort upgrade
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** A$50-100 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** A$50-100 each
+
+### F05: Trolley/tool cart
+
+- **1. Procurement Item ID:** F05
+- **2. Item name:** Trolley/tool cart
+- **3. Plain-English description:** N/A
+- **4. Business area:** Massage
+- **5. Sub-area/location:** Storage
+- **6. Quantity:** 2-3
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Category A, China candidate
+
+### F06: Massage table linen (sheets, pillowcases)
+
+- **1. Procurement Item ID:** F06
+- **2. Item name:** Massage table linen (sheets, pillowcases)
+- **3. Plain-English description:** Machine-washable
+- **4. Business area:** Massage
+- **5. Sub-area/location:** Linen
+- **6. Quantity:** 2 sets per station minimum
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** set
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** Machine-washable
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Machine-washable
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### F07: Pregnancy-safe massage oil
+
+- **1. Procurement Item ID:** F07
+- **2. Item name:** Pregnancy-safe massage oil
+- **3. Plain-English description:** Lavender, mandarin, chamomile only
+- **4. Business area:** Massage
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** 5L bulk
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** litre
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** Lavender, mandarin, chamomile only
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Lavender, mandarin, chamomile only
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Pregnancy-safe formulation
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$25-50/L (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$25-50/L
+
+### F08: Aromatherapy/hamper items
+
+- **1. Procurement Item ID:** F08
+- **2. Item name:** Aromatherapy/hamper items
+- **3. Plain-English description:** Opening stock
+- **4. Business area:** Massage
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** Opening stock
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Opening stock
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Pregnancy-safe formulation
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### F09: Curtain partition per treatment room
+
+- **1. Procurement Item ID:** F09
+- **2. Item name:** Curtain partition per treatment room
+- **3. Plain-English description:** Washable fabric, matches locked palette
+- **4. Business area:** Massage
+- **5. Sub-area/location:** Privacy
+- **6. Quantity:** 3 (day-one 2 + growth 1)
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** Washable fabric, matches locked palette
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** fabric
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Matches the locked 7-colour palette (outputs/brand/warm-stone-tokens.css)
+- **24. Performance requirements:** Washable fabric, matches locked palette
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control (washable fabric)
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Fit-out cost, not equipment
+
+### F10: Task/ambient lighting per station
+
+- **1. Procurement Item ID:** F10
+- **2. Item name:** Task/ambient lighting per station
+- **3. Plain-English description:** Warm, dimmable
+- **4. Business area:** Massage
+- **5. Sub-area/location:** Lighting
+- **6. Quantity:** 2-3
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** Warm, dimmable
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Warm, dimmable
+- **25. Electrical requirements if applicable:** Electrical safety, professional lighting design
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety, professional lighting design
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** See Section X
+
+### F11: Disposable table-roll paper or equivalent barrier
+
+- **1. Procurement Item ID:** F11
+- **2. Item name:** Disposable table-roll paper or equivalent barrier
+- **3. Plain-English description:** N/A
+- **4. Business area:** Massage
+- **5. Sub-area/location:** PPE
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** roll
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### F12: Practitioner apron/uniform
+
+- **1. Procurement Item ID:** F12
+- **2. Item name:** Practitioner apron/uniform
+- **3. Plain-English description:** Per position register (MB01-MB06)
+- **4. Business area:** Massage
+- **5. Sub-area/location:** Practitioner Equipment
+- **6. Quantity:** 6 (employment pool)
+- **7. Quantity basis:** STAFF-DEPENDENT
+- **8. Unit of measure:** set
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** G. INFORMATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Massage item.
+- **19. Specification:** Per position register (MB01-MB06)
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Per position register (MB01-MB06)
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Information gap must be resolved first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific, named information gap (see the item's own register note), not a vague research task.
+- **41. Who must confirm it:** Depends on the specific gap; usually the Venue Manager once hired, or Anthony in the interim.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Resolve the specific information gap noted in the register first.
+- **Register note:** 4 committed + 2 relief pool
+
+---
+
+## Section G: Beauty
+
+### G01: Facial/beauty treatment bed
+
+- **1. Procurement Item ID:** G01
+- **2. Item name:** Facial/beauty treatment bed
+- **3. Plain-English description:** Electric, adjustable, vinyl
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 2 (day-one), up to 3 (growth, recommended)
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** Electric, adjustable, vinyl
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** vinyl
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Electric, adjustable, vinyl
+- **25. Electrical requirements if applicable:** SAA electrical mark (recline mechanism)
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** SAA electrical mark (recline mechanism)
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$400-900 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$400-900 each
+
+### G02: Practitioner stool
+
+- **1. Procurement Item ID:** G02
+- **2. Item name:** Practitioner stool
+- **3. Plain-English description:** Adjustable height
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 2-3
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** Adjustable height
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Adjustable height
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### G03: Magnifying lamp (LED, adjustable)
+
+- **1. Procurement Item ID:** G03
+- **2. Item name:** Magnifying lamp (LED, adjustable)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Lighting
+- **6. Quantity:** 2-3
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** SAA electrical mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** SAA electrical mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$80-150 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$80-150 each
+
+### G04: Wax heater (dual-pot, professional)
+
+- **1. Procurement Item ID:** G04
+- **2. Item name:** Wax heater (dual-pot, professional)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** SAA electrical mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** SAA electrical mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$120-250 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$120-250
+
+### G05: Brow/lash tool kit
+
+- **1. Procurement Item ID:** G05
+- **2. Item name:** Brow/lash tool kit
+- **3. Plain-English description:** Tweezers, brushes, applicators
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 2-3 sets
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** set
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** Tweezers, brushes, applicators
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Tweezers, brushes, applicators
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$60-120/set (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$60-120/set
+
+### G06: Facial steamer
+
+- **1. Procurement Item ID:** G06
+- **2. Item name:** Facial steamer
+- **3. Plain-English description:** Only if deeper facials are offered
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 0-1
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** Only if deeper facials are offered
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Only if deeper facials are offered
+- **25. Electrical requirements if applicable:** SAA electrical mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** SAA electrical mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** A$150-350, service-dependent, not confirmed as locked (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** A$150-350, service-dependent, not confirmed as locked
+
+### G07: Trolley/tool cart
+
+- **1. Procurement Item ID:** G07
+- **2. Item name:** Trolley/tool cart
+- **3. Plain-English description:** N/A
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Storage
+- **6. Quantity:** 2-3
+- **7. Quantity basis:** CALCULATED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$100-200 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$100-200 each
+
+### G08: 2-sink fitout (hand-wash + instrument decontamination)
+
+- **1. Procurement Item ID:** G08
+- **2. Item name:** 2-sink fitout (hand-wash + instrument decontamination)
+- **3. Plain-English description:** Hands-free tap on hand-wash sink
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Hygiene
+- **6. Quantity:** 1-2
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** Hands-free tap on hand-wash sink
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Hands-free tap on hand-wash sink
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** Yes, licensed plumber required
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** WA Skin Penetration Code (researched this round: waxing, tweezing, and electrolysis are within the Code's scope; a hands-free handwash basin with hot/cold water, soap, and paper towel is required in the immediate treatment area, per the Code of Practice for Skin Penetration Procedures 1998)
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** Local hydraulic trade install
+
+### G09: Treatment bed linen (disposable or machine-washable)
+
+- **1. Procurement Item ID:** G09
+- **2. Item name:** Treatment bed linen (disposable or machine-washable)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Linen
+- **6. Quantity:** 2 sets per station minimum
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** set
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### G10: PPD-free brow tint
+
+- **1. Procurement Item ID:** G10
+- **2. Item name:** PPD-free brow tint
+- **3. Plain-English description:** Pregnancy-safe
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** Pregnancy-safe
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Pregnancy-safe
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Pregnancy-safe, PPD-free
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$150-250 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$150-250
+
+### G11: Wax (strip + hard, pregnancy-safe)
+
+- **1. Procurement Item ID:** G11
+- **2. Item name:** Wax (strip + hard, pregnancy-safe)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Pregnancy-safe
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$100-200 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$100-200
+
+### G12: Facial products (HA serum, niacinamide, pregnancy-safe masks)
+
+- **1. Procurement Item ID:** G12
+- **2. Item name:** Facial products (HA serum, niacinamide, pregnancy-safe masks)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Pregnancy-safe formulation
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$300-600 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$300-600
+
+### G13: Disposable brow/wax consumables
+
+- **1. Procurement Item ID:** G13
+- **2. Item name:** Disposable brow/wax consumables
+- **3. Plain-English description:** Spatulas, strips, patch-test kits
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Disposables
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** Spatulas, strips, patch-test kits
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Spatulas, strips, patch-test kits
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$100-200 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$100-200
+
+### G14: Standard GPO, task lighting per station
+
+- **1. Procurement Item ID:** G14
+- **2. Item name:** Standard GPO, task lighting per station
+- **3. Plain-English description:** N/A
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Electrical
+- **6. Quantity:** 2-3
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Licensed electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### G15: Practitioner uniform
+
+- **1. Procurement Item ID:** G15
+- **2. Item name:** Practitioner uniform
+- **3. Plain-English description:** Per position register
+- **4. Business area:** Beauty
+- **5. Sub-area/location:** Practitioner Equipment
+- **6. Quantity:** Staff-dependent
+- **7. Quantity basis:** STAFF-DEPENDENT
+- **8. Unit of measure:** set
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** G. INFORMATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Beauty item.
+- **19. Specification:** Per position register
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Per position register
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Information gap must be resolved first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific, named information gap (see the item's own register note), not a vague research task.
+- **41. Who must confirm it:** Depends on the specific gap; usually the Venue Manager once hired, or Anthony in the interim.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Resolve the specific information gap noted in the register first.
+- **Register note:** Shared with Massage where dual-qualified (MB01-MB06)
+
+---
+
+## Section H: Nail
+
+### H01: Nail table with built-in dust collector
+
+- **1. Procurement Item ID:** H01
+- **2. Item name:** Nail table with built-in dust collector
+- **3. Plain-English description:** Professional grade
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 4
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** Professional grade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Professional grade
+- **25. Electrical requirements if applicable:** Electrical safety mark (built-in collector)
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark (built-in collector)
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$500-800 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$500-800 each
+
+### H02: Nail technician chair
+
+- **1. Procurement Item ID:** H02
+- **2. Item name:** Nail technician chair
+- **3. Plain-English description:** Adjustable
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 4
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** Adjustable
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Adjustable
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### H03: Client manicure chair
+
+- **1. Procurement Item ID:** H03
+- **2. Item name:** Client manicure chair
+- **3. Plain-English description:** N/A
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 4
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS/NZS 4088 general seating standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$200-400 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$200-400 each
+
+### H04: UV/LED nail lamp
+
+- **1. Procurement Item ID:** H04
+- **2. Item name:** UV/LED nail lamp
+- **3. Plain-English description:** Professional grade
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 4
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** Professional grade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Professional grade
+- **25. Electrical requirements if applicable:** SAA electrical mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** SAA electrical mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$100-200 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$100-200 each
+
+### H05: Nail drill
+
+- **1. Procurement Item ID:** H05
+- **2. Item name:** Nail drill
+- **3. Plain-English description:** Professional grade
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 2-4
+- **7. Quantity basis:** STAFF-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** G. INFORMATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** Professional grade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** LED
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Professional grade
+- **25. Electrical requirements if applicable:** SAA electrical mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** SAA electrical mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Information gap must be resolved first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific, named information gap (see the item's own register note), not a vague research task.
+- **41. Who must confirm it:** Depends on the specific gap; usually the Venue Manager once hired, or Anthony in the interim.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Resolve the specific information gap noted in the register first.
+- **Register note:** Not itemised in prior source documents; genuine gap now flagged and filled
+
+### H06: LEV (local exhaust ventilation) unit
+
+- **1. Procurement Item ID:** H06
+- **2. Item name:** LEV (local exhaust ventilation) unit
+- **3. Plain-English description:** Sized for 4 stations, installed
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Ventilation
+- **6. Quantity:** 1
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Priced
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** Sized for 4 stations, installed
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** LED
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Sized for 4 stations, installed
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** WorkSafe WA pre-application; researched this round: LEV/downdraft capture-hood systems are the standard method for open-plan nail-station air-quality compliance, but no WorkSafe-WA-familiar contractor has been identified for this specific installation
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** WorkSafe WA pre-application; researched this round: LEV/downdraft capture-hood systems are the standard method for open-plan nail-station air-quality compliance, but no WorkSafe-WA-familiar contractor has been identified for this specific installation
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** A$1,500-4,000 installed; **genuine gap: no contractor identified yet** (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** A$1,500-4,000 installed; **genuine gap: no contractor identified yet**
+
+### H07: Nail tool trolley
+
+- **1. Procurement Item ID:** H07
+- **2. Item name:** Nail tool trolley
+- **3. Plain-English description:** N/A
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Storage
+- **6. Quantity:** 4
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$150-300 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$150-300 each
+
+### H08: Nail files
+
+- **1. Procurement Item ID:** H08
+- **2. Item name:** Nail files
+- **3. Plain-English description:** N/A
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### H09: Buffing blocks
+
+- **1. Procurement Item ID:** H09
+- **2. Item name:** Buffing blocks
+- **3. Plain-English description:** N/A
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### H10: Cuticle pushers
+
+- **1. Procurement Item ID:** H10
+- **2. Item name:** Cuticle pushers
+- **3. Plain-English description:** N/A
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### H11: Cuticle nippers
+
+- **1. Procurement Item ID:** H11
+- **2. Item name:** Cuticle nippers
+- **3. Plain-English description:** N/A
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### H12: Base coat
+
+- **1. Procurement Item ID:** H12
+- **2. Item name:** Base coat
+- **3. Plain-English description:** 9-free formula
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** 9-free formula
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** 9-free formula
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Product safety, 9-free formulation
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** Part of A$830-1,480 combined opening stock (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Part of A$830-1,480 combined opening stock
+
+### H13: Top coat
+
+- **1. Procurement Item ID:** H13
+- **2. Item name:** Top coat
+- **3. Plain-English description:** 9-free formula
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** 9-free formula
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** 9-free formula
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Product safety
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### H14: Gel polish
+
+- **1. Procurement Item ID:** H14
+- **2. Item name:** Gel polish
+- **3. Plain-English description:** 20+ colours, 9-free formula
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** 20+ colours, 9-free formula
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** 20+ colours, 9-free formula
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Product safety
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$15-25 each, 20 colours = A$300-500 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$15-25 each, 20 colours = A$300-500
+
+### H15: Regular (non-gel) polish
+
+- **1. Procurement Item ID:** H15
+- **2. Item name:** Regular (non-gel) polish
+- **3. Plain-English description:** 20+ colours
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** 20+ colours
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** 20+ colours
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Product safety
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$8-15 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$8-15 each
+
+### H16: Remover/acetone
+
+- **1. Procurement Item ID:** H16
+- **2. Item name:** Remover/acetone
+- **3. Plain-English description:** N/A
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Flammable-liquid storage standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### H17: Lint-free wipes
+
+- **1. Procurement Item ID:** H17
+- **2. Item name:** Lint-free wipes
+- **3. Plain-English description:** N/A
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Disposables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### H18: Disposable gloves
+
+- **1. Procurement Item ID:** H18
+- **2. Item name:** Disposable gloves
+- **3. Plain-English description:** Food/beauty-grade
+- **4. Business area:** Nail
+- **5. Sub-area/location:** PPE
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** Food/beauty-grade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Food/beauty-grade
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Product safety
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### H19: Nail dust masks (N95)
+
+- **1. Procurement Item ID:** H19
+- **2. Item name:** Nail dust masks (N95)
+- **3. Plain-English description:** Box of 50
+- **4. Business area:** Nail
+- **5. Sub-area/location:** PPE
+- **6. Quantity:** 2 boxes
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** Box of 50
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Box of 50
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS/NZS respiratory protection standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$25-40/box (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$25-40/box
+
+### H20: Disinfection solution + containers
+
+- **1. Procurement Item ID:** H20
+- **2. Item name:** Disinfection solution + containers
+- **3. Plain-English description:** Instrument disinfection
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Cleaning
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** Instrument disinfection
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Instrument disinfection
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$80-150 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$80-150
+
+### H21: GPO per station (2x 10A)
+
+- **1. Procurement Item ID:** H21
+- **2. Item name:** GPO per station (2x 10A)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Nail
+- **5. Sub-area/location:** Electrical
+- **6. Quantity:** 4
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Nail item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Licensed electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+---
+
+## Section I: Pedicure
+
+### I01: Pedicure spa chair (pipeless)
+
+- **1. Procurement Item ID:** I01
+- **2. Item name:** Pedicure spa chair (pipeless)
+- **3. Plain-English description:** Pipeless/no-jet design mandatory for hygiene
+- **4. Business area:** Pedicure
+- **5. Sub-area/location:** Furniture/Equipment
+- **6. Quantity:** 4 (same zone as Nail, not an additional 8)
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Pedicure item.
+- **19. Specification:** Pipeless/no-jet design mandatory for hygiene
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Pipeless/no-jet design mandatory for hygiene
+- **25. Electrical requirements if applicable:** CE/SAA electrical mark, pipeless design confirmed
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** CE/SAA electrical mark, pipeless design confirmed
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$800-2,000 AU / A$500-1,500 China-sourced (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$800-2,000 AU / A$500-1,500 China-sourced
+
+### I02: Chair plumbing (hot/cold water, drainage)
+
+- **1. Procurement Item ID:** I02
+- **2. Item name:** Chair plumbing (hot/cold water, drainage)
+- **3. Plain-English description:** Per chair
+- **4. Business area:** Pedicure
+- **5. Sub-area/location:** Plumbing
+- **6. Quantity:** 4
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Pedicure item.
+- **19. Specification:** Per chair
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Per chair
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** Yes, licensed plumber required
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Licensed plumber
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### I03: Foot files/pumice
+
+- **1. Procurement Item ID:** I03
+- **2. Item name:** Foot files/pumice
+- **3. Plain-English description:** N/A
+- **4. Business area:** Pedicure
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Pedicure item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### I04: Foot towels
+
+- **1. Procurement Item ID:** I04
+- **2. Item name:** Foot towels
+- **3. Plain-English description:** Machine-washable
+- **4. Business area:** Pedicure
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** 8-12
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Pedicure item.
+- **19. Specification:** Machine-washable
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Machine-washable
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### I05: Toe separators (disposable)
+
+- **1. Procurement Item ID:** I05
+- **2. Item name:** Toe separators (disposable)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Pedicure
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Pedicure item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Product safety
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### I06: Pipeless chair sanitation kit
+
+- **1. Procurement Item ID:** I06
+- **2. Item name:** Pipeless chair sanitation kit
+- **3. Plain-English description:** Disinfectant compatible with the pipeless system's specific hygiene design
+- **4. Business area:** Pedicure
+- **5. Sub-area/location:** Cleaning
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Pedicure item.
+- **19. Specification:** Disinfectant compatible with the pipeless system's specific hygiene design
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Disinfectant compatible with the pipeless system's specific hygiene design
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Manufacturer-specified sanitation compliance
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Must match the specific chair's own sanitation system
+
+---
+
+## Section J: Hair
+
+### J01: Styling chair (hydraulic, wipe-clean)
+
+- **1. Procurement Item ID:** J01
+- **2. Item name:** Styling chair (hydraulic, wipe-clean)
+- **3. Plain-English description:** Professional grade
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 4
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** Professional grade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Professional grade
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS/NZS 4088
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$500-1,200 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$500-1,200 each
+
+### J02: Salon mirror (lighted, full-length)
+
+- **1. Procurement Item ID:** J02
+- **2. Item name:** Salon mirror (lighted, full-length)
+- **3. Plain-English description:** Custom-fit to actual wall length, spans 4 chairs
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 1
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** Custom-fit to actual wall length, spans 4 chairs
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** LED
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Custom-fit to actual wall length, spans 4 chairs
+- **25. Electrical requirements if applicable:** SAA electrical mark for the LED strip
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** SAA electrical mark for the LED strip
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** A$200-500 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** A$200-500
+
+### J03: Professional hair dryer
+
+- **1. Procurement Item ID:** J03
+- **2. Item name:** Professional hair dryer
+- **3. Plain-English description:** Named brand (Dyson, GHD, or equivalent)
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 4
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Dyson, GHD
+- **19. Specification:** Named brand (Dyson, GHD, or equivalent)
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Dyson, GHD
+- **24. Performance requirements:** Named brand (Dyson, GHD, or equivalent)
+- **25. Electrical requirements if applicable:** SAA electrical mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** SAA electrical mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$250-500 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$250-500 each
+
+### J04: Straightening iron
+
+- **1. Procurement Item ID:** J04
+- **2. Item name:** Straightening iron
+- **3. Plain-English description:** Named brand (GHD, Cloud Nine, or equivalent)
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 4
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** GHD, Cloud Nine
+- **19. Specification:** Named brand (GHD, Cloud Nine, or equivalent)
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** GHD, Cloud Nine
+- **24. Performance requirements:** Named brand (GHD, Cloud Nine, or equivalent)
+- **25. Electrical requirements if applicable:** SAA electrical mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** SAA electrical mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$150-300 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$150-300 each
+
+### J05: Curling tools
+
+- **1. Procurement Item ID:** J05
+- **2. Item name:** Curling tools
+- **3. Plain-English description:** Professional grade
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 2-4
+- **7. Quantity basis:** STAFF-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** G. INFORMATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** Professional grade
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** LED
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Professional grade
+- **25. Electrical requirements if applicable:** SAA electrical mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** SAA electrical mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Information gap must be resolved first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific, named information gap (see the item's own register note), not a vague research task.
+- **41. Who must confirm it:** Depends on the specific gap; usually the Venue Manager once hired, or Anthony in the interim.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Resolve the specific information gap noted in the register first.
+- **Register note:** Genuine gap not itemised in prior source documents, now filled
+
+### J06: Hair clippers
+
+- **1. Procurement Item ID:** J06
+- **2. Item name:** Hair clippers
+- **3. Plain-English description:** If offered as a service
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 0-2
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** If offered as a service
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** If offered as a service
+- **25. Electrical requirements if applicable:** SAA electrical mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** SAA electrical mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** Confirm against the current service catalogue before purchasing
+
+### J07: Brushes/combs
+
+- **1. Procurement Item ID:** J07
+- **2. Item name:** Brushes/combs
+- **3. Plain-English description:** Professional grade, various
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Tools
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** Professional grade, various
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Professional grade, various
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### J08: Capes
+
+- **1. Procurement Item ID:** J08
+- **2. Item name:** Capes
+- **3. Plain-English description:** Wipe-clean, machine-washable
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Linen
+- **6. Quantity:** 8-12
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** Wipe-clean, machine-washable
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** wipe-clean
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Wipe-clean, machine-washable
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### J09: Towels (hair-specific)
+
+- **1. Procurement Item ID:** J09
+- **2. Item name:** Towels (hair-specific)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Linen
+- **6. Quantity:** 12-20
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### J10: Shampoo
+
+- **1. Procurement Item ID:** J10
+- **2. Item name:** Shampoo
+- **3. Plain-English description:** Pregnancy-safe (no harsh chemicals)
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** Pregnancy-safe (no harsh chemicals)
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Pregnancy-safe (no harsh chemicals)
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Pregnancy-safe formulation
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### J11: Conditioner
+
+- **1. Procurement Item ID:** J11
+- **2. Item name:** Conditioner
+- **3. Plain-English description:** Pregnancy-safe
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** Pregnancy-safe
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Pregnancy-safe
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Pregnancy-safe formulation
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### J12: Treatment products
+
+- **1. Procurement Item ID:** J12
+- **2. Item name:** Treatment products
+- **3. Plain-English description:** Pregnancy-safe
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** Pregnancy-safe
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Pregnancy-safe
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Pregnancy-safe formulation
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** Part of A$350-650 combined opening stock (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Part of A$350-650 combined opening stock
+
+### J13: Styling products (mousse, spray, serum)
+
+- **1. Procurement Item ID:** J13
+- **2. Item name:** Styling products (mousse, spray, serum)
+- **3. Plain-English description:** Pregnancy-safe
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** Pregnancy-safe
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Pregnancy-safe
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Pregnancy-safe formulation
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### J14: Colour bowls, brushes, foils, capes
+
+- **1. Procurement Item ID:** J14
+- **2. Item name:** Colour bowls, brushes, foils, capes
+- **3. Plain-English description:** Only if the current service model includes colour services
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Colour Equipment
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** Only if the current service model includes colour services
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Only if the current service model includes colour services
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Product safety
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** Confirm against the current service catalogue (Chapter 10) before purchasing
+
+### J15: Tool trolley + organiser
+
+- **1. Procurement Item ID:** J15
+- **2. Item name:** Tool trolley + organiser
+- **3. Plain-English description:** N/A
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Storage
+- **6. Quantity:** 4
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$150-300 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$150-300 each
+
+### J16: Hair waste bin
+
+- **1. Procurement Item ID:** J16
+- **2. Item name:** Hair waste bin
+- **3. Plain-English description:** Lidded
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Waste
+- **6. Quantity:** 1-2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** Lidded
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Lidded
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### J17: Disposable gloves
+
+- **1. Procurement Item ID:** J17
+- **2. Item name:** Disposable gloves
+- **3. Plain-English description:** N/A
+- **4. Business area:** Hair
+- **5. Sub-area/location:** PPE
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Product safety
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### J18: GPO nearby each chair
+
+- **1. Procurement Item ID:** J18
+- **2. Item name:** GPO nearby each chair
+- **3. Plain-English description:** N/A
+- **4. Business area:** Hair
+- **5. Sub-area/location:** Electrical
+- **6. Quantity:** 4
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Licensed electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+---
+
+## Section K: Hair Wash
+
+### K01: Backwash basin + client chair
+
+- **1. Procurement Item ID:** K01
+- **2. Item name:** Backwash basin + client chair
+- **3. Plain-English description:** Plumbed hot/cold, neck rest
+- **4. Business area:** Hair Wash
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 2 (day-one), 3rd optional
+- **7. Quantity basis:** LOCKED (2), OPTIONAL (3rd)
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Priced
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair Wash item.
+- **19. Specification:** Plumbed hot/cold, neck rest
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Plumbed hot/cold, neck rest
+- **25. Electrical requirements if applicable:** Electrical (if electric recline)
+- **26. Plumbing requirements if applicable:** Yes, licensed plumber required
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical (if electric recline)
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** A$1,000-2,500 each; +A$1,000-2,500 if 3rd added (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** A$1,000-2,500 each; +A$1,000-2,500 if 3rd added
+
+### K02: Hot water supply, drainage per basin
+
+- **1. Procurement Item ID:** K02
+- **2. Item name:** Hot water supply, drainage per basin
+- **3. Plain-English description:** N/A
+- **4. Business area:** Hair Wash
+- **5. Sub-area/location:** Plumbing
+- **6. Quantity:** 2
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair Wash item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** Yes, licensed plumber required
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Licensed plumber
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### K03: Towels (hair-wash-specific)
+
+- **1. Procurement Item ID:** K03
+- **2. Item name:** Towels (hair-wash-specific)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Hair Wash
+- **5. Sub-area/location:** Linen
+- **6. Quantity:** 8-12
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair Wash item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### K04: Hot water system capacity
+
+- **1. Procurement Item ID:** K04
+- **2. Item name:** Hot water system capacity
+- **3. Plain-English description:** N/A
+- **4. Business area:** Hair Wash
+- **5. Sub-area/location:** Hot Water
+- **6. Quantity:** 1
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** system
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Hair Wash item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** Yes, licensed plumber required
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Licensed plumber, hot-water system sizing
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** Venue-dependent, verify against existing plant
+
+---
+
+## Section L: Staff Area
+
+### L01: Lockers
+
+- **1. Procurement Item ID:** L01
+- **2. Item name:** Lockers
+- **3. Plain-English description:** Per employed headcount
+- **4. Business area:** Staff Area
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** Not itemised at unit level yet
+- **7. Quantity basis:** STAFF-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** G. INFORMATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Staff Area item.
+- **19. Specification:** Per employed headcount
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Per employed headcount
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Information gap must be resolved first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific, named information gap (see the item's own register note), not a vague research task.
+- **41. Who must confirm it:** Depends on the specific gap; usually the Venue Manager once hired, or Anthony in the interim.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Resolve the specific information gap noted in the register first.
+- **Register note:** Genuine gap: no unit count/price researched yet; calculate against the full employment pool (VM01, PHL01-04, MB01-06, NAIL01-03, HAIR01-03, PMM01/PMB01/PMN01/PMH01) once final pool sizes are confirmed
+
+### L02: Staff table
+
+- **1. Procurement Item ID:** L02
+- **2. Item name:** Staff table
+- **3. Plain-English description:** Break facilities
+- **4. Business area:** Staff Area
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Staff Area item.
+- **19. Specification:** Break facilities
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Break facilities
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### L03: Kettle
+
+- **1. Procurement Item ID:** L03
+- **2. Item name:** Kettle
+- **3. Plain-English description:** Break facilities
+- **4. Business area:** Staff Area
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Staff Area item.
+- **19. Specification:** Break facilities
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Break facilities
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### L04: Staff sink
+
+- **1. Procurement Item ID:** L04
+- **2. Item name:** Staff sink
+- **3. Plain-English description:** Break facilities
+- **4. Business area:** Staff Area
+- **5. Sub-area/location:** Plumbing
+- **6. Quantity:** 1
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Staff Area item.
+- **19. Specification:** Break facilities
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Break facilities
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** Yes, licensed plumber required
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Licensed plumber
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### L05: Chairs (staff break)
+
+- **1. Procurement Item ID:** L05
+- **2. Item name:** Chairs (staff break)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Staff Area
+- **5. Sub-area/location:** Furniture
+- **6. Quantity:** 4-6
+- **7. Quantity basis:** STAFF-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** G. INFORMATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Staff Area item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Information gap must be resolved first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific, named information gap (see the item's own register note), not a vague research task.
+- **41. Who must confirm it:** Depends on the specific gap; usually the Venue Manager once hired, or Anthony in the interim.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Resolve the specific information gap noted in the register first.
+- **Register note:** None
+
+### L06: Small fridge (staff use)
+
+- **1. Procurement Item ID:** L06
+- **2. Item name:** Small fridge (staff use)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Staff Area
+- **5. Sub-area/location:** Amenity
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Staff Area item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Separate from the Cafe's client-facing fridges
+
+### L07: Microwave (staff use)
+
+- **1. Procurement Item ID:** L07
+- **2. Item name:** Microwave (staff use)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Staff Area
+- **5. Sub-area/location:** Amenity
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Staff Area item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+---
+
+## Section M: Storage
+
+### M01: Clean linen storage shelving/cabinet
+
+- **1. Procurement Item ID:** M01
+- **2. Item name:** Clean linen storage shelving/cabinet
+- **3. Plain-English description:** Lockable consumable cabinet
+- **4. Business area:** Storage
+- **5. Sub-area/location:** BOH
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Storage item.
+- **19. Specification:** Lockable consumable cabinet
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Lockable consumable cabinet
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### M02: Dirty linen/biohazard storage
+
+- **1. Procurement Item ID:** M02
+- **2. Item name:** Dirty linen/biohazard storage
+- **3. Plain-English description:** Separate from clean linen
+- **4. Business area:** Storage
+- **5. Sub-area/location:** BOH
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Storage item.
+- **19. Specification:** Separate from clean linen
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Separate from clean linen
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Clinical waste handling standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Clinical waste handling standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### M03: General retail/product storage shelving
+
+- **1. Procurement Item ID:** M03
+- **2. Item name:** General retail/product storage shelving
+- **3. Plain-English description:** N/A
+- **4. Business area:** Storage
+- **5. Sub-area/location:** BOH
+- **6. Quantity:** 1-2
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Storage item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### M04: Consumables stockroom shelving (nail/hair/beauty products)
+
+- **1. Procurement Item ID:** M04
+- **2. Item name:** Consumables stockroom shelving (nail/hair/beauty products)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Storage
+- **5. Sub-area/location:** BOH
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Storage item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+---
+
+## Section N: Toilets
+
+### N01: Toilet paper
+
+- **1. Procurement Item ID:** N01
+- **2. Item name:** Toilet paper
+- **3. Plain-English description:** Commercial-grade, per toilet count
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** To be determined
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** roll
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** Commercial-grade, per toilet count
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Commercial-grade, per toilet count
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** None
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Quantity depends on final toilet count (patient WC accessible, patient WC standard, staff WC per the venue program)
+
+### N02: Paper towel (hand-drying)
+
+- **1. Procurement Item ID:** N02
+- **2. Item name:** Paper towel (hand-drying)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** To be determined
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** None
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### N03: Hand soap
+
+- **1. Procurement Item ID:** N03
+- **2. Item name:** Hand soap
+- **3. Plain-English description:** Dispenser refill
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** To be determined
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** Dispenser refill
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Dispenser refill
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** None
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### N04: Soap dispenser
+
+- **1. Procurement Item ID:** N04
+- **2. Item name:** Soap dispenser
+- **3. Plain-English description:** Wall-mounted
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Fixtures
+- **6. Quantity:** Per toilet count
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** Wall-mounted
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Wall-mounted
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** None
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### N05: Paper towel dispenser
+
+- **1. Procurement Item ID:** N05
+- **2. Item name:** Paper towel dispenser
+- **3. Plain-English description:** Wall-mounted
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Fixtures
+- **6. Quantity:** Per toilet count
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** Wall-mounted
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Wall-mounted
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** None
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### N06: Sanitary disposal unit
+
+- **1. Procurement Item ID:** N06
+- **2. Item name:** Sanitary disposal unit
+- **3. Plain-English description:** N/A
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Fixtures
+- **6. Quantity:** Per toilet count
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** Waste-management standard
+- **31. Certification/compliance requirements:** Waste-management standard
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### N07: Sanitary products (complimentary)
+
+- **1. Procurement Item ID:** N07
+- **2. Item name:** Sanitary products (complimentary)
+- **3. Plain-English description:** If offered as a client amenity
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Optional
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** If offered as a client amenity
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** If offered as a client amenity
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** None
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** Genuine amenity decision, not confirmed either way
+
+### N08: Hand dryer (if selected instead of paper towel)
+
+- **1. Procurement Item ID:** N08
+- **2. Item name:** Hand dryer (if selected instead of paper towel)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Fixtures
+- **6. Quantity:** Per toilet count
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** Electrical safety mark
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** Paper towel vs hand dryer not yet decided
+
+### N09: Bin (general)
+
+- **1. Procurement Item ID:** N09
+- **2. Item name:** Bin (general)
+- **3. Plain-English description:** Lidded
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Waste
+- **6. Quantity:** Per toilet count
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** Lidded
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Lidded
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** None
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### N10: Toilet brush
+
+- **1. Procurement Item ID:** N10
+- **2. Item name:** Toilet brush
+- **3. Plain-English description:** N/A
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Cleaning
+- **6. Quantity:** Per toilet count
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** None
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### N11: Plunger
+
+- **1. Procurement Item ID:** N11
+- **2. Item name:** Plunger
+- **3. Plain-English description:** N/A
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Cleaning
+- **6. Quantity:** 1-2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** None
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### N12: Air freshener (if appropriate to the brand)
+
+- **1. Procurement Item ID:** N12
+- **2. Item name:** Air freshener (if appropriate to the brand)
+- **3. Plain-English description:** Subtle, unscented preferred given pregnancy sensitivity
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Ambience
+- **6. Quantity:** Optional
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** Subtle, unscented preferred given pregnancy sensitivity
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Subtle, unscented preferred given pregnancy sensitivity
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** None
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** Scent sensitivity in pregnancy is a real consideration; not confirmed either way
+
+### N13: Accessibility grab rails, accessible WC fittings
+
+- **1. Procurement Item ID:** N13
+- **2. Item name:** Accessibility grab rails, accessible WC fittings
+- **3. Plain-English description:** AS 1428.1
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Accessibility
+- **6. Quantity:** Per accessible toilet
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** AS 1428.1
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** AS 1428.1
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** AS 1428.1 accessibility clearances
+- **31. Certification/compliance requirements:** AS 1428.1 accessibility clearances
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** **Australian accessibility verification required**
+
+### N14: Toilet signage (including accessibility symbol)
+
+- **1. Procurement Item ID:** N14
+- **2. Item name:** Toilet signage (including accessibility symbol)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Signage
+- **6. Quantity:** Per toilet count
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** AS 1428.1 signage requirement
+- **31. Certification/compliance requirements:** AS 1428.1 signage requirement
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### N16: Spare stock (toilet paper, soap, paper towel reserve)
+
+- **1. Procurement Item ID:** N16
+- **2. Item name:** Spare stock (toilet paper, soap, paper towel reserve)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Toilets
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Toilets item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** None
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Quantity to be determined from opening-stock policy/supplier recommendation
+
+**Cross-reference items in this section (not independently specified, see the target item):**
+
+- **N15** (Cleaning chemicals (bathroom-specific)): See Section O for the full cleaning inventory Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+
+---
+
+## Section O: Cleaning / Housekeeping
+
+### O01: Commercial vacuum
+
+- **1. Procurement Item ID:** O01
+- **2. Item name:** Commercial vacuum
+- **3. Plain-English description:** N/A
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** General
+- **6. Quantity:** 1-2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### O02: Mop system (bucket + wringer)
+
+- **1. Procurement Item ID:** O02
+- **2. Item name:** Mop system (bucket + wringer)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** General
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** None
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** One general, one clinical, kept separate
+
+### O03: Buckets
+
+- **1. Procurement Item ID:** O03
+- **2. Item name:** Buckets
+- **3. Plain-English description:** N/A
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** General
+- **6. Quantity:** 2-4
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### O04: Dustpans/brooms
+
+- **1. Procurement Item ID:** O04
+- **2. Item name:** Dustpans/brooms
+- **3. Plain-English description:** N/A
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** General
+- **6. Quantity:** 2-3 sets
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** set
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### O05: Microfibre cloths
+
+- **1. Procurement Item ID:** O05
+- **2. Item name:** Microfibre cloths
+- **3. Plain-English description:** Colour-coded by area (clinical vs general)
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** General
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** Colour-coded by area (clinical vs general)
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Colour-coded by area (clinical vs general)
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Infection control colour-coding standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control colour-coding standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### O06: General-purpose disinfectant
+
+- **1. Procurement Item ID:** O06
+- **2. Item name:** General-purpose disinfectant
+- **3. Plain-English description:** Non-clinical areas (Lounge, Reception, BOH)
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** General
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** Non-clinical areas (Lounge, Reception, BOH)
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Non-clinical areas (Lounge, Reception, BOH)
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** None
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Kept separate from the clinical-grade disinfectant in Section E
+
+### O07: Bathroom cleaner
+
+- **1. Procurement Item ID:** O07
+- **2. Item name:** Bathroom cleaner
+- **3. Plain-English description:** N/A
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** Bathroom
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### O08: Glass cleaner
+
+- **1. Procurement Item ID:** O08
+- **2. Item name:** Glass cleaner
+- **3. Plain-English description:** N/A
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** General
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### O09: Floor cleaner
+
+- **1. Procurement Item ID:** O09
+- **2. Item name:** Floor cleaner
+- **3. Plain-English description:** Appropriate to the venue's actual flooring once confirmed
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** General
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** Appropriate to the venue's actual flooring once confirmed
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Appropriate to the venue's actual flooring once confirmed
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### O10: Bin liners (general)
+
+- **1. Procurement Item ID:** O10
+- **2. Item name:** Bin liners (general)
+- **3. Plain-English description:** Various sizes per bin type
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** Waste
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** Various sizes per bin type
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Various sizes per bin type
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### O12: Cleaning gloves (heavy-duty)
+
+- **1. Procurement Item ID:** O12
+- **2. Item name:** Cleaning gloves (heavy-duty)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** PPE
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** pair
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### O13: Cleaning caddies
+
+- **1. Procurement Item ID:** O13
+- **2. Item name:** Cleaning caddies
+- **3. Plain-English description:** For staff to carry supplies between rooms
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 2-3
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** For staff to carry supplies between rooms
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** For staff to carry supplies between rooms
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### O14: Wet floor warning signs
+
+- **1. Procurement Item ID:** O14
+- **2. Item name:** Wet floor warning signs
+- **3. Plain-English description:** N/A
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** Signage
+- **6. Quantity:** 2-3
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS/NZS signage standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### O15: Paper products (general-area hand towel, tissues)
+
+- **1. Procurement Item ID:** O15
+- **2. Item name:** Paper products (general-area hand towel, tissues)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### O16: Spill kit (general, non-biohazard)
+
+- **1. Procurement Item ID:** O16
+- **2. Item name:** Spill kit (general, non-biohazard)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** Emergency
+- **6. Quantity:** 1-2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** None
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Separate from the clinical blood spill kit in Section E
+
+### O17: Cleaning products storage (lockable)
+
+- **1. Procurement Item ID:** O17
+- **2. Item name:** Cleaning products storage (lockable)
+- **3. Plain-English description:** Separate from clinical and general retail stock
+- **4. Business area:** Cleaning
+- **5. Sub-area/location:** Storage
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Cleaning item.
+- **19. Specification:** Separate from clinical and general retail stock
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Separate from clinical and general retail stock
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Chemical storage safety standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Chemical storage safety standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+**Cross-reference items in this section (not independently specified, see the target item):**
+
+- **O11** (Clinical-grade cleaning products (TGA-listed)): Kept entirely separate from general cleaning products, see Section E for the full clinical list Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+
+---
+
+## Section P: Laundry
+
+### P01: Towels (general/hand)
+
+- **1. Procurement Item ID:** P01
+- **2. Item name:** Towels (general/hand)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Laundry
+- **5. Sub-area/location:** Linen
+- **6. Quantity:** 20-30
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Laundry item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### P02: Face towels
+
+- **1. Procurement Item ID:** P02
+- **2. Item name:** Face towels
+- **3. Plain-English description:** N/A
+- **4. Business area:** Laundry
+- **5. Sub-area/location:** Linen
+- **6. Quantity:** 12-20
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Laundry item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### P06: Laundry bags/hampers
+
+- **1. Procurement Item ID:** P06
+- **2. Item name:** Laundry bags/hampers
+- **3. Plain-English description:** Segregated clean vs dirty
+- **4. Business area:** Laundry
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 4-6
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Laundry item.
+- **19. Specification:** Segregated clean vs dirty
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Segregated clean vs dirty
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Clinical/general segregation standard
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Clinical/general segregation standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### P07: Detergent
+
+- **1. Procurement Item ID:** P07
+- **2. Item name:** Detergent
+- **3. Plain-English description:** N/A
+- **4. Business area:** Laundry
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Laundry item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Model (in-house wash vs outsourced) not yet decided
+
+### P08: Stain remover
+
+- **1. Procurement Item ID:** P08
+- **2. Item name:** Stain remover
+- **3. Plain-English description:** N/A
+- **4. Business area:** Laundry
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Laundry item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### P09: Disinfecting laundry additive (for clinical/treatment linen)
+
+- **1. Procurement Item ID:** P09
+- **2. Item name:** Disinfecting laundry additive (for clinical/treatment linen)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Laundry
+- **5. Sub-area/location:** Consumables
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** bottle
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Laundry item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Infection control standard
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### P10: Commercial washer/dryer
+
+- **1. Procurement Item ID:** P10
+- **2. Item name:** Commercial washer/dryer
+- **3. Plain-English description:** Only if in-house laundry model is adopted
+- **4. Business area:** Laundry
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 0-2
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Laundry item.
+- **19. Specification:** Only if in-house laundry model is adopted
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Only if in-house laundry model is adopted
+- **25. Electrical requirements if applicable:** Electrical/plumbing, commercial appliance standard
+- **26. Plumbing requirements if applicable:** Yes, licensed plumber required
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical/plumbing, commercial appliance standard
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** **Genuine, unresolved: in-house vs outsourced laundry model not confirmed anywhere in this repository, not invented here**
+
+### P11: Outsourced commercial laundry contract
+
+- **1. Procurement Item ID:** P11
+- **2. Item name:** Outsourced commercial laundry contract
+- **3. Plain-English description:** Only if outsourced model is adopted
+- **4. Business area:** Laundry
+- **5. Sub-area/location:** Service
+- **6. Quantity:** 0-1
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** contract
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Laundry item.
+- **19. Specification:** Only if outsourced model is adopted
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Only if outsourced model is adopted
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** Alternative to P10, mutually exclusive
+
+**Cross-reference items in this section (not independently specified, see the target item):**
+
+- **P03** (Massage/treatment linen): See Section F06/G09 for room-specific quantities, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **P04** (Hair towels): See Section J09/K03 Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **P05** (Pedicure/foot towels): See Section I04 Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+
+---
+
+## Section Q: Clinical Consumables (Venue-Wide, Beyond Blood Collection)
+
+### Q01: Consent/intake forms (printed)
+
+- **1. Procurement Item ID:** Q01
+- **2. Item name:** Consent/intake forms (printed)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Clinical Consumables
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Clinical Consumables item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Privacy Act, patient record-keeping
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** A$150-250 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** A$150-250
+
+### Q02: Referral cards (printed)
+
+- **1. Procurement Item ID:** Q02
+- **2. Item name:** Referral cards (printed)
+- **3. Plain-English description:** For referring practices
+- **4. Business area:** Clinical Consumables
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Clinical Consumables item.
+- **19. Specification:** For referring practices
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** For referring practices
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### Q03: Digital thermometer (general use, non-cold-chain)
+
+- **1. Procurement Item ID:** Q03
+- **2. Item name:** Digital thermometer (general use, non-cold-chain)
+- **3. Plain-English description:** For any general first-aid need
+- **4. Business area:** Clinical Consumables
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1-2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Clinical Consumables item.
+- **19. Specification:** For any general first-aid need
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** For any general first-aid need
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+---
+
+## Section R: First Aid / CPR / Emergency
+
+### R01: AED (Automated External Defibrillator)
+
+- **1. Procurement Item ID:** R01
+- **2. Item name:** AED (Automated External Defibrillator)
+- **3. Plain-English description:** ARTG-registered
+- **4. Business area:** First Aid
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** PRO
+- **16. China/Australia classification:** Professional/clinical procurement channel
+- **17. Preferred procurement channel:** Named professional/clinical equipment channel, see PROCUREMENT-AUSTRALIA-PACKAGE.md Specialist Clinical Suppliers
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this First Aid item.
+- **19. Specification:** ARTG-registered
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** ARTG-registered
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** ARTG registration mandatory
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery via the named professional channel, not yet quoted.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Leasing option exists, ~A$40-60/month; purchase vs lease not yet compared
+
+### R02: First aid kit (comprehensive)
+
+- **1. Procurement Item ID:** R02
+- **2. Item name:** First aid kit (comprehensive)
+- **3. Plain-English description:** WorkSafe-compliant
+- **4. Business area:** First Aid
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this First Aid item.
+- **19. Specification:** WorkSafe-compliant
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** WorkSafe-compliant
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** WorkSafe-compliant
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$100-200 each (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$100-200 each
+
+### R03: Panic buttons
+
+- **1. Procurement Item ID:** R03
+- **2. Item name:** Panic buttons
+- **3. Plain-English description:** Wired circuit to reception
+- **4. Business area:** First Aid
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** Per current room count
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this First Aid item.
+- **19. Specification:** Wired circuit to reception
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Wired circuit to reception
+- **25. Electrical requirements if applicable:** WorkSafe-compliant, electrical
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** WorkSafe-compliant, electrical
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### R06: First Aid/CPR accredited course (per staff member)
+
+- **1. Procurement Item ID:** R06
+- **2. Item name:** First Aid/CPR accredited course (per staff member)
+- **3. Plain-English description:** HLTAID011 Provide First Aid or equivalent, emphasis on venepuncture-related incidents
+- **4. Business area:** First Aid
+- **5. Sub-area/location:** Training
+- **6. Quantity:** Full employment pool
+- **7. Quantity basis:** STAFF-DEPENDENT
+- **8. Unit of measure:** course
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** Yes, renewal cycle
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** G. INFORMATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this First Aid item.
+- **19. Specification:** HLTAID011 Provide First Aid or equivalent, emphasis on venepuncture-related incidents
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** HLTAID011 Provide First Aid or equivalent, emphasis on venepuncture-related incidents
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Registered training organisation, exact course requirement to be confirmed
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Information gap must be resolved first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific, named information gap (see the item's own register note), not a vague research task.
+- **41. Who must confirm it:** Depends on the specific gap; usually the Venue Manager once hired, or Anthony in the interim.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Resolve the specific information gap noted in the register first.
+- **Register note:** Not a physical purchase, a training/service line; recurring renewal cost
+
+### R07: EpiPen (anaphylaxis)
+
+- **1. Procurement Item ID:** R07
+- **2. Item name:** EpiPen (anaphylaxis)
+- **3. Plain-English description:** Held by the Venue Manager, trained first aider
+- **4. Business area:** First Aid
+- **5. Sub-area/location:** Emergency
+- **6. Quantity:** 1-2
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes, expiry-driven
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this First Aid item.
+- **19. Specification:** Held by the Venue Manager, trained first aider
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Held by the Venue Manager, trained first aider
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** TGA-registered, prescription item
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Expiry-driven reorder, not a standard consumable
+
+**Cross-reference items in this section (not independently specified, see the target item):**
+
+- **R04** (Emergency exit signage): See Section A02, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **R05** (Blood spill kit): See Section E29, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+
+---
+
+## Section S: PPE / Infection Control (Venue-Wide Summary)
+
+### S01: Disposable gloves (general, non-clinical, non-nail)
+
+- **1. Procurement Item ID:** S01
+- **2. Item name:** Disposable gloves (general, non-clinical, non-nail)
+- **3. Plain-English description:** For general cleaning/housekeeping use
+- **4. Business area:** PPE
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** Ongoing
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** box
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this PPE item.
+- **19. Specification:** For general cleaning/housekeeping use
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** For general cleaning/housekeeping use
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** None
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** Distinct from the clinical-grade gloves in Section E
+
+### S02: Hand sanitiser (public-facing, Reception/Lounge/Cafe)
+
+- **1. Procurement Item ID:** S02
+- **2. Item name:** Hand sanitiser (public-facing, Reception/Lounge/Cafe)
+- **3. Plain-English description:** Alcohol-based
+- **4. Business area:** PPE
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 3-4 dispensers
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this PPE item.
+- **19. Specification:** Alcohol-based
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Alcohol-based
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+---
+
+## Section T: IT / Technology (Venue-Wide)
+
+### T01: WiFi router (commercial grade)
+
+- **1. Procurement Item ID:** T01
+- **2. Item name:** WiFi router (commercial grade)
+- **3. Plain-English description:** Ubiquiti/TP-Link business range
+- **4. Business area:** IT
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** A. ORDER READY
+- **14. Current status:** Priced
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Ubiquiti, TP-Link
+- **19. Specification:** Ubiquiti/TP-Link business range
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Ubiquiti, TP-Link
+- **24. Performance requirements:** Ubiquiti/TP-Link business range
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, already priced, ready to order.
+- **38. Existing price/source if already researched:** A$200-500 (sourced from this repository's existing research, not an independently obtained quote)
+- **39. Cost status:** Priced
+- **40. What is still required before ordering:** Nothing outstanding. Specification and quantity are locked and a price has already been researched.
+- **41. Who must confirm it:** No further confirmation needed. Venue Manager (once hired) or Anthony can place the order.
+- **42. Final purchasing instruction in plain English:** Order now from the recommended sourcing route.
+- **Register note:** A$200-500
+
+### T02: Network switches
+
+- **1. Procurement Item ID:** T02
+- **2. Item name:** Network switches
+- **3. Plain-English description:** To distribute wired connections
+- **4. Business area:** IT
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1-2
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this IT item.
+- **19. Specification:** To distribute wired connections
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** To distribute wired connections
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### T03: Access points (WiFi coverage across the full floor plate)
+
+- **1. Procurement Item ID:** T03
+- **2. Item name:** Access points (WiFi coverage across the full floor plate)
+- **3. Plain-English description:** N/A
+- **4. Business area:** IT
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1-2
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this IT item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### T08: Security cameras
+
+- **1. Procurement Item ID:** T08
+- **2. Item name:** Security cameras
+- **3. Plain-English description:** Optional, not yet confirmed as required
+- **4. Business area:** IT
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 0-4
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this IT item.
+- **19. Specification:** Optional, not yet confirmed as required
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Optional, not yet confirmed as required
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Privacy Act, CCTV signage requirement
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** None
+
+### T09: Access control (e.g. keypad/fob entry)
+
+- **1. Procurement Item ID:** T09
+- **2. Item name:** Access control (e.g. keypad/fob entry)
+- **3. Plain-English description:** Optional
+- **4. Business area:** IT
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 0-1
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** system
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this IT item.
+- **19. Specification:** Optional
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Optional
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** None
+
+### T10: UPS (uninterruptible power supply)
+
+- **1. Procurement Item ID:** T10
+- **2. Item name:** UPS (uninterruptible power supply)
+- **3. Plain-English description:** For POS/booking system continuity during a power blip
+- **4. Business area:** IT
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this IT item.
+- **19. Specification:** For POS/booking system continuity during a power blip
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** For POS/booking system continuity during a power blip
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** None
+
+### T11: Backup device/cloud backup subscription
+
+- **1. Procurement Item ID:** T11
+- **2. Item name:** Backup device/cloud backup subscription
+- **3. Plain-English description:** For Fresha/patient data
+- **4. Business area:** IT
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** subscription
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this IT item.
+- **19. Specification:** For Fresha/patient data
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** For Fresha/patient data
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Privacy Act data-retention requirement
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### T13: Small TV/display
+
+- **1. Procurement Item ID:** T13
+- **2. Item name:** Small TV/display
+- **3. Plain-English description:** Optional (Lounge, see Section D12 future-use note)
+- **4. Business area:** IT
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 0-1
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this IT item.
+- **19. Specification:** Optional (Lounge, see Section D12 future-use note)
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Optional (Lounge, see Section D12 future-use note)
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** None
+
+**Cross-reference items in this section (not independently specified, see the target item):**
+
+- **T04** (Cabling (Cat6)): See Section A06, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **T05** (Computer/laptop): See Section B03, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **T06** (Charging stations): See Sections B17/D02 Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **T07** (Tablet mounts): See Section D06 Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **T12** (Phone/VoIP system): See Section B06 Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+
+---
+
+## Section V: Security
+
+### V03: Alarm system
+
+- **1. Procurement Item ID:** V03
+- **2. Item name:** Alarm system
+- **3. Plain-English description:** Optional, not yet confirmed
+- **4. Business area:** Security
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 0-1
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** system
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Security item.
+- **19. Specification:** Optional, not yet confirmed
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Optional, not yet confirmed
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** None
+
+**Cross-reference items in this section (not independently specified, see the target item):**
+
+- **V01** (Security cameras): See Section T08, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **V02** (Access control): See Section T09, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **V04** (Lockable medical consumables cabinet): See Section E07, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **V05** (Lockable filing storage): See Section B16, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+
+---
+
+## Section W: Signage / Branding
+
+### W01: External signage (business name/logo)
+
+- **1. Procurement Item ID:** W01
+- **2. Item name:** External signage (business name/logo)
+- **3. Plain-English description:** Design-dependent, gated on final naming decision
+- **4. Business area:** Branding
+- **5. Sub-area/location:** External
+- **6. Quantity:** 1
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Branding item.
+- **19. Specification:** Design-dependent, gated on final naming decision
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Design-dependent, gated on final naming decision
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Local council signage permit
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** Cannot be finalised until SOLENA/ELOWEN is decided
+
+### W02: Internal wayfinding signage
+
+- **1. Procurement Item ID:** W02
+- **2. Item name:** Internal wayfinding signage
+- **3. Plain-English description:** Per venue layout
+- **4. Business area:** Branding
+- **5. Sub-area/location:** Internal
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Branding item.
+- **19. Specification:** Per venue layout
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Per venue layout
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### W04: Printed materials (brochures, referral cards)
+
+- **1. Procurement Item ID:** W04
+- **2. Item name:** Printed materials (brochures, referral cards)
+- **3. Plain-English description:** See Q02 for referral cards specifically
+- **4. Business area:** Branding
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Branding item.
+- **19. Specification:** See Q02 for referral cards specifically
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** See Q02 for referral cards specifically
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### W06: Name badges
+
+- **1. Procurement Item ID:** W06
+- **2. Item name:** Name badges
+- **3. Plain-English description:** Per employed headcount
+- **4. Business area:** Branding
+- **5. Sub-area/location:** Staff
+- **6. Quantity:** Full employment pool
+- **7. Quantity basis:** STAFF-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** G. INFORMATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Branding item.
+- **19. Specification:** Per employed headcount
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Per employed headcount
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Information gap must be resolved first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific, named information gap (see the item's own register note), not a vague research task.
+- **41. Who must confirm it:** Depends on the specific gap; usually the Venue Manager once hired, or Anthony in the interim.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Resolve the specific information gap noted in the register first.
+- **Register note:** None
+
+### W07: Branded stationery
+
+- **1. Procurement Item ID:** W07
+- **2. Item name:** Branded stationery
+- **3. Plain-English description:** N/A
+- **4. Business area:** Branding
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Branding item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### W08: Decor/artwork
+
+- **1. Procurement Item ID:** W08
+- **2. Item name:** Decor/artwork
+- **3. Plain-English description:** Warm, natural, earthy, matches the locked palette
+- **4. Business area:** Branding
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Branding item.
+- **19. Specification:** Warm, natural, earthy, matches the locked palette
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Matches the locked 7-colour palette (outputs/brand/warm-stone-tokens.css)
+- **24. Performance requirements:** Warm, natural, earthy, matches the locked palette
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+### W09: Mirrors (decorative, beyond the functional Hair mirror in J02)
+
+- **1. Procurement Item ID:** W09
+- **2. Item name:** Mirrors (decorative, beyond the functional Hair mirror in J02)
+- **3. Plain-English description:** Optional
+- **4. Business area:** Branding
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 0-2
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Branding item.
+- **19. Specification:** Optional
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Optional
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** None
+
+### W10: Planters (if appropriate)
+
+- **1. Procurement Item ID:** W10
+- **2. Item name:** Planters (if appropriate)
+- **3. Plain-English description:** Optional, real or artificial plants matching the palette
+- **4. Business area:** Branding
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 2-4
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Branding item.
+- **19. Specification:** Optional, real or artificial plants matching the palette
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Matches the locked 7-colour palette (outputs/brand/warm-stone-tokens.css)
+- **24. Performance requirements:** Optional, real or artificial plants matching the palette
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** None
+
+### W11: Scent/ambience diffuser
+
+- **1. Procurement Item ID:** W11
+- **2. Item name:** Scent/ambience diffuser
+- **3. Plain-English description:** Only if appropriate and safe given pregnancy scent-sensitivity
+- **4. Business area:** Branding
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 0-1
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Branding item.
+- **19. Specification:** Only if appropriate and safe given pregnancy scent-sensitivity
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Only if appropriate and safe given pregnancy scent-sensitivity
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Pregnancy-safe fragrance-free or low-scent formulation if adopted
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** Genuine, unresolved: not confirmed appropriate given pregnancy sensitivity
+
+**Cross-reference items in this section (not independently specified, see the target item):**
+
+- **W03** (Menu): See Section C17, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **W05** (Uniforms): See Sections E39/F12/G15, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+
+---
+
+## Section X: Lighting (Dedicated Section)
+
+### X01: General ambient lighting
+
+- **1. Procurement Item ID:** X01
+- **2. Item name:** General ambient lighting
+- **3. Plain-English description:** Warm, matches palette
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** Reception
+- **6. Quantity:** Per venue layout
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** Warm, matches palette
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Matches the locked 7-colour palette (outputs/brand/warm-stone-tokens.css)
+- **24. Performance requirements:** Warm, matches palette
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Australian lighting designer/electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### X02: Task + ambient lighting
+
+- **1. Procurement Item ID:** X02
+- **2. Item name:** Task + ambient lighting
+- **3. Plain-English description:** Warm, food-safe fixture ratings where applicable
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** Cafe
+- **6. Quantity:** Per venue layout
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** Warm, food-safe fixture ratings where applicable
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Warm, food-safe fixture ratings where applicable
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Australian lighting designer/electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### X04: Clinical-standard lighting
+
+- **1. Procurement Item ID:** X04
+- **2. Item name:** Clinical-standard lighting
+- **3. Plain-English description:** Adequate for venepuncture precision work
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** Blood Collection
+- **6. Quantity:** Per room
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** Adequate for venepuncture precision work
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Adequate for venepuncture precision work
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** Australian clinical lighting standard, electrician
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Australian clinical lighting standard, electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### X05: Task lighting per station
+
+- **1. Procurement Item ID:** X05
+- **2. Item name:** Task lighting per station
+- **3. Plain-English description:** See Section H (implied in station equipment), dedicated fixture if not built into the nail lamp
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** Nail
+- **6. Quantity:** Per station
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** See Section H (implied in station equipment), dedicated fixture if not built into the nail lamp
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** See Section H (implied in station equipment), dedicated fixture if not built into the nail lamp
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### X06: Task lighting per chair
+
+- **1. Procurement Item ID:** X06
+- **2. Item name:** Task lighting per chair
+- **3. Plain-English description:** N/A
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** Pedicure
+- **6. Quantity:** Per chair
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### X07: Task/ambient lighting per station
+
+- **1. Procurement Item ID:** X07
+- **2. Item name:** Task/ambient lighting per station
+- **3. Plain-English description:** Warm, dimmable
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** Massage
+- **6. Quantity:** Per station
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** Warm, dimmable
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Warm, dimmable
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### X10: General ambient lighting
+
+- **1. Procurement Item ID:** X10
+- **2. Item name:** General ambient lighting
+- **3. Plain-English description:** N/A
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** Hair Wash
+- **6. Quantity:** Per venue layout
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### X11: General ambient lighting
+
+- **1. Procurement Item ID:** X11
+- **2. Item name:** General ambient lighting
+- **3. Plain-English description:** N/A
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** Toilets
+- **6. Quantity:** Per toilet count
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### X12: General ambient lighting
+
+- **1. Procurement Item ID:** X12
+- **2. Item name:** General ambient lighting
+- **3. Plain-English description:** N/A
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** Staff Areas
+- **6. Quantity:** Per venue layout
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### X13: Basic utility lighting
+
+- **1. Procurement Item ID:** X13
+- **2. Item name:** Basic utility lighting
+- **3. Plain-English description:** N/A
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** Storage
+- **6. Quantity:** Per venue layout
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrician
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### X14: Emergency lighting
+
+- **1. Procurement Item ID:** X14
+- **2. Item name:** Emergency lighting
+- **3. Plain-English description:** Building-code compliant, exit-path illumination
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** Per venue layout
+- **7. Quantity basis:** PROFESSIONAL-VERIFICATION
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** D. PROFESSIONAL VERIFICATION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** SITE
+- **16. China/Australia classification:** Site-dependent, not a shippable product
+- **17. Preferred procurement channel:** Licensed trade/contractor, engaged once the venue is confirmed
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** Building-code compliant, exit-path illumination
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Building-code compliant, exit-path illumination
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Building surveyor, AS 2293
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Not applicable. This is a site-installed item or trade service, not a shipped product.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** N/A, not a standard commercial purchase
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Professional verification required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Sign-off from the relevant licensed Australian professional named in the Compliance/Verification field.
+- **41. Who must confirm it:** The specific licensed professional named in the Compliance/Verification field, engaged once the venue is confirmed.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Obtain the required professional verification, then proceed to RFQ or order.
+- **Register note:** None
+
+### X15: Feature/decorative lighting
+
+- **1. Procurement Item ID:** X15
+- **2. Item name:** Feature/decorative lighting
+- **3. Plain-English description:** Optional, brand-reinforcing
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** Optional
+- **7. Quantity basis:** OPTIONAL
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** Optional, brand-reinforcing
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Optional, brand-reinforcing
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrician
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** None
+
+### X16: Signage lighting
+
+- **1. Procurement Item ID:** X16
+- **2. Item name:** Signage lighting
+- **3. Plain-English description:** Gated on naming decision
+- **4. Business area:** Lighting
+- **5. Sub-area/location:** External
+- **6. Quantity:** 1
+- **7. Quantity basis:** FOUNDER-DECISION
+- **8. Unit of measure:** fixture
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Lighting item.
+- **19. Specification:** Gated on naming decision
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Gated on naming decision
+- **25. Electrical requirements if applicable:** Electrical component present, confirm Australian electrical safety mark (SAA) before purchase
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrician, council signage permit
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+- **41. Who must confirm it:** Anthony.
+- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
+- **Register note:** None
+
+**Cross-reference items in this section (not independently specified, see the target item):**
+
+- **X03** (Ambient + floor lamps): See Section D04, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **X08** (Magnifying/task lighting): See Section G03, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **X09** (Mirror-integrated lighting): See Section J02, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+
+---
+
+## Section AA: Waste Management
+
+### AA03: General waste collection contract
+
+- **1. Procurement Item ID:** AA03
+- **2. Item name:** General waste collection contract
+- **3. Plain-English description:** Council or private contractor
+- **4. Business area:** Waste
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1
+- **7. Quantity basis:** SITE-DEPENDENT
+- **8. Unit of measure:** contract
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** C. SITE DEPENDENT
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Waste item.
+- **19. Specification:** Council or private contractor
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Council or private contractor
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Council waste-management requirement
+- **32. Installation requirements:** Yes, site-dependent install required by a licensed trade
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Not yet. Site measurement required first, then RFQ.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** Site measurement and confirmation once a venue is secured. Exact dimensions/installation cannot be finalised before then.
+- **41. Who must confirm it:** Whoever measures the confirmed site (Venue Manager, builder, or Anthony), per PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Wait until the venue is secured and measured, then proceed to RFQ.
+- **Register note:** None
+
+**Cross-reference items in this section (not independently specified, see the target item):**
+
+- **AA01** (Biohazard/clinical waste): See Sections E12/E13/E14, not double-counted here Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **AA02** (General waste bins): Per area, see individual sections Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+- **AA04** (Food waste/recycling separation): See Section C21 Cross-reference only, not an independent procurement item, see the item it points to for the real specification.
+
+---
+
+## Section AB: Maintenance / Tooling
+
+### AB01: Basic tool kit (screwdrivers, allen keys for furniture assembly/maintenance)
+
+- **1. Procurement Item ID:** AB01
+- **2. Item name:** Basic tool kit (screwdrivers, allen keys for furniture assembly/maintenance)
+- **3. Plain-English description:** N/A
+- **4. Business area:** Maintenance
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** No
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Maintenance item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** None
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### AB02: Spare lightbulbs/fixtures
+
+- **1. Procurement Item ID:** AB02
+- **2. Item name:** Spare lightbulbs/fixtures
+- **3. Plain-English description:** Matching the installed fixture types
+- **4. Business area:** Maintenance
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1 lot
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** lot
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Maintenance item.
+- **19. Specification:** Matching the installed fixture types
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** LED
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Matching the installed fixture types
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** Yes, installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### AB03: Equipment service/maintenance contracts (centrifuge, LEV units, coffee machine)
+
+- **1. Procurement Item ID:** AB03
+- **2. Item name:** Equipment service/maintenance contracts (centrifuge, LEV units, coffee machine)
+- **3. Plain-English description:** Manufacturer or third-party servicing
+- **4. Business area:** Maintenance
+- **5. Sub-area/location:** Equipment
+- **6. Quantity:** 3+
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** contract
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** HY
+- **16. China/Australia classification:** Hybrid (China or Australia, either works)
+- **17. Preferred procurement channel:** Either Australian or China sourcing group, whichever quote is better once both exist
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Maintenance item.
+- **19. Specification:** Manufacturer or third-party servicing
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Manufacturer or third-party servicing
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Manufacturer warranty terms
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery if Australian-sourced, or container/consolidated freight if China-sourced, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+---
+
+## Section AD: Backup / Replacement Stock
+
+### AD01: Spare phlebotomy chair componentry (armrests, wipe-clean covers)
+
+- **1. Procurement Item ID:** AD01
+- **2. Item name:** Spare phlebotomy chair componentry (armrests, wipe-clean covers)
+- **3. Plain-English description:** In case of damage
+- **4. Business area:** Backup
+- **5. Sub-area/location:** Blood Collection
+- **6. Quantity:** Quantity to be determined from opening-stock policy
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** No
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** PRO
+- **16. China/Australia classification:** Professional/clinical procurement channel
+- **17. Preferred procurement channel:** Named professional/clinical equipment channel, see PROCUREMENT-AUSTRALIA-PACKAGE.md Specialist Clinical Suppliers
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Backup item.
+- **19. Specification:** In case of damage
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** In case of damage
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Same as E01/E02
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery via the named professional channel, not yet quoted.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### AD02: Spare GPO adaptors/power boards
+
+- **1. Procurement Item ID:** AD02
+- **2. Item name:** Spare GPO adaptors/power boards
+- **3. Plain-English description:** N/A
+- **4. Business area:** Backup
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** Small lot
+- **7. Quantity basis:** LOCKED
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** CN
+- **16. China/Australia classification:** China
+- **17. Preferred procurement channel:** China sourcing group, see PROCUREMENT-CHINA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Backup item.
+- **19. Specification:** N/A
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** N/A
+- **25. Electrical requirements if applicable:** Electrical safety mark
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** Electrical safety mark
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Container/consolidated freight from China. Delivery timing depends on production and shipping lead time, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### AD03: Spare AED pads/battery
+
+- **1. Procurement Item ID:** AD03
+- **2. Item name:** Spare AED pads/battery
+- **3. Plain-English description:** Expiry-driven replacement
+- **4. Business area:** Backup
+- **5. Sub-area/location:** Venue-wide
+- **6. Quantity:** 1 set
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** set
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes, expiry-driven
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** PRO
+- **16. China/Australia classification:** Professional/clinical procurement channel
+- **17. Preferred procurement channel:** Named professional/clinical equipment channel, see PROCUREMENT-AUSTRALIA-PACKAGE.md Specialist Clinical Suppliers
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Backup item.
+- **19. Specification:** Expiry-driven replacement
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** Expiry-driven replacement
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** N/A
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** ARTG registration
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery via the named professional channel, not yet quoted.
+- **34. Assembly requirements:** N/A
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+### AD04: Spare sharps containers, biohazard bags
+
+- **1. Procurement Item ID:** AD04
+- **2. Item name:** Spare sharps containers, biohazard bags
+- **3. Plain-English description:** See Section E, additional buffer stock
+- **4. Business area:** Backup
+- **5. Sub-area/location:** Blood Collection
+- **6. Quantity:** Quantity to be determined from opening-stock policy
+- **7. Quantity basis:** CONSUMPTION-DEPENDENT
+- **8. Unit of measure:** each
+- **9. Opening quantity (where applicable):** Yes
+- **10. Reorder quantity (where applicable):** Yes
+- **11. Required at opening Y/N:** Yes
+- **12. Future/optional Y/N:** No
+- **13. Procurement readiness classification:** B. RFQ READY
+- **14. Current status:** Open
+- **15. Source route:** AU
+- **16. China/Australia classification:** Australia only
+- **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
+- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Backup item.
+- **19. Specification:** See Section E, additional buffer stock
+- **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
+- **21. Material if known:** Not yet determined
+- **22. Finish if known:** Not yet determined
+- **23. Colour/brand requirements if known:** Not yet determined
+- **24. Performance requirements:** See Section E, additional buffer stock
+- **25. Electrical requirements if applicable:** N/A
+- **26. Plumbing requirements if applicable:** N/A
+- **27. HVAC/ventilation requirements if applicable:** N/A
+- **28. Clinical requirements if applicable:** AS/NZS 23907:2023
+- **29. Food-safety requirements if applicable:** N/A
+- **30. Accessibility requirements if applicable:** N/A
+- **31. Certification/compliance requirements:** AS/NZS 23907:2023
+- **32. Installation requirements:** No, freestanding/portable, no installation required
+- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
+- **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
+- **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
+- **38. Existing price/source if already researched:** No price researched yet
+- **39. Cost status:** Open
+- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
+- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
+- **Register note:** None
+
+---
+
+## Generation Summary
+
+- Total distinct items with a full 42-field specification record: 281
+- Cross-reference items listed (not independently specified): 25
+- Total register rows accounted for: 306
+
+## Sourcing
+
+`docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md` (authoritative source for every field below), `tools/generate_procurement_item_specifications.py`, `tools/procurement_register_parser.py`, `tools/procurement_derivations.py`.
+
+## Changelog
+
+**2026-08-23 (created):** Built per direct founder instruction (Part 1) as a genuinely complete per-item specification for all 281 items, generated mechanically from the authoritative register rather than hand-authored, to guarantee consistent field coverage and eliminate fabrication risk at this scale. Supersedes the coverage-only statement in `PROCUREMENT-ITEM-SPECIFICATION-COVERAGE.md`, which remains as the record of why a generated approach was chosen over hand-authoring.
