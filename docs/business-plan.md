@@ -106,7 +106,7 @@ GTT Center Perth's **planning capacity model is 18 GTT clients/day (Table 1)** (
 Per the solver-verified Table 1 timetable ([scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) §0.6a), the 18th (last) client's Draw 1 is scheduled at **10:20** — inside WDP's own directly-stated guidance that they "would not normally commence a GTT after 10:30am" (Carole Rivers, WDP, verified 2026-07-30), with a real, checked margin. This capacity figure — 18 clients/day at 8 dual-qualified treatment staff + 2 phlebotomists — was independently verified via two different scheduling methods (sweep-line peak concurrency and greedy first-fit assignment), which agreed exactly. A 3rd phlebotomist/chair beyond this ceiling is a genuine future strategic question (reframed 2026-08-16 as a real capacity decision — 3rd chair at this venue vs. a second location — see [scenario-d-investigation.md](scenario-d-investigation.md)), not a committed plan.
 
 ### Secondary Market — Afternoon Wellness
-All pregnant women in the broader gestational window (not just GTT week) plus postnatal clients, per the afternoon standalone service model ([extended-wellness-services.md](extended-wellness-services.md)).
+All pregnant women in the broader gestational window (not just GTT week) plus postnatal clients, per the current afternoon standalone service model ([PM-OPERATIONS-MODEL.md](architecture/PM-OPERATIONS-MODEL.md), [PM-PACKAGES.md](architecture/PM-PACKAGES.md)). [extended-wellness-services.md](extended-wellness-services.md) is an earlier exploratory document (2026-06-09) whose GDM retail concepts are not part of the current confirmed model; not cited as current here.
 
 ### Target Customer Profile
 | Attribute | Profile |

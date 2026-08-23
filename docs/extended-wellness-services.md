@@ -3,6 +3,8 @@
 **Version:** 2.0 | **Date:** 2026-06-09
 **Supersedes:** v1.0 (2026-06-09)
 
+**Status (added 2026-08-23, Tier 4, historical): the GDM Retail section below (Freestyle Libre sensors, GDM-safe snack pack, CGM retail) is not part of the current confirmed service, retail, or Cafe model.** The current authoritative procurement register (`docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md`) explicitly states "Not procured: any snack pack. No item is provided to clients after the final blood draw as a separate food/snack service," and the current service catalogue (`docs/architecture/SERVICE-CATALOGUE.md`) does not include CGM sensor retail or a monthly GDM information session as a confirmed offering. This document predates that confirmation and has not been updated to match; it is retained here as a historical exploratory concept, not cited as current from any current-facing document. The current afternoon/PM operating model is `docs/architecture/PM-OPERATIONS-MODEL.md` and `docs/architecture/PM-PACKAGES.md`, not this document.
+
 GTT Center Perth is a **day spa + hairdresser + diabetes test centre**. This document covers services beyond core beauty treatments. Staff must know their scope and limitations.
 
 ---
