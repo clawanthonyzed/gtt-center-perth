@@ -23,6 +23,7 @@
 > - **Workers' compensation** — for approximately 10-12 employees at launch (wellness therapists, phlebotomists, reception)
 > - **Commercial property/contents** — covering fit-out and equipment (specific figures to follow once a venue is confirmed)
 > - **Business interruption** — optional, would like a quote for reference
+> - **Cyber/data liability**: we hold client health/booking data (an online booking system and clinical intake records), would like an indicative quote for this exposure as well
 >
 > The venue is not yet leased or open — I'm gathering indicative quotes now to finalise the startup budget, and would follow up for a firm quote once a lease is signed.
 >
@@ -52,3 +53,5 @@
 ## Changelog
 
 **2026-08-15** — Created as the first-contact insurance quote-request draft, built entirely from the existing `financial-setup.md` Step 8 checklist and `external-resources-and-advisors.md` §4 broker-selection reasoning. Priority 3, external professional outreach round.
+
+**2026-08-23**: Added a cyber/data-liability line, per `docs/architecture/OPENING-READINESS-EXECUTION-PLAN.md` Section 2's finding that this exposure (client health/booking data, an online booking system, clinical intake records) was not covered anywhere in the existing draft. No other line changed; the draft remains READY TO SEND once a specific broker is chosen, still not sent.
