@@ -17,6 +17,24 @@ Status: current as of 2026-08-23. This is a concise, procurement-focused decisio
 | Retail brand selection | No locked brand currently selected | None: retail is explicitly not a current priority per direct founder instruction | Retail development is deferred to a separate strategy pass, not this procurement round | B18 (retail display shelving), any retail stock | Not currently blocking opening; deferred |
 | Scent/ambience diffuser (Branding) | Adopt vs. do not adopt | None: pregnancy scent-sensitivity is a real consideration not resolved either way in this repository | No document confirms whether a diffuser is appropriate given pregnancy clients' scent sensitivity | W11 (diffuser) | Low priority, does not block opening |
 
+## Massage Table vs Chair: Detailed Comparison (Added 2026-08-23, Per Direct Founder Instruction)
+
+This is the only decision above that currently blocks a ready-to-send RFQ. A concise comparison, not a resolution; Beauty station count and every other row above is not reopened here.
+
+| Factor | Table/Bed | Chair-Based |
+|---|---|---|
+| Existing specification in this repository | Full: face hole plus side cutouts, vinyl surface, dimensions researched | None: no specification, dimensions, material, or price exists anywhere in this repository |
+| Existing pricing | A$800-2,500 Australian, A$300-800 China-sourced, both real researched ranges | None: would require commissioning fresh product research before any quote could be sought |
+| Operational advantages | Standard, well-understood setup and turnover between clients; matches the treatment format used in every comparable day-spa/wellness venue researched for this venture | Would need to be evaluated fresh; no comparable operating precedent exists in this repository's own research |
+| Client experience (pregnancy-specific) | Face-hole/side-cutout tables are the industry-standard format for pregnancy massage specifically, accommodating a pregnant client lying prone safely | Chair-based massage is typically seated/upright, a materially different treatment style (commonly used for short, clothed, public-space massage, not the longer prenatal treatment this venture offers) |
+| Treatment suitability | Matches the confirmed service catalogue (`docs/architecture/SERVICE-CATALOGUE.md`: 30/45-minute pregnancy and relaxation massage, prone positioning) | Not evidenced as suitable for the confirmed 30/45-minute prone treatment format; would likely require a different, shorter service concept, not confirmed anywhere as the intended offering |
+| Space implications | Standard footprint already reflected in the current 3-station Massage room program | Not evaluated; a chair typically has a smaller footprint, but this venture's specification requires prone treatment, which a chair format does not support without redesigning the service itself |
+| Procurement implications | Ready to RFQ today, both Australian and China sourcing groups already specified | Blocked entirely; no supplier, spec, or pricing route exists |
+| Likely longevity | Standard commercial massage table, well-understood replacement/maintenance cycle | Unknown, no research basis |
+| Implications for future growth | Matches the up-to-4-station growth reservation already modelled in the venue program without further redesign | Would require re-evaluating the entire Massage service concept and venue program, not just a furniture swap |
+
+**Recommendation, labelled as a recommendation, not a decision made on Anthony's behalf:** the evidence in this repository supports the table/bed format. It is the only option with a real specification, real pricing, and a confirmed fit against the current prenatal massage service catalogue; the chair-based option has no evidence base anywhere in this venture's own research and would require redefining the Massage service itself, not simply substituting furniture. If Anthony has a specific reason to want a chair-based format (e.g. a genuinely different, shorter treatment concept not yet documented), that would need to be established as a new service concept first, not resolved as a furniture choice alone.
+
 ## What this list deliberately does not include
 
 - **China/Australia procurement model**: Hybrid remains the standing recommendation (`docs/architecture/CHINA-AUSTRALIA-SOURCING-STRATEGY.md` §5), not reopened as a founder decision here, per direct instruction.
@@ -30,3 +48,5 @@ Status: current as of 2026-08-23. This is a concise, procurement-focused decisio
 ## Changelog
 
 **2026-08-23 (created):** Built per direct founder instruction as a concise, procurement-specific decision list distinct from the dossier's own general decision register, showing exactly what each open decision blocks in the procurement system, with a recommendation stated only where the evidence genuinely supports one.
+
+**2026-08-23 (Massage comparison added):** Added a detailed table-vs-chair comparison per direct founder instruction, since this is the only decision in this register that currently blocks a ready-to-send RFQ. Recommendation given (table/bed) since the evidence genuinely supports one, labelled explicitly as a recommendation, not a decision made on Anthony's behalf. Beauty station count and every other row were not reopened.
