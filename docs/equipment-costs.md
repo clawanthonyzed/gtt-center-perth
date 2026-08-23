@@ -15,15 +15,15 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 
 | Type | What's included | Approx. range |
 |---|---|---|
-| **One-off capital** (equipment, furniture, fixtures, technology hardware) | Phlebotomy chairs, centrifuge, massage tables, nail stations + LEV, styling chairs + backwash, spray tan booth, lounge furniture, AED, iPads/POS/printers, hire-fleet items (TENS units, birth balls, etc. — bought once, hired out repeatedly) | Majority of the A$49,300-114,700 summary budget below |
-| **Recurring/consumable** (replenished regularly, ongoing spend) | Opening stock and ongoing restocking of: massage oil, nail polish/gel, hair products, facial/beauty products, spray tan DHA solution, pathology consumables (tubes, needles — mostly supplied by the pathology partner), cleaning/disinfection supplies, printed forms, lounge snacks/teas | Captured in each section's "opening stock" lines below — ongoing monthly restocking cost is a separate operating-cost line, see `financial-setup.md`/`cash-flow.md`, not this capital-cost document |
+| **One-off capital** (equipment, furniture, fixtures, technology hardware) | Phlebotomy chairs, centrifuge, massage tables, nail stations + LEV, styling chairs + backwash, cafe equipment, lounge furniture, AED, iPads/POS/printers, hire-fleet items (TENS units, birth balls, etc. — bought once, hired out repeatedly) | Majority of the A$49,300-114,700 summary budget below |
+| **Recurring/consumable** (replenished regularly, ongoing spend) | Opening stock and ongoing restocking of: massage oil, nail polish/gel, hair products, facial/beauty products, cafe food/beverage stock, pathology consumables (tubes, needles — mostly supplied by the pathology partner), cleaning/disinfection supplies, printed forms | Captured in each section's "opening stock" lines below — ongoing monthly restocking cost is a separate operating-cost line, see `financial-setup.md`/`cash-flow.md`, not this capital-cost document |
 | **Recurring service/subscription** (not physical stock) | Booking software subscription, medical waste disposal contract | Listed inline in §1 (medical waste) and §8 (booking software) with "/yr" or "/month" units to distinguish from one-off purchases |
 
 ---
 
 ## Summary Budget
 
-> **PHASE 2 / POST-LAUNCH EXPANSION reclassification, 2026-07-31, per Anthony's direct instruction.** Spray tan booth, Cafe/partner area, Hire fleet (birth-prep items), and China Sourced Branded Stock (the retail/hire-buffer stock that directly supports the hire fleet) are **legitimate expansion ideas Anthony wants kept on the roadmap — not mistakes, not deleted.** They are relabeled below as Phase 2/post-launch, excluded from the day-one committed budget and every P&L figure (the same treatment already given to café/retail revenue in `profit-loss-tables.md`'s Ancillary Revenue exclusion). Content is fully retained, not removed — see §2, §7, §9, §10 below, each now clearly headed "PHASE 2."
+> **Corrected 2026-08-23: spray tan removed entirely (not disclosed as historical, per direct founder instruction that it must not appear anywhere in current planning materials), and the Cafe (§7) is now a current day-one feature, not Phase 2.** Hire fleet (birth-prep items, §9) and China Sourced Branded Stock (§10, the retail/hire-buffer stock that directly supports the hire fleet) remain legitimate Phase 2/post-launch expansion ideas, excluded from the day-one committed budget and every P&L figure.
 
 | Category | Low Estimate | High Estimate | Phase |
 |----------|-------------|--------------|-------|
@@ -38,11 +38,10 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 | Consumables (opening stock) | A$3,000 | A$6,000 | Day-one |
 | **TOTAL EQUIPMENT (DAY-ONE ONLY, 2026-08-07 recompute — was A$42,690-96,530, +A$500-900 for the vasovagal reclining chair/couch)** | **A$43,190** | **A$97,430** | |
 | **Pre-existing, disclosed, not-newly-introduced gap:** this Summary Budget's "Pathology collection room" row (A$7,800-13,200 before this update) never exactly matched §1's own itemized total (A$5,830-9,340 before this update) — a ~A$1,970-3,860 unexplained gap predating this session. Not investigated or reconciled this round (out of this specific task's scope); the same delta (+A$500-900) was applied to both rows to preserve whatever that pre-existing buffer represents, rather than silently closing it. Flagged for a future consistency pass. | | | |
-| Spray tan booth | ~~A$2,500~~ | ~~A$6,000~~ | **REMOVED FROM THE CONCEPT ENTIRELY, 2026-08-16 — not Phase 2, not costed anywhere, see §2** |
-| Cafe / partner area | A$2,000 | A$6,000 | **PHASE 2** |
+| Cafe (corrected 2026-08-23: current day-one model, not Phase 2, see §7) | A$5,000 | A$12,650 | Day-one |
 | Hire fleet (TENS + wellness items) | A$8,000 | A$18,000 | **PHASE 2** |
 | China sourced branded wellness items (stock) | A$5,000 | A$10,000 | **PHASE 2** |
-| **PHASE 2 SUBTOTAL (not in day-one budget)** | **A$17,500** | **A$40,000** | |
+| **PHASE 2 SUBTOTAL (not in day-one budget)** | **A$13,000** | **A$28,000** | |
 | Fit-out (construction, NOT equipment — 2026-07-31 recompute, open-plan/curtain layout, 239sqm day-one) | A$162,452 | A$306,029 | Day-one |
 
 **If the 3rd backwash station is added (upper end of the 2-3 range Anthony specified), Hair station totals A$7,750-17,850 instead — add A$1,000-2,500 to the totals above.** Full itemised recompute for both the equipment quantity changes and the fit-out construction-type changes (walls vs curtains vs open-plan) is in `docs/floor-plan-concept.md`'s Room Schedule and Fit-Out Cost Estimate sections — this document's figures are sourced from that recompute, not derived independently twice.
@@ -73,25 +72,6 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 **Note on centrifuge:** The centrifuge is the most critical piece of equipment in the venue. GDM underdiagnosis risk without centrifugation within 10 minutes (ORCHID study). Do not compromise on quality.
 
 **Note on the reclining chair/exam couch, added 2026-08-07:** flagged as missing from `docs/floor-plan-concept.md`'s Blood Collection Room requirements during the 2026-08-06 cross-check against Carole Rivers' (WDP) detailed ACC/NPAAC room spec (`docs/VERIFICATION-TRACKER.md` item 30) — a client feeling faint or having a vasovagal reaction during/after venepuncture needs somewhere separate from the 2 active phlebotomy chairs to recover, since those chairs need to stay free for the next pair. `[MODELED — market-research estimate, same basis as every other line in this table, not a confirmed quote]`. Priced below the phlebotomy chairs (which need blood-draw-specific armrests/positioning) since this is a simpler recovery recliner.
-
----
-
-## 2. Spray Tan Booth — REMOVED FROM THE CONCEPT ENTIRELY (2026-08-16, supersedes the 2026-07-31 "Phase 2" reclassification below)
-
-> **REMOVED FROM THE CONCEPT ENTIRELY, 2026-08-16, per Anthony's explicit instruction — too many things in one location.** This is a real change from the prior "Phase 2/post-launch expansion, kept on the roadmap" framing immediately below — spray tan is no longer a future possibility for this venture at all, not just excluded from day-one. Content retained in full below, not deleted, per this repo's disclose-don't-delete convention — do not cost this into any budget, current or future, and do not reintroduce it without a fresh, explicit founder decision.
->
-> ~~Excluded from the day-one committed budget and every P&L figure, per Anthony's direct instruction. This is a legitimate expansion idea kept on the roadmap, not a mistake — content retained in full below, not deleted. Do not cost this into the day-one Summary Budget total or the floor plan's day-one room schedule going forward.~~ (2026-07-31 framing, superseded above)
-
-| Item | Qty | Unit Price | Total |
-|------|-----|------------|-------|
-| Automatic enclosed spray tan booth (ventilation, 3+ nozzles, timer) | 1 | A$2,000-5,000 | A$2,000-5,000 |
-| DHA solution (opening stock, 10 litres) | 10L | A$20-30/L | A$200-300 |
-| Protective kit consumables (nose filters, hair caps, barrier cream) per 100 sessions | 1 lot | A$150-250 | A$150-250 |
-| Booth maintenance kit (nozzle cleaner, spare parts) | 1 | A$100-200 | A$100-200 |
-| Ventilation ducting/installation (if not included in fit-out) | 1 | A$300-800 | A$300-800 |
-| **Spray tan TOTAL** | | | **A$2,750-6,550** |
-
-**China sourcing:** Alibaba enclosed automatic spray tan booth with extraction fan: A$1,250-5,500 landed (vs A$2,000-5,000 Australian brand). Savings possible if CE certification confirmed. See hire-purchase-china.md.
 
 ---
 
@@ -185,37 +165,38 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
-| Pregnancy-friendly lounge chairs (wide, supportive, easy rise) | 8 | A$600-1,500 | A$4,800-12,000 |
-| Side tables with phone charging ports | 6 | A$150-300 | A$900-1,800 |
-| Low coffee tables | 4 | A$100-250 | A$400-1,000 |
-| Heated throw blankets (complimentary for patients) | 20 | A$15-25 | A$300-500 |
+| Three-seat couch (waiting area, not reclining chairs, per current direction) | 3-4, final count set by venue floor area | A$1,200-3,000 | A$3,600-12,000 |
+| Side tables with phone charging ports | 4-6 | A$150-300 | A$600-1,800 |
+| Low coffee tables | 3-4 | A$100-250 | A$300-1,000 |
+| Heated throw blankets (complimentary for clients) | 20 | A$15-25 | A$300-500 |
 | Packaged eye masks (complimentary, 500-unit bulk order) | 500 | A$0.80-1.50 | A$400-750 |
 | Floor lamp (soft, warm lighting) | 4 | A$80-150 | A$320-600 |
-| Curated reading material (pregnancy books, not magazines) | 1 lot | A$200-400 | A$200-400 |
+| Curated reading material (pregnancy/postpartum information and documents) | 1 lot | A$200-400 | A$200-400 |
+| Tablet (kiosk-mounted, pregnancy/postpartum information and documents while waiting) | 2 (ballpark) | A$400-700 | A$800-1,400 |
 | Small screen/TV (optional: birth prep videos, slideshow) | 1 | A$400-800 | A$400-800 |
-| Snack display stand/tiered rack | 2 | A$100-250 | A$200-500 |
-| Filtered water dispenser/jug station | 1 | A$200-500 | A$200-500 |
-| Herbal tea station (kettle + display) | 1 | A$200-400 | A$200-400 |
-| Mini fridge (sparkling water, coconut water, electrolytes) | 1 | A$300-600 | A$300-600 |
-| **Lounge TOTAL** | | | **A$8,620-19,850** |
+| **Lounge TOTAL (excludes food/beverage service, now owned by the Cafe, §7)** | | | **A$6,620-18,750** |
 
-**Note:** Lounge chairs are critical. Invest in quality — pregnant women spend 2+ hours here. Wide, supportive seats with firm cushioning and armrests. Easy to rise from. Test before buying in bulk.
+**Note:** Lounge couches are critical. Invest in quality: pregnant women may spend meaningful time here. Wide, supportive seating with firm cushioning and armrests. Test before buying in bulk. Food, drink, and beverage-service equipment (mini fridge, snack display, herbal tea station) moved to §7 Cafe, which now owns all food/beverage service as a day-one feature, not the Lounge.
 
 ---
 
-## 7. Cafe and Partner Area — PHASE 2 / POST-LAUNCH EXPANSION (2026-07-31, not day-one)
+## 7. Cafe: CURRENT DAY-ONE MODEL (corrected 2026-08-23, supersedes the "Phase 2/partner area" framing below)
 
-> **Excluded from the day-one committed budget and every P&L figure, per Anthony's direct instruction — same treatment as `profit-loss-tables.md`'s existing Ancillary Revenue exclusion.** Legitimate expansion idea kept on the roadmap, not a mistake — content retained in full below, not deleted.
+**Current model, per direct founder clarification:** the Cafe is a day-one feature, not a Phase 2/post-launch expansion. It is both a genuine customer-experience feature and an additional revenue stream. Clients purchase food and beverages directly; food is not manufactured or cooked from raw ingredients on site, everything is supplied pre-made by an external supplier (not yet identified, a genuine procurement dependency), stored correctly, and displayed for sale; selected items may be warmed or toasted on site using a toastie press; coffee and other hot/cold drinks are available for purchase; free water and herbal tea remain available to every client regardless of purchase.
 
 | Item | Qty | Unit Price | Total |
 |------|-----|------------|-------|
-| Cafe-style seating (bar stools or chairs) for partner area | 4-6 | A$100-300 | A$400-1,800 |
-| Counter/bar table for partner seating | 1 | A$200-500 | A$200-500 |
-| Commercial espresso machine (optional — if serving hot drinks in future) | 1 | A$1,000-3,000 | A$1,000-3,000 |
-| Commercial kettle (keep-warm) | 1 | A$100-200 | A$100-200 |
-| Water cooler/jug for partner area | 1 | A$100-300 | A$100-300 |
-| Signage: "Partners and visitors area" (printed, framed) | 1 | A$50-150 | A$50-150 |
-| **Cafe / partner area TOTAL** | | | **A$1,850-5,950** |
+| Full-size beverage refrigerator | 1 | A$800-1,800 | A$800-1,800 |
+| Display refrigerator (sandwiches/rolls, temperature-controlled) | 1 | A$1,200-2,500 | A$1,200-2,500 |
+| Coffee machine (espresso-capable, hot and cold drink formats) | 1 | A$1,500-4,000 | A$1,500-4,000 |
+| Chilled and boiling water tap | 1 | A$800-1,800 | A$800-1,800 |
+| Toastie press (commercial grade) | 1 | A$150-350 | A$150-350 |
+| Preparation/serving counter (within the Cafe's existing solid-walled footprint) | 1 | Custom, site-installed | See fit-out, not this list | |
+| Customer-accessible display shelving | 1 | A$150-400 | A$150-400 |
+| Cafe seating (stools or chairs, if the venue's floor plan allows adjacent seating) | 4-6 | A$100-300 | A$400-1,800 |
+| **Cafe equipment TOTAL (excludes food stock, cups/crockery, and custom cabinetry, see the master procurement list for the full itemised breakdown)** | | | **A$5,000-12,650** |
+
+**Genuine procurement dependency, not invented here:** the external food supplier for pre-made sandwiches/rolls is not yet identified. This is a real, disclosed gap, not a filled-in assumption.
 
 ---
 
@@ -300,7 +281,6 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 | Hair care products (opening stock, pregnancy-safe brands) | 1 lot | A$200-400 | A$200-400 |
 | Facial products (opening stock: HA serum, niacinamide, collagen masks) | 1 lot | A$300-600 | A$300-600 |
 | Pathology consumables (tubes, needles, gauze, etc.) — largely supplied by APA | 1 lot | A$200-400 | A$200-400 |
-| Spray tan protective kits (nose filters, hair caps) — 200 sessions | 200 | A$0.80-1.25 each | A$160-250 |
 | Lounge snacks (herbal teas, protein bars, coconut water — opening stock) | 1 lot | A$300-500 | A$300-500 |
 | Printed forms (consent, intake, referral cards) | 1 lot | A$150-250 | A$150-250 |
 | Cleaning + disinfection supplies (opening stock) | 1 lot | A$200-400 | A$200-400 |
@@ -314,7 +294,7 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 |-------|-------|-----------------|
 | Pre-lease | None — do not purchase equipment before lease is signed | Month 1 |
 | Month 2 (post-lease) | Pathology room equipment, lounge furniture, technology | Immediately post lease signing |
-| Month 2-3 | Spray tan booth, nail station, massage tables, hair station | Allow 4-8 weeks delivery for China-sourced items |
+| Month 2-3 | Nail station, massage tables, hair station | Allow 4-8 weeks delivery for China-sourced items |
 | Month 3 | Hire fleet stock, China branded items, consumables opening stock | 4 weeks before opening |
 | Month 4 | Final checks, emergency equipment, any missing items | 1-2 weeks before opening |
 
@@ -329,6 +309,8 @@ Per Phase 6 spec, every item below is also classified as either **one-off capita
 ---
 
 ## Changelog
+
+**2026-08-23 (spray tan fully removed, Cafe corrected to current day-one model, Lounge corrected to couches):** Per direct founder instruction that spray tan must not appear anywhere in current planning materials, even as a disclosed-historical item, the entire former §2 Spray Tan Booth section, its Summary Budget row, its opening-consumables line, and its Equipment Purchase Timeline reference are deleted, not merely disclosed. The former §7 Cafe/Partner Area section (previously labelled Phase 2/post-launch) is rewritten as a current day-one section, reflecting the actual required equipment (full-size beverage fridge, display fridge, coffee machine, chilled/boiling water tap, toastie press), moved from the Phase 2 subtotal into the day-one Summary Budget. The Lounge section (§6) is corrected from "lounge chairs" to three-seat couches per current direction, and its beverage/snack equipment (mini fridge, snack display, herbal tea station) is removed since the Cafe now owns all food/beverage service. This document remains historical/reference-level detail; `docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md` (2026-08-23) is now the single authoritative, itemised procurement register for opening the business, superseding this document's role as the primary procurement source.
 
 **2026-08-07 (reclining chair/exam couch for vasovagal episodes added as a real line item, per Anthony's direct instruction)** — Previously only logged as a gap in `docs/VERIFICATION-TRACKER.md` item 30 (2026-08-06 cross-check against Carole Rivers' ACC/NPAAC room spec). Added to §1 Pathology Collection Room as a real, costed line: A$500-900 `[MODELED — market-research estimate, same basis as every other line in this table]`. Recomputed §1's own itemized TOTAL (A$5,830-9,340 -> A$6,330-10,240) and the Summary Budget's "Pathology collection room" row and "TOTAL EQUIPMENT (DAY-ONE ONLY)" row by the same +A$500-900 delta (A$42,690-96,530 -> A$43,190-97,430). Flagged, not silently fixed: a pre-existing, unexplained ~A$1,970-3,860 gap between the Summary Budget's Pathology collection room row and §1's own itemized total already existed before this change — the same delta was applied to both rather than reconciling that gap, which is out of this task's scope. Propagated to `docs/CURRENT-STATE.md` §6/§7's Section 7 Build (Equipment line and 7.1 subtotal) — see that document's own changelog entry.
 
