@@ -26,6 +26,7 @@ Status: current as of 2026-08-23. This document builds a genuine opening-stock m
 | Cleaning chemicals (general disinfectant, bathroom cleaner, glass cleaner, floor cleaner) | 1 bottle of each per cleaning trolley/caddy (2-3 caddies, Section O13) | 25% remaining | Restock to 1 bottle per caddy | Caddy-count-linked, a planning assumption, not measured |
 | Laundry detergent/stain remover | Only applicable if the in-house laundry model is adopted (Founder Decision, `PROCUREMENT-FOUNDER-DECISIONS.md`); not sized until that decision is made | N/A | N/A | Blocked by the laundry-model founder decision |
 | Tissues (general-area) | 1 box per public-facing area (Reception, Lounge, Cafe) | 20% of box remaining | 1 new box per area | Area-count-linked |
+| Disposable gloves (general, non-clinical, non-nail, for cleaning/housekeeping use, Section S01) | 1 box per cleaning caddy (2-3 caddies, same basis as Section O13 above) | 25% of a box remaining | 1 new box per caddy | Caddy-count-linked; explicitly distinct from the clinical-grade gloves in Section E and the beauty/nail-grade gloves in Sections G/H/J |
 
 ## Clinical Consumables (Blood Collection, cross-referenced to Section E of the master register)
 
@@ -113,3 +114,5 @@ It does not invent a measured consumption rate for a venture that has not opened
 ## Changelog
 
 **2026-08-23 (created):** Built per direct founder instruction as a genuine opening-stock methodology, using a standard 25%-remaining reorder-point convention and the venture's own committed client-volume assumptions as the disclosed basis for each figure, rather than an arbitrary quantity beside each consumable.
+
+**2026-08-23 (reviewed, Part 8):** Re-tested against "if the venue opened tomorrow, could we identify everything consumed during the first four weeks?" across blood collection consumables, PPE, nail/hair/massage/beauty consumables, cafe food/beverages/coffee/tea, cleaning products, laundry, toilet supplies, paper products, office supplies, first aid supplies, and general consumables. Found and fixed one genuine gap: general non-clinical PPE gloves for cleaning/housekeeping use (Section S01) were not yet itemised here, distinct from the clinical-grade and beauty/nail-grade gloves already covered elsewhere. No other gap found; the existing methodology and consumption-dependent basis labels were confirmed still accurate.
