@@ -2116,8 +2116,11 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
 
     <div class="callout">
       <span class="callout-label">Where the detail actually lives</span>
-      <code>docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md</code> is the single authoritative, itemised procurement register: 306 itemised rows across 26 functional categories, 281 distinct purchasable items after removing cross-reference duplicates. This chapter gives the business-plan-level summary an investor or advisor needs; it does not dump the full register into the dossier.
+      <code>docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md</code> is the single authoritative, itemised procurement register: 306 itemised rows across 26 functional categories, 281 distinct purchasable items after removing cross-reference duplicates. Every item now carries a full 42-field specification record (<code>PROCUREMENT-ITEM-SPECIFICATIONS-FULL.md</code>), an order-readiness view, a room-by-room checklist, a 17-step purchasing workflow, and executable China/Australia sourcing packages. This chapter gives the business-plan-level summary an investor or advisor needs; it does not dump the full register into the dossier.
     </div>
+
+    <h2>Procurement readiness</h2>
+    <p>Of the 281 distinct items: 39 are order-ready today, 149 need a supplier quote (specification and quantity already locked), 24 cannot be finalised before a venue is measured, 28 need a licensed Australian professional's sign-off, 3 need pathology-partner (WDP) confirmation, 15 are blocked on a genuine founder decision, 9 need a specific named information gap closed, and 14 are future/optional. No purchase, quote request, or supplier/agent contact has been made against any of them.</p>
 
     <h2>Procurement strategy</h2>
     <p>Every item in the register carries a real quantity basis (a fixed/locked count, a figure calculated from the operating model or staff position register, a venue-dependent figure, a staff-headcount-dependent figure, a consumption-based opening-stock figure, an optional upgrade, a professional-verification requirement, a genuine founder decision, or a WDP-dependent figure) rather than an invented number. Named real Australian salon/spa suppliers already identified (National Salon Supplies, Salon Supply Australia, Diamond Nail Supplies, American Beauty Supply, The Salon Furniture Hub), none yet contacted for an actual quote.</p>
@@ -2161,7 +2164,7 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
 
     <div class="callout olive">
       <span class="callout-label">Sourcing</span>
-      <code>docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md</code> (primary, current authoritative register), <code>docs/architecture/ITEMISED-PURCHASE-LIST.md</code> and <code>docs/equipment-costs.md</code> (historical research trail, superseded as the primary source), <code>docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md</code> (GTT supplies discrepancy status), <code>data/canonical/opex.yml</code>.
+      <code>docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md</code> (primary, current authoritative register), <code>docs/architecture/PROCUREMENT-ITEM-SPECIFICATIONS-FULL.md</code>, <code>PROCUREMENT-ORDER-READINESS-CHECKLIST.md</code>, <code>PROCUREMENT-ROOM-BY-ROOM-CHECKLIST.md</code>, <code>PROCUREMENT-WORKFLOW.md</code>, <code>PROCUREMENT-CHINA-PACKAGE.md</code>, <code>PROCUREMENT-AUSTRALIA-PACKAGE.md</code>, <code>PROCUREMENT-CLINICAL-GTT-WDP-SPLIT.md</code>, <code>PROCUREMENT-CONSTRUCTION-FITOUT.md</code>, <code>docs/architecture/ITEMISED-PURCHASE-LIST.md</code> and <code>docs/equipment-costs.md</code> (historical research trail, superseded as the primary source), <code>docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md</code> (GTT supplies discrepancy status), <code>data/canonical/opex.yml</code>.
     </div>
   </div>
 </section>
