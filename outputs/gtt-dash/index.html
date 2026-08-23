@@ -266,7 +266,11 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
         </div>
       </div>
       <div class="calc-warning" id="calcWarning">
-        <strong>Outside the disclosed fixed-headcount range.</strong> Below ~6 clients/day, Chapter 31's demand-driven staffing solver finds treatment headcount can actually flex down (e.g. 4 staff instead of 8 at a widened 45-min cadence) &ndash; this calculator does not model that flex, so results below 6/day understate what a demand-flexed roster could achieve. Treat this range as illustrative only, not a planning figure.
+        <strong>Outside the disclosed fixed-headcount range.</strong> Below ~6 clients/day, Chapter 31's demand-driven staffing solver finds treatment headcount can actually flex down (e.g. 4 staff instead of 8 at a widened 45-min cadence): this calculator does not model that flex by default, so results below 6/day understate what a demand-flexed roster could achieve. Treat this range as illustrative only, not a planning figure. Use the toggle below to see the demand-flexed alternative.
+      </div>
+      <div class="calc-field" style="flex-direction:row; align-items:center; gap:8px;">
+        <input type="checkbox" id="calcDemandFlexed" style="width:auto;">
+        <label for="calcDemandFlexed" style="text-transform:none; font-size:0.82rem; font-weight:600;">Apply demand-flexed staffing (2 Massage+Beauty + 1 Nail + 1 Hair, widened cadence) at 6 clients/day or below. Solver-verified (tools/demand_scenario_financial_model.py), not adopted as policy: requires a real day-ahead rostering mechanism and Anthony's confirmation that a widened cadence is acceptable client experience.</label>
       </div>
       <div class="card-grid" id="calcResults"></div>
       <p class="calc-note" style="margin-top:14px;">AM revenue = clients/day &times; A$250 (Package 1, the conservative revenue-calculation price, Chapter 27) &times; 26.33 operating days/month (22 weekday + 4.33 Saturday, same daily volume assumed for both). PM revenue (A$36,225.69/month) and total opex (A$110,544.52/month) are held fixed: this matches the model's own disclosed limitation that committed headcount does not currently flex with booking volume, the same simplification Chapters 30 and 31 already use.</p>
@@ -543,6 +547,10 @@ const AM_PRICE = 250;
 const OPERATING_DAYS_PER_MONTH = 26.33; // 22 weekday + 4.33 Saturday, same daily volume assumed
 const PM_REVENUE_FIXED = 36225.69;
 const TOTAL_OPEX_FIXED = 110544.52;
+// Demand-flexed 6-client opex (2 Massage+Beauty + 1 Nail + 1 Hair, widened cadence,
+// Saturday treatment held at the committed level per Chapter 31's own disclosed scope).
+// Solver-verified via tools/demand_scenario_financial_model.py, matches Chapter 31 exactly.
+const TOTAL_OPEX_DEMAND_FLEXED_6 = 88239.03;
 const BREAKEVEN_CLIENTS_PER_DAY = (TOTAL_OPEX_FIXED - PM_REVENUE_FIXED) / (AM_PRICE * OPERATING_DAYS_PER_MONTH);
 
 function fmtMoney(n){
@@ -551,9 +559,13 @@ function fmtMoney(n){
 }
 
 function renderCalcResults(clients){
+  const flexToggle = document.getElementById('calcDemandFlexed');
+  const useFlexed = flexToggle && flexToggle.checked && clients <= 6;
+  const opex = useFlexed ? TOTAL_OPEX_DEMAND_FLEXED_6 : TOTAL_OPEX_FIXED;
+
   const amRevenue = clients * AM_PRICE * OPERATING_DAYS_PER_MONTH;
   const totalRevenue = amRevenue + PM_REVENUE_FIXED;
-  const netResult = totalRevenue - TOTAL_OPEX_FIXED;
+  const netResult = totalRevenue - opex;
   const margin = totalRevenue > 0 ? (netResult / totalRevenue * 100) : 0;
   const bufferClients = clients - BREAKEVEN_CLIENTS_PER_DAY;
   const bufferPct = BREAKEVEN_CLIENTS_PER_DAY > 0 ? (bufferClients / BREAKEVEN_CLIENTS_PER_DAY * 100) : 0;
@@ -562,13 +574,13 @@ function renderCalcResults(clients){
   el.innerHTML = `
     <div class="metric-card"><span class="label">AM revenue</span><div class="value">${fmtMoney(amRevenue)}</div><div class="note">at ${clients.toFixed(1)} clients/day</div></div>
     <div class="metric-card"><span class="label">Total revenue</span><div class="value">${fmtMoney(totalRevenue)}</div><div class="note">AM + PM (PM held fixed)</div></div>
-    <div class="metric-card"><span class="label">Total opex</span><div class="value">${fmtMoney(TOTAL_OPEX_FIXED)}</div><div class="note">Held fixed, current staffing model</div></div>
+    <div class="metric-card"><span class="label">Total opex</span><div class="value">${fmtMoney(opex)}</div><div class="note">${useFlexed ? 'Demand-flexed: 4 treatment staff, not adopted as policy' : 'Held fixed, current committed staffing model'}</div></div>
     <div class="metric-card ${netResult >= 0 ? 'positive' : ''}"><span class="label">Net operating result</span><div class="value">${fmtMoney(netResult)}</div><div class="note">${margin.toFixed(1)}% margin</div></div>
     <div class="metric-card"><span class="label">Buffer vs break-even</span><div class="value">${bufferClients >= 0 ? '+' : ''}${bufferClients.toFixed(2)}/day</div><div class="note">${bufferPct >= 0 ? '+' : ''}${bufferPct.toFixed(1)}% vs the 11.290/day break-even</div></div>
   `;
 
   const warn = document.getElementById('calcWarning');
-  if(clients < 6){ warn.classList.add('show'); } else { warn.classList.remove('show'); }
+  if(clients < 6 && !useFlexed){ warn.classList.add('show'); } else { warn.classList.remove('show'); }
 }
 
 function onCalcClientsChange(value){
@@ -581,6 +593,7 @@ function onCalcClientsChange(value){
 }
 document.getElementById('calcClients').addEventListener('input', e => onCalcClientsChange(e.target.value));
 document.getElementById('calcClientsRange').addEventListener('input', e => onCalcClientsChange(e.target.value));
+document.getElementById('calcDemandFlexed').addEventListener('change', () => onCalcClientsChange(document.getElementById('calcClients').value));
 renderCalcResults(18);
 
 // ===================== STAFFING RELIABILITY CALCULATOR =====================
