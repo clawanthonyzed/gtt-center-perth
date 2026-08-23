@@ -280,7 +280,25 @@ def derive(item):
         "who_confirms": "Not yet determined.",
         "instruction": "Not yet determined.",
     })
-    d["still_required"] = template["still_required"]
+    still_required = template["still_required"]
+
+    # Genuine edge case: a small number of RFQ-ready (B) items have a
+    # Quantity field that itself reads "to be determined" or "depends on"
+    # something site-dependent (e.g. toilet-count-dependent consumables,
+    # opening-stock-policy-dependent spares). The item and its unit price
+    # can still be quoted, but the generic "B" template's "quantity are
+    # locked" framing would misstate this specific item, so it is corrected
+    # here rather than left inaccurate.
+    quantity_text = (item.get("quantity") or "").lower()
+    if letter == "B" and ("to be determined" in quantity_text or "depends on" in quantity_text):
+        still_required = (
+            "A real supplier quote (RFQ) for the item and unit price. The exact "
+            "quantity itself is not yet fixed, it depends on a factor stated in "
+            "the register's own Quantity field (see field 6 above), not just on "
+            "obtaining a quote."
+        )
+
+    d["still_required"] = still_required
     d["who_confirms"] = template["who_confirms"]
     d["final_instruction"] = template["instruction"]
     d["register_note"] = notes if notes else "None"

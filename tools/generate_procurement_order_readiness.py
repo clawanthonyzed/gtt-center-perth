@@ -86,6 +86,9 @@ def main():
         can_purchase = "Yes" if letter == "A" else "No"
         for full in section_items:
             spec_completeness = SPEC_COMPLETENESS.get(full.get("quantity_basis", ""), "Not yet determined")
+            quantity_text = (full.get("quantity") or "").lower()
+            if "to be determined" in quantity_text or "depends on" in quantity_text:
+                spec_completeness = "Partial: item and unit price can be quoted, but the exact quantity itself is not yet fixed (see the Quantity column)"
             row = [
                 full["id"],
                 full["item"],

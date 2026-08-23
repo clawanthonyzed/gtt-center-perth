@@ -8987,7 +8987,7 @@ Fields 1-18 identify what the item is and where it sits in the procurement syste
 - **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
 - **38. Existing price/source if already researched:** No price researched yet
 - **39. Cost status:** Open
-- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **40. What is still required before ordering:** A real supplier quote (RFQ) for the item and unit price. The exact quantity itself is not yet fixed, it depends on a factor stated in the register's own Quantity field (see field 6 above), not just on obtaining a quote.
 - **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
 - **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
 - **Register note:** Quantity depends on final toilet count (patient WC accessible, patient WC standard, staff WC per the venue program)
@@ -9033,7 +9033,7 @@ Fields 1-18 identify what the item is and where it sits in the procurement syste
 - **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
 - **38. Existing price/source if already researched:** No price researched yet
 - **39. Cost status:** Open
-- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **40. What is still required before ordering:** A real supplier quote (RFQ) for the item and unit price. The exact quantity itself is not yet fixed, it depends on a factor stated in the register's own Quantity field (see field 6 above), not just on obtaining a quote.
 - **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
 - **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
 - **Register note:** None
@@ -9079,7 +9079,7 @@ Fields 1-18 identify what the item is and where it sits in the procurement syste
 - **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
 - **38. Existing price/source if already researched:** No price researched yet
 - **39. Cost status:** Open
-- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **40. What is still required before ordering:** A real supplier quote (RFQ) for the item and unit price. The exact quantity itself is not yet fixed, it depends on a factor stated in the register's own Quantity field (see field 6 above), not just on obtaining a quote.
 - **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
 - **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
 - **Register note:** None
@@ -12950,7 +12950,7 @@ Fields 1-18 identify what the item is and where it sits in the procurement syste
 - **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
 - **38. Existing price/source if already researched:** No price researched yet
 - **39. Cost status:** Open
-- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **40. What is still required before ordering:** A real supplier quote (RFQ) for the item and unit price. The exact quantity itself is not yet fixed, it depends on a factor stated in the register's own Quantity field (see field 6 above), not just on obtaining a quote.
 - **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
 - **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
 - **Register note:** None
@@ -13088,7 +13088,7 @@ Fields 1-18 identify what the item is and where it sits in the procurement syste
 - **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
 - **38. Existing price/source if already researched:** No price researched yet
 - **39. Cost status:** Open
-- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **40. What is still required before ordering:** A real supplier quote (RFQ) for the item and unit price. The exact quantity itself is not yet fixed, it depends on a factor stated in the register's own Quantity field (see field 6 above), not just on obtaining a quote.
 - **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
 - **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
 - **Register note:** None
