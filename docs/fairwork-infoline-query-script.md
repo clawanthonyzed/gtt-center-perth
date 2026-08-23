@@ -1,7 +1,7 @@
 # Fair Work Infoline Query Script — Saturday Ordinary-Hours Question (MA000027)
 
-**Compiled:** 2026-08-15 | **Status:** READY TO USE — call 13 13 94, no recipient selection needed, no founder review required beyond confirming Anthony is the right person to make the call.
-**Purpose:** Close the genuine, unresolved gap flagged in `docs/hr-framework.md` §"Saturday Ordinary-Hours Question — Investigation (2026-07-19)": whether MA000027 (Health Professionals and Support Services Award) treats Saturday 8am-4:30pm as ordinary hours (not penalty hours) for a private pathology/collection-centre classification. This session has no live web-fetch capability to check the current award text directly (confirmed, flagged, not worked around by guessing) — the Fair Work Infoline is the correct, tool-independent next step `hr-framework.md` itself already recommended.
+**Compiled:** 2026-08-15 | **Status: PARTIALLY RESOLVED 2026-08-23.** The general question (does MA000027 have a clause treating Saturday hours as ordinary for pathology practices) is answered: yes, clause 13.2(b)(ii), confirmed via a direct Fair Work Ombudsman award-library fetch, see `docs/hr-framework.md` §"Saturday Ordinary-Hours Question: RESOLVED 2026-08-23, Primary-Sourced". The call below is still worth making, but for the narrower remaining question in the updated script, not the original one.
+**Purpose (updated 2026-08-23):** the original gap this script was written to close, whether MA000027 has a Saturday-ordinary-hours clause for pathology practices at all, is now closed via a direct fetch of `awards.fairwork.gov.au/MA000027.html`. What remains genuinely open: whether GTT Center Perth's specific setup (a co-located wellness venue with a WDP-operated collection room, not a stand-alone pathology practice) qualifies under this clause, and whether the venture's actual Saturday phlebotomist shift time falls entirely within the clause's 8:00am-4:30pm window. The call script below has been updated to ask this narrower, better-informed question.
 
 **Why this matters financially:** every current financial model (`docs/CURRENT-STATE.md`, `data/models/master_financial_model.yml`) uses the conservative full-Saturday-penalty-rate assumption for phlebotomist wages. If the carve-out is real, Saturday phlebotomist labour cost is lower than currently modelled — **this is upside-only risk**, no model currently overstates profitability by assuming a carve-out that may not exist.
 
@@ -14,15 +14,17 @@
 
 > Hi, I'm calling about a specific classification question under the Health Professionals and Support Services Award, MA000027.
 >
-> I'm setting up a business that will employ phlebotomists (blood collection staff) working within a private pathology collection service, operating Monday to Saturday. I've seen a suggestion that under MA000027, Saturday hours — specifically an 8am to 4:30pm span — may be treated as **ordinary hours** rather than penalty/overtime hours for certain private pathology or collection-centre classifications, rather than the general default Saturday penalty rate.
+> I've already confirmed that clause 13.2(b)(ii) of MA000027 treats Saturday 8:00am to 4:30pm as ordinary hours, not penalty hours, for private medical, dental, pathology, physiotherapy, chiropractic and osteopathic practices.
+>
+> I'm setting up a wellness venue that hosts a licensed pathology partner's blood-collection service on-site, not a stand-alone pathology practice. Our phlebotomists would work within that on-site collection service.
 >
 > Could you help me confirm:
 >
-> 1. Does MA000027 have a specific classification or industry-sector clause for private pathology/collection-centre roles that treats Saturday hours differently from the award's general default?
-> 2. If so, what is the exact clause reference, and what span of hours does it cover?
-> 3. Does this apply to a phlebotomist working at a private collection site that is not itself a hospital or a large pathology laboratory — i.e. a smaller, standalone collection room?
+> 1. Does a wellness venue hosting a third-party pathology partner's collection service on-site (rather than operating as a stand-alone pathology practice itself) qualify for the clause 13.2(b)(ii) treatment for its phlebotomist staff?
+> 2. If our Saturday phlebotomist shift starts before 8:00am, does only the portion of the shift within 8:00am-4:30pm count as ordinary hours, with the earlier portion remaining at the general penalty rate?
+> 3. Is there anything else about our specific structure (the phlebotomists may ultimately be employed by us or by the pathology partner, this is not yet decided) that would change which entity's award coverage applies?
 >
-> I'd like to get this right before finalising employment contracts, so an exact clause reference I can check myself afterwards would be ideal.
+> I'd like to get this right before finalising employment contracts, so an exact clause reference or written confirmation I can check myself afterwards would be ideal.
 
 ---
 
