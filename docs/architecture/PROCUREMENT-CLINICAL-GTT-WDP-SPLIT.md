@@ -53,9 +53,11 @@ These items require WDP's own confirmation on their commercial/supply arrangemen
 
 | Item ID | Item | What Specifically Needs WDP Confirmation |
 |---|---|---|
-| E14 | Medical waste disposal contract | Whether WDP's own collection-centre arrangement already covers medical waste disposal, or whether GTT Center Perth needs its own separate contract. Genuinely open, not assumed either way. |
-| E15 | Tabletop centrifuge (refrigerated) | Whether it is sourced via the WDP relationship (the register's own Notes state this is "likely") and whether NATA acceptance confirmation is required before purchasing any non-established-brand alternative. This is the single most critical piece of equipment in the venue; do not compromise by purchasing independently before this is confirmed. |
-| E21 | 75g glucose solution (Polycal or equivalent) | Whether WDP supplies this as part of their pathology relationship, or whether GTT Center Perth sources it independently. The register itself flags this as "possibly WDP-supplied, confirm", a genuinely open, disclosed uncertainty, not resolved here. |
+| E14 | Medical waste disposal contract | Whether WDP's own collection-centre arrangement already covers medical waste disposal, or whether GTT Center Perth needs its own separate contract. Genuinely open, not assumed either way. **Correspondence status: already asked, in Anthony's 2026-08-21 follow-up to Carole Rivers (`docs/wdp-followup-draft-2026-08-20.md`, sent directly, outside this repository's workflow). No reply received yet.** |
+| E15 | Tabletop centrifuge (refrigerated) | Whether it is sourced via the WDP relationship (the register's own Notes state this is "likely") and whether NATA acceptance confirmation is required before purchasing any non-established-brand alternative. This is the single most critical piece of equipment in the venue; do not compromise by purchasing independently before this is confirmed. **Correspondence status: not yet specifically asked in any sent correspondence with WDP.** |
+| E21 | 75g glucose solution (Polycal or equivalent) | Whether WDP supplies this as part of their pathology relationship, or whether GTT Center Perth sources it independently. The register itself flags this as "possibly WDP-supplied, confirm", a genuinely open, disclosed uncertainty, not resolved here. **Correspondence status: not yet specifically asked in any sent correspondence with WDP.** |
+
+**Do not draft another WDP follow-up for E15/E21 without a genuine reason; per standing instruction, wait for a reply to the 2026-08-21 send before raising further questions.** Full correspondence history: `docs/reed-partnerships.md`, `docs/VERIFICATION-TRACKER.md`.
 
 ## Category D: Professional Verification Required (Australian Licensed Professional, Not WDP)
 
