@@ -120,6 +120,7 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
       <a href="#dependencies">Dependencies</a>
       <a href="#financial">Financial</a>
       <a href="#calculators">Calculators</a>
+      <a href="#procurement">Procurement</a>
       <a href="#wdp">WDP Action</a>
       <a href="#fitout">Fit-Out</a>
     </nav>
@@ -298,6 +299,38 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
   </div>
 </section>
 
+<!-- ================= PROCUREMENT ================= -->
+<section id="procurement">
+  <div class="container">
+    <div class="eyebrow">Procurement</div>
+    <h2 class="sec-title">Master Procurement Register</h2>
+    <p><span class="tag tag-current">Current truth</span> Presentation of <a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md" target="_blank" rel="noopener">MASTER-PROCUREMENT-SHOPPING-LIST.md</a>, the authoritative itemised procurement register for opening the business. Every figure below is counted directly from that register, not estimated separately.</p>
+
+    <div class="card-grid">
+      <div class="metric-card"><span class="label">Total itemised rows</span><div class="value">306</div><div class="note">Across 26 functional categories</div></div>
+      <div class="metric-card"><span class="label">Distinct purchasable items</span><div class="value">281</div><div class="note">306 rows minus 25 cross-reference rows (avoiding double-counting shared items)</div></div>
+      <div class="metric-card"><span class="label">China sourcing candidates</span><div class="value">42</div><div class="note">Marked CN in the register</div></div>
+      <div class="metric-card"><span class="label">Australian-only purchases</span><div class="value">110</div><div class="note">Marked AU: clinical, regulated, or warranty-sensitive items</div></div>
+      <div class="metric-card"><span class="label">Hybrid/source-dependent</span><div class="value">93</div><div class="note">Marked HY: either sourcing works, final spec decides</div></div>
+      <div class="metric-card"><span class="label">Professional procurement</span><div class="value">7</div><div class="note">Marked PRO: clinical/medical equipment via a named channel</div></div>
+      <div class="metric-card"><span class="label">Venue-dependent items</span><div class="value">26</div><div class="note">Marked SITE: cannot be sourced before a venue is confirmed</div></div>
+      <div class="metric-card"><span class="label">WDP-dependent items</span><div class="value">2</div><div class="note">Depend on the pathology partner's final commercial arrangement</div></div>
+      <div class="metric-card"><span class="label">Items with an existing repository price</span><div class="value">70</div><div class="note">Sourced from equipment-costs.md/ITEMISED-PURCHASE-LIST.md's own research, not re-estimated</div></div>
+      <div class="metric-card"><span class="label">Quantity basis: professional verification required</span><div class="value">28</div><div class="note">Electrical, plumbing, HVAC, accessibility</div></div>
+      <div class="metric-card"><span class="label">Quantity basis: founder decision</span><div class="value">15</div><div class="note">Genuinely unresolved, not forced</div></div>
+      <div class="metric-card"><span class="label">Quantity basis: consumption-dependent</span><div class="value">84</div><div class="note">Opening stock plus reorder, no invented consumption rate</div></div>
+    </div>
+
+    <h3>Procurement readiness, honestly stated</h3>
+    <p>This register is genuinely detailed enough to identify what to buy, how many, and what specification for the large majority of the business (furniture, equipment, consumables, PPE, cleaning, IT, branding). It is <strong>not</strong> a complete, quotable fit-out cost: construction/fit-out, exact electrical/lighting/plumbing fixture counts, toilet-count-dependent consumable volumes, and the external Cafe food supplier's own pricing remain genuinely open, not overlooked. 15 procurement packages and an Opening Day Procurement Checklist are built from the same register. No purchase, RFQ, or supplier contact has been made.</p>
+
+    <div class="callout brown">
+      <span class="callout-label">What remains genuinely open</span>
+      External Cafe food supplier not yet identified; WorkSafe-WA-familiar LEV contractor not yet identified; laundry model (in-house vs outsourced) not confirmed; Massage station format (table vs chair) a genuine founder decision; final treatment/phlebotomist employment pool sizes still gate exact locker/uniform counts; toilet-count-dependent items await a confirmed venue.
+    </div>
+  </div>
+</section>
+
 <!-- ================= WDP ACTION ================= -->
 <section id="wdp">
   <div class="container">
@@ -416,6 +449,13 @@ const SEARCH_INDEX = [
   {title:"China/Australia sourcing strategy", chapter:"Fit-Out / Procurement", excerpt:"Real sourcing-agent research (Epic Sourcing Australia, FBM Sourcing, Sourci), Hybrid procurement-model recommendation, landed-cost framework, station-program investigation. No supplier contacted.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/CHINA-AUSTRALIA-SOURCING-STRATEGY.md"},
   {title:"Sourcing agent research findings", chapter:"Fit-Out / Procurement", excerpt:"Epic Sourcing Australia (strongest fit, furniture-specialised, hospitality-sector claim), FBM Sourcing (China-based FF&E specialist), Sourci (weak fit, no commercial-furniture evidence). Ali Baba Furniture corrected, general retailer, not a project partner.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/CHINA-AUSTRALIA-SOURCING-STRATEGY.md"},
   {title:"Blood Collection Room count", chapter:"Fit-Out / Procurement", excerpt:"Recommendation: one room, built and serviced for 3 chairs from day one, not two separate rooms, reasoned from the venue's own real growth lever (Scenario D's 3rd chair), workflow, and cost.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/FIT-OUT-PROGRAM-DECISION-ANALYSIS.md"},
+  {title:"Master Procurement Register", chapter:"Procurement", excerpt:"306 itemised rows across 26 categories, 281 distinct purchasable items. Every quantity classified LOCKED/CALCULATED/SITE-DEPENDENT/STAFF-DEPENDENT/CONSUMPTION-DEPENDENT/OPTIONAL/PROFESSIONAL-VERIFICATION/FOUNDER-DECISION/WDP-DEPENDENT, never invented.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md"},
+  {title:"Blood Collection procurement", chapter:"Procurement", excerpt:"Maximum-detail section: ~40 items distinguishing GTT-purchased, WDP-supplied, WDP-dependent, and professional-verification-required. Centrifuge is the single most critical piece of equipment in the venue.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md"},
+  {title:"Cafe procurement", chapter:"Procurement", excerpt:"Full-size beverage fridge, display fridge, coffee machine, chilled/boiling water tap, toastie press, crockery, takeaway items. External food supplier not yet identified, a genuine dependency.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md"},
+  {title:"Nail/Pedicure procurement", chapter:"Procurement", excerpt:"4 nail stations, 4 pipeless pedicure chairs in the same zone (not an additional 8-station expansion). LEV extraction mandatory; no WorkSafe-WA-familiar contractor identified yet.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md"},
+  {title:"Massage/Beauty procurement", chapter:"Procurement", excerpt:"3 Massage stations (format table vs chair still a founder decision), 3 Beauty stations (recommended, matching Massage, pending sign-off). Both options' procurement implications shown, neither silently resolved.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md"},
+  {title:"Opening Day Procurement Checklist", chapter:"Procurement", excerpt:"Practical checklist of what must physically be present before the first client arrives: toilet paper, PPE, clinical consumables, cafe stock, POS/booking system, uniforms, bins, emergency equipment, signage.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md"},
+  {title:"Procurement sourcing breakdown", chapter:"Procurement", excerpt:"42 China candidates, 110 Australian-only purchases, 93 hybrid/source-dependent, 7 professional-procurement (clinical), 26 venue-dependent, 2 WDP-dependent.", link:"https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md"},
 ];
 
 function renderSearchResults(query){
@@ -454,6 +494,7 @@ const AI_QA = [
   {q:"Which venue requirements are mandatory?", a:"Minimum functional floor area ~239-242sqm; the Blood Collection Room must have solid walls (the only room that does); parking is non-negotiable, minimum 8-10 dedicated or immediately adjacent off-street spaces; 4 treatment rooms, 4 nail stations, 4 hair chairs at day-one commitment. No candidate venue has confirmed zoning/permitted-use status yet.", source:"Dossier Chapter 19 Venue, Chapter 20 Floor Plan"},
   {q:"What's the status of the fit-out procurement brief?", a:"Draft, ready for internal review, not sent to any supplier. Triggered by 2 Made-in-China suppliers found for reference (Guangzhou XERA Display, Guangzhou Brutalist Store Display Products), neither contacted, neither assumed suitable, no work awarded. Nail+Pedicure and Massage are CONFIRMED reconciled with the currently-costed model, no expansion. Blood Collection Room count and Beauty station count now each carry a specific recommendation (one room built for 3 chairs; 3 Beauty stations matching Massage), pending Anthony's sign-off.", source:"docs/architecture/FIT-OUT-PROGRAM-DECISION-ANALYSIS.md Round 3"},
   {q:"Should we source the fit-out from China directly or use a sourcing agent?", a:"Recommendation (not yet Anthony's decision): a Hybrid model, an Australian-based sourcing agent (Epic Sourcing Australia is the strongest evidenced candidate found, furniture-specialised with an explicit hospitality-sector claim) for China-suitable categories, independent 3rd-party pre-shipment inspection (SGS/Bureau Veritas/QIMA, US$149-350/inspection-day) regardless of route, and Australian sourcing kept unchanged for clinical/regulated items (phlebotomy chairs, pathology equipment, fire/life-safety, TGA-regulated items). No agent contacted, no purchase made.", source:"docs/architecture/CHINA-AUSTRALIA-SOURCING-STRATEGY.md §5"},
+  {q:"Where are we up to with procurement?", a:"The Master Procurement Register (MASTER-PROCUREMENT-SHOPPING-LIST.md) is built: 306 itemised rows across 26 categories, 281 distinct purchasable items after removing cross-reference duplicates. 70 items already carry an existing repository price; the rest need a quote (professional trade, China RFQ, or site quote once a venue is confirmed). Sourcing breakdown: 42 China candidates, 110 Australian-only, 93 hybrid/source-dependent, 7 professional-procurement (clinical), 26 venue-dependent, 2 WDP-dependent. Genuinely open: the external Cafe food supplier (not yet identified), a WorkSafe-WA-familiar LEV contractor for Nail ventilation (not yet identified), the laundry model (in-house vs outsourced, not confirmed), and the Massage table-vs-chair format (a real founder decision). No supplier, sourcing agent, or WDP contact has been made; no purchase or RFQ has been sent. This is not a complete fit-out cost: construction, exact fixture counts, and toilet-count-dependent volumes remain genuinely open pending a confirmed venue.", source:"docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md"},
 ];
 
 function renderAiExamples(){
