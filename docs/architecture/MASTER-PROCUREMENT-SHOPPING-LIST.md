@@ -14,47 +14,53 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **Research standard applied in this document:** genuine information gaps that can be answered through research have been researched this round (WA Skin Penetration Code, WA Food Business Risk Classification, cleaning/infection-control product categories), not left as "needs research." Genuinely open founder decisions and genuinely site-dependent items are labelled as such, not disguised as research gaps.
 
+**Readiness key (2026-08-23, audited across every row):** every distinct item carries exactly one primary Readiness status, computed from its own Quantity Basis, Sourcing, and WDP-dependency fields, not assigned separately from them. A. ORDER READY (specification and quantity are locked and an existing repository price exists; still requires an actual supplier order, not yet placed). B. RFQ READY (specification and quantity are known or calculable; a real supplier quote is the next step). C. SITE DEPENDENT (cannot be finalised until a venue is confirmed and measured). D. PROFESSIONAL VERIFICATION REQUIRED (a named type of Australian professional, e.g. electrician, plumber, HVAC/LEV contractor, building surveyor, must confirm the specification first). E. WDP DEPENDENT (depends on the pathology partner's final commercial arrangement or supply confirmation). F. FOUNDER DECISION REQUIRED (a genuine, unresolved decision blocks this item, not silently resolved here). G. INFORMATION REQUIRED (a specific, named piece of information is missing, stated explicitly, not a vague "needs research"). H. FUTURE / OPTIONAL (a genuine upgrade or Phase 2+ item, not required to open).
+
+**Current Readiness totals (281 distinct items, 25 cross-reference rows excluded from scoring since they are not separate purchase decisions):** A. ORDER READY: 39. B. RFQ READY: 149. C. SITE DEPENDENT: 24. D. PROFESSIONAL VERIFICATION REQUIRED: 28. E. WDP DEPENDENT: 3. F. FOUNDER DECISION REQUIRED: 15. G. INFORMATION REQUIRED: 9. H. FUTURE / OPTIONAL: 14.
+
+**What this means in plain terms:** 39 items could be ordered today if a supplier were engaged (specification and quantity are not in question). 149 items are ready for a real supplier quote once one is sought. 24 items and 28 professional-verification items cannot progress until a venue is confirmed and the relevant trade/professional is engaged. 3 items wait on WDP. 15 items are blocked by a real, named founder decision. 9 items are missing a specific, named piece of information. 14 items are genuine future/optional upgrades, not required to open. **No purchase, RFQ, or supplier/agent contact has been made.**
+
 ---
 
 ## A. Venue / General Building
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| A01 | Venue | General | Fire extinguishers | ABE-rated dry chemical, per venue floor area | To be determined | each | PROFESSIONAL-VERIFICATION | No | N/A | AU | Fire safety officer/building surveyor sign-off | No | Yes | No | Yes | Open | Local council/building code will dictate exact count and type |
-| A02 | Venue | General | Emergency exit signage | Illuminated, AS 2293 compliant | To be determined | each | SITE-DEPENDENT | No | N/A | AU | AS 2293, building surveyor | No | Yes | No | Yes | Open | Depends on venue exit configuration |
-| A03 | Venue | General | Smoke detectors/alarm system | Building-code compliant | To be determined | each | PROFESSIONAL-VERIFICATION | No | N/A | AU | Building surveyor, fire safety | No | Yes | No | Yes | Open | Likely landlord/base-building responsibility, confirm at lease |
-| A04 | Venue | General | Air conditioning/HVAC servicing | Ongoing service contract | 1 | contract | SITE-DEPENDENT | No | Yes, annual | AU | HVAC contractor | No | Yes | No | Yes | Open | Depends on existing venue plant |
-| A05 | Venue | General | Power outlets (GPO), general | Standard double GPO, per room per the venue program | To be determined | each | PROFESSIONAL-VERIFICATION | No | N/A | AU | Licensed electrician | No | Yes | No | Yes | Open | Exact count is an electrician's job, not a shopping-list quantity |
-| A06 | Venue | General | Data/network cabling | Cat6, to reception, cafe POS, and any networked device location | To be determined | run | PROFESSIONAL-VERIFICATION | No | N/A | AU | Licensed data cabler | No | Yes | No | Yes | Open | Site-specific |
-| A07 | Venue | General | Building insurance certificate of currency | Public Liability + Professional Indemnity + Property/Contents, A$708.34/month (Chapter 27) | 1 | policy | LOCKED | No | Yes, annual | AU | Insurance broker | No | Yes | No | No | Open | Real broker quotes already in motion |
-| A08 | Venue | General | Business name/lease signage (external) | Design-dependent, gated on the final name decision (Chapter 5) | 1 | unit | FOUNDER-DECISION | No | N/A | AU | Local council signage permit | No | Yes | No | Yes | Open | Cannot be finalised until SOLENA/ELOWEN is decided |
-| A09 | Venue | General | Floor mats (entry, wet-weather) | Commercial-grade, slip-resistant | 2-3 | each | SITE-DEPENDENT | Yes | Yes | AU | AS/NZS 4586 slip resistance | No | Yes | No | Yes | Open | |
-| A10 | Venue | General | Umbrella stand | For wet-weather clients | 1 | each | LOCKED | No | No | CN | None | Yes | Yes | No | No | Open | Low-value, either sourcing works |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| A01 | Venue | General | Fire extinguishers | ABE-rated dry chemical, per venue floor area | To be determined | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | N/A | AU | Fire safety officer/building surveyor sign-off | No | Yes | No | Yes | Open | Local council/building code will dictate exact count and type |
+| A02 | Venue | General | Emergency exit signage | Illuminated, AS 2293 compliant | To be determined | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | N/A | AU | AS 2293, building surveyor | No | Yes | No | Yes | Open | Depends on venue exit configuration |
+| A03 | Venue | General | Smoke detectors/alarm system | Building-code compliant | To be determined | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | N/A | AU | Building surveyor, fire safety | No | Yes | No | Yes | Open | Likely landlord/base-building responsibility, confirm at lease |
+| A04 | Venue | General | Air conditioning/HVAC servicing | Ongoing service contract | 1 | contract | SITE-DEPENDENT | C. SITE DEPENDENT | No | Yes, annual | AU | HVAC contractor | No | Yes | No | Yes | Open | Depends on existing venue plant |
+| A05 | Venue | General | Power outlets (GPO), general | Standard double GPO, per room per the venue program | To be determined | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | N/A | AU | Licensed electrician | No | Yes | No | Yes | Open | Exact count is an electrician's job, not a shopping-list quantity |
+| A06 | Venue | General | Data/network cabling | Cat6, to reception, cafe POS, and any networked device location | To be determined | run | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | N/A | AU | Licensed data cabler | No | Yes | No | Yes | Open | Site-specific |
+| A07 | Venue | General | Building insurance certificate of currency | Public Liability + Professional Indemnity + Property/Contents, A$708.34/month (Chapter 27) | 1 | policy | LOCKED | B. RFQ READY | No | Yes, annual | AU | Insurance broker | No | Yes | No | No | Open | Real broker quotes already in motion |
+| A08 | Venue | General | Business name/lease signage (external) | Design-dependent, gated on the final name decision (Chapter 5) | 1 | unit | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | N/A | AU | Local council signage permit | No | Yes | No | Yes | Open | Cannot be finalised until SOLENA/ELOWEN is decided |
+| A09 | Venue | General | Floor mats (entry, wet-weather) | Commercial-grade, slip-resistant | 2-3 | each | SITE-DEPENDENT | C. SITE DEPENDENT | Yes | Yes | AU | AS/NZS 4586 slip resistance | No | Yes | No | Yes | Open | |
+| A10 | Venue | General | Umbrella stand | For wet-weather clients | 1 | each | LOCKED | B. RFQ READY | No | No | CN | None | Yes | Yes | No | No | Open | Low-value, either sourcing works |
 
 ---
 
 ## B. Reception
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| B01 | Reception | Reception | Reception counter | 900mm standard height + 750mm low accessible section, warm stone/timber finish matching the locked palette | 1 | each | LOCKED | No | No | SITE | Custom, site-installed local trade, not a shippable import | No | Yes | No | Yes | Open | Structural build, not a China-sourceable item |
-| B02 | Reception | Reception | Reception chair (Venue Manager) | Ergonomic office chair | 1 | each | LOCKED | No | No | HY | None | Possible | Either | No | No | Open | |
-| B03 | Reception | Reception | Computer/laptop | Business-grade, A$800-1,500 | 1 | each | LOCKED | No | No | AU | None | No | Yes | No | No | Priced | A$800-1,500, JB Hi-Fi/Officeworks business account |
-| B04 | Reception | Reception | Monitor | Standard business monitor | 1 | each | LOCKED | No | No | HY | None | Possible | Either | No | No | Open | |
-| B05 | Reception | Reception | Keyboard/mouse | Standard | 1 set | each | LOCKED | No | No | HY | None | Possible | Either | No | No | Open | |
-| B06 | Reception | Reception | Phone (landline or VoIP) | Business line | 1 | each | LOCKED | No | No | AU | Telco compliance | No | Yes | No | No | Open | |
-| B07 | Reception | Reception | POS terminal | Square/Tyro/Stripe Reader, A$0-120 | 2 | each | LOCKED | No | No | AU | Payment-industry standard | No | Yes | No | No | Priced | A$0-120, Square Terminal A$299 alternative |
-| B08 | Reception | Reception | iPad (9th gen or Air), core | Booking/check-in via Fresha | 2 | each | LOCKED | No | No | AU | N/A | No | Yes | No | No | Priced | A$550-750 each |
-| B09 | Reception | Reception | iPad kiosk stand | Lockable, charging | 2-3 | each | LOCKED | No | No | AU | Electrical safety mark on charging module | No | Yes | No | No | Priced | A$80-150 each |
-| B10 | Reception | Reception | B&W laser printer | For consent forms, referral copies | 1 | each | LOCKED | No | No | AU | None | No | Yes | No | No | Priced | A$200-400 |
-| B11 | Reception | Reception | Colour inkjet printer | Optional upgrade | 1 | each | OPTIONAL | No | No | AU | None | No | Yes | No | No | Priced | A$150-300, deferred in MVP scenario |
-| B12 | Reception | Reception | Scanner | If separate from printer | 0-1 | each | OPTIONAL | No | No | AU | None | No | Yes | No | No | Open | Most business printers include scan function, may not be a separate purchase |
-| B13 | Reception | Reception | Booking software subscription (Fresha) | Team plan, 1-2 seats | 1 | subscription | LOCKED | No | N/A | AU | N/A | No | Yes | No | No | Priced | A$14.95/user/month |
-| B14 | Reception | Reception | Cable management (under-desk) | Standard | 1 lot | each | LOCKED | No | No | CN | None | Yes | Yes | No | No | Open | |
-| B15 | Reception | Reception | Stationery (pens, notepads, staplers, folders) | General office | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | Opening stock policy TBD |
-| B16 | Reception | Reception | Filing storage (lockable, for referral forms/patient records) | Lockable cabinet | 1 | each | LOCKED | No | No | HY | Privacy Act record-keeping compliance | Possible | Either | No | No | Open | 7-year retention requirement (Chapter 7) |
-| B17 | Reception | Reception | Charging station (staff phones/devices) | Multi-port USB | 1 | each | LOCKED | No | No | CN | Electrical safety mark | Yes | Yes | No | No | Open | |
-| B18 | Reception | Reception | Retail display shelving | Wall-mounted, visible from Lounge | 1 | each | FOUNDER-DECISION | No | No | HY | None | Possible | Either | No | Yes | Open | Retail is not currently a priority; no locked brand selected, per current direction |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| B01 | Reception | Reception | Reception counter | 900mm standard height + 750mm low accessible section, warm stone/timber finish matching the locked palette | 1 | each | LOCKED | B. RFQ READY | No | No | SITE | Custom, site-installed local trade, not a shippable import | No | Yes | No | Yes | Open | Structural build, not a China-sourceable item |
+| B02 | Reception | Reception | Reception chair (Venue Manager) | Ergonomic office chair | 1 | each | LOCKED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Open | |
+| B03 | Reception | Reception | Computer/laptop | Business-grade, A$800-1,500 | 1 | each | LOCKED | A. ORDER READY | No | No | AU | None | No | Yes | No | No | Priced | A$800-1,500, JB Hi-Fi/Officeworks business account |
+| B04 | Reception | Reception | Monitor | Standard business monitor | 1 | each | LOCKED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Open | |
+| B05 | Reception | Reception | Keyboard/mouse | Standard | 1 set | each | LOCKED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Open | |
+| B06 | Reception | Reception | Phone (landline or VoIP) | Business line | 1 | each | LOCKED | B. RFQ READY | No | No | AU | Telco compliance | No | Yes | No | No | Open | |
+| B07 | Reception | Reception | POS terminal | Square/Tyro/Stripe Reader, A$0-120 | 2 | each | LOCKED | A. ORDER READY | No | No | AU | Payment-industry standard | No | Yes | No | No | Priced | A$0-120, Square Terminal A$299 alternative |
+| B08 | Reception | Reception | iPad (9th gen or Air), core | Booking/check-in via Fresha | 2 | each | LOCKED | A. ORDER READY | No | No | AU | N/A | No | Yes | No | No | Priced | A$550-750 each |
+| B09 | Reception | Reception | iPad kiosk stand | Lockable, charging | 2-3 | each | LOCKED | A. ORDER READY | No | No | AU | Electrical safety mark on charging module | No | Yes | No | No | Priced | A$80-150 each |
+| B10 | Reception | Reception | B&W laser printer | For consent forms, referral copies | 1 | each | LOCKED | A. ORDER READY | No | No | AU | None | No | Yes | No | No | Priced | A$200-400 |
+| B11 | Reception | Reception | Colour inkjet printer | Optional upgrade | 1 | each | OPTIONAL | H. FUTURE / OPTIONAL | No | No | AU | None | No | Yes | No | No | Priced | A$150-300, deferred in MVP scenario |
+| B12 | Reception | Reception | Scanner | If separate from printer | 0-1 | each | OPTIONAL | H. FUTURE / OPTIONAL | No | No | AU | None | No | Yes | No | No | Open | Most business printers include scan function, may not be a separate purchase |
+| B13 | Reception | Reception | Booking software subscription (Fresha) | Team plan, 1-2 seats | 1 | subscription | LOCKED | A. ORDER READY | No | N/A | AU | N/A | No | Yes | No | No | Priced | A$14.95/user/month |
+| B14 | Reception | Reception | Cable management (under-desk) | Standard | 1 lot | each | LOCKED | B. RFQ READY | No | No | CN | None | Yes | Yes | No | No | Open | |
+| B15 | Reception | Reception | Stationery (pens, notepads, staplers, folders) | General office | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | Opening stock policy TBD |
+| B16 | Reception | Reception | Filing storage (lockable, for referral forms/patient records) | Lockable cabinet | 1 | each | LOCKED | B. RFQ READY | No | No | HY | Privacy Act record-keeping compliance | Possible | Either | No | No | Open | 7-year retention requirement (Chapter 7) |
+| B17 | Reception | Reception | Charging station (staff phones/devices) | Multi-port USB | 1 | each | LOCKED | B. RFQ READY | No | No | CN | Electrical safety mark | Yes | Yes | No | No | Open | |
+| B18 | Reception | Reception | Retail display shelving | Wall-mounted, visible from Lounge | 1 | each | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | No | HY | None | Possible | Either | No | Yes | Open | Retail is not currently a priority; no locked brand selected, per current direction |
 
 **Explicitly not procured: a dedicated PM Reception workstation or role.** PM reception is covered by rostered service staff during natural gaps between their own PM bookings (Model C, confirmed founder decision), using the same Fresha/POS equipment already itemised above, not a second set of reception equipment.
 
@@ -64,34 +70,34 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **Current model (researched and current, not a snack-pack model):** clients purchase food and beverages directly. Food is not manufactured or cooked from raw ingredients on site; it is supplied pre-made by an external supplier (not yet identified, a genuine procurement dependency, not invented here), stored correctly, and displayed for sale. Selected items may be warmed or toasted on site. Coffee and other hot/cold drinks are available for purchase. Free water and herbal tea remain available to every client regardless of purchase. Researched this round against the WA Food Business Risk Classification System's own 2024 scoring rubric: this model scores in the Low risk band (approximately 36 points of 7-39), with council notification still required at least 14 days before trading regardless of tier.
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| C01 | Cafe | Food Service Equipment | Full-size beverage refrigerator | Commercial grade | 1 | each | LOCKED | No | No | AU | Food-safety cold-chain requirement | No | Yes | No | No | Priced | A$800-1,800 |
-| C02 | Cafe | Refrigeration | Display refrigerator (sandwiches/rolls) | Temperature-controlled, customer-visible | 1 | each | LOCKED | No | No | AU | Food-safety cold-chain requirement | No | Yes | No | No | Priced | A$1,200-2,500 |
-| C03 | Cafe | Beverage Equipment | Coffee machine | Espresso-capable, hot and cold drink formats | 1 | each | LOCKED | No | No | HY | Electrical safety mark | Possible for base unit, service/parts AU | Either | No | No | Priced | A$1,500-4,000 |
-| C04 | Cafe | Beverage Equipment | Chilled and boiling water tap | Under-counter unit | 1 | each | LOCKED | No | No | AU | Plumbing, electrical safety mark | No | Yes | No | Yes | Priced | A$800-1,800; requires plumbed water supply, site-dependent install |
-| C05 | Cafe | Heating/Toasting | Toastie press | Commercial grade | 1 | each | LOCKED | No | No | HY | Electrical safety mark | Possible | Either | No | No | Priced | A$150-350 |
-| C06 | Cafe | Storage | Food storage containers (sealed, stackable) | Commercial food-grade | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Food-safety storage requirement | Yes | Either | No | No | Open | |
-| C07 | Cafe | Food Safety | Fridge/freezer thermometer | Digital, with log sheet | 2 | each | LOCKED | No | No | AU | Food-safety cold-chain temperature logging | No | Yes | No | No | Open | Low cost |
-| C08 | Cafe | Food Safety | Food handling gloves | Disposable, food-grade | 1 lot | box | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Food handling standard | Yes | Either | No | No | Open | |
-| C09 | Cafe | Food Safety | Chopping board/utensils (toastie assembly only, no raw-ingredient prep) | Colour-coded, dishwasher-safe | 1 set | set | LOCKED | No | No | CN | Food-safety hygiene | Yes | Yes | No | No | Open | Assembly/toasting only, not raw-ingredient cooking |
-| C10 | Cafe | Crockery | Cups (dine-in) | Ceramic, branded or plain per current brand palette | 24-36 | each | CONSUMPTION-DEPENDENT | Yes | Yes | HY | None | Yes | Either | No | No | Open | |
-| C11 | Cafe | Crockery | Plates (dine-in) | Ceramic | 12-24 | each | CONSUMPTION-DEPENDENT | Yes | Yes | HY | None | Yes | Either | No | No | Open | |
-| C12 | Cafe | Takeaway Items | Takeaway cups (hot drinks) | Compostable/recyclable, branded | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | CN | Food-safe packaging standard | Yes | Yes | No | No | Open | |
-| C13 | Cafe | Takeaway Items | Takeaway lids | Matching takeaway cup size | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | CN | Food-safe packaging standard | Yes | Yes | No | No | Open | |
-| C14 | Cafe | Takeaway Items | Napkins | Branded or plain | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | |
-| C15 | Cafe | Takeaway Items | Cutlery (disposable or reusable) | Food-grade | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Food-safe standard | Yes | Either | No | No | Open | Reusable preferred for the premium positioning, disposable as a fallback |
-| C16 | Cafe | Display | Customer-accessible display shelving | Self-selection of packaged items | 1 | each | LOCKED | No | No | HY | None | Possible | Either | No | No | Priced | A$150-400 |
-| C17 | Cafe | Display | Menu board/signage | Design-dependent, current brand palette | 1 | each | FOUNDER-DECISION | No | No | HY | None | Possible | Either | No | Yes | Open | Gated on final naming decision |
-| C18 | Cafe | POS | Cafe POS integration | Shares reception's POS terminal (B07), not a separate purchase | 0 | each | LOCKED | No | No | AU | N/A | No | Yes | No | No | Locked | No separate cafe POS hardware required |
-| C19 | Cafe | Staff Equipment | Preparation/serving counter | Within the Cafe's existing solid-walled footprint | 1 | each | SITE-DEPENDENT | No | No | SITE | Local trade, food-business fitout standard | No | Yes | No | Yes | Open | Custom, site-installed |
-| C20 | Cafe | Staff Equipment | Handwashing station (Cafe-specific) | Separate from any clinical hand-hygiene station | 1 | each | PROFESSIONAL-VERIFICATION | No | No | AU | WA food-business hygiene requirement | No | Yes | No | Yes | Open | Confirm exact requirement with local council EHO |
-| C21 | Cafe | Waste | Cafe-specific waste bin (food waste, separate from general/biohazard) | Lidded, foot-pedal | 1-2 | each | LOCKED | No | No | HY | Food-safety waste segregation | Possible | Either | No | No | Open | |
-| C22 | Cafe | Supplier/Food Stock | Pre-made sandwiches/rolls | External supplier, not yet identified | Ongoing | unit | CONSUMPTION-DEPENDENT | Yes | Yes | PRO | WA food business notification, supplier's own food-safety certification | No | Yes (supplier, not this venture) | No | No | Open | **Genuine procurement dependency: no external food supplier identified yet, not invented here** |
-| C23 | Cafe | Supplier/Food Stock | Coffee beans/milk/syrups | Wholesale coffee supplier | Ongoing | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Food-safety storage | No | Yes | No | No | Open | Supplier not yet selected |
-| C24 | Cafe | Supplier/Food Stock | Herbal tea (free to all clients) | Bulk supply | Ongoing | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | |
-| C25 | Cafe | Supplier/Food Stock | Bottled/canned cold drinks | Wholesale beverage supplier | Ongoing | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | |
-| C26 | Cafe | Food Safety | Food Business Notification (local council) | Administrative, not a physical item, required at least 14 days before trading | 1 | filing | PROFESSIONAL-VERIFICATION | No | N/A | AU | WA Food Act 2008, Food Business Notification Form | No | N/A | No | Yes | Open | Council-specific, gated on venue confirmation |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| C01 | Cafe | Food Service Equipment | Full-size beverage refrigerator | Commercial grade | 1 | each | LOCKED | A. ORDER READY | No | No | AU | Food-safety cold-chain requirement | No | Yes | No | No | Priced | A$800-1,800 |
+| C02 | Cafe | Refrigeration | Display refrigerator (sandwiches/rolls) | Temperature-controlled, customer-visible | 1 | each | LOCKED | A. ORDER READY | No | No | AU | Food-safety cold-chain requirement | No | Yes | No | No | Priced | A$1,200-2,500 |
+| C03 | Cafe | Beverage Equipment | Coffee machine | Espresso-capable, hot and cold drink formats | 1 | each | LOCKED | A. ORDER READY | No | No | HY | Electrical safety mark | Possible for base unit, service/parts AU | Either | No | No | Priced | A$1,500-4,000 |
+| C04 | Cafe | Beverage Equipment | Chilled and boiling water tap | Under-counter unit | 1 | each | LOCKED | A. ORDER READY | No | No | AU | Plumbing, electrical safety mark | No | Yes | No | Yes | Priced | A$800-1,800; requires plumbed water supply, site-dependent install |
+| C05 | Cafe | Heating/Toasting | Toastie press | Commercial grade | 1 | each | LOCKED | A. ORDER READY | No | No | HY | Electrical safety mark | Possible | Either | No | No | Priced | A$150-350 |
+| C06 | Cafe | Storage | Food storage containers (sealed, stackable) | Commercial food-grade | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Food-safety storage requirement | Yes | Either | No | No | Open | |
+| C07 | Cafe | Food Safety | Fridge/freezer thermometer | Digital, with log sheet | 2 | each | LOCKED | B. RFQ READY | No | No | AU | Food-safety cold-chain temperature logging | No | Yes | No | No | Open | Low cost |
+| C08 | Cafe | Food Safety | Food handling gloves | Disposable, food-grade | 1 lot | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Food handling standard | Yes | Either | No | No | Open | |
+| C09 | Cafe | Food Safety | Chopping board/utensils (toastie assembly only, no raw-ingredient prep) | Colour-coded, dishwasher-safe | 1 set | set | LOCKED | B. RFQ READY | No | No | CN | Food-safety hygiene | Yes | Yes | No | No | Open | Assembly/toasting only, not raw-ingredient cooking |
+| C10 | Cafe | Crockery | Cups (dine-in) | Ceramic, branded or plain per current brand palette | 24-36 | each | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | None | Yes | Either | No | No | Open | |
+| C11 | Cafe | Crockery | Plates (dine-in) | Ceramic | 12-24 | each | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | None | Yes | Either | No | No | Open | |
+| C12 | Cafe | Takeaway Items | Takeaway cups (hot drinks) | Compostable/recyclable, branded | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | Food-safe packaging standard | Yes | Yes | No | No | Open | |
+| C13 | Cafe | Takeaway Items | Takeaway lids | Matching takeaway cup size | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | Food-safe packaging standard | Yes | Yes | No | No | Open | |
+| C14 | Cafe | Takeaway Items | Napkins | Branded or plain | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | |
+| C15 | Cafe | Takeaway Items | Cutlery (disposable or reusable) | Food-grade | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Food-safe standard | Yes | Either | No | No | Open | Reusable preferred for the premium positioning, disposable as a fallback |
+| C16 | Cafe | Display | Customer-accessible display shelving | Self-selection of packaged items | 1 | each | LOCKED | A. ORDER READY | No | No | HY | None | Possible | Either | No | No | Priced | A$150-400 |
+| C17 | Cafe | Display | Menu board/signage | Design-dependent, current brand palette | 1 | each | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | No | HY | None | Possible | Either | No | Yes | Open | Gated on final naming decision |
+| C18 | Cafe | POS | Cafe POS integration | Shares reception's POS terminal (B07), not a separate purchase | 0 | each | LOCKED | B. RFQ READY | No | No | AU | N/A | No | Yes | No | No | Locked | No separate cafe POS hardware required |
+| C19 | Cafe | Staff Equipment | Preparation/serving counter | Within the Cafe's existing solid-walled footprint | 1 | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | SITE | Local trade, food-business fitout standard | No | Yes | No | Yes | Open | Custom, site-installed |
+| C20 | Cafe | Staff Equipment | Handwashing station (Cafe-specific) | Separate from any clinical hand-hygiene station | 1 | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | AU | WA food-business hygiene requirement | No | Yes | No | Yes | Open | Confirm exact requirement with local council EHO |
+| C21 | Cafe | Waste | Cafe-specific waste bin (food waste, separate from general/biohazard) | Lidded, foot-pedal | 1-2 | each | LOCKED | B. RFQ READY | No | No | HY | Food-safety waste segregation | Possible | Either | No | No | Open | |
+| C22 | Cafe | Supplier/Food Stock | Pre-made sandwiches/rolls | External supplier, not yet identified | Ongoing | unit | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | PRO | WA food business notification, supplier's own food-safety certification | No | Yes (supplier, not this venture) | No | No | Open | **Genuine procurement dependency: no external food supplier identified yet, not invented here** |
+| C23 | Cafe | Supplier/Food Stock | Coffee beans/milk/syrups | Wholesale coffee supplier | Ongoing | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Food-safety storage | No | Yes | No | No | Open | Supplier not yet selected |
+| C24 | Cafe | Supplier/Food Stock | Herbal tea (free to all clients) | Bulk supply | Ongoing | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | |
+| C25 | Cafe | Supplier/Food Stock | Bottled/canned cold drinks | Wholesale beverage supplier | Ongoing | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | |
+| C26 | Cafe | Food Safety | Food Business Notification (local council) | Administrative, not a physical item, required at least 14 days before trading | 1 | filing | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | N/A | AU | WA Food Act 2008, Food Business Notification Form | No | N/A | No | Yes | Open | Council-specific, gated on venue confirmation |
 
 **Not procured: any snack pack. No item is provided to clients after the final blood draw as a separate food/snack service.** The glucose drink itself is a phlebotomist workflow item, covered under Blood Collection (Section E), not Cafe.
 
@@ -101,20 +107,20 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **Current model:** the Lounge is the waiting area, seated with couches, not reclining chairs. Approximately 3-4 three-seat couches, final quantity set by the actual floor area once a venue is confirmed. Clients not currently receiving a blood draw or treatment use the Lounge. Tablets are available for pregnancy/postpartum information and documents. The Lounge may later host classes or ticketed information sessions outside normal operating hours (a future-use consideration, not a day-one physical requirement beyond adequate general floor space).
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| D01 | Lounge | Furniture | Three-seat couch | Not reclining chairs, per current direction | 3-4 | each | SITE-DEPENDENT | No | No | HY | AS/NZS 4088 stability, upholstery flammability standard | Possible | Genuinely needs in-person testing before bulk purchase | No | Yes | Priced | A$1,200-3,000 each; final count set by venue floor area, do not lock a number before a venue is confirmed |
-| D02 | Lounge | Furniture | Side table with charging port | USB-A/USB-C | 4-6 | each | SITE-DEPENDENT | No | No | CN | Electrical safety mark on charging module | Yes | Yes | No | Yes | Priced | A$150-300 each |
-| D03 | Lounge | Furniture | Low coffee table | N/A | 3-4 | each | SITE-DEPENDENT | No | No | CN | None | Yes | Yes | No | Yes | Priced | A$100-250 each |
-| D04 | Lounge | Lighting | Floor lamp (soft, warm) | Matches the locked palette | 4 | each | LOCKED | No | No | CN | SAA electrical mark | Yes | Yes | No | No | Priced | A$80-150 each |
-| D05 | Lounge | Technology | Tablet (kiosk-mounted, pregnancy/postpartum information) | Curated content only, no open browser, no app store, no social login | 2 | each | LOCKED | No | No | AU | Kiosk-mode device management | No | Yes | No | No | Open | Content licensing and device brand not yet finalised |
-| D06 | Lounge | Technology | Tablet stand/mount | Kiosk-mode, secure, charging | 2 | each | LOCKED | No | No | CN | Electrical safety mark | Yes | Yes | No | No | Open | |
-| D07 | Lounge | Technology | Wi-Fi access point (Lounge zone) | Part of venue-wide network | 1 | each | LOCKED | No | No | AU | None | No | Yes | No | No | Open | Shared with venue-wide IT, Section T |
-| D08 | Lounge | Decor | Heated throw blankets | Complimentary for clients | 20 | each | CONSUMPTION-DEPENDENT | Yes | Yes | CN | Electrical safety mark | Yes | Yes | No | No | Priced | A$15-25 each |
-| D09 | Lounge | Decor | Curated reading material | Pregnancy/postpartum information and documents | 1 lot | lot | LOCKED | Yes | Yes | AU | None | No | Yes | No | No | Priced | A$200-400 |
-| D10 | Lounge | Decor | Signage (Lounge wayfinding) | Design-dependent | 1 | each | FOUNDER-DECISION | No | No | HY | None | Possible | Either | No | Yes | Open | Gated on naming decision |
-| D11 | Lounge | Waste | Bin (general waste, Lounge zone) | Lidded | 1-2 | each | SITE-DEPENDENT | No | No | CN | None | Yes | Yes | No | Yes | Open | |
-| D12 | Lounge | Future Use | Portable AV/PA equipment for classes/ticketed sessions | Only if the Lounge's future-use plan is activated | 0 (future) | each | FOUNDER-DECISION | No | No | AU | None | No | Yes | No | No | Open | Not a day-one requirement; flagged for the venture's own growth path, Chapter 33 |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| D01 | Lounge | Furniture | Three-seat couch | Not reclining chairs, per current direction | 3-4 | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | HY | AS/NZS 4088 stability, upholstery flammability standard | Possible | Genuinely needs in-person testing before bulk purchase | No | Yes | Priced | A$1,200-3,000 each; final count set by venue floor area, do not lock a number before a venue is confirmed |
+| D02 | Lounge | Furniture | Side table with charging port | USB-A/USB-C | 4-6 | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | CN | Electrical safety mark on charging module | Yes | Yes | No | Yes | Priced | A$150-300 each |
+| D03 | Lounge | Furniture | Low coffee table | N/A | 3-4 | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | CN | None | Yes | Yes | No | Yes | Priced | A$100-250 each |
+| D04 | Lounge | Lighting | Floor lamp (soft, warm) | Matches the locked palette | 4 | each | LOCKED | A. ORDER READY | No | No | CN | SAA electrical mark | Yes | Yes | No | No | Priced | A$80-150 each |
+| D05 | Lounge | Technology | Tablet (kiosk-mounted, pregnancy/postpartum information) | Curated content only, no open browser, no app store, no social login | 2 | each | LOCKED | B. RFQ READY | No | No | AU | Kiosk-mode device management | No | Yes | No | No | Open | Content licensing and device brand not yet finalised |
+| D06 | Lounge | Technology | Tablet stand/mount | Kiosk-mode, secure, charging | 2 | each | LOCKED | B. RFQ READY | No | No | CN | Electrical safety mark | Yes | Yes | No | No | Open | |
+| D07 | Lounge | Technology | Wi-Fi access point (Lounge zone) | Part of venue-wide network | 1 | each | LOCKED | B. RFQ READY | No | No | AU | None | No | Yes | No | No | Open | Shared with venue-wide IT, Section T |
+| D08 | Lounge | Decor | Heated throw blankets | Complimentary for clients | 20 | each | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | Electrical safety mark | Yes | Yes | No | No | Priced | A$15-25 each |
+| D09 | Lounge | Decor | Curated reading material | Pregnancy/postpartum information and documents | 1 lot | lot | LOCKED | A. ORDER READY | Yes | Yes | AU | None | No | Yes | No | No | Priced | A$200-400 |
+| D10 | Lounge | Decor | Signage (Lounge wayfinding) | Design-dependent | 1 | each | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | No | HY | None | Possible | Either | No | Yes | Open | Gated on naming decision |
+| D11 | Lounge | Waste | Bin (general waste, Lounge zone) | Lidded | 1-2 | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | CN | None | Yes | Yes | No | Yes | Open | |
+| D12 | Lounge | Future Use | Portable AV/PA equipment for classes/ticketed sessions | Only if the Lounge's future-use plan is activated | 0 (future) | each | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | No | AU | None | No | Yes | No | No | Open | Not a day-one requirement; flagged for the venture's own growth path, Chapter 33 |
 
 **Not procured: a small TV/screen, snack display stand, mini fridge, or herbal tea station in the Lounge.** Beverage/food service now belongs entirely to the Cafe (Section C); the Lounge is purely a waiting/seating area with tablets, per current direction.
 
@@ -126,68 +132,68 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 ### E1. Furniture and Clinical Work Surfaces
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| E01 | Blood Collection | Furniture | Phlebotomy chair (Chair A) | Reclines to flat, adjustable arm support, vinyl wipe-clean, wide/bariatric seat | 1 | each | LOCKED | No | No | PRO | Clinical suitability sign-off from the pathology partner | No | Yes, named Perth medical-furniture brands (Sunflower Medical, Alphatec Australia, Ultramedic) | No, GTT Center purchases | No | Priced | A$800-1,200 |
-| E02 | Blood Collection | Furniture | Phlebotomy chair (Chair B) | Same as E01 | 1 | each | LOCKED | No | No | PRO | Same as E01 | No | Yes | No | No | Priced | A$800-1,200 |
-| E03 | Blood Collection | Furniture | 3rd phlebotomy chair (growth reservation) | Same spec as E01/E02, room built to accommodate but not purchased at day-one | 0 (day-one), 1 (growth) | each | CALCULATED | No | No | PRO | Same as E01 | No | Yes | No | No | Open | Room is built/serviced for 3 chairs from day one (Chapter 20); the 3rd chair itself is a staffing/demand-triggered purchase, not a day-one purchase |
-| E04 | Blood Collection | Furniture | Vasovagal recliner/exam couch | Full recline to flat, separate from the 2 active phlebotomy chairs, for fainting/vasovagal recovery | 1 | each | LOCKED | No | No | AU | Non-TGA furniture item | No | Yes | No | No | Priced | A$500-900 |
-| E05 | Blood Collection | Furniture | Documentation desk/bench | 900mm min width | 1 | each | LOCKED | No | No | HY | None | Possible | Either | No | No | Open | |
-| E06 | Blood Collection | Furniture | Phlebotomist stool (adjustable height) | Wipe-clean, adjustable | 2 | each | LOCKED | No | No | HY | None | Possible | Either | No | No | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| E01 | Blood Collection | Furniture | Phlebotomy chair (Chair A) | Reclines to flat, adjustable arm support, vinyl wipe-clean, wide/bariatric seat | 1 | each | LOCKED | A. ORDER READY | No | No | PRO | Clinical suitability sign-off from the pathology partner | No | Yes, named Perth medical-furniture brands (Sunflower Medical, Alphatec Australia, Ultramedic) | No, GTT Center purchases | No | Priced | A$800-1,200 |
+| E02 | Blood Collection | Furniture | Phlebotomy chair (Chair B) | Same as E01 | 1 | each | LOCKED | A. ORDER READY | No | No | PRO | Same as E01 | No | Yes | No | No | Priced | A$800-1,200 |
+| E03 | Blood Collection | Furniture | 3rd phlebotomy chair (growth reservation) | Same spec as E01/E02, room built to accommodate but not purchased at day-one | 0 (day-one), 1 (growth) | each | CALCULATED | B. RFQ READY | No | No | PRO | Same as E01 | No | Yes | No | No | Open | Room is built/serviced for 3 chairs from day one (Chapter 20); the 3rd chair itself is a staffing/demand-triggered purchase, not a day-one purchase |
+| E04 | Blood Collection | Furniture | Vasovagal recliner/exam couch | Full recline to flat, separate from the 2 active phlebotomy chairs, for fainting/vasovagal recovery | 1 | each | LOCKED | A. ORDER READY | No | No | AU | Non-TGA furniture item | No | Yes | No | No | Priced | A$500-900 |
+| E05 | Blood Collection | Furniture | Documentation desk/bench | 900mm min width | 1 | each | LOCKED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Open | |
+| E06 | Blood Collection | Furniture | Phlebotomist stool (adjustable height) | Wipe-clean, adjustable | 2 | each | LOCKED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Open | |
 
 ### E2. Storage, Sharps Disposal, Clinical Waste
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| E07 | Blood Collection | Storage | Medical consumables cabinet (lockable) | N/A | 1 | each | LOCKED | No | No | HY | None | Possible | Either | No | No | Priced | A$200-400 |
-| E08 | Blood Collection | Storage | Patient documentation drawer (lockable) | Privacy Act compliant record storage | 1 | each | LOCKED | No | No | HY | Privacy Act record-keeping | Possible | Either | No | No | Priced | A$100-200 |
-| E09 | Blood Collection | Sharps Disposal | Sharps container, bench size (1.4L) | AS/NZS 23907:2023 compliant | 2 | each | LOCKED | Yes | Yes | AU | AS/NZS 23907:2023 | No | Yes, named brands (Daniels Health, Cleanaway Medical, Stericycle) | No | No | Priced | A$5-15 each, consumable |
-| E10 | Blood Collection | Sharps Disposal | Sharps container, room size (5L) | AS/NZS 23907:2023 compliant | 2 | each | LOCKED | Yes | Yes | AU | AS/NZS 23907:2023 | No | Yes | No | No | Priced | A$5-15 each, consumable |
-| E11 | Blood Collection | Sharps Disposal | Wall-mounted sharps container bracket | N/A | 2 | each | LOCKED | No | No | AU | AS/NZS 23907:2023 | No | Yes | No | No | Priced | A$20-40 each |
-| E12 | Blood Collection | Clinical Waste | Biohazard waste bin (yellow, lidded) | AS/NZS clinical waste standard | 2 | each | LOCKED | No | No | AU | Clinical waste handling standard | No | Yes | No | No | Priced | A$35-60 each |
-| E13 | Blood Collection | Clinical Waste | Biohazard specimen pouches | Box of 100 | 2 boxes | box | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Clinical waste standard | No | Yes | No | No | Priced | A$25-40/box |
-| E14 | Blood Collection | Clinical Waste | Medical waste disposal contract | Annual service, not a one-off purchase | 1 | contract | WDP-DEPENDENT | No | Yes, annual | AU | Council/WorkSafe WA compliance | No | Yes | Possibly, confirm whether WDP's own collection-centre setup already covers it | Yes (confirm at lease) | Open | **Genuine open dependency: whether WDP's own arrangement covers this, not assumed either way (Chapter 34)** |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| E07 | Blood Collection | Storage | Medical consumables cabinet (lockable) | N/A | 1 | each | LOCKED | A. ORDER READY | No | No | HY | None | Possible | Either | No | No | Priced | A$200-400 |
+| E08 | Blood Collection | Storage | Patient documentation drawer (lockable) | Privacy Act compliant record storage | 1 | each | LOCKED | A. ORDER READY | No | No | HY | Privacy Act record-keeping | Possible | Either | No | No | Priced | A$100-200 |
+| E09 | Blood Collection | Sharps Disposal | Sharps container, bench size (1.4L) | AS/NZS 23907:2023 compliant | 2 | each | LOCKED | A. ORDER READY | Yes | Yes | AU | AS/NZS 23907:2023 | No | Yes, named brands (Daniels Health, Cleanaway Medical, Stericycle) | No | No | Priced | A$5-15 each, consumable |
+| E10 | Blood Collection | Sharps Disposal | Sharps container, room size (5L) | AS/NZS 23907:2023 compliant | 2 | each | LOCKED | A. ORDER READY | Yes | Yes | AU | AS/NZS 23907:2023 | No | Yes | No | No | Priced | A$5-15 each, consumable |
+| E11 | Blood Collection | Sharps Disposal | Wall-mounted sharps container bracket | N/A | 2 | each | LOCKED | A. ORDER READY | No | No | AU | AS/NZS 23907:2023 | No | Yes | No | No | Priced | A$20-40 each |
+| E12 | Blood Collection | Clinical Waste | Biohazard waste bin (yellow, lidded) | AS/NZS clinical waste standard | 2 | each | LOCKED | A. ORDER READY | No | No | AU | Clinical waste handling standard | No | Yes | No | No | Priced | A$35-60 each |
+| E13 | Blood Collection | Clinical Waste | Biohazard specimen pouches | Box of 100 | 2 boxes | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Clinical waste standard | No | Yes | No | No | Priced | A$25-40/box |
+| E14 | Blood Collection | Clinical Waste | Medical waste disposal contract | Annual service, not a one-off purchase | 1 | contract | WDP-DEPENDENT | E. WDP DEPENDENT | No | Yes, annual | AU | Council/WorkSafe WA compliance | No | Yes | Possibly, confirm whether WDP's own collection-centre setup already covers it | Yes (confirm at lease) | Open | **Genuine open dependency: whether WDP's own arrangement covers this, not assumed either way (Chapter 34)** |
 
 ### E3. Specimen Handling and Pathology/Collection Equipment
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| E15 | Blood Collection | Specimen Handling | Tabletop centrifuge (refrigerated) | 3,000 RPM min, 8+ position rotor; GDM underdiagnosis risk without centrifugation within 10 minutes | 1 | each | LOCKED | No | No | WDP | NATA acceptance confirmation before purchase of any non-established-brand alternative | No | Yes, if purchased directly (Hettich Universal 320R, Thermo Scientific CL10) | Likely, sourced via the WDP relationship, not general retail | No | Priced | A$1,800-5,000; the single most critical piece of equipment in the venue, do not compromise on quality |
-| E16 | Blood Collection | Specimen Handling | Specimen refrigerator | 2-8°C, temperature logged | 1 | each | LOCKED | No | No | AU | Cold-chain, temperature-logging requirement | No | Yes | No | No | Open | |
-| E17 | Blood Collection | Specimen Handling | Insulated specimen transport bag | For courier/drop-off dispatch | 2 | each | LOCKED | No | Yes | AU | Cold-chain standard | No | Yes | No | No | Priced | A$40-60 each |
-| E18 | Blood Collection | Specimen Handling | Ice packs (reusable, cold chain) | N/A | 6 | each | LOCKED | Yes | Yes | AU | None | No | Yes | No | No | Priced | A$8-15 each |
-| E19 | Blood Collection | Specimen Handling | Thermal label printer | Zebra ZD420 or equivalent | 1 | each | LOCKED | No | No | AU | None | No | Yes | No | No | Priced | A$350 |
-| E20 | Blood Collection | Pathology Equipment | Pathology collection equipment (vacutainers, needles, tourniquets, alcohol swabs, gauze, tape) | GTT-specific (fluoride-oxalate tubes for GTT tubes) | Ongoing | lot | WDP-DEPENDENT | Yes | Yes | WDP | NATA Licensed Collection Centre umbrella | No | No | Yes, largely supplied under WDP's accreditation, not general retail | No | Open | **Do not invent pathology equipment WDP would supply beyond what current documentation establishes; final split confirmed once WDP's commercial arrangement is settled** |
-| E21 | Blood Collection | Glucose Drink | 75g glucose solution (Polycal or equivalent) | Commercially prepared, NOT home-made, one bottle per client, refrigerated | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Pathology-grade product | No | Yes | Possibly WDP-supplied, confirm | No | Open | Administered by the phlebotomist as part of the collection workflow, not a separate cafe/snack item |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| E15 | Blood Collection | Specimen Handling | Tabletop centrifuge (refrigerated) | 3,000 RPM min, 8+ position rotor; GDM underdiagnosis risk without centrifugation within 10 minutes | 1 | each | LOCKED | E. WDP DEPENDENT | No | No | WDP | NATA acceptance confirmation before purchase of any non-established-brand alternative | No | Yes, if purchased directly (Hettich Universal 320R, Thermo Scientific CL10) | Likely, sourced via the WDP relationship, not general retail | No | Priced | A$1,800-5,000; the single most critical piece of equipment in the venue, do not compromise on quality |
+| E16 | Blood Collection | Specimen Handling | Specimen refrigerator | 2-8°C, temperature logged | 1 | each | LOCKED | B. RFQ READY | No | No | AU | Cold-chain, temperature-logging requirement | No | Yes | No | No | Open | |
+| E17 | Blood Collection | Specimen Handling | Insulated specimen transport bag | For courier/drop-off dispatch | 2 | each | LOCKED | A. ORDER READY | No | Yes | AU | Cold-chain standard | No | Yes | No | No | Priced | A$40-60 each |
+| E18 | Blood Collection | Specimen Handling | Ice packs (reusable, cold chain) | N/A | 6 | each | LOCKED | A. ORDER READY | Yes | Yes | AU | None | No | Yes | No | No | Priced | A$8-15 each |
+| E19 | Blood Collection | Specimen Handling | Thermal label printer | Zebra ZD420 or equivalent | 1 | each | LOCKED | A. ORDER READY | No | No | AU | None | No | Yes | No | No | Priced | A$350 |
+| E20 | Blood Collection | Pathology Equipment | Pathology collection equipment (vacutainers, needles, tourniquets, alcohol swabs, gauze, tape) | GTT-specific (fluoride-oxalate tubes for GTT tubes) | Ongoing | lot | WDP-DEPENDENT | E. WDP DEPENDENT | Yes | Yes | WDP | NATA Licensed Collection Centre umbrella | No | No | Yes, largely supplied under WDP's accreditation, not general retail | No | Open | **Do not invent pathology equipment WDP would supply beyond what current documentation establishes; final split confirmed once WDP's commercial arrangement is settled** |
+| E21 | Blood Collection | Glucose Drink | 75g glucose solution (Polycal or equivalent) | Commercially prepared, NOT home-made, one bottle per client, refrigerated | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Pathology-grade product | No | Yes | Possibly WDP-supplied, confirm | No | Open | Administered by the phlebotomist as part of the collection workflow, not a separate cafe/snack item |
 
 ### E4. PPE, Hand Hygiene, Cleaning/Disinfection
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| E22 | Blood Collection | PPE | Disposable gloves (nitrile) | Powder-free | Ongoing | box | CONSUMPTION-DEPENDENT | Yes | Yes | AU | AS/NZS 4179/4011 | No | Yes | No | No | Open | |
-| E23 | Blood Collection | PPE | Face masks (surgical) | For phlebotomist use where clinically indicated | Ongoing | box | CONSUMPTION-DEPENDENT | Yes | Yes | HY | AS 4381 | Yes | Either | No | No | Open | |
-| E24 | Blood Collection | Hand Hygiene | Clinical sink + elbow/sensor tap fitout | Elbow-operated or sensor tap, stainless/tiled splashback | 1 | each | SITE-DEPENDENT | No | No | SITE | NSQHS Standards | No | Yes | No | Yes | Open | **Australian hydraulic verification required, local trade install** |
-| E25 | Blood Collection | Hand Hygiene | Alcohol-based hand rub (ABHR) dispenser | Wall-mounted | 2 | each | LOCKED | No | No | AU | Infection control standard | No | Yes | No | No | Open | |
-| E26 | Blood Collection | Hand Hygiene | Hand soap (clinical grade) | Dispenser refill | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Infection control standard | No | Yes | No | No | Open | |
-| E27 | Blood Collection | Hand Hygiene | Paper towel (clinical) | Dispenser refill | Ongoing | box | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Infection control standard | No | Yes | No | No | Open | |
-| E28 | Blood Collection | Cleaning | Surface disinfectant (hospital-grade) | TGA-listed disinfectant, effective against blood-borne pathogens | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | TGA listing | No | Yes | No | No | Open | Must be TGA-listed, not a generic household disinfectant |
-| E29 | Blood Collection | Cleaning | Blood spill kit | N/A | 2 | each | LOCKED | Yes | Yes | AU | Infection control standard | No | Yes | No | No | Priced | A$80-120 each |
-| E30 | Blood Collection | Cleaning | Disposable wipes (surface, clinical-grade) | N/A | Ongoing | box | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Infection control standard | No | Yes | No | No | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| E22 | Blood Collection | PPE | Disposable gloves (nitrile) | Powder-free | Ongoing | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | AS/NZS 4179/4011 | No | Yes | No | No | Open | |
+| E23 | Blood Collection | PPE | Face masks (surgical) | For phlebotomist use where clinically indicated | Ongoing | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | AS 4381 | Yes | Either | No | No | Open | |
+| E24 | Blood Collection | Hand Hygiene | Clinical sink + elbow/sensor tap fitout | Elbow-operated or sensor tap, stainless/tiled splashback | 1 | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | SITE | NSQHS Standards | No | Yes | No | Yes | Open | **Australian hydraulic verification required, local trade install** |
+| E25 | Blood Collection | Hand Hygiene | Alcohol-based hand rub (ABHR) dispenser | Wall-mounted | 2 | each | LOCKED | B. RFQ READY | No | No | AU | Infection control standard | No | Yes | No | No | Open | |
+| E26 | Blood Collection | Hand Hygiene | Hand soap (clinical grade) | Dispenser refill | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Infection control standard | No | Yes | No | No | Open | |
+| E27 | Blood Collection | Hand Hygiene | Paper towel (clinical) | Dispenser refill | Ongoing | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Infection control standard | No | Yes | No | No | Open | |
+| E28 | Blood Collection | Cleaning | Surface disinfectant (hospital-grade) | TGA-listed disinfectant, effective against blood-borne pathogens | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | TGA listing | No | Yes | No | No | Open | Must be TGA-listed, not a generic household disinfectant |
+| E29 | Blood Collection | Cleaning | Blood spill kit | N/A | 2 | each | LOCKED | A. ORDER READY | Yes | Yes | AU | Infection control standard | No | Yes | No | No | Priced | A$80-120 each |
+| E30 | Blood Collection | Cleaning | Disposable wipes (surface, clinical-grade) | N/A | Ongoing | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Infection control standard | No | Yes | No | No | Open | |
 
 ### E5. Privacy, Curtains, Walls/Partitions, Signage, Emergency
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| E31 | Blood Collection | Construction | Solid walls, one door, no public-facing window | Room construction, not a shippable product | 1 | room | LOCKED | No | No | SITE | Building surveyor, WA construction standard | No | Yes | No | Yes | Open | Built and serviced for 3 chairs from day one (Fit-Out Program Decision Analysis, Round 3) |
-| E32 | Blood Collection | Privacy | Per-chair curtain/partition between the up-to-3 chair positions | Washable curtain fabric | 2-3 | each | CALCULATED | No | No | HY | Infection control (washable fabric) | Possible | Either | No | Yes | Open | Matches the recommended growth-first 3-chair-ready design |
-| E33 | Blood Collection | Signage | Biohazard symbol (room door) | AS/NZS signage standard | 1 | each | LOCKED | No | No | AU | AS/NZS signage standard | No | Yes | No | No | Open | |
-| E34 | Blood Collection | Signage | Hand hygiene reminder signage | At sink | 1 | each | LOCKED | No | No | AU | None | No | Yes | No | No | Open | |
-| E35 | Blood Collection | Signage | "No entry when in use" signage | Door-mounted | 1 | each | LOCKED | No | No | AU | None | No | Yes | No | No | Open | |
-| E36 | Blood Collection | Emergency | Emergency call button/intercom to reception | Wired circuit | 1 | each | SITE-DEPENDENT | No | No | AU | Electrical, WorkSafe | No | Yes | No | Yes | Open | Local trade install |
-| E37 | Blood Collection | Emergency | AED (venue-wide, not room-specific) | See Section R | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference Section R, not double-counted here |
-| E38 | Blood Collection | Ventilation | Room ventilation | 6 ACH per current spec | 1 | system | PROFESSIONAL-VERIFICATION | No | No | SITE | Australian HVAC verification required | No | Yes | No | Yes | Open | Site-specific, local HVAC contractor |
-| E39 | Blood Collection | Staff Equipment | Phlebotomist uniform/scrubs | Per staff position register (PHL01-PHL04) | 4 (employment pool) | set | STAFF-DEPENDENT | No | No | HY | None | Possible | Either | No | No | Open | 2 committed + 2 relief pool |
-| E40 | Blood Collection | Documentation | Collection log, specimen dispatch log, adverse event register (printed forms) | 7-year retention requirement | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Patient record-keeping requirement | No | Yes | No | No | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| E31 | Blood Collection | Construction | Solid walls, one door, no public-facing window | Room construction, not a shippable product | 1 | room | LOCKED | B. RFQ READY | No | No | SITE | Building surveyor, WA construction standard | No | Yes | No | Yes | Open | Built and serviced for 3 chairs from day one (Fit-Out Program Decision Analysis, Round 3) |
+| E32 | Blood Collection | Privacy | Per-chair curtain/partition between the up-to-3 chair positions | Washable curtain fabric | 2-3 | each | CALCULATED | B. RFQ READY | No | No | HY | Infection control (washable fabric) | Possible | Either | No | Yes | Open | Matches the recommended growth-first 3-chair-ready design |
+| E33 | Blood Collection | Signage | Biohazard symbol (room door) | AS/NZS signage standard | 1 | each | LOCKED | B. RFQ READY | No | No | AU | AS/NZS signage standard | No | Yes | No | No | Open | |
+| E34 | Blood Collection | Signage | Hand hygiene reminder signage | At sink | 1 | each | LOCKED | B. RFQ READY | No | No | AU | None | No | Yes | No | No | Open | |
+| E35 | Blood Collection | Signage | "No entry when in use" signage | Door-mounted | 1 | each | LOCKED | B. RFQ READY | No | No | AU | None | No | Yes | No | No | Open | |
+| E36 | Blood Collection | Emergency | Emergency call button/intercom to reception | Wired circuit | 1 | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | AU | Electrical, WorkSafe | No | Yes | No | Yes | Open | Local trade install |
+| E37 | Blood Collection | Emergency | AED (venue-wide, not room-specific) | See Section R | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference Section R, not double-counted here |
+| E38 | Blood Collection | Ventilation | Room ventilation | 6 ACH per current spec | 1 | system | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Australian HVAC verification required | No | Yes | No | Yes | Open | Site-specific, local HVAC contractor |
+| E39 | Blood Collection | Staff Equipment | Phlebotomist uniform/scrubs | Per staff position register (PHL01-PHL04) | 4 (employment pool) | set | STAFF-DEPENDENT | G. INFORMATION REQUIRED | No | No | HY | None | Possible | Either | No | No | Open | 2 committed + 2 relief pool |
+| E40 | Blood Collection | Documentation | Collection log, specimen dispatch log, adverse event register (printed forms) | 7-year retention requirement | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Patient record-keeping requirement | No | Yes | No | No | Open | |
 
 **Not invented: an internal "phlebotomy supervisor" clinical escalation role or equipment for one.** Escalation beyond the second on-site phlebotomist is a genuine, disclosed dependency on WDP's own Licensed Collection Centre protocol, not resolved by procurement.
 
@@ -197,21 +203,21 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **Current model:** 3 stations (2 day-one + 1 growth reservation), curtain-partitioned, not stud-wall. Table-vs-chair format is a genuine, unresolved founder decision (`docs/architecture/FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` §6), not silently resolved here. Both options' procurement implications are shown.
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| F01a | Massage | Furniture (OPTION A: table/bed) | Pregnancy massage table | Face hole + side cutouts, vinyl | 2 (day-one), up to 3 (growth) | each | CALCULATED | No | No | HY | General consumer product safety | Possible, mandatory AU reference unit | Hybrid | No | No | Priced | A$800-2,500 AU / A$300-800 China-sourced |
-| F01b | Massage | Furniture (OPTION B: chair-based) | Massage station chair | Format and spec not previously modelled anywhere in this repository | Qty TBC if adopted | each | FOUNDER-DECISION | No | No | Open | None established | Unknown | Unknown | No | No | Open | **Genuinely unlocked, no existing spec: if Anthony adopts chair-based format, this line requires fresh research before quoting** |
-| F02 | Massage | Equipment | Bolster/positioning pillow set | N/A | 2-3 sets | set | CALCULATED | No | No | HY | None | Possible | Either | No | No | Priced | A$80-150/set |
-| F03 | Massage | Linen | Heated blanket | Electric, machine-washable | 4 | each | CALCULATED | No | No | HY | Electrical safety mark | Possible | Either | No | No | Priced | A$80-150 each, 2 per room including wash rotation |
-| F04 | Massage | Equipment | Massage oil warming unit | Optional comfort upgrade | 2-3 | each | OPTIONAL | No | No | HY | Electrical safety mark | Possible | Either | No | No | Priced | A$50-100 each |
-| F05 | Massage | Storage | Trolley/tool cart | N/A | 2-3 | each | CALCULATED | No | No | HY | None | Possible | Either | No | No | Open | Category A, China candidate |
-| F06 | Massage | Linen | Massage table linen (sheets, pillowcases) | Machine-washable | 2 sets per station minimum | set | CONSUMPTION-DEPENDENT | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
-| F07 | Massage | Consumables | Pregnancy-safe massage oil | Lavender, mandarin, chamomile only | 5L bulk | litre | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Pregnancy-safe formulation | No | Yes | No | No | Priced | A$25-50/L |
-| F08 | Massage | Consumables | Aromatherapy/hamper items | Opening stock | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Pregnancy-safe formulation | Possible | Either | No | No | Open | |
-| F09 | Massage | Privacy | Curtain partition per treatment room | Washable fabric, matches locked palette | 3 (day-one 2 + growth 1) | each | CALCULATED | No | No | HY | Infection control (washable fabric) | Possible | Either | No | No | Open | Fit-out cost, not equipment |
-| F10 | Massage | Lighting | Task/ambient lighting per station | Warm, dimmable | 2-3 | each | CALCULATED | No | No | HY | Electrical safety, professional lighting design | Possible | Either | No | No | Open | See Section X |
-| F11 | Massage | PPE | Disposable table-roll paper or equivalent barrier | N/A | Ongoing | roll | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Infection control | Possible | Either | No | No | Open | |
-| F12 | Massage | Practitioner Equipment | Practitioner apron/uniform | Per position register (MB01-MB06) | 6 (employment pool) | set | STAFF-DEPENDENT | No | No | HY | None | Possible | Either | No | No | Open | 4 committed + 2 relief pool |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| F01a | Massage | Furniture (OPTION A: table/bed) | Pregnancy massage table | Face hole + side cutouts, vinyl | 2 (day-one), up to 3 (growth) | each | CALCULATED | B. RFQ READY | No | No | HY | General consumer product safety | Possible, mandatory AU reference unit | Hybrid | No | No | Priced | A$800-2,500 AU / A$300-800 China-sourced |
+| F01b | Massage | Furniture (OPTION B: chair-based) | Massage station chair | Format and spec not previously modelled anywhere in this repository | Qty TBC if adopted | each | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | No | Open | None established | Unknown | Unknown | No | No | Open | **Genuinely unlocked, no existing spec: if Anthony adopts chair-based format, this line requires fresh research before quoting** |
+| F02 | Massage | Equipment | Bolster/positioning pillow set | N/A | 2-3 sets | set | CALCULATED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Priced | A$80-150/set |
+| F03 | Massage | Linen | Heated blanket | Electric, machine-washable | 4 | each | CALCULATED | B. RFQ READY | No | No | HY | Electrical safety mark | Possible | Either | No | No | Priced | A$80-150 each, 2 per room including wash rotation |
+| F04 | Massage | Equipment | Massage oil warming unit | Optional comfort upgrade | 2-3 | each | OPTIONAL | H. FUTURE / OPTIONAL | No | No | HY | Electrical safety mark | Possible | Either | No | No | Priced | A$50-100 each |
+| F05 | Massage | Storage | Trolley/tool cart | N/A | 2-3 | each | CALCULATED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Open | Category A, China candidate |
+| F06 | Massage | Linen | Massage table linen (sheets, pillowcases) | Machine-washable | 2 sets per station minimum | set | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
+| F07 | Massage | Consumables | Pregnancy-safe massage oil | Lavender, mandarin, chamomile only | 5L bulk | litre | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Pregnancy-safe formulation | No | Yes | No | No | Priced | A$25-50/L |
+| F08 | Massage | Consumables | Aromatherapy/hamper items | Opening stock | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Pregnancy-safe formulation | Possible | Either | No | No | Open | |
+| F09 | Massage | Privacy | Curtain partition per treatment room | Washable fabric, matches locked palette | 3 (day-one 2 + growth 1) | each | CALCULATED | B. RFQ READY | No | No | HY | Infection control (washable fabric) | Possible | Either | No | No | Open | Fit-out cost, not equipment |
+| F10 | Massage | Lighting | Task/ambient lighting per station | Warm, dimmable | 2-3 | each | CALCULATED | B. RFQ READY | No | No | HY | Electrical safety, professional lighting design | Possible | Either | No | No | Open | See Section X |
+| F11 | Massage | PPE | Disposable table-roll paper or equivalent barrier | N/A | Ongoing | roll | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Infection control | Possible | Either | No | No | Open | |
+| F12 | Massage | Practitioner Equipment | Practitioner apron/uniform | Per position register (MB01-MB06) | 6 (employment pool) | set | STAFF-DEPENDENT | G. INFORMATION REQUIRED | No | No | HY | None | Possible | Either | No | No | Open | 4 committed + 2 relief pool |
 
 ---
 
@@ -219,23 +225,23 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **Current model:** 3 stations (2 day-one + 1 growth reservation, recommended, matching Massage, pending Anthony's final sign-off, `docs/architecture/FIT-OUT-PROGRAM-DECISION-ANALYSIS.md` Round 3). Services provided: pregnancy-safe facials, brow/lash work. Facial steamer only if deeper facials are offered (service-dependent, not yet confirmed as a locked service).
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| G01 | Beauty | Furniture | Facial/beauty treatment bed | Electric, adjustable, vinyl | 2 (day-one), up to 3 (growth, recommended) | each | CALCULATED | No | No | HY | SAA electrical mark (recline mechanism) | Possible | Either | No | No | Priced | A$400-900 each |
-| G02 | Beauty | Furniture | Practitioner stool | Adjustable height | 2-3 | each | CALCULATED | No | No | HY | None | Possible | Either | No | No | Open | |
-| G03 | Beauty | Lighting | Magnifying lamp (LED, adjustable) | N/A | 2-3 | each | CALCULATED | No | No | HY | SAA electrical mark | Possible | Either | No | No | Priced | A$80-150 each |
-| G04 | Beauty | Equipment | Wax heater (dual-pot, professional) | N/A | 1 | each | LOCKED | No | No | HY | SAA electrical mark | Possible | Either | No | No | Priced | A$120-250 |
-| G05 | Beauty | Equipment | Brow/lash tool kit | Tweezers, brushes, applicators | 2-3 sets | set | CALCULATED | No | No | HY | None | Possible | Either | No | No | Priced | A$60-120/set |
-| G06 | Beauty | Equipment | Facial steamer | Only if deeper facials are offered | 0-1 | each | FOUNDER-DECISION | No | No | HY | SAA electrical mark | Possible | Either | No | No | Priced | A$150-350, service-dependent, not confirmed as locked |
-| G07 | Beauty | Storage | Trolley/tool cart | N/A | 2-3 | each | CALCULATED | No | No | HY | None | Possible | Either | No | No | Priced | A$100-200 each |
-| G08 | Beauty | Hygiene | 2-sink fitout (hand-wash + instrument decontamination) | Hands-free tap on hand-wash sink | 1-2 | each | PROFESSIONAL-VERIFICATION | No | No | SITE | WA Skin Penetration Code (researched this round: waxing, tweezing, and electrolysis are within the Code's scope; a hands-free handwash basin with hot/cold water, soap, and paper towel is required in the immediate treatment area, per the Code of Practice for Skin Penetration Procedures 1998) | No | Yes | No | Yes | Open | Local hydraulic trade install |
-| G09 | Beauty | Linen | Treatment bed linen (disposable or machine-washable) | N/A | 2 sets per station minimum | set | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Infection control | Possible | Either | No | No | Open | |
-| G10 | Beauty | Consumables | PPD-free brow tint | Pregnancy-safe | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Pregnancy-safe, PPD-free | No | Yes | No | No | Priced | A$150-250 |
-| G11 | Beauty | Consumables | Wax (strip + hard, pregnancy-safe) | N/A | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Pregnancy-safe | No | Yes | No | No | Priced | A$100-200 |
-| G12 | Beauty | Consumables | Facial products (HA serum, niacinamide, pregnancy-safe masks) | N/A | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Pregnancy-safe formulation | No | Yes | No | No | Priced | A$300-600 |
-| G13 | Beauty | Disposables | Disposable brow/wax consumables | Spatulas, strips, patch-test kits | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Infection control | Possible | Either | No | No | Priced | A$100-200 |
-| G14 | Beauty | Electrical | Standard GPO, task lighting per station | N/A | 2-3 | each | PROFESSIONAL-VERIFICATION | No | No | SITE | Licensed electrician | No | Yes | No | Yes | Open | |
-| G15 | Beauty | Practitioner Equipment | Practitioner uniform | Per position register | Staff-dependent | set | STAFF-DEPENDENT | No | No | HY | None | Possible | Either | No | No | Open | Shared with Massage where dual-qualified (MB01-MB06) |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| G01 | Beauty | Furniture | Facial/beauty treatment bed | Electric, adjustable, vinyl | 2 (day-one), up to 3 (growth, recommended) | each | CALCULATED | B. RFQ READY | No | No | HY | SAA electrical mark (recline mechanism) | Possible | Either | No | No | Priced | A$400-900 each |
+| G02 | Beauty | Furniture | Practitioner stool | Adjustable height | 2-3 | each | CALCULATED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Open | |
+| G03 | Beauty | Lighting | Magnifying lamp (LED, adjustable) | N/A | 2-3 | each | CALCULATED | B. RFQ READY | No | No | HY | SAA electrical mark | Possible | Either | No | No | Priced | A$80-150 each |
+| G04 | Beauty | Equipment | Wax heater (dual-pot, professional) | N/A | 1 | each | LOCKED | A. ORDER READY | No | No | HY | SAA electrical mark | Possible | Either | No | No | Priced | A$120-250 |
+| G05 | Beauty | Equipment | Brow/lash tool kit | Tweezers, brushes, applicators | 2-3 sets | set | CALCULATED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Priced | A$60-120/set |
+| G06 | Beauty | Equipment | Facial steamer | Only if deeper facials are offered | 0-1 | each | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | No | HY | SAA electrical mark | Possible | Either | No | No | Priced | A$150-350, service-dependent, not confirmed as locked |
+| G07 | Beauty | Storage | Trolley/tool cart | N/A | 2-3 | each | CALCULATED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Priced | A$100-200 each |
+| G08 | Beauty | Hygiene | 2-sink fitout (hand-wash + instrument decontamination) | Hands-free tap on hand-wash sink | 1-2 | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | WA Skin Penetration Code (researched this round: waxing, tweezing, and electrolysis are within the Code's scope; a hands-free handwash basin with hot/cold water, soap, and paper towel is required in the immediate treatment area, per the Code of Practice for Skin Penetration Procedures 1998) | No | Yes | No | Yes | Open | Local hydraulic trade install |
+| G09 | Beauty | Linen | Treatment bed linen (disposable or machine-washable) | N/A | 2 sets per station minimum | set | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Infection control | Possible | Either | No | No | Open | |
+| G10 | Beauty | Consumables | PPD-free brow tint | Pregnancy-safe | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Pregnancy-safe, PPD-free | No | Yes | No | No | Priced | A$150-250 |
+| G11 | Beauty | Consumables | Wax (strip + hard, pregnancy-safe) | N/A | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Pregnancy-safe | No | Yes | No | No | Priced | A$100-200 |
+| G12 | Beauty | Consumables | Facial products (HA serum, niacinamide, pregnancy-safe masks) | N/A | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Pregnancy-safe formulation | No | Yes | No | No | Priced | A$300-600 |
+| G13 | Beauty | Disposables | Disposable brow/wax consumables | Spatulas, strips, patch-test kits | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Infection control | Possible | Either | No | No | Priced | A$100-200 |
+| G14 | Beauty | Electrical | Standard GPO, task lighting per station | N/A | 2-3 | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Licensed electrician | No | Yes | No | Yes | Open | |
+| G15 | Beauty | Practitioner Equipment | Practitioner uniform | Per position register | Staff-dependent | set | STAFF-DEPENDENT | G. INFORMATION REQUIRED | No | No | HY | None | Possible | Either | No | No | Open | Shared with Massage where dual-qualified (MB01-MB06) |
 
 **Not invented: services not currently offered.** No spray tan, no service beyond facials/brow/lash currently confirmed in the service catalogue is procured for here.
 
@@ -245,29 +251,29 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **Current model:** 4 nail stations, open-plan, LEV extraction mandatory.
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| H01 | Nail | Furniture | Nail table with built-in dust collector | Professional grade | 4 | each | LOCKED | No | No | HY | Electrical safety mark (built-in collector) | Possible | Either | No | No | Priced | A$500-800 each |
-| H02 | Nail | Furniture | Nail technician chair | Adjustable | 4 | each | LOCKED | No | No | HY | None | Possible | Either | No | No | Open | |
-| H03 | Nail | Furniture | Client manicure chair | N/A | 4 | each | LOCKED | No | No | HY | AS/NZS 4088 general seating standard | Possible | Either | No | No | Priced | A$200-400 each |
-| H04 | Nail | Equipment | UV/LED nail lamp | Professional grade | 4 | each | LOCKED | No | No | HY | SAA electrical mark | Possible | Either | No | No | Priced | A$100-200 each |
-| H05 | Nail | Equipment | Nail drill | Professional grade | 2-4 | each | STAFF-DEPENDENT | No | No | HY | SAA electrical mark | Possible | Either | No | No | Open | Not itemised in prior source documents; genuine gap now flagged and filled |
-| H06 | Nail | Ventilation | LEV (local exhaust ventilation) unit | Sized for 4 stations, installed | 1 | each | PROFESSIONAL-VERIFICATION | No | No | SITE | WorkSafe WA pre-application; researched this round: LEV/downdraft capture-hood systems are the standard method for open-plan nail-station air-quality compliance, but no WorkSafe-WA-familiar contractor has been identified for this specific installation | No | Yes, local install regardless of unit origin | No | Yes | Priced | A$1,500-4,000 installed; **genuine gap: no contractor identified yet** |
-| H07 | Nail | Storage | Nail tool trolley | N/A | 4 | each | LOCKED | No | No | HY | None | Possible | Either | No | No | Priced | A$150-300 each |
-| H08 | Nail | Consumables | Nail files | N/A | Ongoing | lot | CONSUMPTION-DEPENDENT | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
-| H09 | Nail | Consumables | Buffing blocks | N/A | Ongoing | lot | CONSUMPTION-DEPENDENT | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
-| H10 | Nail | Consumables | Cuticle pushers | N/A | Ongoing | lot | CONSUMPTION-DEPENDENT | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
-| H11 | Nail | Consumables | Cuticle nippers | N/A | Ongoing | lot | CONSUMPTION-DEPENDENT | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
-| H12 | Nail | Consumables | Base coat | 9-free formula | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Product safety, 9-free formulation | Possible | Either | No | No | Priced | Part of A$830-1,480 combined opening stock |
-| H13 | Nail | Consumables | Top coat | 9-free formula | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Product safety | Possible | Either | No | No | Open | |
-| H14 | Nail | Consumables | Gel polish | 20+ colours, 9-free formula | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Product safety | Possible | Either | No | No | Priced | A$15-25 each, 20 colours = A$300-500 |
-| H15 | Nail | Consumables | Regular (non-gel) polish | 20+ colours | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | CN | Product safety | Yes | Yes | No | No | Priced | A$8-15 each |
-| H16 | Nail | Consumables | Remover/acetone | N/A | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Flammable-liquid storage standard | No | Yes | No | No | Open | |
-| H17 | Nail | Disposables | Lint-free wipes | N/A | Ongoing | box | CONSUMPTION-DEPENDENT | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
-| H18 | Nail | PPE | Disposable gloves | Food/beauty-grade | Ongoing | box | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Product safety | Possible | Either | No | No | Open | |
-| H19 | Nail | PPE | Nail dust masks (N95) | Box of 50 | 2 boxes | box | CONSUMPTION-DEPENDENT | Yes | Yes | AU | AS/NZS respiratory protection standard | No | Yes | No | No | Priced | A$25-40/box |
-| H20 | Nail | Cleaning | Disinfection solution + containers | Instrument disinfection | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Infection control standard | No | Yes | No | No | Priced | A$80-150 |
-| H21 | Nail | Electrical | GPO per station (2x 10A) | N/A | 4 | each | PROFESSIONAL-VERIFICATION | No | No | SITE | Licensed electrician | No | Yes | No | Yes | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| H01 | Nail | Furniture | Nail table with built-in dust collector | Professional grade | 4 | each | LOCKED | A. ORDER READY | No | No | HY | Electrical safety mark (built-in collector) | Possible | Either | No | No | Priced | A$500-800 each |
+| H02 | Nail | Furniture | Nail technician chair | Adjustable | 4 | each | LOCKED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Open | |
+| H03 | Nail | Furniture | Client manicure chair | N/A | 4 | each | LOCKED | A. ORDER READY | No | No | HY | AS/NZS 4088 general seating standard | Possible | Either | No | No | Priced | A$200-400 each |
+| H04 | Nail | Equipment | UV/LED nail lamp | Professional grade | 4 | each | LOCKED | A. ORDER READY | No | No | HY | SAA electrical mark | Possible | Either | No | No | Priced | A$100-200 each |
+| H05 | Nail | Equipment | Nail drill | Professional grade | 2-4 | each | STAFF-DEPENDENT | G. INFORMATION REQUIRED | No | No | HY | SAA electrical mark | Possible | Either | No | No | Open | Not itemised in prior source documents; genuine gap now flagged and filled |
+| H06 | Nail | Ventilation | LEV (local exhaust ventilation) unit | Sized for 4 stations, installed | 1 | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | WorkSafe WA pre-application; researched this round: LEV/downdraft capture-hood systems are the standard method for open-plan nail-station air-quality compliance, but no WorkSafe-WA-familiar contractor has been identified for this specific installation | No | Yes, local install regardless of unit origin | No | Yes | Priced | A$1,500-4,000 installed; **genuine gap: no contractor identified yet** |
+| H07 | Nail | Storage | Nail tool trolley | N/A | 4 | each | LOCKED | A. ORDER READY | No | No | HY | None | Possible | Either | No | No | Priced | A$150-300 each |
+| H08 | Nail | Consumables | Nail files | N/A | Ongoing | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
+| H09 | Nail | Consumables | Buffing blocks | N/A | Ongoing | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
+| H10 | Nail | Consumables | Cuticle pushers | N/A | Ongoing | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
+| H11 | Nail | Consumables | Cuticle nippers | N/A | Ongoing | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
+| H12 | Nail | Consumables | Base coat | 9-free formula | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Product safety, 9-free formulation | Possible | Either | No | No | Priced | Part of A$830-1,480 combined opening stock |
+| H13 | Nail | Consumables | Top coat | 9-free formula | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Product safety | Possible | Either | No | No | Open | |
+| H14 | Nail | Consumables | Gel polish | 20+ colours, 9-free formula | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Product safety | Possible | Either | No | No | Priced | A$15-25 each, 20 colours = A$300-500 |
+| H15 | Nail | Consumables | Regular (non-gel) polish | 20+ colours | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | Product safety | Yes | Yes | No | No | Priced | A$8-15 each |
+| H16 | Nail | Consumables | Remover/acetone | N/A | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Flammable-liquid storage standard | No | Yes | No | No | Open | |
+| H17 | Nail | Disposables | Lint-free wipes | N/A | Ongoing | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
+| H18 | Nail | PPE | Disposable gloves | Food/beauty-grade | Ongoing | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Product safety | Possible | Either | No | No | Open | |
+| H19 | Nail | PPE | Nail dust masks (N95) | Box of 50 | 2 boxes | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | AS/NZS respiratory protection standard | No | Yes | No | No | Priced | A$25-40/box |
+| H20 | Nail | Cleaning | Disinfection solution + containers | Instrument disinfection | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Infection control standard | No | Yes | No | No | Priced | A$80-150 |
+| H21 | Nail | Electrical | GPO per station (2x 10A) | N/A | 4 | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Licensed electrician | No | Yes | No | Yes | Open | |
 
 **Note: French gel manicure = 45 minutes in the AM/GTT window (Chapter 10); available as a standalone PM service too, per current model. No additional procurement implication beyond the items above.**
 
@@ -277,14 +283,14 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **Current model:** 4 pedicure chairs, same zone as the 4 nail stations, not an additional 8-station expansion.
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| I01 | Pedicure | Furniture/Equipment | Pedicure spa chair (pipeless) | Pipeless/no-jet design mandatory for hygiene | 4 (same zone as Nail, not an additional 8) | each | LOCKED | No | No | CN | CE/SAA electrical mark, pipeless design confirmed | Yes, highest-confidence quantified saving in this whole schedule | Also available | No | No | Priced | A$800-2,000 AU / A$500-1,500 China-sourced |
-| I02 | Pedicure | Plumbing | Chair plumbing (hot/cold water, drainage) | Per chair | 4 | each | PROFESSIONAL-VERIFICATION | No | No | SITE | Licensed plumber | No | Yes | No | Yes | Open | |
-| I03 | Pedicure | Consumables | Foot files/pumice | N/A | Ongoing | lot | CONSUMPTION-DEPENDENT | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
-| I04 | Pedicure | Consumables | Foot towels | Machine-washable | 8-12 | each | CONSUMPTION-DEPENDENT | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
-| I05 | Pedicure | Consumables | Toe separators (disposable) | N/A | Ongoing | box | CONSUMPTION-DEPENDENT | Yes | Yes | CN | Product safety | Yes | Yes | No | No | Open | |
-| I06 | Pedicure | Cleaning | Pipeless chair sanitation kit | Disinfectant compatible with the pipeless system's specific hygiene design | Ongoing | lot | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Manufacturer-specified sanitation compliance | Possible | Either | No | No | Open | Must match the specific chair's own sanitation system |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| I01 | Pedicure | Furniture/Equipment | Pedicure spa chair (pipeless) | Pipeless/no-jet design mandatory for hygiene | 4 (same zone as Nail, not an additional 8) | each | LOCKED | A. ORDER READY | No | No | CN | CE/SAA electrical mark, pipeless design confirmed | Yes, highest-confidence quantified saving in this whole schedule | Also available | No | No | Priced | A$800-2,000 AU / A$500-1,500 China-sourced |
+| I02 | Pedicure | Plumbing | Chair plumbing (hot/cold water, drainage) | Per chair | 4 | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Licensed plumber | No | Yes | No | Yes | Open | |
+| I03 | Pedicure | Consumables | Foot files/pumice | N/A | Ongoing | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
+| I04 | Pedicure | Consumables | Foot towels | Machine-washable | 8-12 | each | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
+| I05 | Pedicure | Consumables | Toe separators (disposable) | N/A | Ongoing | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | Product safety | Yes | Yes | No | No | Open | |
+| I06 | Pedicure | Cleaning | Pipeless chair sanitation kit | Disinfectant compatible with the pipeless system's specific hygiene design | Ongoing | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Manufacturer-specified sanitation compliance | Possible | Either | No | No | Open | Must match the specific chair's own sanitation system |
 
 **Not additional: gel manicure/pedicure = 45-minute AM/GTT-window service, available as standalone PM service too. No spray tan reintroduced anywhere in this section.**
 
@@ -294,26 +300,26 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **Current model:** 4 hairdresser stations, deliberately allowing hairdressers to work behind chairs without requiring an unnecessarily large room. No colour service currently confirmed beyond what the service catalogue states (Chapter 10 confirms colour services exist in the catalogue at PM/standalone level; colour equipment procured accordingly).
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| J01 | Hair | Furniture | Styling chair (hydraulic, wipe-clean) | Professional grade | 4 | each | LOCKED | No | No | HY | AS/NZS 4088 | Possible | Either | No | No | Priced | A$500-1,200 each |
-| J02 | Hair | Furniture | Salon mirror (lighted, full-length) | Custom-fit to actual wall length, spans 4 chairs | 1 | each | SITE-DEPENDENT | No | No | HY | SAA electrical mark for the LED strip | Possible | Either | No | Yes | Priced | A$200-500 |
-| J03 | Hair | Equipment | Professional hair dryer | Named brand (Dyson, GHD, or equivalent) | 4 | each | LOCKED | No | No | AU | SAA electrical mark | No, poor import candidate on warranty grounds | Yes, direct trade account | No | No | Priced | A$250-500 each |
-| J04 | Hair | Equipment | Straightening iron | Named brand (GHD, Cloud Nine, or equivalent) | 4 | each | LOCKED | No | No | AU | SAA electrical mark | No, same reasoning as J03 | Yes | No | No | Priced | A$150-300 each |
-| J05 | Hair | Equipment | Curling tools | Professional grade | 2-4 | each | STAFF-DEPENDENT | No | No | AU | SAA electrical mark | No | Yes | No | No | Open | Genuine gap not itemised in prior source documents, now filled |
-| J06 | Hair | Equipment | Hair clippers | If offered as a service | 0-2 | each | FOUNDER-DECISION | No | No | AU | SAA electrical mark | No | Yes | No | No | Open | Confirm against the current service catalogue before purchasing |
-| J07 | Hair | Tools | Brushes/combs | Professional grade, various | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
-| J08 | Hair | Linen | Capes | Wipe-clean, machine-washable | 8-12 | each | CONSUMPTION-DEPENDENT | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
-| J09 | Hair | Linen | Towels (hair-specific) | N/A | 12-20 | each | CONSUMPTION-DEPENDENT | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
-| J10 | Hair | Consumables | Shampoo | Pregnancy-safe (no harsh chemicals) | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Pregnancy-safe formulation | No | Yes | No | No | Open | |
-| J11 | Hair | Consumables | Conditioner | Pregnancy-safe | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Pregnancy-safe formulation | No | Yes | No | No | Open | |
-| J12 | Hair | Consumables | Treatment products | Pregnancy-safe | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Pregnancy-safe formulation | No | Yes | No | No | Priced | Part of A$350-650 combined opening stock |
-| J13 | Hair | Consumables | Styling products (mousse, spray, serum) | Pregnancy-safe | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Pregnancy-safe formulation | No | Yes | No | No | Open | |
-| J14 | Hair | Colour Equipment | Colour bowls, brushes, foils, capes | Only if the current service model includes colour services | 1 lot | lot | FOUNDER-DECISION | Yes | Yes | HY | Product safety | Possible | Either | No | No | Open | Confirm against the current service catalogue (Chapter 10) before purchasing |
-| J15 | Hair | Storage | Tool trolley + organiser | N/A | 4 | each | LOCKED | No | No | HY | None | Possible | Either | No | No | Priced | A$150-300 each |
-| J16 | Hair | Waste | Hair waste bin | Lidded | 1-2 | each | LOCKED | No | No | CN | None | Yes | Yes | No | No | Open | |
-| J17 | Hair | PPE | Disposable gloves | N/A | Ongoing | box | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Product safety | Possible | Either | No | No | Open | |
-| J18 | Hair | Electrical | GPO nearby each chair | N/A | 4 | each | PROFESSIONAL-VERIFICATION | No | No | SITE | Licensed electrician | No | Yes | No | Yes | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| J01 | Hair | Furniture | Styling chair (hydraulic, wipe-clean) | Professional grade | 4 | each | LOCKED | A. ORDER READY | No | No | HY | AS/NZS 4088 | Possible | Either | No | No | Priced | A$500-1,200 each |
+| J02 | Hair | Furniture | Salon mirror (lighted, full-length) | Custom-fit to actual wall length, spans 4 chairs | 1 | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | HY | SAA electrical mark for the LED strip | Possible | Either | No | Yes | Priced | A$200-500 |
+| J03 | Hair | Equipment | Professional hair dryer | Named brand (Dyson, GHD, or equivalent) | 4 | each | LOCKED | A. ORDER READY | No | No | AU | SAA electrical mark | No, poor import candidate on warranty grounds | Yes, direct trade account | No | No | Priced | A$250-500 each |
+| J04 | Hair | Equipment | Straightening iron | Named brand (GHD, Cloud Nine, or equivalent) | 4 | each | LOCKED | A. ORDER READY | No | No | AU | SAA electrical mark | No, same reasoning as J03 | Yes | No | No | Priced | A$150-300 each |
+| J05 | Hair | Equipment | Curling tools | Professional grade | 2-4 | each | STAFF-DEPENDENT | G. INFORMATION REQUIRED | No | No | AU | SAA electrical mark | No | Yes | No | No | Open | Genuine gap not itemised in prior source documents, now filled |
+| J06 | Hair | Equipment | Hair clippers | If offered as a service | 0-2 | each | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | No | AU | SAA electrical mark | No | Yes | No | No | Open | Confirm against the current service catalogue before purchasing |
+| J07 | Hair | Tools | Brushes/combs | Professional grade, various | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
+| J08 | Hair | Linen | Capes | Wipe-clean, machine-washable | 8-12 | each | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
+| J09 | Hair | Linen | Towels (hair-specific) | N/A | 12-20 | each | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
+| J10 | Hair | Consumables | Shampoo | Pregnancy-safe (no harsh chemicals) | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Pregnancy-safe formulation | No | Yes | No | No | Open | |
+| J11 | Hair | Consumables | Conditioner | Pregnancy-safe | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Pregnancy-safe formulation | No | Yes | No | No | Open | |
+| J12 | Hair | Consumables | Treatment products | Pregnancy-safe | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Pregnancy-safe formulation | No | Yes | No | No | Priced | Part of A$350-650 combined opening stock |
+| J13 | Hair | Consumables | Styling products (mousse, spray, serum) | Pregnancy-safe | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Pregnancy-safe formulation | No | Yes | No | No | Open | |
+| J14 | Hair | Colour Equipment | Colour bowls, brushes, foils, capes | Only if the current service model includes colour services | 1 lot | lot | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | Yes | Yes | HY | Product safety | Possible | Either | No | No | Open | Confirm against the current service catalogue (Chapter 10) before purchasing |
+| J15 | Hair | Storage | Tool trolley + organiser | N/A | 4 | each | LOCKED | A. ORDER READY | No | No | HY | None | Possible | Either | No | No | Priced | A$150-300 each |
+| J16 | Hair | Waste | Hair waste bin | Lidded | 1-2 | each | LOCKED | B. RFQ READY | No | No | CN | None | Yes | Yes | No | No | Open | |
+| J17 | Hair | PPE | Disposable gloves | N/A | Ongoing | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Product safety | Possible | Either | No | No | Open | |
+| J18 | Hair | Electrical | GPO nearby each chair | N/A | 4 | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Licensed electrician | No | Yes | No | Yes | Open | |
 
 ---
 
@@ -321,84 +327,84 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **Current model:** 2 hair wash stations.
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| K01 | Hair Wash | Equipment | Backwash basin + client chair | Plumbed hot/cold, neck rest | 2 (day-one), 3rd optional | each | LOCKED (2), OPTIONAL (3rd) | No | No | HY | Electrical (if electric recline) | Possible | Either | No | Yes | Priced | A$1,000-2,500 each; +A$1,000-2,500 if 3rd added |
-| K02 | Hair Wash | Plumbing | Hot water supply, drainage per basin | N/A | 2 | each | PROFESSIONAL-VERIFICATION | No | No | SITE | Licensed plumber | No | Yes | No | Yes | Open | |
-| K03 | Hair Wash | Linen | Towels (hair-wash-specific) | N/A | 8-12 | each | CONSUMPTION-DEPENDENT | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
-| K04 | Hair Wash | Hot Water | Hot water system capacity | N/A | 1 | system | PROFESSIONAL-VERIFICATION | No | No | SITE | Licensed plumber, hot-water system sizing | No | Yes | No | Yes | Open | Venue-dependent, verify against existing plant |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| K01 | Hair Wash | Equipment | Backwash basin + client chair | Plumbed hot/cold, neck rest | 2 (day-one), 3rd optional | each | LOCKED (2), OPTIONAL (3rd) | H. FUTURE / OPTIONAL | No | No | HY | Electrical (if electric recline) | Possible | Either | No | Yes | Priced | A$1,000-2,500 each; +A$1,000-2,500 if 3rd added |
+| K02 | Hair Wash | Plumbing | Hot water supply, drainage per basin | N/A | 2 | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Licensed plumber | No | Yes | No | Yes | Open | |
+| K03 | Hair Wash | Linen | Towels (hair-wash-specific) | N/A | 8-12 | each | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
+| K04 | Hair Wash | Hot Water | Hot water system capacity | N/A | 1 | system | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Licensed plumber, hot-water system sizing | No | Yes | No | Yes | Open | Venue-dependent, verify against existing plant |
 
 ---
 
 ## L. Staff Area
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| L01 | Staff Area | Furniture | Lockers | Per employed headcount | Not itemised at unit level yet | each | STAFF-DEPENDENT | No | No | HY | None | Possible | Either | No | No | Open | Genuine gap: no unit count/price researched yet; calculate against the full employment pool (VM01, PHL01-04, MB01-06, NAIL01-03, HAIR01-03, PMM01/PMB01/PMN01/PMH01) once final pool sizes are confirmed |
-| L02 | Staff Area | Furniture | Staff table | Break facilities | 1 | each | LOCKED | No | No | HY | None | Possible | Either | No | No | Open | |
-| L03 | Staff Area | Equipment | Kettle | Break facilities | 1 | each | LOCKED | No | No | CN | Electrical safety mark | Yes | Yes | No | No | Open | |
-| L04 | Staff Area | Plumbing | Staff sink | Break facilities | 1 | each | PROFESSIONAL-VERIFICATION | No | No | SITE | Licensed plumber | No | Yes | No | Yes | Open | |
-| L05 | Staff Area | Furniture | Chairs (staff break) | N/A | 4-6 | each | STAFF-DEPENDENT | No | No | HY | None | Possible | Either | No | No | Open | |
-| L06 | Staff Area | Amenity | Small fridge (staff use) | N/A | 1 | each | LOCKED | No | No | HY | Electrical safety mark | Possible | Either | No | No | Open | Separate from the Cafe's client-facing fridges |
-| L07 | Staff Area | Amenity | Microwave (staff use) | N/A | 1 | each | LOCKED | No | No | HY | Electrical safety mark | Possible | Either | No | No | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| L01 | Staff Area | Furniture | Lockers | Per employed headcount | Not itemised at unit level yet | each | STAFF-DEPENDENT | G. INFORMATION REQUIRED | No | No | HY | None | Possible | Either | No | No | Open | Genuine gap: no unit count/price researched yet; calculate against the full employment pool (VM01, PHL01-04, MB01-06, NAIL01-03, HAIR01-03, PMM01/PMB01/PMN01/PMH01) once final pool sizes are confirmed |
+| L02 | Staff Area | Furniture | Staff table | Break facilities | 1 | each | LOCKED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Open | |
+| L03 | Staff Area | Equipment | Kettle | Break facilities | 1 | each | LOCKED | B. RFQ READY | No | No | CN | Electrical safety mark | Yes | Yes | No | No | Open | |
+| L04 | Staff Area | Plumbing | Staff sink | Break facilities | 1 | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Licensed plumber | No | Yes | No | Yes | Open | |
+| L05 | Staff Area | Furniture | Chairs (staff break) | N/A | 4-6 | each | STAFF-DEPENDENT | G. INFORMATION REQUIRED | No | No | HY | None | Possible | Either | No | No | Open | |
+| L06 | Staff Area | Amenity | Small fridge (staff use) | N/A | 1 | each | LOCKED | B. RFQ READY | No | No | HY | Electrical safety mark | Possible | Either | No | No | Open | Separate from the Cafe's client-facing fridges |
+| L07 | Staff Area | Amenity | Microwave (staff use) | N/A | 1 | each | LOCKED | B. RFQ READY | No | No | HY | Electrical safety mark | Possible | Either | No | No | Open | |
 
 ---
 
 ## M. Storage
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| M01 | Storage | BOH | Clean linen storage shelving/cabinet | Lockable consumable cabinet | 1 | each | LOCKED | No | No | CN | None | Yes, strong candidate, non-client-facing | Also available | No | No | Open | |
-| M02 | Storage | BOH | Dirty linen/biohazard storage | Separate from clean linen | 1 | each | LOCKED | No | No | HY | Clinical waste handling standard | Possible | Either | No | No | Open | |
-| M03 | Storage | BOH | General retail/product storage shelving | N/A | 1-2 | each | SITE-DEPENDENT | No | No | CN | None | Yes | Yes | No | Yes | Open | |
-| M04 | Storage | BOH | Consumables stockroom shelving (nail/hair/beauty products) | N/A | 1 | each | LOCKED | No | No | CN | None | Yes | Yes | No | No | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| M01 | Storage | BOH | Clean linen storage shelving/cabinet | Lockable consumable cabinet | 1 | each | LOCKED | B. RFQ READY | No | No | CN | None | Yes, strong candidate, non-client-facing | Also available | No | No | Open | |
+| M02 | Storage | BOH | Dirty linen/biohazard storage | Separate from clean linen | 1 | each | LOCKED | B. RFQ READY | No | No | HY | Clinical waste handling standard | Possible | Either | No | No | Open | |
+| M03 | Storage | BOH | General retail/product storage shelving | N/A | 1-2 | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | CN | None | Yes | Yes | No | Yes | Open | |
+| M04 | Storage | BOH | Consumables stockroom shelving (nail/hair/beauty products) | N/A | 1 | each | LOCKED | B. RFQ READY | No | No | CN | None | Yes | Yes | No | No | Open | |
 
 ---
 
 ## N. Toilets
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| N01 | Toilets | Consumables | Toilet paper | Commercial-grade, per toilet count | To be determined | roll | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | Yes | Open | Quantity depends on final toilet count (patient WC accessible, patient WC standard, staff WC per the venue program) |
-| N02 | Toilets | Consumables | Paper towel (hand-drying) | N/A | To be determined | box | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | Yes | Open | |
-| N03 | Toilets | Consumables | Hand soap | Dispenser refill | To be determined | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | Yes | Open | |
-| N04 | Toilets | Fixtures | Soap dispenser | Wall-mounted | Per toilet count | each | SITE-DEPENDENT | No | No | HY | None | Possible | Either | No | Yes | Open | |
-| N05 | Toilets | Fixtures | Paper towel dispenser | Wall-mounted | Per toilet count | each | SITE-DEPENDENT | No | No | HY | None | Possible | Either | No | Yes | Open | |
-| N06 | Toilets | Fixtures | Sanitary disposal unit | N/A | Per toilet count | each | SITE-DEPENDENT | No | No | AU | Waste-management standard | No | Yes | No | Yes | Open | |
-| N07 | Toilets | Consumables | Sanitary products (complimentary) | If offered as a client amenity | Optional | lot | OPTIONAL | Yes | Yes | AU | None | No | Yes | No | No | Open | Genuine amenity decision, not confirmed either way |
-| N08 | Toilets | Fixtures | Hand dryer (if selected instead of paper towel) | N/A | Per toilet count | each | FOUNDER-DECISION | No | No | AU | Electrical safety mark | No | Yes | No | Yes | Open | Paper towel vs hand dryer not yet decided |
-| N09 | Toilets | Waste | Bin (general) | Lidded | Per toilet count | each | SITE-DEPENDENT | No | No | CN | None | Yes | Yes | No | Yes | Open | |
-| N10 | Toilets | Cleaning | Toilet brush | N/A | Per toilet count | each | SITE-DEPENDENT | No | No | CN | None | Yes | Yes | No | Yes | Open | |
-| N11 | Toilets | Cleaning | Plunger | N/A | 1-2 | each | LOCKED | No | No | CN | None | Yes | Yes | No | No | Open | |
-| N12 | Toilets | Ambience | Air freshener (if appropriate to the brand) | Subtle, unscented preferred given pregnancy sensitivity | Optional | each | OPTIONAL | Yes | Yes | AU | None | No | Yes | No | No | Open | Scent sensitivity in pregnancy is a real consideration; not confirmed either way |
-| N13 | Toilets | Accessibility | Accessibility grab rails, accessible WC fittings | AS 1428.1 | Per accessible toilet | each | PROFESSIONAL-VERIFICATION | No | No | SITE | AS 1428.1 accessibility clearances | No | Yes | No | Yes | Open | **Australian accessibility verification required** |
-| N14 | Toilets | Signage | Toilet signage (including accessibility symbol) | N/A | Per toilet count | each | SITE-DEPENDENT | No | No | AU | AS 1428.1 signage requirement | No | Yes | No | Yes | Open | |
-| N15 | Toilets | Cleaning | Cleaning chemicals (bathroom-specific) | See Section O for the full cleaning inventory | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference Section O, not double-counted here | |
-| N16 | Toilets | Consumables | Spare stock (toilet paper, soap, paper towel reserve) | N/A | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | Quantity to be determined from opening-stock policy/supplier recommendation |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| N01 | Toilets | Consumables | Toilet paper | Commercial-grade, per toilet count | To be determined | roll | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | Yes | Open | Quantity depends on final toilet count (patient WC accessible, patient WC standard, staff WC per the venue program) |
+| N02 | Toilets | Consumables | Paper towel (hand-drying) | N/A | To be determined | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | Yes | Open | |
+| N03 | Toilets | Consumables | Hand soap | Dispenser refill | To be determined | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | Yes | Open | |
+| N04 | Toilets | Fixtures | Soap dispenser | Wall-mounted | Per toilet count | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | HY | None | Possible | Either | No | Yes | Open | |
+| N05 | Toilets | Fixtures | Paper towel dispenser | Wall-mounted | Per toilet count | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | HY | None | Possible | Either | No | Yes | Open | |
+| N06 | Toilets | Fixtures | Sanitary disposal unit | N/A | Per toilet count | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | AU | Waste-management standard | No | Yes | No | Yes | Open | |
+| N07 | Toilets | Consumables | Sanitary products (complimentary) | If offered as a client amenity | Optional | lot | OPTIONAL | H. FUTURE / OPTIONAL | Yes | Yes | AU | None | No | Yes | No | No | Open | Genuine amenity decision, not confirmed either way |
+| N08 | Toilets | Fixtures | Hand dryer (if selected instead of paper towel) | N/A | Per toilet count | each | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | No | AU | Electrical safety mark | No | Yes | No | Yes | Open | Paper towel vs hand dryer not yet decided |
+| N09 | Toilets | Waste | Bin (general) | Lidded | Per toilet count | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | CN | None | Yes | Yes | No | Yes | Open | |
+| N10 | Toilets | Cleaning | Toilet brush | N/A | Per toilet count | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | CN | None | Yes | Yes | No | Yes | Open | |
+| N11 | Toilets | Cleaning | Plunger | N/A | 1-2 | each | LOCKED | B. RFQ READY | No | No | CN | None | Yes | Yes | No | No | Open | |
+| N12 | Toilets | Ambience | Air freshener (if appropriate to the brand) | Subtle, unscented preferred given pregnancy sensitivity | Optional | each | OPTIONAL | H. FUTURE / OPTIONAL | Yes | Yes | AU | None | No | Yes | No | No | Open | Scent sensitivity in pregnancy is a real consideration; not confirmed either way |
+| N13 | Toilets | Accessibility | Accessibility grab rails, accessible WC fittings | AS 1428.1 | Per accessible toilet | each | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | AS 1428.1 accessibility clearances | No | Yes | No | Yes | Open | **Australian accessibility verification required** |
+| N14 | Toilets | Signage | Toilet signage (including accessibility symbol) | N/A | Per toilet count | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | AU | AS 1428.1 signage requirement | No | Yes | No | Yes | Open | |
+| N15 | Toilets | Cleaning | Cleaning chemicals (bathroom-specific) | See Section O for the full cleaning inventory | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference Section O, not double-counted here | |
+| N16 | Toilets | Consumables | Spare stock (toilet paper, soap, paper towel reserve) | N/A | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | Quantity to be determined from opening-stock policy/supplier recommendation |
 
 ---
 
 ## O. Cleaning / Housekeeping
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| O01 | Cleaning | General | Commercial vacuum | N/A | 1-2 | each | LOCKED | No | No | HY | Electrical safety mark | Possible | Either | No | No | Open | |
-| O02 | Cleaning | General | Mop system (bucket + wringer) | N/A | 2 | each | LOCKED | No | No | CN | None | Yes | Yes | No | No | Open | One general, one clinical, kept separate |
-| O03 | Cleaning | General | Buckets | N/A | 2-4 | each | LOCKED | No | No | CN | None | Yes | Yes | No | No | Open | |
-| O04 | Cleaning | General | Dustpans/brooms | N/A | 2-3 sets | set | LOCKED | No | No | CN | None | Yes | Yes | No | No | Open | |
-| O05 | Cleaning | General | Microfibre cloths | Colour-coded by area (clinical vs general) | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | CN | Infection control colour-coding standard | Yes | Yes | No | No | Open | |
-| O06 | Cleaning | General | General-purpose disinfectant | Non-clinical areas (Lounge, Reception, BOH) | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | Kept separate from the clinical-grade disinfectant in Section E |
-| O07 | Cleaning | Bathroom | Bathroom cleaner | N/A | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | |
-| O08 | Cleaning | General | Glass cleaner | N/A | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | |
-| O09 | Cleaning | General | Floor cleaner | Appropriate to the venue's actual flooring once confirmed | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | |
-| O10 | Cleaning | Waste | Bin liners (general) | Various sizes per bin type | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
-| O11 | Cleaning | Clinical | Clinical-grade cleaning products (TGA-listed) | Kept entirely separate from general cleaning products, see Section E for the full clinical list | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference Section E4, not double-counted here | |
-| O12 | Cleaning | PPE | Cleaning gloves (heavy-duty) | N/A | Ongoing | pair | CONSUMPTION-DEPENDENT | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
-| O13 | Cleaning | Equipment | Cleaning caddies | For staff to carry supplies between rooms | 2-3 | each | LOCKED | No | No | CN | None | Yes | Yes | No | No | Open | |
-| O14 | Cleaning | Signage | Wet floor warning signs | N/A | 2-3 | each | LOCKED | No | No | CN | AS/NZS signage standard | Yes | Yes | No | No | Open | |
-| O15 | Cleaning | Consumables | Paper products (general-area hand towel, tissues) | N/A | Ongoing | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | |
-| O16 | Cleaning | Emergency | Spill kit (general, non-biohazard) | N/A | 1-2 | each | LOCKED | No | No | AU | None | No | Yes | No | No | Open | Separate from the clinical blood spill kit in Section E |
-| O17 | Cleaning | Storage | Cleaning products storage (lockable) | Separate from clinical and general retail stock | 1 | each | LOCKED | No | No | HY | Chemical storage safety standard | Possible | Either | No | No | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| O01 | Cleaning | General | Commercial vacuum | N/A | 1-2 | each | LOCKED | B. RFQ READY | No | No | HY | Electrical safety mark | Possible | Either | No | No | Open | |
+| O02 | Cleaning | General | Mop system (bucket + wringer) | N/A | 2 | each | LOCKED | B. RFQ READY | No | No | CN | None | Yes | Yes | No | No | Open | One general, one clinical, kept separate |
+| O03 | Cleaning | General | Buckets | N/A | 2-4 | each | LOCKED | B. RFQ READY | No | No | CN | None | Yes | Yes | No | No | Open | |
+| O04 | Cleaning | General | Dustpans/brooms | N/A | 2-3 sets | set | LOCKED | B. RFQ READY | No | No | CN | None | Yes | Yes | No | No | Open | |
+| O05 | Cleaning | General | Microfibre cloths | Colour-coded by area (clinical vs general) | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | Infection control colour-coding standard | Yes | Yes | No | No | Open | |
+| O06 | Cleaning | General | General-purpose disinfectant | Non-clinical areas (Lounge, Reception, BOH) | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | Kept separate from the clinical-grade disinfectant in Section E |
+| O07 | Cleaning | Bathroom | Bathroom cleaner | N/A | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | |
+| O08 | Cleaning | General | Glass cleaner | N/A | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | |
+| O09 | Cleaning | General | Floor cleaner | Appropriate to the venue's actual flooring once confirmed | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | |
+| O10 | Cleaning | Waste | Bin liners (general) | Various sizes per bin type | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
+| O11 | Cleaning | Clinical | Clinical-grade cleaning products (TGA-listed) | Kept entirely separate from general cleaning products, see Section E for the full clinical list | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference Section E4, not double-counted here | |
+| O12 | Cleaning | PPE | Cleaning gloves (heavy-duty) | N/A | Ongoing | pair | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | CN | None | Yes | Yes | No | No | Open | |
+| O13 | Cleaning | Equipment | Cleaning caddies | For staff to carry supplies between rooms | 2-3 | each | LOCKED | B. RFQ READY | No | No | CN | None | Yes | Yes | No | No | Open | |
+| O14 | Cleaning | Signage | Wet floor warning signs | N/A | 2-3 | each | LOCKED | B. RFQ READY | No | No | CN | AS/NZS signage standard | Yes | Yes | No | No | Open | |
+| O15 | Cleaning | Consumables | Paper products (general-area hand towel, tissues) | N/A | Ongoing | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | |
+| O16 | Cleaning | Emergency | Spill kit (general, non-biohazard) | N/A | 1-2 | each | LOCKED | B. RFQ READY | No | No | AU | None | No | Yes | No | No | Open | Separate from the clinical blood spill kit in Section E |
+| O17 | Cleaning | Storage | Cleaning products storage (lockable) | Separate from clinical and general retail stock | 1 | each | LOCKED | B. RFQ READY | No | No | HY | Chemical storage safety standard | Possible | Either | No | No | Open | |
 
 ---
 
@@ -406,19 +412,19 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **Current model:** researched against current source documents; no in-house commercial washer/dryer is confirmed as decided anywhere in this repository, and no outsourced laundry contract is confirmed either. This is a genuine, disclosed gap, not invented here.
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| P01 | Laundry | Linen | Towels (general/hand) | N/A | 20-30 | each | CONSUMPTION-DEPENDENT | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
-| P02 | Laundry | Linen | Face towels | N/A | 12-20 | each | CONSUMPTION-DEPENDENT | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
-| P03 | Laundry | Linen | Massage/treatment linen | See Section F06/G09 for room-specific quantities, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference F/G, not double-counted | |
-| P04 | Laundry | Linen | Hair towels | See Section J09/K03 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference J/K, not double-counted | |
-| P05 | Laundry | Linen | Pedicure/foot towels | See Section I04 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference I, not double-counted | |
-| P06 | Laundry | Equipment | Laundry bags/hampers | Segregated clean vs dirty | 4-6 | each | LOCKED | No | No | HY | Clinical/general segregation standard | Possible | Either | No | No | Open | |
-| P07 | Laundry | Consumables | Detergent | N/A | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | Model (in-house wash vs outsourced) not yet decided |
-| P08 | Laundry | Consumables | Stain remover | N/A | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | |
-| P09 | Laundry | Consumables | Disinfecting laundry additive (for clinical/treatment linen) | N/A | Ongoing | bottle | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Infection control standard | No | Yes | No | No | Open | |
-| P10 | Laundry | Equipment | Commercial washer/dryer | Only if in-house laundry model is adopted | 0-2 | each | FOUNDER-DECISION | No | No | AU | Electrical/plumbing, commercial appliance standard | No | Yes | No | Yes | Open | **Genuine, unresolved: in-house vs outsourced laundry model not confirmed anywhere in this repository, not invented here** |
-| P11 | Laundry | Service | Outsourced commercial laundry contract | Only if outsourced model is adopted | 0-1 | contract | FOUNDER-DECISION | No | Yes | AU | None | No | Yes | No | No | Open | Alternative to P10, mutually exclusive |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| P01 | Laundry | Linen | Towels (general/hand) | N/A | 20-30 | each | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
+| P02 | Laundry | Linen | Face towels | N/A | 12-20 | each | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
+| P03 | Laundry | Linen | Massage/treatment linen | See Section F06/G09 for room-specific quantities, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference F/G, not double-counted | |
+| P04 | Laundry | Linen | Hair towels | See Section J09/K03 | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference J/K, not double-counted | |
+| P05 | Laundry | Linen | Pedicure/foot towels | See Section I04 | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference I, not double-counted | |
+| P06 | Laundry | Equipment | Laundry bags/hampers | Segregated clean vs dirty | 4-6 | each | LOCKED | B. RFQ READY | No | No | HY | Clinical/general segregation standard | Possible | Either | No | No | Open | |
+| P07 | Laundry | Consumables | Detergent | N/A | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | Model (in-house wash vs outsourced) not yet decided |
+| P08 | Laundry | Consumables | Stain remover | N/A | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | |
+| P09 | Laundry | Consumables | Disinfecting laundry additive (for clinical/treatment linen) | N/A | Ongoing | bottle | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Infection control standard | No | Yes | No | No | Open | |
+| P10 | Laundry | Equipment | Commercial washer/dryer | Only if in-house laundry model is adopted | 0-2 | each | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | No | AU | Electrical/plumbing, commercial appliance standard | No | Yes | No | Yes | Open | **Genuine, unresolved: in-house vs outsourced laundry model not confirmed anywhere in this repository, not invented here** |
+| P11 | Laundry | Service | Outsourced commercial laundry contract | Only if outsourced model is adopted | 0-1 | contract | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | Yes | AU | None | No | Yes | No | No | Open | Alternative to P10, mutually exclusive |
 
 ---
 
@@ -426,11 +432,11 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **Note:** the core clinical consumables specific to venepuncture are itemised in full in Section E. This section covers clinical-adjacent consumables not specific to the Blood Collection Room itself.
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Q01 | Clinical Consumables | Venue-wide | Consent/intake forms (printed) | N/A | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | Privacy Act, patient record-keeping | No | Yes | No | No | Priced | A$150-250 |
-| Q02 | Clinical Consumables | Venue-wide | Referral cards (printed) | For referring practices | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | |
-| Q03 | Clinical Consumables | Venue-wide | Digital thermometer (general use, non-cold-chain) | For any general first-aid need | 1-2 | each | LOCKED | No | No | HY | None | Possible | Either | No | No | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Q01 | Clinical Consumables | Venue-wide | Consent/intake forms (printed) | N/A | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | Privacy Act, patient record-keeping | No | Yes | No | No | Priced | A$150-250 |
+| Q02 | Clinical Consumables | Venue-wide | Referral cards (printed) | For referring practices | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | |
+| Q03 | Clinical Consumables | Venue-wide | Digital thermometer (general use, non-cold-chain) | For any general first-aid need | 1-2 | each | LOCKED | B. RFQ READY | No | No | HY | None | Possible | Either | No | No | Open | |
 
 ---
 
@@ -438,15 +444,15 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **Protected: no reduction.** All staff receive first aid/CPR training with explicit emphasis on incidents associated with blood collection (fainting, vasovagal response, bleeding, bruising, difficult venepuncture complications, client distress), not a generic first aid course, per `docs/architecture/STAFF-PROFILES-COMPLETE.md`. Exact accredited-course requirement (HLTAID011 Provide First Aid or equivalent) still needs direct confirmation from a registered training organisation before being written into an employment contract.
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R01 | First Aid | Venue-wide | AED (Automated External Defibrillator) | ARTG-registered | 1 | each | LOCKED | No | No | PRO | ARTG registration mandatory | No | Yes, named brands (HeartSine, Zoll, Philips) | No | No | Open | Leasing option exists, ~A$40-60/month; purchase vs lease not yet compared |
-| R02 | First Aid | Venue-wide | First aid kit (comprehensive) | WorkSafe-compliant | 2 | each | LOCKED | Yes | Yes | AU | WorkSafe-compliant | No | Yes | No | No | Priced | A$100-200 each |
-| R03 | First Aid | Venue-wide | Panic buttons | Wired circuit to reception | Per current room count | each | SITE-DEPENDENT | No | No | AU | WorkSafe-compliant, electrical | No | Yes | No | Yes | Open | |
-| R04 | First Aid | Venue-wide | Emergency exit signage | See Section A02, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference A, not double-counted | |
-| R05 | First Aid | Blood Collection | Blood spill kit | See Section E29, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference E, not double-counted | |
-| R06 | First Aid | Training | First Aid/CPR accredited course (per staff member) | HLTAID011 Provide First Aid or equivalent, emphasis on venepuncture-related incidents | Full employment pool | course | STAFF-DEPENDENT | No | Yes, renewal cycle | AU | Registered training organisation, exact course requirement to be confirmed | No | Yes | No | No | Open | Not a physical purchase, a training/service line; recurring renewal cost |
-| R07 | First Aid | Emergency | EpiPen (anaphylaxis) | Held by the Venue Manager, trained first aider | 1-2 | each | LOCKED | Yes | Yes, expiry-driven | AU | TGA-registered, prescription item | No | Yes | No | No | Open | Expiry-driven reorder, not a standard consumable |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| R01 | First Aid | Venue-wide | AED (Automated External Defibrillator) | ARTG-registered | 1 | each | LOCKED | B. RFQ READY | No | No | PRO | ARTG registration mandatory | No | Yes, named brands (HeartSine, Zoll, Philips) | No | No | Open | Leasing option exists, ~A$40-60/month; purchase vs lease not yet compared |
+| R02 | First Aid | Venue-wide | First aid kit (comprehensive) | WorkSafe-compliant | 2 | each | LOCKED | A. ORDER READY | Yes | Yes | AU | WorkSafe-compliant | No | Yes | No | No | Priced | A$100-200 each |
+| R03 | First Aid | Venue-wide | Panic buttons | Wired circuit to reception | Per current room count | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | AU | WorkSafe-compliant, electrical | No | Yes | No | Yes | Open | |
+| R04 | First Aid | Venue-wide | Emergency exit signage | See Section A02, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference A, not double-counted | |
+| R05 | First Aid | Blood Collection | Blood spill kit | See Section E29, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference E, not double-counted | |
+| R06 | First Aid | Training | First Aid/CPR accredited course (per staff member) | HLTAID011 Provide First Aid or equivalent, emphasis on venepuncture-related incidents | Full employment pool | course | STAFF-DEPENDENT | G. INFORMATION REQUIRED | No | Yes, renewal cycle | AU | Registered training organisation, exact course requirement to be confirmed | No | Yes | No | No | Open | Not a physical purchase, a training/service line; recurring renewal cost |
+| R07 | First Aid | Emergency | EpiPen (anaphylaxis) | Held by the Venue Manager, trained first aider | 1-2 | each | LOCKED | B. RFQ READY | Yes | Yes, expiry-driven | AU | TGA-registered, prescription item | No | Yes | No | No | Open | Expiry-driven reorder, not a standard consumable |
 
 ---
 
@@ -454,30 +460,30 @@ Status: current as of 2026-08-23. This is the single authoritative, itemised pro
 
 **This section cross-references, does not duplicate, the PPE items already itemised in Sections E (Blood Collection), G (Beauty), H (Nail), J (Hair), and C (Cafe).**
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| S01 | PPE | Venue-wide | Disposable gloves (general, non-clinical, non-nail) | For general cleaning/housekeeping use | Ongoing | box | CONSUMPTION-DEPENDENT | Yes | Yes | HY | None | Possible | Either | No | No | Open | Distinct from the clinical-grade gloves in Section E |
-| S02 | PPE | Venue-wide | Hand sanitiser (public-facing, Reception/Lounge/Cafe) | Alcohol-based | 3-4 dispensers | each | LOCKED | Yes | Yes | AU | None | No | Yes | No | No | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| S01 | PPE | Venue-wide | Disposable gloves (general, non-clinical, non-nail) | For general cleaning/housekeeping use | Ongoing | box | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | None | Possible | Either | No | No | Open | Distinct from the clinical-grade gloves in Section E |
+| S02 | PPE | Venue-wide | Hand sanitiser (public-facing, Reception/Lounge/Cafe) | Alcohol-based | 3-4 dispensers | each | LOCKED | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | |
 
 ---
 
 ## T. IT / Technology (Venue-Wide)
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes | Required at Opening / Optional / Future |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| T01 | IT | Venue-wide | WiFi router (commercial grade) | Ubiquiti/TP-Link business range | 1 | each | LOCKED | No | No | AU | None | No | Yes | No | No | Priced | A$200-500 | Required at Opening |
-| T02 | IT | Venue-wide | Network switches | To distribute wired connections | 1-2 | each | SITE-DEPENDENT | No | No | AU | None | No | Yes | No | Yes | Open | | Required at Opening |
-| T03 | IT | Venue-wide | Access points (WiFi coverage across the full floor plate) | N/A | 1-2 | each | SITE-DEPENDENT | No | No | AU | None | No | Yes | No | Yes | Open | | Required at Opening |
-| T04 | IT | Venue-wide | Cabling (Cat6) | See Section A06, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference A, not double-counted | | |
-| T05 | IT | Reception | Computer/laptop | See Section B03, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference B, not double-counted | | |
-| T06 | IT | Reception/Lounge | Charging stations | See Sections B17/D02 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference B/D, not double-counted | | |
-| T07 | IT | Lounge | Tablet mounts | See Section D06 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference D, not double-counted | | |
-| T08 | IT | Venue-wide | Security cameras | Optional, not yet confirmed as required | 0-4 | each | OPTIONAL | No | No | HY | Privacy Act, CCTV signage requirement | Possible | Either | No | No | Open | | Optional |
-| T09 | IT | Venue-wide | Access control (e.g. keypad/fob entry) | Optional | 0-1 | system | OPTIONAL | No | No | AU | None | No | Yes | No | Yes | Open | | Optional |
-| T10 | IT | Venue-wide | UPS (uninterruptible power supply) | For POS/booking system continuity during a power blip | 1 | each | OPTIONAL | No | No | AU | Electrical safety mark | No | Yes | No | No | Open | | Optional |
-| T11 | IT | Venue-wide | Backup device/cloud backup subscription | For Fresha/patient data | 1 | subscription | LOCKED | No | Yes | AU | Privacy Act data-retention requirement | No | Yes | No | No | Open | | Required at Opening |
-| T12 | IT | Reception | Phone/VoIP system | See Section B06 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference B, not double-counted | | |
-| T13 | IT | Venue-wide | Small TV/display | Optional (Lounge, see Section D12 future-use note) | 0-1 | each | OPTIONAL | No | No | HY | Electrical safety mark | Possible | Either | No | No | Open | | Optional/Future |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes | Required at Opening / Optional / Future |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| T01 | IT | Venue-wide | WiFi router (commercial grade) | Ubiquiti/TP-Link business range | 1 | each | LOCKED | A. ORDER READY | No | No | AU | None | No | Yes | No | No | Priced | A$200-500 | Required at Opening |
+| T02 | IT | Venue-wide | Network switches | To distribute wired connections | 1-2 | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | AU | None | No | Yes | No | Yes | Open | | Required at Opening |
+| T03 | IT | Venue-wide | Access points (WiFi coverage across the full floor plate) | N/A | 1-2 | each | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | AU | None | No | Yes | No | Yes | Open | | Required at Opening |
+| T04 | IT | Venue-wide | Cabling (Cat6) | See Section A06, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference A, not double-counted | | |
+| T05 | IT | Reception | Computer/laptop | See Section B03, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference B, not double-counted | | |
+| T06 | IT | Reception/Lounge | Charging stations | See Sections B17/D02 | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference B/D, not double-counted | | |
+| T07 | IT | Lounge | Tablet mounts | See Section D06 | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference D, not double-counted | | |
+| T08 | IT | Venue-wide | Security cameras | Optional, not yet confirmed as required | 0-4 | each | OPTIONAL | H. FUTURE / OPTIONAL | No | No | HY | Privacy Act, CCTV signage requirement | Possible | Either | No | No | Open | | Optional |
+| T09 | IT | Venue-wide | Access control (e.g. keypad/fob entry) | Optional | 0-1 | system | OPTIONAL | H. FUTURE / OPTIONAL | No | No | AU | None | No | Yes | No | Yes | Open | | Optional |
+| T10 | IT | Venue-wide | UPS (uninterruptible power supply) | For POS/booking system continuity during a power blip | 1 | each | OPTIONAL | H. FUTURE / OPTIONAL | No | No | AU | Electrical safety mark | No | Yes | No | No | Open | | Optional |
+| T11 | IT | Venue-wide | Backup device/cloud backup subscription | For Fresha/patient data | 1 | subscription | LOCKED | B. RFQ READY | No | Yes | AU | Privacy Act data-retention requirement | No | Yes | No | No | Open | | Required at Opening |
+| T12 | IT | Reception | Phone/VoIP system | See Section B06 | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference B, not double-counted | | |
+| T13 | IT | Venue-wide | Small TV/display | Optional (Lounge, see Section D12 future-use note) | 0-1 | each | OPTIONAL | H. FUTURE / OPTIONAL | No | No | HY | Electrical safety mark | Possible | Either | No | No | Open | | Optional/Future |
 
 ---
 
@@ -489,13 +495,13 @@ All POS, booking, and admin equipment is itemised under Reception (Section B) an
 
 ## V. Security
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| V01 | Security | Venue-wide | Security cameras | See Section T08, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference T, not double-counted | |
-| V02 | Security | Venue-wide | Access control | See Section T09, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference T, not double-counted | |
-| V03 | Security | Venue-wide | Alarm system | Optional, not yet confirmed | 0-1 | system | OPTIONAL | No | No | AU | None | No | Yes | No | Yes | Open | |
-| V04 | Security | Blood Collection | Lockable medical consumables cabinet | See Section E07, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference E, not double-counted | |
-| V05 | Security | Reception | Lockable filing storage | See Section B16, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference B, not double-counted | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| V01 | Security | Venue-wide | Security cameras | See Section T08, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference T, not double-counted | |
+| V02 | Security | Venue-wide | Access control | See Section T09, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference T, not double-counted | |
+| V03 | Security | Venue-wide | Alarm system | Optional, not yet confirmed | 0-1 | system | OPTIONAL | H. FUTURE / OPTIONAL | No | No | AU | None | No | Yes | No | Yes | Open | |
+| V04 | Security | Blood Collection | Lockable medical consumables cabinet | See Section E07, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference E, not double-counted | |
+| V05 | Security | Reception | Lockable filing storage | See Section B16, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference B, not double-counted | |
 
 ---
 
@@ -503,19 +509,19 @@ All POS, booking, and admin equipment is itemised under Reception (Section B) an
 
 **Uses the locked brand direction: warm, natural, earthy, calm premium/luxury positioning, current approved 7-colour palette (`outputs/brand/warm-stone-tokens.css`). No new brand colours invented here.**
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| W01 | Branding | External | External signage (business name/logo) | Design-dependent, gated on final naming decision | 1 | each | FOUNDER-DECISION | No | No | HY | Local council signage permit | Possible | Either | No | Yes | Open | Cannot be finalised until SOLENA/ELOWEN is decided |
-| W02 | Branding | Internal | Internal wayfinding signage | Per venue layout | 1 lot | lot | SITE-DEPENDENT | No | No | HY | None | Possible | Either | No | Yes | Open | |
-| W03 | Branding | Cafe | Menu | See Section C17, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference C, not double-counted | |
-| W04 | Branding | Venue-wide | Printed materials (brochures, referral cards) | See Q02 for referral cards specifically | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | AU | None | No | Yes | No | No | Open | |
-| W05 | Branding | Staff | Uniforms | See Sections E39/F12/G15, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference E/F/G, not double-counted | |
-| W06 | Branding | Staff | Name badges | Per employed headcount | Full employment pool | each | STAFF-DEPENDENT | No | No | HY | None | Possible | Either | No | No | Open | |
-| W07 | Branding | Reception | Branded stationery | N/A | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
-| W08 | Branding | Venue-wide | Decor/artwork | Warm, natural, earthy, matches the locked palette | 1 lot | lot | SITE-DEPENDENT | No | No | HY | None | Possible | Either | No | Yes | Open | |
-| W09 | Branding | Venue-wide | Mirrors (decorative, beyond the functional Hair mirror in J02) | Optional | 0-2 | each | OPTIONAL | No | No | HY | None | Possible | Either | No | No | Open | |
-| W10 | Branding | Venue-wide | Planters (if appropriate) | Optional, real or artificial plants matching the palette | 2-4 | each | OPTIONAL | No | No | CN | None | Yes | Yes | No | No | Open | |
-| W11 | Branding | Venue-wide | Scent/ambience diffuser | Only if appropriate and safe given pregnancy scent-sensitivity | 0-1 | each | FOUNDER-DECISION | No | No | HY | Pregnancy-safe fragrance-free or low-scent formulation if adopted | Possible | Either | No | No | Open | Genuine, unresolved: not confirmed appropriate given pregnancy sensitivity |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| W01 | Branding | External | External signage (business name/logo) | Design-dependent, gated on final naming decision | 1 | each | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | No | HY | Local council signage permit | Possible | Either | No | Yes | Open | Cannot be finalised until SOLENA/ELOWEN is decided |
+| W02 | Branding | Internal | Internal wayfinding signage | Per venue layout | 1 lot | lot | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | HY | None | Possible | Either | No | Yes | Open | |
+| W03 | Branding | Cafe | Menu | See Section C17, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference C, not double-counted | |
+| W04 | Branding | Venue-wide | Printed materials (brochures, referral cards) | See Q02 for referral cards specifically | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | None | No | Yes | No | No | Open | |
+| W05 | Branding | Staff | Uniforms | See Sections E39/F12/G15, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference E/F/G, not double-counted | |
+| W06 | Branding | Staff | Name badges | Per employed headcount | Full employment pool | each | STAFF-DEPENDENT | G. INFORMATION REQUIRED | No | No | HY | None | Possible | Either | No | No | Open | |
+| W07 | Branding | Reception | Branded stationery | N/A | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | None | Possible | Either | No | No | Open | |
+| W08 | Branding | Venue-wide | Decor/artwork | Warm, natural, earthy, matches the locked palette | 1 lot | lot | SITE-DEPENDENT | C. SITE DEPENDENT | No | No | HY | None | Possible | Either | No | Yes | Open | |
+| W09 | Branding | Venue-wide | Mirrors (decorative, beyond the functional Hair mirror in J02) | Optional | 0-2 | each | OPTIONAL | H. FUTURE / OPTIONAL | No | No | HY | None | Possible | Either | No | No | Open | |
+| W10 | Branding | Venue-wide | Planters (if appropriate) | Optional, real or artificial plants matching the palette | 2-4 | each | OPTIONAL | H. FUTURE / OPTIONAL | No | No | CN | None | Yes | Yes | No | No | Open | |
+| W11 | Branding | Venue-wide | Scent/ambience diffuser | Only if appropriate and safe given pregnancy scent-sensitivity | 0-1 | each | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | No | HY | Pregnancy-safe fragrance-free or low-scent formulation if adopted | Possible | Either | No | No | Open | Genuine, unresolved: not confirmed appropriate given pregnancy sensitivity |
 
 ---
 
@@ -523,24 +529,24 @@ All POS, booking, and admin equipment is itemised under Reception (Section B) an
 
 **No lux levels are fabricated below. Where Australian standards/professional lighting design are required, the verification requirement is identified, not a number invented.**
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| X01 | Lighting | Reception | General ambient lighting | Warm, matches palette | Per venue layout | fixture | PROFESSIONAL-VERIFICATION | No | No | SITE | Australian lighting designer/electrician | Possible | Either | No | Yes | Open | |
-| X02 | Lighting | Cafe | Task + ambient lighting | Warm, food-safe fixture ratings where applicable | Per venue layout | fixture | PROFESSIONAL-VERIFICATION | No | No | SITE | Australian lighting designer/electrician | Possible | Either | No | Yes | Open | |
-| X03 | Lighting | Lounge | Ambient + floor lamps | See Section D04, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference D, not double-counted | |
-| X04 | Lighting | Blood Collection | Clinical-standard lighting | Adequate for venepuncture precision work | Per room | fixture | PROFESSIONAL-VERIFICATION | No | No | SITE | Australian clinical lighting standard, electrician | No | Yes | No | Yes | Open | |
-| X05 | Lighting | Nail | Task lighting per station | See Section H (implied in station equipment), dedicated fixture if not built into the nail lamp | Per station | fixture | PROFESSIONAL-VERIFICATION | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
-| X06 | Lighting | Pedicure | Task lighting per chair | N/A | Per chair | fixture | PROFESSIONAL-VERIFICATION | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
-| X07 | Lighting | Massage | Task/ambient lighting per station | Warm, dimmable | Per station | fixture | PROFESSIONAL-VERIFICATION | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
-| X08 | Lighting | Beauty | Magnifying/task lighting | See Section G03, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference G, not double-counted | |
-| X09 | Lighting | Hair Styling | Mirror-integrated lighting | See Section J02, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference J, not double-counted | |
-| X10 | Lighting | Hair Wash | General ambient lighting | N/A | Per venue layout | fixture | PROFESSIONAL-VERIFICATION | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
-| X11 | Lighting | Toilets | General ambient lighting | N/A | Per toilet count | fixture | PROFESSIONAL-VERIFICATION | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
-| X12 | Lighting | Staff Areas | General ambient lighting | N/A | Per venue layout | fixture | PROFESSIONAL-VERIFICATION | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
-| X13 | Lighting | Storage | Basic utility lighting | N/A | Per venue layout | fixture | PROFESSIONAL-VERIFICATION | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
-| X14 | Lighting | Venue-wide | Emergency lighting | Building-code compliant, exit-path illumination | Per venue layout | fixture | PROFESSIONAL-VERIFICATION | No | No | SITE | Building surveyor, AS 2293 | No | Yes | No | Yes | Open | |
-| X15 | Lighting | Venue-wide | Feature/decorative lighting | Optional, brand-reinforcing | Optional | fixture | OPTIONAL | No | No | HY | Electrician | Possible | Either | No | No | Open | |
-| X16 | Lighting | External | Signage lighting | Gated on naming decision | 1 | fixture | FOUNDER-DECISION | No | No | HY | Electrician, council signage permit | Possible | Either | No | Yes | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| X01 | Lighting | Reception | General ambient lighting | Warm, matches palette | Per venue layout | fixture | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Australian lighting designer/electrician | Possible | Either | No | Yes | Open | |
+| X02 | Lighting | Cafe | Task + ambient lighting | Warm, food-safe fixture ratings where applicable | Per venue layout | fixture | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Australian lighting designer/electrician | Possible | Either | No | Yes | Open | |
+| X03 | Lighting | Lounge | Ambient + floor lamps | See Section D04, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference D, not double-counted | |
+| X04 | Lighting | Blood Collection | Clinical-standard lighting | Adequate for venepuncture precision work | Per room | fixture | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Australian clinical lighting standard, electrician | No | Yes | No | Yes | Open | |
+| X05 | Lighting | Nail | Task lighting per station | See Section H (implied in station equipment), dedicated fixture if not built into the nail lamp | Per station | fixture | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
+| X06 | Lighting | Pedicure | Task lighting per chair | N/A | Per chair | fixture | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
+| X07 | Lighting | Massage | Task/ambient lighting per station | Warm, dimmable | Per station | fixture | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
+| X08 | Lighting | Beauty | Magnifying/task lighting | See Section G03, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference G, not double-counted | |
+| X09 | Lighting | Hair Styling | Mirror-integrated lighting | See Section J02, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference J, not double-counted | |
+| X10 | Lighting | Hair Wash | General ambient lighting | N/A | Per venue layout | fixture | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
+| X11 | Lighting | Toilets | General ambient lighting | N/A | Per toilet count | fixture | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
+| X12 | Lighting | Staff Areas | General ambient lighting | N/A | Per venue layout | fixture | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
+| X13 | Lighting | Storage | Basic utility lighting | N/A | Per venue layout | fixture | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Electrician | Possible | Either | No | Yes | Open | |
+| X14 | Lighting | Venue-wide | Emergency lighting | Building-code compliant, exit-path illumination | Per venue layout | fixture | PROFESSIONAL-VERIFICATION | D. PROFESSIONAL VERIFICATION REQUIRED | No | No | SITE | Building surveyor, AS 2293 | No | Yes | No | Yes | Open | |
+| X15 | Lighting | Venue-wide | Feature/decorative lighting | Optional, brand-reinforcing | Optional | fixture | OPTIONAL | H. FUTURE / OPTIONAL | No | No | HY | Electrician | Possible | Either | No | No | Open | |
+| X16 | Lighting | External | Signage lighting | Gated on naming decision | 1 | fixture | FOUNDER-DECISION | F. FOUNDER DECISION REQUIRED | No | No | HY | Electrician, council signage permit | Possible | Either | No | Yes | Open | |
 
 ---
 
@@ -558,22 +564,22 @@ Covered under Branding (Section W) and Lounge (Section D). Not duplicated here.
 
 ## AA. Waste Management
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| AA01 | Waste | Blood Collection | Biohazard/clinical waste | See Sections E12/E13/E14, not double-counted here | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference E, not double-counted | |
-| AA02 | Waste | Venue-wide | General waste bins | Per area, see individual sections | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference C21/D11/J16/N09, not double-counted | |
-| AA03 | Waste | Venue-wide | General waste collection contract | Council or private contractor | 1 | contract | SITE-DEPENDENT | No | Yes | AU | Council waste-management requirement | No | Yes | No | Yes | Open | |
-| AA04 | Waste | Cafe | Food waste/recycling separation | See Section C21 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference C, not double-counted | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| AA01 | Waste | Blood Collection | Biohazard/clinical waste | See Sections E12/E13/E14, not double-counted here | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference E, not double-counted | |
+| AA02 | Waste | Venue-wide | General waste bins | Per area, see individual sections | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference C21/D11/J16/N09, not double-counted | |
+| AA03 | Waste | Venue-wide | General waste collection contract | Council or private contractor | 1 | contract | SITE-DEPENDENT | C. SITE DEPENDENT | No | Yes | AU | Council waste-management requirement | No | Yes | No | Yes | Open | |
+| AA04 | Waste | Cafe | Food waste/recycling separation | See Section C21 | N/A | N/A | N/A | Cross-reference (not scored) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Cross-reference C, not double-counted | |
 
 ---
 
 ## AB. Maintenance / Tooling
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| AB01 | Maintenance | Venue-wide | Basic tool kit (screwdrivers, allen keys for furniture assembly/maintenance) | N/A | 1 | each | LOCKED | No | No | CN | None | Yes | Yes | No | No | Open | |
-| AB02 | Maintenance | Venue-wide | Spare lightbulbs/fixtures | Matching the installed fixture types | 1 lot | lot | CONSUMPTION-DEPENDENT | Yes | Yes | HY | Electrical safety mark | Possible | Either | No | No | Open | |
-| AB03 | Maintenance | Equipment | Equipment service/maintenance contracts (centrifuge, LEV units, coffee machine) | Manufacturer or third-party servicing | 3+ | contract | LOCKED | No | Yes | HY | Manufacturer warranty terms | Possible | Either | No | No | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| AB01 | Maintenance | Venue-wide | Basic tool kit (screwdrivers, allen keys for furniture assembly/maintenance) | N/A | 1 | each | LOCKED | B. RFQ READY | No | No | CN | None | Yes | Yes | No | No | Open | |
+| AB02 | Maintenance | Venue-wide | Spare lightbulbs/fixtures | Matching the installed fixture types | 1 lot | lot | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | HY | Electrical safety mark | Possible | Either | No | No | Open | |
+| AB03 | Maintenance | Equipment | Equipment service/maintenance contracts (centrifuge, LEV units, coffee machine) | Manufacturer or third-party servicing | 3+ | contract | LOCKED | B. RFQ READY | No | Yes | HY | Manufacturer warranty terms | Possible | Either | No | No | Open | |
 
 ---
 
@@ -585,12 +591,12 @@ All opening-stock consumables are itemised within their own functional area thro
 
 ## AD. Backup / Replacement Stock
 
-| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| AD01 | Backup | Blood Collection | Spare phlebotomy chair componentry (armrests, wipe-clean covers) | In case of damage | Quantity to be determined from opening-stock policy | each | CONSUMPTION-DEPENDENT | No | Yes | PRO | Same as E01/E02 | No | Yes | No | No | Open | |
-| AD02 | Backup | Venue-wide | Spare GPO adaptors/power boards | N/A | Small lot | each | LOCKED | Yes | Yes | CN | Electrical safety mark | Yes | Yes | No | No | Open | |
-| AD03 | Backup | Venue-wide | Spare AED pads/battery | Expiry-driven replacement | 1 set | set | CONSUMPTION-DEPENDENT | Yes | Yes, expiry-driven | PRO | ARTG registration | No | Yes | No | No | Open | |
-| AD04 | Backup | Blood Collection | Spare sharps containers, biohazard bags | See Section E, additional buffer stock | Quantity to be determined from opening-stock policy | each | CONSUMPTION-DEPENDENT | Yes | Yes | AU | AS/NZS 23907:2023 | No | Yes | No | No | Open | |
+| ID | Category | Area | Item | Description / Specification | Quantity | Unit | Quantity Basis | Readiness | Opening Stock? | Reorderable? | Sourcing | Compliance / Verification | China Candidate? | Australian Source? | WDP Supplied? | Venue Dependent? | Status | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| AD01 | Backup | Blood Collection | Spare phlebotomy chair componentry (armrests, wipe-clean covers) | In case of damage | Quantity to be determined from opening-stock policy | each | CONSUMPTION-DEPENDENT | B. RFQ READY | No | Yes | PRO | Same as E01/E02 | No | Yes | No | No | Open | |
+| AD02 | Backup | Venue-wide | Spare GPO adaptors/power boards | N/A | Small lot | each | LOCKED | B. RFQ READY | Yes | Yes | CN | Electrical safety mark | Yes | Yes | No | No | Open | |
+| AD03 | Backup | Venue-wide | Spare AED pads/battery | Expiry-driven replacement | 1 set | set | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes, expiry-driven | PRO | ARTG registration | No | Yes | No | No | Open | |
+| AD04 | Backup | Blood Collection | Spare sharps containers, biohazard bags | See Section E, additional buffer stock | Quantity to be determined from opening-stock policy | each | CONSUMPTION-DEPENDENT | B. RFQ READY | Yes | Yes | AU | AS/NZS 23907:2023 | No | Yes | No | No | Open | |
 
 ---
 
