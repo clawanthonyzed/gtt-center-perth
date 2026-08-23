@@ -321,6 +321,20 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
       <div class="metric-card"><span class="label">Quantity basis: consumption-dependent</span><div class="value">84</div><div class="note">Opening stock plus reorder, no invented consumption rate</div></div>
     </div>
 
+    <h3>Procurement readiness classification (A-H)</h3>
+    <p>Every one of the 281 distinct items carries exactly one primary Readiness classification, computed from its existing Quantity Basis, Sourcing, and Status fields, not re-judged from scratch. Counts sum exactly to 281.</p>
+
+    <div class="card-grid">
+      <div class="metric-card"><span class="label">A. Order ready</span><div class="value">39</div><div class="note">Locked spec and quantity, existing price, no blocker</div></div>
+      <div class="metric-card"><span class="label">B. RFQ ready</span><div class="value">149</div><div class="note">Locked spec and quantity, no existing price, needs a quote</div></div>
+      <div class="metric-card"><span class="label">C. Site dependent</span><div class="value">24</div><div class="note">Cannot finalise before a venue is measured</div></div>
+      <div class="metric-card"><span class="label">D. Professional verification required</span><div class="value">28</div><div class="note">Electrical, plumbing, HVAC, accessibility sign-off</div></div>
+      <div class="metric-card"><span class="label">E. WDP dependent</span><div class="value">3</div><div class="note">Pathology partner confirmation required</div></div>
+      <div class="metric-card"><span class="label">F. Founder decision required</span><div class="value">15</div><div class="note">Genuinely unresolved, listed in full in the Founder Decisions register</div></div>
+      <div class="metric-card"><span class="label">G. Information required</span><div class="value">9</div><div class="note">A specific named gap, not a vague "research required"</div></div>
+      <div class="metric-card"><span class="label">H. Future/optional</span><div class="value">14</div><div class="note">Deferred until after opening</div></div>
+    </div>
+
     <h3>Procurement readiness, honestly stated</h3>
     <p>This register is genuinely detailed enough to identify what to buy, how many, and what specification for the large majority of the business (furniture, equipment, consumables, PPE, cleaning, IT, branding). It is <strong>not</strong> a complete, quotable fit-out cost: construction/fit-out, exact electrical/lighting/plumbing fixture counts, toilet-count-dependent consumable volumes, and the external Cafe food supplier's own pricing remain genuinely open, not overlooked. 15 procurement packages and an Opening Day Procurement Checklist are built from the same register. No purchase, RFQ, or supplier contact has been made.</p>
 
@@ -328,6 +342,20 @@ code{background:var(--warm-stone); padding:1px 5px; border-radius:3px; font-size
       <span class="callout-label">What remains genuinely open</span>
       External Cafe food supplier not yet identified; WorkSafe-WA-familiar LEV contractor not yet identified; laundry model (in-house vs outsourced) not confirmed; Massage station format (table vs chair) a genuine founder decision; final treatment/phlebotomist employment pool sizes still gate exact locker/uniform counts; toilet-count-dependent items await a confirmed venue.
     </div>
+
+    <h3>Procurement system, full document set</h3>
+    <p>Companion documents that feed into the single authoritative register above; none of these is a second source of truth, each covers a distinct planning function.</p>
+    <ul>
+      <li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md" target="_blank" rel="noopener">Master procurement register</a> (authoritative, all 281 items, Readiness A-H)</li>
+      <li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/PROCUREMENT-CHINA-PACKAGE.md" target="_blank" rel="noopener">China procurement package</a> (10 sourcing groups, spec/material/QC per group)</li>
+      <li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/PROCUREMENT-AUSTRALIA-PACKAGE.md" target="_blank" rel="noopener">Australia procurement package</a> (retail, commercial, clinical, trade, food-service, formal-RFQ vs normal purchasing)</li>
+      <li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/PROCUREMENT-OPENING-STOCK-SCHEDULE.md" target="_blank" rel="noopener">Opening stock schedule</a> (4-week opening stock, reorder point, reorder quantity, per consumable)</li>
+      <li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/PROCUREMENT-SITE-DEPENDENT-HOLD-LIST.md" target="_blank" rel="noopener">Site-dependent hold list</a> (exact measurement/confirmation required per category, held item IDs)</li>
+      <li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/PROCUREMENT-SOURCING-AGENT-BRIEF.md" target="_blank" rel="noopener">Sourcing agent information package</a> (self-contained brief, no repo access required)</li>
+      <li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/PROCUREMENT-FOUNDER-DECISIONS.md" target="_blank" rel="noopener">Founder decisions blocking procurement</a> (options, recommendation where evidence supports one, deadline)</li>
+      <li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/PROCUREMENT-DEPENDENCY-MAP.md" target="_blank" rel="noopener">Procurement dependency map and phasing</a> (venue secured through opening, Phase 0-7)</li>
+      <li><a href="https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/FIT-OUT-SUPPLIER-RFQ-TEMPLATE.md" target="_blank" rel="noopener">Supplier RFQ template</a> (existing, 36-item checklist plus comparison matrix)</li>
+    </ul>
   </div>
 </section>
 
