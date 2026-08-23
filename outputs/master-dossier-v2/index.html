@@ -2111,61 +2111,43 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     <div class="chapter-opener">
       <div class="chapter-eyebrow">Chapter 25</div>
       <h1 class="chapter-title">Purchasing</h1>
-      <p class="chapter-dek">Real named suppliers, real market-range prices, nothing here is an actual received quote yet.</p>
+      <p class="chapter-dek">A concise procurement strategy summary. The full, itemised register lives in <code>docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md</code>, not reproduced line-by-line here.</p>
     </div>
 
-    <h2>Named real suppliers identified (research basis)</h2>
-    <p>National Salon Supplies, Salon Supply Australia, Diamond Nail Supplies, American Beauty Supply, The Salon Furniture Hub, all national Australian suppliers with Australia-wide delivery. <strong>None have been contacted for an actual quote yet.</strong> Confidence convention used throughout: MEDIUM = market-range estimate cross-checked against a named real supplier category; LOW = wide range, genuinely uncertain pending a real quote. Nothing below is marked VERIFIED: nothing here is a received quote.</p>
-
-    <h2>Nail Station (4 stations, day-one committed)</h2>
-    <div class="table-wrap">
-    <table>
-      <thead><tr><th>Item</th><th>Qty</th><th>Total</th><th>Supplier</th><th>Confidence</th></tr></thead>
-      <tbody>
-        <tr><td>Nail table with dust collector</td><td>4</td><td>A$2,000&ndash;3,200</td><td>Diamond Nail Supplies / National Salon Supplies</td><td>MEDIUM</td></tr>
-        <tr><td>LEV unit (shared, WorkSafe WA compliant)</td><td>1</td><td>A$1,500&ndash;4,000</td><td><span class="tag tag-research">Needs research</span> no specific WorkSafe-WA-familiar contractor identified, a genuine gap</td><td>LOW</td></tr>
-        <tr><td>UV/LED nail lamp</td><td>4</td><td>A$400&ndash;800</td><td>Diamond Nail Supplies</td><td>MEDIUM</td></tr>
-        <tr><td>Client manicure chair</td><td>4</td><td>A$800&ndash;1,600</td><td>American Beauty Supply</td><td>MEDIUM</td></tr>
-        <tr><td>Pedicure spa chair (pipeless, hygiene-mandatory design)</td><td>4</td><td>A$3,200&ndash;8,000</td><td>American Beauty Supply / Salon Supply Australia</td><td>MEDIUM</td></tr>
-        <tr><td>Nail tool trolley</td><td>4</td><td>A$600&ndash;1,200</td><td>The Salon Furniture Hub</td><td>MEDIUM</td></tr>
-        <tr><td>Opening stock (polish, base/top coats, files, disinfection)</td><td>1 lot</td><td>A$830&ndash;1,480</td><td>National Salon Supplies</td><td>MEDIUM</td></tr>
-        <tr><td><strong>Nail Station subtotal</strong></td><td></td><td><strong>A$9,340&ndash;20,280</strong></td><td></td><td></td></tr>
-      </tbody>
-    </table>
+    <div class="callout">
+      <span class="callout-label">Where the detail actually lives</span>
+      <code>docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md</code> is the single authoritative, itemised procurement register: 306 itemised rows across 26 functional categories, 281 distinct purchasable items after removing cross-reference duplicates. This chapter gives the business-plan-level summary an investor or advisor needs; it does not dump the full register into the dossier.
     </div>
 
-    <h2>Massage Rooms (2 rooms, day-one committed)</h2>
-    <div class="table-wrap">
-    <table>
-      <thead><tr><th>Item</th><th>Qty</th><th>Total</th><th>Confidence</th></tr></thead>
-      <tbody>
-        <tr><td>Pregnancy massage table (face hole + side cutouts)</td><td>2</td><td>A$1,600&ndash;5,000</td><td>MEDIUM</td></tr>
-        <tr><td>Bolster/positioning pillow set</td><td>2 sets</td><td>A$160&ndash;300</td><td>MEDIUM</td></tr>
-        <tr><td>Heated blanket</td><td>4</td><td>A$320&ndash;600</td><td>MEDIUM</td></tr>
-        <tr><td>Massage oil warming unit</td><td>2</td><td>A$100&ndash;200</td><td>MEDIUM (Optional)</td></tr>
-        <tr><td>Opening stock (pregnancy-safe oil, linen, hamper)</td><td>1 lot</td><td>A$745&ndash;1,300</td><td>MEDIUM</td></tr>
-        <tr><td><strong>Massage Rooms subtotal</strong></td><td></td><td><strong>A$2,925&ndash;7,400</strong></td><td></td></tr>
-      </tbody>
-    </table>
-    </div>
+    <h2>Procurement strategy</h2>
+    <p>Every item in the register carries a real quantity basis (a fixed/locked count, a figure calculated from the operating model or staff position register, a venue-dependent figure, a staff-headcount-dependent figure, a consumption-based opening-stock figure, an optional upgrade, a professional-verification requirement, a genuine founder decision, or a WDP-dependent figure) rather than an invented number. Named real Australian salon/spa suppliers already identified (National Salon Supplies, Salon Supply Australia, Diamond Nail Supplies, American Beauty Supply, The Salon Furniture Hub), none yet contacted for an actual quote.</p>
 
-    <h2>Hair Station (4 chairs, 2 backwash, day-one committed)</h2>
-    <div class="table-wrap">
-    <table>
-      <thead><tr><th>Item</th><th>Qty</th><th>Total</th><th>Confidence</th></tr></thead>
-      <tbody>
-        <tr><td>Styling chair (hydraulic, wipe-clean)</td><td>4</td><td>A$2,000&ndash;4,800</td><td>MEDIUM</td></tr>
-        <tr><td>Backwash basin + client chair</td><td>2</td><td>A$2,000&ndash;5,000</td><td>MEDIUM: 3rd backwash optional, +A$1,000&ndash;2,500</td></tr>
-        <tr><td>Professional hair dryer (named-brand quality)</td><td>4</td><td>A$1,000&ndash;2,000</td><td>MEDIUM</td></tr>
-        <tr><td>Straightening iron (professional grade)</td><td>4</td><td>A$600&ndash;1,200</td><td>MEDIUM</td></tr>
-        <tr><td>Salon mirror (lighted, full-length)</td><td>1</td><td>A$200&ndash;500</td><td>MEDIUM</td></tr>
-        <tr><td>Tool trolley + organiser</td><td>4</td><td>A$600&ndash;1,200</td><td>MEDIUM</td></tr>
-        <tr><td>Opening stock (pregnancy-safe hair products, gowns, towels)</td><td>1 lot</td><td>A$350&ndash;650</td><td>MEDIUM</td></tr>
-        <tr><td><strong>Hair Station subtotal</strong></td><td></td><td><strong>A$6,750&ndash;15,350</strong></td><td></td></tr>
-      </tbody>
-    </table>
-    </div>
-    <p style="font-size:0.85rem; opacity:0.75;">Blood Collection Room, Beauty/Facial rooms, Lounge, Cafe, retail, and technology categories are itemised at the same MEDIUM/LOW confidence in the full source document, not reproduced line-by-line here to avoid duplicating a very long table; see <code>docs/architecture/ITEMISED-PURCHASE-LIST.md</code> directly.</p>
+    <h2>Major equipment requirements</h2>
+    <p>Current venue program (Chapter 20, <code>docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md</code>): Blood Collection (1 room, built and serviced for 3 chairs, 2 staffed day-one), Massage (3 stations: 2 day-one + 1 growth reservation, table-vs-chair format a genuine open founder decision), Beauty (3 stations recommended, matching Massage, pending sign-off), Nail (4 stations), Pedicure (4 chairs in the same zone as Nail, not an additional expansion), Hair (4 chairs, 2 backwash, 3rd optional). Major equipment subtotals already researched: Nail Station A$9,340&ndash;20,280, Hair Station A$6,750&ndash;15,350 (4 chairs, 2 backwash), Massage and Beauty subtotals pending re-costing against the current 3-station figures (the existing itemised research was built against an earlier 2-room figure for each and needs updating to match).</p>
+
+    <h2>China/Australia sourcing approach</h2>
+    <p>Every item in the register carries a sourcing classification (China candidate, Australian-only, hybrid/source-dependent, professional procurement, venue-dependent, or WDP-dependent), not a default assumption of China sourcing. Clinical, regulated, and fire/life-safety items remain Australian-sourced. The highest-confidence China sourcing opportunity remains the pipeless pedicure chairs (Chapter 33/34's own sourcing strategy). The recommended procurement model remains Hybrid: an Australian-based sourcing agent for China-suitable categories, independent pre-shipment inspection, Australian sourcing kept unchanged for clinical/regulated items (Chapter 34, <code>docs/architecture/CHINA-AUSTRALIA-SOURCING-STRATEGY.md</code>).</p>
+
+    <h2>Opening-stock strategy</h2>
+    <p>Consumables (nail polish, hair/beauty products, cleaning supplies, clinical consumables) are costed as opening stock plus an ongoing reorder, not a one-off purchase; no consumption rate is invented where none exists in the source research. An Opening Day Procurement Checklist exists in the master register, covering the practical must-have-before-first-client view across toilets, cleaning, Blood Collection, PPE, linen, service consumables, Cafe stock, POS/technology, uniforms, waste arrangements, emergency equipment, and signage.</p>
+
+    <h2>Cafe procurement</h2>
+    <p>Full-size beverage refrigerator, display refrigerator, coffee machine, chilled and boiling water tap, toastie press (Chapter 12). A genuine, disclosed procurement dependency: the external food supplier for pre-made sandwiches/rolls is not yet identified.</p>
+
+    <h2>Clinical procurement</h2>
+    <p>The Blood Collection Room is the most detailed section of the master register: furniture, sharps disposal, clinical waste, specimen handling, PPE, hand hygiene, cleaning/disinfection, privacy/partitions, and emergency provisions are itemised separately from general venue procurement, with each item marked as a GTT Center Perth purchase, a WDP-supplied item, a WDP-dependent item, or requiring Australian clinical/professional verification. The refrigerated centrifuge remains the single most critical piece of equipment in the venue. No phlebotomy supervisor equipment or role is procured for; escalation beyond the second on-site phlebotomist is a genuine, disclosed WDP dependency (Chapter 7).</p>
+
+    <h2>Fit-out procurement</h2>
+    <p>Construction (partitions, electrical, plumbing, flooring, HVAC), LEV ducting/routing, and exact fixture counts remain genuinely site-dependent, requiring a confirmed venue and real Perth builder quotes, not itemised at unit level in the master register.</p>
+
+    <h2>Procurement dependencies</h2>
+    <ul>
+      <li>External Cafe food supplier: not yet identified.</li>
+      <li>WorkSafe WA-familiar LEV contractor (Nail Station ventilation): no specific supplier identified yet.</li>
+      <li>Laundry model (in-house wash vs outsourced contract): not confirmed anywhere in this repository.</li>
+      <li>3 real builder quotes for construction/fit-out (Chapter 24), gated on a confirmed venue.</li>
+      <li>Real supplier quotes from every named supplier: none contacted yet.</li>
+    </ul>
 
     <h2>The GTT supplies discrepancy: disclosed, not resolved</h2>
     <div class="callout">
@@ -2175,18 +2157,11 @@ footer a{color:var(--warm-ivory); text-decoration-color:rgba(250,246,238,0.4);}
     </div>
 
     <h2>GST treatment</h2>
-    <p>All equipment/furniture/fixture purchases are standard-rated (10% GST), input tax credit claimable against the trust's GST-registered ABN, applied uniformly across every line above.</p>
-
-    <h2>Quotes still required before any figure above is locked</h2>
-    <ul>
-      <li>A WorkSafe WA-familiar LEV contractor: no specific supplier identified yet, a genuine gap.</li>
-      <li>3 real builder quotes for construction/fit-out (Chapter 24), gated on a confirmed venue.</li>
-      <li>Real supplier quotes from every named supplier above: none contacted yet.</li>
-    </ul>
+    <p>All equipment/furniture/fixture purchases are standard-rated (10% GST), input tax credit claimable against the trust's GST-registered ABN, applied uniformly across the register.</p>
 
     <div class="callout olive">
       <span class="callout-label">Sourcing</span>
-      <code>docs/architecture/ITEMISED-PURCHASE-LIST.md</code> (primary), <code>docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md</code> (GTT supplies discrepancy status), <code>data/canonical/opex.yml</code>.
+      <code>docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md</code> (primary, current authoritative register), <code>docs/architecture/ITEMISED-PURCHASE-LIST.md</code> and <code>docs/equipment-costs.md</code> (historical research trail, superseded as the primary source), <code>docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md</code> (GTT supplies discrepancy status), <code>data/canonical/opex.yml</code>.
     </div>
   </div>
 </section>
