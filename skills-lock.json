@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "anydesign": {
+      "source": "uxKero/anydesign",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "a6ad93501ad7de471f89c1ced0d7b30e354fdfe0a053b9e135a378561905489c"
+    },
     "design-taste-frontend": {
       "source": "Leonxlnx/taste-skill",
       "sourceType": "github",
