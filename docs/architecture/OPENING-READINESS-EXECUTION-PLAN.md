@@ -120,7 +120,22 @@ The venture is not blocked by any unsolved design question. It is blocked by a s
 
 **Prior-GDM market (researched, per the same document):** 18% current GDM diagnosis rate nationally, 30-41% recurrence rate in subsequent pregnancies. This supports a real, elevated-probability repeat-engagement segment, not a specific customer-count forecast (which would require the venture's own booking data over time). **What is missing is the execution side:** no retention/referral process exists yet to actually capture prior-GDM clients as repeat customers (e.g. a structured way to invite a GDM-positive client back, beyond the already-modelled "welcome GDM-positive clients back for a dedicated session" concept in the now-superseded-in-part `docs/extended-wellness-services.md`). This is a revenue-upside build, not an opening blocker.
 
-**Website, booking system, Google Business Profile, social media:** booking system (Fresha) is confirmed and modelled. Website/GBP/social media status was not independently re-verified this round (out of this task's research scope); should be checked directly against Poppy's marketing plans (`docs/afternoon-marketing-plan.md`, `docs/poppy-marketing.md`) before assuming readiness.
+**Website, booking system, Google Business Profile, social media, verified against the repository directly (2026-08-24), not assumed:** website is spec-only (`docs/website-spec.md`), no developer engaged, no domain registered anywhere in this repository. Fresha is selected and modelled but no live account exists yet (nothing to configure without confirmed staff/venue). Google Business Profile is explicitly plan-only, correctly stated as venue-address-dependent.
+
+**Minimum viable customer-acquisition sequence, in order, marking what can start before a venue exists:**
+
+| # | Step | Can start before venue? | Note |
+|---|---|---|---|
+| 1 | Domain registration | Yes | A small, cheap, immediately actionable step; not yet done |
+| 2 | Branded email (on the registered domain) | Yes | Depends only on step 1 |
+| 3 | Landing/waitlist page | Yes | Does not need a venue address; can capture early interest now |
+| 4 | Referral/partner information (the one-page practice sheet, per `docs/referral-partnership-plan.md`) | Partially | Can be drafted now; finalised once the venue address exists |
+| 5 | Booking infrastructure (a live Fresha account, configured) | No | Needs a confirmed venue and staff roster to configure meaningfully |
+| 6 | Full website | Partially | Content/structure can be drafted now (per `docs/website-spec.md`'s own 2-phase plan); the booking widget integration waits for step 5 |
+| 7 | Google Business Profile | No | Explicitly requires a venue address |
+| 8 | Launch campaign | No | Should follow, not precede, a live venue and booking system |
+
+**What this means in practice:** steps 1-3 (domain, email, waitlist) are genuinely actionable today, at low cost, and are currently sitting undone; they are lower-consequence than referral outreach (Section 6, first paragraph) but higher-consequence than social-media polish, since they establish the actual infrastructure referral outreach eventually needs to point to.
 
 **AM-to-PM conversion, repeat visits, reviews, introductory offers:** not yet built as an execution plan; these are real commercial levers but not opening blockers, since the venue can legally and safely open without them, only its revenue ramp depends on them.
 
@@ -171,6 +186,23 @@ The venture is not blocked by any unsolved design question. It is blocked by a s
 
 **Not reopened, already settled:** Beauty station count, Blood Collection Room count, China/Australia procurement model, PM package direction (2026-07-30).
 
+## 11. Execution Board (Added 2026-08-24, Venture-Wide, Distinct From the Procurement Execution Matrix)
+
+This is the single venture-wide execution view; it does not duplicate `docs/architecture/PROCUREMENT-EXECUTION-MATRIX.md`, which covers only the 281 procurement items. Status reflects work actually completed since this plan was first written.
+
+| Priority | Action | Owner | Can start now? | Dependency | External party? | Decision required? | Expected output | Status | Next action |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Send the insurance quote request | Anthony | Yes | None | Yes, broker | No | Real premium quote | Send-ready, not sent | Send once authorised |
+| 2 | Confirm MA000005/MA000027 award questions | Anthony | Yes | None | Yes, Fair Work | No | Confirmed rates/clause application | **Done** (primary-sourced 2026-08-23, see `docs/hr-framework.md`) | Narrower MA000027 call still open, script ready |
+| 3 | Decide Massage table vs chair | Anthony | Yes | None | No | Yes | A decision | Recommendation provided (table/bed), not yet decided | Anthony to decide |
+| 4 | Begin GP/midwife/obstetrician referral outreach | Anthony/Reed | Yes | None | Yes, each practice | No | Referral relationships | **Test batch defined** (first 3 practices, see `docs/referral-partnership-plan.md`), not yet contacted | Make the first 3 calls |
+| 5 | Engage a solicitor for the employment contract template | Anthony | Yes | None | Yes, solicitor | No | A signable contract | Draft complete (`docs/employment-contract-template.md`), not yet reviewed | Send for solicitor review |
+| 6 | Publish job postings | Anthony | Yes | None | No | No | Applications | Postings exist, not yet published | Publish with start-date TBC |
+| 7 | Register a domain, set up branded email | Anthony/Poppy | Yes | None | Yes, registrar | No | Live domain/email | Not started | Register domain |
+| 8 | Draft opening/closing, business-continuity, complaints SOPs | Anthony | Yes | None | No | No | 3 usable SOPs | **Done** (`docs/opening-sops.md`) | None, complete |
+| 9 | Identify HVAC/LEV contractor candidates | Anthony | Yes | None | Yes, contractors | No | A shortlist | Not started | Identify 2-3 candidates |
+| 10 | Identify Cafe food/coffee supplier candidates | Anthony | Yes | None | Yes, suppliers | No | A shortlist | Not started | Identify 2-3 candidates |
+
 ## Sourcing
 
 `docs/CURRENT-STATE.md`, `docs/architecture/SOURCE-OF-TRUTH-TIERS.md`, `docs/architecture/VENTURE-OPENING-READINESS-AUDIT.md`, `docs/architecture/MARKET-RESEARCH-BIRTHS-GDM-REFERRAL-2026.md`, `docs/hr-framework.md`, `docs/fairwork-infoline-query-script.md`, `docs/insurance-broker-quote-request-draft.md`, `docs/architecture/PROCUREMENT-FOUNDER-DECISIONS.md`, `docs/architecture/PROCUREMENT-CLINICAL-GTT-WDP-SPLIT.md`.
@@ -178,3 +210,5 @@ The venture is not blocked by any unsolved design question. It is blocked by a s
 ## Changelog
 
 **2026-08-23 (created):** Built per direct founder instruction as a single, concise execution plan, explicitly not a documentation-sprawl exercise. Every proposed action ties to a decision, quote, hire, approval, or opening task; no document was created that does not directly enable one of those. No settled figure changed merely because it is an estimate; the insurance and phlebotomist-employment-model inputs are flagged as the two with the most material financial consequence still requiring external resolution.
+
+**2026-08-24 (Section 6 verified, Section 11 added):** Verified website/booking/GBP status directly against the repository rather than deferring it (website spec-only, no domain, no live Fresha account, GBP correctly venue-dependent); added the minimum-viable customer-acquisition sequence. Added Section 11, a single venture-wide Execution Board, distinct from the procurement-only execution matrix, reflecting real status changes since this plan was first written (MA000005/MA000027 primary-sourced, opening SOPs drafted, referral test batch defined).
