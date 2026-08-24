@@ -2,6 +2,58 @@
 
 Status: current as of 2026-08-24. Prepared for the hypothetical that Carole confirms WDP is happy to partner with GTT Center Perth. Treats "happy to partner" as the start of structured commercial/clinical due diligence, not a final agreement. Nothing in this document has been sent to WDP or any other party; it is preparation only, per standing instruction not to draft, send, or initiate further WDP correspondence.
 
+## Executive Sequence (Condensed A-K Reference, Added 2026-08-24)
+
+This section condenses the detailed analysis in Sections 1-6 below into the exact operational structure requested for a quick, decision-oriented read. It reuses that analysis rather than re-deriving it; read the numbered sections below for full detail on any row.
+
+### A. If Carole Says YES, Do This First (First 24-48 Hours)
+
+Thank Carole, propose a substantive follow-up call, and send the meeting agenda (Section 4) ahead of it. Internally, review the 3 phlebotomist-employment models (Section 2) and the rent models (Section 3) to form a starting position, not a final one. Align with Reed on which of the 20 agenda items are must-resolve-before-venue vs can-resolve-in-parallel. Do not sign anything, commit to a venue, or purchase anything yet (see B).
+
+### B. Do Not Do These Things Yet
+
+No venue deposit or lease signature on "happy to partner" alone. No centrifuge or other WDP-dependent equipment purchase until WDP states its position (E15/E20/E14). No employment contract issued to a phlebotomist until the employment model is confirmed. No Blood Collection Room fit-out design finalised until WDP's room sign-off criteria are in writing. No non-binding heads of terms signed without solicitor review first, even though non-binding.
+
+### C. Questions for Carole
+
+The full 20-item agenda is Section 4. Must be answered on the first call: partnership intent, phlebotomist employment model, pathology equipment (centrifuge), consumables, medical waste, difficult-venepuncture escalation, Blood Collection Room requirements, clinical governance, rent/commercial model, fit-out responsibilities. Can follow up later: results-workflow nuance, records/privacy interface detail, insurance-scope detail, branding, exact agreement structure, implementation timeline, the finer detail of items already broadly confirmed (operating hours, staffing model) where only a sanity-check is needed, not a first-principles discussion.
+
+### D. Phlebotomist Model Comparison
+
+Full table in Section 2. Condensed: **A. GTT employs** (known: this is what the current A$48,255/month model assumes; likely: simplest single-employer payroll; needs WDP confirmation: whether WDP's accreditation extends to GTT-employed staff; needs professional advice: GTT's own professional indemnity must explicitly cover phlebotomy). **B. WDP employs/supplies** (known: WDP retains full clinical control; likely: a rental/service-fee structure replaces the wage line entirely, not yet modelled; needs WDP confirmation: the actual fee structure and whether it flexes with volume; needs professional advice: insurance-scope clarification either way). **C. Hybrid** (known: nothing, not evidenced anywhere in this repository as a concrete model; needs WDP confirmation: the exact division of responsibility, since "hybrid" is not one model until defined; needs professional advice: the clearest written division of clinical responsibility, since ambiguity is the actual risk). No model chosen.
+
+### E. Commercial/Rent Model Comparison
+
+Full table in Section 3. Condensed: whole-venue-lease-with-WDP-room-fee (GTT bears full lease risk, WDP fee amount unknown, cannot be quantified); WDP-leases-its-own-room (lowers GTT's fixed rent but adds a 2-tenancy landlord negotiation, a genuine landlord-approval dependency); WDP-rental-subsidy (improves GTT's net rent by an unknown amount). **Minimum information required before comparing these properly:** WDP's own stated commercial preference (Section 4, item 14) and a real room-fee or subsidy figure, neither of which exists yet.
+
+### F. Decision Gates
+
+Gate 1: WDP confirms willingness to proceed (the "yes" itself). Gate 2: WDP confirms minimum room/pathology requirements and commercial principles (Week 1 call, Section 4). Gate 3: Anthony compares the viable employment/rent models once WDP's position exists (Sections 2/3). Gate 4: the legal/commercial structure is sufficiently understood to search against a real operating model (post solicitor review of any heads of terms). Gate 5: venue shortlist begins, using WDP's room requirements as a hard filter. Gate 6: site inspection, WDP room review, and professional checks (electrical/plumbing/HVAC/accessibility/fire safety) on a specific site. Gate 7: Heads of Terms/lease negotiation. Gate 8: final agreement and procurement release (site-dependent items move from hold to RFQ).
+
+### G. What Unlocks Venue Search
+
+Gate 4 (above) unlocks active venue search intensification: a sufficiently understood legal/commercial structure, not "happy to partner" alone. Before Gate 4, venue search can continue at Anthony's own existing pace (his task, not accelerated or slowed by this document), but WDP's room requirements should not be treated as a hard search filter until Gate 2 (WDP states them) has actually happened.
+
+### H. What Unlocks Procurement
+
+Unchanged from the existing procurement execution queues: Queue 1 (Buy Now) and Queue 2 (RFQ Now) items not gated by WDP or venue can proceed regardless of WDP's response. What must wait specifically for WDP's position: the centrifuge (E15), pathology consumables sizing (E20), the medical waste contract decision (E14), and the phlebotomist uniform/employment-dependent lines. What must wait for a venue regardless of WDP's response: all 24 Readiness-C site-dependent items and every builder/trade RFQ, unchanged from the existing execution matrix. Genuinely safe low-risk purchases already identified and unaffected by any WDP outcome: the 14 Tier-1a "buy now" items in `docs/architecture/PROCUREMENT-EXECUTION-QUEUES.md` (laptop, iPads, first aid kits, sharps containers, etc.), none of which depend on the employment or rent model.
+
+### I. Remaining Founder Decisions
+
+Massage table vs chair (the only decision currently blocking a ready RFQ, unaffected by WDP's response, recommendation already given in `docs/architecture/PROCUREMENT-FOUNDER-DECISIONS.md`). Phlebotomist employment model and rent model (both genuinely cannot be decided until WDP states its own position, per Sections 2/3). Laundry model (not urgent, unaffected by WDP). Not reopened: Beauty station count, Blood Collection Room count, China/Australia procurement model.
+
+### J. Design Skill/Tool Investigation Result
+
+Re-confirmed and extended this round, full detail in `docs/architecture/GTT-DESIGN-QUALITY-STANDARD.md`: a 3rd design skill, `anydesign` (image-to-code, `uxKero/anydesign`), was inspected and installed after a security scan (Safe/0 Socket alerts, Med Snyk risk, same band as the previously installed `web-design-guidelines`), genuinely complementary (not overlapping) to the 2 skills installed last round. "Awesome Design" re-confirmed as a curated-list category, not an installable skill or plugin, correctly not installed. No UI/Dash work was performed this round, so no Playwright validation was needed this round; Playwright's working status (verified last round via Node/npx) is unchanged.
+
+### K. Recommended Next 5 Real-World Actions
+
+1. Anthony reviews Sections 2/3 (employment/rent model implications) now, before Carole replies, so Week 1's call is not the first time he has thought about the trade-offs.
+2. Make the first 3 referral calls (`docs/referral-partnership-plan.md`, unaffected by WDP's timeline).
+3. Send the insurance quote request (`docs/insurance-broker-quote-request-draft.md`, unaffected by WDP's timeline).
+4. Decide Massage table vs chair (unaffected by WDP's timeline, unblocks a ready RFQ today).
+5. If Carole replies, hold the Week 1 call using the Section 4 agenda before any other action, and do not sign anything at or immediately after it.
+
 ## 1. Post-Positive-Response Execution Sequence
 
 **Day 1 (the day Carole says yes):** (A) Anthony thanks Carole and proposes a substantive follow-up call/meeting. (G) Internally, Anthony reviews the 3 phlebotomist-employment models below and forms a preferred starting position, not a final one. (A) Circulate the meeting agenda (Section 4) ahead of the call.
@@ -75,6 +127,18 @@ Positive WDP intent, then confirm substantive commercial/clinical assumptions (S
 
 **Where money should NOT be committed yet, stated explicitly:** no venue deposit or lease signature based on "happy to partner" alone, without at least the Section 4 agenda having been worked through. No phlebotomy equipment purchase (centrifuge specifically) until WDP confirms whether it supplies this. No employment contract issued to a phlebotomist until the employment model is confirmed. No Blood Collection Room fit-out design finalised until WDP's own room sign-off criteria are in writing, not assumed from this document's own placeholder understanding of them.
 
+## 7. Decision Tree: Carole Says Yes
+
+Carole says YES, then clarify what "yes" actually means: willing to explore vs willing to partner in principle vs willing to proceed commercially (these are 3 genuinely different statements, and the Week 1 call's first job is finding out which one was meant, not assuming the strongest reading). Then: what employment model does WDP propose (A/B/C, Section 2)? Then: what commercial model does WDP propose (Section 3)? Then: are room requirements confirmed (Y/N)? Then: is clinical responsibility confirmed (Y/N)? **If sufficient** (employment model stated, commercial model stated, room requirements confirmed, clinical responsibility confirmed): proceed to model the financial scenarios below, begin legal review of any heads of terms, and let venue search accelerate (Gate 4/5 above). **If insufficient** (any of the 4 questions genuinely unanswered): return to WDP with targeted, specific follow-up questions only, on the exact unanswered item, not a repeat of the whole agenda, and do not proceed to Gate 4 until they are answered.
+
+## 8. Financial-Model Scenarios to Run Once WDP Provides Its Position
+
+**The settled financial model is not altered here.** Once WDP states its position, these are the scenarios that should be run, not before: (1) GTT employs (the current model's own existing assumption, re-run only if WDP's stated accreditation position changes any input to it). (2) WDP employs/supplies (a materially different cost structure: the A$48,255/month AM Direct Labor line is replaced by a rental/service-fee line, not yet modelled, since no real figure exists). (3) Hybrid (cannot be modelled until WDP defines the specific split, per Section 2). (4) Different rent/service-fee structures (per Section 3's 3 rows, each run once a real figure exists for whichever row WDP proposes). **Key variables each scenario must carry through consistently:** AM labour cost, WDP's own charges or revenue allocation, rent, pathology equipment/consumables cost, medical waste cost, equipment ownership implications, insurance cost, GST/tax treatment, any minimum-commitment clause, and any revenue-share percentage. **The A$48,255/month AM Direct Labor figure is flagged here again, explicitly, as a major variable, not a fixed fact, until the employment structure is actually confirmed** (consistent with `docs/CURRENT-STATE.md`'s own existing flag on this same point).
+
+## 9. Eventual Legal Documents (Sequence and Ownership Only, Not Drafted Here)
+
+In likely sequence: (1) WDP Heads of Terms/letter of intent (non-binding, still solicitor-reviewed before signature, Anthony + solicitor). (2) The formal WDP partnership/service agreement itself (solicitor-drafted, informed by Section 5's checklist). (3) A pathology/service agreement specifically, if the chosen structure separates this from the general partnership agreement (solicitor, informed by WDP's own accreditation requirements). (4) Employment agreements for whichever staff GTT itself employs (per the model chosen; template already drafted in `docs/employment-contract-template.md`, pending solicitor review and the employing-entity confirmation). (5) The venue lease or licence (property solicitor, informed by whichever rent model is chosen, Section 3). (6) Any material supplier agreement (standard commercial terms, lower solicitor priority than 1-5). (7) A documented privacy/data-responsibility split between GTT and WDP (drafted collaboratively, not solely a solicitor task, informed by Section 4 item 11). (8) A documented clinical-governance responsibility statement (collaborative, informed by Section 4 item 9). (9) Confirmation of insurance/indemnity allocation between the parties (broker + solicitor, informed by Section 4 item 13). **None of these are drafted in this document; this is a sequencing and ownership list only.**
+
 ## What This Document Deliberately Does Not Do
 
 It does not choose a phlebotomist employment model, a rent model, or an agreement structure on Anthony's behalf. It does not invent a rental fee, a service-agreement clause, or a WDP commercial position not yet stated by WDP. It does not contact WDP, draft a WDP-facing email, or imply any of the above has been agreed. It does not change the financial model's existing A$48,255/month AM Direct Labor assumption, which remains correctly labelled as an assumption pending WDP's actual position, unchanged from `docs/CURRENT-STATE.md`'s own existing flag on this exact point.
@@ -86,3 +150,5 @@ It does not choose a phlebotomist employment model, a rent model, or an agreemen
 ## Changelog
 
 **2026-08-24 (created):** Built per direct founder instruction as the methodical post-positive-WDP-response execution sequence, phlebotomist-employment and rent-model decision matrices, meeting agenda, commercial terms checklist, and premature-spending guardrails. No model chosen, no WDP contact made, no financial figure changed.
+
+**2026-08-24 (condensed A-K reference added, same day, per a follow-up instruction to reformat rather than re-derive):** Added the Executive Sequence section (condensed A-K structure at the top of this document, reusing Sections 1-6 rather than repeating them), plus 3 genuinely new sections: the explicit Carole-says-yes decision tree (Section 7), the financial-model scenarios to run once WDP's position exists (Section 8, no figure changed), and the eventual legal-documents sequence and ownership list (Section 9, nothing drafted). No new parallel document created; this remains the single WDP contingency file.
