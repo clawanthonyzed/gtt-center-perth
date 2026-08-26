@@ -5,7 +5,7 @@
 Western Australia's first premium wellness venue built around the Glucose Tolerance Test.
 
 **YETI Holding Trust trading as GTT Center Perth** | Trustee: YETI Tipi Holdings PTY LTD
-Version 5.0 | Pre-launch, planning and feasibility stage
+Version 5.1 | Pre-launch, planning and feasibility stage
 
 ---
 
@@ -30,15 +30,15 @@ Version 5.0 | Pre-launch, planning and feasibility stage
 
 ## 1. Executive Summary
 
-GTT Center Perth is a premium wellness venue built around the Glucose Tolerance Test (GTT), the mandatory pregnancy screening test undergone by an estimated 33,570 women in Western Australia each year. The test itself requires a fasting blood draw, a glucose drink, and further blood draws roughly one and two hours later, with patients advised to remain nearby for the full window, commonly around two to two and a half hours. Today, that wait typically happens in a standard pathology waiting room.
+GTT Center Perth is a premium wellness venue built around the Glucose Tolerance Test (GTT), the mandatory pregnancy screening test undergone by an estimated 33,570 women in Western Australia each year. The test itself requires a fasting blood draw, a glucose drink administered by the phlebotomist, and two further blood draws at exactly one hour and exactly two hours after the first draw, a fixed clinical timing set by the test itself. Patients are required to remain on site for the full window, typically two to two and a half hours. Today, that wait typically happens in a standard pathology waiting room.
 
-GTT Center Perth replaces that wait with a purpose-built premium experience. Clients book into the venue, undergo their blood draws on site, and spend the waiting window receiving massage, nails, brows, or hairdressing, priced as one of two fixed packages with venue and lounge access included. In the afternoon, the same venue operates as a standalone pregnancy and postnatal wellness destination, open to any client regardless of whether she attended a GTT that morning.
+GTT Center Perth replaces that wait with a purpose-built premium experience. Clients book into the venue, undergo their blood draws on site at their fixed clinical times, and receive massage, nails, brows, or hairdressing services scheduled into the gaps between those draws, priced as one of two fixed packages with venue and lounge access included. In the afternoon, the same venue operates as a standalone pregnancy and postnatal wellness destination, open to any client regardless of whether she attended a GTT that morning.
 
-**The opportunity.** No dedicated wellness-integrated GTT venue currently operates in Western Australia. The closest comparable businesses identified in the Australian market are on the east coast, one of which is reported fully booked three to four weeks in advance. GTT Center Perth would be the first venue of its kind in WA.
+**The opportunity.** No dedicated wellness-integrated GTT venue currently operates in Western Australia. The closest comparable businesses identified in the Australian market are on the east coast, one of which is reported fully booked three to four weeks in advance. GTT Center Perth would be the first venue of its kind in Western Australia.
 
 **The customer.** Pregnant women in the 24-28 week screening window, typically mid-to-upper socioeconomic profile given the discretionary wellness spend alongside a mandatory medical test, referred primarily through midwives, obstetricians, and word of mouth. In the afternoon, the addressable customer broadens to any woman across the wider pregnancy and postnatal period seeking premium wellness services.
 
-**The business model.** Morning revenue is built on two fixed-price packages (A$250 and A$300) sold against a planning capacity of 18 clients per day, six days a week. The afternoon operates as an independent wellness venue, offering individual services and set packages at a modelled average of approximately A$95 per visit. At the current planning volume, the venue is modelled to operate at a monthly surplus; a lower-volume reference scenario is also modelled and shown transparently in Section 11.
+**The business model.** Morning revenue is built on two fixed-price packages (A$250 and A$300) sold against a planning capacity of 18 clients per day, six days a week. The afternoon operates as an independent wellness venue, offering individual services and set packages at a modelled average of approximately A$95 per visit. At the current planning volume, the venue is modelled to operate at a monthly surplus. Volume below this planning target is treated as the venture's downside case, addressed transparently in Section 11.
 
 **Differentiation.** GTT Center Perth combines a clinically necessary appointment with a genuinely premium hospitality experience, hairdressing included alongside the more typical massage and beauty services, in a venue purpose-designed around the pregnancy screening window rather than adapted from a conventional day spa.
 
@@ -50,11 +50,11 @@ GTT Center Perth replaces that wait with a purpose-built premium experience. Cli
 
 ### The Experience Today
 
-A pregnant woman receiving a GTT referral currently attends a standard pathology collection centre. She arrives fasting, undergoes an initial blood draw, drinks a 75g glucose solution, and returns for further draws approximately one and two hours later. For the two to two and a half hours in between, she is typically expected to remain nearby, often in a basic waiting room with limited amenity, unable to eat, and with no structured way to use the time.
+A pregnant woman receiving a GTT referral currently attends a standard pathology collection centre. She arrives fasting, undergoes an initial blood draw, drinks a 75g glucose solution provided by the phlebotomist, and returns for further draws at exactly one hour and exactly two hours after the first draw, a fixed clinical timing required to meet the test's own requirements. For the two to two and a half hours in between, she is typically expected to remain nearby, often in a basic waiting room with limited amenity, unable to eat, and with no structured way to use the time.
 
 ### The Market Gap
 
-No dedicated wellness-integrated GTT venue was identified operating in Western Australia. Two broadly comparable businesses exist on the Australian east coast: one in Melbourne, reported fully booked three to four weeks in advance, and a smaller, less premium-positioned venue in Sydney. Neither has an equivalent in WA.
+No dedicated wellness-integrated GTT venue was identified operating in Western Australia. Two broadly comparable businesses exist on the Australian east coast: one in Melbourne, reported fully booked three to four weeks in advance, and a smaller, less premium-positioned venue in Sydney. Neither has an equivalent in Western Australia.
 
 ### Why This Opportunity Exists Now
 
@@ -66,13 +66,13 @@ Every pregnant woman in Western Australia undergoes this test as a matter of rou
 
 GTT Center Perth is a purpose-built venue in which:
 
-- GTT blood draws happen on site, performed by phlebotomists, under the clinical oversight of the venue's pathology partner
-- The wait between draws is filled with wellness services: massage, nails, brows, and hairdressing
+- GTT blood draws happen on site at fixed clinical times, performed by phlebotomists, under the clinical oversight of the venue's pathology partner
+- Wellness services, massage, nails, brows, and hairdressing, are scheduled into the fixed gaps between draws, rather than the draws being fitted around the services
 - The afternoon operates as a standalone pregnancy and postnatal wellness venue, with no GTT testing and no fasting requirement
 
 ### The Client Journey
 
-A client books online for a fixed time window. She arrives and checks in at reception, where her documentation and glucose drink are managed as part of the clinical workflow. Her first blood draw takes place in a private collection room, after which she moves into the wellness area to begin her booked services. Wellness services are timed around, and never interrupted by, the two subsequent blood draws; the phlebotomist waits for a natural break point in the service before proceeding. Once her final draw is complete, she departs, having received the full value of her booked package without having spent the wait in a conventional waiting room.
+A client books online for a fixed time window. She arrives and checks in at reception, where her documentation is confirmed and the phlebotomist provides her glucose drink as part of the clinical workflow. Her first blood draw takes place in a private collection room, after which she moves into the wellness area for the first portion of her booked services. Her second and third draws occur at exactly one hour and exactly two hours after the first draw; these times are fixed by the test itself and do not move to accommodate a service in progress. Wellness services are scheduled into the gaps between draws, not the other way around. Once her final draw is complete, she departs, having received the full value of her booked package without having spent the wait in a conventional waiting room.
 
 In the afternoon, the same venue receives clients directly for wellness services alone, with no clinical component, functioning as an independent premium wellness destination.
 
@@ -86,7 +86,7 @@ Western Australia records an estimated 33,570 births each year, with Greater Per
 
 ### Addressable Market
 
-GTT Center Perth's planning model provides 18 GTT client slots per day, operating six days a week (Monday to Saturday), for 108 slots per week. Against the estimated 515 weekly Perth metro GTT tests, this represents approximately 21% of the addressable weekly market at full planning capacity. A lower-volume reference model of 12 clients per day (72 slots per week, approximately 14% of the market) is also maintained for planning purposes; both figures represent physical capacity ceilings, not guaranteed bookings. Actual client volume will depend on the referral pipeline described in Section 10, and is treated throughout this plan as genuinely unproven until real trading data exists.
+GTT Center Perth's planning model provides 18 GTT client slots per day, operating six days a week (Monday to Saturday), for 108 slots per week. Against the estimated 515 weekly Perth metro GTT tests, this represents approximately 21% of the addressable weekly market at full planning capacity. This figure represents a physical capacity ceiling, not a guaranteed booking level. Actual client volume will depend on the referral pipeline described in Section 10, and is treated throughout this plan as genuinely unproven until real trading data exists.
 
 ### Target Customer Profile
 
@@ -95,7 +95,7 @@ GTT Center Perth's planning model provides 18 GTT client slots per day, operatin
 | Life stage | Pregnant, 24-28 weeks' gestation for the morning GTT service; broader pregnancy and postnatal range for afternoon wellness services |
 | Location | Perth metro, drive-time dependent on the final venue location |
 | Profile | Discretionary spend on wellness services alongside a mandatory medical test suggests a mid-to-upper socioeconomic customer, though this has not been independently surveyed and is treated as a planning assumption |
-| Discovery | Midwife and obstetrician referral, online search, word of mouth |
+| Discovery | Midwife and obstetrician referral, social media, online search, word of mouth |
 
 ### Competitive Landscape
 
@@ -142,7 +142,7 @@ GTT Center Perth generates revenue from three sources: morning GTT package sales
 | Afternoon set packages | Bundled two-service combinations at a set price, actively offered alongside individual services | Same afternoon roster capacity |
 | Ancillary | Cafe and retail sales | Per-client incidental spend |
 
-Financial planning uses A$250, the lower of the two morning packages, as the standard price per GTT package sold, a deliberately conservative basis rather than a blended average across both packages. The full financial detail behind this model, including the monthly profit and loss position, is set out in Section 11.
+Financial planning uses A$250, the lower of the two morning packages, as the standard price per GTT package sold, a deliberately conservative basis rather than a blended average across both packages. At full planning capacity, every morning treatment slot is allocated to a GTT client's booked package; there is no separate morning revenue line beyond the packages themselves. On any morning below full booked capacity, including the ramp-up period before referral volume reaches the planning target, unused treatment-staff time in the morning roster can instead be sold as standalone wellness bookings, the same gap-fill mechanism already used to fill unbooked afternoon capacity. This is incremental revenue available below full capacity, not an addition on top of it. The full financial detail behind this model, including the monthly profit and loss position, is set out in Section 11.
 
 ---
 
@@ -150,11 +150,7 @@ Financial planning uses A$250, the lower of the two morning packages, as the sta
 
 ### Venue Requirements
 
-The venue requires approximately 239 square metres on a day-one basis, encompassing reception, an open-plan lounge and waiting area, a private blood collection room, four treatment rooms, a nail station with dedicated ventilation, a hairdressing area, a small cafe and refreshment counter, a staff room, and accessible facilities. A confirmed venue has not yet been secured; site search is underway across the Perth metropolitan area.
-
-### Premises Strategy
-
-The venture's Year 1 approach is to lease under a standard commercial lease, allowing the operating model to be proven before any capital is committed to a property purchase. A longer-term option, subject to specific accountant and solicitor advice at the time, would see the trust consider purchasing a commercial property and leasing it back to the trading operation once the model is established.
+The venue requires approximately 239 square metres on a day-one basis, encompassing reception, an open-plan lounge and waiting area, a private blood collection room, four treatment rooms, a nail station with dedicated ventilation, a hairdressing area, a small cafe and refreshment counter, a staff room, and accessible facilities. The venture will operate under a standard commercial lease. A confirmed venue has not yet been secured.
 
 ### Operational Flow
 
@@ -176,9 +172,9 @@ GTT Center Perth does not hold pathology accreditation itself. The proposed mode
 
 | Role | Number | Notes |
 |---|---|---|
-| Venue Manager | 1 | Day-to-day operational lead; recruitment begins once a venue is confirmed |
+| Venue Manager | 1 | Day-to-day operational lead; required to hold a genuine treatment qualification (Certificate III/IV in Beauty Therapy, Massage, or Hairdressing, or a dual qualification), so the role can step into treatment or service work in a genuine emergency, not supervise only; recruitment begins once a venue is confirmed |
 | Phlebotomist | 2 (morning) | Credentialed under the pathology partner's accreditation |
-| Treatment staff (massage, beauty, nails, hairdressing) | 8, dual-qualified across a shared pool | Rostered across morning and afternoon shifts as a single common pool |
+| Treatment staff (massage, beauty, nails, hairdressing) | 8, dual-qualified across a shared pool | Rostered across morning and afternoon shifts as a single common pool; all treatment staff hold a formal qualification appropriate to their service (Certificate III/IV or Diploma level, including Diploma of Beauty Therapy for beauty roles) |
 | Reception | 1 | Covers morning opening and afternoon administrative needs |
 | Afternoon service roster | 4 dedicated roles | Drawn from the same shared treatment-staff pool, not a separate hiring line |
 | Relief and backup coverage | A dedicated relief pool across treatment and phlebotomy roles | Ensures leave and absence coverage without reducing same-day capacity |
@@ -190,6 +186,8 @@ Staffing levels are calibrated to the current planning capacity of 18 clients pe
 ## 10. Marketing & Customer Acquisition
 
 GTT Center Perth's primary customer discovery channel is the referring healthcare practice, not paid advertising: a GTT referral already exists as a routine medical event for essentially every pregnant client in the relevant window, and the opportunity is to make referring practices aware of a premium alternative for where that test takes place. This is treated as a genuine, unproven assumption requiring validation once outreach begins, not an established fact.
+
+**How a referral actually works.** A client is referred to GTT Center Perth the same way she would be referred to any pathology collection centre: her GP, obstetrician, or midwife issues a standard pathology request form, which the client brings with her. This form is not specific to any single collection-centre brand; it identifies the ordering practitioner and the required test, and is accepted at whichever collection point the client chooses. GTT Center Perth does not need its own clinical referral form for this purpose. What outreach to referring practices does require is a simple practice-facing information sheet describing the venue, so that practitioners are aware it exists as an option to mention to their patients, alongside social media and word of mouth as the discovery channels a client acts on directly.
 
 **Pre-launch.** A waitlist-building campaign runs alongside referral partnership outreach to midwifery and obstetric practices, targeting several hundred waitlist signups ahead of opening.
 
@@ -213,17 +211,17 @@ The current adopted planning estimate for pre-opening capital is A$251,198, appr
 
 ### Monthly Operating Result, Steady State (from approximately Month 5 of operation)
 
-| | Planning Model (18 clients/day) | Reference Model (12 clients/day) |
-|---|---|---|
-| Total Revenue | A$154,711 | A$115,216 |
-| Total Operating Costs | A$122,134 | A$116,729 |
-| **Monthly Operating Result** | **+A$32,577** | **-A$1,513** |
+| | Planning Model (18 clients/day) |
+|---|---|
+| Total Revenue | A$154,711 |
+| Total Operating Costs | A$122,134 |
+| **Monthly Operating Result** | **+A$32,577** |
 
-The 12-clients-per-day figure is retained as a transparent downside/reference scenario; at that volume, the venture is modelled to be loss-making at steady state, which is why the 18-client planning model is the venture's committed operating target, supported by the referral and marketing plan in Section 10.
+Volume below the 18-client planning target is the venture's downside case. Below approximately 13.05 clients per day (see break-even below), the venture is modelled to be loss-making at steady state, which is why the 18-client planning model is the venture's committed operating target, supported by the referral and marketing plan in Section 10.
 
 ### Break-Even and Annual View
 
-Break-even occurs at approximately 13.05 clients per day, 72.5% of the planning target, giving a margin of safety of approximately 4.95 clients per day (27.5%). On an annualised steady-state run-rate basis, the planning model equates to approximately +A$390,922 per year; the reference model equates to approximately -A$18,159 per year. These are run-rate figures, not a projection of actual Year 1 performance, since Year 1 will include a ramp-up period before steady-state volume is reached.
+Break-even occurs at approximately 13.05 clients per day, 72.5% of the planning target, giving a margin of safety of approximately 4.95 clients per day (27.5%). On an annualised steady-state run-rate basis, the planning model equates to approximately +A$390,922 per year. This is a run-rate figure, not a projection of actual Year 1 performance, since Year 1 will include a ramp-up period before steady-state volume is reached.
 
 ### Major Unresolved Financial Variables
 
@@ -236,8 +234,8 @@ The two largest unresolved inputs to this financial model are: the final phlebot
 | Risk | Mitigation |
 |---|---|
 | Pathology partnership not yet confirmed | Treated as the venture's critical pre-launch dependency; no venue, staffing, or fit-out commitment proceeds on the assumption of a specific outcome before this is resolved |
-| Client volume slower than the planning model assumes | The referral and marketing plan (Section 10) is designed to build demand ahead of and during fit-out; a lower-volume reference scenario is modelled transparently rather than hidden |
-| Venue not yet secured | Site search is active and treated as the next major milestone once the pathology partnership position is clear |
+| Client volume slower than the planning model assumes | The referral and marketing plan (Section 10) is designed to build demand ahead of and during fit-out; the downside case below break-even is modelled transparently in Section 11, rather than hidden |
+| Venue not yet secured | Securing a venue is treated as the next major milestone once the pathology partnership position is clear |
 | Commercial lease and fit-out cost uncertainty | Startup capital is presented as a range, not a single locked figure, pending a confirmed venue and real supplier quotes |
 | Regulatory and licensing requirements (health-use permit, food business notification, skin penetration premises registration, insurance, employment obligations) | Addressed through standard professional channels (solicitor, accountant, insurance broker, local council) as part of the implementation roadmap in Section 13, not assumed resolved |
 | Staffing and labour cost assumptions | Verified through an independently cross-checked scheduling model; final wage and award treatment to be confirmed with a payroll professional before contracts are issued |
@@ -250,7 +248,7 @@ Implementation is sequenced by dependency rather than by a fixed calendar, since
 
 1. **Current stage:** planning and feasibility complete; pathology partnership discussions active.
 2. **Pathology partnership confirmed:** commercial and clinical structure agreed with the pathology partner.
-3. **Venue search and selection:** site search intensifies using the confirmed operating and clinical requirements as selection criteria.
+3. **Venue selection:** a venue is confirmed against the operating and clinical requirements set out in Section 7.
 4. **Lease and regulatory approvals:** commercial lease finalised; council planning and health-use approvals sought; insurance, employment, and compliance obligations actioned with the relevant professionals.
 5. **Design and fit-out:** venue fit-out designed and constructed to the confirmed space requirements.
 6. **Recruitment and training:** Venue Manager hired first, followed by the treatment and reception team; staff trained on systems and procedures ahead of opening.
@@ -261,7 +259,7 @@ Implementation is sequenced by dependency rather than by a fixed calendar, since
 
 ## 14. Conclusion
 
-GTT Center Perth addresses a genuine, currently unmet opportunity in Western Australia: no venue in the state currently offers a premium wellness experience built around the mandatory GTT screening test undergone by tens of thousands of pregnant women each year. The venture has completed substantial feasibility work: a solver-verified operating model, a defined and costed venue program, a staffing structure, and a transparent financial model that discloses both its planning target and a conservative reference scenario rather than a single optimistic figure.
+GTT Center Perth addresses a genuine, currently unmet opportunity in Western Australia: no venue in the state currently offers a premium wellness experience built around the mandatory GTT screening test undergone by tens of thousands of pregnant women each year. The venture has completed substantial feasibility work: a solver-verified operating model, a defined and costed venue program, a staffing structure, and a transparent financial model that discloses its planning target, break-even point, and downside case rather than a single optimistic figure.
 
 The venture's single critical dependency before moving into site selection and execution is confirmation of its pathology partnership, without which the model as currently designed cannot proceed. This dependency is disclosed directly, not minimised. Once resolved, the venture is positioned to move quickly: the operating model, venue requirements, staffing structure, and financial plan are already in place, and the next milestone is a confirmed venue secured against those requirements.
 
@@ -270,9 +268,3 @@ The venture's single critical dependency before moving into site selection and e
 ## Basis of Information & Assumptions
 
 The commercial, operational, and financial information in this Business Plan is drawn from GTT Center Perth's current planning model and supporting feasibility work, including verified market data (ABS and KPMG published birth statistics, AIHW and ADIPS clinical screening data), an independently cross-checked staffing and scheduling model, and a detailed financial model maintained separately from this document. Figures are updated as the underlying planning model changes; this document reflects the current position as of the version stated on the cover. Detailed supporting evidence, research, and operational planning are maintained in the venture's internal planning records and are available on request.
-
----
-
-## Changelog
-
-**2026-08-26 (v5.0, full external-presentation rewrite):** Restructured the entire document into a 14-section external business-plan architecture (Executive Summary, Opportunity, Concept, Customer & Market, Services, Business Model, Venue & Operations, Pathology Partnership, Staffing, Marketing, Financial Overview, Risk & Mitigation, Implementation Roadmap, Conclusion), removed all internal repository texture (file links, bracketed status tags, changelog commentary, internal filenames) from reader-facing content, softened WDP status language to avoid implying a confirmed partnership, and added a cover, contents list, and a discreet "Basis of Information & Assumptions" closing note in place of a working-file reference list. No business figures, decisions, pricing, staffing numbers, venue dimensions, market data, or strategy were changed; every figure was carried forward unchanged from the prior version. The full version history of this document prior to 2026-08-26 remains available in version control.
