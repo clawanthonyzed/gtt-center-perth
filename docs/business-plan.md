@@ -18,8 +18,6 @@ The opportunity: no dedicated wellness-integrated GTT venue currently operates i
 
 ## 1. EXECUTIVE SUMMARY
 
-GTT Center Perth is a concept for Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT), a mandatory ~2.5-hour pregnancy screening test undergone by an estimated ~33,570 WA women per year (KPMG analysis of ABS Births, Australia 2024). Instead of a bare pathology waiting room while fasting, patients would book into GTT Center Perth and spend the test window receiving massage, nails, brows, or hairdressing, priced as one of two fixed packages with venue/lounge access bundled free.
-
 **The current committed operational model is:**
 - **AM GTT, planning model:** 18 clients/day (Table 1), 07:00 start, 2 chairs, 2 phlebotomists, 25-minute synchronized pair cadence, 8 dual-qualified treatment staff. 12 clients/day (Table 2, 08:00 start) is the downside/backup reference model only, pending information from WDP that could change which operating model is more beneficial.
 - **Packages:** 2 tiers only. Package 1 (A$250, fixed 2×30-min composition) and Package 2 (A$300, flexible choice of 2×45min, 1×45min+1×30min, or 2×30min).
