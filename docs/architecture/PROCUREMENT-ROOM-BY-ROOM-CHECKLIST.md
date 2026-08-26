@@ -192,7 +192,6 @@ Each area is divided into: Furniture, Equipment, Fixtures, Electrical, Plumbing,
 **Furniture:**
 
 - [RFQ-READY] F01a: Pregnancy massage table
-- [FOUNDER DECISION] F01b: Massage station chair
 
 **Equipment:**
 
@@ -221,6 +220,7 @@ Each area is divided into: Furniture, Equipment, Fixtures, Electrical, Plumbing,
 
 **Future/Optional:**
 
+- [FUTURE/OPTIONAL] F01b: Massage station chair
 - [FUTURE/OPTIONAL] F04: Massage oil warming unit
 
 ---

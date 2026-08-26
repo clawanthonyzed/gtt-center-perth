@@ -272,7 +272,7 @@ Status: current as of 2026-08-23. Answers "what can we actually buy today" for a
 | E15 | Tabletop centrifuge (refrigerated) | 1 | Pathology partner (WDP) arranged, not an open-market purchase | Complete: quantity and specification are locked | Confirmation from the pathology partner (WDP) on their own supply/commercial arrangement for this item. | Do not order yet. Wait for WDP's confirmation before taking any procurement action on this item. | WDP, via Reed's partnership channel, not this venture directly. | No |
 | E20 | Pathology collection equipment (vacutainers, needles, tourniquets, alcohol swabs, gauze, tape) | Ongoing | Pathology partner (WDP) arranged, not an open-market purchase | Partial: specification exists, pending WDP confirmation | Confirmation from the pathology partner (WDP) on their own supply/commercial arrangement for this item. | Do not order yet. Wait for WDP's confirmation before taking any procurement action on this item. | WDP, via Reed's partnership channel, not this venture directly. | No |
 
-## F. Founder Decision Required (15 items)
+## F. Founder Decision Required (14 items)
 
 | Item ID | Item | Quantity | Supplier route | Specification completeness | Blocking issue | Next action | Person responsible | Can purchase now? |
 |---|---|---|---|---|---|---|---|---|
@@ -281,7 +281,6 @@ Status: current as of 2026-08-23. Answers "what can we actually buy today" for a
 | C17 | Menu board/signage | 1 | Either Australian or China sourcing group, whichever quote is better once both exist | Incomplete: pending a founder decision | A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on. | Do not order yet. This item is blocked on a founder decision, not a supplier or site issue. | Anthony. | No |
 | D10 | Signage (Lounge wayfinding) | 1 | Either Australian or China sourcing group, whichever quote is better once both exist | Incomplete: pending a founder decision | A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on. | Do not order yet. This item is blocked on a founder decision, not a supplier or site issue. | Anthony. | No |
 | D12 | Portable AV/PA equipment for classes/ticketed sessions | 0 (future) | Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md | Incomplete: pending a founder decision | A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on. | Do not order yet. This item is blocked on a founder decision, not a supplier or site issue. | Anthony. | No |
-| F01b | Massage station chair | Qty TBC if adopted | Not yet determined | Incomplete: pending a founder decision | A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on. | Do not order yet. This item is blocked on a founder decision, not a supplier or site issue. | Anthony. | No |
 | G06 | Facial steamer | 0-1 | Either Australian or China sourcing group, whichever quote is better once both exist | Incomplete: pending a founder decision | A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on. | Do not order yet. This item is blocked on a founder decision, not a supplier or site issue. | Anthony. | No |
 | J06 | Hair clippers | 0-2 | Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md | Incomplete: pending a founder decision | A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on. | Do not order yet. This item is blocked on a founder decision, not a supplier or site issue. | Anthony. | No |
 | J14 | Colour bowls, brushes, foils, capes | 1 lot | Either Australian or China sourcing group, whichever quote is better once both exist | Incomplete: pending a founder decision | A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on. | Do not order yet. This item is blocked on a founder decision, not a supplier or site issue. | Anthony. | No |
@@ -306,12 +305,13 @@ Status: current as of 2026-08-23. Answers "what can we actually buy today" for a
 | R06 | First Aid/CPR accredited course (per staff member) | Full employment pool | Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md | Partial: specification exists, exact quantity pending confirmed headcount | A specific, named information gap (see the item's own register note), not a vague research task. | Do not order yet. Resolve the specific information gap noted in the register first. | Depends on the specific gap; usually the Venue Manager once hired, or Anthony in the interim. | No |
 | W06 | Name badges | Full employment pool | Either Australian or China sourcing group, whichever quote is better once both exist | Partial: specification exists, exact quantity pending confirmed headcount | A specific, named information gap (see the item's own register note), not a vague research task. | Do not order yet. Resolve the specific information gap noted in the register first. | Depends on the specific gap; usually the Venue Manager once hired, or Anthony in the interim. | No |
 
-## H. Future/Optional (14 items)
+## H. Future/Optional (15 items)
 
 | Item ID | Item | Quantity | Supplier route | Specification completeness | Blocking issue | Next action | Person responsible | Can purchase now? |
 |---|---|---|---|---|---|---|---|---|
 | B11 | Colour inkjet printer | 1 | Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md | Complete but deferred: this is an optional item, not being actioned now | Nothing required now. This item is deferred until after opening and revisited against actual trading performance. | Do not order now. Revisit after opening if actual demand supports it. | Anthony, if and when reconsidered post-opening. | No |
 | B12 | Scanner | 0-1 | Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md | Complete but deferred: this is an optional item, not being actioned now | Nothing required now. This item is deferred until after opening and revisited against actual trading performance. | Do not order now. Revisit after opening if actual demand supports it. | Anthony, if and when reconsidered post-opening. | No |
+| F01b | Massage station chair | N/A, not adopted | Not yet determined | Complete but deferred: this is an optional item, not being actioned now | Nothing required now. This item is deferred until after opening and revisited against actual trading performance. | Do not order now. Revisit after opening if actual demand supports it. | Anthony, if and when reconsidered post-opening. | No |
 | F04 | Massage oil warming unit | 2-3 | Either Australian or China sourcing group, whichever quote is better once both exist | Complete but deferred: this is an optional item, not being actioned now | Nothing required now. This item is deferred until after opening and revisited against actual trading performance. | Do not order now. Revisit after opening if actual demand supports it. | Anthony, if and when reconsidered post-opening. | No |
 | K01 | Backwash basin + client chair | 2 (day-one), 3rd optional | Either Australian or China sourcing group, whichever quote is better once both exist | Not yet determined | Nothing required now. This item is deferred until after opening and revisited against actual trading performance. | Do not order now. Revisit after opening if actual demand supports it. | Anthony, if and when reconsidered post-opening. | No |
 | N07 | Sanitary products (complimentary) | Optional | Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md | Complete but deferred: this is an optional item, not being actioned now | Nothing required now. This item is deferred until after opening and revisited against actual trading performance. | Do not order now. Revisit after opening if actual demand supports it. | Anthony, if and when reconsidered post-opening. | No |
@@ -334,9 +334,9 @@ Status: current as of 2026-08-23. Answers "what can we actually buy today" for a
 | C. Wait For Venue | 24 |
 | D. Professional Verification Required | 28 |
 | E. WDP Confirmation Required | 3 |
-| F. Founder Decision Required | 15 |
+| F. Founder Decision Required | 14 |
 | G. Information Required | 9 |
-| H. Future/Optional | 14 |
+| H. Future/Optional | 15 |
 | **Total distinct items** | **281** |
 
 ## Sourcing

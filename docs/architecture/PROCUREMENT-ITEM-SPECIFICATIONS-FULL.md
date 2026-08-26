@@ -4872,7 +4872,7 @@ Fields 1-18 identify what the item is and where it sits in the procurement syste
 - **2. Item name:** Pregnancy massage table
 - **3. Plain-English description:** Face hole + side cutouts, vinyl
 - **4. Business area:** Massage
-- **5. Sub-area/location:** Furniture (OPTION A: table/bed)
+- **5. Sub-area/location:** Furniture
 - **6. Quantity:** 2 (day-one), up to 3 (growth)
 - **7. Quantity basis:** CALCULATED
 - **8. Unit of measure:** each
@@ -4889,7 +4889,7 @@ Fields 1-18 identify what the item is and where it sits in the procurement syste
 - **19. Specification:** Face hole + side cutouts, vinyl
 - **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
 - **21. Material if known:** vinyl
-- **22. Finish if known:** Not yet determined
+- **22. Finish if known:** LED
 - **23. Colour/brand requirements if known:** Not yet determined
 - **24. Performance requirements:** Face hole + side cutouts, vinyl
 - **25. Electrical requirements if applicable:** N/A
@@ -4905,12 +4905,12 @@ Fields 1-18 identify what the item is and where it sits in the procurement syste
 - **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
 - **36. Quality-control requirements:** See PROCUREMENT-CHINA-PACKAGE.md: factory specification confirmation, material/finish sample, pre-production approval, and independent pre-shipment inspection required before any order, if sourced from China.
 - **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
-- **38. Existing price/source if already researched:** A$800-2,500 AU / A$300-800 China-sourced (sourced from this repository's existing research, not an independently obtained quote)
+- **38. Existing price/source if already researched:** A$800-2,500 AU / A$300-800 China-sourced. **DECIDED 2026-08-26: table/bed is the settled format, per direct founder decision (see PROCUREMENT-FOUNDER-DECISIONS.md). Not reopened.** (sourced from this repository's existing research, not an independently obtained quote)
 - **39. Cost status:** Priced
 - **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
 - **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
 - **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
-- **Register note:** A$800-2,500 AU / A$300-800 China-sourced
+- **Register note:** A$800-2,500 AU / A$300-800 China-sourced. **DECIDED 2026-08-26: table/bed is the settled format, per direct founder decision (see PROCUREMENT-FOUNDER-DECISIONS.md). Not reopened.**
 
 ### F01b: Massage station chair
 
@@ -4918,16 +4918,16 @@ Fields 1-18 identify what the item is and where it sits in the procurement syste
 - **2. Item name:** Massage station chair
 - **3. Plain-English description:** Format and spec not previously modelled anywhere in this repository
 - **4. Business area:** Massage
-- **5. Sub-area/location:** Furniture (OPTION B: chair-based)
-- **6. Quantity:** Qty TBC if adopted
-- **7. Quantity basis:** FOUNDER-DECISION
+- **5. Sub-area/location:** Furniture (not adopted)
+- **6. Quantity:** N/A, not adopted
+- **7. Quantity basis:** OPTIONAL
 - **8. Unit of measure:** each
 - **9. Opening quantity (where applicable):** No
 - **10. Reorder quantity (where applicable):** No
-- **11. Required at opening Y/N:** Blocked pending founder decision, see field 40 (what is still required)
-- **12. Future/optional Y/N:** No
-- **13. Procurement readiness classification:** F. FOUNDER DECISION REQUIRED
-- **14. Current status:** Open
+- **11. Required at opening Y/N:** No (future/optional)
+- **12. Future/optional Y/N:** Yes
+- **13. Procurement readiness classification:** H. FUTURE / OPTIONAL
+- **14. Current status:** Not proceeding
 - **15. Source route:** Open
 - **16. China/Australia classification:** Not yet determined, sourcing route not classified in the register
 - **17. Preferred procurement channel:** Not yet determined
@@ -4950,13 +4950,13 @@ Fields 1-18 identify what the item is and where it sits in the procurement syste
 - **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
 - **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
 - **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
-- **37. Quote/RFQ requirements:** Not yet. Founder decision required first.
+- **37. Quote/RFQ requirements:** No, future/optional, not being actioned now.
 - **38. Existing price/source if already researched:** No price researched yet
-- **39. Cost status:** Open
-- **40. What is still required before ordering:** A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
-- **41. Who must confirm it:** Anthony.
-- **42. Final purchasing instruction in plain English:** Do not order yet. This item is blocked on a founder decision, not a supplier or site issue.
-- **Register note:** **Genuinely unlocked, no existing spec: if Anthony adopts chair-based format, this line requires fresh research before quoting**
+- **39. Cost status:** Not proceeding
+- **40. What is still required before ordering:** Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
+- **41. Who must confirm it:** Anthony, if and when reconsidered post-opening.
+- **42. Final purchasing instruction in plain English:** Do not order now. Revisit after opening if actual demand supports it.
+- **Register note:** **CLOSED 2026-08-26: Anthony decided table/bed (F01a), not chairs. Retained as a record of the option considered; not a live procurement line, no quote should be sought for this item.**
 
 ### F02: Bolster/positioning pillow set
 

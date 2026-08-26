@@ -1178,24 +1178,24 @@ Status: current as of 2026-08-23. A teenager-proof shopping checklist covering a
 - [ ] **Pregnancy massage table** (Item ID: F01a)
     - Quantity: 2 (day-one), up to 3 (growth) (CALCULATED)
     - What it is: Face hole + side cutouts, vinyl
-    - Where it goes: Massage, Furniture (OPTION A: table/bed)
+    - Where it goes: Massage, Furniture
     - What to look for: Face hole + side cutouts, vinyl
     - Where to buy it: Either Australian or China sourcing group, whichever quote is better once both exist
     - China/Australia/Hybrid: Hybrid (China or Australia, either works)
     - Status: RFQ required (quote needed before ordering)
-    - Approximate existing researched price: A$800-2,500 AU / A$300-800 China-sourced (sourced from this repository's existing research, not an independently obtained quote)
+    - Approximate existing researched price: A$800-2,500 AU / A$300-800 China-sourced. **DECIDED 2026-08-26: table/bed is the settled format, per direct founder decision (see PROCUREMENT-FOUNDER-DECISIONS.md). Not reopened.** (sourced from this repository's existing research, not an independently obtained quote)
     - Must confirm before purchase: A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
 
 - [ ] **Massage station chair** (Item ID: F01b)
-    - Quantity: Qty TBC if adopted (FOUNDER-DECISION)
+    - Quantity: N/A, not adopted (OPTIONAL)
     - What it is: Format and spec not previously modelled anywhere in this repository
-    - Where it goes: Massage, Furniture (OPTION B: chair-based)
+    - Where it goes: Massage, Furniture (not adopted)
     - What to look for: Format and spec not previously modelled anywhere in this repository
     - Where to buy it: Not yet determined
     - China/Australia/Hybrid: Not yet determined, sourcing route not classified in the register
-    - Status: Blocked: waiting on a founder decision
+    - Status: Future/optional, not being ordered now
     - Approximate existing researched price: No price researched yet
-    - Must confirm before purchase: A specific founder decision. See PROCUREMENT-FOUNDER-DECISIONS.md for the exact decision this item depends on.
+    - Must confirm before purchase: Nothing required now. This item is deferred until after opening and revisited against actual trading performance.
 
 - [ ] **Bolster/positioning pillow set** (Item ID: F02)
     - Quantity: 2-3 sets (CALCULATED)
