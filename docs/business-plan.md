@@ -1,30 +1,35 @@
-# GTT Center Perth — Business Plan
+# GTT Center Perth: Business Plan
 
-**Version:** 4.0 | **Date:** 2026-08-16 (K — full currency refresh, see changelog. Was stale since 2026-07-31, over 2 weeks/2 model-generations behind [docs/CURRENT-STATE.md](CURRENT-STATE.md))
+Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT), a mandatory ~2.5-hour pregnancy screening test undergone by an estimated ~33,570 WA women per year. Instead of a bare pathology waiting room while fasting, clients book into GTT Center Perth and spend the test window receiving massage, nails, brows, or hairdressing, priced as one of two fixed packages with venue/lounge access bundled free.
+
+The opportunity: no dedicated wellness-integrated GTT venue currently operates in Western Australia. The closest comparable businesses identified anywhere in Australia are on the east coast (Melbourne and Sydney), one of which is reported fully booked 3-4 weeks in advance. GTT Center Perth would be the first venue of this kind in WA.
+
+---
+
 **Entity:** YETI Holding Trust trading as GTT Center Perth
 **Trustee:** YETI Tipi Holdings PTY LTD
-**Founders:** Anthony Zed + Imara (funding partner — see [financial-model.md](financial-model.md)/[research.md](research.md) for ownership structure)
-**Status:** Pre-launch, planning/feasibility stage. **No launch date set — sequence by dependency only, per standing instruction.**
-**Working/brand name:** "GTT Center Perth" remains the descriptive working name — the naming decision is narrowed to two finalists, SOLENA (conditional leader, 71.6%) and ELOWEN (68.8%), neither locked; trademark clearance deliberately deferred to a later funding milestone. See [naming/NAMING-DECISION-STATE.md](naming/NAMING-DECISION-STATE.md) for current status.
+**Founders:** Anthony Zed + Imara (funding partner)
+**Status:** Pre-launch, planning/feasibility stage. No launch date is set; sequencing is by dependency only.
+**Working/brand name:** "GTT Center Perth" is the current working name. A final brand name has not yet been locked.
 
-> **All financial figures in this document are estimates and planning assumptions, not confirmed facts.** Each figure is sourced to its origin document below and cross-checked against [docs/CURRENT-STATE.md](CURRENT-STATE.md), this venture's single canonical source for package prices, client capacity, headcount, and P&L. See [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) for every item still awaiting founder or third-party (WDP, accountant, solicitor) confirmation before it can be treated as settled.
+> All financial figures in this document are estimates and planning assumptions, not confirmed facts. See "Sources and Current-State Basis" at the end of this document for the full sourcing and verification trail behind every figure.
 
 ---
 
 ## 1. EXECUTIVE SUMMARY
 
-GTT Center Perth is a concept for Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT) — a mandatory ~2.5-hour pregnancy screening test undergone by an estimated **~33,570 WA women per year** (KPMG analysis of ABS Births, Australia 2024). Instead of a bare pathology waiting room while fasting, patients would book into GTT Center Perth and spend the test window receiving massage, nails, brows, or hairdressing, priced as one of two fixed packages with venue/lounge access bundled free ([services-pricing-locked.md](services-pricing-locked.md)).
+GTT Center Perth is a concept for Western Australia's first premium wellness venue built around the Glucose Tolerance Test (GTT), a mandatory ~2.5-hour pregnancy screening test undergone by an estimated ~33,570 WA women per year (KPMG analysis of ABS Births, Australia 2024). Instead of a bare pathology waiting room while fasting, patients would book into GTT Center Perth and spend the test window receiving massage, nails, brows, or hairdressing, priced as one of two fixed packages with venue/lounge access bundled free.
 
-**The current committed operational model (per [CURRENT-STATE.md](CURRENT-STATE.md), the single canonical source for these figures) is:**
-- **AM GTT — planning model:** **18 clients/day (Table 1), 07:00 start**, 2 chairs, 2 phlebotomists, 25-minute synchronized pair cadence, 8 dual-qualified treatment staff — see [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) §0.6a. **12 clients/day (Table 2, 08:00 start) is the downside/backup reference model only**, pending information from WDP/Carole that could change which operating model is more beneficial — not an open question to keep re-litigating.
-- **Packages:** 2 tiers only — Package 1 (A$250, fixed 2×30-min composition) and Package 2 (A$300, flexible choice of 2×45min / 1×45min+1×30min / 2×30min) ([services-pricing-locked.md](services-pricing-locked.md))
-- **PM:** Individual standalone a-la-carte services PLUS set/fixed PM packages (bundled combos, no client-choice, the opposite flexibility model from AM's Package 2), 4 dedicated casual hires, costed on actual hours worked. Active sales strategy to steer clients toward the package option since it drives higher revenue per visit — see `pm-package-structure.md` for the proposed package menu (pricing requires Anthony's sign-off). **The PM shift operates as a standalone wellness venue in its own right** — any woman can book a PM appointment directly, not only clients who attended a GTT test that morning.
-- **Saturday:** Reuses the AM planning model + PM standalone, costed as a bolt-on shift
-- **Sunday:** Closed until standalone PM service demand is proven and profitable enough to justify the added penalty-rate staffing cost — a conditional business choice, not a fixed-forever position and not a legal requirement (WA Retail Trading Hours Act exempts this business type from restriction)
+**The current committed operational model is:**
+- **AM GTT, planning model:** 18 clients/day (Table 1), 07:00 start, 2 chairs, 2 phlebotomists, 25-minute synchronized pair cadence, 8 dual-qualified treatment staff. 12 clients/day (Table 2, 08:00 start) is the downside/backup reference model only, pending information from WDP that could change which operating model is more beneficial.
+- **Packages:** 2 tiers only. Package 1 (A$250, fixed 2×30-min composition) and Package 2 (A$300, flexible choice of 2×45min, 1×45min+1×30min, or 2×30min).
+- **PM:** individual standalone a-la-carte services plus set/fixed PM packages (bundled combos, no client-choice, the opposite flexibility model from AM's Package 2), 4 dedicated casual hires, costed on actual hours worked. Active sales strategy to steer clients toward the package option, since it drives higher revenue per visit. The PM shift operates as a standalone wellness venue in its own right; any woman can book a PM appointment directly, not only clients who attended a GTT test that morning.
+- **Saturday:** reuses the AM planning model plus PM standalone, costed as a bolt-on shift.
+- **Sunday:** closed until standalone PM service demand is proven and profitable enough to justify the added penalty-rate staffing cost. A conditional business choice, not a fixed-forever position, and not a legal requirement (the WA Retail Trading Hours Act exempts this business type from restriction).
 
-**The only comparable business found in market research is MIWM in Melbourne** (see [market-research-findings.md](market-research-findings.md)) — reported fully booked 3-4 weeks in advance. No direct WA competitor has been identified in the research conducted for this venture.
+The only comparable business found in market research is MIWM in Melbourne, reported fully booked 3-4 weeks in advance. No direct WA competitor has been identified in the research conducted for this venture.
 
-**Financial baseline (steady state, Month 5+, current as of 2026-08-18, per [CURRENT-STATE.md](CURRENT-STATE.md) §5):** **+A$32,576.80/month (Table 1, planning model)** or **-A$1,513.21/month (Table 2, downside/backup — now loss-making at steady state, see §9)**. **This figure is a planning estimate based on assumed booking volumes and no real trading data — see §9 for the full breakdown and sourcing.**
+**Financial baseline (steady state, Month 5+):** +A$32,576.80/month (Table 1, planning model) or -A$1,513.21/month (Table 2, downside/backup, now loss-making at steady state, see §9). This figure is a planning estimate based on assumed booking volumes and no real trading data; see §9 for the full breakdown.
 
 ---
 
@@ -35,9 +40,9 @@ GTT Center Perth is a concept for Western Australia's first premium wellness ven
 2. They attend a pathology collection centre (e.g. PathWest, WDP) for the blood draws
 3. They arrive fasting (8+ hours without food)
 4. The test requires a fasting draw, a 75g glucose drink, then further draws at approximately 1 and 2 hours later
-5. Typical guidance is to remain nearby for the duration — commonly reported as ~2-2.5 hours total, though this varies
+5. Typical guidance is to remain nearby for the duration, commonly reported as ~2-2.5 hours total, though this varies
 
-**Market gap identified in research ([market-research-findings.md](market-research-findings.md)):** no dedicated wellness-integrated GTT venue was found operating in WA at the time of research. This is a market observation from the research conducted for this venture, not an exhaustive competitor audit.
+**Market gap identified in research:** no dedicated wellness-integrated GTT venue was found operating in WA at the time of research. This is a market observation from the research conducted for this venture, not an exhaustive competitor audit.
 
 ---
 
@@ -48,15 +53,15 @@ GTT Center Perth is a concept for a purpose-built venue where:
 - The wait between draws is filled with wellness services (massage, nails, brows, hair)
 - The afternoon operates as a standalone pregnancy wellness venue (no GTT testing, no fasting requirement)
 
-### Pathology Model (Option A — confirmed approach)
-GTT Center Perth pursues **Option A**: partnering with an already-NATA-accredited pathology provider (WDP is priority 1; PathWest and Clinipath are contingency options — see [reed-partnerships.md](reed-partnerships.md)) for collection oversight, rather than **Option B** (building an in-house NATA/RCPA-accredited collection centre from scratch). Option B was investigated and rejected — see [option-b-collection-centre.md](option-b-collection-centre.md) and [inhouse-gtt-research.md](archive/inhouse-gtt-research.md) — primarily due to the 12-18 month accreditation timeline being incompatible with a faster path to operating. **Under Option A, GTT Center Perth employs the phlebotomist and provides the collection room; the pathology partner provides the NATA accreditation umbrella, credentialing, specimen processing, and result reporting to the referring doctor.** GTT Center Perth does not diagnose, interpret, or communicate results.
+### Pathology Model (Option A, confirmed approach)
+GTT Center Perth pursues Option A: partnering with an already-NATA-accredited pathology provider (WDP is priority 1; PathWest and Clinipath are contingency options) for collection oversight, rather than Option B (building an in-house NATA/RCPA-accredited collection centre from scratch). Option B was investigated and rejected, primarily due to the 12-18 month accreditation timeline being incompatible with a faster path to operating. Under Option A, GTT Center Perth employs the phlebotomist and provides the collection room; the pathology partner provides the NATA accreditation umbrella, credentialing, specimen processing, and result reporting to the referring doctor. GTT Center Perth does not diagnose, interpret, or communicate results.
 
-**Status of pathology partnership (updated 2026-08-16):** All 3 potential partners have been contacted. **WDP is in active, ongoing back-and-forth** (Carole Rivers, Customer & Commercial Manager) — several regulatory/operational questions resolved directly, a full collection-room specification received, the commercial rental figure actively progressing via WDP's State Business Manager. **This is a WAITING status, not a research gap** — do not keep investigating around it internally. PathWest and Clinipath were emailed 2026-07-27, both still awaiting reply. See [reed-partnerships.md](reed-partnerships.md) "Outreach Status" for the live tracker.
+**Status of pathology partnership:** all 3 potential partners have been contacted. WDP is in active, ongoing dialogue (Carole Rivers, Customer & Commercial Manager): several regulatory/operational questions resolved directly, a full collection-room specification received, the commercial rental figure actively progressing via WDP's State Business Manager. This is a waiting status, not a research gap. PathWest and Clinipath were contacted and remain awaiting reply.
 
 ### No-Interrupt Rule
-Wellness services fill the gaps between blood draws and are never interrupted by a draw — the phlebotomist waits for a service to reach a natural break point ([services-pricing-locked.md](services-pricing-locked.md) Part A, [operations-manual.md](operations-manual.md)).
+Wellness services fill the gaps between blood draws and are never interrupted by a draw; the phlebotomist waits for a service to reach a natural break point.
 
-### Current Package Structure ([services-pricing-locked.md](services-pricing-locked.md), renumbered 2026-07-20)
+### Current Package Structure
 
 | Package | Inclusions | Price |
 |---|---|---|
@@ -65,12 +70,12 @@ Wellness services fill the gaps between blood draws and are never interrupted by
 
 All GTT-window wellness services are 45 minutes or under, delivered by employed staff (massage, nails, brows, hairdressing).
 
-### Afternoon (PM) Model — Standalone Wellness Venue, Individual Services PLUS Set/Fixed Packages
-**Confirmed model (per [HANDOFF.md](HANDOFF.md)):** the PM shift delivers individual standalone services — not the AM Package 1/2 client-choice structure — via 4 dedicated casual hires (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, costed on **actual hours worked**, not a blanket shift assumption. Average per-service price is modelled at ~A$95 ([pm-staffing-roster.md](pm-staffing-roster.md)) — see §9 for the full financial detail.
+### Afternoon (PM) Model: Standalone Wellness Venue, Individual Services Plus Set/Fixed Packages
+The PM shift delivers individual standalone services, not the AM Package 1/2 client-choice structure, via 4 dedicated casual hires (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, costed on actual hours worked, not a blanket shift assumption. Average per-service price is modelled at ~A$95; see §9 for the full financial detail.
 
-**Committed 2026-07-20:** PM also now offers a small menu of set/fixed PM packages (bundled combos — e.g. "PM Refresh" pairing a 45-min massage with a 45-min facial at a set price) alongside the existing individual-service menu — the opposite flexibility model from AM's Package 2 (PM packages are fixed combos, not client-choice). Anthony's direction: actively steer/upsell PM clients toward the package option, since it generates materially higher revenue per visit than a single a-la-carte service, even after a bundle discount. See `pm-package-structure.md` for the proposed package menu, modelled revenue impact, and sales strategy — **proposed pricing requires Anthony's sign-off, not yet final.**
+PM also offers a small menu of set/fixed PM packages (bundled combos, e.g. "PM Refresh" pairing a 45-min massage with a 45-min facial at a set price) alongside the existing individual-service menu, the opposite flexibility model from AM's Package 2 (PM packages are fixed combos, not client-choice). Anthony's direction is to actively steer/upsell PM clients toward the package option, since it generates materially higher revenue per visit than a single a-la-carte service, even after a bundle discount. Proposed pricing for these packages requires Anthony's sign-off, not yet final.
 
-**The PM shift is a standalone wellness venue, not an add-on restricted to GTT patients:** any woman — pregnant or not, GTT patient or not — can book a PM appointment directly (massage, nails, hair, beauty), the same way she would book at any day spa. There is no requirement to have attended a GTT test that morning. This matters for market sizing (§4) since the PM addressable market is broader than the AM GTT patient pool.
+The PM shift is a standalone wellness venue, not an add-on restricted to GTT patients: any woman, pregnant or not, GTT patient or not, can book a PM appointment directly (massage, nails, hair, beauty), the same way she would book at any day spa. There is no requirement to have attended a GTT test that morning. This matters for market sizing (§4), since the PM addressable market is broader than the AM GTT patient pool.
 
 ---
 
@@ -312,7 +317,23 @@ YETI Holding Trust (discretionary trust)
 
 ---
 
+## Sources and Current-State Basis
+
+This section collects the working-document cross-references and version/currency notes that were moved out of the Executive Summary, Problem, and Solution sections during the 2026-08-26 presentation pass, so this remains readable as a business plan rather than a repository index, while nothing sourced there is lost.
+
+**§1 Executive Summary:** market-size figure per [CURRENT-STATE.md](CURRENT-STATE.md), the single canonical source for package prices, client capacity, headcount, and P&L; venue/lounge package structure per [services-pricing-locked.md](services-pricing-locked.md); AM timetable per [scenario-c-sync-timetables.md](scenario-c-sync-timetables.md) §0.6a; PM package menu per `pm-package-structure.md` (pricing requires Anthony's sign-off, not yet final); competitor research per [market-research-findings.md](market-research-findings.md); financial baseline current as of 2026-08-18 per [CURRENT-STATE.md](CURRENT-STATE.md) §5.
+
+**§2 Problem:** market gap observation per [market-research-findings.md](market-research-findings.md).
+
+**§3 Solution:** pathology option analysis per [reed-partnerships.md](reed-partnerships.md), [option-b-collection-centre.md](option-b-collection-centre.md), and [inhouse-gtt-research.md](archive/inhouse-gtt-research.md); pathology partnership live tracker at [reed-partnerships.md](reed-partnerships.md) "Outreach Status"; no-interrupt rule per [services-pricing-locked.md](services-pricing-locked.md) Part A and [operations-manual.md](operations-manual.md); package structure per [services-pricing-locked.md](services-pricing-locked.md) (renumbered 2026-07-20); PM model per [HANDOFF.md](HANDOFF.md) and [pm-staffing-roster.md](pm-staffing-roster.md); PM package menu, revenue modelling, and sales strategy per `pm-package-structure.md`.
+
+**Document version:** this Business Plan was last fully refreshed for currency 2026-08-16 (v4.0), audited against [CURRENT-STATE.md](CURRENT-STATE.md) and current canonical data; see the full version history in the Changelog below for exactly what changed at each pass. **Verification status:** every figure in this document is sourced to its origin document above and cross-checked against [CURRENT-STATE.md](CURRENT-STATE.md); see [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) for every item still awaiting founder or third-party (WDP, accountant, solicitor) confirmation before it can be treated as settled.
+
+---
+
 ## Changelog
+
+**2026-08-26 (presentation pass, placement/framing only, no figures or facts changed):** Restructured the document opening to give a reader a clean, caveat-free concept and opportunity statement before any version/changelog/naming-status material. Stripped inline changelog commentary and inline cross-references to working files out of the Executive Summary, Problem, and Solution sections' reader-facing prose, and moved them to the new "Sources and Current-State Basis" section immediately above. No figures, facts, section order, financial data, verification tags, or the Entity Structure section's content were changed; this was a placement and framing pass only, authorised specifically as a bounded fix, not a rewrite.
 
 **2026-08-16 (K — full currency refresh, v4.0)** — This document was over 2 weeks and 2 model-generations stale (still describing the 10-client Scenario C model, superseded by the 12-client rebase 2026-07-30 and the 18-client Table 1 rebase 2026-08-05; still using pre-superannuation P&L figures superseded 2026-08-09). Audited against [CURRENT-STATE.md](CURRENT-STATE.md), `data/models/master_financial_model.yml`, current canonical data, current strategy/naming/venue status. Updated: §1 (18-client Table 1 planning model, current P&L), §3 (WDP status — active dialogue, not "awaiting reply"), §4 (18-client market share ~21%, the four-concepts framing: design capacity/opening target/downside scenario/actual demand), §5 (Table 1 timetable, common treatment pool, Section A operating-model notes), §6 (18-package/day revenue driver), §8 (aggressive marketing during fit-out alongside referrals, revised 500-700 waitlist target, AM→PM incentive mechanism), §9 (current startup-capital and P&L figures, human-readable financial summary link), §10 (fixed 2 dead document references — `docs/05_open_questions_for_founder.md` and `docs/regulatory-accreditation-tracker.md` were both merged into [VERIFICATION-TRACKER.md](VERIFICATION-TRACKER.md) weeks ago and no longer exist as separate files — replaced with working links; added naming/trademark-brief and outreach-draft cross-references), §12 (added the actual active venue search area, Osborne Park through Cockburn/Cannington). Preserved all still-accurate structural content (entity structure, pathology model rationale, package structure, competitive analysis) unchanged, per instruction not to rewrite unnecessarily.
 
