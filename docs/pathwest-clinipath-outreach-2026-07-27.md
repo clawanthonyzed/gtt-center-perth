@@ -147,7 +147,11 @@
 
 **Newly introduced:** nothing that contradicts any authoritative source. PathWest's questions are answerable directly from existing repository documents (see the drafted reply below), no new fact was disclosed by PathWest itself.
 
-### 4c. Drafted Reply to Meera Bennett (REVISED 2026-08-27 per Anthony's corrections, NOT SENT, for Anthony's review)
+### 4c. Reply to Meera Bennett (SENT 2026-08-27, by Anthony directly, outside this repository's workflow)
+
+**Status: SENT.** No agent sent this email; Anthony sent it himself and this record was updated afterward to match, same discipline as `docs/wdp-followup-draft-2026-08-20.md`. **No response from Meera Bennett or PathWest has been received yet: none invented or assumed.**
+
+**Note on what was actually sent vs. the drafted version:** Anthony sent a version that differs from the drafted text in two respects: (1) he kept only 2 of the 4 reciprocal questions (staffing/rent arrangement model, prior partnership experience) and dropped 2 ("what would you need to see to move this to a further discussion or meeting" and "roughly what timeframe are you anticipating for your own review"), not an oversight, his own edit; (2) he signed off "Regards," not "Kind regards." The body text on venue location, wellness services, testing operation, volume, timeframe, and "anything else relevant" is unchanged from the draft.
 
 **To:** Meera.Bennett@health.wa.gov.au
 **CC:** Sura Al Saedi (PathWest, per the original CC)
@@ -157,28 +161,24 @@
 >
 > Thanks very much for coming back to me, and for the clear list of what would help.
 >
-> **Venue location:** we are currently searching for a location in the Perth metro area that meets our requirements. I'll confirm a specific location once one is finalised.
+> Venue location: we are currently searching for a location in the Perth metro area that meets our requirements. I'll confirm a specific location once one is finalised.
 >
-> **Wellness services:** the concept pairs the test visit with a premium wellness offering delivered by qualified staff: pregnancy and general massage, beauty treatments including brows, manicure and pedicure services, and hairdressing, alongside a small cafe/lounge area. In the afternoons, once the morning session ends, the same venue operates as a standalone wellness destination open to the public.
+> Wellness services: the concept pairs the test visit with a premium wellness offering delivered by qualified staff: pregnancy and general massage, beauty treatments including brows, manicure and pedicure services, and hairdressing, alongside a small cafe/lounge area. In the afternoons, once the morning session ends, the same venue operates as a standalone wellness destination open to the public.
 >
-> **How the gestational glucose testing would operate:** the plan is two dedicated testing rooms within the venue, one per phlebotomist, for extra client privacy. Clients would attend for their scheduled test, complete their draws at the required clinical intervals, and receive their wellness services in the time between draws. The testing rooms and their clinical operation would sit under the pathology partner's own accreditation and protocol throughout.
+> How the gestational glucose testing would operate: the plan is two dedicated testing rooms within the venue, one per phlebotomist, for extra client privacy. Clients would attend for their scheduled test, complete their draws at the required clinical intervals, and receive their wellness services in the time between draws. The testing rooms and their clinical operation would sit under the pathology partner's own accreditation and protocol throughout.
 >
-> **Expected volume/frequency:** the current planning model is up to 18 clients per morning session, Monday to Saturday.
+> Expected volume/frequency: the current planning model is up to 18 clients per morning session, Monday to Saturday.
 >
-> **Anticipated timeframe:** no fixed opening date yet. The venture is still at the planning and feasibility stage, and next steps (venue selection, fit-out) are sequenced behind confirming a pathology partnership, so timing will firm up once that's further along.
+> Anticipated timeframe: no fixed opening date yet. The venture is still at the planning and feasibility stage, and next steps (venue selection, fit-out) are sequenced behind confirming a pathology partnership, so timing will firm up once that's further along.
 >
-> **Anything else relevant:** this is a premium maternal wellness concept built specifically around the gestational glucose test visit, still exploring which pathology partner arrangement would be the right fit, and no commitment has been made to any provider at this stage.
+> Anything else relevant: this is a premium maternal wellness concept built specifically around the gestational glucose test visit, still exploring which pathology partner arrangement would be the right fit, and no commitment has been made to any provider at this stage.
 >
 > A few things that would help on our end too, if you don't mind:
->
-> - Does PathWest have a typical staffing or rent arrangement model for this kind of onsite testing partnership, so I have a sense of how that side usually works?
-> - Has PathWest done a partnership of this kind before (an onsite testing service inside a wellness-style venue), or would this be a new model for you as well?
-> - What would you need to see from us to move this to a further discussion or meeting?
-> - Roughly what timeframe are you anticipating for your own review?
->
+> Does PathWest have a typical staffing or rent arrangement model for this kind of onsite testing partnership, so I have a sense of how that side usually works?
+> Has PathWest done a partnership of this kind before, or would this be a new model for you as well?
 > Happy to answer anything else that would help.
 >
-> Kind regards,
+> Regards,
 > Anthony
 
 **Design notes (not for inclusion in the sent email):** revised 2026-08-27 per Anthony's corrections to the original draft above:
@@ -188,18 +188,19 @@
 4. **Cafe wording** ("a small cafe/lounge area", no post-test-only qualifier added), Anthony's suggested phrasing ("food and drink options for clients only, after the completion of their test") was checked against the settled operating model before use: `docs/gtt-clinical-protocol.md`'s fasting requirement ("NO food or drinks except plain water" for the full duration of the test) and `docs/architecture/CAFE-FOOD-SERVICE-INVESTIGATION.md`/`docs/experience/CUSTOMER-JOURNEY.md`'s "Departure Experience" framing both confirm food/drink is genuinely a post-test-only offering in this venture's own model, since clients remain fasting until the final draw completes. **No conflict found**: Anthony's wording is consistent with the settled model, not contradicted by it. It was not included verbatim in this draft only because the reply doesn't need that level of operational detail for this early-stage information request; the cafe is mentioned in passing as part of the venue description, not itemised service-by-service.
 5. **Blood Collection Rooms now described as 2, one per phlebotomist**, per the founder decision closed 2026-08-27 (see the Decision Log entry and propagated documents above), for extra client privacy.
 6. **"Weekday" removed** from the volume sentence, now reads "18 clients per morning session, Monday to Saturday," since Saturday is not a weekday and the prior phrasing was self-contradictory.
-7. **Reciprocal question added** on PathWest's typical staff/rent arrangement model, worded generically (no mention of WDP or that other providers are being approached in parallel).
-8. **3 further reciprocal questions added** (prior partnership experience, what PathWest needs to see to progress, PathWest's own review timeframe), a small, judgement-based set appropriate to this early-stage conversation, not the full WDP-style 20-item agenda, which would be premature and mismatched to where this conversation actually is.
+7. **Reciprocal questions drafted:** 4 were prepared (staff/rent arrangement model, prior partnership experience, what PathWest needs to see to progress, PathWest's own review timeframe), worded generically (no mention of WDP or that other providers are being approached in parallel). **Anthony sent only the first 2** (staff/rent arrangement model, prior partnership experience) and dropped the other 2 in his own final edit, not an oversight.
 
-Every remaining factual claim is sourced directly from this repository, not invented: services from `docs/architecture/SERVICE-CATALOGUE.md` and `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md`; the 2-room/1-phlebotomist-per-room detail and the 18-clients/day, Monday-Saturday volume from `docs/CURRENT-STATE.md` §1/§3 and `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md` (updated 2026-08-27); planning-stage/no-fixed-date framing consistent with `docs/business-plan.md` §14. Deliberately provider-neutral throughout: does not name WDP or Clinipath, and does not disclose that other pathology providers are being approached in parallel, since the original 2026-07-27 and 2026-08-27 correspondence to PathWest never disclosed this either. Does not overcommit: no opening date invented, no venue address invented, no clinical detail beyond what is already established. **Not sent**: drafted for Anthony's review and sending.
+Every remaining factual claim is sourced directly from this repository, not invented: services from `docs/architecture/SERVICE-CATALOGUE.md` and `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md`; the 2-room/1-phlebotomist-per-room detail and the 18-clients/day, Monday-Saturday volume from `docs/CURRENT-STATE.md` §1/§3 and `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md` (updated 2026-08-27); planning-stage/no-fixed-date framing consistent with `docs/business-plan.md` §14. Deliberately provider-neutral throughout: does not name WDP or Clinipath, and does not disclose that other pathology providers are being approached in parallel, since the original 2026-07-27 and 2026-08-27 correspondence to PathWest never disclosed this either. Does not overcommit: no opening date invented, no venue address invented, no clinical detail beyond what is already established. **Sent 2026-08-27** (see status line above).
 
 ## What Happens Next
 
-**PathWest:** awaiting Anthony's review and sending of the drafted reply above; once sent, awaiting PathWest's substantive review and response. **Clinipath:** still awaiting any reply to the 2026-08-27 follow-up. When either replies further, log it here, in `docs/VERIFICATION-TRACKER.md` (item 4), and in `docs/reed-partnerships.md`'s tracker, and update this file's status accordingly. Do not invent or assume a response.
+**PathWest:** awaiting Meera Bennett's substantive review and response to the 2026-08-27 reply. No response received yet, none invented. **Clinipath:** still awaiting any reply to the 2026-08-27 follow-up. When either replies further, log it here, in `docs/VERIFICATION-TRACKER.md` (item 4), and in `docs/reed-partnerships.md`'s tracker, and update this file's status accordingly. Do not invent or assume a response.
 
 ---
 
 ## Changelog
+
+**2026-08-27 (reply to Meera Bennett SENT, recorded after the fact):** Anthony sent the reply to Meera Bennett directly, outside this repository's workflow. The actual sent text differs from the drafted version in 2 respects, both his own edit, not oversights: kept only 2 of the 4 reciprocal questions (staff/rent arrangement model, prior partnership experience), dropping "what would you need to see to progress" and "review timeframe"; signed off "Regards," not "Kind regards." Body text on venue location, services, testing operation, volume, timeframe, and other relevant detail unchanged. Status changed from DRAFTED/NOT SENT to SENT. No response from Meera Bennett or PathWest received yet, none invented. Cross-referenced updates made to `docs/VERIFICATION-TRACKER.md` item 4 and `docs/reed-partnerships.md`'s tracker in the same pass.
 
 **2026-08-27 (PathWest replied, reply drafted):** Added Section 4. Meera Bennett (Medical Liaison Officer, PathWest Laboratory Medicine), CC Sura Al Saedi, replied to the 2026-08-27 follow-up requesting further information: venue location, wellness-services overview, onsite collection operation, patient volume/frequency, opening timeframe, and any other relevant detail. Full reply transcribed verbatim. Classified per `docs/reed-partnerships.md` §1a as genuine engagement/requests-further-information, not a decision, does not change WDP's primary status. Drafted a reply sourced only from authoritative repository documents (`docs/architecture/SERVICE-CATALOGUE.md`, `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md`, `docs/location-scouting.md`, `docs/CURRENT-STATE.md`), honest about no venue secured yet and no fixed opening date, states the current 18-clients/day Monday-Saturday model, provider-neutral (does not name WDP or Clinipath). Not sent, awaiting Anthony's review. Cross-referenced updates made to `docs/VERIFICATION-TRACKER.md` item 4 and `docs/reed-partnerships.md`'s tracker in the same pass.
 
