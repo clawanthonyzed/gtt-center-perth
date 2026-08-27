@@ -147,7 +147,7 @@
 
 **Newly introduced:** nothing that contradicts any authoritative source. PathWest's questions are answerable directly from existing repository documents (see the drafted reply below), no new fact was disclosed by PathWest itself.
 
-### 4c. Drafted Reply to Meera Bennett (NOT SENT, for Anthony's review)
+### 4c. Drafted Reply to Meera Bennett (REVISED 2026-08-27 per Anthony's corrections, NOT SENT, for Anthony's review)
 
 **To:** Meera.Bennett@health.wa.gov.au
 **CC:** Sura Al Saedi (PathWest, per the original CC)
@@ -157,24 +157,41 @@
 >
 > Thanks very much for coming back to me, and for the clear list of what would help.
 >
-> **Venue location:** a venue has not yet been secured. The search is focused on the Perth metropolitan area, with several commercial precincts currently under consideration, including Osborne Park, Cannington, and the Myaree/Murdoch corridor. I'll confirm a specific location once one is finalised.
+> **Venue location:** we are currently searching for a location in the Perth metro area that meets our requirements. I'll confirm a specific location once one is finalised.
 >
-> **Wellness services:** the concept, GTT Center Perth, pairs the onsite collection visit with a premium wellness offering delivered by qualified staff: pregnancy and general massage, beauty treatments including brows, manicure and pedicure services, and hairdressing, alongside a small cafe/lounge area for clients to wait in comfort. In the afternoons, once the morning clinical session ends, the same venue operates as a standalone wellness destination open to the public.
+> **Wellness services:** the concept pairs the test visit with a premium wellness offering delivered by qualified staff: pregnancy and general massage, beauty treatments including brows, manicure and pedicure services, and hairdressing, alongside a small cafe/lounge area. In the afternoons, once the morning session ends, the same venue operates as a standalone wellness destination open to the public.
 >
-> **How the onsite collection service would operate:** the plan is a single dedicated blood collection room within the venue, staffed by two phlebotomists working two collection chairs in parallel. Clients would attend for their scheduled test, complete their draws at the required clinical intervals, and receive their wellness services in the time between draws. The collection room and its clinical operation would sit under the pathology partner's own accreditation and protocol throughout.
+> **How the gestational glucose testing would operate:** the plan is two dedicated testing rooms within the venue, one per phlebotomist, for extra client privacy. Clients would attend for their scheduled test, complete their draws at the required clinical intervals, and receive their wellness services in the time between draws. The testing rooms and their clinical operation would sit under the pathology partner's own accreditation and protocol throughout.
 >
-> **Expected volume/frequency:** the current planning model is up to 18 clients per weekday morning session, Monday to Saturday.
+> **Expected volume/frequency:** the current planning model is up to 18 clients per morning session, Monday to Saturday.
 >
 > **Anticipated timeframe:** no fixed opening date yet. The venture is still at the planning and feasibility stage, and next steps (venue selection, fit-out) are sequenced behind confirming a pathology partnership, so timing will firm up once that's further along.
 >
-> **Anything else relevant:** this is a premium maternal wellness concept built specifically around the onsite collection visit, still exploring which pathology partner arrangement would be the right fit, and no commitment has been made to any provider at this stage.
+> **Anything else relevant:** this is a premium maternal wellness concept built specifically around the gestational glucose test visit, still exploring which pathology partner arrangement would be the right fit, and no commitment has been made to any provider at this stage.
 >
-> Happy to answer anything else that would help with your review.
+> A few things that would help on our end too, if you don't mind:
+>
+> - Does PathWest have a typical staffing or rent arrangement model for this kind of onsite testing partnership, so I have a sense of how that side usually works?
+> - Has PathWest done a partnership of this kind before (an onsite testing service inside a wellness-style venue), or would this be a new model for you as well?
+> - What would you need to see from us to move this to a further discussion or meeting?
+> - Roughly what timeframe are you anticipating for your own review?
+>
+> Happy to answer anything else that would help.
 >
 > Kind regards,
 > Anthony
 
-**Design notes (not for inclusion in the sent email):** every factual claim above is sourced directly from this repository, not invented: services from `docs/architecture/SERVICE-CATALOGUE.md` and `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md`; venue target precincts from `docs/location-scouting.md` (Priority 1 Osborne Park, Priority 3 Cannington, Priority 4 Myaree/Murdoch, matching `docs/VERIFICATION-TRACKER.md` item 3's "Osborne Park through Cockburn/Cannington" framing); collection-room/chair/phlebotomist detail and the 18-clients/day, Monday-Saturday, weekday-morning volume from `docs/CURRENT-STATE.md` §1/§3 (Table 1, the current committed model, not the superseded 12/day figure); planning-stage/no-fixed-date framing consistent with `docs/business-plan.md` §14 and the standing venture status. Deliberately provider-neutral: does not name WDP or Clinipath, and does not disclose that other pathology providers are being approached in parallel, since the original 2026-07-27 and 2026-08-27 correspondence to PathWest never disclosed this either. Does not overcommit: no opening date invented, no venue address invented, no clinical detail beyond what is already established (e.g. does not state exact draw timing minutes, since PathWest did not ask for that level of clinical detail). **Not sent**: drafted for Anthony's review and sending.
+**Design notes (not for inclusion in the sent email):** revised 2026-08-27 per Anthony's corrections to the original draft above:
+1. **Venue location** no longer names specific suburbs/precincts (Osborne Park/Cannington/Myaree-Murdoch) or lists site requirements, states only that a Perth-metro location meeting requirements is being searched for, per Anthony's instruction not to give more detail than that.
+2. **No venture name used at all** (previously named "GTT Center Perth" as if final), refers to "the concept" throughout, per Anthony's instruction not to name it, or if named, only as a working name.
+3. **"Onsite collection" language replaced** with "gestational glucose testing"/"the test" throughout, describing what actually happens rather than generic pathology-collection phrasing.
+4. **Cafe wording** ("a small cafe/lounge area", no post-test-only qualifier added), Anthony's suggested phrasing ("food and drink options for clients only, after the completion of their test") was checked against the settled operating model before use: `docs/gtt-clinical-protocol.md`'s fasting requirement ("NO food or drinks except plain water" for the full duration of the test) and `docs/architecture/CAFE-FOOD-SERVICE-INVESTIGATION.md`/`docs/experience/CUSTOMER-JOURNEY.md`'s "Departure Experience" framing both confirm food/drink is genuinely a post-test-only offering in this venture's own model, since clients remain fasting until the final draw completes. **No conflict found**: Anthony's wording is consistent with the settled model, not contradicted by it. It was not included verbatim in this draft only because the reply doesn't need that level of operational detail for this early-stage information request; the cafe is mentioned in passing as part of the venue description, not itemised service-by-service.
+5. **Blood Collection Rooms now described as 2, one per phlebotomist**, per the founder decision closed 2026-08-27 (see the Decision Log entry and propagated documents above), for extra client privacy.
+6. **"Weekday" removed** from the volume sentence, now reads "18 clients per morning session, Monday to Saturday," since Saturday is not a weekday and the prior phrasing was self-contradictory.
+7. **Reciprocal question added** on PathWest's typical staff/rent arrangement model, worded generically (no mention of WDP or that other providers are being approached in parallel).
+8. **3 further reciprocal questions added** (prior partnership experience, what PathWest needs to see to progress, PathWest's own review timeframe), a small, judgement-based set appropriate to this early-stage conversation, not the full WDP-style 20-item agenda, which would be premature and mismatched to where this conversation actually is.
+
+Every remaining factual claim is sourced directly from this repository, not invented: services from `docs/architecture/SERVICE-CATALOGUE.md` and `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md`; the 2-room/1-phlebotomist-per-room detail and the 18-clients/day, Monday-Saturday volume from `docs/CURRENT-STATE.md` §1/§3 and `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md` (updated 2026-08-27); planning-stage/no-fixed-date framing consistent with `docs/business-plan.md` §14. Deliberately provider-neutral throughout: does not name WDP or Clinipath, and does not disclose that other pathology providers are being approached in parallel, since the original 2026-07-27 and 2026-08-27 correspondence to PathWest never disclosed this either. Does not overcommit: no opening date invented, no venue address invented, no clinical detail beyond what is already established. **Not sent**: drafted for Anthony's review and sending.
 
 ## What Happens Next
 

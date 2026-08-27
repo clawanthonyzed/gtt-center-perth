@@ -5,7 +5,7 @@
 Western Australia's first premium wellness venue built around the Glucose Tolerance Test.
 
 **YETI Holding Trust trading as GTT Center Perth** | Trustee: YETI Tipi Holdings PTY LTD
-Version 5.2 | Pre-launch, planning and feasibility stage
+Version 5.3 | Pre-launch, planning and feasibility stage
 
 ---
 
@@ -150,17 +150,17 @@ Financial planning uses A$250, the lower of the two morning packages, as the sta
 
 ### Venue Requirements
 
-The venue requires approximately 239 square metres on a day-one basis, encompassing reception, an open-plan lounge and waiting area, a private blood collection room, four treatment rooms, a nail station with dedicated ventilation, a hairdressing area, a small cafe and refreshment counter, a staff room, and accessible facilities. The venture will operate under a standard commercial lease. A confirmed venue has not yet been secured.
+The venue requires approximately 257-259 square metres on a day-one basis, encompassing reception, an open-plan lounge and waiting area, two private blood collection rooms (one per phlebotomist, for client privacy), four treatment rooms, a nail station with dedicated ventilation, a hairdressing area, a small cafe and refreshment counter, a staff room, and accessible facilities. The venture will operate under a standard commercial lease. A confirmed venue has not yet been secured.
 
 ### Operational Flow
 
-Reception manages check-in, documentation, and the morning schedule. The blood collection room operates under the pathology partner's clinical protocol, described further in Section 8. Wellness services are delivered across the treatment rooms, nail station, and hairdressing area, coordinated so that no service is interrupted by a scheduled blood draw. The lounge provides a calm waiting environment for clients between appointments. The afternoon shift uses the same physical footprint for standalone wellness bookings.
+Reception manages check-in, documentation, and the morning schedule. The two blood collection rooms operate under the pathology partner's clinical protocol, described further in Section 8. Wellness services are delivered across the treatment rooms, nail station, and hairdressing area, coordinated so that no service is interrupted by a scheduled blood draw. The lounge provides a calm waiting environment for clients between appointments. The afternoon shift uses the same physical footprint for standalone wellness bookings.
 
 ---
 
 ## 8. Pathology Partnership
 
-GTT Center Perth does not hold pathology accreditation itself. The proposed model incorporates a NATA-accredited pathology partner to provide clinical oversight of blood collection, in the same way a private collection centre would, while GTT Center Perth provides the venue, the collection room, and employs the phlebotomist under the pathology partner's protocol. GTT Center Perth does not diagnose, interpret, or communicate test results; results are reported by the pathology partner to the client's own referring doctor.
+GTT Center Perth does not hold pathology accreditation itself. The proposed model incorporates a NATA-accredited pathology partner to provide clinical oversight of blood collection, in the same way a private collection centre would, while GTT Center Perth provides the venue, the collection rooms, and employs the phlebotomists under the pathology partner's protocol. GTT Center Perth does not diagnose, interpret, or communicate test results; results are reported by the pathology partner to the client's own referring doctor.
 
 **Established.** The pathology partnership model itself (a NATA-accredited partner providing accreditation and clinical protocol, GTT Center Perth providing the venue and employing on-site staff) reflects the approach assessed as most viable after considering the alternative of building an in-house accredited collection centre, which was found to carry an accreditation timeline incompatible with a realistic path to opening.
 

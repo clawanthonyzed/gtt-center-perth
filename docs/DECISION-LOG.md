@@ -4,6 +4,22 @@
 
 ---
 
+## 2026-08-27: Blood Collection Room count: 2 rooms, one per phlebotomist, founder decision overrides evidence-based recommendation
+
+**Decision:** Anthony has decided: **2 Blood Collection Rooms, one per phlebotomist (Chair A/Room 1, Chair B/Room 2), specifically for extra client privacy.** This overrides the evidence-based "1 room, built and serviced for 3 chairs from day one" recommendation reached in `docs/architecture/FIT-OUT-PROGRAM-DECISION-ANALYSIS.md` Part B (Round 3, 2026-08-22) after extensive evidence review. The evidence-based recommendation was sound on its own terms and is retained in full for trace, not deleted or found to be wrong, it is simply overridden by direct founder instruction, a founder's prerogative, not to be second-guessed or reopened.
+
+**Nature of the change:** this is a room-configuration change, not a capacity change. Total phlebotomists (2) and chairs (2) are unchanged, split across 2 separate rooms rather than sharing 1 room. The 18-clients/day AM model, staffing model, and financial figures in `docs/CURRENT-STATE.md` are unaffected.
+
+**New open questions this decision introduces, flagged not resolved:** (1) the growth path: the single-room design's own documented 3rd-chair growth lever no longer straightforwardly applies once the room is split into 2 separate 1-chair rooms; whether growth means a 3rd room or a 2nd chair added to one of the 2 existing rooms is undecided. (2) whether the centrifuge, specimen fridge, and vasovagal recliner are shared between the 2 rooms or duplicated (a real cost question, not decided). (3) whether the per-chair curtain (previously for partitioning multiple chairs within 1 shared room) is still needed now each chair has its own solid door.
+
+**Real consequences propagated:** floor area increases by an estimated ~18-20sqm (using the already-evidenced Option 2 minimum-floor-area estimate from the same decision-analysis document, not a newly invented figure); day-one venue footprint moves from ~239sqm to ~257-259sqm. The existing day-one fit-out dollar cost range (A$228,142-457,559) has NOT been recalculated for the larger footprint, flagged as an open item pending a confirmed venue, not invented here. Room-level fixed infrastructure (solid walls/door, biohazard/no-entry signage, emergency call button) confirmed doubled in the procurement register; several other items (centrifuge, specimen fridge, vasovagal recliner, sharps/waste bins, clinical sink, ventilation, per-chair curtain) flagged as genuinely open shared-vs-duplicated questions, not asserted either way.
+
+**Documents updated:** `docs/architecture/FIT-OUT-PROGRAM-DECISION-ANALYSIS.md` (Part B closure banner, Part D consolidated table, Part F gap list), `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md` (Blood Collection row, Notes, Changelog), `docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md` (Section E header banner plus individual line items E31/E33/E35/E36 confirmed doubled, E03/E04/E15/E16/E24/E32/E38 flagged as open questions), `docs/architecture/PROCUREMENT-CONSTRUCTION-FITOUT.md`, `docs/architecture/FIT-OUT-DESIGN-PROCUREMENT-BRIEF.md` (§3.2 contradiction resolved, §5 chair spec updated), `docs/floor-plan-concept.md` (Room Schedule split into 2 rooms, subtotals recalculated), `docs/business-plan.md` (venue footprint and room-count wording corrected, v5.2 -> v5.3), `outputs/master-dossier-v2/index.html` and `outputs/gtt-dash/index.html` (decision registers and narrative mentions updated).
+
+**Related documents:** `docs/architecture/FIT-OUT-PROGRAM-DECISION-ANALYSIS.md`, `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md`, `docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md` Section E.
+
+---
+
 ## 2026-08-14 — Naming: conditional leader is SOLENA; retail-strategy question closed
 
 **Decision:** SOLENA is the current conditional naming leader (71.6% on the weighted three-way comparison), ahead of ELOWEN (68.8%) and ELOWYN (65.9%). Not locked.

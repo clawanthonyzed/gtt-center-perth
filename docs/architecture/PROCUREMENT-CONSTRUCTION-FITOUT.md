@@ -38,7 +38,7 @@ The Blood Collection Room's own construction (solid walls, one door, no public-f
 
 ## Clinical Room Requirements (Blood Collection)
 
-**PROFESSIONAL DESIGN/VERIFICATION, SITE-DEPENDENT.** Room construction (E31), room ventilation at 6 ACH (E38), clinical sink fitout (E24), emergency call button (E36). Full detail in `docs/architecture/PROCUREMENT-CLINICAL-GTT-WDP-SPLIT.md` Category D.
+**PROFESSIONAL DESIGN/VERIFICATION, SITE-DEPENDENT.** Room construction (E31), room ventilation at 6 ACH (E38), clinical sink fitout (E24), emergency call button (E36). **Founder decision, closed 2026-08-27: 2 Blood Collection Rooms, one per phlebotomist, for privacy** (`docs/architecture/MASTER-PROCUREMENT-SHOPPING-LIST.md` Section E, `docs/architecture/FIT-OUT-PROGRAM-DECISION-ANALYSIS.md` Part B): E31 now quantity 2; E24/E36/E38 flagged as likely-2/genuinely-open per-room questions in the master register, not asserted here. Full detail in `docs/architecture/PROCUREMENT-CLINICAL-GTT-WDP-SPLIT.md` Category D.
 
 ## Cafe Services
 
