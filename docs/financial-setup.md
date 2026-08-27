@@ -29,7 +29,7 @@ Before any financial setup: brief a Perth-based accountant with experience in:
 6. 2028 trust distribution tax risk — should we add an operating PTY LTD under the trust now?
 
 **Deliverables from accountant (get in writing):**
-- [ ] Confirmed the existing YETI Holding Trust ABN is correctly applied to GTT Center Perth trading activity (compliance verification, not a structure decision: the trading structure itself is settled per `business-plan.md` §11, YETI Holding Trust, trustee YETI Tipi Holdings PTY LTD, revenue to the trust, not Anthony personally)
+- [ ] Confirmed the existing YETI Holding Trust ABN is correctly applied to GTT Center Perth trading activity (compliance verification, not a structure decision: the final trading structure, trust-direct vs. a PTY LTD owned by the trust, is a genuine open founder decision, not yet settled; either way, revenue is to the trust, not Anthony personally)
 - [ ] Venue Manager remuneration structure (salary amount vs distribution amount)
 - [ ] GST registration advice (must register before first booking)
 - [ ] BAS lodgement frequency (monthly vs quarterly — recommend monthly given cash flow tightness in Month 1–3)
