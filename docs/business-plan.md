@@ -5,7 +5,7 @@
 Western Australia's first premium wellness venue built around the Glucose Tolerance Test.
 
 **YETI Holding Trust trading as GTT Center Perth** | Trustee: YETI Tipi Holdings PTY LTD
-Version 5.1 | Pre-launch, planning and feasibility stage
+Version 5.2 | Pre-launch, planning and feasibility stage
 
 ---
 
@@ -214,14 +214,14 @@ The current adopted planning estimate for pre-opening capital is A$251,198, appr
 | | Planning Model (18 clients/day) |
 |---|---|
 | Total Revenue | A$154,711 |
-| Total Operating Costs | A$122,134 |
-| **Monthly Operating Result** | **+A$32,577** |
+| Total Operating Costs | A$110,545 |
+| **Monthly Operating Result** | **+A$44,166** |
 
-Volume below the 18-client planning target is the venture's downside case. Below approximately 13.05 clients per day (see break-even below), the venture is modelled to be loss-making at steady state, which is why the 18-client planning model is the venture's committed operating target, supported by the referral and marketing plan in Section 10.
+Volume below the 18-client planning target is the venture's downside case. Below approximately 11.29 clients per day (see break-even below), the venture is modelled to be loss-making at steady state, which is why the 18-client planning model is the venture's committed operating target, supported by the referral and marketing plan in Section 10.
 
 ### Break-Even and Annual View
 
-Break-even occurs at approximately 13.05 clients per day, 72.5% of the planning target, giving a margin of safety of approximately 4.95 clients per day (27.5%). On an annualised steady-state run-rate basis, the planning model equates to approximately +A$390,922 per year. This is a run-rate figure, not a projection of actual Year 1 performance, since Year 1 will include a ramp-up period before steady-state volume is reached.
+Break-even occurs at approximately 11.29 clients per day, 62.7% of the planning target, giving a margin of safety of approximately 6.71 clients per day (37.3%). On an annualised steady-state run-rate basis, the planning model equates to approximately +A$529,994 per year. This is a run-rate figure, not a projection of actual Year 1 performance, since Year 1 will include a ramp-up period before steady-state volume is reached.
 
 ### Major Unresolved Financial Variables
 
