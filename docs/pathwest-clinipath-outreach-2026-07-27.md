@@ -69,6 +69,50 @@
 
 ---
 
+## 3. Follow-Up Emails (2026-08-27, One Month Since Original Enquiry, No Reply From Either)
+
+**Status: DRAFTED, READY TO SEND, NOT SENT.** It has been one month since the original 2026-07-27 enquiries with no reply logged from either PathWest or Clinipath (distinct from the original send status above, which remains genuinely unconfirmed as to whether it was actually sent at all; this follow-up is worded to work either way, since it opens by checking whether the original enquiry was received rather than assuming it was). Low-pressure, short, does not repeat the full original enquiry content, does not assume interest, does not reference WDP's status in any way.
+
+### 3a. PathWest Follow-Up
+
+**To:** info.pathwest@health.wa.gov.au
+**Subject:** Following up: Onsite Blood Collection Partnership Enquiry
+
+> Hi PathWest Business Development Team,
+>
+> I sent an enquiry on 27 July about a possible onsite blood collection partnership for a pregnancy-related wellness venue concept I'm developing in Perth, still in the planning stage. I haven't heard back and wanted to check whether it reached the right team.
+>
+> Briefly, the concept centres on hosting glucose tolerance test appointments alongside wellness services during the wait, which I understand is a less usual model for an onsite collection arrangement.
+>
+> If this is something PathWest would be open to a brief conversation about, I'd welcome that. If it's not a fit or not something your team handles, a quick note either way would be appreciated so I can plan accordingly.
+>
+> Thanks,
+> [Name]
+> [email]
+
+### 3b. Clinipath Follow-Up
+
+**To:** businessdevelopment@clinipath.net
+**Subject:** Following up: Onsite Blood Collection Partnership Enquiry
+
+> Hi Clinipath Business Development Team,
+>
+> I sent an enquiry on 27 July about a possible onsite blood collection partnership for a pregnancy-related wellness venue concept I'm developing in Perth, still in the planning stage. I haven't heard back and wanted to check whether it reached the right team.
+>
+> Briefly, the concept centres on hosting glucose tolerance test appointments alongside wellness services during the wait, which I understand is a less usual model for an onsite collection arrangement.
+>
+> If this is something Clinipath would be open to a brief conversation about, I'd welcome that. If it's not a fit or not something your team handles, a quick note either way would be appreciated so I can plan accordingly.
+>
+> Thanks,
+> [Name]
+> [email]
+
+**Design notes (not for inclusion in the sent email):** both drafts deliberately (1) do not attach or summarise the business plan, financial model, or any internal figures; (2) do not assume either organisation is interested or available; (3) make no mention of WDP or its status, positive or negative; (4) do not create any commercial commitment or ask for a quote; (5) ask a single yes/no-shaped question (did this reach the right team, is a brief conversation worth having) rather than a list of clinical/operational questions; those belong in a later conversation if one happens, not this nudge. **Not sent**: same capability gap as the original outreach (no email-sending tool available in this environment); ready for Anthony or Reed to send directly.
+
+---
+
 ## Changelog
+
+**2026-08-27:** Added Section 3, one-month follow-up drafts for both PathWest and Clinipath, per direct instruction. Low-pressure, does not repeat the original enquiry's content, does not assume interest, does not reference WDP. Drafted and ready, not sent: no email-sending capability confirmed in this environment, same disclosed gap as the original 2026-07-27 outreach.
 
 **2026-07-27** — Created per Anthony's direct instruction to contact PathWest and Clinipath now (not wait for WDP/decline-first sequencing). Drafted using the same corrected Template A content as the WDP outreach (`lab-partnership-email-draft.md`) since both partners have published BD email addresses. Flagged: no email-sending capability confirmed in this environment — drafted and ready, not confirmed sent.
