@@ -51,7 +51,7 @@ A weighted scoring system for evaluating potential venue candidates, once found.
 
 ## 2. Venue Data Capture Template
 
-Directly usable — Anthony fills this out per property under consideration. One copy per candidate.
+Directly usable — Anthony fills this out per property under consideration. One copy per candidate. **See also `docs/architecture/COMMERCIAL-LEASE-RED-FLAG-CHECKLIST.md` (added 2026-08-27)** — this template records the facts of a lease offer, that checklist explains which answers are actually red flags, use both together, before solicitor review.
 
 ```
 VENUE DATA CAPTURE — [Property Address]
