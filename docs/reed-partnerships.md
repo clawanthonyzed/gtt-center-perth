@@ -75,6 +75,43 @@ No published satellite-collection-centre partnership program found (unlike WDP's
 
 ---
 
+## 1a. Response-Handling Playbook (added 2026-08-27)
+
+A simple decision framework for what happens the moment any of the three partners actually replies. No automatic commercial or clinical commitment is created by any of these; every path below leads to a conversation or a document review, not a signature.
+
+### WDP (Carole Rivers)
+
+| Response type | Immediate next action |
+|---|---|
+| **YES** (willing to proceed) | Do not assume the strongest reading. First clarify which of "willing to explore" / "willing to partner in principle" / "willing to proceed commercially" was meant (`docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §7), then follow that document's Day 1-2 sequence: thank Carole, propose the substantive call, circulate the 20-item agenda (§4). No venue deposit, no equipment purchase, no employment contract. |
+| **MAYBE** / non-committal | Ask the specific clarifying question needed to move from MAYBE to a real YES/NO, do not repeat the whole original enquiry. |
+| **NO** | Move PathWest to primary status if it has replied favourably by then; otherwise Clinipath. See §"If WDP declines" in `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md`. |
+| **Requests more info** | Answer only what's asked, do not proactively send the Business Plan or financial model unless specifically requested. |
+| **Asks for a meeting** | Accept, prepare using the 20-item agenda (§4 of the activation plan), no document signed at or immediately after it. |
+| **Gives commercial terms** | Log the figure in `docs/VERIFICATION-TRACKER.md` item 1c, run it against the pure financial break-even already computed there (item 1d-be), do not accept or reject on the spot, that is Anthony's own decision once the figure exists. |
+| **Gives clinical/room requirements** | Log against `docs/architecture/PROCUREMENT-CLINICAL-GTT-WDP-SPLIT.md` and the Blood Collection Room spec, this is an input to venue search criteria (Gate 5 of the activation plan), not itself an action. |
+| **Declines but offers another pathway** (e.g. a different site-assessment or model) | Treat as a genuine new option, do not force-fit it into the existing 3-model comparison (`docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2) without first understanding what's actually being proposed. |
+
+### PathWest
+
+| Response type | Immediate next action |
+|---|---|
+| **YES** | Ask the same two practical questions the original enquiry raised (cutoff time, overnight storage viability), do not assume PathWest's answers match WDP's, government-operated pathology can differ operationally. |
+| **MAYBE** | Ask what would need to be true for a YES, given PathWest has "less commercial flexibility" per this document's own §1 finding. |
+| **NO** | No further action needed on PathWest specifically, Clinipath remains the last contingency. |
+| **Redirects to another department/contact** | Follow the redirect, do not re-send the original enquiry to the general address again. |
+
+### Clinipath
+
+| Response type | Immediate next action |
+|---|---|
+| **YES** | Same two practical questions as PathWest. Since Clinipath has no documented Licensed Collection Centre-equivalent program (this document's own §1 finding), also ask directly what their actual partnership/commercial process looks like, don't assume it mirrors WDP's. |
+| **MAYBE** | Same approach as PathWest MAYBE. |
+| **NO** | If WDP has also declined by this point, the venture's next real step is a founder-level reconsideration of the pathology pathway itself (see the standing audit's own "If WDP Says No" section), not further pathology-provider research, since all three realistic WA options have then been exhausted. |
+| **Redirects to another department/contact** | Follow the redirect, same as PathWest. |
+
+---
+
 ## 2. KEEPSAKE ULTRASOUND SUBTENANTS
 
 Approach in priority order. Offer: permanent scan room, fixed weekly rent A$250–350/week, captive pregnant audience 20–25 customers/week.
@@ -290,6 +327,8 @@ Approach in priority order. Offer: permanent scan room, fixed weekly rent A$250�
 ---
 
 ## Changelog
+
+**2026-08-27:** Added Section 1a, a Response-Handling Playbook covering WDP, PathWest, and Clinipath, a simple decision framework for the immediate next action per response type (YES/MAYBE/NO/requests info/meeting/commercial terms/clinical requirements/redirect), no automatic commitments created. Also updated the PathWest/Clinipath tracker row in Section 1 to record that the one-month follow-up (`docs/pathwest-clinipath-outreach-2026-07-27.md` §3) was SENT by Anthony directly, no response yet.
 
 **2026-08-21 (follow-up SENT by Anthony directly — tracker row updated to match)** — Anthony sent the drafted follow-up (`docs/wdp-followup-draft-2026-08-20.md`) to Carole directly, outside this repository's workflow. Sent content: client-volume correction (18/day, Mon-Sat), a check-in on the commercial/rental figure (item 1c), and the medical waste disposal question (item 21/F22). He deliberately dropped the phlebotomist-employment question (item 1d) from this particular send — still open, not asked. No reply from Carole yet. WDP tracker row above updated to record the send; `docs/VERIFICATION-TRACKER.md` items 1c, 1d, 21/F22, and 50 updated in the same pass. No response invented, nothing else marked resolved on this basis.
 
