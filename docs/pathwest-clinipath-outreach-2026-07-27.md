@@ -64,14 +64,14 @@
 | Partner | Channel | Drafted | Sent (confirm before marking done) |
 |---|---|---|---|
 | WDP | Online enquiry form | N/A (already contacted, per correction) | Yes, prior session — awaiting reply |
-| PathWest | Email (info.pathwest@health.wa.gov.au) | Yes, 2026-07-27 | **UNCONFIRMED — flag for Anthony/Reed to action and confirm** |
-| Clinipath | Email (businessdevelopment@clinipath.net) | Yes, 2026-07-27 | **UNCONFIRMED — flag for Anthony/Reed to action and confirm** |
+| PathWest | Email (info.pathwest@health.wa.gov.au) | Yes, 2026-07-27 | **Original send still unconfirmed. One-month follow-up SENT 2026-08-27 by Anthony directly (see §3): awaiting reply.** |
+| Clinipath | Email (businessdevelopment@clinipath.net) | Yes, 2026-07-27 | **Original send still unconfirmed. One-month follow-up SENT 2026-08-27 by Anthony directly (see §3): awaiting reply.** |
 
 ---
 
 ## 3. Follow-Up Emails (2026-08-27, One Month Since Original Enquiry, No Reply From Either)
 
-**Status: DRAFTED, READY TO SEND, NOT SENT.** It has been one month since the original 2026-07-27 enquiries with no reply logged from either PathWest or Clinipath (distinct from the original send status above, which remains genuinely unconfirmed as to whether it was actually sent at all; this follow-up is worded to work either way, since it opens by checking whether the original enquiry was received rather than assuming it was). Low-pressure, short, does not repeat the full original enquiry content, does not assume interest, does not reference WDP's status in any way.
+**Status: SENT, 2026-08-27, by Anthony directly, outside this repository's workflow.** No agent sent this email; Anthony sent it himself and this record was updated afterward to match, same discipline as `docs/wdp-followup-draft-2026-08-20.md`. No response from either PathWest or Clinipath has been received yet. It had been one month since the original 2026-07-27 enquiries with no reply logged from either (distinct from the original send status above, which remains genuinely unconfirmed as to whether it was actually sent at all; this follow-up was worded to work either way, since it opens by checking whether the original enquiry was received rather than assuming it was). Low-pressure, short, does not repeat the full original enquiry content, does not assume interest, does not reference WDP's status in any way.
 
 ### 3a. PathWest Follow-Up
 
@@ -107,12 +107,18 @@
 > [Name]
 > [email]
 
-**Design notes (not for inclusion in the sent email):** both drafts deliberately (1) do not attach or summarise the business plan, financial model, or any internal figures; (2) do not assume either organisation is interested or available; (3) make no mention of WDP or its status, positive or negative; (4) do not create any commercial commitment or ask for a quote; (5) ask a single yes/no-shaped question (did this reach the right team, is a brief conversation worth having) rather than a list of clinical/operational questions; those belong in a later conversation if one happens, not this nudge. **Not sent**: same capability gap as the original outreach (no email-sending tool available in this environment); ready for Anthony or Reed to send directly.
+**Design notes (not for inclusion in the sent email):** both drafts deliberately (1) do not attach or summarise the business plan, financial model, or any internal figures; (2) do not assume either organisation is interested or available; (3) make no mention of WDP or its status, positive or negative; (4) do not create any commercial commitment or ask for a quote; (5) ask a single yes/no-shaped question (did this reach the right team, is a brief conversation worth having) rather than a list of clinical/operational questions; those belong in a later conversation if one happens, not this nudge. **Sent 2026-08-27** (see status line above). No response received yet from either organisation: do not invent or assume one.
+
+## What Happens Next
+
+Awaiting PathWest's and Clinipath's replies to the 2026-08-27 follow-up. No response received yet as of that date. When either replies, log it here, in `docs/VERIFICATION-TRACKER.md` (item 4), and in `docs/reed-partnerships.md`'s tracker, and update this file's status accordingly. Do not invent or assume a response.
 
 ---
 
 ## Changelog
 
-**2026-08-27:** Added Section 3, one-month follow-up drafts for both PathWest and Clinipath, per direct instruction. Low-pressure, does not repeat the original enquiry's content, does not assume interest, does not reference WDP. Drafted and ready, not sent: no email-sending capability confirmed in this environment, same disclosed gap as the original 2026-07-27 outreach.
+**2026-08-27 (SENT, recorded after the fact):** Anthony sent the drafted one-month follow-up to both PathWest and Clinipath directly, outside this repository's workflow. Status changed from DRAFTED/READY TO SEND to SENT for both. No response from either received yet. Cross-referenced updates made to `docs/VERIFICATION-TRACKER.md` item 4 in the same pass.
+
+**2026-08-27 (drafted, earlier same day):** Added Section 3, one-month follow-up drafts for both PathWest and Clinipath, per direct instruction. Low-pressure, does not repeat the original enquiry's content, does not assume interest, does not reference WDP. Drafted and ready, not sent at the time: no email-sending capability confirmed in this environment, same disclosed gap as the original 2026-07-27 outreach. **Superseded by the SENT entry above the same day.**
 
 **2026-07-27** — Created per Anthony's direct instruction to contact PathWest and Clinipath now (not wait for WDP/decline-first sequencing). Drafted using the same corrected Template A content as the WDP outreach (`lab-partnership-email-draft.md`) since both partners have published BD email addresses. Flagged: no email-sending capability confirmed in this environment — drafted and ready, not confirmed sent.
