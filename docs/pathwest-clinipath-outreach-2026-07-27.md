@@ -260,13 +260,72 @@ Every remaining factual claim is sourced directly from this repository, not inve
 
 **Do not send this yet.** Once Meera replies to the clarifying email above, the next question to ask (not before, not combined with the current send): **is the "clinic with doctors" pathway specifically PathWest's own siting preference/policy, or a universal/regulatory rule that would apply to any WA pathology provider?** This is distinct from, and narrower than, the general GP-on-site research already filed at `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2a, that section investigates what a GP-on-site model would involve internally; this queued question asks Meera directly whether the requirement is PathWest-specific or universal, to test the "provider-specific siting preference" reading against WDP's own already-confirmed position (GP absence not an operational concern for WDP, per `docs/wdp-reply-carole-2026-08-07.md`). Queued here, cross-referenced from `docs/reed-partnerships.md` §1b, not drafted as a full email yet, and not to be asked until this round's reply arrives.
 
+## 4e. PathWest's Follow-Up Messages, 2 Real Replies (2026-08-28, CLASSIFICATION CORRECTED: genuinely progressing, not a decline)
+
+**Read this carefully, per the coordinator's own instruction: Meera is NOT declining courier collection.** She is saying the standard interval-based courier concern can potentially be resolved by grey-top (Fluoride Oxalate) tube stability, and she needs a rough location to assess actual courier-routing feasibility. This is a real, live, conditional opening. Any prior record characterising this exchange as more negative than it is, is corrected here, not just appended to.
+
+### 4e-i. Message 1 (~1:31pm Perth time, 28 August 2026, transcribed in full)
+
+> Hi Anthony,
+>
+> Depending on the number of samples we receive, we can definitely accommodate courier collection and provide the Doctor with access to Healthlink, our report delivery system but this would not apply to couriers for glucose tolerance testing. Glucose Tolerance testing would need be carried out in intervals as you know, this would not be accommodated for courier collection as our couriers travel around collecting samples from various locations and timely collections would not be possible at each interval.
+>
+> Kind Regards,
+> Meera Bennett
+
+### 4e-ii. Message 2 (~1:41pm Perth time, 28 August 2026, follow-up to the above, transcribed in full)
+
+> Hi Anthony,
+>
+> If the samples are collected in a grey top (Fluoride Oxalate) tube then the samples have more stability and we may be able to assist. I suggest getting back in touch once you have a more established location and then I can check if couriers can accommodate pick-ups along their route. It is difficult to anticipate the number of samples we would receive and without an exact location, I am unable to provide accurate information.
+>
+> Kind Regards,
+> Meera Bennett
+
+### 4e-iii. What This Actually Means, Corrected Reading
+
+**Message 1, read in isolation, could sound like a decline** (interval-based courier collection "would not be accommodated"). **Message 2, sent 10 minutes later by Meera herself, corrects that reading before we even had to ask:** she is not ruling out courier collection at all, she is ruling out interval-based courier collection specifically, and directly points to grey-top (Fluoride Oxalate) tube stability as a real, specific technical enabler that "may" allow it. She has also asked two concrete, answerable things: (1) get back in touch once there's a more established location, so she can check whether couriers can route past it; (2) she can't estimate sample volume or routing feasibility without a rough location. **This is a genuinely open, progressing conversation, not a decline of the courier/lab-processing model.**
+
+**The real operational fact that reframes her interval-collection concern, not yet stated to her:** GTT's own model only needs ONE collection per day, at the end of the morning session once all clients have completed their final draw, not a pickup timed to each individual client's draw intervals throughout the day. Meera's concern (multiple synchronized interval pickups across a route) does not actually describe GTT's own operating model; a single end-of-day pickup is a far more normal ask for a courier route. This has not yet been communicated to her, and is the central point of the next reply below.
+
+### 4e-iv. Drafted Next Reply to Meera Bennett (NOT SENT, for Anthony's review)
+
+**To:** Meera.Bennett@health.wa.gov.au
+**Subject:** RE: Following up: Onsite Blood Collection Partnership Enquiry
+
+> Hi Meera,
+>
+> Thanks so much for the detail, that's really helpful.
+>
+> On the courier timing concern: we wouldn't need interval-based pickups throughout the day. Our model is for one collection at the end of each morning, once all clients have completed their final draw for the day, so a single end-of-day pickup rather than pickups matched to the individual test intervals. Hopefully that fits a normal route much more easily than what you may have pictured.
+>
+> We'd collect using grey top (Fluoride Oxalate) tubes as you've indicated, and would store and handle samples in line with standard practice for that tube type until the end-of-day pickup.
+>
+> On location, we don't have a venue secured yet, but the rough area we're looking at is Perth metro, roughly Osborne Park through to Cockburn and out to Maddington. This is genuinely the piece we need resolved before we finalise a location, rather than the other way around, so I appreciate you working through it with us at this stage.
+>
+> On volume, our current planning model is up to 18 clients per morning session, Monday to Saturday, though that's a planning target and the actual number some days may be lower.
+>
+> A couple of other things while I have you:
+>
+> - Would this kind of arrangement be able to include supplying the tubes and other consumables needed for the test, including the glucose drink?
+> - If it turns out couriers genuinely can't accommodate pick-ups even with the above, would it be possible for our own staff to drop samples off at a PathWest lab directly instead?
+>
+> Thanks again, really appreciate you helping us work through this.
+>
+> Regards,
+> Anthony
+
+**Design notes (not for inclusion in the sent email):** directly reframes her routing concern with the actual operating detail (one end-of-day pickup, not interval-based), rather than leaving her working from a mistaken picture of the model. Confirms the tube type she flagged as the stability enabler. States the rough target area only now that she has specifically asked for one to assess routing, per Anthony's own instruction not to volunteer this earlier; still no specific address, still no venue secured. States the 18-clients/day planning figure with the same "may be lower" caveat used consistently elsewhere in this correspondence. **Sample storage/handling reference, checked, not invented:** this repository's only established reference for fluoride oxalate tube stability is Carole Rivers' (WDP) own 2026-07-30 email, cited in `docs/cutoff-time-CORRECTION.md` and `docs/VERIFICATION-TRACKER.md` item 1 ("fluoride oxalate tubes...stable for approximately 24 hours"), and the formal NPAAC "Guidelines for Approved Pathology Collection Centres" document reviewed in full for `docs/VERIFICATION-TRACKER.md` item 29 does not itself address specimen storage stability duration, only collection-room provisioning. **No formal named storage standard beyond WDP's own operational statement exists anywhere in this repository, so the reply deliberately says "standard practice for that tube type" rather than inventing or naming a formal storage standard that hasn't actually been established here.** Asks about tube/consumable/glucose-drink supply and the drop-off fallback, both genuinely open, neither assumed either way. **Does not ask the GP/doctor siting-preference-vs-universal-rule question**, per instruction, held for a later round, still queued at §4d-v above. The critical-path framing (pathology partnership resolved before venue) is included once, briefly, in the location paragraph where it fits naturally, not forced elsewhere in the email. **Not sent**: drafted for Anthony's review and sending.
+
 ## What Happens Next
 
-**PathWest:** the 2026-08-28 clarifying email is sent; awaiting Meera's reply, none received yet. Once she replies, action her answer first, then ask the queued follow-up at §4d-v above (PathWest-specific vs. universal "clinic with doctors" requirement), not before and not combined with a prior send. **The GP-on-site research (§2a of the activation plan) remains internal, not raised with PathWest.** **Clinipath:** still awaiting any reply to the 2026-08-27 follow-up; the same self-collection/lab-processing-only clarifying framing should be part of the standard question set once Clinipath replies (GP question held back there too, for consistency, until there's a reason to ask it), not treated as a PathWest-specific fix, see `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2 (new Model D) and `docs/reed-partnerships.md`. **WDP:** remains primary, unaffected by this development, still awaiting a reply to Anthony's 2026-08-21 follow-up; the same clarifying question applies once WDP responds. When Clinipath or WDP reply further, log it here, in `docs/VERIFICATION-TRACKER.md` (item 4 or item 1c), and in `docs/reed-partnerships.md`'s tracker, and update this file's status accordingly. Do not invent or assume a response.
+**PathWest:** 2 real follow-up messages received 2026-08-28 (§4e-i/ii), genuinely progressing, not a decline; a further reply is drafted (§4e-iv), not sent, addressing the end-of-day-pickup reframe, tube type, rough location, volume, consumables-supply question, and the lab-drop-off fallback. The queued GP/siting-preference question (§4d-v) remains held for a later round, not this one. **Clinipath:** still awaiting any reply to the 2026-08-27 follow-up; the same self-collection/lab-processing-only clarifying framing should be part of the standard question set once Clinipath replies (GP question held back there too, for consistency, until there's a reason to ask it), not treated as a PathWest-specific fix, see `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2 (new Model D) and `docs/reed-partnerships.md`. **WDP:** remains primary, unaffected by this development, still awaiting a reply to Anthony's 2026-08-21 follow-up; the same clarifying question applies once WDP responds. When Clinipath or WDP reply further, log it here, in `docs/VERIFICATION-TRACKER.md` (item 4 or item 1c), and in `docs/reed-partnerships.md`'s tracker, and update this file's status accordingly. Do not invent or assume a response.
 
 ---
 
 ## Changelog
+
+**2026-08-28 (2 real follow-up messages recorded, classification corrected to genuinely progressing, next reply drafted):** Meera Bennett sent 2 further messages, ~10 minutes apart. Message 1 could read as a decline (interval-based courier collection "would not be accommodated"); Message 2, sent by Meera herself immediately after, corrects that reading: grey-top (Fluoride Oxalate) tube stability "may" allow courier collection, and she asked for a rough location to assess routing feasibility, since interval-collection concerns and volume estimation both depend on it. **Corrected the classification: this is genuinely progressing, not a decline**: any prior framing suggesting otherwise is corrected here, not appended to. Identified the real operating fact that reframes her concern: GTT only needs one end-of-day pickup, not interval-based pickups, not yet communicated to her. Drafted the next reply (§4e-iv): states the one-pickup-per-day model, confirms the tube type, states the rough target area now that she's specifically asked for one, states the volume with its usual caveat, asks about tube/consumable/glucose-drink supply and a lab-drop-off fallback, checked and used the only real established repository reference for tube storage stability (WDP's own 2026-07-30 email, not a formal named standard, since none exists here) rather than inventing one, does not ask the queued GP question this round. Not sent.
 
 **2026-08-28 (clarifying reply SENT, queued follow-up added):** Anthony sent the clarifying reply directly, outside this repository's workflow, near-identical to the last draft with one edit: dropped the venture name "GTT Center Perth" entirely. Status changed to SENT. No response from Meera Bennett received yet, none invented. Added §4d-v, a queued follow-up question (PathWest-specific siting preference vs. universal/regulatory "clinic with doctors" requirement), explicitly marked not to be sent until Meera replies to this round. Cross-referenced updates made to `docs/VERIFICATION-TRACKER.md` item 4 and `docs/reed-partnerships.md` in the same pass.
 
