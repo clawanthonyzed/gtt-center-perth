@@ -194,7 +194,7 @@ Every remaining factual claim is sourced directly from this repository, not inve
 
 ## 4d. PathWest's Substantive Reply (2026-08-28)
 
-**Classification per the response-handling playbook (`docs/reed-partnerships.md` §1a): effectively a NO to the specific model proposed, not a full decline of PathWest as a future partner. Conditional pathway only if GTT's own operating model changes.** WDP remains primary and unaffected; WDP has not yet replied.
+**CLASSIFICATION CORRECTED, 2026-08-28 (same day, later): the original classification below was premature and is withdrawn, not just appended to.** On review, Meera's reply is genuinely ambiguous and does not, on its own, establish a decline of PathWest as a viable partner for GTT's actual proposed model. **Status: OPEN, pending a direct clarifying question not yet asked.** See §4d-ii (corrected) and §4d-iv (new clarifying draft, replacing the previously-drafted closing acknowledgment, which has NOT been and must NOT be sent) below. WDP remains primary and unaffected; WDP has not yet replied.
 
 ### 4d-i. The Reply Received (transcribed in full, nothing added or omitted)
 
@@ -215,41 +215,56 @@ Every remaining factual claim is sourced directly from this repository, not inve
 
 **Factual note, recorded accurately, not corrected or omitted:** the reply addresses "Andrew," not Anthony. This is an apparent naming slip on PathWest's side. No assumption is made about what caused it; it is simply logged as received.
 
-### 4d-ii. What Was Declined vs. What Remains Open
+### 4d-ii. What Was Declined vs. What Remains Open (CORRECTED, 2026-08-28)
 
-**Declined:** the specific model this venture proposed, PathWest supplying collection staff to a non-PathWest (third-party wellness venue) site. Meera's own words: "we currently do not have the capacity to provide collection staff to non-PathWest collection sites." This is a real, direct no to that exact ask, not ambiguous.
+**Genuinely ambiguous, not a clear decline of the actual proposed model.** Meera's own words: "we currently do not have the capacity to provide collection staff to non-PathWest collection sites." This was read, prematurely, as a direct no to GTT's ask. On review, this reading assumed "collection staff" meant phlebotomists performing the venepuncture itself, and assumed Meera correctly understood that GTT's own model is to employ its own phlebotomists and run its own collection room(s), with a pathology partner providing lab testing and results reporting only, not collection staff at all. **Neither assumption was confirmed before drafting a closing reply. Two real open questions:**
 
-**Remains open, a genuinely different model:** PathWest establishing and staffing its own collection room inside "a clinic with doctors," i.e. PathWest's standard Licensed Collection Centre model, which requires a doctor-staffed medical clinic as the host, not a standalone wellness venue. She has explicitly invited a future approach "once the service delivery model is more defined," and said PathWest "would be happy to explore the opportunity at that stage." This is not a pathway GTT Center Perth currently fits, since GTT is a premium wellness venue with its own employed/contracted phlebotomists, not a doctor-staffed medical clinic.
+1. Does "collection staff" in her reply mean phlebotomists (the people drawing blood) specifically, or does it mean sample-transport/courier staff, or both? Not established either way.
+2. Did Meera's reply address the model GTT actually proposed (GTT self-collects, PathWest limited to lab testing/reporting), or did she assume PathWest would need to supply/operate the collection itself (a materially different, larger ask)? Her "clinic with doctors" comment reads as though she assumed the latter, but this has not been confirmed, and may simply be a misunderstanding of what was actually being proposed, not evidence PathWest can't help at all.
+
+**"Clinic with doctors," genuinely not understood yet, not just noted and dropped:** what having a GP on-site would actually involve, and what the GP's role/purpose would be in this arrangement, is not established. Whether a GP is required specifically to unlock the self-collection/lab-processing-only model in question 2 above, or is a separate/different model to what she was describing, is unknown and needs to be asked directly, not assumed.
+
+**Status: OPEN pending clarification, not effectively declined.** See §4d-iv below for the clarifying question now drafted in place of the previously-drafted closing acknowledgment (which was never sent and must not be).
 
 ### 4d-iii. Strategic Flag for Anthony, Not Resolved Here
 
-**This is now real evidence that at least one WA pathology provider's standard onsite-collection model requires a doctor-staffed clinic as the host, not a standalone wellness venue employing its own phlebotomists.** This is a genuine data point about the WA pathology-partnership landscape that may be relevant context for whatever WDP eventually says, and for Clinipath's eventual reply. **It does not mean GTT's model needs to change.** WDP has not given its own position yet, and PathWest was always the backup pathway, not the primary one. This is flagged here as strategic context for Anthony's awareness, not as a trigger to redesign anything, and is not resolved or acted on in this document.
+**Still a genuine, real open question, reframed:** whether at least one WA pathology provider's standard onsite-collection model requires either (a) supplying/accrediting the collection staff itself, or (b) a doctor-staffed clinic host, or whether a self-collection/lab-processing-only model (GTT's own actual proposal) is genuinely workable with PathWest, is not yet known. This is a real, relevant data point for whatever WDP eventually says, and for Clinipath's eventual reply, once it is actually clarified, not assumed from an ambiguous first read. **It does not mean GTT's model needs to change** regardless of how this resolves; WDP has not given its own position yet, and PathWest was always the backup pathway, not the primary one. Flagged as context for Anthony's awareness, not a trigger to redesign anything, and not resolved here.
 
-### 4d-iv. Drafted Acknowledgment Reply to Meera Bennett (NOT SENT, for Anthony's review)
+### 4d-iv. Drafted Clarifying Reply to Meera Bennett (NOT SENT, for Anthony's review; REPLACES the withdrawn closing acknowledgment above)
+
+**The previously-drafted closing acknowledgment reply is WITHDRAWN and must NOT be sent**: it gave up on PathWest prematurely based on an ambiguous reading of her email, per Anthony's own correction.
 
 **To:** Meera.Bennett@health.wa.gov.au
 **Subject:** RE: Following up: Onsite Blood Collection Partnership Enquiry
 
 > Hi Meera,
 >
-> Thanks for clarifying, that's really helpful. Our current concept is a wellness venue with its own collection staff, not a doctor-staffed clinic, so I understand this particular model isn't something PathWest can support at the moment.
+> Thanks for coming back to me, I think there might be a bit of a mismatch in what I described versus what you understood, so I wanted to clarify.
 >
-> I appreciate you flagging the option to reconnect if our service delivery model becomes more defined down the track, I'll keep that in mind.
+> Our actual plan is for us to employ our own phlebotomists and run our own collection room(s) ourselves, we're not looking for PathWest to supply or operate the collection side at all. What we'd be looking for from a pathology partner is purely the lab testing itself and reporting results back to the client's own referring doctor.
 >
-> Thanks again for your time.
+> A couple of things that would help me understand your reply better:
+>
+> - When you mentioned not having capacity to provide collection staff, did that mean phlebotomists specifically, or does it also (or instead) cover staff involved in transporting/couriering collected samples to a lab? Just want to make sure I understand what wasn't feasible.
+> - Is there a model where we collect the samples ourselves with our own staff, and simply deliver them to PathWest for testing and results reporting, with no PathWest staff involved on our site at all? That's actually closer to what we had in mind.
+> - On the clinic-with-doctors point, I'd love to understand that a bit better too, what would having a GP on-site actually involve, and what would their role be? Is that specifically what would unlock the model above, or is that a separate arrangement altogether?
+>
+> Really appreciate you taking the time to clarify, keen to understand whether there's a version of this that could work.
 >
 > Regards,
 > Anthony
 
-**Design notes (not for inclusion in the sent email):** short and final, matching the tone of a fairly clear and conclusive answer, not reopening the ask or asking further questions at this stage. Does not name WDP or Clinipath, does not disclose that other providers are being approached in parallel. Does not commit to changing GTT's operating model, and does not ask PathWest to reconsider. **Not sent**: drafted for Anthony's review and sending.
+**Design notes (not for inclusion in the sent email):** professional and genuinely curious, not pushy, does not overcommit to anything, does not assume PathWest will say yes. States GTT's actual model plainly rather than leaving it implicit. Asks the "collection staff" ambiguity directly (phlebotomists vs. sample-transport/courier), asks the self-collection/lab-only model directly, and asks the GP/clinic point directly rather than assuming it is either required or irrelevant. Does not name WDP or Clinipath, does not disclose that other providers are being approached in parallel. **Not sent**: drafted for Anthony's review and sending.
 
 ## What Happens Next
 
-**PathWest:** Anthony's acknowledgment reply above is drafted, not sent; once sent, this specific thread is effectively concluded (a conditional future pathway only, contingent on GTT's own model changing to a doctor-staffed clinic, not the current wellness-venue model). **Clinipath:** still awaiting any reply to the 2026-08-27 follow-up. **WDP:** remains primary, unaffected by this development, still awaiting a reply to Anthony's 2026-08-21 follow-up. When Clinipath or WDP reply further, log it here, in `docs/VERIFICATION-TRACKER.md` (item 4 or item 1c), and in `docs/reed-partnerships.md`'s tracker, and update this file's status accordingly. Do not invent or assume a response.
+**PathWest:** the clarifying reply above is drafted, not sent; this thread remains genuinely OPEN, not concluded, pending Meera's answer to the 3 clarifying questions. **Clinipath:** still awaiting any reply to the 2026-08-27 follow-up; the same clarifying framing (GTT self-collects, partner does lab-processing-and-reporting only) should be part of the standard question set once Clinipath replies, not treated as a PathWest-specific fix, see `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2 (new Model D) and `docs/reed-partnerships.md`. **WDP:** remains primary, unaffected by this development, still awaiting a reply to Anthony's 2026-08-21 follow-up; the same clarifying question applies once WDP responds. When Clinipath or WDP reply further, log it here, in `docs/VERIFICATION-TRACKER.md` (item 4 or item 1c), and in `docs/reed-partnerships.md`'s tracker, and update this file's status accordingly. Do not invent or assume a response.
 
 ---
 
 ## Changelog
+
+**2026-08-28 (classification corrected, later same day):** The prior classification ("effectively a NO," conditional-pathway-only) was withdrawn on Anthony's own correction, not just appended to. Meera's reply is genuinely ambiguous: it was not confirmed whether "collection staff" meant phlebotomists or sample-transport/courier staff, and it was not confirmed whether she understood GTT's actual proposed model (GTT self-collects with its own employed phlebotomists, partner limited to lab testing and results reporting only) rather than assuming the partner would need to supply/operate the collection room itself. Status corrected to OPEN, pending clarification. Withdrew the previously-drafted closing acknowledgment reply (not sent, must not be sent) and replaced it with a substantive clarifying reply asking the collection-staff ambiguity, the self-collection/lab-only model, and the clinic-with-doctors/GP-role question directly. Generalised this clarifying question into the WDP employment-model comparison (new Model D, `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2) and the reed-partnerships.md standard question set, so it applies to WDP and Clinipath too, not just PathWest.
 
 **2026-08-28 (PathWest's substantive reply, effectively declines the current model):** Meera Bennett replied that PathWest "currently do[es] not have the capacity to provide collection staff to non-PathWest collection sites," a direct decline of the specific model proposed (PathWest staff at a GTT-operated venue). She identified a different, open pathway: PathWest establishing its own collection room inside "a clinic with doctors," PathWest's standard Licensed Collection Centre model, not compatible with GTT's current standalone-wellness-venue model. Classified per the response-handling playbook as effectively NO to the current model, conditional-pathway-only if the model changes. Recorded the "Andrew" naming discrepancy factually, not corrected or interpreted. Flagged as strategic context for Anthony (real evidence of at least one WA provider's doctor-clinic-host requirement), not a trigger to redesign GTT's model. WDP remains primary, unaffected, still awaiting reply. Drafted a short acknowledgment reply, not sent. Cross-referenced updates made to `docs/VERIFICATION-TRACKER.md` item 4 and `docs/reed-partnerships.md`'s tracker in the same pass.
 
