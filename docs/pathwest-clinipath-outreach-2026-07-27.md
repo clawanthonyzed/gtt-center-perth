@@ -192,13 +192,66 @@
 
 Every remaining factual claim is sourced directly from this repository, not invented: services from `docs/architecture/SERVICE-CATALOGUE.md` and `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md`; the 2-room/1-phlebotomist-per-room detail and the 18-clients/day, Monday-Saturday volume from `docs/CURRENT-STATE.md` §1/§3 and `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md` (updated 2026-08-27); planning-stage/no-fixed-date framing consistent with `docs/business-plan.md` §14. Deliberately provider-neutral throughout: does not name WDP or Clinipath, and does not disclose that other pathology providers are being approached in parallel, since the original 2026-07-27 and 2026-08-27 correspondence to PathWest never disclosed this either. Does not overcommit: no opening date invented, no venue address invented, no clinical detail beyond what is already established. **Sent 2026-08-27** (see status line above).
 
+## 4d. PathWest's Substantive Reply (2026-08-28)
+
+**Classification per the response-handling playbook (`docs/reed-partnerships.md` §1a): effectively a NO to the specific model proposed, not a full decline of PathWest as a future partner. Conditional pathway only if GTT's own operating model changes.** WDP remains primary and unaffected; WDP has not yet replied.
+
+### 4d-i. The Reply Received (transcribed in full, nothing added or omitted)
+
+**From:** "Pathwest, Client Liaison" &lt;Pathwest.ClientLiaison@health.wa.gov.au&gt;, replied by Meera Bennett, Medical Liaison Officer, PathWest Laboratory Medicine
+**Date:** Friday, 28 August 2026
+**Subject:** RE: Following up: Onsite Blood Collection Partnership Enquiry
+
+> Thank you for getting back to me Andrew.
+>
+> Based on advice from the relevant departments, we currently do not have the capacity to provide collection staff to non-PathWest collection sites unfortunately.
+>
+> However, if you plan to open a clinic with doctors and would like us to establish a collection room to provide collection services, you are welcome to contact us once the service delivery model is more defined.
+>
+> We would be happy to explore the opportunity at that stage.
+>
+> Kind regards,
+> Meera Bennett
+
+**Factual note, recorded accurately, not corrected or omitted:** the reply addresses "Andrew," not Anthony. This is an apparent naming slip on PathWest's side. No assumption is made about what caused it; it is simply logged as received.
+
+### 4d-ii. What Was Declined vs. What Remains Open
+
+**Declined:** the specific model this venture proposed, PathWest supplying collection staff to a non-PathWest (third-party wellness venue) site. Meera's own words: "we currently do not have the capacity to provide collection staff to non-PathWest collection sites." This is a real, direct no to that exact ask, not ambiguous.
+
+**Remains open, a genuinely different model:** PathWest establishing and staffing its own collection room inside "a clinic with doctors," i.e. PathWest's standard Licensed Collection Centre model, which requires a doctor-staffed medical clinic as the host, not a standalone wellness venue. She has explicitly invited a future approach "once the service delivery model is more defined," and said PathWest "would be happy to explore the opportunity at that stage." This is not a pathway GTT Center Perth currently fits, since GTT is a premium wellness venue with its own employed/contracted phlebotomists, not a doctor-staffed medical clinic.
+
+### 4d-iii. Strategic Flag for Anthony, Not Resolved Here
+
+**This is now real evidence that at least one WA pathology provider's standard onsite-collection model requires a doctor-staffed clinic as the host, not a standalone wellness venue employing its own phlebotomists.** This is a genuine data point about the WA pathology-partnership landscape that may be relevant context for whatever WDP eventually says, and for Clinipath's eventual reply. **It does not mean GTT's model needs to change.** WDP has not given its own position yet, and PathWest was always the backup pathway, not the primary one. This is flagged here as strategic context for Anthony's awareness, not as a trigger to redesign anything, and is not resolved or acted on in this document.
+
+### 4d-iv. Drafted Acknowledgment Reply to Meera Bennett (NOT SENT, for Anthony's review)
+
+**To:** Meera.Bennett@health.wa.gov.au
+**Subject:** RE: Following up: Onsite Blood Collection Partnership Enquiry
+
+> Hi Meera,
+>
+> Thanks for clarifying, that's really helpful. Our current concept is a wellness venue with its own collection staff, not a doctor-staffed clinic, so I understand this particular model isn't something PathWest can support at the moment.
+>
+> I appreciate you flagging the option to reconnect if our service delivery model becomes more defined down the track, I'll keep that in mind.
+>
+> Thanks again for your time.
+>
+> Regards,
+> Anthony
+
+**Design notes (not for inclusion in the sent email):** short and final, matching the tone of a fairly clear and conclusive answer, not reopening the ask or asking further questions at this stage. Does not name WDP or Clinipath, does not disclose that other providers are being approached in parallel. Does not commit to changing GTT's operating model, and does not ask PathWest to reconsider. **Not sent**: drafted for Anthony's review and sending.
+
 ## What Happens Next
 
-**PathWest:** awaiting Meera Bennett's substantive review and response to the 2026-08-27 reply. No response received yet, none invented. **Clinipath:** still awaiting any reply to the 2026-08-27 follow-up. When either replies further, log it here, in `docs/VERIFICATION-TRACKER.md` (item 4), and in `docs/reed-partnerships.md`'s tracker, and update this file's status accordingly. Do not invent or assume a response.
+**PathWest:** Anthony's acknowledgment reply above is drafted, not sent; once sent, this specific thread is effectively concluded (a conditional future pathway only, contingent on GTT's own model changing to a doctor-staffed clinic, not the current wellness-venue model). **Clinipath:** still awaiting any reply to the 2026-08-27 follow-up. **WDP:** remains primary, unaffected by this development, still awaiting a reply to Anthony's 2026-08-21 follow-up. When Clinipath or WDP reply further, log it here, in `docs/VERIFICATION-TRACKER.md` (item 4 or item 1c), and in `docs/reed-partnerships.md`'s tracker, and update this file's status accordingly. Do not invent or assume a response.
 
 ---
 
 ## Changelog
+
+**2026-08-28 (PathWest's substantive reply, effectively declines the current model):** Meera Bennett replied that PathWest "currently do[es] not have the capacity to provide collection staff to non-PathWest collection sites," a direct decline of the specific model proposed (PathWest staff at a GTT-operated venue). She identified a different, open pathway: PathWest establishing its own collection room inside "a clinic with doctors," PathWest's standard Licensed Collection Centre model, not compatible with GTT's current standalone-wellness-venue model. Classified per the response-handling playbook as effectively NO to the current model, conditional-pathway-only if the model changes. Recorded the "Andrew" naming discrepancy factually, not corrected or interpreted. Flagged as strategic context for Anthony (real evidence of at least one WA provider's doctor-clinic-host requirement), not a trigger to redesign GTT's model. WDP remains primary, unaffected, still awaiting reply. Drafted a short acknowledgment reply, not sent. Cross-referenced updates made to `docs/VERIFICATION-TRACKER.md` item 4 and `docs/reed-partnerships.md`'s tracker in the same pass.
 
 **2026-08-27 (reply to Meera Bennett SENT, recorded after the fact):** Anthony sent the reply to Meera Bennett directly, outside this repository's workflow. The actual sent text differs from the drafted version in 2 respects, both his own edit, not oversights: kept only 2 of the 4 reciprocal questions (staff/rent arrangement model, prior partnership experience), dropping "what would you need to see to progress" and "review timeframe"; signed off "Regards," not "Kind regards." Body text on venue location, services, testing operation, volume, timeframe, and other relevant detail unchanged. Status changed from DRAFTED/NOT SENT to SENT. No response from Meera Bennett or PathWest received yet, none invented. Cross-referenced updates made to `docs/VERIFICATION-TRACKER.md` item 4 and `docs/reed-partnerships.md`'s tracker in the same pass.
 
