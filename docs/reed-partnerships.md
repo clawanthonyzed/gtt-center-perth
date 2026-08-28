@@ -12,8 +12,9 @@
 | **WDP (Western Diagnostic Pathology)** | 1st | **Active back-and-forth, progressing well. Anthony's 2026-07-31, 2026-08-07, and 2026-08-21 replies SENT; Carole's 2026-08-08 reply received — internal WDP escalation underway, fuller response expected "during the coming week," no reply yet to the 2026-08-21 follow-up.** Contacted via WDP's online enquiry form. Carole Rivers (Customer & Commercial Manager, Country) responded with detailed staffing/scope/timing information, an indicative timetable, (2026-08-06) a full ACC/NPAAC collection-room spec plus site-assessment criteria, and (2026-08-08) a further reply. **Latest SENT reply is filed at `docs/wdp-followup-draft-2026-08-20.md` — status: SENT (2026-08-21, by Anthony directly, outside this repository's workflow).** That email corrected the client-volume figure Carole was told (18/day, Mon-Sat, not the earlier 12/day), checked in on the commercial/rental figure (item 1c), and asked whether medical waste disposal is covered under WDP's collection-centre arrangement (item 21/F22). **Anthony deliberately dropped the phlebotomist-employment question (item 1d) from this send** — not asked yet, still genuinely open. **2026-08-08 reply key points (see `docs/VERIFICATION-TRACKER.md` item 29d for full detail):** (1) Carole escalated internally to WDP's Quality Department to clarify collection-centre boundaries in a wellness-centre setting — not resolved yet. (2) She confirmed directly the "remain at the collection centre" requirement is WDP's own policy layered on NPAAC, not an NPAAC mandate — validates items 29/29b's finding in her own words. (3) Her actual wording is "remain at the collection centre," not literally "the waiting room" — a real nuance. (4) GP/FTE-doctors-on-site site-assessment point RESOLVED favourably — "the absence of doctors on site would not present an operational concern." (5) Commercial figure (item 1c) actively progressing — she's chasing it with WDP's State Business Manager. **`wdp-reply-carole-2026-08-03.md` remains DRAFT, NOT YET SENT — superseded in practice by the 08-07 and 08-21 replies, not independently actioned.** See `lab-outreach-2026-07-28.md` for the full status log, `wdp-reply-carole-2026-07-30.md` for the prior sent reply. | Awaiting Carole's reply to the 2026-08-21 follow-up (volume correction, rental-figure check-in, medical waste). **Collector-scope question SETTLED, 2026-08 (reconfirmed) — not open.** Anthony's direct words: "WDP staff or hired phlebotomists will only work inside the scope of pathology collection. This has been addressed multiple times." WDP/hired phlebotomist staff (whichever employment model is used) work collection-only, never wellness/general-venue duties — consistent with `staff-plan.md`'s model regardless of the still-separately-open in-house-vs-WDP-supplied employment question (`docs/VERIFICATION-TRACKER.md` item 1d, still unasked). WDP-supplied-staffing commercial cost range (item 1c) — actively progressing, not stalled; minimum-term question still open. Site-assessment criteria (GP/FTE-doctors) — resolved, closed. |
 | **PathWest** | 2nd | **Clarifying reply SENT 2026-08-28, by Anthony directly, awaiting Meera's response.** Meera Bennett, Medical Liaison Officer, PathWest Laboratory Medicine, replied 2026-08-28: PathWest "currently do[es] not have the capacity to provide collection staff to non-PathWest collection sites," and mentioned establishing a collection room inside "a clinic with doctors" as a pathway PathWest would explore. **Initially classified as an effective decline, corrected the same day**: genuinely ambiguous, never confirming whether "collection staff" meant phlebotomists specifically or also/instead sample-transport/courier staff, or whether Meera understood GTT's actual model (GTT employs its own phlebotomists, runs its own collection room, partner limited to lab testing/reporting only) rather than assuming PathWest would need to supply/operate collection itself. **Anthony sent a clarifying reply 2026-08-28**: states GTT's own 2-option plan (self-employ/operate under the partner's accreditation, vs. the partner supplying staff, with the fallback to the former stated since PathWest can't supply staff), asks directly whether PathWest can provide transport/courier staff and perform lab testing/results reporting. No GP question asked this round, held back deliberately. **Factual note:** the original reply addressed "Andrew," not Anthony, an apparent naming slip, recorded factually, not interpreted. No response from Meera to the 2026-08-28 email yet, none invented. A queued follow-up (PathWest-specific vs. universal "clinic with doctors" requirement) is held for the round after this reply, see `docs/pathwest-clinipath-outreach-2026-07-27.md` §4d-v, not yet sent. | **Strategic flag for Anthony:** once genuinely clarified, whether PathWest's/WA pathology providers' standard onsite-collection model requires supplying collection staff or a doctor-staffed clinic host is relevant context for WDP's/Clinipath's eventual replies, not a trigger to change GTT's model. The self-collection/lab-processing-only clarifying question is now part of the standard question set for WDP and Clinipath too, see §1b below and `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2 (new Model D). WDP remains primary, unaffected, still awaiting reply. |
 | **Clinipath** | 3rd (contingency) | **Emailed 2026-07-27** (businessdevelopment@clinipath.net). **One-month follow-up SENT 2026-08-27** by Anthony directly: see `pathwest-clinipath-outreach-2026-07-27.md` §3 for the sent copy. No response yet. | Contingency only — proceed if WDP and PathWest both decline or terms are unfavourable. |
+| **Australian Clinical Labs (ACL)** | 4th, added 2026-08-28 | **Draft prepared, NOT YET SENT.** Anthony decided to add ACL to active outreach following the fresh landscape re-verification (§1c). First-contact email drafted, presenting both staffing/operating options (Option A: GTT self-collects, ACL limited to transport/lab-testing; Option B: ACL supplies collection staff and runs collection end-to-end) from the outset, learned from the PathWest clarification cycle. See the ACL subsection below for the full draft. | Anthony reviews and sends. |
 
-**3 of 3 originally-identified pathology partners contacted, 2 of 3 (WDP, PathWest) now in active back-and-forth as of 2026-08-27.** PathWest replied 2026-08-27 (Meera Bennett) requesting further information, a genuine engagement, not an agreement, see the table row above and `docs/pathwest-clinipath-outreach-2026-07-27.md` §4 for the full record and drafted reply. Clinipath's follow-up remains awaiting reply. **A genuine 4th candidate, Australian Clinical Labs, was identified 2026-08-28 via fresh re-verification (see §1c below), NOT yet contacted, flagged for Anthony's decision.**
+**3 of 3 originally-identified pathology partners contacted, 2 of 3 (WDP, PathWest) now in active back-and-forth as of 2026-08-27.** PathWest replied 2026-08-27 (Meera Bennett) requesting further information, a genuine engagement, not an agreement, see the table row above and `docs/pathwest-clinipath-outreach-2026-07-27.md` §4 for the full record and drafted reply. Clinipath's follow-up remains awaiting reply. **Australian Clinical Labs (ACL), the genuine 4th candidate identified 2026-08-28 via fresh re-verification (§1c), is now an active outreach target per Anthony's decision: first-contact email drafted, not yet sent.**
 
 ---
 
@@ -71,7 +72,44 @@ Part of Sonic Healthcare (ASX top-40). Central lab Osborne Park + 260+ collectio
 
 No published satellite-collection-centre partnership program found (unlike WDP's documented Licensed Collection Centre program) — approach via general business-development inquiry only if WDP and PathWest both decline or terms are unfavourable.
 
-**Approach order: 1. WDP (documented LCC program) → 2. PathWest (government, backup) → 3. Clinipath (contingency, no documented program — general BD inquiry only).** **Note added 2026-08-28:** this was the full field as researched at the time; a genuine 4th candidate, Australian Clinical Labs, has since been identified via fresh re-verification, not yet contacted, not yet added to this approach order pending Anthony's decision, see §1c below.
+**Approach order: 1. WDP (documented LCC program) → 2. PathWest (government, backup) → 3. Clinipath (contingency, no documented program — general BD inquiry only).** **Note added 2026-08-28:** this was the full field as researched at the time; a genuine 4th candidate, Australian Clinical Labs, has since been identified via fresh re-verification, see §1c, and Anthony has decided to add it to active outreach (below).
+
+---
+
+### Australian Clinical Labs (ACL) (4th CANDIDATE, ADDED TO ACTIVE OUTREACH 2026-08-28)
+
+Independent, ASX-listed (ACL.AX), genuinely independent of Sonic Healthcare and Healius (full ownership/footprint detail: §1c above). No published satellite-collection-centre partnership program found (same situation as PathWest and Clinipath), general business-development enquiry is the correct channel.
+
+| Detail | Info |
+|---|---|
+| **General enquiry contact** | Info@clinicallabs.com.au |
+| **Phone** | 1300 134 111 |
+| **WA presence** | 6 current labs (Bunbury, Geraldton, Midland, Murdoch, Osborne Park, Subiaco); broader collection-centre network inherited from the 2016 St John of God Pathology / Perth Pathology acquisitions |
+| **Sources** | clinicallabs.com.au/our-laboratories, /contact |
+
+**Status: DRAFT PREPARED, NOT YET SENT.** Anthony reviews and sends, same pattern as every other external communication this session.
+
+**To:** Info@clinicallabs.com.au
+**Subject:** Enquiry: Onsite Blood Collection Partnership, Perth
+
+> Hi Australian Clinical Labs team,
+>
+> I'm exploring options for a pregnancy-related wellness venue concept, currently in the planning and feasibility stage, in the Perth metro area, roughly Osborne Park through to Cockburn and out to Maddington, no specific site confirmed yet. The concept centres on hosting gestational glucose testing (GTT) appointments, with wellness services filling the time between the required blood draws.
+>
+> We're open to two possible ways this could work, and keen to understand which (if either) would suit Australian Clinical Labs:
+>
+> - We employ our own phlebotomists and operate our own collection room(s), working under your accreditation, policies and guidelines. Your role would be limited to sample transport/courier and lab testing, with results reported back to the client's referring doctor.
+> - Australian Clinical Labs supplies the collection staff and operates the collection room(s) directly, handling transport and lab testing as a fuller-service arrangement.
+>
+> The current planning model is up to 18 clients per morning session, Monday to Saturday, though that's a planning target and actual daily volume may be lower in practice. There's no fixed opening date yet, next steps are sequenced behind confirming a pathology partnership.
+>
+> If this is something Australian Clinical Labs would be open to exploring, I'd welcome a brief conversation. If it's not a fit, a quick note either way would be appreciated so I can plan accordingly.
+>
+> Thanks,
+> [Name]
+> [email]
+
+**Design notes (not for inclusion in the sent email):** presents both staffing/operating models from the outset, learned directly from the PathWest back-and-forth (her first reply required a clarification round because GTT's own 2-option position wasn't stated plainly at first contact); not making ACL go through the same cycle. Similar weight/tone/length to the original PathWest and Clinipath first-contact emails, not the business plan. States a rough target area (Osborne Park through Cockburn/Maddington) without committing to a specific site. States the 18-clients/day planning target with an explicit caveat that actual volume may be lower. No fixed opening date invented. Does not name WDP, PathWest, or Clinipath, does not disclose that other providers are being approached in parallel. Includes an easy out ("a quick note either way would be appreciated"). **Not sent**: drafted for Anthony's review and sending.
 
 ---
 
@@ -255,7 +293,7 @@ Approach in priority order. Offer: permanent scan room, fixed weekly rent A$250�
 
 *For Clinipath, lead with a general partnership inquiry rather than referencing a specific program — Clinipath has no documented Licensed Collection Centre equivalent.*
 
-**Subject:** Enquiry — Onsite Blood Collection Partnership, Perth
+**Subject:** Enquiry: Onsite Blood Collection Partnership, Perth
 
 > Hi [Name / Business Development Team],
 >
@@ -356,6 +394,8 @@ Approach in priority order. Offer: permanent scan room, fixed weekly rent A$250�
 ---
 
 ## Changelog
+
+**2026-08-28 (ACL added to active outreach, first-contact email drafted):** Anthony decided to add Australian Clinical Labs to active pathology-partner outreach alongside WDP/PathWest/Clinipath. Drafted a first-contact enquiry (general enquiry channel, Info@clinicallabs.com.au, no dedicated partnership program found, same situation as PathWest/Clinipath) presenting both staffing/operating options from the outset (GTT self-collects with the partner limited to transport/lab-testing, vs. the partner supplying collection staff and running collection end-to-end), learned directly from the PathWest clarification cycle so ACL doesn't need the same back-and-forth. Added the OUTREACH STATUS table row and a full ACL subsection under Section 1, status DRAFT PREPARED, NOT YET SENT. Does not name WDP, PathWest, or Clinipath.
 
 **2026-08-28 (WA pathology landscape freshly re-verified, genuine 4th candidate found):** Per Anthony's direct question (are WDP/PathWest/Clinipath really the full WA field), ran a fresh primary-source search rather than assuming the prior research still complete. Confirmed WDP (Healius Ltd, ASX: HLS) and Clinipath (Sonic Healthcare Ltd, ASX: SHL) ownership as previously stated, PathWest as WA Health government. **Found a genuine 4th major WA pathology provider missed by the prior research: Australian Clinical Labs (ACL, ASX: ACL.AX)**, an independent, currently-operating national pathology group (the 3rd of Australia's 3 majors alongside Sonic and Healius) with 6 current WA labs and a substantial inherited WA collection-centre network (from 2016 acquisitions of St John of God Pathology and Perth Pathology, both WA-specific businesses no longer independently operating). Ruled out St John of God Pathology and Perth Pathology as separate candidates (both fully absorbed into ACL), Medlab Pathology (also ACL, historically NSW), and GI Pathology (real, independent, WA-based, but a gastrointestinal-histopathology specialist, not relevant to GTT's test type). Added Section 1c with the full evidence table. **ACL flagged as a genuine candidate for Anthony's consideration, NOT contacted, a real strategic decision for him, not made here.**
 
