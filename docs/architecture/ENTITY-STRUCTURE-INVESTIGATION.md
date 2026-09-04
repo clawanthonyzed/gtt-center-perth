@@ -33,9 +33,9 @@ This is why the entity-structure question, previously a two-way "trust-direct vs
 
 Laid out neutrally. None is presented as preferred.
 
-### Option (a) — Trust-direct (current setup, unchanged)
+### Option (a) — Trust-direct (default if no other option is chosen — NOT yet decided)
 
-GTT Center Perth continues trading directly under YETI Holding Trust, exactly as it is currently set up per `docs/financial-setup.md` and `docs/revenue-extraction-options.md`. No new entity. The trust retains full discretionary power to vary distributions year to year among its beneficiaries, subject to the trust deed.
+GTT Center Perth has not launched yet, so there is no trading arrangement actually in operation for any option to be "current" against. This option means GTT Center Perth would trade directly under YETI Holding Trust as planned in `docs/financial-setup.md` and `docs/revenue-extraction-options.md` — no new entity — if no other option is ever chosen. It is the default/status-quo path by omission, not a decision that has been made. The trust would retain full discretionary power to vary distributions year to year among its beneficiaries, subject to the trust deed.
 
 Under the 2026-09-03 draft, from 1 July 2028 this option would, unless one of Options (b) or (c) is also taken, become subject to the 30% minimum trustee-level tax described in Section 0.
 
@@ -64,7 +64,7 @@ YETI Holding Trust elects, under the new mechanism described in Section 0, to ma
 
 ## 2. Tradeoffs by Option
 
-| Dimension | (a) Trust-direct (current) | (b) New operating PTY LTD under trust | (c) Fixed-distribution election |
+| Dimension | (a) Trust-direct (default — not yet decided) | (b) New operating PTY LTD under trust | (c) Fixed-distribution election |
 |---|---|---|---|
 | **Tax treatment from 1 July 2028** | Subject to 30% minimum trustee-level tax on trust income unless (b) or (c) is also adopted `[VERIFIED — ATO/William Buck, as cited]` | Not a discretionary trust — not captured by the minimum tax at all; ordinary corporate tax rate applies to the company, trust structure above it is a shareholder, not the trading entity `[VERIFIED — general company tax treatment, not this-venture-specific]` | Exempt from the 30% minimum tax while the election is validly maintained; loses the ability to vary distributions year to year `[VERIFIED — Accountants Daily/Sterlinx Global, as cited]` |
 | **Liability exposure** | Trust/trustee-level exposure — a physical venue with clinical activity, staff, and public foot traffic is a real liability profile a pure trust does not ring-fence as cleanly as a company `[MODELED — this venture's own stated rationale, not independently re-verified against a solicitor's opinion this pass]` | Company provides a distinct legal-liability boundary between the trading entity and the trust/individuals above it — the standard reason operating businesses use a company layer `[MODELED — general principle, not this-venture-specific legal advice]` | Same liability profile as (a) — the fixed-distribution election addresses the 2028 tax question only, it does not change the trust's liability-ring-fencing position at all `[MODELED]` |
@@ -112,3 +112,5 @@ YETI Holding Trust elects, under the new mechanism described in Section 0, to ma
 ## Changelog
 
 **2026-09-04** — Initial write-up created (Grace). Responds to `docs/FOUNDER-FEEDBACK-IMPLEMENTATION-MATRIX.md` row 37 (PLANNED, never actually written) and the open question flagged in `docs/financial-setup.md` Step 1. Triggered by the 2026-09-03 draft legislation for a 30% minimum tax on discretionary trusts, which converts the previously two-way trust-direct-vs-PTY-LTD question into a three-way question by introducing a fixed-distribution election as a third live option. See `docs/DECISION-LOG.md` 2026-09-04 entry (research started, no decision made) and `docs/FOUNDER-FEEDBACK-IMPLEMENTATION-MATRIX.md` row 37 (status updated).
+
+**2026-09-04 (correction, Grace)** — Anthony flagged that Option (a)'s framing wrongly implied a trading-structure decision had already been made. Corrected: the heading and comparison-table header for Option (a) previously read "Trust-direct (current setup, unchanged)" / "Trust-direct (current)" and the body text said GTT trades "exactly as it is currently set up" — all of which implied an already-existing, already-decided arrangement. In fact GTT has not launched, no trading-structure decision has been made at all, and Option (a) is only the default outcome if no other option is ever chosen. Reworded to "Trust-direct (default if no other option is chosen — NOT yet decided)" throughout, and the body text now states plainly that no arrangement is currently in operation. No change to the substance of what Option (a) describes.
