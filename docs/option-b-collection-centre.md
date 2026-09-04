@@ -1,16 +1,18 @@
 # GTT Center Perth — Option B: Own Approved Collection Centre
 
-**Version:** 1.0 | **Date:** 2026-06-09 | **Status:** Not Pursuing — Reference Only
+**Version:** 1.1 | **Date:** 2026-06-09 (clarification added 2026-09-04) | **Status:** Not Pursuing — Reference Only
 
 ---
 
 > **Decision (Day 49):** Option A (PathWest/WDP satellite collection) is the PERMANENT pathology model — not a launch-only stepping stone. Option B is not being pursued. This document is retained for historical reference only. The 2-collection-chair / 2-phlebotomist Day 1 model (see operations-manual.md, pathology-collection-room.md) is unrelated to this decision — it is a staffing/equipment change fully compatible with Option A.
 
+> **CLARIFICATION, added 2026-09-04, per direct instruction from Anthony — read this before anything else in this document:** **"Option B" does NOT mean GTT would own, build, or operate an actual diagnostic laboratory, employ lab scientists, or do any sample analysis on-site.** "Becoming GTT's own Approved Collection Centre" means, specifically and only, that GTT would hold the official government (Services Australia/Medicare) permission to run the **blood-draw room only** under its own name, instead of operating under a pathology partner's permission. The actual testing/analysis of every specimen would still happen at an existing accredited laboratory elsewhere — PathWest's, WDP's, or another Approved Pathology Authority's own lab — exactly as it would under a normal partner arrangement (Option A). Only the question of who holds the paperwork for the collection room changes; nothing about where or by whom the actual test is performed changes. **Separately, and confirmed already ruled out:** the genuinely different, much bigger idea of GTT becoming its own full "Approved Pathology Authority" *with its own accredited testing laboratory* (i.e. actually building a lab, hiring lab scientists, doing analysis on-site) was already researched and confirmed unrealistic for this venture — see `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2d-ii. No version of the research in this document, or anywhere else in this repository, proposes GTT build a laboratory. Not pursued anyway, per the Day 49 decision above — this clarification exists only to remove any ambiguity about what the option being described (and not pursued) actually was.
+
 ## Overview
 
-Option B means GTT Center Perth operates its own Medicare-approved pathology collection facility. This replaces the Option A model (hosting a PathWest/WDP satellite collection point) and gives the venture full operational control, full Medicare billing authority, and the ability to employ its own phlebotomist.
+Option B means GTT Center Perth operates its own Medicare-approved pathology **collection facility** — the blood-draw room only, holding the government permission for that room under GTT's own name rather than a partner's. It does not mean GTT operates a laboratory. This replaces the Option A model (hosting a PathWest/WDP satellite collection point) and gives the venture full operational control of the collection room and full Medicare billing authority for the collection fee, plus the ability to employ its own phlebotomist. Actual specimen testing/analysis still happens off-site at an existing accredited lab either way (see HARD RULE below).
 
-**HARD RULE (unchanged):** No in-house glucose analysis. Blood is collected in-house; specimens are couriered to PathWest or WDP for analysis. Results go directly to the referring GP. GTT Center Perth never communicates clinical results to patients.
+**HARD RULE (unchanged):** No in-house glucose analysis, under Option A or Option B. Blood is collected in-house (in a Blood Collection Room only, never a laboratory); specimens are couriered to PathWest or WDP for analysis at their own existing accredited laboratories. Results go directly to the referring GP. GTT Center Perth never communicates clinical results to patients, and never analyses a specimen itself under any option described in this document.
 
 ---
 
@@ -250,3 +252,9 @@ See pathology-collection-room.md for full fit-out specification.
 - equipment-costs.md — full equipment list with prices
 - gtt-clinical-protocol.md — collection procedures
 - operations-manual.md — daily operations including specimen handling
+
+---
+
+## Changelog
+
+**2026-09-04 (Clarification added, Grace, per direct instruction from Anthony):** Added a prominent clarification at the top of this document, and reworded the Overview and HARD RULE sections, to remove any ambiguity that "Option B" could be misread as GTT building or operating an in-house diagnostic laboratory. Option B, as this document has always described it, means only that GTT would hold the Approved Collection Centre permission for the blood-draw room under its own name — actual specimen testing still happens off-site at an existing accredited lab (PathWest's, WDP's, or another Approved Pathology Authority's) regardless. Confirmed and cross-referenced that the separate, much bigger idea of GTT becoming its own Approved Pathology Authority with its own accredited laboratory was already researched and ruled out as unrealistic (`docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2d-ii). No change to the Day 49 decision (Option B not pursued) or to any figure, timeline, or process step in this document — clarification only.

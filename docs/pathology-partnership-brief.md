@@ -8,7 +8,7 @@
 
 ## Summary
 
-GTT Center Perth will operate under **Option A: WDP Licensed Collection Centre (LCC)** arrangement. This is the only model being pursued. Option B (own Approved Pathology Authority) has been ruled out — it requires an estimated 7-9 months from decision-to-proceed to operational (NATA "collection only" accreditation plus Medicare ACC approval — see `option-b-collection-centre.md` "Option B Timeline" for the step-by-step breakdown) and is not compatible with an October 2026 launch.
+GTT Center Perth will operate under **Option A: WDP Licensed Collection Centre (LCC)** arrangement. This is the only model being pursued. Option B (GTT becoming its own Approved Collection Centre for the blood-draw room only — **not** its own Approved Pathology Authority with its own laboratory, a genuinely bigger and different thing, see clarification below) has been ruled out — it requires an estimated 7-9 months from decision-to-proceed to operational (NATA "collection only" accreditation plus Medicare ACC approval — see `option-b-collection-centre.md` "Option B Timeline" for the step-by-step breakdown) and is not compatible with an October 2026 launch. **Clarified 2026-09-04:** even if Option B had been pursued, it would never have meant GTT owning or operating a laboratory — testing would still happen at an existing accredited lab elsewhere; only the government permission for the collection room would sit with GTT rather than a partner. See `option-b-collection-centre.md`'s own 2026-09-04 clarification for the full statement.
 
 Under Option A:
 - GTT Center Perth provides: venue, collection room, employed phlebotomists, equipment
@@ -156,7 +156,9 @@ If any single value meets or exceeds the threshold → GDM positive → result r
 
 ## 7. Option B — Reference Only (Not Pursuing)
 
-Becoming an Approved Pathology Authority (own ACC, Medicare-billing) requires:
+**Terminology correction, 2026-09-04:** the line below previously read "Becoming an Approved Pathology Authority (own ACC, Medicare-billing)," which incorrectly conflates two different Commonwealth designations. Option B, as `option-b-collection-centre.md` actually describes it, means GTT becoming its own **Approved Collection Centre (ACC)** — permission to run the blood-draw room only. It does **not** mean GTT becomes an **Approved Pathology Authority (APA)** — the designation that requires owning or holding agreement to use an accredited laboratory, which only the pathology partner (PathWest/WDP/Clinipath/ACL) holds under any model described in this document, including Option B. GTT as an ACC still cannot bill Medicare independently for the pathology test itself (only the APA can); Option B's only revenue is a negotiated per-specimen collection fee, per `option-b-collection-centre.md`'s own comparison table. Corrected wording below.
+
+Becoming an Approved Collection Centre (ACC) for the blood-draw room only — not an Approved Pathology Authority, and not a laboratory — requires:
 - NATA accreditation (collection-only scope, ISO 15189): 4–6 months, A$4,500–7,500
 - Medicare Approved Collection Centre application via Services Australia (HPOS): up to 90 days, requires current NATA accreditation and an executed Approved Pathology Authority agreement before submission
 - Written agreement with an Approved Pathology Authority (PathWest or WDP), plus phlebotomist hire
