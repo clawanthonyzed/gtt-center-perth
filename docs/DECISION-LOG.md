@@ -4,6 +4,20 @@
 
 ---
 
+## 2026-09-04: Collection room specimen storage stays physically segregated from the cafe/wellness-lounge operation
+
+**Decision:** Anthony has confirmed: the Blood Collection Room(s)' specimen storage (medical-grade specimen fridge) stays physically segregated from the venue's cafe/wellness-lounge food & drink operation (the Cafe/Refreshments Counter and the GTT Lounge's own cafe counter feature).
+
+**Reason:** NPAAC's Guidelines for Approved Pathology Collection Centres (Third Edition 2013, Tier 3B — the same primary source already relied on elsewhere in this repository, e.g. `docs/VERIFICATION-TRACKER.md` items 29/29b, `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2b-i) requires that specimens "must not be stored with food, drink, or pharmaceuticals" — directly relevant to GTT since the same venue also runs a cafe/wellness-lounge food & drink operation.
+
+**Nature of the change — confirmation, not a design change.** Checked directly against the current floor plan before logging this decision: `docs/floor-plan-concept.md`'s Room Schedule and Critical Design Requirements, and `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md`'s venue-program table, already show the Blood Collection Room(s) as solid-walled rooms with their own dedicated medical-grade specimen fridge, physically separate from the Cafe/Refreshments Counter's own solid-walled room and separate mini fridge — no shared storage unit or shared space between clinical specimens and food/drink exists anywhere in the current design. This outcome already existed for other reasons (the Blood Collection Room's solid-wall/privacy requirement confirmed 2026-07-31; the Cafe's own separate kitchenette room, in this document since its original version) — it was not previously documented as satisfying this specific NPAAC requirement. **This decision confirms existing design intent and adds the regulatory citation to the documentation trail; it does not require moving any room, wall, or piece of equipment.**
+
+**Documents updated:** `docs/floor-plan-concept.md` (Blood Collection Room Critical Design Requirements — new confirmed bullet with NPAAC citation, plus changelog entry), `docs/architecture/VENUE-PROGRAM-AUTHORITATIVE.md` (Notes section cross-reference, plus changelog entry).
+
+**Related documents:** `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` (same NPAAC primary source cited in §2b-i/§2c research this session), `docs/architecture/CAFE-FOOD-SERVICE-INVESTIGATION.md` (the cafe's own food-risk-classification research; unaffected by this decision — that document concerns the cafe's own WA food-business risk tier, not specimen storage).
+
+---
+
 ## 2026-09-04 — Entity-structure investigation write-up started (research only, no decision made)
 
 **What happened:** `docs/FOUNDER-FEEDBACK-IMPLEMENTATION-MATRIX.md` row 37 flagged an "entity structure investigation write-up" as PLANNED and never actually written, and `docs/financial-setup.md` Step 1 independently flagged the trust-direct vs. PTY LTD question as a genuine open founder decision. Grace produced the write-up: `docs/architecture/ENTITY-STRUCTURE-INVESTIGATION.md`.
