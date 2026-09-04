@@ -4,6 +4,20 @@
 
 ---
 
+## 2026-09-04 — Entity-structure investigation write-up started (research only, no decision made)
+
+**What happened:** `docs/FOUNDER-FEEDBACK-IMPLEMENTATION-MATRIX.md` row 37 flagged an "entity structure investigation write-up" as PLANNED and never actually written, and `docs/financial-setup.md` Step 1 independently flagged the trust-direct vs. PTY LTD question as a genuine open founder decision. Grace produced the write-up: `docs/architecture/ENTITY-STRUCTURE-INVESTIGATION.md`.
+
+**Trigger:** on 2026-09-03 the federal Treasurer released exposure draft legislation for a 30% minimum tax on discretionary trusts from 1 July 2028, with public consultation open until approximately 18 September 2026. YETI Holding Trust (GTT Center Perth's parent structure, corporate trustee YETI Tipi Holdings PTY LTD) is a discretionary trust and falls within scope. The draft also introduces a new option — electing fixed distributions to pre-nominated beneficiaries — as an alternative to restructuring, exempting the trust from the minimum tax without stamp duty exposure but at the cost of the trust's discretionary distribution flexibility. This converts the previously two-way question (trust-direct vs. new PTY LTD) into a three-way question.
+
+**This is NOT a decision.** The new document lays out all three options (trust-direct/current setup, new operating PTY LTD under the trust, fixed-distribution election) neutrally with tradeoffs (tax, liability, admin cost, TPI pension implications for Anthony, impact on Imara's position as beneficiary/funding partner — no operational role assigned to her), and a list of specific questions for the upcoming accountant conversation. No option is recommended or selected. The actual decision remains with Anthony and the accountant.
+
+**Documents updated:** `docs/architecture/ENTITY-STRUCTURE-INVESTIGATION.md` (new), `docs/financial-setup.md` Step 1 (added cross-reference, checklist itself not rewritten), `docs/FOUNDER-FEEDBACK-IMPLEMENTATION-MATRIX.md` row 37 (status PLANNED -> IN PROGRESS, dossier Ch12 rebuild itself still outstanding, consistent with the Phase L pattern already used for items 4a/6/22/23/24).
+
+**Related documents:** `docs/architecture/ENTITY-STRUCTURE-INVESTIGATION.md`, `docs/financial-setup.md`, `docs/revenue-extraction-options.md`, `docs/dva-tpi-research.md`, `docs/01_conflicts_log.md` (CF-07).
+
+---
+
 ## 2026-08-27: Blood Collection Room count: 2 rooms, one per phlebotomist, founder decision overrides evidence-based recommendation
 
 **Decision:** Anthony has decided: **2 Blood Collection Rooms, one per phlebotomist (Chair A/Room 1, Chair B/Room 2), specifically for extra client privacy.** This overrides the evidence-based "1 room, built and serviced for 3 chairs from day one" recommendation reached in `docs/architecture/FIT-OUT-PROGRAM-DECISION-ANALYSIS.md` Part B (Round 3, 2026-08-22) after extensive evidence review. The evidence-based recommendation was sound on its own terms and is retained in full for trace, not deleted or found to be wrong, it is simply overridden by direct founder instruction, a founder's prerogative, not to be second-guessed or reopened.

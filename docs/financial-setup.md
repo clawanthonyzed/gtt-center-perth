@@ -26,7 +26,7 @@ Before any financial setup: brief a Perth-based accountant with experience in:
 3. Mixed supply GST issue (pathology = GST-free, wellness = taxable, rental income = taxable)
 4. Venue Manager salary vs trust distribution decision (must be resolved before first pay run)
 5. TPI pension implications (flag to DVA-qualified advisor — accountant must know this constraint)
-6. 2028 trust distribution tax risk — should we add an operating PTY LTD under the trust now?
+6. 2028 trust distribution tax risk — should we add an operating PTY LTD under the trust now? See `docs/architecture/ENTITY-STRUCTURE-INVESTIGATION.md` for the full research write-up on this question, including the 2026-09-03 draft federal legislation (30% minimum tax on discretionary trusts from 1 July 2028) and the new fixed-distribution-election alternative it introduces — genuinely open, not settled, prepared for this accountant conversation.
 
 **Deliverables from accountant (get in writing):**
 - [ ] Confirmed the existing YETI Holding Trust ABN is correctly applied to GTT Center Perth trading activity (compliance verification, not a structure decision: the final trading structure, trust-direct vs. a PTY LTD owned by the trust, is a genuine open founder decision, not yet settled; either way, revenue is to the trust, not Anthony personally)
