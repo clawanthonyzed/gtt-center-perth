@@ -29,7 +29,7 @@
 | POCD Scientific | — | ~~$2.29~~ | ~~$55.00~~ | — | **EXCLUDED — confirmed 50g, wrong concentration (§2 above). 75g listing dead/unavailable.** |
 | Medisa | NSW (02 area code) | $4.20 (inc. GST) | not confirmed ("From $4.20") | Product currently listed **"Preorder" status** — not in stock at time of check | Confirmed 75g/300ml per product title. Preorder status is a real availability risk, not just a price consideration. |
 | Vital Medical Supplies | — | $6.39 (inc. GST) | not shown | Trade/wholesale pricing appears to exist behind a "Sign in / Register" gate — not explored (see §4) | Most expensive confirmed retail price. |
-| Livingstone International | — | not shown (trade catalogue, price gated) | 24/carton confirmed as pack size | Site includes a "Bulk Buy Request" mechanism | No price obtained despite two fetch attempts; genuine open item, not a dead end (see §4). |
+| Livingstone International (house-brand carton SKU, GLUCAID075N, trade-catalogue) | — | not shown (trade catalogue, price gated) | 24/carton confirmed as pack size | Site includes a "Bulk Buy Request" mechanism | No price obtained despite two fetch attempts; genuine open item, not a dead end (see §4). Distinct from Livingstone's loose-unit "Glucaid075LX" listing, logged separately in §9 below — the two are different SKUs and should not be conflated. |
 
 ## 4. Bulk/Wholesale Digging at GTT's Real Planning Volume (Task Item 2)
 
@@ -146,7 +146,31 @@ This investigation is logged as a standalone procurement document in `docs/archi
 
 ---
 
+## 9. Livingstone International — Second, Distinct Product Found: "Glucaid Drink 75g, 300ml, Loose" (Added 2026-09-04)
+
+**A second, separate Livingstone International listing was found this session — distinct from the trade-gated house-brand carton SKU (GLUCAID075N) already logged in §3/§4 above, and not previously captured in this document.**
+
+- **Product:** Glucaid Drink 75g, 300ml, Loose
+- **URL:** https://www.livingstone.com.au/products/glucaid075lx-out-of-date-glucaid-drink-75g-300ml-loose?variant=46000983769332
+- **SKU:** GLUCAID075LX
+- **Price:** **$1.38/unit** — confirmed directly from the page's own structured product data (not a summary, not an estimate, not a page-text mention that could be stale).
+- **Format:** Sold as loose individual units, not a sealed carton — distinct from the 24/carton format every other confirmed supplier in §3 uses.
+- **Stock status:** The page's own structured stock data marks this SKU "available: true."
+
+**A nuance worth recording plainly, not overstated either direction:** the word "out-of-date" appears in this product's URL slug (`glucaid075lx-out-of-date-glucaid-drink-75g-300ml-loose`) but does **not** appear anywhere in the actual visible page title, description, or content — the real, displayed page title is simply "Glucaid Drink 75g, 300ml, Loose." Two genuinely open explanations exist and neither is confirmed over the other:
+
+1. The URL slug could be stale/leftover text carried over from a previous listing (e.g. an old SKU that was once genuinely marked out-of-date and never had its URL cleaned up when the listing was re-used or re-priced) — in which case it means nothing about current stock condition.
+2. It could genuinely indicate short-dated/near-expiry clearance stock. The price is dramatically cheaper than every other confirmed supplier in §3 above — **$1.38/unit versus the current cheapest confirmed option, Surgical House at $2.31/unit** — a gap consistent with clearance/close-dated pricing, though this is not confirmed either way from the page itself.
+
+**Expiry status is genuinely unconfirmed — recorded here as an honest unknown, not as "likely expired" and not as "confirmed fine."** It is flagged for confirmation before use, not assumed in either direction.
+
+**Per Anthony's direct instruction: this is logged here as a real option for the record, but is not being actioned now.** Anthony will contact Livingstone International himself, directly, when GTT is actually ready to purchase, to confirm the true expiry date and true availability of this specific loose-unit SKU before relying on it. This is **not** added as an open task on the current priority list — the priority action in this document remains the POCD Scientific phone call (§7c above), which is unrelated to this Livingstone finding. This entry is logged for later, Anthony to confirm directly when purchasing time comes.
+
+---
+
 ## Changelog
+
+**2026-09-04 (§9 added — Livingstone International loose-unit "Glucaid075LX" listing logged, Grace):** Added a second, distinct Livingstone International product to the record: "Glucaid Drink 75g, 300ml, Loose" (SKU GLUCAID075LX), $1.38/unit confirmed directly from the page's structured product data, sold as loose units (not carton), marked "available: true." Recorded the "out-of-date" URL-slug nuance plainly as a genuine unknown, not resolved either direction — the page's visible title/content never uses that phrase, only the URL does, and the price gap versus the cheapest confirmed carton supplier ($1.38 vs Surgical House's $2.31) is consistent with, but does not confirm, clearance/near-expiry stock. Per Anthony's direct instruction, this is logged for the record only — not actioned, not added as an open task for any agent to chase. Anthony will contact Livingstone directly to confirm true expiry and availability when GTT reaches actual purchasing time. Does not change the current priority action (§7c, the POCD Scientific call) or the §5 recommendation.
 
 **2026-09-04 (§7d and §8 added; §5 recommendation reframed — POCD priority, China sourcing checked, Grace):** Per direct instruction, re-verified POCD Scientific's product page (`.../pathology/GTT_2`) a second time, thoroughly, since Anthony has pushed back on the "no 75g selector" finding twice — confirmed again, in full verbatim detail this time: no dropdown/selector/variant control exists on that page, it is a fixed 50g SKU, and the "either 50g or 75g" line is general product-line marketing copy, not a selector. Stated plainly rather than hedged: this exact product is 50g only, the correct 75g dose is not purchasable from this specific link. This does not change the underlying finding, only the thoroughness and clarity with which it is now documented (§7d). **Reframed §5's recommendation:** POCD Scientific is now recorded as Anthony's own explicitly chosen priority/frontrunner supplier (not "worth checking"), with the 2-minute call to 1800 640 075 as the top action item; Surgical House is recorded as the current fallback/cheapest-confirmed-available option only until POCD is actually confirmed (available in 75g, priced, able to do a trade account at GTT's real volume). **Added §8, China sourcing question:** checked Alibaba directly — general bulk liquid-glucose/dextrose manufacturers exist, but no confirmed listing found for the specific pre-dosed 75g/300ml ready-to-drink OGTT beverage GTT actually needs. Honest assessment, not false certainty: China sourcing for this specific consumable is very unlikely to be worth pursuing given the small per-unit dollar amounts, the added FSANZ import-compliance layer (a genuinely different requirement from the furniture/fixture China-sourcing pathway, which is fit-out only per `docs/architecture/CHINA-SOURCING-AGENT-ENQUIRY-PACKAGE.md`), and consistency/quality risk for a product used in a clinical diagnostic test — but not ruled out with false certainty either. Not pursued further; flagged as a low-priority option only if Anthony wants it explored despite this assessment.
 
