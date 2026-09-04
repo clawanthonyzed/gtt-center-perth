@@ -8,7 +8,7 @@
 
 ## Summary
 
-GTT Center Perth will operate under **Option A: WDP Licensed Collection Centre (LCC)** arrangement. This is the only model being pursued. Option B (own Approved Pathology Authority) has been ruled out — it requires 12–18 months of NATA accreditation and is not compatible with an October 2026 launch.
+GTT Center Perth will operate under **Option A: WDP Licensed Collection Centre (LCC)** arrangement. This is the only model being pursued. Option B (own Approved Pathology Authority) has been ruled out — it requires an estimated 7-9 months from decision-to-proceed to operational (NATA "collection only" accreditation plus Medicare ACC approval — see `option-b-collection-centre.md` "Option B Timeline" for the step-by-step breakdown) and is not compatible with an October 2026 launch.
 
 Under Option A:
 - GTT Center Perth provides: venue, collection room, employed phlebotomists, equipment
@@ -157,12 +157,14 @@ If any single value meets or exceeds the threshold → GDM positive → result r
 ## 7. Option B — Reference Only (Not Pursuing)
 
 Becoming an Approved Pathology Authority (own ACC, Medicare-billing) requires:
-- NATA accreditation (ISO 15189): 4–6 months, A$4,500–7,500
-- Approved Pathology Authority registration
-- NATA-accredited Clinical Scientist on staff
-- Timeline: 12–18 months minimum
+- NATA accreditation (collection-only scope, ISO 15189): 4–6 months, A$4,500–7,500
+- Medicare Approved Collection Centre application via Services Australia (HPOS): up to 90 days, requires current NATA accreditation and an executed Approved Pathology Authority agreement before submission
+- Written agreement with an Approved Pathology Authority (PathWest or WDP), plus phlebotomist hire
+- Timeline: 7–9 months minimum, from decision-to-proceed to operational (see `option-b-collection-centre.md` "Option B Timeline" for the full week-by-week breakdown; that document is the authoritative source for this figure)
 
 Option B has been ruled out — not compatible with October 2026 launch. The WDP Option A LCC model is the permanent strategy (per Day 49 decision, confirmed in `option-b-collection-centre.md`).
+
+**Timeline correction (2026-09-04):** an earlier version of this section stated "12–18 months minimum," which was an unsourced placeholder that did not reconcile with this section's own 4-6 month NATA figure and did not match `option-b-collection-centre.md`'s detailed, dated Option B Timeline table (Month 7-9 from launch decision to operational) — the two documents describe the same milestone (Option B's own-collection-centre NATA/Medicare accreditation path becoming operational), not different things. `option-b-collection-centre.md` is the better-evidenced figure: it is the source document Section 7 already cites for the Day 49 decision, and it breaks the timeline down step-by-step (NATA document review, on-site assessment, Medicare ACC application, phlebotomist hire) rather than asserting a total. The 12-18 month figure likely conflated full diagnostic-laboratory NATA accreditation timelines with the narrower "collection only (non-testing)" scope this venture would actually apply for. Corrected here to match.
 
 ---
 
@@ -198,3 +200,5 @@ Option B has been ruled out — not compatible with October 2026 launch. The WDP
 **2026-07-19** — Updated status line: WDP has been emailed (not yet called) and is awaiting reply; PathWest and Clinipath have not yet been contacted. See `reed-partnerships.md` for the live outreach tracker and `cutoff-time-CORRECTION.md` for the two questions Anthony will ask WDP once they reply.
 
 **2026-07-27** — Corrected WDP channel: contacted via online enquiry form, not email (no email thread exists — the 2026-07-19 entry above is retained for historical trace, not deleted). PathWest and Clinipath emailed the same day per Anthony's direct instruction to contact all three in parallel rather than sequentially. Updated the sequencing note accordingly. See `pathwest-clinipath-outreach-2026-07-27.md` for the outreach copy — flagged as drafted/ready, not confirmed sent (no email-sending capability available in this environment).
+
+**2026-09-04 (Grace)** — Corrected Option B timeline in the Summary and §7: was "12-18 months," now "7-9 months," matching `option-b-collection-centre.md`'s detailed, sourced milestone table. This inconsistency had already been flagged as unresolved in `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` (2026-09-04 entry, §2c-iii). Investigated: both documents describe the same milestone (Option B — GTT's own collection-centre NATA/Medicare accreditation path becoming operational), not two different things. The old figure was an unsourced placeholder, inconsistent even within this document (which states NATA itself takes 4-6 months, leaving 6-12 months unaccounted for), and likely conflated full diagnostic-laboratory NATA accreditation (correctly ~12-18 months, per `docs/archive/inhouse-gtt-research.md`'s genuinely different in-house-analysis scope) with the narrower "collection only" NATA scope Option B actually requires. `option-b-collection-centre.md` is the better-evidenced source: it is already cited here for the Day 49 decision and gives a step-by-step, week-by-week breakdown rather than an asserted total. `WDP-PARTNERSHIP-ACTIVATION-PLAN.md` updated with a matching reconciliation note.
