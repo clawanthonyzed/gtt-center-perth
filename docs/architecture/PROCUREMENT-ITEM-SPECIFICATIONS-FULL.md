@@ -4003,7 +4003,7 @@ Fields 1-18 identify what the item is and where it sits in the procurement syste
 - **15. Source route:** AU
 - **16. China/Australia classification:** Australia only
 - **17. Preferred procurement channel:** Australian retail/commercial supplier, see PROCUREMENT-AUSTRALIA-PACKAGE.md
-- **18. Supplier type:** Not yet determined. No specific supplier identified in the register for this Blood Collection item.
+- **18. Supplier type:** Australian retail/wholesale medical consumables suppliers, identified but not yet ordered. Current front-runner: **Surgical House** (Osborne Park, WA) at $2.31/unit ($55.44/carton of 24), confirmed 75g/300ml, no order cap found. See `GLUCOSE-DRINK-SUPPLIER-INVESTIGATION.md` for the full comparison, a rejected candidate (POCD Scientific — confirmed 50g, wrong concentration), and two still-open bulk-pricing follow-ups (Diabetes WA phone quote, Livingstone Bulk Buy Request) that could change this ranking.
 - **19. Specification:** Commercially prepared, NOT home-made, one bottle per client, refrigerated
 - **20. Dimensions if known:** Not yet determined. Depends on the final floor plan and/or the specific product selected at quote stage.
 - **21. Material if known:** Not yet determined
@@ -4018,17 +4018,17 @@ Fields 1-18 identify what the item is and where it sits in the procurement syste
 - **30. Accessibility requirements if applicable:** N/A
 - **31. Certification/compliance requirements:** Pathology-grade product
 - **32. Installation requirements:** No, freestanding/portable, no installation required
-- **33. Delivery requirements:** Standard Australian courier/freight delivery, not yet quoted.
+- **33. Delivery requirements:** Standard Australian courier/freight delivery; shipping cost not yet confirmed for any candidate supplier. Both leading candidates (Surgical House, Diabetes WA) are Perth/WA-based, so local pickup may be possible — worth asking directly, not yet confirmed.
 - **34. Assembly requirements:** Not yet determined. Confirm with the selected supplier at quote stage; no assembly information exists in this repository for any item.
 - **35. Warranty requirements:** Not yet determined. No warranty term has been confirmed for any item in this register; must be obtained at quote stage, per the genuine gap already disclosed in PROCUREMENT-CHINA-PACKAGE.md.
 - **36. Quality-control requirements:** N/A, standard Australian retail/commercial purchase, no factory QC process required.
-- **37. Quote/RFQ requirements:** Yes, RFQ/quote required.
-- **38. Existing price/source if already researched:** No price researched yet
-- **39. Cost status:** Open
-- **40. What is still required before ordering:** A real supplier quote (RFQ). Specification and quantity are locked but no price/quote has been obtained yet.
+- **37. Quote/RFQ requirements:** Yes, RFQ/quote required to confirm/lock in an order — sticker prices only confirmed so far, no formal quote requested from any supplier.
+- **38. Existing price/source if already researched:** Researched 2026-09-04 — full comparison and verification in `GLUCOSE-DRINK-SUPPLIER-INVESTIGATION.md`. Cheapest confirmed and viable: **Surgical House, $2.31/unit ($55.44/carton of 24), WA-based, no order cap.** Also checked: Diabetes WA ($2.80/unit, WA-based, but capped at 15 units/online order, bulk price on request not yet obtained), Medisa ($4.20/unit, currently Preorder/out of stock), Vital Medical Supplies ($6.39/unit, most expensive), Livingstone International (price not obtained, trade-gated, has a Bulk Buy Request mechanism not yet actioned). POCD Scientific checked and **excluded** — its live/priced product is confirmed 50g, not the required 75g; its 75g listing is dead/unavailable.
+- **39. Cost status:** Open — pricing researched and a front-runner identified (Surgical House), but no formal quote requested, no order placed, and two bulk-pricing follow-ups (Diabetes WA phone quote, Livingstone Bulk Buy Request) remain un-actioned and could change the ranking.
+- **40. What is still required before ordering:** Confirm real freight/pickup cost with Surgical House; optionally chase the two open bulk-pricing leads (Diabetes WA, Livingstone) in case either beats Surgical House's $2.31/unit at GTT's real ~450-470 unit/month full-ramp volume; then place a real order.
 - **41. Who must confirm it:** Venue Manager (once hired) or Anthony, to request and compare quotes.
-- **42. Final purchasing instruction in plain English:** Do not order yet. Request quotes from the recommended sourcing route, compare them, then order.
-- **Register note:** Administered by the phlebotomist as part of the collection workflow, not a separate cafe/snack item
+- **42. Final purchasing instruction in plain English:** Do not order yet. Surgical House is the current best-priced, viable option researched so far, but confirm freight/pickup cost and consider chasing the two open bulk-pricing leads before placing a real order.
+- **Register note:** Administered by the phlebotomist as part of the collection workflow, not a separate cafe/snack item. Full sourcing research and verification: `GLUCOSE-DRINK-SUPPLIER-INVESTIGATION.md`.
 
 ### E22: Disposable gloves (nitrile)
 
