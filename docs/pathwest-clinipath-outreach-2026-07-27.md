@@ -59,13 +59,54 @@
 
 ---
 
+## 2a. Clinipath — Third Contact Attempt (SENT 2026-09-07, by Anthony directly, outside this repository's workflow)
+
+**Status: SENT.** No agent sent this email; Anthony sent it himself and this record was updated afterward to match, same discipline as `docs/wdp-followup-draft-2026-08-20.md`. **No response from any Clinipath address has been received yet, as of 2026-09-07: none invented or assumed.**
+
+**Contact history for Clinipath:** this is the 3rd contact attempt — original enquiry 2026-07-27 (§2 above, general cutoff-time/overnight-storage questions), one-month follow-up 2026-08-27 (§3b above, low-pressure "did this reach the right team" nudge), and this new send 2026-09-07. **Materially different from the first two:** this is the first Clinipath contact to state GTT's actual operating model plainly — the self-collection/lab-processing-only clarifying framework (`docs/reed-partnerships.md` §1b, and already used for Australian Clinical Labs' first-contact email, added 2026-08-28 per `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2/Model D) — rather than the original two contacts' generic cutoff-time/overnight-storage questions only.
+
+**Sent to 3 addresses simultaneously, not 1:** commercial@clinipath.net, BusinessDevelopment@clinipath.net (the same address used for the original 2 attempts), and partnershipmanagersspecialists@clinipath.net (a named team inbox found this session on Clinipath's own contact-us page, [clinipathpathology.com.au/about-us/contact-us/](https://www.clinipathpathology.com.au/about-us/contact-us/), chosen as the closest categorical fit among Clinipath's several specialty inboxes — GPs, Specialists/Hospitals, IT support, collection supplies, doctor services/events, lab results, bookings, home visits, clinical trials — none of which perfectly fit a new-venue partnership enquiry; this one judged closest since GTT is a clinical venue, not a referring GP practice). Maximising reach after two prior silences to a single address.
+
+### 2a-i. The Email Actually Sent (transcribed in full, verbatim)
+
+**To:** commercial@clinipath.net, BusinessDevelopment@clinipath.net, partnershipmanagersspecialists@clinipath.net
+**Subject:** Enquiry: Onsite Blood Collection Partnership, Perth (subject not specified by Anthony — recorded here matching the drafted subject unless he indicates otherwise)
+
+> Hi there CliniPath Team,
+>
+> I'm exploring options for a pregnancy-related wellness venue concept currently in the planning and feasibility stage in Perth. Part of the concept involves hosting gestational glucose testing (GTT) appointments, with wellness services filling the time between the required blood draws.
+>
+> I'd like to ask about partnering with your team at a future venue. We're open to either:
+>
+> Us employing our own phlebotomists and operating the collection room under your accreditation and guidelines, with your role limited to sample transport and lab testing.
+> Or CliniPath supplying the collection staff and running collection directly, along with sample transport and lab testing, whichever would suit your team.
+>
+> This is a planning-stage enquiry, not yet an active site. Happy to share more detail once I understand whether this is something your team could support.
+>
+> Looking forward to your reply when convenient.
+>
+> Regards,
+> Anthony
+
+### 2a-ii. Differences From the Drafted Version (Anthony's own edits, not oversights)
+
+1. **Sent to 3 recipients at once, not 1** — commercial@ (new), BusinessDevelopment@ (already tried twice), and partnershipmanagersspecialists@ (new, named team inbox) — maximising reach after two prior silences to a single address.
+2. **Restructured the two operating-model options into a clearer 2-item list** rather than one dense sentence.
+3. **Second option explicitly states Clinipath would handle "collection staff and running collection directly, along with sample transport and lab testing"** — spelling out that in that model Clinipath does everything (collection, transport, and testing), not left implicit.
+4. **Removed the old cutoff-time/overnight-storage questions entirely** (already resolved/redundant per prior WDP correspondence) and the "prefer email over a call" line — kept the email shorter and focused purely on establishing which operating model Clinipath could support.
+5. **Greeting "Hi there CliniPath Team," and sign-off "Regards, Anthony"** (no em dash used anywhere in the sent text, noted positively — Anthony has an active standing rule against em dashes).
+
+**Design notes:** this send finally applies `docs/reed-partnerships.md` §1b's standard clarifying question to Clinipath — it had previously only been applied to PathWest (§4d/§4e above) and used from the outset for ACL's first-contact email. The GP-on-site/doctor-staffed-clinic question was deliberately not included, consistent with it being held back across all partners per standing instruction (`docs/reed-partnerships.md` §1b) until there's a specific reason to ask it. No venture name used. No business plan, financial model, or internal figures disclosed. Does not mention WDP, PathWest, or ACL, or that other providers are being approached in parallel.
+
+---
+
 ## Status
 
 | Partner | Channel | Drafted | Sent (confirm before marking done) |
 |---|---|---|---|
 | WDP | Online enquiry form | N/A (already contacted, per correction) | Yes, prior session — awaiting reply |
 | PathWest | Email (info.pathwest@health.wa.gov.au) | Yes, 2026-07-27 | **Original send still unconfirmed. One-month follow-up SENT 2026-08-27 by Anthony directly (see §3): awaiting reply.** |
-| Clinipath | Email (businessdevelopment@clinipath.net) | Yes, 2026-07-27 | **Original send still unconfirmed. One-month follow-up SENT 2026-08-27 by Anthony directly (see §3): awaiting reply.** |
+| Clinipath | Email (businessdevelopment@clinipath.net; 3rd attempt also to commercial@clinipath.net and partnershipmanagersspecialists@clinipath.net) | Yes, 2026-07-27 | **3 contact attempts now made: original 2026-07-27, one-month follow-up SENT 2026-08-27 (see §3), and a 3rd contact SENT 2026-09-07 by Anthony directly to 3 addresses (see §2a), the first to state the self-collection/lab-processing-only model plainly. Awaiting reply — no response from any address as of 2026-09-07.** |
 
 ---
 
@@ -415,6 +456,8 @@ Every remaining factual claim is sourced directly from this repository, not inve
 ---
 
 ## Changelog
+
+**2026-09-07 (Clinipath 3rd contact attempt SENT — self-collection/lab-processing-only model finally stated plainly, sent to 3 addresses):** Anthony sent a 3rd Clinipath contact directly, outside this repository's workflow, to commercial@clinipath.net, BusinessDevelopment@clinipath.net (already tried twice), and partnershipmanagersspecialists@clinipath.net (a named team inbox newly found on Clinipath's own contact-us page, judged the closest categorical fit among Clinipath's several specialty inboxes, none of which are a perfect match for a new-venue partnership enquiry). Materially different from the first two contacts (2026-07-27 original, 2026-08-27 follow-up): this is the first Clinipath send to apply the self-collection/lab-processing-only clarifying model (`docs/reed-partnerships.md` §1b, already used for ACL's first-contact email per `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2/Model D) rather than the old generic cutoff-time/overnight-storage questions, which were dropped entirely. Full verbatim text and a list of differences from the drafted version (2-item option list, second option spelling out Clinipath doing collection/transport/testing, shorter focused body, no em dash) recorded at new §2a. Added §2a, updated the Status table's Clinipath row. No response received yet from any of the 3 addresses as of 2026-09-07, none invented or assumed. Cross-referenced update made to `docs/reed-partnerships.md`'s OUTREACH STATUS table and Section 1 Clinipath subsection in the same pass.
 
 **2026-09-03 (§4e-vii reply SENT — cost/arrangement-shape/next-steps asked, standing decision recorded not to lock in until WDP's 2026-09-07 follow-up is answered):** Anthony sent a reply to Meera Bennett directly, outside this repository's workflow, following on from her §4e-vi unconditional courier confirmation. Asked three new things: a rough ballpark cost for courier pickup and lab testing (acknowledging courier cost is likely location-dependent), what shape an arrangement would take (formal contract, partnership, or fee-for-service), and what PathWest's own next steps would be. Deliberately did not ask about glucose-drink sourcing — GTT has separately and privately identified Diabetes WA (75g/300ml, A$2.80/unit, WA-based, 15-unit online order cap, bulk available via direct contact) as a candidate supplier; this is an internal planning note only, not disclosed to Meera or PathWest. Did not re-ask the now-moot own-staff drop-off fallback question, and did not ask the still-queued GP/siting-preference question (§4d-v), both held per standing practice. Recorded a standing decision for status accuracy: Anthony will not lock anything in with PathWest until WDP (Carole Rivers, primary candidate) has replied to an upcoming follow-up planned for Monday 2026-09-07, not yet sent as of this logging — this email is exploratory/information-gathering only, not a commitment. No response from Meera Bennett or PathWest received yet, none invented or assumed. "What Happens Next" section updated to reflect OPEN status pending both Meera's answers and the 2026-09-07 WDP follow-up outcome.
 
