@@ -41,7 +41,55 @@ Option B means GTT Center Perth operates its own Medicare-approved pathology **c
 - ACSQHC *Guidelines for Approved Pathology Collection Centres: Requirements for Medical Pathology Specimen Collection* (3rd Edition, 2013) — free download from ACSQHC website
 - NATA ISO 15189:2022 Medical Laboratory Accreditation requirements
 - Medicare Benefits Schedule — pathology collection items (Items 73070-73340)
-- Health Insurance Act 1973 (Cth) — ss.16B, 23DNBA definitions of Approved Pathology Authority and Approved Collection Centre
+- Health Insurance Act 1973 (Cth), Division 4A — Specimen collection centres. **Primary legislative text for two of its key sections (s.23DNBA — Grant of approval for collection centre; s.23DNJ — Inspection of specimen collection centres) is now confirmed and quoted in full below (Step 1a, added 2026-09-08).** The Act's own definition of "approved pathology authority" sits elsewhere in the Act and has not yet been located/quoted — treat that specific definition as still outstanding. The ss.16B citation above has not been verified against primary text by this update and should not be read as confirmed.
+
+### Step 1a — Primary Legislative Text Now Confirmed (Added 2026-09-08)
+
+The gap previously flagged across this repository — "the primary Health Insurance Act legislative text was not directly obtained, only secondary commentary" — is now closed **for these two specific sections only, not the whole Act.** A separate session with real browser access retrieved and directly quoted the primary text, sourced to **Health Insurance Act 1973 (Cth), as at 13 June 2022, `legislation.gov.au/C2004A00101/2022-06-13`, Division 4A — Specimen collection centres.**
+
+**Section 23DNBA — Grant of approval for collection centre** (quoted in full, verbatim):
+
+> (1) The Minister may grant an approval to an approved pathology authority for an eligible collection centre conducted (or to be conducted):
+> (a) on premises of which the authority is the owner, lessee or sub-lessee; or
+> (b) on premises the authority is otherwise entitled to occupy.
+>
+> (2) The Minister must not grant an approval for an eligible collection centre unless the tax on that grant has been paid.
+> Note: Tax on the grant of an approval is imposed by the Health Insurance (Approved Pathology Specimen Collection Centres) Tax Act 2000.
+>
+> (3) In exercising powers under subsection (1), the Minister must comply with the Approval Principles determined by the Minister under subsection (4).
+>
+> (4) The Minister must, by legislative instrument, determine principles (Approval Principles) that apply to the granting of approvals for eligible collection centres.
+>
+> (5) Without limiting subsection (4), the Approval Principles may provide for the following matters:
+> (a) a system for determining the maximum number of approvals that may be granted to a particular approved pathology authority in respect of a financial year;
+> (b) applications for approvals;
+> (c) the giving of undertakings by approved pathology authorities regarding compliance with the Collection Centre Guidelines;
+> (d) duration of approvals, including backdating in special circumstances;
+> (e) review of decisions made under the Approval Principles;
+> (f) delegation of powers and functions conferred on any person under the Approval Principles.
+
+**Section 23DNJ — Inspection of specimen collection centres** (quoted in full, verbatim):
+
+> (1) A person authorised in writing by the Minister for the purposes of this section (in this section called an authorised person) may at any reasonable time:
+> (a) enter and inspect:
+> (i) the premises occupied or to be occupied by a specimen collection centre in respect of which an application for an approval has been made; or
+> (ii) the premises occupied by an approved collection centre; and
+> (b) inspect, copy, or make copies of, any books, documents or records on the premises that relate to the operation or the intended operation of the centre.
+>
+> (2) The authorised person:
+> (a) must have the Minister's authorisation with him or her when entering the premises; and
+> (b) on request, must show the authorisation to any employee or representative of the approved pathology authority operating or intending to operate the specimen collection centre who is then on the premises.
+>
+> (3) Any person who hinders or prevents an authorised person from doing anything that he or she is authorised to do under subsection (1) commits an offence punishable, on conviction, by imprisonment for a period not exceeding 6 months.
+
+**What this confirms, directly from primary text, not inferred:** approval for an eligible/approved collection centre is granted by the Minister **only to an approved pathology authority** — the applicant and approval-holder must be an APA (e.g. PathWest, WDP), operating on premises it owns, leases, sub-leases, or is otherwise entitled to occupy, and only after the prescribed tax has been paid. This is the primary legal basis for the finding already established elsewhere in this repository via secondary ABLIS sourcing (see Regulatory chain below): **GTT itself could never independently hold Approved Collection Centre status — it operates only via contract/agreement with an APA, never independently.** Section 23DNJ separately confirms Commonwealth-authorised inspectors have a statutory right to enter and inspect both premises with a pending application and premises already operating as an approved collection centre, and to copy any related books/documents/records — relevant to the ongoing-compliance expectations already described in Step 7 below.
+
+**What remains genuinely open, not resolved by this update:**
+- Section 23DNBA itself does not define "approved pathology authority" — it only defines, by cross-reference to itself, "approval" (an approval under s.23DNBA) and "approved collection centre" (a specimen collection centre for which an approval under s.23DNBA is in force). The full "approved pathology authority" definition sits elsewhere in the Act and has not yet been located and quoted. A follow-up lookup is in progress separately — do not treat that definition as confirmed until it is quoted directly.
+- **Section 23DNBB** (the section immediately following 23DNBA) requires an approved collection centre to carry an identification number on all documents — a real, relevant cross-reference, flagged here, but its exact wording has not yet been retrieved and is not quoted.
+- These two sections do not themselves address the "staffed by people employed or engaged by an APA" staffing test discussed in `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2c-i — that test is sourced to ABLIS/the Approval Principles made under s.23DNBA(4), not to s.23DNBA or s.23DNJ's own text, and remains open on the "engaged" definition point exactly as that document already describes.
+
+---
 
 **Regulatory chain:**
 ```
@@ -53,6 +101,8 @@ Services Australia (pays pathology for each test)
 ```
 
 GTT Center Perth as an ACC collects specimens but CANNOT bill Medicare independently. Only the Approved Pathology Authority (PathWest/WDP) bills Medicare. Revenue sharing is negotiated between ACC and APA.
+
+**Confirmed directly against primary legislative text (s.23DNBA, Step 1a above, added 2026-09-08):** the Minister grants ACC approval only to an approved pathology authority, on premises it owns, leases, sub-leases, or is otherwise entitled to occupy — GTT itself is never the approval holder under any reading of this framework.
 
 ---
 
@@ -256,5 +306,7 @@ See pathology-collection-room.md for full fit-out specification.
 ---
 
 ## Changelog
+
+**2026-09-08 (Primary legislative text confirmed for ss.23DNBA/23DNJ, Grace):** Added new Step 1a, quoting in full the primary text of Health Insurance Act 1973 (Cth) ss.23DNBA (Grant of approval for collection centre) and 23DNJ (Inspection of specimen collection centres), as at 13 June 2022, `legislation.gov.au/C2004A00101/2022-06-13`, Division 4A — retrieved by a separate session with real browser access, closing the "primary source not directly obtained, only secondary commentary" gap for these two specific sections only (not the whole Act). Confirms, from primary text rather than secondary ABLIS commentary, the existing finding that approval is granted only to an approved pathology authority on premises it owns/leases/is entitled to occupy — GTT itself can never independently hold ACC status. Also updated the Step 1 "Key documents" bullet and the Regulatory chain section to cross-reference this. Noted as still genuinely open, not resolved by this update: the Act's own "approved pathology authority" definition (elsewhere in the Act, not yet located), s.23DNBB's exact wording (identification-number requirement, real but not yet quoted), and the "employed or engaged by an APA" staffing test (sourced to ABLIS/Approval Principles, not to these two sections — see `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2c-i, also updated same day). No figure, timeline, or process step changed — sourcing upgrade only.
 
 **2026-09-04 (Clarification added, Grace, per direct instruction from Anthony):** Added a prominent clarification at the top of this document, and reworded the Overview and HARD RULE sections, to remove any ambiguity that "Option B" could be misread as GTT building or operating an in-house diagnostic laboratory. Option B, as this document has always described it, means only that GTT would hold the Approved Collection Centre permission for the blood-draw room under its own name — actual specimen testing still happens off-site at an existing accredited lab (PathWest's, WDP's, or another Approved Pathology Authority's) regardless. Confirmed and cross-referenced that the separate, much bigger idea of GTT becoming its own Approved Pathology Authority with its own accredited laboratory was already researched and ruled out as unrealistic (`docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md` §2d-ii). No change to the Day 49 decision (Option B not pursued) or to any figure, timeline, or process step in this document — clarification only.
