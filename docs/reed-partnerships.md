@@ -3,7 +3,7 @@
 **Prepared by:** Reed (Partnerships Coordinator)  
 **Date:** 2026-06-05
 
-**See also:** `docs/architecture/PARTNER-ACCREDITATION-STANDARDS-COMPARISON.md` (added 2026-09-08) — researches each of the 4 candidates' (WDP, PathWest, Clinipath, Australian Clinical Labs) own collection-centre accreditation requirements/quality standards beyond the universal NPAAC baseline, and what genuinely varies vs is unconfirmed per provider.
+**See also:** `docs/architecture/PARTNER-ACCREDITATION-STANDARDS-COMPARISON.md` (added 2026-09-08) — researches each of the 4 candidates' (WDP, PathWest, Clinipath, Australian Clinical Labs) own collection-centre accreditation requirements/quality standards beyond the universal NPAAC baseline, and what genuinely varies vs is unconfirmed per provider. **Section 5 (added 2026-09-08)** covers staff credentialing specifically — what a GTT-employed phlebotomist actually needs to have/do to be signed off by a chosen pathology partner, including a concrete finding that PathWest trains its own collectors in-house from an unqualified base.
 
 ---
 

@@ -175,6 +175,8 @@ OR A$33.38-38.00/hr casual (loading included)
 
 ### HIRE 7: Phlebotomist x 1 (Priority: Option B only — not needed for Option A launch)
 
+**See `docs/architecture/PARTNER-ACCREDITATION-STANDARDS-COMPARISON.md` §5 (added 2026-09-08)** for what APA credentialing actually requires. Also flags: this entry's qualification codes (HLT33015, HLT37215-as-Cert-IV) do not match training.gov.au — see §5b for the correction — and a contradiction with `docs/pathology-partnership-brief.md` §5 over whether Option A means GTT or the partner employs the phlebotomist. Neither corrected here.
+
 **Award:** Health Professionals and Support Services Award MA000027
 **Employment type:** Casual (25hrs/week — morning GTT window)
 

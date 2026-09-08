@@ -116,6 +116,8 @@ GTT Center Perth will centrifuge on-site immediately after each draw. This is ou
 
 ## 5. Phlebotomist Staffing
 
+**See `docs/architecture/PARTNER-ACCREDITATION-STANDARDS-COMPARISON.md` §5 (added 2026-09-08)** for what "credentialled by the Approved Pathology Authority" (below) actually requires in practice — NPAAC's own framework, the base qualification, and what's confirmed vs unknown per provider. Also flags a code error in the qualification references below (HLT47015 is Certificate IV in Sterilisation Services, unrelated to pathology) and a contradiction with `docs/team-startup.md` HIRE 7 over whether GTT or the partner employs the phlebotomist under Option A — neither corrected here.
+
 GTT Center Perth employs **2 phlebotomists from Day 1** (Chair A / Chair B). The model:
 
 - **Qualification:** Certificate III or IV Pathology (HLT37215 / HLT47015) or Certificate IV in Nursing with phlebotomy training. Not AHPRA-registered.
