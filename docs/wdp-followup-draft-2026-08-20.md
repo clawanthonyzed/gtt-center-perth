@@ -1,8 +1,45 @@
 # GTT Center Perth — Follow-Up to Carole Rivers (WDP)
 
-**Status: SENT — 2026-09-07, by Anthony directly, outside this repository's workflow.** No agent sent this email; Anthony sent it himself and this record was updated afterward to match. No response from Carole has been received yet.
+**Status: SENT — 2026-09-08, by Anthony directly, outside this repository's workflow.** Carole replied 2026-09-08 (to the 2026-09-07 check-in bump) with a short, fairly closing-sounding note; Anthony sent a further reply the same day. See the 2026-09-08 entry below for both, full text. No further response from Carole has been received yet as of this send.
 
-**Note on what was actually sent vs. any draft:** a longer draft had been prepared for this round, also including the still-open phlebotomist-employment question (item 1d). Anthony did not send that version. He sent a much shorter pure check-in bump instead — no new content, no questions, just confirming the 2026-08-21 follow-up hasn't been lost. See the 2026-09-07 entry below for the full transcribed text. The phlebotomist-employment question (item 1d) remains open and unasked, same as it has been since 2026-08-21 — this send does not resolve it.
+**Note on what was actually sent vs. any draft:** a longer draft had been prepared for the 2026-09-07 round, also including the still-open phlebotomist-employment question (item 1d). Anthony did not send that version. He sent a much shorter pure check-in bump instead — no new content, no questions, just confirming the 2026-08-21 follow-up hasn't been lost. See the 2026-09-07 entry below for the full transcribed text. The phlebotomist-employment question (item 1d) remains open and unasked, same as it has been since 2026-08-21 — neither the 2026-09-07 nor the 2026-09-08 send resolves it. The rental figure (item 1c) and the Quality Department collection-centre-boundary escalation also remain open and unresolved — Anthony deliberately did not press on either in the 2026-09-08 reply, given Carole's closing-sounding tone (see that entry for the reasoning).
+
+---
+
+## 2026-09-08 — Carole's reply received, and Anthony's follow-up (SENT)
+
+**Status: Carole's reply RECEIVED 2026-09-08 (via forwarded .eml); Anthony's reply SENT 2026-09-08, by Anthony directly, outside this repository's workflow.**
+
+**Carole's reply (received 2026-09-08, in full):**
+
+> Hi Anthony, I think I have provided all the information I can as a Customer and Commercial Manager. Many thanks.
+
+**Context on Carole's reply:** this reads as fairly closing-sounding — a short note that she's given what she personally can. It does not mention any update from her Quality Department or State Business Manager, despite her 2026-08-08 email stating she was waiting on feedback from both before providing a fuller response. Whether that means those two haven't gotten back to her yet, or she simply didn't restate it, is not something this reply resolves either way — not assumed, flagged as genuinely unclear.
+
+**Anthony's reply (sent 2026-09-08, in full):**
+
+> Hi Carole,
+>
+> Thank you for everything you've helped clarify so far, it's been extremely useful.
+>
+> In a past email you said you were waiting on feedback from your Quality Department and State Business Manager, did they get back to you by chance?
+>
+> One thing that would help us as we take the next steps in getting this business off the ground: based on the information that has been provided, would WDP be open to supporting this concept by providing sample transport and lab testing? I understand a lot has to happen on my side but knowing WDP could support the most fundamental part of this venture allows us to move forward with confidence.
+>
+> And more broadly, what would the next steps actually look like from here if we wanted to move this toward a formal partnership or contract?
+>
+> Happy to jump on a call if that would help move things forward, or if there's someone else at WDP who might be able to give us further information, I'd welcome an introduction.
+>
+> Thanks again for your help.
+>
+> Regards,
+> Anthony
+
+**Note on what was deliberately not included:** this reply did not include the specific rental-figure ask (item 1c), the Quality Department boundary question, or the phlebotomist-employment/staffing question — all three previously considered for this round. Anthony chose a lighter-touch approach given Carole's closing-sounding tone: a gentle check-in on the Quality/State Business Manager feedback, a broader in-principle question (would WDP support the concept with sample transport and lab testing as GTT progresses — framed around ongoing willingness, not granular logistics), a question on what next steps toward a formal partnership/contract would look like, and an offer of a call or an alternate WDP contact. This is a genuine strategic choice not to pile on more granular open items given the risk of over-asking someone who may be signaling she's reached her own limit — the rental figure, Quality boundary, and phlebotomist-employment questions remain open and unresolved, not answered by this send.
+
+## What happens next (2026-09-08 send)
+
+Awaiting a substantive response from Carole or another WDP contact. No further response received yet as of 2026-09-08 (send date). When one arrives, log it in `docs/VERIFICATION-TRACKER.md` (items 1c, 1d, 21/F22, 29d) and `docs/reed-partnerships.md`'s WDP tracker row, and update this file's status accordingly. Do not invent or assume a response.
 
 ---
 
@@ -65,6 +102,8 @@ Awaiting Carole's reply. No response received yet as of 2026-08-21 (send date). 
 `docs/architecture/WDP-COMMERCIAL-ALIGNMENT-REVIEW.md` (full analysis behind the volume-correction point), `docs/VERIFICATION-TRACKER.md` items 1c (commercial figure), 1d (phlebotomist employment model, still unasked), 21/F22 (medical waste, now asked), 29d (8 August response), 50 (volume-correction communication gap, now closed by this send), `docs/reed-partnerships.md`.
 
 ## Changelog
+
+**2026-09-08 (Carole's reply received; Anthony's follow-up SENT)** — Carole replied 2026-09-08 to the 2026-09-07 check-in bump, in full: "Hi Anthony, I think I have provided all the information I can as a Customer and Commercial Manager. Many thanks." Fairly closing-sounding, and does not mention any update from her Quality Department or State Business Manager despite her 2026-08-08 email saying she was waiting on both. Anthony sent a further reply the same day, directly, outside this repository's workflow: a gentle check-in on whether Quality/State Business Manager got back to her, an in-principle question on whether WDP would be open to supporting the concept with sample transport and lab testing as GTT progresses, a question on what next steps toward a formal partnership/contract would look like, and an offer of a call or an alternate WDP contact. Deliberately did not include the rental-figure ask (item 1c), the Quality Department boundary question, or the phlebotomist-employment question (item 1d) — a genuine strategic choice given Carole's closing-sounding tone, not an oversight. All three remain open and unresolved. Full text logged above under "2026-09-08 — Carole's reply received, and Anthony's follow-up (SENT)". File status header updated to reflect this as the most recent exchange. Cross-referenced updates made to `docs/reed-partnerships.md`'s WDP tracker row in the same pass.
 
 **2026-09-07 (SENT — pure check-in bump, recorded after the fact)** — Anthony sent a follow-up to Carole directly, outside this repository's workflow, following up on the 2026-08-21 email which never received a reply. A longer draft had been prepared for this round, also including the still-open phlebotomist-employment question (`docs/VERIFICATION-TRACKER.md` item 1d). Anthony chose not to send that version — he sent a much shorter pure check-in bump instead: no new information, no new questions, just confirming the earlier email hadn't slipped through. Full text logged above under "2026-09-07 — Pure check-in bump (SENT)". Item 1d remains open and unasked, not resolved by this send, same as it has been since 2026-08-21. No response from Carole received yet as of 2026-09-07, none invented. File status header updated to reflect this as the most recent send. Cross-referenced updates made to `docs/reed-partnerships.md`'s WDP tracker row in the same pass.
 
