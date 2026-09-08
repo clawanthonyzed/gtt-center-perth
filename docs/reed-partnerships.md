@@ -3,6 +3,8 @@
 **Prepared by:** Reed (Partnerships Coordinator)  
 **Date:** 2026-06-05
 
+**See also:** `docs/architecture/PARTNER-ACCREDITATION-STANDARDS-COMPARISON.md` (added 2026-09-08) — researches each of the 4 candidates' (WDP, PathWest, Clinipath, Australian Clinical Labs) own collection-centre accreditation requirements/quality standards beyond the universal NPAAC baseline, and what genuinely varies vs is unconfirmed per provider.
+
 ---
 
 ## OUTREACH STATUS (live tracker — update as replies come in)

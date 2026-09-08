@@ -2,6 +2,8 @@
 
 Status: current as of 2026-08-24. Prepared for the hypothetical that Carole confirms WDP is happy to partner with GTT Center Perth. Treats "happy to partner" as the start of structured commercial/clinical due diligence, not a final agreement. Nothing in this document has been sent to WDP or any other party; it is preparation only, per standing instruction not to draft, send, or initiate further WDP correspondence.
 
+**See also:** `docs/architecture/PARTNER-ACCREDITATION-STANDARDS-COMPARISON.md` (added 2026-09-08) — compares the universal NPAAC baseline (Section 2b-i below) against each of the 4 candidates' own additional collection-centre policies, including WDP's own confirmed "remain at the collection centre" overlay, side by side.
+
 ## Executive Sequence (Condensed A-K Reference, Added 2026-08-24)
 
 This section condenses the detailed analysis in Sections 1-6 below into the exact operational structure requested for a quick, decision-oriented read. It reuses that analysis rather than re-deriving it; read the numbered sections below for full detail on any row.
