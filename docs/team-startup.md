@@ -173,21 +173,20 @@ OR A$33.38-38.00/hr casual (loading included)
 
 ---
 
-### HIRE 7: Phlebotomist x 1 (Priority: Option B only — not needed for Option A launch)
+### HIRE 7: Phlebotomist x 2 (Priority: Option A launch — GTT employs these, not the partner)
 
-**See `docs/architecture/PARTNER-ACCREDITATION-STANDARDS-COMPARISON.md` §5 (added 2026-09-08)** for what APA credentialing actually requires. Also flags: this entry's qualification codes (HLT33015, HLT37215-as-Cert-IV) do not match training.gov.au — see §5b for the correction — and a contradiction with `docs/pathology-partnership-brief.md` §5 over whether Option A means GTT or the partner employs the phlebotomist. Neither corrected here.
+**Corrected 2026-09-08 (Grace):** this entry previously had two errors, both fixed against `docs/architecture/PARTNER-ACCREDITATION-STANDARDS-COMPARISON.md` §5/§5b (2026-09-08 research): (1) the qualification codes were wrong — HLT33015 is Certificate III in Allied Health Assistance and "Certificate IV in Pathology Collection (HLT37215)" does not exist (no Cert IV in Pathology Collection is offered in Australia; HLT37215 is itself a superseded Cert III code) — corrected to Certificate III in Pathology Collection, HLT37525; (2) this entry previously stated the opposite of GTT's actual model ("PathWest/WDP provide their own phlebotomist... Option B only") — GTT's established position, consistent with `docs/pathology-partnership-brief.md` §5 and `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md`'s Model A/D framing, is that **GTT employs its own phlebotomists under Option A**, working under the chosen partner's accreditation/QMS — the partner supplies lab testing/reporting and transport only, not collection staff. `docs/pathology-partnership-brief.md` §5 already had this right; this entry was the one that was wrong.
 
 **Award:** Health Professionals and Support Services Award MA000027
 **Employment type:** Casual (25hrs/week — morning GTT window)
 
 **Qualifications required:**
-- Certificate III in Pathology Collection (HLT33015) minimum
-- Certificate IV in Pathology Collection (HLT37215) required for Person In Charge (PIC) role
+- Certificate III in Pathology Collection (HLT37525 — current code, supersedes HLT37215 as of December 2025) minimum
 - Must be credentialled by the Approved Pathology Authority (PathWest or WDP) before commencing
 
 **Pay:** A$38-42/hr casual
 
-**Important:** Under Option A, PathWest/WDP provide their own phlebotomist. GTT Center Perth does NOT hire one. Only relevant for Option B.
+**Important:** Under Option A, GTT Center Perth employs its own phlebotomists, who work under the chosen pathology partner's (PathWest/WDP) Licensed Collection Centre accreditation and QMS. See `docs/pathology-partnership-brief.md` §5 for the staffing model and schedule.
 
 ---
 
@@ -256,5 +255,7 @@ OR A$33.38-38.00/hr casual (loading included)
 ---
 
 ## Changelog
+
+**2026-09-08 (Grace)** — Corrected HIRE 7 (Phlebotomist): (1) qualification codes were wrong — HLT33015 is Certificate III in Allied Health Assistance (unrelated), and "Certificate IV in Pathology Collection (HLT37215)" is not a real qualification (no such Cert IV exists; HLT37215 is a superseded Cert III code) — corrected to Certificate III in Pathology Collection, current code HLT37525. (2) This entry previously stated the partner (PathWest/WDP) supplies its own phlebotomist and filed the hire under "Option B only" — the opposite of GTT's established position. Per `docs/pathology-partnership-brief.md` §5 (already correct) and `docs/architecture/WDP-PARTNERSHIP-ACTIVATION-PLAN.md`'s Model A/D framing, GTT employs its own 2 phlebotomists under Option A, credentialled to work under the chosen partner's accreditation/QMS; the partner is limited to lab testing/reporting and transport. Updated headcount from x1 to x2 and priority from "Option B only" to "Option A launch" to match. Source: `docs/architecture/PARTNER-ACCREDITATION-STANDARDS-COMPARISON.md` §5/§5b (2026-09-08 research), which flagged both errors without correcting them.
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Restructured the "Imara's Role" section to clearly separate Imara's ownership/funding role (unaffected) from the on-site Venue Manager's operational duties (new hire, critical-path). See `financial-model.md`/`research.md` for the ownership structure, which this change does not touch.

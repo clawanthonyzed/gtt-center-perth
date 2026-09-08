@@ -116,11 +116,11 @@ GTT Center Perth will centrifuge on-site immediately after each draw. This is ou
 
 ## 5. Phlebotomist Staffing
 
-**See `docs/architecture/PARTNER-ACCREDITATION-STANDARDS-COMPARISON.md` §5 (added 2026-09-08)** for what "credentialled by the Approved Pathology Authority" (below) actually requires in practice — NPAAC's own framework, the base qualification, and what's confirmed vs unknown per provider. Also flags a code error in the qualification references below (HLT47015 is Certificate IV in Sterilisation Services, unrelated to pathology) and a contradiction with `docs/team-startup.md` HIRE 7 over whether GTT or the partner employs the phlebotomist under Option A — neither corrected here.
+**See `docs/architecture/PARTNER-ACCREDITATION-STANDARDS-COMPARISON.md` §5 (added 2026-09-08)** for what "credentialled by the Approved Pathology Authority" (below) actually requires in practice — NPAAC's own framework, the base qualification, and what's confirmed vs unknown per provider. **Corrected 2026-09-08:** the qualification code below was wrong (HLT47015 is Certificate IV in Sterilisation Services, unrelated to pathology) — fixed to HLT37525. This section's employment model (GTT employs, operates under the partner's accreditation) was already correct and did not need changing — see changelog.
 
 GTT Center Perth employs **2 phlebotomists from Day 1** (Chair A / Chair B). The model:
 
-- **Qualification:** Certificate III or IV Pathology (HLT37215 / HLT47015) or Certificate IV in Nursing with phlebotomy training. Not AHPRA-registered.
+- **Qualification:** Certificate III in Pathology Collection (HLT37525 — current code, supersedes HLT37215 as of December 2025) or Certificate IV in Nursing with phlebotomy training. Not AHPRA-registered.
 - **Award:** Health Professionals Award MA000027, Pathology Collector classification, ~A$24.50/hr base, 25hr/week AM shift = A$43,068/yr including super.
 - **Operating under:** WDP's Licensed Collection Centre accreditation — phlebotomists work within WDP's quality management system (QMS) and comply with their standard operating procedures
 - **Training:** WDP may require our phlebotomists to complete their specific SOP training — confirm in partnership negotiation
@@ -200,6 +200,8 @@ Option B has been ruled out — not compatible with October 2026 launch. The WDP
 ---
 
 ## Changelog
+
+**2026-09-08 (Grace)** — Corrected §5 qualification code: "Certificate III or IV Pathology (HLT37215 / HLT47015)" was wrong — HLT47015 is Certificate IV in Sterilisation Services, an unrelated qualification (confirmed via training.gov.au, see `docs/architecture/PARTNER-ACCREDITATION-STANDARDS-COMPARISON.md` §5b). There is no Certificate IV in Pathology Collection. Corrected to Certificate III in Pathology Collection, current code HLT37525 (supersedes HLT37215, retired 21 Dec 2025). This section's employment model (GTT employs its own phlebotomists, operating under the partner's LCC accreditation/QMS) was already correct and is unchanged — `docs/team-startup.md` HIRE 7 was the document that had the employment model backwards; corrected there, not here.
 
 **2026-07-19** — Updated status line: WDP has been emailed (not yet called) and is awaiting reply; PathWest and Clinipath have not yet been contacted. See `reed-partnerships.md` for the live outreach tracker and `cutoff-time-CORRECTION.md` for the two questions Anthony will ask WDP once they reply.
 
