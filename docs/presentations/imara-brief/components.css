@@ -1,0 +1,97 @@
+@import url('tokens.css');
+
+/* ---------- Cover ---------- */
+.page.cover { justify-content: space-between; background: var(--brown); }
+.cover .page-body { padding: 0; height: 100%; }
+.cover-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 26mm 20mm 18mm;
+  position: relative;
+  color: var(--ivory);
+}
+.cover-mark { font-family: var(--font-body); font-size: 9pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blush); }
+.cover h1 { color: var(--ivory); font-size: 46pt; }
+.cover .cover-name { font-family: var(--font-display); font-style: italic; font-weight: 400; color: var(--blush); font-size: 20pt; }
+.cover .lede { color: rgba(250,246,238,0.82); max-width: 52ch; }
+.cover-foot { display: flex; justify-content: space-between; align-items: flex-end; font-size: 9pt; color: rgba(250,246,238,0.6); }
+.cover-rule { height: 1px; background: rgba(217,160,140,0.4); margin: 8mm 0; }
+
+/* ---------- Two column layout ---------- */
+.cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; align-items: start; }
+.cols-lede-body { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 12mm; align-items: start; }
+
+/* ---------- Section index chip ---------- */
+.section-no { font-family: var(--font-display); font-size: 44pt; color: var(--blush); line-height: 1; font-weight: 500; }
+
+/* ---------- Journey diagram ---------- */
+.journey { display: flex; flex-direction: column; gap: 0; flex: 1; justify-content: center; }
+.journey-step { display: grid; grid-template-columns: 9mm 1fr; gap: 4mm; position: relative; padding-bottom: 4.2mm; }
+.journey-step:last-child { padding-bottom: 0; }
+.journey-dot { width: 9mm; height: 9mm; border-radius: 50%; background: var(--ivory); border: 1.4px solid var(--terracotta); color: var(--terracotta); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 9pt; font-weight: 600; position: relative; z-index: 1; }
+.journey-step.pm .journey-dot { border-color: var(--olive); color: var(--olive); }
+.journey-line { position: absolute; left: 4.5mm; top: 9mm; bottom: -4.2mm; width: 1px; background: var(--fineline-40); }
+.journey-step:last-child .journey-line { display: none; }
+.journey-title { font-family: var(--font-body); font-weight: 700; font-size: 9.8pt; color: var(--brown); margin-bottom: 0.6mm; }
+.journey-desc { font-size: 9pt; line-height: 1.45; color: var(--brown-60); max-width: 88ch; }
+.journey-badge { display: inline-block; font-size: 6.8pt; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: var(--olive); border: 1px solid var(--olive); border-radius: 1.5mm; padding: 0.3mm 1.5mm; margin-left: 2mm; vertical-align: middle; }
+
+/* ---------- Day timeline ---------- */
+.daytime { width: 100%; }
+.daytime text { font-family: var(--font-body); }
+
+/* ---------- Micro timeline (per-client) ---------- */
+.microline { width: 100%; }
+.microline text { font-family: var(--font-body); }
+
+/* ---------- Palette ---------- */
+.swatch-row { display: flex; gap: 5mm; flex-wrap: wrap; }
+.swatch { width: 26mm; }
+.swatch-chip { width: 26mm; height: 18mm; border-radius: 2mm; border: 1px solid var(--fineline-40); }
+.swatch-name { font-size: 8pt; font-weight: 700; margin-top: 2mm; }
+.swatch-hex { font-size: 7.5pt; color: var(--brown-60); font-variant-numeric: tabular-nums; }
+
+/* ---------- Type specimen ---------- */
+.type-specimen .label { font-size: 8pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fineline); margin-bottom: 1mm; }
+.type-specimen .display-sample { font-family: var(--font-display); font-size: 27pt; color: var(--brown); }
+.type-specimen .body-sample { font-family: var(--font-body); font-size: 12pt; color: var(--brown); }
+
+/* ---------- Status pill ---------- */
+.status-pill { display: inline-flex; align-items: center; gap: 2mm; padding: 1.4mm 3.2mm; border-radius: 20mm; font-size: 8pt; font-weight: 700; letter-spacing: 0.03em; }
+.status-active { background: var(--terracotta); color: var(--ivory); }
+.status-progress { background: var(--olive); color: var(--ivory); }
+.status-waiting { background: var(--blush-25); color: #7a4633; border: 1px solid var(--blush); }
+.status-none { background: transparent; color: var(--brown-60); border: 1px solid var(--fineline-40); }
+
+/* ---------- Partner card ---------- */
+.partner-card { border: 1px solid var(--fineline-40); border-radius: 3mm; padding: 5mm; display: flex; flex-direction: column; gap: 2.5mm; }
+.partner-name { font-family: var(--font-display); font-size: 14pt; font-weight: 600; }
+.partner-role { font-size: 7.5pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fineline); }
+.partner-row { display: grid; grid-template-columns: 24mm 1fr; gap: 2mm; font-size: 8.6pt; line-height: 1.4; }
+.partner-row .k { color: var(--brown-60); font-weight: 700; text-transform: uppercase; font-size: 7.2pt; letter-spacing: 0.05em; padding-top: 0.3mm; }
+
+/* ---------- Chart shells ---------- */
+.chart-box { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.chart-legend { display: flex; gap: 6mm; font-size: 8pt; color: var(--brown-60); margin-top: 2mm; }
+.legend-chip { display: inline-flex; align-items: center; gap: 1.8mm; }
+.legend-swatch { width: 3mm; height: 3mm; border-radius: 0.7mm; display: inline-block; }
+
+/* ---------- Venue diagram ---------- */
+.venue-group { border: 1px solid var(--fineline-40); border-radius: 3mm; padding: 4mm; background: var(--ivory); }
+.venue-group-title { font-size: 7.6pt; letter-spacing: 0.09em; text-transform: uppercase; color: var(--fineline); font-weight: 700; margin-bottom: 2mm; }
+.venue-zone { background: var(--stone); border-radius: 2mm; padding: 1.8mm 3mm; font-size: 8.6pt; font-weight: 600; margin-bottom: 1.6mm; }
+.venue-zone:last-child { margin-bottom: 0; }
+.venue-flow-arrow { display: flex; align-items: center; justify-content: center; color: var(--fineline); font-size: 12pt; }
+
+/* ---------- Ladder / list styling ---------- */
+.list-clean { list-style: none; }
+.list-clean li { position: relative; padding-left: 4.5mm; margin-bottom: 2mm; font-size: 9.5pt; line-height: 1.5; }
+.list-clean li::before { content: '—'; position: absolute; left: 0; color: var(--fineline); }
+.list-clean.open li::before { content: '?'; color: var(--terracotta); font-weight: 700; }
+
+/* ---------- Divider label ---------- */
+.divider-label { display: flex; align-items: center; gap: 3mm; margin: 1mm 0; }
+.divider-label .line { flex: 1; height: 1px; background: var(--fineline-40); }
+.divider-label span { font-size: 7.6pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fineline); font-weight: 700; }

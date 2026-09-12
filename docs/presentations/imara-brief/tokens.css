@@ -1,0 +1,30 @@
+/* GTT Center Perth — Imara presentation design tokens
+   Palette and naming are locked per brand-guide.md — do not alter hex values. */
+
+:root {
+  --ivory: #FAF6EE;      /* page ground */
+  --stone: #E8DAC5;      /* section blocks, card fills */
+  --brown: #33261E;      /* primary text, headings */
+  --terracotta: #A9654E; /* primary accent — key numbers, primary chart series, CTAs */
+  --olive: #5E5F45;      /* secondary accent — secondary chart series, icon strokes */
+  --blush: #D9A08C;      /* tertiary accent — soft highlights, tags, chart tint fills */
+  --fineline: #9C7A46;   /* hairlines, dividers, signage-style rules */
+
+  /* derived tones for depth without leaving the palette */
+  --brown-60: rgba(51, 38, 30, 0.6);
+  --brown-35: rgba(51, 38, 30, 0.35);
+  --terracotta-15: rgba(169, 101, 78, 0.15);
+  --olive-15: rgba(94, 95, 69, 0.15);
+  --blush-25: rgba(217, 160, 140, 0.25);
+  --fineline-40: rgba(156, 122, 70, 0.4);
+
+  /* type — matches this venture's own locked typography territory (Fraunces + DM Sans, wordmark-led) */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  /* page geometry — A4 print */
+  --page-w: 210mm;
+  --page-h: 297mm;
+  --margin: 20mm;
+  --margin-outer: 16mm;
+}
