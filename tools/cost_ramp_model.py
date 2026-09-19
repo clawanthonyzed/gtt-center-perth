@@ -163,8 +163,25 @@ AM_SATURDAY_DAILY_LABOR = {
 # VM: 1 x 8hrs x $40.00/hr (MA000005 L6 casual) = $320.00/day (weekday
 # basis; Saturday handled separately in compute_payroll via the same x1.5
 # penalty pattern as other roles).
+# VENUE MANAGER HOURS CORRECTED 2026-09-19, per Anthony's direct instruction:
+# the Venue Manager's roster changes from Monday-Saturday to Monday-Friday.
+# VENUE_MANAGER_SATURDAY_DAILY is now 0.00 (was A$480.00, the x1.5 Saturday
+# penalty on the same $320.00/day rate) -- the VM simply does not work
+# Saturdays under the corrected roster, not a rate change. Monthly VM cost:
+# was A$320.00 x 22 + A$480.00 x 4.33 = A$9,118.40/month (Mon-Sat) -> now
+# A$320.00 x 22 + A$0.00 x 4.33 = A$7,040.00/month (Mon-Fri only), a
+# A$2,078.40/month direct-labor saving (before super/workers comp).
+# GENUINE OPEN GAP, disclosed not resolved: this change does not itself
+# say who covers Venue Manager duties (opening, reception oversight,
+# rostering escalation) on Saturdays, which remains a full committed
+# trading day under both Table 1 and Table 2. No new role or cost is
+# invented here to cover this -- flagged as an open operational question,
+# not silently answered by assuming the existing emergency-fallback rule
+# (docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md §4, itself scoped to
+# "Monday-Friday...unexpectedly unavailable", not a standing Saturday
+# rostering answer) extends to cover a routine, every-Saturday gap.
 OPENING_TIME_INCREMENT_DAILY = 320.00   # was A$44.50 (undocumented) -> A$294.48 (Phase C, Clerks Award L2, likely misclassified) -> A$320.00 (Phase C audit, MA000005 L6, corrected classification)
-VENUE_MANAGER_SATURDAY_DAILY = round(320.00 * 1.5, 2)  # $480.00/day, x1.5 Saturday penalty
+VENUE_MANAGER_SATURDAY_DAILY = 0.00     # was A$480.00 (Mon-Sat x1.5 Saturday penalty) -> A$0.00 (Mon-Fri only, 2026-09-19)
 
 # REMOVED 2026-08-21 (Founder Decision round), per Anthony's direct
 # instruction, overriding docs/architecture/STAFFING-COVERAGE-VALIDATION.md
@@ -219,27 +236,37 @@ PM_ROLES = 4
 PM_THROUGHPUT_SESSIONS_PER_HOUR = 1.3  # docs/pm-staffing-roster.md, established elsewhere in this repo
 CASUAL_MINIMUM_ENGAGEMENT_HOURS = 3.0  # wages.yml#wage_casual_minimum_engagement, VERIFIED
 
-# PM session-count ramp -- REUSED from data/canonical/revenue_assumptions.yml's
-# rev_pm_session_ramp_historical (docs/pm-staffing-roster.md's own PM staffing
-# table), NOT the blanket 43/64/79/93/100% revenue-ramp curve. This is the
-# one genuine, disclosed departure from "reuse the revenue ramp for costs" --
-# justified because PM labor cost is a DIRECT function of session count via
-# the hours-based costing formula already established in
-# docs/pm-staffing-roster.md, whereas the blanket curve was built for revenue
-# specifically. See docs/architecture/COST-RAMP-METHODOLOGY.md §5.
-PM_SESSION_RAMP = {"M1": 4, "M2": 8, "M3": 12, "M4": 15, "M5plus": 16}
+# PM session-count ramp -- CORRECTED 2026-09-19, per Anthony's direct
+# instruction: PM steady-state capacity is now 10 sessions/day (not 16) --
+# see docs/architecture/PM-SESSION-CAPACITY-MODEL-E-2026-09.md for the full
+# resolved session-consumption methodology this replaces
+# docs/architecture/PM-CAPACITY-RECONCILIATION.md's Model C with. The
+# Month 1-4 ramp shape is RESCALED proportionally against the same
+# 25/50/75/93.75% shape used historically (revenue_assumptions.yml's
+# rev_pm_session_ramp_historical, itself now superseded for the M5plus
+# endpoint only -- see that record's own 2026-09-19 status update), rounded
+# to whole sessions: was {4, 8, 12, 15, 16}, now {3, 5, 8, 9, 10}.
+# GENUINE, DISCLOSED FINDING: at 10 sessions/day (and every rescaled M1-4
+# value below it), hours/role/day = sessions/4/1.3 stays BELOW the 3.0hr
+# casual-minimum floor for every one of the 5 ramp months, including
+# M5plus (10/4/1.3 = 1.923hrs, floored to 3.0hrs) -- unlike the old 16-session
+# M5plus figure, which cleared the floor at 3.08hrs. PM weekday labor is
+# therefore now FLAT across the ENTIRE Month 1-24 life of the model, not just
+# Months 1-4 -- a real consequence of the lower session target, not a bug.
+# This also means no anchor/formula discrepancy exists any more (see the
+# removed PM_WEEKDAY_M5PLUS_DAILY_LABOR_CANONICAL_ANCHOR note below) --
+# the general floor formula now reproduces the correct M5plus figure exactly.
+PM_SESSION_RAMP = {"M1": 3, "M2": 5, "M3": 8, "M4": 9, "M5plus": 10}
 
-# Month 5+ PM weekday daily labor is anchored to the already-canonical,
-# independently-verified A$440.00/day figure (docs/profit-loss-tables.md §1),
-# NOT to this module's own formula output (which gives ~A$446.95/day -- the
-# repo's own Appendix already discloses this exact "within rounding, not
-# exact" gap for the identical calculation, a pre-existing imprecision, not
-# introduced here).
-# RECOMPUTED 2026-08-17 (Phase C, first principles) -- 4 PM roles x 3.08hrs/role
-# (16 weekday sessions/4 roles/1.3 throughput, clears the 3hr floor) x
-# $37.155/hr (blended current rate) = docs/architecture/FIRST-PRINCIPLES-
-# FINANCIAL-MODEL.md §3e.
-PM_WEEKDAY_M5PLUS_DAILY_LABOR_CANONICAL_ANCHOR = 457.75  # was 450.18 (proportional-scaled) -> first-principles 457.75
+# REMOVED 2026-09-19: PM_WEEKDAY_M5PLUS_DAILY_LABOR_CANONICAL_ANCHOR (was
+# A$457.75/day, anchored to a pre-existing, disclosed "within rounding, not
+# exact" gap between the formula's own output and a separately-published
+# figure). At the new 10-session/day target, M5plus is genuinely floor-bound
+# (see PM_SESSION_RAMP's own comment above) and the general formula in
+# compute_pm_weekday_daily_labor now reproduces the correct figure directly
+# -- no special-cased anchor value is needed any more. compute_pm_weekday_daily_labor
+# below now applies the same floor formula to every one of the 5 ramp months,
+# including M5plus, rather than special-casing it.
 
 WORKERS_COMP_RATE_PCT = 1.7  # wages.yml#wage_workers_comp_rate, MODELLED
 
@@ -414,16 +441,61 @@ class CanonicalCostInputs:
 
 def compute_pm_weekday_daily_labor(month):
     """PM Direct Labor (weekday), per session-count ramp + 3-hour casual
-    minimum floor. Month5plus is anchored to the canonical figure (see
-    PM_WEEKDAY_M5PLUS_DAILY_LABOR_CANONICAL_ANCHOR's own docstring)."""
-    if month == "M5plus":
-        return PM_WEEKDAY_M5PLUS_DAILY_LABOR_CANONICAL_ANCHOR
+    minimum floor. CORRECTED 2026-09-19: no more M5plus special-case/anchor
+    -- at the new 10-session/day target, every one of the 5 ramp months
+    (including M5plus) is genuinely floor-bound, so the same general formula
+    applies uniformly (see PM_SESSION_RAMP's own comment for the full
+    disclosure)."""
     sessions = PM_SESSION_RAMP[month]
     hours_per_role = max(
         CASUAL_MINIMUM_ENGAGEMENT_HOURS,
         sessions / PM_ROLES / PM_THROUGHPUT_SESSIONS_PER_HOUR,
     )
     return round(hours_per_role * PM_ROLES * PM_WEEKDAY_BLENDED_CASUAL_RATE, 2)
+
+
+# ---------------------------------------------------------------------------
+# DEMAND-DRIVEN AM TREATMENT STAFFING TIERS -- added 2026-09-19, per Anthony's
+# direct instruction: "Do not use a flat 8 service staff every day assumption
+# across every client-volume scenario." Reuses the exact same per-role wage
+# rates already defined above (MB/Nails/Hair weekday+Saturday), parameterized
+# by headcount instead of hard-coded at the committed 4/2/2 split, so the
+# profitability ladder (docs/CURRENT-STATE.md §8) can cost each AM
+# client-volume tier at its own solver-verified headcount, not the committed
+# 18-client headcount held constant. Solver-verified headcount by tier:
+# tools/am_volume_tier_staffing_solver.py (calibrated against this same
+# 4/2/2-at-18-clients and 4/2/2-at-12-clients published finding before being
+# trusted on the new, lower-volume tiers) -- see
+# docs/architecture/AM-DEMAND-DRIVEN-STAFFING-TIERS-2026-09.md for the full
+# solver output and cadence analysis this constant reflects.
+# AM_HEADCOUNT_HIGH (4 Massage+Beauty + 2 Nails + 2 Hair = 8) is IDENTICAL to
+# the existing committed AM_WEEKDAY_TREATMENT_STAFF_MONTHLY/AM_SATURDAY_DAILY_LABOR
+# constants above -- kept as a second, parameterized function rather than
+# replacing those constants, so every existing Table 1/Table 2 figure that
+# already depends on them is unaffected by this addition.
+AM_HEADCOUNT_LOW = (2, 1, 1)    # 2 Massage+Beauty + 1 Nail + 1 Hair = 4 -- solver-verified sufficient at <=10 clients/day, AT A WIDENED 45-MINUTE PAIR CADENCE (not yet a founder decision, see the doc above)
+AM_HEADCOUNT_HIGH = (4, 2, 2)   # 4 Massage+Beauty + 2 Nail + 2 Hair = 8 -- solver-verified REQUIRED at 11+ clients/day at any cadence within the WDP 10:30am guidance window; unchanged from the committed model
+
+
+def am_treatment_monthly_for_headcount(n_mb, n_nails, n_hair):
+    """AM treatment staff monthly cost (weekday + Saturday) for an arbitrary
+    (Massage+Beauty, Nails, Hair) headcount split, using the same per-role
+    wage rates as the committed AM_WEEKDAY_TREATMENT_STAFF_MONTHLY /
+    AM_SATURDAY_DAILY_LABOR constants above. At (4, 2, 2) this function
+    reproduces those two constants exactly -- verified in
+    tests/test_am_volume_tier_staffing_solver.py, not assumed."""
+    mb_wd = n_mb * 37.50
+    nails_wd = n_nails * 36.81
+    hair_wd = n_hair * 36.81
+    weekday_monthly = round((mb_wd + nails_wd + hair_wd) * 6 * 22, 2)
+
+    mb_sat = n_mb * 56.25
+    nails_sat = n_nails * 55.215
+    hair_sat = n_hair * 55.215
+    saturday_daily = round((mb_sat + nails_sat + hair_sat) * 6, 2)
+    saturday_monthly = round(saturday_daily * 4.33, 2)
+
+    return weekday_monthly, saturday_monthly, round(weekday_monthly + saturday_monthly, 2)
 
 
 def compute_payroll(scenario_id, month, inputs: CanonicalCostInputs):

@@ -126,8 +126,13 @@ def compute_scenario(n_mb, n_nails, n_hair, am_price_per_client, client_volume, 
     am_direct_labor = round(treatment_weekday + treatment_saturday + phleb_weekday + phleb_saturday, 2)
 
     # PM/opening/fixed-nonwage held at the published Table 1 steady-state
-    # values (Chapter 27/28), reused directly, not re-derived here.
-    pm_and_opening = crm.PM_WEEKDAY_M5PLUS_DAILY_LABOR_CANONICAL_ANCHOR * WEEKDAY_DAYS \
+    # values, reused directly, not re-derived here. CORRECTED 2026-09-19:
+    # PM_WEEKDAY_M5PLUS_DAILY_LABOR_CANONICAL_ANCHOR was removed from
+    # cost_ramp_model.py (no longer needed -- M5plus is now genuinely
+    # floor-bound like every other month, see that module's own 2026-09-19
+    # comment) -- read the same figure via the general formula instead.
+    # VENUE_MANAGER_SATURDAY_DAILY is now 0.00 (Mon-Fri only).
+    pm_and_opening = crm.compute_pm_weekday_daily_labor("M5plus") * WEEKDAY_DAYS \
         + crm.PM_SATURDAY_DAILY_LABOR * SATURDAY_DAYS \
         + crm.OPENING_TIME_INCREMENT_DAILY * WEEKDAY_DAYS \
         + crm.VENUE_MANAGER_SATURDAY_DAILY * SATURDAY_DAYS
@@ -170,7 +175,10 @@ def main():
 
     pricing = crm.load_yaml("pricing.yml")
     am_price = crm.find_record(pricing["records"], "am_price_used_for_revenue")["price"]
-    pm_revenue = 36225.69   # Chapter 9/28's own published, fixed PM revenue figure
+    # RECOMPUTED 2026-09-19 -- PM revenue at the new 10-session/day Model E
+    # target (docs/architecture/PM-SESSION-CAPACITY-MODEL-E-2026-09.md), was
+    # A$36,225.69 (16-session Model C figure).
+    pm_revenue = 24585.37
     ancillary_revenue = 0.0
 
     print("\n=== Committed-cadence view: 8 treatment staff at every volume (the venture's actual committed rostering) ===")
@@ -189,15 +197,17 @@ def main():
         print(f"  {label}: revenue={r['total_revenue']}, opex={r['total_operating_costs']}, "
               f"result={r['net_operating_result']}, AM treatment headcount={r['am_treatment_headcount']}")
 
-    print("\n=== Cross-check against Chapter 31's own published 6-day demand-flexed figures ===")
+    print("\n=== Historical cross-check, Chapter 31's own 6-day demand-flexed figures (now permanently stale) ===")
+    print("(Chapter 31's A$88,239.03/-A$12,518.34 figures used the pre-2026-09-19 PM/VM model --")
+    print(" this cross-check is retained for trace only, not expected to match post-rebuild)")
     r6 = compute_scenario(2, 1, 1, am_price, 6, pm_revenue, ancillary_revenue)
     published_opex = 88239.03
     published_result = -12518.34
     opex_match = abs(r6["total_operating_costs"] - published_opex) < 0.02
     result_match = abs(r6["net_operating_result"] - published_result) < 0.02
-    print(f"  Computed opex={r6['total_operating_costs']} vs published {published_opex}: "
-          f"{'MATCHES (within rounding)' if opex_match else 'DOES NOT MATCH'}")
-    print(f"  Computed result={r6['net_operating_result']} vs published {published_result}: "
+    print(f"  Computed opex={r6['total_operating_costs']} vs historical {published_opex}: "
+          f"{'MATCHES (within rounding)' if opex_match else 'DOES NOT MATCH -- expected, see note above'}")
+    print(f"  Computed result={r6['net_operating_result']} vs historical {published_result}: "
           f"{'MATCHES (within rounding)' if result_match else 'DOES NOT MATCH'}")
 
 

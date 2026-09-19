@@ -48,25 +48,34 @@ class TestCommittedCadenceScenarios(unittest.TestCase):
     def _run(self, volume):
         pricing = dsfm.crm.load_yaml("pricing.yml")
         am_price = dsfm.crm.find_record(pricing["records"], "am_price_used_for_revenue")["price"]
-        return dsfm.compute_scenario(4, 2, 2, am_price, volume, 36225.69, 0.0)
+        return dsfm.compute_scenario(4, 2, 2, am_price, volume, 24585.37, 0.0)
 
     def test_18_clients_matches_published(self):
+        """RECOMPUTED 2026-09-19 (Venue Manager Mon-Fri, PM Model E 10
+        sessions/day) -- was total_revenue 154710.69/opex 110544.52/result
+        44166.17."""
         r = self._run(18)
-        self.assertAlmostEqual(r["total_revenue"], 154710.69, places=2)
-        self.assertAlmostEqual(r["total_operating_costs"], 110544.52, places=2)
-        self.assertAlmostEqual(r["net_operating_result"], 44166.17, places=2)
+        self.assertAlmostEqual(r["total_revenue"], 143070.37, places=2)
+        self.assertAlmostEqual(r["total_operating_costs"], 107883.97, places=2)
+        self.assertAlmostEqual(r["net_operating_result"], 35186.40, places=2)
 
     def test_12_clients_matches_published(self):
+        """RECOMPUTED 2026-09-19 -- was total_revenue 115215.69/result
+        4671.17. Genuine finding: at the recomputed PM revenue and Venue
+        Manager cost, 12/day at the committed 8-staff headcount is now
+        LOSS-MAKING (result flips negative), not marginally profitable."""
         r = self._run(12)
-        self.assertAlmostEqual(r["total_revenue"], 115215.69, places=2)
-        self.assertAlmostEqual(r["total_operating_costs"], 110544.52, places=2)
-        self.assertAlmostEqual(r["net_operating_result"], 4671.17, places=2)
+        self.assertAlmostEqual(r["total_revenue"], 103575.37, places=2)
+        self.assertAlmostEqual(r["total_operating_costs"], 107883.97, places=2)
+        self.assertAlmostEqual(r["net_operating_result"], -4308.60, places=2)
 
     def test_6_clients_matches_published(self):
+        """RECOMPUTED 2026-09-19 -- was total_revenue 75720.69/result
+        -34823.83."""
         r = self._run(6)
-        self.assertAlmostEqual(r["total_revenue"], 75720.69, places=2)
-        self.assertAlmostEqual(r["total_operating_costs"], 110544.52, places=2)
-        self.assertAlmostEqual(r["net_operating_result"], -34823.83, places=2)
+        self.assertAlmostEqual(r["total_revenue"], 64080.37, places=2)
+        self.assertAlmostEqual(r["total_operating_costs"], 107883.97, places=2)
+        self.assertAlmostEqual(r["net_operating_result"], -43803.60, places=2)
 
 
 class TestDemandFlexedScenario(unittest.TestCase):
@@ -75,31 +84,33 @@ class TestDemandFlexedScenario(unittest.TestCase):
     the committed level per Chapter 31's own disclosed scope)."""
 
     def test_6_clients_demand_flexed_matches_published(self):
+        """RECOMPUTED 2026-09-19 -- was total_operating_costs 88239.03 /
+        net_operating_result -12518.34, under the pre-rebuild PM/VM model."""
         pricing = dsfm.crm.load_yaml("pricing.yml")
         am_price = dsfm.crm.find_record(pricing["records"], "am_price_used_for_revenue")["price"]
-        r = dsfm.compute_scenario(2, 1, 1, am_price, 6, 36225.69, 0.0)
-        self.assertAlmostEqual(r["total_operating_costs"], 88239.03, places=2)
-        self.assertAlmostEqual(r["net_operating_result"], -12518.34, places=2)
+        r = dsfm.compute_scenario(2, 1, 1, am_price, 6, 24585.37, 0.0)
+        self.assertAlmostEqual(r["total_operating_costs"], 85578.48, places=2)
+        self.assertAlmostEqual(r["net_operating_result"], -21498.11, places=2)
         self.assertEqual(r["am_treatment_headcount"], 4)
 
     def test_saturday_scope_matches_chapter_31_disclosure(self):
         """Confirms that flexing weekday headcount alone (without also
-        flexing Saturday) is what reproduces the published figure: a
-        genuine discrepancy was found and fixed this round when the
-        module initially (incorrectly) flexed Saturday too, producing
-        A$81,653.85 instead of the published A$88,239.03."""
+        flexing Saturday) is what reproduces this module's own committed
+        scope -- a genuine discrepancy was found and fixed when the module
+        initially (incorrectly) flexed Saturday too. RECOMPUTED 2026-09-19:
+        was total_operating_costs 88239.03 (pre-rebuild PM/VM model)."""
         pricing = dsfm.crm.load_yaml("pricing.yml")
         am_price = dsfm.crm.find_record(pricing["records"], "am_price_used_for_revenue")["price"]
         flexed_saturday_too = dsfm.compute_scenario(
-            2, 1, 1, am_price, 6, 36225.69, 0.0, saturday_headcount=(2, 1, 1)
+            2, 1, 1, am_price, 6, 24585.37, 0.0, saturday_headcount=(2, 1, 1)
         )
-        weekday_only_flexed = dsfm.compute_scenario(2, 1, 1, am_price, 6, 36225.69, 0.0)
+        weekday_only_flexed = dsfm.compute_scenario(2, 1, 1, am_price, 6, 24585.37, 0.0)
         self.assertNotAlmostEqual(
             flexed_saturday_too["total_operating_costs"],
             weekday_only_flexed["total_operating_costs"],
             places=2,
         )
-        self.assertAlmostEqual(weekday_only_flexed["total_operating_costs"], 88239.03, places=2)
+        self.assertAlmostEqual(weekday_only_flexed["total_operating_costs"], 85578.48, places=2)
 
 
 if __name__ == "__main__":
