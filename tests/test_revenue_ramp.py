@@ -64,23 +64,28 @@ class SteadyStateConvergenceTests(unittest.TestCase):
         reconciliation) -- was 163721.88 (raw 16/8 staff-session PM count
         used directly, incorrect), now 154710.69 (corrected 12.8128/6.4064
         transaction capacity, docs/architecture/PM-CAPACITY-RECONCILIATION.md).
-        Was 155215.80 (A$95 PM placeholder average) before that."""
+        Was 155215.80 (A$95 PM placeholder average) before that.
+
+        RECOMPUTED 2026-09-19 (PM Model E, 10 sessions/day, was 16) -- now
+        143070.37."""
         inputs = ramp_model.CanonicalRevenueInputs()
         months = ramp_model.compute_ramp("scenario_table_1", inputs)
         m5 = next(m for m in months if m["month"] == "M5plus")
         self.assertEqual(m5["ramp_pct"], 100)
-        self.assertAlmostEqual(m5["total_revenue"], 154710.69, places=2)
+        self.assertAlmostEqual(m5["total_revenue"], 143070.37, places=2)
         self.assertAlmostEqual(m5["total_revenue"], m5["steady_state_total_revenue"], places=2)
 
     def test_table2_m5plus_equals_canonical_steady_state(self):
         """RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction
         reconciliation) -- was 124226.88, now 115215.69. Was 115720.80
-        before the 2026-08-17 PM-PACKAGES.md rebuild."""
+        before the 2026-08-17 PM-PACKAGES.md rebuild.
+
+        RECOMPUTED 2026-09-19 (PM Model E, 10 sessions/day) -- now 103575.37."""
         inputs = ramp_model.CanonicalRevenueInputs()
         months = ramp_model.compute_ramp("scenario_table_2", inputs)
         m5 = next(m for m in months if m["month"] == "M5plus")
         self.assertEqual(m5["ramp_pct"], 100)
-        self.assertAlmostEqual(m5["total_revenue"], 115215.69, places=2)
+        self.assertAlmostEqual(m5["total_revenue"], 103575.37, places=2)
         self.assertAlmostEqual(m5["total_revenue"], m5["steady_state_total_revenue"], places=2)
 
     def test_m5plus_matches_canonical_revenue_methodology_records(self):

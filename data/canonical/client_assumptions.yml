@@ -155,13 +155,13 @@ universal:
     notes: "Operational buffer: comfortably covers Table 1's last departure (well inside the shift window per CURRENT-STATE.md §1) without needing a separate explicit buffer-minutes figure."
 
   - id: pm_steady_state_capacity
-    name: "PM individual services capacity (steady state)"
-    value: 16
-    unit: "sessions/day (approx. 350/month)"
-    status: MODELLED
-    status_detail: "assumption: ~50% utilisation of theoretical 4-line capacity -- no real demand data exists yet"
-    source: {file: docs/CURRENT-STATE.md, section: "§3 Client Capacity"}
-    notes: "Unaffected by the AM-only 2026-08-05 rebase."
+    name: "PM individual services capacity (steady state) -- CORRECTED 2026-09-19"
+    value: 10
+    unit: "sessions/day"
+    status: DECIDED
+    status_detail: "Was 16 (assumption: ~50% utilisation of theoretical 4-line capacity, no real demand data). CHANGED 2026-09-19 per Anthony's direct instruction to use exactly 10 PM sessions/day -- a directly-specified planning input, not a re-derived utilisation estimate. See docs/architecture/PM-SESSION-CAPACITY-MODEL-E-2026-09.md for the full session-consumption methodology and downstream revenue/labour recompute."
+    source: {file: docs/architecture/PM-SESSION-CAPACITY-MODEL-E-2026-09.md, section: "full document"}
+    notes: "Feeds tools/cost_ramp_model.py's PM_SESSION_RAMP (labour-hours costing) and, via the session-consumption method, revenue_assumptions.yml's rev_pm_weekday_transactions/rev_pm_saturday_transactions (revenue). Old value (16) preserved in revenue_assumptions.yml's rev_pm_weekday_transactions_model_c_superseded / rev_pm_session_ramp_historical records, not deleted."
 
   - id: addressable_market_perth_weekly
     name: "Perth metro GTT tests/week (addressable market)"

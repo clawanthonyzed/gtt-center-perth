@@ -110,11 +110,16 @@ class Table1Tests(unittest.TestCase):
         first-principles rebuild, 101378.78 under the proportional-wage-
         scaling recompute, 98634.10 before that, 95014.18 before super was
         added). See docs/architecture/FINANCIAL-ASSUMPTION-REGISTER.md and
-        cost_ramp.yml#change_pm_reception_dedicated_role_removed."""
+        cost_ramp.yml#change_pm_reception_dedicated_role_removed.
+
+        RECOMPUTED 2026-09-19 (per Anthony's direct instruction -- Venue
+        Manager Mon-Fri, PM Model E 10 sessions/day) to 107883.97 -- was
+        110544.52. See docs/architecture/PM-SESSION-CAPACITY-MODEL-E-2026-09.md
+        and cost_ramp_model.py's VENUE_MANAGER_SATURDAY_DAILY comment."""
         inputs = cost_model.CanonicalCostInputs()
         computed = cost_model.compute_ramp("scenario_table_1", inputs, cost_model.DEFAULT_REVENUE_RAMP_CURVE)
         m5 = next(m for m in computed if m["month"] == "M5plus")
-        self.assertAlmostEqual(m5["total_operating_costs"], 110544.52, places=2)
+        self.assertAlmostEqual(m5["total_operating_costs"], 107883.97, places=2)
         self.assertAlmostEqual(m5["relief_absence_allowance"], 0.00, places=2)
         self.assertAlmostEqual(m5["payroll_detail"]["receptionist_relief"], 0.00, places=2)
 
@@ -138,11 +143,14 @@ class Table2Tests(unittest.TestCase):
         110292.03 pre-2026-08-18-correction (109465.22 under the
         2026-08-17 first-principles rebuild, 97258.43 under the
         proportional-wage-scaling recompute, 94664.16 before that, 91463.24
-        before super was added)."""
+        before super was added).
+
+        RECOMPUTED 2026-09-19 to 102478.97 -- was 105139.53. Same 2 changes
+        as cost_table1_m5plus."""
         inputs = cost_model.CanonicalCostInputs()
         computed = cost_model.compute_ramp("scenario_table_2", inputs, cost_model.DEFAULT_REVENUE_RAMP_CURVE)
         m5 = next(m for m in computed if m["month"] == "M5plus")
-        self.assertAlmostEqual(m5["total_operating_costs"], 105139.53, places=2)
+        self.assertAlmostEqual(m5["total_operating_costs"], 102478.97, places=2)
         self.assertAlmostEqual(m5["relief_absence_allowance"], 0.00, places=2)
         self.assertAlmostEqual(m5["payroll_detail"]["receptionist_relief"], 0.00, places=2)
 
@@ -157,14 +165,17 @@ class Month1To5PlusTests(unittest.TestCase):
             self.assertEqual(months, ["M1", "M2", "M3", "M4", "M5plus"])
 
     def test_month1_to_4_payroll_identical_within_scenario(self):
-        """Confirms the 3-hour casual-minimum floor keeps PM (and therefore
-        total) payroll flat across Months 1-4, only rising at Month 5+."""
+        """RECOMPUTED 2026-09-19: the 3-hour casual-minimum floor now keeps
+        PM (and therefore total) payroll flat across ALL 5 months INCLUDING
+        M5plus, not just Months 1-4 -- a genuine, disclosed finding at the
+        new 10-session/day PM target (was 16, which cleared the floor at
+        M5plus). See cost_ramp_model.py's PM_SESSION_RAMP comment."""
         inputs = cost_model.CanonicalCostInputs()
         months = cost_model.compute_ramp("scenario_table_1", inputs, cost_model.DEFAULT_REVENUE_RAMP_CURVE)
         m1_to_4 = [m["payroll_costs"] for m in months if m["month"] != "M5plus"]
         self.assertEqual(len(set(m1_to_4)), 1, "Months 1-4 payroll should be identical (floor-constrained)")
         m5 = next(m for m in months if m["month"] == "M5plus")
-        self.assertGreater(m5["payroll_costs"], m1_to_4[0])
+        self.assertEqual(m5["payroll_costs"], m1_to_4[0])
 
 
 class FixedCostsTests(unittest.TestCase):
@@ -239,14 +250,17 @@ class PayrollTests(unittest.TestCase):
         self.assertAlmostEqual(payroll["workers_comp"], expected_wc, places=2)
 
     def test_pm_weekday_labor_floored_at_3_hours_below_threshold(self):
-        """4, 8, 12, 15 sessions/day should all produce the SAME floor-
-        constrained daily rate; only 16 sessions/day clears the floor."""
+        """RECOMPUTED 2026-09-19: at the new 3/5/8/9/10-session ramp (was
+        4/8/12/15/16), ALL 5 months including M5plus are now below the
+        floor threshold (10/4/1.3=1.923hrs < 3.0hr floor) -- a genuine,
+        disclosed finding, not previously true when the M5plus target was
+        16 sessions/day (3.08hrs, just above the floor)."""
         floored_months = [cost_model.compute_pm_weekday_daily_labor(m) for m in ("M1", "M2", "M3", "M4")]
         self.assertEqual(len(set(floored_months)), 1)
         expected_floor_rate = round(3.0 * 4 * cost_model.PM_WEEKDAY_BLENDED_CASUAL_RATE, 2)
         self.assertAlmostEqual(floored_months[0], expected_floor_rate, places=2)
         m5_rate = cost_model.compute_pm_weekday_daily_labor("M5plus")
-        self.assertGreater(m5_rate, floored_months[0])
+        self.assertEqual(m5_rate, floored_months[0])
 
 
 class UnresolvedPlaceholderInputTests(unittest.TestCase):

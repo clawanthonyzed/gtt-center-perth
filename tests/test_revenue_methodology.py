@@ -155,20 +155,25 @@ class CanonicalRevenueMethodologyTests(unittest.TestCase):
         directly, incorrect), now 154710.69 (12.8128/6.4064 corrected
         transaction capacity, docs/architecture/PM-CAPACITY-RECONCILIATION.md).
         Was 155215.80 (A$95 PM placeholder average) before the 2026-08-17
-        PM-PACKAGES.md rebuild."""
+        PM-PACKAGES.md rebuild.
+
+        RECOMPUTED 2026-09-19, per Anthony's direct instruction (PM Model E,
+        10 sessions/day, was 16) -- now 143070.37."""
         result = self._table1_result()
         self.assertAlmostEqual(result, self.inputs.canonical_table1_monthly, places=2)
-        self.assertAlmostEqual(result, 154710.69, places=2)
+        self.assertAlmostEqual(result, 143070.37, places=2)
 
     def test_table2_matches_canonical_value(self):
         """Table 2 (12 clients/day) computed purely from canonical inputs must equal
         the recorded rev_reconstruction_table2_monthly value exactly (to the cent).
         RECALCULATED 2026-08-18 (Priority 1, PM capacity/transaction
         reconciliation) -- was 124226.88, now 115215.69. Was 115720.80 before
-        the 2026-08-17 PM-PACKAGES.md rebuild."""
+        the 2026-08-17 PM-PACKAGES.md rebuild.
+
+        RECOMPUTED 2026-09-19 (PM Model E, 10 sessions/day) -- now 103575.37."""
         result = self._table2_result()
         self.assertAlmostEqual(result, self.inputs.canonical_table2_monthly, places=2)
-        self.assertAlmostEqual(result, 115215.69, places=2)
+        self.assertAlmostEqual(result, 103575.37, places=2)
 
     def test_deterministic(self):
         """Calling the formula twice with the same canonical inputs must produce the
@@ -250,12 +255,17 @@ class CanonicalRevenueMethodologyTests(unittest.TestCase):
         identical to this round's figure -- both anchored to the same
         historical inherited total, A$157,792.16, but via different
         canonical bases). Both values remain readable from the canonical
-        data (neither was deleted)."""
+        data (neither was deleted).
+
+        RECOMPUTED 2026-09-19, per Anthony's direct instruction (PM Model E,
+        10 sessions/day, was 16) -- gap widens further to +A$14,721.79
+        (historical still higher than canonical, same direction as before,
+        just a larger gap since canonical PM revenue dropped again)."""
         i = self.inputs
         table1_gap = i.historical_table1_monthly - self._table1_result()
         table2_gap = i.historical_table2_monthly - self._table2_result()
-        self.assertAlmostEqual(table1_gap, 3081.47, places=2)
-        self.assertAlmostEqual(table2_gap, 3081.47, places=2)
+        self.assertAlmostEqual(table1_gap, 14721.79, places=2)
+        self.assertAlmostEqual(table2_gap, 14721.79, places=2)
         self.assertAlmostEqual(table1_gap, table2_gap, places=2)
 
 

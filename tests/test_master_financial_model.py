@@ -184,7 +184,12 @@ class HistoricalRevenueNotCanonicalTests(unittest.TestCase):
         staff-session PM count, incorrect), now 154710.69/115215.69
         (corrected transaction capacity, docs/architecture/
         PM-CAPACITY-RECONCILIATION.md). Was 155215.80/115720.80 (A$95 PM
-        placeholder) before the 2026-08-17 PM-PACKAGES.md rebuild."""
+        placeholder) before the 2026-08-17 PM-PACKAGES.md rebuild.
+
+        RECOMPUTED 2026-09-19, per Anthony's direct instruction to use
+        exactly 10 PM sessions/day (Model E session-count method, was 16
+        under Model C) -- see docs/architecture/PM-SESSION-CAPACITY-MODEL-E-2026-09.md.
+        total_revenue: was 154710.69/115215.69 -> now 143070.37/103575.37."""
         inputs = mfm.CanonicalModelInputs()
         t1 = mfm.compute_month_pnl("scenario_table_1", 5, inputs)
         t2 = mfm.compute_month_pnl("scenario_table_2", 5, inputs)
@@ -192,8 +197,8 @@ class HistoricalRevenueNotCanonicalTests(unittest.TestCase):
         self.assertNotAlmostEqual(t1["revenue"]["total_revenue"], 157792.16, places=2)
         self.assertNotAlmostEqual(t2["revenue"]["total_revenue"], 118297.16, places=2)
         # Canonical figures -- must match exactly.
-        self.assertAlmostEqual(t1["revenue"]["total_revenue"], 154710.69, places=2)
-        self.assertAlmostEqual(t2["revenue"]["total_revenue"], 115215.69, places=2)
+        self.assertAlmostEqual(t1["revenue"]["total_revenue"], 143070.37, places=2)
+        self.assertAlmostEqual(t2["revenue"]["total_revenue"], 103575.37, places=2)
 
     def test_historical_net_pnl_not_confused_with_revenue_anywhere(self):
         """A$63,028.75 is historical Net P&L, not revenue -- must not appear
@@ -287,14 +292,18 @@ class UnresolvedAssumptionsVisibleTests(unittest.TestCase):
         now 36225.69 (corrected 12.8128 transactions/day, docs/architecture/
         PM-CAPACITY-RECONCILIATION.md) -- the discount-not-applied property
         itself is unaffected, only the absolute figure moved. Was 36730.80
-        (A$95 placeholder average) before the 2026-08-17 rebuild."""
+        (A$95 placeholder average) before the 2026-08-17 rebuild.
+
+        RECOMPUTED 2026-09-19 (PM Model E, 10 sessions/day, was 16) -- pm_revenue
+        was 36225.69, now 24585.37. The discount-not-applied property itself is
+        unaffected, only the absolute figure moved."""
         rev_assumptions = load_canonical_yaml("revenue_assumptions.yml")["records"]
         discount_rec = find_record(rev_assumptions, "rev_discount_pm_prebooking")
         self.assertEqual(discount_rec["value"], 10)
         # PM revenue at steady state must equal the full undiscounted figure.
         inputs = mfm.CanonicalModelInputs()
         m5 = mfm.compute_month_pnl("scenario_table_1", 5, inputs)
-        self.assertAlmostEqual(m5["revenue"]["pm_revenue"], 36225.69, places=2)
+        self.assertAlmostEqual(m5["revenue"]["pm_revenue"], 24585.37, places=2)
 
     def test_model_yaml_declares_its_own_new_conflicts(self):
         data = load_model_yaml("master_financial_model.yml")
@@ -660,14 +669,19 @@ class FundingRequirementInvestigationTests(unittest.TestCase):
         A$5,460.84/month including super/workers-comp, removed). Were
         100890.20/95485.22 under the 2026-08-17 first-principles rebuild;
         84654.10/80684.16 prior to the 2026-08-16 current-wage-rate
-        research."""
+        research.
+
+        RECOMPUTED 2026-09-19, per Anthony's direct instruction (Venue
+        Manager Mon-Fri + PM Model E 10 sessions/day) -- revenue: was
+        154710.69/115215.69 -> now 143070.37/103575.37. payroll: was
+        96256.18/90851.19 -> now 93595.63/88190.63."""
         inputs = mfm.CanonicalModelInputs()
         m5_t1 = mfm.compute_month_pnl("scenario_table_1", 5, inputs)
         m5_t2 = mfm.compute_month_pnl("scenario_table_2", 5, inputs)
-        self.assertAlmostEqual(m5_t1["revenue"]["total_revenue"], 154710.69, places=2)
-        self.assertAlmostEqual(m5_t2["revenue"]["total_revenue"], 115215.69, places=2)
-        self.assertAlmostEqual(m5_t1["payroll"], 96256.18, places=2)
-        self.assertAlmostEqual(m5_t2["payroll"], 90851.19, places=2)
+        self.assertAlmostEqual(m5_t1["revenue"]["total_revenue"], 143070.37, places=2)
+        self.assertAlmostEqual(m5_t2["revenue"]["total_revenue"], 103575.37, places=2)
+        self.assertAlmostEqual(m5_t1["payroll"], 93595.63, places=2)
+        self.assertAlmostEqual(m5_t2["payroll"], 88190.63, places=2)
 
 
 if __name__ == "__main__":
