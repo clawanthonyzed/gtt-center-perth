@@ -18,7 +18,7 @@
 
 | # | Question | Option(s), where possible |
 |---|---|---|
-| 1d | Should Anthony ask Carole directly whether WDP will supply the phlebotomist under the rental model, or GTT Center Perth keeps hiring in-house? | **Still open — deliberately not asked in the 2026-08-21 follow-up.** Anthony chose to drop this question from that email rather than ask it alongside the others; still worth asking, on its own or once the commercial rental figure (item 1c) arrives. |
+| 1d | Should Anthony ask Carole directly whether WDP will supply the phlebotomist under the rental model, or GTT Center Perth keeps hiring in-house? | **CLOSED 2026-09-19, per Anthony's direct instruction.** SOLENA employs both phlebotomists directly (Option A, in-house) — the pathology partner's role is limited to lab transport/processing only. No longer needs to be asked of Carole/WDP as an open employment-model question. See `docs/CURRENT-STATE.md` §0/§4 and `docs/architecture/AM-DEMAND-DRIVEN-STAFFING-TIERS-2026-09.md`. |
 | 3 | Confirm current venue-search progress (Osborne Park through Cockburn/Cannington) — any candidate ready to inspect? | N/A — status check, not a pick-one decision. |
 | G9 | Engage a trademark attorney now, or continue deferring? | See `docs/naming/TRADEMARK-ATTORNEY-DECISION-BRIEF.md` — not a "yes/no default," genuinely Anthony's call once he's read the plain-terms treatment there. |
 | 36 | When (if ever) should package prices increase from A$250/A$300? | See `docs/price-increase-comparison.md` — no timing decision needed yet, flagged for whenever it becomes relevant. |
