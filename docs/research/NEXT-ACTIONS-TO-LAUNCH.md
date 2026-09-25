@@ -18,6 +18,9 @@
 |---|---|---|---|---|---|---|---|
 | Solicitor review of referral-courtesy mechanics against s129AA before live referral outreach begins | Referral outreach is already gated on venue confirmation (`docs/referral-partnership-plan.md`) — bundle this legal check into that same pre-outreach step rather than adding a new blocker | `AUSTRALIAN-COMPLIANCE-SUPPLEMENT.md` Finding 1 | Avoids inadvertent breach once real referral relationships and any preferential pricing go live | Anthony (engage solicitor) | Yes — professional engagement | Medium-High | Small (one focused legal question, not a full engagement) |
 | Quantify the complimentary-visit referral cost once outreach timing firms up | Currently invisible cost line, small but real | `PROFIT-OPTIMISATION-REGISTER.md` Opportunity 2 | Improves accuracy of referral-program costing | Whoever owns the referral-outreach execution at that time | No | Low | Trivial |
+| **(Round 2)** Sanity-check the real quoted rent for any specific venue candidate against both the A$40/sqm/month planning assumption and the ~24% real-world rent-to-revenue ratio found this round | Rides on the existing #1 blocking gate (venue not yet secured) — do this the moment a real quote exists, not as a separate new blocker | `FINANCIAL-FORENSICS-RECONSTRUCTION.md` §1 | Confirms whether the current 5.6% modelled rent-to-revenue ratio is realistic or optimistic before signing a lease | Anthony/Grace, at venue-shortlist stage | No | Medium | Trivial once a quote exists |
+| **(Round 2)** Ask WDP (or the eventual pathology partner) whether GTT Center Perth, as a direct employer of its own phlebotomists, can access the partner's own relief/locum collector pool for sick-day coverage | Currently unconfirmed whether GTT needs to build its own relief pool from scratch | `UNASKED-QUESTIONS-LOG.md` Q1 | Materially affects sick-day coverage cost/complexity | Anthony/Reed, as part of ongoing WDP negotiation | No | Medium | Trivial to ask, already an open conversation |
+| **(Round 2)** Scale the laundry cost-band research to GTT Center Perth's own real towel/linen volume once daily client throughput is known with more confidence | The real cost bands found this round (§`PROFIT-OPTIMISATION-REGISTER.md` Opportunity 4) are not yet scaled to this venture's specific volume | `PROFIT-OPTIMISATION-REGISTER.md` Opportunity 4 | Turns a real but generic cost range into a GTT Center Perth-specific number for the laundry founder decision | Grace | No | Low | Small |
 
 ## NEED ANTHONY DECISION
 
@@ -50,4 +53,6 @@ The overwhelming majority of what actually needs to happen next for this venture
 
 ## Changelog
 
-**2026-09-25 (created):** New file, external-research mission deliverable. All actions here are new items surfaced by this session's research; every pre-existing open item remains solely tracked in `docs/VERIFICATION-TRACKER.md` and `docs/architecture/OPENING-READINESS-EXECUTION-PLAN.md`, not duplicated here.
+**2026-09-25 (Round 1, created):** New file, external-research mission deliverable. All actions here are new items surfaced by this session's research; every pre-existing open item remains solely tracked in `docs/VERIFICATION-TRACKER.md` and `docs/architecture/OPENING-READINESS-EXECUTION-PLAN.md`, not duplicated here.
+
+**2026-09-25 (Round 2, deepened following founder rejection of Round 1 as too shallow):** Added 3 further actions surfaced by the deeper pass (rent-ratio sanity check at venue-shortlist stage, relief-collector-pool-access question for WDP negotiation, laundry-volume scaling).

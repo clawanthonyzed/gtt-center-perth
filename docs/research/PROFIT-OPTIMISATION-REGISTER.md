@@ -53,6 +53,38 @@
 
 ---
 
+## Opportunity 4: Laundry Outsourcing — Now Quantified (Added Round 2, 2026-09-25)
+
+**CURRENT:** `docs/architecture/AUSTRALIAN-SALON-SPA-INDUSTRY-BENCHMARK.md` already found that commercial laundry outsourcing is standard, standards-governed (AS 4146:2024) Australian salon practice, and flagged it as a genuinely open founder decision — but did not quantify the actual daily time/dollar cost of the alternative (in-house laundry).
+
+**EVIDENCE:** Real commercial-laundry-industry cost data found this round: in-house laundry handled by paid staff costs roughly **$7,000-21,600/year in pure labour alone** for 1-3 hours/day of staff time at $19-20/hour, before counting water, electricity, detergent (a further $200-500/month, $2,500-6,000/year), and equipment maintenance/depreciation. Professional linen/laundry services for a towel-heavy business (150 towels/day cited as a benchmark) cost roughly **$45-120/day ($1,350-3,600/month, $16,200-43,200/year)** — genuinely more expensive in raw dollar terms in some scenarios, but the labour hours it frees up are hours a treatment or beauty staff member would otherwise spend folding towels instead of generating revenue (a real, quantified opportunity cost, not just a convenience argument).
+
+**POTENTIAL CHANGE:** Present both real cost bands (in-house labour+utilities+equipment vs commercial linen service) to Anthony as an input to the still-open laundry founder decision, alongside the actual GTT Center Perth-specific towel/linen volume once real client-throughput data exists (18 AM clients/day plus PM sessions implies materially higher towel volume than a typical single-service salon).
+
+**FINANCIAL EFFECT:** `[ESTIMATE — range only, not GTT-specific volume-adjusted]`. At GTT Center Perth's own committed scale (18 AM clients/day + up to 10 PM sessions/day), towel/linen volume would likely exceed the 150-towel/day benchmark used in the sourced figures above, meaning the real dollar comparison for this specific venture has not yet been calculated — flagged as a next step, not resolved here.
+
+**CONFIDENCE:** Medium — the underlying cost bands are real and sourced, but not yet scaled to GTT Center Perth's own specific volume.
+
+**DECISION:** Anthony approval required (this is the same open founder decision `AUSTRALIAN-SALON-SPA-INDUSTRY-BENCHMARK.md` already identified) — this entry adds real quantification to inform that decision, it does not make it.
+
+---
+
+## Opportunity 5: Bundled Value-Add Following MIWM's Model — Flagged, Not Recommended (Added Round 2, 2026-09-25)
+
+**CURRENT:** GTT Center Perth's AM package does not bundle a GP consultation; the pathology partner handles collection/transport only, and results go to the client's own referring practitioner (`docs/CURRENT-STATE.md` §0).
+
+**EVIDENCE:** MIWM's own real, current pricing (`docs/research/PATHOLOGY-OPERATIONS-DEEP-DIVE.md` §4) bundles a **short bulk-billed GP consultation** into both its paid packages, at $220 and $400-435 — a value-add GTT Center Perth's own model does not include, and one that materially changes MIWM's staffing model (a GP is on-site) in a way that would be a significant, non-trivial operating-model change for GTT Center Perth, not a simple add-on.
+
+**POTENTIAL CHANGE:** None recommended at this stage. This is logged as a data point for awareness only, not a genuine opportunity to pursue — adding an on-site GP consultation would require a materially different staffing/credentialing/insurance model than anything currently planned, and would directly compete with, rather than complement, this venture's referral relationships with the client's own existing OB/midwife (a client who gets a GP consult at GTT Center Perth may see it as duplicating, not complementing, her existing antenatal care relationship). **Explicitly flagged as a rejected idea, with reasoning, rather than silently omitted** — see `docs/research/KNOWLEDGE-GAP-REGISTER.md` for the formal rejected-ideas note.
+
+**FINANCIAL EFFECT:** Not modelled — rejected before quantification, for structural/positioning reasons stated above, not a cost reason.
+
+**CONFIDENCE:** N/A (rejected, not a live opportunity).
+
+**DECISION:** No founder decision needed — logged as considered and rejected, with reasoning, so a future session does not re-propose it without seeing this reasoning first.
+
+---
+
 ## What Was Deliberately Not Pursued Further
 
 - **Re-deriving AM capacity/staffing levers** — `docs/CURRENT-STATE.md` §0 and §10 already contain an extremely recent (2026-09-19), solver-verified set of findings on this exact question (demand-driven staffing tiers, Lever 0). Nothing found this session would add to or contradict that work.
@@ -62,4 +94,6 @@
 
 ## Changelog
 
-**2026-09-25 (created):** New file, external-research mission deliverable. 3 new opportunities identified, none applied to the canonical financial model, all tagged for Anthony's decision or standard professional/bookkeeping practice as appropriate. Cross-references `COMPETITOR-ANALOGUE-DATABASE.md` (endota membership precedent) and `OWNER-OPERATOR-FAILURE-INTELLIGENCE.md` (Adytum cash-flow evidence) and `AUSTRALIAN-COMPLIANCE-SUPPLEMENT.md` (referral-inducement question) rather than repeating their content.
+**2026-09-25 (Round 1, created):** New file, external-research mission deliverable. 3 new opportunities identified, none applied to the canonical financial model, all tagged for Anthony's decision or standard professional/bookkeeping practice as appropriate. Cross-references `COMPETITOR-ANALOGUE-DATABASE.md` (endota membership precedent) and `OWNER-OPERATOR-FAILURE-INTELLIGENCE.md` (Adytum cash-flow evidence) and `AUSTRALIAN-COMPLIANCE-SUPPLEMENT.md` (referral-inducement question) rather than repeating their content.
+
+**2026-09-25 (Round 2, deepened following founder rejection of Round 1 as too shallow):** Added Opportunity 4 (laundry outsourcing, now with real quantified cost bands, not just "worth considering") and Opportunity 5 (MIWM's bundled-GP-consult model, deliberately considered and rejected with stated reasoning, logged so it is not silently omitted or re-proposed blind in a future session). Reinforced Opportunity 3 with a second independent failure case (Australian Laser & Skin Clinics).
