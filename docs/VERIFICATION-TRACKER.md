@@ -46,6 +46,8 @@
 | 23 | EFTPOS/card-payment processing costs | Still OPEN — genuinely researchable, not attempted this round |
 | 20 | Booking software cost conflict (3 disagreeing figures for the same decided platform, Fresha) | Still OPEN — an internal document-reconciliation task, not external research |
 | B3 | WA workers' comp requirement/rate | **CLOSED this round (2026-08-16)** — confirmed mandatory for all workers including casuals, `financial-setup.md` Step 6 updated. Exact premium rate for this venture's classification still a real quote, not researched further. |
+| G1 | Does GTT's referral-courtesy model (complimentary practice-staff visits, referral tracking, possible partner-specific pricing) risk breaching Health Insurance Act 1973 s129AA (pathology referral inducements)? | **NEW, 2026-09-25 — OPEN, needs solicitor.** Genuine Commonwealth offence provision found, applicability to GTT's specific structure untested. Full detail: `docs/research/AUSTRALIAN-COMPLIANCE-SUPPLEMENT.md` Finding 1. |
+| G2 | Does GTT's full-payment-at-booking model carry any Corporations Act "non-cash payment facility"/AFSL exposure? | **NEW, 2026-09-25 — OPEN, needs accountant/solicitor.** Genuinely open question, not resolved. Full detail: `docs/research/AUSTRALIAN-COMPLIANCE-SUPPLEMENT.md` Finding 2. |
 
 ## 4. CLOSED (resolved, kept below for traceability only — no action needed)
 

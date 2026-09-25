@@ -6,6 +6,12 @@
 
 ---
 
+## EXTERNAL RESEARCH LAYER (added 2026-09-25)
+
+**[`docs/research/RESEARCH-INDEX.md`](research/RESEARCH-INDEX.md)** — a new, separate research category covering competitor/analogue intelligence, owner/operator + failure intelligence, and 2 new compliance findings (referral-inducement law, prepaid-payment consumer law), none of which existed anywhere in this repository before. Deliberately does not re-research the already-deep pathology, financial-model, or WA-salon-regulatory work covered elsewhere — see that index's own "what was already deep" table.
+
+---
+
 ## READ THIS FIRST — THE MASTER VENTURE DOSSIER (2026-08-16)
 
 **[`outputs/master-dossier/index.html`](../outputs/master-dossier/index.html)** — a single, standalone, self-contained HTML document covering the entire venture in 18 chapters: business idea, brand, customer/market, services/pricing, operating model, venue, startup costs, staffing, wages, financial model, sensitivity, legal/compliance, operations, marketing, expansion, execution status, and a master action plan. Real tables, real SVG charts, full source traceability per chapter, print-ready for A4/PDF (a pre-generated PDF also exists at `outputs/master-dossier/GTT-Center-Perth-Master-Dossier.pdf`). Built to be opened once a day and understood without reading anything else — read this before any other document in this repository if you're new to the venture or need a full refresh.
