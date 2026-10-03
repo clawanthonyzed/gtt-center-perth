@@ -4,6 +4,20 @@
 
 ---
 
+## 2026-10-03: Rent budget stays at A$8,000/month for budgeting — footprint-growth gap acknowledged, revisit at lease stage
+
+**Decision:** Anthony reviewed `docs/research/RENT-ECONOMICS-FORENSICS.md` §1's finding that the A$8,000/month rent line was set 2026-07-28 against a 200sqm planning footprint and never recalculated after the venue program grew to 239-249sqm across two later founder decisions (implying A$9,560-9,960/month at the same A$40/sqm/month rate) and instructed: **"leave rent as is for budgeting."**
+
+**Reason:** the gap is real and quantified, but no precise rent figure can be meaningfully fixed before a real venue and lease exist — whatever real quote eventually comes in will supersede any planning estimate regardless of which number sits in the model today. Revisiting now would replace one unverified estimate with another, not add certainty.
+
+**Nature of the change — a decision, not a dollar change.** No figure in `data/canonical/*.yml`, `docs/CURRENT-STATE.md`, or any downstream revenue/cost/profit/break-even calculation changes. The A$8,000/month figure remains exactly as it was; only its status moves from an unflagged internal gap to a disclosed, deliberate planning choice, explicitly scheduled for revisit once a real venue and lease are on the table, not before.
+
+**Documents updated:** `docs/CURRENT-STATE.md` §0 (new item 5), `docs/VERIFICATION-TRACKER.md` (new item 54, plus a Changelog entry), `docs/research/RENT-ECONOMICS-FORENSICS.md` (decision banner added; the finding and sensitivity analysis themselves are unchanged and still stand as reported).
+
+**Related documents:** `docs/research/RENT-ECONOMICS-FORENSICS.md`, `docs/research/ROUND-3-SYNTHESIS.md`, `docs/research/MODEL-BREAKPOINTS.md`.
+
+---
+
 ## 2026-09-04: Collection room specimen storage stays physically segregated from the cafe/wellness-lounge operation
 
 **Decision:** Anthony has confirmed: the Blood Collection Room(s)' specimen storage (medical-grade specimen fridge) stays physically segregated from the venue's cafe/wellness-lounge food & drink operation (the Cafe/Refreshments Counter and the GTT Lounge's own cafe counter feature).

@@ -5,6 +5,8 @@
 
 **Tagging used throughout:** `[VERIFIED]` = confirmed real source, `[REPORTED]` = stated by a source without independent audit, `[BENCHMARK]` = industry-wide commercial figure, `[ESTIMATE]` = this document's own arithmetic from real fragments, `[ASSUMPTION]` = a GTT planning figure, `[UNKNOWN]` = not found. Any finding with only one credible source is explicitly marked `LOW CONFIDENCE — SINGLE SOURCE`.
 
+> **DECIDED 2026-10-03 — Section 1's finding below is confirmed and stands as reported; it is now closed as an action item, not left open.** Anthony reviewed this finding directly and instructed: "leave rent as is for budgeting." The A$8,000/month rent figure stays unchanged for all current budgeting and presentation purposes. Anthony is aware it may understate the real cost of the grown 239-249sqm footprint — this is a deliberate, informed decision, not an oversight, and will be revisited once a real venue and lease are on the table, not before. No figure in this document, `data/canonical/*.yml`, or `docs/CURRENT-STATE.md` has been changed as a result. See `docs/CURRENT-STATE.md` §0 item 5, `docs/VERIFICATION-TRACKER.md` item 54, and `docs/DECISION-LOG.md` for the full decision record.
+
 ---
 
 ## 1. First, a Genuine Internal Finding: the Rent Line Was Not Recalculated When the Footprint Grew
