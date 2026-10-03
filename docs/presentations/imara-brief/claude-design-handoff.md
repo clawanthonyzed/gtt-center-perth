@@ -109,7 +109,7 @@ Four candidates, current commercial position:
 No partnership is signed with any of the four. State plainly: "SOLENA employs the phlebotomists, who perform the blood collection. The pathology partner provides laboratory transport and processing."
 
 ### Page 13. Financial overview
-State once: "All financial figures are in Australian dollars unless otherwise stated." Then give the headline numbers at the 18 clients a day operating target, the maximum the venue is designed to serve: monthly revenue $143,070, monthly operating cost $107,884, monthly operating profit $35,186. Break-even is 12.655 clients a day, meaning the venue is designed with a genuine buffer above the point where it covers its costs. The pages that follow show how each of these numbers is built.
+State once: "All financial figures are in Australian dollars unless otherwise stated." Then give the headline numbers at the 18 clients a day operating target, the maximum the venue is designed to serve: monthly revenue $143,070, monthly operating cost $107,884, monthly operating profit $35,186. Break-even is $107,884 in monthly revenue, equivalent to roughly 12.7 GTT clients a day, meaning the venue is designed with a genuine buffer above the point where it covers its costs. The pages that follow show how each of these numbers is built.
 
 ### Page 14. Revenue
 Two streams, added together.
@@ -141,7 +141,7 @@ Two streams, added together.
 **Total operating cost at the 18 client target: $107,884 a month.**
 
 ### Page 16. Break-even
-Fixed monthly operating cost is $107,884 at the fully staffed, 18 client design. SOLENA covers that cost at **12.655 clients a day**, which is 70.3% of the 18 client target, roughly 76 clients a week, and about 333 clients a month.
+SOLENA's break-even point is $107,884 in monthly revenue, the fixed operating cost at the fully staffed, 18 client design. At current pricing, that's equivalent to roughly 12.7 GTT clients a day, 70.3% of the 18 client target, around 76 clients a week, and about 333 clients a month.
 
 Perth's metro area sees an estimated 2,232 GTT tests a month. Break-even represents approximately 15% of that market.
 
@@ -260,6 +260,7 @@ All figures Australian dollars. All figures at the 18 clients a day operating ta
 | Operating profit at 12.655 clients/day | $0 | Break-even |
 | Operating profit at 13.50 clients/day | $5,565/month | Full staffing tier |
 | Operating profit at 15.50 clients/day | $18,730/month | Full staffing tier |
+| Break-even, monthly revenue | $107,884 | Fixed operating cost at the committed 8-staff tier |
 | Break-even, AM clients/day | 12.655 | 70.3% of the 18-client target |
 | Break-even, clients/week | ~76 | 6 trading days |
 | Break-even, clients/month | ~333 | ~26.3 trading days/month |
@@ -322,4 +323,4 @@ Groups, left to right: Arrival (reception, lounge, food and drink), GTT collecti
 
 ### F5. Break-even at a glance
 Type: three values shown side by side, for the introduction on Page 16, ahead of the full chart.
-"18 clients a day: the maximum operating target." "12.655 clients a day: break-even." "5.3 clients a day: the operating buffer before the maximum target."
+"18 clients a day: the maximum operating target." "$107,884 a month: break-even." "5.3 clients a day: the operating buffer before the maximum target."

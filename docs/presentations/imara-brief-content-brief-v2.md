@@ -36,7 +36,7 @@ Recomputed on a 5-day week, per Anthony's direct instruction. `[DECIDED — Anth
 
 **A$2,078.40/month direct-labor saving** (before super/workers comp; the full downstream saving after super/workers comp is folded into the payroll totals in §5 below).
 
-**Genuine open gap, not resolved by this change and not papered over:** Table 1 trades Monday through Saturday — a full committed 6th trading day. This change does not say who covers Venue Manager duties (opening, reception oversight, rostering escalation) on Saturday. The existing "emergency fallback" cross-training rule (`docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md` §4) is explicitly scoped to *"Monday–Friday, if VM01 is unexpectedly unavailable"* — it is not a standing answer for a routine, every-Saturday gap. No new role or cost is invented here to fill it. `[PLACEHOLDER — genuine operational gap, flagged not resolved]`
+**Saturday coverage gap — RESOLVED 2026-10-03, per Anthony's direct instruction:** "Saturday venue manager will be an experienced staff member." Table 1 trades Monday through Saturday — a full committed 6th trading day — and on Saturdays, Venue Manager duties (opening, reception oversight, rostering escalation) are covered by an experienced staff member already rostered that day, not a new hire and not the Venue Manager role itself. This supersedes the existing "emergency fallback" cross-training rule (`docs/architecture/DEMAND-DRIVEN-STAFFING-MODEL.md` §4, scoped only to *"Monday–Friday, if VM01 is unexpectedly unavailable"*) as the standing answer for the routine, every-Saturday coverage question. `[VERIFIED/DECIDED — Anthony's direct instruction, 2026-10-03]`. **Still unresolved, not invented:** Anthony did not specify whether this carries an additional pay loading (e.g. a leading-hand allowance) or is simply an added responsibility within existing rostered hours — no cost line is added or changed either way pending that answer. `[PLACEHOLDER — pay-loading question, flag back to Anthony if it matters for any Saturday cost line]`
 
 Updated in the repo: `tools/cost_ramp_model.py` (`VENUE_MANAGER_SATURDAY_DAILY`), `docs/CURRENT-STATE.md` §0/§4/§5.
 
@@ -232,6 +232,8 @@ Basis: the A$251,198 Pre-Opening Capital planning figure's own itemised componen
 
 ## 9. Break-Even — Recomputed
 
+**Break-even, headline figure: $107,883.97/month in revenue** — this is the fixed monthly operating cost under the HIGH segment (8-staff, 25min cadence, the standing committed model), per §0 above. That dollar figure is equivalent to **12.655 clients/day** (table below) — the clients/day figure is a derived, equivalent way of expressing the same break-even point, not the primary figure; lead with the dollar amount when presenting.
+
 **The previously-quoted 11.290 clients/day break-even figure is now stale and should not be quoted** — it predates this rebuild's demand-driven staffing and PM/Venue Manager changes. Because headcount now genuinely flexes by volume, break-even is not one number — it is two, segment-specific figures:
 
 | Metric | LOW segment (4-staff, 45min cadence, not yet a founder decision) | **HIGH segment (8-staff, 25min cadence — the standing committed model)** |
@@ -302,7 +304,7 @@ No new correspondence exists in this repo for any of the 4 candidates since the 
 
 ## What's Genuinely Unresolved — Read Before Presenting
 
-- **Saturday Venue Manager coverage:** the Mon-Fri change creates a real, disclosed gap on who covers VM duties on Saturday — not answered by this brief, no cost invented to cover it.
+- **Saturday Venue Manager coverage:** RESOLVED 2026-10-03 — an experienced staff member already rostered that day covers VM duties (opening, reception oversight, rostering escalation), per Anthony's direct instruction. Still open: whether this carries an additional pay loading or is an added responsibility within existing hours — not specified, no cost invented either way.
 - **The 45-minute widened-cadence staffing model (9.00/day tier, and the LOW-segment break-even of 8.266/day that depends on it):** a genuine, solver-verified finding, but explicitly not yet a founder decision — do not present it as the committed operating model.
 - **Depreciation and indicative tax (§6, §7):** both genuinely indicative, using stated but not professionally-confirmed assumptions (useful life, entity structure/tax rate) — both explicitly require an accountant before being used in any real funding conversation.
 - **A$251,198 startup capital:** Anthony's own "in principle" approval, not a locked final cost — still pending venue confirmation and final supplier/quote validation (`docs/VERIFICATION-TRACKER.md` item 49, OPEN).
