@@ -100,12 +100,12 @@ Using the same disclosed 60% individual / 25% Refresh / 15% Restore mix assumpti
 
 | Package/service | Duration | Price | Tag |
 |---|---|---|---|
-| PM Refresh (Massage 45min + Mini facial 30min) | 75 min | **A$185** (13% bundle discount vs A$212 bought separately) | `[MODELED — estimate, real Perth-comparable bundle pricing research, best current defensible planning figure]` |
-| PM Restore (Gel manicure 45min + Blow-dry 30min) | 75 min | **A$135** (10% bundle discount vs A$150 bought separately) | `[MODELED — estimate, same basis]` |
+| PM Refresh (Massage 45min + Mini facial 30min) | 75 min | **A$185** (13% bundle discount vs A$212 bought separately) | `[VERIFIED/DECIDED — Anthony's direct instruction, 2026-10-03]` |
+| PM Restore (Gel manicure 45min + Blow-dry 30min) | 75 min | **A$135** (10% bundle discount vs A$150 bought separately) | `[VERIFIED/DECIDED — Anthony's direct instruction, 2026-10-03]` |
 | Individual a-la-carte average | — | A$84.11 (average of 9 representative catalogue midpoints) | `[CALCULATED — docs/architecture/SERVICE-CATALOGUE.md]` |
 | **Blended PM average transaction value** (60/25/15 mix) | — | **A$116.97 ≈ A$117** | `[MODELED — estimate, unchanged by this round's session-count correction]` |
 
-**Per Anthony's explicit instruction, this is presented as the resolved planning figure with a plain estimate label — not as "may be X% high" or unresolved.** Anthony's own final sign-off on the exact A$185/A$135 numbers has not been separately re-confirmed this round; they are the same figures already proposed and carried forward as the best current defensible planning prices.
+**Founder sign-off confirmed 2026-10-03: Anthony is "happy with the PM package prices."** PM Refresh (A$185) and PM Restore (A$135) are now founder-approved prices, not carried-forward planning estimates — only the status tag moves, per the same convention used for the phlebotomist employment model above (§1). **No dollar change and no recomputation triggered** — the 60/25/15 mix assumption feeding the blended average above remains its own, separate, still-open planning estimate (no real booking data exists yet), so the A$116.97≈A$117 blended figure is unaffected by this sign-off and keeps its `[MODELED — estimate]` tag.
 
 ### PM revenue
 
@@ -302,7 +302,6 @@ No new correspondence exists in this repo for any of the 4 candidates since the 
 
 ## What's Genuinely Unresolved — Read Before Presenting
 
-- **PM package pricing (A$185/A$135):** presented as the resolved planning figure per Anthony's explicit instruction, but his own final line-by-line sign-off on these two exact numbers has not been separately re-confirmed this round.
 - **Saturday Venue Manager coverage:** the Mon-Fri change creates a real, disclosed gap on who covers VM duties on Saturday — not answered by this brief, no cost invented to cover it.
 - **The 45-minute widened-cadence staffing model (9.00/day tier, and the LOW-segment break-even of 8.266/day that depends on it):** a genuine, solver-verified finding, but explicitly not yet a founder decision — do not present it as the committed operating model.
 - **Depreciation and indicative tax (§6, §7):** both genuinely indicative, using stated but not professionally-confirmed assumptions (useful life, entity structure/tax rate) — both explicitly require an accountant before being used in any real funding conversation.

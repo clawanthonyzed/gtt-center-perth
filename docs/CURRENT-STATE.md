@@ -65,6 +65,7 @@ Per Anthony's direct instruction, four operating-model/financial-model decisions
 | AM revenue calculations use which price | A$250 (Package 1) as a deliberate conservative safety price, not a blended average | `[MODELED — standing instruction, not a re-derivation]` |
 | PM individual a-la-carte average | ~A$95/session | `[MODELED — assumption: pm-staffing-roster.md planning estimate, no real booking data]` |
 | PM set/fixed packages | **Confirmed direction 2026-07-30** (PM Duo/Refresh/Glow menu) — pricing itself still requires Anthony's final sign-off | `[VERIFIED — Anthony's direct instruction, 2026-07-30, direction confirmed]` + `[PLACEHOLDER — final pricing not yet signed off, pm-package-structure.md]` |
+| **PM Refresh / PM Restore packages — the two packages actually used in every current PM revenue calculation** (`docs/architecture/PM-PACKAGES.md`, 2026-08-17; distinct from the PM Duo/Refresh/Glow trio in the row above — flagging, not resolving, that this repo reuses the name "PM Refresh" for two different compositions/prices never reconciled against each other) | **A$185 (PM Refresh) / A$135 (PM Restore)** | `[VERIFIED/DECIDED — Anthony's direct instruction, 2026-10-03, "happy with the pm package prices"]` |
 
 ---
 

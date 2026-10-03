@@ -67,12 +67,14 @@ Staffing: 1 Nail technician + 1 Hairdresser, run concurrently (not sequentially)
 
 ## 6. What Still Requires Confirmation
 
-- Anthony's sign-off on the two packages and their pricing (same as AM packages required his sign-off before being locked).
+- ~~Anthony's sign-off on the two packages and their pricing (same as AM packages required his sign-off before being locked).~~ **CLOSED 2026-10-03 — see Changelog.**
 - The 60/25/15 mix assumption is a planning estimate only, not evidenced.
 - Whether Package B's two services should run concurrently (needs 2 staff simultaneously) or sequentially (needs 75 continuous minutes from one client, 2 staff at different times) — an operational decision for later.
 
 ---
 
 ## Changelog
+
+**2026-10-03 — Founder sign-off on PM Refresh/PM Restore pricing.** Anthony: "happy with the pm package prices." PM Refresh (A$185) and PM Restore (A$135) move from `[MODELED — estimate]` to `[VERIFIED/DECIDED — Anthony's direct instruction, 2026-10-03]`, per the same convention already used for the phlebotomist employment model (`docs/presentations/imara-brief-content-brief-v2.md` §1). Status-only change — no dollar figure above (§3, §4, §5) is altered, and the §5 blended average (A$116.97≈A$117) keeps its own `[MODELED — estimate]` tag unchanged, since the 60/25/15 mix assumption is a separate, still-open planning estimate not covered by this sign-off.
 
 **2026-08-17** — Created per the founder's explicit instruction to actually select and price two real PM packages (same structured process as AM) and calculate a real PM average transaction value from the actual catalogue and package mix, replacing the unexplained ~A$95 placeholder.
