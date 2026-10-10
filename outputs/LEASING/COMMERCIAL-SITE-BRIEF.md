@@ -2,7 +2,7 @@
 
 **Venture:** GTT Center Perth (trading name TO CONFIRM)
 **Prepared by:** Catherine (commercial operations, WA), for Grace (GTT Center Perth manager)
-**Version:** DRAFT v0.2, 2026-10-10, locked parameters
+**Version:** DRAFT v0.3 (2026-10-10, gross rent ceiling)
 **Status:** DRAFT. Not to be sent until Anthony signs it off.
 **Source:** read-only clone of `clawanthonyzed/gtt-center-perth` (server `/tmp/gtt`), read 2026-10-10, plus Anthony's locked parameters of 2026-10-10.
 
@@ -10,6 +10,14 @@
 |---|---|---|
 | Part 1 | The brief for leasing agents and landlords | External, after sign-off |
 | Part 2 | Our internal lease checklist, budget, red flags, conflicts | Internal only. Never send. |
+
+### What changed in v0.3
+
+| # | Change | Where |
+|---|---|---|
+| 1 | Anthony's decision (2026-10-10): A$9,500 to A$10,500/month is a **gross occupancy ceiling** (base rent plus estimated variable outgoings). Gross/net placeholder filled. | Part 1 §4; Part 2 §B |
+| 2 | Red flag and deal-breaker reset to the A$10,500 all-in ceiling. Catherine's proposed A$11,550 deal-breaker (10% over) is withdrawn. Reading B (net) retired. | Part 2 §B, §C, §D |
+| 3 | Conflict #6 closed. #20 closed (superseded). | Part 2 §F |
 
 ### What changed in v0.2
 
@@ -118,7 +126,7 @@ We will also consider strong options elsewhere in metro Perth, especially near a
 
 | Term | What we are seeking |
 |---|---|
-| Budget | **Target A$9,500 to A$10,500 per month** [BASIS TO CONFIRM BEFORE SENDING: "including outgoings" or "net rent, outgoings extra"], plus GST |
+| Budget | **Maximum A$10,500 per month gross (base rent plus estimated outgoings), excluding GST.** Our target range is A$9,500 to A$10,500 gross. Please do not present premises above A$10,500 all-in. (GST treatment on the lease: TO CONFIRM.) |
 | Initial term | 3 years |
 | Option | 3-year option to renew |
 | Rent reviews | Fixed percentage or CPI. No ratchet (only-up) clause. |
@@ -129,7 +137,7 @@ We will also consider strong options elsewhere in metro Perth, especially near a
 | Make-good | Negotiated. Plumbing, HVAC and accessible WC improvements may stay with the building. |
 | Assignment / subletting | Landlord consent not to be unreasonably withheld, with the pathology licence above pre-approved in the lease |
 
-**Please quote these separately:** face rent (A$/sqm/yr), outgoings (A$/sqm/yr, with a budget), GST treatment, car bay fees, bond or bank guarantee, and any incentives.
+**Please quote these separately, and add them up to one all-in monthly figure:** face rent (A$/sqm/yr), outgoings (A$/sqm/yr, with a budget), GST treatment, car bay fees, bond or bank guarantee, and any incentives.
 
 **Tenant entity:** TO CONFIRM.
 
@@ -178,13 +186,13 @@ We will also consider strong options elsewhere in metro Perth, especially near a
 | Item | Figure | Source |
 |---|---|---|
 | Rent budget (founder decision, locked) | **A$9,500 to A$10,500/month = A$114,000 to A$126,000/year** | Anthony, 2026-10-10. Replaces A$8,000 (`docs/DECISION-LOG.md` 2026-10-03). |
-| Gross or net? | **TO CONFIRM with Anthony.** The repo never says (`docs/VERIFICATION-TRACKER.md` item 24; `COMMERCIAL-VALIDATION-FRAMEWORK.md` item 24). Both readings below. | |
+| Gross or net? | **GROSS. Resolved.** A$10,500/month is a hard all-in ceiling: base rent plus estimated variable outgoings (plus car bays), excluding GST. Reading A below applies. Reading B is retired. | Anthony, 2026-10-10 |
 | Per-sqm equivalent | A$9,500 to A$10,500/month across 257 to 290 sqm = about **A$393 to A$490/sqm/yr** | Catherine's arithmetic |
 | What to compare against the budget | True occupancy cost: rent + outgoings + car bays, before GST | `docs/rent-budget-2026-07-28.md`; `docs/architecture/VENUE-FIRST-VISIT-CHECKLIST.md` §5 |
 | Market reference rates (net) | Osborne Park A$200 to 350/sqm/yr; Joondalup A$250 to 400; Cannington A$180 to 320; Myaree/Murdoch A$220 to 380 | `docs/location-scouting.md` |
 | Outgoings assumption | Perth outgoings typically add 15 to 25% on top of face rent (general market note, not venture-specific) | `docs/grace-startup-plan.md` (as quoted in `VERIFICATION-TRACKER.md` item 24) |
 
-### The two readings (all figures A$ per month)
+### The two readings (all figures A$ per month). Reading A (gross) is the decision. Reading B is kept for reference only.
 
 | Reading | What the A$9,500 to A$10,500 covers | True occupancy cost, ex GST | Including 10% GST |
 |---|---|---|---|
@@ -195,7 +203,7 @@ We will also consider strong options elsewhere in metro Perth, especially near a
 
 **GST note (general, verify with the accountant):** if the tenant entity is registered for GST, GST on rent is normally claimable back as a credit, so it is mainly a cash-flow item. This depends on the tenant entity, which is still TO CONFIRM.
 
-**Why Part 1 shows the range (WA practice, my call):** Perth leasing agents routinely ask for a budget to filter listings, so giving the range saves wasted inspections; we still negotiate each listing on its own numbers, and the basis (gross or net) must be filled in before sending or the figure misleads.
+**Why Part 1 shows the ceiling (WA practice, my call):** Perth leasing agents routinely ask for a budget to filter listings, so stating the gross ceiling saves wasted inspections. The basis (gross, excluding GST) is now filled in. We still negotiate each listing on its own numbers.
 
 **Quick maths:** 290 sqm x A$350/sqm/yr = A$101,500/yr net (A$8,458/month). Add 15 to 25% outgoings = A$9,727 to A$10,573/month. That fits Reading A only at the low end of outgoings. Ask for outgoings every time.
 
@@ -213,7 +221,7 @@ Source: `docs/architecture/COMMERCIAL-LEASE-RED-FLAG-CHECKLIST.md`, plus v0.2 ad
 | Rent | Uncapped outgoings, or "as determined by the landlord" |
 | Rent | Market review with no independent valuer process |
 | Rent | No rent-free or incentive offered for a heavy fit-out |
-| Rent (new) | True occupancy cost (rent + outgoings + bays, ex GST) above the confirmed budget top: **over A$10,500/month under Reading A, or over A$13,125/month under Reading B**. Needs an offset (rent-free, fit-out contribution, existing fit-out) to proceed. |
+| Rent (new, v0.3) | True all-in occupancy cost (rent + estimated outgoings + bays, ex GST) **above the A$10,500/month gross ceiling**. Needs an offset (rent-free, fit-out contribution, existing fit-out) that brings the effective cost within A$10,500, or we do not proceed. |
 | Rent (new) | Rent quoted with outgoings "to be advised" or no outgoings budget, so we cannot test it against either reading |
 | Use | Permitted use narrower than "health, beauty and wellness services" |
 | Use | Landlord silent on blood collection and clinical waste (get written acknowledgement) |
@@ -240,11 +248,11 @@ Source: `docs/strategy/PROPERTY-SEARCH-FRAMEWORK.md` §D and consolidated list, 
 | 2 | Effectively no parking (fewer than 2 dedicated bays and no real alternative) | Listing + site visit |
 | 3 | Zoning prohibits the use, with no pathway | Council / planning authority |
 | 4 | Plumbing physically cannot be installed (including hands-free basins in both collection rooms) | Builder or architect |
-| 5 | True occupancy cost (ex GST) **more than about 10% over the confirmed budget top, with no offset**: over about **A$11,550/month (A$138,600/yr) under Reading A**, or over about **A$14,438/month (A$173,250/yr) under Reading B**. Proposed by Catherine, needs Anthony's OK (see §F #20). | Listing + agent |
+| 5 | True all-in occupancy cost (rent + estimated outgoings + bays, ex GST) **above A$10,500/month (A$126,000/yr), with no offset that brings it within the ceiling.** Aligned to Anthony's gross ceiling (2026-10-10). Replaces Catherine's proposed A$11,550 (10% over). | Listing + agent |
 | 6 (new) | Landlord refuses to allow the collection rooms to be licensed or sublet to an approved pathology provider | Agent + draft lease, then WA leasing lawyer |
 | 7 (new) | Usable area under 257 sqm with no way to fit both collection rooms | Listing + floor plan |
 
-**Why #5 moved from "25 to 30% over" to "10% over":** the old line was set off a A$7,000 to 9,000 band, so it allowed up to about A$11,250 to A$11,700/month. Anthony has now lifted the budget itself to absorb the known footprint gap, so a further 25 to 30% would allow A$13,125 to A$13,650 (Reading A), well beyond what the financial model was rebased on. 10% keeps the hard line at roughly where it already was under Reading A.
+**Why #5 changed (v0.3):** the old line allowed 25 to 30% over a A$7,000 to 9,000 band (about A$11,250 to A$11,700/month). v0.2 proposed 10% over the new top (A$11,550). Anthony has since made A$10,500 a hard gross ceiling, so there is no tolerance band any more. The deal-breaker and the red flag in §C are now the same line: above A$10,500 all-in.
 
 **Also must do before signing:** get **both** PathWest's and WDP's collection room specs and check the site against the stricter of the two (`docs/location-scouting.md`, "Rule").
 
@@ -270,7 +278,7 @@ Source: `docs/strategy/PROPERTY-SEARCH-FRAMEWORK.md` §D and consolidated list, 
 | Early hours (6:45 am arrivals), Mon to Sat, PM from 12:30 | `PROPERTY-SEARCH-FRAMEWORK.md` §F; `docs/strategy/VENUE-FUNCTIONAL-BRIEF.md` (line 11); `docs/CURRENT-STATE.md` (6-day week) |
 | Nail extraction, coffee circuit, data | `VENUE-PROGRAM-AUTHORITATIVE.md`; `PROPERTY-SEARCH-FRAMEWORK.md` §F |
 | Signage | `docs/location-scouting.md`; `COMMERCIAL-LEASE-RED-FLAG-CHECKLIST.md` §5 |
-| Budget A$9,500 to A$10,500 | Anthony, 2026-10-10 (locked). Basis TO CONFIRM. |
+| Budget: maximum A$10,500 gross | Anthony, 2026-10-10 (locked, gross ceiling inclusive of estimated variable outgoings). GST treatment TO CONFIRM. |
 | Collection room licence / lab change | Anthony's dual-lab strategy, 2026-10-10; `docs/option-b-collection-centre.md` Step 1a (s.23DNBA) |
 | Lease terms (3 + 3, CPI, rent-free 3 to 6 months) | `docs/location-scouting.md` (Lease Terms to Negotiate); `COMMERCIAL-LEASE-RED-FLAG-CHECKLIST.md` |
 | Questions to ask the agent | `PROPERTY-SEARCH-FRAMEWORK.md` §E; `VENUE-FIRST-VISIT-CHECKLIST.md` §5 |
@@ -284,7 +292,7 @@ Source: `docs/strategy/PROPERTY-SEARCH-FRAMEWORK.md` §D and consolidated list, 
 | 3 | Floor area floor | `location-scouting.md` records 150 sqm as a floor with no maximum (2026-07-28); also an older 180-220 sqm target. | Superseded | ✅ RESOLVED (Anthony 2026-10-10, superseded by #1) |
 | 4 | Medical precincts | Directive: near medical precincts. Repo: proximity is **not a requirement** (`location-scouting.md`), only a **soft positive** (`PROPERTY-SEARCH-FRAMEWORK.md`). | Priority suburbs (3 of 4 near health campuses), proximity as a plus | OPEN. Anthony |
 | 5 | **Tenant entity** | `location-scouting.md` says "YETI Tipi Holdings PTY LTD as trustee for YETI Holding Trust". `DECISION-LOG.md` 2026-09-04 and `ENTITY-STRUCTURE-INVESTIGATION.md` say the entity question is **open**. Catherine's persona file says "Cudan Studio Pty Ltd" (not from repo). | TO CONFIRM | OPEN. Anthony + accountant |
-| 6 | **Budget basis (gross vs net)** | New budget A$9,500 to A$10,500/month. Repo never says whether rent figures include outgoings (`VERIFICATION-TRACKER.md` item 24). Difference between readings is up to A$2,625/month ex GST. | Both readings shown (§B); Part 1 placeholder | OPEN. Anthony. **Must be filled before Part 1 is sent.** |
+| 6 | **Budget basis (gross vs net)** | Repo never said whether rent figures include outgoings (`VERIFICATION-TRACKER.md` item 24). Anthony decided: GROSS, inclusive of estimated variable outgoings. | Part 1 §4: "Maximum A$10,500 per month gross (base rent plus outgoings), excluding GST" | ✅ RESOLVED (Anthony 2026-10-10). GST treatment on the lease still TO CONFIRM. |
 | 7 | Budget vs footprint | Old gap: A$8,000 vs ~A$9,560-10,300 at A$40/sqm/month. New budget covers 257 sqm at that rate (A$10,280). At 290 sqm the same rate gives A$11,600, above the top. | A$9,500 to A$10,500 | ✅ RESOLVED at minimum footprint (Anthony 2026-10-10). Watch: larger sites need a lower rate. |
 | 8 | Plumbing count | Repo hard requirement says **minimum 2 plumbed wet areas**. Program needs far more water points. | 2 existing wet areas minimum + full list, about 8 hands-free basins day one | OPEN. Architect / plumber |
 | 9 | Collection room sinks | `VENUE-PROGRAM-AUTHORITATIVE.md`: one hand-hygiene basin per room. `floor-plan-concept.md`: Skin Penetration Code 2-sink rule stays in force. Now applies x2. | "Second sink may be required" per room | OPEN. Building / compliance professional, plus both labs' room specs |
@@ -296,9 +304,9 @@ Source: `docs/strategy/PROPERTY-SEARCH-FRAMEWORK.md` §D and consolidated list, 
 | 15 | Shortlist currency | `PERTH-PROPERTY-SHORTLIST.md` Tier 1 is from August 2026. Under the new floor area, 11/48 Central Walk Joondalup (237 sqm) now **fails**. 59 Grand Blvd Joondalup (A$218,000/yr + outgoings + GST, about A$18,167/month) still exceeds both budget readings. | Not in Part 1 | OPEN. Grace to recheck before contact |
 | 16 | Trading name | SOLENA is a conditional leader, not locked (`DECISION-LOG.md`). | Name not used | OPEN. Anthony |
 | 17 | Contact details | Business contact not set. Anthony's personal phone/email must not be used. | TO CONFIRM | OPEN. Anthony |
-| 18 (new) | Repo budget figures stale | `DECISION-LOG.md`, `CURRENT-STATE.md`, `profit-loss-tables.md` and the financial model still carry A$8,000/month. | A$9,500 to A$10,500 | OPEN. Grace to log decision and rebase model after sign-off |
+| 18 (new) | Repo budget figures stale | `DECISION-LOG.md`, `CURRENT-STATE.md`, `profit-loss-tables.md` and the financial model still carry A$8,000/month. The model also carries Utilities A$650 and Cleaning A$600 as separate lines (possible overlap with gross outgoings). | A$10,500 gross ceiling | OPEN. Grace to log decision; Theodore to rebase model after sign-off |
 | 19 (new) | **Dual-lab lease structure** | See §G. Lease must let us licence or sublet the room(s) to the winning lab and change labs later. | Part 1 §4 rows | OPEN. **Verify with a WA leasing lawyer and both labs** |
-| 20 (new) | Deal-breaker threshold | Catherine proposes "10% over confirmed budget top" (§D #5). | Part 2 only | OPEN. Anthony to approve |
+| 20 (new) | Deal-breaker threshold | Catherine proposed "10% over confirmed budget top" (A$11,550). Superseded by the gross ceiling: deal-breaker is above A$10,500 all-in (§D #5). | Part 2 only | ✅ RESOLVED (Anthony 2026-10-10, superseded by #6) |
 | 21 (new) | Who employs the collectors | v0.1 said "our own employed phlebotomists". Under the approved collection centre model the lab holds the approval and is responsible for the centre (`option-b-collection-centre.md`). Whether staff are GTT's or the lab's is a deal term. Part 1 now says only that collection happens on site. | Neutral wording | OPEN. Grace with both labs |
 
 ## G. Dual-lab strategy: lease implications (verify with a WA leasing lawyer and both labs)
@@ -322,4 +330,4 @@ Source: `docs/strategy/PROPERTY-SEARCH-FRAMEWORK.md` §D and consolidated list, 
 
 ---
 
-*Prepared by Catherine for Grace. DRAFT v0.2, 2026-10-10. Not legal advice. Verify all WA law points with a WA leasing lawyer.*
+*Prepared by Catherine for Grace. DRAFT v0.3 (2026-10-10, gross rent ceiling). Not legal advice. Verify all WA law points with a WA leasing lawyer.*
