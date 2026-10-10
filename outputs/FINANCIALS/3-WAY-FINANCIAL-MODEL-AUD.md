@@ -1,12 +1,15 @@
 # GTT Center Perth: 3-Way Financial Model (AUD)
 
 **Prepared by:** Theodore (CFO consultant) for Grace (GTT Center Perth manager)
+**Version:** v0.2, 2026-10-10, dual-lab + rent update
 **Date:** 2026-10-10
-**Repo snapshot:** clawanthonyzed/gtt-center-perth, commit `14b747d` (read-only)
+**Repo snapshot:** clawanthonyzed/gtt-center-perth, commit `14b747d` (v0.1), re-checked at `d96215a` for v0.2 (read-only)
 **Currency:** every figure is in Australian dollars (A$). No foreign amounts are used.
 
 > **Read this first**
-> - 📌 **Baseline used:** the CURRENT committed model. That is Table 1: 18 AM clients/day, 07:00 start, founder decision round 2026-09-19 ([CURRENT-STATE.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/CURRENT-STATE.md) §0 and §5).
+> - 📌 **Baseline used:** the v3.0 committed model, locked as the headline by Anthony on 2026-10-10. That is Table 1: 18 AM clients/day, 07:00 start, founder decision round 2026-09-19 ([CURRENT-STATE.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/CURRENT-STATE.md) §0 and §5).
+> - 🏠 **Rent:** the headline uses **A$8,000/month, per Anthony's instruction.** His real rent budget is **A$9,500 to A$10,500/month** for 257 to 290 sqm with 2 blood collection rooms. Rent-adjusted figures sit right beside the headline in the key numbers card and in full in Section 9.
+> - 🧪 **New in v0.2:** rent-adjusted scenarios (Section 9), lab fee sensitivity for the PathWest / WDP tender (Section 10), proposed two-tier GST invoicing (Section 11).
 > - 🗄️ The older v2.0 baseline (A$113,712.16 revenue / A$88,625.09 costs / +A$25,087.07 net, 10 clients/day, ancillary included) is **superseded**. It is listed in Section 8 only.
 > - 🧮 Nothing here is real trading data. No venue is open yet. Every figure is a planning estimate.
 > - 🧾 Tax and GST content is **general information only**. Verify with the accountant before acting.
@@ -43,25 +46,34 @@ Tables cite sources using these short codes. Each code links to the real file.
 | S21 | [outputs/GTT-Center-Perth-Financial-Model.xlsx](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/outputs/GTT-Center-Perth-Financial-Model.xlsx) |
 | S22 | [outputs/master-dossier/index.html](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/outputs/master-dossier/index.html) and [outputs/master-dossier-v2/index.html](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/outputs/master-dossier-v2/index.html) |
 | S23 | [docs/architecture/CONSTRUCTION-COST-BASIS-INVESTIGATION.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/CONSTRUCTION-COST-BASIS-INVESTIGATION.md) |
+| S24 | [docs/services-pricing-locked.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/services-pricing-locked.md) |
+| S25 | [docs/pricing-billing-strategy.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/pricing-billing-strategy.md) |
+| S26 | [docs/research/PATHOLOGY-PARTNER-ECONOMICS.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/research/PATHOLOGY-PARTNER-ECONOMICS.md) |
+| S27 | [docs/research/PATHOLOGY-OPERATIONS-DEEP-DIVE.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/research/PATHOLOGY-OPERATIONS-DEEP-DIVE.md) §4 |
+| S28 | [docs/onboarding.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/onboarding.md) |
 | **TM** | **This model's own assumption or arithmetic.** Always listed in Section 8. |
 
 ---
 
 ## 1. Key numbers card
 
-| | Figure | Status |
-|---|---|---|
-| 💰 **Total startup capital (base)** | **A$336,198** = A$251,198 pre-opening capital + A$85,000 working capital reserve | 🟡 Founder-approved "in principle" planning figure, not quotes (S1 §6, S6, S8) |
-| ↔️ Startup capital range | A$328,912 (lean) to A$754,832 (full build) | 🟡 S7, S8 |
-| 📈 **Monthly net at baseline (Month 5 onward)** | **+A$35,186.40** (repo figure, GST-inclusive) | 🟢 S1 §5 |
-| 🧾 Monthly net after estimated GST | about **+A$23,442.58** | 🟠 TM estimate, accountant to confirm |
-| ⚖️ **Break-even (repo unit)** | **12.655 AM clients/day** (with PM at full 10 sessions/day) | 🟢 S1 §10, reproduced exactly here |
-| ⚖️ Break-even (two streams, current mix) | about **516 visits/month** (357 AM + 158 PM) | 🆕 New analysis, Section 6 |
-| 🏦 **Peak funding requirement** | **A$318,176** (with GST timing) / A$312,281 (repo basis, no GST) | 🟢 Fits inside the A$336,198 base |
-| ⚠️ Lowest cash point | **A$18,022** at Month 3 | 🟠 Thin. Below the old A$25,000 buffer rule (S11) |
-| ⏱️ **Payback** | **Month 13** (repo basis) / **Month 18** (after GST) | 🆕 Section 7 |
+| | Headline (A$8,000 rent) ✅ | Rent-adjusted A$9,500 | Rent-adjusted A$10,500 | Status |
+|---|---|---|---|---|
+| 💰 **Total startup capital** | **A$336,198** | A$339,198 | A$341,198 | 🟡 Headline is the founder-approved "in principle" figure, not quotes (S1 §6, S6, S8). Rent columns scale bond + advance rent only (Section 9) |
+| ↔️ Startup capital range (headline rent) | A$328,912 (lean) to A$754,832 (full build) | | | 🟡 S7, S8 |
+| 📈 **Monthly net, Month 5 onward (repo basis, GST-inclusive)** | **+A$35,186.40** | +A$33,686.40 | +A$32,686.40 | 🟢 Headline S1 §5, locked by Anthony 2026-10-10 |
+| 🧾 **GST-stress downside** (all AM sales taxable) | **+A$23,442.58** | +A$22,078.94 | +A$21,169.85 | 🟠 Conservative downside, TM estimate, accountant to confirm |
+| ⚖️ **Break-even, AM clients/day (repo basis)** | **12.655** | 12.882 | 13.034 | 🟢 Headline reproduces S1 §10 exactly |
+| ⚖️ Break-even, AM clients/day (GST-stress) | 14.083 | 14.310 | 14.462 | 🟠 TM |
+| ⚖️ Break-even (two streams, current mix) | about **516 visits/month** (357 AM + 158 PM) | | | 🆕 Section 6 |
+| 🏦 **Peak funding** (with GST timing) | **A$318,176** | A$325,403 | A$330,222 | 🟢 All fit inside their startup capital |
+| 🏦 Peak funding (repo basis, no GST) | A$312,281 | A$318,281 | A$322,281 | 🟢 |
+| ⚠️ Lowest cash point (Month 3) | **A$18,022** | A$13,795 | A$10,976 | 🟠 Thin in every case |
+| ⏱️ **Payback** (repo basis / after GST) | **Month 13 / Month 18** | Month 14 / Month 19 | Month 14 / Month 20 | 🆕 Sections 7 and 9 |
+| 🧪 Lab / courier fee to GTT | A$0 per client (repo assumption) | | | 🟠 Tender fees TO CONFIRM. Each A$10/client costs about A$4,739/month (Section 10) |
+| 🧾 Two-tier GST (proposed) | +A$2,154/month vs GST-stress if A$50 of each A$250 package is GST-free | | | 🔴 Proposed only. Needs accountant advice and possibly an ATO private ruling (Section 11) |
 
-**Plain English:** the plan needs about A$336k. Cash is tightest in Month 3. The business pays back its opening spend in roughly 13 to 18 months, if 18 clients/day is reached by Month 5.
+**Plain English:** the plan needs about A$336k at A$8,000 rent, or up to about A$341k at A$10,500 rent. Cash is tightest in Month 3. Payback is roughly 13 to 20 months depending on rent and GST, if 18 clients/day is reached by Month 5. A lab fee is the biggest unknown left: at A$20+ per client the cash buffer is close to gone.
 
 ---
 
@@ -442,6 +454,8 @@ The repo has no two-stream break-even. This section is new and is labelled TM.
 | Price -10% (AM A$225, PM average -10%) | A$20,879.36 | 14.476 | 🟡 |
 | Rent A$7,000 | A$36,186.40 | 12.503 | 🟢 |
 | Rent A$9,000 | A$34,186.40 | 12.806 | 🟢 |
+| Rent A$9,500 (budget low end) | A$33,686.40 | 12.882 | 🟢 Section 9 |
+| Rent A$10,500 (budget high end) | A$32,686.40 | 13.034 | 🟢 Section 9 |
 | Repo downside: 12/day (Table 2) | A$1,096.40 | 11.833 (repo's own Table 2 figure) | 🔴 Near zero (S1 §10) |
 
 Formulas (TM): net = revenue x factor - A$107,883.97. Break-even = (costs ± rent change - PM revenue x price factor) ÷ (A$6,582.50 x price factor).
@@ -481,7 +495,7 @@ Months 13 to 18 assume steady state continues, the same "no growth after Month 5
 
 | # | Old figure | Where | Current figure | Status |
 |---|---|---|---|---|
-| 1 | Revenue A$113,712.16 / costs A$88,625.09 / net +A$25,087.07 (v2.0, 10 clients/day, ancillary A$8,580 included) | S4 history, S11, S20 | A$143,070.37 / A$107,883.97 / +A$35,186.40 | 🗄️ Superseded. S20 still calls v2.0 "current authoritative", which is stale |
+| 1 | Revenue A$113,712.16 / costs A$88,625.09 / net +A$25,087.07 (v2.0, 10 clients/day, ancillary A$8,580 included) | S4 history, S11, S20 | A$143,070.37 / A$107,883.97 / +A$35,186.40 | ✅ RESOLVED by Anthony 2026-10-10: baseline choice locked to v3.0 (+A$35,186.40 headline, +A$23,443 GST-stress downside). S20 still calls v2.0 "current authoritative", which is stale |
 | 2 | 220 AM : 350 PM visits/month mix | S20, original brief | about 474 AM : 210 PM per month | 🗄️ Superseded (18/day AM; PM capped at 10 sessions/day on 2026-09-19) |
 | 3 | Net A$63,028.75 / A$56,581.70 / A$44,166.17 (and others) | S1 strike-throughs, S21 | +A$35,186.40 | 🗄️ Superseded |
 | 4 | Revenue A$154,710.69, net A$32,576.80, break-even 13.051/day, trough -A$76,532.52 | S5 (titled "Current") | See Sections 3, 4, 6 | 🗄️ Stale (2026-08-18) despite the file name |
@@ -496,13 +510,14 @@ Months 13 to 18 assume steady state continues, the same "no growth after Month 5
 | # | Conflict | Figures | Impact | Owner |
 |---|---|---|---|---|
 | 10 | S1 §5 cost table lines do not add to its own total | 82,318.05 + 1,399.41 + 14,288.34 = A$98,005.80, but total says A$107,883.97 | Missing super line A$9,878.17 (present in S3). Total is right; table is incomplete | Grace: add super row to S1 |
-| 11 | Rent budget vs footprint | A$8,000 kept by founder decision (S16). At the same A$40/sqm, 239 to 249 sqm = A$9,560 to 9,960 (S14). 257 to 259 sqm after the 2-room decision = A$10,280 to 10,360 (TM arithmetic) | About -A$1,560 to -A$2,360/month to net | Decided: revisit at lease stage |
-| 12 | 2nd Blood Collection Room not costed | +18 to 20 sqm (S16). At A$800 to 1,250/sqm = A$14,400 to 25,000 extra fit-out (TM arithmetic, indicative only) | Base capex may be understated | Needs venue + builder quote |
+| 11 | Rent budget vs footprint | Headline keeps A$8,000 (S16). Anthony's budget is A$9,500 to 10,500/month for 257 to 290 sqm, about A$32.76 to 40.86 per sqm per month (TM arithmetic) | -A$1,500 to -A$2,500/month to net; full effect in Section 9 | ✅ RESOLVED by Anthony 2026-10-10 |
+| 12a | Floor area | 257 to 290 sqm with 2 blood collection rooms | Sets the search brief | ✅ RESOLVED by Anthony 2026-10-10 |
+| 12b | Fit-out for the larger floor area not costed | Base fit-out is for 239 sqm. 257 to 290 sqm adds 18 to 51 sqm. At the repo's A$800 to 1,250/sqm = A$14,400 to 63,750 extra fit-out (TM arithmetic, indicative only). Not added to any capital figure here | Base capex likely understated; would eat the A$10,976 to 18,022 cash headroom | 🔴 Still open: needs venue + builder quote |
 | 13 | Construction rate vs market | Repo A$800 to 1,250/sqm is internal, not benchmarked (S23). Allied-health benchmark A$1,800 to 2,800/sqm; blended estimate is A$39,000 to 60,450 higher (S15) | Fit-out risk on the high side | 3 builder quotes (repo tracker item 49) |
 | 14 | Cafe equipment not in base | A$5,000 to 12,650, made day-one 2026-08-23 (S10); base dated 2026-08-10 | Base capex understated | Grace / founder |
 | 15 | Clinical equipment two figures | Summary A$8,300 to 14,100 vs itemised A$6,330 to 10,240 (S10, S6) | Up to A$3,860 | Unreconciled in repo |
 | 16 | Lease cost overlap | Lease and legal lines may double up, up to A$48,600 combined high end (S6 `conflict_lease_cost_overlap`) | Unclear | Unresolved in repo |
-| 17 | GST on the AM package | S12 codes the package as mixed (GST-free pathology part + taxable wellness part). S11 says "likely fully taxable", since the pathology partner bills Medicare directly | A$0 to about A$11,744/month cash difference | 🔴 Accountant |
+| 17 | GST on the AM package | S12 codes the package as mixed (GST-free pathology part + taxable wellness part). S11 says "likely fully taxable", since the pathology partner bills Medicare directly | A$0 to about A$11,744/month cash difference. Proposed two-tier structure in Section 11 | 🔴 Accountant, possibly ATO private ruling |
 | 18 | GST not in any repo P&L or cashflow | Figures are GST-inclusive with no GST-paid line (S11) | Payback Month 13 vs Month 18 | 🔴 Accountant |
 | 19 | Working capital reserve basis | A$85,000 to 110,000 flagged stale in the repo (S19, repo tracker item 30). This model needs about A$67,000 drop cover with GST | Reserve looks adequate, but headroom is only A$18,022 | Founder |
 | 20 | Startup capital: several ranges | Adopted A$251,198 (S6); older adopted range A$292,335 to 594,900 (S1 §7.4); reconstruction A$283,122 to 644,832 (S9) | This model uses A$251,198 as base | Locked only after venue + quotes |
@@ -518,7 +533,7 @@ Months 13 to 18 assume steady state continues, the same "no growth after Month 5
 | 25 | All funding is capital put in before opening, no loans | TM. Source of funds not stated in repo | 🟡 |
 | 26 | GST: all sales taxable, monthly BAS paid next month, credits on non-wage overhead | TM, from S11 and S12 | 🟠 Accountant |
 | 27 | GST credits on fit-out and equipment | Not claimed (could improve early cash) | 🟢 Upside |
-| 28 | Rent during fit-out (before trading) | Not in base. Only 1 month advance rent included. A rent-free fit-out period would remove this | 🔴 Negotiate at lease stage |
+| 28 | Rent during fit-out (before trading) | Not in base. Only 1 month advance rent included. Each month of fit-out rent costs A$8,000 / A$9,500 / A$10,500 at the three rent levels. A rent-free fit-out period would remove this | 🔴 Negotiate at lease stage |
 | 29 | No debtor / creditor timing | P&L net = operating cash (repo has no timing data) | 🟡 |
 | 30 | No depreciation, income tax or interest | Not modelled; entity undecided | 🟡 Accountant |
 | 31 | Workers comp 1.7% | Repo placeholder rate | 🟡 |
@@ -526,6 +541,132 @@ Months 13 to 18 assume steady state continues, the same "no growth after Month 5
 | 33 | Insurance A$708.34/month | Modelled, not a broker quote | 🟡 Quotes in motion |
 | 34 | PM volume (10 sessions/day) and A$117 average | Founder-set planning input (S13), no booking data | 🟡 |
 | 35 | Inventory held flat | Assumed replenished via the monthly consumables line | 🟡 |
+| 36 | Lab / courier fee charged to GTT by PathWest or WDP | Repo assumes A$0 (lab bills Medicare). Sensitivity only in Section 10 | 🔴 TO CONFIRM via tender |
+| 37 | Two-tier GST invoicing (s38-10) | Proposed only. Clinical / lounge split is a TM assumption (Section 11) | 🔴 Accountant + possibly ATO private ruling |
+| 38 | Contingency in rent-adjusted capital | Kept at A$26,914. Not re-scaled for the higher bond and advance rent (adds about A$360 to A$600 at 12%) | 🟡 TM |
+| 39 | Rent-adjusted scenarios keep every other line at the headline | Only rent, bond and advance rent change. Floor-area fit-out uplift is item 12b | 🟡 TM |
+
+---
+
+## 9. Rent-adjusted scenarios (🆕 v0.2)
+
+📌 **The headline uses A$8,000/month rent, per Anthony's instruction (2026-10-10).** His real rent budget is A$9,500 to A$10,500/month, to fit 257 to 290 sqm with 2 blood collection rooms. The two right-hand columns show what that budget does.
+
+**What changes (TM):** rent every month, the lease bond (1 month's rent) and the advance rent (1 month's rent). Everything else stays at the headline. Same ramp, same GST method, same deferred capex.
+
+| Measure | Headline A$8,000 ✅ | Rent-adjusted A$9,500 | Rent-adjusted A$10,500 |
+|---|---|---|---|
+| Rent per month | A$8,000.00 | A$9,500.00 | A$10,500.00 |
+| Rent per sqm per month (257 to 290 sqm) | n/a (headline) | A$32.76 to A$36.96 | A$36.21 to A$40.86 |
+| Lease bond (1 month, or bank guarantee) | A$8,000.00 | A$9,500.00 | A$10,500.00 |
+| Advance rent (1 month) | A$8,000.00 | A$9,500.00 | A$10,500.00 |
+| Pre-opening capital | A$251,198.00 | A$254,198.00 | A$256,198.00 |
+| Working capital reserve | A$85,000.00 | A$85,000.00 | A$85,000.00 |
+| **Total startup capital** | **A$336,198.00** | **A$339,198.00** | **A$341,198.00** |
+| Each month of rent during fit-out (not in any total, item 28) | A$8,000.00 | A$9,500.00 | A$10,500.00 |
+| **Net per month, Month 5 onward (repo basis)** | **A$35,186.40** | **A$33,686.40** | **A$32,686.40** |
+| **Net per month, GST-stress downside** | **A$23,442.58** | **A$22,078.94** | **A$21,169.85** |
+| Year 1 net (repo basis) | A$251,521.65 | A$233,521.65 | A$221,521.65 |
+| Year 1 net (after estimated GST) | A$126,115.37 | A$109,751.71 | A$98,842.62 |
+| **Break-even, AM clients/day (repo basis)** | **12.655** | **12.882** | **13.034** |
+| Break-even, AM clients/day (GST-stress) | 14.083 | 14.310 | 14.462 |
+| Peak funding (repo basis, no GST) | A$312,280.64 | A$318,280.64 | A$322,280.64 |
+| **Peak funding (with GST timing)** | **A$318,176.16** | **A$325,403.44** | **A$330,221.62** |
+| Lowest cash (Month 3) = headroom | A$18,021.84 | A$13,794.56 | A$10,976.38 |
+| **Payback (repo basis)** | **Month 13** | **Month 14** | **Month 14** |
+| **Payback (after GST)** | **Month 18** | **Month 19** | **Month 20** |
+
+**Formulas (TM):**
+- Net = headline net less (rent less A$8,000).
+- GST-stress net also gets back 1/11 of the extra rent as a GST credit.
+- Break-even = (A$107,883.97 + extra rent less PM A$24,585.37) ÷ A$6,582.50.
+- Peak funding and payback are re-run month by month with the same cashflow rules as Sections 4 and 7.
+
+**Plain English:**
+- Each extra A$1,000 of rent costs A$1,000 a month (about A$909 after the GST credit).
+- At A$10,500 the business still clears about A$32.7k a month on the repo basis, or about A$21.2k in the GST-stress case.
+- Payback slips by 1 to 2 months.
+- The real risk is the cash buffer: it shrinks to about A$11k, and the bigger floor area's fit-out (item 12b, up to about A$63.8k) is not in it yet.
+
+---
+
+## 10. Lab fee sensitivity: dual-lab tender (🆕 v0.2)
+
+**Strategy:** PathWest and WDP compete on courier plus lab analysis through a tender. GTT employs its own 2 phlebotomists (already in payroll, Section 3a).
+
+**What the repo assumes: A$0 lab fee to GTT (Medicare bulk-billing by the lab).**
+- "GTT Center Perth earns zero revenue from pathology billing ... the pathology partner (WDP/PathWest) bills Medicare directly" (S11).
+- "Your OGTT is bulk-billed by WDP at no charge to you" for Medicare card holders (S28).
+- The partner's revenue per client is "the Medicare rebate value of the OGTT test itself ... not a fee GTT Center Perth pays the partner directly" (S26). Courier cost is not modelled anywhere in the repo (S26).
+- So no lab or courier fee appears in any repo cost line. 🔴 **Actual tender fees are TO CONFIRM.**
+
+**Fee basis (TM):** a flat fee per AM client, charged at the steady-state volume of 473.94 AM clients/month (18 x 26.33). It ramps with volume in Months 1 to 4. GST-stress column assumes the fee includes GST and GTT claims the credit.
+
+**At headline rent A$8,000 (startup capital A$336,198):**
+
+| Fee per client | Monthly cost | **Net / month (repo)** | Net / month (GST-stress) | Break-even AM/day (repo / GST) | Peak funding (with GST) | Headroom in capital | Payback (repo / GST) |
+|---|---|---|---|---|---|---|---|
+| A$0 (repo) | A$0.00 | **A$35,186.40** | A$23,442.58 | 12.655 / 14.083 | A$318,176.16 | 🟢 A$18,021.84 | M13 / M18 |
+| A$10 | A$4,739.40 | **A$30,447.00** | A$19,134.03 | 13.182 / 14.669 | A$326,530.43 | 🟠 A$9,667.57 | M15 / M22 |
+| A$20 | A$9,478.80 | **A$25,707.60** | A$14,825.49 | 13.755 / 15.307 | A$334,884.70 | 🔴 A$1,313.30 | M17 / M27 |
+| A$30 | A$14,218.20 | **A$20,968.20** | A$10,516.94 | 14.380 / 16.003 | A$344,627.24 | 🔴 short by A$8,429.24 | M20 / M38 |
+
+**At rent A$10,500 (startup capital A$341,198):**
+
+| Fee per client | **Net / month (repo)** | Net / month (GST-stress) | Break-even AM/day (repo / GST) | Peak funding (with GST) | Headroom in capital | Payback (repo / GST) |
+|---|---|---|---|---|---|---|
+| A$0 | **A$32,686.40** | A$21,169.85 | 13.034 / 14.462 | A$330,221.62 | 🟠 A$10,976.38 | M14 / M20 |
+| A$10 | **A$27,947.00** | A$16,861.30 | 13.577 / 15.065 | A$338,575.89 | 🔴 A$2,622.11 | M16 / M25 |
+| A$20 | **A$23,207.60** | A$12,552.76 | 14.168 / 15.720 | A$346,930.16 | 🔴 short by A$5,732.16 | M19 / M33 |
+| A$30 | **A$18,468.20** | A$8,244.21 | 14.812 / 16.434 | A$358,945.43 | 🔴 short by A$17,747.43 | M23 / M49 |
+
+**Plain English:**
+- Every A$10 per client costs about A$4,739 a month, about the same as 0.7 extra AM clients/day.
+- The business stays profitable even at A$30 per client. But from about A$20 per client, the startup capital no longer covers the Month 3 cash low.
+- Tender goal: A$0 to GTT (lab earns from Medicare), or at most about A$10 per client. Get courier, consumables supply and any rental or fee terms in writing from both labs.
+
+---
+
+## 11. Two-tier GST invoicing (proposed, s38-10 GST Act) (🆕 v0.2)
+
+> **This is general knowledge, not your personal documents. Verify before acting.**
+> **Status: proposed; requires accountant advice and possibly an ATO private ruling.** Nothing here is settled tax treatment.
+
+### 11a. The proposed structure
+
+| Invoice line | What it covers | Proposed GST |
+|---|---|---|
+| Clinical phlebotomy component | Blood collection by GTT's employed phlebotomist for the referred GTT test | GST-free under s38-10 **only if** every condition below is met. Unproven |
+| Wellness lounge component | Treatments, lounge access, refreshments | Taxable, 10% GST |
+| Pathology test itself | Lab analysis | Not GTT's supply. The lab bills Medicare (S11, S26) |
+
+### 11b. Why this is not settled (read before relying on it)
+
+- 🔴 **Recognised professional test.** s38-10 only covers services by a recognised professional in the s38-10 table (for example nursing, physiotherapy, pharmacy). To my knowledge, phlebotomy is not a listed profession. A collection by a registered nurse might arguably sit under nursing. A phlebotomist alone may not qualify.
+- 🔴 **"Generally accepted as necessary" test.** The service must be generally accepted in the profession as necessary for appropriate treatment of the recipient.
+- 🔴 **Pathology is normally the lab's Medicare service, not GTT's.** The collection is usually part of the lab's own Medicare-billed service. Whether a GTT-employed phlebotomist's collection is a separate supply by GTT is **not settled**.
+- 🟠 **Repo conflict.** The repo currently says the A$250 package is 100% wellness and lounge, with the pathology billed separately to Medicare (S24 via S11, S25). That framing supports no GST-free part at all. The repo's older Xero coding (S12) assumed a mixed supply. A two-tier invoice changes this framing and must be decided on purpose.
+- 🟠 **Fair price.** Any clinical price has to be a genuine, market-supportable value. Shifting price into the GST-free line just to cut GST risks the ATO's anti-avoidance rules.
+- 🟢 **GST credits are kept.** GST-free supplies (unlike input-taxed ones) do not stop GTT claiming GST credits on its costs.
+
+### 11c. Effect on net profit
+
+**The repo's pricing supports no clinical / lounge split** (S24 says the package is 100% wellness and lounge). So every split below is a **TM assumption**. The A$50 row is anchored to one real market price: a competitor's A$50 "pathology only" offer (S27, Tier 3, not GTT's price).
+
+Method (TM): GST saved per month = AM clients/month (473.94) x clinical amount ÷ 11. PM is unchanged (taxable). Compared with the GST-stress downside, where all AM sales are taxable.
+
+| Clinical part of each A$250 package (assumption) | Share | GST saved / month | **Net / month at A$8,000** | Net at A$9,500 | Net at A$10,500 | Break-even AM/day (GST, A$8,000) | Payback after GST (A$8,000) |
+|---|---|---|---|---|---|---|---|
+| A$0 (GST-stress downside) | 0% | A$0.00 | **A$23,442.58** | A$22,078.94 | A$21,169.85 | 14.083 | M18 |
+| A$25 | 10% | A$1,077.14 | **A$24,519.72** | A$23,156.08 | A$22,246.99 | 13.943 | M17 |
+| A$50 (market anchor) | 20% | A$2,154.27 | **A$25,596.85** | A$24,233.21 | A$23,324.12 | 13.806 | M17 |
+| A$75 | 30% | A$3,231.41 | **A$26,673.99** | A$25,310.35 | A$24,401.26 | 13.672 | M16 |
+
+**Plain English:**
+- If it works, a two-tier invoice adds about A$1.1k to A$3.2k a month over the GST-stress downside.
+- It does not change the A$35,186.40 headline (that figure has no GST line at all).
+- It closes only a small part of the roughly A$11.7k a month gap between headline and downside.
+- Worth asking the accountant. Not worth building the business case on.
 
 ---
 

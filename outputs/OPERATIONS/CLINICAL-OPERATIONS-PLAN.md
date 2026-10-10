@@ -1,4 +1,4 @@
-# GTT Center Perth: Clinical Operations and Lab Testing Feasibility Plan
+# GTT Center Perth: Clinical Operations and Lab Testing Feasibility Plan (DRAFT v0.2, 2026-10-10, dual-lab)
 
 **DRAFT for Anthony's sign-off. Nothing here has been sent to anyone.**
 Prepared by Grace (Operations Manager) | 2026-10-10 | All money in AUD (A$).
@@ -14,13 +14,15 @@ Rules used: every claim cites a repo file by ID (key at the bottom). Anything no
 | Question | Answer | Status |
 |---|---|---|
 | Who collects the blood? | GTT's own employed phlebotomists, 2 chairs, 2 people on shift [S1 §0, §4] | ✅ decided 2026-09-19 |
-| Who tests the blood? | A pathology partner's lab. No partner is signed [S2, S3] | 🟡 |
-| Who moves the blood? | Partner courier (PathWest said yes to pickups). Staff drop-off is the fallback [S4 §4e-vi, S5 §2c-ii] | 🟡 |
-| Anthony's "way ahead" on lab testing | Described here as: in-house phlebotomist + partner lab + courier. No partner terms are in the repo. Which partner, what cost, what term: unknown | 🟡 TO CONFIRM |
-| Biggest blockers | No signed partner. No venue. No written credentialing path for our phlebotomists. No cost figure from any partner | 🔴 |
-| Who holds the Medicare collection-centre approval? | The partner (an Approved Pathology Authority), never GTT [S6 Step 1a] | ✅ |
+| Who tests the blood? | PathWest or WDP, chosen by tender (dual-lab, locked 2026-10-10). Neither signed. Clinipath is an optional third bidder only if it replies [S2, S3] | 🟡 |
+| Who moves the blood? | Courier from the winning lab (PathWest said yes to pickups; WDP feasible with correct tubes). Staff drop-off is the fallback [S4 §4e-vi, S5 §2c-ii] | 🟡 |
+| Anthony's way ahead (locked 2026-10-10) | 2 certified in-house phlebotomists guarantee the premium care experience. Courier and lab analysis go to tender between PathWest and WDP for the best per-test fee schedule. Fees for both TO CONFIRM | 🟡 TO CONFIRM |
+| Biggest blockers | No signed lab agreement. No venue. No written credentialing path for our phlebotomists. No cost figure from any partner | 🔴 |
+| Who holds the Medicare collection-centre approval? | The partner (an Approved Pathology Authority), never GTT [S6 Step 1a]. How this works with two competing labs is not solved: see Section 10 | ✅ rule, 🔴 two-lab mechanics |
 
-Key volume used in this plan: **18 morning clients a day, Monday to Saturday, up to 9 pairs, 2 chairs** [S1 §1, S7 §0.6a]. This is a planning target, not booked demand. The older 10-client, 12-client and 8-client figures in some clinical files are superseded (Section 12, C1).
+Key volume used in this plan: **18 morning clients a day, Monday to Saturday, up to 9 pairs, 2 chairs** [S1 §1, S7 §0.6a]. This is a planning target, not booked demand. Premises: 257 to 290 sqm minimum with 2 dedicated blood collection rooms (locked 2026-10-10; essential for clinical flow and to prevent bottlenecks), rent budget A$9,500 to A$10,500 a month.
+
+Profit baseline this plan refers to: +A$35,186/month (v3.0 model at A$8,000 rent). Conservative "GST-stress" downside: +A$23,443/month. At the new rent budget, net is about +A$32,686 to +A$33,686/month (Theodore's financial model has the exact figures). The older 10-client, 12-client and 8-client figures in some clinical files are superseded (Section 12, C1).
 
 ---
 
@@ -33,7 +35,7 @@ Key volume used in this plan: **18 morning clients a day, Monday to Saturday, up
 | Draws blood | ✅ | | |
 | Tubes, bags | Partner: PathWest says free [S4 §4e-vi]. WDP: 🟡 | | |
 | 75g glucose drink | GTT buys it. PathWest does not supply. WDP 🟡 [S4, S9 E21] | | |
-| Courier or sample transport | | ✅ (PathWest confirmed) | |
+| Courier or sample transport | | ✅ winning lab (PathWest confirmed pickup; WDP feasible) | |
 | Lab testing and Medicare billing | | ✅ | |
 | Results to doctor | | ✅ | |
 | Tell the patient her result | | | ✅ GTT never does [S10 §12] |
@@ -151,7 +153,7 @@ What this means for planning:
 | Opening check | Fridge temperature checked before opening | S23 |
 | Fridge out of range | Collection service is not offered until fixed. Booked clients are phoned. Partner told | S23 |
 | Centrifuge fails | Ice-slurry backup, transport within 30 min (backup only) | S18 |
-| Two rooms | Shared or doubled fridge and centrifuge is undecided | 🟡 [S22 2026-08-27] |
+| Two rooms | 2 dedicated rooms locked 2026-10-10. Shared or doubled fridge and centrifuge is undecided | 🟡 [S22 2026-08-27] |
 
 ---
 
@@ -201,14 +203,14 @@ Who acts:
 
 | Item | Current position | Source |
 |---|---|---|
-| On shift | 2 phlebotomists (Chair A, Chair B), 07:00 to 13:00, Monday to Saturday | S28 Pos 02 |
+| On shift | 2 certified in-house phlebotomists (Chair A, Chair B), 07:00 to 13:00, Monday to Saturday. Guarantees the premium care experience | S28 Pos 02 |
 | On the books | 4 (relief pool), because no one else can cover phlebotomy | S28 §1 |
 | Employment | Casual at first, review at 3 to 6 months | S28 |
 | Reports to | Venue Manager. No clinical supervisor role | S28, S12 |
 | Qualification | Certificate III in Pathology Collection. Code **HLT37525** (HLT37215 was retired 21 Dec 2025) | S8 §5b, S3 |
 | Government registration | None. Phlebotomists are not AHPRA-registered | S10 §7 |
 | Pre-start checks | Police clearance, immunisation records, CPR (annual) and First Aid (3-year), anaphylaxis (annual), confidentiality agreement | S26 §8, S12 §8 |
-| Partner sign-off | Partner must engage or credential each collector under its QMS (quality management system). Process unpublished by all 4 partners | 🟡 S8 §5d |
+| Lab sign-off | Each lab we use must engage or credential each collector under its QMS (quality management system). Process unpublished by all 4 partners | 🟡 S8 §5d |
 | Award | MA000027 Health Professionals and Support Services | S28 |
 | Pay used | A$33.71 to A$35.04 an hour casual (2026-08-16 research) | S28. See C12 |
 | Hiring | On hold until partner AND location are settled | ⏸ S29 |
@@ -237,10 +239,29 @@ Relief question for the partner: can GTT use the partner's own relief collectors
 | Work safety | Work Health and Safety Act 2020 (WA). WorkSafe WA notifiable incidents | ✅ [S26 §9] |
 | Insurance | No broker quote. Public liability A$20M and professional indemnity A$5M are modelled only. Clinical-liability and cyber lines unresolved [S34 §2] | 🔴 |
 | Awards | Pay-rate clauses for MA000005 and MA000027 not yet confirmed with Fair Work | 🟡 [S34 §3] |
+| GST on the invoice | Proposed two-tier invoice: clinical phlebotomy component possibly GST-free as a health service (GST Act s38-10), wellness lounge component taxable. s38-10 has conditions on who supplies the service, and GTT is not a pathology provider. Proposed, to be confirmed by the accountant / ATO ruling | 🟡 |
+| ACC with two labs | See Section 10. Verify with both labs and an adviser | 🔴 |
 
 ---
 
-## 10. Partner options matrix
+## 10. Lab tender (dual-lab) and partner options matrix
+
+**Lab tender (dual-lab strategy, locked by Anthony 2026-10-10).** Anthony: "We need to leave both labs open as their prices may be different." GTT employs 2 certified in-house phlebotomists, which guarantees the premium care experience. Courier and lab analysis go out to tender between PathWest and WDP for the best per-test fee schedule. Clinipath stays an optional third bidder only if it ever replies (3 attempts kept on record).
+
+| Criterion | PathWest | WDP | Status |
+|---|---|---|---|
+| Per-test fee | TO CONFIRM. Cost question of 2026-09-03 unanswered | TO CONFIRM. No figure given | 🔴 no fees from either lab |
+| Courier cutoffs and pickups | Courier pickup confirmed 2026-09-01 (fluoro-ox tubes). Times TO CONFIRM | Feasible with correct tubes. Overnight storage conditional. No fixed cutoff | 🟡 times in writing from both |
+| Turnaround | TO CONFIRM | TO CONFIRM | 🟡 |
+| Tube and consumables supply | Tubes and bags free if volume is large. Glucose drink not supplied | TO CONFIRM | 🟡 |
+| Result delivery to referring doctor | TO CONFIRM | TO CONFIRM | 🟡 |
+| Minimum term and volume | Not given | Open item: minimum term | 🟡 |
+| ACC (Approved Collection Centre) arrangement | TO CONFIRM | TO CONFIRM | 🔴 see caveat below |
+| Other open items | Declined to supply staff (not needed, GTT employs) | Quality feedback, State Business Manager input, staffing cost | 🟡 |
+
+**Regulatory caveat (not solved).** Only the pathology partner can hold the Commonwealth ACC approval for a collection room. Two competing labs cannot both hold it for the same room. Options to test: one ACC-holding lab per room (we plan 2 rooms), a separate arrangement per room or per lab, or one lab holding it while the other is used for courier and analysis only if its rules allow. Verify with both labs and an adviser before relying on any of these.
+
+### 10.1 Partner options matrix
 
 | | **WDP** (Western Diagnostic Pathology) | **PathWest** (WA Health) | **Clinipath** (Sonic) |
 |---|---|---|---|
@@ -256,10 +277,10 @@ Relief question for the partner: can GTT use the partner's own relief collectors
 | Room standard | Gave a detailed room list. We checked our plan against it. 5 gaps noted [S35] | Not asked | Not asked |
 | Open at partner | Quality Department view and State Business Manager figure | Cost ballpark, contract shape, next steps | Everything |
 | Risk | Carole sounds like she has reached her limit | Wants own room in a "clinic with doctors". Looks like PathWest preference, not law, unconfirmed [S15] | Silence |
-| Standing decision | Primary. Chase through another WDP contact | Do not lock in until WDP answers | Decide by 2026-10-21 whether to drop (date from Anthony's brief, not in repo) |
+| Standing decision (locked 2026-10-10) | Competing bidder. Chase open items; ask another WDP contact | Competing bidder. Chase the cost question | Optional third bidder only if it ever replies. 3 attempts kept on record |
 
 Also: **Australian Clinical Labs (ACL)** was emailed 2026-08-29, no reply [S36].
-Model chosen for the matrix: GTT collects, partner does lab and courier only. Both WDP and PathWest were told this; WDP and Clinipath were also offered the partner-supplies-staff alternative.
+Model chosen for the matrix: GTT's 2 in-house phlebotomists collect; the winning lab or labs do analysis and courier only. Both WDP and PathWest were told this; WDP and Clinipath were also offered the partner-supplies-staff alternative.
 Industry context: the two big listed operators say they are closing collection centres, so a new site needs a strong volume story. Our volume is about 9,500 to 14,000 specimens a year at 18 clients a day (internal estimate, low confidence) [S37].
 
 ---
@@ -268,14 +289,16 @@ Industry context: the two big listed operators say they are closing collection c
 
 | # | Decision or gate | Owner | Status |
 |---|---|---|---|
-| 1 | Written yes from one partner for courier and lab testing | reed | 🟡 |
-| 2 | Partner's written credentialing path for our phlebotomists | reed | 🟡 |
+| 1 | Written fee schedules and terms from PathWest and WDP; tender decision (one lab or both) | reed | 🟡 |
+| 2 | Each lab's written credentialing path for our phlebotomists | reed | 🟡 |
 | 3 | Partner confirms: spin on site or not; consumables; glucose drink; waste; pickup time | reed | 🟡 |
-| 4 | Venue and lease; collection room entitlement for the partner (s23DNBA) | catherine with grace | ⏸ |
+| 4 | Venue and lease; collection room entitlement for the ACC-holding lab, per room if two labs (s23DNBA); 257 to 290 sqm, 2 rooms, rent A$9,500 to A$10,500 | catherine with grace | ⏸ |
 | 5 | Sightline answer for the seated rule | reed | 🟡 |
 | 6 | Hypoglycaemia and needle-stick procedures drafted | grace | 🔴 |
 | 7 | Solicitor review of consent form and privacy policy | grace | 🔴 |
 | 8 | Insurance quote (clinical line included) | grace | 🔴 |
+| 9 | ACC arrangement with two competing labs: verify with PathWest, WDP and an adviser | reed with grace | 🔴 |
+| 10 | Accountant: proposed two-tier GST invoice (s38-10) / ATO ruling | grace | 🟡 |
 
 ---
 
@@ -283,7 +306,7 @@ Industry context: the two big listed operators say they are closing collection c
 
 | ID | Topic | What the files say | What this plan uses | Action |
 |---|---|---|---|---|
-| C1 | Volume and money baseline | Brief and the 2026-10-08 CFO analysis [S38] quote 570 visits, A$113,712.16 revenue, A$88,625.09 costs, +A$25,087.07 net. That is v2.0, **superseded** (about 10 AM clients). Older clinical files also say 8, 10 or 12 clients. CURRENT-STATE and P&L v3.0 say 18 AM/day [S1, S39] | 18 AM clients/day, ancillary A$0. Figures in the tracker | Logged. Old numbers kept only as history |
+| C1 | Volume and money baseline | Brief and the 2026-10-08 CFO analysis [S38] quote 570 visits, A$113,712.16 revenue, A$88,625.09 costs, +A$25,087.07 net. That is v2.0, **superseded** (about 10 AM clients). Older clinical files also say 8, 10 or 12 clients. CURRENT-STATE and P&L v3.0 say 18 AM/day [S1, S39] | 18 AM clients/day, ancillary A$0. Figures in the tracker | ✅ RESOLVED (Anthony 2026-10-10): baseline is +A$35,186/month (GST-stress downside +A$23,443). Old numbers kept only as history |
 | C2 | When T=0 starts | Protocol: from end of the drink. Schedule: Draw 2 is Draw 1 + 60 min and the drink fits inside the 5-min draw. Room guide: draw plus drink takes 10 to 15 min | Schedule (it is WDP's hard mark) | Ask partner which clock they count from |
 | C3 | Start time | WDP: not after 10:30. PathWest 2019: before 10:00 preferred. Test reference: "ADIPS 2025: 8:00 to 10:00", last start 9:30. Table 1 runs 07:00 to 10:20 | WDP (the partner) | Ask partner to confirm 07:00 start is acceptable. ADIPS claim not verified here |
 | C4 | Fasting hours | 10 to 12 (PathWest 2024). 8 to 14 (test reference). 8 to 16 (competitor MIWM) | 10 to 12 | Partner to confirm |
@@ -301,14 +324,18 @@ Industry context: the two big listed operators say they are closing collection c
 | C16 | Incident logging time | Emergency plan: 2 hours in §5, 24 hours in §9 | 2 hours | Fix plan |
 | C17 | CPR and first aid | Emergency plan: CPR HLTAID009 yearly, First Aid HLTAID011 3-yearly. Test reference: CPR HLTAID011 every 3 years | Emergency plan | Confirm with training provider |
 | C18 | Vein attempts | 2 tries then second collector (protocol); 2 per arm (reference) | Protocol | Partner rule governs |
-| C19 | Room size and count | 9, 10 or 12 to 14 sqm; 2 rooms since 2026-08-27, footprint about 257 to 259 sqm; shared kit unresolved [S22] | Two rooms | Fit-out unresolved until venue |
+| C19 | Room size and count | 9, 10 or 12 to 14 sqm; 2 rooms since 2026-08-27, footprint about 257 to 259 sqm; shared kit unresolved [S22] | ✅ RESOLVED (Anthony 2026-10-10): 2 dedicated rooms, 257 to 290 sqm minimum. Room size and shared kit still open until venue |
 | C20 | Partner economics file | Says WDP confirmed a single end-of-day pickup. No such WDP statement in the correspondence | Not relied on | Correct the file |
 | C21 | PathWest status | Older log says effectively declined; later corrected to progressing; 09-01 unconditional courier | Latest | Keep corrected |
 | C22 | Police and child checks | Protocol: "Working with Vulnerable People". Staff profile: Working with Children not required. Naming unclear | 🟡 | **General information, verify with adviser/regulator** |
 | C23 | Guideline edition | Protocol cites ADIPS 2014. Reference and brief cite ADIPS 2025 thresholds | ADIPS 2025 for thresholds | Update protocol |
 | C24 | Operations manual | Still the 8-client model; risk register #6 | Do not train from it | Rewrite |
-| C25 | Anthony's "way ahead" | Not in repo | Described per brief | Log partner, terms, date |
+| C25 | Anthony's "way ahead" | Not in repo | ✅ RESOLVED (Anthony 2026-10-10): logged as dual-lab. 2 in-house phlebotomists, courier and lab tendered between PathWest and WDP. Fees TO CONFIRM |
 | C26 | Hypoglycaemia, needle-stick | No procedure | Drafts needed | Section 7, 6 |
+| C27 | ACC with two competing labs | Only the partner can hold the Commonwealth ACC approval. How it works with two labs is unverified | Not claimed as solved | Verify with both labs and an adviser |
+| C28 | GST on the invoice | Proposed two-tier invoice; s38-10 has supplier conditions and GTT is not a pathology provider | Proposed only | Accountant / ATO ruling |
+| C29 | Rent vs costs model | v3.0 costs assume A$8,000; new budget A$9,500 to A$10,500 | +A$35,186 headline plus new-rent line | Theodore's model has exact figures |
+| C30 | Lab fees | No per-test fee from PathWest or WDP | TO CONFIRM | Tender |
 
 ---
 
