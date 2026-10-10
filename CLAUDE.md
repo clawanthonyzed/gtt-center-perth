@@ -36,3 +36,10 @@ Copied from the empire shared skill library (`/opt/openclaw/shared/skills/` on s
 - **`docs/CURRENT-STATE.md`** — the single canonical source for package prices, client capacity, headcount, monthly net P&L, and startup capital range. Every other document defers to it.
 - **`docs/VERIFICATION-TRACKER.md`** — the single running list of unconfirmed facts, who can confirm each, and status (merges the former `05_open_questions_for_founder.md`, `regulatory-accreditation-tracker.md`, `04_roadmap_next_steps.md`).
 - Run `python tools/check_consistency.py` before quoting any figure externally.
+
+## HARD RULE: Human-in-the-Loop Publishing Shield (2026-10-10)
+
+Anthony: "I need to view whatever is getting put out through Cudan Studio, it is a real business." The same applies to GTT Center Perth.
+- No agent, workflow, script or n8n flow may post to Google Business Profile, Instagram, Facebook, TikTok or any social media. None may publish to a website, send an email, or message a customer, partner, landlord or agent on its own.
+- Every marketing, email and social output is a DRAFT task card on EmpireOS Tasks (/tasks). The database trigger hitl_publishing_shield sets finished agent tasks for this venture to "awaiting_approval". Nothing goes out until Anthony presses Approve on that exact content.
+- Publishing automations stay inactive unless they fire only from an approved task, and are never activated without Anthony instruction.
