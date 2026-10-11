@@ -63,6 +63,70 @@ tr:nth-child(even) td { background:var(--stone); }
 .bar { display:flex; height:70px; border-radius:4px; overflow:hidden; font-size:30px; font-weight:700; margin:10px 0 24px 0; }
 .bar div { display:flex; align-items:center; justify-content:center; }
 
+
+/* visual-financials slides (shared with visual-financials.html) */
+
+.vf { --ivory:#FAF6EE; --stone:#E8DAC5; --brown:#33261E; --terra:#A9654E; --olive:#5E5F45; --rose:#D9A08C; --brass:#9C7A46;
+  font-family:'DM Sans','Segoe UI',Verdana,Tahoma,Arial,sans-serif; color:#33261E; }
+.vf .vf-src { display:block; font-size:0.62em; color:#5E5F45; letter-spacing:0.01em; margin-top:0.2em; font-weight:500; }
+.vf .vf-svg { width:100%; height:auto; display:block; font-family:'DM Sans','Segoe UI',Verdana,Arial,sans-serif; }
+.vf .vf-tl { font-size:17px; font-weight:700; }
+.vf .vf-axis { font-size:15px; fill:#33261E; font-weight:500; }
+.vf .vf-time { font-size:16px; fill:#33261E; font-weight:700; }
+.vf .vf-dot { font-size:17px; font-weight:700; }
+.vf .vf-rowlab { font-size:26px; font-weight:700; fill:#33261E; font-family:'Fraunces',Georgia,serif; }
+.vf .vf-rowsub { font-size:14px; fill:#5E5F45; font-weight:700; }
+.vf .vf-total { font-size:56px; font-family:'Fraunces',Georgia,serif; }
+.vf .vf-tsrc { fill:#5E5F45; font-weight:500; }
+.vf .vf-mk { font-size:17px; font-weight:700; }
+.vf .vf-bl { font-size:12.5px; font-weight:700; }
+.vf .vf-cl { font-size:13px; font-weight:700; fill:#33261E; }
+.vf .vf-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:0.6em; margin:0 0 0.8em 0; }
+.vf .vf-step { background:#E8DAC5; border-radius:6px; padding:0.7em 0.8em; position:relative; }
+.vf .vf-sn { position:absolute; top:0.4em; right:0.6em; font-weight:700; color:#A9654E; font-size:0.8em; }
+.vf .vf-big { font-family:'Fraunces',Georgia,serif; font-size:2em; line-height:1.05; color:#33261E; }
+.vf .vf-lab { font-size:0.8em; font-weight:700; color:#33261E; line-height:1.3; margin-top:0.2em; }
+.vf .vf-draws { background:#FAF6EE; border:2px solid #E8DAC5; border-radius:6px; padding:0.6em 0.8em; margin-bottom:0.8em; max-width:30em; }
+.vf .vf-mini { max-width:26em; }
+.vf .vf-math { background:#33261E; color:#FAF6EE; border-radius:6px; padding:0.8em 1em; margin:0 0 0.8em 0; border:3px solid #9C7A46; }
+.vf .vf-math .vf-src { color:#E8DAC5; }
+.vf .vf-eq { font-size:1.35em; line-height:1.5; }
+.vf .vf-eq b { color:#D9A08C; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:1.25em; }
+.vf .vf-eq b.vf-hl { font-size:1.6em; }
+.vf .vf-eq2 { opacity:0.92; font-size:1.1em; }
+.vf .vf-k { display:inline-block; min-width:4.2em; color:#E8DAC5; font-weight:700; }
+.vf .vf-note { font-size:0.78em; color:#5E5F45; margin:0.5em 0 0 0; line-height:1.4; }
+.vf .vf-be { display:grid; grid-template-columns:1fr 1fr; gap:1em; }
+.vf .vf-col { border-radius:6px; padding:0.9em 1.1em; }
+.vf .vf-a { background:#E8DAC5; }
+.vf .vf-b { background:#33261E; color:#FAF6EE; border:3px solid #9C7A46; }
+.vf .vf-b .vf-lab, .vf .vf-b .vf-val { color:#FAF6EE; }
+.vf .vf-b .vf-src { color:#E8DAC5; }
+.vf .vf-colhead { font-family:'Fraunces',Georgia,serif; font-size:1.6em; color:#A9654E; font-weight:600; }
+.vf .vf-b .vf-colhead { color:#D9A08C; }
+.vf .vf-colsub { font-size:0.85em; font-weight:700; margin-bottom:0.5em; }
+.vf .vf-row, .vf .vf-res { display:grid; grid-template-columns:1.4em 1fr; gap:0.4em; padding:0.45em 0; border-top:2px solid rgba(156,122,70,0.45); }
+.vf .vf-op { font-size:1.6em; font-weight:700; color:#A9654E; line-height:1; }
+.vf .vf-b .vf-op { color:#D9A08C; }
+.vf .vf-val { font-family:'Fraunces',Georgia,serif; font-size:1.55em; line-height:1.1; }
+.vf .vf-resn { font-family:'Fraunces',Georgia,serif; font-size:3.4em; line-height:1; color:#33261E; }
+.vf .vf-b .vf-resn { color:#D9A08C; }
+.vf .vf-lock { display:inline-block; background:#A9654E; color:#FAF6EE; font-size:0.85em; padding:0.05em 0.5em; border-radius:3px; letter-spacing:0.08em; margin-left:0.3em; }
+.vf .vf-tbl { display:grid; font-size:0.85em; margin-top:0.6em; }
+.vf .vf-tr { display:grid; grid-template-columns:0.6fr 1fr 1fr 1.3fr; }
+.vf .vf-tr > div { padding:0.3em 0.6em; border-bottom:1px solid #E8DAC5; }
+.vf .vf-th > div { background:#33261E; color:#FAF6EE; font-weight:700; }
+.vf .vf-tr:nth-child(even) > div { background:#F1E7D7; }
+.vf .vf-step, .vf .vf-col, .vf .vf-tr > div, .vf .vf-src, .vf .vf-note { min-width:0; overflow-wrap:anywhere; }
+.vf .vf-na { color:#5E5F45; font-style:italic; }
+
+.slide .vf { font-size:26px; }
+.slide .vf .vf-steps { margin-bottom:12px; }
+.slide .vf .vf-cap { max-width:1280px; margin:0 auto; }
+.slide .vf .vf-math { padding:10px 20px; margin-bottom:10px; }
+.slide.vfs { padding-top:56px; }
+.slide.vfs h1 { font-size:64px; margin-bottom:18px; }
+
 #hud { position:fixed; left:0; right:0; bottom:0; display:flex; justify-content:space-between;
   padding:6px 16px; font-size:15px; color:var(--stone); background:rgba(51,38,30,0.92); z-index:10; }
 html.ext .int { display:none !important; }
@@ -317,7 +381,185 @@ html.ext .int { display:none !important; }
     <li>Year 1 net A$322,015 (A$196,609 after GST). Payback Month 11 (Month 15 after GST).</li>
   </ul>
   <p class="small warn" style="font-size:26px !important">Break-even 8.266 a day (GST-stress 9.255; ceiling 8.455; prudent 8.645). 45-min cadence adopted 2026-10-11 (quiet mornings). Fill assumed 100%: each 1% of fill at capacity is about A$1,185/month, 85% fill gives about +A$17.4k, 70% makes a loss. That is why the waitlist matters. GST two-tier invoice is proposed only, accountant / ATO ruling to confirm. Planning estimates, no trading data.</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-11 | Working shown: <a href="visual-financials.html" style="color:#A9654E">visual-financials.html</a></div>
+</section>
+
+<!-- VF-1 CAPACITY WORKING (internal) -->
+<section class="slide int vfs" data-name="Capacity working">
+  <div class="tag">INTERNAL</div>
+  <h1>Capacity: <span>how 18 a day is found</span></h1>
+  <div class="vf" style="font-size:22px"><div class="vf-steps">
+<div class="vf-step"><div class="vf-sn">1</div><div class="vf-big">07:00</div><div class="vf-lab">first booking</div><span class="vf-src">repo tools/am_volume_tier_staffing_solver.py L12</span></div>
+<div class="vf-step"><div class="vf-sn">2</div><div class="vf-big">2</div><div class="vf-lab">chairs, synchronised pairs</div><span class="vf-src">repo tools/am_volume_tier_staffing_solver.py L43</span></div>
+<div class="vf-step"><div class="vf-sn">3</div><div class="vf-big">25 min</div><div class="vf-lab">pair cadence (full mornings)</div><span class="vf-src">repo calculator run, commit 3b576db, 18-client tier</span></div>
+<div class="vf-step"><div class="vf-sn">4</div><div class="vf-big">0 / 60 / 120</div><div class="vf-lab">draw marks (min after start)</div><span class="vf-src">repo tools/am_volume_tier_staffing_solver.py L112-114</span></div>
+<div class="vf-step"><div class="vf-sn">5</div><div class="vf-big">10:30</div><div class="vf-lab">latest first draw = 210 min after 07:00 (WDP guidance window)</div><span class="vf-src">repo tools/am_volume_tier_staffing_solver.py L12, L37</span></div>
+</div>
+<div class="vf-math"><div class="vf-eq"><span class="vf-k">slots</span> = floor(210 ÷ 25) + 1 = 8 + 1 = <b>9</b> &nbsp;x 2 = <b class="vf-hl">18</b> clients</div><div class="vf-eq vf-eq2"><span class="vf-k">quiet</span> = floor(210 ÷ 45) + 1 = 4 + 1 = <b>5</b> &nbsp;x 2 = <b>10</b> clients</div><span class="vf-src">same rule as repo tools/am_volume_tier_staffing_solver.py L127-137 max_feasible_cadence: (pairs - 1) x cadence &lt;= 210. Calculator: last first draw 10:20 at 25 min, 10:00 at 45 min</span></div>
+<svg class="vf-svg vf-cap" viewBox="0 0 1200 345" role="img" aria-label="Pair start times at 25 and 45 minute cadence between 07:00 and 10:30">
+<rect x="270.0" y="40" width="770.0" height="250" fill="#E8DAC5" opacity="0.45"/>
+<line x1="1040.0" y1="30" x2="1040.0" y2="292" stroke="#A9654E" stroke-width="4" stroke-dasharray="10 6"/>
+<text x="1040.0" y="22" text-anchor="middle" class="vf-tl" fill="#A9654E">10:30 latest first draw</text>
+<line x1="270.0" y1="292" x2="1040.0" y2="292" stroke="#33261E" stroke-width="2"/>
+<text x="655.0" y="312" text-anchor="middle" class="vf-axis">210 min window</text>
+<text x="20" y="108" class="vf-rowlab">25 min</text>
+<text x="20" y="132" class="vf-rowsub">full mornings</text>
+<line x1="270.0" y1="110" x2="1003.3" y2="110" stroke="#33261E" stroke-width="3"/>
+<circle cx="270.0" cy="110" r="19" fill="#33261E"/>
+<text x="270.0" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
+<text x="270.0" y="80" text-anchor="middle" class="vf-time">07:00</text>
+<circle cx="361.7" cy="110" r="19" fill="#33261E"/>
+<text x="361.7" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
+<text x="361.7" y="80" text-anchor="middle" class="vf-time">07:25</text>
+<circle cx="453.3" cy="110" r="19" fill="#33261E"/>
+<text x="453.3" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
+<text x="453.3" y="80" text-anchor="middle" class="vf-time">07:50</text>
+<circle cx="545.0" cy="110" r="19" fill="#33261E"/>
+<text x="545.0" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
+<text x="545.0" y="80" text-anchor="middle" class="vf-time">08:15</text>
+<circle cx="636.7" cy="110" r="19" fill="#33261E"/>
+<text x="636.7" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
+<text x="636.7" y="80" text-anchor="middle" class="vf-time">08:40</text>
+<circle cx="728.3" cy="110" r="19" fill="#33261E"/>
+<text x="728.3" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
+<text x="728.3" y="80" text-anchor="middle" class="vf-time">09:05</text>
+<circle cx="820.0" cy="110" r="19" fill="#33261E"/>
+<text x="820.0" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
+<text x="820.0" y="80" text-anchor="middle" class="vf-time">09:30</text>
+<circle cx="911.7" cy="110" r="19" fill="#33261E"/>
+<text x="911.7" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
+<text x="911.7" y="80" text-anchor="middle" class="vf-time">09:55</text>
+<circle cx="1003.3" cy="110" r="19" fill="#33261E"/>
+<text x="1003.3" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
+<text x="1003.3" y="80" text-anchor="middle" class="vf-time">10:20</text>
+<text x="1188" y="124" text-anchor="end" class="vf-total" fill="#33261E">18</text>
+<text x="1188" y="148" text-anchor="end" class="vf-rowsub">9 pairs x 2 chairs</text>
+<text x="20" y="220" class="vf-rowlab">45 min</text>
+<text x="20" y="244" class="vf-rowsub">quiet mornings</text>
+<text x="20" y="262" class="vf-rowsub">(adopted 11 Oct)</text>
+<line x1="270.0" y1="222" x2="930.0" y2="222" stroke="#5E5F45" stroke-width="3"/>
+<circle cx="270.0" cy="222" r="19" fill="#5E5F45"/>
+<text x="270.0" y="228" text-anchor="middle" class="vf-dot" fill="#FAF6EE">2</text>
+<text x="270.0" y="192" text-anchor="middle" class="vf-time">07:00</text>
+<circle cx="435.0" cy="222" r="19" fill="#5E5F45"/>
+<text x="435.0" y="228" text-anchor="middle" class="vf-dot" fill="#FAF6EE">2</text>
+<text x="435.0" y="192" text-anchor="middle" class="vf-time">07:45</text>
+<circle cx="600.0" cy="222" r="19" fill="#5E5F45"/>
+<text x="600.0" y="228" text-anchor="middle" class="vf-dot" fill="#FAF6EE">2</text>
+<text x="600.0" y="192" text-anchor="middle" class="vf-time">08:30</text>
+<circle cx="765.0" cy="222" r="19" fill="#5E5F45"/>
+<text x="765.0" y="228" text-anchor="middle" class="vf-dot" fill="#FAF6EE">2</text>
+<text x="765.0" y="192" text-anchor="middle" class="vf-time">09:15</text>
+<circle cx="930.0" cy="222" r="19" fill="#5E5F45"/>
+<text x="930.0" y="228" text-anchor="middle" class="vf-dot" fill="#FAF6EE">2</text>
+<text x="930.0" y="192" text-anchor="middle" class="vf-time">10:00</text>
+<text x="1188" y="236" text-anchor="end" class="vf-total" fill="#5E5F45">10</text>
+<text x="1188" y="260" text-anchor="end" class="vf-rowsub">5 pairs x 2 chairs</text>
+<text x="20" y="338" class="vf-tsrc" text-anchor="start" font-size="11">times: repo tools/am_volume_tier_staffing_solver.py build_clients_odd (x = slot x cadence)</text>
+</svg></div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-11 | Full working: <a href="visual-financials.html" style="color:#A9654E">visual-financials.html</a></div>
+</section>
+
+<!-- VF-2 BREAK-EVEN WORKING (internal) -->
+<section class="slide int vfs" data-name="Break-even working">
+  <div class="tag">INTERNAL</div>
+  <h1>Break-even: <span>the working</span></h1>
+  <div class="vf" style="font-size:25px"><div class="vf-be"><div class="vf-col vf-a"><div class="vf-colhead">Fixed staffing</div><div class="vf-colsub">full 2 + 8 roster every morning</div>
+<div class="vf-row"><div class="vf-op"></div><div><div class="vf-val">A$107,883.97</div><div class="vf-lab">monthly costs at 18 a day</div><span class="vf-src">repo docs/CURRENT-STATE.md §0; v0.4 model §6a</span></div></div>
+<div class="vf-row"><div class="vf-op">-</div><div><div class="vf-val">A$24,585.37</div><div class="vf-lab">PM revenue (held at full)</div><span class="vf-src">repo docs/CURRENT-STATE.md §0; v0.4 model §6a</span></div></div>
+<div class="vf-row"><div class="vf-op">÷</div><div><div class="vf-val">A$6,582.50</div><div class="vf-lab">one AM client a day for a month: A$250 x 26.33 days</div><span class="vf-src">v0.4 model §6a; v0.4 model §3 line definitions</span></div></div>
+<div class="vf-res"><div class="vf-op">=</div><div><div class="vf-resn">12.655</div><div class="vf-lab">AM clients a day </div><span class="vf-src">repo docs/CURRENT-STATE.md §10 (HIGH segment)</span><div class="vf-lab">70.3% of 18 a day <span class="vf-src">repo docs/CURRENT-STATE.md §10</span></div></div></div></div>
+<div class="vf-col vf-b"><div class="vf-colhead">Demand-responsive</div><div class="vf-colsub">rostered to bookings (adopted)</div>
+<div class="vf-row"><div class="vf-op"></div><div><div class="vf-val">A$78,993.29</div><div class="vf-lab">monthly costs: fixed A$36,738.11 + one 2 + 4 roster every morning A$42,255.18</div><span class="vf-src">v0.4 model §6a; repo shows A$78,993.30 (repo docs/CURRENT-STATE.md §10)</span></div></div>
+<div class="vf-row"><div class="vf-op">-</div><div><div class="vf-val">A$24,585.37</div><div class="vf-lab">PM revenue (held at full)</div><span class="vf-src">v0.4 model §6a</span></div></div>
+<div class="vf-row"><div class="vf-op">÷</div><div><div class="vf-val">A$6,582.50</div><div class="vf-lab">one AM client a day for a month</div><span class="vf-src">v0.4 model §6a</span></div></div>
+<div class="vf-res"><div class="vf-op">=</div><div><div class="vf-resn">8.266</div><div class="vf-lab">AM clients a day <span class="vf-lock">LOCKED</span></div><span class="vf-src">v0.4 model §6a LOCKED (Anthony 2026-10-11); = repo docs/CURRENT-STATE.md §10 LOW segment</span><div class="vf-lab">45.9% of 18 a day <span class="vf-src">v0.4 model §6a</span></div></div></div></div></div>
+<div class="vf-note">Method: repo docs/CURRENT-STATE.md §10 and v0.4 model §6a (PM held at full, solve for AM clients a day). The two columns differ only in the cost line: under demand-responsive rostering a quiet morning runs on 2 phlebotomists + 4 therapists at the 45 min cadence.</div></div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-11 | Full working: <a href="visual-financials.html" style="color:#A9654E">visual-financials.html</a></div>
+</section>
+
+<!-- VF-3 CASHFLOW CHART (internal) -->
+<section class="slide int vfs" data-name="Cashflow chart">
+  <div class="tag">INTERNAL</div>
+  <h1>Cashflow: <span>Month 0 to 12</span></h1>
+  <div class="vf" style="max-width:1560px"><svg class="vf-svg" viewBox="0 0 1200 560" role="img" aria-label="Cashflow Month 0 to 12">
+<line x1="90" y1="432.4" x2="1180" y2="432.4" stroke="#A9654E" stroke-width="2.5" stroke-dasharray="9 6"/>
+<text x="1040" y="422.4" text-anchor="end" class="vf-mk" fill="#A9654E">Peak funding A$267,771 LOCKED (lowest point, Month 1)</text>
+<line x1="1054.2" y1="30" x2="1054.2" y2="470" stroke="#9C7A46" stroke-width="3"/>
+<text x="1046.2" y="44" text-anchor="end" class="vf-mk" fill="#9C7A46">Payback Month 11 (repo basis), Month 15 after GST</text>
+<line x1="90" y1="120.0" x2="1180" y2="120.0" stroke="#33261E" stroke-width="2"/>
+<text x="82" y="125.0" text-anchor="end" class="vf-axis">A$0</text>
+<rect x="102.4" y="120.0" width="28.5" height="293.1" fill="#33261E"/>
+<text x="116.7" y="266.5" text-anchor="middle" class="vf-bl" fill="#FAF6EE" transform="rotate(-90 121.7 266.5)">capex -A$251,198.00</text>
+<text x="131.9" y="498" text-anchor="middle" class="vf-axis">M0</text>
+<rect x="216.8" y="120.0" width="28.5" height="19.3" fill="#A9654E"/>
+<text x="231.0" y="155.3" text-anchor="middle" class="vf-bl" fill="#A9654E">-16,573.03</text>
+<text x="215.8" y="498" text-anchor="middle" class="vf-axis">M1</text>
+<rect x="300.6" y="110.9" width="28.5" height="9.1" fill="#5E5F45"/>
+<text x="314.9" y="102.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">7,782.51</text>
+<text x="299.6" y="498" text-anchor="middle" class="vf-axis">M2</text>
+<rect x="384.5" y="97.5" width="28.5" height="22.5" fill="#5E5F45"/>
+<text x="398.7" y="89.5" text-anchor="middle" class="vf-bl" fill="#5E5F45">19,292.48</text>
+<text x="383.5" y="498" text-anchor="middle" class="vf-axis">M3</text>
+<rect x="437.8" y="120.0" width="28.5" height="6.5" fill="#33261E"/>
+<text x="453.1" y="146.0" text-anchor="middle" class="vf-bl" fill="#33261E">capex</text>
+<text x="453.1" y="160.0" text-anchor="middle" class="vf-bl" fill="#33261E">-5,600.00</text>
+<rect x="468.3" y="85.0" width="28.5" height="35.0" fill="#5E5F45"/>
+<text x="482.6" y="77.0" text-anchor="middle" class="vf-bl" fill="#5E5F45">30,021.77</text>
+<text x="467.3" y="498" text-anchor="middle" class="vf-axis">M4</text>
+<rect x="552.2" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
+<text x="566.4" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
+<text x="551.2" y="498" text-anchor="middle" class="vf-axis">M5</text>
+<rect x="605.5" y="120.0" width="28.5" height="9.1" fill="#33261E"/>
+<text x="620.7" y="146.0" text-anchor="middle" class="vf-bl" fill="#33261E">capex</text>
+<text x="620.7" y="160.0" text-anchor="middle" class="vf-bl" fill="#33261E">-7,774.00</text>
+<rect x="636.0" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
+<text x="650.3" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
+<text x="635.0" y="498" text-anchor="middle" class="vf-axis">M6</text>
+<rect x="719.8" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
+<text x="734.1" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
+<text x="718.8" y="498" text-anchor="middle" class="vf-axis">M7</text>
+<rect x="803.7" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
+<text x="817.9" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
+<text x="802.7" y="498" text-anchor="middle" class="vf-axis">M8</text>
+<rect x="887.5" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
+<text x="901.8" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
+<text x="886.5" y="498" text-anchor="middle" class="vf-axis">M9</text>
+<rect x="971.4" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
+<text x="985.6" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
+<text x="970.4" y="498" text-anchor="middle" class="vf-axis">M10</text>
+<rect x="1055.2" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
+<text x="1069.5" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
+<text x="1054.2" y="498" text-anchor="middle" class="vf-axis">M11</text>
+<rect x="1139.1" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
+<text x="1153.3" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
+<text x="1138.1" y="498" text-anchor="middle" class="vf-axis">M12</text>
+<polyline points="131.9,413.1 215.8,432.4 383.5,400.8 635.0,299.3 886.5,176.1 970.4,135.1 1054.2,94.0" fill="none" stroke="#9C7A46" stroke-width="3" stroke-dasharray="2 5" stroke-linecap="round"/>
+<circle cx="131.9" cy="413.1" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
+<text x="143.9" y="401.1" text-anchor="start" class="vf-cl">-251,198.00</text>
+<circle cx="215.8" cy="432.4" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
+<text x="215.8" y="456.4" text-anchor="middle" class="vf-cl">-267,771.03</text>
+<circle cx="383.5" cy="400.8" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
+<text x="395.5" y="424.8" text-anchor="start" class="vf-cl">-240,696.04</text>
+<circle cx="635.0" cy="299.3" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
+<text x="647.0" y="323.3" text-anchor="start" class="vf-cl">-153,675.47</text>
+<circle cx="886.5" cy="176.1" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
+<text x="898.5" y="200.1" text-anchor="start" class="vf-cl">-48,116.27</text>
+<circle cx="970.4" cy="135.1" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
+<text x="982.4" y="159.1" text-anchor="start" class="vf-cl">-12,929.87</text>
+<circle cx="1054.2" cy="94.0" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
+<text x="1066.2" y="146.0" text-anchor="start" class="vf-cl">22,256.53</text>
+<rect x="90" y="516" width="16" height="16" fill="#33261E"/>
+<text x="114" y="530" class="vf-axis" font-size="15">capex</text>
+<rect x="184" y="516" width="16" height="16" fill="#5E5F45"/>
+<text x="208" y="530" class="vf-axis" font-size="15">monthly net (P&amp;L)</text>
+<rect x="374" y="516" width="16" height="16" fill="#A9654E"/>
+<text x="398" y="530" class="vf-axis" font-size="15">monthly loss</text>
+<circle cx="532" cy="524" r="7" fill="#9C7A46"/>
+<text x="548" y="530" class="vf-axis" font-size="15">cumulative cash, repo basis (dots = published months)</text>
+<text x="90" y="552" class="vf-tsrc" text-anchor="start" font-size="12">data: v0.4 model §3 (net), v0.4 model §4 (capex), v0.4 model §7 (cumulative), v0.4 model §1 (peak funding, payback)</text>
+</svg></div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-11 | Full working: <a href="visual-financials.html" style="color:#A9654E">visual-financials.html</a></div>
 </section>
 
 <!-- 11 FUNDING (internal) -->

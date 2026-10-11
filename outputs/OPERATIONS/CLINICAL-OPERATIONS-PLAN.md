@@ -26,6 +26,24 @@ Profit baseline this plan refers to: +A$35,186/month (v3.0 model at A$8,000 rent
 
 ---
 
+## Timing standard (from the repo calculator)
+
+Source: `tools/draw-event-scheduler.py`, `tools/am_volume_tier_staffing_solver.py` and `tools/am_staggered_staffing_solver.py`, run 2026-10-11 on repo commit 3b576db. Raw output: CALCULATOR-OUTPUT-2026-10-11.txt (server copy /tmp/gtt-calc/). Draw marks and pair start times are from the Table 1 timetable in `docs/scenario-c-sync-timetables.md` section 0.6a [S7], which the solvers reproduce (N=18: last Draw 1 10:20, 8 therapists).
+
+| Item | Standard | Source |
+|---|---|---|
+| First booking, both chairs together | 07:00 | S7 section 0.6a; am_staggered_staffing_solver.py (rosters start 07:05 after Draw 1) |
+| Pair start times (25-min cadence, 9 pairs, 18 clients) | 07:00, 07:25, 07:50, 08:15, 08:40, 09:05, 09:30, 09:55, 10:20 | S7 Table 1; am_volume_tier_staffing_solver.py (N=18, cadence 25) |
+| Draw marks for the 07:00 pair | Fasting 07:00, 60-min 08:00, 120-min 09:00 (each 5 min) | S7 Table 1, clients 1 and 2 |
+| Last Draw 1 | 10:20 | am_volume_tier_staffing_solver.py (18/day) |
+| Last Draw 3 | 12:20 to 12:25 (clients 17 and 18) | S7 Table 1. The solver prints "last departure 12:15"; the repo has not reconciled the 10 minutes |
+| Clients per day | 18 (25-min cadence) | am_volume_tier_staffing_solver.py |
+| Quiet mornings (Anthony decision 2026-10-11) | 45-min cadence, up to 10 clients, last Draw 1 10:00, 4 therapists | am_volume_tier_staffing_solver.py (10 clients, 45 min); max feasible cadence 50 min |
+
+Not used: `draw-event-scheduler.py` prints a different greedy packing (10 clients to a 10:05 last start, 16 to 10:45) because it models Draw 1 as 15 minutes in the chair. The committed schedule in CURRENT-STATE uses 5-minute draws, so Table 1 governs.
+
+---
+
 ## 1. Who does what
 
 | Task | GTT Center Perth | Pathology partner | Nobody (never GTT) |
@@ -86,12 +104,12 @@ Anthony approved the 45-minute pair cadence on 2026-10-11. This is GTT's clinica
 |---|---|
 | Booking | Advance booking 2 to 4 weeks ahead, plus a waitlist that backfills cancellations |
 | Phlebotomists | 2 on every GTT morning that has any GTT booking (Chair A and Chair B) |
-| Mornings with 10 or fewer bookings | 45-min pair cadence, 4 therapists |
+| Mornings with 10 or fewer bookings | 45-min pair cadence, 4 therapists (Anthony decision 2026-10-11; solver-verified at 10, see calculator check below) |
 | Full mornings (15+ weekday / 17+ Saturday) | 25-min pair cadence (the committed Table 1 above), 8 therapists |
 
 The first Draw 1 stays at 07:00 and the last Draw 1 must be no later than 10:30am (WDP guidance [S14]). Source: Theodore's 3-way model v0.4, Sections 1A and 16.
 
-**Confirm with Anthony:** 45-min cadence applies to low-volume mornings only (as modelled); applying it to full mornings would reduce capacity to about 10/day. Working: 10:30am is 210 minutes after a 07:00 start. At 45 minutes, (n - 1) x 45 <= 210 gives n <= 5.67, so 5 pair-slots x 2 chairs = 10 clients. At 25 minutes, (n - 1) x 25 <= 210 gives n <= 9.4, so 9 pair-slots = 18 clients.
+**Confirm with Anthony:** 45-min cadence applies to low-volume mornings only (as modelled); applying it to full mornings would reduce capacity to about 10/day. Calculator check (tools/am_volume_tier_staffing_solver.py, run 2026-10-11, repo commit 3b576db): 10 clients at 45-min cadence = 4 therapists, last Draw 1 10:00, last departure 11:55, max feasible cadence 50 min; 18 clients at 25-min cadence = 8 therapists, last Draw 1 10:20. Output: CALCULATOR-OUTPUT-2026-10-11.txt.
 
 ### 2.3 Fasting
 
