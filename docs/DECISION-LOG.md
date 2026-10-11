@@ -4,6 +4,22 @@
 
 ---
 
+## 2026-10-11: 45-minute pair cadence adopted for low-volume mornings; break-even 8.266 and peak funding A$267,771 locked
+
+**Decision:** Anthony approved the 45-minute pair cadence ("Anthony approves the 45-minute pair cadence"). Scope as modelled in Theodore's 3-way model v0.4: 45-min pair cadence adopted for mornings with 10 or fewer bookings (2 phlebotomists + 4 therapists); 25-min cadence for full mornings (15+ weekday / 17+ Saturday; 2 phlebotomists + 8 therapists). Locked figures: break-even 8.266 AM clients/day (about 8.3) and peak funding A$267,771. Scheduling standard, GTT's clinical standard: advance booking 2 to 4 weeks ahead plus a waitlist, and 2 phlebotomists on every GTT morning.
+
+**Reason:** the 4-therapist roster for quiet mornings is only feasible at a 45-minute cadence inside the WDP guidance window (last Draw 1 no later than 10:30am), per `docs/architecture/AM-DEMAND-DRIVEN-STAFFING-TIERS-2026-09.md` §3, which had marked it "presented, not adopted" pending Anthony's explicit sign-off. Adopting it cuts Months 1 to 3 payroll from A$280,787 to A$214,844 and peak funding from A$318,176 to A$267,771.
+
+**Scope check, open for Anthony to confirm:** 45-min cadence applies to low-volume mornings only (as modelled); applying it to full mornings would reduce capacity to about 10/day. Working: 10:30am is 210 minutes after a 07:00 start. At 45 minutes, (n - 1) x 45 <= 210 gives n <= 5.67, so 5 pair-slots x 2 chairs = 10 clients. At 25 minutes, (n - 1) x 25 <= 210 gives 9 pair-slots = 18 clients. Only the 25-minute cadence on full mornings produces 18/day and the +A$35,186/month steady state.
+
+**Nature of the change:** a decision, not a dollar change. No figure in the model moves from v0.3 to v0.4. Steady state stays +A$35,186.40/month (GST-stress +A$23,442.58). The fill-rate caveat stays: fill is assumed 100%; 85% fill is about +A$17.4k a month and 70% is a loss. The full-mornings-only fallback (model Section 14) is now a contingency only.
+
+**Documents updated:** 3-way financial model v0.4, executive pitch deck v0.4 and slides, launch readiness tracker v0.4 (T10 resolved), clinical operations plan v0.4 (new section 2.2A, scheduling standard). `docs/CURRENT-STATE.md` still shows the 25-minute cadence and needs a follow-up edit.
+
+**Related documents:** `docs/architecture/AM-DEMAND-DRIVEN-STAFFING-TIERS-2026-09.md`, `docs/CURRENT-STATE.md` §10.
+
+---
+
 ## 2026-10-03: Rent budget stays at A$8,000/month for budgeting — footprint-growth gap acknowledged, revisit at lease stage
 
 **Decision:** Anthony reviewed `docs/research/RENT-ECONOMICS-FORENSICS.md` §1's finding that the A$8,000/month rent line was set 2026-07-28 against a 200sqm planning footprint and never recalculated after the venue program grew to 239-249sqm across two later founder decisions (implying A$9,560-9,960/month at the same A$40/sqm/month rate) and instructed: **"leave rent as is for budgeting."**

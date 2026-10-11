@@ -1,4 +1,4 @@
-# GTT Center Perth: Clinical Operations and Lab Testing Feasibility Plan (DRAFT v0.2, 2026-10-10, dual-lab)
+# GTT Center Perth: Clinical Operations and Lab Testing Feasibility Plan (DRAFT v0.4, 2026-10-11, scheduling standard adopted)
 
 **DRAFT for Anthony's sign-off. Nothing here has been sent to anyone.**
 Prepared by Grace (Operations Manager) | 2026-10-10 | All money in AUD (A$).
@@ -77,6 +77,21 @@ Tube for every draw: grey-top (fluoride oxalate) [S10, S4].
 | Fallback table (Table 2) | 08:00 start, 12 clients, last Draw 3 about 12:05 to 12:10 | S7 |
 
 WDP guidance: "would not normally commence a GTT after 10:30am" [S14]. Table 1 fits (last Draw 1 is 10:20). 🔴 Other files disagree on start times (C3).
+
+### 2.2A Scheduling standard (adopted 2026-10-11)
+
+Anthony approved the 45-minute pair cadence on 2026-10-11. This is GTT's clinical scheduling standard:
+
+| Rule | Standard |
+|---|---|
+| Booking | Advance booking 2 to 4 weeks ahead, plus a waitlist that backfills cancellations |
+| Phlebotomists | 2 on every GTT morning that has any GTT booking (Chair A and Chair B) |
+| Mornings with 10 or fewer bookings | 45-min pair cadence, 4 therapists |
+| Full mornings (15+ weekday / 17+ Saturday) | 25-min pair cadence (the committed Table 1 above), 8 therapists |
+
+The first Draw 1 stays at 07:00 and the last Draw 1 must be no later than 10:30am (WDP guidance [S14]). Source: Theodore's 3-way model v0.4, Sections 1A and 16.
+
+**Confirm with Anthony:** 45-min cadence applies to low-volume mornings only (as modelled); applying it to full mornings would reduce capacity to about 10/day. Working: 10:30am is 210 minutes after a 07:00 start. At 45 minutes, (n - 1) x 45 <= 210 gives n <= 5.67, so 5 pair-slots x 2 chairs = 10 clients. At 25 minutes, (n - 1) x 25 <= 210 gives n <= 9.4, so 9 pair-slots = 18 clients.
 
 ### 2.3 Fasting
 

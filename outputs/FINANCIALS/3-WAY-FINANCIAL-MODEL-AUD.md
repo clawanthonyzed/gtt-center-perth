@@ -1,7 +1,7 @@
 # GTT Center Perth: 3-Way Financial Model (AUD)
 
 **Prepared by:** Theodore (CFO consultant) for Grace (GTT Center Perth manager)
-**Version:** v0.3 (2026-10-11, demand-responsive rostering)
+**Version:** v0.4 (2026-10-11, 45-minute cadence adopted; break-even and peak funding locked). Numbers are unchanged from v0.3.
 **Date:** 2026-10-11
 **Repo snapshot:** clawanthonyzed/gtt-center-perth, commit `14b747d` (v0.1), `d96215a` (v0.2), re-checked at `01f769d` for v0.3 (read-only)
 **Currency:** every figure is in Australian dollars (A$). No foreign amounts are used.
@@ -10,7 +10,9 @@
 > - 🆕 **What v0.3 changes:** Anthony's mandate (2026-10-11): *"Staff will be rostered depending on the amount of clients that morning. We want to have a waitlist and clients book weeks in advance."* v0.2 paid the full 8 treatment staff + 2 phlebotomists every morning from Month 1. v0.3 rosters the casual phlebotomists and therapists to each morning's confirmed bookings, using the repo's own solver-verified staffing tiers and wage rates (Section 1A).
 > - 📌 **Baseline kept:** the v3.0 committed model, locked as the headline by Anthony on 2026-10-10: 18 AM clients/day at capacity, 07:00 start ([CURRENT-STATE.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/CURRENT-STATE.md) §0 and §5). Revenue, ramp, prices, rent and overheads are unchanged from v0.2. Only labour changes.
 > - 🏠 **Rent:** the headline still uses **A$8,000/month, per Anthony's instruction.** Rent-adjusted A$9,500 and A$10,500 columns sit beside it, plus a new **gross ceiling** column (A$10,500 all-in per the [site brief v0.3](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/outputs/LEASING/COMMERCIAL-SITE-BRIEF.md)). Section 9 states the utilities / cleaning assumption.
-> - ⚠️ **One decision is still needed:** the cheaper 4-therapist roster for mornings with 10 or fewer bookings needs a 45-minute pair cadence. The repo solver says it works inside the lab's 10:30am window, but it is **"presented, not adopted"** and needs Anthony's sign-off (S29 §3). Without it, see Section 14 for the fallback.
+> - ✅ **Decision made (Anthony 2026-10-11): "Anthony approves the 45-minute pair cadence."** Scope as modelled: 45-min pair cadence adopted for mornings with 10 or fewer bookings; 25-min cadence for full mornings (15+ weekday / 17+ Saturday). The solver says it works inside the lab's 10:30am window (S29 §3). **LOCKED:** break-even 8.266 AM clients/day and peak funding A$267,771. Advance-booked mornings with 2 phlebotomists are GTT's clinical standard.
+> - ❓ **Confirm with Anthony:** 45-min cadence applies to low-volume mornings only (as modelled); applying it to full mornings would reduce capacity to about 10/day. Working: the lab window allows the last first draw by 10:30am, 210 minutes after a 07:00 start, and each pair-slot serves 2 clients. At 45 minutes, (n - 1) x 45 <= 210 gives n <= 5.67, so 5 pair-slots = 10 clients. At 25 minutes, (n - 1) x 25 <= 210 gives n <= 9.4, so 9 pair-slots = 18 clients. Only the 25-minute cadence reaches 18/day and the +A$35,186 steady state.
+> - 🔁 **Still open, not a sign-off item:** fill rate is assumed 100% (85% fill is about +A$17.4k a month, 70% is a loss, Section 13).
 > - 🧮 Nothing here is real trading data. No venue is open yet. Every figure is a planning estimate.
 > - 🧾 Tax, GST and award content is **general information only**. Verify tax with the accountant and award rules with Fair Work before acting.
 > - 🏢 The business's legal entity and ownership structure are **not stated here**. The repo lists this as an open founder and accountant decision ([ENTITY-STRUCTURE-INVESTIGATION.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/ENTITY-STRUCTURE-INVESTIGATION.md)).
@@ -73,9 +75,9 @@ v0.3 figures first. The v0.2 figure (full roster from Month 1) is shown in brack
 | 👥 **Payroll, Months 1 to 3** | **A$214,844** (v0.2 A$280,787) | same | same | same | 🟢 Saves **A$65,943** (Section 3a) |
 | 📈 **Monthly net, Month 5 onward (repo basis)** | **+A$35,186.40** (unchanged) | +A$33,686.40 | +A$32,686.40 | +A$33,936.40 | 🟢 Full roster needed at 18/day (Section 12) |
 | 🧾 **GST-stress downside** | **+A$23,442.58** (unchanged) | +A$22,078.94 | +A$21,169.85 | +A$22,306.21 | 🟠 TM, accountant to confirm |
-| ⚖️ **Break-even, AM clients/day (repo basis)** | **8.266** (v0.2 12.655) | 8.493 (12.882) | 8.645 (13.034) | 8.455 (12.844) | 🟢 Headline matches the repo's own LOW-segment figure (S1 §10) |
+| ⚖️ **Break-even, AM clients/day (repo basis)** | **8.266** (v0.2 12.655) | 8.493 (12.882) | 8.645 (13.034) | 8.455 (12.844) | 🔒 LOCKED (Anthony 2026-10-11). Matches the repo's own LOW-segment figure (S1 §10) |
 | ⚖️ Break-even, AM clients/day (GST-stress) | 9.255 (v0.2 14.083) | 9.482 (14.310) | 9.634 (14.462) | 9.444 (14.272) | 🟠 TM |
-| 🏦 **Peak funding** (with GST timing) | **A$267,771** (v0.2 A$318,176) | A$272,271 (A$325,403) | A$275,271 (A$330,222) | A$274,021 (A$326,699) | 🟢 About A$50k to A$55k lower |
+| 🏦 **Peak funding** (with GST timing) | **A$267,771** (v0.2 A$318,176) | A$272,271 (A$325,403) | A$275,271 (A$330,222) | A$274,021 (A$326,699) | 🔒 LOCKED (Anthony 2026-10-11). About A$50k to A$55k lower |
 | ⚠️ **Lowest cash point** | **A$68,427, Month 1** (v0.2 A$18,022, Month 3) | A$66,927 (A$13,795) | A$65,927 (A$10,976) | A$67,177 (A$14,499) | 🟢 Headroom roughly 4 to 6 times larger |
 | 🛟 Runway if bookings stall at Month 1 volume | **4 full months** (v0.2: 1) | 3 (1) | 3 (1) | 4 (1) | 🆕 Months the A$85,000 reserve lasts (Section 4b) |
 | ⏱️ **Payback** (repo basis / after GST) | **Month 11 / Month 15** (v0.2 M13 / M18) | M11 / M16 (M14 / M19) | M12 / M17 (M14 / M20) | M11 / M16 (M13 / M19) | 🟢 Sections 7 and 9 |
@@ -87,7 +89,7 @@ v0.3 figures first. The v0.2 figure (full roster from Month 1) is shown in brack
 - Rostering to bookings does not change what the business earns at full capacity. At 18 clients a morning every role is needed, so Month 5 onward is still about **A$35.2k a month**.
 - What changes is the **ramp-up**. Months 1 to 3 cost about **A$66k less** in wages, Month 1's loss falls from about A$45k to about A$17k, and Month 2 turns positive.
 - The cash low is now about A$68k (Month 1) instead of about A$18k (Month 3). Payback comes about 2 to 3 months sooner.
-- Break-even drops from about 12.7 to about 8.3 clients a morning, **if** bookings are steered to fill mornings in the tiers shown in Section 1A, and **if** Anthony signs off the 45-minute cadence for quiet mornings.
+- Break-even drops from about 12.7 to about 8.3 clients a morning, **if** bookings are steered to fill mornings in the tiers shown in Section 1A, and **if** the 45-minute cadence (adopted by Anthony 2026-10-11) is used for quiet mornings. Fill is assumed 100%.
 
 ---
 
@@ -118,7 +120,7 @@ Labour cost per morning, wages only for the AM clinical and treatment roster. "I
 | 0 | 0 | 0 | n/a | A$0.00 | **A$0.00** | A$0.00 | n/a | No AM clinical roster |
 | 1 (clinical floor) | 2 | 1 (the booked service line) | n/a | A$637.50 | **A$724.84** | A$1,087.26 | A$724.84 | Floor: 2 phlebotomists must be on whenever any GTT client is booked |
 | 2 to 5 | 2 | 1 to 4 (one per booked line, capped at the 6 to 10 roster) | 45 min | A$637.50 to A$1,304.22 | **A$724.84 to A$1,482.90** | up to A$2,224.35 | e.g. A$362.42 (2 clients, 1 therapist); A$296.58 (5 clients, 4 therapists) | 🟠 Repo has no solver result below 6 clients (S30 §3). Avoid: steer bookings to fill mornings |
-| 6 to 10 | 2 | 4 (2 massage+beauty, 1 nails, 1 hair) | 45 min | A$1,304.22 | **A$1,482.90** | A$2,224.35 | A$247.15 to A$148.29 | ✅ Solver-verified at 6 and 9 (S29 §2). ⚠️ 45-min cadence needs Anthony's sign-off |
+| 6 to 10 | 2 | 4 (2 massage+beauty, 1 nails, 1 hair) | 45 min | A$1,304.22 | **A$1,482.90** | A$2,224.35 | A$247.15 to A$148.29 | ✅ Solver-verified at 6 and 9 (S29 §2). ✅ 45-min cadence ADOPTED (Anthony 2026-10-11) |
 | 11 to 14 | 2 | 8 (4 massage+beauty, 2 nails, 2 hair) | 25 min | A$2,195.94 | **A$2,496.78** | A$3,745.18 | A$226.98 to A$178.34 | 🔴 Avoid: the costliest band per client. Hold the morning at 10 and offer the waitlisted client another morning inside her window |
 | 15 to 18 | 2 | 8 | 25 min | A$2,195.94 | **A$2,496.78** | A$3,745.18 | A$166.45 to A$138.71 | ✅ Release slots 11 to 18 on a morning only when it can reach **15 firm bookings on a weekday or 17 on a Saturday** |
 
@@ -523,7 +525,7 @@ Repo method (S1 §10): PM held at its full A$24,585.37, solve for AM clients/day
 - A$78,993.29 = fixed costs A$36,738.11 (rent, overhead, direct costs, PM labour and Venue Manager with on-costs) + one 2 + 4 roster every morning A$42,255.18 incl. on-costs. It is the repo's own LOW-segment total, and 8.266 is the repo's own LOW-segment break-even (S1 §10, S29 §5). ✅ Exact match.
 - Margin of safety at 18/day: 9.734 clients/day (54.1%), up from 5.345 (29.7%).
 - **Why the repo's "valley" goes away:** the repo shows 11.29 clients/day losing A$8,982/month because every morning steps up to 8 therapists (S1 §10). Under the v0.3 rule, a morning never runs at 11 to 14 on the full roster; extra clients fill whole 18-client mornings. Each extra client above 10 then adds A$250 of revenue for about A$137 of labour, so profit rises steadily from 8.266 upward.
-- ⚠️ This depends on the 45-minute cadence sign-off (Section 1A) and on Grace steering bookings. Without the cadence, see Section 14.
+- ✅ 8.266 is LOCKED (Anthony 2026-10-11). It depends on the 45-minute cadence, ADOPTED for mornings of 10 or fewer bookings only, and on Grace steering bookings. Fill is assumed 100% (Section 13). Section 14 is now a contingency only.
 
 ### 6b. Two-stream break-even in visits/month (TM)
 
@@ -637,7 +639,7 @@ Note: the 12/day row is this model's own figure on Table 1 rules. The repo's Tab
 | 37 | Two-tier GST invoicing (s38-10) | Proposed only (Section 11) | 🔴 Accountant |
 | 38 | Contingency in rent-adjusted capital | Kept at A$26,914 | 🟡 TM |
 | 39 | Rent-adjusted scenarios keep every other line at the headline | Only rent, bond and advance rent change (plus utilities / cleaning in the gross ceiling column) | 🟡 TM |
-| 40 | 🆕 **45-minute pair cadence on mornings of 10 or fewer** | Used for the 2 + 4 roster. Solver-feasible inside the WDP 10:30am window but "presented, not adopted" (S29 §3) | 🔴 **Anthony sign-off needed.** Without it, Section 14 |
+| 40 | 🆕 **45-minute pair cadence on mornings of 10 or fewer** | Used for the 2 + 4 roster. Solver-feasible inside the WDP 10:30am window (S29 §3). Applies to low-volume mornings only; full mornings use 25 minutes | ✅ **ADOPTED (Anthony 2026-10-11).** Confirm scope: applying 45 minutes to full mornings would cap capacity at about 10/day |
 | 41 | 🆕 **Booking steering ("fill-to-tier")** | Grace fills each morning to 10, and opens slots 11 to 18 only when a morning can reach 15 (weekday) / 17 (Saturday). Assumes clients accept another morning inside their 24 to 28 week window | 🟠 Fresha slot-release setup + front-desk script. Fill-rate risk in Section 13 |
 | 42 | 🆕 Fill rate 100% of rostered capacity in the base | Clients prepay; no-shows and late cancellations keep full payment (S28). Waitlist backfills earlier cancellations | 🟠 Sensitivity in Section 13 |
 | 43 | 🆕 Casual pool availability | Phlebotomists and therapists accept variable mornings. Fewer early-month shifts may push good casuals to other work. The repo's one-pool, cross-trained hiring (S35) helps | 🟠 Recruitment risk, not costed |
@@ -816,7 +818,7 @@ Three things could still move the steady state, none counted in the headline:
 
 ## 14. Alternative: full mornings only (🆕, no cadence decision needed)
 
-If Anthony does **not** sign off the 45-minute cadence, the 2 + 4 roster is not available. The fallback that keeps the committed 25-minute cadence is to run AM GTT **only on full 18-client mornings** with the 2 + 8 roster, and close AM GTT on other mornings (PM and the Venue Manager carry on).
+Anthony adopted the 45-minute cadence on 2026-10-11, so this section is **a contingency only** (for example if a lab or the clinical review later rejects 45-minute spacing). Without the cadence, the 2 + 4 roster is not available. The fallback that keeps the committed 25-minute cadence is to run AM GTT **only on full 18-client mornings** with the 2 + 8 roster, and close AM GTT on other mornings (PM and the Venue Manager carry on).
 
 | Measure (headline rent) | v0.3 base (fill-to-tier) | Full mornings only | v0.2 |
 |---|---|---|---|
@@ -834,7 +836,7 @@ If Anthony does **not** sign off the 45-minute cadence, the 2 + 4 roster is not 
 - A full 18-client morning has the lowest labour per client (A$138.71 on a weekday).
 - But in Month 1 AM GTT would run on only about 11 mornings a month (about 2 or 3 a week). Clients lose choice of day, and casual phlebotomists and therapists get few shifts, which risks losing them before volume arrives (item 43).
 - An 18-client morning is also the most complex operation, run from opening week by a new team.
-- Recommendation (TM): use the v0.3 base if the cadence is approved; use full mornings only as the fallback, or for the first 2 to 4 weeks only.
+- Recommendation (TM): use the v0.3/v0.4 base (cadence approved 2026-10-11); use full mornings only as the fallback, or for the first 2 to 4 weeks only.
 
 ---
 
@@ -869,7 +871,24 @@ If Anthony does **not** sign off the 45-minute cadence, the 2 + 4 roster is not 
 | Gross ceiling A$10,500 all-in: net / GST-stress / break-even / peak / payback | **+A$33,936 / +A$22,306 / 8.455 / A$274,021 / M11 and M16** | new |
 | Rent-adjusted A$10,500 (+ separate utilities and cleaning): net / break-even / peak / payback | **+A$32,686 / 8.645 / A$275,271 / M12 and M17** | +A$32,686 / 13.034 / A$330,222 / M14 and M20 |
 | Startup capital | A$336,198 (A$341,198 at A$10,500) | no change |
-| Caveat to carry on every slide using the new break-even | "Needs the 45-minute cadence for mornings of 10 or fewer and booking steering. Without the cadence: full-mornings fallback, Section 14." | new |
+| Caveat to carry on every slide using the new break-even | "45-minute cadence adopted 2026-10-11 for mornings of 10 or fewer. Break-even 8.266 and peak funding A$267,771 locked. Fill assumed 100%: 85% is about +A$17.4k a month, 70% is a loss." | replaces "needs sign-off" |
+
+---
+
+---
+
+## 16. What changed from v0.3 to v0.4 (2026-10-11)
+
+| Item | v0.3 | v0.4 |
+|---|---|---|
+| 45-minute pair cadence | Needs Anthony's sign-off | ADOPTED (Anthony 2026-10-11) for mornings of 10 or fewer bookings. 25-minute cadence stays for full mornings (15+ weekday / 17+ Saturday) |
+| Break-even | 8.266 | **8.266 LOCKED** |
+| Peak funding | A$267,771 | **A$267,771 LOCKED** |
+| Scheduling standard | Mandate | Advance booking 2 to 4 weeks plus waitlist; 2 phlebotomists every GTT morning (GTT clinical standard) |
+| Fill-rate caveat | Kept | **Kept** (100% assumed; 85% about +A$17.4k a month; 70% a loss) |
+| Figures | | No number changed |
+
+**Scope check (confirm with Anthony):** 45-min cadence applies to low-volume mornings only (as modelled). Applying it to full mornings would reduce capacity to about 10 clients/day (working in the "Decision made" note at the top). At 10/day the repo-basis net would be roughly (10 - 8.266) x A$6,582.50 = about A$11.4k a month, against +A$35,186 at 18/day (TM, approximate).
 
 ---
 
