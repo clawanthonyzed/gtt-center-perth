@@ -4,6 +4,12 @@
 
 ---
 
+## 2026-10-13: Wording only, CURRENT-STATE section 10 now quotes 8.266
+
+**Wording only:** CURRENT-STATE section 10 now quotes 8.266 (Anthony, 2026-10-13). No figures changed. The 12.655 figure stays as the fixed full-roster comparison. Follows the 2026-10-11 decision below.
+
+---
+
 ## 2026-10-11: 45-minute pair cadence adopted for low-volume mornings; break-even 8.266 and peak funding A$267,771 locked
 
 **Decision:** Anthony approved the 45-minute pair cadence ("Anthony approves the 45-minute pair cadence"). Scope as modelled in Theodore's 3-way model v0.4: 45-min pair cadence adopted for mornings with 10 or fewer bookings (2 phlebotomists + 4 therapists); 25-min cadence for full mornings (15+ weekday / 17+ Saturday; 2 phlebotomists + 8 therapists). Locked figures: break-even 8.266 AM clients/day (about 8.3) and peak funding A$267,771. Scheduling standard, GTT's clinical standard: advance booking 2 to 4 weeks ahead plus a waitlist, and 2 phlebotomists on every GTT morning.

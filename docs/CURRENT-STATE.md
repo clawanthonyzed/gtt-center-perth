@@ -341,7 +341,7 @@ Per Anthony's direct instruction, four operating-model/financial-model decisions
 
 Because headcount now genuinely flexes with volume, there are two distinct, valid break-even points depending on which staffing regime applies — presenting a single number would be misleading:
 
-| Metric | LOW segment (4-staff, 45min cadence, not yet adopted) | **HIGH segment (8-staff, 25min cadence — the standing committed model)** |
+| Metric | **LOW segment (4-staff, 45min cadence, adopted 2026-10-11 for quiet mornings)** | HIGH segment (8-staff, 25min cadence, fixed full-roster comparison) |
 |---|---|---|
 | Break-even AM clients/day | 8.266 | **12.655** |
 | Break-even clients/week | 49.59 | 75.93 |
@@ -349,7 +349,7 @@ Because headcount now genuinely flexes with volume, there are two distinct, vali
 | % of the 18-client/day committed target | 45.9% | **70.3%** |
 | Approx. share of the addressable market (515/week ÷ ≈2,231.7 births/month) | ≈9.75% | **≈14.93%** |
 
-**Quote the HIGH-segment figure (12.655 clients/day, ~70.3% of committed, ~14.93% of addressable market) as "the" break-even** under the currently-committed, always-8-staff model. The LOW-segment figure (8.266/day) is a real, solver-verified secondary finding, applicable only if the widened-cadence, demand-flexed approach is separately adopted for genuinely low-volume days — disclosed, not blended into one misleading average.
+**Quote 8.266 AM clients/day (about 45.9% of the 18-client committed target, about 9.75% of the addressable market) as "the" break-even, per Anthony's 2026-10-11 decision** (45-minute pair cadence adopted for quiet mornings; see `docs/DECISION-LOG.md`). The HIGH-segment figure (12.655/day, about 70.3% of committed, about 14.93% of addressable market) is kept as the fixed full-roster comparison only: what break-even would be if all 8 treatment staff were rostered every morning. Both figures are unchanged; only the wording changed (2026-10-13).
 
 **Margin of safety at the 18.00-client planning case:** 5.345 clients/day above the HIGH-segment break-even (≈29.7% of committed volume) — narrower than the pre-rebuild margin (6.710 clients/day, ≈37.3%), a real, disclosed consequence of the lower PM revenue, not offset by the Venue Manager saving.
 
