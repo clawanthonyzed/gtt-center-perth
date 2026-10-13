@@ -201,7 +201,7 @@ Minimum clear space around logo = height of the capital "G" in the wordmark on a
 | Space — reception desk | Clean, minimal, welcoming | 🟡 Need |
 | Product — snacks | Coconut water, herbal teas, packaged snacks arranged on tray | 🟡 Need |
 | Detail — textures | Linen, sage plant, warm ceramic cup, candle — lifestyle details | 🟡 Nice to have |
-| Team | Imara and therapist, professional but warm, not posed corporate | 🟡 Need |
+| Team | Venue Manager (name TBC once hired) and a therapist, professional but warm, not posed corporate | 🟡 Need |
 
 ### Photography Rules
 
@@ -425,7 +425,7 @@ To keep the brand consistent — especially as partners and third parties produc
 *Logo design brief: assigned to designer Week 5 — brief this document*  
 *Photography brief: Week 14 shoot (venue must be substantially fit-out)*  
 *Print production: BizPrint Perth or Vistaprint Pro (3 quotes required for >A$500 jobs)*  
-*Review: Imara (final approval on all brand decisions before external use)*
+*Review: Anthony (final approval on all brand decisions before external use)*
 
 ---
 

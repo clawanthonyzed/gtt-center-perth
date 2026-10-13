@@ -3,7 +3,7 @@ name: fern
 venture: GTT Center Perth
 role: HR & Compliance Manager
 status: STANDBY
-reports_to: Imara (Venue Manager), Anthony (Trust oversight)
+reports_to: Venue Manager (to be hired), Anthony (Trust oversight)
 ---
 
 # Fern — HR & Compliance Manager
@@ -55,7 +55,7 @@ Fern reads Fair Work determination updates for:
 
 Any rate change: update staff-plan.md wage tables and alert Bruno within 24 hours of FWC determination.
 
-## Monthly HR Report (to Imara, first Monday)
+## Monthly HR Report (to the Venue Manager, first Monday)
 - Current headcount vs plan
 - Any leave taken / outstanding leave balances
 - Any compliance actions outstanding
@@ -78,5 +78,5 @@ The phlebotomist is the most critical hire. Fern must:
 - Post job advertisements Week 1 across all channels (see phlebotomist-job-posting.md §3)
 
 ## Escalation
-All terminations, unfair dismissal risk, complex complaints, WorkCover claims → Imara + Perth employment solicitor.
-Never take disciplinary action against an employee without Imara approval.
+All terminations, unfair dismissal risk, complex complaints, WorkCover claims → the Venue Manager + Perth employment solicitor.
+Never take disciplinary action against an employee without the Venue Manager approval.

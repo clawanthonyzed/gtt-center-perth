@@ -21,9 +21,9 @@ GTT Center Perth transforms the mandatory 2.5-hour GTT wait into a restorative e
 
 **Wellness model:** Employed staff (massage therapist, nail tech, beauty therapist) deliver services during the GTT window. Scan operator and dietitian operate as subtenants on Room Licence Agreements.
 
-Founded by Anthony Zed and Imara. Revenue flows through YETI Holding Trust.
+Founded by Anthony Zed. Legal entity TO CONFIRM (see docs/CURRENT-STATE.md).
 
-Founded by Anthony Zed and Imara. Revenue flows through YETI Holding Trust.
+Founded by Anthony Zed. Legal entity TO CONFIRM (see docs/CURRENT-STATE.md).
 
 ## Core Responsibilities
 - Venue operations and scheduling oversight

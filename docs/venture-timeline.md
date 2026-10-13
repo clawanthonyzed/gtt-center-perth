@@ -19,10 +19,10 @@
 
 ### Week 1 (2026-06-09 to 2026-06-16)
 - [ ] Read all documents in this venture folder (read order: README -> research.md -> this file -> financial-break-even-staff.md -> services-pricing-locked.md)
-- [ ] Anthony + Imara confirm: north or south Perth location preference
-- [ ] Anthony + Imara confirm: launch with Option A (PathWest partner) or pursue Option B from day 1
+- [ ] Anthony confirms: north or south Perth location preference
+- [ ] Anthony confirms: launch with Option A (PathWest partner) or pursue Option B from day 1
 - [x] ~~Anthony + Imara confirm: is Imara the operational manager?~~ **SUPERSEDED 2026-07-19 — RESOLVED NO.** Imara is not the operational manager. A dedicated Venue Manager (new hire, not yet in place) fills this role — see banner above. **Venue Manager recruitment does NOT begin until a physical venue location is confirmed (founder instruction, 2026-07-19) — once it does, this is the first, critical-path hire.**
-- [ ] Anthony + Imara confirm: YETI Trust is the operating entity (confirmed in research.md)
+- [ ] Anthony confirms: YETI Trust is the operating entity (confirmed in research.md)
 - [ ] ~~Consult DVA financial adviser — confirm TPI/SRDP implications~~ **Not a GTT Center Perth task (2026-07-19) — Anthony's personal matter, handled by him directly, not delegated. Retained here only as a historical line item.**
 - [ ] Contact Bloom Baby Ultrasound — gauge interest in subtenant partnership (reed agent to prepare)
 - [ ] Register YETI Trust for GST (if not already done)
@@ -160,7 +160,7 @@
 
 > Note (2026-07-19): DVA financial advice removed from this list — it's Anthony's personal matter, not a GTT Center Perth task (see banner above). Venue Manager recruitment is not on this list because it does not begin until a location is confirmed (see "Who Is Doing What" below) — it follows on from item 1 once resolved, not a parallel Week 1 action.
 
-1. North or south Perth decision (Anthony + Imara) — WEEK 1
+1. North or south Perth decision (Anthony) — WEEK 1
 2. Commercial real estate brief sent to 2-3 agents — WEEK 2
 3. PathWest + WDP approached via Reed — WEEK 2
 4. Bloom Baby subtenant interest confirmed — WEEK 2
@@ -176,7 +176,7 @@
 
 | Task | Owner |
 |------|-------|
-| Location decision | Anthony + Imara |
+| Location decision | Anthony |
 | **Venue Manager recruitment (CRITICAL PATH once location is confirmed)** | **Anthony/Grace — does NOT begin until a physical venue location is sorted (founder instruction, 2026-07-19). Job posting document ready in advance: `docs/venue-manager-job-posting.md`. See staff-plan.md §7.** |
 | Commercial real estate enquiries | Reed (agent) |
 | PathWest + WDP approach | Reed (agent) |

@@ -3,7 +3,7 @@ name: cora
 venture: GTT Center Perth
 role: Clinical Coordinator (GTT)
 status: STANDBY
-reports_to: Imara (Venue Manager)
+reports_to: Venue Manager (to be hired)
 ---
 
 # Cora — Clinical Coordinator
@@ -32,7 +32,7 @@ Cora does NOT make clinical decisions. All clinical judgements are made by the p
   - CPR/First Aid (HLTAID011) — expires every 3 years
   - Anaphylaxis training — expires annually
   - Police clearance — renew every 3 years
-- Alert Imara 60 days before any credential expires
+- Alert the Venue Manager 60 days before any credential expires
 - Coordinate renewals with phlebotomist
 
 ### Collection Room Compliance
@@ -75,7 +75,7 @@ Document time-from-draw-to-centrifuge in collection log for every sample.
   - Zero protocol deviations → good
   - Any deviation → document, retrain if needed
 - Monthly: review WDP/PathWest feedback on specimen quality
-- Annual: prepare for WDP site audit — coordinate with Imara
+- Annual: prepare for WDP site audit — coordinate with the Venue Manager
 
 ### Adverse Event Review
 - Review incident register weekly for any clinical entries
@@ -83,7 +83,7 @@ Document time-from-draw-to-centrifuge in collection log for every sample.
 - Prepare incident report for WDP if required
 - Trend analysis: if same adverse event recurs > 2 times → protocol change required
 
-## Monthly Clinical Report (to Imara)
+## Monthly Clinical Report (to the Venue Manager)
 - GTT collections completed vs planned
 - Specimen rejection rate
 - Adverse events (count and summary)
@@ -100,6 +100,6 @@ Document time-from-draw-to-centrifuge in collection log for every sample.
 - docs/phlebotomist-job-posting.md (recruitment process and credential requirements)
 
 ## Escalation
-Any clinical safety concern → Imara immediately, then WDP/PathWest clinical liaison.
-Patient complaint with clinical element → Imara + Perth solicitor.
-Any notifiable incident to WorkSafe WA → Imara decides, solicitor advises.
+Any clinical safety concern → the Venue Manager immediately, then WDP/PathWest clinical liaison.
+Patient complaint with clinical element → the Venue Manager + Perth solicitor.
+Any notifiable incident to WorkSafe WA → the Venue Manager decides, solicitor advises.

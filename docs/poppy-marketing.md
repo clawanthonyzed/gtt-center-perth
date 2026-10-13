@@ -116,7 +116,7 @@ Launch posts should use:
 - Service menu with pricing
 - Embedded booking system (Fresha widget)
 - FAQ page (what is a GTT, what to bring, fasting instructions)
-- About page (Anthony + Imara story — genuine, personal)
+- About page (founder story, Anthony; genuine, personal)
 - Partner logos (WDP/PathWest, keepsake scan operator)
 - Mobile-first design (90% of traffic will be mobile)
 
@@ -159,7 +159,7 @@ Launch posts should use:
 13. Fit-out progress photo
 14. Behind the scenes: treatment room taking shape
 15. "Spots are limited — join the waitlist" (CTA)
-16. Team spotlight: Imara (personal story — why we started this)
+16. Team spotlight: the Venue Manager (name TBC once hired)
 17. Referral shoutout post (tag your midwife or OB)
 18. LAUNCH DAY announcement
 
@@ -276,7 +276,7 @@ Launch posts should use:
 - Local Perth parenting Instagram accounts with 5K+ followers
 
 ### PR Angle
-"Perth woman [Imara] noticed there was nothing to do during her GTT test — so she opened WA's first wellness venue dedicated to the wait. The only other business doing this in Australia is Melbourne, fully booked 3-4 weeks out."
+"A new Perth venue noticed there was nothing to do during the GTT wait, so it opened as WA's first wellness venue dedicated to the wait. The only other business doing this in Australia is Melbourne, fully booked 3-4 weeks out."
 
 **This is a strong human interest story.** Personal founder angle + "first in WA" + "female-founded" + maternal health focus = ideal local media pitch.
 

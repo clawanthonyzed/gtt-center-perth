@@ -154,10 +154,10 @@
 
 | Dependency | Owner | Deadline |
 |---|---|---|
-| WDP/PathWest partnership confirmed | Anthony/Imara | Week 2 |
+| WDP/PathWest partnership confirmed | Anthony | Week 2 |
 | Solicitor engaged (Room Licence + lease review) | Anthony | Week 1 |
 | Accountant brief (Trust structure confirmed) | Anthony | Week 1 |
-| Venue located and heads of agreement signed | Imara (trustee-related signatory — see financial-model.md) | Week 6 |
+| Venue located and heads of agreement signed | Anthony (signatory; legal entity TO CONFIRM, see docs/CURRENT-STATE.md) | Week 6 |
 | Venue Manager hired (critical path — see hr-framework.md §13) | Anthony/Grace | Week 1 |
 | Scan room subtenant (Bloom Baby) confirmed | Reed | Week 7 |
 | Booking system selected | Ivy | Week 9 |

@@ -68,7 +68,7 @@ No Service Pension is held. Therefore:
 **Structure:**
 - YETI Holding Trust (discretionary trust)
 - YETI Tipi Holdings PTY LTD (corporate trustee)
-- Imara = operational director (day-to-day business decisions)
+- Imara = Anthony's partner, holds no venture role
 - Anthony = nominal director of corporate trustee (paperwork and signing only)
 - Employed manager runs all daily operations
 

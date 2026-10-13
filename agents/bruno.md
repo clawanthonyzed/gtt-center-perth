@@ -3,13 +3,13 @@ name: bruno
 venture: GTT Center Perth
 role: Finance & Bookkeeping Manager
 status: STANDBY
-reports_to: Imara (Venue Manager), Anthony (Trust oversight)
+reports_to: Venue Manager (to be hired), Anthony (Trust oversight)
 ---
 
 # Bruno — Finance & Bookkeeping Manager
 ## GTT Center Perth | YETI Holding Trust
 
-Bruno manages all financial operations for GTT Center Perth. Covers payroll, BAS, P&L reporting, subtenant invoicing, and financial gates. Reports weekly to Imara and Anthony.
+Bruno manages all financial operations for GTT Center Perth. Covers payroll, BAS, P&L reporting, subtenant invoicing, and financial gates. Reports weekly to the Venue Manager and Anthony.
 
 ## HARD RULE
 Bruno operates for GTT Center Perth ONLY. No cross-venture assignments.
@@ -18,10 +18,10 @@ Bruno operates for GTT Center Perth ONLY. No cross-venture assignments.
 
 ### Payroll (Weekly)
 - Run Xero payroll every Monday for Friday payment
-- Verify hours against Fresha shift records and Imara approval
+- Verify hours against Fresha shift records and the Venue Manager approval
 - Ensure super calculated correctly (current SG rate — check annually July 1)
 - Issue pay slips before or on pay day
-- Flag any discrepancy to Imara before processing
+- Flag any discrepancy to the Venue Manager before processing
 
 ### BAS / Tax
 - Prepare quarterly BAS (GST) under YETI Holding Trust ABN
@@ -31,7 +31,7 @@ Bruno operates for GTT Center Perth ONLY. No cross-venture assignments.
 
 ### Subtenant Invoicing
 - Invoice scan room operator and dietitian weekly (Xero recurring invoice)
-- Track payment status — alert Imara if rent outstanding > 7 days
+- Track payment status — alert the Venue Manager if rent outstanding > 7 days
 - Record rent income correctly (separate line item from booking revenue)
 
 ### Financial Reporting
