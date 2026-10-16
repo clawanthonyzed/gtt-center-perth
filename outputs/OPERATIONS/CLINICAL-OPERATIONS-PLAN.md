@@ -38,7 +38,7 @@ Source: `tools/draw-event-scheduler.py`, `tools/am_volume_tier_staffing_solver.p
 | Last Draw 1 | 10:20 | am_volume_tier_staffing_solver.py (18/day) |
 | Last Draw 3 | 12:20 to 12:25 (clients 17 and 18) | S7 Table 1. The solver prints "last departure 12:15"; the repo has not reconciled the 10 minutes |
 | Clients per day | 18 (25-min cadence) | am_volume_tier_staffing_solver.py |
-| Quiet mornings (Anthony decision 2026-10-11) | 45-min cadence, up to 10 clients, last Draw 1 10:00, 4 therapists | am_volume_tier_staffing_solver.py (10 clients, 45 min); max feasible cadence 50 min |
+| Rostering (Anthony decision 2026-10-16) | Staff called in to match confirmed bookings: 2 phlebotomists, 2 therapists for 1 client, 4 for 2 to 9, 6 for 10, 8 for 11 to 18 | adaptive rostering (financial model v0.5) |
 
 Not used: `draw-event-scheduler.py` prints a different greedy packing (10 clients to a 10:05 last start, 16 to 10:45) because it models Draw 1 as 15 minutes in the chair. The committed schedule in CURRENT-STATE uses 5-minute draws, so Table 1 governs.
 
@@ -98,18 +98,18 @@ WDP guidance: "would not normally commence a GTT after 10:30am" [S14]. Table 1 f
 
 ### 2.2A Scheduling standard (adopted 2026-10-11)
 
-Anthony approved the 45-minute pair cadence on 2026-10-11. This is GTT's clinical scheduling standard:
+The 25-minute pair cadence is the only cadence and is GTT's clinical scheduling standard (Anthony, 2026-10-16):
 
 | Rule | Standard |
 |---|---|
 | Booking | Advance booking 2 to 4 weeks ahead, plus a waitlist that backfills cancellations |
 | Phlebotomists | 2 on every GTT morning that has any GTT booking (Chair A and Chair B) |
-| Mornings with 10 or fewer bookings | 45-min pair cadence, 4 therapists (Anthony decision 2026-10-11; solver-verified at 10, see calculator check below) |
-| Full mornings (15+ weekday / 17+ Saturday) | 25-min pair cadence (the committed Table 1 above), 8 therapists |
+| Rostering | Staff called in to match confirmed bookings: 2 phlebotomists and 4 therapists for up to 9 clients, 6 at 10, 8 from 11 |
+| Cadence | 25-min pair cadence, 9 pairs, 18 clients (the committed Table 1 above) |
 
 The first Draw 1 stays at 07:00 and the last Draw 1 must be no later than 10:30am (WDP guidance [S14]). Source: Theodore's 3-way model v0.4, Sections 1A and 16.
 
-**Confirm with Anthony:** 45-min cadence applies to low-volume mornings only (as modelled); applying it to full mornings would reduce capacity to about 10/day. Calculator check (tools/am_volume_tier_staffing_solver.py, run 2026-10-11, repo commit 3b576db): 10 clients at 45-min cadence = 4 therapists, last Draw 1 10:00, last departure 11:55, max feasible cadence 50 min; 18 clients at 25-min cadence = 8 therapists, last Draw 1 10:20. Output: CALCULATOR-OUTPUT-2026-10-11.txt.
+
 
 ### 2.3 Fasting
 
