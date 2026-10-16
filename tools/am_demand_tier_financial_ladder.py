@@ -186,7 +186,7 @@ def main():
     print("=== Break-even, both headcount segments ===\n")
     be_low = breakeven_for_headcount(*LOW_HEADCOUNT, valid_range=(0, 10.4))
     be_high = breakeven_for_headcount(*HIGH_HEADCOUNT, valid_range=(10.4, 18.0))
-    for label, be in (("LOW (4 treatment staff, 45min cadence, <=10/day)", be_low),
+    for label, be in (("LOW (4 treatment staff, <=10/day; widened cadence RETIRED 2026-10-16, historical comparison only)", be_low),
                        ("HIGH (8 treatment staff, 25min cadence, committed model)", be_high)):
         print(f"{label}: total_opex={be['total_opex']:,.2f}, "
               f"breakeven={be['breakeven_am_client_volume_per_day']}/day, "

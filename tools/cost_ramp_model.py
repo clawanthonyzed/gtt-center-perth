@@ -473,7 +473,7 @@ def compute_pm_weekday_daily_labor(month):
 # constants above -- kept as a second, parameterized function rather than
 # replacing those constants, so every existing Table 1/Table 2 figure that
 # already depends on them is unaffected by this addition.
-AM_HEADCOUNT_LOW = (2, 1, 1)    # 2 Massage+Beauty + 1 Nail + 1 Hair = 4 -- solver-verified sufficient at <=10 clients/day, AT A WIDENED 45-MINUTE PAIR CADENCE (not yet a founder decision, see the doc above)
+AM_HEADCOUNT_LOW = (2, 1, 1)    # 2 Massage+Beauty + 1 Nail + 1 Hair = 4 -- solver-verified sufficient at <=10 clients/day, RETIRED 2026-10-16: widened cadence no longer used; 4 therapists now arise from one-client-per-slot bookings on the 25-minute cadence
 AM_HEADCOUNT_HIGH = (4, 2, 2)   # 4 Massage+Beauty + 2 Nail + 2 Hair = 8 -- solver-verified REQUIRED at 11+ clients/day at any cadence within the WDP 10:30am guidance window; unchanged from the committed model
 
 

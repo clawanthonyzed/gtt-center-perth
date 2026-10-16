@@ -189,7 +189,7 @@ def main():
 
     print("\n=== Demand-flexed view, NOT adopted as policy: staffing solver-verified appropriate to each volume ===")
     print("(18/day and 12/day cannot reduce below 8 treatment staff at the committed 25-min cadence, solver-verified;")
-    print(" 6/day CAN reduce to 4 only if the cadence is widened to 45min+, requiring Anthony's confirmation)")
+    print(" 6/day CAN reduce to 4 only if the cadence is widened (RETIRED 2026-10-16), requiring Anthony's confirmation)")
     configs = {18: (4, 2, 2), 12: (4, 2, 2), 6: (2, 1, 1)}
     for label, volume in (("18/day", 18), ("12/day", 12), ("6/day (widened cadence, not adopted)", 6)):
         n_mb, n_nails, n_hair = configs[volume]

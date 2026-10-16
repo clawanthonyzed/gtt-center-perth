@@ -1,3 +1,5 @@
+> **SUPERSEDED 2026-10-16 (Anthony, Permanent Cadence Law):** any widened pair cadence in this document is retired. The 25-minute pair cadence is the only cadence. See docs/CURRENT-STATE.md section 00.
+
 # GTT Center Perth — Content Brief v2 for the Imara Presentation (Financial/Factual Rebuild)
 
 **Prepared:** 2026-09-19 | **Prepared by:** Grace (Operations Manager), for the separate session rebuilding the Imara presentation from reconciled numbers
@@ -50,15 +52,15 @@ Full method: `docs/architecture/AM-DEMAND-DRIVEN-STAFFING-TIERS-2026-09.md`. `to
 
 | AM clients/day | Rostered for (whole clients) | Pair cadence | Massage+Beauty | Nail Technician | Hairdresser | **Total treatment** | Phlebotomists |
 |---|---|---|---|---|---|---|---|
-| 9.00 | 9 | 45min (widened — **not yet a founder decision**) | 2 | 1 | 1 | **4** | 2 |
+| 9.00 | 9 | retired (widened — **not yet a founder decision**) | 2 | 1 | 1 | **4** | 2 |
 | 11.29 | 12 | 25min (committed) | 4 | 2 | 2 | **8** | 2 |
 | 13.50 | 14 | 25min (committed) | 4 | 2 | 2 | **8** | 2 |
 | 15.50 | 16 | 25min (committed) | 4 | 2 | 2 | **8** | 2 |
 | 18.00 | 18 | 25min (committed) | 4 | 2 | 2 | **8** | 2 |
 
-**Genuine, disclosed finding, not forced to fit expectations: only the lowest tier (9.00/day) can actually reduce treatment headcount below the committed 8.** The mathematics: reducing to 4 requires widening the pair cadence to 45 minutes or more (an already-published finding at 6 clients/day, now confirmed to extend up to 9 clients/day specifically). The WDP guidance window (last Draw 1 ≤ 210 minutes after a 07:00 start) caps how many pair-slots can fit at a 45-minute cadence at 5 (10 clients) — 11.29/day rounds up to 12 clients (6 pair-slots), whose own maximum feasible cadence is only 40 minutes, below the 45-minute threshold the reduction needs. This is a direct mathematical consequence of the synchronized-pair schedule and the fixed 60/120-minute clinical marks, not a modelling choice. **Phlebotomist headcount (2) is unaffected at every tier tested — structural, 2 collection chairs.**
+**Genuine, disclosed finding, not forced to fit expectations: only the lowest tier (9.00/day) can actually reduce treatment headcount below the committed 8.** The mathematics: reducing to 4 requires widening the pair cadence to 45 minutes or more (an already-published finding at 6 clients/day, now confirmed to extend up to 9 clients/day specifically). The WDP guidance window (last Draw 1 ≤ 210 minutes after a 07:00 start) caps how many pair-slots can fit at a widened (retired) cadence at 5 (10 clients) — 11.29/day rounds up to 12 clients (6 pair-slots), whose own maximum feasible cadence is only 40 minutes, below the 45-minute threshold the reduction needs. This is a direct mathematical consequence of the synchronized-pair schedule and the fixed 60/120-minute clinical marks, not a modelling choice. **Phlebotomist headcount (2) is unaffected at every tier tested — structural, 2 collection chairs.**
 
-**The 45-minute widened cadence at 9.00/day is a genuine finding, presented for Anthony's decision, not adopted as policy** — same status as the already-published 6-client/day finding. Requires: (a) confirming a 45-minute pair spacing is acceptable client-wait experience (per-client clinical timing is unaffected, only inter-pair spacing widens); (b) a real day-ahead rostering mechanism to know in advance a given day will be a genuinely low-volume day; (c) Anthony's explicit sign-off.
+**The widened (retired) cadence at 9.00/day is a genuine finding, presented for Anthony's decision, not adopted as policy** — same status as the already-published 6-client/day finding. Requires: (a) confirming a 45-minute pair spacing is acceptable client-wait experience (per-client clinical timing is unaffected, only inter-pair spacing widens); (b) a real day-ahead rostering mechanism to know in advance a given day will be a genuinely low-volume day; (c) Anthony's explicit sign-off.
 
 ### Full financial ladder — revenue, wage cost, total operating cost, operating profit
 
@@ -236,7 +238,7 @@ Basis: the A$251,198 Pre-Opening Capital planning figure's own itemised componen
 
 **The previously-quoted 11.290 clients/day break-even figure is now stale and should not be quoted** — it predates this rebuild's demand-driven staffing and PM/Venue Manager changes. Because headcount now genuinely flexes by volume, break-even is not one number — it is two, segment-specific figures:
 
-| Metric | LOW segment (4-staff, 45min cadence, not yet a founder decision) | **HIGH segment (8-staff, 25min cadence — the standing committed model)** |
+| Metric | LOW segment (4-staff, widened (retired) cadence, not yet a founder decision) | **HIGH segment (8-staff, 25min cadence — the standing committed model)** |
 |---|---|---|
 | Break-even AM clients/day | 8.266 | **12.655** |
 | Break-even clients/week (×6 trading days) | 49.59 | 75.93 |
@@ -305,7 +307,7 @@ No new correspondence exists in this repo for any of the 4 candidates since the 
 ## What's Genuinely Unresolved — Read Before Presenting
 
 - **Saturday Venue Manager coverage:** RESOLVED 2026-10-03 — an experienced staff member already rostered that day covers VM duties (opening, reception oversight, rostering escalation), per Anthony's direct instruction. Still open: whether this carries an additional pay loading or is an added responsibility within existing hours — not specified, no cost invented either way.
-- **The 45-minute widened-cadence staffing model (9.00/day tier, and the LOW-segment break-even of 8.266/day that depends on it):** a genuine, solver-verified finding, but explicitly not yet a founder decision — do not present it as the committed operating model.
+- **The widened (retired) cadence staffing model (9.00/day tier, and the LOW-segment break-even of 8.266/day that depends on it):** a genuine, solver-verified finding, but explicitly not yet a founder decision — do not present it as the committed operating model.
 - **Depreciation and indicative tax (§6, §7):** both genuinely indicative, using stated but not professionally-confirmed assumptions (useful life, entity structure/tax rate) — both explicitly require an accountant before being used in any real funding conversation.
 - **A$251,198 startup capital:** Anthony's own "in principle" approval, not a locked final cost — still pending venue confirmation and final supplier/quote validation (`docs/VERIFICATION-TRACKER.md` item 49, OPEN).
 - **Entity structure:** genuinely a live, 3-way, undecided question (`docs/architecture/ENTITY-STRUCTURE-INVESTIGATION.md`) — the 25% company tax rate used in §7 is illustrative only, not a claim about which structure will be chosen.

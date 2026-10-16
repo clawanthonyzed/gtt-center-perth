@@ -56,7 +56,7 @@ class OddClientCountTests(unittest.TestCase):
         self.assertEqual(chair_a_count, 5)
         self.assertEqual(chair_b_count, 4)
 
-    def test_n9_at_45min_cadence_reduces_headcount_to_4(self):
+    def test_n9_at_widened_cadence_RETIRED_reduces_headcount_to_4(self):
         r = solver.assign_and_check_odd(9, 45)
         self.assertEqual(r["peak_by_line"], {"MB": 2, "Nails": 1, "Hair": 1})
         self.assertEqual(r["total_headcount"], 4)
@@ -70,7 +70,7 @@ class VolumeTierLadderTests(unittest.TestCase):
     """The 5 profitability-ladder volumes -- confirms the genuine, disclosed
     finding: only the lowest tier (9.00/day) can reduce treatment headcount
     below 8 within the WDP guidance window, and only via a widened
-    (45min+) cadence, not yet a founder decision."""
+    widened cadence (RETIRED 2026-10-16), not yet a founder decision."""
 
     def test_9_00_reduces_to_4_treatment_staff(self):
         r = solver.minimum_headcount_for_volume(9.00)
