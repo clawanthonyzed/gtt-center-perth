@@ -13,20 +13,40 @@
 
 ---
 
+## 00. OVERHAUL DECISIONS, 2026-10-16 (Anthony): Read This First, it overrides anything below
+
+1. **25-minute pair cadence ONLY.** First booking 07:00; pairs at 07:00, 07:25, 07:50 and so on; last first draw 10:20 (07:00 + 8 x 25 minutes); 9 pairs = 18 clients a morning at most; bookings 2 to 4 weeks ahead. No other cadence exists. Any text below that describes a different cadence is **SUPERSEDED** and must not be used.
+2. **True adaptive rostering, AM and PM.** Staff are called in to match confirmed slots; idle staff are never rostered. Roster for 1 client: 2 phlebotomists + 2 therapists. For 2 to 9 clients (one per slot): 2 + 4. For 10: 2 + 6. For 11 to 18: 2 + 8. Full table: `docs/overhaul-2026-10-16/M-model/MODEL-WORKINGS.md`.
+3. **No ramp-up.** The plan opens at 18 clients a morning via marketing and a pre-launch waitlist.
+4. **Afternoon:** stand-alone pre-booked services, not bound by the 2-hour GTT clock; walk-ins only if staff are free.
+5. **AM packages** include any service-menu option fitting the 30 or 45 minute wellness window (a service length, not a cadence).
+
+| Figure | Value | Tag |
+|---|---|---|
+| Steady state, every month from Month 1 | +A$35,186.40 a month; A$422,236.80 a year; margin 24.6% (35,186.40 / 143,070.37) | `[CALCULATED, unchanged]` |
+| Break-even AM clients/day | **8.266** (2 phlebotomists + 4 therapists, bookings one per slot); 12.655 if bookings stack in pairs from 07:00 | `[CALCULATED, tools/am_volume_tier_staffing_solver.py + cost_ramp_model.py, 2026-10-16]` |
+| Year 1 (no ramp) | Net A$422,236.80; GST-stress A$281,310.96 | `[CALCULATED]` |
+| Peak funding / lowest cash / payback | A$251,198 / A$85,000 (opening) / Month 8 repo, Month 11 after GST | `[CALCULATED]` |
+| Phlebotomist minimum | 2 on any GTT morning, **open question for Anthony** (1 would save A$6,682.23 a month on mornings of 9 or fewer) | `[PLACEHOLDER, decision pending]` |
+
+Full workings: `docs/overhaul-2026-10-16/M-model/MODEL-WORKINGS.md`; 3-way model v0.5 in `outputs/FINANCIALS/`.
+
+---
+
 ## 0. FOUNDER DECISION ROUND, 2026-09-19 — Read This First
 
 Per Anthony's direct instruction, four operating-model/financial-model decisions are now settled and propagated through the full canonical layer (`data/canonical/*.yml`, `tools/cost_ramp_model.py`, `tools/revenue_ramp_model.py`, `data/models/master_financial_model.yml`) — not just described differently in prose:
 
 1. **Phlebotomist employment model — CLOSED.** SOLENA (the venture's working operating name) employs both phlebotomists directly (Option A, in-house) and performs the blood collection itself. The pathology partner's role is limited to lab transport and processing only. This closes the "in-house vs partner-supplied" question that was open throughout August 2026 — see §4 below. **No dollar change** — this was already the costed baseline; only the status tag moves from "contingent on an open question" to `[VERIFIED/DECIDED]`.
 2. **Venue Manager hours — Monday to Friday (was Monday to Saturday).** Recomputed on a 5-day week. See §4/§5 below. **Saturday coverage gap — RESOLVED 2026-10-03, per Anthony's direct instruction:** "Saturday venue manager will be an experienced staff member." On Saturdays, Venue Manager duties (opening, reception oversight, rostering escalation) are covered by an experienced staff member already rostered that day — not a new hire, and not the Venue Manager role itself. **Unresolved, flagged not invented:** whether this carries an additional pay loading (e.g. a leading-hand allowance) or is simply an added responsibility within existing rostered hours — Anthony has not specified either way. No cost line added or changed pending that answer. See `[VERIFIED/DECIDED — Anthony's direct instruction, 2026-10-03]` for the staffing/coverage decision itself; the pay-loading question remains `[PLACEHOLDER]`.
-3. **Demand-driven AM staffing, solver-verified at 5 volumes.** Full rebuild — see §10 below and `docs/architecture/AM-DEMAND-DRIVEN-STAFFING-TIERS-2026-09.md`. Genuine finding: only the lowest tier (9.00 clients/day) can reduce treatment headcount below the committed 8, and only via a widened 45-minute pair cadence (not yet a founder decision, same status as the already-published 6-client finding). 11.29–18.00 clients/day all require the full 8.
+3. **Demand-driven AM staffing, solver-verified at 5 volumes.** Full rebuild, see §10 below. **[SUPERSEDED 2026-10-16: the widened-cadence route for the lowest tier is retired; see §00 and §10.]**
 4. **PM capacity locked at exactly 10 sessions/day (was 16).** Full session-consumption reconciliation (Model E) — see §5 below and `docs/architecture/PM-SESSION-CAPACITY-MODEL-E-2026-09.md`. PM revenue: was A$36,225.69/month → now **A$24,585.37/month**.
 
 **Addendum, 2026-10-03 — a fifth decision, made separately from the 2026-09-19 round above:**
 
 5. **Rent budget — DECIDED 2026-10-03: stays at A$8,000/month for all current budgeting, revisit at lease stage, not before.** `docs/research/RENT-ECONOMICS-FORENSICS.md` §1 found a real, quantified gap: the A$8,000/month rent line (`docs/profit-loss-tables.md` §4, propagated to §5 below and the canonical YAML model) was set 2026-07-28 against a 200sqm planning footprint at A$40/sqm/month, and the venue program has since grown to 239-249sqm across two later founder decisions (the growth-reservation recalculation, 2026-07-28 later same day, and the 2026-08-27 Blood Collection Room split) — at the same A$40/sqm/month rate this would imply A$9,560-9,960/month, not A$8,000/month. **Per Anthony's direct instruction ("leave rent as is for budgeting"), the A$8,000/month figure is retained unchanged for all current budgeting and presentation purposes.** Anthony is aware the figure may understate the real cost relative to the grown footprint — this is a deliberate, informed decision, not an oversight or an unresolved gap, and will be revisited once a real venue and lease are on the table, not before. **No dollar change** to the A$8,000/month figure itself, and no change to any downstream revenue, cost, profit, or break-even figure in the canonical layer or in `docs/presentations/imara-brief/claude-design-handoff.md`. See `docs/VERIFICATION-TRACKER.md` item 54 for the tracker entry closing this out. `[VERIFIED/DECIDED — Anthony's direct instruction, 2026-10-03]`
 
-**Net effect on the headline Table 1 (18-client, committed) figures:** Total Revenue A$154,710.69 → **A$143,070.37/month**. Total Operating Costs A$110,544.52 → **A$107,883.97/month**. Net Operating Result (Operating Profit) A$44,166.17 → **A$35,186.40/month**. Break-even AM client volume 11.290/day is now stale — recomputed to **12.655/day** under the committed (always-8-staff) model, or a secondary 8.266/day under a not-yet-adopted demand-flexed low-volume model — see §10.
+**Net effect on the headline Table 1 (18-client, committed) figures:** Total Revenue A$154,710.69 → **A$143,070.37/month**. Total Operating Costs A$110,544.52 → **A$107,883.97/month**. Net Operating Result (Operating Profit) A$44,166.17 → **A$35,186.40/month**. Break-even AM client volume 11.290/day is now stale — re-derived 2026-10-16: **8.266/day** on the 25-minute cadence with adaptive rostering (12.655 if every morning ran the full 8-therapist roster) — see §00 and §10.
 
 ---
 
@@ -319,41 +339,38 @@ Per Anthony's direct instruction, four operating-model/financial-model decisions
 
 ---
 
-## 10. AM Demand-Driven Staffing Profitability Ladder — REBUILT 2026-09-19
+## 10. AM Adaptive Rostering Ladder, 25-minute cadence only (REBUILT 2026-10-16)
 
-> Per Anthony's direct instruction: "SOLENA may employ a full staff pool capable of supporting the maximum operating capacity. However, staff are not all rostered every day. The roster flexes according to client demand... Do not use a flat 8 service staff every day assumption across every client-volume scenario." Full method: `tools/am_volume_tier_staffing_solver.py` (extends the already-published, calibrated concurrency solver to odd client counts and cadence sweeps) + `tools/am_demand_tier_financial_ladder.py` (combines the solved headcount with the canonical wage rates from `tools/cost_ramp_model.py`). Full narrative: `docs/architecture/AM-DEMAND-DRIVEN-STAFFING-TIERS-2026-09.md`. **The 22.50 clients/day sensitivity point used in earlier presentation work is REMOVED entirely, per Anthony's explicit instruction — it exceeds the physical capacity of the current schedule design and must not appear even as an illustrative extrapolation.**
+> Rebuilt per Anthony's 2026-10-16 instructions (§00). Method: `tools/am_volume_tier_staffing_solver.py` run on the 25-minute cadence with the confirmed-slot pattern as input (planning case: bookings fill from 07:00, one client per slot first), wage rates from `tools/cost_ramp_model.py`, PM revenue and overhead from `tools/am_demand_tier_financial_ladder.py`. The earlier ladder and its widened-cadence tier are superseded. The 22.50 clients/day point stays removed (exceeds physical capacity). Rostering rule: a morning rosters what its confirmed slots need; 1 client = 2 phlebotomists + 2 therapists, never a full team. Full 1 to 18 table, best and worst booking patterns: `docs/overhaul-2026-10-16/M-model/MODEL-WORKINGS.md`.
 
-| AM clients/day | Rostered for (whole clients) | Pair cadence | Treatment headcount | Phlebotomists | Monthly payroll total | Monthly total revenue | Monthly total operating cost | **Monthly Operating Profit** |
-|---|---|---|---|---|---|---|---|---|
-| 9.00 | 9 | 45min (widened — **not yet a founder decision**) | 4 (2 Massage+Beauty + 1 Nail + 1 Hair) | 2 | A$64,705.01 | A$83,827.87 | A$78,993.30 | **+A$4,834.57** |
-| 11.29 | 12 | 25min (committed) | 8 (4 Massage+Beauty + 2 Nails + 2 Hair) | 2 | A$93,595.63 | A$98,901.79 | A$107,883.97 | **-A$8,982.18** (loss-making) |
-| 13.50 | 14 | 25min (committed) | 8 (4 Massage+Beauty + 2 Nails + 2 Hair) | 2 | A$93,595.63 | A$113,449.12 | A$107,883.97 | **+A$5,565.15** |
-| 15.50 | 16 | 25min (committed) | 8 (4 Massage+Beauty + 2 Nails + 2 Hair) | 2 | A$93,595.63 | A$126,614.12 | A$107,883.97 | **+A$18,730.15** |
-| **18.00** | **18** | **25min (committed)** | **8 (4 Massage+Beauty + 2 Nails + 2 Hair)** | **2** | **A$93,595.63** | **A$143,070.37** | **A$107,883.97** | **+A$35,186.40 (planning case)** |
+| AM clients/day booked | Phlebotomists | Therapists (Massage+Beauty / Nails / Hair) | AM labour per month (with on-costs) | Monthly operating profit |
+|---|---|---|---|---|
+| 1 | 2 | 1 / 1 / 0 = 2 | A$27,809.86 | -A$33,380.10 |
+| 5 | 2 | 2 / 2 / 0 = 4 | A$42,255.18 | -A$21,495.42 |
+| 9 | 2 | 2 / 2 / 0 = 4 | A$42,255.18 | A$4,834.58 |
+| 10 | 2 | 3 / 2 / 1 = 6 | A$56,700.52 | -A$3,028.26 |
+| 13 | 2 | 4 / 2 / 2 = 8 | A$71,145.86 | A$2,273.90 |
+| 18 | 2 | 4 / 2 / 2 = 8 | A$71,145.86 | A$35,186.40 |
 
-**Genuine, disclosed finding:** only the LOWEST tier (9.00/day) can reduce treatment headcount below the committed 8 — down to 4, and only via a widened 45-minute pair cadence, solver-verified feasible within the WDP 10:30am guidance window but not yet a founder decision (same status as the already-published 6-client/day finding). At 11.29 through 18.00 clients/day, 8 treatment staff is genuinely required at every cadence tested. Phlebotomist headcount (2) is unaffected at every tier — structural (2 collection chairs).
+**Phlebotomist minimum (open question for Anthony):** 2 whenever a GTT client is booked, as GTT's clinical standard. Not a regulation found in this repo. 1 phlebotomist on mornings of 9 or fewer would save A$234.51 a weekday morning.
 
-**A genuinely counter-intuitive result, disclosed not smoothed over:** 9.00 clients/day is MORE profitable (+A$4,834.57) than 11.29 clients/day (-A$8,982.18), because 11.29 requires the full 8-staff headcount step-up while 9.00 does not — a real "valley" in the ladder between roughly 9 and 12.655 clients/day (see break-even below).
+**Valley, disclosed:** 10 to 12 clients cost more than they earn at the margin (the roster steps to 6 then 8 therapists): net -A$3,028.26 at 10, -A$10,891.10 at 11, -A$4,308.60 at 12, against +A$4,834.58 at 9 and +A$2,273.90 at 13. With no ramp-up and a waitlist the target is 18 every morning.
 
-**Rounding convention:** each fractional volume (a continuous average planning figure, same convention this file has always used for revenue) is rounded UP to the nearest whole client for STAFFING purposes only; revenue continues to use the exact fractional volume.
+### Break-even, re-derived on the 25-minute cadence
 
-### Break-even — recomputed, the old 11.290/day figure is now STALE
-
-Because headcount now genuinely flexes with volume, there are two distinct, valid break-even points depending on which staffing regime applies — presenting a single number would be misleading:
-
-| Metric | **LOW segment (4-staff, 45min cadence, adopted 2026-10-11 for quiet mornings)** | HIGH segment (8-staff, 25min cadence, fixed full-roster comparison) |
+| Step | Working | Result |
 |---|---|---|
-| Break-even AM clients/day | 8.266 | **12.655** |
-| Break-even clients/week | 49.59 | 75.93 |
-| Break-even clients/month | ≈217.6 | ≈333.2 |
-| % of the 18-client/day committed target | 45.9% | **70.3%** |
-| Approx. share of the addressable market (515/week ÷ ≈2,231.7 births/month) | ≈9.75% | **≈14.93%** |
+| Fixed costs | Rent, overhead, cost of goods, PM labour and Venue Manager with on-costs | A$36,738.11 |
+| AM roster (2 phlebotomists + 4 therapists) | with on-costs | + A$42,255.18 |
+| Total | | A$78,993.29 |
+| Less PM revenue | | - A$24,585.37 |
+| Costs AM GTT must cover | | A$54,407.92 |
+| Revenue per daily AM client per month | A$250 x 26.33 | A$6,582.50 |
+| **Break-even** | | **8.266 AM clients/day** (45.9% of 18; ≈ 9.75% of the addressable market) |
 
-**Quote 8.266 AM clients/day (about 45.9% of the 18-client committed target, about 9.75% of the addressable market) as "the" break-even, per Anthony's 2026-10-11 decision** (45-minute pair cadence adopted for quiet mornings; see `docs/DECISION-LOG.md`). The HIGH-segment figure (12.655/day, about 70.3% of committed, about 14.93% of addressable market) is kept as the fixed full-roster comparison only: what break-even would be if all 8 treatment staff were rostered every morning. Both figures are unchanged; only the wording changed (2026-10-13).
+Same value as before the rebuild, now earned on the 25-minute cadence. If every booking stacks in pairs from 07:00 the roster is 2 + 8 from 4 clients and break-even is **12.655**. With 1 phlebotomist on mornings of 9 or fewer: 7.250. Margin of safety at 18: 9.734 clients/day (54.1%).
 
-**Margin of safety at the 18.00-client planning case:** 5.345 clients/day above the HIGH-segment break-even (≈29.7% of committed volume) — narrower than the pre-rebuild margin (6.710 clients/day, ≈37.3%), a real, disclosed consequence of the lower PM revenue, not offset by the Venue Manager saving.
-
-**Table 2 (12-client secondary reference) post-rebuild:** Net Operating Result is now **+A$1,096.40/month** (was +A$10,076.16) — a thin but still-positive margin, break-even 11.833/day, margin of safety 0.167 clients/day (~1.4%).
+**Table 2 (12-client secondary reference):** Net Operating Result **+A$1,096.40/month**, break-even 11.833/day, margin of safety 0.167 clients/day (~1.4%).
 
 ---
 
@@ -367,6 +384,8 @@ Because headcount now genuinely flexes with volume, there are two distinct, vali
 ---
 
 ## Changelog
+
+**2026-10-16 (Anthony's overhaul review, workstream M)** — New §00; §10 rebuilt (25-minute cadence only, adaptive roster, break-even re-derived); §0 item 3 marked superseded. Net, annual and margin figures unchanged. Details in `docs/DECISION-LOG.md`.
 
 **2026-10-03 (old PM package proposal killed, name-collision ambiguity removed from §2)** — Per Anthony's direct instruction ("old proposal is dead, use the new"), the old PM Duo/Refresh/Glow package proposal (`pm-package-structure.md`, including its own differently-priced "PM Refresh" at A$225/A$212) is dead. Archived in full to `docs/archive/pm-package-structure-superseded-2026-10-03.md`; `docs/pm-package-structure.md` replaced with a short pointer stub. §2 above rewritten so it no longer lists both the dead proposal and the live PM Refresh (A$185) / PM Restore (A$135) packages (`docs/architecture/PM-PACKAGES.md`) as if either could still be live — the old row is now explicitly marked DEAD/SUPERSEDED, the new row is the only current pricing. Documentation cleanup only — no dollar figure or downstream calculation changed.
 
