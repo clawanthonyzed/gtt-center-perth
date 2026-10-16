@@ -132,3 +132,4 @@
 **Documents created:** `docs/strategy/BRAND-STRATEGY-NAME-AGNOSTIC.md`, `docs/experience/CUSTOMER-JOURNEY.md`, `docs/experience/RETURN-LOOP.md`, `docs/strategy/BRAND-ARCHITECTURE.md`, `docs/strategy/PREMIUM-POSITIONING.md`.
 
 **Explicit boundary:** none of the above lock a final logo, palette, type system, signage, packaging, uniforms, or production website for either candidate name — that remains gated on the naming decision per `docs/naming/NAMING-DECISION-STATE.md`'s "DO NOT START YET" list.
+- 2026-10-16: shortlist replaced by outputs/LEASING/PROPERTY-SHORTLIST-2026-10.md; old list archived in docs/archive.
