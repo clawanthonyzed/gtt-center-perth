@@ -3,11 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTT Center Perth - Pitch Deck (DRAFT v0.4, 2026-10-11)</title>
+<title>GTT Center Perth - Pitch Deck (DRAFT v0.5, 2026-10-16)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-/* Palette: LOCKED 7-colour founder palette (2026-08-15), outputs/brand/warm-stone-tokens.css.
-   Fonts: Fraunces (display) + DM Sans (body) with system fallbacks, same file. */
+/* Palette: seven-colour founder palette. Fonts: Fraunces (display) + DM Sans (body) with system fallbacks. */
 :root { --ivory:#FAF6EE; --stone:#E8DAC5; --brown:#33261E; --terra:#A9654E; --olive:#5E5F45; --rose:#D9A08C; --brass:#9C7A46; --s:1;
   --serif:'Fraunces', Georgia, 'Times New Roman', serif; --sans:'DM Sans', 'Segoe UI', Verdana, Tahoma, Arial, sans-serif; }
 * { box-sizing:border-box; }
@@ -151,6 +150,39 @@ tr:nth-child(even) td { background:var(--stone); }
 .fit-rent td, .fit-rent th { padding:8px 16px; font-size:26px; line-height:1.2; }
 .fit-rent p.small { line-height:1.3; margin-bottom:0; }
 
+
+/* v0.5 additions */
+.slide.vfs .vf.vfbig { font-size:30px; }
+.slide .vf.vfbig .vf-lab { font-size:0.85em; }
+.slide .vf.vfbig .vf-big { font-size:1.9em; }
+.slide .vf.vfbig .vf-src { font-size:0.62em; display:block; }
+.slide .vf.vfbig .vf-eq { font-size:1.15em; }
+.slide .vf.vfbig .vf-note { font-size:0.8em; }
+.slide .vf.vfbig .vf-val { font-size:1.35em; }
+.slide .vf.vfbig .vf-resn { font-size:3em; }
+.slide .vf.vfbig .vf-colsub { font-size:0.75em; }
+.slide .vf.vfbig .vf-cap { max-width:1500px; }
+.slide .vf .vf-steps .vf-step { padding:0.5em 0.6em; }
+.fit-plan { padding-top:50px; }
+.fit-plan h1 { font-size:68px; margin-bottom:14px; }
+.fit-plan .plan-wrap { display:grid; grid-template-columns:820px 1fr; gap:36px; }
+.fit-plan img.plan { width:820px; height:auto; border:3px solid var(--stone); border-radius:4px; display:block; }
+.fit-plan ol { margin:0; padding-left:34px; }
+.fit-plan li { font-size:28px; line-height:1.3; margin-bottom:9px; }
+.fit-plan .cap { font-size:22px; color:var(--olive); margin:6px 0 0 0; }
+.tight2 h1 { font-size:68px; margin-bottom:16px; }
+.tight2 .card { padding:14px 24px; }
+.tight2 .card .lab { font-size:25px; }
+.tight2 .card .big.sm { font-size:50px; }
+.tight2 .card .big { font-size:72px; }
+.tight2 .card .txt { font-size:24px; margin-top:4px; line-height:1.3; }
+.tight2 p.small, .tight2 li { font-size:26px !important; line-height:1.3; }
+.tight2 li { margin-bottom:6px; }
+.tight2 td, .tight2 th { padding:8px 14px; font-size:25px; line-height:1.2; }
+.tight2 .grid { gap:20px; }
+.rk td, .rk th { padding:5px 12px !important; font-size:22px !important; }
+.tight2 a { color:#A9654E; }
+
 #hud { position:fixed; left:0; right:0; bottom:0; display:flex; justify-content:space-between;
   padding:6px 16px; font-size:15px; color:var(--stone); background:rgba(51,38,30,0.92); z-index:10; }
 html.ext .int { display:none !important; }
@@ -173,11 +205,11 @@ html.ext .int { display:none !important; }
 <!-- 1 COVER (external) -->
 <section class="slide cover center" data-name="Cover">
   <h1 class="wordmark">GTT Center<br><span>Perth</span></h1>
-  <p style="font-size:50px">WA's first premium waiting experience for pregnant women having the Glucose Tolerance Test (GTT)</p>
-  <p class="small">Our research found no equivalent venue in WA. This is our own finding, not an audit.</p>
+  <p style="font-size:50px">Western Australia's first premium waiting experience for expecting mothers having the Glucose Tolerance Test (GTT)</p>
+  <p class="small">Our research found no equivalent venue in Western Australia. This is our own finding, not an audit.</p>
   <p class="small">Pre-launch. No venue yet. No launch date set.</p>
-  <div class="stamp">DRAFT 2026-10-11</div>
-  <div class="foot">Working name. Pitch deck v0.4.</div>
+  <div class="stamp">DRAFT 2026-10-16</div>
+  <div class="foot">Working name. Pitch deck v0.5.</div>
 </section>
 
 <!-- 2 PROBLEM (external) -->
@@ -189,11 +221,11 @@ html.ext .int { display:none !important; }
     <div class="card dark"><div class="lab">Care during wait</div><div class="big sm">None</div><div class="txt">Fasting, tired, cannot leave</div></div>
   </div>
   <ul>
-    <li>The GTT is a standard pregnancy screening test.</li>
-    <li>Nearly every pregnant woman is screened.</li>
-    <li>Gap: no WA venue turns this wait into a care experience.</li>
+    <li>The GTT is a standard pregnancy screening test, recommended for expecting mothers, usually between 24 and 28 weeks. It is optional: every expecting mother chooses.</li>
+    <li>Nearly every expecting mother is offered it.</li>
+    <li>Gap: no Western Australian venue turns this wait into a care experience.</li>
   </ul>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
 <!-- 3 SOLUTION (external) -->
@@ -207,51 +239,55 @@ html.ext .int { display:none !important; }
   </div>
   <ul>
     <li>Blood is drawn on site in a private collection room.</li>
-    <li>2 in-house certified phlebotomists (trained to draw blood).</li>
-    <li>Services fit between draws. A draw never interrupts a service.</li>
-    <li>Staff are employed (casual or permanent). Not subtenants.</li>
+    <li>2 certified phlebotomists on every testing morning. Who employs the collection staff is subject to written confirmation from the pathology partner and Medicare.</li>
+    <li>Services fit between draws. <b>Wellness services never interrupt a blood draw.</b></li>
+    <li>Wellness staff are employed (casual or permanent).</li>
     <li>Venue and lounge access is free inside every package.</li>
   </ul>
-  <p class="small">Not in launch scope: 3D keepsake ultrasound (possible Phase 2, never diagnostic).</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 4 MARKET (external, one internal line) -->
-<section class="slide" data-name="Market">
-  <h1>Market <span>size</span></h1>
-  <div class="grid g2" style="margin-bottom:28px">
-    <div class="card dark"><div class="lab">Greater Perth births per year (2024)</div><div class="big">26,790</div></div>
-    <div class="card"><div class="lab">WA births per year (2024)</div><div class="big">33,570</div></div>
-  </div>
+<!-- 4 MARKET (external) -->
+<section class="slide tight2" data-name="Market">
+  <h1>Western Australia and Greater Perth <span>births</span></h1>
+  <table style="margin-bottom:22px">
+    <tr><th>Measure</th><th>2023</th><th>2024</th></tr>
+    <tr><td>Registered births, Western Australia</td><td>32,031</td><td>30,541</td></tr>
+    <tr><td>Registered births, Greater Perth</td><td>25,436</td><td>24,271</td></tr>
+    <tr><td>Total fertility rate, Greater Perth</td><td>1.58</td><td>1.47</td></tr>
+    <tr><td>Perth births per week</td><td>489</td><td>467</td></tr>
+  </table>
   <div class="grid g2">
-    <div class="card"><div class="lab">Perth GTT tests per week (proxy)</div><div class="big sm">about 515</div><div class="txt">26,790 births divided by 52. Births used as a stand-in. TO CONFIRM</div></div>
-    <div class="card"><div class="lab">Our planned capacity</div><div class="big sm">108 AM slots a week</div><div class="txt">About 21% of Perth's weekly tests</div></div>
+    <div class="card"><div class="lab">Perth glucose tolerance tests a week (births used as a stand-in)</div><div class="big sm">about 467</div><div class="txt">24,271 births divided by 52. To be confirmed.</div></div>
+    <div class="card dark"><div class="lab">Our planned capacity</div><div class="big sm">18 clients a morning, 108 a week</div><div class="txt">About 23% of Perth's weekly tests. A ceiling on places offered, not a forecast and not market control.</div></div>
   </div>
-  <p class="small int" style="margin-top:22px">Internal: break-even (8.266 a day) needs about 9.8% of the Perth market, roughly 1 in 10 Perth GTT mothers. 45-min cadence adopted 2026-10-11 (quiet mornings); fill assumed 100%.</p>
-  <p class="small" style="margin-top:10px">Source: ABS Births, Australia 2024, as analysed by KPMG. Preliminary figures.</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <p class="small" style="margin-top:16px">GTT is a premium, high-desire choice for the expecting mother who wants a comfortable wait. Most expecting mothers will still test at their usual collection centre.</p>
+  <p class="small" style="margin-top:6px">Source: Australian Bureau of Statistics, Births, Australia 2024 (released 15 October 2025) and Data by region. The 2025 figures are due on 6 November 2026 and will replace these.</p>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
 <!-- 5 VISIT (external) -->
 <section class="slide fit-visit" data-name="How a visit works">
   <h1>How a visit <span>works</span></h1>
-  <div class="grid g2" style="grid-template-columns:1.25fr 1fr; gap:50px">
-    <ol class="steps" style="margin:0; padding-left:50px">
-      <li>Book and pay online in advance.</li>
-      <li>Arrive fasted. Check in and consent.</li>
-      <li>Draw 1 (about 5 minutes), then service 1.</li>
-      <li>Draw 2 at 60 minutes, then service 2.</li>
-      <li>Draw 3 at 120 minutes. Relax in the lounge.</li>
-      <li>One courier pickup of the day's samples at the end of the morning. GTT does not diagnose or interpret results.</li>
+  <div class="grid g2" style="grid-template-columns:1.45fr 1fr; gap:44px">
+    <ol class="steps" style="margin:0; padding-left:46px">
+      <li style="font-size:29px; margin-bottom:7px">Book and pay online, 2 to 4 weeks ahead.</li>
+      <li style="font-size:29px; margin-bottom:7px">Arrive fasted 10 minutes before your draw (06:50 for the 07:00 draw). Check in and consent.</li>
+      <li style="font-size:29px; margin-bottom:7px">Draw 1 (about 5 minutes), then the glucose drink.</li>
+      <li style="font-size:29px; margin-bottom:7px">Wellness service 1 (30 or 45 minutes). It never interrupts a draw.</li>
+      <li style="font-size:29px; margin-bottom:7px">Draw 2 at 60 minutes, then wellness service 2 (30 or 45 minutes).</li>
+      <li style="font-size:29px; margin-bottom:7px">Draw 3 at 120 minutes.</li>
+      <li style="font-size:29px; margin-bottom:7px">Relax in the lounge, have something to eat or drink from the Private Refreshment Counter, or continue to pre-booked standalone services.</li>
+      <li style="font-size:29px; margin-bottom:7px">One courier pickup per day. GTT does not diagnose or interpret results.</li>
     </ol>
-    <div class="grid" style="gap:20px; align-content:start">
-      <div class="card dark"><div class="lab">First client</div><div class="big sm">07:00</div></div>
-      <div class="card dark"><div class="lab">Clients per day</div><div class="big sm">up to 18</div></div>
+    <div class="grid" style="gap:18px; align-content:start">
+      <div class="card dark"><div class="lab">First booking</div><div class="big sm">07:00</div></div>
+      <div class="card dark"><div class="lab">Clients per morning</div><div class="big sm">up to 18</div></div>
       <div class="card dark"><div class="lab">Collection rooms</div><div class="big sm">2</div><div class="txt">2 chairs, 2 phlebotomists</div></div>
       <div class="card dark"><div class="lab">Trading days</div><div class="big sm">Mon to Sat</div></div>
     </div>
   </div>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
 <!-- 6 LAB PARTNERS (external) -->
@@ -262,9 +298,9 @@ html.ext .int { display:none !important; }
       <h2>What we offer</h2>
       <ul>
         <li>A steady morning stream of GTT patients at one site (up to 108 a week at capacity)</li>
-        <li>Our own certified phlebotomists</li>
+        <li>Certified phlebotomists on every testing morning (employment arrangement to be confirmed in writing with the partner and Medicare)</li>
         <li>2 dedicated blood collection rooms built to national standards (NPAAC)</li>
-        <li>One pickup a day, end of morning</li>
+        <li>One courier pickup per day</li>
         <li>We earn nothing from pathology billing</li>
       </ul>
     </div>
@@ -275,53 +311,51 @@ html.ext .int { display:none !important; }
         <li>Lab testing</li>
         <li>Results reporting to the doctor</li>
         <li>Tubes and bags</li>
-        <li>Collection-room spec in writing</li>
-        <li>Costs</li>
+        <li>Collection room requirements in writing</li>
+        <li>Written fees</li>
       </ul>
       <p class="small">NPAAC = National Pathology Accreditation Advisory Council</p>
     </div>
   </div>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 6B BOOKINGS AHEAD + WAITLIST (external, no money figures) -->
+<!-- 7 BOOKINGS AHEAD + WAITLIST (external) -->
 <section class="slide tight" data-name="Bookings ahead and waitlist">
   <h1>Predictable <span>daily volume</span></h1>
-  <p style="font-size:40px; margin-bottom:20px">Bookings 2 to 4 weeks ahead + waitlist = predictable daily volume for courier pickups</p>
+  <p style="font-size:40px; margin-bottom:20px">Bookings 2 to 4 weeks ahead + a pre-launch waitlist = a full morning from day one and one courier pickup per day</p>
   <div class="grid g3" style="margin-bottom:30px">
-    <div class="card dark"><div class="lab">Book ahead</div><div class="big sm">2 to 4 weeks</div><div class="txt">Prepaid online booking inside the usual 24 to 28 week referral window</div></div>
-    <div class="card dark"><div class="lab">Waitlist</div><div class="big sm">Always on</div><div class="txt">Backfills cancellations so each released morning stays full</div></div>
-    <div class="card dark"><div class="lab">Pickup</div><div class="big sm">One a day</div><div class="txt">End of morning, with the sample count known in advance</div></div>
+    <div class="card dark"><div class="lab">Book ahead</div><div class="big sm">2 to 4 weeks</div><div class="txt">Prepaid online booking inside the usual 24 to 28 week window</div></div>
+    <div class="card dark"><div class="lab">Waitlist</div><div class="big sm">Always on</div><div class="txt">Opens before launch and backfills cancellations so each morning stays full</div></div>
+    <div class="card dark"><div class="lab">Courier pickup</div><div class="big sm">One per day</div><div class="txt">With the sample count known in advance</div></div>
   </div>
   <ul>
     <li>Each morning's client count is confirmed days ahead, so the lab can plan for the expected samples.</li>
-    <li>We share the forecast before each week. The pickup stays one per morning.</li>
-    <li>Mornings are filled in planned steps, so volume does not swing day to day.</li>
+    <li>We share the forecast before each week. There is one courier pickup per day.</li>
+    <li>Launch marketing and the waitlist fill the diary before opening, so GTT opens at 18 bookings a morning.</li>
   </ul>
-  <p class="small">Planned operating model. Pre-launch, no trading data. Forecast format and timing TO CONFIRM with each lab.</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 7 TENDER (internal) -->
-<section class="slide int fit-tender" data-name="Dual-lab tender">
+<!-- 8 PATHOLOGY PARTNERS (internal) -->
+<section class="slide int fit-tender" data-name="Pathology partner options">
   <div class="tag">INTERNAL</div>
-  <h1>Dual-lab <span>tender</span></h1>
-  <p class="small" style="margin-bottom:14px">Courier and lab analysis tendered between PathWest and WDP. No exclusive commitment. Locked 2026-10-10.</p>
+  <h1>Pathology partner <span>options</span></h1>
   <table>
-    <tr><th style="width:22%">Criterion</th><th style="width:39%">PathWest</th><th style="width:39%">WDP</th></tr>
-    <tr><td>Per-test fee</td><td>TO CONFIRM. Cost question of 2026-09-03 unanswered</td><td>TO CONFIRM. No figure given</td></tr>
-    <tr><td>Courier cutoffs</td><td>Pickup confirmed 2026-09-01 (fluoro-ox tubes). Times TO CONFIRM</td><td>Feasible with correct tubes. No fixed cutoff</td></tr>
-    <tr><td>Turnaround</td><td>TO CONFIRM</td><td>TO CONFIRM</td></tr>
-    <tr><td>Tubes and supplies</td><td>Free if volume is large. Glucose drink not supplied</td><td>TO CONFIRM</td></tr>
-    <tr><td>Results to doctor</td><td>TO CONFIRM</td><td>TO CONFIRM</td></tr>
-    <tr><td>Minimum term and volume</td><td>Not given</td><td>Open item: minimum term</td></tr>
-    <tr><td>ACC arrangement</td><td>TO CONFIRM</td><td>TO CONFIRM</td></tr>
+    <tr><th style="width:19%"></th><th style="width:27%">Western Diagnostic Pathology (WDP)</th><th style="width:27%">PathWest</th><th style="width:27%">Clinipath</th></tr>
+    <tr><td>Role</td><td>Priority partner</td><td>Contingency</td><td>Contingency</td></tr>
+    <tr><td>Fee per test</td><td>No fee quoted yet</td><td>No fee quoted yet</td><td>No fee quoted yet</td></tr>
+    <tr><td>Collection or rental fee</td><td>No fee quoted yet</td><td>No fee quoted yet</td><td>No fee quoted yet</td></tr>
+    <tr><td>Courier</td><td>One pickup per day</td><td>Under assessment (grey top tubes may allow courier collection)</td><td>Not yet discussed</td></tr>
+    <tr><td>Turnaround</td><td>Not yet quoted</td><td>Not yet quoted</td><td>Not yet quoted</td></tr>
+    <tr><td>Contact status</td><td>In active discussion since July 2026; formal partnership steps requested</td><td>Replied in August 2026, progressing</td><td>Approached July 2026, awaiting reply</td></tr>
   </table>
-  <p class="small warn" style="margin-top:14px">ACC (Approved Collection Centre) caveat: only the lab can hold the Commonwealth approval for a room. Two labs cannot both hold it for the same room. Verify with both labs and an adviser.</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11 | Clinipath: optional third bidder only if it replies</div>
+  <p class="small" style="margin-top:14px">No laboratory has yet quoted a fee. Written wholesale per-test and collection fees will be requested from all three before a partner is chosen.</p>
+  <p class="small warn" style="margin-top:8px">The pathology partner holds the Medicare collection centre approval and an occupation agreement for the collection room. Who employs the collectors is subject to written confirmation from the partner and Medicare.</p>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 8 PRICING (external) -->
+<!-- 9 PRICING (external) -->
 <section class="slide" data-name="Pricing">
   <h1><span>Pricing</span></h1>
   <div class="grid g4" style="margin-bottom:30px">
@@ -331,394 +365,243 @@ html.ext .int { display:none !important; }
     <div class="card"><div class="lab">PM Restore</div><div class="big">A$135</div><div class="txt">75 minutes: manicure + blow-dry</div></div>
   </div>
   <ul>
-    <li>Prices are our own. Not tested with customers yet.</li>
-    <li>Pathology fee is separate. Out-of-pocket estimate A$0 to A$80, TO CONFIRM.</li>
+    <li style="font-size:34px">Prices are GST-inclusive and are our own. Not tested with customers yet.</li>
+    <li style="font-size:34px">The pathology fee is billed by the lab, separate from our package. Out-of-pocket estimate A$0 to A$80, to be confirmed. Written fees are being requested from PathWest, WDP and Clinipath.</li>
+    <li style="font-size:34px">Test Day Thank You (proposed): an exclusive discount on a standalone afternoon treatment booked within 14 days of the test. Discount level to be set.</li>
   </ul>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 9 REVENUE + BREAK-EVEN (internal) -->
-<section class="slide int" data-name="Revenue and break-even">
+<!-- 10 REVENUE + BREAK-EVEN (internal) -->
+<section class="slide int tight2" data-name="Revenue and break-even">
   <div class="tag">INTERNAL</div>
   <h1>Revenue and <span>break-even</span></h1>
-  <div class="grid g2" style="margin-bottom:20px">
+  <div class="grid g2" style="margin-bottom:16px">
     <div class="card dark"><div class="lab">Revenue per month (full capacity)</div><div class="big sm">A$143,070.37</div></div>
-    <div class="card dark"><div class="lab">Break-even (AM clients a day)</div><div class="big sm">8.266</div><div class="txt">Was 12.655. 45.9% of the 18-a-day plan. GST-stress 9.255</div></div>
+    <div class="card dark"><div class="lab">Break-even (morning clients a day)</div><div class="big sm">8.266</div><div class="txt">45.9% of the 18-a-day capacity</div></div>
   </div>
-  <table style="font-size:28px">
-    <tr><th>AM clients a day</th><th>Roster</th><th>Revenue</th><th>Costs</th><th>Profit per month</th></tr>
+  <table>
+    <tr><th>Morning clients a day</th><th>Roster</th><th>Revenue</th><th>Costs</th><th>Profit per month</th></tr>
     <tr><td>8.266 (break-even)</td><td>2 + 4</td><td>A$78,993.29</td><td>A$78,993.29</td><td>A$0</td></tr>
-    <tr><td>10 (derived)</td><td>2 + 4</td><td>A$90,410.37</td><td>A$78,993.29</td><td>+A$11,417.08</td></tr>
+    <tr><td>9</td><td>2 + 4</td><td>A$83,827.87</td><td>A$78,993.29</td><td>+A$4,834.58</td></tr>
+    <tr><td>10</td><td>2 + 6</td><td>A$90,410.37</td><td>A$93,438.63</td><td class="warn">-A$3,028.26</td></tr>
     <tr><td>12.6 (70% fill)</td><td>2 + 8</td><td>A$107,524.87</td><td>A$107,883.97</td><td class="warn">-A$359.10</td></tr>
     <tr><td>15.3 (85% fill)</td><td>2 + 8</td><td>A$125,297.62</td><td>A$107,883.97</td><td>+A$17,413.65</td></tr>
-    <tr><td>18 (100% fill, planning case)</td><td>2 + 8</td><td>A$143,070.37</td><td>A$107,883.97</td><td>+A$35,186.40</td></tr>
+    <tr><td>18 (full capacity, planning case)</td><td>2 + 8</td><td>A$143,070.37</td><td>A$107,883.97</td><td>+A$35,186.40</td></tr>
   </table>
-  <p class="small warn" style="margin-top:14px; font-size:26px !important">Roster = phlebotomists + therapists. 45-min cadence adopted 2026-10-11 (quiet mornings). Fill assumed 100%: each 1% of fill at capacity is about A$1,185/month, 85% fill gives about +A$17.4k, 70% makes a loss. That is why the waitlist matters.</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
-</section>
-
-<!-- 9B DEMAND-RESPONSIVE ROSTERING (internal) -->
-<section class="slide int" data-name="Demand-responsive rostering">
-  <div class="tag">INTERNAL</div>
-  <h1>Demand-responsive <span>rostering</span></h1>
-  <div class="grid" style="grid-template-columns:1.35fr 1fr; gap:36px">
-    <div>
-      <table style="font-size:25px">
-        <tr><th>Bookings that morning</th><th>Phleb.</th><th>Therapists</th><th>Cadence</th><th>Weekday cost</th></tr>
-        <tr><td>0</td><td>0</td><td>0</td><td>n/a</td><td>A$0</td></tr>
-        <tr><td>1 (floor)</td><td>2</td><td>1</td><td>n/a</td><td>A$724.84</td></tr>
-        <tr><td>2 to 5 (avoid)</td><td>2</td><td>1 to 4</td><td>45 min</td><td>A$724.84 to A$1,482.90</td></tr>
-        <tr><td>6 to 10 (target)</td><td>2</td><td>4</td><td>45 min</td><td>A$1,482.90</td></tr>
-        <tr><td>11 to 14 (avoid)</td><td>2</td><td>8</td><td>25 min</td><td>A$2,496.78</td></tr>
-        <tr><td>15+ weekday, 17+ Sat</td><td>2</td><td>8</td><td>25 min</td><td>A$2,496.78</td></tr>
-      </table>
-      <p class="small" style="margin-top:12px; font-size:24px !important">Cost includes super 12% and workers comp 1.7%. Saturday is 1.5 times. 2 phlebotomists whenever any GTT client is booked. Bookings are steered to fill mornings to 10; the full roster only runs at 15+ on weekdays or 17+ on Saturdays.</p>
-    </div>
-    <div>
-      <table style="font-size:25px">
-        <tr><th>Ramp-up</th><th>Old</th><th>New</th></tr>
-        <tr><td>Payroll, Months 1 to 3</td><td>A$280,787</td><td>A$214,844</td></tr>
-        <tr><td>Month 1 net</td><td>-A$45,464</td><td>-A$16,573</td></tr>
-        <tr><td>Break-even a day</td><td>12.655</td><td>8.266</td></tr>
-        <tr><td>Peak funding</td><td>A$318,176</td><td>A$267,771</td></tr>
-        <tr><td>Payback</td><td>M13 / M18</td><td>M11 / M15</td></tr>
-      </table>
-      <p class="small" style="margin-top:12px; font-size:24px !important">Month 2 turns positive. Steady state is unchanged at +A$35,186.40: 18 a day needs the full roster.</p>
-    </div>
+  <p class="small" style="margin-top:12px">Roster = phlebotomists + therapists. Staff are called in to match confirmed bookings. Margin of safety: 9.7 clients a day. If every booking stacks in pairs from 07:00, break-even rises to 12.655.</p>
+  <div class="grid g2" style="margin-top:10px">
+    <div class="card"><div class="lab">Why 8 therapists at about 12.6 clients?</div><div class="txt">Staffing follows overlap, not headcount. Each client has two services and pairs start 25 minutes apart. At about 12.6 booked clients neighbouring double-booked slots put four first services in the room at once, so 8 therapists are needed. If second-chair bookings fall in alternate slots, 6 are enough.</div></div>
+    <div class="card"><div class="lab">Fill rate is the central risk</div><div class="txt">The plan assumes every released morning place fills. Each 1% of fill at capacity is worth about A$1,185 a month. At 85% fill profit is about +A$17.4k a month; at 70% GTT roughly breaks even. That is why the waitlist matters.</div></div>
   </div>
-  <p class="small warn" style="margin-top:14px; font-size:25px !important">Clients book 2 to 4 weeks ahead (24 to 28 week referral window) with a waitlist. 45-min cadence adopted 2026-10-11 (quiet mornings). Fill assumed 100%: each 1% of fill at capacity is about A$1,185/month, 85% fill gives about +A$17.4k, 70% makes a loss. That is why the waitlist matters.</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 10 FINANCIAL BASELINE (internal) -->
-<section class="slide int tight" data-name="Financial baseline">
+<!-- 11 DEMAND-RESPONSIVE ROSTERING (internal) -->
+<section class="slide int tight2" data-name="Demand-responsive rostering">
+  <div class="tag">INTERNAL</div>
+  <h1>Adaptive <span>rostering</span></h1>
+  <table style="font-size:25px">
+    <tr><th>Booked</th><th>Phlebotomists</th><th>Therapists</th><th>Last first draw</th><th>Labour per morning</th><th>Revenue per morning</th><th>Contribution per morning</th></tr>
+    <tr><td>1</td><td>2</td><td>2</td><td>07:00</td><td>A$975.96</td><td>A$250</td><td class="warn">-A$725.96</td></tr>
+    <tr><td>2 to 9 (one per slot)</td><td>2</td><td>4</td><td>07:25 to 10:20</td><td>A$1,482.90</td><td>A$500 to A$2,250</td><td>-A$982.90 to +A$767.10</td></tr>
+    <tr><td>10</td><td>2</td><td>6</td><td>10:20</td><td>A$1,989.84</td><td>A$2,500</td><td>+A$510.16</td></tr>
+    <tr><td>11 to 18</td><td>2</td><td>8</td><td>10:20</td><td>A$2,496.78</td><td>A$2,750 to A$4,500</td><td>+A$253.22 to +A$2,003.22</td></tr>
+  </table>
+  <p class="small" style="margin-top:10px">Weekday labour with 12% superannuation and 1.7% workers compensation. Saturday is 1.5 times. Staff are called in to match confirmed bookings. A morning with one booking runs 2 phlebotomists and 2 therapists, not a full team. Afternoons follow the pre-booked services; walk-ins are accepted only when staff are free.</p>
+  <div class="grid g3" style="margin-top:12px">
+    <div class="card dark"><div class="lab">No slow ramp-up</div><div class="txt">GTT uses launch marketing and a pre-launch waitlist to open at 18 bookings a morning.</div></div>
+    <div class="card dark"><div class="lab">Book 2 to 4 weeks ahead</div><div class="txt">The standard for every time slot. The roster is published 1 to 2 weeks ahead from confirmed bookings.</div></div>
+    <div class="card"><div class="lab">Phlebotomist minimum</div><div class="txt">2 on every testing morning, GTT's clinical standard, pending the pathology partner's answer.</div></div>
+  </div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
+</section>
+
+<!-- 12 FINANCIAL BASELINE (internal) -->
+<section class="slide int tight2" data-name="Financial baseline">
   <div class="tag">INTERNAL</div>
   <h1>Profit <span>per month</span></h1>
-  <div class="grid g3" style="margin-bottom:24px">
-    <div class="card dark"><div class="lab">Baseline (headline)</div><div class="big">+A$35,186</div><div class="txt">A$8,000 rent, 18 clients a day. Unchanged in v0.4</div></div>
-    <div class="card"><div class="lab">Rent-adjusted (A$9,500 to A$10,500 rent)</div><div class="big sm">+A$32,686 to +A$33,936</div><div class="txt">Gross ceiling A$10,500 all-in: +A$33,936. Prudent case (plus utilities and cleaning): +A$32,686</div></div>
-    <div class="card"><div class="lab">GST-stress downside</div><div class="big">+A$23,443</div><div class="txt">Gross ceiling +A$22,306</div></div>
+  <div class="grid g3" style="margin-bottom:14px">
+    <div class="card dark"><div class="lab">Baseline (headline)</div><div class="big">+A$35,186</div><div class="txt">A$8,000 rent, 18 clients a day, GST not deducted (subject to an ATO private ruling)</div></div>
+    <div class="card"><div class="lab">Rent-adjusted (A$9,500 to A$10,500)</div><div class="big sm">+A$32,686 to +A$33,936</div><div class="txt">Gross ceiling A$10,500 all-in: +A$33,936. Prudent case (plus utilities and cleaning): +A$32,686</div></div>
+    <div class="card"><div class="lab">GST-stress (prudent planning case)</div><div class="big">+A$23,443</div><div class="txt">Gross ceiling +A$22,306</div></div>
   </div>
-  <ul>
-    <li>Revenue A$143,070.37. Total costs A$107,883.97. About A$422k a year at steady state.</li>
-    <li>Ramp is cheaper: Months 1 to 3 payroll A$214,844 (was A$280,787). Month 1 -A$16,573 (was -A$45,464), Month 2 positive.</li>
-    <li>Year 1 net A$322,015 (A$196,609 after GST). Payback Month 11 (Month 15 after GST).</li>
-  </ul>
-  <p class="small warn" style="font-size:26px !important">Break-even 8.266 a day (GST-stress 9.255; ceiling 8.455; prudent 8.645). 45-min cadence adopted 2026-10-11 (quiet mornings). Fill assumed 100%: each 1% of fill at capacity is about A$1,185/month, 85% fill gives about +A$17.4k, 70% makes a loss. That is why the waitlist matters. GST two-tier invoice is proposed only, accountant / ATO ruling to confirm. Planning estimates, no trading data.</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11 | Working shown: <a href="visual-financials.html" style="color:#A9654E">visual-financials.html</a></div>
+  <div class="grid g2" style="margin-bottom:14px">
+    <div class="card"><div class="lab">What is GST-stress?</div><div class="txt">The safety test that assumes the Australian Taxation Office treats the whole package as taxable, so one eleventh of every sale is paid away as GST. GTT still earns A$23,443 a month. First-year net under the test: A$254,038 (rent A$10,500) to A$281,311 (rent A$8,000). Any GST-free element the ATO confirms would be extra profit.</div></div>
+    <div class="card"><div class="lab">What is the A$422k a year steady state?</div><div class="txt">At full capacity, 18 expecting mothers every morning, GTT earns A$35,186 a month in net operating profit (24.6% margin). Twelve months of that is A$422,237 a year.</div></div>
+  </div>
+  <div class="card dark"><div class="lab">Year 1 (no ramp-up, 12 full months)</div><div class="txt">Revenue A$1,716,844, costs A$1,294,608, net A$422,237 (GST-stress A$281,311). Earlier drafts showed A$322,015 (A$196,609 under GST-stress) because they assumed four months of build-up to full capacity. A pre-launch waitlist removes that build-up, so those figures are replaced.</div></div>
+  <p class="small" style="margin-top:12px">Break-even 8.266 a day. Fill rate is the central risk: 85% fill is about +A$17.4k a month. GST: clinical pathology is billed by the lab; GTT's lounge, treatments and refreshments are taxable; our accountant will seek an ATO private ruling. Planning estimates, no trading data. Working shown: <a href="visual-financials.html">visual financials</a>.</p>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- VF-1 CAPACITY WORKING (internal) -->
+<!-- 13 CAPACITY WORKING (internal) -->
 <section class="slide int vfs" data-name="Capacity working">
   <div class="tag">INTERNAL</div>
   <h1>Capacity: <span>how 18 a day is found</span></h1>
-  <div class="vf" style="font-size:22px"><div class="vf-steps">
-<div class="vf-step"><div class="vf-sn">1</div><div class="vf-big">07:00</div><div class="vf-lab">first booking</div><span class="vf-src">repo tools/am_volume_tier_staffing_solver.py L12</span></div>
-<div class="vf-step"><div class="vf-sn">2</div><div class="vf-big">2</div><div class="vf-lab">chairs, synchronised pairs</div><span class="vf-src">repo tools/am_volume_tier_staffing_solver.py L43</span></div>
-<div class="vf-step"><div class="vf-sn">3</div><div class="vf-big">25 min</div><div class="vf-lab">pair cadence (full mornings)</div><span class="vf-src">repo calculator run, commit 3b576db, 18-client tier</span></div>
-<div class="vf-step"><div class="vf-sn">4</div><div class="vf-big">0 / 60 / 120</div><div class="vf-lab">draw marks (min after start)</div><span class="vf-src">repo tools/am_volume_tier_staffing_solver.py L112-114</span></div>
-<div class="vf-step"><div class="vf-sn">5</div><div class="vf-big">10:30</div><div class="vf-lab">latest first draw = 210 min after 07:00 (WDP guidance window)</div><span class="vf-src">repo tools/am_volume_tier_staffing_solver.py L12, L37</span></div>
+  <div class="vf vfbig"><div class="vf-steps">
+<div class="vf-step"><div class="vf-sn">1</div><div class="vf-big">07:00</div><div class="vf-lab">first booking (expecting mothers arrive fasted at 06:50)</div></div>
+<div class="vf-step"><div class="vf-sn">2</div><div class="vf-big">2</div><div class="vf-lab">chairs, synchronised pairs</div></div>
+<div class="vf-step"><div class="vf-sn">3</div><div class="vf-big">25 min</div><div class="vf-lab">pair cadence</div></div>
+<div class="vf-step"><div class="vf-sn">4</div><div class="vf-big">0 / 60 / 120</div><div class="vf-lab">draw marks (minutes after the first draw)</div></div>
+<div class="vf-step"><div class="vf-sn">5</div><div class="vf-big">10:30</div><div class="vf-lab">latest first draw, 210 minutes after 07:00 (pathology partner guidance window)</div></div>
 </div>
-<div class="vf-math"><div class="vf-eq"><span class="vf-k">slots</span> = floor(210 ÷ 25) + 1 = 8 + 1 = <b>9</b> &nbsp;x 2 = <b class="vf-hl">18</b> clients</div><div class="vf-eq vf-eq2"><span class="vf-k">quiet</span> = floor(210 ÷ 45) + 1 = 4 + 1 = <b>5</b> &nbsp;x 2 = <b>10</b> clients</div><span class="vf-src">same rule as repo tools/am_volume_tier_staffing_solver.py L127-137 max_feasible_cadence: (pairs - 1) x cadence &lt;= 210. Calculator: last first draw 10:20 at 25 min, 10:00 at 45 min</span></div>
-<svg class="vf-svg vf-cap" viewBox="0 0 1200 345" role="img" aria-label="Pair start times at 25 and 45 minute cadence between 07:00 and 10:30">
-<rect x="270.0" y="40" width="770.0" height="250" fill="#E8DAC5" opacity="0.45"/>
-<line x1="1040.0" y1="30" x2="1040.0" y2="292" stroke="#A9654E" stroke-width="4" stroke-dasharray="10 6"/>
-<text x="1040.0" y="22" text-anchor="middle" class="vf-tl" fill="#A9654E">10:30 latest first draw</text>
-<line x1="270.0" y1="292" x2="1040.0" y2="292" stroke="#33261E" stroke-width="2"/>
-<text x="655.0" y="312" text-anchor="middle" class="vf-axis">210 min window</text>
-<text x="20" y="108" class="vf-rowlab">25 min</text>
-<text x="20" y="132" class="vf-rowsub">full mornings</text>
-<line x1="270.0" y1="110" x2="1003.3" y2="110" stroke="#33261E" stroke-width="3"/>
-<circle cx="270.0" cy="110" r="19" fill="#33261E"/>
-<text x="270.0" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
-<text x="270.0" y="80" text-anchor="middle" class="vf-time">07:00</text>
-<circle cx="361.7" cy="110" r="19" fill="#33261E"/>
-<text x="361.7" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
-<text x="361.7" y="80" text-anchor="middle" class="vf-time">07:25</text>
-<circle cx="453.3" cy="110" r="19" fill="#33261E"/>
-<text x="453.3" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
-<text x="453.3" y="80" text-anchor="middle" class="vf-time">07:50</text>
-<circle cx="545.0" cy="110" r="19" fill="#33261E"/>
-<text x="545.0" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
-<text x="545.0" y="80" text-anchor="middle" class="vf-time">08:15</text>
-<circle cx="636.7" cy="110" r="19" fill="#33261E"/>
-<text x="636.7" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
-<text x="636.7" y="80" text-anchor="middle" class="vf-time">08:40</text>
-<circle cx="728.3" cy="110" r="19" fill="#33261E"/>
-<text x="728.3" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
-<text x="728.3" y="80" text-anchor="middle" class="vf-time">09:05</text>
-<circle cx="820.0" cy="110" r="19" fill="#33261E"/>
-<text x="820.0" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
-<text x="820.0" y="80" text-anchor="middle" class="vf-time">09:30</text>
-<circle cx="911.7" cy="110" r="19" fill="#33261E"/>
-<text x="911.7" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
-<text x="911.7" y="80" text-anchor="middle" class="vf-time">09:55</text>
-<circle cx="1003.3" cy="110" r="19" fill="#33261E"/>
-<text x="1003.3" y="116" text-anchor="middle" class="vf-dot" fill="#D9A08C">2</text>
-<text x="1003.3" y="80" text-anchor="middle" class="vf-time">10:20</text>
-<text x="1188" y="124" text-anchor="end" class="vf-total" fill="#33261E">18</text>
-<text x="1188" y="148" text-anchor="end" class="vf-rowsub">9 pairs x 2 chairs</text>
-<text x="20" y="220" class="vf-rowlab">45 min</text>
-<text x="20" y="244" class="vf-rowsub">quiet mornings</text>
-<text x="20" y="262" class="vf-rowsub">(adopted 11 Oct)</text>
-<line x1="270.0" y1="222" x2="930.0" y2="222" stroke="#5E5F45" stroke-width="3"/>
-<circle cx="270.0" cy="222" r="19" fill="#5E5F45"/>
-<text x="270.0" y="228" text-anchor="middle" class="vf-dot" fill="#FAF6EE">2</text>
-<text x="270.0" y="192" text-anchor="middle" class="vf-time">07:00</text>
-<circle cx="435.0" cy="222" r="19" fill="#5E5F45"/>
-<text x="435.0" y="228" text-anchor="middle" class="vf-dot" fill="#FAF6EE">2</text>
-<text x="435.0" y="192" text-anchor="middle" class="vf-time">07:45</text>
-<circle cx="600.0" cy="222" r="19" fill="#5E5F45"/>
-<text x="600.0" y="228" text-anchor="middle" class="vf-dot" fill="#FAF6EE">2</text>
-<text x="600.0" y="192" text-anchor="middle" class="vf-time">08:30</text>
-<circle cx="765.0" cy="222" r="19" fill="#5E5F45"/>
-<text x="765.0" y="228" text-anchor="middle" class="vf-dot" fill="#FAF6EE">2</text>
-<text x="765.0" y="192" text-anchor="middle" class="vf-time">09:15</text>
-<circle cx="930.0" cy="222" r="19" fill="#5E5F45"/>
-<text x="930.0" y="228" text-anchor="middle" class="vf-dot" fill="#FAF6EE">2</text>
-<text x="930.0" y="192" text-anchor="middle" class="vf-time">10:00</text>
-<text x="1188" y="236" text-anchor="end" class="vf-total" fill="#5E5F45">10</text>
-<text x="1188" y="260" text-anchor="end" class="vf-rowsub">5 pairs x 2 chairs</text>
-<text x="20" y="338" class="vf-tsrc" text-anchor="start" font-size="11">times: repo tools/am_volume_tier_staffing_solver.py build_clients_odd (x = slot x cadence)</text>
-</svg></div>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11 | Full working: <a href="visual-financials.html" style="color:#A9654E">visual-financials.html</a></div>
+<div class="vf-math"><div class="vf-eq"><span class="vf-k">slots</span> = floor(210 &divide; 25) + 1 = 8 + 1 = <b>9</b> pairs &nbsp;x 2 chairs = <b class="vf-hl">18</b> expecting mothers a morning</div><span class="vf-src">Rule: (pairs - 1) x cadence must not pass 210 minutes. The last first draw is 10:20. Full-capacity time slots are booked 2 to 4 weeks ahead.</span></div>
+<svg class="vf-svg vf-cap" viewBox="0 0 1200 250" role="img" aria-label="Pair start times every 25 minutes between 07:00 and 10:20"><rect x="90" y="50" width="910.0" height="110" fill="#E8DAC5" opacity="0.45"/><line x1="1000.0" y1="40" x2="1000.0" y2="175" stroke="#A9654E" stroke-width="4" stroke-dasharray="10 6"/><text x="1000.0" y="30" text-anchor="middle" font-size="26" font-weight="700" fill="#A9654E">10:30 latest first draw</text><line x1="90" y1="110" x2="956.6666666666666" y2="110" stroke="#33261E" stroke-width="4"/><circle cx="90.0" cy="110" r="24" fill="#33261E"/><text x="90.0" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#D9A08C">2</text><text x="90.0" y="82" text-anchor="middle" font-size="24" font-weight="700" fill="#33261E">07:00</text><circle cx="198.3" cy="110" r="24" fill="#33261E"/><text x="198.3" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#D9A08C">2</text><text x="198.3" y="82" text-anchor="middle" font-size="24" font-weight="700" fill="#33261E">07:25</text><circle cx="306.7" cy="110" r="24" fill="#33261E"/><text x="306.7" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#D9A08C">2</text><text x="306.7" y="82" text-anchor="middle" font-size="24" font-weight="700" fill="#33261E">07:50</text><circle cx="415.0" cy="110" r="24" fill="#33261E"/><text x="415.0" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#D9A08C">2</text><text x="415.0" y="82" text-anchor="middle" font-size="24" font-weight="700" fill="#33261E">08:15</text><circle cx="523.3" cy="110" r="24" fill="#33261E"/><text x="523.3" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#D9A08C">2</text><text x="523.3" y="82" text-anchor="middle" font-size="24" font-weight="700" fill="#33261E">08:40</text><circle cx="631.7" cy="110" r="24" fill="#33261E"/><text x="631.7" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#D9A08C">2</text><text x="631.7" y="82" text-anchor="middle" font-size="24" font-weight="700" fill="#33261E">09:05</text><circle cx="740.0" cy="110" r="24" fill="#33261E"/><text x="740.0" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#D9A08C">2</text><text x="740.0" y="82" text-anchor="middle" font-size="24" font-weight="700" fill="#33261E">09:30</text><circle cx="848.3" cy="110" r="24" fill="#33261E"/><text x="848.3" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#D9A08C">2</text><text x="848.3" y="82" text-anchor="middle" font-size="24" font-weight="700" fill="#33261E">09:55</text><circle cx="956.7" cy="110" r="24" fill="#33261E"/><text x="956.7" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#D9A08C">2</text><text x="956.7" y="82" text-anchor="middle" font-size="24" font-weight="700" fill="#33261E">10:20</text><text x="1180" y="120" text-anchor="end" font-size="72" font-family="Fraunces,Georgia,serif" fill="#33261E">18</text><text x="1180" y="152" text-anchor="end" font-size="24" font-weight="700" fill="#5E5F45">9 pairs x 2 chairs</text><text x="545.0" y="205" text-anchor="middle" font-size="24" font-weight="700" fill="#33261E">210 minute window, one pair of clients every 25 minutes</text></svg></div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- VF-2 BREAK-EVEN WORKING (internal) -->
+<!-- 14 BREAK-EVEN WORKING (internal) -->
 <section class="slide int vfs" data-name="Break-even working">
   <div class="tag">INTERNAL</div>
   <h1>Break-even: <span>the working</span></h1>
-  <div class="vf" style="font-size:25px"><div class="vf-be"><div class="vf-col vf-a"><div class="vf-colhead">Fixed staffing</div><div class="vf-colsub">full 2 + 8 roster every morning</div>
-<div class="vf-row"><div class="vf-op"></div><div><div class="vf-val">A$107,883.97</div><div class="vf-lab">monthly costs at 18 a day</div><span class="vf-src">repo docs/CURRENT-STATE.md §0; v0.4 model §6a</span></div></div>
-<div class="vf-row"><div class="vf-op">-</div><div><div class="vf-val">A$24,585.37</div><div class="vf-lab">PM revenue (held at full)</div><span class="vf-src">repo docs/CURRENT-STATE.md §0; v0.4 model §6a</span></div></div>
-<div class="vf-row"><div class="vf-op">÷</div><div><div class="vf-val">A$6,582.50</div><div class="vf-lab">one AM client a day for a month: A$250 x 26.33 days</div><span class="vf-src">v0.4 model §6a; v0.4 model §3 line definitions</span></div></div>
-<div class="vf-res"><div class="vf-op">=</div><div><div class="vf-resn">12.655</div><div class="vf-lab">AM clients a day </div><span class="vf-src">repo docs/CURRENT-STATE.md §10 (HIGH segment)</span><div class="vf-lab">70.3% of 18 a day <span class="vf-src">repo docs/CURRENT-STATE.md §10</span></div></div></div></div>
-<div class="vf-col vf-b"><div class="vf-colhead">Demand-responsive</div><div class="vf-colsub">rostered to bookings (adopted)</div>
-<div class="vf-row"><div class="vf-op"></div><div><div class="vf-val">A$78,993.29</div><div class="vf-lab">monthly costs: fixed A$36,738.11 + one 2 + 4 roster every morning A$42,255.18</div><span class="vf-src">v0.4 model §6a; repo shows A$78,993.30 (repo docs/CURRENT-STATE.md §10)</span></div></div>
-<div class="vf-row"><div class="vf-op">-</div><div><div class="vf-val">A$24,585.37</div><div class="vf-lab">PM revenue (held at full)</div><span class="vf-src">v0.4 model §6a</span></div></div>
-<div class="vf-row"><div class="vf-op">÷</div><div><div class="vf-val">A$6,582.50</div><div class="vf-lab">one AM client a day for a month</div><span class="vf-src">v0.4 model §6a</span></div></div>
-<div class="vf-res"><div class="vf-op">=</div><div><div class="vf-resn">8.266</div><div class="vf-lab">AM clients a day <span class="vf-lock">LOCKED</span></div><span class="vf-src">v0.4 model §6a LOCKED (Anthony 2026-10-11); = repo docs/CURRENT-STATE.md §10 LOW segment</span><div class="vf-lab">45.9% of 18 a day <span class="vf-src">v0.4 model §6a</span></div></div></div></div></div>
-<div class="vf-note">Method: repo docs/CURRENT-STATE.md §10 and v0.4 model §6a (PM held at full, solve for AM clients a day). The two columns differ only in the cost line: under demand-responsive rostering a quiet morning runs on 2 phlebotomists + 4 therapists at the 45 min cadence.</div></div>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11 | Full working: <a href="visual-financials.html" style="color:#A9654E">visual-financials.html</a></div>
+  <div style="font-size:0"><div class="vf vfbig" style="font-size:24px"><div class="vf-be"><div class="vf-col vf-b"><div class="vf-colhead">Adaptive rostering</div><div class="vf-colsub">25 minute cadence, staff called in to match bookings</div><div class="vf-row"><div class="vf-op"></div><div><div class="vf-val">A$36,738.11</div><div class="vf-lab">fixed costs a month: rent, overhead, cost of goods, afternoon team and Venue Manager, with on-costs</div></div></div><div class="vf-row"><div class="vf-op">+</div><div><div class="vf-val">A$42,255.18</div><div class="vf-lab">morning roster for up to 9 clients: 2 phlebotomists + 4 therapists, with on-costs</div></div></div><div class="vf-row"><div class="vf-op">=</div><div><div class="vf-val">A$78,993.29</div><div class="vf-lab">total costs at that roster</div></div></div><div class="vf-row"><div class="vf-op">-</div><div><div class="vf-val">A$24,585.37</div><div class="vf-lab">afternoon revenue</div></div></div><div class="vf-row"><div class="vf-op">&divide;</div><div><div class="vf-val">A$6,582.50</div><div class="vf-lab">one morning client a day for a month: A$250 x 26.33 trading days</div></div></div><div class="vf-res"><div class="vf-op">=</div><div><div class="vf-resn">8.266</div><div class="vf-lab">morning clients a day, 45.9% of the 18 a day capacity</div></div></div></div><div class="vf-col vf-a"><div class="vf-colhead">If every booking stacks in pairs</div><div class="vf-colsub">all bookings placed in pairs from 07:00 (the full 2 + 8 roster is needed)</div><div class="vf-row"><div class="vf-op"></div><div><div class="vf-val">A$107,883.97</div><div class="vf-lab">monthly costs with the full roster</div></div></div><div class="vf-row"><div class="vf-op">-</div><div><div class="vf-val">A$24,585.37</div><div class="vf-lab">afternoon revenue</div></div></div><div class="vf-row"><div class="vf-op">&divide;</div><div><div class="vf-val">A$6,582.50</div><div class="vf-lab">one morning client a day for a month</div></div></div><div class="vf-res"><div class="vf-op">=</div><div><div class="vf-resn">12.655</div><div class="vf-lab">morning clients a day, 70.3% of capacity</div></div></div></div></div><div class="vf-note">Margin of safety at the planning case: 9.7 clients a day below capacity. The two columns differ only in the cost line: with one booking per time slot at most two first services overlap, so 4 therapists cover up to 9 clients. Two phlebotomists are kept on every testing morning as GTT's clinical standard, pending the pathology partner's answer.</div></div></div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- VF-3 CASHFLOW CHART (internal) -->
+<!-- 15 CASHFLOW CHART (internal) -->
 <section class="slide int vfs" data-name="Cashflow chart">
   <div class="tag">INTERNAL</div>
   <h1>Cashflow: <span>Month 0 to 12</span></h1>
-  <div class="vf" style="max-width:1560px"><svg class="vf-svg" viewBox="0 0 1200 560" role="img" aria-label="Cashflow Month 0 to 12">
-<line x1="90" y1="432.4" x2="1180" y2="432.4" stroke="#A9654E" stroke-width="2.5" stroke-dasharray="9 6"/>
-<text x="1040" y="422.4" text-anchor="end" class="vf-mk" fill="#A9654E">Peak funding A$267,771 LOCKED (lowest point, Month 1)</text>
-<line x1="1054.2" y1="30" x2="1054.2" y2="470" stroke="#9C7A46" stroke-width="3"/>
-<text x="1046.2" y="44" text-anchor="end" class="vf-mk" fill="#9C7A46">Payback Month 11 (repo basis), Month 15 after GST</text>
-<line x1="90" y1="120.0" x2="1180" y2="120.0" stroke="#33261E" stroke-width="2"/>
-<text x="82" y="125.0" text-anchor="end" class="vf-axis">A$0</text>
-<rect x="102.4" y="120.0" width="28.5" height="293.1" fill="#33261E"/>
-<text x="116.7" y="266.5" text-anchor="middle" class="vf-bl" fill="#FAF6EE" transform="rotate(-90 121.7 266.5)">capex -A$251,198.00</text>
-<text x="131.9" y="498" text-anchor="middle" class="vf-axis">M0</text>
-<rect x="216.8" y="120.0" width="28.5" height="19.3" fill="#A9654E"/>
-<text x="231.0" y="155.3" text-anchor="middle" class="vf-bl" fill="#A9654E">-16,573.03</text>
-<text x="215.8" y="498" text-anchor="middle" class="vf-axis">M1</text>
-<rect x="300.6" y="110.9" width="28.5" height="9.1" fill="#5E5F45"/>
-<text x="314.9" y="102.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">7,782.51</text>
-<text x="299.6" y="498" text-anchor="middle" class="vf-axis">M2</text>
-<rect x="384.5" y="97.5" width="28.5" height="22.5" fill="#5E5F45"/>
-<text x="398.7" y="89.5" text-anchor="middle" class="vf-bl" fill="#5E5F45">19,292.48</text>
-<text x="383.5" y="498" text-anchor="middle" class="vf-axis">M3</text>
-<rect x="437.8" y="120.0" width="28.5" height="6.5" fill="#33261E"/>
-<text x="453.1" y="146.0" text-anchor="middle" class="vf-bl" fill="#33261E">capex</text>
-<text x="453.1" y="160.0" text-anchor="middle" class="vf-bl" fill="#33261E">-5,600.00</text>
-<rect x="468.3" y="85.0" width="28.5" height="35.0" fill="#5E5F45"/>
-<text x="482.6" y="77.0" text-anchor="middle" class="vf-bl" fill="#5E5F45">30,021.77</text>
-<text x="467.3" y="498" text-anchor="middle" class="vf-axis">M4</text>
-<rect x="552.2" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
-<text x="566.4" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
-<text x="551.2" y="498" text-anchor="middle" class="vf-axis">M5</text>
-<rect x="605.5" y="120.0" width="28.5" height="9.1" fill="#33261E"/>
-<text x="620.7" y="146.0" text-anchor="middle" class="vf-bl" fill="#33261E">capex</text>
-<text x="620.7" y="160.0" text-anchor="middle" class="vf-bl" fill="#33261E">-7,774.00</text>
-<rect x="636.0" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
-<text x="650.3" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
-<text x="635.0" y="498" text-anchor="middle" class="vf-axis">M6</text>
-<rect x="719.8" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
-<text x="734.1" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
-<text x="718.8" y="498" text-anchor="middle" class="vf-axis">M7</text>
-<rect x="803.7" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
-<text x="817.9" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
-<text x="802.7" y="498" text-anchor="middle" class="vf-axis">M8</text>
-<rect x="887.5" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
-<text x="901.8" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
-<text x="886.5" y="498" text-anchor="middle" class="vf-axis">M9</text>
-<rect x="971.4" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
-<text x="985.6" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
-<text x="970.4" y="498" text-anchor="middle" class="vf-axis">M10</text>
-<rect x="1055.2" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
-<text x="1069.5" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
-<text x="1054.2" y="498" text-anchor="middle" class="vf-axis">M11</text>
-<rect x="1139.1" y="78.9" width="28.5" height="41.1" fill="#5E5F45"/>
-<text x="1153.3" y="70.9" text-anchor="middle" class="vf-bl" fill="#5E5F45">35,186.40</text>
-<text x="1138.1" y="498" text-anchor="middle" class="vf-axis">M12</text>
-<polyline points="131.9,413.1 215.8,432.4 383.5,400.8 635.0,299.3 886.5,176.1 970.4,135.1 1054.2,94.0" fill="none" stroke="#9C7A46" stroke-width="3" stroke-dasharray="2 5" stroke-linecap="round"/>
-<circle cx="131.9" cy="413.1" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
-<text x="143.9" y="401.1" text-anchor="start" class="vf-cl">-251,198.00</text>
-<circle cx="215.8" cy="432.4" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
-<text x="215.8" y="456.4" text-anchor="middle" class="vf-cl">-267,771.03</text>
-<circle cx="383.5" cy="400.8" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
-<text x="395.5" y="424.8" text-anchor="start" class="vf-cl">-240,696.04</text>
-<circle cx="635.0" cy="299.3" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
-<text x="647.0" y="323.3" text-anchor="start" class="vf-cl">-153,675.47</text>
-<circle cx="886.5" cy="176.1" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
-<text x="898.5" y="200.1" text-anchor="start" class="vf-cl">-48,116.27</text>
-<circle cx="970.4" cy="135.1" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
-<text x="982.4" y="159.1" text-anchor="start" class="vf-cl">-12,929.87</text>
-<circle cx="1054.2" cy="94.0" r="7" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/>
-<text x="1066.2" y="146.0" text-anchor="start" class="vf-cl">22,256.53</text>
-<rect x="90" y="516" width="16" height="16" fill="#33261E"/>
-<text x="114" y="530" class="vf-axis" font-size="15">capex</text>
-<rect x="184" y="516" width="16" height="16" fill="#5E5F45"/>
-<text x="208" y="530" class="vf-axis" font-size="15">monthly net (P&amp;L)</text>
-<rect x="374" y="516" width="16" height="16" fill="#A9654E"/>
-<text x="398" y="530" class="vf-axis" font-size="15">monthly loss</text>
-<circle cx="532" cy="524" r="7" fill="#9C7A46"/>
-<text x="548" y="530" class="vf-axis" font-size="15">cumulative cash, repo basis (dots = published months)</text>
-<text x="90" y="552" class="vf-tsrc" text-anchor="start" font-size="12">data: v0.4 model §3 (net), v0.4 model §4 (capex), v0.4 model §7 (cumulative), v0.4 model §1 (peak funding, payback)</text>
-</svg></div>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11 | Full working: <a href="visual-financials.html" style="color:#A9654E">visual-financials.html</a></div>
+  <div class="card" style="padding:12px 24px;margin-bottom:12px"><div class="txt" style="font-size:28px;margin:0"><b>CapEx</b> (Capital Expenditure, the startup setup costs): fit-out, chairs, equipment and other one-off items bought to open the venue.</div></div>
+  <div class="vf" style="max-width:1480px"><svg class="vf-svg" viewBox="0 0 1200 525" role="img" aria-label="Cashflow Month 0 to 12" style="font-size:20px"><line x1="110" y1="424.5" x2="1110" y2="424.5" stroke="#A9654E" stroke-width="2.5" stroke-dasharray="9 6"/><text x="1110" y="448.5" text-anchor="end" font-size="22" font-weight="700" fill="#A9654E">Peak funding A$251,198 (Month 0)</text><line x1="110" y1="218.0" x2="1110" y2="218.0" stroke="#33261E" stroke-width="2"/><text x="102" y="224.0" text-anchor="end" font-size="20" font-weight="500" fill="#33261E">A$0</text><line x1="110" y1="135.8" x2="1110" y2="135.8" stroke="#E8DAC5" stroke-width="1.5"/><text x="102" y="141.8" text-anchor="end" font-size="18" fill="#5E5F45">A$100k</text><line x1="110" y1="300.2" x2="1110" y2="300.2" stroke="#E8DAC5" stroke-width="1.5"/><text x="102" y="306.2" text-anchor="end" font-size="18" fill="#5E5F45">-A$100k</text><line x1="110" y1="382.4" x2="1110" y2="382.4" stroke="#E8DAC5" stroke-width="1.5"/><text x="102" y="388.4" text-anchor="end" font-size="18" fill="#5E5F45">-A$200k</text><rect x="129.2" y="218.0" width="38.5" height="206.5" fill="#33261E"/><text x="148.5" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M0</text><rect x="206.2" y="189.1" width="38.5" height="28.9" fill="#5E5F45"/><text x="225.4" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M1</text><rect x="283.1" y="189.1" width="38.5" height="28.9" fill="#5E5F45"/><text x="302.3" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M2</text><rect x="360.0" y="189.1" width="38.5" height="28.9" fill="#5E5F45"/><text x="379.2" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M3</text><rect x="436.9" y="189.1" width="38.5" height="28.9" fill="#5E5F45"/><rect x="436.9" y="218.0" width="38.5" height="6.0" fill="#33261E"/><text x="456.2" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M4</text><rect x="513.8" y="189.1" width="38.5" height="28.9" fill="#5E5F45"/><text x="533.1" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M5</text><rect x="590.8" y="189.1" width="38.5" height="28.9" fill="#5E5F45"/><rect x="590.8" y="218.0" width="38.5" height="6.4" fill="#33261E"/><text x="610.0" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M6</text><rect x="667.7" y="189.1" width="38.5" height="28.9" fill="#5E5F45"/><text x="686.9" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M7</text><rect x="744.6" y="189.1" width="38.5" height="28.9" fill="#5E5F45"/><text x="763.8" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M8</text><rect x="821.5" y="189.1" width="38.5" height="28.9" fill="#5E5F45"/><text x="840.8" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M9</text><rect x="898.5" y="189.1" width="38.5" height="28.9" fill="#5E5F45"/><text x="917.7" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M10</text><rect x="975.4" y="189.1" width="38.5" height="28.9" fill="#5E5F45"/><text x="994.6" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M11</text><rect x="1052.3" y="189.1" width="38.5" height="28.9" fill="#5E5F45"/><text x="1071.5" y="470" text-anchor="middle" font-size="22" font-weight="500" fill="#33261E">M12</text><polyline points="148.5,424.5 225.4,395.6 302.3,366.7 379.2,337.7 456.2,313.4 533.1,284.5 610.0,262.0 686.9,233.0 763.8,204.1 840.8,175.2 917.7,146.2 994.6,117.3 1071.5,88.4" fill="none" stroke="#9C7A46" stroke-width="4" stroke-dasharray="2 7" stroke-linecap="round"/><polyline points="148.5,424.5 225.4,395.6 302.3,376.3 379.2,357.1 456.2,342.4 533.1,323.1 610.0,310.2 686.9,291.0 763.8,271.7 840.8,252.4 917.7,233.1 994.6,213.9 1071.5,194.6" fill="none" stroke="#A9654E" stroke-width="4"/><circle cx="148.5" cy="424.5" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="148.5" cy="424.5" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><circle cx="225.4" cy="395.6" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="225.4" cy="395.6" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><circle cx="302.3" cy="366.7" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="302.3" cy="376.3" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><circle cx="379.2" cy="337.7" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="379.2" cy="357.1" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><circle cx="456.2" cy="313.4" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="456.2" cy="342.4" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><circle cx="533.1" cy="284.5" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="533.1" cy="323.1" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><circle cx="610.0" cy="262.0" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="610.0" cy="310.2" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><circle cx="686.9" cy="233.0" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="686.9" cy="291.0" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><circle cx="763.8" cy="204.1" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="763.8" cy="271.7" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><circle cx="840.8" cy="175.2" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="840.8" cy="252.4" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><circle cx="917.7" cy="146.2" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="917.7" cy="233.1" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><circle cx="994.6" cy="117.3" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="994.6" cy="213.9" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><circle cx="1071.5" cy="88.4" r="6" fill="#9C7A46" stroke="#FAF6EE" stroke-width="2"/><circle cx="1071.5" cy="194.6" r="6" fill="#A9654E" stroke="#FAF6EE" stroke-width="2"/><line x1="763.8" y1="70" x2="763.8" y2="440" stroke="#9C7A46" stroke-width="2" stroke-dasharray="4 4"/><text x="755.8" y="56" text-anchor="end" font-size="22" font-weight="700" fill="#9C7A46">Payback Month 8 (before GST timing)</text><line x1="994.6" y1="100" x2="994.6" y2="440" stroke="#A9654E" stroke-width="2" stroke-dasharray="4 4"/><text x="986.6" y="84" text-anchor="end" font-size="22" font-weight="700" fill="#A9654E">Payback Month 11 (after GST)</text><text x="1085.5" y="94.4" text-anchor="start" font-size="20" font-weight="700" fill="#9C7A46">+157,665</text><text x="1085.5" y="200.6" text-anchor="start" font-size="20" font-weight="700" fill="#A9654E">+28,483</text><rect x="110" y="491" width="18" height="18" fill="#33261E"/><text x="136" y="505" font-size="20" fill="#33261E">capex (setup costs)</text><rect x="360" y="491" width="18" height="18" fill="#5E5F45"/><text x="386" y="505" font-size="20" fill="#33261E">monthly net profit A$35,186</text><circle cx="670" cy="500" r="7" fill="#9C7A46"/><text x="686" y="505" font-size="20" fill="#33261E">cumulative, before GST timing</text><circle cx="810" cy="500" r="7" fill="#A9654E"/><text x="826" y="505" font-size="20" fill="#33261E">after GST</text></svg><div class="vf-note" style="font-size:22px">Funding in at Month 0: A$336,198. Pre-opening capital spent: A$251,198. The A$85,000 reserve is never drawn: Month 1 already makes a profit. Headline case: A$8,000 rent, full capacity from Month 1, no ramp-up.</div></div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 11 FUNDING (internal) -->
+<!-- 16 FUNDING (internal) -->
 <section class="slide int tight" data-name="Funding gap">
   <div class="tag">INTERNAL</div>
   <h1>Funding <span>gap</span></h1>
   <div class="grid g3" style="margin-bottom:30px">
     <div class="card"><div class="lab">Planning need</div><div class="big sm">A$336,198 to A$361,198</div><div class="txt">A$251,198 pre-opening + A$85,000 to A$110,000 working capital</div></div>
-    <div class="card"><div class="lab">On hand (joint savings, as stated)</div><div class="big sm">about A$200,000</div></div>
-    <div class="card dark"><div class="lab">Gap on planning case (derived)</div><div class="big sm">A$136,198 to A$161,198</div></div>
+    <div class="card"><div class="lab">On hand (founder savings, to be confirmed)</div><div class="big sm">about A$200,000</div></div>
+    <div class="card dark"><div class="lab">Gap on planning case</div><div class="big sm">A$136,198 to A$161,198</div></div>
   </div>
   <div class="grid g3" style="margin-bottom:30px">
-    <div class="card"><div class="lab">Peak funding actually drawn</div><div class="big sm">A$267,771</div><div class="txt">Was A$318,176. Ceiling cases A$274,021 to A$275,271</div></div>
-    <div class="card"><div class="lab">Lowest cash point</div><div class="big sm">A$68,427, Month 1</div><div class="txt">Was A$18,022 in Month 3</div></div>
-    <div class="card dark"><div class="lab">Gap on peak basis (derived)</div><div class="big sm">about A$67,771</div><div class="txt">A$267,771 less A$200,000 on hand</div></div>
+    <div class="card"><div class="lab">Peak funding actually drawn</div><div class="big sm">A$251,198</div><div class="txt">The pre-opening capital. Month 1 already makes a profit. Ceiling rent cases: A$256,198</div></div>
+    <div class="card"><div class="lab">Lowest cash point</div><div class="big sm">A$85,000 at opening</div><div class="txt">The working capital reserve is never drawn</div></div>
+    <div class="card dark"><div class="lab">Gap on peak basis</div><div class="big sm">about A$51,198</div><div class="txt">A$251,198 less A$200,000 on hand</div></div>
   </div>
   <ul>
-    <li>No external investor sought. Funding route TO CONFIRM.</li>
-    <li>Fit-out not repriced for the larger footprint.</li>
-    <li>Accountant and quantity surveyor to confirm.</li>
+    <li>No external investor sought. Funding route to be confirmed.</li>
+    <li>Fit-out is not repriced for the larger footprint.</li>
+    <li>Accountant and quantity surveyor to confirm the startup budget.</li>
   </ul>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 12 PARTNERSHIP STATUS (internal) -->
+<!-- 17 PARTNERSHIP STATUS (internal) -->
 <section class="slide int" data-name="Partnership status">
   <div class="tag">INTERNAL</div>
   <h1>Partner <span>status</span></h1>
   <table>
-    <tr><th style="width:20%">Partner</th><th style="width:60%">Last known position</th><th style="width:20%">Status</th></tr>
-    <tr><td>WDP</td><td>Engaged since 2026-07-28. Reply 2026-09-08 closing in tone. Rental figure never arrived. Open: quality feedback, State Business Manager input, staffing cost, minimum term</td><td>Competing bidder</td></tr>
-    <tr><td>PathWest</td><td>Declined collection staff (not needed). Courier pickup for fluoro-ox tubes confirmed 2026-09-01. Cost question of 2026-09-03 unanswered</td><td>Competing bidder</td></tr>
-    <tr><td>Clinipath</td><td>3 contacts (2026-07-27, 08-27, 09-07). No reply</td><td class="warn">Silent</td></tr>
+    <tr><th style="width:22%">Partner</th><th style="width:58%">Last known position</th><th style="width:20%">Status</th></tr>
+    <tr><td>Western Diagnostic Pathology (WDP)</td><td>In active discussion since July 2026. Formal partnership steps requested; a written fee and the rental figure are still to come.</td><td>Priority partner</td></tr>
+    <tr><td>PathWest</td><td>Replied in August 2026 and is progressing. Courier collection of grey top tubes is being assessed. A further reply is drafted, awaiting approval.</td><td>Contingency</td></tr>
+    <tr><td>Clinipath</td><td>Approached in July 2026. No reply recorded.</td><td class="warn">Awaiting reply</td></tr>
   </table>
-  <p style="margin-top:20px">Nothing is signed. Neither lab has quoted a fee.</p>
-  <p class="small">Records stop at 2026-09-08. Anything after that is not yet logged. TO CONFIRM.</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <p style="margin-top:20px">Nothing is signed. No laboratory has quoted a fee.</p>
+  <p class="small">Records current to October 2026. Any later contact is not yet logged.</p>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 13 SITE WE NEED (external) -->
-<section class="slide" data-name="The site we need">
-  <h1>The site <span>we need</span></h1>
-  <div class="grid g2" style="margin-bottom:34px">
-    <div class="card dark"><div class="lab">Venue size (minimum)</div><div class="big">257 to 290 sqm</div></div>
-    <div class="card dark"><div class="lab">Dedicated blood collection rooms</div><div class="big">2</div></div>
+<!-- 18 FLOOR PLAN AND DESIGN (external) -->
+<section class="slide fit-plan" data-name="Floor plan and design">
+  <h1>Floor Plan and <span>Design</span></h1>
+  <div class="plan-wrap">
+    <div>
+      <a href="floor-plan-concept.png"><img class="plan" src="floor-plan-concept-plan.png" alt="Concept floor plan, 18.5 m x 15.6 m"></a>
+      <p class="cap">Concept layout, 18.5 m x 15.6 m (about 289 sqm). Concept only; subject to site survey, architect and NCC compliance. <a href="floor-plan-concept.png" style="color:#A9654E">Full drawing.</a></p>
+    </div>
+    <ol>
+      <li>Two dedicated blood collection rooms, or one large room divided by a clinical privacy curtain.</li>
+      <li>Open-plan luxury lounge beside collection, with a Private Refreshment Counter for GTT clients only.</li>
+      <li>Massage and beauty bays with partition walls, privacy curtains and a handwash basin in every bay.</li>
+      <li>Specimen fridge and clinical waste kept physically separate from the refreshment counter.</li>
+      <li>Accessible toilet, staff room and storage, within the 257 to 290 sqm site range.</li>
+      <li>Used to brief the architect, obtain fit-out quotes and source furniture and fixtures, including direct from China where compliant.</li>
+    </ol>
   </div>
-  <ul>
-    <li>Lease sought: 3 years + 3-year option.</li>
-    <li>Collection-room spec in writing from the labs before any lease is signed.</li>
-    <li>Collection room standard: NPAAC (Guidelines for Approved Pathology Collection Centres).</li>
-    <li>An architect is engaged once a site is chosen.</li>
-  </ul>
-  <p class="small">Status: no venue, no lease, no heads of agreement yet.</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 14 SITE AND RENT (internal) -->
-<section class="slide int fit-rent" data-name="Rent ceiling">
+<!-- 19 PROPERTY SEARCH (internal) -->
+<section class="slide int tight2" data-name="Property search">
   <div class="tag">INTERNAL</div>
-  <h1>Rent <span>ceiling</span></h1>
-  <div class="grid g2" style="margin-bottom:28px; grid-template-columns:1.3fr 1fr">
-    <div class="card dark"><div class="lab">Gross occupancy ceiling per month</div><div class="big">A$10,500</div><div class="txt">Base rent plus estimated outgoings. Target band A$9,500 to A$10,500. Locked 2026-10-10. GST treatment TO CONFIRM</div></div>
-    <div class="card"><div class="lab">Model still assumes</div><div class="big sm">A$8,000 rent</div><div class="txt">A$1,500 to A$2,500 a month below the ceiling band</div></div>
-  </div>
+  <h1>Property search: <span>redone October 2026</span></h1>
+  <p class="small" style="margin-bottom:10px">The earlier shortlist has been replaced. The new search covers the Kwinana Freeway corridor, Cockburn, Jandakot, Cannington, Osborne Park, Murdoch and the medical precincts around Fiona Stanley and St John of God Murdoch. Criteria: 257 to 290 sqm, ground-level step-free entry, space for two collection rooms, plumbing for hand basins, 8 to 10 client car bays plus staff bays, zoning for health and beauty and a small refreshment counter, and a gross rent of A$9,500 to A$10,500 a month (A$10,500 is the all-in ceiling; the model assumes A$8,000).</p>
   <table>
-    <tr><th style="width:34%">Shortlist (Tier 1, not verified)</th><th style="width:16%">Size</th><th>Rent</th></tr>
-    <tr><td><a href="https://reiwa.com.au/6-325-harborne-street-osborne-park-4941752/" style="color:#33261E">6/325 Harborne St, Osborne Park</a></td><td>268 sqm</td><td>A$55,000/yr + A$23,785 outgoings (about A$6,565/month + GST). Blank shell</td></tr>
-    <tr><td>25 Mills St, Cannington</td><td>up to 302 sqm</td><td>Not disclosed. Existing medical fit-out</td></tr>
+    <tr><th style="width:5%">Rank</th><th style="width:30%">Address</th><th style="width:14%">Size</th><th style="width:30%">Advertised rent</th><th>Position against criteria</th></tr>
+    <tr><td>1</td><td><a href="https://www.commercialrealestate.com.au/property/5-fiona-wood-road-murdoch-wa-6150-17678685">5 Fiona Wood Road, Murdoch</a></td><td>100 to 645 sqm ground floor, new development</td><td>Not published</td><td>Best location, details to confirm</td></tr>
+    <tr><td>2</td><td><a href="https://www.commercialrealestate.com.au/property/9-110-114-bannister-road-canning-vale-wa-6155-18063808">9/110-114 Bannister Road, Canning Vale</a></td><td>298 sqm</td><td>A$80,000 a year plus outgoings and GST (about A$8,900 to A$10,300 a month gross, indicative)</td><td>Fits size and rent, other criteria to confirm</td></tr>
+    <tr><td>3</td><td><a href="https://www.commercialrealestate.com.au/property/13-386-scarborough-beach-road-osborne-park-wa-6017-18315005">13/386 Scarborough Beach Road, Osborne Park</a></td><td>263 sqm</td><td>A$95,000 a year plus outgoings and GST (about A$9,900 to A$11,100 a month gross, indicative)</td><td>Rent at the ceiling</td></tr>
   </table>
-  <p class="small" style="margin-top:14px; font-size:26px !important">At the A$10,500 gross ceiling all-in: +A$33,936/month, break-even 8.455, peak funding A$274,021, payback M11 / M16. Prudent case (plus separate utilities and cleaning): +A$32,686, 8.645, A$275,271, M12 / M17. Break-evens use the 45-min cadence adopted 2026-10-11 (quiet mornings) and assume 100% fill (each 1% about A$1,185/month; 85% about +A$17.4k; 70% a loss).</p>
-  <p class="small" style="margin-top:10px; font-size:26px !important">Lease bond and legal about A$19,600 to A$27,600 (modelled). No landlord contribution counted.</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <p class="small" style="margin-top:10px">Three conditional matches; no listing meets every criterion yet. The nearest medical building (25 Mills Street South, Cannington, 330 sqm) is advertised at A$15,000 a month before outgoings. No agent has been contacted. Search repeated weekly until a site is chosen.</p>
+  <p class="small" style="margin-top:6px">At the A$10,500 gross ceiling all-in: +A$33,936 a month, break-even 8.455, peak funding A$256,198. Prudent case (plus separate utilities and cleaning): +A$32,686, break-even 8.645. Lease bond and legal about A$19,600 to A$27,600 (modelled). No landlord contribution counted.</p>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 15 RISKS (internal) -->
-<section class="slide int" data-name="Risks">
+<!-- 20 RISKS (internal) -->
+<section class="slide int" style="padding-top:44px" data-name="Risks">
   <div class="tag">INTERNAL</div>
-  <h1><span>Risks</span> and fixes</h1>
-  <table style="font-size:27px">
-    <tr><th style="width:5%">#</th><th style="width:40%">Risk</th><th style="width:13%">Level</th><th>Mitigation</th></tr>
-    <tr><td>1</td><td>No venue secured</td><td>Critical</td><td>Verify two Tier-1 candidates; inspect</td></tr>
-    <tr><td>2</td><td>No signed lab agreement; fees and ACC across two labs unresolved</td><td>High</td><td>Run the tender; adviser on ACC</td></tr>
-    <tr><td>3</td><td>Funding gap: A$336k to A$361k need vs about A$200k. Peak funding drawn A$267,771</td><td>High</td><td>Founder decision; accountant; staged fit-out</td></tr>
-    <tr><td>4</td><td>Demand unproven. Break-even 8.266 (locked); 45-min cadence adopted 2026-10-11 (quiet mornings). Fill assumed 100%: each 1% about A$1,185/month, 85% about +A$17.4k, 70% a loss</td><td>High</td><td>Referral network and waitlist from day one; book 2 to 4 weeks ahead; track fill weekly</td></tr>
-    <tr><td>5</td><td>Courier cut-off time unconfirmed</td><td>Med-High</td><td>Confirm in writing</td></tr>
+  <h1 style="font-size:60px;margin-bottom:14px"><span>Risks</span> and fixes</h1>
+  <table style="font-size:22px" class="rk">
+    <tr><th style="width:5%">#</th><th style="width:44%">Risk</th><th style="width:12%">Level</th><th>Mitigation</th></tr>
+    <tr><td>1</td><td>No venue secured. Three conditional matches only</td><td>Critical</td><td>Enquire with agents (with approval); inspect; search weekly</td></tr>
+    <tr><td>2</td><td>No signed lab agreement; fees unquoted; who employs the collectors for Medicare billing unresolved</td><td>High</td><td>Written fees from all three labs; written answer from the partner and Medicare before fit-out spend</td></tr>
+    <tr><td>3</td><td>Funding gap: A$336k to A$361k need vs about A$200k. Peak funding A$251,198</td><td>High</td><td>Founder decision; accountant; staged fit-out</td></tr>
+    <tr><td>4</td><td>Fill rate. Break-even 8.266. Each 1% of fill about A$1,185 a month; 85% about +A$17.4k; 70% roughly break-even</td><td>High</td><td>Pre-launch waitlist; referral network; book 2 to 4 weeks ahead; track fill weekly</td></tr>
+    <tr><td>5</td><td>Courier arrangement unconfirmed</td><td>Med-High</td><td>Confirm in writing</td></tr>
     <tr><td>6</td><td>Model uses A$8,000 rent; ceiling is A$10,500 gross</td><td>Medium</td><td>Headline kept; rent-adjusted line shown</td></tr>
-    <tr><td>7</td><td>Collection-room compliance; no architect yet</td><td>Medium</td><td>Brief architect after site pick</td></tr>
+    <tr><td>7</td><td>Collection room approval and compliance; no architect yet</td><td>Medium</td><td>Brief architect after site pick; confirm with partner and WA Department of Health</td></tr>
     <tr><td>8</td><td>Proposed 30% minimum tax on discretionary trusts from 1 July 2028 (exposure draft, not law)</td><td>Low-Med</td><td>Accountant review</td></tr>
-    <tr><td>9</td><td>GST on two-tier invoice unsettled</td><td>Medium</td><td>Accountant / ATO ruling. Downside +A$23,443</td></tr>
+    <tr><td>9</td><td>GST treatment unsettled. GST-stress downside +A$23,443 a month</td><td>Medium</td><td>Accountant; ATO private ruling; plan on the taxable basis</td></tr>
+    <tr><td>10</td><td>Pregnancy complications on site (liability)</td><td>Medium</td><td>Health declaration, emergency plan, incident register, insurance</td></tr>
   </table>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11 | Risks 1 to 3 are one single point of failure: no site and no partner means no revenue</div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16 | Risks 1 to 3 are one single point of failure: no site and no partner means no revenue</div>
 </section>
 
-<!-- 16 ROADMAP (external) -->
+<!-- 21 ROADMAP (external) -->
 <section class="slide" data-name="Roadmap">
   <h1>Roadmap and <span>gates</span></h1>
   <table>
     <tr><th style="width:18%">Stage</th><th style="width:52%">What happens</th><th>Gate</th></tr>
     <tr><td>0</td><td>Venue search. Pathology partner talks. Waitlist can start early</td><td>None</td></tr>
-    <tr><td>Gate A</td><td>Lab agreement in place (PathWest and/or WDP)</td><td>Written terms</td></tr>
+    <tr><td>Gate A</td><td>Lab agreement in place (WDP, PathWest or Clinipath)</td><td>Written terms</td></tr>
     <tr><td>Gate B</td><td>Venue location confirmed</td><td>Site and lease terms</td></tr>
     <tr><td>1</td><td>Venue Manager hire. Lease. Architect and fit-out quotes</td><td>A + B</td></tr>
     <tr><td>2</td><td>Recruitment of phlebotomists and treatment staff</td><td>Venue Manager in place</td></tr>
     <tr><td>3</td><td>Training, test runs, soft open, public launch</td><td>Fit-out done, staff hired</td></tr>
   </table>
   <p class="small" style="margin-top:20px">No calendar dates. Launch is undated. Go-live trigger: first confirmed customer booking.</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 17 NEXT STEPS (internal) -->
+<!-- 22 NEXT STEPS (internal) -->
 <section class="slide int" data-name="Decisions and next steps">
   <div class="tag">INTERNAL</div>
   <h1>Decisions and <span>next steps</span></h1>
   <ol class="steps" style="margin:0; padding-left:56px">
-    <li style="font-size:28px; margin-bottom:6px">Baseline locked: +A$35,186/month, downside +A$23,443 (done, unchanged by v0.3)</li>
-    <li style="font-size:28px; margin-bottom:6px">Run the dual-lab tender: fees, courier cutoffs, term, ACC</li>
-    <li style="font-size:28px; margin-bottom:6px">Chase PathWest cost question and WDP open items</li>
-    <li style="font-size:28px; margin-bottom:6px">Verify a site first (Harborne St or Mills St): 257 to 290 sqm, 2 collection rooms, rent within the A$10,500 gross ceiling</li>
-    <li style="font-size:28px; margin-bottom:6px">Decide how to cover the funding gap (A$336k to A$361k vs about A$200k); brief the accountant on entity structure</li>
-    <li style="font-size:28px; margin-bottom:6px">Appoint an architect once a site is chosen</li>
-    <li style="font-size:28px; margin-bottom:6px">Approve this deck, then Grace exports PDF</li>
-    <li style="font-size:28px; margin-bottom:6px">Accountant: confirm the two-tier GST invoice (s38-10)</li>
-    <li style="font-size:28px; margin-bottom:6px">Adviser plus both labs: ACC approval with two competing labs</li>
-    <li style="font-size:28px; margin-bottom:6px"><b>Done: 45-min cadence adopted 2026-10-11 (quiet mornings); 8.266 break-even locked</b></li>
-    <li style="font-size:28px; margin-bottom:6px">Ivy: booking + waitlist system live, and fill-rate tracking</li>
+    <li style="font-size:30px; margin-bottom:8px">Baseline confirmed: +A$35,186 a month at full capacity; GST-stress downside +A$23,443</li>
+    <li style="font-size:30px; margin-bottom:8px">Request written wholesale per-test and collection fees from WDP, PathWest and Clinipath; ask who must employ the collectors for Medicare billing</li>
+    <li style="font-size:30px; margin-bottom:8px">Approve agent enquiries for the three shortlisted sites (nothing has been sent)</li>
+    <li style="font-size:30px; margin-bottom:8px">Verify a site first: 257 to 290 sqm, 2 collection rooms, rent within the A$10,500 gross ceiling</li>
+    <li style="font-size:30px; margin-bottom:8px">Decide how to cover the funding gap (A$336k to A$361k vs about A$200k)</li>
+    <li style="font-size:30px; margin-bottom:8px">Accountant: GST ruling application and the trading entity (recommendation: a new dedicated company)</li>
+    <li style="font-size:30px; margin-bottom:8px">Appoint an architect once a site is chosen; use the concept floor plan for fit-out quotes</li>
+    <li style="font-size:30px; margin-bottom:8px">Decide the Test Day Thank You discount and the phlebotomist minimum</li>
+    <li style="font-size:30px; margin-bottom:8px">Approve this deck, then Grace exports PDF</li>
+    <li style="font-size:30px; margin-bottom:8px">Ivy: booking and waitlist system live, and fill-rate tracking</li>
   </ol>
-  <p class="small">We are not asking for money in this draft. Tenant entity: TO CONFIRM.</p>
-  <div class="foot">GTT Center Perth | DRAFT 2026-10-11</div>
+  <p class="small">We are not asking for money in this draft. Tenant entity: to be confirmed. Full list of open items: Items to Confirm in the business plan.</p>
+  <div class="foot">GTT Center Perth | DRAFT 2026-10-16</div>
 </section>
 
-<!-- 18 CLOSING (both) -->
+<!-- 23 CLOSING (both) -->
 <section class="slide cover center" data-name="Draft notice">
   <h1><span>DRAFT</span></h1>
   <p style="font-size:56px; max-width:1400px">DRAFT for Anthony's approval. Not for distribution until approved.</p>
-  <div class="foot">GTT Center Perth | Pitch deck v0.4 | 2026-10-11</div>
+  <div class="foot">GTT Center Perth | Pitch deck v0.5 | 2026-10-16</div>
 </section>
 
 </div>
