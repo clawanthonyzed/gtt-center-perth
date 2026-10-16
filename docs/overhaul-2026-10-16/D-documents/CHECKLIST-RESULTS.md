@@ -2,3 +2,4 @@
 
 ## Progress log
 - Block 1 done: slides.html rebuilt (23 slides, v0.5) with every S-ID plus L1, L2, L4 purges; slide 18 floor plan; slide 19 new property search; visual-financials.html rebuilt. Build scripts in outputs/PRESENTATION/build/. Deployed to the live folder (backup in /root/gtt-presentation-backup-20261016/). Rendered in headless Chromium: no JS errors, no slide overflow.
+- Block 2 done: BUSINESS-PLAN.md rewritten as v0.5 (all P-IDs). Section map: P1 cover and Appendices C, D; P2 contents; P3 Section 1; P5 Section 2; P6, P7 Section 3; P8 Section 4 (4.2 to 4.6, Appendix B); P9 4.4 to 4.6; P10 Table 5.3; P11 5.3 to 5.5; P12 5.6, 5.4; P13 6.1 to 6.3; P14 6.4; P15 7.4 to 7.6; P16 5.7, 7.8, 7.9, 8.1; P17 8.2 to 8.5; P18 8.5, 8.6; P19, P20 Section 9.
