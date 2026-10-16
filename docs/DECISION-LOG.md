@@ -4,25 +4,48 @@
 
 ---
 
-## 2026-10-13: Wording only, CURRENT-STATE section 10 now quotes 8.266
+## 2026-10-16: Permanent Cadence Law, adaptive rostering, no ramp-up, afternoon structure (Anthony)
 
-**Wording only:** CURRENT-STATE section 10 now quotes 8.266 (Anthony, 2026-10-13). No figures changed. The 12.655 figure stays as the fixed full-roster comparison. Follows the 2026-10-11 decision below.
+**Decision (Anthony, 2026-10-16, line-by-line review, items L1, L2, L3, S11b, P8d, P8e, P16a, P19c):**
+
+- **(a) Cadence.** The earlier alternative pair cadence is **retired permanently**. The **25-minute pair cadence is the only cadence** in every plan, booking, roster and calculator. First booking **07:00** (expecting mothers arrive fasted 10 minutes before, 06:50). Pairs at 07:00, 07:25, 07:50 and so on. Last first draw **10:20** (check: 07:00 + 8 x 25 minutes = 10:20; 9 pairs = 18 clients at most). Full-capacity time slots are offered; bookings are taken **2 to 4 weeks ahead**.
+- **(b) True adaptive rostering.** Staff are called in to match the confirmed slots, AM and PM. Idle staff are never rostered. One booked client does not trigger a full roster.
+- **(c) No ramp-up.** The plan opens at the full 18 clients a morning, filled through marketing and a pre-launch waitlist. The 43% / 64% / 79% / 93% ramp is removed from every model.
+- **(d) Afternoon.** Stand-alone pre-booked services, not bound by the 2-hour GTT clock. Walk-ins only if staff are free. Rostered adaptively to the pre-booked services.
+- **(e) AM packages** include any service-menu option that fits the 30 or 45 minute wellness window. (This 45 is a **service length**, not a cadence, and stays.)
+
+**Reason:** the earlier alternative cadence was adopted to justify a 4-therapist roster on quiet mornings. Anthony has ruled that the 25-minute cadence is the only one and that rostering must follow the confirmed bookings. The 25-minute cadence supports a small roster by itself when bookings fall one per slot (at most two first services overlap at once, so 4 therapists cover up to 9 clients), so the model does not need a second cadence. Removing the ramp is Anthony's decision; the marketing and waitlist plan has to deliver it.
+
+**Nature of the change:** a decision plus a model rebuild. Calculators re-run (tools/am_volume_tier_staffing_solver.py, tools/cost_ramp_model.py, tools/am_demand_tier_financial_ladder.py); no new calculator replaces them. Results:
+
+| Figure | Earlier ramped model | Now |
+|---|---|---|
+| Steady state per month (Table 1, 18 clients a day) | +A$35,186.40 | **+A$35,186.40** (unchanged, 24.6% margin) |
+| Steady state per year | A$422,236.80 | **A$422,236.80** |
+| Break-even (AM clients a day) | 8.266 | **8.266**, re-derived on the 25-minute cadence (planning case, bookings one per slot); 12.655 if every booking stacks in pairs from 07:00; 7.250 if one phlebotomist is allowed on mornings of 9 or fewer |
+| Year 1 net (repo basis / GST-stress) | A$322,014.93 / A$196,608.65 | **A$422,236.80 / A$281,310.96** (12 full-capacity months) |
+| Peak funding / lowest cash | A$267,771.03 / A$68,426.97 | **A$251,198.00 / A$85,000.00** (reserve never drawn) |
+| Payback (repo / after GST) | Month 11 / Month 15 | **Month 8 / Month 11** |
+
+**Superseded by this entry:** the 2026-10-11 entry below (cadence part; its text has been reduced to a superseded stub per this law) and the 2026-10-13 wording-only entry. `docs/CURRENT-STATE.md` section 10 and the 3-way model have been rebuilt.
+
+**Open question for Anthony, flagged not decided:** the model keeps **2 phlebotomists on any morning with a GTT booking**. That minimum is not a regulation found in this repo. It comes from GTT's own clinical standard recorded on 2026-10-11 and from the difficult-blood-draw protocol (a second on-site phlebotomist attempts after two failed attempts, `docs/gtt-clinical-protocol.md`). On the 25-minute cadence one chair carries up to 9 clients with no overlapping draws, so mornings of 9 or fewer could run 1 phlebotomist: saving A$234.51 a weekday morning (A$6,682.23 a month) and lowering break-even to 7.250. L3 can be read either way ("do NOT roster 2 phlebotomists and 8 therapists" for 1 client). Until Anthony decides, 1 booked client rosters 2 phlebotomists and 2 therapists, never 8 therapists. Worth asking the pathology partner whether it requires 2 collectors.
+
+**Documents updated:** `docs/CURRENT-STATE.md` (new section 00, sections 0, 4, 10), `outputs/FINANCIALS/3-WAY-FINANCIAL-MODEL-AUD.md` (v0.5), `outputs/FINANCIALS/PROFIT-AND-LOSS.md`, `outputs/FINANCIALS/CASHFLOW-FORECAST.md`, comments in `tools/`, and the workings and document-ready wording under `docs/overhaul-2026-10-16/M-model/`.
+
+**Related documents:** `docs/reviews/ANTHONY-REVIEW-2026-10-16.md`, `docs/overhaul-2026-10-16/M-model/MODEL-WORKINGS.md`.
 
 ---
 
-## 2026-10-11: 45-minute pair cadence adopted for low-volume mornings; break-even 8.266 and peak funding A$267,771 locked
+## 2026-10-13: Wording only, CURRENT-STATE section 10 break-even wording (SUPERSEDED 2026-10-16)
 
-**Decision:** Anthony approved the 45-minute pair cadence ("Anthony approves the 45-minute pair cadence"). Scope as modelled in Theodore's 3-way model v0.4: 45-min pair cadence adopted for mornings with 10 or fewer bookings (2 phlebotomists + 4 therapists); 25-min cadence for full mornings (15+ weekday / 17+ Saturday; 2 phlebotomists + 8 therapists). Locked figures: break-even 8.266 AM clients/day (about 8.3) and peak funding A$267,771. Scheduling standard, GTT's clinical standard: advance booking 2 to 4 weeks ahead plus a waitlist, and 2 phlebotomists on every GTT morning.
+**Superseded.** Section 10 of `docs/CURRENT-STATE.md` was rebuilt on 2026-10-16 (see the entry above). No figure in this entry is current.
 
-**Reason:** the 4-therapist roster for quiet mornings is only feasible at a 45-minute cadence inside the WDP guidance window (last Draw 1 no later than 10:30am), per `docs/architecture/AM-DEMAND-DRIVEN-STAFFING-TIERS-2026-09.md` §3, which had marked it "presented, not adopted" pending Anthony's explicit sign-off. Adopting it cuts Months 1 to 3 payroll from A$280,787 to A$214,844 and peak funding from A$318,176 to A$267,771.
+---
 
-**Scope check, open for Anthony to confirm:** 45-min cadence applies to low-volume mornings only (as modelled); applying it to full mornings would reduce capacity to about 10/day. Working: 10:30am is 210 minutes after a 07:00 start. At 45 minutes, (n - 1) x 45 <= 210 gives n <= 5.67, so 5 pair-slots x 2 chairs = 10 clients. At 25 minutes, (n - 1) x 25 <= 210 gives 9 pair-slots = 18 clients. Only the 25-minute cadence on full mornings produces 18/day and the +A$35,186/month steady state.
+## 2026-10-11: Low-volume cadence decision, break-even and peak funding lock (SUPERSEDED 2026-10-16, retired permanently)
 
-**Nature of the change:** a decision, not a dollar change. No figure in the model moves from v0.3 to v0.4. Steady state stays +A$35,186.40/month (GST-stress +A$23,442.58). The fill-rate caveat stays: fill is assumed 100%; 85% fill is about +A$17.4k a month and 70% is a loss. The full-mornings-only fallback (model Section 14) is now a contingency only.
-
-**Documents updated:** 3-way financial model v0.4, executive pitch deck v0.4 and slides, launch readiness tracker v0.4 (T10 resolved), clinical operations plan v0.4 (new section 2.2A, scheduling standard). `docs/CURRENT-STATE.md` still shows the 25-minute cadence and needs a follow-up edit.
-
-**Related documents:** `docs/architecture/AM-DEMAND-DRIVEN-STAFFING-TIERS-2026-09.md`, `docs/CURRENT-STATE.md` §10.
+**Superseded.** Retired by Anthony on 2026-10-16 under the Permanent Cadence Law (entry above). The 25-minute pair cadence is the only cadence. The figures this entry locked are replaced: break-even is re-derived on the 25-minute cadence (8.266, planning case), peak funding is now A$251,198, and the scheduling standard of advance booking 2 to 4 weeks ahead plus a waitlist is kept. The line "2 phlebotomists on every GTT morning" is held as an open question for Anthony (see the entry above). The detailed cadence text of this entry was removed, not preserved, because Anthony's law is to eradicate every mention; the earlier text remains in version history.
 
 ---
 
