@@ -203,6 +203,10 @@ def clean_fin(t):
         (r'CURRENT-STATE[^|;)]*', 'the plan'), (r'profit-loss-tables\.md v3\.0', 'the financial model'),
         (r'\bTO CONFIRM\b', 'to be confirmed'), (r'\bNot in model\b', 'Not in the model'), (r'\bnot in model\b', 'not in the model'),
         (r'\.md\b', ''),
+        (r'financial model\(model startup_costs[^)]*\)', 'financial model'),
+        (r'\(model, executive-summary[^)]*\)', '(figure to be confirmed)'),
+        (r'\(model executive-summary[^)]*\)', '(figure to be confirmed)'),
+        (r'; this figure is not in the plan', ''),
     ]
     for a, b in subs:
         t = re.sub(a, b, t)
@@ -212,6 +216,7 @@ def clean_fin(t):
 def build_fin(name, title, out_name, wide=False):
     t = clean_fin(fin_md(name))
     body = md_to_html(t)
+    body = re.sub(r'<table>.*?</table>', lambda m: '<div class="tblock">'+m.group(0)+'</div>', body, flags=re.S)
     cls = 'fin wide' if wide else 'fin'
     if wide:
         body = body.replace('<table>', '<table class="wide">', 1) if False else body

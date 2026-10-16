@@ -1,0 +1,612 @@
+<!DOCTYPE html><html lang="en-AU"><head><meta charset="utf-8"><title>Cashflow Forecast</title><style>
+@page { size: A4; margin: 16mm 16mm 18mm 16mm; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'Carlito','Calibri','Liberation Sans',Arial,sans-serif; font-size: 10pt; line-height: 1.38; color: #33261E; margin: 0; }
+h1 { font-family: 'Gentium Basic','Liberation Serif',Georgia,serif; font-size: 30pt; margin: 0 0 4pt 0; color: #33261E; border-bottom: 2px solid #9C7A46; padding-bottom: 6pt; }
+h2 { font-family: 'Gentium Basic','Liberation Serif',Georgia,serif; font-size: 17pt; color: #A9654E; margin: 0 0 8pt 0; padding-bottom: 3pt; border-bottom: 1px solid #E8DAC5; break-after: avoid; }
+h1 + h2 { font-size: 15pt; border: none; }
+h3 { font-family: 'Gentium Basic','Liberation Serif',Georgia,serif; font-size: 12.5pt; color: #5E5F45; margin: 12pt 0 4pt 0; break-after: avoid; }
+p { margin: 0 0 6pt 0; }
+ul, ol { margin: 0 0 6pt 0; padding-left: 18pt; }
+li { margin-bottom: 2pt; }
+a { color: #A9654E; text-decoration: underline; }
+table { width: 100%; border-collapse: collapse; margin: 4pt 0 8pt 0; font-size: 8.8pt; line-height: 1.28; }
+th { background: #33261E; color: #FAF6EE; text-align: left; padding: 3.5pt 6pt; font-weight: 700; }
+td { padding: 3pt 6pt; border-bottom: 1px solid #E8DAC5; vertical-align: top; }
+tr:nth-child(even) td { background: #F6EEE0; }
+tr { break-inside: avoid; }
+thead { display: table-header-group; }
+.tblock { break-inside: avoid; page-break-inside: avoid; }
+.tblock table { margin-top: 2pt; }
+.tblock.fit table { font-size: 8.4pt; line-height: 1.22; }
+.tblock.fit td { padding: 2.4pt 5pt; }
+.tcap { font-weight: 700; color: #A9654E; margin: 8pt 0 2pt 0; font-size: 10.5pt; break-after: avoid; }
+.pagebreak { break-after: page; page-break-after: always; height: 0; }
+img { max-width: 100%; height: auto; display: block; margin: 6pt auto; border: 1px solid #E8DAC5; }
+em { color: #5E5F45; }
+strong { color: #33261E; }
+/* cover table */
+h1 + h2 + p + table td:first-child, h1 + h2 + p + table th:first-child { width: 24%; }
+/* table of contents */
+.toc h2 { font-size: 24pt; margin-bottom: 16pt; border-bottom: 2px solid #9C7A46; }
+.toc .lead { font-size: 11.5pt; color: #5E5F45; margin-bottom: 18pt; }
+.toc a.row { display: flex; align-items: baseline; text-decoration: none; color: #33261E; font-size: 15.5pt; padding: 6pt 0; border-bottom: 1px solid #E8DAC5; }
+.toc a.row .n { width: 30pt; color: #A9654E; font-family: 'Gentium Basic','Liberation Serif',serif; font-weight: 700; }
+.toc a.row .t { flex: 1; }
+.toc a.row .pg { width: 34pt; text-align: right; color: #A9654E; font-weight: 700; }
+.toc a.row.sub { font-size: 12.5pt; padding: 4pt 0 4pt 30pt; color: #5E5F45; }
+.toc a.row.sub .n { width: 22pt; }
+/* financial statements */
+.fin table { font-size: 7.6pt; }
+.fin.wide table.wide { font-size: 6.4pt; }
+.fin.wide table.wide th, .fin.wide table.wide td { padding: 2pt 2.5pt; }
+
+@page { size: A4 landscape; margin: 12mm; }</style></head><body class="fin wide"><h1>Cashflow Forecast and Startup Capital</h1>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Business</strong></td>
+<td>GTT Center Perth</td>
+</tr>
+<tr>
+<td><strong>Document</strong></td>
+<td>Startup capital and 12-month cashflow forecast</td>
+</tr>
+<tr>
+<td><strong>Prepared by</strong></td>
+<td>Theodore (CFO) for Anthony Zed. Updated 2026-10-16 (Grace, to Anthony's instructions of 2026-10-16)</td>
+</tr>
+<tr>
+<td><strong>Date</strong></td>
+<td>2026-10-16</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>DRAFT for review</td>
+</tr>
+<tr>
+<td><strong>Legal entity</strong></td>
+<td>to be confirmed</td>
+</tr>
+<tr>
+<td><strong>Currency</strong></td>
+<td>Australian dollars (A$)</td>
+</tr>
+<tr>
+<td><strong>Basis</strong></td>
+<td>3-Way Financial Model v0.5 (2026-10-16), 25-minute cadence, adaptive rostering, full capacity from Month 1 (no ramp-up), headline rent A$8,000 per month</td>
+</tr>
+</tbody>
+</table></div>
+<p>All figures are planning estimates. The venue is not yet open and no trading data exists.</p>
+<hr />
+<h2>1. Startup capital</h2>
+<h3>1a. By group (Low / Base / High)</h3>
+<p>The base is the founder-approved "Revised Recommended Opening Strategy" (2026-08-10).</p>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>Group</th>
+<th style="text-align: right;">Low</th>
+<th style="text-align: right;"><strong>Base</strong></th>
+<th style="text-align: right;">High</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equipment, non-clinical</td>
+<td style="text-align: right;">A$12,950</td>
+<td style="text-align: right;"><strong>A$12,950</strong></td>
+<td style="text-align: right;">A$34,980</td>
+</tr>
+<tr>
+<td>Clinical / blood collection equipment</td>
+<td style="text-align: right;">A$6,330</td>
+<td style="text-align: right;"><strong>A$6,330</strong></td>
+<td style="text-align: right;">A$10,240</td>
+</tr>
+<tr>
+<td>Furniture, fixtures, fittings, signage</td>
+<td style="text-align: right;">A$14,160</td>
+<td style="text-align: right;"><strong>A$14,160</strong></td>
+<td style="text-align: right;">A$51,800</td>
+</tr>
+<tr>
+<td>Fit-out / construction</td>
+<td style="text-align: right;">A$138,328</td>
+<td style="text-align: right;"><strong>A$139,678</strong></td>
+<td style="text-align: right;">A$306,029</td>
+</tr>
+<tr>
+<td>IT / booking setup</td>
+<td style="text-align: right;">A$820</td>
+<td style="text-align: right;"><strong>A$820</strong></td>
+<td style="text-align: right;">A$7,550</td>
+</tr>
+<tr>
+<td>Compliance, legal, design, approvals</td>
+<td style="text-align: right;">A$7,639</td>
+<td style="text-align: right;"><strong>A$7,639</strong></td>
+<td style="text-align: right;">A$28,239</td>
+</tr>
+<tr>
+<td>Bond and lease</td>
+<td style="text-align: right;">A$16,000</td>
+<td style="text-align: right;"><strong>A$16,000</strong></td>
+<td style="text-align: right;">A$41,500</td>
+</tr>
+<tr>
+<td>Pre-opening staff, launch marketing, opening stock</td>
+<td style="text-align: right;">A$21,552</td>
+<td style="text-align: right;"><strong>A$26,707</strong></td>
+<td style="text-align: right;">A$57,022</td>
+</tr>
+<tr>
+<td>Contingency</td>
+<td style="text-align: right;">A$26,133</td>
+<td style="text-align: right;"><strong>A$26,914</strong></td>
+<td style="text-align: right;">A$107,472</td>
+</tr>
+<tr>
+<td><strong>Pre-opening capital (to open)</strong></td>
+<td style="text-align: right;"><strong>A$243,912</strong></td>
+<td style="text-align: right;"><strong>A$251,198</strong></td>
+<td style="text-align: right;"><strong>A$644,832</strong></td>
+</tr>
+<tr>
+<td>Working capital reserve</td>
+<td style="text-align: right;">A$85,000</td>
+<td style="text-align: right;"><strong>A$85,000</strong></td>
+<td style="text-align: right;">A$110,000</td>
+</tr>
+<tr>
+<td><strong>Total startup capital</strong></td>
+<td style="text-align: right;"><strong>A$328,912</strong></td>
+<td style="text-align: right;"><strong>A$336,198</strong></td>
+<td style="text-align: right;"><strong>A$754,832</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Source: financial model. Low is the "Minimum Viable Opening"; High is the "Full Build" with 20% contingency.</p>
+<p><strong>Base = A$251,198 to open + A$85,000 working capital reserve = A$336,198.</strong></p>
+<p>Base detail (financial model): fit-out includes acoustic curtain fabric (+A$1,350); pre-opening staff A$22,872; launch marketing A$1,250; opening stock A$2,585. Line-by-line items are itemised in the model only for the full-scope scenarios (financial model).</p>
+<h3>1b. Range across model scenarios</h3>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th style="text-align: right;">Total startup capital</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low (Minimum Viable Opening)</td>
+<td style="text-align: right;">A$328,912</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td><strong>Base, A$8,000 rent (headline)</strong></td>
+<td style="text-align: right;"><strong>A$336,198</strong></td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td>Base, rent A$9,500</td>
+<td style="text-align: right;">A$339,198</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td>Base, rent A$10,500 or A$10,500 gross ceiling</td>
+<td style="text-align: right;">A$341,198</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td>High (Full Build)</td>
+<td style="text-align: right;">A$754,832</td>
+<td>Financial model</td>
+</tr>
+</tbody>
+</table></div>
+<p>The rent cases change only the lease bond and one month's advance rent.</p>
+<h3>1c. Spend deferred to after opening (not in base)</h3>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">Amount</th>
+<th>Month paid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nail stations 3 and 4</td>
+<td style="text-align: right;">A$3,000</td>
+<td>Month 4</td>
+</tr>
+<tr>
+<td>Hair chairs 3 and 4</td>
+<td style="text-align: right;">A$2,600</td>
+<td>Month 4</td>
+</tr>
+<tr>
+<td>Acoustic treatment for curtain bays</td>
+<td style="text-align: right;">A$4,874</td>
+<td>Month 6</td>
+</tr>
+<tr>
+<td>Full website build</td>
+<td style="text-align: right;">A$1,200</td>
+<td>Month 6</td>
+</tr>
+<tr>
+<td>Professional photography</td>
+<td style="text-align: right;">A$1,000</td>
+<td>Month 6</td>
+</tr>
+<tr>
+<td>3rd iPad + colour printer</td>
+<td style="text-align: right;">A$700</td>
+<td>Month 6</td>
+</tr>
+<tr>
+<td><strong>Total deferred</strong></td>
+<td style="text-align: right;"><strong>A$13,374</strong></td>
+<td>M4 A$5,600; M6 A$7,774</td>
+</tr>
+</tbody>
+</table></div>
+<p>Source: financial model</p>
+<hr />
+<h2>2. Month 0 to 12 cash forecast</h2>
+<p>Figures in A$. Negative = cash out. There is no ramp-up: every month is a full-capacity month (18 clients a morning), so receipts and operating payments are the same in every month.</p>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>A$</th>
+<th style="text-align: right;">Opening cash</th>
+<th style="text-align: right;">Funding in</th>
+<th style="text-align: right;">Receipts</th>
+<th style="text-align: right;">Operating payments</th>
+<th style="text-align: right;">Pre-opening capex</th>
+<th style="text-align: right;">Deferred capex</th>
+<th style="text-align: right;">GST paid (BAS)</th>
+<th style="text-align: right;">Net cash flow</th>
+<th style="text-align: right;"><strong>Closing cash</strong></th>
+<th style="text-align: right;">Cumulative (after GST)</th>
+<th style="text-align: right;">Cumulative (before GST timing)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">336,198.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-251,198.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">85,000.00</td>
+<td style="text-align: right;"><strong>85,000.00</strong> ◄ LOW</td>
+<td style="text-align: right;">-251,198.00 ◄ PEAK FUNDING</td>
+<td style="text-align: right;">-251,198.00</td>
+</tr>
+<tr>
+<td>M1</td>
+<td style="text-align: right;">85,000.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">143,070.37</td>
+<td style="text-align: right;">-107,883.97</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">35,186.40</td>
+<td style="text-align: right;"><strong>120,186.40</strong></td>
+<td style="text-align: right;">-216,011.60</td>
+<td style="text-align: right;">-216,011.60</td>
+</tr>
+<tr>
+<td>M2</td>
+<td style="text-align: right;">120,186.40</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">143,070.37</td>
+<td style="text-align: right;">-107,883.97</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-11,743.82</td>
+<td style="text-align: right;">23,442.58</td>
+<td style="text-align: right;"><strong>143,628.98</strong></td>
+<td style="text-align: right;">-192,569.02</td>
+<td style="text-align: right;">-180,825.20</td>
+</tr>
+<tr>
+<td>M3</td>
+<td style="text-align: right;">143,628.98</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">143,070.37</td>
+<td style="text-align: right;">-107,883.97</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-11,743.82</td>
+<td style="text-align: right;">23,442.58</td>
+<td style="text-align: right;"><strong>167,071.56</strong></td>
+<td style="text-align: right;">-169,126.44</td>
+<td style="text-align: right;">-145,638.80</td>
+</tr>
+<tr>
+<td>M4</td>
+<td style="text-align: right;">167,071.56</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">143,070.37</td>
+<td style="text-align: right;">-107,883.97</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-5,600.00</td>
+<td style="text-align: right;">-11,743.82</td>
+<td style="text-align: right;">17,842.58</td>
+<td style="text-align: right;"><strong>184,914.14</strong></td>
+<td style="text-align: right;">-151,283.86</td>
+<td style="text-align: right;">-116,052.40</td>
+</tr>
+<tr>
+<td>M5</td>
+<td style="text-align: right;">184,914.14</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">143,070.37</td>
+<td style="text-align: right;">-107,883.97</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-11,743.82</td>
+<td style="text-align: right;">23,442.58</td>
+<td style="text-align: right;"><strong>208,356.72</strong></td>
+<td style="text-align: right;">-127,841.28</td>
+<td style="text-align: right;">-80,866.00</td>
+</tr>
+<tr>
+<td>M6</td>
+<td style="text-align: right;">208,356.72</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">143,070.37</td>
+<td style="text-align: right;">-107,883.97</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-7,774.00</td>
+<td style="text-align: right;">-11,743.82</td>
+<td style="text-align: right;">15,668.58</td>
+<td style="text-align: right;"><strong>224,025.30</strong></td>
+<td style="text-align: right;">-112,172.70</td>
+<td style="text-align: right;">-53,453.60</td>
+</tr>
+<tr>
+<td>M7</td>
+<td style="text-align: right;">224,025.30</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">143,070.37</td>
+<td style="text-align: right;">-107,883.97</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-11,743.82</td>
+<td style="text-align: right;">23,442.58</td>
+<td style="text-align: right;"><strong>247,467.88</strong></td>
+<td style="text-align: right;">-88,730.12</td>
+<td style="text-align: right;">-18,267.20</td>
+</tr>
+<tr>
+<td>M8</td>
+<td style="text-align: right;">247,467.88</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">143,070.37</td>
+<td style="text-align: right;">-107,883.97</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-11,743.82</td>
+<td style="text-align: right;">23,442.58</td>
+<td style="text-align: right;"><strong>270,910.46</strong></td>
+<td style="text-align: right;">-65,287.54</td>
+<td style="text-align: right;">16,919.20 ◄ PAYBACK (before GST timing)</td>
+</tr>
+<tr>
+<td>M9</td>
+<td style="text-align: right;">270,910.46</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">143,070.37</td>
+<td style="text-align: right;">-107,883.97</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-11,743.82</td>
+<td style="text-align: right;">23,442.58</td>
+<td style="text-align: right;"><strong>294,353.04</strong></td>
+<td style="text-align: right;">-41,844.96</td>
+<td style="text-align: right;">52,105.60</td>
+</tr>
+<tr>
+<td>M10</td>
+<td style="text-align: right;">294,353.04</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">143,070.37</td>
+<td style="text-align: right;">-107,883.97</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-11,743.82</td>
+<td style="text-align: right;">23,442.58</td>
+<td style="text-align: right;"><strong>317,795.62</strong></td>
+<td style="text-align: right;">-18,402.38</td>
+<td style="text-align: right;">87,292.00</td>
+</tr>
+<tr>
+<td>M11</td>
+<td style="text-align: right;">317,795.62</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">143,070.37</td>
+<td style="text-align: right;">-107,883.97</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-11,743.82</td>
+<td style="text-align: right;">23,442.58</td>
+<td style="text-align: right;"><strong>341,238.20</strong></td>
+<td style="text-align: right;">5,040.20 ◄ PAYBACK (after GST)</td>
+<td style="text-align: right;">122,478.40</td>
+</tr>
+<tr>
+<td>M12</td>
+<td style="text-align: right;">341,238.20</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">143,070.37</td>
+<td style="text-align: right;">-107,883.97</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-11,743.82</td>
+<td style="text-align: right;">23,442.58</td>
+<td style="text-align: right;"><strong>364,680.78</strong></td>
+<td style="text-align: right;">28,482.78</td>
+<td style="text-align: right;">157,664.80</td>
+</tr>
+<tr>
+<td><strong>M1 to M12 total</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>0.00</strong></td>
+<td style="text-align: right;"><strong>1,716,844.44</strong></td>
+<td style="text-align: right;"><strong>-1,294,607.64</strong></td>
+<td style="text-align: right;"><strong>0.00</strong></td>
+<td style="text-align: right;"><strong>-13,374.00</strong></td>
+<td style="text-align: right;"><strong>-129,182.02</strong></td>
+<td style="text-align: right;"><strong>279,680.78</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How to read the table</strong>
+- Opening cash, funding, pre-opening capex, deferred capex, GST paid and closing cash follow the 3-Way Financial Model v0.5 §4. The model's own rules are unchanged: all funding in before opening, no debt, clients prepay at booking (no debtor or creditor timing), GST paid monthly in the month after.
+- Receipts are financial model's operating cash in every month.
+- <strong>Cumulative (after GST)</strong> = closing cash less A$336,198 capital in. <strong>Cumulative (before GST timing)</strong> excludes GST paid.</p>
+<h3>2a. Key cash measures</h3>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th style="text-align: right;">Figure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Peak funding requirement (with GST timing)</strong></td>
+<td style="text-align: right;"><strong>A$251,198.00</strong></td>
+<td>Financial model-opening capital, because with no ramp-up there is no operating loss to fund</td>
+</tr>
+<tr>
+<td>Lowest cash point</td>
+<td style="text-align: right;">A$85,000.00, <strong>at opening (Month 0)</strong></td>
+<td>Financial model$85,000 working-capital reserve is never drawn</td>
+</tr>
+<tr>
+<td>How it is reached</td>
+<td style="text-align: right;">A$251,198 pre-opening capital; Month 1 makes a profit</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td><strong>Payback, before GST timing</strong></td>
+<td style="text-align: right;"><strong>Month 8</strong> (cumulative +A$16,919.20)</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td><strong>Payback, after GST</strong></td>
+<td style="text-align: right;"><strong>Month 11</strong> (cumulative +A$5,040.20)</td>
+<td>Financial model</td>
+</tr>
+</tbody>
+</table></div>
+<p>The earlier ramped forecast showed peak funding of A$267,771.03 (the Month 1 loss on top of the pre-opening capital) and payback in Month 11 (before GST timing) and Month 15 (after GST). Removing the ramp-up removes the Month 1 to 4 losses, so peak funding falls to the pre-opening capital and payback comes about 3 to 4 months sooner. Both rest on the waitlist delivering a full morning from the first day.</p>
+<hr />
+<h2>3. Working capital buffer</h2>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th style="text-align: right;">Figure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Working capital reserve at opening</td>
+<td style="text-align: right;">A$85,000.00</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td>Deepest drop after opening</td>
+<td style="text-align: right;">A$0.00 (cash rises from Month 1)</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td><strong>Cash remaining above the low point (headroom)</strong></td>
+<td style="text-align: right;"><strong>A$85,000.00</strong></td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td>Runway if fill falls to 70% (12.6 clients a morning) from Month 1</td>
+<td style="text-align: right;">9 full months (net after GST -A$8,871.51 a month; cash goes negative in Month 10)</td>
+<td>Financial model</td>
+</tr>
+</tbody>
+</table></div>
+<p>What the buffer is for (financial model):
+- The uncosted fit-out for the larger 257 to 290 sqm floor area, indicatively up to A$63,750.
+- Cafe equipment (A$5,000 to A$12,650), not in the base.
+- Rent during the fit-out period, not in the base.
+- Unspent contingency (up to A$26,914) and GST credits on fit-out would add headroom. Not counted.</p>
+<p>At the A$10,500 gross ceiling peak funding is A$256,198.00 and the lowest cash point is A$85,000.00 (opening); the reserve is still not drawn (financial model).</p>
+<hr />
+<h2>4. Funding</h2>
+<p>Funding source per the model: <strong>self-funded from founder savings, about A$200,000 (funding and ownership structure to be confirmed). No external investor sought to date</strong> (figure to be confirmed).</p>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th style="text-align: right;">Requirement</th>
+<th style="text-align: right;">Less savings (about)</th>
+<th style="text-align: right;"><strong>Gap</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pre-opening capital only</td>
+<td style="text-align: right;">A$251,198</td>
+<td style="text-align: right;">A$200,000</td>
+<td style="text-align: right;"><strong>A$51,198</strong></td>
+</tr>
+<tr>
+<td><strong>Peak funding requirement</strong></td>
+<td style="text-align: right;"><strong>A$251,198</strong></td>
+<td style="text-align: right;">A$200,000</td>
+<td style="text-align: right;"><strong>A$51,198</strong></td>
+</tr>
+<tr>
+<td>Total startup capital incl. A$85,000 reserve</td>
+<td style="text-align: right;">A$336,198</td>
+<td style="text-align: right;">A$200,000</td>
+<td style="text-align: right;"><strong>A$136,198</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The gaps are simple subtractions of the two sourced figures. How the gap is to be funded (loan, lease finance, investor) is <strong>not in the model</strong>: the model assumes all capital is put in before opening with no debt (financial model). Interest and repayments are therefore not in the model.</p>
+<hr />
+<h2>5. Notes</h2>
+<ol>
+<li><strong>No debt assumed.</strong> All A$336,198 is received before opening. No loan drawdowns, interest or repayments are modelled.</li>
+<li><strong>Pre-opening capital</strong> (A$251,198, including the full contingency) is spent in Month 0. This is conservative.</li>
+<li><strong>GST.</strong> Monthly BAS, paid the month after (financial model). All sales are treated as taxable. GST treatment is general information only and must be confirmed with the accountant. The model's own P&amp;L carries no GST line, so the model-basis payback is Month 8 and the after-GST payback is Month 11.</li>
+<li><strong>Receipts timing.</strong> Clients prepay at booking. No debtor or creditor timing is modelled.</li>
+<li><strong>No ramp-up, fill rate is the central risk.</strong> Fill is assumed 100% from Month 1. At 85% fill, peak funding stays A$251,198 but payback is Month 16 (before GST timing) and Month 35 (after GST). At 70% fill the business does not pay back and the A$85,000 reserve is used up in about 9 months (financial model).</li>
+<li><strong>Lab fee</strong> is assumed A$0 to GTT (model assumption). Tender fees are to be confirmed.</li>
+<li><strong>Rent</strong> is the A$8,000 headline per Anthony's instruction. Rent during fit-out is not in the base.</li>
+<li><strong>Not in the model:</strong> income tax, depreciation, interest, loan funding, cafe equipment, fit-out for the larger floor area.</li>
+</ol>
+<p><em>Arithmetic check: every cash row was rolled forward by script from opening cash. The same roll-forward rules reproduced the earlier ramped forecast exactly (peak funding A$267,771.03, paybacks Month 11 and Month 15) before the ramp was removed.</em></p></body></html>

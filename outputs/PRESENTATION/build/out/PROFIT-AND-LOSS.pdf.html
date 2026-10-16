@@ -1,0 +1,647 @@
+<!DOCTYPE html><html lang="en-AU"><head><meta charset="utf-8"><title>Projected Profit and Loss</title><style>
+@page { size: A4; margin: 16mm 16mm 18mm 16mm; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'Carlito','Calibri','Liberation Sans',Arial,sans-serif; font-size: 10pt; line-height: 1.38; color: #33261E; margin: 0; }
+h1 { font-family: 'Gentium Basic','Liberation Serif',Georgia,serif; font-size: 30pt; margin: 0 0 4pt 0; color: #33261E; border-bottom: 2px solid #9C7A46; padding-bottom: 6pt; }
+h2 { font-family: 'Gentium Basic','Liberation Serif',Georgia,serif; font-size: 17pt; color: #A9654E; margin: 0 0 8pt 0; padding-bottom: 3pt; border-bottom: 1px solid #E8DAC5; break-after: avoid; }
+h1 + h2 { font-size: 15pt; border: none; }
+h3 { font-family: 'Gentium Basic','Liberation Serif',Georgia,serif; font-size: 12.5pt; color: #5E5F45; margin: 12pt 0 4pt 0; break-after: avoid; }
+p { margin: 0 0 6pt 0; }
+ul, ol { margin: 0 0 6pt 0; padding-left: 18pt; }
+li { margin-bottom: 2pt; }
+a { color: #A9654E; text-decoration: underline; }
+table { width: 100%; border-collapse: collapse; margin: 4pt 0 8pt 0; font-size: 8.8pt; line-height: 1.28; }
+th { background: #33261E; color: #FAF6EE; text-align: left; padding: 3.5pt 6pt; font-weight: 700; }
+td { padding: 3pt 6pt; border-bottom: 1px solid #E8DAC5; vertical-align: top; }
+tr:nth-child(even) td { background: #F6EEE0; }
+tr { break-inside: avoid; }
+thead { display: table-header-group; }
+.tblock { break-inside: avoid; page-break-inside: avoid; }
+.tblock table { margin-top: 2pt; }
+.tblock.fit table { font-size: 8.4pt; line-height: 1.22; }
+.tblock.fit td { padding: 2.4pt 5pt; }
+.tcap { font-weight: 700; color: #A9654E; margin: 8pt 0 2pt 0; font-size: 10.5pt; break-after: avoid; }
+.pagebreak { break-after: page; page-break-after: always; height: 0; }
+img { max-width: 100%; height: auto; display: block; margin: 6pt auto; border: 1px solid #E8DAC5; }
+em { color: #5E5F45; }
+strong { color: #33261E; }
+/* cover table */
+h1 + h2 + p + table td:first-child, h1 + h2 + p + table th:first-child { width: 24%; }
+/* table of contents */
+.toc h2 { font-size: 24pt; margin-bottom: 16pt; border-bottom: 2px solid #9C7A46; }
+.toc .lead { font-size: 11.5pt; color: #5E5F45; margin-bottom: 18pt; }
+.toc a.row { display: flex; align-items: baseline; text-decoration: none; color: #33261E; font-size: 15.5pt; padding: 6pt 0; border-bottom: 1px solid #E8DAC5; }
+.toc a.row .n { width: 30pt; color: #A9654E; font-family: 'Gentium Basic','Liberation Serif',serif; font-weight: 700; }
+.toc a.row .t { flex: 1; }
+.toc a.row .pg { width: 34pt; text-align: right; color: #A9654E; font-weight: 700; }
+.toc a.row.sub { font-size: 12.5pt; padding: 4pt 0 4pt 30pt; color: #5E5F45; }
+.toc a.row.sub .n { width: 22pt; }
+/* financial statements */
+.fin table { font-size: 7.6pt; }
+.fin.wide table.wide { font-size: 6.4pt; }
+.fin.wide table.wide th, .fin.wide table.wide td { padding: 2pt 2.5pt; }
+
+@page { size: A4 landscape; margin: 12mm; }</style></head><body class="fin wide"><h1>Projected Profit and Loss Statement</h1>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Business</strong></td>
+<td>GTT Center Perth</td>
+</tr>
+<tr>
+<td><strong>Document</strong></td>
+<td>Projected Profit and Loss, Year 1 and steady state</td>
+</tr>
+<tr>
+<td><strong>Prepared by</strong></td>
+<td>Theodore (CFO) for Anthony Zed. Updated 2026-10-16 (Grace, to Anthony's instructions of 2026-10-16)</td>
+</tr>
+<tr>
+<td><strong>Date</strong></td>
+<td>2026-10-16</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>DRAFT for review</td>
+</tr>
+<tr>
+<td><strong>Legal entity</strong></td>
+<td>to be confirmed</td>
+</tr>
+<tr>
+<td><strong>Currency</strong></td>
+<td>Australian dollars (A$). All figures GST-inclusive unless stated</td>
+</tr>
+<tr>
+<td><strong>Basis</strong></td>
+<td>3-Way Financial Model v0.5 (2026-10-16): 25-minute pair cadence only, adaptive rostering, full capacity (18 clients a morning) from Month 1, headline rent A$8,000 per month</td>
+</tr>
+</tbody>
+</table></div>
+<p>All figures are planning estimates. The venue is not yet open and no trading data exists.</p>
+<hr />
+<h2>1. Twelve-month projected P&amp;L (Months 1 to 12)</h2>
+<p>There is no ramp-up. The plan opens at the full 18 clients a morning, filled through marketing and a pre-launch waitlist, so every month is a full-capacity month. The A$600 to A$1,200 marketing ramp of the earlier model is replaced by the steady A$1,500 a month from Month 1.</p>
+<p>Figures in A$.</p>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>A$</th>
+<th style="text-align: right;">M1</th>
+<th style="text-align: right;">M2</th>
+<th style="text-align: right;">M3</th>
+<th style="text-align: right;">M4</th>
+<th style="text-align: right;">M5</th>
+<th style="text-align: right;">M6</th>
+<th style="text-align: right;">M7</th>
+<th style="text-align: right;">M8</th>
+<th style="text-align: right;">M9</th>
+<th style="text-align: right;">M10</th>
+<th style="text-align: right;">M11</th>
+<th style="text-align: right;">M12</th>
+<th style="text-align: right;"><strong>Year 1</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AM GTT packages</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;"><strong>1,421,820.00</strong></td>
+</tr>
+<tr>
+<td>PM services</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;"><strong>295,024.44</strong></td>
+</tr>
+<tr>
+<td>Ancillary (cafe / retail)</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;"><strong>0.00</strong></td>
+</tr>
+<tr>
+<td><strong>Total revenue</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>1,716,844.44</strong></td>
+</tr>
+<tr>
+<td>Lab fee (lab bulk-bills)</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;"><strong>0.00</strong></td>
+</tr>
+<tr>
+<td>GTT supplies</td>
+<td style="text-align: right;">400.00</td>
+<td style="text-align: right;">400.00</td>
+<td style="text-align: right;">400.00</td>
+<td style="text-align: right;">400.00</td>
+<td style="text-align: right;">400.00</td>
+<td style="text-align: right;">400.00</td>
+<td style="text-align: right;">400.00</td>
+<td style="text-align: right;">400.00</td>
+<td style="text-align: right;">400.00</td>
+<td style="text-align: right;">400.00</td>
+<td style="text-align: right;">400.00</td>
+<td style="text-align: right;">400.00</td>
+<td style="text-align: right;"><strong>4,800.00</strong></td>
+</tr>
+<tr>
+<td>Consumables</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;">800.00</td>
+<td style="text-align: right;"><strong>9,600.00</strong></td>
+</tr>
+<tr>
+<td><strong>Cost of goods</strong></td>
+<td style="text-align: right;"><strong>1,200.00</strong></td>
+<td style="text-align: right;"><strong>1,200.00</strong></td>
+<td style="text-align: right;"><strong>1,200.00</strong></td>
+<td style="text-align: right;"><strong>1,200.00</strong></td>
+<td style="text-align: right;"><strong>1,200.00</strong></td>
+<td style="text-align: right;"><strong>1,200.00</strong></td>
+<td style="text-align: right;"><strong>1,200.00</strong></td>
+<td style="text-align: right;"><strong>1,200.00</strong></td>
+<td style="text-align: right;"><strong>1,200.00</strong></td>
+<td style="text-align: right;"><strong>1,200.00</strong></td>
+<td style="text-align: right;"><strong>1,200.00</strong></td>
+<td style="text-align: right;"><strong>1,200.00</strong></td>
+<td style="text-align: right;"><strong>14,400.00</strong></td>
+</tr>
+<tr>
+<td>Variable labour (rostered AM)</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;"><strong>853,750.32</strong></td>
+</tr>
+<tr>
+<td>Fixed labour (PM + Venue Manager)</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;"><strong>269,397.24</strong></td>
+</tr>
+<tr>
+<td>Rent</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;"><strong>96,000.00</strong></td>
+</tr>
+<tr>
+<td>Other fixed overhead</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;"><strong>61,060.08</strong></td>
+</tr>
+<tr>
+<td><strong>Total costs</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>1,294,607.64</strong></td>
+</tr>
+<tr>
+<td><strong>Net operating profit</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>422,236.80</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Year 1 summary:</strong> revenue A$1,716,844.44, total costs A$1,294,607.64, net operating profit A$422,236.80. This is exactly 12 times the steady-state month.</p>
+<p><strong>Line definitions and sources</strong></p>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>Line</th>
+<th>How it is built</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AM GTT packages</td>
+<td>18 AM clients per day x A$250 x 26.33 trading days</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td>PM services</td>
+<td>10 sessions per day, about 210 transactions per month at A$117 average</td>
+<td>Financial model; PM capacity model</td>
+</tr>
+<tr>
+<td>Ancillary</td>
+<td>A$0. Excluded from the baseline by founder decision (2026-07-30)</td>
+<td>the financial model</td>
+</tr>
+<tr>
+<td>Lab fee</td>
+<td>A$0. The model assumes the pathology lab bulk-bills Medicare. Tender fees are not yet confirmed</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td>GTT supplies / consumables</td>
+<td>A$400 + A$800 per month, flat</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td>Variable labour</td>
+<td>AM phlebotomists and therapists rostered to the confirmed bookings (at 18 clients: 2 phlebotomists and 8 therapists), plus super 12% and workers compensation 1.7%</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td>Fixed labour</td>
+<td>PM wages A$12,704.74 + Venue Manager A$7,040.00 = A$19,744.74, plus on-costs = A$22,449.77</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td>Rent</td>
+<td>A$8,000 per month (headline, per Anthony's instruction)</td>
+<td>Financial model</td>
+</tr>
+<tr>
+<td>Other fixed overhead</td>
+<td>Utilities, insurance, laundry, marketing (A$1,500), software, cleaning, accounting, miscellaneous</td>
+<td>Financial model</td>
+</tr>
+</tbody>
+</table></div>
+<p>Not in the model: income tax (entity undecided), depreciation, interest (no debt assumed).</p>
+<p><strong>How Year 1 relates to the earlier figures.</strong> The earlier Year 1 net of A$322,014.93 (and A$196,608.65 after GST) assumed the first four months ran at 43%, 64%, 79% and 93% of capacity. That ramp-up has been removed by decision. Year 1 is now A$422,236.80 (and A$281,310.96 in the GST-stress case), which is 12 times the steady-state month. The difference (A$100,221.87) is the profit the old ramp-up assumption was giving away in Months 1 to 4. It depends entirely on the waitlist delivering a full morning from the first day (see Notes 2).</p>
+<hr />
+<h2>2. Steady-state monthly P&amp;L (Month 5 onward is now Month 1 onward)</h2>
+<p>Anthony's brief asked for both "fixed overhead (rent ceiling A$10.5k)" and the "+A$35,186 baseline". <strong>These do not go together: the +A$35,186.40 baseline uses A$8,000 rent, so both are shown below.</strong></p>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>A$ per month</th>
+<th style="text-align: right;"><strong>Headline (A$8,000 rent)</strong></th>
+<th style="text-align: right;"><strong>Rent at A$10,500 gross ceiling</strong></th>
+<th style="text-align: right;"><strong>GST-stress (A$8,000 rent)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AM GTT packages</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+<td style="text-align: right;">118,485.00</td>
+</tr>
+<tr>
+<td>PM services</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+<td style="text-align: right;">24,585.37</td>
+</tr>
+<tr>
+<td>Ancillary</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr>
+<td><strong>Total revenue</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+<td style="text-align: right;"><strong>143,070.37</strong></td>
+</tr>
+<tr>
+<td>Lab fee</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr>
+<td>GTT supplies and consumables</td>
+<td style="text-align: right;">1,200.00</td>
+<td style="text-align: right;">1,200.00</td>
+<td style="text-align: right;">1,200.00</td>
+</tr>
+<tr>
+<td>Variable labour (rostered AM)</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+<td style="text-align: right;">71,145.86</td>
+</tr>
+<tr>
+<td>Fixed labour (PM + Venue Manager)</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+<td style="text-align: right;">22,449.77</td>
+</tr>
+<tr>
+<td>Rent</td>
+<td style="text-align: right;">8,000.00</td>
+<td style="text-align: right;">10,500.00</td>
+<td style="text-align: right;">8,000.00</td>
+</tr>
+<tr>
+<td>Other fixed overhead</td>
+<td style="text-align: right;">5,088.34</td>
+<td style="text-align: right;">3,838.34</td>
+<td style="text-align: right;">5,088.34</td>
+</tr>
+<tr>
+<td><strong>Total costs</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+<td style="text-align: right;"><strong>109,133.97</strong></td>
+<td style="text-align: right;"><strong>107,883.97</strong></td>
+</tr>
+<tr>
+<td><strong>Net operating profit (before GST timing)</strong></td>
+<td style="text-align: right;"><strong>35,186.40</strong></td>
+<td style="text-align: right;"><strong>33,936.40</strong></td>
+<td style="text-align: right;">35,186.40</td>
+</tr>
+<tr>
+<td>Less: GST on sales (revenue ÷ 11)</td>
+<td style="text-align: right;">not applied</td>
+<td style="text-align: right;">not applied</td>
+<td style="text-align: right;">-13,006.40</td>
+</tr>
+<tr>
+<td>Add: GST credits on costs</td>
+<td style="text-align: right;">not applied</td>
+<td style="text-align: right;">not applied</td>
+<td style="text-align: right;">1,262.58</td>
+</tr>
+<tr>
+<td><strong>Net after GST</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>23,442.58</strong></td>
+</tr>
+<tr>
+<td><strong>Reported figure</strong></td>
+<td style="text-align: right;"><strong>+A$35,186.40</strong></td>
+<td style="text-align: right;"><strong>+A$33,936.40</strong></td>
+<td style="text-align: right;"><strong>+A$23,442.58</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Annual and margin.</strong> +A$35,186.40 x 12 = <strong>A$422,236.80</strong> a year. Net margin = 35,186.40 ÷ 143,070.37 = <strong>24.6%</strong>. The GST-stress case gives +A$23,442.58 x 12 = A$281,310.96 a year.</p>
+<p>Column notes:
+- <strong>Headline:</strong> the committed model at 18 AM clients per day.
+- <strong>Gross ceiling:</strong> A$10,500 all-in per the commercial site brief. The model assumes utilities (A$650) and cleaning (A$600) sit inside the ceiling, so other overhead falls by A$1,250. If they do not, the separate "rent-adjusted A$10,500" case gives +A$32,686.40.
+- <strong>GST-stress:</strong> assumes all sales are taxable at 10% and the A$250 package price includes GST. At the gross ceiling the GST-stress figure is +A$22,306.21.</p>
+<hr />
+<h2>3. Break-even working</h2>
+<p><strong>Adaptive rostering on the 25-minute pair cadence (first booking 07:00, last first draw 10:20)</strong></p>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Working</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Fixed costs per month</td>
+<td>Rent, other overhead, cost of goods, PM labour and Venue Manager with on-costs</td>
+<td>A$36,738.11</td>
+</tr>
+<tr>
+<td>2. Add the AM roster for a morning of up to 9 clients booked one per 25-minute slot</td>
+<td>2 phlebotomists + 4 therapists, with on-costs, 22 weekdays + 4.33 Saturdays</td>
+<td>+ A$42,255.18</td>
+</tr>
+<tr>
+<td>3. Total costs at that roster</td>
+<td>A$36,738.11 + A$42,255.18</td>
+<td><strong>A$78,993.29</strong></td>
+</tr>
+<tr>
+<td>4. Less non-AM revenue</td>
+<td>PM services held at full steady state</td>
+<td>- A$24,585.37</td>
+</tr>
+<tr>
+<td>5. Costs AM GTT must cover</td>
+<td>A$78,993.29 - A$24,585.37</td>
+<td><strong>A$54,407.92</strong></td>
+</tr>
+<tr>
+<td>6. Revenue per daily AM client per month</td>
+<td>A$250 x 26.33 trading days</td>
+<td><strong>A$6,582.50</strong></td>
+</tr>
+<tr>
+<td>7. Break-even</td>
+<td>A$54,407.92 ÷ A$6,582.50</td>
+<td><strong>8.266 AM clients per day</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>8.266 is 45.9% of the 18-client capacity, a margin of safety of 9.734 clients per day (54.1%). This is the break-even on the 25-minute cadence. The roster behind it (2 phlebotomists and 4 therapists) is what the cadence needs when bookings fall one per slot: at most two first services overlap at once, so 4 therapists cover up to 9 clients.</p>
+<p><strong>The break-even depends on how bookings land in the 25-minute slots</strong></p>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>Booking pattern</th>
+<th>Roster at the break-even</th>
+<th>Break-even AM clients per day</th>
+<th>GST-stress break-even</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bookings spread across the slots (one client per slot, spaced)</td>
+<td>2 phlebotomists + 4 therapists</td>
+<td><strong>8.266</strong></td>
+<td>9.255</td>
+</tr>
+<tr>
+<td>Planning case: bookings fill from 07:00, one client per slot first</td>
+<td>2 phlebotomists + 4 therapists</td>
+<td><strong>8.266</strong></td>
+<td>14.083</td>
+</tr>
+<tr>
+<td>Bookings stack in pairs from 07:00 (model solver as published)</td>
+<td>2 phlebotomists + 8 therapists</td>
+<td>12.655</td>
+<td>14.083</td>
+</tr>
+<tr>
+<td>Planning case if one phlebotomist is allowed on mornings of 9 or fewer (Anthony to decide, see Notes 1)</td>
+<td>1 phlebotomist + 4 therapists</td>
+<td>7.250</td>
+<td>8.138</td>
+</tr>
+</tbody>
+</table></div>
+<p>The headline is the planning case, <strong>8.266</strong>. The GST-stress break-even is 9.255 if the tenth booking lands in a slot not adjacent to another second-chair booking, and 14.083 if it does not (the roster then steps up to 6 or 8 therapists).</p>
+<p><strong>Comparison: fixed staffing (full 2 + 8 roster every morning)</strong></p>
+<div class="tblock"><table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Working</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steady-state total costs</td>
+<td>Full roster every morning</td>
+<td>A$107,883.97</td>
+</tr>
+<tr>
+<td>Less non-AM revenue</td>
+<td></td>
+<td>- A$24,585.37</td>
+</tr>
+<tr>
+<td>Costs AM GTT must cover</td>
+<td></td>
+<td>A$83,298.60</td>
+</tr>
+<tr>
+<td>Break-even</td>
+<td>A$83,298.60 ÷ A$6,582.50</td>
+<td><strong>12.655 AM clients per day</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Rostering to bookings lowers break-even by about 4.4 clients per day. It does not change steady-state profit, because at 18 clients every role is needed.</p>
+<hr />
+<h2>4. Notes</h2>
+<ol>
+<li><strong>Cadence and rostering.</strong> The 25-minute pair cadence is the only cadence: first booking 07:00, pairs at 07:00, 07:25, 07:50 and so on, last first draw 10:20, 9 pairs, 18 clients a morning at most. Staff are called in to match the confirmed slots each morning, AM and PM; idle staff are never rostered. Booking is 2 to 4 weeks ahead. <strong>Phlebotomist minimum, flagged for Anthony:</strong> the model keeps 2 phlebotomists on every morning with a GTT booking, because the clinical protocol uses a second on-site phlebotomist for a difficult blood draw and the 2026-10-11 decision recorded 2 phlebotomists on every GTT morning as GTT's clinical standard. The model contains no regulation requiring it. Mornings of 9 or fewer need only one chair, so running 1 phlebotomist would save A$234.51 a weekday morning (A$6,682.23 a month) and lower break-even to 7.250. This is Anthony's decision.</li>
+<li><strong>No ramp-up and fill rate.</strong> Fill of rostered slots is assumed to be 100% from Month 1. At 85% fill, steady-state net is about +A$17.4k per month (A$17,413.65 before GST timing). At 70% fill the business makes a small loss (-A$359.10 a month). With no ramp-up to cushion it, fill is the central risk (financial model).</li>
+<li><strong>GST.</strong> GST treatment is general information only and must be confirmed with the accountant. The P&amp;L is GST-inclusive with no line for GST paid; the GST-stress column shows the downside. Each percentage point of the AM package that is GST-free is worth A$107.71 a month at 18 clients a morning (financial model).</li>
+<li><strong>Lab fee.</strong> The model assumes A$0 to GTT. Each A$10 per client would cost about A$4,739 per month at capacity (financial model). Tender fees are to be confirmed.</li>
+<li><strong>Rent.</strong> A$8,000 is the headline per Anthony's instruction. The real search budget is A$9,500 to A$10,500 per month (financial model).</li>
+<li><strong>Award rates.</strong> Wage rates are the award casual rates (1 July 2026). Verify with Fair Work before acting.</li>
+<li><strong>Not in the model:</strong> income tax, depreciation, interest, rent during fit-out, early-release staffing upside.</li>
+</ol>
+<p><em>Arithmetic check: every row and column above was re-summed by script and agrees to the cent with model v0.5 §3, §3a, §3d, §6a and §9. The steady-state month reproduces the model's own A$107,883.97 total cost and A$35,186.40 net exactly.</em></p></body></html>
