@@ -43,4 +43,4 @@ The aim: an expecting mother with no referral can get one quickly. The law does 
 - Offering free packages or discounts to a doctor or midwife who refers, or to staff at GP practices.
 - Any statement that the test is mandatory.
 
-**Open points for the solicitor:** whether a simple "information listing" of telehealth providers is itself an advertisement under the National Law; Services Australia and Department of Health guidance on requester-provider arrangements; the effect of any lab–telehealth links on GTT.
+**Open points for the solicitor:** whether a simple "information listing" of telehealth providers is itself an advertisement under the National Law; Services Australia and Department of Health guidance on requester-provider arrangements; the effect of any lab to telehealth links on GTT.
