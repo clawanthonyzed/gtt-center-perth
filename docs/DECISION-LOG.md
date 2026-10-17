@@ -4,6 +4,45 @@
 
 ---
 
+## 2026-10-17: Phlebotomists on the adaptive roster; 10% post-test discount adopted (Anthony)
+
+**Decisions (Anthony, 2026-10-17, directive items R1 and R2):**
+
+- **(R1) Phlebotomists are rostered adaptively from confirmed advance bookings**, like every other role. The fixed minimum of 2 per GTT morning (recorded 2026-10-11, kept open on 2026-10-16) is retired. Rule: **1 phlebotomist when 1 to 9 clients are booked and no two share a slot; 2 phlebotomists when 10 to 18 are booked** (two chairs running pairs); **none in the afternoon**. On mornings of 9 or fewer a named second collector is on call for a difficult draw or a faint, and is paid only when called in (assumed; the repo has no standby allowance, so none is invented). Options priced: a 3-hour second shift every light morning (A$3,341.13 a month, break-even 7.758); a second collector on Saturdays only (A$1,523.12 a month, break-even 7.482).
+- **(R2) The 10% post-test discount is adopted.** Any expecting mother who completes a GTT test can redeem 10% off standalone wellness treatments or multi-service packages. It is **not limited to the afternoon**: it is valid immediately, so a morning client who completes her test can redeem the same day. The precise terms (exclusions, stacking, one use per test, expiry, recording) are **proposals pending Anthony's sign-off**, in `docs/overhaul-2026-10-17/M-model/R2-POST-TEST-DISCOUNT.md`.
+
+**Clinical-safety conditions recorded (proposals, from `docs/gtt-clinical-protocol.md`):** (1) difficult draw: maximum 2 attempts by the first collector, then the on-call second collector, and if she cannot attend in time, reschedule or refer back per the pathology partner's protocol; (2) fainting and vasovagal response: client kept seated or lying, Venue Manager called, 000 if unconscious, recovery chair used, and the Venue Manager takes over the client so the sole collector can continue; (3) Saturday has no Venue Manager, so a second collector on every Saturday is recommended until first-aid cover is confirmed (not in the headline); (4) every light-morning roster names the on-call collector; (5) the pathology partner must confirm that one collector per chair meets its collection-site conditions.
+
+**Dependency flag:** the pathology partner and the Medicare and lab-employment rules (see `docs/overhaul-2026-10-17/L-medicare/` when it appears; not yet published when this was written) **may require the lab to supply or employ the collectors. If so, the phlebotomist roster is the lab's decision and the figures below for phlebotomist wages change to a lab arrangement.** The 2026-09-19 decision (GTT employs both phlebotomists directly) stands until that is answered.
+
+**Results (calculators re-run with one changed input, the phlebotomist count; no new calculator):**
+
+| Figure | Before (2 phlebotomists always) | After (adaptive) |
+|---|---|---|
+| Break-even, AM clients a day (one client per slot) | 8.266 | **7.250** (40.3% of 18; margin of safety 10.750, 59.7%) |
+| Break-even if bookings stack in pairs from 07:00 | 12.655 | 12.655 (both chairs run) |
+| GST-stress break-even | 9.255 spaced / 14.083 planning | **8.138** |
+| Morning labour per month, 1 to 9 booked | A$42,255.18 (4 therapists + 2 phlebotomists) | **A$35,572.95**, saving A$6,682.23 a month |
+| Net operating profit a month at 9 booked | +A$4,834.58 | **+A$11,516.81** |
+| Net operating profit at 1 / 5 booked | -A$33,380.10 / -A$21,495.42 | -A$26,697.87 / -A$14,813.19 |
+| Saturday contribution at 9 booked | +A$25.65 | **+A$377.41** |
+| Saturday direct-labour break-even (4 therapists) | 8.90 clients | **7.49** |
+| Steady state at 18 a day (month / Year 1 / margin) | +A$35,186.40 / A$422,236.80 / 24.6% | unchanged (both chairs run) |
+| Saturday proof at 18 | +A$754.82 | unchanged |
+| GST-stress Year 1; peak funding; payback | A$281,310.96; A$251,198.00; Month 8 / Month 11 | unchanged |
+| Year 1 if only half a morning fills (9 a day) | A$58,015 (GST-stress -A$18,283), payback Month 55 | **A$138,202 (GST-stress A$61,904), payback Month 23** |
+| Headcount on the books | 21 (4 phlebotomists) | 21 (4 phlebotomists; peak need still 2; pool unchanged) |
+
+Discount cost (R2): at A$117 a booking, 5% / 10% / 25% / 40% take-up costs A$277 / A$555 / A$1,386 / A$2,218 a month if every redeemer would have booked anyway (3.9% of monthly profit at 25%); it pays for itself if 10% of redeemers are new bookings (idle therapist time) or 24.2% (extra hours must be paid). X's A$1,381 a month at 25% is A$1,386.27 on the exact 118.49 redemptions. Cost is not deducted from the headline model and upside is not added; take-up and new-booking share are assumptions.
+
+**Flags for Anthony:** (a) the phlebotomist job posting offers permanent part-time 25 hours a week; an adaptive roster cannot guarantee that (9 to 18 hours a week each on a pool of 4), so engage as casual or set a guaranteed minimum (employment type TO CONFIRM); (b) the adopted discount replaces the earlier 10% pre-booking discount and lifts the "no discount on same-day upsells" rule for standalone treatments and packages (`docs/services-pricing-locked.md` updated, subject to your sign-off on the proposed terms); (c) the previous "Open question" in the 2026-10-16 entry is now closed by this entry.
+
+**Documents updated:** `docs/CURRENT-STATE.md`, `outputs/FINANCIALS/3-WAY-FINANCIAL-MODEL-AUD.md`, `outputs/FINANCIALS/PROFIT-AND-LOSS.md`, `outputs/FINANCIALS/CASHFLOW-FORECAST.md`, discount wording in `docs/services-pricing-locked.md`, `docs/financial-break-even-staff.md`, `docs/ITEMS-TO-CONFIRM.md`, `docs/VERIFICATION-TRACKER.md` and the X-market workings. Slides and the business plan are left for the documents agent.
+
+**Related documents:** `docs/overhaul-2026-10-17/M-model/R1-ADAPTIVE-PHLEBOTOMY.md`, `docs/overhaul-2026-10-17/M-model/R2-POST-TEST-DISCOUNT.md`, `docs/overhaul-2026-10-17/M-model/FOR-DOCUMENTS-AGENT.md`, `docs/reviews/ANTHONY-DIRECTIVE-2026-10-17.md`.
+
+---
+
 ## 2026-10-16: Permanent Cadence Law, adaptive rostering, no ramp-up, afternoon structure (Anthony)
 
 **Decision (Anthony, 2026-10-16, line-by-line review, items L1, L2, L3, S11b, P8d, P8e, P16a, P19c):**
