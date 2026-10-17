@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Draws the three working diagrams (capacity, break-even, cashflow) used on the
 internal slides and in visual-financials.html. Figures come from the financial
-model v0.5 documents (outputs/FINANCIALS/CASHFLOW-FORECAST.md is parsed for the
+model v0.6 documents (outputs/FINANCIALS/CASHFLOW-FORECAST.md is parsed for the
 cash rows); nothing here is a new calculation.
 """
 import re, os
@@ -81,22 +81,22 @@ def breakeven_block():
     left = ('<div class="vf-col vf-b"><div class="vf-colhead">Adaptive rostering</div>'
             '<div class="vf-colsub">25 minute cadence, staff called in to match bookings</div>'
             + row('', 'A$36,738.11', 'fixed costs a month: rent, overhead, cost of goods, afternoon team and Venue Manager, with on-costs')
-            + row('+', 'A$42,255.18', 'morning roster for up to 9 clients: 2 phlebotomists + 4 therapists, with on-costs')
-            + row('=', 'A$78,993.29', 'total costs at that roster')
+            + row('+', 'A$35,572.95', 'morning roster for up to 9 clients: 1 phlebotomist + 4 therapists, with on-costs')
+            + row('=', 'A$72,311.06', 'total costs at that roster')
             + row('-', 'A$24,585.37', 'afternoon revenue')
             + row('&divide;', 'A$6,582.50', 'one morning client a day for a month: A$250 x 26.33 trading days')
-            + '<div class="vf-res"><div class="vf-op">=</div><div><div class="vf-resn">8.266</div>'
-              '<div class="vf-lab">morning clients a day, 45.9% of the 18 a day capacity</div></div></div></div>')
+            + '<div class="vf-res"><div class="vf-op">=</div><div><div class="vf-resn">7.250</div>'
+              '<div class="vf-lab">morning clients a day, 40.3% of the 18 a day capacity</div></div></div></div>')
     right = ('<div class="vf-col vf-a"><div class="vf-colhead">If every booking stacks in pairs</div>'
-             '<div class="vf-colsub">all bookings placed in pairs from 07:00 (the full 2 + 8 roster is needed)</div>'
+             '<div class="vf-colsub">all bookings placed in pairs from 07:00 (both chairs and the full 2 + 8 roster are needed)</div>'
              + row('', 'A$107,883.97', 'monthly costs with the full roster')
              + row('-', 'A$24,585.37', 'afternoon revenue')
              + row('&divide;', 'A$6,582.50', 'one morning client a day for a month')
              + '<div class="vf-res"><div class="vf-op">=</div><div><div class="vf-resn">12.655</div>'
                '<div class="vf-lab">morning clients a day, 70.3% of capacity</div></div></div></div>')
-    note = ('<div class="vf-note">Margin of safety at the planning case: 9.7 clients a day below capacity. The two columns differ only in the cost line: '
+    note = ('<div class="vf-note">Margin of safety at the planning case: 10.75 clients a day below capacity. The two columns differ only in the cost line: '
             'with one booking per time slot at most two first services overlap, so 4 therapists cover up to 9 clients. '
-            'Two phlebotomists are kept on every testing morning as GTT\'s clinical standard, pending the pathology partner\'s answer.</div>')
+            'Phlebotomists are rostered like everyone else: one up to 9 clients, two from the tenth booking, none in the afternoon.</div>')
     return f'<div class="vf vfbig"><div class="vf-be">{left}{right}</div>{note}</div>'
 
 
