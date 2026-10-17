@@ -30,7 +30,7 @@ lines.append('# GTT Center Perth: Executive Pitch Deck (DRAFT v0.6, 2026-10-17)'
 lines.append('')
 lines.append('**Status:** DRAFT for Anthony\'s approval. Nothing here has been sent or published.')
 lines.append('**Prepared by:** Grace (Operations Manager). All figures in Australian dollars (A$). Planning estimates: the business has not opened and has no trading data.')
-lines.append('This text is the same as the slide deck (slides.html, 29 slides). Slides marked INTERNAL contain financials and are not for external use.')
+lines.append('This text is the same as the slide deck (slides.html, 30 slides). Slides marked INTERNAL contain financials and are not for external use.')
 lines.append('')
 for i, sl in enumerate(soup.select('.slide'), 1):
     name = sl.get('data-name', '')

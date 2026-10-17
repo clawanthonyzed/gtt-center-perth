@@ -1008,8 +1008,8 @@ The authoritative index of open items. Status: BLOCKING (the venture cannot move
 | E2 | Dual-qualified hiring (massage plus nails or beauty): confirm candidate pool | Venue Manager | OPEN |
 | E3 | Pre-launch waitlist target tested against 18 a day | Anthony, marketing | OPEN |
 | E4 | Afternoon menu of record: reconcile pricing list and package arithmetic; scope of belly casting | Grace, Anthony | OPEN |
-| F1 | Final trading name (see Appendix C) | Anthony | OPEN |
-| F2 | Trade mark attorney engagement, deferred | Anthony | OPEN |
+| F1 | Final trading name: shortlist BELMIRA, ELOWEN, SOLENA (see Appendix C); spoken-name test and attorney clearance first | Anthony | OPEN |
+| F2 | Trade mark attorney search and written opinion (Classes 44, 41 and 3) before any filing | Anthony | OPEN |
 | F3 | Approval of every marketing item before publication | Anthony | OPEN |
 | G1 | Pull ABS Births, Australia 2025 and update the market section | Grace | DATED: Friday 6 November 2026 |
 | G2 | Confirm the births figures against the Australian Bureau of Statistics release | Grace, Anthony | OPEN |
@@ -1020,21 +1020,26 @@ The authoritative index of open items. Status: BLOCKING (the venture cannot move
 | H3 | Price the second specimen fridge, second recovery recliner and possible second centrifuge | Grace, supplier quotes | OPEN |
 | H4 | Approve the list of items sensible to import direct and how to buy | Anthony | OPEN |
 
-### Appendix C. Brand name research (October 2026)
+### Appendix C. Brand name shortlist and clearance status
 
-SOLENA remains the working leader, but checks this month found that solena.com.au is already registered, two beauty businesses in New South Wales trade as Solena, and a cosmetics trade mark (Class 3) exists. Seven refined options were checked for domain, trade mark and business name availability. No name has been registered. The business continues to trade under its working name GTT Center Perth until Anthony decides.
+**Status.** The venture trades under a working name, GTT Center Perth, and the business is not renamed by this plan. A final brand name has not been chosen, and no name has been registered, reserved or filed. The searches below were made on 17 October 2026 on public registers. They are a first-pass check and **not a trade mark clearance**. A registered trade marks attorney will clear the chosen name before any filing, signage or fit-out spend.
 
-| Name | Idea | .com.au | Trade mark search | Business names |
-|---|---|---|---|---|
-| SOLENARA | Extension of SOLENA | Free | None | No exact match |
-| BELMIRA | Beautiful view | Free | None | No exact match |
-| SOLAINE | Sun, French feel | Free | None | One NSW holding company |
-| SOLMIRA | Sun and wonder | Free | None | NSW business name in use |
-| AMAREL | Love | Free | None | One WA holding company |
-| MAELIS | Breton given name | Free | None | Similar QLD aesthetics business |
-| VERENA | Old-world calm | Free | Unrelated classes only | Several companies |
+**Table C1: Brand name comparison (public-register check, 17 October 2026)**
 
-Recommendation: SOLENARA if the SOLENA line is kept; BELMIRA as the cleanest alternative. A trade marks attorney must clear the final choice.
+| Name | Domain availability (.com.au / .au) | Australian trade mark register (Class 44, health and wellness services) | Business-name use in Australia | Score out of 30 | Assessment |
+|---|---|---|---|---|---|
+| BELMIRA | Available / available | No marks found | No exact match | 23 | Cleanest on public registers. Needs a spoken-name test and attorney clearance |
+| ELOWEN | Held by another party / available | No Class 44 mark. Marks exist in other classes (baby furniture, wine, medical research) | About 12 active Australian users, one in Western Australia offering counselling for women | 20 | Strong meaning and fit. Needs attorney review of the Western Australian counselling business and the existing marks |
+| SOLENA | Held / held | A registered Class 44 mark for health and clinic services (SOLENNE) sits one letter away; an exact SOLENA mark exists in cosmetics | Four skin and beauty businesses and companies in other states | 18 | Higher risk. Proceed only if the attorney clears it |
+| ELOWYN | Held / held (by a Queensland accounting company) | No marks found, but it sounds identical to ELOWEN | Three active users | 17 | Not recommended. It carries the same questions as ELOWEN, with weaker domains and a spelling difficulty |
+
+The score is a comparison on six plain criteria, out of 30. It is a judgement aid, not a legal finding.
+
+**Meaning.** ELOWEN is a Cornish name meaning "elm tree", a symbol of strength and new beginnings. ELOWYN is a modern respelling of the same name. BELMIRA is a Portuguese and Spanish given name, read as "beautiful view".
+
+**Update, October 2026.** Earlier work had SOLENA leading. A registered Class 44 mark one letter from SOLENA was found, and both SOLENA domains are held, so SOLENA no longer leads.
+
+**Next steps.** (1) A spoken-name test with ten people. (2) A formal search and written opinion from a registered trade marks attorney across Classes 44, 41 and 3. (3) If supported, filing with IP Australia, where current fees are A$250 per class using the standard descriptions or A$400 per class with custom wording (IP Australia, October 2026). (4) Securing the matching domain once the owning entity is confirmed. A business name search with the corporate regulator and social media handle checks are still to be done by hand.
 
 ### Appendix D. Corporate structure recommendation
 

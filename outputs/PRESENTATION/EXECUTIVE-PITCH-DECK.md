@@ -2,7 +2,7 @@
 
 **Status:** DRAFT for Anthony's approval. Nothing here has been sent or published.
 **Prepared by:** Grace (Operations Manager). All figures in Australian dollars (A$). Planning estimates: the business has not opened and has no trading data.
-This text is the same as the slide deck (slides.html, 29 slides). Slides marked INTERNAL contain financials and are not for external use.
+This text is the same as the slide deck (slides.html, 30 slides). Slides marked INTERNAL contain financials and are not for external use.
 
 ---
 
@@ -478,7 +478,23 @@ Proposed terms, not yet confirmed: 14-day expiry, a test completed at GTT Center
 
 ---
 
-## SLIDE 29: Draft notice (external)
+## SLIDE 29: Brand name shortlist (external)
+
+**Brand name shortlist**
+
+| Name | Domains (.com.au / .au) | Class 44 trade marks | Score of 30 | Assessment |
+|---|---|---|---|---|
+| BELMIRA | Available / available | None found | 23 | Cleanest on public registers |
+| ELOWEN | Held / available | None in Class 44 | 20 | Strong fit; attorney to review a Western Australian user |
+| SOLENA | Held / held | Class 44 mark one letter away | 18 | Higher risk |
+| ELOWYN | Held / held | None, sounds identical to ELOWEN | 17 | Not recommended |
+
+Brand name under clearance. Public-register checks (17 October 2026) are complete; this is not a trade mark clearance . A registered trade marks attorney must clear any name before filing. Nothing is registered. The business keeps its working name, GTT Center Perth, until Anthony decides.
+
+
+---
+
+## SLIDE 30: Draft notice (external)
 
 **DRAFT**
 
