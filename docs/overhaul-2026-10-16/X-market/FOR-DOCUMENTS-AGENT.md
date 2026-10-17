@@ -117,7 +117,7 @@ Use the six-step path and the sentence: "If one in four testing clients books an
 
 ## P11b Page 11: post-test incentive
 
-"Test Day Thank You: every expecting mother who books a standalone afternoon treatment within 14 days of her test receives an exclusive discount, advance booking only, one use per client, subject to availability. Proposed discount: 10% (to be set by Anthony; 15% and A$20 off are alternatives, costed in the strategy paper). The existing 10% online pre-booking discount applies when an afternoon treatment is booked with the test."
+SUPERSEDED 2026-10-17 by Anthony's decision (use `docs/overhaul-2026-10-17/M-model/FOR-DOCUMENTS-AGENT.md` section D): "Test Day Thank You: every expecting mother who completes a GTT test can redeem 10% off standalone wellness treatments or multi-service packages, morning or afternoon, from the moment her test is complete. One use per test, not combined with other offers, subject to availability." (Earlier afternoon-only, advance-booking version removed.)
 
 ## P15a to P15e Page 15: marketing
 

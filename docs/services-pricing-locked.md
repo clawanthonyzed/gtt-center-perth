@@ -17,7 +17,7 @@
 - Add-ons visible at booking stage in booking system
 - Morning sessions: GTT clients get priority. General public fill remaining gaps.
 - Venue fee embedded in GTT packages — inclusions appear free to client
-- Discount policy: 10% online pre-booking discount on afternoon/standalone services booked at the same time as a GTT reservation. No discount on in-center upsells (add-ons, cafe, retail, spray tan) — full price applies on the day.
+- Discount policy: 10% post-test discount (adopted by Anthony 2026-10-17, supersedes the 10% online pre-booking discount): any expecting mother who completes a GTT test can redeem 10% off standalone wellness treatments or multi-service packages, morning or afternoon, valid immediately. No stacking with other offers. Excludes the GTT morning package, refreshments, retail and gift vouchers (proposed terms: see docs/overhaul-2026-10-17/M-model/R2-POST-TEST-DISCOUNT.md). Add-ons sold inside the morning package, cafe and retail stay at full price. (Replaces the earlier rule: 10% online pre-booking discount on afternoon/standalone services booked at the same time as a GTT reservation, with no discount on same-day upsells.)
 
 ---
 
@@ -169,7 +169,7 @@ The verified capacity timetable (`operations-manual.md`) gives every GTT client 
 
 *GTT pathology testing is AM-only (fasting requirement) — no testing in the afternoon. PM standalone services are sold as individual a-la-carte services plus set/fixed PM packages (see banner above) — this is distinct from AM's Package 1/2 (client-choice) model. The longer standalone-only services below (spray tan, hair colour, lash extensions, belly casting, and the 60-min/50-min hairdressing services that exceed the 45-min GTT slot) remain afternoon/standalone-only regardless of package model.*
 
-*10% online pre-booking discount applies when booked at the same time as a GTT reservation. Full price applies for in-center/same-day upsells.*
+*10% post-test discount (adopted 2026-10-17): any expecting mother who completes a GTT test can redeem it on standalone treatments or packages, morning or afternoon, valid immediately; it replaces the earlier pre-booking discount. Add-ons, cafe and retail stay at full price.*
 
 ---
 

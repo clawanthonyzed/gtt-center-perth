@@ -43,7 +43,7 @@ Status key: BLOCKING (the venture cannot move past it) | OPEN | IN PROGRESS | WA
 | ITC-35 | Insurance: broker quotes against A$400 a month in the model (tracker 19) | Insurance broker | Opening | OPEN |
 | ITC-36 | Rent, EFTPOS, medical waste and GTT supplies lines missing from non-wage overheads (tracker 21 to 23) | Grace | Model accuracy | OPEN |
 | ITC-37 | Award wage rates last verified for 1 July 2025; confirm current rates and Saturday penalties (tracker 16 to 18) | Payroll adviser, Fair Work | Labour cost | OPEN |
-| ITC-38 | 10% online pre-booking discount not applied in afternoon revenue (tracker 39) | Grace | Revenue accuracy | OPEN |
+| ITC-38 | 10% discount not applied in afternoon revenue (tracker 39). Updated 2026-10-17: the 10% post-test discount is adopted (morning or afternoon) and costed separately in R2-POST-TEST-DISCOUNT.md (A$277 to A$2,218 a month at 5% to 40% take-up; not deducted from the headline). Anthony to sign off the proposed terms | Grace | Revenue accuracy | OPEN (policy adopted, terms pending) |
 
 ## D. Regulatory
 

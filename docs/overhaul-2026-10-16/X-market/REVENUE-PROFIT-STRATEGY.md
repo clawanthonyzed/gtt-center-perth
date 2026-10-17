@@ -36,17 +36,17 @@ Path:
 1. At booking: show the afternoon menu and the PM Refresh (A$185) and PM Restore (A$135) packages beside the morning package.
 2. At intake, with consent: record the due date and preferred treatments, and pregnancy-safe notes for the therapist.
 3. During the visit: the therapist who gave the 30 or 45 minute treatment mentions the longer version (a 30 minute facial at A$95 against a 60 minute hydration facial at A$145).
-4. At checkout: book a standalone afternoon treatment on the lounge tablet with the post-test offer below, valid 14 days.
+4. At checkout, or as soon as her test is complete: book a standalone treatment (morning or afternoon, if a therapist is free) on the lounge tablet with the 10% post-test discount (adopted 2026-10-17, section P11b).
 5. After the visit: a thank-you message (consented) with the afternoon booking link; a second message at 34 to 36 weeks; a postnatal message after the due date.
 6. Rebooking: every afternoon visitor is offered the next appointment at the desk, building a monthly treat rhythm until the due date.
 
 Effect (estimate): if 25% of 474 testing clients book one afternoon treatment at A$117, that is 118 sessions and A$13,800 a month of demand, more than half of what the model needs. At 10% it is 47 sessions and A$5,500.
 
-## P11b Post-test incentive (proposal for Anthony to set)
+## P11b Post-test incentive (UPDATED 2026-10-17: Anthony adopted the 10% post-test discount, not limited to the afternoon; the option table below is kept for the costing record, and the corrected cost, break-even uplift and net effect are in `docs/overhaul-2026-10-17/M-model/R2-POST-TEST-DISCOUNT.md`)
 
 Existing rule in the pricing file: 10% off afternoon services booked online at the same time as a test reservation; no discount on same-day upsells.
 
-Proposal: an exclusive "Test Day Thank You" offer on one standalone afternoon treatment booked within 14 days of the test, usable Monday to Friday afternoons to lift the weaker days.
+Adopted: an exclusive "Test Day Thank You" offer of 10% on a standalone treatment or package for any expecting mother who completes a GTT test, valid immediately and not limited to the afternoon (earlier proposal: afternoon only, Monday to Friday). Option A (10%) is the adopted option; B and C are not adopted.
 
 | Option | Discount | Cost at 118 redemptions a month (25% take-up) | Cost at 47 (10% take-up) |
 |---|---|---|---|

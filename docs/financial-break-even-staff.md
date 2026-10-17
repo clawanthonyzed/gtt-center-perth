@@ -252,7 +252,7 @@ Holding the structure (2x30min / 30+45min / 2x45min) and total volume (2,000 GTT
 
 See services-pricing-locked.md for the full package definitions and service menu.
 
-**Discount policy:** 10% online pre-booking discount on afternoon/standalone services booked at the same time as a GTT reservation. No discount on in-center upsells (add-ons, cafe, retail, spray tan) — full price applies on the day.
+**Discount policy:** 10% post-test discount (adopted by Anthony 2026-10-17, supersedes the 10% online pre-booking discount): any expecting mother who completes a GTT test can redeem 10% off standalone wellness treatments or multi-service packages, morning or afternoon, valid immediately. No stacking with other offers. Excludes the GTT morning package, refreshments, retail and gift vouchers (proposed terms: see docs/overhaul-2026-10-17/M-model/R2-POST-TEST-DISCOUNT.md). (Earlier wording, superseded: 10% online pre-booking discount on afternoon/standalone services booked with a GTT reservation; no discount on in-center upsells.)
 
 **Morning priority:** GTT client slots locked until 10:00am. General public can book afternoon slots and any unfilled morning gaps released at 10:00am on the day.
 

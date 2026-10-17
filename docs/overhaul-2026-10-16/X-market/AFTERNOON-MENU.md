@@ -87,4 +87,4 @@ Refreshment counter (pre-ordered or purchased, nothing served during the active 
 
 1. Massage 45 min is A$120 in the pricing file but about A$130 inside the PM Refresh package arithmetic, and the express facial is A$95 versus about A$82 in the same arithmetic. The A$185 package price is unaffected, but the stated "A$212 if bought separately" and the 13% saving use the planning figures. TO CONFIRM which set is the menu of record.
 2. Belly casting (A$250 to A$330) and lash extensions remain in the pricing file. Belly casting scope is not stated in the current decision records. TO CONFIRM before listing publicly.
-3. The 10% online pre-booking discount on afternoon services booked with a test reservation exists in the pricing file, and is not applied in any current PM revenue figure (tracker item 39).
+3. The 10% online pre-booking discount in the pricing file is replaced (Anthony, 2026-10-17) by the 10% post-test discount for any expecting mother who completes a GTT test, morning or afternoon. It is costed separately and not applied in any current PM revenue figure (tracker item 39).
