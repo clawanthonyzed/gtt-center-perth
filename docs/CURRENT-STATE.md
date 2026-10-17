@@ -16,20 +16,23 @@
 ## 00. OVERHAUL DECISIONS, 2026-10-16 (Anthony): Read This First, it overrides anything below
 
 1. **25-minute pair cadence ONLY.** First booking 07:00; pairs at 07:00, 07:25, 07:50 and so on; last first draw 10:20 (07:00 + 8 x 25 minutes); 9 pairs = 18 clients a morning at most; bookings 2 to 4 weeks ahead. No other cadence exists. Any text below that describes a different cadence is **SUPERSEDED** and must not be used.
-2. **True adaptive rostering, AM and PM.** Staff are called in to match confirmed slots; idle staff are never rostered. Roster for 1 client: 2 phlebotomists + 2 therapists. For 2 to 9 clients (one per slot): 2 + 4. For 10: 2 + 6. For 11 to 18: 2 + 8. Full table: `docs/overhaul-2026-10-16/M-model/MODEL-WORKINGS.md`.
+2. **True adaptive rostering, AM and PM, phlebotomists included (updated 2026-10-17).** Staff are called in to match confirmed slots; idle staff are never rostered. Roster for 1 client: 1 phlebotomist + 2 therapists. For 2 to 9 clients (one per slot): 1 + 4. For 10: 2 + 6. For 11 to 18: 2 + 8. No phlebotomist in the afternoon. A named second collector is on call on mornings of 9 or fewer. Full table: `docs/overhaul-2026-10-17/M-model/R1-ADAPTIVE-PHLEBOTOMY.md` (earlier 2-phlebotomist table in `docs/overhaul-2026-10-16/M-model/MODEL-WORKINGS.md` is superseded).
 3. **No ramp-up.** The plan opens at 18 clients a morning via marketing and a pre-launch waitlist.
 4. **Afternoon:** stand-alone pre-booked services, not bound by the 2-hour GTT clock; walk-ins only if staff are free.
 5. **AM packages** include any service-menu option fitting the 30 or 45 minute wellness window (a service length, not a cadence).
+6. **Phlebotomists on the adaptive roster (Anthony, 2026-10-17).** 1 phlebotomist when 9 or fewer are booked, 2 when 10 to 18; none in the afternoon. The fixed minimum of 2 is retired. Clinical-safety conditions, and the dependency on the pathology partner and Medicare lab-employment rules, are in the Decision Log entry of 2026-10-17.
+7. **10% post-test discount adopted (Anthony, 2026-10-17).** Any expecting mother who completes a GTT test can redeem 10% off standalone wellness treatments or multi-service packages. Not limited to the afternoon: valid immediately, including for a morning client who completes her test. Terms (exclusions, stacking, one use per test, 14-day expiry, recording) are proposals awaiting sign-off: `docs/overhaul-2026-10-17/M-model/R2-POST-TEST-DISCOUNT.md`. It replaces the earlier 10% online pre-booking discount. Cost at 25% take-up on A$117 bookings: A$1,386.27 a month (not deducted from the figures below).
 
 | Figure | Value | Tag |
 |---|---|---|
 | Steady state, every month from Month 1 | +A$35,186.40 a month; A$422,236.80 a year; margin 24.6% (35,186.40 / 143,070.37) | `[CALCULATED, unchanged]` |
-| Break-even AM clients/day | **8.266** (2 phlebotomists + 4 therapists, bookings one per slot); 12.655 if bookings stack in pairs from 07:00 | `[CALCULATED, tools/am_volume_tier_staffing_solver.py + cost_ramp_model.py, 2026-10-16]` |
-| Year 1 (no ramp) | Net A$422,236.80; GST-stress A$281,310.96 | `[CALCULATED]` |
+| Break-even AM clients/day | **7.250** (1 phlebotomist + 4 therapists, bookings one per slot; was 8.266 with 2 phlebotomists); 12.655 if bookings stack in pairs from 07:00 (both chairs run); GST-stress 8.138; margin of safety at 18 is 10.750 (59.7%) | `[CALCULATED, tools/am_volume_tier_staffing_solver.py + cost_ramp_model.py, 2026-10-17]` |
+| Year 1 (no ramp) | Net A$422,236.80; GST-stress A$281,310.96 (unchanged by the adaptive phlebotomist rule: at 18 a day both chairs run). If only 9 a day fill: A$138,202 (was A$58,015) | `[CALCULATED]` |
 | Peak funding / lowest cash / payback | A$251,198 / A$85,000 (opening) / Month 8 repo, Month 11 after GST | `[CALCULATED]` |
-| Phlebotomist minimum | 2 on any GTT morning, **open question for Anthony** (1 would save A$6,682.23 a month on mornings of 9 or fewer) | `[PLACEHOLDER, decision pending]` |
+| Phlebotomist rule | **Adaptive (Anthony, 2026-10-17):** 1 on mornings of 9 or fewer booked, 2 on 10 to 18, none in the afternoon. Saves A$6,682.23 a month on mornings of 9 or fewer. Dependency: the pathology partner and Medicare/lab-employment rules may require the lab to supply collectors, in which case the roster is the lab's decision | `[DECISION, 2026-10-17; partner confirmation TO CONFIRM]` |
+| 10% post-test discount | Adopted 2026-10-17; cost A$277 to A$2,218 a month at 5% to 40% take-up on A$117 bookings; pays for itself if 10% of redeemers are new bookings (idle time) or 24.2% (extra hours paid) | `[DECISION; take-up and new-booking share are assumptions]` |
 
-Full workings: `docs/overhaul-2026-10-16/M-model/MODEL-WORKINGS.md`; 3-way model v0.5 in `outputs/FINANCIALS/`.
+Full workings: `docs/overhaul-2026-10-17/M-model/` (R1 and R2) and `docs/overhaul-2026-10-16/M-model/MODEL-WORKINGS.md` for the cadence, ramp and GST work; 3-way model v0.6 in `outputs/FINANCIALS/`.
 
 ---
 
@@ -341,18 +344,18 @@ Per Anthony's direct instruction, four operating-model/financial-model decisions
 
 ## 10. AM Adaptive Rostering Ladder, 25-minute cadence only (REBUILT 2026-10-16)
 
-> Rebuilt per Anthony's 2026-10-16 instructions (§00). Method: `tools/am_volume_tier_staffing_solver.py` run on the 25-minute cadence with the confirmed-slot pattern as input (planning case: bookings fill from 07:00, one client per slot first), wage rates from `tools/cost_ramp_model.py`, PM revenue and overhead from `tools/am_demand_tier_financial_ladder.py`. The earlier ladder and its widened-cadence tier are superseded. The 22.50 clients/day point stays removed (exceeds physical capacity). Rostering rule: a morning rosters what its confirmed slots need; 1 client = 2 phlebotomists + 2 therapists, never a full team. Full 1 to 18 table, best and worst booking patterns: `docs/overhaul-2026-10-16/M-model/MODEL-WORKINGS.md`.
+> Rebuilt per Anthony's 2026-10-16 instructions (§00). Method: `tools/am_volume_tier_staffing_solver.py` run on the 25-minute cadence with the confirmed-slot pattern as input (planning case: bookings fill from 07:00, one client per slot first), wage rates from `tools/cost_ramp_model.py`, PM revenue and overhead from `tools/am_demand_tier_financial_ladder.py`. The earlier ladder and its widened-cadence tier are superseded. The 22.50 clients/day point stays removed (exceeds physical capacity). Rostering rule (updated 2026-10-17): a morning rosters what its confirmed slots need; 1 client = 1 phlebotomist + 2 therapists, never a full team; phlebotomists follow the same rule (1 up to 9 booked, 2 from 10). Full 1 to 18 table before and after: `docs/overhaul-2026-10-17/M-model/R1-ADAPTIVE-PHLEBOTOMY.md`.
 
-| AM clients/day booked | Phlebotomists | Therapists (Massage+Beauty / Nails / Hair) | AM labour per month (with on-costs) | Monthly operating profit |
+| AM clients/day booked | Phlebotomists (before / now) | Therapists (Massage+Beauty / Nails / Hair) | AM labour per month (with on-costs) | Monthly operating profit (before / now) |
 |---|---|---|---|---|
-| 1 | 2 | 1 / 1 / 0 = 2 | A$27,809.86 | -A$33,380.10 |
-| 5 | 2 | 2 / 2 / 0 = 4 | A$42,255.18 | -A$21,495.42 |
-| 9 | 2 | 2 / 2 / 0 = 4 | A$42,255.18 | A$4,834.58 |
-| 10 | 2 | 3 / 2 / 1 = 6 | A$56,700.52 | -A$3,028.26 |
-| 13 | 2 | 4 / 2 / 2 = 8 | A$71,145.86 | A$2,273.90 |
-| 18 | 2 | 4 / 2 / 2 = 8 | A$71,145.86 | A$35,186.40 |
+| 1 | 2 / 1 | 1 / 1 / 0 = 2 | A$21,127.63 | -A$33,380.10 / -A$26,697.87 |
+| 5 | 2 / 1 | 2 / 2 / 0 = 4 | A$35,572.95 | -A$21,495.42 / -A$14,813.19 |
+| 9 | 2 / 1 | 2 / 2 / 0 = 4 | A$35,572.95 | A$4,834.58 / **A$11,516.81** |
+| 10 | 2 / 2 | 3 / 2 / 1 = 6 | A$56,700.52 | -A$3,028.26 (unchanged) |
+| 13 | 2 / 2 | 4 / 2 / 2 = 8 | A$71,145.86 | A$2,273.90 (unchanged) |
+| 18 | 2 / 2 | 4 / 2 / 2 = 8 | A$71,145.86 | A$35,186.40 (unchanged) |
 
-**Phlebotomist minimum (open question for Anthony):** 2 whenever a GTT client is booked, as GTT's clinical standard. Not a regulation found in this repo. 1 phlebotomist on mornings of 9 or fewer would save A$234.51 a weekday morning.
+**Phlebotomist rule (decided by Anthony, 2026-10-17):** 1 on mornings of 9 or fewer booked (saving A$234.51 a weekday morning and A$6,682.23 a month), 2 from 10 booked, none in the afternoon. The earlier fixed minimum of 2 was GTT's own clinical standard, not a regulation found in this repo. A named second collector is on call on light mornings, paid only if called in (assumed; one call-in costs A$117.25 at the 3-hour minimum). Safety conditions and the pathology-partner and Medicare dependency: Decision Log 2026-10-17.
 
 **Valley, disclosed:** 10 to 12 clients cost more than they earn at the margin (the roster steps to 6 then 8 therapists): net -A$3,028.26 at 10, -A$10,891.10 at 11, -A$4,308.60 at 12, against +A$4,834.58 at 9 and +A$2,273.90 at 13. With no ramp-up and a waitlist the target is 18 every morning.
 
@@ -361,14 +364,14 @@ Per Anthony's direct instruction, four operating-model/financial-model decisions
 | Step | Working | Result |
 |---|---|---|
 | Fixed costs | Rent, overhead, cost of goods, PM labour and Venue Manager with on-costs | A$36,738.11 |
-| AM roster (2 phlebotomists + 4 therapists) | with on-costs | + A$42,255.18 |
-| Total | | A$78,993.29 |
+| AM roster (1 phlebotomist + 4 therapists; was 2 + 4 at A$42,255.18) | with on-costs | + A$35,572.95 |
+| Total (was A$78,993.29) | | A$72,311.06 |
 | Less PM revenue | | - A$24,585.37 |
-| Costs AM GTT must cover | | A$54,407.92 |
+| Costs AM GTT must cover (was A$54,407.92) | | A$47,725.69 |
 | Revenue per daily AM client per month | A$250 x 26.33 | A$6,582.50 |
-| **Break-even** | | **8.266 AM clients/day** (45.9% of 18; ≈ 9.75% of the addressable market) |
+| **Break-even** | A$47,725.69 / A$6,582.50 | **7.250 AM clients/day** (40.3% of 18; was 8.266 or 45.9%) |
 
-Same value as before the rebuild, now earned on the 25-minute cadence. If every booking stacks in pairs from 07:00 the roster is 2 + 8 from 4 clients and break-even is **12.655**. With 1 phlebotomist on mornings of 9 or fewer: 7.250. Margin of safety at 18: 9.734 clients/day (54.1%).
+Recomputed 2026-10-17 on the adaptive phlebotomist rule. If every booking stacks in pairs from 07:00 both chairs run from the second booking and break-even stays **12.655**. GST-stress: 8.138 (was 9.255 spaced). With a paid 3-hour second shift every light morning: 7.758; with a second collector every Saturday: 7.482. Margin of safety at 18: 10.750 clients/day (59.7%; was 9.734).
 
 **Table 2 (12-client secondary reference):** Net Operating Result **+A$1,096.40/month**, break-even 11.833/day, margin of safety 0.167 clients/day (~1.4%).
 
@@ -384,6 +387,8 @@ Same value as before the rebuild, now earned on the 25-minute cadence. If every 
 ---
 
 ## Changelog
+
+**2026-10-17 (Anthony's directive R1 and R2, workstream M2)** — Phlebotomists moved to the adaptive roster (1 up to 9 booked, 2 from 10, none in the afternoon): break-even 8.266 to 7.250, §00 items 2, 6 and 7, §10 rebuilt. 10% post-test discount adopted (not afternoon-only). Steady state, Year 1, GST-stress, peak funding and payback at 18 a day are unchanged. Details in `docs/DECISION-LOG.md`.
 
 **2026-10-16 (Anthony's overhaul review, workstream M)** — New §00; §10 rebuilt (25-minute cadence only, adaptive roster, break-even re-derived); §0 item 3 marked superseded. Net, annual and margin figures unchanged. Details in `docs/DECISION-LOG.md`.
 
