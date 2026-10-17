@@ -4,12 +4,12 @@
 |---|---|
 | **Business** | GTT Center Perth |
 | **Document** | Startup capital and 12-month cashflow forecast |
-| **Prepared by** | Theodore (CFO) for Anthony Zed. Updated 2026-10-16 (Grace, to Anthony's instructions of 2026-10-16) |
-| **Date** | 2026-10-16 |
+| **Prepared by** | Theodore (CFO) for Anthony Zed. Updated 2026-10-17 (Grace, to Anthony's instructions of 2026-10-16 and 2026-10-17) |
+| **Date** | 2026-10-17 |
 | **Status** | DRAFT for review |
 | **Legal entity** | TO CONFIRM |
 | **Currency** | Australian dollars (A$) |
-| **Basis** | 3-Way Financial Model v0.5 (2026-10-16), 25-minute cadence, adaptive rostering, full capacity from Month 1 (no ramp-up), headline rent A$8,000 per month |
+| **Basis** | 3-Way Financial Model v0.6 (2026-10-17), 25-minute cadence, adaptive rostering of phlebotomists and therapists (unchanged at 18 a morning), full capacity from Month 1 (no ramp-up), headline rent A$8,000 per month |
 
 All figures are planning estimates. The venue is not yet open and no trading data exists.
 
@@ -92,7 +92,7 @@ Figures in A$. Negative = cash out. There is no ramp-up: every month is a full-c
 | **M1 to M12 total** | | **0.00** | **1,716,844.44** | **-1,294,607.64** | **0.00** | **-13,374.00** | **-129,182.02** | **279,680.78** | | | |
 
 **How to read the table**
-- Opening cash, funding, pre-opening capex, deferred capex, GST paid and closing cash follow the 3-Way Financial Model v0.5 §4. The model's own rules are unchanged: all funding in before opening, no debt, clients prepay at booking (no debtor or creditor timing), GST paid monthly in the month after.
+- Opening cash, funding, pre-opening capex, deferred capex, GST paid and closing cash follow the 3-Way Financial Model v0.6 §4 (every cash figure is unchanged at 18 a morning: both chairs run). The model's own rules are unchanged: all funding in before opening, no debt, clients prepay at booking (no debtor or creditor timing), GST paid monthly in the month after.
 - Receipts are model §3 total revenue and payments are model §3 total costs. Receipts less payments equals the model's operating cash in every month.
 - **Cumulative (after GST)** = closing cash less A$336,198 capital in. **Cumulative (repo basis)** excludes GST paid.
 

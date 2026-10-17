@@ -76,7 +76,7 @@ Reading it: mornings of 1 to 9 improve by A$6,682.23 a month each (A$234.51 a we
 
 ## 5. Break-even, recomputed (working as a table)
 
-Method as in the repo ladder (`breakeven_for_headcount`), applied tier by tier: costs = fixed costs + the morning roster that the break-even number of clients needs. 7.250 falls in the 8-client tier (roster 1 phlebotomist + 4 therapists); the check is that the roster for 7 clients is the same, so the answer is stable inside the tier.
+Method as in the repo ladder (`breakeven_for_headcount`), applied tier by tier: costs = fixed costs + the morning roster that the break-even number of clients needs. 7.250 falls in the tier for 8 booked clients (roster 1 phlebotomist + 4 therapists); the check is that the roster for 7 clients is the same, so the answer is stable inside the tier.
 
 | Step | Working | Before (2 phlebotomists + 4 therapists) | After (1 phlebotomist + 4 therapists) |
 |---|---|---|---|

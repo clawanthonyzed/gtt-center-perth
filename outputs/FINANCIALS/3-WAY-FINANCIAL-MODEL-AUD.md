@@ -1,18 +1,19 @@
 # GTT Center Perth: 3-Way Financial Model (AUD)
 
-**Prepared by:** Theodore (CFO consultant) for Grace (GTT Center Perth manager). Rebuilt to v0.5 on 2026-10-16 by Grace (workstream M) to Anthony's instructions of 2026-10-16.
-**Version:** v0.5 (2026-10-16). 25-minute pair cadence only, adaptive rostering, full capacity from Month 1 (no ramp-up). The Month 5 onward steady state is unchanged at +A$35,186.40.
-**Date:** 2026-10-16
-**Repo snapshot:** clawanthonyzed/gtt-center-perth; calculators re-run on 2026-10-16 (tools/am_volume_tier_staffing_solver.py, tools/cost_ramp_model.py, tools/am_demand_tier_financial_ladder.py)
+**Prepared by:** Theodore (CFO consultant) for Grace (GTT Center Perth manager). Rebuilt to v0.5 on 2026-10-16 by Grace (workstream M) to Anthony's instructions of 2026-10-16; updated to v0.6 on 2026-10-17 (workstream M2) for the adaptive phlebotomist roster and the 10% post-test discount.
+**Version:** v0.6 (2026-10-17). 25-minute pair cadence only, adaptive rostering of phlebotomists and therapists, full capacity from Month 1 (no ramp-up). The steady state at 18 clients a morning is unchanged at +A$35,186.40; break-even is now 7.250.
+**Date:** 2026-10-17
+**Repo snapshot:** clawanthonyzed/gtt-center-perth; calculators re-run on 2026-10-16 (tools/am_volume_tier_staffing_solver.py, tools/cost_ramp_model.py, tools/am_demand_tier_financial_ladder.py) re-run on 2026-10-17 with the phlebotomist count taken from the solver's draw check; workings in docs/overhaul-2026-10-17/M-model/
 **Currency:** every figure is in Australian dollars (A$). No foreign amounts are used.
 
 > **Read this first**
-> - 🆕 **What v0.5 changes (Anthony, 2026-10-16):** (1) the 25-minute pair cadence is the only cadence: first booking 07:00, pairs at 07:00, 07:25, 07:50 and so on, last first draw 10:20, 9 pairs, 18 clients a morning at most, booked 2 to 4 weeks ahead; (2) staff are called in to match the confirmed slots, AM and PM, and idle staff are never rostered; (3) there is no ramp-up: the plan opens at the full 18 clients a morning, filled through marketing and a pre-launch waitlist; (4) the afternoon is made of stand-alone pre-booked services, with walk-ins only if staff are free.
+> - 🆕 **What v0.6 changes (Anthony, 2026-10-17):** (1) phlebotomists are on the adaptive roster: 1 phlebotomist when 9 or fewer clients are booked, 2 when 10 to 18, none in the afternoon, with a named second collector on call on light mornings; (2) the 10% post-test discount is adopted for any expecting mother who completes a GTT test, on standalone treatments or packages, morning or afternoon (Section 8b item 20c). Break-even falls from 8.266 to **7.250**; steady state, Year 1, GST-stress, peak funding and payback at 18 a morning are unchanged because both chairs run.
+> - 🆕 **What v0.5 changed (Anthony, 2026-10-16):** (1) the 25-minute pair cadence is the only cadence: first booking 07:00, pairs at 07:00, 07:25, 07:50 and so on, last first draw 10:20, 9 pairs, 18 clients a morning at most, booked 2 to 4 weeks ahead; (2) staff are called in to match the confirmed slots, AM and PM, and idle staff are never rostered; (3) there is no ramp-up: the plan opens at the full 18 clients a morning, filled through marketing and a pre-launch waitlist; (4) the afternoon is made of stand-alone pre-booked services, with walk-ins only if staff are free.
 > - 📌 **Baseline kept:** 18 AM clients/day at capacity, 07:00 start (CURRENT-STATE §0 and §5). Prices, rent and overheads are unchanged. Month 5 onward net is still **+A$35,186.40** and the GST-stress case **+A$23,442.58**.
 > - 🔁 **What the no-ramp decision does:** Year 1 is now 12 full months: net **A$422,236.80** (earlier ramped figure A$322,014.93), GST-stress **A$281,310.96** (earlier A$196,608.65). Peak funding falls to the pre-opening capital, **A$251,198** (earlier A$267,771), and payback is **Month 8 / Month 11** (earlier Month 11 / Month 15). All of this assumes the waitlist delivers 18 clients on day one.
-> - ⚖️ **Break-even:** **8.266** AM clients a day, now earned on the 25-minute cadence (planning case). It rests on bookings landing one per slot; if every booking stacks in pairs from 07:00 it is 12.655 (Section 6).
+> - ⚖️ **Break-even:** **7.250** AM clients a day (40.3% of 18; was 8.266 with 2 phlebotomists on every morning), planning case, 25-minute cadence. It rests on bookings landing one per slot; if every booking stacks in pairs from 07:00 both chairs run and it is 12.655 (Section 6).
 > - 🏠 **Rent:** the headline still uses **A$8,000/month, per Anthony's instruction.** Rent-adjusted A$9,500 and A$10,500 columns sit beside it, plus the gross ceiling column (A$10,500 all-in per the site brief v0.3). Section 9 states the utilities / cleaning assumption.
-> - ❓ **For Anthony to decide:** the model keeps **2 phlebotomists on every morning with a GTT booking** (Section 1A). Mornings of 9 or fewer need only one chair, so 1 phlebotomist would save A$234.51 a weekday morning (A$6,682.23 a month) and lower break-even to 7.250. The repo contains no regulation requiring 2; it is GTT's own clinical standard (2026-10-11) and the difficult-blood-draw protocol.
+> - ✅ **Decided (Anthony, 2026-10-17):** phlebotomists are rostered adaptively. Dependency still open: the pathology partner and the Medicare and lab-employment rules may require the lab to supply collectors, in which case the roster is the lab's decision (Decision Log 2026-10-17).
 > - 🧮 Nothing here is real trading data. No venue is open yet. Every figure is a planning estimate.
 > - 🧾 Tax, GST and award content is **general information only**. Verify tax with the accountant and award rules with Fair Work before acting.
 > - 🏢 The business's legal entity and ownership structure are **not stated here**. The repo lists this as an open founder and accountant decision ([ENTITY-STRUCTURE-INVESTIGATION.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/ENTITY-STRUCTURE-INVESTIGATION.md)).
@@ -74,8 +75,8 @@ v0.5 figures. The earlier ramped (v0.4) figure is shown in brackets where it cha
 | 👥 **Payroll, Months 1 to 3** | **A$280,787** (v0.4 A$214,844) | same | same | same | Full roster from Month 1, no ramp |
 | 📈 **Monthly net, every month from Month 1 (repo basis)** | **+A$35,186.40** | +A$33,686.40 | +A$32,686.40 | +A$33,936.40 | 🟢 Full roster needed at 18/day (Section 12) |
 | 🧾 **GST-stress downside** | **+A$23,442.58** | +A$22,078.94 | +A$21,169.85 | +A$22,306.21 | 🟠 TM, accountant to confirm |
-| ⚖️ **Break-even, AM clients/day (repo basis)** | **8.266** | 8.493 | 8.645 | 8.455 | 🟢 Planning case, 25-minute cadence (Section 6) |
-| ⚖️ Break-even, AM clients/day (GST-stress, bookings spaced) | 9.255 | 9.482 | 9.634 | 9.445 | 🟠 TM |
+| ⚖️ **Break-even, AM clients/day (repo basis)** | **7.250** (was 8.266) | 7.478 | 7.630 | 7.440 | 🟢 Planning case, 25-minute cadence, adaptive phlebotomists (Section 6) |
+| ⚖️ Break-even, AM clients/day (GST-stress, bookings spaced) | 8.138 (was 9.255) | 8.366 | 8.518 | 8.328 | 🟠 TM |
 | 🏦 **Peak funding** (with GST timing) | **A$251,198** (v0.4 A$267,771) | A$254,198 (A$272,271) | A$256,198 (A$275,271) | A$256,198 (A$274,021) | Equals the pre-opening capital: no operating loss to fund |
 | ⚠️ **Lowest cash point** | **A$85,000, at opening** (v0.4 A$68,427, Month 1) | A$85,000 | A$85,000 | A$85,000 | 🟢 The reserve is never drawn |
 | 🛟 Runway if fill falls to 70% from Month 1 | **9 full months** | 7 | 7 | 7 | Months the A$85,000 reserve lasts (Section 4b) |
@@ -97,7 +98,7 @@ v0.5 figures. The earlier ramped (v0.4) figure is shown in brackets where it cha
 
 | Role / cost | v0.5 treatment | Why | Source |
 |---|---|---|---|
-| Phlebotomists (casual, employed in-house) | **Variable by morning.** Rostered only on mornings with at least 1 confirmed GTT booking. **Minimum 2 whenever any GTT client is booked (flag for Anthony)** | GTT's own clinical standard (2026-10-11 decision) and the difficult-blood-draw protocol (second on-site phlebotomist). No regulation requiring 2 was found in the repo. One chair can physically carry up to 9 clients on the 25-minute cadence (the three draws never overlap), so 1 phlebotomist is a costed option, below | S29, S1 §4, gtt-clinical-protocol §Difficult Venepuncture |
+| Phlebotomists (casual, employed in-house; employer to be confirmed, see Decision Log 2026-10-17) | **Variable by morning (Anthony, 2026-10-17).** 1 phlebotomist when 1 to 9 clients are booked and no two share a slot; 2 phlebotomists when 10 to 18 are booked; none in the afternoon. A named second collector is on call on mornings of 9 or fewer, paid only if called in (assumed) | One chair carries up to 9 clients on the 25-minute cadence because the three draws of each client never overlap (solver draw check = 1); from the tenth booking two clients share a slot and two draws fall together (check = 2). The fixed minimum of 2 (2026-10-11) is retired | S29, tools/am_volume_tier_staffing_solver.py, gtt-clinical-protocol §Difficult Venepuncture |
 | AM therapists (massage + beauty pool, nails, hair; casual) | **Variable by morning:** set by how many 45-minute services overlap at the busiest moment of the confirmed bookings (2 to 8 therapists, table below) | Repo solver run on the 25-minute cadence with the actual slot pattern | S29 §2, S31 |
 | PM therapists (4 roles, casual) | Rostered to pre-booked stand-alone services only; each role is paid the 3-hour minimum engagement on a trading day. Walk-ins are accepted only if staff are free | Already priced at the legal floor at every PM level. A PM role with no bookings could be stood down, but there is no per-role PM booking mix, so no saving is counted (upside) | S31 `compute_pm_weekday_daily_labor`, S4 §2 |
 | Venue Manager (Mon to Fri, A$320/day) | **Fixed** A$7,040/month | Safety-critical, must be on site every operating day (first aid, fire warden, clinical escalation) | S30 §1, S1 §0 item 2 |
@@ -116,15 +117,15 @@ Labour cost per morning, wages only for the AM clinical and treatment roster, in
 | Confirmed bookings that morning | Phlebotomists | Therapists (Massage and Beauty / Nails / Hair) | Last first draw | Weekday labour | Saturday labour | Labour per client (weekday) | Therapists if bookings are spaced (best) | Therapists if bookings stack in pairs (worst) |
 |---|---|---|---|---|---|---|---|---|
 | 0 | 0 | 0 | n/a | A$0.00 | A$0.00 | n/a | 0 | 0 |
-| 1 | 2 | 1 / 1 / 0 = 2 | 07:00 | A$975.96 | A$1,463.93 | A$975.96 | 2 | 2 |
-| 2 | 2 | 2 / 2 / 0 = 4 | 07:25 | A$1,482.90 | A$2,224.35 | A$741.45 | 2 | 4 |
-| 3 | 2 | 2 / 2 / 0 = 4 | 07:50 | A$1,482.90 | A$2,224.35 | A$494.30 | 2 | 6 |
-| 4 | 2 | 2 / 2 / 0 = 4 | 08:15 | A$1,482.90 | A$2,224.35 | A$370.72 | 2 | 8 |
-| 5 | 2 | 2 / 2 / 0 = 4 | 08:40 | A$1,482.90 | A$2,224.35 | A$296.58 | 2 | 8 |
-| 6 | 2 | 2 / 2 / 0 = 4 | 09:05 | A$1,482.90 | A$2,224.35 | A$247.15 | 4 | 8 |
-| 7 | 2 | 2 / 2 / 0 = 4 | 09:30 | A$1,482.90 | A$2,224.35 | A$211.84 | 4 | 8 |
-| 8 | 2 | 2 / 2 / 0 = 4 | 09:55 | A$1,482.90 | A$2,224.35 | A$185.36 | 4 | 8 |
-| 9 | 2 | 2 / 2 / 0 = 4 | 10:20 | A$1,482.90 | A$2,224.35 | A$164.77 | 4 | 8 |
+| 1 | 1 | 1 / 1 / 0 = 2 | 07:00 | A$741.45 | A$1,112.17 | A$741.45 | 2 | 2 |
+| 2 | 1 | 2 / 2 / 0 = 4 | 07:25 | A$1,248.39 | A$1,872.59 | A$624.20 | 2 | 4 |
+| 3 | 1 | 2 / 2 / 0 = 4 | 07:50 | A$1,248.39 | A$1,872.59 | A$416.13 | 2 | 6 |
+| 4 | 1 | 2 / 2 / 0 = 4 | 08:15 | A$1,248.39 | A$1,872.59 | A$312.10 | 2 | 8 |
+| 5 | 1 | 2 / 2 / 0 = 4 | 08:40 | A$1,248.39 | A$1,872.59 | A$249.68 | 2 | 8 |
+| 6 | 1 | 2 / 2 / 0 = 4 | 09:05 | A$1,248.39 | A$1,872.59 | A$208.07 | 4 | 8 |
+| 7 | 1 | 2 / 2 / 0 = 4 | 09:30 | A$1,248.39 | A$1,872.59 | A$178.34 | 4 | 8 |
+| 8 | 1 | 2 / 2 / 0 = 4 | 09:55 | A$1,248.39 | A$1,872.59 | A$156.05 | 4 | 8 |
+| 9 | 1 | 2 / 2 / 0 = 4 | 10:20 | A$1,248.39 | A$1,872.59 | A$138.71 | 4 | 8 |
 | 10 | 2 | 3 / 2 / 1 = 6 | 10:20 | A$1,989.84 | A$2,984.76 | A$198.98 | 4 | 8 |
 | 11 | 2 | 4 / 2 / 2 = 8 | 10:20 | A$2,496.78 | A$3,745.18 | A$226.98 | 6 | 8 |
 | 12 | 2 | 4 / 2 / 2 = 8 | 10:20 | A$2,496.78 | A$3,745.18 | A$208.07 | 6 | 8 |
@@ -135,9 +136,9 @@ Labour cost per morning, wages only for the AM clinical and treatment roster, in
 | 17 | 2 | 4 / 2 / 2 = 8 | 10:20 | A$2,496.78 | A$3,745.18 | A$146.87 | 8 | 8 |
 | 18 | 2 | 4 / 2 / 2 = 8 | 10:20 | A$2,496.78 | A$3,745.18 | A$138.71 | 8 | 8 |
 
-**Why the roster is what it is (S10b).** The number of therapists is the number of 45-minute services that overlap at the busiest moment, not the number of clients. Pairs are 25 minutes apart, so two neighbouring slots overlap; with one client per slot at most two first services (massage or beauty) and two second services (nails or hair) run together, which is 4 therapists for any morning of 2 to 9 clients. Once a morning passes 10 clients the second chair is working in neighbouring slots, and 11 or more clients put four first services in the room at once, which is the full 4 + 2 + 2 = 8. So at about 12.6 booked clients (12 or 13 on a real morning) the roster is **8 therapists in the planning case and 2 phlebotomists**; if the second-chair bookings happen to sit in alternate slots it is 6. Eight is never a standard: a morning of 1 client rosters 2 therapists, 2 to 9 clients roster 4.
+**Why the roster is what it is (S10b).** The number of therapists is the number of 45-minute services that overlap at the busiest moment, not the number of clients. Pairs are 25 minutes apart, so two neighbouring slots overlap; with one client per slot at most two first services (massage or beauty) and two second services (nails or hair) run together, which is 4 therapists for any morning of 2 to 9 clients. Once a morning passes 10 clients the second chair is working in neighbouring slots, and 11 or more clients put four first services in the room at once, which is the full 4 + 2 + 2 = 8. So at about 12.6 booked clients (12 or 13 on a real morning) the roster is **8 therapists in the planning case and 2 phlebotomists** (1 phlebotomist up to 9 clients); if the second-chair bookings happen to sit in alternate slots it is 6. Eight is never a standard: a morning of 1 client rosters 1 phlebotomist and 2 therapists, 2 to 9 clients roster 1 phlebotomist and 4 therapists.
 
-**Phlebotomist option for Anthony (Section 8b item 20a).** With one chair in use (mornings of up to 9 clients in the planning case) the three draws per client never overlap, so one phlebotomist is physically enough. Cost of keeping the minimum of 2: A$234.51 a weekday morning and A$6,682.23 a month on any morning of 9 or fewer. At 10 or more clients both chairs run at once and 2 are needed whatever the choice.
+**Phlebotomist rule (decided by Anthony 2026-10-17; Section 8b item 20a).** With one chair in use (mornings of up to 9 clients, no two in a slot) the three draws per client never overlap, so one phlebotomist is rostered. Against the earlier fixed 2 this saves A$234.51 on a weekday morning, A$351.76 on a Saturday morning and **A$6,682.23 a month** whenever 9 or fewer are booked; break-even falls from 8.266 to 7.250. From 10 clients both chairs run and 2 are needed. A second collector is on call on light mornings (difficult draw, fainting) and is paid only if called in: one call-in at the 3-hour casual minimum costs A$117.25 on a weekday and A$175.88 on a Saturday; even one call-in every trading day adds only 0.463 to break-even. A paid standby allowance is not in the repo and is not modelled (TO CONFIRM). Options for a guaranteed second collector: a 3-hour second shift on every light morning (A$3,341.13 a month, break-even 7.758) or a second collector on Saturdays only (A$1,523.12 a month, break-even 7.482). Workings: `docs/overhaul-2026-10-17/M-model/R1-ADAPTIVE-PHLEBOTOMY.md`.
 
 **How the roster is made.** Clients pay in full when they book; bookings open 2 to 4 weeks ahead; the roster is published 1 to 2 weeks ahead from the confirmed calendar (S28, S32 "Staffing Decision Point"). The waitlist (100 signups by week 13, 300+ by week 18, S32) and the service-interest checkboxes let the therapist mix follow what clients booked.
 
@@ -498,26 +499,27 @@ Method (S1 §10): PM held at its full A$24,585.37, solve for AM clients/day at t
 | Step | Working | Result |
 |---|---|---|
 | 1. Fixed costs per month | Rent, other overhead, cost of goods, PM labour and Venue Manager with on-costs | A$36,738.11 |
-| 2. AM roster for a morning of up to 9 clients booked one per slot | 2 phlebotomists + 4 therapists, with on-costs, 22 weekdays + 4.33 Saturdays | + A$42,255.18 |
-| 3. Total costs at that roster | | **A$78,993.29** |
+| 2. AM roster for a morning of up to 9 clients booked one per slot | 1 phlebotomist + 4 therapists, with on-costs, 22 weekdays + 4.33 Saturdays (was 2 + 4 at A$42,255.18) | + A$35,572.95 |
+| 3. Total costs at that roster | (was A$78,993.29) | **A$72,311.06** |
 | 4. Less PM revenue | PM services at full steady state | - A$24,585.37 |
-| 5. Costs AM GTT must cover | | **A$54,407.92** |
+| 5. Costs AM GTT must cover | (was A$54,407.92) | **A$47,725.69** |
 | 6. Revenue per daily AM client per month | A$250 x 26.33 trading days | **A$6,582.50** |
-| 7. **Break-even** | A$54,407.92 ÷ A$6,582.50 | **8.266 AM clients/day** |
+| 7. **Break-even** | A$47,725.69 ÷ A$6,582.50 | **7.250 AM clients/day** |
 
-8.266 is 45.9% of the 18-client capacity, a margin of safety of 9.734 clients/day (54.1%). The earlier ramped model also showed 8.266; the new figure is not inherited from it. It was re-derived by running the repo solver on the 25-minute cadence with the roster the bookings need, and it comes out the same because the 2 + 4 roster is also what one-client-per-slot bookings need.
+7.250 is 40.3% of the 18-client capacity, a margin of safety of 10.750 clients/day (59.7%). Before the adaptive phlebotomist rule it was 8.266 (45.9%, margin 9.734). The tier for 8 booked clients is the right one: the roster for 7 clients is the same 1 phlebotomist + 4 therapists, so the answer is stable inside the tier.
 
 **Break-even depends on where bookings land in the slots**
 
 | Booking pattern (roster that results) | Break-even AM/day (repo) | Break-even AM/day (GST-stress) | % of 18/day |
 |---|---|---|---|
-| Bookings spaced across the slots (2 phlebotomists + 4 therapists up to 10 clients) | **8.266** | 9.255 | 45.9% |
-| **Planning case:** one client per slot from 07:00 (2 + 4 up to 9 clients, then 6, then 8) | **8.266** | 14.083 | 45.9% |
+| Bookings spaced across the slots (1 phlebotomist + 4 therapists up to 9 clients) | **7.250** (was 8.266) | 8.138 (was 9.255) | 40.3% |
+| **Planning case:** one client per slot from 07:00 (1 + 4 up to 9 clients, then 2 + 6, then 2 + 8) | **7.250** (was 8.266) | 8.138 (was 14.083) | 40.3% |
 | Bookings stack in pairs from 07:00 (repo solver as published; 2 + 8 from 4 clients) | 12.655 | 14.083 | 70.3% |
-| Planning case with 1 phlebotomist on mornings of 9 or fewer (Anthony to decide) | 7.250 | 8.138 | 40.3% |
+| Planning case with a paid 3-hour second phlebotomist shift on every light morning | 7.758 | 8.696 | 43.1% |
+| Planning case with a second collector every Saturday | 7.482 | 8.392 | 41.6% |
 
-- **Headline: 8.266.** The GST-stress figure of 9.255 needs the tenth booking to land away from other second-chair bookings; otherwise the roster steps up and the GST-stress break-even is 14.083 (the same as the full roster).
-- **Why the repo's "valley" is still there:** at 10 to 12 clients the planning-case roster steps up to 6 and then 8 therapists before the revenue catches up (net -A$3,028.26 at 10 clients, -A$10,891.10 at 11, -A$4,308.60 at 12, against +A$4,834.58 at 9). A morning is profitable from 13 clients upward (+A$2,273.90). With no ramp-up and a waitlist the aim is 18 every morning, so the valley is a risk to watch, not a plan.
+- **Headline: 7.250.** Bookings that stack in pairs put both chairs to work from the second booking, so the 2 + 8 roster and 12.655 return. The GST-stress figure of 8.138 holds as long as bookings stay one per slot.
+- **Why the repo's "valley" is still there:** at 10 to 12 clients the planning-case roster steps up to 6 and then 8 therapists before the revenue catches up (net -A$3,028.26 at 10 clients, -A$10,891.10 at 11, -A$4,308.60 at 12, against +A$4,834.58 at 9). 9 booked earns +A$11,516.81 under the adaptive rule, more than any of 10 to 14 booked; a morning is again better than 9 from 15 clients upward (+A$15,438.90). With no ramp-up and a waitlist the aim is 18 every morning, so the valley is a risk to watch, not a plan.
 - Fill is assumed 100% (Section 13).
 
 ### 6b. Two-stream break-even in visits/month (TM)
@@ -527,19 +529,19 @@ Both streams scaled together at the current capacity mix (474 AM : 210 PM per mo
 | Labour basis | **Break-even visits / month** | AM / PM split | AM clients/day | % of 684 visits capacity |
 |---|---|---|---|---|
 | Full roster every morning (all costs fixed) | 515.8 | 357.4 AM + 158.5 PM | 13.57 | 75.4% |
-| **Adaptive rostering (2 + 4 roster, spaced bookings)** | **377.7** | 261.7 AM + 116.0 PM | 9.94 | 55.2% |
+| **Adaptive rostering (1 phlebotomist + 4 therapists, spaced bookings; was 2 + 4: 377.7 visits, 9.94 AM/day, 55.2%)** | **345.7** | 239.6 AM + 106.1 PM | 9.10 | 50.5% |
 
 ### 6c. Sensitivity (steady-state cost base, headline rent)
 
 | Scenario | Monthly net (repo / GST-stress) | Break-even AM/day (repo) | Status |
 |---|---|---|---|
-| Base: 18/day, A$8k rent | A$35,186.40 / A$23,442.58 | 8.266 | 🟢 |
-| Volume -20% (14.4 AM/day, PM -20%) | A$6,572.33 / -A$2,570.22 | 9.013 | 🟡 still profitable |
-| Price -10% (AM A$225, PM -10%) | A$20,879.36 / A$10,436.18 | 9.599 | 🟡 |
-| Rent A$7,000 | A$36,186.40 / A$24,351.67 | 8.114 | 🟢 |
-| Rent A$9,000 | A$34,186.40 / A$22,533.49 | 8.417 | 🟢 |
-| 12 AM/day, PM full (TM, Table 1 rules) | -A$4,308.60 / -A$12,461.96 | 8.266 | 🔴 loss |
-| Rent A$9,500 / A$10,500 / gross ceiling | see Section 9 | 8.493 / 8.645 / 8.455 | 🟢 |
+| Base: 18/day, A$8k rent | A$35,186.40 / A$23,442.58 | 7.250 | 🟢 |
+| Volume -20% (14.4 AM/day, PM -20%) | A$6,572.33 / -A$2,570.22 | 7.997 | 🟡 still profitable |
+| Price -10% (AM A$225, PM -10%) | A$20,879.36 / A$10,436.18 | 8.471 | 🟡 |
+| Rent A$7,000 | A$36,186.40 / A$24,351.67 | 7.098 | 🟢 |
+| Rent A$9,000 | A$34,186.40 / A$22,533.49 | 7.402 | 🟢 |
+| 12 AM/day, PM full (TM, Table 1 rules) | -A$4,308.60 / -A$12,461.96 | 7.250 | 🔴 loss |
+| Rent A$9,500 / A$10,500 / gross ceiling | see Section 9 | 7.478 / 7.630 / 7.440 | 🟢 |
 
 Note: the 12/day row is this model's own figure on Table 1 rules. The repo's Table 2 (+A$1,096.40) uses a different 08:00-start schedule and is not comparable (S1 §10).
 
@@ -580,11 +582,11 @@ Note: the 12/day row is this model's own figure on Table 1 rules. The repo's Tab
 | 3 | Net A$63,028.75 / A$56,581.70 / A$44,166.17 (and others) | S1 strike-throughs, S21 | +A$35,186.40 | 🗄️ Superseded |
 | 4 | Revenue A$154,710.69, net A$32,576.80, break-even 13.051/day, trough -A$76,532.52 | S5 (titled "Current") | See Sections 3, 4, 6 | 🗄️ Stale (2026-08-18) |
 | 5 | Workbook: revenue A$155,215.80, net A$56,581.70, break-even 9.404/day | S21 | See above | 🗄️ Stale (2026-08-09) |
-| 6 | Break-even 9.4/day and 9.821/day; 11.290/day | S22 dossiers | 8.266/day; 12.655/day (full-roster basis) | 🗄️ Stale |
-| 7 | Break-even "12 AM visits/day, capacity 8", Year 1 loss -A$513,540 | S20 | 8.266/day, Year 1 +A$422,237 (repo basis) | 🗄️ Not real |
+| 6 | Break-even 9.4/day and 9.821/day; 11.290/day | S22 dossiers | 7.250/day; 12.655/day (full-roster basis) | 🗄️ Stale |
+| 7 | Break-even "12 AM visits/day, capacity 8", Year 1 loss -A$513,540 | S20 | 7.250/day, Year 1 +A$422,237 (repo basis) | 🗄️ Not real |
 | 8 | Cash trough -A$53,353.76 (Month 2) | S19 | no cash trough: lowest cash A$85,000 at opening | 🗄️ Not recomputed in repo |
 | 9 | Inherited revenue A$157,792.16 | S1 §5 | A$143,070.37 canonical | 🗄️ Historical only |
-| 9a | v0.2 of this model: break-even 12.655, peak funding A$318,176, lowest cash A$18,022, payback M13 / M18, Year 1 A$251,522 | This file v0.2 | v0.5 figures in Section 1 | 🗄️ Superseded |
+| 9a | v0.2 of this model: break-even 12.655, peak funding A$318,176, lowest cash A$18,022, payback M13 / M18, Year 1 A$251,522 | This file v0.2 | current figures in Section 1 | 🗄️ Superseded |
 | 9c | 🆕 v0.3 and v0.4 of this model: Year 1 A$322,015 / A$196,609, peak funding A$267,771, lowest cash A$68,427, payback M11 / M15, Months 1 to 4 ramped at 43 / 64 / 79 / 93% | This file v0.3, v0.4 | Year 1 A$422,236.80 / A$281,310.96, peak funding A$251,198, lowest cash A$85,000, payback M8 / M11 | 🗄️ Superseded 2026-10-16 (ramp-up removed by decision) |
 | 9b | 7-staff AM option (massage+beauty pool of 3) and 3 to 10/day tables | S30, S34, `am-staffing-by-volume.md` | Roster table, Section 1A (25-minute cadence) | 🗄️ Older cadences (23 and 40 minutes). Not used here |
 
@@ -604,7 +606,8 @@ Note: the 12/day row is this model's own figure on Table 1 rules. The repo's Tab
 | 18 | GST not in any repo P&L or cashflow | S11 | Payback M8 vs M11 | 🔴 Accountant |
 | 19 | Working capital reserve basis | A$85,000 to 110,000 flagged stale (S19). with no ramp-up the plan never draws the reserve, and A$85,000 buys about 9 months of runway if fill falls to 70% (Section 4b) | Keep A$85,000 | Founder |
 | 20 | Startup capital: several ranges | A$251,198 base (S6) vs older ranges (S1 §7.4, S9) | Base used | After venue + quotes |
-| 20a | 🔁 Phlebotomist minimum | The model keeps 2 phlebotomists on every morning with a GTT booking: GTT's clinical standard (2026-10-11 decision) and the difficult-blood-draw protocol (a second on-site phlebotomist attempts after two failed attempts). No regulation requiring 2 was found in the repo, and one chair can physically carry up to 9 clients on the 25-minute cadence. 1 phlebotomist on mornings of 9 or fewer saves A$234.51 a weekday morning (A$6,682.23 a month) and lowers break-even to 7.250 | 🟡 **Anthony to decide.** Not silently dropped. Ask the pathology partner whether it requires 2 collectors |
+| 20a | ✅ Phlebotomist rule | **Decided by Anthony 2026-10-17: phlebotomists are on the adaptive roster.** 1 phlebotomist on mornings of 9 or fewer (no two clients in a slot), 2 from 10 booked, none in the afternoon; a named second collector is on call on light mornings. The earlier fixed minimum of 2 was GTT's own clinical standard (2026-10-11), not a regulation found in the repo. Saves A$6,682.23 a month on light mornings and lowers break-even to 7.250 | 🟡 Conditions: difficult-draw cover (maximum 2 attempts, then the on-call collector, otherwise reschedule or refer back), fainting protocol and a vasovagal recovery chair; Saturday has no Venue Manager, so a second collector every Saturday is recommended until first-aid cover is confirmed (A$1,523.12 a month, not in the headline). **The pathology partner and the Medicare and lab-employment rules may require the lab to supply collectors; if so the roster is the lab's decision** |
+| 20c | 🆕 10% post-test discount | **Adopted by Anthony 2026-10-17.** Any expecting mother who completes a GTT test can redeem 10% off standalone wellness treatments or multi-service packages, morning or afternoon (valid immediately). Cost is not deducted from any figure in this model: at A$117 a booking, 25% take-up costs A$1,386.27 a month (3.9% of monthly profit; break-even 7.250 to 7.461), 10% take-up A$554.51. It pays for itself if 10% of redeemers are new bookings (idle therapist time) or 24.2% (extra hours must be paid). Terms (exclusions, stacking, one use per test, 14-day expiry) are proposals awaiting sign-off | 🟡 Take-up and new-booking share are assumptions. Workings: `docs/overhaul-2026-10-17/M-model/R2-POST-TEST-DISCOUNT.md` |
 | 20b | 🆕 Site brief says the A$10,500 ceiling is **excluding GST**; this model (like v0.2) treats the rent line as GST-inclusive and claims 1/11 back | If the landlord charges GST on top of A$10,500, cash rent is A$11,550: repo-basis net -A$1,050/month and GST-stress net -A$954.55/month vs Section 9 | Small, flagged | Grace at lease stage |
 
 ### 8c. Open items and this model's assumptions (TM)
@@ -631,7 +634,7 @@ Note: the 12/day row is this model's own figure on Table 1 rules. The repo's Tab
 | 38 | Contingency in rent-adjusted capital | Kept at A$26,914 | 🟡 TM |
 | 39 | Rent-adjusted scenarios keep every other line at the headline | Only rent, bond and advance rent change (plus utilities / cleaning in the gross ceiling column) | 🟡 TM |
 | 40 | 🆕 **Cadence** | **25-minute pair cadence only** (first booking 07:00, last first draw 10:20, 18 clients a morning at most). Retired permanently by Anthony 2026-10-16: no other cadence is used anywhere | ✅ Decided |
-| 41 | 🆕 **Slot offering** | All slots are offered; clients choose, booking 2 to 4 weeks ahead. The roster follows the confirmed pattern. The break-even of 8.266 assumes bookings fall one per slot; stacking in pairs from 07:00 raises it (Section 6) | 🟠 Watch the booking pattern in Fresha |
+| 41 | 🆕 **Slot offering** | All slots are offered; clients choose, booking 2 to 4 weeks ahead. The roster follows the confirmed pattern. The break-even of 7.250 assumes bookings fall one per slot; stacking in pairs from 07:00 raises it to 12.655 (Section 6) | 🟠 Watch the booking pattern in Fresha |
 | 42 | 🆕 Fill rate 100% of rostered capacity from Month 1 | No ramp-up. Clients prepay; no-shows and late cancellations keep full payment (S28). The waitlist backfills cancellations | 🔴 Central risk, sensitivity in Section 13 |
 | 43 | 🆕 Casual pool availability | Phlebotomists and therapists are called in to match the confirmed slots. The pool on the books is sized for the busiest morning plus absences (12 AM therapists, 4 phlebotomists, 4 PM therapists, 1 Venue Manager) | 🟠 Recruitment risk, not costed |
 | 44 | 🆕 Full 6-hour AM shifts paid on every rostered morning | Repo basis. Early release (start later / leave earlier, 3-hour floor) is a separate repo upside: A$14,167.19/month wages at 18/day (S1 §8, dated 2026-08-05, older rates), about A$16,108/month with on-costs (TM). Not in any figure here | 🟢 Upside |
@@ -664,8 +667,8 @@ Note: the 12/day row is this model's own figure on Table 1 rules. The repo's Tab
 | **Net per month, GST-stress** | **A$23,442.58** | **A$22,078.94** | **A$21,169.85** | **A$22,306.21** |
 | Year 1 net, repo basis: v0.5 (v0.4 ramped) | A$422,236.80 (A$322,014.93) | A$404,236.80 (A$304,014.93) | A$392,236.80 (A$292,014.93) | A$407,236.80 (A$307,014.93) |
 | Year 1 net, after GST: v0.5 (v0.4 ramped) | A$281,310.96 (A$196,608.65) | A$264,947.28 (A$180,244.99) | A$254,038.20 (A$169,335.90) | A$267,674.52 (A$182,972.24) |
-| **Break-even AM/day, repo (spaced bookings)** | **8.266** | **8.493** | **8.645** | **8.455** |
-| Break-even AM/day, GST-stress (spaced bookings) | 9.255 | 9.482 | 9.634 | 9.445 |
+| **Break-even AM/day, repo (spaced bookings)** | **7.250** | **7.478** | **7.630** | **7.440** |
+| Break-even AM/day, GST-stress (spaced bookings) | 8.138 | 8.366 | 8.518 | 8.328 |
 | **Peak funding, with GST: v0.5 (v0.4)** | **A$251,198.00** (A$267,771.03) | **A$254,198.00** (A$272,271.03) | **A$256,198.00** (A$275,271.03) | **A$256,198.00** (A$274,021.03) |
 | **Lowest cash = headroom** | **A$85,000.00** (opening) | **A$85,000.00** | **A$85,000.00** | **A$85,000.00** |
 | Fill-down runway, full months (70% fill) | 9 | 7 | 7 | 7 |
@@ -675,7 +678,7 @@ Note: the 12/day row is this model's own figure on Table 1 rules. The repo's Tab
 **Formulas (TM):**
 - Net = headline net less (total occupancy less A$9,250).
 - GST-stress net also gets back 1/11 of the occupancy change as a GST credit (see item 20b on GST and the ceiling).
-- Break-even = (A$78,993.29 + occupancy change less PM A$24,585.37) ÷ A$6,582.50.
+- Break-even = (A$72,311.06 + occupancy change less PM A$24,585.37) ÷ A$6,582.50.
 - Peak funding, payback and runway are re-run month by month with the Section 4 and 7 rules.
 
 **Plain English:**
@@ -697,28 +700,28 @@ Note: the 12/day row is this model's own figure on Table 1 rules. The repo's Tab
 
 | Fee per client | Monthly cost (at 18/day) | **Net / month (repo)** | Net / month (GST-stress) | Break-even AM/day (repo / GST, spaced) | Year 1 net (repo) | Payback (repo / GST) |
 |---|---|---|---|---|---|---|
-| A$0 (repo) | A$0.00 | **A$35,186.40** | A$23,442.58 | 8.266 / 9.255 | A$422,236.80 | M8 / M11 |
-| A$10 | A$4,739.40 | **A$30,447.00** | A$19,134.03 | 8.610 / 9.640 | A$365,364.00 | M9 / M14 |
-| A$20 | A$9,478.80 | **A$25,707.60** | A$14,825.49 | 8.984 / 12.683 | A$308,491.20 | M11 / M18 |
-| A$30 | A$14,218.20 | **A$20,968.20** | A$10,516.94 | 9.393 / 13.260 | A$251,618.40 | M13 / M25 |
+| A$0 (repo) | A$0.00 | **A$35,186.40** | A$23,442.58 | 7.250 / 8.138 | A$422,236.80 | M8 / M11 |
+| A$10 | A$4,739.40 | **A$30,447.00** | A$19,134.03 | 7.552 / 8.477 | A$365,364.00 | M9 / M14 |
+| A$20 | A$9,478.80 | **A$25,707.60** | A$14,825.49 | 7.881 / 8.846 | A$308,491.20 | M11 / M18 |
+| A$30 | A$14,218.20 | **A$20,968.20** | A$10,516.94 | 8.239 / 13.260 | A$251,618.40 | M13 / M25 |
 
 **At rent-adjusted A$10,500 (startup capital A$341,198; peak funding A$256,198):**
 
 | Fee per client | Monthly cost (at 18/day) | **Net / month (repo)** | Net / month (GST-stress) | Break-even AM/day (repo / GST, spaced) | Year 1 net (repo) | Payback (repo / GST) |
 |---|---|---|---|---|---|---|
-| A$0 (repo) | A$0.00 | **A$32,686.40** | A$21,169.85 | 8.645 / 9.634 | A$392,236.80 | M9 / M13 |
-| A$10 | A$4,739.40 | **A$27,947.00** | A$16,861.30 | 9.006 / 12.550 | A$335,364.00 | M10 / M16 |
-| A$20 | A$9,478.80 | **A$23,207.60** | A$12,552.76 | 9.397 / 13.096 | A$278,491.20 | M12 / M21 |
-| A$30 | A$14,218.20 | **A$18,468.20** | A$8,244.21 | 9.824 / 13.691 | A$221,618.40 | M15 / M32 |
+| A$0 (repo) | A$0.00 | **A$32,686.40** | A$21,169.85 | 7.630 / 8.518 | A$392,236.80 | M9 / M13 |
+| A$10 | A$4,739.40 | **A$27,947.00** | A$16,861.30 | 7.948 / 8.873 | A$335,364.00 | M10 / M16 |
+| A$20 | A$9,478.80 | **A$23,207.60** | A$12,552.76 | 8.294 / 13.096 | A$278,491.20 | M12 / M21 |
+| A$30 | A$14,218.20 | **A$18,468.20** | A$8,244.21 | 8.671 / 13.691 | A$221,618.40 | M15 / M32 |
 
 **At gross ceiling A$10,500 all-in (startup capital A$341,198; peak funding A$256,198):**
 
 | Fee per client | Monthly cost (at 18/day) | **Net / month (repo)** | Net / month (GST-stress) | Break-even AM/day (repo / GST, spaced) | Year 1 net (repo) | Payback (repo / GST) |
 |---|---|---|---|---|---|---|
-| A$0 (repo) | A$0.00 | **A$33,936.40** | A$22,306.21 | 8.455 / 9.445 | A$407,236.80 | M8 / M12 |
-| A$10 | A$4,739.40 | **A$29,197.00** | A$17,997.67 | 8.808 / 9.838 | A$350,364.00 | M10 / M15 |
-| A$20 | A$9,478.80 | **A$24,457.60** | A$13,689.12 | 9.191 / 12.890 | A$293,491.20 | M12 / M19 |
-| A$30 | A$14,218.20 | **A$19,718.20** | A$9,380.58 | 9.608 / 13.476 | A$236,618.40 | M14 / M28 |
+| A$0 (repo) | A$0.00 | **A$33,936.40** | A$22,306.21 | 7.440 / 8.328 | A$407,236.80 | M8 / M12 |
+| A$10 | A$4,739.40 | **A$29,197.00** | A$17,997.67 | 7.750 / 8.675 | A$350,364.00 | M10 / M15 |
+| A$20 | A$9,478.80 | **A$24,457.60** | A$13,689.12 | 8.087 / 12.890 | A$293,491.20 | M12 / M19 |
+| A$30 | A$14,218.20 | **A$19,718.20** | A$9,380.58 | 8.455 / 13.476 | A$236,618.40 | M14 / M28 |
 
 **Plain English:**
 - Every A$10 per client still costs about A$4,739 a month at full volume.
@@ -773,10 +776,10 @@ Every split is a **TM assumption**. The A$50 row is anchored to a competitor's A
 
 | Clinical part of each A$250 package (assumption) | Share | GST saved / month | **Net / month at A$8,000** | Net at A$9,500 | Net at A$10,500 | Net at gross ceiling | Break-even AM/day (GST, A$8,000, spaced) | Payback after GST (A$8,000) |
 |---|---|---|---|---|---|---|---|---|
-| A$0 (GST-stress downside) | 0% | A$0.00 | **A$23,442.58** | A$22,078.94 | A$21,169.85 | A$22,306.21 | 9.255 | M11 |
-| A$25 | 10% | A$1,077.14 | **A$24,519.72** | A$23,156.08 | A$22,246.99 | A$23,383.35 | 9.163 | M11 |
-| A$50 (market anchor) | 20% | A$2,154.27 | **A$25,596.85** | A$24,233.21 | A$23,324.12 | A$24,460.48 | 9.073 | M10 |
-| A$75 | 30% | A$3,231.41 | **A$26,673.99** | A$25,310.35 | A$24,401.26 | A$25,537.62 | 8.985 | M10 |
+| A$0 (GST-stress downside) | 0% | A$0.00 | **A$23,442.58** | A$22,078.94 | A$21,169.85 | A$22,306.21 | 8.138 | M11 |
+| A$25 | 10% | A$1,077.14 | **A$24,519.72** | A$23,156.08 | A$22,246.99 | A$23,383.35 | 8.057 | M11 |
+| A$50 (market anchor) | 20% | A$2,154.27 | **A$25,596.85** | A$24,233.21 | A$23,324.12 | A$24,460.48 | 7.978 | M10 |
+| A$75 | 30% | A$3,231.41 | **A$26,673.99** | A$25,310.35 | A$24,401.26 | A$25,537.62 | 7.901 | M10 |
 
 Note: computing the A$50 row directly (not by adding) can give A$0.01 more in some columns, from rounding GST on sales to the cent.
 
@@ -789,8 +792,8 @@ Note: computing the A$50 row directly (not by adding) can give A$0.01 more in so
 **Month 1 onward stays at +A$35,186.40 (repo basis) and +A$23,442.58 (GST-stress).** Annual: A$422,236.80 (repo basis) and A$281,310.96 (GST-stress). Net margin: 35,186.40 ÷ 143,070.37 = 24.6%.
 
 Why:
-- At 18 clients a morning the repo solver needs **8 therapists whatever the booking pattern**, and 2 phlebotomists (S29 §2). Payroll is A$93,595.63 (Section 3b).
-- Rostering to bookings is a lever on any morning that is not full; at capacity every role is rostered.
+- At 18 clients a morning the repo solver needs **8 therapists whatever the booking pattern**, and 2 phlebotomists (both chairs run; S29 §2). Payroll is A$93,595.63 (Section 3b).
+- Rostering to bookings, phlebotomists included, is a lever on any morning that is not full; at capacity every role is rostered, so the adaptive phlebotomist rule changes none of the steady-state figures.
 
 Three things could still move the steady state, none counted in the headline:
 - 🟢 **Early release** (staff start at their first booking and leave after their last, 3-hour floor): repo figure A$14,167.19/month wages at 18/day, about A$16,108 with on-costs (S1 §8, TM). Dated 2026-08-05, before the latest rates. Tagged upside.
@@ -803,7 +806,7 @@ Three things could still move the steady state, none counted in the headline:
 
 **Repo position:** the repo plans a waitlist (100 signups by week 13, 300+ by week 18) and a staffing decision from confirmed paid bookings (S32). It has **no fill-rate or conversion data**; it notes warm-waitlist conversion is "commonly 20 to 40%" but unverified for this category (S32). So the fill rates below are **explicit TM assumptions**. With no ramp-up this is the central risk of the plan.
 
-**Definition (TM):** fill rate = clients actually served ÷ rostered slots, from Month 1. The roster follows the bookings (Section 1A); at 85% and 70% the morning is still a 16-slot and 13-slot roster of 2 + 8.
+**Definition (TM):** fill rate = clients actually served ÷ rostered slots, from Month 1. The roster follows the bookings (Section 1A); at 85% and 70% the morning is still a 16-slot and 13-slot roster of 2 + 8 (both chairs run, so the adaptive phlebotomist rule does not change those two rows; averages hide quiet days under 10, which do better under the rule).
 
 - Prepaid bookings protect revenue: no-shows and cancellations under 24 hours keep the full fee; 24 to 48 hours keeps 50% (S28). The waitlist's job is to backfill released slots.
 
@@ -812,6 +815,7 @@ Three things could still move the steady state, none counted in the headline:
 | **100% (base)** | 18.0 | **A$35,186.40 / A$23,442.58** | A$422,236.80 | A$251,198.00 | 🟢 A$85,000.00 (opening) | M8 / M11 |
 | 85% | 15.3 | **A$17,413.65 / A$7,285.54** | A$208,963.80 | A$251,198.00 | 🟢 A$85,000.00 (opening) | M16 / M35 |
 | 70% | 12.6 | **-A$359.10 / -A$8,871.51** | -A$4,309.20 | A$468,975.83 at Month 24, still rising | 🔴 -A$132,777.83 (Month 24, still falling) | not reached |
+| 50% (v0.6; 9 a morning, 1 phlebotomist) | 9.0 | **A$11,516.81 / A$5,158.67** (was A$4,834.58 / -A$1,523.56 with 2 phlebotomists) | A$138,201.72 (was A$58,014.96) | A$251,198.00 | 🟢 A$85,000.00 (opening) | M23 / M51 (was M55 / not reached) |
 
 **Plain English:**
 - At 100% fill (the base), the waitlist does what the plan needs.
@@ -852,23 +856,42 @@ The earlier contingency for a slower cadence no longer applies. With the 25-minu
 | Annual steady state | A$422,236.80 | no change |
 | Net margin | 24.6% | no change |
 | GST-stress downside | +A$23,442.58 a month; A$281,310.96 a year | Year 1 A$196,609 |
-| Break-even AM clients/day | **8.266** (re-derived on the 25-minute cadence) | tied to the retired cadence |
+| Break-even AM clients/day | **7.250** (v0.6: adaptive phlebotomists; was 8.266 in v0.5) | tied to the retired cadence |
 | Year 1 net (repo / after GST) | **A$422,237 / A$281,311** | A$322,015 / A$196,609 |
 | Peak funding (with GST) | **A$251,198** | A$267,771 |
 | Payback (repo / after GST) | **Month 8 / Month 11** | Month 11 / Month 15 |
-| Gross ceiling A$10,500 all-in: net / GST-stress / break-even / peak / payback | **+A$33,936 / +A$22,306 / 8.455 / A$256,198 / M8 and M12** | +A$33,936 / +A$22,306 / 8.455 / A$274,021 / M11 and M16 |
-| Rent-adjusted A$10,500 (+ separate utilities and cleaning) | **+A$32,686 / 8.645 / A$256,198 / M9 and M13** | +A$32,686 / 8.645 / A$275,271 / M12 and M17 |
+| Gross ceiling A$10,500 all-in: net / GST-stress / break-even / peak / payback | **+A$33,936 / +A$22,306 / 7.440 / A$256,198 / M8 and M12** | +A$33,936 / +A$22,306 / 8.455 / A$274,021 / M11 and M16 |
+| Rent-adjusted A$10,500 (+ separate utilities and cleaning) | **+A$32,686 / 7.630 / A$256,198 / M9 and M13** | +A$32,686 / 8.645 / A$275,271 / M12 and M17 |
 | Startup capital | A$336,198 (A$341,198 at A$10,500) | no change |
 | Caveat to carry on every slide using these numbers | "Fill assumed 100% from Month 1 through marketing and a pre-launch waitlist: 85% is about +A$17.4k a month, 70% is a loss." | |
 
 ---
 
+## 15b. What changed from v0.5 to v0.6 (2026-10-17)
+
+| Item | v0.5 | v0.6 |
+|---|---|---|
+| Phlebotomists | 2 on every morning with a booking | **1 up to 9 booked, 2 from 10, none in the afternoon**; named second collector on call |
+| Break-even (repo / GST-stress) | 8.266 / 9.255 | **7.250 / 8.138** |
+| Margin of safety at 18 | 9.734 clients (54.1%) | **10.750 clients (59.7%)** |
+| Morning labour per month, 1 to 9 booked | A$42,255.18 (4 therapists + 2 phlebotomists) | **A$35,572.95** |
+| Net at 9 booked a morning | +A$4,834.58 a month | **+A$11,516.81** |
+| Saturday contribution at 9 booked | +A$25.65 | **+A$377.41** |
+| Saturday proof at 18 | +A$754.82 | +A$754.82 (unchanged) |
+| Steady state, Year 1, GST-stress, peak funding, payback | A$35,186.40; A$422,236.80; A$281,310.96; A$251,198; M8 / M11 | unchanged |
+| Headcount on the books | 21 (4 phlebotomists) | 21 (4 phlebotomists; peak need still 2) |
+| 10% post-test discount | proposal, afternoon only | **adopted, morning or afternoon**; cost A$277 to A$2,218 a month at 5% to 40% take-up; not deducted from the headline |
+
+---
+
 ## 16. Flags for Anthony
 
-1. **Phlebotomist minimum.** The model keeps 2 on every morning with a GTT booking (Section 1A). Releasing it to 1 on mornings of 9 or fewer saves A$6,682.23 a month and lowers break-even to 7.250. Your call, and worth asking the pathology partner first.
-2. **Break-even depends on booking pattern.** 8.266 assumes bookings fall one per slot. If every booking stacks in pairs from 07:00 it is 12.655.
+1. **Phlebotomists are adaptive (your decision, 2026-10-17).** The pathology partner and the Medicare and lab-employment rules may require the lab to supply collectors; if so the roster is the lab's decision. Ask the partner whether one collector per chair meets its collection-site conditions, and confirm Saturday first-aid cover (no Venue Manager on Saturdays).
+2. **Break-even depends on booking pattern.** 7.250 assumes bookings fall one per slot. If every booking stacks in pairs from 07:00 it is 12.655.
 3. **No ramp-up is a demand assumption.** Year 1 of A$422,237 requires 18 clients on day one. At 85% fill Year 1 is A$208,964; at 70% it is a loss.
 4. **Marketing.** The model uses the steady A$1,500 a month from Month 1. The pre-launch waitlist build sits in the launch marketing already in the startup costs.
+5. **Phlebotomist employment type.** The job posting offers permanent part-time 25 hours a week; an adaptive roster gives each of 4 phlebotomists about 9 to 18 hours a week. Casual or a guaranteed minimum roster: TO CONFIRM.
+6. **10% post-test discount terms.** Adopted in principle; the exclusions, stacking (it replaces the 10% pre-booking discount), one use per test and 14-day expiry are proposals for your sign-off.
 
 ---
 
