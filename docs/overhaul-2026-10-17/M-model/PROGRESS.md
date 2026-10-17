@@ -5,3 +5,4 @@
 - R2 workings written: R2-POST-TEST-DISCOUNT.md (policy box, cost, breakeven uplift)
 - DECISION-LOG 2026-10-17 entry, CURRENT-STATE, FINANCIALS (3-way v0.6, P&L, cashflow) updated; check_consistency run (1 pre-existing X-market finding only)
 - R2 afternoon-only wording updated in pricing, break-even-staff, ITC-38, tracker 39, X-market files
+- FOR-DOCUMENTS-AGENT.md written
