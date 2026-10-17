@@ -207,6 +207,8 @@ def clean_fin(t):
         (r'\(model, executive-summary[^)]*\)', '(figure to be confirmed)'),
         (r'\(model executive-summary[^)]*\)', '(figure to be confirmed)'),
         (r'; this figure is not in the plan', ''),
+        (r' \(was 8\.266 when 2 phlebotomists were rostered on every morning\)', ''),
+        (r'lowers break-even from 8\.266 to 7\.250', 'lowers break-even to 7.250'),
     ]
     for a, b in subs:
         t = re.sub(a, b, t)
