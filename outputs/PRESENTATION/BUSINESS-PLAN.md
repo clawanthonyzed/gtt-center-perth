@@ -7,11 +7,11 @@
 | | |
 |---|---|
 | **Prepared by** | Grace (Operations Manager) for Anthony Zed |
-| **Date** | 2026-10-16 |
+| **Date** | 2026-10-17 |
 | **Status** | DRAFT for review. Not yet approved for release. |
-| **Version** | v0.5 |
+| **Version** | v0.6 |
 | **Business name** | GTT Center Perth (working name; the trading name is still to be confirmed, see Appendix C) |
-| **Trading entity** | To be confirmed (the accountant and solicitor will advise; see Appendix D) |
+| **Trading entity** | A dedicated Australian proprietary company is recommended, subject to accountant and solicitor advice (see Section 9.7) |
 | **Stage** | Pre-launch. No venue, no lease, no signed laboratory agreement, no trading data. |
 | **Currency** | All figures in Australian dollars (A$) |
 
@@ -29,7 +29,7 @@
 
 **Why it should work.** The test is recommended for every pregnant woman and nearly every expecting mother is offered it. Greater Perth recorded 24,271 births in 2024, roughly 467 tests a week. Our research found no equivalent venue in Western Australia. This is our own finding, not an independent audit.
 
-**The model.** Wellness staff are employed (casual or permanent). GTT takes up to 18 clients each morning, Monday to Saturday, with the first booking at 07:00 and pairs of clients starting every 25 minutes. Expecting mothers book 2 to 4 weeks ahead and a waitlist backfills cancellations. Staff are called in to match each morning's confirmed bookings, so idle staff are never rostered. GTT opens at full capacity: launch marketing and a pre-launch waitlist fill the diary before the first day, so the plan has no slow ramp-up period. Pathology testing and the courier are provided by the pathology partner, chosen from PathWest, Western Diagnostic Pathology (WDP) and Clinipath. GTT earns no pathology revenue.
+**The model.** Wellness staff are employed (casual or permanent). GTT takes up to 18 clients each morning, Monday to Saturday, with the first booking at 07:00 and pairs of clients starting every 25 minutes. Expecting mothers book 2 to 4 weeks ahead and a waitlist backfills cancellations. Staff, phlebotomists included, are called in to match each morning's confirmed bookings, so idle staff are never rostered. GTT opens at full capacity: launch marketing and a pre-launch waitlist fill the diary before the first day, so the plan has no slow ramp-up period. Pathology testing and the courier are provided by the pathology partner, chosen from PathWest, Western Diagnostic Pathology (WDP) and Clinipath. GTT earns no pathology revenue.
 
 ### Key numbers card
 
@@ -38,7 +38,7 @@
 | Morning capacity | 18 clients a day (9 pairs, 2 chairs, 25-minute cadence) | same |
 | Steady-state operating profit, per month (from Month 1) | **+A$35,186.40** | **+A$33,936** |
 | Conservative "GST-stress" case, per month | +A$23,443 | +A$22,306 |
-| Break-even, morning clients a day | **8.266** (about 46% of capacity) | 8.455 |
+| Break-even, morning clients a day | **7.250** (about 40% of capacity) | 7.440 |
 | Year 1 net operating profit (12 full months) | **A$422,237** (GST-stress A$281,311) | GST-stress A$267,675 |
 | Startup capital (base) | **A$336,198** | A$341,198 |
 | Peak funding | **A$251,198** | A$256,198 |
@@ -48,8 +48,9 @@
 **Conditions that travel with these numbers.**
 
 1. **Rent.** The cost model uses A$8,000 a month. The approved rent budget is A$9,500 to A$10,500 a month. The right-hand column shows the A$10,500 gross ceiling (rent, outgoings and car bays all in).
-2. **Fill rate is the central risk.** The model assumes every released morning place fills (100%) from the first day. Each 1% of fill at capacity is worth about A$1,185 a month. At 85% fill, profit is about +A$17.4k a month. At 70% fill GTT roughly breaks even. This is why the pre-launch waitlist and the 2 to 4 week booking window are core to the plan.
-3. **Clinical staffing.** The plan keeps 2 phlebotomists on every testing morning, GTT's clinical standard, pending the pathology partner's answer on its collector requirements.
+2. **Fill rate is the central risk.** The model assumes every released morning place fills (100%) from the first day. Each 1% of fill at capacity is worth about A$1,185 a month. At 85% fill, profit is about +A$17.4k a month. At 70% fill GTT roughly breaks even. At half a morning (9 a day) GTT still earns about A$11,517 a month, because the roster scales down with the bookings. This is why the pre-launch waitlist and the 2 to 4 week booking window are core to the plan.
+3. **Clinical staffing.** Phlebotomists are rostered to the confirmed bookings like every other role: one phlebotomist for 1 to 9 bookings, two from the tenth booking, none in the afternoon, and a named second collector on call on lighter mornings. The break-even of 7.250 assumes bookings fall one to a time slot. The pathology partner and the Medicare rules may require the laboratory to supply the collectors, in which case the roster is the laboratory's decision (Section 5.4).
+4. **Medicare.** The plan assumes the laboratory bills Medicare for the test. If Medicare did not pay and GTT absorbed the laboratory fee, it would cost about A$12,251 a month and lift break-even to 8.087 (Section 5.4).
 
 **Funding position.** The planning need is A$336,198 to A$361,198 (A$251,198 pre-opening capital plus A$85,000 to A$110,000 working capital). Funds on hand are about A$200,000 (founder savings, to be confirmed). The gap on the peak-funding basis is about A$51,198. The funding route is to be confirmed.
 
@@ -74,7 +75,7 @@ The glucose tolerance test is optional: every expecting mother chooses whether t
 
 | Element | What GTT Center Perth provides |
 |---|---|
-| Blood collection | On site, in private collection rooms, by certified phlebotomists. Who employs the collection staff is subject to written confirmation from the pathology partner and Medicare (see Section 5.4). |
+| Blood collection | On site, in private collection rooms, by certified phlebotomists, under the pathology partner's Medicare approvals. Who employs the collectors is to be settled in writing with the partner (see Section 5.4). |
 | The wait | Pregnancy massage, facials, nails, hair and brows between draws. Wellness services never interrupt a blood draw. |
 | Lounge | Venue and lounge access (water and herbal tea) is free inside every package. In-lounge tablets are loaded with pregnancy guides and the intake forms. |
 | Booking | Book and pay online in advance. Waitlist for popular mornings. |
@@ -109,7 +110,7 @@ Greater Perth recorded 24,271 births in 2024 (Australian Bureau of Statistics), 
 |---|---|
 | Planning capacity | 108 morning places a week (18 a day, 6 days) |
 | Capacity as share of Perth weekly tests | about 23% |
-| Break-even volume as share of Perth weekly tests | about 10.8% (8.266 clients a day, about 50 a week, out of 467) |
+| Break-even volume as share of Perth weekly tests | about 9.3% (7.250 clients a day, about 44 a week, out of 467) |
 
 The honest question is not whether the market is big. It is whether we can win roughly 1 in 9 Perth expecting mothers through referrals and keep every released morning full.
 
@@ -152,7 +153,8 @@ A GTT is usually done at 24 to 28 weeks of pregnancy (earlier for women with ris
 - Every morning package includes any service on the menu that fits the 30 or 45 minute wellness window (see 4.3).
 - No package is sold lounge-only. Prices are GST-inclusive.
 - The financial baseline prices every morning client at A$250, a deliberately cautious assumption. Package 2 upgrades are upside, not counted.
-- The pathology fee is billed separately by the laboratory. The estimated out-of-pocket cost is A$0 to A$80, pending partner confirmation.
+- The test itself is billed by the laboratory to Medicare, so the expected out-of-pocket cost for a Medicare card holder is A$0. If Medicare did not pay, the laboratory's own fee would apply; the Medicare schedule fee is A$25.85 a visit and no laboratory has quoted a fee yet (Section 5.4).
+- **10% off after the test.** Any expecting mother who completes a glucose tolerance test can use 10% off standalone treatments or multi-service packages, morning or afternoon (Section 5.3).
 
 ### 4.2 Afternoon services
 
@@ -272,7 +274,7 @@ No price increase is planned in the first 12 months, so price is not a Year 1 le
 
 | # | Strategy | A$ effect | Basis |
 |---|---|---|---|
-| 1 | Adaptive rostering: roster only the staff that confirmed bookings need | Largest lever: it lowers break-even by about 4.4 clients a day against a fixed full roster | Financial model |
+| 1 | Adaptive rostering: roster only the staff that confirmed bookings need, phlebotomists included | Largest lever: it lowers break-even by about 5.4 clients a day against a fixed full roster (12.655 to 7.250) | Financial model |
 | 2 | Rent in the lower half of A$9,500 to A$10,500 gross, and 3 to 6 months rent-free during fit-out | Each A$500 a month saved = A$6,000 a year. Three to six rent-free months at A$10,000 = A$30,000 to A$60,000, one-off | Arithmetic from the lease terms sought |
 | 3 | Written wholesale per-test and collection fees from all three laboratories, then compare | Not valued until a fee is quoted | No fee quoted yet |
 | 4 | Three insurance broker quotes | Not valued until quoted | Quotes pending |
@@ -287,7 +289,7 @@ The afternoon runs 10 sessions a day (about 210 a month). The morning supplies a
 1. At booking: show the afternoon menu and the PM Refresh (A$185) and PM Restore (A$135) packages beside the morning package.
 2. At intake, with consent: record the due date and preferred treatments, and pregnancy-safe notes for the therapist.
 3. During the visit: the therapist who gave the 30 or 45 minute treatment mentions the longer version (a 30 minute facial at A$95 against a 60 minute hydration facial at A$145).
-4. At checkout: book a standalone afternoon treatment on the lounge tablet with the Test Day Thank You offer (Section 5.3), valid 14 days.
+4. At checkout: book a standalone treatment on the lounge tablet with the 10% post-test discount (Section 5.3).
 5. After the visit: a thank-you message (with consent) with the afternoon booking link; a second message at 34 to 36 weeks; a postnatal message after the due date.
 6. Rebooking: every afternoon visitor is offered the next appointment at the desk, building a monthly treat rhythm until the due date.
 
@@ -302,8 +304,8 @@ If one in four testing clients books an afternoon treatment, that is about 118 s
 | Task | GTT Center Perth | Pathology partner |
 |---|---|---|
 | Venue, collection rooms, chairs | Provides | Inspects and approves |
-| Collection staff (phlebotomists) | Proposed: GTT employs them, subject to written confirmation from the pathology partner and Medicare. The collector may need to be employed or engaged by the laboratory. | Must engage or credential them under its own quality system |
-| Draws blood | The certified collection staff on site | Collection approval and oversight |
+| Collection staff (phlebotomists) | Preferred: the laboratory places its own employed collectors in our rooms. Alternative: GTT employs them, which only works if Medicare payment for those specimens is confirmed in writing (Section 5.4). | Employs or engages the collectors it places and credentials them under its own quality system |
+| Draws blood | The certified collection staff on site, as agreed with the partner | Collection approval and oversight |
 | Courier and laboratory testing | No | Yes (one courier pickup per day) |
 | Medicare billing for the test | No. GTT earns nothing from pathology. | Yes |
 | Results to the doctor | No | Yes |
@@ -316,10 +318,10 @@ Marketing must not say "we perform GTT testing". The phlebotomist's scope is pat
 | Item | Standard |
 |---|---|
 | First booking | 07:00. Expecting mothers arrive fasted, 10 minutes before their draw (06:50). |
-| Chairs and phlebotomists | 2 chairs, 2 phlebotomists on every morning with any GTT booking |
+| Chairs and phlebotomists | 2 chairs. One phlebotomist for 1 to 9 bookings, two from the tenth booking, none in the afternoon. A named second collector is on call on lighter mornings. |
 | Cadence | One cadence only: the 25-minute pair cadence. Pairs start at 07:00, 07:25, 07:50 and so on. Nine pairs, up to **18 clients** a morning. Last first draw 10:20. |
 | Last first-draw limit | No later than 10:30 (laboratory guidance) |
-| Rostering | Staff are called in to match confirmed bookings, morning and afternoon. A morning with one booking runs 2 phlebotomists and 2 therapists. |
+| Rostering | Staff are called in to match confirmed bookings, morning and afternoon. A morning with one booking runs 1 phlebotomist and 2 therapists. |
 | Booking | 2 to 4 weeks ahead, prepaid, plus a waitlist |
 | Trading days | Monday to Saturday |
 
@@ -341,7 +343,21 @@ The client stays on site and seated or escorted throughout. Services are low-act
 
 **Refreshment counter.** There is no free meal. Expecting mothers pre-order food and drink when they book, or buy from the Private Refreshment Counter in the lounge. Nothing is served during an active test.
 
-**Test Day Thank You.** Every expecting mother who books a standalone afternoon treatment within 14 days of her test receives an exclusive discount: advance booking only, one use per client, subject to availability. Proposed discount: 10% (to be set by Anthony; 15% and A$20 off are alternatives). The existing 10% online pre-booking discount applies when an afternoon treatment is booked with the test.
+**10% off after your test.** Every expecting mother who completes a glucose tolerance test with us can redeem 10% off a standalone wellness treatment or multi-service package. It is valid from the moment her test is complete, so a morning client who finishes her test can book the same day if a therapist is free, and it is also available in the afternoon. One redemption per completed test. Cannot be combined with other offers. Does not apply to the morning package, refreshments, retail or gift vouchers. Subject to availability. This replaces the earlier 10% online pre-booking discount: there is one 10% offer only.
+
+*Proposed terms, not yet confirmed:* a 14-day expiry, "a test completed at GTT Center Perth", one redemption per test, the exclusion list and recording the redemption in the booking system. If these are not confirmed, only the first four sentences above are used and no expiry applies.
+
+**Table 5.3a: Cost of the 10% post-test discount (not deducted from the profit figures)**
+
+| Take-up (share of testing clients who redeem) | Redemptions a month | Cost a month, one A$117 treatment | Cost, PM Restore A$135 | Cost, PM Refresh A$185 | Share of monthly profit (A$117) | Break-even after discount (A$117) |
+|---|---|---|---|---|---|---|
+| 5% | 23.7 | A$277.25 | A$319.91 | A$438.39 | 0.8% | 7.293 |
+| 10% | 47.4 | A$554.51 | A$639.82 | A$876.79 | 1.6% | 7.335 |
+| 15% | 71.1 | A$831.76 | A$959.73 | A$1,315.18 | 2.4% | 7.377 |
+| 25% | 118.5 | A$1,386.27 | A$1,599.55 | A$2,191.97 | 3.9% | 7.461 |
+| 40% | 189.6 | A$2,218.04 | A$2,559.28 | A$3,507.16 | 6.3% | 7.587 |
+
+How it pays for itself. The discount costs 10% of each redeemed booking. At 25% take-up on a typical A$117 treatment it costs about A$1,386 a month, 3.9% of monthly profit, and raises break-even from 7.25 to 7.46 clients a day. It pays for itself if one redeemer in ten is a new booking that would otherwise not have been made (when the therapist's time is already paid), or about one in four (24%) if extra hours must be paid. Take-up and the share of new bookings are planning assumptions, not data.
 
 ### 5.4 Pathology partner options
 
@@ -358,9 +374,36 @@ The client stays on site and seated or escorted throughout. Services are low-act
 
 No laboratory has yet quoted a fee. Written per-test and collection fees will be requested from all three before a partner is chosen.
 
-**Pathology accreditation and approvals.** Pathology collection at GTT Center Perth operates under our pathology partner's accreditation and Medicare collection centre approval. The approval is held by the pathology company, not by GTT. The collection room is designed to the national standard for approved pathology collection centres and is a dedicated room (or a single large room with a clinical privacy curtain between two collection bays), with a hand wash basin in each bay. We have found no Western Australian state licence category for a private blood collection room, and will confirm this in writing with the Western Australian Department of Health. The pathology partner holds the Medicare collection centre approval and an occupation agreement for the collection room. Who employs the collectors is being confirmed with the partner so that the test remains bulk billed. If two collection rooms create an approval difficulty, the single large room with a curtain partition is the fallback design.
+**Pathology accreditation and approvals.** Pathology collection at GTT Center Perth operates under our pathology partner's accreditation and Medicare approvals. A company that only collects blood cannot be an Approved Pathology Authority: under the Health Insurance Act 1973 only an authority that owns and runs an accredited laboratory can hold an approved collection centre. Only the laboratory applies for the approved collection centre for our rooms, on an occupation agreement with us, and it gives the undertaking to follow the national collection standard. GTT cannot apply to Services Australia for the approval, and building our own laboratory is not a practical option for this plan. The collection rooms are designed to the national standard for approved pathology collection centres: two equal dedicated rooms (or a single large room with a clinical privacy curtain between two collection bays), each with its own specimen fridge and a hand wash basin. If two collection rooms create an approval difficulty, the single large room with a curtain partition is the fallback design.
 
-**Caveat that is not yet solved.** Only the pathology partner can hold the Commonwealth collection centre approval for a room, and two competing laboratories cannot both hold it for the same room. This, and the question of who must employ the collectors for Medicare billing, must be settled in writing with the chosen laboratory and an adviser before fit-out spending. Nothing is signed.
+**How bulk billing works.** For a Medicare card holder, the laboratory bills Medicare for the test and the client pays the laboratory nothing, so GTT carries no pathology cost or revenue. The Medicare schedule fee for one visit is A$25.85: item 66548 (the pregnancy glucose tolerance test, A$19.90) plus item 73928 (the collection episode, A$5.95). Laboratory private fees may differ and no laboratory has quoted a fee yet.
+
+**The collector question.** Medicare pays for a specimen collected at an approved centre only where the person collecting is the pathologist or an employee of the approved pathology authority. Centre approval itself also accepts collectors who are engaged by the authority under a contract that lets it direct and control their work, but the wording of the payment rule does not mention contractors. For that reason the preferred arrangement is for the laboratory to place its own employed collectors in our rooms, with GTT hosts supporting each expecting mother through the two-hour wait. If a laboratory does supply the collectors, GTT's collector wage cost (about A$6,682 a month for each collector on shift) falls away, less any market-value charge the laboratory may make. None of this is agreed with any laboratory yet.
+
+**Table 5.4a: What happens if Medicare does not pay (monthly, 18 clients a morning, 26.33 days)**
+
+| Scenario | Lab fee borne by GTT per client | Cost per month | Net operating profit per month | Break-even clients per morning |
+|---|---|---|---|---|
+| Laboratory bulk-bills Medicare (plan) | A$0.00 | A$0.00 | A$35,186.40 | 7.250 |
+| Laboratory supplies its own employed collectors, no charge (upside, only if agreed in writing) | A$0.00 | A$0.00, and collector wages of A$13,364 a month are saved | A$48,550.92 | 6.235 |
+| Client pays the laboratory directly | A$0.00 | A$0.00 | A$35,186.40 if bookings hold | 7.250 |
+| GTT absorbs the Medicare schedule fee of A$25.85 | A$25.85 | A$12,251.35 | A$22,935.05 | 8.087 |
+
+If GTT absorbed the fee, Year 1 profit would fall by about A$147,016 (from A$422,237 to A$275,221). The package price needed to stay whole is A$275.85 (GST aside). If the client pays the laboratory directly, GTT's profit is unchanged but the client's outlay rises by about A$25.85, which may weigh on demand.
+
+**Table 5.4b: Ways to make bulk billing work, ranked by feasibility**
+
+| Rank | Route | What it does | Who must agree |
+|---|---|---|---|
+| 1 | The laboratory places its own employed collectors in our rooms | Fits the Medicare payment rule exactly. Removes GTT's collector wages, less any charge by the laboratory. | The laboratory; Services Australia for the centre approval |
+| 2 | Hybrid: a laboratory-employed collector takes every specimen and GTT hosts do everything else | Keeps the host experience in GTT's hands. GTT staff must not collect. | The laboratory; roles written down |
+| 3 | The laboratory engages GTT's collectors under a contract giving it direction and control | Acceptable for centre approval. Whether Medicare pays for these specimens is unclear. | The Department of Health in writing; a health lawyer |
+| 4 | GTT-employed collectors seconded to the laboratory for the morning | Weakest route. Improved if they become fixed-term employees of the laboratory (route 1). | As route 3 |
+| 5 | Fallback: the client pays the laboratory privately, or GTT absorbs the fee | Lawful. Cost is shown in Table 5.4a. | The accountant |
+
+The recommended approach is to open with routes 1 and 2 with each laboratory and let its written answer decide. Nothing is signed and nobody has been asked yet. Written answers are needed from the laboratories, from Services Australia (on the approval, one room with two chairs and a curtain, and the occupation document) and from the Department of Health (on the employee-or-contractor question), before any fit-out money is spent.
+
+**Western Australian licence.** No Western Australian state licence category for a private blood collection room has been found. The private hospital licence covers hospitals, and a collection-only room does none of the procedures that define a day hospital. Accreditation belongs to the laboratory, not the room. Council planning, building and health approvals still apply. Written confirmation from the Department of Health and the local council has still to be obtained. If GTT rostered a registered nurse and offered facilities for medical attention, a regulator could treat the venue differently, so the clinical role is kept to laboratory collectors and first aid.
 
 ### 5.5 Compliance
 
@@ -376,7 +419,8 @@ No laboratory has yet quoted a fee. Written per-test and collection fees will be
 | Consent form and privacy policy | Drafts. Solicitor review required before any client data is collected. | Open |
 | Referral law | No payment, reward or perk to any doctor or midwife for referrals (Health Insurance Act 1973 (Cth) and advertising rules) | Policy set; wording review open |
 | Insurance | Public liability, products liability, professional indemnity, workers compensation: no broker quote yet. Clinical and cyber cover to be settled. | Open |
-| Western Australian licence for a blood collection room | No state licence category found | Confirm in writing with the Department of Health |
+| Medicare approved collection centre | Held by the pathology partner only. GTT cannot hold it or apply for it. | Partner and Services Australia to confirm |
+| Western Australian licence for a blood collection room | No state licence category found for a collection-only room | Written confirmation from the Department of Health still to be obtained |
 | Emergency procedures | Emergency plan drafted. Hypoglycaemia and needle-stick procedures still to be written. | Open |
 
 General information only. Each item must be verified with the adviser or regulator before external reliance.
@@ -398,7 +442,7 @@ Every client completes a pregnancy health declaration and consent form, and a re
 | Item | Requirement |
 |---|---|
 | Floor area | **257 to 290 sqm** net usable. 257 sqm is the minimum. |
-| Blood collection rooms | **2 dedicated rooms**, solid walls, one lockable door each, or one large room divided by a clinical privacy curtain between two bays. A hand wash basin in each bay. |
+| Blood collection rooms | **2 equal dedicated rooms of 19.0 sqm each** (the middle of the 18 to 20 sqm range, subject to the partner's confirmation), solid walls, one lockable door each, each with its own specimen fridge, or one large room divided by a clinical privacy curtain between two bays. A hand wash basin in each bay. |
 | Lounge | Open-plan luxury lounge with the **Private Refreshment Counter (exclusive to GTT clients)** |
 | Rent budget | **A$9,500 to A$10,500 a month gross** (base rent plus estimated outgoings, excluding GST). A$10,500 is the hard all-in ceiling. |
 | Level and access | Ground floor only, accessible path of travel, accessible toilet, doors at least 850 mm clear in clinical rooms |
@@ -450,7 +494,14 @@ The nearest medical building (25 Mills Street South, Cannington, 330 sqm) is adv
 
 ### 6.5 Concept floor plan
 
-A concept floor plan and layout schematic is used to brief the architect, obtain fit-out quotes and source furniture and fixtures, including direct from China where compliant. It shows two dedicated blood collection rooms (with an inset for one large room divided by a clinical privacy curtain), an open-plan luxury lounge with the Private Refreshment Counter, massage and beauty bays with partition walls and privacy curtains, a handwash basin in every bay, and clinical waste and the specimen fridge kept physically separate from the refreshment counter. Concept layout of about 289 sqm, concept only, not for construction; subject to site survey, architect and building code compliance.
+A concept floor plan (version 2) is used to brief the architect, obtain fit-out quotes and source furniture and fixtures, including direct from China where compliant. It is a single drawing of about 289 sqm (18.5 m by 15.6 m), inside the 257 to 290 sqm search range. It is a concept only, not for construction, and is subject to site survey, architect and building code compliance. The full drawing, change list and shopping list by room are in the companion page, floor-plan-v2.html, in the same folder as this plan.
+
+- **Two equal blood collection rooms of 19.0 sqm each**, each with its own specimen fridge under the bench, a hand wash basin, a recovery recliner and a documentation bench. There is no separate fridge room. The alternative of one large room divided by a clinical privacy curtain is shown as an inset.
+- **Every room opens onto a corridor or the lounge.** No room is reached only by walking through another.
+- **Clean and dirty routes are separate.** Clinical waste and soiled linen leave by a separate service door along a staff-only corridor and never cross a client area. Staff reach the staff room without passing the service and linen area, and the staff room opens to both corridors.
+- **Shared amenities.** One accessible and one standard toilet serve clients and staff. There is no separate staff toilet. The number of toilets is confirmed by the architect and building surveyor.
+- **Bay sizes.** Hair and nail areas are sized at 5 to 6 sqm per station (about 24 sqm for hair and 22 sqm for nails). Each massage and beauty bay is about 10.7 sqm with partition walls, a privacy curtain and a hand wash basin. The open luxury lounge is about 45 sqm beside the Private Refreshment Counter, which is kept apart from specimens and clinical waste.
+- **Quantities to price.** A second specimen fridge and a second recovery recliner (one in each room) and possibly a second centrifuge are quantity changes not yet priced in the financial model.
 
 ![Concept floor plan](floor-plan-concept.png)
 
@@ -523,7 +574,7 @@ We will notify Perth GPs and private obstetricians through WA Primary Health All
 | Element | Plan |
 |---|---|
 | Offer | Lead with PM Refresh and PM Restore. Individual services stay visible as a secondary option. |
-| Cross-selling | Testing clients are offered afternoon treatments (Section 4.6) with the Test Day Thank You discount. |
+| Cross-selling | Testing clients are offered standalone treatments (Section 4.6) with the 10% post-test discount (Section 5.3). |
 | Partners | Prenatal yoga studios, women's health physiotherapists, antenatal class providers, doulas, maternity retailers and pregnancy photographers |
 | Group bookings | Antenatal cohorts, baby-shower groups, mother and daughter visits |
 | Paid search | Separate afternoon campaign for pregnancy wellness terms |
@@ -555,16 +606,22 @@ With her consent, each expecting mother's due date is recorded at booking so we 
 
 ### 8.1 Principle: adaptive rostering
 
-Staff are called in to match the confirmed bookings, morning and afternoon. GTT never rosters idle staff. A morning with one booking runs two phlebotomists and two therapists, not a full team. Staffing follows overlap, not headcount: each client has two services and pairs start 25 minutes apart. One client needs 2 phlebotomists and 2 therapists. Two to nine clients, one per slot, need 2 phlebotomists and 4 therapists. Ten clients need 6 therapists. Eleven to eighteen clients need the full 8 therapists (4 massage and beauty, 2 nails, 2 hair). At about 12.6 booked clients the roster is 8 therapists because neighbouring double-booked slots put four first services in the room at once; if second-chair bookings fall in alternate slots, 6 are enough. The roster is published one to two weeks ahead from the confirmed bookings. Afternoon sessions are fully adaptive and follow the pre-booked standalone services; walk-ins are accepted only when staff are free.
+Staff are called in to match the confirmed bookings, morning and afternoon, phlebotomists included. GTT never rosters idle staff. A morning with one booking runs one phlebotomist and two therapists, not a full team. Up to nine bookings run one phlebotomist and four therapists. From the tenth booking both collection chairs run, with two phlebotomists. There is no phlebotomist in the afternoon. On lighter mornings a named second collector is on call for a difficult draw or a faint.
+
+**Roster logic.** Staffing follows overlap, not headcount. Each client has three timed blood draws and two 45-minute wellness services, and pairs start 25 minutes apart. One chair carries up to nine clients because no two draws ever fall together, so one phlebotomist is rostered. From the tenth booking two clients share a time slot, two draws fall together and the second chair opens. One client: 1 phlebotomist and 2 therapists. Two to nine clients, one per slot: 1 phlebotomist and 4 therapists. Ten clients: 2 phlebotomists and 6 therapists. Eleven to eighteen clients: 2 phlebotomists and the full 8 therapists (4 massage and beauty, 2 nails, 2 hair). The roster is published one to two weeks ahead from the confirmed bookings. Afternoon sessions are fully adaptive and follow the pre-booked standalone services; walk-ins are accepted only when staff are free.
+
+**Clinical safety.** A named second collector is on call on mornings with nine or fewer bookings. If a first collector cannot obtain a sample after two attempts, the second collector attends; if she cannot, the client is rebooked or referred back to her doctor or midwife in line with the pathology partner's protocol. A client who feels faint is seated or laid down, the Venue Manager attends immediately and the recovery chair is used; the collector continues with the next client.
+
+**One honest line.** The pathology partner and the Medicare rules may require the laboratory to supply the collectors, in which case the collector roster is the laboratory's decision (Section 5.4).
 
 ### 8.2 People on the books
 
-GTT keeps 21 people on the books: 1 Venue Manager; 4 phlebotomists; 12 morning therapists (6 massage and beauty, 3 nail technicians, 3 hairdressers); and 4 afternoon therapists (massage, beauty, nails, hair). Only 2 phlebotomists and up to 8 therapists work any one morning. The extra people cover leave, illness and Saturdays, sized so that at least 95% of days are fully staffed (phlebotomists 99.8%). All are casual initially, reviewed for part-time after 3 to 6 months. Employment type for the Venue Manager and phlebotomists is to be confirmed.
+GTT keeps 21 people on the books: 1 Venue Manager; 4 phlebotomists; 12 morning therapists (6 massage and beauty, 3 nail technicians, 3 hairdressers); and 4 afternoon therapists (massage, beauty, nails, hair). Only as many work a morning as the bookings need: one phlebotomist up to nine bookings, two from ten, and up to 8 therapists. The extra people cover leave, illness and Saturdays, and supply the on-call second collector on lighter mornings, so that at least 95% of days are fully staffed (phlebotomists 99.8%). All are casual initially, reviewed for part-time after 3 to 6 months. Employment type for the Venue Manager and phlebotomists is to be confirmed.
 
 | Role | Number | Basis | Notes |
 |---|---|---|---|
 | Venue Manager | 1 | Monday to Friday, 07:00 to 15:00 | Not yet hired. Covers reception from 07:00 and is the first responder, first aider, EpiPen holder and fire warden. An experienced rostered staff member covers reception on Saturday. Hire is gated behind the laboratory agreement and the venue. |
-| Phlebotomists (certified) | 2 on shift, 4 on the books | Casual, review at 3 to 6 months | Collection Room 1 and Collection Room 2, 07:00 to 13:00. Relief pool because nobody else can cover phlebotomy. Employer subject to written confirmation from the pathology partner and Medicare. |
+| Phlebotomists (certified) | 1 or 2 on shift, 4 on the books | Casual, review at 3 to 6 months | One for 1 to 9 bookings, two from 10, 07:00 to 13:00; none in the afternoon. Relief pool because nobody else can cover phlebotomy. Employer to be settled in writing with the pathology partner (Section 5.4). |
 | Morning therapists | up to 8 on a full morning | Casual, dual-qualified where possible | 4 massage and beauty, 2 nails, 2 hair |
 | Afternoon therapists | 4 | Casual, paid for hours worked | Massage, beauty, nails, hair, cross-qualified with the morning pool |
 | Reception | No separate role | Venue Manager covers the morning shift. Rostered afternoon staff cover check-in. | |
@@ -579,15 +636,15 @@ Awards: Hair and Beauty Industry Award (MA000005) and Health Professionals and S
 
 | Booked | Phlebotomists | Therapists (massage and beauty / nails / hair) | Last first draw | Labour per morning | Revenue per morning | Contribution per morning |
 |---|---|---|---|---|---|---|
-| 1 | 2 | 2 (1/1/0) | 07:00 | A$975.96 | A$250 | -A$725.96 |
-| 2 | 2 | 4 (2/2/0) | 07:25 | A$1,482.90 | A$500 | -A$982.90 |
-| 3 | 2 | 4 (2/2/0) | 07:50 | A$1,482.90 | A$750 | -A$732.90 |
-| 4 | 2 | 4 (2/2/0) | 08:15 | A$1,482.90 | A$1,000 | -A$482.90 |
-| 5 | 2 | 4 (2/2/0) | 08:40 | A$1,482.90 | A$1,250 | -A$232.90 |
-| 6 | 2 | 4 (2/2/0) | 09:05 | A$1,482.90 | A$1,500 | A$17.10 |
-| 7 | 2 | 4 (2/2/0) | 09:30 | A$1,482.90 | A$1,750 | A$267.10 |
-| 8 | 2 | 4 (2/2/0) | 09:55 | A$1,482.90 | A$2,000 | A$517.10 |
-| 9 | 2 | 4 (2/2/0) | 10:20 | A$1,482.90 | A$2,250 | A$767.10 |
+| 1 | 1 | 2 (1/1/0) | 07:00 | A$741.45 | A$250 | -A$491.45 |
+| 2 | 1 | 4 (2/2/0) | 07:25 | A$1,248.39 | A$500 | -A$748.39 |
+| 3 | 1 | 4 (2/2/0) | 07:50 | A$1,248.39 | A$750 | -A$498.39 |
+| 4 | 1 | 4 (2/2/0) | 08:15 | A$1,248.39 | A$1,000 | -A$248.39 |
+| 5 | 1 | 4 (2/2/0) | 08:40 | A$1,248.39 | A$1,250 | A$1.61 |
+| 6 | 1 | 4 (2/2/0) | 09:05 | A$1,248.39 | A$1,500 | A$251.61 |
+| 7 | 1 | 4 (2/2/0) | 09:30 | A$1,248.39 | A$1,750 | A$501.61 |
+| 8 | 1 | 4 (2/2/0) | 09:55 | A$1,248.39 | A$2,000 | A$751.61 |
+| 9 | 1 | 4 (2/2/0) | 10:20 | A$1,248.39 | A$2,250 | A$1,001.61 |
 | 10 | 2 | 6 (3/2/1) | 10:20 | A$1,989.84 | A$2,500 | A$510.16 |
 | 11 | 2 | 8 (4/2/2) | 10:20 | A$2,496.78 | A$2,750 | A$253.22 |
 | 12 | 2 | 8 (4/2/2) | 10:20 | A$2,496.78 | A$3,000 | A$503.22 |
@@ -598,7 +655,7 @@ Awards: Hair and Beauty Industry Award (MA000005) and Health Professionals and S
 | 17 | 2 | 8 (4/2/2) | 10:20 | A$2,496.78 | A$4,250 | A$1,753.22 |
 | 18 | 2 | 8 (4/2/2) | 10:20 | A$2,496.78 | A$4,500 | A$2,003.22 |
 
-Weekday labour with superannuation and workers compensation; bookings assumed to fill from 07:00, one per slot first. Saturday labour is 1.5 times. The Venue Manager is a fixed cost and is not in these figures. The minimum of 2 phlebotomists on every testing morning is GTT's clinical standard, pending the pathology partner's answer.
+Weekday labour with superannuation and workers compensation; bookings assumed to fill from 07:00, one per slot first. Saturday labour is 1.5 times: at 9 bookings A$1,872.59, at 18 bookings A$3,745.18. The Venue Manager is a fixed cost and is not in these figures. A paid call-in of a second collector costs A$117.25 on a weekday and A$175.88 on a Saturday (three-hour minimum). Nine bookings earn more than ten to fourteen, because the tenth booking opens the second chair and steps the roster up. The target is eighteen every morning.
 
 ### 8.4 Hiring sequence
 
@@ -606,14 +663,14 @@ Recruitment documents are prepared. Hiring starts only after the laboratory agre
 
 ### 8.5 Position register
 
-Every position reports to the Venue Manager except GTT-01, who reports to the Founder (Anthony Zed). The employing entity is to be confirmed.
+Every position reports to the Venue Manager except GTT-01, who reports to the Founder (Anthony Zed). The employing entity is the operating company (Section 9.7), subject to accountant and solicitor advice.
 
 | Position number | Title | Employment type | Task and job description |
 |---|---|---|---|
 | GTT-01 | Venue Manager (to be hired) | Full-time, Monday to Friday, 07:00 to 15:00 (salaried or casual to be confirmed) | Runs daily operations; rosters staff and checks Fair Work compliance; covers reception from 07:00 (an experienced rostered staff member covers Saturday); first aider, fire warden, EpiPen holder, escalation contact; liaises with the pathology partner; weekly profit and loss review |
-| GTT-02 | Phlebotomist, Collection Room 1 | Casual (part-time to be confirmed) | Three timed blood draws per client (0, 60, 120 minutes); glucose drink; specimen labelling and dispatch logs; vasovagal response; credentialed under the pathology partner |
-| GTT-03 | Phlebotomist, Collection Room 2 | Casual | As GTT-02; second on-site collector for difficult draws |
-| GTT-04, GTT-05 | Phlebotomist, relief | Casual, on call | As GTT-02; cover leave and absences |
+| GTT-02 | Phlebotomist, Collection Room 1 | Casual (permanent part-time cannot be guaranteed on an adaptive roster; to be confirmed with Fair Work) | Rostered on every morning with a booking. Three timed blood draws per client (0, 60 and 120 minutes); glucose drink; specimen labelling and dispatch logs; first response to a faint; credentialed under the pathology partner |
+| GTT-03 | Phlebotomist, Collection Room 2 | Casual | Rostered when ten or more clients are booked; otherwise the named on-call second collector for difficult draws and faints. Paid for hours worked when called in |
+| GTT-04, GTT-05 | Phlebotomist, relief | Casual, on call | As GTT-02; cover leave and absences, and act as the on-call second collector on lighter mornings |
 | GTT-06 to GTT-09 | Massage and Beauty Therapist (morning) | Casual | Pregnancy massage and pregnancy-safe facials in the 30 or 45 minute wellness window; Certificate IV; booking system check-in |
 | GTT-10, GTT-11 | Massage and Beauty Therapist, relief (morning) | Casual, on call | As GTT-06 |
 | GTT-12, GTT-13 | Nail Technician (morning) | Casual | Manicure, pedicure and add-ons in the wellness window |
@@ -625,9 +682,11 @@ Every position reports to the Venue Manager except GTT-01, who reports to the Fo
 | GTT-20 | Nail Technician (afternoon) | Casual | Stand-alone nails and Restore package (nails half); as GTT-18 |
 | GTT-21 | Hairdresser (afternoon) | Casual | Stand-alone hair and Restore package (hair half); as GTT-18 |
 
+Weekly loading: at 18 a day there are 12 phlebotomist shifts a week over 4 people (3 shifts each); at 9 a day, 6 shifts a week (about 1.5 each). No standby allowance is assumed; any rate would be set by the award.
+
 ### 8.6 Saturday profitability
 
-Saturday mornings earn their keep. At 18 clients: revenue 18 x A$250 = A$4,500. Staff at Saturday rates (1.5 times): 4 massage and beauty therapists A$1,350.00, 2 nail technicians A$662.58, 2 hairdressers A$662.58, 2 phlebotomists A$618.75 = A$3,293.91; plus 12% superannuation A$395.27 and 1.7% workers compensation A$56.00 = A$3,745.18. Contribution **+A$754.82 per Saturday** (about A$3,268 a month). The Venue Manager does not work Saturdays and rent is fixed, so this is extra profit. A Saturday covers its own staff from 9 clients with the 4-therapist roster (+A$25.65) and from 15 clients with the full roster (+A$4.82).
+Saturday mornings earn their keep. At 18 clients: revenue 18 x A$250 = A$4,500. Staff at Saturday rates (1.5 times): 4 massage and beauty therapists A$1,350.00, 2 nail technicians A$662.58, 2 hairdressers A$662.58, 2 phlebotomists A$618.75 = A$3,293.91; plus 12% superannuation A$395.27 and 1.7% workers compensation A$56.00 = A$3,745.18. Contribution **+A$754.82 per Saturday** (about A$3,268 a month). The Venue Manager does not work Saturdays and rent is fixed, so this is extra profit. A Saturday covers its own staff from 8 clients with the 4-therapist roster (A$127; at 9 clients it earns A$377) and from 15 clients with the full roster (A$4.82). At 18 clients it earns A$754.82.
 
 <div class="pagebreak"></div>
 
@@ -658,11 +717,11 @@ Full statements are in the companion documents:
 
 | Case | Net per month | GST-stress net per month | Break-even (clients a day) | Peak funding | GST-stress Year 1 |
 |---|---|---|---|---|---|
-| Base, A$8,000 rent | +A$35,186 | +A$23,443 | 8.266 | A$251,198 | A$281,311 |
-| A$10,500 gross ceiling, all-in | +A$33,936 | +A$22,306 | 8.455 | A$256,198 | A$267,675 |
-| A$10,500 plus separate utilities and cleaning (prudent) | +A$32,686 | +A$21,170 | 8.645 | A$256,198 | A$254,038 |
+| Base, A$8,000 rent | +A$35,186 | +A$23,443 | 7.250 | A$251,198 | A$281,311 |
+| A$10,500 gross ceiling, all-in | +A$33,936 | +A$22,306 | 7.440 | A$256,198 | A$267,675 |
+| A$10,500 plus separate utilities and cleaning (prudent) | +A$32,686 | +A$21,170 | 7.630 | A$256,198 | A$254,038 |
 
-**What is GST-stress?** GST-stress is our safety test. It assumes the Australian Taxation Office treats the whole package as taxable, so one eleventh of every sale is paid away as GST. Even then, GTT still earns A$23,443 a month (A$281,311 over a first year at full capacity), against A$35,186 a month before the test. GST-stress first-year net is A$254,038 to A$281,311 across the rent range of A$10,500 to A$8,000 a month. Whether part of the package is GST-free is a question for our accountant. GST-stress is the prudent planning case.
+**What is GST-stress?** GST-stress is the fully taxable case: the whole package is taxable, so one eleventh of every sale is paid away as GST. On the statute read, this is the legal base for GTT's own services (Section 9.6), not just a safety test. GTT still earns A$23,443 a month (A$281,311 over a first year at full capacity), against A$35,186 a month before GST. The GST-stress first-year net is A$254,038 to A$281,311 across the rent range of A$10,500 to A$8,000 a month. The break-even column assumes bookings fall one to a time slot; the GST-stress break-even is 8.138 at the base rent.
 
 ### 9.3 Year 1 at full capacity
 
@@ -679,7 +738,7 @@ Every month is a full-capacity month: 18 expecting mothers each morning, from Mo
 
 **What is the A$422k a year steady state?** At full capacity, 18 expecting mothers every morning, GTT earns A$35,186 a month in net operating profit. Twelve months of that is A$422,237 a year. Net margin is 24.6%.
 
-**The risk.** This depends on the waitlist delivering a full morning on opening day: at 85% of capacity profit is about A$17,400 a month; at 70% GTT roughly breaks even.
+**The risk.** This depends on the waitlist delivering a full morning on opening day. At 85% of capacity profit is about A$17,400 a month; at 70% GTT roughly breaks even; at half a morning (9 a day) GTT still earns about A$11,517 a month, because the roster scales down with the bookings, and pays back in Month 23.
 
 ### 9.4 Startup capital and funding
 
@@ -704,21 +763,73 @@ Of the pre-opening capital, fit-out and construction is the largest group (A$139
 | Base (100% fill) | +A$35,186 |
 | 85% fill | about +A$17.4k (payback Month 16 before GST timing) |
 | 70% fill | roughly break-even (-A$359) |
+| 50% fill (9 a day, roster scales down) | +A$11,517 (payback Month 23) |
+| Medicare does not pay and GTT absorbs the A$25.85 laboratory fee | +A$22,935 (break-even 8.087) |
+| 10% post-test discount at 25% take-up, A$117 treatment | about A$1,386 less (cost shown separately, Table 5.3a) |
 | Volume down 20% | +A$19,573 |
 | Morning price down 10% (A$225) | +A$20,879 |
 | Each A$10 per client of laboratory fee | about A$4,739 less at capacity |
 
 ### 9.6 Tax, GST and structure
 
-**GST.** The glucose tolerance test and its specimen collection are provided and billed by our pathology partner as a GST-free medical service. GTT Center Perth's own supplies, the Wellness Lounge, treatments and Private Refreshment Counter, are taxable and priced GST-inclusive. Package invoices are itemised so each supply is shown separately. We register for GST and claim back the GST on our fit-out, equipment and supplies. The base case profit figures carry no GST deduction and are subject to an Australian Taxation Office private ruling. Our financial plan already assumes the entire package is taxable (the GST-stress case, our prudent planning case), so any GST-free element confirmed by the Australian Taxation Office would be additional profit, not a plan requirement. Each percentage point of the A$250 package that is confirmed GST-free would be worth about A$108 a month at 18 clients a morning. No split is used to reduce GST: the Australian Taxation Office treats contrived splits as avoidance.
+*This is general information, not tax advice. Verify with a qualified adviser before acting.*
 
-**GST ruling.** Before the first taxable sale, our accountant will apply to the Australian Taxation Office for a private ruling confirming the GST treatment of our packages and any collection-related services. The Australian Taxation Office aims to finalise most private rulings within 28 days of receiving all information. Until a ruling is received, we price and plan on the fully taxable basis.
+**GST treatment.** GTT Center Perth's own services (wellness treatments, lounge access and refreshments) are taxable at 10% and the package prices of A$250 and A$300 include GST. The glucose tolerance test is a medical service provided and billed by the pathology partner, and is not part of GTT's invoice. GTT registers for GST before its first sale and claims input tax credits on its running costs and fit-out. The financial plan uses the fully taxable case as its base: at A$250 and 18 morning clients, net profit after GST is A$23,442.58 a month (A$281,310.96 in Year 1), compared with A$35,186.40 a month (A$422,236.80 in Year 1) before GST.
 
-**Pathology fees.** The glucose tolerance test is billed by the pathology partner to Medicare, and bulk billed for Medicare card holders, so GTT Center Perth carries no pathology cost or revenue on that test. We will obtain written fee schedules from PathWest, Western Diagnostic Pathology and Clinipath for private (non-Medicare) clients, consumables, courier and collection room terms, and negotiate wholesale per-test pricing on the basis of expected volume. No laboratory fee is included in the plan until confirmed in writing.
+**What the law says about phlebotomy.** Section 38-10 of the GST Act lists the health services that are GST-free. It is a closed list of 21 services, and phlebotomy (blood collection) is not on it. The test is GST-free in the laboratory's hands because Medicare pays a benefit for it (section 38-7), which is why the laboratory, not GTT, bills it. GTT supplies no GST-free service today, so the correct split of the package is nothing to a clinical part and the whole price taxable.
+
+**Table 9.6a: GST position (18 clients a morning, A$250 package)**
+
+| Measure | Before GST (no GST line) | After GST (fully taxable base) |
+|---|---|---|
+| Net profit a month | A$35,186.40 | A$23,442.58 |
+| Net profit Year 1 (no ramp-up) | A$422,236.80 | A$281,310.96 |
+| GST on sales a month | not applicable | A$13,006.40 |
+| Input tax credits a month | not applicable | A$1,262.58 |
+| Net GST paid a month | not applicable | A$11,743.82 |
+
+**Table 9.6b: Value at stake if a genuine GST-free component existed (hypothetical, not available money)**
+
+| Share of the A$250 package that would be a genuine GST-free service | Extra profit a month | Extra profit a year | Net profit a month |
+|---|---|---|---|
+| 50% (50/50 split) | A$5,385.68 | A$64,628.16 | A$28,828.26 |
+| 60% (60/40 split) | A$6,462.81 | A$77,553.72 | A$29,905.39 |
+| 70% (70/30 split) | A$7,539.95 | A$90,479.40 | A$30,982.53 |
+
+These rows show the size of the prize, not money GTT can claim. A 50% to 70% clinical share is not supportable: the laboratory's whole fee for the visit is A$25.85 (about 10% of A$250) and GTT's own collection cost is about A$30.73 a client (about 12%). Each percentage point of the package that were genuinely GST-free would be worth about A$108 a month. A split on invoices or a separate merchant account does not change the tax result, because GST follows the supply, not the bank account. Contrived splits are treated as avoidance under the anti-avoidance rule in Division 165 of the GST Act.
+
+**Lawful ways to improve the GST position, ranked by feasibility.**
+
+1. Keep every GTT supply taxable, register before the first sale and claim all input tax credits, including on fit-out and equipment (the legal base case above).
+2. The laboratory places its own employed collectors in our rooms (Section 5.4). The collection stays GST-free in the laboratory's hands and GTT stops carrying collector wages. Any room or service fee GTT charges the laboratory is taxable.
+3. Add real, separately priced services that are on the GST-free list, delivered by recognised professionals (for example nursing, dietetics, physiotherapy or psychology). Only those services are GST-free, and the rest of the package stays taxable.
+4. The laboratory pays GTT a market fee for the room or the collection service. No fee has been quoted.
+5. Once a real model is chosen, the accountant applies for an Australian Taxation Office private ruling on that one model. The Australian Taxation Office aims to finalise most private rulings within 28 days of receiving all information. Until a ruling is received, GTT prices and plans on the fully taxable basis.
+
+**Pathology fees.** The glucose tolerance test is billed by the pathology partner to Medicare, and bulk billed for Medicare card holders, so GTT Center Perth carries no pathology cost or revenue on that test. The Medicare schedule fee is A$25.85 a visit; if Medicare did not pay, Table 5.4a shows the effect. We will obtain written fee schedules from PathWest, Western Diagnostic Pathology and Clinipath for private (non-Medicare) clients, consumables, courier and collection room terms, and negotiate wholesale per-test pricing on the basis of expected volume. No laboratory fee is included in the plan until confirmed in writing.
 
 **Proposed minimum tax.** A proposed 30% minimum tax on discretionary trusts from 1 July 2028 is an exposure draft, not law. Accountant review is needed.
 
-**Trading entity.** To be confirmed (Appendix D).
+### 9.7 Business structure
+
+*This is general information. The structure is subject to advice from the company's accountant and solicitor before any lease or contract is signed.*
+
+GTT Center Perth will operate through a purpose-built Australian proprietary company. The company will hold the premises lease, the pathology partner agreement, employment contracts, insurance policies, GST and payroll registrations, and the business bank account. Its shares will be held by a family trust whose trustee is a separate corporate entity from the trustee of the family's property trust, so that a claim against the venture cannot reach the family's property. The company will be managed by an employed Venue Manager and overseen by an independent director. The founder will take no operational role. The company will not rely on any other business of the founder or his associates.
+
+**Table 9.7: Structures considered**
+
+| Option | What it means | View |
+|---|---|---|
+| 1. Trade directly through an existing family trust | The venture's clinical and public liability sits beside the trust's other assets | Not recommended |
+| 2. A new dedicated proprietary company owned by a family trust | The company carries the lease, insurance, staff and clinical risk; the trust is the shareholder | **Recommended** |
+| 3. A completely separate new structure (new trust, new corporate trustee, new company) | The same protection with no link to any existing entity; more set-up cost | Strong alternative if option 2 is not possible under the existing trust documents |
+| 4. Hybrid or corporate-unit structures | Variations on the above, for example a unit trust or a joint venture company | Considered; no advantage over option 2 identified |
+
+| Heading | Position |
+|---|---|
+| Risk containment | Clinical and public liability sits in the operating company, covered by its own public liability, professional indemnity and workers compensation insurance. The founder's other assets are held in separate entities and do not guarantee the venture. |
+| Partners | The pathology partner is contracted by the operating company. Practitioners are employed by the operating company. |
+| Status | Final structure to be confirmed with the company's accountant and solicitor before the lease and contracts are signed. |
 
 <div class="pagebreak"></div>
 
@@ -727,7 +838,7 @@ Of the pre-opening capital, fit-out and construction is the largest group (A$139
 | # | Risk | Level | Mitigation |
 |---|---|---|---|
 | 1 | No venue secured. Blocks hiring, fit-out and everything after. | Critical | Three conditional matches. Enquire with agents (with approval), inspect, search weekly. |
-| 2 | No signed laboratory agreement. No fees quoted. Who employs the collectors for Medicare billing is unresolved. | High | Written fee schedules from all three. Written answer from the partner and Medicare before fit-out spending. |
+| 2 | No signed laboratory agreement. No fees quoted. Who employs the collectors, and so whether Medicare pays, is unresolved. | High | Written fee schedules from all three. Written answers from the laboratories, Services Australia and the Department of Health before fit-out spending (Section 5.4). |
 | 3 | Funding gap. Planning need A$336k to A$361k against about A$200k on hand. Peak funding A$251,198. | High | Founder funding decision. Accountant. Staged fit-out. |
 | 4 | Fill rate. Full capacity is assumed from day one. 85% fill gives about +A$17.4k a month and 70% roughly breaks even. | High | Pre-launch waitlist and marketing. Book 2 to 4 weeks ahead. Track fill weekly against an 85% warning line. |
 | 5 | Cost model uses A$8,000 rent but budget is A$9,500 to A$10,500. | Medium | Net at the new rent is about +A$32,686 to +A$33,936 a month, shown beside the headline. |
@@ -736,11 +847,13 @@ Of the pre-opening capital, fit-out and construction is the largest group (A$139
 | 8 | Insurance not yet quoted, including the clinical line. | Medium-High | Obtain broker quotes before any commitment. Insurance is a launch gate. |
 | 9 | Safety cover depends on one not-yet-hired Venue Manager. | Medium-High | Cross-train a backup responder. The venue does not open without this cover. |
 | 10 | Referral law and the draft consent and privacy documents. | Medium | Solicitor review before any client or waitlist data is collected. No benefit to any referrer. |
-| 11 | GST treatment is unsettled. | Medium | Accountant and private ruling. GST-stress is +A$23,443 a month. |
+| 11 | GST: phlebotomy is not on the closed list of GST-free health services, so no large GST-free share is available. | Medium | Plan on the fully taxable base of +A$23,443 a month. Accountant and, for any real GST-free service, a private ruling (Section 9.6). |
 | 12 | Pregnancy complications on site (liability). | Medium | Risk protocol (Section 5.7), incident register, insurance. |
 | 13 | Proposed 2028 minimum tax on discretionary trusts. | Low-Medium | Annual accountant review of the entity structure. |
 | 14 | Hiring window compresses once the gates clear. | Medium | Job documents are pre-built so recruitment starts the day the gates clear. |
 | 15 | Copycat entering Western Australia. | Low-Medium | First-mover position, referral relationships, brand, and a compliant collection room. |
+| 16 | Medicare does not pay for specimens collected by GTT's own staff. If GTT absorbed the A$25.85 fee it would cost about A$12,251 a month (break-even 8.087); the alternative is a client-paid laboratory fee. | High | Prefer laboratory-employed collectors in our rooms; written confirmation from each laboratory and Services Australia before fit-out. Price needed to stay whole: A$275.85. |
+| 17 | The business structure is not yet settled in advice. | Medium | Dedicated operating company with its own insurance; accountant and solicitor confirm before the lease is signed (Section 9.7). |
 
 Risks 1 to 3 are one single point of failure: no site and no laboratory partner means no revenue. The order of fixing matters more than anything else in this table.
 
@@ -781,13 +894,15 @@ No calendar dates are set. The venture holds launch undated until the gates clea
 
 | # | Decision | Owner |
 |---|---|---|
-| 1 | Request written wholesale per-test and collection fees from all three laboratories, and ask who must employ the collectors | Anthony, Reed |
+| 1 | Request written wholesale per-test and collection fees from all three laboratories, and ask whether they will place their own employed collectors in our rooms | Anthony, Reed |
 | 2 | Approve agent enquiries for the shortlisted sites | Anthony |
 | 3 | Decide how to cover the funding gap and brief the accountant on entity structure | Anthony |
 | 4 | Appoint an architect once a site is chosen, using the concept floor plan | Anthony |
 | 5 | Accountant: apply for the GST private ruling and confirm the invoice structure | Anthony |
-| 6 | Set the Test Day Thank You discount and confirm the phlebotomist minimum | Anthony |
+| 6 | Confirm the terms of the 10% post-test discount (expiry, exclusions, test location) | Anthony |
 | 7 | Build the booking and waitlist system and weekly fill tracking | Ivy |
+| 8 | Approve the written questions to Services Australia and the Department of Health on the employee-or-contractor rule | Anthony |
+| 9 | Confirm the business structure with the accountant and solicitor | Anthony |
 
 ### 11.4 Growth options (not in the baseline)
 
@@ -806,13 +921,15 @@ No calendar dates are set. The venture holds launch undated until the gates clea
 
 Figures and facts in this plan come from the following, in plain terms.
 
-- **GTT Center Perth financial model, version 0.5 (October 2026):** all financial figures, the profit and loss, the cashflow forecast and the roster costs.
+- **GTT Center Perth financial model, version 0.6 (October 2026):** all financial figures, the profit and loss, the cashflow forecast and the roster costs.
 - **GTT Center Perth operating documents:** clinical operations plan, commercial site brief, launch readiness tracker, staff profiles, service pricing and afternoon packages, marketing and referral plans.
 - **Australian Bureau of Statistics,** Births, Australia 2024 and Data by region: [abs.gov.au](https://www.abs.gov.au/statistics/people/population/births-australia/latest-release). The 2025 release is due on 6 November 2026.
 - **Australian Institute of Health and Welfare,** gestational diabetes (2023-24), national hospital data.
 - **Australasian Diabetes in Pregnancy Society,** consensus recommendations (2025) on gestational diabetes screening.
 - **National Pathology Accreditation Advisory Council,** Guidelines for Approved Pathology Collection Centres (third edition, 2013).
 - **Australian Taxation Office,** GST and health guidance and private rulings: [ato.gov.au](https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/in-detail/your-industry/gst-and-health).
+- **A New Tax System (Goods and Services Tax) Act 1999 (Cth),** sections 38-7 and 38-10 (compilation in force 1 January 2026), and **Health Insurance Act 1973 (Cth),** section 16A and Part IID (approved collection centres), read on [legislation.gov.au](https://www.legislation.gov.au). Medicare Benefits Schedule items 66548 and 73928 at [mbsonline.gov.au](https://www.mbsonline.gov.au).
+- **Services Australia,** approved collection centre information for pathology.
 - **Maternal and Infant Wellbeing Melbourne,** public website and directory listing: [miwm.com.au](https://www.miwm.com.au).
 - **Commercial property listings** viewed on 16 October 2026 at commercialrealestate.com.au (linked in Section 6.4).
 - **Event organisers and professional bodies** named in Section 7.5.
@@ -830,10 +947,10 @@ The authoritative index of open items. Status: BLOCKING (the venture cannot move
 | Venue location | Anthony | Lease, fit-out, hiring | Blocking |
 | Rent: gross A$9,500 to A$10,500 a month confirmed | Anthony, agent | Lease | Open |
 | Pathology partner fee and agreement | Anthony | Partner choice | Waiting on laboratories |
-| Medicare billing arrangement in writing | Laboratory | Pricing | Open |
-| GST treatment of the package | Accountant | Invoices | Open |
+| Medicare billing arrangement in writing, including who employs the collectors | Laboratory, Services Australia | Pricing | Open |
+| GST: confirm the fully taxable base and any real GST-free service | Accountant | Invoices | Open |
 | Trading entity | Accountant | Lease, ABN | Open |
-| Collection room licensing requirements | Regulatory review | Floor plan | Open |
+| Collection room licensing: written confirmation from the Department of Health and council | Regulatory review | Floor plan | Open |
 | Council planning and health permits | Council | Opening | Not started |
 | Insurance quotes | Broker | Opening | Open |
 | Award wage rates re-verified | Payroll adviser | Labour cost | Open |
@@ -858,21 +975,28 @@ The authoritative index of open items. Status: BLOCKING (the venture cannot move
 | B4 | PathWest courier routing and consumable supply; reply drafted, awaiting approval | Anthony | IN PROGRESS |
 | B5 | Clinipath reply | Clinipath | WAITING |
 | B6 | Medicare billing arrangement confirmed in writing, including who must employ the collectors | Laboratory, accountant | OPEN |
+| B12 | Will each laboratory place its own employed collectors in our rooms, and at what charge | PathWest, WDP, Clinipath | OPEN |
+| B13 | Written answer on whether a collector engaged under a laboratory's direction and control counts as an employee for Medicare payment | Department of Health, Services Australia, health lawyer | OPEN |
+| B14 | Approved collection centre: occupation document, one room with two chairs and a curtain, minimum six-month benefit threshold, who pays the A$2,000 approval tax | Services Australia, laboratory | OPEN |
+| B15 | Laboratory private fee for the test and collection (the Medicare schedule fee is A$25.85; no fee quoted yet) | Each laboratory | OPEN |
+| B16 | Partner sign-off that one collector per chair meets its collection-site conditions for up to 9 clients; escalation steps for a difficult draw | Partner | OPEN |
 | B7 | Medical waste cover by the partner | WDP | WAITING |
 | B8 | Collection room inspection checklist from the chosen partner | Partner, architect | OPEN |
 | B9 | Phlebotomist credentialing under the partner's accreditation | Partner | OPEN |
 | B10 | Supervision rule: sightline from shared area or separate room | WDP | WAITING |
 | B11 | Communicate the 18 a day volume to each laboratory in writing | Anthony | OPEN |
-| C1 | GST treatment of the testing package and private ruling | Accountant | OPEN |
+| C1 | GST treatment: confirm the fully taxable base; private ruling on any real GST-free model chosen | Accountant | OPEN |
+| C1a | Whether to add separately priced GST-free services (nursing, dietetics, physiotherapy, psychology) and their cost | Anthony, accountant | OPEN |
 | C2 | ABN and GST registration under the chosen entity | Accountant | OPEN |
-| C3 | Trading entity and trust structure recommendation | Accountant | OPEN |
+| C3 | Business structure: dedicated company recommended; confirm with accountant and solicitor (Section 9.7) | Accountant, solicitor | OPEN |
 | C4 | Proposed 30% trust distribution tax from 1 July 2028 | Accountant | DATED |
 | C5 | Startup capital: quantity surveyor and builder quotes | Quantity surveyor | OPEN |
 | C6 | Insurance: broker quotes against the allowance in the model | Insurance broker | OPEN |
 | C7 | Rent, card fees, medical waste and supplies lines in the overheads | Grace | OPEN |
 | C8 | Award wage rates: confirm current rates and Saturday penalties | Payroll adviser, Fair Work | OPEN |
-| C9 | 10% online pre-booking discount not applied in afternoon revenue | Grace | OPEN |
-| D1 | Western Australian Department of Health blood collection room licensing and the collection room versus business distinction | Regulatory review | OPEN |
+| C9 | Confirm the post-test discount terms: expiry, exclusions, test location, one use per test | Anthony | OPEN |
+| C10 | Phlebotomist employment type (casual or guaranteed minimum), standby allowance, Saturday second collector | Payroll adviser, Fair Work | OPEN |
+| D1 | Written confirmation from the Western Australian Department of Health that no licence is needed for a collection-only room, and whether a rostered nurse changes that | Department of Health | OPEN |
 | D2 | Council planning and health-use permit | Council | NOT STARTED |
 | D3 | Food business notification for the refreshment counter | Council | NOT STARTED |
 | D4 | Nail station extraction compliance | WorkSafe WA | NOT STARTED |
@@ -891,6 +1015,10 @@ The authoritative index of open items. Status: BLOCKING (the venture cannot move
 | G2 | Confirm the births figures against the Australian Bureau of Statistics release | Grace, Anthony | OPEN |
 | G3 | Perth Pregnancy, Babies and Children's Expo exhibitor decision | Anthony | DATED: 10 and 11 April 2027 |
 | G4 | Re-check the property shortlist (listings change weekly) | Grace | DATED: weekly |
+| H1 | Floor plan: partner confirms the 19.0 sqm collection room size (if 20 sqm or more, the plan grows by about 2 sqm) | Partner | OPEN |
+| H2 | Floor plan: toilet count (one accessible, one standard, shared) confirmed under the building code | Architect, building surveyor | OPEN |
+| H3 | Price the second specimen fridge, second recovery recliner and possible second centrifuge | Grace, supplier quotes | OPEN |
+| H4 | Approve the list of items sensible to import direct and how to buy | Anthony | OPEN |
 
 ### Appendix C. Brand name research (October 2026)
 
@@ -910,4 +1038,4 @@ Recommendation: SOLENARA if the SOLENA line is kept; BELMIRA as the cleanest alt
 
 ### Appendix D. Corporate structure recommendation
 
-GTT Center Perth is recommended to trade through a new dedicated proprietary limited company, separate from Cudan Studio, so that the clinical and public liability of a venue serving pregnant women is held in one clean legal entity, with the lease, pathology agreement, staff and insurance all in its name. The final structure and share holding will be confirmed by our accountant and solicitor before the lease is signed.
+GTT Center Perth is recommended to trade through a new dedicated proprietary limited company, so that the clinical and public liability of a venue serving pregnant women is held in one clean legal entity, with the lease, pathology agreement, staff and insurance all in its name. The options considered and the reasons are in Section 9.7. The final structure and share holding will be confirmed by our accountant and solicitor before the lease is signed.
