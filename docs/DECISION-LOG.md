@@ -4,6 +4,12 @@
 
 ---
 
+## 2026-10-17: Floor plan v2 corrections (Anthony, directive items F1 to F8)
+
+**Decisions (Anthony, 2026-10-17):** fix wall placement and corridors so every room has unblocked access; resize hair and nails to commercial proportions with the freed area to the lounge; remove the separate fridge room (an under-counter clinical specimen fridge in each collection room); standardise both collection rooms at equal size; route staff to the staff room without passing the service and linen zone; remove the staff toilet.
+
+**Applied (workstream F):** both collection rooms 19.0 sqm (middle of the 18 to 20 sqm range in the venue room schedule and pathology partner brief); hair 23.9 sqm and nails 22.4 sqm (5 to 6 sqm per station); lounge 44.7 sqm; staff WC removed; separate service entry and staff-only corridor. Files: `outputs/DESIGN/CONCEPT-FLOOR-PLAN.svg`, `outputs/PRESENTATION/floor-plan-v2.html`, `docs/overhaul-2026-10-17/F-floorplan/`. Open for the architect and pathology partner: collection room size confirmation, NCC toilet count, second fridge, recliner and centrifuge quantities (not priced in the model).
+
 ## 2026-10-17: Phlebotomists on the adaptive roster; 10% post-test discount adopted (Anthony)
 
 **Decisions (Anthony, 2026-10-17, directive items R1 and R2):**

@@ -6,3 +6,4 @@
 - F8 built: floor-plan-v2.html/png/svg, floor-plan-concept.png/svg updated
 - floor-plan-concept-plan.png regenerated as v2 plan-only crop
 - FFE-SCHEDULE.md updated (fridges x2, recliners x2, no fridge room, no staff WC; totals unchanged)
+- FOR-DOCUMENTS-AGENT.md written (Slide 18, C3); DECISION-LOG entry added
