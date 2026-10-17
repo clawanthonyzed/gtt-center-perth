@@ -1,6 +1,6 @@
 # GTT Center Perth: FF&E Schedule (Furniture, Fixtures and Equipment by Room)
 
-Companion to the Concept Floor Plan ([CONCEPT-FLOOR-PLAN.svg](CONCEPT-FLOOR-PLAN.svg), [PNG](CONCEPT-FLOOR-PLAN.png)). Prepared 2026-10-16. Concept only, not for construction.
+Companion to the Concept Floor Plan ([CONCEPT-FLOOR-PLAN.svg](CONCEPT-FLOOR-PLAN.svg), [PNG](CONCEPT-FLOOR-PLAN.png)). Prepared 2026-10-16, updated 2026-10-17 for floor plan version 2 (equal collection rooms with their own specimen fridges, no separate fridge room, no staff toilet). Concept only, not for construction.
 
 ## How to read this schedule
 
@@ -25,7 +25,7 @@ Deferred after opening (model Section 2d, not in the base): nail stations 3 and 
 
 ---
 
-## 1. Reception and entry (drawn 11.8 sqm plus 5.5 sqm vestibule)
+## 1. Reception and entry (drawn 15.4 sqm plus 7.6 sqm arrival lobby)
 
 | Item (register ID) | Qty | Budget line | Source |
 |---|---|---|---|
@@ -44,7 +44,7 @@ Deferred after opening (model Section 2d, not in the base): nail stations 3 and 
 | External signage (A08, W01); internal wayfinding (W02) | 1; 1 lot | L2 (signage) | AU / HY |
 | Ambient lighting (X01) | TBD (site) | L1 (lighting fixtures) | SITE |
 
-## 2. Open-plan luxury lounge (drawn 34.5 sqm plus 9.3 sqm approach)
+## 2. Open-plan luxury lounge (drawn 44.7 sqm)
 
 | Item | Qty | Budget line | Source |
 |---|---|---|---|
@@ -63,7 +63,7 @@ Deferred after opening (model Section 2d, not in the base): nail stations 3 and 
 
 ## 3. Private Refreshment Counter (exclusive to GTT clients) (drawn 8.0 sqm)
 
-Solid-walled kitchenette, physically apart from the blood collection rooms and the specimen fridge bay.
+Solid-walled kitchenette, physically apart from the blood collection rooms (3.6 m from the nearest room wall, no shared wall), their specimen fridges and the clinical waste room.
 
 | Item | Qty | Budget line | Source |
 |---|---|---|---|
@@ -78,14 +78,16 @@ Solid-walled kitchenette, physically apart from the blood collection rooms and t
 | Food storage, thermometers, utensils, bins (C06 to C09, C21) | 1 lot | Opening stock / cafe equipment | HY / AU / CN |
 | Task and ambient lighting (X02) | TBD (site) | L1 | SITE |
 
-## 4. Blood Collection Room 1 and Room 2, Option A (drawn 17.6 and 19.4 sqm)
+## 4. Blood Collection Room 1 and Room 2, Option A (drawn 19.0 sqm each, equal)
 
-Solid walls, one door each, no public-facing window (E31). Each room has its own handwash basin.
+Solid walls, no public-facing window (E31). Each room has two doors (clinical corridor and back-of-house corridor), its own handwash basin and its own under-counter clinical specimen fridge.
 
 | Item | Qty | Budget line | Source |
 |---|---|---|---|
 | Phlebotomy chair, Chair A and Chair B (E01, E02) | 1 per room, 2 total | L4 | PRO |
-| Vasovagal recliner or examination couch (E04) | 1 (drawn in Room 1) | L4 | AU |
+| Vasovagal recliner or examination couch (E04) | 2 (one in each room; quantity up from 1) | L4 | AU |
+| Under-counter clinical specimen refrigerator with temperature log (E16) | 2 (one in each room; moved here from the former fridge bay, quantity up from 1) | L4 | AU |
+| Tabletop centrifuge, refrigerated (E15) | 1 on the Room 1 bench; bench space kept in Room 2 for a second (TO CONFIRM) | L4 | WDP |
 | Phlebotomist stool, adjustable (E06) | 2 | L4 | HY |
 | Documentation desk or bench (E05) | 1 | L4 (documentation) | HY |
 | Lockable consumables cabinet (E07); documentation drawer (E08) | 1 each | L2 | HY |
@@ -104,23 +106,21 @@ Solid walls, one door each, no public-facing window (E31). Each room has its own
 
 **Option B (one large room, curtain-divided):** same items. The dividing wall (E31, one room instead of two) is deleted, the per-chair clinical privacy curtain (E32) becomes a full ceiling track, and one basin sits on each side of the curtain. Whether the clinical sink, sharps and bins are shared or duplicated is an open point in the register.
 
-## 5. Specimen fridge and centrifuge bay, and clinical waste bay (drawn 4.8 sqm each)
+## 5. Clinical waste and dirty linen room (drawn 4.2 sqm), service entry (3.1 sqm)
 
-Physically separate from the Private Refreshment Counter (decision of 2026-09-04).
+The separate specimen fridge and centrifuge bay is removed in version 2: each collection room holds its own under-counter specimen fridge (section 4). This room is physically separate from the Private Refreshment Counter (decision of 2026-09-04), is reached from the staff-only back-of-house corridor and has its own service door to outside.
 
 | Item | Qty | Budget line | Source |
 |---|---|---|---|
-| Specimen refrigerator, medical grade with temperature log (E16) | 1 | L4 | AU |
-| Tabletop centrifuge, refrigerated (E15) | 1 | L4 | WDP |
-| Insulated specimen bags (E17); ice packs (E18) | 2; 6 | L4 (specimen transport) | AU |
-| Thermal label printer (E19) | 1 | L4 | AU |
-| Clinical waste bins (E12, in bay) and sharps overflow (AD04) | per register | L4 | AU |
+| Insulated specimen bags (E17); ice packs (E18) | 2; 6 (kept in the collection rooms) | L4 (specimen transport) | AU |
+| Thermal label printer (E19) | 1 (in a collection room) | L4 | AU |
+| Clinical waste bins (E12) and sharps overflow (AD04) | per register | L4 | AU |
 | Dirty linen and biohazard storage (M02) | 1 | L2 | HY |
 | Clinical waste and linen contracts (E14) | 1 | Operating cost | AU |
 
 Ongoing pathology consumables (E20, E21) are supplied through the pathology partner and are not capital.
 
-## 6. Massage bays 1 and 2 (drawn 10.2 sqm each) and Beauty bays 1 and 2 (drawn 10.2 sqm each)
+## 6. Massage bays 1 and 2 (drawn 10.7 sqm each) and Beauty bays 1 and 2 (drawn 10.7 sqm each)
 
 Partition walls between bays, ceiling curtain track on the open side, handwash basin in every bay. Beauty bays also carry an instrument sink.
 
@@ -141,7 +141,7 @@ Partition walls between bays, ceiling curtain track on the open side, handwash b
 | Linen, oils, consumables (F06, F07, G09 to G13) | per register | Opening stock | HY / AU |
 | Hooks and gown rail | 3 per bay entry | L2 | TBD |
 
-## 7. Hairdressing, open plan (drawn 45.0 sqm; room schedule target 52)
+## 7. Hairdressing, open plan (drawn 23.9 sqm; 4 chairs and 2 backwash at about 6 sqm per chair)
 
 | Item | Qty | Budget line | Source |
 |---|---|---|---|
@@ -155,7 +155,7 @@ Partition walls between bays, ceiling curtain track on the open side, handwash b
 | Waterproof flooring, no carpet | TBD (site) | L1 (flooring) | SITE |
 | Capes (J08); towels (J09, K03); hair bin (J16) | per register | Opening stock | CN / HY |
 
-## 8. Nails and pedicure, open plan (drawn 30.0 sqm; room schedule target 32)
+## 8. Nails and pedicure, open plan (drawn 22.4 sqm; 4 stations at about 5.6 sqm per station)
 
 | Item | Qty | Budget line | Source |
 |---|---|---|---|
@@ -169,7 +169,7 @@ Partition walls between bays, ceiling curtain track on the open side, handwash b
 | Chemical-resistant flooring | TBD (site) | L1 (flooring) | SITE |
 | Consumables, PPE (H08 to H20, I03 to I06) | per register | Opening stock | CN / HY / AU |
 
-## 9. Toilets (accessible 7.0 sqm, standard 4.1 sqm, staff 4.0 sqm)
+## 9. Toilets (accessible 7.2 sqm and standard 4.5 sqm, shared by clients and staff; staff toilet removed)
 
 | Item | Qty | Budget line | Source |
 |---|---|---|---|
@@ -179,7 +179,9 @@ Partition walls between bays, ceiling curtain track on the open side, handwash b
 | Bins (N09); brushes and plunger (N10, N11) | per toilet | Opening stock | CN |
 | Toilet signage with accessibility symbol (N14) | per toilet | L2 (signage) | AU |
 
-## 10. Staff room, service entry and clean linen, storage
+The separate staff toilet (4.0 sqm in version 1) is removed. No staff-toilet quantities remain; the fixtures above serve both clients and staff. Number of facilities is subject to NCC Part F4 and the building surveyor (TO CONFIRM).
+
+## 10. Staff room and lockers (13.0 sqm), clean linen (6.2 sqm), storage (8.6 sqm), service entry
 
 | Item | Qty | Budget line | Source |
 |---|---|---|---|
@@ -205,9 +207,20 @@ Partition walls between bays, ceiling curtain track on the open side, handwash b
 
 ---
 
+## Version 2 changes to quantities (budget totals not changed)
+
+| Change | Quantity effect | Budget effect |
+|---|---|---|
+| Separate specimen fridge bay removed; under-counter specimen fridge in each collection room (E16) | 1 becomes 2 | Not priced in the repository (no unit price for E16). The L4 total of A$6,330 is left unchanged and flagged TO CONFIRM |
+| Recovery recliner in each room (E04) | 1 becomes 2 | The repository prices one at A$500 to 900; the second is not added to the model total and is flagged TO CONFIRM |
+| Centrifuge (E15) | 1 (space for a second in Room 2) | Second unit A$3,500 to 5,000 per the equipment schedule if required; not added |
+| Staff toilet removed | no staff-toilet fixtures | No budget line was drawn for it; no total changes |
+| Hair 4 chairs and nails 4 stations | unchanged | Unchanged |
+
 ## Items to confirm (not resolved here)
 
 1. Cafe equipment (refrigerators, coffee machine, toastie press) is not in any model total. This was already flagged in the 3-way model; this schedule does not change it.
-2. The second blood collection room may need a second centrifuge, specimen fridge or recovery chair. The register treats this as open; the drawing shares one fridge and centrifuge bay between both rooms.
-3. The room schedule in the repo adds to about 276 sqm of rooms with circulation. At the 288.6 sqm concept shell, the four bays, reception, hair and nails are drawn slightly smaller than their targets (see the area schedule on the drawing). The quantities above do not change; the architect should confirm fit.
+2. The second blood collection room may need a second centrifuge, specimen fridge or recovery chair. Version 2 draws a fridge and a recliner in each room and keeps bench space for a second centrifuge. The register still carries one of each; pricing the second units is open and not added to any total.
+3. The room schedule in the repo adds to about 276 sqm of rooms with circulation. At the 288.6 sqm concept shell, the four bays and reception are drawn at or slightly below their targets and hair and nails at 5 to 6 sqm per station (see the area schedule on the drawing). The quantities above do not change except where listed; the architect should confirm fit.
 4. Register items marked TBD (site) cannot be counted until a venue is chosen.
+5. Sanitary facilities (one accessible and one standard WC, shared) need the architect and building surveyor under NCC Part F4. TO CONFIRM.
