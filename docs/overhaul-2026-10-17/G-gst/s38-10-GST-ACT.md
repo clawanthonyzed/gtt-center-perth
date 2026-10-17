@@ -18,7 +18,7 @@
 3. Definitions relied on, from s 195-1: "medical practitioner", "medical service", "approved pathology practitioner", "hospital treatment", "professional service", "recognised professional".
 4. GST Regulations 2019, reg 38-7.01 (prescribed provision for s 38-7(2)(a)).
 5. Health Insurance Act 1973: s 3(1) definitions of "pathology service", "pathology services table", "professional service" (opening paragraphs), "approved collection centre"; and s 16A in full (Medicare benefits for pathology services), because it controls who may collect a specimen when a Medicare benefit is claimed.
-6. Context sections used by the split analysis: GST Act ss 9-30, 9-80, 29-70 (tax invoices) and Division 165 (anti-avoidance) ss 165-1 to 165-15, 165-40 to 165-55.
+6. Context sections used by the split analysis: GST Act ss 9-5, 9-15, 9-30, 9-80, 29-70 (tax invoices) and Division 165 (anti-avoidance) ss 165-1 to 165-15, 165-40 to 165-55.
 
 ## What could not be fetched or is not included
 
@@ -1144,4 +1144,27 @@ Section 165-50
                                                             Anti-avoidance Division 165
                                                                                 Section 165-60
 165-60 One declaration may cover several tax periods and
+```
+
+## Context: GST Act s 9-5 and s 9-15 (verbatim, added for the invoicing analysis)
+```text
+9-5 Taxable supplies
+                 You make a taxable supply if:
+                  (a) you make the supply for *consideration; and
+                  (b) the supply is made in the course or furtherance of an
+                      *enterprise that you *carry on; and
+                  (c) the supply is *connected with the indirect tax zone; and
+                  (d) you are *registered, or *required to be registered.
+                 However, the supply is not a *taxable supply to the extent that it is
+                 *GST-free or *input taxed.
+
+9-15 Consideration
+          (1) Consideration includes:
+               (a) any payment, or any act or forbearance, in connection with a
+                   supply of anything; and
+               (b) any payment, or any act or forbearance, in response to or for
+                   the inducement of a supply of anything.
+          (2) It does not matter whether the payment, act or forbearance was
+              voluntary, or whether it was by the *recipient of the supply.
+        (2A) [not reproduced here]
 ```
