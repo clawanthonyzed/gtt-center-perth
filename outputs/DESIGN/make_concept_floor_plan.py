@@ -376,7 +376,7 @@ def build():
         circ(ox_ + 3.25, oy_ + 2.2, 0.22)
         item(ox_ + 0.12, oy_ + 1.3, 0.85, 1.85, "#fff", MUTE); vtext(ox_ + 0.58, oy_ + 2.25, "recovery recliner", 7.5)
         basin(ox_ + 4.1, oy_ + 2.95); text(ox_ + 3.85, oy_ + 3.0, "HB", 8, "700", BLUE)
-        label2(ox_ + 2.0, oy_ + 3.6, f"Blood Collection Room {n}", area(k), 9.5)
+        label2(ox_ + 1.8, oy_ + 3.6, f"Blood Collection Room {n}", area(k), 9.5)
     # staff room
     item(12.45, 1.9, 1.2, 0.9, "#fff"); circ(12.6, 1.75, 0.11); circ(13.5, 1.75, 0.11); circ(12.6, 2.95, 0.11); circ(13.5, 2.95, 0.11)
     item(14.12, 1.35, 0.38, 3.4, "#E6D7BF", MUTE); vtext(14.31, 3.05, "lockers", 7.5, "400", MUTE)

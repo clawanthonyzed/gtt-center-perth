@@ -4,3 +4,4 @@
 - F4 done: 19.0 sqm each (middle of repo 18 to 20)
 - F7 done: 9 references, Pinterest not retrievable
 - F8 built: floor-plan-v2.html/png/svg, floor-plan-concept.png/svg updated
+- floor-plan-concept-plan.png regenerated as v2 plan-only crop
