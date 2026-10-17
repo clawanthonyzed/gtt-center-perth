@@ -128,3 +128,7 @@ Weekly loading for the plan appendix: at 18 a day, 12 phlebotomist shifts a week
 - Phlebotomist employer, Medicare and lab-employment dependency, pathology partner confirmation (kept in the decision log and open items).
 - Standby allowance: none is assumed; any rate is TO CONFIRM against the award.
 - The take-up rates and new-booking shares are planning assumptions; do not present them as forecasts.
+
+## H. Medicare link (use with the Medicare section from workstream L)
+
+Investor wording: "If our pathology partner supplies its own collectors, GTT's collector wage cost (about A$6,682 a month per collector) is avoided and break-even falls to about 6.2 clients a day. If Medicare did not pay and GTT absorbed the A$25.85 schedule fee, break-even would be about 8.1 clients a day and profit at full capacity A$22,935 a month." Both depend on the lab's answers and are not yet confirmed.

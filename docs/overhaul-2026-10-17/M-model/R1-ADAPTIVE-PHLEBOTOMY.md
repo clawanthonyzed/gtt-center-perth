@@ -142,3 +142,15 @@ Taken from the repo's own protocol (`docs/gtt-clinical-protocol.md` adverse even
 - **Medicare and lab-employment rules:** workstream L (`docs/overhaul-2026-10-17/L-medicare/`) had not been published when this was written; check it before committing. If the lab must supply or employ the collectors, GTT's phlebotomist wage lines move to a lab fee and the roster follows the lab's staffing rule.
 - **Award:** casual minimum engagement (3 hours, VERIFIED in the repo), Saturday penalty (1.5 times assumed), any standby or on-call allowance (none in the repo): TO CONFIRM with Fair Work.
 - **Not modelled:** relief for absence (repo allowance A$940.34 a month for phlebotomists is outside the A$78,993.29 and A$72,311.06 totals, as before), call-in frequency, public holiday premiums, shorter shifts on very light mornings (3-hour floor upside, not counted, consistent with the repo).
+
+## 11. Medicare findings (workstream L) and what they do to this roster
+
+Source: `docs/overhaul-2026-10-17/L-medicare/MEDICARE-FEASIBILITY-REPORT.md` and `NON-BULK-BILLED-COST-MODEL.md`. Medicare pays for the test only where the specimen is collected by the pathologist or an employee of the approved pathology authority (Health Insurance Act s16A(5AB)(c), as quoted by L); centre approval accepts staff "employed or engaged". The ranked workaround is for the lab to place its own employed collectors in GTT's rooms, so the collector roster would then be the lab's decision.
+
+| Case | Collector wages borne by GTT | Break-even (clients a day) | Net at 18 a morning |
+|---|---|---|---|
+| Plan: GTT-employed adaptive roster, lab bulk-bills (assumes Medicare pays) | 1 up to 9 booked, 2 from 10 | 7.250 | +A$35,186.40 |
+| Lab supplies employed collectors, no service charge (L workaround 1) | A$0 (saves A$6,682.28 a month per collector; A$13,364.52 with two) | 6.235 | +A$48,550.92 |
+| Medicare does not pay and GTT absorbs the schedule fee of A$25.85 a visit (test A$19.90 + collection A$5.95) | adaptive roster as above | 8.087 (L reported 9.219 on the fixed 2-phlebotomist roster); GST-stress 13.014 | +A$22,935.05 (unchanged: both chairs run at 18) |
+
+The adaptive roster therefore cushions the fallback: absorbing the fee costs 0.837 of a client in break-even, not the 0.953 L showed. A market-value service charge from the lab for supplying collectors is not known (TO CONFIRM) and is not netted off the lab-supplied row. Lab fee, supply of collectors and whether two collectors are required are questions for PathWest, WDP and Clinipath; nothing has been sent.
