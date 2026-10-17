@@ -141,7 +141,7 @@ def pdf_pages(pdf):
 def build_plan():
     md_text = open(os.path.join(PRES, 'BUSINESS-PLAN.md'), encoding='utf-8').read()
     body = md_to_html(md_text)
-    body = wrap_tables(body, fit_ids=('5.3', '5.5', '6.3', '8.3', '9.3'))
+    body = wrap_tables(body, fit_ids=('5.3', '5.4', '5.5', '6.3', '8.3', '9.3', '9.6', '9.7'))
     body = add_ids(body)
     hs = headings(body)
     toc_items = []
@@ -169,7 +169,7 @@ def build_plan():
         return f'<!DOCTYPE html><html lang="en-AU"><head><meta charset="utf-8"><title>GTT Center Perth Business Plan</title><base href="file://{PRES}/"><style>{CSS}</style></head><body>{b}</body></html>'
 
     pdf = os.path.join(OUT, 'BUSINESS-PLAN.pdf')
-    footer = 'GTT Center Perth | Business Plan v0.5 | DRAFT 2026-10-16'
+    footer = 'GTT Center Perth | Business Plan v0.6 | DRAFT 2026-10-17'
     render_pdf(full({}), pdf, footer, PRES)
     texts = pdf_pages(pdf)
     pages = {}
@@ -230,7 +230,7 @@ def build_fin(name, title, out_name, wide=False):
         pg.goto('file://' + path)
         pg.wait_for_timeout(400)
         footer = ('<div style="font-size:8px;width:100%;padding:0 12mm;color:#5E5F45;display:flex;justify-content:space-between;font-family:Arial,sans-serif">'
-                  f'<span>GTT Center Perth | {title} | DRAFT 2026-10-16</span><span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>')
+                  f'<span>GTT Center Perth | {title} | DRAFT 2026-10-17</span><span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>')
         pg.pdf(path=pdf, format='A4', landscape=True, print_background=True, display_header_footer=True,
                header_template='<div></div>', footer_template=footer, margin={'top': '12mm', 'bottom': '14mm', 'left': '12mm', 'right': '12mm'})
         b.close()

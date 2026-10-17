@@ -1,510 +1,487 @@
-# GTT Center Perth: Executive Pitch Deck (DRAFT v0.4, 2026-10-11, cadence adopted)
+# GTT Center Perth: Executive Pitch Deck (DRAFT v0.6, 2026-10-17)
 
-**Note (2026-10-16):** the cadence, Year 1, ramp-up and funding figures in this text predate the v0.5 model. The v0.5 slides and business plan (25-minute cadence only, no ramp-up, Year 1 net A$422,237, peak funding A$251,198) are the current documents.
-
-**Status:** DRAFT for Anthony's sign-off. Nothing here has been sent or published.
-**Prepared by:** Grace (Operations Manager). Strategy lens: Alexander (Australian market, moat, honest sizing).
-**Version:** v0.4 (2026-10-11, cadence adopted; break-even 8.266 and peak funding A$267,771 locked). Financials synced to Theodore's 3-way model v0.4 (`FINANCIALS/3-WAY-FINANCIAL-MODEL-AUD.md`).
-**Date:** 2026-10-11 | **Money:** all A$ (Australian dollars)
-**Repo checked:** clawanthonyzed/gtt-center-perth, branch main, latest commit seen 2026-10-08.
-
-**How to read this**
-- 🟢 = confirmed in the repo | 🟡 = planning figure or in progress | 🔴 = blocked or not yet true
-- "TO CONFIRM" = not in the repo, or the repo disagrees. Anthony decides.
-- Every figure traces to a repo file (links at the bottom). Figures are planning estimates. There is no venue and no trading data yet.
-- Acronyms are explained the first time they appear.
-
-**Headline number (locked by Anthony 2026-10-10).** Baseline operating profit is **+A$35,186/month** (v3.0 model: A$143,070 revenue vs A$107,884 costs, at the A$8,000/month rent assumption, 18 clients a day). Conservative "GST-stress" downside: **+A$23,443/month**. At the new rent budget, net is about +A$32,686 to +A$33,936/month (A$10,500 gross ceiling all-in: +A$33,936; prudent A$10,500 plus separate utilities and cleaning: +A$32,686). **v0.3 change:** staff are now rostered to each morning's bookings, which leaves steady state unchanged but cuts the ramp-up: Months 1 to 3 payroll A$214,844 (was A$280,787), Month 1 loss -A$16,573 (was -A$45,464), Month 2 positive, break-even **8.266** clients a day (was 12.655; GST-stress 9.255), peak funding A$267,771 (was A$318,176). Two points travel with this number. (1) One cadence only: the 25-minute pair cadence (first booking 07:00, 18 clients a morning at most); staff are called in to match confirmed bookings. (2) Fill rate is assumed 100%. Each 1% of fill at capacity is worth about A$1,185/month: 85% fill gives about +A$17.4k and 70% makes a loss. That is why the waitlist matters. The older +A$25,087.07 baseline (570 visits) is historical. See Conflict C1.
+**Status:** DRAFT for Anthony's approval. Nothing here has been sent or published.
+**Prepared by:** Grace (Operations Manager). All figures in Australian dollars (A$). Planning estimates: the business has not opened and has no trading data.
+This text is the same as the slide deck (slides.html, 29 slides). Slides marked INTERNAL contain financials and are not for external use.
 
 ---
 
-## SLIDE 1: Cover
+## SLIDE 1: Cover (external)
 
-- **GTT Center Perth** (working name; SOLENA is the conditional front-runner, not locked, trademark not cleared) 🟡
-- WA's first premium waiting experience for pregnant women having the Glucose Tolerance Test (GTT).
-- Our research found no equivalent venue in WA. This is our own finding, not an audit.
-- Pre-launch. No venue yet. No launch date set. Status: STANDBY.
-- DRAFT 2026-10-11. For Anthony's sign-off only.
+**GTT Center Perth**
 
-**Visual:** Full-bleed warm-stone photo or colour field, centred wordmark. Palette from the brand tokens (`outputs/brand/warm-stone-tokens.css`). Small "DRAFT" stamp bottom right.
-**Source:** [README.md][README]; [docs/naming/NAMING-DECISION-STATE.md][NAMING]; [docs/DECISION-LOG.md][DL] (2026-08-14 entry).
+Western Australia's first premium waiting experience for expecting mothers having the Glucose Tolerance Test (GTT)
 
----
+Our research found no equivalent venue in Western Australia. This is our own finding, not an audit.
 
-## SLIDE 2: The Problem
+Pre-launch. No venue yet. No launch date set.
 
-- The GTT is a standard pregnancy screening test. Mothers fast first, then sit for about 2 to 2.5 hours (some sources say up to 3).
-- Today that wait is a bare pathology waiting room, with blood draws at set times.
-- Mothers cannot leave, cannot eat, and are often tired and uncomfortable.
-- Demand is not optional. Nearly every pregnant woman is screened.
-- Gap: our research found no WA venue that turns this wait into a care experience.
-
-| Today | What mothers get |
-|---|---|
-| Wait time | About 2 to 2.5 hours |
-| Setting | Pathology waiting room |
-| Care during wait | None |
-
-**Visual:** Simple timeline bar: fasting draw, 60 min draw, 120 min draw, with the gaps shaded "dead time".
-**Source:** [docs/executive-summary.md][EXEC] (The Problem); [docs/market-research-findings.md][MKT]; [docs/business-plan.md][BP] (Market Size).
-**Alexander lens:** Non-discretionary demand is the strongest asset. Marketing does not have to create the test, only the choice of where to have it.
 
 ---
 
-## SLIDE 3: The Wellness Solution
+## SLIDE 2: Problem (external)
 
-- Turn the wait into a restorative visit: massage, nails, hair, beauty (facials, brows).
-- Blood is drawn on site, in a private collection room, by GTT's own 2 in-house certified phlebotomists (people trained to draw blood), which guarantees the premium care experience.
-- Services fit between draws. A draw never interrupts a service.
-- Staff are employed (casual or permanent). Not subtenants.
+**The problem**
+
+- Wait time: 2 to 2.5 hours: Some sources say up to 3
+- Setting: Waiting room: Bare pathology room
+- Care during wait: None: Fasting, tired, cannot leave
+- The GTT is a standard pregnancy screening test, recommended for expecting mothers, usually between 24 and 28 weeks. It is optional: every expecting mother chooses.
+- Nearly every expecting mother is offered it.
+- Gap: no Western Australian venue turns this wait into a care experience.
+
+---
+
+## SLIDE 3: Solution (external)
+
+**The wellness solution**
+
+- Massage
+- Nails
+- Hair
+- Beauty
+- Blood is drawn on site in a private collection room.
+- Certified phlebotomists, rostered to the morning's bookings: one up to 9 clients, two from the tenth. Who employs the collectors is being settled in writing with the pathology partner.
+- Services fit between draws. Wellness services never interrupt a blood draw.
+- Wellness staff are employed (casual or permanent).
 - Venue and lounge access is free inside every package.
-- **Not in launch scope:** 3D keepsake ultrasound (possible Phase 2; never diagnostic). Spray tan removed from the concept.
-
-| Launch menu | Status |
-|---|---|
-| Pregnancy massage, facial, nails, hair, brows | 🟡 planned |
-| Lounge, tea, birth plan tablet | 🟡 planned |
-| 3D keepsake scan | 🔴 not launch scope (Phase 2 idea only) |
-
-**Visual:** Four icon tiles (massage, nails, hair, beauty) around a blood-draw chair icon. Keep it calm and clean.
-**Source:** [README.md][README]; [docs/services-pricing-locked.md][PRICE]; [docs/market-research-findings.md][MKT] (3D reframe note); [docs/CURRENT-STATE.md][CS] §0 item 1.
-**Alexander lens:** First-mover edge is the experience itself. Be honest: this is not a hard-to-copy product. The moat has to come from referral relationships, a compliant collection room and brand.
 
 ---
 
-## SLIDE 4: Market Size (Perth and WA)
+## SLIDE 4: Market (external)
 
-| Measure | Figure | Note |
+**Western Australia and Greater Perth births**
+
+| Measure | 2023 | 2024 |
 |---|---|---|
-| WA births per year | about 33,570 | Source year: 2024 |
-| Greater Perth births per year | about 26,790 | Source year: 2024 |
-| Perth GTT tests per year (proxy) | about 26,790 | Assumes near-universal screening. Births used as a stand-in. TO CONFIRM |
-| Perth GTT tests per week | about 515 | 26,790 divided by 52 |
-| Women diagnosed with gestational diabetes (of those tested) | about 18% | Business plan; verify against a current clinical source before external use |
+| Registered births, Western Australia | 32,031 | 30,541 |
+| Registered births, Greater Perth | 25,436 | 24,271 |
+| Total fertility rate, Greater Perth | 1.58 | 1.47 |
+| Perth births per week | 489 | 467 |
 
-- Our planning capacity is 108 AM slots a week, about **21%** of Perth's weekly tests.
-- Break-even needs about **9.8%** of the Perth market (8.266 clients a day, LOCKED, see Slide 9; derived by Grace from Theodore's figure). That is roughly 1 in 10 Perth GTT mothers. This uses the 25-minute pair cadence and assumes 100% fill (each 1% of fill at capacity is about A$1,185/month).
+- Perth glucose tolerance tests a week (births used as a stand-in): about 467: 24,271 births divided by 52. To be confirmed.
+- Our planned capacity: 18 clients a morning, 108 a week: About 23% of Perth's weekly tests. A ceiling on places offered, not a forecast and not market control.
+GTT is a premium, high-desire choice for the expecting mother who wants a comfortable wait. Most expecting mothers will still test at their usual collection centre.
 
-**Visual:** Nested circles (WA 33,570 > Perth 26,790 > our capacity 21% > break-even 9.8%). Add a footnote: "ABS Births, Australia 2024, as analysed by KPMG; preliminary figures."
-**Source:** [docs/CURRENT-STATE.md][CS] §3 and §10; [docs/investor-memorandum.md][IM] (market table); [docs/business-plan.md][BP] (Market Size, Addressable Market).
-**Alexander lens:** The honest question is not "is the market big?" (it is). It is "can we win about 1 in 10 Perth GTT mothers through referrals, and keep every released morning full?" Smaller than the old 1 in 7, but it still needs midwife and obstetrician relationships from day one, plus a waitlist.
+Source: Australian Bureau of Statistics, Births, Australia 2024 (released 15 October 2025) and Data by region. The 2025 figures are due on 6 November 2026 and will replace these.
 
----
-
-## SLIDE 5: How a Visit Works
-
-1. Book and pay online in advance. 🟡
-2. Arrive fasted. Check in and consent forms.
-3. Draw 1 (about 5 minutes), then service 1.
-4. Draw 2 at 60 minutes, then service 2.
-5. Draw 3 at 120 minutes. Relax in the lounge.
-6. One courier pickup of the day's samples at the end of the morning, by the lab that wins the tender (PathWest or WDP). Lab tests; results go to the mother's doctor. GTT does not diagnose or interpret results.
-
-| Operating detail | Planning figure |
-|---|---|
-| First client | 07:00 start |
-| Clients per day | up to 18 (9 pairs, 25 minutes apart). Booked 2 to 4 weeks ahead, with a waitlist |
-| Collection rooms and chairs | 2 dedicated blood collection rooms, 2 chairs, 2 in-house phlebotomists |
-| Treatment staff | Rostered to bookings: 4 on mornings of up to 9 clients (25-minute pair cadence), 6 at ten clients, 8 (4 massage/beauty pool, 2 nails, 2 hair) on fuller mornings. See Slide 9A |
-| Trading days | Monday to Saturday (no Sunday) |
-
-**Visual:** Horizontal swim-lane timeline: one mother's 2 hours, draws as red dots, services as blue bars, lounge as soft green.
-**Source:** [docs/CURRENT-STATE.md][CS] §1 and §4; [docs/scenario-c-sync-timetables.md][SYNC] §0.6a (the schedule was checked by solver for zero clashes); [docs/executive-summary.md][EXEC] ("GTT does not diagnose").
-**TO CONFIRM:** who supplies the glucose drink (PathWest said it is excluded from its free supplies), and how the patient's pathology fee is billed under the new model.
 
 ---
 
-## SLIDE 6: Lab Partners: Dual-Lab Tender
+## SLIDE 5: How a visit works (external)
 
-**What we offer the labs (PathWest and WDP)**
+**How a visit works**
 
-| We provide | Status |
-|---|---|
-| A steady, pre-booked morning stream of GTT patients at one site (up to 108 a week at capacity; clients book 2 to 4 weeks ahead, so volume is known in advance) | 🟡 capacity, not a forecast |
-| Our own certified phlebotomists, employed and supervised by us | 🟢 decided 2026-09-19 |
-| 2 dedicated blood collection rooms (locked 2026-10-10) built to national standards (NPAAC = National Pathology Accreditation Advisory Council) | 🟡 design stage |
-| One pickup a day at end of morning, not timed pickups per patient | 🟢 put to PathWest |
-| We earn nothing from pathology billing. The partner keeps its testing revenue | 🟢 repo position |
-| Courier and lab volume put out to tender between PathWest and WDP. No exclusive commitment to either | 🟢 locked 2026-10-10 |
+- Book and pay online, 2 to 4 weeks ahead.
+- Arrive fasted 10 minutes before your draw (06:50 for the 07:00 draw). Check in and consent.
+- Draw 1 (about 5 minutes), then the glucose drink.
+- Wellness service 1 (30 or 45 minutes). It never interrupts a draw.
+- Draw 2 at 60 minutes, then wellness service 2 (30 or 45 minutes).
+- Draw 3 at 120 minutes.
+- Relax in the lounge, have something to eat or drink from the Private Refreshment Counter, or continue to pre-booked standalone services.
+- One courier pickup per day. GTT does not diagnose or interpret results.
+- First booking: 07:00
+- Clients per morning: up to 18
+- Collection rooms: 2: 2 chairs, 1 or 2 phlebotomists
+- Trading days: Mon to Sat
 
-**What we ask:** courier pickup, lab testing, results reporting to the doctor, tubes and bags, collection-room spec in writing, and costs.
+---
 
-**Lab tender (dual-lab strategy, locked by Anthony 2026-10-10).** Anthony: "We need to leave both labs open as their prices may be different." GTT employs 2 certified in-house phlebotomists, which guarantees the premium care experience. Courier and lab analysis go out to tender between PathWest and WDP for the best per-test fee schedule. Clinipath stays an optional third bidder only if it ever replies (3 attempts kept on record).
+## SLIDE 6: Lab partners (external)
 
-| Criterion | PathWest | WDP | Status |
+**Lab partners**
+
+**What we offer**
+
+- A steady morning stream of GTT patients at one site (up to 108 a week)
+- Rooms ready for your employed collectors (preferred), or our certified phlebotomists if you agree in writing
+- 2 equal collection rooms of 19.0 sqm with their own specimen fridges, to NPAAC standards
+- One courier pickup per day
+- We earn nothing from pathology billing
+**What we ask**
+
+- Courier pickup
+- Lab testing
+- Results reporting to the doctor
+- Tubes and bags
+- Collection room requirements in writing
+- Written fees
+NPAAC = National Pathology Accreditation Advisory Council
+
+
+---
+
+## SLIDE 7: Bookings ahead and waitlist (external)
+
+**Predictable daily volume**
+
+Bookings 2 to 4 weeks ahead + a pre-launch waitlist = a full morning from day one and one courier pickup per day
+
+- Book ahead: 2 to 4 weeks: Prepaid online booking inside the usual 24 to 28 week window
+- Waitlist: Always on: Opens before launch and backfills cancellations so each morning stays full
+- Courier pickup: One per day: With the sample count known in advance
+- Each morning's client count is confirmed days ahead, so the lab can plan for the expected samples.
+- We share the forecast before each week. There is one courier pickup per day.
+- Launch marketing and the waitlist fill the diary before opening, so GTT opens at 18 bookings a morning.
+
+---
+
+## SLIDE 8: Pathology partner options (INTERNAL)
+
+**Pathology partner options**
+
+|  | Western Diagnostic Pathology (WDP) | PathWest | Clinipath |
 |---|---|---|---|
-| Per-test fee | TO CONFIRM. Cost question of 2026-09-03 unanswered | TO CONFIRM. No figure given | 🔴 no fees from either lab |
-| Courier cutoffs and pickups | Courier pickup confirmed 2026-09-01 (fluoro-ox tubes). Times TO CONFIRM | Feasible with correct tubes. Overnight storage conditional. No fixed cutoff | 🟡 times in writing from both |
-| Turnaround | TO CONFIRM | TO CONFIRM | 🟡 |
-| Tube and consumables supply | Tubes and bags free if volume is large. Glucose drink not supplied | TO CONFIRM | 🟡 |
-| Result delivery to referring doctor | TO CONFIRM | TO CONFIRM | 🟡 |
-| Minimum term and volume | Not given | Open item: minimum term | 🟡 |
-| ACC (Approved Collection Centre) arrangement | TO CONFIRM | TO CONFIRM | 🔴 see caveat below |
-| Other open items | Declined to supply staff (not needed, GTT employs) | Quality feedback, State Business Manager input, staffing cost | 🟡 |
+| Role | Priority partner | Contingency | Contingency |
+| Fee per test | No fee quoted yet | No fee quoted yet | No fee quoted yet |
+| Collection or rental fee | No fee quoted yet | No fee quoted yet | No fee quoted yet |
+| Courier | One pickup per day | Under assessment (grey top tubes may allow courier collection) | Not yet discussed |
+| Turnaround | Not yet quoted | Not yet quoted | Not yet quoted |
+| Contact status | In active discussion since July 2026; formal partnership steps requested | Replied in August 2026, progressing | Approached July 2026, awaiting reply |
 
-**Regulatory caveat (not solved).** Only the pathology partner can hold the Commonwealth ACC approval for a collection room. Two competing labs cannot both hold it for the same room. Options to test: one ACC-holding lab per room (we plan 2 rooms), a separate arrangement per room or per lab, or one lab holding it while the other is used for courier and analysis only if its rules allow. Verify with both labs and an adviser before relying on any of these.
+No laboratory has yet quoted a fee. Written wholesale per-test and collection fees will be requested from all three before a partner is chosen.
 
-**Visual:** Two-column handshake diagram. Left: GTT (venue, room, phlebotomists, mothers). Right: Partner (courier, lab, reporting, Medicare billing). Arrow in the middle: samples out, results back.
-**Source:** [docs/CURRENT-STATE.md][CS] §0 item 1 and §4; [docs/pathology-partnership-brief.md][PPB] §3 (written under an older model; see Conflict C8); [docs/pathwest-clinipath-outreach-2026-07-27.md][PWC] §4e.
-**Alexander lens:** Each lab's incentive is volume it would not otherwise capture, and two bidders give us price leverage. Say it as a hypothesis until a lab agrees. A regulatory moat exists only if our rooms and processes clear the bar that copycats find hard.
+Only the pathology partner can hold the Medicare collection centre approval, on an occupation agreement for the room. Medicare pays when the collector is the laboratory's own employee, so the preferred arrangement is that the laboratory places its collectors in our rooms. See the Medicare slides.
+
 
 ---
 
-## SLIDE 7: Revenue Streams
+## SLIDE 9: Pricing (external)
 
-| Stream | A$ per month (steady state, planning case) | Share |
-|---|---|---|
-| AM GTT packages (18 clients a day, A$250 each, about 26.33 trading days) | 118,485.00 (derived) | about 83% |
-| PM standalone services and packages (10 sessions a day) | 24,585.37 | about 17% |
-| **Total revenue** | **143,070.37** | 100% |
+**Pricing**
 
-**Not counted in the baseline (upside only):**
-- Cafe and retail (ancillary): set to A$0 by founder decision.
-- Staff downtime fill and early-release savings: tracked separately, unproven.
-- Package 2 upgrades (A$300): baseline prices every client at A$250.
-- 3D keepsake scan: Phase 2 idea only.
-
-**Visual:** Stacked bar (AM 83% / PM 17%), plus a greyed-out "upside, not counted" box.
-**Source:** [docs/CURRENT-STATE.md][CS] §0 (items 3, 4), §5, §8; AM split derived as 18 x A$250 x 26.33 days = A$118,485.00 (adds exactly to the total with PM).
-**Ramp-up (new in v0.3):** Theodore has now rebuilt the 12-month ramp for 18 clients a day (43% / 64% / 79% / 93% of steady state in Months 1 to 4). Year 1 net is A$322,015 (repo basis) or A$196,609 after GST timing. Conflict C5 resolved. The ramp curve's origin is still undocumented in the repo.
+- GTT Package 1: A$250: Venue and lounge free + 2 x 30-minute services
+- GTT Package 2 (most flexible): A$300: Venue and lounge free + 2 x 45, or 45 + 30, or 2 x 30 minutes
+- PM Refresh: A$185: 75 minutes: massage + mini facial
+- PM Restore: A$135: 75 minutes: manicure + blow-dry
+- Prices are GST-inclusive and are our own. Not tested with customers yet.
+- The test is billed by the lab to Medicare, separate from our package: A$0 out of pocket for a Medicare card holder. The Medicare schedule fee is A$25.85 a visit; no lab has quoted a fee yet.
+- 10% off after your test: any expecting mother who completes a glucose tolerance test can redeem 10% off a standalone treatment or multi-service package, morning or afternoon, valid immediately. One use per test. Expiry and exclusions are proposed terms.
 
 ---
 
-## SLIDE 8: Pricing
+## SLIDE 10: Revenue and break-even (INTERNAL)
 
-| Offer | Price | What it is |
-|---|---|---|
-| GTT Package 1 | **A$250** | Venue and lounge free + 2 x 30-minute services (fixed) |
-| GTT Package 2 | **A$300** | Venue and lounge free + choice of 2 x 45, or 45 + 30, or 2 x 30 minutes |
-| PM Refresh | **A$185** | 75 minutes: massage + mini facial (A$212 if bought separately) |
-| PM Restore | **A$135** | 75 minutes: manicure + blow-dry (A$150 if bought separately) |
+**Revenue and break-even**
 
-- Baseline uses A$250 for every GTT client. Deliberately cautious.
-- Prices are our own. Not tested with customers yet. 🟡
-- Pathology fee is separate from our packages. Out-of-pocket estimate A$0 to A$80, pending partner confirmation. TO CONFIRM
-- Perth comparison: discounted spa packages average about A$140.
-
-**Visual:** Four clean price cards. Package 2 labelled "most flexible".
-**Source:** [docs/CURRENT-STATE.md][CS] §2; [docs/architecture/PM-PACKAGES.md][PMP]; [docs/services-pricing-locked.md][PRICE]; [docs/market-research-findings.md][MKT] §2.
-**Note:** PM Refresh and PM Restore prices signed off by Anthony 2026-10-03.
-
----
-
-## SLIDE 9: Unit Economics
-
-| Measure | Figure |
-|---|---|
-| Revenue per AM client | A$250 (Package 1) |
-| Extra revenue per extra AM client a day, per month | A$6,582.50 (derived: A$250 x 26.33) |
-| Break-even (repo basis) | **8.266 AM clients a day** (about 218 a month), 🔒 LOCKED (Anthony 2026-10-11). Was 12.655 before rostering to bookings |
-| Break-even (GST-stress) | 9.255 clients a day (was 14.083) |
-| Break-even as share of the 18-a-day plan | 45.9% (derived) |
-| Margin of safety | 9.734 clients a day (54.1%, derived) |
-| Break-even share of Perth market | about 9.8% (derived) |
-
-**Profit ladder (A$ per month, operating profit, steady state)**
-
-| AM clients a day | Roster | Revenue | Costs | Profit |
+- Revenue per month (full capacity): A$143,070.37
+- Break-even (morning clients a day): 7.250: 40.3% of the 18-a-day capacity. Margin of safety 10.75 clients (59.7%)
+| Morning clients a day | Roster | Revenue | Costs | Profit per month |
 |---|---|---|---|---|
-| **8.266 (break-even)** | 2 phlebotomists + 4 therapists | 78,993.29 | 78,993.29 | **0** |
-| 10 (morning filled to the tier top) | 2 + 4 | 90,410.37 | 78,993.29 | +11,417.08 (derived) |
-| 12.6 (70% fill of 18) | 2 + 8 | 107,524.87 | 107,883.97 | **-359.10** |
-| 15.3 (85% fill of 18) | 2 + 8 | 125,297.62 | 107,883.97 | +17,413.65 |
-| **18 (planning case, 100% fill)** | 2 + 8 | 143,070.37 | 107,883.97 | **+35,186.40** |
+| 7.250 (break-even) | 1 + 4 | A$72,311.06 | A$72,311.06 | A$0 |
+| 9 | 1 + 4 | A$83,827.87 | A$72,311.06 | +A$11,516.81 |
+| 10 | 2 + 6 | A$90,410.37 | A$93,438.63 | -A$3,028.26 |
+| 12.6 (70% fill) | 2 + 8 | A$107,524.87 | A$107,883.97 | -A$359.10 |
+| 15.3 (85% fill) | 2 + 8 | A$125,297.62 | A$107,883.97 | +A$17,413.65 |
+| 18 (full capacity, planning case) | 2 + 8 | A$143,070.37 | A$107,883.97 | +A$35,186.40 |
 
-- All rows use the 25-minute pair cadence. Only as a contingency, the fallback is to run AM GTT on full 18-client mornings only (Theodore's model Section 14: payroll Months 1 to 3 A$199,681; its break-even is not comparable because mornings close).
-- The 70% and 85% fill rows keep the full roster (conservative). The 10-a-day row uses Theodore's own cost base and break-even formula; the arithmetic is Grace's.
-- Two points travel with this number. (1) One cadence only: the 25-minute pair cadence (first booking 07:00, 18 clients a morning at most); staff are called in to match confirmed bookings. (2) Fill rate is assumed 100%. Each 1% of fill at capacity is worth about A$1,185/month: 85% fill gives about +A$17.4k and 70% makes a loss. That is why the waitlist matters.
+Roster = phlebotomists + therapists, called in to match bookings. Assumes one booking to a time slot; if every booking stacks in pairs from 07:00, break-even is 12.655 (GST-stress 8.138). If the lab must supply the collectors, the roster is the lab's decision.
 
-- The old fixed-roster ladder (11.29 a day at -A$8,982.18; 12-client alternative +A$1,096.40) is superseded by rostering to bookings.
-
-**Visual:** Line chart of profit against clients a day, with a dotted vertical line at 8.266 and a shaded "fill risk" band below 85% fill.
-**Source:** Theodore's 3-way model v0.3, Sections 1, 6, 12, 13, 14; [docs/CURRENT-STATE.md][CS] §10 (older fixed-roster ladder).
-**Alexander lens:** Still a high fixed-cost model, but far less exposed in the ramp. It wins or loses on fill rate, so the waitlist and the 2-to-4-week booking window are core to the plan, not marketing extras. Referrals must be proven before the lease is signed.
+- Why 8 therapists at about 12.6 clients?: Staffing follows overlap, not headcount. At about 12.6 booked clients, neighbouring double-booked slots put four first services in the room at once, so 8 therapists are needed. If second-chair bookings fall in alternate slots, 6 are enough.
+- Fill rate is the central risk: The plan assumes every released morning place fills. Each 1% of fill at capacity is worth about A$1,185 a month. At 85% fill profit is about +A$17.4k a month; at 70% GTT roughly breaks even; at half a morning (9 a day) it still earns about A$11,517 because the roster scales down.
 
 ---
 
-## SLIDE 9A: Demand-Responsive Rostering (new in v0.3)
+## SLIDE 11: Demand-responsive rostering (INTERNAL)
 
-**The rule (Anthony, 2026-10-11): staff are rostered to the number of clients booked that morning. Clients book weeks ahead and there is a waitlist.**
+**Adaptive rostering**
 
-| Confirmed bookings that morning | Phlebotomists | Therapists | Pair cadence | Weekday cost incl. on-costs | Rule |
-|---|---|---|---|---|---|
-| 0 | 0 | 0 | n/a | A$0 | No AM clinical roster |
-| 1 | 2 | 1 | n/a | **A$724.84** | Floor: 2 phlebotomists whenever any GTT client is booked |
-| 2 to 5 | 2 | 1 to 4 | 25 min | A$724.84 to A$1,482.90 | Avoid: steer bookings to fill the morning |
-| 6 to 10 | 2 | 4 | 25 min | A$1,482.90 | Target band |
-| 11 to 14 | 2 | 8 | 25 min | A$2,496.78 | Avoid: costliest per client. Hold at 10, offer the waitlisted client another morning |
-| 15 to 18 | 2 | 8 | 25 min | A$2,496.78 | Full roster runs only at **15+ bookings on a weekday or 17+ on a Saturday** |
+| Booked | Phlebotomists | Therapists | Last first draw | Labour per morning | Revenue per morning | Contribution per morning |
+|---|---|---|---|---|---|---|
+| 1 | 1 | 2 | 07:00 | A$741.45 | A$250 | -A$491.45 |
+| 2 to 9 (one per slot) | 1 | 4 | 07:25 to 10:20 | A$1,248.39 | A$500 to A$2,250 | -A$748.39 to +A$1,001.61 |
+| 10 | 2 | 6 | 10:20 | A$1,989.84 | A$2,500 | +A$510.16 |
+| 11 to 18 | 2 | 8 | 10:20 | A$2,496.78 | A$2,750 to A$4,500 | +A$253.22 to +A$2,003.22 |
 
-On-costs are super 12% and workers comp 1.7%. Saturday costs 1.5 times the weekday figure. The Venue Manager is fixed and not in these figures.
+Weekday labour with 12% superannuation and 1.7% workers compensation. Saturday is 1.5 times. Phlebotomists are rostered like every other role: 1 for 1 to 9 bookings, 2 from the tenth, none in the afternoon. A morning with one booking runs 1 phlebotomist and 2 therapists. Afternoons follow the pre-booked services; walk-ins are accepted only when staff are free.
 
-| Ramp-up effect | Before (full roster every morning) | After (rostered to bookings) |
-|---|---|---|
-| Payroll, Months 1 to 3 | A$280,787 | **A$214,844** (saves A$65,943) |
-| Month 1 net | -A$45,464 | **-A$16,573** (Month 2 is positive) |
-| Break-even, clients a day | 12.655 | **8.266** (GST-stress 9.255) |
-| Peak funding / lowest cash | A$318,176 / A$18,022 (Month 3) | **A$267,771 (🔒 LOCKED) / A$68,427 (Month 1)** |
-| Payback (repo / after GST) | Month 13 / Month 18 | **Month 11 / Month 15** |
-| Steady state, Month 5 onward | +A$35,186.40 | +A$35,186.40 (unchanged: 18 a day needs the full roster) |
-
-**Waitlist and fill rate:**
-- Clients book 2 to 4 weeks ahead (the referral window is 24 to 28 weeks of pregnancy, so each mother has several mornings that suit her). The roster is published 1 to 2 weeks ahead from confirmed, prepaid bookings.
-- The waitlist backfills cancellations and lets us hold a morning at 10 instead of opening a half-used full roster.
-- Fill rate is assumed 100%. Each 1% of fill at capacity is worth about A$1,185/month. 85% fill gives about +A$17.4k a month (Year 1 net about A$149k) and 70% fill makes a small loss. If real fill tracks below about 85%, cut released slots and lean on the waitlist before adding mornings.
-- Scheduling standard: advance booking 2 to 4 weeks plus waitlist, 2 phlebotomists every GTT morning. Contingency only: full 18-client mornings (Section 14 of the model).
-
-
-**Visual:** Left, the rule as a staircase (0 / floor / 4-therapist band / 8-therapist band). Right, two bars: ramp payroll before vs after.
-**Source:** Theodore's 3-way model v0.3, Sections 1A, 3a, 4, 13, 14; [docs/architecture/AM-DEMAND-DRIVEN-STAFFING-TIERS-2026-09.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/AM-DEMAND-DRIVEN-STAFFING-TIERS-2026-09.md); [docs/pm-staffing-roster.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/pm-staffing-roster.md).
+- No slow ramp-up: GTT uses launch marketing and a pre-launch waitlist to open at 18 bookings a morning.
+- Why one phlebotomist to 9: One chair carries up to nine clients because no two draws ever fall together. From the tenth booking two clients share a slot and the second chair opens. A named second collector is on call on lighter mornings.
+- Honest line: The pathology partner and the Medicare rules may require the lab to supply collectors. If so, the roster is the lab's decision.
 
 ---
 
-## SLIDE 10: Financial Baseline
+## SLIDE 12: Financial baseline (INTERNAL)
 
-| Planning case (full 18 a day) | A$ per month | A$ per year |
+**Profit per month**
+
+- Baseline (headline): +A$35,186: A$8,000 rent, 18 clients a day, before GST (see the fully taxable case)
+- Rent-adjusted (A$9,500 to A$10,500): +A$32,686 to +A$33,936: Gross ceiling A$10,500 all-in: +A$33,936. Prudent case (plus utilities and cleaning): +A$32,686
+- Fully taxable case (legal base after GST): +A$23,443: Gross ceiling +A$22,306
+- What is the fully taxable case?: Phlebotomy is not on the closed list of GST-free health services, so every GTT supply is taxable and one eleventh of every sale is paid away as GST. GTT still earns A$23,443 a month. First-year net: A$254,038 (rent A$10,500) to A$281,311 (rent A$8,000). Any real GST-free service added later would be extra profit.
+- What is the A$422k a year steady state?: At full capacity, 18 expecting mothers every morning, GTT earns A$35,186 a month in net operating profit (24.6% margin). Twelve months of that is A$422,237 a year.
+- Year 1 (no ramp-up, 12 full months): Revenue A$1,716,844, costs A$1,294,608, net A$422,237 (GST-stress A$281,311). Earlier drafts showed A$322,015 (A$196,609 under GST-stress) because they assumed four months of build-up to full capacity. A pre-launch waitlist removes that build-up, so those figures are replaced.
+Break-even 7.250 a day. Fill rate is the central risk: 85% fill is about +A$17.4k a month. GST: the test is billed by the lab; GTT's lounge, treatments and refreshments are taxable (see the GST slides). Planning estimates, no trading data. Working shown: visual financials .
+
+
+---
+
+## SLIDE 13: Capacity working (INTERNAL)
+
+**Capacity: how 18 a day is found**
+
+
+---
+
+## SLIDE 14: Break-even working (INTERNAL)
+
+**Break-even: the working**
+
+
+---
+
+## SLIDE 15: Cashflow chart (INTERNAL)
+
+**Cashflow: Month 0 to 12**
+
+- CapEx (Capital Expenditure, the startup setup costs): fit-out, chairs, equipment and other one-off items bought to open the venue.
+
+---
+
+## SLIDE 16: Funding gap (INTERNAL)
+
+**Funding gap**
+
+- Planning need: A$336,198 to A$361,198: A$251,198 pre-opening + A$85,000 to A$110,000 working capital
+- On hand (founder savings, to be confirmed): about A$200,000
+- Gap on planning case: A$136,198 to A$161,198
+- Peak funding actually drawn: A$251,198: The pre-opening capital. Month 1 already makes a profit. Ceiling rent cases: A$256,198
+- Lowest cash point: A$85,000 at opening: The working capital reserve is never drawn
+- Gap on peak basis: about A$51,198: A$251,198 less A$200,000 on hand
+- No external investor sought. Funding route to be confirmed.
+- Fit-out is not repriced for the larger footprint.
+- Accountant and quantity surveyor to confirm the startup budget.
+
+---
+
+## SLIDE 17: Partnership status (INTERNAL)
+
+**Partner status**
+
+| Partner | Last known position | Status |
 |---|---|---|
-| Revenue | 143,070.37 | 1,716,844.44 (derived) |
-| Payroll (including workers comp) | 93,595.63 | |
-| Other costs (rent budget A$8,000, insurance, admin) | 14,288.34 | |
-| **Total costs** | **107,883.97** | |
-| **Operating profit** | **+35,186.40** | **+422,236.80** |
-| Profit margin | about 24.6% (derived) | |
+| Western Diagnostic Pathology (WDP) | In active discussion since July 2026. Formal partnership steps requested; a written fee and the rental figure are still to come. | Priority partner |
+| PathWest | Replied in August 2026 and is progressing. Courier collection of grey top tubes is being assessed. A further reply is drafted, awaiting approval. | Contingency |
+| Clinipath | Approached in July 2026. No reply recorded. | Awaiting reply |
 
-**Profit view (headline locked by Anthony 2026-10-10; unchanged in v0.3)**
+Nothing is signed. No laboratory has quoted a fee.
 
-| Case | Net A$ per month | Break-even (clients a day) | Peak funding | Payback (repo / after GST) |
+Records current to October 2026. Any later contact is not yet logged.
+
+
+---
+
+## SLIDE 18: Floor plan and design (external)
+
+**Floor Plan and Design**
+
+Concept layout version 2, 18.5 m x 15.6 m (288.6 sqm). Concept only, not for construction; subject to site survey, architect and NCC compliance. Full page with change list.
+
+- Two equal blood collection rooms of 19.0 sqm, each with its own specimen fridge, handwash basin, recovery recliner and documentation bench (or one large room divided by a clinical privacy curtain).
+- Every room opens onto a corridor or the lounge. Staff reach the staff room without passing the service and linen area.
+- A separate service door and staff-only corridor carry clinical waste and soiled linen away without crossing any client area.
+- Hair and nail areas sized at 5 to 6 sqm per station, giving a larger open luxury lounge beside the Private Refreshment Counter, kept apart from specimens and clinical waste.
+- Massage and beauty bays with partition walls, privacy curtains and a handwash basin in every bay; one accessible and one standard toilet shared by clients and staff.
+- Used to brief the architect, obtain fit-out quotes and source furniture and fixtures, including direct from China where compliant.
+
+---
+
+## SLIDE 19: Property search (INTERNAL)
+
+**Property search: redone October 2026**
+
+The earlier shortlist has been replaced. The new search covers the Kwinana Freeway corridor, Cockburn, Jandakot, Cannington, Osborne Park, Murdoch and the medical precincts around Fiona Stanley and St John of God Murdoch. Criteria: 257 to 290 sqm, ground-level step-free entry, space for two collection rooms, plumbing for hand basins, 8 to 10 client car bays plus staff bays, zoning for health and beauty and a small refreshment counter, and a gross rent of A$9,500 to A$10,500 a month (A$10,500 is the all-in ceiling; the model assumes A$8,000).
+
+| Rank | Address | Size | Advertised rent | Position against criteria |
 |---|---|---|---|---|
-| **Baseline (headline), A$8,000 rent** | **+35,186** | 8.266 (🔒 LOCKED) | A$267,771 (🔒 LOCKED) | M11 / M15 |
-| Conservative "GST-stress" downside | +23,443 | 9.255 | not separately modelled | |
-| Gross ceiling A$10,500 all-in (utilities and cleaning inside) | +33,936 (GST-stress +22,306) | 8.455 | A$274,021 | M11 / M16 |
-| Rent-adjusted A$10,500 plus separate utilities and cleaning (prudent case) | +32,686 (GST-stress +21,170) | 8.645 | A$275,271 | M12 / M17 |
+| 1 | 5 Fiona Wood Road, Murdoch | 100 to 645 sqm ground floor, new development | Not published | Best location, details to confirm |
+| 2 | 9/110-114 Bannister Road, Canning Vale | 298 sqm | A$80,000 a year plus outgoings and GST (about A$8,900 to A$10,300 a month gross, indicative) | Fits size and rent, other criteria to confirm |
+| 3 | 13/386 Scarborough Beach Road, Osborne Park | 263 sqm | A$95,000 a year plus outgoings and GST (about A$9,900 to A$11,100 a month gross, indicative) | Rent at the ceiling |
 
-**Ramp-up (new in v0.3, staff rostered to bookings)**
+Three conditional matches; no listing meets every criterion yet. The nearest medical building (25 Mills Street South, Cannington, 330 sqm) is advertised at A$15,000 a month before outgoings. No agent has been contacted. Search repeated weekly until a site is chosen.
 
-| Measure | v0.3 | Was (v0.2) |
-|---|---|---|
-| Payroll, Months 1 to 3 | A$214,844 | A$280,787 |
-| Month 1 net | -A$16,573 | -A$45,464 |
-| Month 2 net | +A$7,783 | -A$15,619 |
-| Lowest cash | A$68,427 in Month 1 | A$18,022 in Month 3 |
-| Year 1 net (repo / after GST) | A$322,015 / A$196,609 | A$251,522 / A$126,115 |
+At the A$10,500 gross ceiling all-in: +A$33,936 a month, break-even 7.440, peak funding A$256,198. Prudent case (plus separate utilities and cleaning): +A$32,686, break-even 7.630. Lease bond and legal about A$19,600 to A$27,600 (modelled). No landlord contribution counted.
 
-- **Caveats on the break-even figures:** the 25-minute pair cadence is the only cadence (break-even 8.266 assumes bookings fall one per time slot). Fill is assumed 100%; each 1% of fill at capacity is about A$1,185/month (85% fill about +A$17.4k, 70% a loss), which is why the waitlist matters.
-- The new rent budget is A$1,500 to A$2,500 above the A$8,000 in the v3.0 costs. +A$35,186 stays the headline as Anthony instructed.
-- **GST (proposed, to be confirmed by the accountant / ATO ruling):** a two-tier invoice, with a clinical phlebotomy component possibly GST-free as a health service (GST Act s38-10) and the wellness lounge component taxable. s38-10 has conditions on who supplies the service, and GTT is not a pathology provider, so this is not settled.
-
-| Startup funding (planning) | A$ |
-|---|---|
-| Pre-opening capital (approved in principle, 2026-08-10) | 251,198 |
-| Working capital reserve | 85,000 to 110,000 |
-| **Combined planning case** | **336,198 to 361,198** |
-| **Peak funding actually drawn (Theodore v0.4, with GST timing)** | **A$267,771** 🔒 LOCKED (was A$318,176) |
-| Funding on hand (joint savings, as stated in repo) | about 200,000 |
-| Gap on the planning case (derived) | about 136,198 to 161,198 |
-| Gap on the peak-funding basis (derived: A$267,771 less A$200,000) | about 67,771 |
-
-- 🔴 Profit is steady state at full capacity; the ramp is modelled but there is no trading data. Fit-out has not been repriced for the larger footprint (see Slide 12).
-- 🟡 The repo holds several unreconciled startup ranges. Anthony's own adopted range is A$292,335 to A$594,900. Accountant and quantity surveyor to confirm.
-- Older "conservative" baseline (A$113,712.16 revenue, A$88,625.09 costs, +A$25,087.07, 570 visits): historical. See Conflict C1.
-
-**Visual:** Waterfall: revenue 143k, less payroll 94k, less other 14k, equals profit 35k. Beside it, a cash curve with the Month 1 low (A$68,427) and a bar showing funds on hand against peak funding.
-**Source:** Theodore's 3-way model v0.3, Sections 1, 3, 4, 9, 15; [docs/CURRENT-STATE.md][CS] §5, §6; `data/models/master_financial_model.yml` (updated_planning_case_2026_08_10); [docs/executive-summary.md][EXEC] (funding line); [docs/risk-register.md][RISK] #8.
 
 ---
 
-## SLIDE 11: Partnership Status: Where We Are
+## SLIDE 20: Risks (INTERNAL)
 
-| Partner | Last known position (repo) | Status |
-|---|---|---|
-| **WDP** (Western Diagnostic Pathology) | Contact: Carole Rivers. Engaged since 2026-07-28. Her reply on 2026-09-08: "I think I have provided all the information I can as a Customer and Commercial Manager." The rental figure never arrived. | 🟡 competing bidder (dual-lab). Open: quality feedback, State Business Manager input, staffing cost, minimum term. Fees TO CONFIRM |
-| **PathWest** | 2026-08-28: no capacity "to provide collection staff to non-PathWest collection sites". 2026-09-01: "We can definitely accommodate courier pick ups for Fluoro ox tubes" and tubes and bags at no cost if volume is large. We asked for costs 2026-09-03. No reply recorded. | 🟡 competing bidder (dual-lab). Courier yes, staff declined (not needed). Cost question unanswered. Fees TO CONFIRM |
-| **Clinipath** | 3 contacts (2026-07-27, 08-27, 09-07). No reply. They were pitched the self-collection model. | 🔴 silent. Optional third bidder only if it replies. 3 attempts kept on record |
-| **Way ahead (Anthony, locked 2026-10-10)** | GTT's 2 in-house certified phlebotomists collect. Courier and lab analysis go to tender between PathWest and WDP. Neither is locked in. | 🟡 fees, terms and ACC arrangement TO CONFIRM |
-
-- Nothing is signed. Neither lab has committed in writing, and neither has quoted a fee.
-- The repo's records stop at 2026-09-08. Anything after that is not yet logged. TO CONFIRM.
-
-**Visual:** Traffic-light table (as above), plus a one-line arrow: "Self-collect + courier + lab".
-**Source:** [docs/wdp-followup-draft-2026-08-20.md][WDP]; [docs/pathwest-clinipath-outreach-2026-07-27.md][PWC] §4d, §4e-vi, §4e-vii; [docs/reed-partnerships.md][REED]; [docs/CURRENT-STATE.md][CS] §0 item 1.
-
----
-
-## SLIDE 12: Site and Lease Plan
-
-| Item | Position |
-|---|---|
-| Venue size | **257 to 290 sqm minimum**, with **2 dedicated blood collection rooms** (essential for clinical flow and to prevent bottlenecks). Locked 2026-10-10. |
-| Rent budget | **A$9,500 to A$10,500 a month** (locked 2026-10-10). Replaces A$8,000 (2026-10-03). |
-| Model impact | v3.0 costs still assume A$8,000. At the A$10,500 gross ceiling all-in: net +A$33,936/month (GST-stress +A$22,306), break-even 8.455, peak funding A$274,021, payback M11 / M16. Prudent case (A$10,500 plus separate utilities and cleaning): +A$32,686, 8.645, A$275,271, M12 / M17. Both break-evens use the 25-minute cadence and assume 100% fill |
-| Lease terms to seek | 3 years + 3-year option; no landlord contribution counted |
-| Lease bond and legal | About A$19,600 to 27,600 (modelled) |
-| Status | No venue. No lease. No heads of agreement. 🔴 |
-
-**Shortlist leaders (Tier 1, not verified as available today)**
-
-| Property | Size | Rent | Notes |
-|---|---|---|---|
-| [6/325 Harborne St, Osborne Park](https://reiwa.com.au/6-325-harborne-street-osborne-park-4941752/) | 268 sqm | A$55,000 a year + A$23,785 outgoings (about A$6,565/month + GST) | Blank shell. Plumbing unknown. Re-checked 2026-08-14. |
-| 25 Mills St, Cannington | up to 302 sqm | Not disclosed | Existing medical fit-out near Bentley Hospital. No direct listing link in repo. Needs verifying. |
-
-- Rule: get the collection-room spec in writing from both PathWest and WDP before signing any lease. Also settle the ACC question (see Slide 6). TO CONFIRM
-- A professional architect is needed once a site is picked. The in-house floor plan is parked.
-- Collection room standards: NPAAC (Guidelines for Approved Pathology Collection Centres, 3rd edition 2013). Specimen fridge kept apart from food and drink.
-
-**Visual:** Perth map with Osborne Park and Cannington pinned; side table of rent vs the A$9,500 to A$10,500 budget band.
-**Source:** [docs/strategy/PERTH-PROPERTY-SHORTLIST.md][SHORT]; [docs/DECISION-LOG.md][DL] (2026-10-03, 2026-08-27, 2026-09-04); [docs/rent-budget-2026-07-28.md][RENT]; [docs/floor-plan-concept.md][FLOOR]; [docs/location-scouting.md][LOC]; [docs/CURRENT-STATE.md][CS] §7.3.
-
----
-
-## SLIDE 13: Risks and Mitigations
+**Risks and fixes**
 
 | # | Risk | Level | Mitigation |
 |---|---|---|---|
-| 1 | No venue secured. Blocks hiring, fit-out and everything after | 🔴 Critical | Two Tier-1 candidates; verify rent and availability; inspect |
-| 2 | No signed lab agreement. Fees from PathWest and WDP both TO CONFIRM. ACC arrangement across two labs unresolved | 🔴 High | Run the tender: written fee schedules from both; adviser on ACC; Clinipath only if it replies |
-| 3 | Funding gap: planning need about A$336k to A$361k vs about A$200k on hand. Peak funding drawn is A$267,771 (LOCKED; was A$318,176) | 🔴 High | Founder funding decision; accountant; staged fit-out. TO CONFIRM |
-| 4 | Demand unproven. Break-even is 8.266 clients a day (LOCKED), on the 25-minute pair cadence with adaptive rostering. Fill is assumed 100%: each 1% of fill at capacity is about A$1,185/month, 85% fill gives about +A$17.4k, 70% makes a loss | 🟡 High | Referral network and waitlist from day one; book 2 to 4 weeks ahead; steer mornings to 10; track fill rate weekly; cut released slots before adding mornings |
-| 5 | Courier cut-off time unconfirmed (docs show 11:30 and 12:30, neither sourced) | 🟡 Medium-High | Confirm with the partner in writing before locking the schedule |
-| 6 | Cost model still uses A$8,000 rent; new budget is A$9,500 to A$10,500 | 🟡 Medium | Headline kept at +A$35,186 per Anthony; net at new rent about +A$32,686 to +A$33,936 (gross ceiling +A$33,936; prudent case +A$32,686) |
-| 7 | Collection-room compliance and cost; architect not engaged | 🟡 Medium | Brief architect after site pick; confirm spec with partner |
-| 8 | Tax: proposed 30% minimum tax on discretionary trusts from 1 July 2028 (exposure draft, not law) | 🟡 Low-Medium | Accountant review; verify against Treasury source before external use |
-| 9 | GST treatment of the proposed two-tier invoice is unsettled (s38-10 conditions; GTT is not a pathology provider) | 🟡 Medium | Proposed, to be confirmed by the accountant / ATO ruling. GST-stress downside +A$23,443/month |
+| 1 | No venue secured. Three conditional matches only | Critical | Enquire with agents (with approval); inspect; search weekly |
+| 2 | No signed lab agreement; fees unquoted; Medicare pays only for lab-employed collectors. If it did not pay, GTT would carry A$12,251 a month (break-even 8.087) | High | Written answers from the labs, Services Australia and the Department of Health before fit-out spend; prefer lab-employed collectors |
+| 3 | Funding gap: A$336k to A$361k need vs about A$200k. Peak funding A$251,198 | High | Founder decision; accountant; staged fit-out |
+| 4 | Fill rate. Break-even 7.250. Each 1% of fill about A$1,185 a month; 85% about +A$17.4k; 70% roughly break-even | High | Pre-launch waitlist; referral network; book 2 to 4 weeks ahead; track fill weekly |
+| 5 | Courier arrangement unconfirmed | Med-High | Confirm in writing |
+| 6 | Model uses A$8,000 rent; ceiling is A$10,500 gross | Medium | Headline kept; rent-adjusted line shown |
+| 7 | Collection room approval and compliance; no architect yet | Medium | Brief architect after site pick; confirm with partner and WA Department of Health |
+| 8 | Proposed 30% minimum tax on discretionary trusts from 1 July 2028 (exposure draft, not law) | Low-Med | Accountant review |
+| 9 | Phlebotomy is not on the closed GST-free list; no large GST-free share is available. Base is +A$23,443 a month | Medium | Plan on the fully taxable base; accountant; ATO ruling for any real GST-free service |
+| 10 | Pregnancy complications on site (liability) | Medium | Health declaration, emergency plan, incident register, insurance |
 
-**Visual:** 3 x 3 heat map (likelihood vs impact) with the nine numbers plotted.
-**Source:** [docs/risk-register.md][RISK] (older; items re-ranked by Grace against newer files); [docs/CURRENT-STATE.md][CS] §6, §10; [docs/cutoff-time-CORRECTION.md][CUT]; [docs/DECISION-LOG.md][DL] (2026-09-04, 2026-10-03).
-**Alexander lens:** Risks 1 to 3 are the same single point of failure: no site and no partner means no revenue. Fix order matters more than anything else on this slide.
 
 ---
 
-## SLIDE 14: Roadmap and Launch Gates
+## SLIDE 21: Roadmap (external)
 
-No calendar dates. The repo keeps launch undated by standing instruction.
+**Roadmap and gates**
 
-| Stage | What happens | Gate | Status |
-|---|---|---|---|
-| 0 | Search for venue. Pathology partner talks. Marketing waitlist can start early | none | 🟡 in progress |
-| **Gate A** | **Lab agreement(s) in place (PathWest and/or WDP, from the tender)** | needs written terms and an ACC arrangement | 🔴 open |
-| **Gate B** | **Venue location confirmed** | needs site and lease terms | 🔴 open |
-| 1 | After Gates A and B: Venue Manager hire (job ad ready, **on hold behind both gates**). Lease or heads of agreement. Architect and fit-out quotes | A + B | not started |
-| 2 | Phlebotomist and treatment staff recruitment; contracts | Venue Manager in place | not started |
-| 3 | Partner site inspection. Training. Test runs. Soft open for waitlist. Public launch | Fit-out done and staff hired | not started |
-| Go-live trigger | First confirmed customer booking: Grace reports to Anthony; manager registration requested | | not started |
-
-**Visual:** Left-to-right gate diagram with two red locks (Gate A, Gate B) before Stage 1.
-**Source:** [docs/project-timeline-milestones.md][TIME]; [docs/venue-manager-job-posting.md][VM] (status banner 2026-07-29); [docs/floor-plan-concept.md][FLOOR]; [README.md][README].
-
----
-
-## SLIDE 15: The Ask / Next Steps
-
-**Decisions for Anthony (nothing has been sent)**
-
-| # | Decision or action | Owner |
+| Stage | What happens | Gate |
 |---|---|---|
-| 1 | Baseline locked: +A$35,186/month headline, +A$23,443/month GST-stress downside (Anthony 2026-10-10). Unchanged by v0.3 | Anthony ✅ |
-| 2 | Run the dual-lab tender: written per-test fees, courier cutoffs, term and ACC arrangement from PathWest and WDP | Anthony, Reed |
-| 3 | Chase PathWest cost question (asked 2026-09-03) and WDP open items (quality feedback, State Business Manager input, staffing cost, minimum term). Clinipath only if it replies | Anthony, Reed |
-| 4 | Pick a site to verify first (Harborne St or Mills St); needs 257 to 290 sqm, 2 collection rooms, rent within A$9,500 to A$10,500 | Anthony |
-| 5 | Decide how to cover the funding gap (planning need A$336k to A$361k vs about A$200k) and brief the accountant on entity structure | Anthony |
-| 6 | Appoint an architect once a site is chosen | Anthony |
-| 7 | Approve this deck, then Grace exports PDF/Keynote | Anthony |
-| 8 | Accountant: confirm the proposed two-tier GST invoice (s38-10) and whether an ATO ruling is needed | Anthony |
-| 9 | Adviser plus both labs: how the ACC approval works with two competing labs | Anthony, Reed |
-| 10 | RESOLVED (Anthony 2026-10-16): 25-minute pair cadence only, with adaptive rostering. | Anthony |
-| 11 | Build the booking and waitlist system (bookings 2 to 4 weeks ahead) and weekly fill-rate tracking | Ivy |
+| 0 | Venue search. Pathology partner talks. Waitlist can start early | None |
+| Gate A | Lab agreement in place (WDP, PathWest or Clinipath) | Written terms |
+| Gate B | Venue location confirmed | Site and lease terms |
+| 1 | Venue Manager hire. Lease. Architect and fit-out quotes | A + B |
+| 2 | Recruitment of phlebotomists and treatment staff | Venue Manager in place |
+| 3 | Training, test runs, soft open, public launch | Fit-out done, staff hired |
 
-- **We are not asking for money in this draft.** The repo says no external investor has been sought. The funding route is TO CONFIRM.
+No calendar dates. Launch is undated. Go-live trigger: first confirmed customer booking.
 
-**Visual:** Numbered checklist with owner icons; big "Gate A + Gate B" lock graphic at the bottom.
-**Source:** [docs/CURRENT-STATE.md][CS]; [docs/VERIFICATION-TRACKER.md][VT]; [docs/venue-manager-job-posting.md][VM]; [docs/executive-summary.md][EXEC] (funding line).
 
 ---
 
-# ONE-PAGE EXECUTIVE SUMMARY
+## SLIDE 22: Decisions and next steps (INTERNAL)
 
-**GTT Center Perth** (working name; SOLENA conditional, not locked) turns the 2 to 2.5 hour Glucose Tolerance Test wait into a care experience: massage, nails, hair and beauty between blood draws. DRAFT v0.4, 2026-10-11.
+**Decisions and next steps**
 
-**Why it matters.** The test is a standard pregnancy screen with near-universal take-up. About 26,790 births a year in Greater Perth (about 33,570 in WA; ABS 2024) gives roughly 515 tests a week. Our research found no equivalent WA venue.
+- Baseline confirmed: +A$35,186 a month at full capacity before GST; +A$23,443 on the fully taxable base
+- Request written fees from WDP, PathWest and Clinipath; ask whether each will place its own employed collectors in our rooms
+- Approve agent enquiries for the three shortlisted sites (nothing has been sent)
+- Verify a site first: 257 to 290 sqm, 2 collection rooms, rent within the A$10,500 gross ceiling
+- Decide how to cover the funding gap (A$336k to A$361k vs about A$200k)
+- Accountant and solicitor: confirm the business structure (a new dedicated company is recommended) and the GST invoice approach
+- Appoint an architect once a site is chosen; use the concept floor plan for fit-out quotes
+- Confirm the terms of the 10% post-test discount (expiry, exclusions, test location)
+- Approve this deck, then Grace exports PDF
+- Ivy: booking and waitlist system live, and fill-rate tracking
+We are not asking for money in this draft. Tenant entity: a dedicated company, subject to accountant and solicitor advice. Full list of open items: Items to Confirm in the business plan.
 
-**The model.** Employed staff, not subtenants. GTT's own certified phlebotomists draw blood in on-site collection rooms. Courier and lab analysis are tendered between PathWest and WDP (fees TO CONFIRM, neither locked in). GTT earns no pathology revenue. Two GTT packages (A$250, A$300) and two afternoon packages (A$185, A$135). Mon to Sat. Up to 18 morning clients a day, booked 2 to 4 weeks ahead with a waitlist; staff are rostered to each morning's bookings.
-
-**The numbers (planning case, full capacity).** Revenue A$143,070.37 a month; costs A$107,883.97; operating profit +A$35,186 a month (about A$422k a year). Conservative GST-stress downside: +A$23,443 a month. Break-even is 8.266 morning clients a day (LOCKED; about 46% of capacity, about 9.8% of the Perth market; was 12.655 before rostering to bookings). It uses the 25-minute pair cadence with adaptive rostering, and it assumes 100% fill: each 1% of fill at capacity is worth about A$1,185/month, 85% fill gives about +A$17.4k and 70% makes a loss, which is why the waitlist matters. The ramp is cheaper too: Months 1 to 3 payroll A$214,844 (was A$280,787), Month 1 loss -A$16,573 (was -A$45,464), Month 2 positive, Year 1 net A$322,015 (A$196,609 after GST timing), payback Month 11 (Month 15 after GST). The model assumes A$8,000 rent; the new rent budget is A$9,500 to A$10,500 a month. At the new rent budget, net is about +A$32,686 to +A$33,936/month (gross ceiling +A$33,936; prudent +A$32,686). Venue need: 257 to 290 sqm with 2 blood collection rooms. GST: a two-tier invoice is proposed, to be confirmed by the accountant / ATO ruling.
-
-**Money needed.** Planning need A$336,198 to A$361,198 (A$251,198 pre-opening plus A$85,000 to 110,000 working capital) against about A$200,000 in joint savings. Gap about A$136k to A$161k. Peak funding actually drawn is A$267,771 (LOCKED; was A$318,176), with the lowest cash point A$68,427 in Month 1. No external investor sought. Funding route TO CONFIRM.
-
-**Where we are.** 🔴 No venue. 🔴 No signed lab agreement. Both PathWest and WDP stay in the running so prices compete. PathWest confirmed courier pickup and free tubes but declined to supply staff; its cost question (2026-09-03) is unanswered. WDP's open items: quality feedback, State Business Manager input, staffing cost, minimum term. Clinipath is an optional third bidder only if it replies (3 attempts on record). Fees for both labs TO CONFIRM. The ACC approval for a two-lab setup is not solved. The Venue Manager hire waits behind both gates.
-
-**Strategy view (Alexander).** Demand is real and non-discretionary, and we are first. But this is a high fixed-cost model with no hard moat yet. The moat has to be built from midwife and obstetrician referrals, a compliant collection room and a trusted partner. The fill needed (about 1 in 10 Perth mothers at the new break-even, with 100% fill assumed) is the number to prove first.
-
-**Next steps.** Run the lab tender and get written fee schedules. Verify one site. Decide funding. Engage an architect. Then hire. Ivy to stand up booking and waitlist, and fill-rate tracking.
 
 ---
 
-# CONFLICTS & OPEN ITEMS
+## SLIDE 23: Medicare: how bulk billing works (INTERNAL)
 
-Rule applied: newest document marked current wins. Disagreements listed here.
+**Medicare and bulk billing**
 
-| # | Topic | What the documents say | Used in deck | Action |
+- How it works: The lab bills Medicare for the test; the client pays the lab nothing. Schedule fee A$25.85 a visit: item 66548 (A$19.90) plus item 73928 (A$5.95).
+- Who holds the approval: Only the lab. A collection-only company cannot be an Approved Pathology Authority. The lab applies for the approved collection centre on an occupation agreement with us.
+- The collector rule: Medicare pays when the person collecting is the pathologist or an employee of the lab. So we prefer lab-employed collectors in our rooms.
+| If Medicare does not pay | Lab fee to GTT | Cost a month | Profit a month | Break-even |
 |---|---|---|---|---|
-| C1 | Financial baseline | Brief and `outputs/FOUNDER-CFO-ANALYSIS.md` (2026-10-08): A$113,712.16 revenue, A$88,625.09 costs, +A$25,087.07, 570 visits, ancillary excluded, "confirmed current". `docs/CURRENT-STATE.md` (2026-09-19/10-03): A$143,070.37, A$107,883.97, +A$35,186.40, 18 clients a day. `docs/profit-loss-tables.md` is v3.0 (rebased 2026-08-05); the A$113,712 figure is called a historical 10-client figure that included ancillary revenue (`docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md` §2). Ancillary-excluded versions of that old baseline were A$16,507.07 then A$28,488.42, not A$25,087.07. | CURRENT-STATE | ✅ RESOLVED (Anthony 2026-10-10): +A$35,186/month is the headline, +A$23,443 the GST-stress downside. CFO analysis still needs a refresh. |
-| C2 | 570 visits | 220 AM + 350 PM equals the old 10-client / 16-session model. Current model is 18 AM a day and 10 PM sessions a day. | Current model | Drop 570 from external use. |
-| C3 | Table 2 (12 a day) profit | `docs/CURRENT-STATE.md` §5 says +A$10,076.16; §10 (newer, 2026-09-19) says +A$1,096.40. | +A$1,096.40 | Fix §5 in repo. |
-| C4 | AM capacity per month | §3 says 396 a month (22 weekdays). Revenue maths and break-even use about 26.33 days (Saturdays included), about 474 a month. | 108 a week; revenue as per model | Clarify in CURRENT-STATE. |
-| C5 | Ramp-up | `docs/CURRENT-STATE.md` §5 had no Month 1 to 4 ramp for 18 a day. | Theodore's model v0.3 (12-month ramp, demand-responsive rostering) | ✅ RESOLVED in v0.3 (2026-10-11). Ramp curve origin still undocumented in the repo (S2). Cadence ADOPTED 2026-10-11; 100% fill remains an open assumption. |
-| C6 | 18 vs 12 clients framing | `docs/VERIFICATION-TRACKER.md` item 1m says the 18-client framing is still open for Anthony to confirm. Later Sept/Oct decisions build on 18. | 18 as planning case, 12 as downside | Anthony to confirm. |
-| C7 | PathWest 2026-08-28 | Older changelog line says "effectively declines". Later entries correct this: reply was ambiguous, then 2026-09-01 gave unconditional courier pickup. Brief says "declined collection staff". Only collection staff were declined. | Courier yes; staff no | None. Record kept accurate. |
-| C8 | Pathology model | `docs/pathology-partnership-brief.md` (Option A, WDP licensed collection centre, 8 clients a day, 7:30 to 12:30) and `docs/executive-summary.md` v2.0 (partner covers accreditation; PathWest and Clinipath "not yet contacted") are stale. Decision 2026-09-19: GTT collects; partner does transport and lab only. Anthony's verbal update goes further. | 2026-09-19 decision plus Anthony's note | ✅ RESOLVED (Anthony 2026-10-10): GTT employs 2 phlebotomists; courier and lab tendered between PathWest and WDP. Stale docs still to update; fees TO CONFIRM. |
-| C9 | WDP status | `docs/VERIFICATION-TRACKER.md` 1c says "actively progressing, not stalled" (2026-08-08). `docs/reed-partnerships.md` and `docs/wdp-followup-draft-2026-08-20.md` say closing tone after 2026-09-08. | Stalling | Update tracker. |
-| C10 | Venue Manager gate | `docs/CURRENT-STATE.md` §4 and risk register #10: one gate (location). `docs/venue-manager-job-posting.md` (2026-07-29): two gates (partner and location). | Two gates | Update CURRENT-STATE. |
-| C11 | Startup capital | Five unreconciled figures in `docs/CURRENT-STATE.md` §6: A$144.5k to 242.5k; A$209k to 431k; A$292,335 to 594,900 (Anthony adopted); A$357,390 to 577,180 (component sum); A$336,198 to 361,198 (2026-08-10 planning case). Fit-out cost not recalculated for 257 to 259 sqm. | 2026-08-10 planning case, others noted | Accountant and quantity surveyor to confirm. |
-| C12 | Funding on hand | About A$200,000 joint savings (`docs/executive-summary.md`, `docs/swot-analysis.md`). Not re-verified since 2026-07-29. | As stated | TO CONFIRM current balance. |
-| C13 | Rent vs footprint | A$8,000 set against 200 sqm; footprint now 257 to 259 sqm (implied A$9,560 to 9,960). Search brief minimum 239 to 242 sqm predates the two-room decision. | A$8,000 (founder decision) | ✅ RESOLVED (Anthony 2026-10-10): 257 to 290 sqm minimum, 2 blood collection rooms, rent A$9,500 to A$10,500. v3.0 costs still use A$8,000 (see C25). |
-| C14 | Market numbers | Older files still show ~18,000 WA births, ~14,400 Perth, ~277 tests a week (`docs/risk-register.md`, `docs/swot-analysis.md`). Corrected 2026-07-31 to ABS 2024 via KPMG. Figures are preliminary. Births are used as a proxy for tests. | 33,570 / 26,790 / 515 | Check for newer ABS release; mark year on every slide. |
-| C15 | 3D keepsake scan | README intro and the venture brief list it as part of the offer. Same README and `docs/market-research-findings.md` say not launch scope, Phase 2 only. | Excluded; never diagnostic | None. |
-| C16 | Entity and ownership | `docs/executive-summary.md` and README say YETI Holding Trust. `docs/DECISION-LOG.md` (2026-09-04) says the structure is under review (trust direct, new company, or fixed distributions). Executive summary wording on funding partner and founder roles is wrong. | Entity not stated beyond "see repo". Tenant entity TO CONFIRM | Accountant. Fix wording in executive summary. |
-| C17 | Option B timeline | `docs/pathology-partnership-brief.md`: 7 to 9 months. `docs/executive-summary.md`: 12 to 18 months. | Not used | Reconcile if raised. |
-| C18 | Pathology consumables cost | `outputs/FOUNDER-CFO-ANALYSIS.md` uses A$2.27 a visit. PathWest said it would supply tubes and bags free (volume permitting). Glucose drink excluded. | Not used | TO CONFIRM. |
-| C19 | Medicare billing and "GTT earns zero from pathology" | Written under the old WDP model. New model billing path not documented. | Stated as repo position, flagged | TO CONFIRM with partner. |
-| C20 | Launch timing | `docs/pathology-partnership-brief.md` mentions an October 2026 launch. Repo says no launch date set. | Undated | None. |
-| C21 | Partner news after 2026-09-08 | Repo has no logged replies after 2026-09-08. | Slide 11 notes this | Log any new emails. |
-| C22 | Savings and exclusive-referral claims | "Willing to refer all pathology to one partner" is a prepared call script, not an offer made. | Marked TO CONFIRM | ✅ RESOLVED (Anthony 2026-10-10): superseded. No exclusive offer; dual-lab tender instead. |
-| C23 | Tax proposal | Decision log cites an exposure draft (released 2026-09-03; consultation to about 2026-09-18). Not checked against a Treasury source in this draft. | Flagged as proposed | Verify before external use. |
-| C24 | Clinical claims | "About 18% diagnosed" and the 2 to 2.5 hour test length come from repo documents, not re-checked against a current Australian clinical source in this draft. | Marked for check | Verify against a current clinical guideline before any external use. |
-| C25 | Rent vs costs model | v3.0 costs assume A$8,000 rent; new budget is A$9,500 to A$10,500 (A$1,500 to A$2,500 more). | +A$35,186 headline as instructed, plus the new-rent lines (+A$33,936 gross ceiling; +A$32,686 prudent) | Exact figures in Theodore's model Section 9. |
-| C29 | Rostering and cadence | Earlier staffing tiers proposed a slower cadence. The committed schedule is the 25-minute cadence. | 25-minute pair cadence only (Anthony 2026-10-16) | RESOLVED |
-| C30 | Fill rate | The repo has no fill or conversion data. Model assumes 100%. | 100% base, 85% and 70% shown | Track fill from the first booking; waitlist is the mitigation. |
-| C26 | ACC with two competing labs | Only the pathology partner can hold the Commonwealth ACC approval for a collection room. How this works with two labs is unverified. | Not claimed as solved | Verify with PathWest, WDP and an adviser. |
-| C27 | GST on the invoice | Proposed two-tier invoice (clinical component possibly GST-free under s38-10; wellness taxable). s38-10 has conditions on who supplies; GTT is not a pathology provider. | Proposed only | Accountant / ATO ruling to confirm. |
-| C28 | Lab fees | No per-test fee from PathWest or WDP. | TO CONFIRM | Tender. |
+| Lab bulk-bills Medicare (plan) | A$0 | A$0 | +A$35,186.40 | 7.250 |
+| Lab supplies its own collectors (upside, only if agreed) | A$0 | A$0 (saves A$13,364) | +A$48,550.92 | 6.235 |
+| Client pays the lab directly | A$0 | A$0 | +A$35,186.40 if bookings hold | 7.250 |
+| GTT absorbs the fee | A$25.85 | A$12,251.35 | +A$22,935.05 | 8.087 |
+
+Absorbing the fee cuts Year 1 by about A$147,016. The price needed to stay whole is A$275.85. Laboratory private fees may differ: no fee quoted yet. A WA Health licence has not been found for a collection-only room; written confirmation is still to be obtained.
+
 
 ---
 
-## Source links
+## SLIDE 24: Medicare: ranked workarounds (INTERNAL)
 
-All files in the venture repo: https://github.com/clawanthonyzed/gtt-center-perth (branch main).
+**Making bulk billing work**
 
-[README]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/README.md
-[CS]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/CURRENT-STATE.md
-[DL]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/DECISION-LOG.md
-[VT]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/VERIFICATION-TRACKER.md
-[EXEC]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/executive-summary.md
-[BP]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/business-plan.md
-[IM]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/investor-memorandum.md
-[MKT]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/market-research-findings.md
-[PRICE]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/services-pricing-locked.md
-[PMP]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/architecture/PM-PACKAGES.md
-[SYNC]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/scenario-c-sync-timetables.md
-[PPB]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/pathology-partnership-brief.md
-[PWC]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/pathwest-clinipath-outreach-2026-07-27.md
-[WDP]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/wdp-followup-draft-2026-08-20.md
-[REED]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/reed-partnerships.md
-[SHORT]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/strategy/PERTH-PROPERTY-SHORTLIST.md
-[RENT]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/rent-budget-2026-07-28.md
-[FLOOR]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/floor-plan-concept.md
-[LOC]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/location-scouting.md
-[RISK]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/risk-register.md
-[CUT]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/cutoff-time-CORRECTION.md
-[TIME]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/project-timeline-milestones.md
-[VM]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/venue-manager-job-posting.md
-[NAMING]: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/naming/NAMING-DECISION-STATE.md
+| # | Route | What it does | Who must agree |
+|---|---|---|---|
+| 1 | The lab places its own employed collectors in our rooms | Fits the Medicare rule exactly. Removes GTT collector wages, less any lab charge. | Lab; Services Australia |
+| 2 | Hybrid: a lab-employed collector takes every specimen; GTT hosts do the rest | Keeps the experience in GTT's hands. GTT staff must not collect. | Lab; roles in writing |
+| 3 | The lab engages GTT's collectors under its direction and control | Fine for centre approval. Whether Medicare pays is unclear. | Department of Health; health lawyer |
+| 4 | GTT collectors seconded to the lab | Weakest. Better if they become lab fixed-term employees (route 1). | As route 3 |
+| 5 | Fallback: client pays the lab, or GTT absorbs the fee | Lawful. Cost shown on the previous slide. | Accountant |
+
+Open with routes 1 and 2 with each lab and let its written answer decide. Building our own laboratory is not practical for this plan. The lab applies for the approved collection centre (a A$2,000 tax every 2 years; who pays is for the agreement).
+
+Written answers needed before fit-out spend: each lab; Services Australia (one room with two chairs and a curtain, the occupation document); the Department of Health (employee or contractor). Nothing has been sent.
+
+
+---
+
+## SLIDE 25: GST: fully taxable case (INTERNAL)
+
+**GST: planned on the fully taxable case**
+
+- The law: Section 38-10 is a closed list of 21 GST-free health services. Phlebotomy is not on it. The test is GST-free in the lab's hands because Medicare pays for it.
+- Legal base case: A$23,443 a month: A$281,311 in Year 1 (before GST: A$35,186 and A$422,237)
+- Package prices: include GST: A$250 package: A$22.73 GST
+| 18 clients a morning, A$250 | Before GST | After GST (fully taxable) |
+|---|---|---|
+| Net profit a month | A$35,186.40 | A$23,442.58 |
+| Net profit Year 1 | A$422,236.80 | A$281,310.96 |
+| GST on sales a month | not applicable | A$13,006.40 |
+| Input tax credits a month | not applicable | A$1,262.58 |
+| Net GST paid a month | not applicable | A$11,743.82 |
+
+The test is billed by the pathology partner, not on GTT's invoice. GTT registers for GST before its first sale and claims credits on running costs and fit-out. General information; verify with an accountant.
+
+
+---
+
+## SLIDE 26: GST: value at stake and lawful routes (INTERNAL)
+
+**GST: value at stake, not available money**
+
+| If a genuine GST-free component existed | Extra profit a month | Extra profit a year | Net profit a month |
+|---|---|---|---|
+| 50/50 split | A$5,385.68 | A$64,628.16 | A$28,828.26 |
+| 60/40 split | A$6,462.81 | A$77,553.72 | A$29,905.39 |
+| 70/30 split | A$7,539.95 | A$90,479.40 | A$30,982.53 |
+
+Hypothetical. The lab's whole fee for the visit is A$25.85 (about 10% of A$250) and GTT's own collection cost is about A$30.73 a client (about 12%), so a 50% to 70% clinical share is not supportable. GST follows the supply, not the bank account.
+
+**Lawful routes, ranked**
+
+- Keep every GTT supply taxable and claim all credits (the base case).
+- The lab places its employed collectors in our rooms: collection stays GST-free in the lab's hands.
+- Add real, separately priced services on the GST-free list (nursing, dietetics, physiotherapy, psychology).
+- The lab pays GTT a market fee for the room or collection service.
+- Accountant seeks an ATO private ruling on the one model chosen (aim: most rulings within 28 days).
+
+---
+
+## SLIDE 27: Business structure (external)
+
+**Business structure**
+
+| Heading | Position |
+|---|---|
+| Structure | GTT Center Perth will trade through a dedicated Australian proprietary company, with its own insurance, lease, employment arrangements and tax registrations. |
+| Ownership | The company is owned by a family trust. Ownership is separate from day-to-day management. |
+| Management | A full-time employed Venue Manager runs the business day to day, reporting to an independent director. |
+| Risk containment | Clinical and public liability sits in the operating company, covered by its own public liability, professional indemnity and workers compensation insurance. The founder's other assets are held in separate entities and do not guarantee the venture. |
+| Partners | The pathology partner is contracted by the operating company. Practitioners are employed by the operating company. |
+| Options considered | Trading directly through an existing trust (not recommended); a new company owned by a family trust (recommended); a fully separate new structure (strong alternative); hybrids (no advantage found). |
+| Status | Subject to advice from the company's accountant and solicitor before the lease and contracts are signed. |
+
+
+---
+
+## SLIDE 28: 10 percent post-test discount (INTERNAL)
+
+**10% off after your test**
+
+- Every expecting mother who completes a glucose tolerance test with us can redeem 10% off a standalone wellness treatment or multi-service package. Valid from the moment her test is complete, morning or afternoon. One redemption per completed test. Not combined with other offers. Not on the morning package, refreshments, retail or vouchers. Subject to availability. It replaces the earlier 10% online pre-booking discount.
+| Take-up | Redemptions a month | Cost a month (A$117 treatment) | Share of monthly profit | Break-even |
+|---|---|---|---|---|
+| 5% | 23.7 | A$277.25 | 0.8% | 7.293 |
+| 10% | 47.4 | A$554.51 | 1.6% | 7.335 |
+| 25% | 118.5 | A$1,386.27 | 3.9% | 7.461 |
+| 40% | 189.6 | A$2,218.04 | 6.3% | 7.587 |
+
+Cost is shown separately and not deducted from the headline profit. It pays for itself if 1 redeemer in 10 is a new booking (therapist time already paid) or about 1 in 4 (24%) if extra hours must be paid. Take-up is an assumption.
+
+Proposed terms, not yet confirmed: 14-day expiry, a test completed at GTT Center Perth, the exclusion list and recording in the booking system.
+
+
+---
+
+## SLIDE 29: Draft notice (external)
+
+**DRAFT**
+
+DRAFT for Anthony's approval. Not for distribution until approved.
+
+

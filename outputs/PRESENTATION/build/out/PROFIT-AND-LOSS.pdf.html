@@ -61,11 +61,11 @@ h1 + h2 + p + table td:first-child, h1 + h2 + p + table th:first-child { width: 
 </tr>
 <tr>
 <td><strong>Prepared by</strong></td>
-<td>Theodore (CFO) for Anthony Zed. Updated 2026-10-16 (Grace, to Anthony's instructions of 2026-10-16)</td>
+<td>Theodore (CFO) for Anthony Zed. Updated 2026-10-17 (Grace, to Anthony's instructions of 2026-10-16 and 2026-10-17)</td>
 </tr>
 <tr>
 <td><strong>Date</strong></td>
-<td>2026-10-16</td>
+<td>2026-10-17</td>
 </tr>
 <tr>
 <td><strong>Status</strong></td>
@@ -81,7 +81,7 @@ h1 + h2 + p + table td:first-child, h1 + h2 + p + table th:first-child { width: 
 </tr>
 <tr>
 <td><strong>Basis</strong></td>
-<td>3-Way Financial Model v0.5 (2026-10-16): 25-minute pair cadence only, adaptive rostering, full capacity (18 clients a morning) from Month 1, headline rent A$8,000 per month</td>
+<td>3-Way Financial Model v0.6 (2026-10-17): 25-minute pair cadence only, adaptive rostering of phlebotomists and therapists, full capacity (18 clients a morning) from Month 1, headline rent A$8,000 per month</td>
 </tr>
 </tbody>
 </table></div>
@@ -374,7 +374,7 @@ h1 + h2 + p + table td:first-child, h1 + h2 + p + table th:first-child { width: 
 </tr>
 <tr>
 <td>Variable labour</td>
-<td>AM phlebotomists and therapists rostered to the confirmed bookings (at 18 clients: 2 phlebotomists and 8 therapists), plus super 12% and workers compensation 1.7%</td>
+<td>AM phlebotomists and therapists rostered to the confirmed bookings (at 18 clients: 2 phlebotomists and 8 therapists; 1 phlebotomist up to 9 clients), plus super 12% and workers compensation 1.7%</td>
 <td>Financial model</td>
 </tr>
 <tr>
@@ -531,13 +531,13 @@ h1 + h2 + p + table td:first-child, h1 + h2 + p + table th:first-child { width: 
 </tr>
 <tr>
 <td>2. Add the AM roster for a morning of up to 9 clients booked one per 25-minute slot</td>
-<td>2 phlebotomists + 4 therapists, with on-costs, 22 weekdays + 4.33 Saturdays</td>
-<td>+ A$42,255.18</td>
+<td>1 phlebotomist + 4 therapists, with on-costs, 22 weekdays + 4.33 Saturdays</td>
+<td>+ A$35,572.95</td>
 </tr>
 <tr>
 <td>3. Total costs at that roster</td>
-<td>A$36,738.11 + A$42,255.18</td>
-<td><strong>A$78,993.29</strong></td>
+<td>A$36,738.11 + A$35,572.95</td>
+<td><strong>A$72,311.06</strong></td>
 </tr>
 <tr>
 <td>4. Less non-AM revenue</td>
@@ -546,8 +546,8 @@ h1 + h2 + p + table td:first-child, h1 + h2 + p + table th:first-child { width: 
 </tr>
 <tr>
 <td>5. Costs AM GTT must cover</td>
-<td>A$78,993.29 - A$24,585.37</td>
-<td><strong>A$54,407.92</strong></td>
+<td>A$72,311.06 - A$24,585.37</td>
+<td><strong>A$47,725.69</strong></td>
 </tr>
 <tr>
 <td>6. Revenue per daily AM client per month</td>
@@ -556,12 +556,12 @@ h1 + h2 + p + table td:first-child, h1 + h2 + p + table th:first-child { width: 
 </tr>
 <tr>
 <td>7. Break-even</td>
-<td>A$54,407.92 ÷ A$6,582.50</td>
-<td><strong>8.266 AM clients per day</strong></td>
+<td>A$47,725.69 ÷ A$6,582.50</td>
+<td><strong>7.250 AM clients per day</strong></td>
 </tr>
 </tbody>
 </table></div>
-<p>8.266 is 45.9% of the 18-client capacity, a margin of safety of 9.734 clients per day (54.1%). This is the break-even on the 25-minute cadence. The roster behind it (2 phlebotomists and 4 therapists) is what the cadence needs when bookings fall one per slot: at most two first services overlap at once, so 4 therapists cover up to 9 clients.</p>
+<p>7.250 is 40.3% of the 18-client capacity, a margin of safety of 10.750 clients per day (59.7%). This is the break-even on the 25-minute cadence with phlebotomists rostered to the bookings. The roster behind it (1 phlebotomist and 4 therapists) is what the cadence needs when bookings fall one per slot: at most two first services overlap at once, so 4 therapists cover up to 9 clients, and the three draws of each client never overlap, so one chair carries them.</p>
 <p><strong>The break-even depends on how bookings land in the 25-minute slots</strong></p>
 <div class="tblock"><table>
 <thead>
@@ -575,15 +575,15 @@ h1 + h2 + p + table td:first-child, h1 + h2 + p + table th:first-child { width: 
 <tbody>
 <tr>
 <td>Bookings spread across the slots (one client per slot, spaced)</td>
-<td>2 phlebotomists + 4 therapists</td>
-<td><strong>8.266</strong></td>
-<td>9.255</td>
+<td>1 phlebotomist + 4 therapists</td>
+<td><strong>7.250</strong></td>
+<td>8.138</td>
 </tr>
 <tr>
 <td>Planning case: bookings fill from 07:00, one client per slot first</td>
-<td>2 phlebotomists + 4 therapists</td>
-<td><strong>8.266</strong></td>
-<td>14.083</td>
+<td>1 phlebotomist + 4 therapists</td>
+<td><strong>7.250</strong></td>
+<td>8.138</td>
 </tr>
 <tr>
 <td>Bookings stack in pairs from 07:00 (model solver as published)</td>
@@ -592,14 +592,14 @@ h1 + h2 + p + table td:first-child, h1 + h2 + p + table th:first-child { width: 
 <td>14.083</td>
 </tr>
 <tr>
-<td>Planning case if one phlebotomist is allowed on mornings of 9 or fewer (Anthony to decide, see Notes 1)</td>
-<td>1 phlebotomist + 4 therapists</td>
-<td>7.250</td>
-<td>8.138</td>
+<td>Planning case with a paid 3-hour second phlebotomist shift on every light morning</td>
+<td>2 phlebotomists (one for 3 hours) + 4 therapists</td>
+<td>7.758</td>
+<td>8.696</td>
 </tr>
 </tbody>
 </table></div>
-<p>The headline is the planning case, <strong>8.266</strong>. The GST-stress break-even is 9.255 if the tenth booking lands in a slot not adjacent to another second-chair booking, and 14.083 if it does not (the roster then steps up to 6 or 8 therapists).</p>
+<p>The headline is the planning case, <strong>7.250</strong> (was 8.266 when 2 phlebotomists were rostered on every morning). The GST-stress break-even is 8.138 while bookings stay one per slot; if they stack in pairs both chairs run and it is 14.083 (the roster then steps up to 6 or 8 therapists).</p>
 <p><strong>Comparison: fixed staffing (full 2 + 8 roster every morning)</strong></p>
 <div class="tblock"><table>
 <thead>
@@ -632,16 +632,17 @@ h1 + h2 + p + table td:first-child, h1 + h2 + p + table th:first-child { width: 
 </tr>
 </tbody>
 </table></div>
-<p>Rostering to bookings lowers break-even by about 4.4 clients per day. It does not change steady-state profit, because at 18 clients every role is needed.</p>
+<p>Rostering to bookings, phlebotomists included, lowers break-even by about 5.4 clients per day. It does not change steady-state profit, because at 18 clients every role is needed.</p>
 <hr />
 <h2>4. Notes</h2>
 <ol>
-<li><strong>Cadence and rostering.</strong> The 25-minute pair cadence is the only cadence: first booking 07:00, pairs at 07:00, 07:25, 07:50 and so on, last first draw 10:20, 9 pairs, 18 clients a morning at most. Staff are called in to match the confirmed slots each morning, AM and PM; idle staff are never rostered. Booking is 2 to 4 weeks ahead. <strong>Phlebotomist minimum, flagged for Anthony:</strong> the model keeps 2 phlebotomists on every morning with a GTT booking, because the clinical protocol uses a second on-site phlebotomist for a difficult blood draw and the 2026-10-11 decision recorded 2 phlebotomists on every GTT morning as GTT's clinical standard. The model contains no regulation requiring it. Mornings of 9 or fewer need only one chair, so running 1 phlebotomist would save A$234.51 a weekday morning (A$6,682.23 a month) and lower break-even to 7.250. This is Anthony's decision.</li>
+<li><strong>Cadence and rostering.</strong> The 25-minute pair cadence is the only cadence: first booking 07:00, pairs at 07:00, 07:25, 07:50 and so on, last first draw 10:20, 9 pairs, 18 clients a morning at most. Staff are called in to match the confirmed slots each morning, AM and PM; idle staff are never rostered. Booking is 2 to 4 weeks ahead. <strong>Phlebotomists are rostered adaptively (Anthony, 2026-10-17):</strong> 1 phlebotomist when 9 or fewer are booked, 2 when 10 to 18, none in the afternoon, with a named second collector on call on light mornings, paid only if called in (assumed). This saves A$234.51 a weekday morning (A$6,682.23 a month) on light mornings and lowers break-even from 8.266 to 7.250. The pathology partner and the Medicare and lab-employment rules may require the lab to supply collectors; if so the roster is the lab's decision.</li>
 <li><strong>No ramp-up and fill rate.</strong> Fill of rostered slots is assumed to be 100% from Month 1. At 85% fill, steady-state net is about +A$17.4k per month (A$17,413.65 before GST timing). At 70% fill the business makes a small loss (-A$359.10 a month). With no ramp-up to cushion it, fill is the central risk (financial model).</li>
-<li><strong>GST.</strong> GST treatment is general information only and must be confirmed with the accountant. The P&amp;L is GST-inclusive with no line for GST paid; the GST-stress column shows the downside. Each percentage point of the AM package that is GST-free is worth A$107.71 a month at 18 clients a morning (financial model).</li>
+<li><strong>GST.</strong> GST treatment is general information only and must be confirmed with the accountant. The P&amp;L is GST-inclusive with no line for GST paid; the GST-stress column shows the downside. Each percentage point of the AM package that is GST-free is worth A$107.71 a month at 18 clients a morning (financial model).
+3a. <strong>10% post-test discount.</strong> Adopted 2026-10-17 for any expecting mother who completes a GTT test, on standalone treatments or packages, morning or afternoon. It is not deducted from the figures above: at A$117 a booking it costs A$277 to A$2,218 a month at 5% to 40% take-up (A$1,386 at 25%), and pays for itself if 10% of redeemers are new bookings (24% if extra hours must be paid). Take-up is an assumption.</li>
 <li><strong>Lab fee.</strong> The model assumes A$0 to GTT. Each A$10 per client would cost about A$4,739 per month at capacity (financial model). Tender fees are to be confirmed.</li>
 <li><strong>Rent.</strong> A$8,000 is the headline per Anthony's instruction. The real search budget is A$9,500 to A$10,500 per month (financial model).</li>
 <li><strong>Award rates.</strong> Wage rates are the award casual rates (1 July 2026). Verify with Fair Work before acting.</li>
 <li><strong>Not in the model:</strong> income tax, depreciation, interest, rent during fit-out, early-release staffing upside.</li>
 </ol>
-<p><em>Arithmetic check: every row and column above was re-summed by script and agrees to the cent with model v0.5 §3, §3a, §3d, §6a and §9. The steady-state month reproduces the model's own A$107,883.97 total cost and A$35,186.40 net exactly.</em></p></body></html>
+<p><em>Arithmetic check: every row and column above was re-summed by script and agrees to the cent with model v0.6 §3, §3a, §3d, §6a and §9. The steady-state month reproduces the model's own A$107,883.97 total cost and A$35,186.40 net exactly.</em></p></body></html>
