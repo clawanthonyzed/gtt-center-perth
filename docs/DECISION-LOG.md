@@ -180,3 +180,9 @@ Discount cost (R2): at A$117 a booking, 5% / 10% / 25% / 40% take-up costs A$277
 
 **Explicit boundary:** none of the above lock a final logo, palette, type system, signage, packaging, uniforms, or production website for either candidate name — that remains gated on the naming decision per `docs/naming/NAMING-DECISION-STATE.md`'s "DO NOT START YET" list.
 - 2026-10-16: shortlist replaced by outputs/LEASING/PROPERTY-SHORTLIST-2026-10.md; old list archived in docs/archive.
+
+## 2026-10-18: Anthony is under the MRCA, not the VEA (permanent correction)
+
+**Decision:** Anthony receives the Special Rate Disability Pension under the Military Rehabilitation and Compensation Act 2004 (MRCA s199). The work threshold is **10 hours a week of remunerative work** (s199(1)(d); cessation s209(b)). Earlier GTT documents that used the VEA 8-hour test (s24A) for Anthony are superseded on that point. Passive trust distributions, dividends and investment income are not remunerative work. Management or employment in the business is. Verify with DVA in writing before relying on it.
+
+**Source:** statute text ingested 2026-10-18 into second-brain knowledge/legal/MRCA-SRDP.md (MRCA compilation No. 77, 29 Sep 2026).

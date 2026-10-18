@@ -1,3 +1,5 @@
+> **CORRECTION 2026-10-18 (Anthony): Anthony is under the Military Rehabilitation and Compensation Act 2004 (MRCA), NOT the Veterans Entitlements Act (VEA).** His payment is the Special Rate Disability Pension (SRDP), MRCA s199(1)(d): "unable to undertake remunerative work for more than 10 hours per week". Cessation test s209(b): able to undertake remunerative work for more than 10 hours per week. Work threshold is **10 hours, not 8**. VEA s24A and the 8-hour test in this file apply to VEA pensioners only and must not be applied to Anthony. Text: second-brain/knowledge/legal/MRCA-SRDP.md. Gold Card: the word does not appear in the MRCA text (treatment entitlements are ss280-282).
+
 # GTT Center Perth — DVA Income Research
 
 **Version:** 2.0 | **Date:** 2026-06-09
