@@ -18,26 +18,26 @@ CSS = """
 @page { size: A4; margin: 16mm 16mm 18mm 16mm; }
 * { box-sizing: border-box; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-body { font-family: 'Carlito','Calibri','Liberation Sans',Arial,sans-serif; font-size: 10pt; line-height: 1.38; color: #33261E; margin: 0; }
-h1 { font-family: 'Gentium Basic','Liberation Serif',Georgia,serif; font-size: 30pt; margin: 0 0 4pt 0; color: #33261E; border-bottom: 2px solid #9C7A46; padding-bottom: 6pt; }
-h2 { font-family: 'Gentium Basic','Liberation Serif',Georgia,serif; font-size: 17pt; color: #A9654E; margin: 0 0 8pt 0; padding-bottom: 3pt; border-bottom: 1px solid #E8DAC5; break-after: avoid; }
-h1 + h2 { font-size: 15pt; border: none; }
-h3 { font-family: 'Gentium Basic','Liberation Serif',Georgia,serif; font-size: 12.5pt; color: #5E5F45; margin: 12pt 0 4pt 0; break-after: avoid; }
+body { font-family: 'Carlito','Calibri','Liberation Sans',Arial,sans-serif; font-size: 14pt; line-height: 1.45; color: #33261E; margin: 0; }
+h1 { font-family: 'Gentium Basic','Liberation Serif',Georgia,serif; font-size: 28pt; margin: 0 0 8pt 0; color: #33261E; border-bottom: 2px solid #9C7A46; padding-bottom: 6pt; }
+h2 { font-family: 'Gentium Basic','Liberation Serif',Georgia,serif; font-size: 24pt; color: #A9654E; margin: 14pt 0 10pt 0; padding-bottom: 3pt; border-bottom: 1px solid #E8DAC5; break-after: avoid; }
+h1 + h2 { font-size: 20pt; border: none; }
+h3 { font-family: 'Gentium Basic','Liberation Serif',Georgia,serif; font-size: 18pt; color: #5E5F45; margin: 14pt 0 6pt 0; break-after: avoid; }
 p { margin: 0 0 6pt 0; }
 ul, ol { margin: 0 0 6pt 0; padding-left: 18pt; }
 li { margin-bottom: 2pt; }
 a { color: #A9654E; text-decoration: underline; }
-table { width: 100%; border-collapse: collapse; margin: 4pt 0 8pt 0; font-size: 8.8pt; line-height: 1.28; }
-th { background: #33261E; color: #FAF6EE; text-align: left; padding: 3.5pt 6pt; font-weight: 700; }
-td { padding: 3pt 6pt; border-bottom: 1px solid #E8DAC5; vertical-align: top; }
+table { width: 100%; border-collapse: collapse; margin: 6pt 0 12pt 0; font-size: 12pt; line-height: 1.4; }
+th { background: #33261E; color: #FAF6EE; text-align: left; padding: 6pt 8pt; font-weight: 700; }
+td { padding: 5pt 8pt; border-bottom: 1px solid #E8DAC5; vertical-align: top; }
 tr:nth-child(even) td { background: #F6EEE0; }
 tr { break-inside: avoid; }
 thead { display: table-header-group; }
 .tblock { break-inside: avoid; page-break-inside: avoid; }
 .tblock table { margin-top: 2pt; }
-.tblock.fit table { font-size: 8.4pt; line-height: 1.22; }
-.tblock.fit td { padding: 2.4pt 5pt; }
-.tcap { font-weight: 700; color: #A9654E; margin: 8pt 0 2pt 0; font-size: 10.5pt; break-after: avoid; }
+.tblock.fit table { font-size: 11.5pt; line-height: 1.3; }
+.tblock.fit td { padding: 4pt 7pt; }
+.tcap { font-weight: 700; color: #A9654E; margin: 10pt 0 3pt 0; font-size: 14pt; break-after: avoid; }
 .pagebreak { break-after: page; page-break-after: always; height: 0; }
 img { max-width: 100%; height: auto; display: block; margin: 6pt auto; border: 1px solid #E8DAC5; }
 em { color: #5E5F45; }
@@ -54,9 +54,9 @@ h1 + h2 + p + table td:first-child, h1 + h2 + p + table th:first-child { width: 
 .toc a.row.sub { font-size: 12.5pt; padding: 4pt 0 4pt 30pt; color: #5E5F45; }
 .toc a.row.sub .n { width: 22pt; }
 /* financial statements */
-.fin table { font-size: 7.6pt; }
-.fin.wide table.wide { font-size: 6.4pt; }
-.fin.wide table.wide th, .fin.wide table.wide td { padding: 2pt 2.5pt; }
+.fin table { font-size: 11pt; }
+.fin.wide table.wide { font-size: 9pt; }
+.fin.wide table.wide th, .fin.wide table.wide td { padding: 4pt 4pt; }
 """
 
 COMMON_SUBS = [
