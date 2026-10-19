@@ -290,7 +290,7 @@ Downtime-fill (pool a) and early-release (pool b) are about using or shedding ot
 ## Pathology Fee — Pending Confirmation
 
 > **Action required:** Contact PathWest (08 6383 4234) and Western Diagnostics Pathology to confirm:
-> 1. MBS items 66551 and 66554 — what does a non-bulk-billed patient pay out-of-pocket?
+> 1. MBS items 66548 (pregnancy GTT, A$19.90) and 73928 (collection, A$5.95; corrected 2026-10-19, previously mislabelled 66551 and 66554, which are HbA1c tests) — what does a non-bulk-billed patient pay out-of-pocket? At schedule fees Medicare pays 85% (A$22.05) when collection is lawful, leaving A$3.80
 > 2. What is the collection-only component charged by the collection centre?
 > 3. Does WDP allow their satellite collection centres to charge an additional venue fee?
 >

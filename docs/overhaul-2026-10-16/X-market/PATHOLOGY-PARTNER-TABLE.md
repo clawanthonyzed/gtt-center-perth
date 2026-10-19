@@ -16,6 +16,6 @@ All entries come from the venture's correspondence and tracker, current to 2026-
 | Open questions | Rental figure; medical waste cover; 18-a-day volume confirmed in writing; sightline versus separate room supervision | Courier routing and consumable supply; lab drop-off fallback | Everything: fees, courier, turnaround, accreditation requirements |
 | Next action | Chase the formal-partnership question; request a written per-test and collection fee | Send the drafted reply (Anthony's approval needed) | Follow-up email (Anthony's approval needed) |
 
-Blood-collection items billed under the Medicare Benefits Schedule for the glucose tolerance test are items 66551 and 66554, per the venture's research.
+Items billed under the Medicare Benefits Schedule for the pregnancy glucose tolerance test are **66548 (A$19.90)** and the collection fee **73928 (A$5.95)**; the non-pregnancy test is 66542 (A$18.95). Corrected 2026-10-19 from MBS Online. Items 66551 and 66554 are HbA1c tests, not the glucose tolerance test.
 
 Negotiation note (P20c, other workstream): the next round of correspondence to each laboratory should ask for a wholesale per-test and collection fee in writing, not a rental figure alone.

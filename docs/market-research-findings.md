@@ -50,8 +50,10 @@ MIWM (Maternal & Infant Wellbeing Melbourne) is the only direct national competi
 **Source:** PathWest WA, MBS schedule
 
 ### MBS Items (OGTT)
-- Item 66551: Glucose tolerance test (fasting + 2hr)
-- Item 66554: Glucose tolerance test with additional specimens
+- Item 66548: Oral glucose tolerance test in pregnancy, A$19.90 (the GTT this venture runs)
+- Item 66542: Oral glucose tolerance test for diabetes, not in pregnancy, A$18.95 (secondary client stream)
+- Item 73928: Patient episode initiation, specimen collected in an approved collection centre, A$5.95
+- (Corrected 2026-10-19 from MBS Online: items 66551 and 66554 are HbA1c tests and were wrongly listed here as glucose tolerance tests.)
 - Item 66830: Blood glucose
 - Item 71077: Glycated haemoglobin
 

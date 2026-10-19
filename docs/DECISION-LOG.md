@@ -186,3 +186,10 @@ Discount cost (R2): at A$117 a booking, 5% / 10% / 25% / 40% take-up costs A$277
 **Decision:** Anthony receives the Special Rate Disability Pension under the Military Rehabilitation and Compensation Act 2004 (MRCA s199). The work threshold is **10 hours a week of remunerative work** (s199(1)(d); cessation s209(b)). Earlier GTT documents that used the VEA 8-hour test (s24A) for Anthony are superseded on that point. Passive trust distributions, dividends and investment income are not remunerative work. Management or employment in the business is. Verify with DVA in writing before relying on it.
 
 **Source:** statute text ingested 2026-10-18 into second-brain knowledge/legal/MRCA-SRDP.md (MRCA compilation No. 77, 29 Sep 2026).
+
+
+## 2026-10-19: Medicare item numbers corrected; non-pregnancy glucose testing added as a secondary stream
+
+**Decision (Anthony):** (1) Use the verified MBS items: 66548 pregnancy OGTT (A$19.90), 66542 non-pregnancy OGTT (A$18.95), 73928 collection (A$5.95). Remove 66551 and 66554 (HbA1c tests) wherever they were used as the GTT. Files corrected: research/PATHOLOGY-PARTNER-ECONOMICS.md, financial-break-even-staff.md, overhaul-2026-10-16/X-market/PATHOLOGY-PARTNER-TABLE.md, market-research-findings.md. (2) Add non-pregnancy adult female glucose testing (item 66542) as a secondary client stream. GTTs core identity remains a luxury womens day spa and sanctuary.
+
+**Not changed:** every financial figure. No volume, revenue or capacity assumption was added for the new stream.
