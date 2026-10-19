@@ -193,3 +193,6 @@ Discount cost (R2): at A$117 a booking, 5% / 10% / 25% / 40% take-up costs A$277
 **Decision (Anthony):** (1) Use the verified MBS items: 66548 pregnancy OGTT (A$19.90), 66542 non-pregnancy OGTT (A$18.95), 73928 collection (A$5.95). Remove 66551 and 66554 (HbA1c tests) wherever they were used as the GTT. Files corrected: research/PATHOLOGY-PARTNER-ECONOMICS.md, financial-break-even-staff.md, overhaul-2026-10-16/X-market/PATHOLOGY-PARTNER-TABLE.md, market-research-findings.md. (2) Add non-pregnancy adult female glucose testing (item 66542) as a secondary client stream. GTTs core identity remains a luxury womens day spa and sanctuary.
 
 **Not changed:** every financial figure. No volume, revenue or capacity assumption was added for the new stream.
+
+## 2026-10-19 (round 9): GST and capital return planning basis
+Anthony asked for one GST journey. Planning profit before company tax is the after-GST A$281,310.96 a year (A$23,442.58 a month); the old A$422,236.80 counted the ATO's GST as profit and is retired for planning. Owners' startup funds go in as written shareholder loans and are repaid before dividends (steady state: month 15; cautious ramp: month 19). Files: docs/overhaul-2026-10-19/L4-capital/ and L5-r9/. Lounge to stay pregnancy-only (Catherine, SEX-DISCRIMINATION-GTT). Not yet approved by Anthony: staffing re-decision, lab letters.
