@@ -196,3 +196,6 @@ Discount cost (R2): at A$117 a booking, 5% / 10% / 25% / 40% take-up costs A$277
 
 ## 2026-10-19 (round 9): GST and capital return planning basis
 Anthony asked for one GST journey. Planning profit before company tax is the after-GST A$281,310.96 a year (A$23,442.58 a month); the old A$422,236.80 counted the ATO's GST as profit and is retired for planning. Owners' startup funds go in as written shareholder loans and are repaid before dividends (steady state: month 15; cautious ramp: month 19). Files: docs/overhaul-2026-10-19/L4-capital/ and L5-r9/. Lounge to stay pregnancy-only (Catherine, SEX-DISCRIMINATION-GTT). Not yet approved by Anthony: staffing re-decision, lab letters.
+
+## 2026-10-20 - Pregnancy only for the whole clinic (Anthony, Round 10)
+Anthony: "We will stick with pregnancy only for the whole clinic." Non-pregnancy testing (item 66542) is dropped from the plan. Supersedes the 2026-10-19 non-pregnancy stream. Routes under study: Route 1 (lab runs the collection centre in GTT) and an own specialised lab; no route chosen yet.

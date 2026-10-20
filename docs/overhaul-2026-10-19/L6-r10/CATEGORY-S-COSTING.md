@@ -111,3 +111,5 @@ Base set-up: analyser 25,000; backup meter 3,000; centrifuge 3,500; fridge and f
 ## 8. Verdict
 
 Route 1 stays the answer. Category S makes sense only as a later option if (a) a full-time specialist already employed elsewhere in the business accepts the designated-person role at little extra cost, (b) the Department confirms 66548 and the glucose-only scope in writing, and (c) volumes well beyond the repo figure of 18 a day appear. None of those is in the repo. To keep the option alive: ask NATA for a new-accreditation quote, ask two local distributors for analyser quotes, and ask the Department the Category S and 66548 questions (R9 draft letter question 8).
+
+CORRECTION 2026-10-20 (Theodore): Services Australia APL application fees were abolished from 1 July 2025 (Catherine R10), so the A$750 line is A$0. Medicare income uses the repo day count (396 visits a month, 4,752 a year), not the 5,688 in Catherine's blueprint.
