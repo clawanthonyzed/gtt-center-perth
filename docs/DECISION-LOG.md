@@ -199,3 +199,6 @@ Anthony asked for one GST journey. Planning profit before company tax is the aft
 
 ## 2026-10-20 - Pregnancy only for the whole clinic (Anthony, Round 10)
 Anthony: "We will stick with pregnancy only for the whole clinic." Non-pregnancy testing (item 66542) is dropped from the plan. Supersedes the 2026-10-19 non-pregnancy stream. Routes under study: Route 1 (lab runs the collection centre in GTT) and an own specialised lab; no route chosen yet.
+
+## 2026-10-20 - Project name is a placeholder; fertility clinics; letters personal (Anthony, Round 11)
+Anthony: "GTT Center Perth" is an unregistered internal placeholder. No ABN, company or address exists. Official letters go from Anthony Zed personally (Founder and Private Healthcare Investor) with the working title only, and must not claim a Pty Ltd, ABN, lease or address. Fertility clinics are a target audience for partnership; GTT serves expecting mothers only (item 66548). Note: Anthony's 2026-09-19 decision that GTT employs both phlebotomists conflicts with Medicare s16A(5AB)(c); to be re-decided.
