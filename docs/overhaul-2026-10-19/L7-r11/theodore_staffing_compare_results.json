@@ -1,0 +1,230 @@
+{
+ "basis_note": "OP = repo operating profit with no GST line; GST = Round 9 after-GST. Same wage saving and same lab fee apply on both.",
+ "constants": {
+  "BASE_OP": 35186.4,
+  "GST_DRAG": 11743.82,
+  "BASE_GST": 23442.58,
+  "WAGE_SAVE_REPO": 13364.52,
+  "WAGE_SAVE_QUOTED_2x6682_28": 13364.56,
+  "WAGE_CALC_BASE": 13364.51,
+  "LAB_FEE_MONTH": 12251.35,
+  "CLIENTS_MONTH": 473.94,
+  "LAB_FEE_PER_CLIENT": 25.85
+ },
+ "reconcile": {
+  "quoted_components": 48550.96,
+  "repo_figure": 48550.92,
+  "cent_difference": 0.04,
+  "user_stated_48550": 48550.0,
+  "diff_to_user_stated": 0.92,
+  "note": "2 x 6,682.28 = 13,364.56 but the repo saving is 13,364.52 (calculator 13,364.51 elsewhere, 13,364.50 in GST-SPLIT-MODEL). Repo A$48,550.92 used. Spread is A$0.06 and is rounding of the per-collector figure."
+ },
+ "options": {
+  "d_baseline": {
+   "op": 35186.4,
+   "after_gst": 23442.58,
+   "year_month": 23442.58,
+   "year_year": 281310.96,
+   "year_company_tax_25pct": 70327.74,
+   "year_year_after_company_tax": 210983.22
+  },
+  "a_lab_employs_no_recharge": {
+   "op": 48550.92,
+   "after_gst": 36807.1,
+   "year_month": 36807.1,
+   "year_year": 441685.2,
+   "year_company_tax_25pct": 110421.3,
+   "year_year_after_company_tax": 331263.9
+  },
+  "c_gtt_employs_absorbs_lab_fee": {
+   "op": 22935.05,
+   "after_gst": 12304.99,
+   "year_month": 12304.99,
+   "year_year": 147659.88,
+   "year_company_tax_25pct": 36914.97,
+   "year_year_after_company_tax": 110744.91
+  }
+ },
+ "a_minus_c": {
+  "month_op": 25615.87,
+  "year_op": 307390.44,
+  "month_after_gst": 24502.11,
+  "year_after_gst": 294025.32,
+  "year_after_gst_after_company_tax": 220518.99
+ },
+ "lab_fee_composition": {
+  "item_66548": 19.9,
+  "item_73928": 5.95,
+  "per_client": 25.85,
+  "clients_month": 473.94,
+  "month": 12251.35,
+  "year": 147016.2,
+  "medicare_benefit_85pct_per_client": 22.05,
+  "client_gap_if_lab_bills_full": 3.8,
+  "note": "12,251.35 = A$25.85 x 473.94 clients. It is the lab's Medicare schedule fee for each pregnancy glucose test visit (test + collection episode), not wages."
+ },
+ "b_sweep": [
+  {
+   "share_of_wage_cost": 0.0,
+   "fee_ex_gst": 0.0,
+   "invoice_incl_gst": 0.0,
+   "profit_after_gst": 36807.1,
+   "profit_if_no_itc": 36807.1,
+   "vs_baseline": 13364.52,
+   "annual": 441685.2,
+   "annual_after_company_tax": 331263.9
+  },
+  {
+   "share_of_wage_cost": 0.1,
+   "fee_ex_gst": 1336.45,
+   "invoice_incl_gst": 1470.1,
+   "profit_after_gst": 35470.65,
+   "profit_if_no_itc": 35337.0,
+   "vs_baseline": 12028.07,
+   "annual": 425647.8,
+   "annual_after_company_tax": 319235.85
+  },
+  {
+   "share_of_wage_cost": 0.2,
+   "fee_ex_gst": 2672.9,
+   "invoice_incl_gst": 2940.19,
+   "profit_after_gst": 34134.2,
+   "profit_if_no_itc": 33866.91,
+   "vs_baseline": 10691.62,
+   "annual": 409610.4,
+   "annual_after_company_tax": 307207.8
+  },
+  {
+   "share_of_wage_cost": 0.3,
+   "fee_ex_gst": 4009.36,
+   "invoice_incl_gst": 4410.3,
+   "profit_after_gst": 32797.74,
+   "profit_if_no_itc": 32396.8,
+   "vs_baseline": 9355.16,
+   "annual": 393572.88,
+   "annual_after_company_tax": 295179.66
+  },
+  {
+   "share_of_wage_cost": 0.4,
+   "fee_ex_gst": 5345.81,
+   "invoice_incl_gst": 5880.39,
+   "profit_after_gst": 31461.29,
+   "profit_if_no_itc": 30926.71,
+   "vs_baseline": 8018.71,
+   "annual": 377535.48,
+   "annual_after_company_tax": 283151.61
+  },
+  {
+   "share_of_wage_cost": 0.5,
+   "fee_ex_gst": 6682.26,
+   "invoice_incl_gst": 7350.49,
+   "profit_after_gst": 30124.84,
+   "profit_if_no_itc": 29456.61,
+   "vs_baseline": 6682.26,
+   "annual": 361498.08,
+   "annual_after_company_tax": 271123.56
+  },
+  {
+   "share_of_wage_cost": 0.6,
+   "fee_ex_gst": 8018.71,
+   "invoice_incl_gst": 8820.58,
+   "profit_after_gst": 28788.39,
+   "profit_if_no_itc": 27986.52,
+   "vs_baseline": 5345.81,
+   "annual": 345460.68,
+   "annual_after_company_tax": 259095.51
+  },
+  {
+   "share_of_wage_cost": 0.7,
+   "fee_ex_gst": 9355.16,
+   "invoice_incl_gst": 10290.68,
+   "profit_after_gst": 27451.94,
+   "profit_if_no_itc": 26516.42,
+   "vs_baseline": 4009.36,
+   "annual": 329423.28,
+   "annual_after_company_tax": 247067.46
+  },
+  {
+   "share_of_wage_cost": 0.8,
+   "fee_ex_gst": 10691.62,
+   "invoice_incl_gst": 11760.78,
+   "profit_after_gst": 26115.48,
+   "profit_if_no_itc": 25046.32,
+   "vs_baseline": 2672.9,
+   "annual": 313385.76,
+   "annual_after_company_tax": 235039.32
+  },
+  {
+   "share_of_wage_cost": 0.9,
+   "fee_ex_gst": 12028.07,
+   "invoice_incl_gst": 13230.88,
+   "profit_after_gst": 24779.03,
+   "profit_if_no_itc": 23576.22,
+   "vs_baseline": 1336.45,
+   "annual": 297348.36,
+   "annual_after_company_tax": 223011.27
+  },
+  {
+   "share_of_wage_cost": 1.0,
+   "fee_ex_gst": 13364.52,
+   "invoice_incl_gst": 14700.97,
+   "profit_after_gst": 23442.58,
+   "profit_if_no_itc": 22106.13,
+   "vs_baseline": 0.0,
+   "annual": 281310.96,
+   "annual_after_company_tax": 210983.22
+  }
+ ],
+ "b_break_even": {
+  "equal_to_baseline": {
+   "fee_ex_gst": 13364.52,
+   "invoice_incl_gst": 14700.97
+  },
+  "equal_to_option_c": {
+   "fee_ex_gst": 24502.11,
+   "invoice_incl_gst": 26952.32
+  },
+  "if_gtt_cannot_claim_itc": {
+   "equal_to_baseline_invoice_incl": 13364.52,
+   "equal_to_c_invoice_incl": 24502.11
+  }
+ },
+ "b_gst_assumption": "Recharge assumed taxable (lab charges GST at 10%); GTT claims the 1/11 credit, the same way the repo treats the lab fee (Case 3 GST-stress A$12,304.99). If GTT cannot claim, the invoice itself is the cost (see profit_if_no_itc).",
+ "rent_sensitivity": [
+  {
+   "rent_incl_gst": 0,
+   "net_of_gst": 0.0,
+   "a_profit_after_gst": 36807.1,
+   "b_at_half_wage_profit": 30124.84,
+   "label": "illustrative, valuer needed, NOT in repo"
+  },
+  {
+   "rent_incl_gst": 500,
+   "net_of_gst": 454.55,
+   "a_profit_after_gst": 37261.65,
+   "b_at_half_wage_profit": 30579.39,
+   "label": "illustrative, valuer needed, NOT in repo"
+  },
+  {
+   "rent_incl_gst": 1000,
+   "net_of_gst": 909.09,
+   "a_profit_after_gst": 37716.19,
+   "b_at_half_wage_profit": 31033.93,
+   "label": "illustrative, valuer needed, NOT in repo"
+  },
+  {
+   "rent_incl_gst": 2000,
+   "net_of_gst": 1818.18,
+   "a_profit_after_gst": 38625.28,
+   "b_at_half_wage_profit": 31943.02,
+   "label": "illustrative, valuer needed, NOT in repo"
+  }
+ ],
+ "rent_note": "Lab-to-GTT payment must be market rent only for space actually used (valuer needed; Catherine to confirm the Health Insurance Act rules on pathology arrangements). Any payment tied to referrals, bookings or doctor requests is not allowed. Rent amounts are placeholders, NOT in repo.",
+ "pregnant_client_price": {
+  "bulk_billed_client_pays": 0.0,
+  "full_fee_client_pays": 3.8,
+  "price_for_c_to_restore_baseline_gst_aside": 275.85,
+  "note": "Repo has A$0 vs A$3.80 but both are paid to the lab, not GTT, so GTT revenue does not change and no payback period exists. Option c has no capex either."
+ }
+}
