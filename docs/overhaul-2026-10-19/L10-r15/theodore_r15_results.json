@@ -1,0 +1,1887 @@
+{
+ "generated": "2026-10-24",
+ "labels": "R repo, V official, E estimate, Q quote needed",
+ "part1": {
+  "steps": {
+   "adverse": {
+    "case": "adverse",
+    "award_rate": "RN L3 pp1",
+    "ordinary": 42.93,
+    "blended_with_saturday": 46.51,
+    "plus_super_12pct": 52.09,
+    "plus_leave_loading": 52.72,
+    "plus_workers_comp_1_7pct": 53.51,
+    "builtup_multiplier_paid_hour": 1.1505,
+    "paid_leave_grossup_factor": 1.1872,
+    "loaded_per_worked_hour": 63.52,
+    "plus_payroll_tax_marginal": 67.49,
+    "r14_oncost_multiplier": 1.25,
+    "r14_wage_per_paid_hour": 58.14,
+    "r14_consumables_per_paid_hour": 5.42,
+    "r14_fixed_per_paid_hour": 12.09,
+    "r14_allin_per_paid_hour": 75.7,
+    "paid_hours_month": 215.8,
+    "clinical_hours_month": 81.9,
+    "billable_share_of_paid": 0.3795,
+    "wage_only_per_clinical_hour": 153.19,
+    "allin_per_clinical_hour": 199.46,
+    "revenue_per_paid_hour_bulk": 49.62,
+    "revenue_per_clinical_hour_bulk": 130.74,
+    "util_input": 0.65,
+    "admin_min": 15,
+    "avg_clinical_min": 21.0
+   },
+   "base": {
+    "case": "base",
+    "award_rate": "RN L2 pp4",
+    "ordinary": 41.59,
+    "blended_with_saturday": 45.06,
+    "plus_super_12pct": 50.46,
+    "plus_leave_loading": 51.07,
+    "plus_workers_comp_1_7pct": 51.84,
+    "builtup_multiplier_paid_hour": 1.1505,
+    "paid_leave_grossup_factor": 1.1872,
+    "loaded_per_worked_hour": 61.54,
+    "plus_payroll_tax_marginal": 65.39,
+    "r14_oncost_multiplier": 1.2,
+    "r14_wage_per_paid_hour": 54.07,
+    "r14_consumables_per_paid_hour": 3.03,
+    "r14_fixed_per_paid_hour": 8.21,
+    "r14_allin_per_paid_hour": 65.31,
+    "paid_hours_month": 231.4,
+    "clinical_hours_month": 134.55,
+    "billable_share_of_paid": 0.5815,
+    "wage_only_per_clinical_hour": 92.99,
+    "allin_per_clinical_hour": 112.32,
+    "revenue_per_paid_hour_bulk": 61.39,
+    "revenue_per_clinical_hour_bulk": 105.57,
+    "util_input": 0.75,
+    "admin_min": 10,
+    "avg_clinical_min": 34.5
+   },
+   "favourable": {
+    "case": "favourable",
+    "award_rate": "RN L2 pp1",
+    "ordinary": 39.59,
+    "blended_with_saturday": 42.89,
+    "plus_super_12pct": 48.04,
+    "plus_leave_loading": 48.61,
+    "plus_workers_comp_1_7pct": 49.34,
+    "builtup_multiplier_paid_hour": 1.1505,
+    "paid_leave_grossup_factor": 1.1872,
+    "loaded_per_worked_hour": 58.58,
+    "plus_payroll_tax_marginal": 62.24,
+    "r14_oncost_multiplier": 1.14,
+    "r14_wage_per_paid_hour": 48.89,
+    "r14_consumables_per_paid_hour": 1.55,
+    "r14_fixed_per_paid_hour": 6.54,
+    "r14_allin_per_paid_hour": 56.99,
+    "paid_hours_month": 227.07,
+    "clinical_hours_month": 169.65,
+    "billable_share_of_paid": 0.7471,
+    "wage_only_per_clinical_hour": 65.44,
+    "allin_per_clinical_hour": 76.28,
+    "revenue_per_paid_hour_bulk": 71.36,
+    "revenue_per_clinical_hour_bulk": 95.51,
+    "util_input": 0.85,
+    "admin_min": 6,
+    "avg_clinical_min": 43.5
+   }
+  },
+  "anthony_arithmetic": {
+   "additive_45": 55.67,
+   "additive_54": 66.8,
+   "compound_45": 56.38,
+   "compound_54": 67.66,
+   "on_r14_base_blended_wage": 55.74,
+   "r14_actual_wage_per_paid_hour": 54.07,
+   "r14_allin_per_paid_hour": 65.31,
+   "gap_explained_by_consumables_and_fixed": 11.24
+  },
+  "sensitivity_oncost": {
+   "A_50pct_6day": {
+    "r14_1.20": {
+     "wage_per_hour": 54.07,
+     "net_month": -907.2,
+     "wage_month": 12511.34
+    },
+    "builtup_paid_hour_1.1505": {
+     "wage_per_hour": 51.84,
+     "net_month": -390.7,
+     "wage_month": 11994.84
+    },
+    "builtup_worked_hour_1.366": {
+     "wage_per_hour": 61.54,
+     "net_month": -2636.31,
+     "wage_month": 14240.45
+    }
+   },
+   "B_80pct_6day": {
+    "r14_1.20": {
+     "wage_per_hour": 54.07,
+     "net_month": -1305.71,
+     "wage_month": 19462.08
+    },
+    "builtup_paid_hour_1.1505": {
+     "wage_per_hour": 51.84,
+     "net_month": -502.27,
+     "wage_month": 18658.64
+    },
+    "builtup_worked_hour_1.366": {
+     "wage_per_hour": 61.54,
+     "net_month": -3995.44,
+     "wage_month": 22151.81
+    }
+   }
+  },
+  "casual_alternative": {
+   "casual_rate_l2pp4": 51.99,
+   "casual_loaded_cost": 59.11,
+   "permanent_loaded_worked_hour": 61.54,
+   "note": "casual 25% loading replaces leave; similar total (E)"
+  },
+  "leave_weeks": {
+   "annual": 4,
+   "personal": 2,
+   "public_holidays": 2.2,
+   "productive_weeks": 43.8
+  },
+  "marginal_payroll_tax": 0.06346,
+  "al_loading_pct": 1.346
+ },
+ "part2": {
+  "f_private": 1.236,
+  "grid": {
+   "A_50pct_6day|bulk_billed": {
+    "adverse": {
+     "consults_month": 234.0,
+     "consults_week": 54.0,
+     "avg_clinical_min": 21.0,
+     "paid_hours_week": 49.8,
+     "fte": 1.31,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 45.76,
+     "rev_week": 2471.04,
+     "rev_month": 10707.84,
+     "wage_month": 12557.25,
+     "consumables_month": 1170.0,
+     "fixed_month": 2608.83,
+     "net_week": -1298.83,
+     "net_month": -5628.24,
+     "wage_per_hour": 58.14,
+     "wages_month_for_payroll_tax": 12557.25
+    },
+    "base": {
+     "consults_month": 234.0,
+     "consults_week": 54.0,
+     "avg_clinical_min": 34.5,
+     "paid_hours_week": 53.4,
+     "fte": 1.41,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 60.71,
+     "rev_week": 3278.07,
+     "rev_month": 14204.97,
+     "wage_month": 12511.34,
+     "consumables_month": 702.0,
+     "fixed_month": 1898.83,
+     "net_week": -209.35,
+     "net_month": -907.2,
+     "wage_per_hour": 54.07,
+     "wages_month_for_payroll_tax": 12511.34
+    },
+    "favourable": {
+     "consults_month": 234.0,
+     "consults_week": 54.0,
+     "avg_clinical_min": 43.5,
+     "paid_hours_week": 52.4,
+     "fte": 1.38,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 69.25,
+     "rev_week": 3739.23,
+     "rev_month": 16203.33,
+     "wage_month": 11104.83,
+     "consumables_month": 351.0,
+     "fixed_month": 1485.5,
+     "net_week": 752.77,
+     "net_month": 3262.0,
+     "wage_per_hour": 48.89,
+     "wages_month_for_payroll_tax": 11104.83
+    }
+   },
+   "A_50pct_6day|structure_B_private_item_scaled": {
+    "adverse": {
+     "consults_month": 234.0,
+     "consults_week": 54.0,
+     "avg_clinical_min": 21.0,
+     "paid_hours_week": 49.8,
+     "fte": 1.31,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 66.53,
+     "rev_week": 2906.55,
+     "rev_month": 15566.92,
+     "wage_month": 12557.25,
+     "consumables_month": 1170.0,
+     "fixed_month": 2608.83,
+     "net_week": -177.5,
+     "net_month": -769.16,
+     "wage_per_hour": 58.14,
+     "wages_month_for_payroll_tax": 12557.25
+    },
+    "base": {
+     "consults_month": 234.0,
+     "consults_week": 54.0,
+     "avg_clinical_min": 34.5,
+     "paid_hours_week": 53.4,
+     "fte": 1.41,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 88.26,
+     "rev_week": 3856.27,
+     "rev_month": 20653.45,
+     "wage_month": 12511.34,
+     "consumables_month": 702.0,
+     "fixed_month": 1898.83,
+     "net_week": 1278.76,
+     "net_month": 5541.29,
+     "wage_per_hour": 54.07,
+     "wages_month_for_payroll_tax": 12511.34
+    },
+    "favourable": {
+     "consults_month": 234.0,
+     "consults_week": 54.0,
+     "avg_clinical_min": 43.5,
+     "paid_hours_week": 52.4,
+     "fte": 1.38,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 100.68,
+     "rev_week": 4398.98,
+     "rev_month": 23560.05,
+     "wage_month": 11104.83,
+     "consumables_month": 351.0,
+     "fixed_month": 1485.5,
+     "net_week": 2450.48,
+     "net_month": 10618.73,
+     "wage_per_hour": 48.89,
+     "wages_month_for_payroll_tax": 11104.83
+    }
+   },
+   "A_50pct_6day|mixed_50_50_bulk_and_gap30": {
+    "adverse": {
+     "consults_month": 234.0,
+     "consults_week": 54.0,
+     "avg_clinical_min": 21.0,
+     "paid_hours_week": 49.8,
+     "fte": 1.31,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 57.87,
+     "rev_week": 3124.78,
+     "rev_month": 13540.7,
+     "wage_month": 12557.25,
+     "consumables_month": 1170.0,
+     "fixed_month": 2608.83,
+     "net_week": -645.09,
+     "net_month": -2795.38,
+     "wage_per_hour": 58.14,
+     "wages_month_for_payroll_tax": 12557.25
+    },
+    "base": {
+     "consults_month": 234.0,
+     "consults_week": 54.0,
+     "avg_clinical_min": 34.5,
+     "paid_hours_week": 53.4,
+     "fte": 1.41,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 76.77,
+     "rev_week": 4145.61,
+     "rev_month": 17964.33,
+     "wage_month": 12511.34,
+     "consumables_month": 702.0,
+     "fixed_month": 1898.83,
+     "net_week": 658.19,
+     "net_month": 2852.16,
+     "wage_per_hour": 54.07,
+     "wages_month_for_payroll_tax": 12511.34
+    },
+    "favourable": {
+     "consults_month": 234.0,
+     "consults_week": 54.0,
+     "avg_clinical_min": 43.5,
+     "paid_hours_week": 52.4,
+     "fte": 1.38,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 87.57,
+     "rev_week": 4728.95,
+     "rev_month": 20492.11,
+     "wage_month": 11104.83,
+     "consumables_month": 351.0,
+     "fixed_month": 1485.5,
+     "net_week": 1742.49,
+     "net_month": 7550.78,
+     "wage_per_hour": 48.89,
+     "wages_month_for_payroll_tax": 11104.83
+    }
+   },
+   "B_80pct_6day|bulk_billed": {
+    "adverse": {
+     "consults_month": 364.0,
+     "consults_week": 84.0,
+     "avg_clinical_min": 21.0,
+     "paid_hours_week": 77.5,
+     "fte": 2.04,
+     "midwives_needed": 3,
+     "rooms": 3,
+     "rev_per_consult": 45.76,
+     "rev_week": 3843.84,
+     "rev_month": 16656.64,
+     "wage_month": 19533.5,
+     "consumables_month": 1820.0,
+     "fixed_month": 3913.25,
+     "net_week": -1986.95,
+     "net_month": -8610.11,
+     "wage_per_hour": 58.14,
+     "wages_month_for_payroll_tax": 19533.5
+    },
+    "base": {
+     "consults_month": 364.0,
+     "consults_week": 84.0,
+     "avg_clinical_min": 34.5,
+     "paid_hours_week": 83.1,
+     "fte": 2.19,
+     "midwives_needed": 3,
+     "rooms": 3,
+     "rev_per_consult": 60.71,
+     "rev_week": 5099.22,
+     "rev_month": 22096.62,
+     "wage_month": 19462.08,
+     "consumables_month": 1092.0,
+     "fixed_month": 2848.25,
+     "net_week": -301.32,
+     "net_month": -1305.71,
+     "wage_per_hour": 54.07,
+     "wages_month_for_payroll_tax": 19462.08
+    },
+    "favourable": {
+     "consults_month": 364.0,
+     "consults_week": 84.0,
+     "avg_clinical_min": 43.5,
+     "paid_hours_week": 81.5,
+     "fte": 2.15,
+     "midwives_needed": 3,
+     "rooms": 3,
+     "rev_per_consult": 69.25,
+     "rev_week": 5816.58,
+     "rev_month": 25205.18,
+     "wage_month": 17274.17,
+     "consumables_month": 546.0,
+     "fixed_month": 2228.25,
+     "net_week": 1190.02,
+     "net_month": 5156.76,
+     "wage_per_hour": 48.89,
+     "wages_month_for_payroll_tax": 17274.17
+    }
+   },
+   "B_80pct_6day|structure_B_private_item_scaled": {
+    "adverse": {
+     "consults_month": 364.0,
+     "consults_week": 84.0,
+     "avg_clinical_min": 21.0,
+     "paid_hours_week": 77.5,
+     "fte": 2.04,
+     "midwives_needed": 3,
+     "rooms": 3,
+     "rev_per_consult": 66.53,
+     "rev_week": 4521.3,
+     "rev_month": 24215.2,
+     "wage_month": 19533.5,
+     "consumables_month": 1820.0,
+     "fixed_month": 3913.25,
+     "net_week": -242.67,
+     "net_month": -1051.55,
+     "wage_per_hour": 58.14,
+     "wages_month_for_payroll_tax": 19533.5
+    },
+    "base": {
+     "consults_month": 364.0,
+     "consults_week": 84.0,
+     "avg_clinical_min": 34.5,
+     "paid_hours_week": 83.1,
+     "fte": 2.19,
+     "midwives_needed": 3,
+     "rooms": 3,
+     "rev_per_consult": 88.26,
+     "rev_week": 5998.65,
+     "rev_month": 32127.6,
+     "wage_month": 19462.08,
+     "consumables_month": 1092.0,
+     "fixed_month": 2848.25,
+     "net_week": 2013.52,
+     "net_month": 8725.27,
+     "wage_per_hour": 54.07,
+     "wages_month_for_payroll_tax": 19462.08
+    },
+    "favourable": {
+     "consults_month": 364.0,
+     "consults_week": 84.0,
+     "avg_clinical_min": 43.5,
+     "paid_hours_week": 81.5,
+     "fte": 2.15,
+     "midwives_needed": 3,
+     "rooms": 3,
+     "rev_per_consult": 100.68,
+     "rev_week": 6842.85,
+     "rev_month": 36648.97,
+     "wage_month": 17274.17,
+     "consumables_month": 546.0,
+     "fixed_month": 2228.25,
+     "net_week": 3830.9,
+     "net_month": 16600.55,
+     "wage_per_hour": 48.89,
+     "wages_month_for_payroll_tax": 17274.17
+    }
+   },
+   "B_80pct_6day|mixed_50_50_bulk_and_gap30": {
+    "adverse": {
+     "consults_month": 364.0,
+     "consults_week": 84.0,
+     "avg_clinical_min": 21.0,
+     "paid_hours_week": 77.5,
+     "fte": 2.04,
+     "midwives_needed": 3,
+     "rooms": 3,
+     "rev_per_consult": 57.87,
+     "rev_week": 4860.77,
+     "rev_month": 21063.32,
+     "wage_month": 19533.5,
+     "consumables_month": 1820.0,
+     "fixed_month": 3913.25,
+     "net_week": -970.02,
+     "net_month": -4203.43,
+     "wage_per_hour": 58.14,
+     "wages_month_for_payroll_tax": 19533.5
+    },
+    "base": {
+     "consults_month": 364.0,
+     "consults_week": 84.0,
+     "avg_clinical_min": 34.5,
+     "paid_hours_week": 83.1,
+     "fte": 2.19,
+     "midwives_needed": 3,
+     "rooms": 3,
+     "rev_per_consult": 76.77,
+     "rev_week": 6448.73,
+     "rev_month": 27944.51,
+     "wage_month": 19462.08,
+     "consumables_month": 1092.0,
+     "fixed_month": 2848.25,
+     "net_week": 1048.2,
+     "net_month": 4542.18,
+     "wage_per_hour": 54.07,
+     "wages_month_for_payroll_tax": 19462.08
+    },
+    "favourable": {
+     "consults_month": 364.0,
+     "consults_week": 84.0,
+     "avg_clinical_min": 43.5,
+     "paid_hours_week": 81.5,
+     "fte": 2.15,
+     "midwives_needed": 3,
+     "rooms": 3,
+     "rev_per_consult": 87.57,
+     "rev_week": 7356.14,
+     "rev_month": 31876.62,
+     "wage_month": 17274.17,
+     "consumables_month": 546.0,
+     "fixed_month": 2228.25,
+     "net_week": 2729.58,
+     "net_month": 11828.19,
+     "wage_per_hour": 48.89,
+     "wages_month_for_payroll_tax": 17274.17
+    }
+   },
+   "A_50pct_396basis|bulk_billed": {
+    "adverse": {
+     "consults_month": 198.0,
+     "consults_week": 45.7,
+     "avg_clinical_min": 21.0,
+     "paid_hours_week": 42.2,
+     "fte": 1.11,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 45.76,
+     "rev_week": 2090.88,
+     "rev_month": 9060.48,
+     "wage_month": 9807.85,
+     "consumables_month": 990.0,
+     "fixed_month": 2608.83,
+     "net_week": -1002.97,
+     "net_month": -4346.21,
+     "wage_per_hour": 53.66,
+     "wages_month_for_payroll_tax": 9807.85
+    },
+    "base": {
+     "consults_month": 198.0,
+     "consults_week": 45.7,
+     "avg_clinical_min": 34.5,
+     "paid_hours_week": 45.2,
+     "fte": 1.19,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 60.71,
+     "rev_week": 2773.75,
+     "rev_month": 12019.59,
+     "wage_month": 9771.99,
+     "consumables_month": 594.0,
+     "fixed_month": 1898.83,
+     "net_week": -56.59,
+     "net_month": -245.23,
+     "wage_per_hour": 49.91,
+     "wages_month_for_payroll_tax": 9771.99
+    },
+    "favourable": {
+     "consults_month": 198.0,
+     "consults_week": 45.7,
+     "avg_clinical_min": 43.5,
+     "paid_hours_week": 44.3,
+     "fte": 1.17,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 69.25,
+     "rev_week": 3163.96,
+     "rev_month": 13710.51,
+     "wage_month": 8673.42,
+     "consumables_month": 297.0,
+     "fixed_month": 1485.5,
+     "net_week": 751.06,
+     "net_month": 3254.59,
+     "wage_per_hour": 45.13,
+     "wages_month_for_payroll_tax": 8673.42
+    }
+   },
+   "A_50pct_396basis|structure_B_private_item_scaled": {
+    "adverse": {
+     "consults_month": 198.0,
+     "consults_week": 45.7,
+     "avg_clinical_min": 21.0,
+     "paid_hours_week": 42.2,
+     "fte": 1.11,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 66.53,
+     "rev_week": 2459.39,
+     "rev_month": 13172.01,
+     "wage_month": 9807.85,
+     "consumables_month": 990.0,
+     "fixed_month": 2608.83,
+     "net_week": -54.16,
+     "net_month": -234.68,
+     "wage_per_hour": 53.66,
+     "wages_month_for_payroll_tax": 9807.85
+    },
+    "base": {
+     "consults_month": 198.0,
+     "consults_week": 45.7,
+     "avg_clinical_min": 34.5,
+     "paid_hours_week": 45.2,
+     "fte": 1.19,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 88.26,
+     "rev_week": 3263.0,
+     "rev_month": 17476.0,
+     "wage_month": 9771.99,
+     "consumables_month": 594.0,
+     "fixed_month": 1898.83,
+     "net_week": 1202.58,
+     "net_month": 5211.19,
+     "wage_per_hour": 49.91,
+     "wages_month_for_payroll_tax": 9771.99
+    },
+    "favourable": {
+     "consults_month": 198.0,
+     "consults_week": 45.7,
+     "avg_clinical_min": 43.5,
+     "paid_hours_week": 44.3,
+     "fte": 1.17,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 100.68,
+     "rev_week": 3722.21,
+     "rev_month": 19935.43,
+     "wage_month": 8673.42,
+     "consumables_month": 297.0,
+     "fixed_month": 1485.5,
+     "net_week": 2187.58,
+     "net_month": 9479.5,
+     "wage_per_hour": 45.13,
+     "wages_month_for_payroll_tax": 8673.42
+    }
+   },
+   "A_50pct_396basis|mixed_50_50_bulk_and_gap30": {
+    "adverse": {
+     "consults_month": 198.0,
+     "consults_week": 45.7,
+     "avg_clinical_min": 21.0,
+     "paid_hours_week": 42.2,
+     "fte": 1.11,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 57.87,
+     "rev_week": 2644.04,
+     "rev_month": 11457.52,
+     "wage_month": 9807.85,
+     "consumables_month": 990.0,
+     "fixed_month": 2608.83,
+     "net_week": -449.81,
+     "net_month": -1949.17,
+     "wage_per_hour": 53.66,
+     "wages_month_for_payroll_tax": 9807.85
+    },
+    "base": {
+     "consults_month": 198.0,
+     "consults_week": 45.7,
+     "avg_clinical_min": 34.5,
+     "paid_hours_week": 45.2,
+     "fte": 1.19,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 76.77,
+     "rev_week": 3507.83,
+     "rev_month": 15200.58,
+     "wage_month": 9771.99,
+     "consumables_month": 594.0,
+     "fixed_month": 1898.83,
+     "net_week": 677.48,
+     "net_month": 2935.76,
+     "wage_per_hour": 49.91,
+     "wages_month_for_payroll_tax": 9771.99
+    },
+    "favourable": {
+     "consults_month": 198.0,
+     "consults_week": 45.7,
+     "avg_clinical_min": 43.5,
+     "paid_hours_week": 44.3,
+     "fte": 1.17,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 87.57,
+     "rev_week": 4001.42,
+     "rev_month": 17339.48,
+     "wage_month": 8673.42,
+     "consumables_month": 297.0,
+     "fixed_month": 1485.5,
+     "net_week": 1588.51,
+     "net_month": 6883.55,
+     "wage_per_hour": 45.13,
+     "wages_month_for_payroll_tax": 8673.42
+    }
+   },
+   "B_80pct_396basis|bulk_billed": {
+    "adverse": {
+     "consults_month": 316.8,
+     "consults_week": 73.1,
+     "avg_clinical_min": 21.0,
+     "paid_hours_week": 67.5,
+     "fte": 1.78,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 45.76,
+     "rev_week": 3345.41,
+     "rev_month": 14496.77,
+     "wage_month": 15692.57,
+     "consumables_month": 1584.0,
+     "fixed_month": 2608.83,
+     "net_week": -1243.53,
+     "net_month": -5388.63,
+     "wage_per_hour": 53.66,
+     "wages_month_for_payroll_tax": 15692.57
+    },
+    "base": {
+     "consults_month": 316.8,
+     "consults_week": 73.1,
+     "avg_clinical_min": 34.5,
+     "paid_hours_week": 72.3,
+     "fte": 1.9,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 60.71,
+     "rev_week": 4438.0,
+     "rev_month": 19231.34,
+     "wage_month": 15635.18,
+     "consumables_month": 950.4,
+     "fixed_month": 1898.83,
+     "net_week": 172.37,
+     "net_month": 746.93,
+     "wage_per_hour": 49.91,
+     "wages_month_for_payroll_tax": 15635.18
+    },
+    "favourable": {
+     "consults_month": 316.8,
+     "consults_week": 73.1,
+     "avg_clinical_min": 43.5,
+     "paid_hours_week": 71.0,
+     "fte": 1.87,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 69.25,
+     "rev_week": 5062.34,
+     "rev_month": 21936.82,
+     "wage_month": 13877.48,
+     "consumables_month": 475.2,
+     "fixed_month": 1485.5,
+     "net_week": 1407.38,
+     "net_month": 6098.64,
+     "wage_per_hour": 45.13,
+     "wages_month_for_payroll_tax": 13877.48
+    }
+   },
+   "B_80pct_396basis|structure_B_private_item_scaled": {
+    "adverse": {
+     "consults_month": 316.8,
+     "consults_week": 73.1,
+     "avg_clinical_min": 21.0,
+     "paid_hours_week": 67.5,
+     "fte": 1.78,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 66.53,
+     "rev_week": 3935.02,
+     "rev_month": 21075.21,
+     "wage_month": 15692.57,
+     "consumables_month": 1584.0,
+     "fixed_month": 2608.83,
+     "net_week": 274.57,
+     "net_month": 1189.81,
+     "wage_per_hour": 53.66,
+     "wages_month_for_payroll_tax": 15692.57
+    },
+    "base": {
+     "consults_month": 316.8,
+     "consults_week": 73.1,
+     "avg_clinical_min": 34.5,
+     "paid_hours_week": 72.3,
+     "fte": 1.9,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 88.26,
+     "rev_week": 5220.8,
+     "rev_month": 27961.6,
+     "wage_month": 15635.18,
+     "consumables_month": 950.4,
+     "fixed_month": 1898.83,
+     "net_week": 2187.04,
+     "net_month": 9477.19,
+     "wage_per_hour": 49.91,
+     "wages_month_for_payroll_tax": 15635.18
+    },
+    "favourable": {
+     "consults_month": 316.8,
+     "consults_week": 73.1,
+     "avg_clinical_min": 43.5,
+     "paid_hours_week": 71.0,
+     "fte": 1.87,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 100.68,
+     "rev_week": 5955.54,
+     "rev_month": 31896.69,
+     "wage_month": 13877.48,
+     "consumables_month": 475.2,
+     "fixed_month": 1485.5,
+     "net_week": 3705.81,
+     "net_month": 16058.51,
+     "wage_per_hour": 45.13,
+     "wages_month_for_payroll_tax": 13877.48
+    }
+   },
+   "B_80pct_396basis|mixed_50_50_bulk_and_gap30": {
+    "adverse": {
+     "consults_month": 316.8,
+     "consults_week": 73.1,
+     "avg_clinical_min": 21.0,
+     "paid_hours_week": 67.5,
+     "fte": 1.78,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 57.87,
+     "rev_week": 4230.47,
+     "rev_month": 18332.03,
+     "wage_month": 15692.57,
+     "consumables_month": 1584.0,
+     "fixed_month": 2608.83,
+     "net_week": -358.47,
+     "net_month": -1553.37,
+     "wage_per_hour": 53.66,
+     "wages_month_for_payroll_tax": 15692.57
+    },
+    "base": {
+     "consults_month": 316.8,
+     "consults_week": 73.1,
+     "avg_clinical_min": 34.5,
+     "paid_hours_week": 72.3,
+     "fte": 1.9,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 76.77,
+     "rev_week": 5612.52,
+     "rev_month": 24320.93,
+     "wage_month": 15635.18,
+     "consumables_month": 950.4,
+     "fixed_month": 1898.83,
+     "net_week": 1346.89,
+     "net_month": 5836.52,
+     "wage_per_hour": 49.91,
+     "wages_month_for_payroll_tax": 15635.18
+    },
+    "favourable": {
+     "consults_month": 316.8,
+     "consults_week": 73.1,
+     "avg_clinical_min": 43.5,
+     "paid_hours_week": 71.0,
+     "fte": 1.87,
+     "midwives_needed": 2,
+     "rooms": 2,
+     "rev_per_consult": 87.57,
+     "rev_week": 6402.27,
+     "rev_month": 27743.17,
+     "wage_month": 13877.48,
+     "consumables_month": 475.2,
+     "fixed_month": 1485.5,
+     "net_week": 2747.3,
+     "net_month": 11904.99,
+     "wage_per_hour": 45.13,
+     "wages_month_for_payroll_tax": 13877.48
+    }
+   }
+  },
+  "items": {
+   "A_50pct_6day": {
+    "82100": {
+     "count_month": 58.5,
+     "fee": 89.0,
+     "rebate": 75.65,
+     "private_fee_E": 110.0,
+     "gross_bulk": 4425.52,
+     "gross_schedule": 5206.5,
+     "gross_private": 6435.0
+    },
+    "82105": {
+     "count_month": 81.9,
+     "fee": 38.75,
+     "rebate": 32.95,
+     "private_fee_E": 47.89,
+     "gross_bulk": 2698.61,
+     "gross_schedule": 3173.62,
+     "gross_private": 3922.46
+    },
+    "82110": {
+     "count_month": 93.6,
+     "fee": 89.0,
+     "rebate": 75.65,
+     "private_fee_E": 110.0,
+     "gross_bulk": 7080.84,
+     "gross_schedule": 8330.4,
+     "gross_private": 10296.0
+    },
+    "total": {
+     "gross_bulk": 14204.97,
+     "gross_schedule": 16710.52,
+     "gross_private": 20653.46
+    }
+   },
+   "B_80pct_6day": {
+    "82100": {
+     "count_month": 91.0,
+     "fee": 89.0,
+     "rebate": 75.65,
+     "private_fee_E": 110.0,
+     "gross_bulk": 6884.15,
+     "gross_schedule": 8099.0,
+     "gross_private": 10010.0
+    },
+    "82105": {
+     "count_month": 127.4,
+     "fee": 38.75,
+     "rebate": 32.95,
+     "private_fee_E": 47.89,
+     "gross_bulk": 4197.83,
+     "gross_schedule": 4936.75,
+     "gross_private": 6101.6
+    },
+    "82110": {
+     "count_month": 145.6,
+     "fee": 89.0,
+     "rebate": 75.65,
+     "private_fee_E": 110.0,
+     "gross_bulk": 11014.64,
+     "gross_schedule": 12958.4,
+     "gross_private": 16016.0
+    },
+    "total": {
+     "gross_bulk": 22096.62,
+     "gross_schedule": 25994.15,
+     "gross_private": 32127.6
+    }
+   }
+  },
+  "item_82115": {
+   "fee": 381.75,
+   "rebate": 324.5,
+   "minutes": 90,
+   "paid_hours": 2.22,
+   "wage_cost": 120.15,
+   "margin_bulk": 201.35,
+   "margin_private": 258.6,
+   "per_10_delivered_month_bulk": 2013.49,
+   "plain": "Maternity care plan: 90 minute visit after 28 weeks, only for a woman who has had 2 antenatal visits with this midwife in 6 months and who will stay with her as main carer. Once per pregnancy. Not a GTT-test visit; upside only if GTT midwives become the woman's carer."
+  }
+ },
+ "part3": {
+  "rule": {
+   "threshold": 1000000,
+   "rate": 0.055,
+   "upper": 7500000,
+   "deduction": "1,000,000 - (wages - 1,000,000) x 2/13, nil at 7,500,000 (V, WA Gov payroll tax guide)",
+   "example_check_1_2m_deduction": 969231,
+   "super_in_taxable_wages": "Yes: Pay-roll Tax Assessment Act 2002 (WA) Div 2A s9CB treats super contributions as wages (V statute heading; secondary sources agree; Catherine to confirm)",
+   "grouping": "Related bodies corporate are grouped and share ONE deduction (V principle, Catherine confirms). Holdings + Medical + Lounge = one threshold."
+  },
+  "rows": [
+   {
+    "label": "Repo only (wages + super)",
+    "taxable_wages_year": 1106355,
+    "tax_year": 6749.43,
+    "tax_month": 562.45,
+    "added_vs_repo_year": 0.0,
+    "added_vs_repo_month": 0.0,
+    "above_threshold_by": 106355
+   },
+   {
+    "label": "R14 basis (wages only, super left out)",
+    "taxable_wages_year": 987817,
+    "tax_year": 0.0,
+    "tax_month": 0.0,
+    "added_vs_repo_year": -6749.43,
+    "added_vs_repo_month": -562.45,
+    "above_threshold_by": -12183
+   },
+   {
+    "label": "Repo + receptionist + host (E)",
+    "taxable_wages_year": 1250171,
+    "tax_year": 15876.2,
+    "tax_month": 1323.02,
+    "added_vs_repo_year": 9126.77,
+    "added_vs_repo_month": 760.56,
+    "above_threshold_by": 250171
+   },
+   {
+    "label": "Repo + 1 full-time midwife (38 h)",
+    "taxable_wages_year": 1207269,
+    "tax_year": 13153.61,
+    "tax_month": 1096.13,
+    "added_vs_repo_year": 6404.18,
+    "added_vs_repo_month": 533.68,
+    "above_threshold_by": 207269
+   },
+   {
+    "label": "Repo + 2 full-time midwife (38 h)",
+    "taxable_wages_year": 1308183,
+    "tax_year": 19557.78,
+    "tax_month": 1629.81,
+    "added_vs_repo_year": 12808.35,
+    "added_vs_repo_month": 1067.36,
+    "above_threshold_by": 308183
+   },
+   {
+    "label": "Repo + 3 full-time midwife (38 h)",
+    "taxable_wages_year": 1409098,
+    "tax_year": 25961.96,
+    "tax_month": 2163.5,
+    "added_vs_repo_year": 19212.53,
+    "added_vs_repo_month": 1601.04,
+    "above_threshold_by": 409098
+   },
+   {
+    "label": "Repo + Scenario A hours (54 a week, 2 midwives)",
+    "taxable_wages_year": 1248166,
+    "tax_year": 15748.99,
+    "tax_month": 1312.42,
+    "added_vs_repo_year": 8999.56,
+    "added_vs_repo_month": 749.96,
+    "above_threshold_by": 248166
+   },
+   {
+    "label": "Repo + Scenario B hours (84 a week, 3 midwives)",
+    "taxable_wages_year": 1326950,
+    "tax_year": 20748.74,
+    "tax_month": 1729.06,
+    "added_vs_repo_year": 13999.31,
+    "added_vs_repo_month": 1166.61,
+    "above_threshold_by": 326950
+   },
+   {
+    "label": "Repo + roster add-on + Scenario A",
+    "taxable_wages_year": 1391982,
+    "tax_year": 24875.76,
+    "tax_month": 2072.98,
+    "added_vs_repo_year": 18126.33,
+    "added_vs_repo_month": 1510.53,
+    "above_threshold_by": 391982
+   },
+   {
+    "label": "Repo + roster add-on + Scenario B",
+    "taxable_wages_year": 1470766,
+    "tax_year": 29875.52,
+    "tax_month": 2489.63,
+    "added_vs_repo_year": 23126.09,
+    "added_vs_repo_month": 1927.17,
+    "above_threshold_by": 470766
+   }
+  ],
+  "sweep": [
+   {
+    "label": "Midwife taxable wages 0 a month",
+    "taxable_wages_year": 1106355,
+    "tax_year": 6749.43,
+    "tax_month": 562.45,
+    "added_vs_repo_year": 0.0,
+    "added_vs_repo_month": 0.0,
+    "above_threshold_by": 106355
+   },
+   {
+    "label": "Midwife taxable wages 1,000 a month",
+    "taxable_wages_year": 1118355,
+    "tax_year": 7510.97,
+    "tax_month": 625.91,
+    "added_vs_repo_year": 761.54,
+    "added_vs_repo_month": 63.46,
+    "above_threshold_by": 118355
+   },
+   {
+    "label": "Midwife taxable wages 2,500 a month",
+    "taxable_wages_year": 1136355,
+    "tax_year": 8653.28,
+    "tax_month": 721.11,
+    "added_vs_repo_year": 1903.85,
+    "added_vs_repo_month": 158.65,
+    "above_threshold_by": 136355
+   },
+   {
+    "label": "Midwife taxable wages 5,000 a month",
+    "taxable_wages_year": 1166355,
+    "tax_year": 10557.12,
+    "tax_month": 879.76,
+    "added_vs_repo_year": 3807.69,
+    "added_vs_repo_month": 317.31,
+    "above_threshold_by": 166355
+   },
+   {
+    "label": "Midwife taxable wages 10,000 a month",
+    "taxable_wages_year": 1226355,
+    "tax_year": 14364.81,
+    "tax_month": 1197.07,
+    "added_vs_repo_year": 7615.38,
+    "added_vs_repo_month": 634.61,
+    "above_threshold_by": 226355
+   },
+   {
+    "label": "Midwife taxable wages 15,000 a month",
+    "taxable_wages_year": 1286355,
+    "tax_year": 18172.51,
+    "tax_month": 1514.38,
+    "added_vs_repo_year": 11423.08,
+    "added_vs_repo_month": 951.92,
+    "above_threshold_by": 286355
+   },
+   {
+    "label": "Midwife taxable wages 20,000 a month",
+    "taxable_wages_year": 1346355,
+    "tax_year": 21980.2,
+    "tax_month": 1831.68,
+    "added_vs_repo_year": 15230.77,
+    "added_vs_repo_month": 1269.23,
+    "above_threshold_by": 346355
+   },
+   {
+    "label": "Midwife taxable wages 25,000 a month",
+    "taxable_wages_year": 1406355,
+    "tax_year": 25787.89,
+    "tax_month": 2148.99,
+    "added_vs_repo_year": 19038.46,
+    "added_vs_repo_month": 1586.54,
+    "above_threshold_by": 406355
+   }
+  ],
+  "reconciliation": {
+   "r14_repo_base_year": 987817,
+   "correct_repo_taxable_year": 1106355,
+   "super_left_out_year": 118538,
+   "r14_A_tax_year": 8754.69,
+   "r14_A_tax_month": 729.56,
+   "r14_B_tax_year": 14047.95,
+   "r14_B_tax_month": 1170.66,
+   "midwife_wage_month_A": 12511.34,
+   "midwife_hours_week_A": 53.4,
+   "midwife_wage_month_B": 19462.08,
+   "midwife_hours_week_B": 83.1,
+   "corrected_total_A_month": 1312.42,
+   "corrected_total_B_month": 1729.06,
+   "corrected_added_by_midwives_A_month": 749.96,
+   "corrected_added_by_midwives_B_month": 1166.61,
+   "monthly_taxable_wages_repo": 92196.22,
+   "monthly_threshold": 83333,
+   "marginal_rate": 0.06346,
+   "midwife_hours_per_month_A": 231.4
+  },
+  "addon_wages_month": 10700.58
+ },
+ "part4": {
+  "roster": [
+   {
+    "role": "Massage + beauty therapist (pool of 4)",
+    "award": "Hair and Beauty MA000005 (repo cites L3/L4; casual loaded)",
+    "heads": 4,
+    "hours_week": 145.83,
+    "rate": 37.5,
+    "wages_month": 25645.5,
+    "loaded_month": 29158.93,
+    "taxable_month": 28722.96,
+    "entity": "Lounge",
+    "label": "R",
+    "note": ""
+   },
+   {
+    "role": "Nail technician",
+    "award": "MA000005 L3 (repo), casual loaded",
+    "heads": 2,
+    "hours_week": 72.91,
+    "rate": 36.81,
+    "wages_month": 12586.81,
+    "loaded_month": 14311.2,
+    "taxable_month": 14097.23,
+    "entity": "Lounge",
+    "label": "R",
+    "note": ""
+   },
+   {
+    "role": "Hairdresser",
+    "award": "MA000005 L3 (repo), casual loaded",
+    "heads": 2,
+    "hours_week": 72.91,
+    "rate": 36.81,
+    "wages_month": 12586.81,
+    "loaded_month": 14311.2,
+    "taxable_month": 14097.23,
+    "entity": "Lounge",
+    "label": "R",
+    "note": ""
+   },
+   {
+    "role": "Phlebotomist (full roster, 10 to 18 booked)",
+    "award": "Health Professionals and Support Services MA000027, casual loaded",
+    "heads": 2,
+    "hours_week": 72.91,
+    "rate": 34.375,
+    "wages_month": 11754.19,
+    "loaded_month": 13364.51,
+    "taxable_month": 13164.69,
+    "entity": "Medical",
+    "label": "R",
+    "note": "adaptive: 1 on mornings of 9 or fewer (saves A$6,682.23 loaded-free wage per R)"
+   },
+   {
+    "role": "Venue manager",
+    "award": "MA000005 L6 salon manager (repo; needs confirming)",
+    "heads": 1,
+    "hours_week": 40.62,
+    "rate": 40.0,
+    "wages_month": 7040.0,
+    "loaded_month": 8004.48,
+    "taxable_month": 7884.8,
+    "entity": "Lounge",
+    "label": "R",
+    "note": "Mon-Fri only; Saturday covered by an experienced rostered staff member, no pay loading decided"
+   },
+   {
+    "role": "PM treatment staff (4 roles, 3 h floor, 10 sessions a day)",
+    "award": "MA000005 casual loaded",
+    "heads": 4,
+    "hours_week": 72.91,
+    "rate": 37.16,
+    "wages_month": 12704.74,
+    "loaded_month": 14445.29,
+    "taxable_month": 14229.31,
+    "entity": "Lounge",
+    "label": "R",
+    "note": "blended rate from repo; PM check-in and payment done by these staff (Model C)"
+   }
+  ],
+  "reconcile_to_repo": {
+   "rows_sum": 82318.05,
+   "repo_total": 82318.05,
+   "difference": 0.0,
+   "note": "Difference is rounding (repo PM figure uses a floating-point blended rate, A$0.21 to A$0.44 disclosed in the repo)"
+  },
+  "addons": [
+   {
+    "role": "AM receptionist / guest coordinator",
+    "award": "Clerks Private Sector MA000002 L1 to L2 (job posting); casual loaded",
+    "heads": 1,
+    "hours_week": 31.9,
+    "rate": 33.38,
+    "wages_month": 4993.61,
+    "loaded_month": 5677.73,
+    "taxable_month": 5592.84,
+    "entity": "Lounge",
+    "label": "E",
+    "note": "NOT in repo cost (AM reception is done by the venue manager, PM reception removed 2026-08-21). Hours from receptionist-job-posting (opening ~07:15 to last client). Rate R from wages.yml (2025-07-01), 2026 uplift Q"
+   },
+   {
+    "role": "Clinic host (arrival, fasting check, drink, lounge watch)",
+    "award": "Clerks MA000002 or Hospitality (Grace and Anthony to confirm)",
+    "heads": 1,
+    "hours_week": 36.46,
+    "rate": 33.38,
+    "wages_month": 5706.98,
+    "loaded_month": 6488.83,
+    "taxable_month": 6391.82,
+    "entity": "Lounge",
+    "label": "E",
+    "note": "Not in repo. Route 1 plain-English roster shows a host at arrival and in the lounge. Rate proxy = receptionist rate (Q)"
+   }
+  ],
+  "midwives": [
+   {
+    "role": "Midwives, Scenario A (54 consults a week)",
+    "award": "Nurses MA000034 RN L2 pp4 (E class), permanent",
+    "heads": 2,
+    "hours_week": 53.4,
+    "rate": 54.07,
+    "wages_month": 12511.34,
+    "loaded_month": 12511.34,
+    "taxable_month": 11817.6,
+    "entity": "Medical",
+    "label": "R14 base, E",
+    "note": "wage_month already includes R14 on-cost 1.20 (super, leave, workers comp)"
+   },
+   {
+    "role": "Midwives, Scenario B (84 consults a week)",
+    "award": "Nurses MA000034 RN L2 pp4 (E class), permanent",
+    "heads": 3,
+    "hours_week": 83.1,
+    "rate": 54.07,
+    "wages_month": 19462.08,
+    "loaded_month": 19462.08,
+    "taxable_month": 18382.93,
+    "entity": "Medical",
+    "label": "R14 base, E",
+    "note": "wage_month already includes R14 on-cost 1.20 (super, leave, workers comp)"
+   }
+  ],
+  "entity_split": {
+   "repo_only": {
+    "Medical": 13364.51,
+    "Lounge": 80231.1,
+    "total_loaded": 93595.61,
+    "total_wages": 82318.05,
+    "taxable_month": 92196.22
+   },
+   "repo_plus_addons": {
+    "Medical": 13364.51,
+    "Lounge": 92397.66,
+    "total_loaded": 105762.17,
+    "total_wages": 93018.64,
+    "taxable_month": 104180.88
+   },
+   "repo_addons_midA": {
+    "Medical": 25875.85,
+    "Lounge": 92397.66,
+    "total_loaded": 118273.51,
+    "total_wages": 105529.98,
+    "taxable_month": 115998.48
+   },
+   "repo_addons_midB": {
+    "Medical": 32826.59,
+    "Lounge": 92397.66,
+    "total_loaded": 125224.25,
+    "total_wages": 112480.72,
+    "taxable_month": 122563.81
+   },
+   "repo_midA_no_addons": {
+    "Medical": 25875.85,
+    "Lounge": 92397.66,
+    "total_loaded": 118273.51,
+    "total_wages": 105529.98,
+    "taxable_month": 115998.48
+   }
+  },
+  "phleb_award_flag": {
+   "L5_30.45": {
+    "ordinary": 30.45,
+    "casual_loaded": 38.06,
+    "monthly_wages": 13015.09,
+    "delta_vs_repo_wages": 1260.9,
+    "delta_loaded": 1433.65
+   },
+   "L6_31.50_E": {
+    "ordinary": 31.5,
+    "casual_loaded": 39.38,
+    "monthly_wages": 13463.89,
+    "delta_vs_repo_wages": 1709.7,
+    "delta_loaded": 1943.93
+   },
+   "L7_32.67": {
+    "ordinary": 32.67,
+    "casual_loaded": 40.84,
+    "monthly_wages": 13963.97,
+    "delta_vs_repo_wages": 2209.79,
+    "delta_loaded": 2512.53
+   },
+   "repo_34.375_is_27.50_plus_25pct": 27.5
+  },
+  "repo_payroll_loaded_month": 93595.63,
+  "addon_loaded_month": 12166.56,
+  "not_in_repo": [
+   "receptionist (cost line removed 2026-08-21)",
+   "clinic host",
+   "midwives",
+   "payroll tax",
+   "relief/absence (reverted to A$0)"
+  ]
+ },
+ "part5": {
+  "setup_cost_extra_two_companies": {
+   "low": {
+    "asic_reg": 1272,
+    "legal_docs": 3000,
+    "accountant_setup": 1500,
+    "name_reg": 47,
+    "total": 5819
+   },
+   "base": {
+    "asic_reg": 1272,
+    "legal_docs": 7500,
+    "accountant_setup": 3000,
+    "name_reg": 108,
+    "total": 11880
+   },
+   "high": {
+    "asic_reg": 1272,
+    "legal_docs": 15000,
+    "accountant_setup": 6000,
+    "name_reg": 108,
+    "total": 22380
+   }
+  },
+  "running_cost_extra": {
+   "low": {
+    "asic_review": 684,
+    "accountant_extra": 3000,
+    "bookkeeping_bas_payroll": 1200,
+    "bank_and_software": 360,
+    "insurance_extra": 500,
+    "total_year": 5744,
+    "total_month": 478.67
+   },
+   "base": {
+    "asic_review": 684,
+    "accountant_extra": 5000,
+    "bookkeeping_bas_payroll": 3000,
+    "bank_and_software": 720,
+    "insurance_extra": 1500,
+    "total_year": 10904,
+    "total_month": 908.67
+   },
+   "high": {
+    "asic_review": 684,
+    "accountant_extra": 8000,
+    "bookkeeping_bas_payroll": 6000,
+    "bank_and_software": 1200,
+    "insurance_extra": 3000,
+    "total_year": 18884,
+    "total_month": 1573.67
+   }
+  },
+  "package_split_250": {
+   "package": 250.0,
+   "consult_medical": 110.0,
+   "lab_agent_not_revenue": 27.85,
+   "lounge": 112.15,
+   "lounge_gst": 10.2,
+   "lounge_ex_gst": 101.95,
+   "client_after_rebate_example": 150.6,
+   "client_after_rebate_mix_avg": 165.54,
+   "share_medical": 0.44,
+   "share_lab": 0.1114,
+   "share_lounge": 0.4486,
+   "group_keeps_gross": 222.15,
+   "group_keeps_ex_gst": 211.95
+  },
+  "price_table": [
+   {
+    "package": 250,
+    "consult_medical": 110.0,
+    "lab_agent_not_revenue": 27.85,
+    "lounge": 112.15,
+    "lounge_gst": 10.2,
+    "lounge_ex_gst": 101.95,
+    "client_after_rebate_example": 150.6,
+    "client_after_rebate_mix_avg": 165.54,
+    "share_medical": 0.44,
+    "share_lab": 0.1114,
+    "share_lounge": 0.4486,
+    "group_keeps_gross": 222.15,
+    "group_keeps_ex_gst": 211.95,
+    "scenario_A": {
+     "n": 234.0,
+     "consult_rev": 25740.0,
+     "midwife_cost": 15112.17,
+     "lounge_delta_ex_gst": -29324.45,
+     "processing": 0.0,
+     "change_vs_repo": -18696.62,
+     "group_net_after_gst": 4745.96
+    },
+    "scenario_B": {
+     "n": 364.0,
+     "consult_rev": 40040.0,
+     "midwife_cost": 23402.33,
+     "lounge_delta_ex_gst": -45615.82,
+     "processing": 0.0,
+     "change_vs_repo": -28978.15,
+     "group_net_after_gst": -5535.57
+    }
+   },
+   {
+    "package": 275,
+    "consult_medical": 110.0,
+    "lab_agent_not_revenue": 27.85,
+    "lounge": 137.15,
+    "lounge_gst": 12.47,
+    "lounge_ex_gst": 124.68,
+    "client_after_rebate_example": 175.6,
+    "client_after_rebate_mix_avg": 190.54,
+    "share_medical": 0.4,
+    "share_lab": 0.1013,
+    "share_lounge": 0.4987,
+    "group_keeps_gross": 247.15,
+    "group_keeps_ex_gst": 234.68,
+    "scenario_A": {
+     "n": 234.0,
+     "consult_rev": 25740.0,
+     "midwife_cost": 15112.17,
+     "lounge_delta_ex_gst": -24006.27,
+     "processing": 0.0,
+     "change_vs_repo": -13378.44,
+     "group_net_after_gst": 10064.14
+    },
+    "scenario_B": {
+     "n": 364.0,
+     "consult_rev": 40040.0,
+     "midwife_cost": 23402.33,
+     "lounge_delta_ex_gst": -37343.09,
+     "processing": 0.0,
+     "change_vs_repo": -20705.42,
+     "group_net_after_gst": 2737.16
+    }
+   },
+   {
+    "package": 300,
+    "consult_medical": 110.0,
+    "lab_agent_not_revenue": 27.85,
+    "lounge": 162.15,
+    "lounge_gst": 14.74,
+    "lounge_ex_gst": 147.41,
+    "client_after_rebate_example": 200.6,
+    "client_after_rebate_mix_avg": 215.54,
+    "share_medical": 0.3667,
+    "share_lab": 0.0928,
+    "share_lounge": 0.5405,
+    "group_keeps_gross": 272.15,
+    "group_keeps_ex_gst": 257.41,
+    "scenario_A": {
+     "n": 234.0,
+     "consult_rev": 25740.0,
+     "midwife_cost": 15112.17,
+     "lounge_delta_ex_gst": -18688.09,
+     "processing": 0.0,
+     "change_vs_repo": -8060.26,
+     "group_net_after_gst": 15382.32
+    },
+    "scenario_B": {
+     "n": 364.0,
+     "consult_rev": 40040.0,
+     "midwife_cost": 23402.33,
+     "lounge_delta_ex_gst": -29070.36,
+     "processing": 0.0,
+     "change_vs_repo": -12432.69,
+     "group_net_after_gst": 11009.89
+    }
+   },
+   {
+    "package": 325,
+    "consult_medical": 110.0,
+    "lab_agent_not_revenue": 27.85,
+    "lounge": 187.15,
+    "lounge_gst": 17.01,
+    "lounge_ex_gst": 170.14,
+    "client_after_rebate_example": 225.6,
+    "client_after_rebate_mix_avg": 240.54,
+    "share_medical": 0.3385,
+    "share_lab": 0.0857,
+    "share_lounge": 0.5758,
+    "group_keeps_gross": 297.15,
+    "group_keeps_ex_gst": 280.14,
+    "scenario_A": {
+     "n": 234.0,
+     "consult_rev": 25740.0,
+     "midwife_cost": 15112.17,
+     "lounge_delta_ex_gst": -13369.91,
+     "processing": 0.0,
+     "change_vs_repo": -2742.08,
+     "group_net_after_gst": 20700.5
+    },
+    "scenario_B": {
+     "n": 364.0,
+     "consult_rev": 40040.0,
+     "midwife_cost": 23402.33,
+     "lounge_delta_ex_gst": -20797.64,
+     "processing": 0.0,
+     "change_vs_repo": -4159.97,
+     "group_net_after_gst": 19282.61
+    }
+   },
+   {
+    "package": 350,
+    "consult_medical": 110.0,
+    "lab_agent_not_revenue": 27.85,
+    "lounge": 212.15,
+    "lounge_gst": 19.29,
+    "lounge_ex_gst": 192.86,
+    "client_after_rebate_example": 250.6,
+    "client_after_rebate_mix_avg": 265.54,
+    "share_medical": 0.3143,
+    "share_lab": 0.0796,
+    "share_lounge": 0.6061,
+    "group_keeps_gross": 322.15,
+    "group_keeps_ex_gst": 302.86,
+    "scenario_A": {
+     "n": 234.0,
+     "consult_rev": 25740.0,
+     "midwife_cost": 15112.17,
+     "lounge_delta_ex_gst": -8051.73,
+     "processing": 0.0,
+     "change_vs_repo": 2576.1,
+     "group_net_after_gst": 26018.68
+    },
+    "scenario_B": {
+     "n": 364.0,
+     "consult_rev": 40040.0,
+     "midwife_cost": 23402.33,
+     "lounge_delta_ex_gst": -12524.91,
+     "processing": 0.0,
+     "change_vs_repo": 4112.76,
+     "group_net_after_gst": 27555.34
+    }
+   },
+   {
+    "package": 387.85,
+    "consult_medical": 110.0,
+    "lab_agent_not_revenue": 27.85,
+    "lounge": 250.0,
+    "lounge_gst": 22.73,
+    "lounge_ex_gst": 227.27,
+    "client_after_rebate_example": 288.45,
+    "client_after_rebate_mix_avg": 303.39,
+    "share_medical": 0.2836,
+    "share_lab": 0.0718,
+    "share_lounge": 0.6446,
+    "group_keeps_gross": 360.0,
+    "group_keeps_ex_gst": 337.27,
+    "scenario_A": {
+     "n": 234.0,
+     "consult_rev": 25740.0,
+     "midwife_cost": 15112.17,
+     "lounge_delta_ex_gst": 0.0,
+     "processing": 0.0,
+     "change_vs_repo": 10627.83,
+     "group_net_after_gst": 34070.41
+    },
+    "scenario_B": {
+     "n": 364.0,
+     "consult_rev": 40040.0,
+     "midwife_cost": 23402.33,
+     "lounge_delta_ex_gst": 0.0,
+     "processing": 0.0,
+     "change_vs_repo": 16637.67,
+     "group_net_after_gst": 40080.25
+    }
+   }
+  ],
+  "bulk_billed_alternative_lounge_250": {
+   "A": {
+    "change_vs_repo": -907.2,
+    "group_net_after_gst": 22535.38
+   },
+   "B": {
+    "change_vs_repo": -1305.71,
+    "group_net_after_gst": 22136.87
+   }
+  },
+  "break_even": {
+   "break_even_price_A": 337.89,
+   "break_even_price_B": 337.57,
+   "min_B_clients_a_month": {
+    "250": null,
+    "275": null,
+    "300": null,
+    "325": null,
+    "350": 50,
+    "387.85": 18
+   }
+  },
+  "waterfall": {
+   "P250_A": {
+    "repo_after_gst": 23442.58,
+    "structure_B_change": -19650.54,
+    "of_which_consult_rev": 25740.0,
+    "of_which_midwife_cost": -15112.17,
+    "of_which_lounge_repricing": -29324.45,
+    "of_which_processing": -953.91,
+    "payroll_tax_repo_base": -562.45,
+    "payroll_tax_added_midwives": -749.96,
+    "three_company_running_cost": -908.67,
+    "group_net_before_company_tax": 1570.95,
+    "company_tax_25pct": 392.74,
+    "group_net_after_company_tax": 1178.22
+   },
+   "P250_B": {
+    "repo_after_gst": 23442.58,
+    "structure_B_change": -30462.01,
+    "of_which_consult_rev": 40040.0,
+    "of_which_midwife_cost": -23402.33,
+    "of_which_lounge_repricing": -45615.82,
+    "of_which_processing": -1483.86,
+    "payroll_tax_repo_base": -562.45,
+    "payroll_tax_added_midwives": -1166.61,
+    "three_company_running_cost": -908.67,
+    "group_net_before_company_tax": -9657.16,
+    "company_tax_25pct": 0.0,
+    "group_net_after_company_tax": -9657.16
+   },
+   "P387_A": {
+    "repo_after_gst": 23442.58,
+    "structure_B_change": 9125.55,
+    "of_which_consult_rev": 25740.0,
+    "of_which_midwife_cost": -15112.17,
+    "of_which_lounge_repricing": 0.0,
+    "of_which_processing": -1502.28,
+    "payroll_tax_repo_base": -562.45,
+    "payroll_tax_added_midwives": -749.96,
+    "three_company_running_cost": -908.67,
+    "group_net_before_company_tax": 30347.04,
+    "company_tax_25pct": 7586.76,
+    "group_net_after_company_tax": 22760.28
+   },
+   "P387_B": {
+    "repo_after_gst": 23442.58,
+    "structure_B_change": 14300.79,
+    "of_which_consult_rev": 40040.0,
+    "of_which_midwife_cost": -23402.33,
+    "of_which_lounge_repricing": 0.0,
+    "of_which_processing": -2336.88,
+    "payroll_tax_repo_base": -562.45,
+    "payroll_tax_added_midwives": -1166.61,
+    "three_company_running_cost": -908.67,
+    "group_net_before_company_tax": 35105.64,
+    "company_tax_25pct": 8776.41,
+    "group_net_after_company_tax": 26329.23
+   },
+   "baseline_no_midwife": {
+    "repo_after_gst": 23442.58,
+    "payroll_tax_repo_base": -562.45,
+    "three_company_running_cost": -908.67,
+    "group_net_before_company_tax": 21971.46,
+    "note": "payroll tax on repo wages is a NEW cost line: the repo net has none. Not changed in the repo; shown beside it"
+   }
+  },
+  "flows": {
+   "ip_licence_E": "2% of lounge revenue ex GST, subsidiaries to Holdings: A$477 a month at Scenario A bundle volume only; on all lounge revenue (ex GST ~A$130064 a month) A$2601",
+   "management_fee_E": "5% of Medical revenue, Medical to Lounge for reception, rooms, booking: A$1287 a month (Scenario A, A$110 consults)",
+   "facility_fee_E": "Medical pays Lounge the midwife room rent: 2 rooms x 12 sqm x A$40 = A$960 a month (already inside R14 fixed costs)",
+   "tax_effect": "Nil when consolidated (one head-company return; intra-group payments ignored). Without consolidation each entity pays 25% on its own profit, loss in one cannot offset profit in another.",
+   "gst_effect": "Nil when a GST group is formed (intra-group supplies ignored). Otherwise GST on each charge, credit claimed by payer, cash timing only.",
+   "bre": "Holdings: non-portfolio dividends (10% or more voting) are NOT passive income (s23AB(1)(a), Catherine BASE-RATE-ENTITY.md V). Royalties and rent ARE passive. An IP licence fee is a royalty. If Holdings stayed outside consolidation and its only income were royalties, passive share = 100%, over the 80% limit, so its rate is 30% not 25%. Consolidating removes the risk: the test runs on the group.",
+   "div7a": "Loans between companies are not a Division 7A deemed dividend by themselves (s109J, company-to-company) but an interposed-entity loan that ends with a shareholder is (s109T). Owners' shareholder loans into the group (R4 loan-first repayment) are the reverse direction. Catherine to confirm.",
+   "franking": "Tax paid at 25% by the head company generates franking credits that go out with dividends to Anthony and his partner (Route B). Consolidated: one franking account at the head company."
+  },
+  "asic": {
+   "registration": 636,
+   "annual_review": 342,
+   "label": "V-secondary (sites quoting ASIC fees from 1 July 2026; asic.gov.au page did not render figures)"
+  },
+  "payroll_tax_effect": "None: grouped companies share one threshold. Three companies means three payroll registrations but one deduction."
+ },
+ "part6": {
+  "option_X_pay_all_online": {
+   "online": 250.0,
+   "processing": 4.55,
+   "lab_held": 27.85,
+   "remit_to_lab": 27.85,
+   "gtt_receives_net": 245.45,
+   "gst_on_lounge": 10.2,
+   "gtt_keeps_before_costs": 207.4,
+   "lab_fee_absorbed": 0
+  },
+  "option_Y_pay_package_online_lab_at_appointment": {
+   "online": 222.15,
+   "processing": 4.08,
+   "at_appointment_to_lab": 27.85,
+   "gtt_receives_net": 218.07,
+   "gst_on_lounge": 10.2,
+   "gtt_keeps_before_costs": 207.88
+  },
+  "recommended": "Y",
+  "rebate_example_99_40": 99.4,
+  "client_after_rebate_example": 150.6,
+  "rebate_mix_avg": 84.45,
+  "client_after_rebate_mix_avg": 165.55,
+  "processing_fee_note": "1.7% + A$0.30 (E, Q for provider)",
+  "reserve_table": [
+   {
+    "clients_month": "396 (Mon to Fri)",
+    "refusal_rate": 0.02,
+    "refused_clients": 7.9,
+    "exposure_month": 220.57,
+    "reserve_two_months": 441.14
+   },
+   {
+    "clients_month": "396 (Mon to Fri)",
+    "refusal_rate": 0.05,
+    "refused_clients": 19.8,
+    "exposure_month": 551.43,
+    "reserve_two_months": 1102.86
+   },
+   {
+    "clients_month": "396 (Mon to Fri)",
+    "refusal_rate": 0.1,
+    "refused_clients": 39.6,
+    "exposure_month": 1102.86,
+    "reserve_two_months": 2205.72
+   },
+   {
+    "clients_month": "473.94 (six-day)",
+    "refusal_rate": 0.02,
+    "refused_clients": 9.5,
+    "exposure_month": 263.98,
+    "reserve_two_months": 527.97
+   },
+   {
+    "clients_month": "473.94 (six-day)",
+    "refusal_rate": 0.05,
+    "refused_clients": 23.7,
+    "exposure_month": 659.96,
+    "reserve_two_months": 1319.92
+   },
+   {
+    "clients_month": "473.94 (six-day)",
+    "refusal_rate": 0.1,
+    "refused_clients": 47.4,
+    "exposure_month": 1319.92,
+    "reserve_two_months": 2639.85
+   }
+  ],
+  "float_held_option_X_at_396": 7618.44,
+  "float_note": "Option X: A$27.85 x 396 clients x about 21 days booking lead (E) = money GTT holds that is not GTT's",
+  "lounge_stays_with_lounge": "Yes, 112.15 of 250 (44.9%) is Lounge revenue, 100% Lounge's if the Lounge invoices it and has its own merchant account (Q provider). Holdings and Medical see none of it except by written inter-company fee."
+ },
+ "part7": {
+  "steps": [
+   {
+    "step": "Medicare provider number for the midwife (form HW088)",
+    "cost_now": 0,
+    "cost_at_lease_signing": 0,
+    "label": "E",
+    "note": "no fee found (R13)"
+   },
+   {
+    "step": "ABN for each company",
+    "cost_now": 0,
+    "cost_at_lease_signing": 0,
+    "label": "V",
+    "note": "ABR registration is free"
+   },
+   {
+    "step": "PRODA account (individual and organisation)",
+    "cost_now": 0,
+    "cost_at_lease_signing": 0,
+    "label": "V",
+    "note": "free"
+   },
+   {
+    "step": "Ahpra registration check (public register)",
+    "cost_now": 0,
+    "cost_at_lease_signing": 0,
+    "label": "V",
+    "note": "free to look up; midwife renewal A$193 a year is hers or GTT's by contract (R14, V)"
+   },
+   {
+    "step": "Register GTT Holdings, Medical, Lounge (3 companies)",
+    "cost_now": 1908,
+    "cost_at_lease_signing": 0,
+    "label": "V-secondary",
+    "note": "A$636 each; only needed for the structure Anthony chooses"
+   },
+   {
+    "step": "Business name for the Lounge",
+    "cost_now": 47,
+    "cost_at_lease_signing": 0,
+    "label": "per brief",
+    "note": "A$47 for 1 year or A$108 for 3 years (not re-verified)"
+   },
+   {
+    "step": "Lab agreement and second paper (sub-lease or licence)",
+    "cost_now": 0,
+    "cost_at_lease_signing": 6000,
+    "label": "Q",
+    "note": "legal review A$3,000 to A$15,000 (Q); nothing due until a lab says yes"
+   },
+   {
+    "step": "Landlord written consent",
+    "cost_now": 0,
+    "cost_at_lease_signing": 0,
+    "label": "E",
+    "note": "no fee normally; legal cost sits in the lease review"
+   },
+   {
+    "step": "Main lease: bond about 2 months rent",
+    "cost_now": 0,
+    "cost_at_lease_signing": 16000,
+    "label": "R",
+    "note": "A$8,000 a month rent budget x 2; refundable"
+   },
+   {
+    "step": "Insurance (public liability, professional indemnity, property)",
+    "cost_now": 0,
+    "cost_at_lease_signing": 2125.02,
+    "label": "R",
+    "note": "repo A$708.34 a month; first quarter due at opening"
+   },
+   {
+    "step": "Collection-centre approval paperwork",
+    "cost_now": 0,
+    "cost_at_lease_signing": 0,
+    "label": "R",
+    "note": "lab applies in its own name; GTT cost nil"
+   }
+  ],
+  "total_now": 1955,
+  "total_at_lease": 24125.02
+ }
+}
