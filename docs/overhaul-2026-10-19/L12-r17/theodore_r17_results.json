@@ -1,0 +1,595 @@
+{
+ "generated": "2026-10-24",
+ "imports": "theodore_r16.py -> r15 -> r14 -> r13",
+ "labels": "R repo, V official, E estimate, Q quote",
+ "Q1_reach_gtt": {
+  "P1": {
+   "client_pays": 300.0,
+   "consult_medical_gst_free": 110.0,
+   "lab_gst_free_not_gtt": 27.85,
+   "lounge_incl_gst": 162.15,
+   "lounge_gst_inside": 14.74,
+   "lounge_ex_gst": 147.41,
+   "gtt_receives_incl_gst": 272.15,
+   "gtt_receives_ex_gst": 257.41,
+   "card_fee": 4.93,
+   "gtt_ex_gst_after_card": 252.48,
+   "clears_250_incl": true,
+   "clears_250_ex_gst": true,
+   "gst_on_top": 16.22,
+   "lounge_with_gst_on_top": 178.37,
+   "client_pays_gst_on_top": 316.22,
+   "gtt_ex_gst_if_gst_on_top": 272.15
+  },
+  "P2": {
+   "client_pays": 350.0,
+   "consult_medical_gst_free": 110.0,
+   "lab_gst_free_not_gtt": 27.85,
+   "lounge_incl_gst": 212.15,
+   "lounge_gst_inside": 19.29,
+   "lounge_ex_gst": 192.86,
+   "gtt_receives_incl_gst": 322.15,
+   "gtt_receives_ex_gst": 302.86,
+   "card_fee": 5.78,
+   "gtt_ex_gst_after_card": 297.08,
+   "clears_250_incl": true,
+   "clears_250_ex_gst": true,
+   "gst_on_top": 21.22,
+   "lounge_with_gst_on_top": 233.37,
+   "client_pays_gst_on_top": 371.22,
+   "gtt_ex_gst_if_gst_on_top": 322.15
+  },
+  "r15_old_example_250_all_in": {
+   "client_pays": 250.0,
+   "consult_medical_gst_free": 110.0,
+   "lab_gst_free_not_gtt": 27.85,
+   "lounge_incl_gst": 112.15,
+   "lounge_gst_inside": 10.2,
+   "lounge_ex_gst": 101.95,
+   "gtt_receives_incl_gst": 222.15,
+   "gtt_receives_ex_gst": 211.95,
+   "card_fee": 4.08,
+   "gtt_ex_gst_after_card": 207.87,
+   "clears_250_incl": false,
+   "clears_250_ex_gst": false,
+   "gst_on_top": 11.22,
+   "lounge_with_gst_on_top": 123.37,
+   "client_pays_gst_on_top": 261.22,
+   "gtt_ex_gst_if_gst_on_top": 222.15
+  }
+ },
+ "Q7_bas_month": {
+  "P1|396": {
+   "clients": 396,
+   "gst_collected_lounge": 5837.04,
+   "gst_free_consult_sales": 43560.0,
+   "taxable_lounge_sales_incl_gst": 64211.4,
+   "lab_on_gtt_bas": 0.0,
+   "gst_collected_if_on_top": 6423.12
+  },
+  "P1|474": {
+   "clients": 473.94,
+   "gst_collected_lounge": 6985.88,
+   "gst_free_consult_sales": 52133.4,
+   "taxable_lounge_sales_incl_gst": 76849.37,
+   "lab_on_gtt_bas": 0.0,
+   "gst_collected_if_on_top": 7687.31
+  },
+  "P2|396": {
+   "clients": 396,
+   "gst_collected_lounge": 7638.84,
+   "gst_free_consult_sales": 43560.0,
+   "taxable_lounge_sales_incl_gst": 84011.4,
+   "lab_on_gtt_bas": 0.0,
+   "gst_collected_if_on_top": 8403.12
+  },
+  "P2|474": {
+   "clients": 473.94,
+   "gst_collected_lounge": 9142.3,
+   "gst_free_consult_sales": 52133.4,
+   "taxable_lounge_sales_incl_gst": 100546.37,
+   "lab_on_gtt_bas": 0.0,
+   "gst_collected_if_on_top": 10057.01
+  }
+ },
+ "Q8_money_map": {
+  "P1|82110_example": {
+   "client_pays": 300.0,
+   "rebate_back": 99.4,
+   "mother_net": 200.6,
+   "gtt_receives_incl_gst": 272.15,
+   "gtt_receives_ex_gst": 257.41,
+   "lab_receives": 27.85
+  },
+  "P1|82105_short": {
+   "client_pays": 300.0,
+   "rebate_back": 56.7,
+   "mother_net": 243.3,
+   "gtt_receives_incl_gst": 272.15,
+   "gtt_receives_ex_gst": 257.41,
+   "lab_receives": 27.85
+  },
+  "P1|mix_avg_base": {
+   "client_pays": 300.0,
+   "rebate_back": 84.46,
+   "mother_net": 215.54,
+   "gtt_receives_incl_gst": 272.15,
+   "gtt_receives_ex_gst": 257.41,
+   "lab_receives": 27.85
+  },
+  "P2|82110_example": {
+   "client_pays": 350.0,
+   "rebate_back": 99.4,
+   "mother_net": 250.6,
+   "gtt_receives_incl_gst": 322.15,
+   "gtt_receives_ex_gst": 302.86,
+   "lab_receives": 27.85
+  },
+  "P2|82105_short": {
+   "client_pays": 350.0,
+   "rebate_back": 56.7,
+   "mother_net": 293.3,
+   "gtt_receives_incl_gst": 322.15,
+   "gtt_receives_ex_gst": 302.86,
+   "lab_receives": 27.85
+  },
+  "P2|mix_avg_base": {
+   "client_pays": 350.0,
+   "rebate_back": 84.46,
+   "mother_net": 265.54,
+   "gtt_receives_incl_gst": 322.15,
+   "gtt_receives_ex_gst": 302.86,
+   "lab_receives": 27.85
+  },
+  "note_test_rebate_alt_73928": 22.05
+ },
+ "Q9_packages_mix": {
+  "base_mix_34.5min|100% P1": {
+   "permanent_r14_oncost": {
+    "clients": 473.9,
+    "p1_share": 1.0,
+    "gtt_revenue_ex_gst": 121996.9,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -37850.14,
+    "card_fees": -2336.52,
+    "midwife_hours_week": 108.2,
+    "midwife_fte": 2.85,
+    "midwife_wages": -25340.27,
+    "midwife_fixed_consumables": -4270.07,
+    "payroll_tax_group": -2081.42,
+    "three_company": -908.67,
+    "group_before_company_tax": 2788.89,
+    "company_tax_25": -697.22,
+    "group_after_company_tax": 2091.67,
+    "change_vs_like_for_like_baseline": -19182.57,
+    "change_vs_repo_23443": -20653.69
+   },
+   "permanent_leave_covered": {
+    "clients": 473.9,
+    "p1_share": 1.0,
+    "gtt_revenue_ex_gst": 121996.9,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -37850.14,
+    "card_fees": -2336.52,
+    "midwife_hours_week": 108.2,
+    "midwife_fte": 2.85,
+    "midwife_wages": -28842.4,
+    "midwife_fixed_consumables": -4270.07,
+    "payroll_tax_group": -2081.42,
+    "three_company": -908.67,
+    "group_before_company_tax": -713.24,
+    "company_tax_25": -0.0,
+    "group_after_company_tax": -713.24,
+    "change_vs_like_for_like_baseline": -22684.7,
+    "change_vs_repo_23443": -24155.82
+   }
+  },
+  "base_mix_34.5min|70/30": {
+   "permanent_r14_oncost": {
+    "clients": 473.9,
+    "p1_share": 0.7,
+    "gtt_revenue_ex_gst": 128459.07,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -31387.97,
+    "card_fees": -2457.38,
+    "midwife_hours_week": 108.2,
+    "midwife_fte": 2.85,
+    "midwife_wages": -25340.27,
+    "midwife_fixed_consumables": -4270.07,
+    "payroll_tax_group": -2081.42,
+    "three_company": -908.67,
+    "group_before_company_tax": 9130.21,
+    "company_tax_25": -2282.55,
+    "group_after_company_tax": 6847.65,
+    "change_vs_like_for_like_baseline": -12841.25,
+    "change_vs_repo_23443": -14312.37
+   },
+   "permanent_leave_covered": {
+    "clients": 473.9,
+    "p1_share": 0.7,
+    "gtt_revenue_ex_gst": 128459.07,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -31387.97,
+    "card_fees": -2457.38,
+    "midwife_hours_week": 108.2,
+    "midwife_fte": 2.85,
+    "midwife_wages": -28842.4,
+    "midwife_fixed_consumables": -4270.07,
+    "payroll_tax_group": -2081.42,
+    "three_company": -908.67,
+    "group_before_company_tax": 5628.08,
+    "company_tax_25": -1407.02,
+    "group_after_company_tax": 4221.06,
+    "change_vs_like_for_like_baseline": -16343.38,
+    "change_vs_repo_23443": -17814.5
+   }
+  },
+  "base_mix_34.5min|50/50": {
+   "permanent_r14_oncost": {
+    "clients": 473.9,
+    "p1_share": 0.5,
+    "gtt_revenue_ex_gst": 132767.18,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -27079.85,
+    "card_fees": -2537.95,
+    "midwife_hours_week": 108.2,
+    "midwife_fte": 2.85,
+    "midwife_wages": -25340.27,
+    "midwife_fixed_consumables": -4270.07,
+    "payroll_tax_group": -2081.42,
+    "three_company": -908.67,
+    "group_before_company_tax": 13357.75,
+    "company_tax_25": -3339.44,
+    "group_after_company_tax": 10018.31,
+    "change_vs_like_for_like_baseline": -8613.71,
+    "change_vs_repo_23443": -10084.83
+   },
+   "permanent_leave_covered": {
+    "clients": 473.9,
+    "p1_share": 0.5,
+    "gtt_revenue_ex_gst": 132767.18,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -27079.85,
+    "card_fees": -2537.95,
+    "midwife_hours_week": 108.2,
+    "midwife_fte": 2.85,
+    "midwife_wages": -28842.4,
+    "midwife_fixed_consumables": -4270.07,
+    "payroll_tax_group": -2081.42,
+    "three_company": -908.67,
+    "group_before_company_tax": 9855.63,
+    "company_tax_25": -2463.91,
+    "group_after_company_tax": 7391.72,
+    "change_vs_like_for_like_baseline": -12115.83,
+    "change_vs_repo_23443": -13586.95
+   }
+  },
+  "base_mix_34.5min|100% P2": {
+   "permanent_r14_oncost": {
+    "clients": 473.9,
+    "p1_share": 0.0,
+    "gtt_revenue_ex_gst": 143537.47,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -16309.57,
+    "card_fees": -2739.37,
+    "midwife_hours_week": 108.2,
+    "midwife_fte": 2.85,
+    "midwife_wages": -25340.27,
+    "midwife_fixed_consumables": -4270.07,
+    "payroll_tax_group": -2081.42,
+    "three_company": -908.67,
+    "group_before_company_tax": 23926.61,
+    "company_tax_25": -5981.65,
+    "group_after_company_tax": 17944.96,
+    "change_vs_like_for_like_baseline": 1955.15,
+    "change_vs_repo_23443": 484.03
+   },
+   "permanent_leave_covered": {
+    "clients": 473.9,
+    "p1_share": 0.0,
+    "gtt_revenue_ex_gst": 143537.47,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -16309.57,
+    "card_fees": -2739.37,
+    "midwife_hours_week": 108.2,
+    "midwife_fte": 2.85,
+    "midwife_wages": -28842.4,
+    "midwife_fixed_consumables": -4270.07,
+    "payroll_tax_group": -2081.42,
+    "three_company": -908.67,
+    "group_before_company_tax": 20424.49,
+    "company_tax_25": -5106.12,
+    "group_after_company_tax": 15318.37,
+    "change_vs_like_for_like_baseline": -1546.97,
+    "change_vs_repo_23443": -3018.09
+   }
+  },
+  "short_82105_10min|100% P1": {
+   "permanent_r14_oncost": {
+    "clients": 473.9,
+    "p1_share": 1.0,
+    "gtt_revenue_ex_gst": 121996.9,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -37850.14,
+    "card_fees": -2336.52,
+    "midwife_hours_week": 48.6,
+    "midwife_fte": 1.28,
+    "midwife_wages": -11388.88,
+    "midwife_fixed_consumables": -3320.65,
+    "payroll_tax_group": -1245.13,
+    "three_company": -908.67,
+    "group_before_company_tax": 18525.98,
+    "company_tax_25": -4631.5,
+    "group_after_company_tax": 13894.49,
+    "change_vs_like_for_like_baseline": -3445.48,
+    "change_vs_repo_23443": -4916.6
+   },
+   "permanent_leave_covered": {
+    "clients": 473.9,
+    "p1_share": 1.0,
+    "gtt_revenue_ex_gst": 121996.9,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -37850.14,
+    "card_fees": -2336.52,
+    "midwife_hours_week": 48.6,
+    "midwife_fte": 1.28,
+    "midwife_wages": -12962.87,
+    "midwife_fixed_consumables": -3320.65,
+    "payroll_tax_group": -1245.13,
+    "three_company": -908.67,
+    "group_before_company_tax": 16951.99,
+    "company_tax_25": -4238.0,
+    "group_after_company_tax": 12714.0,
+    "change_vs_like_for_like_baseline": -5019.47,
+    "change_vs_repo_23443": -6490.59
+   }
+  },
+  "short_82105_10min|70/30": {
+   "permanent_r14_oncost": {
+    "clients": 473.9,
+    "p1_share": 0.7,
+    "gtt_revenue_ex_gst": 128459.07,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -31387.97,
+    "card_fees": -2457.38,
+    "midwife_hours_week": 48.6,
+    "midwife_fte": 1.28,
+    "midwife_wages": -11388.88,
+    "midwife_fixed_consumables": -3320.65,
+    "payroll_tax_group": -1245.13,
+    "three_company": -908.67,
+    "group_before_company_tax": 24867.3,
+    "company_tax_25": -6216.82,
+    "group_after_company_tax": 18650.47,
+    "change_vs_like_for_like_baseline": 2895.84,
+    "change_vs_repo_23443": 1424.72
+   },
+   "permanent_leave_covered": {
+    "clients": 473.9,
+    "p1_share": 0.7,
+    "gtt_revenue_ex_gst": 128459.07,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -31387.97,
+    "card_fees": -2457.38,
+    "midwife_hours_week": 48.6,
+    "midwife_fte": 1.28,
+    "midwife_wages": -12962.87,
+    "midwife_fixed_consumables": -3320.65,
+    "payroll_tax_group": -1245.13,
+    "three_company": -908.67,
+    "group_before_company_tax": 23293.31,
+    "company_tax_25": -5823.33,
+    "group_after_company_tax": 17469.98,
+    "change_vs_like_for_like_baseline": 1321.85,
+    "change_vs_repo_23443": -149.27
+   }
+  },
+  "short_82105_10min|50/50": {
+   "permanent_r14_oncost": {
+    "clients": 473.9,
+    "p1_share": 0.5,
+    "gtt_revenue_ex_gst": 132767.18,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -27079.85,
+    "card_fees": -2537.95,
+    "midwife_hours_week": 48.6,
+    "midwife_fte": 1.28,
+    "midwife_wages": -11388.88,
+    "midwife_fixed_consumables": -3320.65,
+    "payroll_tax_group": -1245.13,
+    "three_company": -908.67,
+    "group_before_company_tax": 29094.84,
+    "company_tax_25": -7273.71,
+    "group_after_company_tax": 21821.13,
+    "change_vs_like_for_like_baseline": 7123.38,
+    "change_vs_repo_23443": 5652.26
+   },
+   "permanent_leave_covered": {
+    "clients": 473.9,
+    "p1_share": 0.5,
+    "gtt_revenue_ex_gst": 132767.18,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -27079.85,
+    "card_fees": -2537.95,
+    "midwife_hours_week": 48.6,
+    "midwife_fte": 1.28,
+    "midwife_wages": -12962.87,
+    "midwife_fixed_consumables": -3320.65,
+    "payroll_tax_group": -1245.13,
+    "three_company": -908.67,
+    "group_before_company_tax": 27520.86,
+    "company_tax_25": -6880.21,
+    "group_after_company_tax": 20640.64,
+    "change_vs_like_for_like_baseline": 5549.4,
+    "change_vs_repo_23443": 4078.28
+   }
+  },
+  "short_82105_10min|100% P2": {
+   "permanent_r14_oncost": {
+    "clients": 473.9,
+    "p1_share": 0.0,
+    "gtt_revenue_ex_gst": 143537.47,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -16309.57,
+    "card_fees": -2739.37,
+    "midwife_hours_week": 48.6,
+    "midwife_fte": 1.28,
+    "midwife_wages": -11388.88,
+    "midwife_fixed_consumables": -3320.65,
+    "payroll_tax_group": -1245.13,
+    "three_company": -908.67,
+    "group_before_company_tax": 39663.71,
+    "company_tax_25": -9915.93,
+    "group_after_company_tax": 29747.78,
+    "change_vs_like_for_like_baseline": 17692.25,
+    "change_vs_repo_23443": 16221.13
+   },
+   "permanent_leave_covered": {
+    "clients": 473.9,
+    "p1_share": 0.0,
+    "gtt_revenue_ex_gst": 143537.47,
+    "consult_income": 52133.4,
+    "lounge_change_vs_old_250": -16309.57,
+    "card_fees": -2739.37,
+    "midwife_hours_week": 48.6,
+    "midwife_fte": 1.28,
+    "midwife_wages": -12962.87,
+    "midwife_fixed_consumables": -3320.65,
+    "payroll_tax_group": -1245.13,
+    "three_company": -908.67,
+    "group_before_company_tax": 38089.72,
+    "company_tax_25": -9522.43,
+    "group_after_company_tax": 28567.29,
+    "change_vs_like_for_like_baseline": 16118.26,
+    "change_vs_repo_23443": 14647.14
+   }
+  }
+ },
+ "baseline_same_costs_no_midwife": 21971.46,
+ "Q6_break_even": {
+  "before_per_client_ex_gst": 227.27,
+  "before_incl_gst": 250.0,
+  "p1_per_client_ex_gst_after_card": 252.48,
+  "p2_per_client_ex_gst_after_card": 297.08,
+  "midwife_cost_per_client_base": 62.48,
+  "midwife_cost_per_client_short": 31.04,
+  "payroll_tax_added_per_client_base": 3.2,
+  "break_even_price_base_mix": 345.38,
+  "break_even_price_short_consult": 308.13,
+  "break_even_vs_repo_23443_base": 348.85,
+  "r15_figure": 338,
+  "r15_like_for_like": 387.85
+ },
+ "Q4_float_interest": [
+  {
+   "clients": 396,
+   "lead_days": 21,
+   "settle": "weekly",
+   "average_balance": 8888.18,
+   "interest_year_big4_business_saver_1.00pct": 88.88,
+   "interest_year_best_online_saver_4.35pct": 386.64
+  },
+  {
+   "clients": 396,
+   "lead_days": 21,
+   "settle": "monthly",
+   "average_balance": 13132.74,
+   "interest_year_big4_business_saver_1.00pct": 131.33,
+   "interest_year_best_online_saver_4.35pct": 571.27
+  },
+  {
+   "clients": 396,
+   "lead_days": 0,
+   "settle": "weekly",
+   "average_balance": 1269.74,
+   "interest_year_big4_business_saver_1.00pct": 12.7,
+   "interest_year_best_online_saver_4.35pct": 55.23
+  },
+  {
+   "clients": 396,
+   "lead_days": 0,
+   "settle": "monthly",
+   "average_balance": 5514.3,
+   "interest_year_big4_business_saver_1.00pct": 55.14,
+   "interest_year_best_online_saver_4.35pct": 239.87
+  },
+  {
+   "clients": 473.9,
+   "lead_days": 21,
+   "settle": "weekly",
+   "average_balance": 10637.54,
+   "interest_year_big4_business_saver_1.00pct": 106.38,
+   "interest_year_best_online_saver_4.35pct": 462.73
+  },
+  {
+   "clients": 473.9,
+   "lead_days": 21,
+   "settle": "monthly",
+   "average_balance": 15717.5,
+   "interest_year_big4_business_saver_1.00pct": 157.18,
+   "interest_year_best_online_saver_4.35pct": 683.71
+  },
+  {
+   "clients": 473.9,
+   "lead_days": 0,
+   "settle": "weekly",
+   "average_balance": 1519.65,
+   "interest_year_big4_business_saver_1.00pct": 15.2,
+   "interest_year_best_online_saver_4.35pct": 66.1
+  },
+  {
+   "clients": 473.9,
+   "lead_days": 0,
+   "settle": "monthly",
+   "average_balance": 6599.61,
+   "interest_year_big4_business_saver_1.00pct": 66.0,
+   "interest_year_best_online_saver_4.35pct": 287.08
+  }
+ ],
+ "Q4_gtt_own_cash": {
+  "average_prepaid_balance_396": 74447.35,
+  "interest_year_big4_business_saver_1.00pct": 744.47,
+  "interest_year_best_online_saver_4.35pct": 3238.46
+ },
+ "Q3_room_licence": {
+  "exclusive_sqm": 49.0,
+  "share_of_footprint": 0.245,
+  "rent_per_sqm_month": 40.0,
+  "rent_part": 1960.0,
+  "outgoings_part_E": 518.18,
+  "licence_ex_gst": 2478.18,
+  "gst_if_no_group": 247.82,
+  "licence_incl_gst_if_no_group": 2726.0,
+  "r15_r16_figure": 960.0
+ },
+ "Q10_pay_types": {
+  "short_consult_hours": {
+   "hours_week": 48.6,
+   "casual": {
+    "rate_blend": 56.32,
+    "loaded": 64.04,
+    "month": 13486.75
+   },
+   "part_or_full_time": {
+    "rate_blend": 45.06,
+    "loaded_paid_hour": 51.84,
+    "loaded_worked_hour": 61.54,
+    "month_leave_covered": 12960.41
+   }
+  },
+  "base_mix_hours": {
+   "hours_week": 108.2,
+   "casual": {
+    "rate_blend": 56.32,
+    "loaded": 64.04,
+    "month": 30026.05
+   },
+   "part_or_full_time": {
+    "rate_blend": 45.06,
+    "loaded_paid_hour": 51.84,
+    "loaded_worked_hour": 61.54,
+    "month_leave_covered": 28854.25
+   }
+  }
+ }
+}
