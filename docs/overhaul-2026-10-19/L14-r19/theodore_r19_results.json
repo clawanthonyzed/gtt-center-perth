@@ -1,0 +1,805 @@
+{
+ "generated": "2026-10-26",
+ "imports": "theodore_r18.py -> r17 -> r16 -> r15 -> r14 -> r13; tools/master_financial_model.py (live via r18); tools/cost_ramp_model.py; tools/demand_driven_staffing_solver.py",
+ "T1_inputs_check": {
+  "am_service_staff": 8,
+  "am_service_staff_expected": 8,
+  "am_treatment_wages_repo": 39235.68,
+  "am_treatment_wages_rebuilt": 39235.68,
+  "phlebotomists_full_roster": 2,
+  "phlebotomist_wages_repo": 9075.0,
+  "phlebotomist_wages_rebuilt": 9075.0,
+  "pm_service_staff": 4,
+  "pm_service_staff_expected": 4,
+  "pm_weekday_wages_repo": 9808.92,
+  "pm_weekday_wages_rebuilt": 9808.92,
+  "venue_manager_repo_0700_wages": 7040.0,
+  "venue_manager_rebuilt": 7040.0,
+  "venue_manager_0630_extra_loaded": 500.28,
+  "am_clients_month": 473.94,
+  "am_clients_day": 18.0,
+  "pm_transactions_month": 210.13,
+  "pm_transactions_weekday_day": 8.6957,
+  "pm_transactions_saturday_day": 4.3478,
+  "pm_price_incl_gst": 117.0,
+  "pm_revenue_repo": 24585.37,
+  "pm_revenue_rebuilt": 24585.37,
+  "solver_service_minutes": 45,
+  "solver_staff_at_18": 8,
+  "midwife_hours_week_r18": 45.0
+ },
+ "locked": {
+  "clients": 473.94,
+  "takings_incl_gst_to_gtt": 153568.14,
+  "rev_lounge_service_am_ex_gst": 69863.5,
+  "rev_pm_ex_gst": 22350.34,
+  "rev_consult_gst_free": 52133.4,
+  "revenue_total_ex_gst": 144347.23,
+  "gst_collected_am": 6985.88,
+  "gst_collected_pm": 2235.03,
+  "repo_payroll": -93595.63,
+  "repo_operating_expenses": -14288.34,
+  "less_gst_credits": 1262.58,
+  "card_fees": -2336.52,
+  "midwife_wages": -12000.38,
+  "midwife_fixed_consumables": -2840.65,
+  "venue_manager_0630": -500.28,
+  "payroll_tax_group": -1344.04,
+  "three_company": -908.67,
+  "total_costs": -127032.92,
+  "payroll_taxable_wages_year": 1254144.89,
+  "payroll_tax_threshold": 1000000,
+  "over_threshold_by": 254144.89,
+  "profit_before_company_tax": 17314.31,
+  "company_tax_25": -4328.58,
+  "profit_after_company_tax": 12985.73,
+  "franked_dividend_available": 12985.73,
+  "franking_credits_attached": 4328.58,
+  "card_fees_pm": -480.99,
+  "card_fees_total": -2817.51,
+  "consult_price": 110.0,
+  "p1": 300.0,
+  "p2": 350.0,
+  "share_p1": 1.0,
+  "midwife_hours_week": 45.0,
+  "oncost_basis": "leave_covered_1.366"
+ },
+ "locked_grace_1_20": {
+  "clients": 473.94,
+  "takings_incl_gst_to_gtt": 153568.14,
+  "rev_lounge_service_am_ex_gst": 69863.5,
+  "rev_pm_ex_gst": 22350.34,
+  "rev_consult_gst_free": 52133.4,
+  "revenue_total_ex_gst": 144347.23,
+  "gst_collected_am": 6985.88,
+  "gst_collected_pm": 2235.03,
+  "repo_payroll": -93595.63,
+  "repo_operating_expenses": -14288.34,
+  "less_gst_credits": 1262.58,
+  "card_fees": -2336.52,
+  "midwife_wages": -10543.26,
+  "midwife_fixed_consumables": -2840.65,
+  "venue_manager_0630": -500.28,
+  "payroll_tax_group": -1225.72,
+  "three_company": -908.67,
+  "total_costs": -125457.49,
+  "payroll_taxable_wages_year": 1231772.04,
+  "payroll_tax_threshold": 1000000,
+  "over_threshold_by": 231772.04,
+  "profit_before_company_tax": 18889.75,
+  "company_tax_25": -4722.44,
+  "profit_after_company_tax": 14167.31,
+  "franked_dividend_available": 14167.31,
+  "franking_credits_attached": 4722.44,
+  "card_fees_pm": -480.99,
+  "card_fees_total": -2817.51,
+  "consult_price": 110.0,
+  "p1": 300.0,
+  "p2": 350.0,
+  "share_p1": 1.0,
+  "midwife_hours_week": 45.0,
+  "oncost_basis": "grace_1.20"
+ },
+ "baseline_no_midwife": {
+  "clients": 473.94,
+  "takings_incl_gst_to_gtt": 143070.37,
+  "rev_lounge_service_am_ex_gst": 107713.64,
+  "rev_pm_ex_gst": 22350.34,
+  "rev_consult_gst_free": 0.0,
+  "revenue_total_ex_gst": 130063.97,
+  "gst_collected_am": 10771.36,
+  "gst_collected_pm": 2235.03,
+  "repo_payroll": -93595.63,
+  "repo_operating_expenses": -14288.34,
+  "less_gst_credits": 1262.58,
+  "card_fees": -2156.43,
+  "midwife_wages": 0,
+  "midwife_fixed_consumables": 0,
+  "venue_manager_0630": -0.0,
+  "payroll_tax_group": -562.45,
+  "three_company": -908.67,
+  "total_costs": -110729.93,
+  "payroll_taxable_wages_year": 1106354.64,
+  "payroll_tax_threshold": 1000000,
+  "over_threshold_by": 106354.64,
+  "profit_before_company_tax": 19334.04,
+  "company_tax_25": -4833.51,
+  "profit_after_company_tax": 14500.53,
+  "franked_dividend_available": 14500.53,
+  "franking_credits_attached": 4833.51,
+  "card_fees_pm": -480.99,
+  "card_fees_total": -2637.42,
+  "consult_price": 110.0,
+  "p1": 300.0,
+  "p2": 350.0,
+  "share_p1": 1.0,
+  "midwife_hours_week": 45.0,
+  "oncost_basis": "leave_covered_1.366"
+ },
+ "T1_bridge": [
+  [
+   "A. Repo net today (CURRENT-STATE line 30): no GST, no card fees, no payroll tax, no company structure cost, before company tax",
+   35186.4
+  ],
+  [
+   "GST the repo never took out (it counts the GST-inclusive A$250 and A$117 as revenue), net of GST credits on costs",
+   -11743.82
+  ],
+  [
+   "Card fees on the old A$250 morning price (repo opex flags this as missing: VERIFICATION-TRACKER 23)",
+   -2156.43
+  ],
+  [
+   "Card fees on afternoon sales (same repo gap)",
+   -480.99
+  ],
+  [
+   "Payroll tax on the repo's own wages (never in the repo net)",
+   -562.45
+  ],
+  [
+   "Three-company running cost (Holdings + Medical + Lounge)",
+   -908.67
+  ],
+  [
+   "B. Like-for-like starting point, no midwife, old A$250 package",
+   19334.04
+  ],
+  [
+   "Consult revenue now labelled separately: 474 x A$110 (GST-free, Medical)",
+   52133.4
+  ],
+  [
+   "Lounge + service line: was the whole A$250, now A$162.15 (474 x A$87.85 / 1.1)",
+   -37850.14
+  ],
+  [
+   "Extra card fee: GTT now takes A$272.15 a client instead of A$250",
+   -180.09
+  ],
+  [
+   "Midwife wages: 45 h a week, permanent with leave covered by the casual (on-cost 1.366)",
+   -12000.38
+  ],
+  [
+   "Midwife fixed costs and consumables (registration, indemnity, training, software, equipment, one consult room)",
+   -2840.65
+  ],
+  [
+   "Venue manager 06:30 start (extra 0.5 h on 22 weekdays)",
+   -500.28
+  ],
+  [
+   "Extra payroll tax on midwife and venue manager wages",
+   -781.59
+  ],
+  [
+   "C. Today, before company tax (locked case)",
+   17314.31
+  ],
+  [
+   "Company tax 25% (the repo A$35,186.40 was always BEFORE company tax)",
+   -4328.58
+  ],
+  [
+   "D. Today, after company tax = franked dividend available",
+   12985.73
+  ]
+ ],
+ "T1_split": {
+  "restatement_never_in_repo": -15852.36,
+  "decisions_package_midwife_vm": -2019.73,
+  "company_tax": -4328.58,
+  "old_repo_if_taxed_25": 26389.8,
+  "r18_headline_after_tax": 13346.47,
+  "revenue_change": 14283.26,
+  "cost_change": -16302.99
+ },
+ "T1_waterfall_per_client": [
+  [
+   "Mother pays at booking (Package 1)",
+   300.0
+  ],
+  [
+   "To the lab, paid by the mother to the lab (never GTT money)",
+   -27.85
+  ],
+  [
+   "Reaches GTT (consult A$110 + lounge + service A$162.15)",
+   272.15
+  ],
+  [
+   "GST inside the lounge + service part, passed to the ATO",
+   -14.74
+  ],
+  [
+   "Card fee on GTT's A$272.15",
+   -4.93
+  ],
+  [
+   "GTT keeps from the morning package",
+   252.48
+  ],
+  [
+   "Plus afternoon sales per morning client (ex GST, after card fee)",
+   46.14
+  ],
+  [
+   "Less repo staff (8 AM service, 2 phlebotomists, 4 PM, venue manager 07:00)",
+   -197.48
+  ],
+  [
+   "Less repo running costs (rent, insurance, overheads, supplies), after GST credits",
+   -27.48
+  ],
+  [
+   "Less midwife wages",
+   -25.32
+  ],
+  [
+   "Less midwife fixed costs and consumables",
+   -5.99
+  ],
+  [
+   "Less venue manager 06:30",
+   -1.06
+  ],
+  [
+   "Less payroll tax (whole group)",
+   -2.84
+  ],
+  [
+   "Less three-company running cost",
+   -1.92
+  ],
+  [
+   "Profit per client before company tax",
+   36.53
+  ],
+  [
+   "Company tax 25%",
+   -9.13
+  ],
+  [
+   "Profit per client after company tax (franked dividend)",
+   27.4
+  ]
+ ],
+ "T1_mother": {
+  "pays": 300.0,
+  "rebate": 55.0,
+  "out_of_pocket_p1": 245.0,
+  "out_of_pocket_p2": 295.0,
+  "note": "out of pocket INCLUDES the A$27.85 lab fee (rebate covers A$22.05 of it)"
+ },
+ "T2_midwife_vs_consult": {
+  "consult_revenue_month": 52133.4,
+  "consult_card_fee_month": 886.27,
+  "midwife_wages": 12000.38,
+  "midwife_fixed": 1418.83,
+  "midwife_consumables": 1421.82,
+  "midwife_payroll_tax": 750.31,
+  "midwife_all_in_month": 15591.34,
+  "midwife_surplus_month": 35655.79,
+  "per_client": {
+   "consult": 110.0,
+   "card": 1.87,
+   "midwife_all_in": 32.9,
+   "surplus": 75.23
+  },
+  "consult_hours_needed_week": 36.0,
+  "paid_hours_week": 45.0
+ },
+ "T2_levers": {
+  "a_consult_plus_10": {
+   "before_tax": 21973.14,
+   "after_tax": 16479.85,
+   "change_before": 4658.83,
+   "change_after": 3494.12
+  },
+  "a_consult_plus_20": {
+   "before_tax": 26631.97,
+   "after_tax": 19973.98,
+   "change_before": 9317.66,
+   "change_after": 6988.25
+  },
+  "b_lounge_plus_10": {
+   "before_tax": 21541.85,
+   "after_tax": 16156.39,
+   "change_before": 4227.54,
+   "change_after": 3170.66
+  },
+  "b_lounge_plus_20": {
+   "before_tax": 25769.4,
+   "after_tax": 19327.05,
+   "change_before": 8455.09,
+   "change_after": 6341.32
+  },
+  "d_p2_share_10pct": {
+   "before_tax": 19428.08,
+   "after_tax": 14571.06,
+   "change_before": 2113.77,
+   "change_after": 1585.33
+  },
+  "d_p2_share_30pct": {
+   "before_tax": 23655.63,
+   "after_tax": 17741.72,
+   "change_before": 6341.32,
+   "change_after": 4755.99
+  },
+  "d_p2_share_50pct": {
+   "before_tax": 27883.17,
+   "after_tax": 20912.38,
+   "change_before": 10568.86,
+   "change_after": 7926.65
+  },
+  "e_hours_42": {
+   "before_tax": 18164.35,
+   "after_tax": 13623.26,
+   "change_before": 850.04,
+   "change_after": 637.53
+  },
+  "e_hours_39": {
+   "before_tax": 19014.4,
+   "after_tax": 14260.8,
+   "change_before": 1700.09,
+   "change_after": 1275.07
+  },
+  "e_hours_36": {
+   "before_tax": 19864.45,
+   "after_tax": 14898.34,
+   "change_before": 2550.14,
+   "change_after": 1912.61
+  },
+  "grace_1_20_basis": {
+   "before_tax": 18889.75,
+   "after_tax": 14167.31,
+   "change_before": 1575.44,
+   "change_after": 1181.58
+  },
+  "c_extra_upgrade_A45_per_10pct": {
+   "change_before": 1902.59,
+   "price": 45.0,
+   "note": "illustrative take-up; fits inside the costed 8-staff roster (solver runs 45-minute services); no repo uptake data"
+  }
+ },
+ "T3_targets_before_tax": {
+  "i_repo_35186_before_company_tax": 35186.4,
+  "ii_35186_after_company_tax": 46915.2,
+  "iii_no_midwife_parity_21971": 21971.46,
+  "iii_b_corrected_like_for_like_19334": 19334.04
+ },
+ "T3_prices": {
+  "i_repo_35186_before_company_tax": {
+   "A_consult": {
+    "increase": 38.36,
+    "p1": 338.36,
+    "p2": 388.36,
+    "oop_p1": 283.36,
+    "oop_p2": 333.36,
+    "gap_to_245": 38.36,
+    "gap_to_295": 38.36,
+    "consult_price": 148.36,
+    "lounge_service_p1": 162.15,
+    "profit_before": 35186.59,
+    "profit_after": 26389.94
+   },
+   "B_lounge": {
+    "increase": 42.27,
+    "p1": 342.27,
+    "p2": 392.27,
+    "oop_p1": 287.27,
+    "oop_p2": 337.27,
+    "gap_to_245": 42.27,
+    "gap_to_295": 42.27,
+    "consult_price": 110,
+    "lounge_service_p1": 204.42,
+    "profit_before": 35186.59,
+    "profit_after": 26389.94
+   },
+   "C_split": {
+    "increase": 40.22,
+    "p1": 340.22,
+    "p2": 390.22,
+    "oop_p1": 285.22,
+    "oop_p2": 335.22,
+    "gap_to_245": 40.22,
+    "gap_to_295": 40.22,
+    "consult_price": 130.11,
+    "lounge_service_p1": 182.26,
+    "profit_before": 35186.59,
+    "profit_after": 26389.94
+   }
+  },
+  "ii_35186_after_company_tax": {
+   "A_consult": {
+    "increase": 63.54,
+    "p1": 363.54,
+    "p2": 413.54,
+    "oop_p1": 308.54,
+    "oop_p2": 358.54,
+    "gap_to_245": 63.54,
+    "gap_to_295": 63.54,
+    "consult_price": 173.54,
+    "lounge_service_p1": 162.15,
+    "profit_before": 46916.6,
+    "profit_after": 35187.45
+   },
+   "B_lounge": {
+    "increase": 70.02,
+    "p1": 370.02,
+    "p2": 420.02,
+    "oop_p1": 315.02,
+    "oop_p2": 365.02,
+    "gap_to_245": 70.02,
+    "gap_to_295": 70.02,
+    "consult_price": 110,
+    "lounge_service_p1": 232.17,
+    "profit_before": 46916.6,
+    "profit_after": 35187.45
+   },
+   "C_split": {
+    "increase": 66.62,
+    "p1": 366.62,
+    "p2": 416.62,
+    "oop_p1": 311.62,
+    "oop_p2": 361.62,
+    "gap_to_245": 66.62,
+    "gap_to_295": 66.62,
+    "consult_price": 143.31,
+    "lounge_service_p1": 195.46,
+    "profit_before": 46916.6,
+    "profit_after": 35187.45
+   }
+  },
+  "iii_no_midwife_parity_21971": {
+   "A_consult": {
+    "increase": 10.0,
+    "p1": 310.0,
+    "p2": 360.0,
+    "oop_p1": 255.0,
+    "oop_p2": 305.0,
+    "gap_to_245": 10.0,
+    "gap_to_295": 10.0,
+    "consult_price": 120.0,
+    "lounge_service_p1": 162.15,
+    "profit_before": 21973.14,
+    "profit_after": 16479.85
+   },
+   "B_lounge": {
+    "increase": 11.01,
+    "p1": 311.01,
+    "p2": 361.01,
+    "oop_p1": 256.01,
+    "oop_p2": 306.01,
+    "gap_to_245": 11.01,
+    "gap_to_295": 11.01,
+    "consult_price": 110,
+    "lounge_service_p1": 173.16,
+    "profit_before": 21973.14,
+    "profit_after": 16479.85
+   },
+   "C_split": {
+    "increase": 10.48,
+    "p1": 310.48,
+    "p2": 360.48,
+    "oop_p1": 255.48,
+    "oop_p2": 305.48,
+    "gap_to_245": 10.48,
+    "gap_to_295": 10.48,
+    "consult_price": 115.24,
+    "lounge_service_p1": 167.39,
+    "profit_before": 21973.14,
+    "profit_after": 16479.85
+   }
+  },
+  "iii_b_corrected_like_for_like_19334": {
+   "A_consult": {
+    "increase": 4.34,
+    "p1": 304.34,
+    "p2": 354.34,
+    "oop_p1": 249.34,
+    "oop_p2": 299.34,
+    "gap_to_245": 4.34,
+    "gap_to_295": 4.34,
+    "consult_price": 114.34,
+    "lounge_service_p1": 162.15,
+    "profit_before": 19338.03,
+    "profit_after": 14503.52
+   },
+   "B_lounge": {
+    "increase": 4.79,
+    "p1": 304.79,
+    "p2": 354.79,
+    "oop_p1": 249.79,
+    "oop_p2": 299.79,
+    "gap_to_245": 4.79,
+    "gap_to_295": 4.79,
+    "consult_price": 110,
+    "lounge_service_p1": 166.94,
+    "profit_before": 19338.03,
+    "profit_after": 14503.52
+   },
+   "C_split": {
+    "increase": 4.55,
+    "p1": 304.55,
+    "p2": 354.55,
+    "oop_p1": 249.55,
+    "oop_p2": 299.55,
+    "gap_to_245": 4.55,
+    "gap_to_295": 4.55,
+    "consult_price": 112.28,
+    "lounge_service_p1": 164.43,
+    "profit_before": 19340.4,
+    "profit_after": 14505.3
+   }
+  }
+ },
+ "T3_mixes": {
+  "M1_plus20_lounge": {
+   "p1": 320,
+   "p2": 370,
+   "consult": 110.0,
+   "hours": 45.0,
+   "p2_share": 0.0,
+   "oop_p1": 265.0,
+   "oop_p2": 315.0,
+   "before_tax": 25769.4,
+   "after_tax": 19327.05
+  },
+  "M2_plus20_consult": {
+   "p1": 320,
+   "p2": 370,
+   "consult": 130,
+   "hours": 45.0,
+   "p2_share": 0.0,
+   "oop_p1": 265.0,
+   "oop_p2": 315.0,
+   "before_tax": 26631.97,
+   "after_tax": 19973.98
+  },
+  "M3_plus20_lounge_hours42": {
+   "p1": 320,
+   "p2": 370,
+   "consult": 110.0,
+   "hours": 42,
+   "p2_share": 0.0,
+   "oop_p1": 265.0,
+   "oop_p2": 315.0,
+   "before_tax": 26619.44,
+   "after_tax": 19964.58
+  },
+  "M4_plus20_consult_hours42": {
+   "p1": 320,
+   "p2": 370,
+   "consult": 130,
+   "hours": 42,
+   "p2_share": 0.0,
+   "oop_p1": 265.0,
+   "oop_p2": 315.0,
+   "before_tax": 27482.01,
+   "after_tax": 20611.51
+  },
+  "M5_plus20_lounge_hours42_p2_30pct": {
+   "p1": 320,
+   "p2": 370,
+   "consult": 110.0,
+   "hours": 42,
+   "p2_share": 0.3,
+   "oop_p1": 265.0,
+   "oop_p2": 315.0,
+   "before_tax": 32962.18,
+   "after_tax": 24721.64
+  },
+  "M6_plus20_consult_hours39_p2_50pct": {
+   "p1": 320,
+   "p2": 370,
+   "consult": 130,
+   "hours": 39,
+   "p2_share": 0.5,
+   "oop_p1": 265.0,
+   "oop_p2": 315.0,
+   "before_tax": 38900.92,
+   "after_tax": 29175.69
+  },
+  "M7_plus30_consult_hours42_p2_50pct": {
+   "p1": 330,
+   "p2": 380,
+   "consult": 140,
+   "hours": 42,
+   "p2_share": 0.5,
+   "oop_p1": 275.0,
+   "oop_p2": 325.0,
+   "before_tax": 42709.71,
+   "after_tax": 32032.28
+  }
+ },
+ "recommendation": {
+  "name": "M1: +A$20 on lounge + service (P1 A$320, P2 A$370); approved 45-hour midwife roster kept; plan stays 100% P1; sell Package 2 as the upgrade",
+  "before_tax": 25769.4,
+  "after_tax": 19327.05,
+  "oop_p1": 265.0,
+  "oop_p2": 315.0,
+  "upgrade_if_accountant_agrees": "M2 (same A$20 on the consult instead): +A$862.57 a month before tax",
+  "upgrade_if_anthony_agrees": "midwife paid hours 45 -> 42: +A$850.04 before tax",
+  "upside_not_banked": "each 10% of clients on Package 2 adds about A$2,114 a month before tax"
+ },
+ "T4_ladder": [
+  {
+   "add": 10,
+   "oop_p1": 255,
+   "oop_p2": 305,
+   "lounge_kept_per_client": 8.92,
+   "lounge_month_before": 4227.54,
+   "lounge_profit_before": 21541.85,
+   "lounge_profit_after": 16156.39,
+   "consult_kept_per_client": 9.83,
+   "consult_month_before": 4658.83,
+   "consult_profit_before": 21973.14,
+   "consult_profit_after": 16479.85
+  },
+  {
+   "add": 20,
+   "oop_p1": 265,
+   "oop_p2": 315,
+   "lounge_kept_per_client": 17.84,
+   "lounge_month_before": 8455.09,
+   "lounge_profit_before": 25769.4,
+   "lounge_profit_after": 19327.05,
+   "consult_kept_per_client": 19.66,
+   "consult_month_before": 9317.66,
+   "consult_profit_before": 26631.97,
+   "consult_profit_after": 19973.98
+  },
+  {
+   "add": 30,
+   "oop_p1": 275,
+   "oop_p2": 325,
+   "lounge_kept_per_client": 26.76,
+   "lounge_month_before": 12682.63,
+   "lounge_profit_before": 29996.94,
+   "lounge_profit_after": 22497.7,
+   "consult_kept_per_client": 29.49,
+   "consult_month_before": 13976.49,
+   "consult_profit_before": 31290.8,
+   "consult_profit_after": 23468.1
+  },
+  {
+   "add": 40,
+   "oop_p1": 285,
+   "oop_p2": 335,
+   "lounge_kept_per_client": 35.68,
+   "lounge_month_before": 16910.18,
+   "lounge_profit_before": 34224.49,
+   "lounge_profit_after": 25668.37,
+   "consult_kept_per_client": 39.32,
+   "consult_month_before": 18635.32,
+   "consult_profit_before": 35949.63,
+   "consult_profit_after": 26962.22
+  },
+  {
+   "add": 50,
+   "oop_p1": 295,
+   "oop_p2": 345,
+   "lounge_kept_per_client": 44.6,
+   "lounge_month_before": 21137.72,
+   "lounge_profit_before": 38452.03,
+   "lounge_profit_after": 28839.02,
+   "consult_kept_per_client": 49.15,
+   "consult_month_before": 23294.15,
+   "consult_profit_before": 40608.46,
+   "consult_profit_after": 30456.35
+  },
+  {
+   "add": 60,
+   "oop_p1": 305,
+   "oop_p2": 355,
+   "lounge_kept_per_client": 53.52,
+   "lounge_month_before": 25365.27,
+   "lounge_profit_before": 42679.58,
+   "lounge_profit_after": 32009.69,
+   "consult_kept_per_client": 58.98,
+   "consult_month_before": 27952.98,
+   "consult_profit_before": 45267.29,
+   "consult_profit_after": 33950.47
+  },
+  {
+   "add": 70,
+   "oop_p1": 315,
+   "oop_p2": 365,
+   "lounge_kept_per_client": 62.45,
+   "lounge_month_before": 29597.55,
+   "lounge_profit_before": 46911.86,
+   "lounge_profit_after": 35183.9,
+   "consult_kept_per_client": 68.81,
+   "consult_month_before": 32611.81,
+   "consult_profit_before": 49926.12,
+   "consult_profit_after": 37444.59
+  },
+  {
+   "add": 80,
+   "oop_p1": 325,
+   "oop_p2": 375,
+   "lounge_kept_per_client": 71.37,
+   "lounge_month_before": 33825.1,
+   "lounge_profit_before": 51139.41,
+   "lounge_profit_after": 38354.56,
+   "consult_kept_per_client": 78.64,
+   "consult_month_before": 37270.64,
+   "consult_profit_before": 54584.95,
+   "consult_profit_after": 40938.71
+  },
+  {
+   "add": 90,
+   "oop_p1": 335,
+   "oop_p2": 385,
+   "lounge_kept_per_client": 80.29,
+   "lounge_month_before": 38052.64,
+   "lounge_profit_before": 55366.95,
+   "lounge_profit_after": 41525.21,
+   "consult_kept_per_client": 88.47,
+   "consult_month_before": 41929.47,
+   "consult_profit_before": 59243.78,
+   "consult_profit_after": 44432.83
+  },
+  {
+   "add": 100,
+   "oop_p1": 345,
+   "oop_p2": 395,
+   "lounge_kept_per_client": 89.21,
+   "lounge_month_before": 42280.19,
+   "lounge_profit_before": 59594.5,
+   "lounge_profit_after": 44695.88,
+   "consult_kept_per_client": 98.3,
+   "consult_month_before": 46588.3,
+   "consult_profit_before": 63902.61,
+   "consult_profit_after": 47926.96
+  }
+ ],
+ "T4_r18_confirm": {
+  "r18_per_client": 17.84,
+  "r18_month": 8455.09,
+  "r18_profit_before_at_320": 26250.39,
+  "r19_profit_before_at_320": 25769.4
+ },
+ "payroll_basis": {
+  "grace_1_20": {
+   "midwife_wages": -10543.26,
+   "before_tax": 18889.75,
+   "after_tax": 14167.31
+  },
+  "theodore_1_366": {
+   "midwife_wages": -12000.38,
+   "before_tax": 17314.31,
+   "after_tax": 12985.73
+  },
+  "oncost_parts": {
+   "super": 0.12,
+   "workers_comp": 0.017,
+   "leave_loading": 0.01346,
+   "leave_grossup": 1.1872,
+   "total": 1.3658
+  }
+ },
+ "fact_check_centre": 0
+}

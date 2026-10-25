@@ -36,6 +36,8 @@
 
 **Status of the figures below:** the package prices in section 2 (A$250 and A$300) are the previous price set; the decided prices are in this section. Headcount in section 4 does not yet list the 2 part-time midwives plus 1 casual.
 
+**Financial Center of Truth, 2026-10-26 (pointer only):** every money variable, the whole-venture monthly P&L on the locked answers and the banned stale values list live in [docs/FINANCIAL-CENTER-OF-TRUTH.md](FINANCIAL-CENTER-OF-TRUTH.md), written by docs/overhaul-2026-10-19/L14-r19/theodore_r19.py. No calculator number or master figure in this file was changed.
+
 ---
 
 ## 00. OVERHAUL DECISIONS, 2026-10-16 (Anthony): Read This First, it overrides anything below

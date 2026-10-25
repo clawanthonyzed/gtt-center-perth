@@ -1,0 +1,142 @@
+generated_by: docs/overhaul-2026-10-19/L14-r19/theodore_r19.py
+date: '2026-10-26'
+currency: AUD
+prices:
+  package_1: 300.0
+  package_2: 350.0
+  gst_inside: true
+  planning_mix_p1: 1.0
+  consult_medical_gst_free: 110.0
+  lab_paid_to_lab_not_gtt: 27.85
+  lounge_service_p1_taxable: 162.15
+  lounge_service_p2_taxable: 212.15
+  gtt_receives_p1_incl_gst: 272.15
+  gtt_receives_p1_ex_gst: 257.41
+  gtt_receives_p2_incl_gst: 322.15
+  gtt_receives_p2_ex_gst: 302.86
+  pm_average_transaction_incl_gst: 117.0
+medicare:
+  consult_item: '82105'
+  consult_minutes: 20
+  consult_rebate: 32.95
+  test_item: '66548'
+  test_rebate: 16.95
+  collection_item: 73928 (AskMBS to confirm vs 73938)
+  collection_rebate: 5.1
+  total_rebate: 55.0
+  out_of_pocket_p1: 245.0
+  out_of_pocket_p2: 295.0
+  rebate_paid_to: mother, by Medicare, never through GTT
+  consult_timing: 1 to 28 days before the test, booked with the test
+volumes:
+  am_clients_day: 18
+  am_clients_month: 473.94
+  days: Mon-Sat (22 weekdays + 4.33 Saturdays a month)
+  draws: 07:00 to 10:30, 25-minute pair cadence
+  pm_transactions_month: 210.13
+  pm_sessions_day: 10 weekday, 5 Saturday (Model E)
+  services_end: '18:00'
+staffing:
+  am_service_staff: 8
+  am_mix: 4 massage and beauty, 2 nails, 2 hair
+  phlebotomists: 2 at 10-18 booked, 1 at 9 or fewer, none PM
+  pm_service_staff: 4
+  pm_hours: 3-hour casual floor weekday
+  venue_manager: Mon-Fri 06:30-15:00 (repo costs 07:00-15:00 at A$40/h; extra 0.5 h added)
+  saturday_cover: senior staff member already rostered (no loading costed)
+  hosts: 0
+  midwives: 2 permanent part-time, 22.5 h each, fortnightly block Mon-Wed / Thu-Sat, 09:00 start, + 1 casual for leave
+  midwife_paid_hours_week: 45.0
+  consult_rooms: 1
+  collection_rooms: 2
+  adaptive_rostering: service staff and phlebotomists
+rates:
+  midwife_award: Nurses Award 2020 RN L2 pp4 A$41.59 weekday, 150% Saturday (E)
+  midwife_blended_hour: 45.05666666666667
+  oncost_used: 1.3658
+  oncost_sensitivity_grace: 1.2
+  super: 0.12
+  workers_comp: 0.017
+  card_fee: 1.7% + A$0.30 a transaction (E; repo lists Tyro 1.4% / Square 1.6%, provider not chosen)
+  payroll_tax: WA 5.5%, A$1m threshold tapering, one group (E, check RevenueWA)
+  company_tax: 0.25
+monthly_pnl_locked:
+  rev_lounge_service_am_ex_gst: 69863.5
+  rev_pm_ex_gst: 22350.34
+  rev_consult_gst_free: 52133.4
+  revenue_total_ex_gst: 144347.23
+  repo_payroll: -93595.63
+  repo_operating_expenses: -14288.34
+  less_gst_credits: 1262.58
+  card_fees: -2336.52
+  card_fees_pm: -480.99
+  midwife_wages: -12000.38
+  midwife_fixed_consumables: -2840.65
+  venue_manager_0630: -500.28
+  payroll_tax_group: -1344.04
+  three_company: -908.67
+  profit_before_company_tax: 17314.31
+  company_tax_25: -4328.58
+  profit_after_company_tax: 12985.73
+  gst_collected_am: 6985.88
+  gst_collected_pm: 2235.03
+baseline_no_midwife_like_for_like_before_tax: 19334.04
+repo_master_net_unchanged: 35186.4
+per_client_waterfall_p1:
+- - Mother pays at booking (Package 1)
+  - 300.0
+- - To the lab, paid by the mother to the lab (never GTT money)
+  - -27.85
+- - Reaches GTT (consult A$110 + lounge + service A$162.15)
+  - 272.15
+- - GST inside the lounge + service part, passed to the ATO
+  - -14.74
+- - Card fee on GTT's A$272.15
+  - -4.93
+- - GTT keeps from the morning package
+  - 252.48
+- - Plus afternoon sales per morning client (ex GST, after card fee)
+  - 46.14
+- - Less repo staff (8 AM service, 2 phlebotomists, 4 PM, venue manager 07:00)
+  - -197.48
+- - Less repo running costs (rent, insurance, overheads, supplies), after GST credits
+  - -27.48
+- - Less midwife wages
+  - -25.32
+- - Less midwife fixed costs and consumables
+  - -5.99
+- - Less venue manager 06:30
+  - -1.06
+- - Less payroll tax (whole group)
+  - -2.84
+- - Less three-company running cost
+  - -1.92
+- - Profit per client before company tax
+  - 36.53
+- - Company tax 25%
+  - -9.13
+- - Profit per client after company tax (franked dividend)
+  - 27.4
+banned_stale_values:
+- 'A$99.40 rebate: that is a 40-minute consult (82110). The 20-minute consult is 82105; total rebate A$55.00'
+- 'A$222.15: old R15 example at the A$250 all-in price. GTT receives A$272.15 (P1) / A$322.15 (P2)'
+- 'A$338 break-even: R15 volumes, retired'
+- R17 break-even prices on old inputs, retired
+- No hosts. The venue manager does reception and welcome
+- Venue manager starts 06:30 (07:00 is the first draw)
+- Say 'consult + lounge + service'
+- One consult room
+- 'Fortnightly block: Mon-Wed / Thu-Sat, swap each fortnight'
+- Lab A$27.85 is paid by the mother straight to the lab
+- Out of pocket is A$245 (P1) / A$295 (P2) after the A$55 rebate
+- R17 headline, superseded
+- R18 headline, superseded by R19 (afternoon card fees added)
+- Midwife paid hours are 45 a week on the approved roster
+- Receptionist/host add-on, removed
+- Volume is 473.94 morning clients a month
+- The consult is 1 to 28 days BEFORE the test
+- Consult is 20 minutes
+not_in_pnl:
+  post_test_discount_10pct: adopted 2026-10-17, repo estimate -A$1,386.27 a month at 25% take-up, not deducted (R)
+  senior_cover_loading: not in repo
+  casual_midwife_minimum_engagement: inside the 1.366 leave gross-up, not separately quoted
