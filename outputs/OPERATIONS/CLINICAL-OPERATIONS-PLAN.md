@@ -417,3 +417,27 @@ Base: https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/
 | S37 | [PATHOLOGY-PARTNER-ECONOMICS.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/research/PATHOLOGY-PARTNER-ECONOMICS.md) |
 | S38 | [FOUNDER-CFO-ANALYSIS.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/outputs/FOUNDER-CFO-ANALYSIS.md) |
 | S39 | [profit-loss-tables.md](https://github.com/clawanthonyzed/gtt-center-perth/blob/main/docs/profit-loss-tables.md) |
+
+---
+
+## 13. Founder Rules, 2026-10-25
+
+**Founder Rule, 2026-10-25 (Anthony's 24 founder interview answers).** Source: docs/overhaul-2026-10-19/L13-r18/FOUNDER-INTERVIEW-LOCKED.md. Tag: `[DECIDED, Anthony, 2026-10-25]`. Added on top. No existing calculator number, table figure or model output in this file was changed.
+
+1. **Package contents.** Package 1 includes 2 services of 30 minutes each. Package 2 includes 2 services of up to 45 minutes each (1 x 30 + 1 x 45, 2 x 30, or 2 x 45). Services fit between draws and never interrupt a draw; draws happen at fixed times. Both packages include lounge access and approved beverages during the draw. _Note: Matches the repo's existing package shapes; the R17 conflict ('Package 1 = one service') is closed._
+5. **Midwife consult.** The midwife consult is short (20 minutes). The client comes only for the GTT referral. _Note: Consult capacity check: docs/overhaul-2026-10-19/L13-r18/ROSTER-R18.md._
+6. **Lab payment split.** Lab payment is split online if possible. Backup: the client pays the lab directly through a link. _Note: Consistent with Option Y (lab money does not sit in GTT). Mechanism is a Theodore R18 design item; no fee figures invented._
+8. **Collection item number.** Ask AskMBS first whether the collection item is 73928 or 73938. _Note: Until AskMBS answers, the repo's 73928 (A$5.95) stays as the working figure. Not a statement of law._
+12. **Midwives.** 2 permanent part-time midwives plus 1 casual for leave. They work a fortnightly block: one works Monday to Wednesday and the other Thursday to Saturday for the fortnight, then they swap (or swap Wednesday for Saturday). To be discussed with the staff when hiring. _Note: Supersedes the R17 alternating-day grid. Costing in ROSTER-R18.md. Casual cost: not in repo._
+13. **Senior cover.** Senior cover (afternoon gap, Saturday venue manager) is determined once the venue is operational. _Note: No loading is costed (not in repo)._
+14. **Venue manager start.** The venue manager arrives at 06:30. Clients arrive at 06:50, with no wiggle room for late clients. The first draw is 07:00. _Note: Repo has 07:00. R17 costed 06:30 as +A$500.28 a month loaded (outside the repo net)._
+15. **Midwife start.** Midwives start at 09:00. _Note: Catherine r16 flagged no clinician on site 07:00 to 09:00; Anthony accepts 09:00._
+16. **Operating hours.** 18 clients in the morning, first draws 07:00 to 10:30. Services must finish before 18:00, when the doors shut. _Note: Same 18-client, 07:00 start model as the repo._
+17. **Consult rooms.** One consult room (one midwife is rostered each day).
+18. **Consult room size.** The consult room is the same size as the collection rooms. _Note: Room size in square metres: not in repo._
+19. **Collection rooms.** Two collection rooms with one chair in each. _Note: The architect draws; agents write words only._
+20. **Lab outreach.** Contact all 4 labs at once, AFTER more information is received from the government bodies. Start fresh: do not use contacts already spoken to. _Note: Lab emails are sent only after government replies._
+21. **Outreach order.** Approved order: government first, then labs.
+22. **Stand for draw.** 'Stand for draw' follows the rulings of the pathology governing bodies and also the partner lab's guidance. _Note: The seated rule is set by the lab and the governing bodies, not by GTT._
+
+**Status:** sections above that say a lab runs the room, or that describe Monday to Friday midwives, are superseded where they clash with these rules.

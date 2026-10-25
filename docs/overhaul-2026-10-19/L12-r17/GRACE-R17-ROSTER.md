@@ -28,6 +28,8 @@ Conflict on the venue manager start time, said plainly: the repo says 07:00 to 1
 5. Pay loading for the senior staff member who covers Saturday and the afternoon gap: not in repo. Not costed.
 6. Herbal tea: repo onboarding.md line 291 allows tea after the first draw; the PathWest sheet and Catherine r16 say water only until the last draw. Lab question.
 
+> **SUPERSEDED 2026-10-25 (Anthony, Round 18):** the A and B alternating-day grid below is replaced by the fortnightly block roster in docs/overhaul-2026-10-19/L13-r18/ROSTER-R18.md. Totals and cost are unchanged.
+
 ## 3. Weekly grid: two midwives, Monday to Saturday, about 3 days each
 
 Suggested even split. 9 to 5 is 8 hours on site and 7.5 paid hours (30 minute unpaid break is my assumption; the repo is silent).

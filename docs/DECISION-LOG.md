@@ -202,3 +202,11 @@ Anthony: "We will stick with pregnancy only for the whole clinic." Non-pregnancy
 
 ## 2026-10-20 - Project name is a placeholder; fertility clinics; letters personal (Anthony, Round 11)
 Anthony: "GTT Center Perth" is an unregistered internal placeholder. No ABN, company or address exists. Official letters go from Anthony Zed personally (Founder and Private Healthcare Investor) with the working title only, and must not claim a Pty Ltd, ABN, lease or address. Fertility clinics are a target audience for partnership; GTT serves expecting mothers only (item 66548). Note: Anthony's 2026-09-19 decision that GTT employs both phlebotomists conflicts with Medicare s16A(5AB)(c); to be re-decided.
+
+## 2026-10-25: Founder interview, 24 answers locked (Anthony, Round 18)
+
+**Decision (Anthony):** the 24 founder interview answers are locked as Founder Rules in docs/CURRENT-STATE.md (section 000), outputs/OPERATIONS/CLINICAL-OPERATIONS-PLAN.md (section 13) and outputs/FINANCIALS/3-WAY-FINANCIAL-MODEL-AUD.md (last section). Full list with the file each went into: docs/overhaul-2026-10-19/L13-r18/FOUNDER-INTERVIEW-LOCKED.md.
+
+Headlines: Package 1 A$300 (2 x 30 min services) and Package 2 A$350 (2 services up to 45 min), GST inside, plan on 100 percent Package 1; 20 minute midwife consult; one consult room; two collection rooms with one chair each; venue manager 06:30, clients 06:50, first draw 07:00, midwives 09:00; 2 permanent part-time midwives (fortnightly block, then swap) plus 1 casual; government emails first, then all 4 labs at once with fresh contacts; payroll tax accepted.
+
+**Not changed:** every calculator number and model output. The models still show the previous price set (A$250 and A$300) until Theodore re-runs the repo calculators (R18). **Open:** answer 23 (refund cap) is pending Theodore R18; answer 8 (collection item 73928 or 73938) waits for AskMBS.

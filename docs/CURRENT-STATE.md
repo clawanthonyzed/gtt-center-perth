@@ -13,6 +13,31 @@
 
 ---
 
+## 000. FOUNDER RULES, 2026-10-25 (Anthony): Read This First, it overrides anything below
+
+**Founder Rule, 2026-10-25 (Anthony's 24 founder interview answers).** Source: docs/overhaul-2026-10-19/L13-r18/FOUNDER-INTERVIEW-LOCKED.md. Tag: `[DECIDED, Anthony, 2026-10-25]`. Added on top. No existing calculator number, table figure or model output in this file was changed.
+
+1. **Package contents.** Package 1 includes 2 services of 30 minutes each. Package 2 includes 2 services of up to 45 minutes each (1 x 30 + 1 x 45, 2 x 30, or 2 x 45). Services fit between draws and never interrupt a draw; draws happen at fixed times. Both packages include lounge access and approved beverages during the draw. _Note: Matches the repo's existing package shapes; the R17 conflict ('Package 1 = one service') is closed._
+2. **Package prices.** Package 1 is A$300. Package 2 is A$350. _Note: The A$250 and A$300 figures in the repo (CURRENT-STATE section 2) are the OLD price set. Model outputs were NOT recomputed._
+3. **GST.** GST is inside the price (A$300 and A$350 are GST-inclusive). _Note: Not in the repo before this lock as a package rule._
+4. **Planning mix.** Plan on 100 percent of clients taking Package 1. _Note: Same idea as the repo's conservative Package 1 standing instruction, now at A$300._
+5. **Midwife consult.** The midwife consult is short (20 minutes). The client comes only for the GTT referral. _Note: Consult capacity check: docs/overhaul-2026-10-19/L13-r18/ROSTER-R18.md._
+8. **Collection item number.** Ask AskMBS first whether the collection item is 73928 or 73938. _Note: Until AskMBS answers, the repo's 73928 (A$5.95) stays as the working figure. Not a statement of law._
+10. **Ownership of Holdings.** GTT Holdings is owned directly by Anthony and his partner. _Note: Route B (franked dividends direct, no wage) is unchanged._
+11. **Directors.** The directors are Anthony and his partner. _Note: Stated by Anthony 2026-10-25. The MRCA 10-hour work test applies to any remunerative work Anthony does as a director: verify with DVA in writing._
+12. **Midwives.** 2 permanent part-time midwives plus 1 casual for leave. They work a fortnightly block: one works Monday to Wednesday and the other Thursday to Saturday for the fortnight, then they swap (or swap Wednesday for Saturday). To be discussed with the staff when hiring. _Note: Supersedes the R17 alternating-day grid. Costing in ROSTER-R18.md. Casual cost: not in repo._
+13. **Senior cover.** Senior cover (afternoon gap, Saturday venue manager) is determined once the venue is operational. _Note: No loading is costed (not in repo)._
+14. **Venue manager start.** The venue manager arrives at 06:30. Clients arrive at 06:50, with no wiggle room for late clients. The first draw is 07:00. _Note: Repo has 07:00. R17 costed 06:30 as +A$500.28 a month loaded (outside the repo net)._
+15. **Midwife start.** Midwives start at 09:00. _Note: Catherine r16 flagged no clinician on site 07:00 to 09:00; Anthony accepts 09:00._
+16. **Operating hours.** 18 clients in the morning, first draws 07:00 to 10:30. Services must finish before 18:00, when the doors shut. _Note: Same 18-client, 07:00 start model as the repo._
+17. **Consult rooms.** One consult room (one midwife is rostered each day).
+19. **Collection rooms.** Two collection rooms with one chair in each. _Note: The architect draws; agents write words only._
+24. **Payroll tax.** Payroll tax is a new cost and Anthony accepts it. _Note: Theodore's R17 approximation was about A$632.14 a month on the new wages; not in the repo net._
+
+**Status of the figures below:** the package prices in section 2 (A$250 and A$300) are the previous price set; the decided prices are in this section. Headcount in section 4 does not yet list the 2 part-time midwives plus 1 casual.
+
+---
+
 ## 00. OVERHAUL DECISIONS, 2026-10-16 (Anthony): Read This First, it overrides anything below
 
 1. **25-minute pair cadence ONLY.** First booking 07:00; pairs at 07:00, 07:25, 07:50 and so on; last first draw 10:20 (07:00 + 8 x 25 minutes); 9 pairs = 18 clients a morning at most; bookings 2 to 4 weeks ahead. No other cadence exists. Any text below that describes a different cadence is **SUPERSEDED** and must not be used.

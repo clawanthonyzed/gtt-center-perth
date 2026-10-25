@@ -896,3 +896,22 @@ The earlier contingency for a slower cadence no longer applies. With the 25-minu
 ---
 
 *Arithmetic: every table above was regenerated and re-summed with a script (row sums, column totals, cashflow roll-forward and balance sheet checks all tie to the cent). The roll-forward rules were first run on the earlier ramped inputs and reproduced the earlier peak funding (A$267,771.03), payback (M11 / M15) and Year 1 (A$322,014.93) exactly, and the steady-state month reproduces the repo's A$107,883.97 cost and A$35,186.40 net exactly. Repo source files were read only.*
+
+---
+
+## Founder Rules, 2026-10-25 (inputs decided, not yet modelled)
+
+**Founder Rule, 2026-10-25 (Anthony's 24 founder interview answers).** Source: docs/overhaul-2026-10-19/L13-r18/FOUNDER-INTERVIEW-LOCKED.md. Tag: `[DECIDED, Anthony, 2026-10-25]`. Added on top. No existing calculator number, table figure or model output in this file was changed.
+
+1. **Package contents.** Package 1 includes 2 services of 30 minutes each. Package 2 includes 2 services of up to 45 minutes each (1 x 30 + 1 x 45, 2 x 30, or 2 x 45). Services fit between draws and never interrupt a draw; draws happen at fixed times. Both packages include lounge access and approved beverages during the draw. _Note: Matches the repo's existing package shapes; the R17 conflict ('Package 1 = one service') is closed._
+2. **Package prices.** Package 1 is A$300. Package 2 is A$350. _Note: The A$250 and A$300 figures in the repo (CURRENT-STATE section 2) are the OLD price set. Model outputs were NOT recomputed._
+3. **GST.** GST is inside the price (A$300 and A$350 are GST-inclusive). _Note: Not in the repo before this lock as a package rule._
+4. **Planning mix.** Plan on 100 percent of clients taking Package 1. _Note: Same idea as the repo's conservative Package 1 standing instruction, now at A$300._
+6. **Lab payment split.** Lab payment is split online if possible. Backup: the client pays the lab directly through a link. _Note: Consistent with Option Y (lab money does not sit in GTT). Mechanism is a Theodore R18 design item; no fee figures invented._
+7. **Interest on prepaid money.** GTT earns interest on prepaid package money. _Note: No interest rate or balance is in the repo, so no interest income is modelled. Only GTT's own package money; the lab portion must not be held (Option Y). Theodore and Catherine to confirm._
+9. **Tax flags.** Keep tax flags only on the three big ones: tax consolidation, GST group, lab money. _Note: Other tax flags are dropped from the model's open-item lists._
+12. **Midwives.** 2 permanent part-time midwives plus 1 casual for leave. They work a fortnightly block: one works Monday to Wednesday and the other Thursday to Saturday for the fortnight, then they swap (or swap Wednesday for Saturday). To be discussed with the staff when hiring. _Note: Supersedes the R17 alternating-day grid. Costing in ROSTER-R18.md. Casual cost: not in repo._
+23. **Refund cap.** ANSWER PENDING Theodore R18. Anthony is unsure whether the cap applies to GTT refunds or to Medicare refunds. Not decided; no figure invented. _Note: Open._
+24. **Payroll tax.** Payroll tax is a new cost and Anthony accepts it. _Note: Theodore's R17 approximation was about A$632.14 a month on the new wages; not in the repo net._
+
+**Model status (read this):** the tables in this file still use Package 1 at A$250 and Package 2 at A$300 and the R17 steady-state figures. Answers 2, 3, 4, 12 and 24 change the inputs (A$300 GST-inclusive Package 1 at 100 percent, two part-time midwives, payroll tax). The repo calculators were not re-run in this lock-in. The re-run is a Theodore R18 task using the repo's own tools (tools/cost_ramp_model.py and the AM solvers). Until then, treat the figures above this section as the previous price set.
