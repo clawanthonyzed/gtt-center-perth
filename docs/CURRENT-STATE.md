@@ -33,6 +33,7 @@
 17. **Consult rooms.** One consult room (one midwife is rostered each day).
 19. **Collection rooms.** Two collection rooms with one chair in each. _Note: The architect draws; agents write words only._
 24. **Payroll tax.** Payroll tax is a new cost and Anthony accepts it. _Note: Theodore's R17 approximation was about A$632.14 a month on the new wages; not in the repo net._
+25. **Consult timing and booking (Anthony, 2026-10-26).** The midwife consult happens 1 to 28 days BEFORE the test, on a different day from the test, because the client needs the consult to get the referral. The client picks BOTH the consult slot and the test date and time at booking. The consult produces the referral (the pathology request). No consult, no test. Never ask this again. _Note: supersedes the open question in ROSTER-R18 section 5. Full flow, capacity and booking-engine rules: docs/overhaul-2026-10-19/L14-r19/WORKFLOW-LOCKED-R19.md._
 
 **Status of the figures below:** the package prices in section 2 (A$250 and A$300) are the previous price set; the decided prices are in this section. Headcount in section 4 does not yet list the 2 part-time midwives plus 1 casual.
 
