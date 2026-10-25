@@ -28,14 +28,14 @@ Files: **CS** = docs/CURRENT-STATE.md (new section 000), **COP** = outputs/OPERA
 | 20 | Lab outreach | Contact all 4 labs at once, AFTER more information is received from the government bodies. Start fresh: do not use contacts already spoken to. | COP, DL | Lab emails are sent only after government replies. |
 | 21 | Outreach order | Approved order: government first, then labs. | COP, DL |  |
 | 22 | Stand for draw | 'Stand for draw' follows the rulings of the pathology governing bodies and also the partner lab's guidance. | COP, DL | The seated rule is set by the lab and the governing bodies, not by GTT. |
-| 23 | Refund cap | ANSWER PENDING Theodore R18. Anthony is unsure whether the cap applies to GTT refunds or to Medicare refunds. Not decided; no figure invented. | FIN, DL | Open. |
+| 23 | Refund cap | ANSWER PENDING Theodore R18. Anthony is unsure whether the cap applies to GTT refunds or to Medicare refunds. Theodore's R18 explanation now exists (docs/overhaul-2026-10-19/L13-r18/THEODORE-R18.md, Q23: Medicare pays the rebate; GTT refunds only its own fees and never repays a rebate; marked unverified, with terms for Catherine). Anthony has not yet accepted it, and no cap figure is decided. | FIN, DL | Open. |
 | 24 | Payroll tax | Payroll tax is a new cost and Anthony accepts it. | CS, FIN, DL | Theodore's R17 approximation was about A$632.14 a month on the new wages; not in the repo net. |
 
 ## Conflicts and open items
 
-1. Prices: repo tables still show A$250 and A$300; locked prices are A$300 and A$350 GST-inclusive. Model not recomputed (Theodore R18).
+1. Prices: repo tables still show A$250 and A$300; locked prices are A$300 and A$350 GST-inclusive. Master model tables not updated; Theodore R18 (THEODORE-R18.md) has run the repo model on the locked answers, awaiting Anthony's approval to copy.
 2. Answer 7 (interest on prepaid money) must not touch the lab portion (Option Y). Theodore and Catherine to confirm.
 3. Answer 8: until AskMBS replies, 73928 (A$5.95) stays as the working collection item. AskMBS is asked in the follow-up, not the introduction email.
 4. Answer 11: Anthony as a director and the MRCA 10-hour test: verify with DVA in writing.
-5. Answer 23: ANSWER PENDING Theodore R18. Not decided.
+5. Answer 23: ANSWER PENDING Theodore R18. His Q23 explanation is in THEODORE-R18.md; Anthony has not accepted it; no cap decided.
 6. Venue manager 06:30 vs repo 07:00, and the casual midwife cost, are outside the repo net.

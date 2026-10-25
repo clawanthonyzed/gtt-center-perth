@@ -15,7 +15,7 @@ Author: Grace (Operations Manager, GTT Center Perth). Date: 2026-10-25. Stand-al
 5. Steps marked **Anthony, personally** are the ones only you can do: identity, signatures, money, accounts, or a fact only you hold. Everything else is drafted or run by an agent or an outside professional.
 6. Each step's status below starts as "[ ]". Tick it by changing it to "[x]" when its "Done when" is true. Steps already done are pre-ticked.
 
-Count: 116 steps in total (111 from R17 plus 5 new), 2 already done, 14 tagged CAN START NOW, 38 need you personally.
+Count: 116 steps in total (111 from R17 plus 5 new), 2 already done, 14 tagged CAN START NOW, 40 need you personally.
 
 ## 2. Steps Anthony can start TODAY (no money, no company needed), ranked
 
@@ -25,7 +25,7 @@ Count: 116 steps in total (111 from R17 plus 5 new), 2 already done, 14 tagged C
 | 2 | 9, 10, 12 | Send that same email to the Department pathology team, AskMBS and WA Health licensing, by email, right after step 5. Services Australia (step 11) has no inbox; send it by post or wait for the forward. | Starts the clock on the slowest replies. Costs nothing. |
 | 3 | 3 | Give the final word on the three-company structure (ownership and directors are already locked). | Unlocks the accountant and the entity steps later. A decision only. |
 | 4 | 1 | Approve the fortnightly midwife roster and say when the midwife consult happens (before or after the draw). | Unlocks the position descriptions, hiring and the architect brief. A decision only. |
-| 5 | 112 | Ask Theodore to re-run the model with the locked prices and roster (an agent task, free). | The model still shows the old A$250 and A$300. You will want the true profit before you commit money. |
+| 5 | 112 | Read Theodore R18 (already run on the locked prices and roster) and say whether to copy it into the master model. | The model still shows the old A$250 and A$300. You will want the true profit before you commit money. |
 | 6 | 21 | Ask Reed to build the four-lab comparison (PathWest, WDP, Saturn, ACL). Desk work, free. | Ready when the government replies arrive, so the lab emails go straight out. |
 | 7 | 19 | Ask Catherine for the Fair Work question script (awards for midwife, phlebotomist, therapists and the 06:30 start). | Costs nothing and settles pay rates that the roster depends on. |
 | 8 | 6 | Set up your own PRODA account (free, needs your identity documents). | Needed later for provider numbers and HPOS. It takes minutes and needs no company. |
@@ -639,16 +639,16 @@ Not on today's list because they cost money or need a company: steps 33 (account
 
 ### New steps from the locked answers (Round 18)
 
-- [ ] **Step 112.** Re-run the repo calculators with the locked inputs (Package 1 A$300 and Package 2 A$350 GST-inclusive, 100 percent Package 1, two part-time midwives, venue manager 06:30, payroll tax). Update the model tables only with Anthony's say
+- [ ] **Step 112.** Review Theodore R18 (THEODORE-R18.md), which re-ran the repo model on the locked inputs (Package 1 A$300 and Package 2 A$350 GST-inclusive, 100 percent Package 1, two part-time midwives, venue manager 06:30, payroll tax). Copy results into the master model tables only with Anthony's say
   - **Start:** CAN START NOW
-  - **Owner:** Theodore | **Who does it:** Theodore (agent, draft only)
-  - **Cost:** A$0 | **Time:** 1 working days
-  - **Done when:** New model outputs on GitHub and Anthony approves the change
-- [ ] **Step 113.** Answer the refund cap question: does the cap apply to GTT refunds or to Medicare refunds (Anthony is unsure). No figure invented
+  - **Owner:** Anthony | **Who does it:** Anthony, personally
+  - **Cost:** A$0 | **Time:** 0.3 working days
+  - **Done when:** Anthony says copy or do not copy
+- [ ] **Step 113.** Accept or correct Theodore R18 Q23 on refunds (GTT refunds only its own fees; Medicare pays the rebate). The refund cap itself is still undecided; no figure invented
   - **Start:** CAN START NOW
-  - **Owner:** Theodore | **Who does it:** Theodore (agent, draft only)
-  - **Cost:** A$0 | **Time:** 0.5 working days
-  - **Done when:** Answer on GitHub and Anthony agrees
+  - **Owner:** Anthony | **Who does it:** Anthony, personally
+  - **Cost:** A$0 | **Time:** 0.1 working days
+  - **Done when:** Anthony accepts or corrects
 - [ ] **Step 114.** Say whether the pathology request must exist before the draw, and what that means for when the midwife consult happens
   - **Start:** CAN START NOW
   - **Owner:** Catherine | **Who does it:** Catherine (agent, draft only)
@@ -688,4 +688,4 @@ Not on today's list because they cost money or need a company: steps 33 (account
 - No calls for first introductions (steps 18, 23). Step 20 (Fair Work call) is unchanged because Fair Work is not on the introduction list.
 - No hosts: the venue manager does welcome and reception. Senior cover is decided once operational (step 85).
 - Midwives: 2 permanent part-time plus 1 casual, fortnightly block (step 81).
-- New steps 112 to 116: re-run the model, refund cap answer, request-before-draw question, consult timing, AskMBS follow-up on item 73928 or 73938.
+- New steps 112 to 116: review Theodore R18 (model re-run), refund answer, request-before-draw question, consult timing, AskMBS follow-up on item 73928 or 73938.
