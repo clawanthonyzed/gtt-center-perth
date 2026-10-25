@@ -1,0 +1,36 @@
+{
+ "slug": "gtt-r19-03-midwife-hiring-pack",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft a compact midwife hiring pack for Anthony to review. No contract is sent or signed.",
+ "inputs": [
+  {
+   "label": "Midwife roster and hours",
+   "path": "docs/overhaul-2026-10-19/L13-r18/ROSTER-R18.md",
+   "start": 9,
+   "end": 48
+  },
+  {
+   "label": "Midwife demand check",
+   "path": "docs/overhaul-2026-10-19/L14-r19/WORKFLOW-LOCKED-R19.md",
+   "start": 51,
+   "end": 80
+  }
+ ],
+ "inline_inputs": [
+  {
+   "label": "Midwife rules already decided (Catherine R16 and Anthony)",
+   "text": "Each midwife needs her own Medicare participating midwife provider number for the venue. A participating midwife can request pathology item 66548 (not 66542). Midwives are employed by GTT Medical Services. Award class for pay is unconfirmed and not checked by an accountant. Casual midwife cost: NOT IN REPO. Midwives start at 09:00; no clinician is on site 07:00 to 09:00 and Anthony accepts that."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1 (compact version of four items)",
+  "format": "Four short sections. 1) Screening sheet: a table of at most 8 rows (check, what to see, pass or fail). 2) Interview guide: at most 8 numbered questions. 3) Position description: at most 14 lines. 4) Employment contract outline: at most 10 bullets, each ending lawyer to check.",
+  "length": "at most 70 lines in total",
+  "write_only": "the four sections and Questions for Anthony",
+  "do_not_write": "pay rates not in the inputs, a Monday to Friday roster, a 48.6 hour week, full contract wording"
+ },
+ "extra_checks": [
+  "Hours are 22.5 paid hours each for the two permanent part-time midwives (45 a week), fortnightly block, 09:00 to 17:00.",
+  "Registration checks name the Ahpra public register and the Medicare provider number; insurance minimums are NOT IN REPO."
+ ]
+}

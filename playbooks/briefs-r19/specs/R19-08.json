@@ -1,0 +1,26 @@
+{
+ "slug": "gtt-r19-08-results-line-patch",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write a patch proposal that rewrites the old result-communication lines. You change nothing yourself.",
+ "inline_inputs": [
+  {
+   "label": "The five old lines found in the repo (file and line)",
+   "text": "agents/grace.md line 19: GTT Center Perth never communicates clinical results.\nagents/ivy.md line 50: GTT procedure is in-house (phlebotomist); lab analysis is offsite (WDP/PathWest); Ivy never communicates test results.\ndocs/onboarding.md line 150: GTT Center Perth does not communicate blood test results. Results are sent by WDP/PathWest directly to the referring GP. Clients must follow up with their GP.\ndocs/pathology-partnership-brief.md line 155: GTT Center Perth never communicates results to patients. Results go WDP to GP to patient.\ndocs/consent-form.md section 1: We do NOT communicate your GTT results to you. Results are sent by the laboratory to your referring doctor."
+  },
+  {
+   "label": "The locked positive-result pathway (Anthony, R15 and R19)",
+   "text": "The lab sends the result to the requesting midwife. Urgent results are phoned within 1 hour. The midwife phones the woman. A short results consult happens within 3 business days. A referral letter is issued within 2 business days. GTT does not take over diabetes care. The midwife is employed by GTT Medical Services. The lab, not GTT, analyses the sample."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "A table with one row per old line (file, line, old text, new text, one-line reason). Then 3 lines on what the owner of each file should check.",
+  "length": "at most 50 lines in total",
+  "write_only": "the patch table and the check lines",
+  "do_not_write": "edits to any file, any clinical advice, any new timing not in the inputs"
+ },
+ "extra_checks": [
+  "Every new line keeps the fact that the lab analyses the sample and GTT does not diagnose.",
+  "Five rows, one per old line."
+ ]
+}

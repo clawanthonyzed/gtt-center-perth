@@ -1,0 +1,36 @@
+{
+ "slug": "gtt-r19-06-booking-flow-consent-text",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft the online booking steps and the plain-English consent text. Nothing is published.",
+ "inputs": [
+  {
+   "label": "Booking and test-day steps 1 to 4 (journey table)",
+   "path": "docs/overhaul-2026-10-19/L14-r19/WORKFLOW-LOCKED-R19.md",
+   "start": 15,
+   "end": 22
+  },
+  {
+   "label": "Rules the booking engine must enforce",
+   "path": "docs/overhaul-2026-10-19/L14-r19/WORKFLOW-LOCKED-R19.md",
+   "start": 81,
+   "end": 97
+  },
+  {
+   "label": "Seated rule",
+   "path": "outputs/OPERATIONS/CLINICAL-OPERATIONS-PLAN.md",
+   "start": 123,
+   "end": 133
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: booking flow as at most 10 numbered steps. Section B: consent text in plain English, at most 12 short lines covering: water only until the final draw, herbal tea and food only after the last draw unless the lab allows otherwise in writing, stand for each draw then return to the waiting area (follow the lab and governing bodies), no strenuous activity, the collection notice, refund wording marked lawyer to check.",
+  "length": "at most 70 lines in total",
+  "write_only": "the two sections and Questions for Anthony",
+  "do_not_write": "a false no-benefit sign, any statement that the lab money passes through GTT, any refund rule not in the inputs"
+ },
+ "extra_checks": [
+  "The booking flow shows consult first, then the test 1 to 28 days later, both chosen at booking.",
+  "The checkout step takes only the GTT part of the price; the lab fee is paid by the mother to the lab."
+ ]
+}

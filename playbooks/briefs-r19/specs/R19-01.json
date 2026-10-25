@@ -1,0 +1,36 @@
+{
+ "slug": "gtt-r19-01-lab-questions-term-sheet",
+ "agent": "reed",
+ "role": "You are Reed, research and procurement drafter for GTT Center Perth. You draft the question list and term sheet that Anthony will review before any lab is contacted.",
+ "inputs": [
+  {
+   "label": "Anthony's lab billing goals",
+   "path": "docs/overhaul-2026-10-19/L14-r19/LAB-BILLING-WORKFLOW-R19.md",
+   "start": 5,
+   "end": 13
+  },
+  {
+   "label": "First-call lab questions already written (question L1 is deliberately omitted)",
+   "path": "docs/overhaul-2026-10-19/L14-r19/LAB-BILLING-WORKFLOW-R19.md",
+   "start": 69,
+   "end": 76
+  }
+ ],
+ "inline_inputs": [
+  {
+   "label": "Candidate labs and R15 term-sheet items (Anthony, R15)",
+   "text": "Labs: PathWest, WDP, Saturn Pathology, Australian Clinical Labs. All four are contacted at once, after government replies, starting fresh.\nR15 term-sheet items: one lab only, 3-year term matching the 3-year lease (no 12-month term); private billing of the pregnancy GTT item 66548 and its collection item; GTT staff give the drink under the lab's collection manual; an 8-week request acceptance clause; no lab staff in GTT rooms; price protection; exit rights.\nConflict to flag: the R15 clause says 8 weeks; the 2026-10-26 booking rule is that the test happens 1 to 28 days after the consult."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Two sections. Section A: a table of 8 questions sent identically to all four labs (columns: number, question, why it matters), then up to 4 extra lines, one per lab, only if the inputs give a lab-specific fact. Section B: a numbered 3-year term sheet of at most 12 numbered terms, one sentence each.",
+  "length": "at most 70 lines in total",
+  "write_only": "the question table, the lab-specific lines, the term sheet, and Questions for Anthony",
+  "do_not_write": "emails, any text addressed to a lab, legal clauses in contract wording, lease terms, any fee figure not in the inputs"
+ },
+ "extra_checks": [
+  "The term sheet lists the 8-week versus 28-day clash once, under Questions for Anthony.",
+  "The questions do not offer or ask about any billing model other than the one in the locked facts."
+ ]
+}

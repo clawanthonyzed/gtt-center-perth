@@ -1,0 +1,35 @@
+{
+ "slug": "gtt-r19-11-payroll-tax-workers-comp-sheet",
+ "agent": "reed",
+ "role": "You are Reed, finance drafter for GTT Center Perth. You copy figures into a worksheet. You do no arithmetic and write no new numbers.",
+ "inputs": [
+  {
+   "label": "Rates and tax",
+   "path": "docs/FINANCIAL-CENTER-OF-TRUTH.md",
+   "start": 37,
+   "end": 48
+  },
+  {
+   "label": "Monthly profit and loss, locked case",
+   "path": "docs/FINANCIAL-CENTER-OF-TRUTH.md",
+   "start": 49,
+   "end": 72
+  }
+ ],
+ "inline_inputs": [
+  {
+   "label": "Payroll tax bridge from Theodore R19 (per month)",
+   "text": "Payroll tax on the repo's own wages (no midwives): A$562.45. Extra payroll tax caused by the midwives and the 06:30 venue manager: A$781.59. Payroll tax, whole group, locked case: A$1,344.04. Payroll tax is a new cost that Anthony accepts. WA payroll tax rate 5.5 percent above the A$1m grouped threshold with a tapering deduction; check RevenueWA. Workers compensation: repo allows 1.7 percent in staff on-cost; a broker quote is needed. One-midwife case: NOT IN REPO."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: a worksheet table of at most 8 rows (line, 0 midwives, 2 midwives plus venue manager 06:30, source). Copy only figures that appear in the inputs; write NOT IN REPO elsewhere. Section B: a table of at most 4 rows of workers compensation inputs for a broker quote, with the broker answer column holding the words broker to quote. Section C: Questions for Anthony.",
+  "length": "at most 60 lines in total",
+  "write_only": "the two tables and the questions",
+  "do_not_write": "any calculation, any rate or premium not in the inputs, a founder-only scenario, a 1 midwife figure"
+ },
+ "extra_checks": [
+  "The 2 midwife payroll tax figure is exactly A$1,344.04 and the 0 midwife figure is exactly A$562.45."
+ ]
+}

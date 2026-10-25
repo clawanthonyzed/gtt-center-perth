@@ -1,0 +1,30 @@
+{
+ "slug": "gtt-r19-10-room-licence-guarantee-lease",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft plain-English term outlines for a lawyer to turn into documents. You do not draft contract wording and you give no legal advice.",
+ "inputs": [
+  {
+   "label": "Lease terms sought",
+   "path": "outputs/LEASING/COMMERCIAL-SITE-BRIEF.md",
+   "start": 125,
+   "end": 140
+  }
+ ],
+ "inline_inputs": [
+  {
+   "label": "Parties and purpose",
+   "text": "Licensor: GTT Lounge Sanctuary (owns the lease and the collection rooms). Licensee: GTT Medical Services (uses the two collection rooms). The room fee is a flat market rent inside the group and is never linked to Medicare billing. Lease: 3 years, matching the one partner lab's 3-year term. Maximum rent from the brief: A$10,500 a month gross excluding GST. Insurance minimums, addresses, ACNs and the licence fee: NOT IN REPO. Consumer law: the Australian Consumer Law guarantees cannot be excluded from the booking terms."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: room licence term outline, a table of at most 10 rows (term, plain-English position). Section B: Australian Consumer Law guarantee wording for the booking terms, at most 6 short lines. Section C: lease checklist, at most 12 numbered items. Every section ends with: lawyer to check.",
+  "length": "at most 70 lines in total",
+  "write_only": "the three sections and Questions for Anthony",
+  "do_not_write": "invented company names, ACNs, addresses, insurance amounts, licence fee, any licensor not named in the inputs, contract clauses in legal wording"
+ },
+ "extra_checks": [
+  "Licensor and licensee are exactly the two names in the inputs.",
+  "Every unknown amount is NOT IN REPO."
+ ]
+}

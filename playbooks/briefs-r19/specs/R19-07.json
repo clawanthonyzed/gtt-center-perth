@@ -1,0 +1,55 @@
+{
+ "slug": "gtt-r19-07-test-morning-procedure",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft the test-morning procedure for the partner lab to approve. It is a draft, not a clinical protocol.",
+ "inputs": [
+  {
+   "label": "Scheduling standard",
+   "path": "outputs/OPERATIONS/CLINICAL-OPERATIONS-PLAN.md",
+   "start": 99,
+   "end": 113
+  },
+  {
+   "label": "Fasting rules",
+   "path": "outputs/OPERATIONS/CLINICAL-OPERATIONS-PLAN.md",
+   "start": 114,
+   "end": 122
+  },
+  {
+   "label": "Seated rule",
+   "path": "outputs/OPERATIONS/CLINICAL-OPERATIONS-PLAN.md",
+   "start": 123,
+   "end": 133
+  },
+  {
+   "label": "Patient flow for one client",
+   "path": "outputs/OPERATIONS/CLINICAL-OPERATIONS-PLAN.md",
+   "start": 66,
+   "end": 84
+  },
+  {
+   "label": "Test day steps 9 to 11",
+   "path": "docs/overhaul-2026-10-19/L14-r19/WORKFLOW-LOCKED-R19.md",
+   "start": 32,
+   "end": 35
+  }
+ ],
+ "inline_inputs": [
+  {
+   "label": "Which input wins",
+   "text": "Input 4 shows 45 minute services, which is the older package shape. The locked facts win: Package 1 has 2 services of 30 minutes, Package 2 up to 45 minutes each. The draw marks (first draw at T+0, second at T+60, third at T+120) are unchanged. Input 3 lists one open point (whether she must stay in the lab's sightline); write it as: the partner lab decides."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Exactly 14 numbered headings, each with 2 to 4 short lines: 1 Arrival, 2 ID check, 3 Fasting check, 4 First draw and draw window, 5 The drink, 6 Timing marks, 7 Waiting area, 8 Each draw, 9 No strenuous activity, 10 Adverse events, 11 Labelling, 12 Transport, 13 Departure, 14 Results.",
+  "length": "at most 70 lines in total",
+  "write_only": "the 14 headings and Questions for Anthony",
+  "do_not_write": "a tube type that is not in the inputs, a venue-manager start of 07:00, drink contents not in the inputs, any clinical decision"
+ },
+ "extra_checks": [
+  "There are exactly 14 numbered headings.",
+  "Heading 14 says the lab sends results to the requesting midwife and GTT does not take over diabetes care.",
+  "Anything the partner lab must decide is written as: the partner lab decides."
+ ]
+}

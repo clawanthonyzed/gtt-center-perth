@@ -1,0 +1,24 @@
+{
+ "slug": "gtt-r19-09-architect-brief-update",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the update list for the existing architect brief, in words only. Floor plans are banned: the registered architect draws.",
+ "inputs": [
+  {
+   "label": "Existing architect brief",
+   "path": "outputs/LEASING/ARCHITECT-DESIGN-BRIEF.md",
+   "start": 1,
+   "end": 84
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: a table of at most 8 rows of changes needed to the existing brief (section number, what it says now, what the locked facts say, new wording). Section B: the consult room needs list as at most 10 bullets, taken only from the inputs or the locked facts. Section C: the luxury day spa and maternal sanctuary feel in 5 plain lines.",
+  "length": "at most 70 lines in total",
+  "write_only": "the three sections and Questions for Anthony",
+  "do_not_write": "dimensions or areas in square metres not in the inputs, any drawing or room layout, any clinical or hospital look"
+ },
+ "extra_checks": [
+  "It states two collection rooms with one chair each and one consult room of the same size.",
+  "Consult room needs not found in the inputs are written NOT IN REPO, not invented."
+ ]
+}

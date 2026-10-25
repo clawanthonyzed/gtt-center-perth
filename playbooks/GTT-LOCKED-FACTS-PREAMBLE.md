@@ -1,0 +1,20 @@
+# GTT locked facts preamble (paste the block below at the top of EVERY overnight brief)
+
+Source: docs/FINANCIAL-CENTER-OF-TRUTH.md (Theodore R19, 2026-10-26) and docs/CURRENT-STATE.md section 000. If this block and those files ever differ, the files win: fix this block the same day and run `python3 tools/factcheck_locked_facts.py playbooks/GTT-LOCKED-FACTS-PREAMBLE.md`.
+
+--- BEGIN PREAMBLE ---
+LOCKED FACTS FOR GTT CENTER PERTH (Anthony, 2026-10-25 and 2026-10-26). Use these exactly. If a fact you need is not here or in the INPUTS below, write NOT IN REPO and move on. Never guess, never invent a figure, name, address or date.
+STYLE: Australian dollars (A$). Plain English a 16 year old can read. No em dashes anywhere. No square-bracket slots. No floor plans or drawings, words only. Nothing is sent or published; this is a draft for Anthony.
+WHAT IT IS: a pregnancy-only glucose tolerance test (GTT) lounge in Perth. Luxury day spa and maternal sanctuary feel, not clinical. Working name only (brand names are on hold).
+PRICES: Package 1 A$300, Package 2 A$350, GST inside the price. Plan on 100 percent Package 1. Package 1 has 2 services of 30 minutes. Package 2 has 2 services of up to 45 minutes. Both include lounge access and approved drinks during the draw.
+MONEY SPLIT (Package 1): the lab test A$27.85 is paid by the mother straight to the lab and is never GTT money. GTT receives A$272.15 (consult A$110.00, GST-free; lounge and service A$162.15). Package 2: GTT receives A$322.15.
+MEDICARE (Structure B only: private all-inclusive, the mother claims her own rebate; do not discuss any other billing model): consult is 20 minutes, item 82105, rebate A$32.95. Test item 66548 rebate A$16.95. Collection item 73928 rebate A$5.10 (AskMBS to confirm 73928 or 73938). Total rebate A$55.00. Mother's out of pocket A$245 (Package 1) or A$295 (Package 2), lab fee included.
+ORDER OF EVENTS: the midwife consult comes 1 to 28 days BEFORE the test, on a different day. The consult produces the referral. No consult, no test. The client picks both slots at booking.
+TEST MORNING: 18 clients a morning, Monday to Saturday, Sunday closed. Clients arrive 06:50 with no allowance for late arrivals. First draw 07:00, draws 07:00 to 10:30, pairs every 25 minutes (the repo cadence; no other cadence exists). Water only until the final draw. Hard 60 and 120 minute marks from the first draw unless the lab says otherwise. Stand for draw follows the pathology governing bodies and the partner lab. Services fit between draws and never interrupt a draw. Services finish and the doors shut by 18:00.
+PEOPLE: venue manager starts 06:30 (Monday to Friday 06:30 to 15:00) and does reception and welcome; there is no separate front-of-house role. 8 morning service staff (4 massage and beauty, 2 nails, 2 hair), 07:00 to 13:00. 2 phlebotomists, employed by GTT Medical. 4 casual afternoon service staff. Saturday cover is a senior staff member already rostered. Midwives: 2 permanent part-time (22.5 paid hours each, 45 a week) plus 1 casual for leave; fortnightly block, one works Monday to Wednesday and the other Thursday to Saturday, then they swap; they work 09:00 to 17:00. Roles are only those listed here.
+ROOMS: 2 collection rooms with 1 chair each; 1 consult room, same size as a collection room. Room sizes in square metres: NOT IN REPO.
+STRUCTURE: Structure B. Three companies: GTT Holdings (owned directly by Anthony and his partner), GTT Medical Services, GTT Lounge Sanctuary. One partner lab on a 3-year term matching the 3-year lease. Payroll tax is accepted as a cost. Company tax 25 percent.
+OUTREACH: government bodies first, then all 4 labs at once (PathWest, WDP, Saturn, Australian Clinical Labs), starting fresh. Nothing is sent without Anthony's approval of the exact text.
+MONEY RESULT (Theodore R19, locked case): profit A$17,314.31 a month before company tax, A$12,985.73 after. Do not recompute. Do not quote any other profit figure.
+HARD STOPS: no legal or medical advice (write "lawyer to check"; Catherine owns the legal library); no floor plans; no invented figures; no external sending.
+--- END PREAMBLE ---

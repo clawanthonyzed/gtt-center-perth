@@ -1,0 +1,81 @@
+OVERNIGHT_SLUG: gtt-r19-06-booking-flow-consent-text
+
+ROLE
+You are Grace, Operations Manager for GTT Center Perth. You draft the online booking steps and the plain-English consent text. Nothing is published.
+
+LOCKED FACTS FOR GTT CENTER PERTH (Anthony, 2026-10-25 and 2026-10-26). Use these exactly. If a fact you need is not here or in the INPUTS below, write NOT IN REPO and move on. Never guess, never invent a figure, name, address or date.
+STYLE: Australian dollars (A$). Plain English a 16 year old can read. No em dashes anywhere. No square-bracket slots. No floor plans or drawings, words only. Nothing is sent or published; this is a draft for Anthony.
+WHAT IT IS: a pregnancy-only glucose tolerance test (GTT) lounge in Perth. Luxury day spa and maternal sanctuary feel, not clinical. Working name only (brand names are on hold).
+PRICES: Package 1 A$300, Package 2 A$350, GST inside the price. Plan on 100 percent Package 1. Package 1 has 2 services of 30 minutes. Package 2 has 2 services of up to 45 minutes. Both include lounge access and approved drinks during the draw.
+MONEY SPLIT (Package 1): the lab test A$27.85 is paid by the mother straight to the lab and is never GTT money. GTT receives A$272.15 (consult A$110.00, GST-free; lounge and service A$162.15). Package 2: GTT receives A$322.15.
+MEDICARE (Structure B only: private all-inclusive, the mother claims her own rebate; do not discuss any other billing model): consult is 20 minutes, item 82105, rebate A$32.95. Test item 66548 rebate A$16.95. Collection item 73928 rebate A$5.10 (AskMBS to confirm 73928 or 73938). Total rebate A$55.00. Mother's out of pocket A$245 (Package 1) or A$295 (Package 2), lab fee included.
+ORDER OF EVENTS: the midwife consult comes 1 to 28 days BEFORE the test, on a different day. The consult produces the referral. No consult, no test. The client picks both slots at booking.
+TEST MORNING: 18 clients a morning, Monday to Saturday, Sunday closed. Clients arrive 06:50 with no allowance for late arrivals. First draw 07:00, draws 07:00 to 10:30, pairs every 25 minutes (the repo cadence; no other cadence exists). Water only until the final draw. Hard 60 and 120 minute marks from the first draw unless the lab says otherwise. Stand for draw follows the pathology governing bodies and the partner lab. Services fit between draws and never interrupt a draw. Services finish and the doors shut by 18:00.
+PEOPLE: venue manager starts 06:30 (Monday to Friday 06:30 to 15:00) and does reception and welcome; there is no separate front-of-house role. 8 morning service staff (4 massage and beauty, 2 nails, 2 hair), 07:00 to 13:00. 2 phlebotomists, employed by GTT Medical. 4 casual afternoon service staff. Saturday cover is a senior staff member already rostered. Midwives: 2 permanent part-time (22.5 paid hours each, 45 a week) plus 1 casual for leave; fortnightly block, one works Monday to Wednesday and the other Thursday to Saturday, then they swap; they work 09:00 to 17:00. Roles are only those listed here.
+ROOMS: 2 collection rooms with 1 chair each; 1 consult room, same size as a collection room. Room sizes in square metres: NOT IN REPO.
+STRUCTURE: Structure B. Three companies: GTT Holdings (owned directly by Anthony and his partner), GTT Medical Services, GTT Lounge Sanctuary. One partner lab on a 3-year term matching the 3-year lease. Payroll tax is accepted as a cost. Company tax 25 percent.
+OUTREACH: government bodies first, then all 4 labs at once (PathWest, WDP, Saturn, Australian Clinical Labs), starting fresh. Nothing is sent without Anthony's approval of the exact text.
+MONEY RESULT (Theodore R19, locked case): profit A$17,314.31 a month before company tax, A$12,985.73 after. Do not recompute. Do not quote any other profit figure.
+HARD STOPS: no legal or medical advice (write "lawyer to check"; Catherine owns the legal library); no floor plans; no invented figures; no external sending.
+
+INPUTS (pasted from the repo; use only these and the locked facts)
+Input 1: Booking and test-day steps 1 to 4 (journey table) (docs/overhaul-2026-10-19/L14-r19/WORKFLOW-LOCKED-R19.md, lines 15 to 22)
+Staff named are the repo's: the midwife and phlebotomists are employees of GTT Medical Services (Catherine R16); the lounge, therapists and venue manager sit in GTT Lounge Sanctuary. Money figures are Theodore R18 (Q2 and Q3 tables) for Package 1; Package 2 is A$50 more. Rebate figures use the repo's collection item 73928 until AskMBS answers.
+
+| # | Step | Who does it | What happens | Money at this step |
+|---|---|---|---|---|
+| **BOOKING (online, day 0)** | | | | |
+| 1 | Choose | Client (booking page) | Picks Package 1 or 2, then a **consult slot** and a **test date and time** in one booking. The engine only offers test dates 1 to 28 days after the consult slot (section 5). | None yet |
+| 2 | Consents and details | Client | Name, mobile, email, due date, Medicare details as needed, accepts booking terms and privacy notice. | None |
+| 3 | Pay | Client, GTT checkout | One checkout for GTT's part only. | Client pays **A$272.15** (Package 1) or A$322.15 (Package 2). Split by the checkout: **A$110.00 consult to GTT Medical** (GST-free), **A$162.15 lounge and service to GTT Lounge** (GST inside). Card fee about A$4.93 is GTT's cost (Theodore R18). The lab's A$27.85 is **not** taken here. |
+
+Input 2: Rules the booking engine must enforce (docs/overhaul-2026-10-19/L14-r19/WORKFLOW-LOCKED-R19.md, lines 81 to 97)
+## 5. What the booking engine must enforce
+
+Hard rules (the engine refuses the booking if any fails):
+
+1. **Two slots in one booking.** Consult slot and test slot are chosen together before payment.
+2. **Gap rule.** Test date minus consult date is at least 1 and at most 28 calendar days (Perth time). Same day is never allowed, in either direction. Consult after test is never allowed.
+3. **Consult inventory.** One midwife per rostered day, 25-minute blocks from 09:00, 18 blocks a day, six days a week, none on Sunday. The roster follows ROSTER-R18 (fortnightly block). No consult slot is sold for a day with no midwife rostered.
+4. **Test inventory.** 18 draws a day, pairs every 25 minutes from 07:00 (repo Table 1 and Founder Rule 16), two collection rooms.
+5. **No request, no draw.** The test slot only becomes "cleared" when the midwife marks "request issued" after the consult. The phlebotomist sees the flag before the first draw. A missing flag on the morning means no draw and a rebook; there is no same-day fix because a same-day consult is blocked and the midwife starts at 09:00.
+6. **Request tied to the booking.** The request is for item 66548, dated the day of the consult (Regulations s 35 requires the date the test was judged necessary). The test must be within 28 days of that date (Anthony's rule).
+7. **Reschedule rules.** Moving the consult: the new date must still be 1 to 28 days before the test. Moving the test: the new date must be 1 to 28 days after the consult; if it falls beyond 28 days, a new consult is needed. Moving a test earlier than consult plus 1 day is refused.
+8. **No-show on the consult.** The test slot stays held until 18:00 the day before the test, then is released automatically (the time is my default, Anthony to change).
+9. **Request lost or not on file at the door.** Same as rule 5. The engine stores the request digitally; the paper copy is a convenience.
+10. **Clinical window not enforced by software.** Gestational timing for a GTT (due date check) is not in the repo. The lead midwife sets it. The booking form collects the due date and shows it to the midwife.
+
+Edge cases decided by these rules: (a) consult yesterday, test today: allowed (gap 1 day). (b) consult 28 days ago, test today: allowed; 29 days: refused, new consult. (c) client who books less than a day ahead: the earliest test is the day after her first available consult slot. (d) late arrival: Founder Rule 14, no wiggle room after 06:50, rebook under the terms. (e) Consult overruns: the engine's 5 minute buffer absorbs it; two overruns in a row push the afternoon and the midwife's notes time, not the clients' times.
+
+
+Input 3: Seated rule (outputs/OPERATIONS/CLINICAL-OPERATIONS-PLAN.md, lines 123 to 133)
+### 2.4 The seated, no-walking rule
+
+| Point | Detail | Source |
+|---|---|---|
+| WDP wants | Patient stays at the collection centre for the whole test. It is WDP's own policy, not an NPAAC rule | S15 §2a |
+| What Anthony told WDP | Client never leaves the building, stays seated, goes straight from collection chair to a treatment seat, one staff member responsible | S16 |
+| Our draft rule | Escort her seated or by wheelchair/arm. Low-activity services only. No exercise, no walking tours, no leaving the premises | draft |
+| Still open | Must she stay in WDP's sightline, or is a separate room with quick staff response enough? | |
+
+---
+
+
+DELIVERABLE
+Part: 1 of 1
+Format: Section A: booking flow as at most 10 numbered steps. Section B: consent text in plain English, at most 12 short lines covering: water only until the final draw, herbal tea and food only after the last draw unless the lab allows otherwise in writing, stand for each draw then return to the waiting area (follow the lab and governing bodies), no strenuous activity, the collection notice, refund wording marked lawyer to check.
+Length: at most 70 lines in total
+Write only: the two sections and Questions for Anthony
+Do not write: a false no-benefit sign, any statement that the lab money passes through GTT, any refund rule not in the inputs
+
+ACCEPTANCE CHECKLIST (the draft is rejected if any is false)
+1. Every number comes from the locked facts or the inputs.
+2. No em dashes, no square brackets, no TBD, no TO CONFIRM.
+3. A missing fact is written as NOT IN REPO and listed once under Questions for Anthony (at most 3).
+4. Nothing is addressed to a real person or sent anywhere. Legal points say lawyer to check.
+5. The reply has the sections Summary, Deliverable and Next step for Anthony.
+6. The booking flow shows consult first, then the test 1 to 28 days later, both chosen at booking.
+7. The checkout step takes only the GTT part of the price; the lab fee is paid by the mother to the lab.
+
+WHEN A FACT IS MISSING
+Write NOT IN REPO, say what is needed and who holds it, and carry on. Never guess.

@@ -1,0 +1,29 @@
+{
+ "slug": "gtt-r19-02-gp-survey-two-lane-waitlist",
+ "agent": "reed",
+ "role": "You are Reed, research drafter for GTT Center Perth. You draft a short survey for GP clinics and a two-lane waitlist test plan for Anthony to review. Nothing is sent.",
+ "inputs": [
+  {
+   "label": "Locked order of events and open question A2",
+   "path": "docs/overhaul-2026-10-19/L14-r19/WORKFLOW-LOCKED-R19.md",
+   "start": 98,
+   "end": 111
+  }
+ ],
+ "inline_inputs": [
+  {
+   "label": "The two lanes (Anthony, R15)",
+   "text": "Lane 1: the client arrives with a request already written by her GP. Lane 2: the client takes the GTT midwife route (consult first, then the test 1 to 28 days later). Today the booking engine makes the consult compulsory for everyone until Anthony answers question A2 (does a woman who already holds a valid request still pay for and attend the consult?)."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: a GP survey of at most 8 questions (question, answer options). Section B: a waitlist test plan as a table of at most 6 rows (step, who, what is measured). Section C: success measures as questions to Anthony, not as numbers.",
+  "length": "at most 70 lines in total",
+  "write_only": "the survey, the test plan table, the success-measure questions",
+  "do_not_write": "any target percentage, any sample size, any email text, any GP name or practice name"
+ },
+ "extra_checks": [
+  "Success measures are written as questions for Anthony; no figure appears that is not in the inputs."
+ ]
+}

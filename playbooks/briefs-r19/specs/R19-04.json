@@ -1,0 +1,36 @@
+{
+ "slug": "gtt-r19-04-role-descriptions-and-weekly-roster",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft position descriptions for the non-midwife roles and a weekly roster, using only the roles in the locked facts.",
+ "inputs": [
+  {
+   "label": "Fortnight roster table",
+   "path": "docs/overhaul-2026-10-19/L13-r18/ROSTER-R18.md",
+   "start": 9,
+   "end": 33
+  },
+  {
+   "label": "Volumes, staffing and hours",
+   "path": "docs/FINANCIAL-CENTER-OF-TRUTH.md",
+   "start": 22,
+   "end": 36
+  }
+ ],
+ "inline_inputs": [
+  {
+   "label": "Employers",
+   "text": "The midwives and phlebotomists are employed by GTT Medical Services. The lounge, therapists and venue manager sit in GTT Lounge Sanctuary. Senior cover for the afternoon gap and the Saturday venue manager is decided once the venue is open (no loading costed). Adaptive rostering: service staff and phlebotomists are called in to match confirmed bookings (2 phlebotomists and 4 therapists for up to 9 clients, 6 therapists at 10, 8 from 11)."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: a table of position descriptions, one row per role (role, employer company, hours, main duties in one line, pay: NOT IN REPO unless in the inputs). Roles are exactly: venue manager, massage and beauty therapist, nail technician, hair stylist, phlebotomist, casual afternoon service staff. Section B: a weekly roster table, one row per day Monday to Sunday (venue manager, therapists, phlebotomists, midwife on duty for Week 1 of the block).",
+  "length": "at most 70 lines in total",
+  "write_only": "the two tables and Questions for Anthony",
+  "do_not_write": "any role not listed, any hours after 18:00, an on-call Sunday, qualification requirements not in the inputs"
+ },
+ "extra_checks": [
+  "Sunday row says closed.",
+  "Venue manager row says starts 06:30 and does reception and welcome."
+ ]
+}
