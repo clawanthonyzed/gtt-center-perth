@@ -1,0 +1,436 @@
+{
+ "generated": "2026-10-25",
+ "imports": "theodore_r17.py -> r16 -> r15 -> r14 -> r13; tools/master_financial_model.py (live)",
+ "labels": "R repo, V official, E estimate, Q quote",
+ "repo_base_live": {
+  "scenario_id": "scenario_table_1",
+  "forecast_month": 12,
+  "ramp_month": "M5plus",
+  "is_extended_flat": true,
+  "revenue": {
+   "am_revenue": 118485.0,
+   "pm_revenue": 24585.37,
+   "ancillary_revenue": 0.0,
+   "total_revenue": 143070.37
+  },
+  "payroll": 93595.63,
+  "payroll_breakdown": {
+   "am_weekday_direct_labor": 48310.68,
+   "am_weekday_treatment_staff": 39235.68,
+   "am_weekday_phlebotomist": 9075.0,
+   "am_saturday_direct_labor": 14262.63,
+   "pm_weekday_direct_labor": 9808.92,
+   "pm_saturday_direct_labor": 2895.82,
+   "opening_time_increment": 7040.0,
+   "receptionist_relief": 0.0,
+   "direct_labor_and_opening_total": 82318.05,
+   "superannuation": 9878.17,
+   "workers_comp": 1399.41
+  },
+  "gross_contribution": 49474.74,
+  "operating_expenses": 14288.34,
+  "operating_expenses_breakdown": {
+   "fixed_costs": 12788.34,
+   "variable_costs": 1500.0,
+   "relief_absence_allowance": 0
+  },
+  "total_operating_costs": 107883.97,
+  "net_operating_result": 35186.4
+ },
+ "gst_credits_implied": 1262.58,
+ "Q1_whole_venture_pnl": {
+  "locked_leave_covered": {
+   "clients": 473.94,
+   "takings_incl_gst_to_gtt": 153568.14,
+   "rev_lounge_service_am_ex_gst": 69863.5,
+   "rev_pm_ex_gst": 22350.34,
+   "rev_consult_gst_free": 52133.4,
+   "revenue_total_ex_gst": 144347.23,
+   "gst_collected_am": 6985.88,
+   "gst_collected_pm": 2235.03,
+   "repo_payroll": -93595.63,
+   "repo_operating_expenses": -14288.34,
+   "less_gst_credits": 1262.58,
+   "card_fees": -2336.52,
+   "midwife_wages": -12000.38,
+   "midwife_fixed_consumables": -2840.65,
+   "venue_manager_0630": -500.28,
+   "payroll_tax_group": -1344.04,
+   "three_company": -908.67,
+   "total_costs": -126551.93,
+   "payroll_taxable_wages_year": 1254144.89,
+   "payroll_tax_threshold": 1000000,
+   "over_threshold_by": 254144.89,
+   "profit_before_company_tax": 17795.3,
+   "company_tax_25": -4448.82,
+   "profit_after_company_tax": 13346.47,
+   "franked_dividend_available": 13346.47,
+   "franking_credits_attached": 4448.82
+  },
+  "locked_grace_1.20": {
+   "clients": 473.94,
+   "takings_incl_gst_to_gtt": 153568.14,
+   "rev_lounge_service_am_ex_gst": 69863.5,
+   "rev_pm_ex_gst": 22350.34,
+   "rev_consult_gst_free": 52133.4,
+   "revenue_total_ex_gst": 144347.23,
+   "gst_collected_am": 6985.88,
+   "gst_collected_pm": 2235.03,
+   "repo_payroll": -93595.63,
+   "repo_operating_expenses": -14288.34,
+   "less_gst_credits": 1262.58,
+   "card_fees": -2336.52,
+   "midwife_wages": -10543.26,
+   "midwife_fixed_consumables": -2840.65,
+   "venue_manager_0630": -500.28,
+   "payroll_tax_group": -1225.72,
+   "three_company": -908.67,
+   "total_costs": -124976.5,
+   "payroll_taxable_wages_year": 1231772.04,
+   "payroll_tax_threshold": 1000000,
+   "over_threshold_by": 231772.04,
+   "profit_before_company_tax": 19370.74,
+   "company_tax_25": -4842.68,
+   "profit_after_company_tax": 14528.05,
+   "franked_dividend_available": 14528.05,
+   "franking_credits_attached": 4842.68
+  },
+  "no_midwife_no_vm_baseline": {
+   "clients": 473.94,
+   "takings_incl_gst_to_gtt": 143070.37,
+   "rev_lounge_service_am_ex_gst": 107713.64,
+   "rev_pm_ex_gst": 22350.34,
+   "rev_consult_gst_free": 0.0,
+   "revenue_total_ex_gst": 130063.97,
+   "gst_collected_am": 10771.36,
+   "gst_collected_pm": 2235.03,
+   "repo_payroll": -93595.63,
+   "repo_operating_expenses": -14288.34,
+   "less_gst_credits": 1262.58,
+   "card_fees": -0.0,
+   "midwife_wages": 0,
+   "midwife_fixed_consumables": 0,
+   "venue_manager_0630": -0.0,
+   "payroll_tax_group": -562.45,
+   "three_company": -908.67,
+   "total_costs": -108092.51,
+   "payroll_taxable_wages_year": 1106354.64,
+   "payroll_tax_threshold": 1000000,
+   "over_threshold_by": 106354.64,
+   "profit_before_company_tax": 21971.46,
+   "company_tax_25": -5492.87,
+   "profit_after_company_tax": 16478.6,
+   "franked_dividend_available": 16478.6,
+   "franking_credits_attached": 5492.87
+  },
+  "r17_basis_check_no_vm": {
+   "clients": 473.94,
+   "takings_incl_gst_to_gtt": 153568.14,
+   "rev_lounge_service_am_ex_gst": 69863.5,
+   "rev_pm_ex_gst": 22350.34,
+   "rev_consult_gst_free": 52133.4,
+   "revenue_total_ex_gst": 144347.23,
+   "gst_collected_am": 6985.88,
+   "gst_collected_pm": 2235.03,
+   "repo_payroll": -93595.63,
+   "repo_operating_expenses": -14288.34,
+   "less_gst_credits": 1262.58,
+   "card_fees": -2336.52,
+   "midwife_wages": -12000.38,
+   "midwife_fixed_consumables": -2840.65,
+   "venue_manager_0630": -0.0,
+   "payroll_tax_group": -1312.76,
+   "three_company": -908.67,
+   "total_costs": -126020.38,
+   "payroll_taxable_wages_year": 1248231.29,
+   "payroll_tax_threshold": 1000000,
+   "over_threshold_by": 248231.29,
+   "profit_before_company_tax": 18326.85,
+   "company_tax_25": -4581.71,
+   "profit_after_company_tax": 13745.14,
+   "franked_dividend_available": 13745.14,
+   "franking_credits_attached": 4581.71
+  }
+ },
+ "Q12_plus_20": {
+  "locked_320_370": {
+   "clients": 473.94,
+   "takings_incl_gst_to_gtt": 163046.94,
+   "rev_lounge_service_am_ex_gst": 78479.72,
+   "rev_pm_ex_gst": 22350.34,
+   "rev_consult_gst_free": 52133.4,
+   "revenue_total_ex_gst": 152963.46,
+   "gst_collected_am": 7848.45,
+   "gst_collected_pm": 2235.03,
+   "repo_payroll": -93595.63,
+   "repo_operating_expenses": -14288.34,
+   "less_gst_credits": 1262.58,
+   "card_fees": -2497.66,
+   "midwife_wages": -12000.38,
+   "midwife_fixed_consumables": -2840.65,
+   "venue_manager_0630": -500.28,
+   "payroll_tax_group": -1344.04,
+   "three_company": -908.67,
+   "total_costs": -126713.07,
+   "payroll_taxable_wages_year": 1254144.89,
+   "payroll_tax_threshold": 1000000,
+   "over_threshold_by": 254144.89,
+   "profit_before_company_tax": 26250.39,
+   "company_tax_25": -6562.6,
+   "profit_after_company_tax": 19687.79,
+   "franked_dividend_available": 19687.79,
+   "franking_credits_attached": 6562.6
+  },
+  "locked_320_370_grace": {
+   "clients": 473.94,
+   "takings_incl_gst_to_gtt": 163046.94,
+   "rev_lounge_service_am_ex_gst": 78479.72,
+   "rev_pm_ex_gst": 22350.34,
+   "rev_consult_gst_free": 52133.4,
+   "revenue_total_ex_gst": 152963.46,
+   "gst_collected_am": 7848.45,
+   "gst_collected_pm": 2235.03,
+   "repo_payroll": -93595.63,
+   "repo_operating_expenses": -14288.34,
+   "less_gst_credits": 1262.58,
+   "card_fees": -2497.66,
+   "midwife_wages": -10543.26,
+   "midwife_fixed_consumables": -2840.65,
+   "venue_manager_0630": -500.28,
+   "payroll_tax_group": -1225.72,
+   "three_company": -908.67,
+   "total_costs": -125137.63,
+   "payroll_taxable_wages_year": 1231772.04,
+   "payroll_tax_threshold": 1000000,
+   "over_threshold_by": 231772.04,
+   "profit_before_company_tax": 27825.83,
+   "company_tax_25": -6956.46,
+   "profit_after_company_tax": 20869.37,
+   "franked_dividend_available": 20869.37,
+   "franking_credits_attached": 6956.46
+  },
+  "per_client_p1_extra_ex_gst": 17.84,
+  "per_client_p1_extra_gst": 1.82
+ },
+ "Q12_payroll_added": {
+  "venue_manager_0630": 500.28,
+  "midwives_grace_1_20": 10543.26,
+  "midwives_leave_covered": 12000.38,
+  "total_grace": 11043.54,
+  "total_leave_covered": 12500.66
+ },
+ "roster_check": {
+  "midwife_hours_week": 45.0,
+  "consults_per_day": 18.0,
+  "consult_hours_per_day": 6.0,
+  "paid_hours_per_day": 7.5,
+  "utilisation": 0.8,
+  "rate_blend": 45.06
+ },
+ "Q2_rebate": {
+  "P1|82105|66548+73928_repo_item": {
+   "client_pays": 300.0,
+   "reaches_gtt_incl_gst": 272.15,
+   "reaches_gtt_ex_gst": 257.41,
+   "lab": 27.85,
+   "rebate": 55.0,
+   "out_of_pocket": 245.0
+  },
+  "P1|82105|66548+73938_as_lab_price": {
+   "client_pays": 300.0,
+   "reaches_gtt_incl_gst": 272.15,
+   "reaches_gtt_ex_gst": 257.41,
+   "lab": 27.85,
+   "rebate": 56.7,
+   "out_of_pocket": 243.3
+  },
+  "P1|82110|66548+73928_repo_item": {
+   "client_pays": 300.0,
+   "reaches_gtt_incl_gst": 272.15,
+   "reaches_gtt_ex_gst": 257.41,
+   "lab": 27.85,
+   "rebate": 97.7,
+   "out_of_pocket": 202.3
+  },
+  "P1|82110|66548+73938_as_lab_price": {
+   "client_pays": 300.0,
+   "reaches_gtt_incl_gst": 272.15,
+   "reaches_gtt_ex_gst": 257.41,
+   "lab": 27.85,
+   "rebate": 99.4,
+   "out_of_pocket": 200.6
+  },
+  "P2|82105|66548+73928_repo_item": {
+   "client_pays": 350.0,
+   "reaches_gtt_incl_gst": 322.15,
+   "reaches_gtt_ex_gst": 302.86,
+   "lab": 27.85,
+   "rebate": 55.0,
+   "out_of_pocket": 295.0
+  },
+  "P2|82105|66548+73938_as_lab_price": {
+   "client_pays": 350.0,
+   "reaches_gtt_incl_gst": 322.15,
+   "reaches_gtt_ex_gst": 302.86,
+   "lab": 27.85,
+   "rebate": 56.7,
+   "out_of_pocket": 293.3
+  },
+  "P2|82110|66548+73928_repo_item": {
+   "client_pays": 350.0,
+   "reaches_gtt_incl_gst": 322.15,
+   "reaches_gtt_ex_gst": 302.86,
+   "lab": 27.85,
+   "rebate": 97.7,
+   "out_of_pocket": 252.3
+  },
+  "P2|82110|66548+73938_as_lab_price": {
+   "client_pays": 350.0,
+   "reaches_gtt_incl_gst": 322.15,
+   "reaches_gtt_ex_gst": 302.86,
+   "lab": 27.85,
+   "rebate": 99.4,
+   "out_of_pocket": 250.6
+  }
+ },
+ "Q2_lab_price_check": {
+  "lab_price_used": 27.85,
+  "with_73938": 27.85,
+  "with_73928_repo_item": 25.85
+ },
+ "Q8_midwife_impact": {
+  "per_client_revenue_before_ex_gst": 227.27,
+  "per_client_revenue_after_ex_gst": 257.41,
+  "per_client_card_fee": 4.93,
+  "per_client_midwife_cost": 31.31,
+  "month_revenue_before": 130063.97,
+  "month_revenue_after": 144347.23,
+  "month_profit_before": 21971.46,
+  "month_profit_after": 17795.3
+ },
+ "Q10_oop": {
+  "P1": 245.0,
+  "P2": 295.0
+ },
+ "Q10_oop_plus20": {
+  "P1": 265.0,
+  "P2": 315.0
+ },
+ "Q5_prepaid": {
+  "clients": 473.94,
+  "average_held_21_days": 89099.94,
+  "r17_figure_396": 74447,
+  "interest_year_big_bank_business_saver_1.00_U": 891.0,
+  "interest_year_cba_3m_business_td_4.30_E": 3831.3,
+  "interest_year_best_3m_business_td_5.00_E": 4455.0,
+  "interest_year_rba_cash_4.60_V": 4098.6,
+  "after_25pct_tax_at_5": 3341.25,
+  "lab_money_held": 0.0
+ },
+ "Q11_bridge": [
+  [
+   "A. Old struck figure 2026-08-21 (CS line 179)",
+   38705.33
+  ],
+  [
+   "Dedicated PM reception removed, 2026-08-21 (yml status note)",
+   5460.84
+  ],
+  [
+   "B. Repo yml figure, 2026-08-21 later",
+   44166.17
+  ],
+  [
+   "PM revenue: PM capacity locked at 10 sessions a day (2026-09-19)",
+   -11640.32
+  ],
+  [
+   "Payroll: venue manager Mon-Fri and phlebotomist model closed (2026-09-19)",
+   2660.55
+  ],
+  [
+   "C. Repo today, no GST line (CS line 30)",
+   35186.4
+  ],
+  [
+   "GST taken out (repo after-GST basis R9/R11)",
+   -11743.82
+  ],
+  [
+   "D. Repo after GST",
+   23442.58
+  ],
+  [
+   "Repo payroll tax (was never in the repo net)",
+   -562.45
+  ],
+  [
+   "Three-company running cost",
+   -908.67
+  ],
+  [
+   "E. Like-for-like baseline, council rounds (R16/R17)",
+   21971.46
+  ],
+  [
+   "Consult income 474 x A$110 (GST-free, Medical)",
+   52133.4
+  ],
+  [
+   "Lounge and service price A$250 -> A$162.15 (ex GST)",
+   -37850.14
+  ],
+  [
+   "Card fees",
+   -2336.52
+  ],
+  [
+   "Midwife wages, R17 demand basis 48.6 h/week x 1.20",
+   -11388.88
+  ],
+  [
+   "Midwife fixed and consumables",
+   -3320.65
+  ],
+  [
+   "Extra payroll tax on midwives",
+   -682.68
+  ],
+  [
+   "F. R17 headline (100% P1, short consult)",
+   18525.98
+  ],
+  [
+   "Midwife roster: 45 h/week instead of 48.6, one consult room instead of two (same 1.20)",
+   1325.62
+  ],
+  [
+   "Venue manager 06:30 start",
+   -500.28
+  ],
+  [
+   "Payroll tax on the venue manager change and roster change",
+   19.42
+  ],
+  [
+   "G. R18 locked, Grace on-cost 1.20",
+   19370.74
+  ],
+  [
+   "Leave cover for permanent midwives (1.20 -> 1.366, casual relief) and its payroll tax",
+   -1575.44
+  ],
+  [
+   "H. R18 locked, leave covered (headline)",
+   17795.3
+  ],
+  [
+   "Company tax 25%",
+   -4448.82
+  ],
+  [
+   "I. R18 after company tax = franked dividend available",
+   13346.47
+  ]
+ ]
+}
