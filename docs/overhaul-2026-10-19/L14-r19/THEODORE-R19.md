@@ -127,7 +127,7 @@ So the midwife side is not the problem. The problem is that only A$22.15 more of
 2. **The market.** A 20-minute consult at A$130 is 3.4 times the A$38.75 schedule fee. No Perth price data was gathered this round (gap).
 3. **GST apportionment.** In one checkout the split between the GST-free consult and the taxable lounge must have a reasonable basis ([ATO GSTR 2001/8](https://www.ato.gov.au/law/view/pdf/pbr/gstr2001-008da.pdf)). Raising the consult just to save GST invites ATO review. It is defensible only if Medical charges the same consult fee to every patient, package or not (ACC).
 4. **The consult fee covers the consult only.** It cannot include lounge or service value (Services Australia, cited R18, V).
-5. **Informed financial consent.** Tell the mother the fee and her expected out of pocket in writing before the consult ([AMA position statement 2024](https://www.ama.com.au/sites/default/files/2024-03/Informed%20financial%20consent%202024%20position%20statement.pdf)). This is professional guidance, not a statute.
+5. **Informed financial consent.** Tell the mother the fee and her expected out of pocket in writing before the consult ([RACS position paper](https://www.surgeons.org/about-racs/position-papers/informed-financial-consent-2019); the AMA 2024 position statement says the same). This is professional guidance, not a statute.
 
 **(e) Hours:** with the consult 1 to 28 days before the test, the midwife no longer has to wait for draws, so a shorter day is possible. But 42 h means 86% of paid time is booked, and you approved 45. That is a question for you, not a recommendation.
 
@@ -269,5 +269,5 @@ Pre-send check for Idea Lobster: `python docs/overhaul-2026-10-19/L14-r19/theodo
 - Repo (fresh clone 2026-10-26): docs/CURRENT-STATE.md (lines 30, sections 000 and 00), data/canonical/cost_ramp.yml (M5plus payroll breakdown), revenue_assumptions.yml (PM transactions), pricing.yml (A$117, A$75 / A$120 massage), opex.yml (opex_eftpos_transaction_fee "genuinely missing"), tools/master_financial_model.py, cost_ramp_model.py, demand_driven_staffing_solver.py (8 staff at N = 18, 45-minute services), check_consistency.py
 - [THEODORE-R18.md](../L13-r18/THEODORE-R18.md), [ROSTER-R18.md](../L13-r18/ROSTER-R18.md), [THEODORE-R17.md](../L12-r17/THEODORE-R17.md), [GRACE-R17-ROSTER.md](../L12-r17/GRACE-R17-ROSTER.md)
 - [ATO GSTR 2001/8 (draft addendum PDF)](https://www.ato.gov.au/law/view/pdf/pbr/gstr2001-008da.pdf)
-- [AMA: Informed financial consent position statement 2024](https://www.ama.com.au/sites/default/files/2024-03/Informed%20financial%20consent%202024%20position%20statement.pdf)
+- [RACS: Informed financial consent position paper](https://www.surgeons.org/about-racs/position-papers/informed-financial-consent-2019)
 - MBS item figures and Services Australia fee rule: as cited in R18 (V)
