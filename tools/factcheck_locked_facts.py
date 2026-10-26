@@ -104,6 +104,8 @@ def scan(path, banned):
                 if any(first == t or first.replace("**", "") == t for t in banned_firsts) or \
                    any(part.strip() in banned_firsts for part in first.split(" / ")):
                     continue
+            if re.search(r"(?<!expecting )mothers?", line, re.I):
+                hits.append((n, "terminology: say client or expecting mother", raw.strip()[:110]))
             for rx, tok in banned:
                 if rx.search(line):
                     hits.append((n, "banned stale value: " + tok, raw.strip()[:110]))

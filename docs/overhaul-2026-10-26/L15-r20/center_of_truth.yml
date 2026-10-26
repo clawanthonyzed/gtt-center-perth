@@ -1,0 +1,44 @@
+generated_by: docs/overhaul-2026-10-26/L15-r20/theodore_r20.py
+date: '2026-10-26'
+currency: AUD
+prices:
+  package_1_full: 320.0
+  package_2_full: 370.0
+  plan_mix_p1: 1.0
+  consult_gst_free: 130.0
+  lab_paid_to_lab_not_gtt: 27.85
+  lounge_service_p1_taxable: 162.15
+  lounge_service_p2_taxable: 212.15
+  client_pays_gtt_p1: 292.15
+  client_pays_gtt_p2: 342.15
+  pm_average_incl_gst: 117.0
+medicare:
+  consult_item: '82105'
+  consult_rebate: 32.95
+  test_item: '66548'
+  test_rebate: 16.95
+  collection_item: 73928 (AskMBS to confirm vs 73938)
+  collection_rebate: 5.1
+  lab_rebate: 22.05
+  total_rebate: 55.0
+  out_of_pocket_p1: 265.0
+  out_of_pocket_p2: 315.0
+  standalone_consult_out_of_pocket: 97.05
+volumes:
+  am_clients_day: 18
+  am_clients_month: 473.94
+  pm_transactions_month: 210.13
+midwives:
+  hours: 08:00 to 16:00
+  paid_h_per_shift: 7.5
+  paid_h_week_both: 45.0
+  block: fortnightly Mon-Wed / Thu-Sat
+  oncost: 1.3658
+  spare_slots_day: 4
+  standalone_consults: upside only, not in headline
+headline:
+  profit_before_company_tax: 26631.97
+  company_tax: -6657.99
+  net_after_all: 19973.98
+  threshold: 20000.0
+  above_threshold: false

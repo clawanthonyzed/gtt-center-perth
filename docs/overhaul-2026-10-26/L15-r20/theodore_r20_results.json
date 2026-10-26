@@ -1,0 +1,548 @@
+{
+ "generated": "2026-10-26",
+ "engine": "theodore_r18.py (-> r17 .. r13) + tools/master_financial_model.py live; same context-manager patching as R19",
+ "inputs_check": {
+  "am_staff": 8,
+  "pm_staff": 4,
+  "solver_staff_at_18": 8,
+  "am_clients_month": 473.94,
+  "pm_tx_month": 210.13,
+  "pm_price_incl_gst": 117.0,
+  "pm_weekday_tx_day": 8.6957,
+  "pm_saturday_tx_day": 4.3478,
+  "pm_revenue_repo": 24585.37
+ },
+ "locked": {
+  "clients": 473.94,
+  "takings_incl_gst_to_gtt": 163046.94,
+  "rev_lounge_service_am_ex_gst": 69863.5,
+  "rev_pm_ex_gst": 22350.34,
+  "rev_consult_gst_free": 61612.2,
+  "revenue_total_ex_gst": 153826.03,
+  "gst_collected_am": 6985.88,
+  "gst_collected_pm": 2235.03,
+  "repo_payroll": -93595.63,
+  "repo_operating_expenses": -14288.34,
+  "less_gst_credits": 1262.58,
+  "card_fees": -2497.66,
+  "midwife_wages": -12000.38,
+  "midwife_fixed_consumables": -2840.65,
+  "venue_manager_0630": -500.28,
+  "payroll_tax_group": -1344.04,
+  "three_company": -908.67,
+  "total_costs": -127194.06,
+  "payroll_taxable_wages_year": 1254144.89,
+  "payroll_tax_threshold": 1000000,
+  "over_threshold_by": 254144.89,
+  "profit_before_company_tax": 26631.97,
+  "company_tax_25": -6657.99,
+  "profit_after_company_tax": 19973.98,
+  "franked_dividend_available": 19973.98,
+  "franking_credits_attached": 6657.99,
+  "card_fees_pm": -480.99,
+  "card_fees_total": -2978.65,
+  "consult_price": 130.0,
+  "p1": 320.0,
+  "p2": 370.0,
+  "midwife_hours_week": 45.0,
+  "oncost_basis": "leave_covered_1.366"
+ },
+ "T1_headline": {
+  "profit_before_company_tax": 26631.97,
+  "company_tax": -6657.99,
+  "net_after_all": 19973.98,
+  "threshold": 20000.0,
+  "above_threshold": false,
+  "margin_vs_threshold": -26.02,
+  "before_tax_needed_for_threshold": 26666.67,
+  "shortfall_before_tax": 34.7
+ },
+ "T1_reach": {
+  "p1": {
+   "client_pays": 320.0,
+   "consult_medical_gst_free": 130.0,
+   "lab_gst_free_not_gtt": 27.85,
+   "lounge_incl_gst": 162.15,
+   "lounge_gst_inside": 14.74,
+   "lounge_ex_gst": 147.41,
+   "gtt_receives_incl_gst": 292.15,
+   "gtt_receives_ex_gst": 277.41,
+   "card_fee": 5.27,
+   "gtt_ex_gst_after_card": 272.14,
+   "clears_250_incl": true,
+   "clears_250_ex_gst": true,
+   "gst_on_top": 16.22,
+   "lounge_with_gst_on_top": 178.37,
+   "client_pays_gst_on_top": 336.22,
+   "gtt_ex_gst_if_gst_on_top": 292.15
+  },
+  "p2": {
+   "client_pays": 370.0,
+   "consult_medical_gst_free": 130.0,
+   "lab_gst_free_not_gtt": 27.85,
+   "lounge_incl_gst": 212.15,
+   "lounge_gst_inside": 19.29,
+   "lounge_ex_gst": 192.86,
+   "gtt_receives_incl_gst": 342.15,
+   "gtt_receives_ex_gst": 322.86,
+   "card_fee": 6.12,
+   "gtt_ex_gst_after_card": 316.74,
+   "clears_250_incl": true,
+   "clears_250_ex_gst": true,
+   "gst_on_top": 21.22,
+   "lounge_with_gst_on_top": 233.37,
+   "client_pays_gst_on_top": 391.22,
+   "gtt_ex_gst_if_gst_on_top": 342.15
+  },
+  "out_of_pocket_p1": 265.0,
+  "out_of_pocket_p2": 315.0
+ },
+ "T1_card_fee_rate_check": {
+  "model_rate": "1.7% + A$0.30 a transaction (E) on the full A$292.15",
+  "fee_model": 5.27,
+  "repo_tyro_1_4": 4.39,
+  "repo_square_1_6": 4.97,
+  "model_matches_r18_reach": 5.27,
+  "month_profit_before_if_repo_rate_1_6": 26796.65,
+  "note": "The repo opex.yml lists Tyro 1.4% and Square 1.6% for cards present and has NO fixed A$0.30; the model's 1.7% + A$0.30 is the more cautious estimate."
+ },
+ "T1_waterfall_per_client": [
+  [
+   "Client pays GTT at checkout (Package 1, lab fee not included)",
+   292.15
+  ],
+  [
+   "   made of: consult (GST-free, Medical)",
+   130.0
+  ],
+  [
+   "   made of: lounge + service incl GST (Lounge)",
+   162.15
+  ],
+  [
+   "GST inside the lounge + service part, passed to the ATO",
+   -14.74
+  ],
+  [
+   "Card fee on the full A$292.15",
+   -5.27
+  ],
+  [
+   "GTT keeps from the morning package",
+   272.14
+  ],
+  [
+   "Plus afternoon sales per morning client (ex GST, after card fee)",
+   46.14
+  ],
+  [
+   "Less repo staff (8 AM service, 2 phlebotomists, 4 PM, venue manager 07:00)",
+   -197.48
+  ],
+  [
+   "Less repo running costs, after GST credits",
+   -27.48
+  ],
+  [
+   "Less midwife wages",
+   -25.32
+  ],
+  [
+   "Less midwife fixed costs and consumables",
+   -5.99
+  ],
+  [
+   "Less venue manager 06:30",
+   -1.06
+  ],
+  [
+   "Less payroll tax (whole group)",
+   -2.84
+  ],
+  [
+   "Less three-company running cost",
+   -1.92
+  ],
+  [
+   "Profit per client before company tax",
+   56.19
+  ],
+  [
+   "Company tax 25%",
+   -14.05
+  ],
+  [
+   "Net per client after GST, card fees, payroll tax and company tax",
+   42.14
+  ]
+ ],
+ "T1_client_view": {
+  "full_price_p1": 320.0,
+  "lab_to_lab": 27.85,
+  "to_gtt": 292.15,
+  "medicare_back": 55.0,
+  "out_of_pocket": 265.0,
+  "note": "A$55.00 is the TOTAL back from Medicare: consult A$32.95 + lab test A$16.95 + collection A$5.10. The consult alone is A$32.95."
+ },
+ "T2_roster": {
+  "on_site_hours_per_shift": 8.0,
+  "unpaid_break_h": 0.5,
+  "paid_hours_per_shift": 7.5,
+  "shifts_per_midwife_per_fortnight": 6,
+  "on_site_h_per_midwife_fortnight": 48.0,
+  "paid_h_per_midwife_fortnight": 45.0,
+  "paid_h_per_midwife_week": 22.5,
+  "paid_h_both_midwives_week": 45.0,
+  "wage_cost_per_midwife_per_fortnight_loaded": 2769.32,
+  "wage_cost_both_per_month": 12000.38,
+  "fixed_and_consumables_month": 2840.65,
+  "oncost": 1.3658,
+  "blended_hourly_before_oncost": 45.06,
+  "slots_per_day_capacity": 22.5,
+  "gtt_consults_per_day": 18.0,
+  "gtt_consult_hours_day": 6.0,
+  "utilisation_by_gtt": 0.8,
+  "spare_slots_day": 4,
+  "spare_minutes_left_over": 10,
+  "spare_slots_month": 105.32
+ },
+ "T2_sensitivity_LABELLED": {
+  "grace_1.20_basis": {
+   "midwife_wages": -10543.26,
+   "payroll_tax": -1225.72,
+   "before_tax": 28207.41,
+   "after_tax": 21155.56,
+   "change_after_vs_headline": 1181.58
+  },
+  "paid_8h_shift_no_unpaid_break_48h_week": {
+   "midwife_wages": -12800.41,
+   "payroll_tax": -1394.06,
+   "before_tax": 25781.92,
+   "after_tax": 19336.44,
+   "change_after_vs_headline": -637.54
+  }
+ },
+ "T2_payroll_tax": {
+  "headline_hours_change_vs_0900_roster": "none (still 45 paid h a week)",
+  "group_taxable_wages_year": 1254144.89,
+  "over_threshold_by": 254144.89,
+  "payroll_tax_month": 1344.04,
+  "standalone_consults_add_payroll_tax": "none while they fit inside the 45 paid hours (no new wages)",
+  "payroll_tax_per_extra_paid_midwife_hour_incl_oncost_wage_E": 3.85
+ },
+ "T2_reed_file_present": true,
+ "T2_standalone_upside": [
+  {
+   "label": "low (Reed: 5 a week, assumption)",
+   "consults_week": 5.0,
+   "share_of_spare_slots": 0.206,
+   "consults_month": 21.7,
+   "consults_day": 0.82,
+   "gross": 2816.67,
+   "card_fees": -54.38,
+   "consumables": -65.0,
+   "midwife_wages_added": 0.0,
+   "payroll_tax_added": 0.0,
+   "before_tax": 2697.28,
+   "company_tax": -674.32,
+   "after_tax": 2022.96,
+   "gst_on_sale": 0.0,
+   "client_out_of_pocket": 97.05
+  },
+  {
+   "label": "middle (Reed: 12 a week, assumption)",
+   "consults_week": 12.0,
+   "share_of_spare_slots": 0.494,
+   "consults_month": 52.0,
+   "consults_day": 1.97,
+   "gross": 6760.0,
+   "card_fees": -130.52,
+   "consumables": -156.0,
+   "midwife_wages_added": 0.0,
+   "payroll_tax_added": 0.0,
+   "before_tax": 6473.48,
+   "company_tax": -1618.37,
+   "after_tax": 4855.11,
+   "gst_on_sale": 0.0,
+   "client_out_of_pocket": 97.05
+  },
+  {
+   "label": "high (Reed: full spare capacity, about 24 a week, assumption)",
+   "consults_week": 24.3,
+   "share_of_spare_slots": 1.0,
+   "consults_month": 105.3,
+   "consults_day": 4.0,
+   "gross": 13691.6,
+   "card_fees": -264.35,
+   "consumables": -315.96,
+   "midwife_wages_added": 0.0,
+   "payroll_tax_added": 0.0,
+   "before_tax": 13111.29,
+   "company_tax": -3277.82,
+   "after_tax": 9833.47,
+   "gst_on_sale": 0.0,
+   "client_out_of_pocket": 97.05
+  }
+ ],
+ "T2_with_upside_after_tax": [
+  {
+   "label": "low (Reed: 5 a week, assumption)",
+   "headline_after_tax": 19973.98,
+   "upside_after_tax": 2022.96,
+   "total_after_tax": 21996.94
+  },
+  {
+   "label": "middle (Reed: 12 a week, assumption)",
+   "headline_after_tax": 19973.98,
+   "upside_after_tax": 4855.11,
+   "total_after_tax": 24829.09
+  },
+  {
+   "label": "high (Reed: full spare capacity, about 24 a week, assumption)",
+   "headline_after_tax": 19973.98,
+   "upside_after_tax": 9833.47,
+   "total_after_tax": 29807.45
+  }
+ ],
+ "T2_one_consult": {
+  "price": 130.0,
+  "gst": 0.0,
+  "card_fee": 2.51,
+  "consumables": 3.0,
+  "kept_before_tax": 124.49,
+  "client_gets_back": 32.95,
+  "client_nets": 97.05
+ },
+ "T3_market": {
+  "gtt_standalone": 130.0,
+  "client_nets": 97.05,
+  "see": "THEODORE-R20.md section 3 (Reed range)"
+ },
+ "T4_afternoon": {
+  "afternoon_ex_gst": 22350.34,
+  "afternoon_card_fees": 480.99,
+  "afternoon_net": 21869.35,
+  "morning_clients": 473.94,
+  "per_morning_client": 46.14,
+  "pm_tx_month": 210.13,
+  "pm_weekday_tx_day": 8.6957,
+  "pm_saturday_tx_day": 4.3478,
+  "pm_price_incl_gst": 117.0,
+  "pm_revenue_incl_gst": 24585.37,
+  "changes_with_consult_rise": false
+ },
+ "T5_interest": {
+  "per_client_held": 292.15,
+  "lab_fee_held": 0.0,
+  "clients_month": 473.94,
+  "new_money_in_per_month": 138461.57,
+  "days_held": 21,
+  "average_standing_balance": 95647.8,
+  "first_year_factor": 0.9712,
+  "sens_balance_by_days_held": {
+   "7": 31882.6,
+   "14": 63765.2,
+   "21": 95647.8,
+   "28": 127530.39
+  },
+  "rates": [
+   {
+    "name": "RBA cash rate 4.60% (V, a reference rate, not a bank product)",
+    "rate": 0.046,
+    "status": "V",
+    "interest_year_steady": 4399.8,
+    "interest_first_12_months": 4273.23,
+    "interest_per_month_steady": 366.65,
+    "after_25pct_company_tax_first_12m": 3204.92
+   },
+   {
+    "name": "5.00% 3-month business term deposit (Aspire, July 2026, secondary)",
+    "rate": 0.05,
+    "status": "U",
+    "interest_year_steady": 4782.39,
+    "interest_first_12_months": 4644.81,
+    "interest_per_month_steady": 398.53,
+    "after_25pct_company_tax_first_12m": 3483.61
+   },
+   {
+    "name": "4.30% CommBank 3-month business term deposit (Aspire, July 2026, before the September rise)",
+    "rate": 0.043,
+    "status": "U",
+    "interest_year_steady": 4112.86,
+    "interest_first_12_months": 3994.54,
+    "interest_per_month_steady": 342.74,
+    "after_25pct_company_tax_first_12m": 2995.91
+   },
+   {
+    "name": "1.00% big-bank business saver (page did not load)",
+    "rate": 0.01,
+    "status": "U",
+    "interest_year_steady": 956.48,
+    "interest_first_12_months": 928.96,
+    "interest_per_month_steady": 79.71,
+    "after_25pct_company_tax_first_12m": 696.72
+   }
+  ],
+  "extra_float_from_consult_rise": 6547.86,
+  "wrong_multiplication_if_balance_times_12": 1147773.6,
+  "note": "in the steady state the balance is replaced, not added to: money in each month equals money out each month"
+ },
+ "T6_refund": {
+  "p1": {
+   "lounge_paid": 162.15,
+   "refund_pct": 0.5,
+   "refund_to_client": 81.08,
+   "gst_adjustment_back_from_ato": 7.37,
+   "refund_net_of_gst": 73.7,
+   "refund_net_of_gst_and_company_tax": 55.28,
+   "gtt_keeps_if_never_rebooks": 81.08,
+   "gtt_keeps_if_never_rebooks_ex_gst": 73.7,
+   "rebook_second_payment": 162.15,
+   "second_card_fee": 3.06,
+   "gtt_lounge_takings_if_rebooks_and_attends": 243.23,
+   "of_which_ex_gst": 221.11,
+   "extra_vs_one_normal_lounge": 81.08,
+   "extra_card_fee_from_second_payment": 3.06
+  },
+  "p2": {
+   "lounge_paid": 212.15,
+   "refund_pct": 0.5,
+   "refund_to_client": 106.08,
+   "gst_adjustment_back_from_ato": 9.64,
+   "refund_net_of_gst": 96.43,
+   "refund_net_of_gst_and_company_tax": 72.32,
+   "gtt_keeps_if_never_rebooks": 106.08,
+   "gtt_keeps_if_never_rebooks_ex_gst": 96.43,
+   "rebook_second_payment": 212.15,
+   "second_card_fee": 3.91,
+   "gtt_lounge_takings_if_rebooks_and_attends": 318.23,
+   "of_which_ex_gst": 289.3,
+   "extra_vs_one_normal_lounge": 106.08,
+   "extra_card_fee_from_second_payment": 3.91
+  },
+  "ladder_p1": [
+   {
+    "lounge_paid": 162.15,
+    "refund_pct": 0.0,
+    "refund_to_client": 0.0,
+    "gst_adjustment_back_from_ato": 0.0,
+    "refund_net_of_gst": 0.0,
+    "refund_net_of_gst_and_company_tax": 0.0,
+    "gtt_keeps_if_never_rebooks": 162.15,
+    "gtt_keeps_if_never_rebooks_ex_gst": 147.41,
+    "rebook_second_payment": 162.15,
+    "second_card_fee": 3.06,
+    "gtt_lounge_takings_if_rebooks_and_attends": 324.3,
+    "of_which_ex_gst": 294.82,
+    "extra_vs_one_normal_lounge": 162.15,
+    "extra_card_fee_from_second_payment": 3.06,
+    "pct": 0.0
+   },
+   {
+    "lounge_paid": 162.15,
+    "refund_pct": 0.25,
+    "refund_to_client": 40.54,
+    "gst_adjustment_back_from_ato": 3.69,
+    "refund_net_of_gst": 36.85,
+    "refund_net_of_gst_and_company_tax": 27.64,
+    "gtt_keeps_if_never_rebooks": 121.61,
+    "gtt_keeps_if_never_rebooks_ex_gst": 110.56,
+    "rebook_second_payment": 162.15,
+    "second_card_fee": 3.06,
+    "gtt_lounge_takings_if_rebooks_and_attends": 283.76,
+    "of_which_ex_gst": 257.97,
+    "extra_vs_one_normal_lounge": 121.61,
+    "extra_card_fee_from_second_payment": 3.06,
+    "pct": 0.25
+   },
+   {
+    "lounge_paid": 162.15,
+    "refund_pct": 0.5,
+    "refund_to_client": 81.08,
+    "gst_adjustment_back_from_ato": 7.37,
+    "refund_net_of_gst": 73.7,
+    "refund_net_of_gst_and_company_tax": 55.28,
+    "gtt_keeps_if_never_rebooks": 81.08,
+    "gtt_keeps_if_never_rebooks_ex_gst": 73.7,
+    "rebook_second_payment": 162.15,
+    "second_card_fee": 3.06,
+    "gtt_lounge_takings_if_rebooks_and_attends": 243.23,
+    "of_which_ex_gst": 221.11,
+    "extra_vs_one_normal_lounge": 81.08,
+    "extra_card_fee_from_second_payment": 3.06,
+    "pct": 0.5
+   },
+   {
+    "lounge_paid": 162.15,
+    "refund_pct": 0.75,
+    "refund_to_client": 121.61,
+    "gst_adjustment_back_from_ato": 11.06,
+    "refund_net_of_gst": 110.56,
+    "refund_net_of_gst_and_company_tax": 82.92,
+    "gtt_keeps_if_never_rebooks": 40.54,
+    "gtt_keeps_if_never_rebooks_ex_gst": 36.85,
+    "rebook_second_payment": 162.15,
+    "second_card_fee": 3.06,
+    "gtt_lounge_takings_if_rebooks_and_attends": 202.69,
+    "of_which_ex_gst": 184.26,
+    "extra_vs_one_normal_lounge": 40.54,
+    "extra_card_fee_from_second_payment": 3.06,
+    "pct": 0.75
+   },
+   {
+    "lounge_paid": 162.15,
+    "refund_pct": 1.0,
+    "refund_to_client": 162.15,
+    "gst_adjustment_back_from_ato": 14.74,
+    "refund_net_of_gst": 147.41,
+    "refund_net_of_gst_and_company_tax": 110.56,
+    "gtt_keeps_if_never_rebooks": 0.0,
+    "gtt_keeps_if_never_rebooks_ex_gst": 0.0,
+    "rebook_second_payment": 162.15,
+    "second_card_fee": 3.06,
+    "gtt_lounge_takings_if_rebooks_and_attends": 162.15,
+    "of_which_ex_gst": 147.41,
+    "extra_vs_one_normal_lounge": 0.0,
+    "extra_card_fee_from_second_payment": 3.06,
+    "pct": 1.0
+   }
+  ],
+  "consult_kept": 130.0,
+  "consult_not_refunded": true,
+  "month_if_no_show_rate": [
+   {
+    "rate": 0.01,
+    "cases": 4.74,
+    "refunds_gross": 384.25,
+    "refunds_net_of_gst_and_tax": 261.99
+   },
+   {
+    "rate": 0.03,
+    "cases": 14.22,
+    "refunds_gross": 1152.74,
+    "refunds_net_of_gst_and_tax": 785.96
+   },
+   {
+    "rate": 0.05,
+    "cases": 23.7,
+    "refunds_gross": 1921.23,
+    "refunds_net_of_gst_and_tax": 1309.93
+   },
+   {
+    "rate": 0.1,
+    "cases": 47.39,
+    "refunds_gross": 3842.47,
+    "refunds_net_of_gst_and_tax": 2619.86
+   }
+  ],
+  "note": "No-show rates are illustrations; there is no repo data on no-shows."
+ },
+ "T7_effects": {
+  "extra_kept_per_client_before_tax": 19.66,
+  "extra_kept_month_before_tax": 9317.66,
+  "extra_float": 6547.86,
+  "gst_change_on_consult_rise": 0.0,
+  "break_even_rerun": false,
+  "note_break_even": "The break-even level needs the repo break-even and cash-flow models re-run with the new prices. Not re-run this round. Direction: each client now keeps about A$19.66 more before tax, so break-even moves in the safe direction."
+ }
+}
