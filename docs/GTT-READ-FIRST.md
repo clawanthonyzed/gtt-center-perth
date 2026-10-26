@@ -6,7 +6,7 @@ Every agent, consultant and overnight worker reads this file AND docs/FINANCIAL-
 - Say "client" or "expecting mother". Never the bare word for a parent. No em dashes. Australian dollars. Sign off "Regards."
 - Path A = PREFERRED: package WITH the GTT midwife consult. Path B = NOT preferred: client keeps an OUTSIDE referral, no GTT consult. (Renamed in Round 22: older files that say the opposite are out of date.) A client who has an outside referral and then books the package with our midwife is on Path A.
 
-## Prices and money (Structure B: private all-inclusive, the client claims her own rebate; never discuss bulk billing)
+## Prices and money (Structure B: private all-inclusive, the client claims her own rebate)
 - Path A: advertised A$320 (Package 1) and A$370 (Package 2) including the A$27.85 lab fee. GTT charges A$292.15 / A$342.15 = consult A$130.00 (GST-free) + lounge and service A$162.15 / A$212.15 (GST inside). The lab bills the client after it receives the paperwork and samples. GTT never touches the lab money and passes no booking details to the lab.
 - Path B: A$300 (Package 1) and A$350 (Package 2) all in including the A$27.85 lab fee, so GTT charges A$272.15 / A$322.15; whole amount is lounge and taxable. No consult line. Outside request gets no Medicare benefit at GTT (screen note, Catherine words it).  <!-- factcheck:ok -->
 - Rebates for planning (locked, shown as "about"): consult A$32.95 (item 82105, confirmed) + lab A$22.05 (66548 A$16.95 + collection A$5.10) = A$55.00. Client cost after rebates A$265 / A$315. The collection item (73928 or 73938) goes to AskMBS later; GTT's own money does not change. Do not reopen this.
