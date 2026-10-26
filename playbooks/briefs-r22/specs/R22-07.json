@@ -1,0 +1,40 @@
+{
+ "slug": "gtt-r22-07-test-morning-procedure",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft the test-morning procedure for the partner lab to approve. It is a draft, not a clinical protocol.",
+ "facts": [
+  "morning",
+  "late",
+  "people",
+  "slots",
+  "results",
+  "filing"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Patient flow for one client (CLINICAL-OPERATIONS-PLAN.md section 2.1, with the locked facts winning)",
+   "text": "About 10 minutes before her appointment she arrives fasting. Check-in, then for Path B the request check, then two ID checks (name and date of birth). T+0: first draw (fasting), about 5 minutes, then the 75 g drink within 5 minutes. Service 1 between draws. A buffer, then escort back seated. T+60 exactly: second draw. Service 2. Buffer. T+120 exactly: third draw; she may leave only after it. After the third draw a snack is offered straight away. Tube for every draw: grey-top (fluoride oxalate). Package 1 has 2 services of 30 minutes, Package 2 up to 45 minutes each."
+  },
+  {
+   "label": "Fasting and seated rules (CLINICAL-OPERATIONS-PLAN.md sections 2.3 and 2.4)",
+   "text": "Fasting hours: NOT IN REPO (the lab sets them); water only. No food, gum, mints, juice, coffee, nicotine, or exercise that morning. If she is not fasted, do not start; the venue manager decides and she rebooks. The partner lab wants the client to stay at the collection centre for the whole test. Our draft rule: escort her seated, low-activity services only, no exercise, no leaving the premises, one staff member responsible. Open point (whether she must stay in the lab's sightline): the partner lab decides."
+  },
+  {
+   "label": "Door and record steps (GRACE-R22-PART-4.md section 8, CATHERINE-R22B-PART-5.md, GRACE-R22-PART-1.md)",
+   "text": "The venue manager opens at 06:30 and greets clients. Path B: she checks the outside request is there (original, phone, or the client's photo), the name matches the booking and a date is on it, and she does not judge whether it is medically right. The client signs the Medicare notice before the draw; no signature, no draw. The phlebotomist checks the request is for the pregnancy glucose test and meets the lab's rules (what the lab accepts: NOT IN REPO), then ticks outside request checked in Today. Missing flag: no draw. Unsure: ask the midwife (on site from 08:00) or phone the lab. Path A clients with a same-morning consult see the midwife first and stay fasted. Staff never write, copy or fix a request.\nResults: for Path A the lab sends results to the requesting midwife; for Path B they go to the client's outside practitioner. A normal result gets a generic message; the midwife phones only abnormal results. GTT does not take over diabetes care."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Exactly 14 numbered headings, each with 2 to 4 short lines: 1 Arrival, 2 ID and request check, 3 Fasting check, 4 First draw and draw window, 5 The drink, 6 Timing marks, 7 Waiting area, 8 Each draw, 9 No strenuous activity, 10 Adverse events, 11 Labelling, 12 Transport, 13 Departure, 14 Results.",
+  "length": "at most 70 lines in total",
+  "write_only": "the 14 headings and Questions for Anthony",
+  "do_not_write": "a tube type that is not in the inputs, drink contents not in the inputs, any clinical decision, fasting hours"
+ },
+ "extra_checks": [
+  "There are exactly 14 numbered headings.",
+  "Heading 1 uses the late rule word for word.",
+  "Heading 14 says the lab sends Path A results to the requesting midwife and GTT does not take over diabetes care.",
+  "Anything the partner lab must decide is written as: the partner lab decides."
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "slug": "gtt-r22-11-payroll-tax-workers-comp-sheet",
+ "agent": "reed",
+ "role": "You are Reed, finance drafter for GTT Center Perth. You copy figures into a worksheet. You do no arithmetic and write no new numbers.",
+ "facts": [
+  "midwives",
+  "people",
+  "structure",
+  "money-notes"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Rates and tax (FINANCIAL-CENTER-OF-TRUTH.md section 3)",
+   "text": "Midwife on-cost used 1.366: super 12 percent, workers comp 1.7 percent, leave loading, paid leave covered by the casual. Midwife on-cost 1.20 is a sensitivity only (no leave cover). WA payroll tax 5.5 percent above the A$1m grouped threshold (tapering deduction); check RevenueWA. Company tax 25 percent."
+  },
+  {
+   "label": "Monthly cost lines, locked case (FINANCIAL-CENTER-OF-TRUTH.md section 4, Theodore R22)",
+   "text": "Midwife wages (45 paid hours a week, on-cost 1.366): A$12,000.38. Midwife fixed costs and consumables: A$2,840.65. Venue manager 06:30 to 15:00, combined loaded cost: A$8,504.76 = repo base A$8,004.48 + extra half hour A$500.28. WA payroll tax, whole group: A$1,344.04. Three-company running cost: A$908.67. Profit before company tax: A$26,631.97. Company tax 25 percent: A$6,657.99. Net after company tax: A$19,973.98."
+  },
+  {
+   "label": "Payroll tax notes (THEODORE-R22-PART-2.md and PART-3.md)",
+   "text": "Related companies are grouped for the A$1m threshold, so the whole wage bill counts once; allocating wages between companies cannot move them out of the group. Payroll tax is a new cost that Anthony accepts. Workers compensation: the repo allows 1.7 percent in staff on-cost; a broker quote is needed. Payroll tax with no midwives, and a one-midwife case: NOT IN REPO."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: a worksheet table of at most 8 rows (line, locked case with 2 midwives and the 06:30 venue manager, source). Copy only figures that appear in the inputs; write NOT IN REPO elsewhere. Section B: a table of at most 4 rows of workers compensation inputs for a broker quote, with the broker answer column holding the words broker to quote. Section C: Questions for Anthony.",
+  "length": "at most 60 lines in total",
+  "write_only": "the two tables and the questions",
+  "do_not_write": "any calculation, any rate or premium not in the inputs, a founder-only scenario, a 1 midwife figure, interest, standalone consult income, any legal or health lawyer cost"
+ },
+ "extra_checks": [
+  "The whole-group payroll tax figure is exactly A$1,344.04 and the venue manager line is exactly A$8,504.76.",
+  "No line counts interest or standalone consult income."
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "slug": "gtt-r22-19-opening-closing-checklists",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the venue manager's opening and closing checklists. Use only duties named in the inputs; anything else is NOT IN REPO. It is a draft for Anthony.",
+ "facts": [
+  "people",
+  "morning",
+  "rooms",
+  "filing",
+  "welcome"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Duties named in the Round 22 files (GRACE-R22-PART-3, 4, 5 and 6; CATHERINE-R22B-PART-6)",
+   "text": "Opening (venue manager, from 06:30): open the roster and check staff names against the day's cards before 06:45; open the computer record and the day's flags (green or red; never the request itself); take the folder of cards and the day list from the locked front desk drawer and count cards against clients; greet clients from about 10 minutes before each appointment; for Path B check the outside request is there (original, phone or photo), the name matches the booking and a date is on it, and make sure the Medicare notice is signed before the draw; a missing flag means no draw until resolved; decide late and illness cases from the decision guide and record a code only; note the midwife's chosen meal break on the timesheet.\nBetween draws: services fit between draws and never interrupt a draw; clients stay on the premises for the whole test. Doors shut by 18:00 (afternoon casual staff run the afternoon). The venue manager works Monday to Friday 06:30 to 15:00; Saturday cover is a senior staff member.\nClosing the test day: shred every copy of the day list and unused cards with a log line (date, copies printed, copies shredded, initials); lock the drawer; print tomorrow's list and cards after the 48 hour change cutoff; tell Grace the same day about any missing list; report any waitlist slot that is still free after 48 hours (it goes to the public page). Cash, alarm, keys, cleaning, lounge set-up and stock: NOT IN REPO."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Two checklists. Section A: Opening, a table of at most 8 rows (time, task, tick). Section B: Closing, a table of at most 8 rows (task, tick). Section C: a list of at most 6 items marked NOT IN REPO that Anthony must supply before this can go live.",
+  "length": "at most 55 lines in total",
+  "write_only": "the two tables, the NOT IN REPO list and Questions for Anthony",
+  "do_not_write": "cash handling, alarm codes, keys, cleaning products or stock, any health detail"
+ },
+ "extra_checks": [
+  "The opening table starts at 06:30 and the first draw is shown as 07:00.",
+  "The venue manager sees flags only and no request or result appears in any task."
+ ]
+}

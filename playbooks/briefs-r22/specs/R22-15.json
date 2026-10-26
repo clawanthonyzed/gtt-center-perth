@@ -1,0 +1,33 @@
+{
+ "slug": "gtt-r22-15-appointment-reminder-set",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the appointment reminder messages for Path A and Path B. Merge fields are written in curly braces such as {first_name}. Nothing is sent.",
+ "facts": [
+  "prices",
+  "late",
+  "changes",
+  "order"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Reminder wording from Catherine (CATHERINE-R22B-PART-4.md section 4.4, lawyer to check)",
+   "text": "Confirmation and reminders (48 hours, evening before): Your appointment is at {time}. Please arrive by {arrive_time}. From {time} a blood test cannot start. If you are unwell or something has happened with your pregnancy, call {phone} and we will rebook you free.\nFollow-up after a late or missed test: You were not checked in by {time}, so your test could not start. We can rebook you: {rebook_link}. If you were unwell or had an emergency, reply and we will look at it under our exceptions. You do not need to give medical details.\nSubject lines and text previews: no pregnancy, glucose or midwife."
+  },
+  {
+   "label": "What each path brings (GRACE-R22-PART-7.md sections 2 and 3)",
+   "text": "Path A confirmation: both appointments (the test and the midwife consult), the late rule, fasting rules (hours NOT IN REPO, the lab sets them), and Bring your Medicare card. If the consult is on the test morning she stays fasted and the consult ends before her draw. Path B confirmation: date, time, the late rule, Bring your referral and ID, and a lab note. Bring the original referral; we check it at the door. Both paths: the 48 hour change window; business name {business_name}; sign-off Regards."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Six items: 1 Path A, 48 hour email (subject and body). 2 Path A, evening before text message (under 300 characters, no health words). 3 Path B, 48 hour email. 4 Path B, evening before text message (under 300 characters, no health words). 5 Follow-up after a late or missed test (email). 6 A table of at most 5 rows of merge fields.",
+  "length": "at most 60 lines in total",
+  "write_only": "the six items and Questions for Anthony",
+  "do_not_write": "fasting hours, a price, a rebate figure, a result, a health word in any text message or subject"
+ },
+ "extra_checks": [
+  "The late rule sentence appears word for word in both emails.",
+  "Path A messages mention the Medicare card and the consult; Path B messages mention the referral and ID and no consult.",
+  "Fasting hours are written NOT IN REPO, not guessed."
+ ]
+}

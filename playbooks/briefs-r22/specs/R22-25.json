@@ -1,0 +1,32 @@
+{
+ "slug": "gtt-r22-25-midwife-prestart-and-consult-note",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the midwife pre-start checklist and the layout of the consult note and client account. Layout and field names only; no clinical content. It is a draft for Anthony and a lawyer.",
+ "facts": [
+  "midwives",
+  "slots",
+  "filing"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Pre-start check and conditions (CATHERINE-R22B-PART-3.md sections 3.2 to 3.4; lawyer to check)",
+   "text": "Before day one the venue manager or Grace checks: an Ahpra register printout showing registration as a midwife with no conditions that limit antenatal practice and endorsement for scheduled medicines for midwives; the insurance certificate (professional indemnity covering private antenatal practice, or cover under GTT's policy if the insurer confirms it); HPOS confirmation of the Medicare provider number for the GTT location (separate number for each location); current CPR; police check (and Working with Children check if required). No provider number for GTT, no Path A consults. Time to issue a provider number: NOT IN REPO, plan for weeks.\nConditions of employment: GTT Medical Services Pty Ltd charges and keeps the consult fee; the provider number for this location is used only for GTT services; written notes for every consult with start and end times; no item 82105 charge for a consult under 10 minutes; one client per consult; the meal break is chosen by the midwife on the day and noted on the timesheet by the venue manager."
+  },
+  {
+   "label": "Consult note and account fields (CATHERINE-R22B-PART-3.md section 3.3; GRACE-R22-PART-5.md and PART-6.md)",
+   "text": "The client's account must name the midwife and her practice address or provider number, state that she provided the service, show the client's name, the date the service was given, the item (82105), the amount charged, paid and owing. The client claims her own rebate. Consult content named in the repo: history, risk check, glucose test counselling, the request, and notes with start and end times. After the consult the midwife writes the request in the computer record, marks request issued, and the system files a copy to the test-day record. She can add requests, not delete. Results follow-up log: one line per attempt (date, time, channel, outcome, midwife name). Blocks: consults run in 25 minute blocks, 08:15 to 10:30 for same-morning consults, then normal bookings."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: the pre-start checklist as a table of at most 8 rows (item, evidence, who checks, tick). Section B: the consult note layout as a list of at most 10 field names (no clinical content). Section C: the client account layout as a list of at most 8 field names. Section D: first-week set-up in at most 5 lines.",
+  "length": "at most 55 lines in total",
+  "write_only": "the four sections and Questions for Anthony",
+  "do_not_write": "clinical advice, a price not in the inputs, a pay rate, a provider number, an Ahpra number"
+ },
+ "extra_checks": [
+  "The checklist includes the endorsement on the Ahpra register and the provider number for the GTT location.",
+  "The consult note layout has fields for start time and end time.",
+  "The account layout names the midwife, her provider number or practice address, and item 82105."
+ ]
+}

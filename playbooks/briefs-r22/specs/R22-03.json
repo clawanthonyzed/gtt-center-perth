@@ -1,0 +1,68 @@
+{
+ "slug": "gtt-r22-03-midwife-hiring-pack",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft part of a compact midwife hiring pack for Anthony to review. No contract is sent or signed.",
+ "facts": [
+  "midwives",
+  "slots",
+  "mealbreak",
+  "results"
+ ],
+ "parts": [
+  {
+   "inline_inputs": [
+    {
+     "label": "Hours and blocks (GRACE-R22-PART-1.md)",
+     "text": "On site 08:00 for set-up, first appointment 08:15, last finish by 16:00. A consult is 20 minutes inside a 25 minute block (5 minutes to write the request and notes). One consult room. From 08:15 to 16:00 is 465 minutes; less a 30 minute meal break leaves 435, so 17 blocks fit and 18 do not. After 10:30 the midwife takes all bookings a normal midwife would take. The meal break is chosen by the midwife on the day and noted on the timesheet by the venue manager; the Fair Work break check is still to be done."
+    },
+    {
+     "label": "Hiring conditions (CATHERINE-R22B-PART-3.md sections 3.2 and 3.4)",
+     "text": "Hire endorsed midwives only. Participating midwife = a registered midwife endorsed by the Nursing and Midwifery Board, with a Medicare provider number for the GTT address (HPOS online or form HW088; HW093 is the wrong form), professional indemnity insurance, in private practice. The Ahpra entry must show endorsement for scheduled medicines for midwives. Pre-start check: Ahpra register printout showing the endorsement, insurance certificate, HPOS confirmation of the provider number for the GTT location. No provider number for GTT, no Path A consults. Also required: current CPR and a police check. Insurance minimums and time to issue a provider number: NOT IN REPO."
+    }
+   ],
+   "deliverable": {
+    "part": "1 of 2 (screening sheet and interview guide)",
+    "format": "Two short sections. 1) Screening sheet: a table of at most 8 rows (check, what to see, pass or fail). 2) Interview guide: at most 8 numbered questions.",
+    "length": "at most 45 lines in total",
+    "write_only": "the two sections and Questions for Anthony",
+    "do_not_write": "the position description and contract outline (part 2), pay rates, a 48.6 hour week, any claim that 18 blocks a day fit"
+   },
+   "extra_checks": [
+    "Registration checks name the Ahpra public register, the endorsement and the Medicare provider number for the GTT location.",
+    "At least one interview question asks about the meal break being chosen on the day, and one about phoning a client in private after confirming her date of birth."
+   ]
+  },
+  {
+   "facts": [
+    "midwives",
+    "slots",
+    "results",
+    "filing",
+    "order",
+    "structure"
+   ],
+   "inline_inputs": [
+    {
+     "label": "Duties of the role (CATHERINE-R22B-PART-3.md 3.3 and 3.4, GRACE-R22-PART-5.md)",
+     "text": "Hours: 08:00 to 16:00 on site, 22.5 paid hours a week each, fortnightly block. Employer: GTT Medical Services Pty Ltd, which charges and keeps the consult fee. Consults: history, risk check, glucose test counselling, the request and written notes with start and end times. Never charge item 82105 for a consult under 10 minutes. One client per consult. The provider number for this location is used only for GTT services. GTT Medical issues the client an account that names the midwife and her provider number.\nFiling: after the consult the midwife writes the request in the secure computer record and marks request issued. She can add requests, not delete. Every look is logged.\nResults: the lab sends Path A results to her. She phones abnormal results in private after checking the client's full name and date of birth; no health detail on voicemail. She logs every attempt (date, time, channel, outcome) in the clinical record. Normal results get a generic message."
+    },
+    {
+     "label": "Contract points (Catherine R22B, all lawyer to check)",
+     "text": "The meal break is chosen by the midwife on the day. Records belong to GTT Medical with her access kept. Pay rate, award class and casual cost: NOT IN REPO."
+    }
+   ],
+   "deliverable": {
+    "part": "2 of 2 (position description and contract outline)",
+    "format": "Two short sections. 1) Position description: at most 14 lines, with Essential and Conditions of employment. 2) Employment contract outline: at most 10 bullets, each ending lawyer to check.",
+    "length": "at most 45 lines in total",
+    "write_only": "the two sections and Questions for Anthony",
+    "do_not_write": "the screening sheet and interview guide (part 1), pay rates not in the inputs, full contract wording"
+   },
+   "extra_checks": [
+    "Hours are 22.5 paid hours each for the two permanent part-time midwives (45 a week), fortnightly block, on site 08:00 to 16:00.",
+    "Essential criteria include endorsement shown on the Ahpra register and willingness to add the GTT location to her Medicare provider number.",
+    "The position description does not promise 18 blocks a day."
+   ]
+  }
+ ]
+}

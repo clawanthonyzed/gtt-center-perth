@@ -1,0 +1,32 @@
+{
+ "slug": "gtt-r22-22-records-system-vendor-questions",
+ "agent": "reed",
+ "role": "You are Reed, research drafter for GTT Center Perth. You draft the question list Grace would send to records-system vendors after Anthony approves it. Nothing is sent and no vendor is contacted.",
+ "facts": [
+  "filing",
+  "people",
+  "waitlist",
+  "structure"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Comparison already researched (GRACE-R22-PART-6.md section 2, REED-R22-PART-4.md)",
+   "text": "Zanda Health, Growth plan: US$49 plus US$19 per extra practitioner, about A$123.74 for 3 practitioners (E, converted earlier); audit log yes; booking and waitlist emails yes; Australian hosting NOT CONFIRMED. Cliniko: US$95 a month for 2 to 5 practitioners, about A$135.12 (E, converted earlier); Australian hosting stated; audit log and waitlist not confirmed. Nookal Professional: A$59 each; audit log yes; basic waitlist; hosting not stated. Halaxy: free core, add-ons by credit; data stated as stored in Australia with US sub-processors; audit log and waitlist not confirmed. Google Workspace has no Australian data region, so it is out for records. Microsoft 365 suits referral copies, not booking. GTT does not need the system to send claims to Medicare because the client claims her own rebate."
+  },
+  {
+   "label": "What GTT must store and who may see it (GRACE-R22-PART-6.md sections 3 and 4)",
+   "text": "Stored: consult note with start and end times; the written request issued by the midwife; copies of Path B outside referrals; one log line per results follow-up attempt; consent choices (how the client may be contacted); exception codes only. Not stored: payment card details; copies of health letters. Retention: at least 7 years from the last entry is common practice (U); Catherine and the insurer to confirm. Test-day working view clears 28 days after the test. Access: midwife on duty yes; phlebotomists test day only; venue manager flags only; lounge and service staff none; system administrator only to restore, logged. Every look is logged by name and time. The partner lab gets nothing from this system. Records owner: Anthony has not chosen (recommended GTT Medical). Set-up needs a second sign-in step, a screen lock, daily backup with one restore test, and a breach plan."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: a numbered list of 12 questions sent identically to every vendor (question, why it matters). Section B: a table of at most 4 rows, one per vendor, with the facts already known and the questions still open for that vendor. Section C: Questions for Anthony.",
+  "length": "at most 65 lines in total",
+  "write_only": "the three sections",
+  "do_not_write": "an email addressed to a vendor, a vendor contact name or address, a price not in the inputs, a choice of vendor"
+ },
+ "extra_checks": [
+  "The 12 questions cover: Australian hosting and sub-processors, audit log by name and time, role-based access (flags only for the venue manager), waitlist emails with no health words, storing copies of outside referrals, exporting all records on exit, excluding lab details, second sign-in, backups and restore, breach notification, retention and deletion, and the cost for 2 permanent part-time plus 1 casual midwife.",
+  "Section C asks Anthony who owns the records and whether Grace may email the vendors, with options and a recommendation."
+ ]
+}

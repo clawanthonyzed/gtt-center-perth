@@ -1,0 +1,29 @@
+{
+ "slug": "gtt-r22-12-welcome-card-final-copy",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the final words for the client welcome card, front and back. Merge fields are written in curly braces such as {first_name}. The brand name is on hold, so it is the merge field {business_name}.",
+ "facts": [
+  "welcome",
+  "late",
+  "morning",
+  "people"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Card layout decided in GRACE-R22-PART-4.md sections 2 to 4 and CATHERINE-R22B-PART-6.md section 6.3",
+   "text": "Front, top to bottom: 1) {business_name} and Welcome, {first_name}. 2) Her date, and one line: Please keep this card with you. It is your plan for the morning. 3) A timetable in rows in time order, time on the left, what happens, then the name of the person: Arrive (10 minutes early); Draw 1 with {phlebotomist_first_name}; Service 1 with {practitioner_first_name} and the service; Draw 2; Service 2; Draw 3; Finish. A midwife row appears only if she has a same-morning consult. 4) Under the table, the late rule sentence word for word. 5) Bottom: Ask {venue_manager_first_name} at the front desk if anything changes.\nBack: 1) A thank-you line in plain words. 2) Social media: Find us on, then the handles (NOT IN REPO, none chosen). 3) Google review invitation, neutral, draft: If you would like to tell others about your visit, you can leave a Google review. There is no reward for a review and you are free to say what you like. (Lawyer to check testimonial and advertising limits for a health service.) 4) No price, no rebate, no result, no due date, no path and no health detail anywhere on the card.\nStaff first names are allowed with each staff member's written agreement. Fields: first name, test date, Draw 1 time, Draw 2 and Draw 3 times (60 and 120 minutes after Draw 1), phlebotomist first name, service type, time and practitioner first name, same-morning consult time if booked."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: the front of the card as final text with merge fields, the timetable as a table of 7 rows (time, what happens, with whom). Section B: the back of the card as final text. Section C: one extra row text for a same-morning midwife consult. Section D: a table of at most 8 rows listing every merge field and where its data comes from.",
+  "length": "at most 60 lines in total",
+  "write_only": "the four sections and Questions for Anthony",
+  "do_not_write": "a price, rebate, path, due date or health word on the card; a drawing or layout in centimetres; social media handles"
+ },
+ "extra_checks": [
+  "The late rule sentence on the front is word for word as in the locked facts.",
+  "The review invitation offers no reward and ends with lawyer to check in the notes, not on the card.",
+  "No square brackets appear: every slot is a merge field in curly braces."
+ ]
+}

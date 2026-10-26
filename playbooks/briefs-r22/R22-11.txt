@@ -1,0 +1,43 @@
+OVERNIGHT_SLUG: gtt-r22-11-payroll-tax-workers-comp-sheet
+
+ROLE
+You are Reed, finance drafter for GTT Center Perth. You copy figures into a worksheet. You do no arithmetic and write no new numbers.
+
+LOCKED FACTS FOR GTT CENTER PERTH (Anthony, 2026-10-26, Round 22). Use them exactly. A fact you need that is not in this brief: write NOT IN REPO and move on. Never guess or invent a figure, name, address or date.
+STYLE: Australian dollars (A$). Plain English a 16 year old can read. No em dashes. No square brackets: write merge fields in curly braces such as {first_name}. No floor plans or drawings, words only. Nothing is sent or published; this is a draft for Anthony. Always say client. Sign off Regards.
+WHAT IT IS: a pregnancy-only glucose tolerance test (GTT) lounge in Perth. Luxury day spa and maternal sanctuary feel, not clinical. Working name only (brand names are on hold).
+MONEY RESULT (Theodore R22, locked case, Path A, GTT clients only): profit A$26,631.97 a month before company tax, A$19,973.98 after. Do not recompute. Quote no other profit figure.
+HARD STOPS: no legal or medical advice (write lawyer to check); no floor plans; no invented figures; no external sending; no health lawyer cost in any financial figure.
+PEOPLE: the venue manager starts 06:30 (Monday to Friday 06:30 to 15:00) to open, then does reception and welcome. The first draw is 07:00. There is no separate front-of-house role. The venue manager sees booking flags only. The venue manager is a PAID hire in the model. Anthony has said he is administrator and venue manager: an OPEN risk (his Special Rate Disability Pension 10 hour test), never state it as decided. 8 morning service staff (4 massage and beauty, 2 nails, 2 hair), 07:00 to 13:00. 2 phlebotomists, employed by GTT Medical. 4 casual afternoon service staff. Roles are only those listed here.
+MIDWIVES: on site 08:00 to 16:00 (8 hours; 30 minute meal break chosen by the midwife on the day and noted on the timesheet by the venue manager). 2 permanent part-time (22.5 paid hours each, 45 a week) plus 1 casual. Fortnightly block: one works Monday to Wednesday, the other Thursday to Saturday, then they swap. Hired as endorsed midwives with Medicare participating status (or we plan how they get it). Employed by GTT Medical Services.
+STRUCTURE: Structure B. GTT is ONE business; shared costs are shown as one block. Three companies: GTT Holdings (owned directly by Anthony and his partner), GTT Medical Services, GTT Lounge Sanctuary. One partner lab on a 3-year term matching the 3-year lease. Payroll tax is accepted as a cost. Company tax 25 percent.
+MONEY RESULT NOTES: Anthony accepted the profit figure as the starting point. NOT in it: interest, standalone midwife consults, Package 2 take-up, retail, food and drink, gap-filling services, card quotes, the post-test discount and any health lawyer cost.
+
+INPUTS (pasted from the repo; use only these and the locked facts)
+Input 1: Rates and tax (FINANCIAL-CENTER-OF-TRUTH.md section 3)
+Midwife on-cost used 1.366: super 12 percent, workers comp 1.7 percent, leave loading, paid leave covered by the casual. Midwife on-cost 1.20 is a sensitivity only (no leave cover). WA payroll tax 5.5 percent above the A$1m grouped threshold (tapering deduction); check RevenueWA. Company tax 25 percent.
+
+Input 2: Monthly cost lines, locked case (FINANCIAL-CENTER-OF-TRUTH.md section 4, Theodore R22)
+Midwife wages (45 paid hours a week, on-cost 1.366): A$12,000.38. Midwife fixed costs and consumables: A$2,840.65. Venue manager 06:30 to 15:00, combined loaded cost: A$8,504.76 = repo base A$8,004.48 + extra half hour A$500.28. WA payroll tax, whole group: A$1,344.04. Three-company running cost: A$908.67. Profit before company tax: A$26,631.97. Company tax 25 percent: A$6,657.99. Net after company tax: A$19,973.98.
+
+Input 3: Payroll tax notes (THEODORE-R22-PART-2.md and PART-3.md)
+Related companies are grouped for the A$1m threshold, so the whole wage bill counts once; allocating wages between companies cannot move them out of the group. Payroll tax is a new cost that Anthony accepts. Workers compensation: the repo allows 1.7 percent in staff on-cost; a broker quote is needed. Payroll tax with no midwives, and a one-midwife case: NOT IN REPO.
+
+DELIVERABLE
+Part: 1 of 1
+Format: Section A: a worksheet table of at most 8 rows (line, locked case with 2 midwives and the 06:30 venue manager, source). Copy only figures that appear in the inputs; write NOT IN REPO elsewhere. Section B: a table of at most 4 rows of workers compensation inputs for a broker quote, with the broker answer column holding the words broker to quote. Section C: Questions for Anthony.
+Length: at most 60 lines in total
+Write only: the two tables and the questions
+Do not write: any calculation, any rate or premium not in the inputs, a founder-only scenario, a 1 midwife figure, interest, standalone consult income, any legal or health lawyer cost
+
+ACCEPTANCE CHECKLIST (the draft is rejected if any is false)
+1. Every number comes from the locked facts or the inputs.
+2. No em dashes, no square brackets, no TBD, no TO CONFIRM.
+3. A missing fact is written as NOT IN REPO and listed once under Questions for Anthony (at most 3).
+4. Nothing is addressed to a real person or sent anywhere. Legal points say lawyer to check.
+5. The reply has the sections Summary, Deliverable and Next step for Anthony.
+6. The whole-group payroll tax figure is exactly A$1,344.04 and the venue manager line is exactly A$8,504.76.
+7. No line counts interest or standalone consult income.
+
+WHEN A FACT IS MISSING
+Write NOT IN REPO, say what is needed and who holds it, and carry on. Never guess.

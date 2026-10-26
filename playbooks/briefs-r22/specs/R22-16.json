@@ -1,0 +1,31 @@
+{
+ "slug": "gtt-r22-16-abnormal-results-messages",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the final text for the call, voicemail, follow-up email, text message and normal-results message. Merge fields are written in curly braces such as {first_name}. The midwife and the client are never named in any file shown to the venue manager. Nothing is sent.",
+ "facts": [
+  "results",
+  "midwives"
+ ],
+ "inline_inputs": [
+  {
+   "label": "The flow in one table (GRACE-R22-PART-5.md section 1)",
+   "text": "Step 1 the result reaches the midwife and she decides it needs a call. Step 2 she phones the client's mobile (checked at booking) the same day, inside her shift. Step 3 no answer: she leaves the voicemail, only if the client allowed voicemail. Step 4 a follow-up email or text goes out, only if allowed, within about 15 minutes. Step 5 a second call 2 to 3 hours later, before 16:00. Step 6 still no contact: the clinical protocol decides the next steps (timings NOT IN REPO). Step 7 if the client rings GTT, the front desk takes name and number only and says: I will get her to ring you straight back. Path B: results go to her outside practitioner, so GTT makes no results call."
+  },
+  {
+   "label": "Wording (GRACE-R22-PART-5.md sections 2 to 6, CATHERINE-R22B-PART-6.md section 6.2)",
+   "text": "Consent question on the Path A details screen: How may our midwife contact you about your results? Call my mobile; you may leave a voicemail asking me to call back; you may email me; you may text me. No tick means no voicemail, email or text.\nCall script: 1 Hello, may I speak to {full_name}? This is {caller_first_name}, from {business_name}. 2 Is now a good time to talk in private? If no: When can I ring back today? 3 Before I go on, can you tell me your full name and date of birth? No match, no detail. 4 I am calling about your recent visit. One of your results needs a follow-up, and I would like to explain what happens next. 5 Do you have any questions? You can call us on {phone} any time we are open.\nVoicemail: This message is for {first_name}. This is {caller_first_name} from {business_name}. Please call us back on {phone}. Thank you. Never say: results, glucose, pregnancy, midwife, abnormal, urgent about your test.\nFollow-up email (Catherine's wording): subject Please call us. Hello {first_name}, {caller_first_name} from {business_name} tried to call you today and will try again later today. Please call us on {phone} when you can. Regards. Text: {business_name}: please call us on {phone} when you can. Regards.\nNormal result, only if she allowed email or text: subject A message from {business_name}. Your midwife has reviewed your recent visit and no action is needed. Call {phone} with any questions. Regards. No values, no diagnosis.\nLog: the midwife only, one line per attempt: date, time, channel, outcome, midwife name. The venue manager never sees a result."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Sections: 1 Consent question (final text). 2 Call script, 5 numbered lines. 3 Voicemail. 4 Follow-up email (subject and body). 5 Follow-up text message. 6 Normal-results email and text. 7 Log line format and the front desk line. 8 A table of at most 5 rows of merge fields.",
+  "length": "at most 60 lines in total",
+  "write_only": "the eight sections and Questions for Anthony",
+  "do_not_write": "a result value, a diagnosis, clinical advice, retry timings that are not in the inputs, the word results inside the voicemail, email or text"
+ },
+ "extra_checks": [
+  "The voicemail, the follow-up email and the follow-up text contain none of the words results, glucose, pregnancy, midwife, abnormal.",
+  "Questions for Anthony includes the open choice: add a second tick box that lets the email say the midwife tried to reach her about her results.",
+  "The call script keeps the identity check before any detail."
+ ]
+}

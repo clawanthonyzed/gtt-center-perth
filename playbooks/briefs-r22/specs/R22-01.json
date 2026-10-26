@@ -1,0 +1,43 @@
+{
+ "slug": "gtt-r22-01-lab-questions-term-sheet",
+ "agent": "reed",
+ "role": "You are Reed, research and procurement drafter for GTT Center Perth. You draft the question list and term sheet that Anthony will review before any lab is contacted.",
+ "facts": [
+  "split-a",
+  "split-b",
+  "checkout",
+  "order",
+  "results",
+  "structure"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Anthony's lab billing goals (LAB-BILLING-WORKFLOW-R19.md, restated for Round 22)",
+   "text": "GTT does not hold the lab's money, so GTT cannot gain from it. GTT pays no card fees on the lab's A$27.85. The lab bills the client itself, after it receives the paperwork and samples. No Part IIBA kickback risk. GTT never passes booking details to the lab."
+  },
+  {
+   "label": "First-call lab questions already written (question L1 is deliberately omitted)",
+   "text": "L2. Will you bill each client directly after you receive the request and sample, by text or email link, as you already do for samples collected by a doctor?\nL3. What fee do you charge the client for test plus collection? (A$27.85 with item 73938, A$25.85 with item 73928.)\nL4. Will you supply a registration and payment-consent form, paper and QR, that the client completes herself at collection?\nL5. Do you add any card surcharge? Which payment channels do you offer?\nL6. Can you lodge the Medicare claim for the client, or only give her a paid receipt?\nL7. Who carries the risk if a client does not pay, and do you require prepayment?\nL8. If no request is issued after the consult, or the client does not attend, what do you refund and when?"
+  },
+  {
+   "label": "Round 22 points the labs must answer (CATHERINE-R22B-PART-3.md and PART-5.md, GRACE-R22-PART-6.md)",
+   "text": "Collection item: 73928 (approved collection centre, fee A$5.95, benefit A$5.10) or 73938 (collected on behalf of the treating practitioner, fee A$7.95, benefit A$6.80). Which applies to GTT phlebotomists is NOT CONFIRMED. GTT's lounge is not an approved collection centre unless the lab gets it approved.\nPath B: the client brings an outside request. A test collected at GTT on an outside request gets no Medicare benefit, so the lab may set a different private fee. The lab's Path B fee is NOT IN REPO and must be confirmed in writing, or the all-in price A$300 / A$350 may be false (Catherine). Catherine's notice slip goes with each Path B sample and a standing notice goes to the lab before the first Path B draw (lawyer to check).\nPath A: the GTT midwife (employed by GTT Medical Services) writes the request, so the lab sends the result to her. Path B results go to the client's outside practitioner.\nFiling: GTT keeps a copy of each request in the computer record; the lab receives the original request with the sample."
+  },
+  {
+   "label": "R15 term-sheet items (Anthony)",
+   "text": "One lab only, 3-year term matching the 3-year lease (no 12-month term); private billing of the pregnancy GTT item 66548 and its collection item; GTT staff give the drink under the lab's collection manual; an 8-week request acceptance clause; no lab staff in GTT rooms; price protection; exit rights.\nConflict to flag: the R15 clause says 8 weeks; the booking rule is that the consult is up to 28 days before the test."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Two sections. Section A: a table of 8 questions sent identically to all four labs (columns: number, question, why it matters), then up to 4 extra lines, one per lab, only if the inputs give a lab-specific fact. Section B: a numbered 3-year term sheet of at most 12 numbered terms, one sentence each.",
+  "length": "at most 70 lines in total",
+  "write_only": "the question table, the lab-specific lines, the term sheet, and Questions for Anthony",
+  "do_not_write": "emails, any text addressed to a lab, legal clauses in contract wording, lease terms, any fee figure not in the inputs"
+ },
+ "extra_checks": [
+  "The 8 week versus 28 day clash is listed once, under Questions for Anthony.",
+  "The 8 questions cover: client billing after paperwork, the collection item 73928 or 73938, whether the lounge counts as an approved collection centre, the lab's private fee for a Path B request, the notice slip, the original request travelling with the sample, who receives results, and refunds.",
+  "Path A means the consult package and Path B means the outside referral. The questions offer no other billing model."
+ ]
+}

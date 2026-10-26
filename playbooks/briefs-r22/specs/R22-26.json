@@ -1,0 +1,28 @@
+{
+ "slug": "gtt-r22-26-staff-privacy-one-pager",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write a one-page privacy sheet that every staff member reads and signs. It is a draft for Anthony and for Catherine to check; it is not legal advice.",
+ "facts": [
+  "filing",
+  "results",
+  "welcome",
+  "people"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Who sees what (GRACE-R22-PART-6.md section 4, CATHERINE-R22B-PART-6.md)",
+   "text": "Midwife on duty: flags yes, clinical record yes, delete no. Phlebotomists (GTT Medical): flags yes, test day record only, delete no. Venue manager (Lounge): flags only, no clinical record, delete no. Lounge and service staff: nothing. System administrator: flags yes, record only to restore and logged, delete yes and logged. Anthony's administrator role is an open issue; until it is cleared the administrator login belongs to a named GTT Medical manager. Every look at a record is logged by name and time. The partner lab gets nothing from this system; the paper request travels with the sample.\nBecause GTT is a pregnancy glucose test service, even a name on a GTT list or a GTT voicemail is health information, because it tells a reader she is pregnant and being tested. Day list: first name and surname initial, Draw 1 time and staff first names only; locked drawer; shredded at the end of the test day with a log line. No home printing, no photos of any list or record. No health words in any note, subject line, text preview or timesheet; record a code only. Voicemails and follow-up messages say only Please call us. Reviews: never reply in a way that confirms she was a client; use general words: Thank you for your feedback. Please contact us on {phone}. A lost list or record is a possible data breach: tell Grace the same day."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "A one-page sheet. Section A: why privacy matters here (3 lines). Section B: a table of 5 rows (role, flags, clinical record, can delete). Section C: ten Do and Do not rules, one line each. Section D: if something goes wrong, 4 lines. Section E: a signature line for the staff member.",
+  "length": "at most 50 lines in total",
+  "write_only": "the five sections and Questions for Anthony",
+  "do_not_write": "legal advice, a statute citation not in the inputs, a phone number, a health detail"
+ },
+ "extra_checks": [
+  "The table matches the inputs exactly and the venue manager row says flags only.",
+  "The rules include no photos, no health words in notes, shredding at the end of the test day and the review reply wording."
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "slug": "gtt-r22-14-waitlist-email-set",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the final text of the five waitlist messages. Merge fields are written in curly braces such as {first_name}. Nothing is sent.",
+ "facts": [
+  "waitlist",
+  "late",
+  "checkout"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Slot-open email as drafted (GRACE-R22-PART-2.md section 3)",
+   "text": "Sender name: the business name. Subject: A time you asked for is free. Preview line: First to book gets it. No health words in the subject, the preview or the body (no test name, no midwife, no pregnancy). Body: Hello {first_name}, A booking time you asked us about is now free: {day_date_time}. It is not held for you. The first person to book it gets it. To book, press the button: Book this time. If it is gone, you stay on the list and we will email you the next time one opens. To leave the list: {leave_link}. Please arrive at least 10 minutes before your appointment, because late means from your appointment time onwards and we cannot fit a first blood draw in after that. Regards. {business_name}. Details such as test or consult and price show only after she presses the button, on the secure booking page."
+  },
+  {
+   "label": "Other messages and rules (GRACE-R22-PART-2.md sections 1, 4, 5)",
+   "text": "Slot taken, on screen and by email: Sorry, someone else booked that time a moment ago. You are still on the list, and we will email you when the next time opens. Regards. While another client is paying (hold about 10 minutes, E): This time is being booked right now. Try again in a few minutes.\nJoining the list is free with a tick box she ticks herself, her name and email; no deposit. She chooses a test time, a midwife time or both, and any day or a date range. She pays only the GTT amount at booking; the lab bills her later. One email per slot per person. When she books, she is removed from that list and gets the normal confirmation. If the slot is still free after 48 hours it goes to the public booking page and the list is not emailed again. Each email address is on a list once. Clients with a booked test and no consult yet are emailed first for midwife slots. A client who books a better time frees her old time at once, and it goes to the list."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Five messages, each with a label, subject, preview line (emails only) and body: 1 Joined the list (confirmation email), 2 A time is free (email), 3 Slot taken (screen and email, two short versions), 4 You have left the list (confirmation), 5 Reminder footer used under every list email. Then a table of at most 6 rows listing the merge fields.",
+  "length": "at most 60 lines in total",
+  "write_only": "the five messages, the merge field table and Questions for Anthony",
+  "do_not_write": "any health word in a subject, preview or body, a price in an email, an order or queue position, a deposit"
+ },
+ "extra_checks": [
+  "No subject, preview or body contains the words pregnancy, glucose, midwife, test, diabetes or results.",
+  "Message 2 says the first person to book gets it and that the time is not held.",
+  "Message 2 includes the late rule sentence word for word."
+ ]
+}

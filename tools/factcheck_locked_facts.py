@@ -29,6 +29,11 @@ OK_MARKER = "factcheck:ok"
 
 # Extra patterns that are not single literal values in the Center of Truth table.
 EXTRA = [
+    # Round 22: A$300/A$350/A$272.15/A$322.15 are valid PATH B figures; banned only beside the words Path A.
+    (r"Path A(?:(?!Path B)[^.\n|]){0,30}A\$(?:300|350|272\.15|322\.15)(?![\d,]*\d)",
+     "A$300/A$350/A$272.15/A$322.15 are Path B figures (outside referral). Path A is A$320/A$370, GTT charge A$292.15/A$342.15"),
+    (r"Path A\s*(?:=|:|means|\()\s*(?:the\s+|an\s+)?(?:outside|option A)|Path B\s*(?:=|:|means|\()\s*(?:the\s+)?(?:consult package|package with)",
+     "reversed path labels: Path A = consult package (preferred), Path B = outside referral (not preferred)"),
     (r"\b12[- ]?min(?:ute)?s?\b[^.\n]{0,30}(?:cadence|stagger|pair|apart|gap)|(?:cadence|stagger|pair)[^.\n]{0,30}\b12[- ]?min(?:ute)?s?\b",
      "12-minute cadence is retired. The repo cadence is 25-minute pairs"),
     (r"venue manager[^.\n|]{0,30}(?:start|arriv|open|begin|in at)\w*[^.\n|]{0,15}\b07:00\b",

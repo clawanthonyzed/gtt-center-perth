@@ -20,7 +20,7 @@ Budget for one brief (characters): core about 1,000, template wording about 1,10
 ## The template (what the builder writes)
 
 ```text
-OVERNIGHT_SLUG: gtt-r21-<nn>-<short-name>[-p1]
+OVERNIGHT_SLUG: gtt-r22-<nn>-<short-name>[-p1]
 
 ROLE
 You are <agent>, <job title> for GTT Center Perth. You write one draft, for Anthony to review. You cannot read files or browse; everything you may use is in this brief.
@@ -63,7 +63,7 @@ Write NOT IN REPO, say what is needed and who holds it, and carry on with the re
 | extra_checks | Task tests, numbered from 6 |
 | parts | Optional list of part specs (deliverable, inputs, inline_inputs, facts, extra_checks per part) |
 
-Build all specs in a folder: `python3 tools/build_overnight_brief.py --specs playbooks/briefs-r21/specs --outdir playbooks/briefs-r21` (prints slug, file, characters, part). Then `python3 tools/factcheck_locked_facts.py playbooks/briefs-r21/*.txt`.
+Build all specs in a folder: `python3 tools/build_overnight_brief.py --specs playbooks/briefs-r22/specs --outdir playbooks/briefs-r22` (prints slug, file, characters, part). Then `python3 tools/factcheck_locked_facts.py playbooks/briefs-r22/*.txt`.
 
 ## Rules for filling it
 
@@ -75,4 +75,4 @@ Build all specs in a folder: `python3 tools/build_overnight_brief.py --specs pla
 | Deliverable | One task, one document part, under 70 lines. Large documents are several parts, each its own task. |
 | Checklist | Keep all five lines. Add task-specific tests as lines 6 and up (for example "exactly 14 headings"). |
 | Wording | Say client. Never use the bare word for a parent. Late means from the appointment time onwards. |
-| Queueing | `python3 /opt/openclaw/orchestration/queue_task.py --agent <same agent> --venture "GTT Center Perth" --title "R21-<nn> <title>" --brief-file <file>`. One command per brief file, parts included. The brief file lives on the server. |
+| Queueing | `python3 /opt/openclaw/orchestration/queue_task.py --agent <same agent> --venture "GTT Center Perth" --title "R22-<nn> <title>" --brief-file <file> --priority 7`. One command per brief file, parts included. The brief file lives on the server. |

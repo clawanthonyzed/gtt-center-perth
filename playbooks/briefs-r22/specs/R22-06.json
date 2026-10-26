@@ -1,0 +1,61 @@
+{
+ "slug": "gtt-r22-06-booking-flow-consent-text",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft the online booking steps and the plain-English consent text. Nothing is published.",
+ "parts": [
+  {
+   "facts": [
+    "prices",
+    "order",
+    "late"
+   ],
+   "inline_inputs": [
+    {
+     "label": "Step 1 and the screens (GRACE-R22-PART-7.md sections 1 to 3)",
+     "text": "Step 1 title: Do you have a referral? Two buttons, neither pre-selected. Button 1: No, I would like the GTT midwife to do my consult. Small print: package with a 20 minute midwife consult; full price A$320 (Package 1) or A$370 (Package 2); about A$55 may come back from Medicare. Goes to Path A. Button 2: Yes, and I will use my own referral. Small print: no GTT midwife consult; A$300 (Package 1) or A$350 (Package 2), lab fee included; no Medicare benefit for a test requested outside GTT; you can also keep your referral and choose the package with our midwife consult. Goes to Path B. A client can switch until she pays.\nPath A screens: A1 Package; A2 Test time (Mon to Sat, nine pairs 07:00 to 10:20; pairs 08:40 and later show Midwife consult on the same morning possible; late rule under the grid); A3 Consult (test first, then consult; tab 1 same morning with a fasting warning and tick box, tab 2 an earlier day, 1 to 28 days before the test; test clients see midwife times first); A4 Details (name, mobile, email, due date, Medicare card, how may our midwife contact you about results, terms, privacy); A5 Checkout; A6 Confirmation (both appointments, late rule, bring your Medicare card).\nPath B screens: B1 Package (all in, lab fee included, no GTT consult); B2 Test time (no midwife tags); B3 Your referral (bring the original; email it in, upload a photo or bring it; the Medicare notice; switch to Path A); B4 Details; B5 Checkout; B6 Confirmation (late rule, bring your referral and ID)."
+    }
+   ],
+   "deliverable": {
+    "part": "1 of 2 (booking flow)",
+    "format": "Booking flow as numbered steps: Step 1, then Path A steps A1 to A6, then Path B steps B1 to B6, one or two lines each (at most 14 lines). Then a table of 4 rows giving what the client sees at checkout for Path A Package 1, Path A Package 2, Path B Package 1 and Path B Package 2: full price, charged by GTT today, billed later by the lab, Medicare about.",
+    "length": "at most 45 lines in total",
+    "write_only": "the booking flow, the checkout table and Questions for Anthony",
+    "do_not_write": "the consent text (part 2), any statement that the lab money passes through GTT"
+   },
+   "extra_checks": [
+    "Step 1 is worded exactly: Do you have a referral?",
+    "Checkout charges only the GTT amount. On Path B GTT charges A$272.15 or A$322.15; on Path A it charges A$292.15 or A$342.15. The lab fee A$27.85 is paid by the client to the lab.",
+    "Medicare about A$55.00 appears on Path A rows only; Path B rows say none.",
+    "The Path A steps show the test booked first and the consult second, up to 28 days before the test."
+   ],
+   "facts_extra": []
+  },
+  {
+   "facts": [
+    "checkout",
+    "late",
+    "changes",
+    "waitlist",
+    "filing",
+    "results"
+   ],
+   "inline_inputs": [
+    {
+     "label": "Consent topics and wording rules (CATHERINE-R22B-PART-4.md, PART-5.md, PART-6.md; all lawyer to check)",
+     "text": "Master late sentence, word for word everywhere: Please arrive at least 10 minutes before your appointment, because late means from your appointment time onwards and we cannot fit a first blood draw in after that. At checkout it sits above the pay button with a tick box. Consult sentence: if you are up to 10 minutes late we will still see you and the consult ends at its normal time (OPEN).\nPath B notice, in writing before she pays and signed at check-in: GTT Center Perth is not an approved pathology collection centre, so Medicare will not pay any benefit for your glucose test if your sample is collected here on that request. The lab bills you its private fee. If you would like a Medicare benefit, choose the package with a GTT midwife consult, or take your request to one of the lab's own collection centres. Never use these words for Path A.\nResults contact question (Path A): how may our midwife contact you about your results? Call my mobile; you may leave a voicemail asking me to call back; you may email me; you may text me. No tick means no voicemail, email or text.\nWaitlist consent: a box she ticks herself, never pre-ticked; she can leave the list at any time. Illness: tell us as soon as you safely can; we rebook free for pregnancy complications, hospital, labour or a serious emergency; you do not need to tell us a diagnosis.\nPrivacy line: a copy of her request is kept in a secure computer record held in Australia; only midwives and phlebotomists open it; every look is logged; booking details are not passed to the lab. Fasting hours: NOT IN REPO (the lab sets them)."
+    }
+   ],
+   "deliverable": {
+    "part": "2 of 2 (consent text)",
+    "format": "Consent text in plain English, at most 18 short lines, covering: water only until the final draw, food only after the last draw unless the lab allows otherwise in writing, stand for each draw then return to the waiting area as the lab directs, no strenuous activity, the late rule, the Path B Medicare notice, the results contact question, the privacy line, the waitlist tick box, illness, and refund wording marked lawyer to check.",
+    "length": "at most 45 lines in total",
+    "write_only": "the consent text and Questions for Anthony",
+    "do_not_write": "the booking flow (part 1), a refund amount not in the inputs, any Medicare benefit claim for Path B"
+   },
+   "extra_checks": [
+    "The late rule appears word for word as in the inputs.",
+    "Rebates are written as about, subject to confirmation, and only on Path A."
+   ]
+  }
+ ]
+}

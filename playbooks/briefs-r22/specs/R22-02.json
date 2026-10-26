@@ -1,0 +1,34 @@
+{
+ "slug": "gtt-r22-02-gp-survey-waitlist-test-plan",
+ "agent": "reed",
+ "role": "You are Reed, research drafter for GTT Center Perth. You draft a short survey for GP clinics and a waitlist test plan covering Path A and Path B for Anthony to review. Nothing is sent.",
+ "facts": [
+  "prices",
+  "order",
+  "slots",
+  "late",
+  "waitlist",
+  "results"
+ ],
+ "inline_inputs": [
+  {
+   "label": "The two paths (GRACE-R22-PART-7.md sections 1 to 3)",
+   "text": "Step 1 asks: Do you have a referral? Path A (preferred): the package with a 20 minute GTT midwife consult. She books the test first, then the consult, 1 to 28 days before the test or the same morning if it ends before her draw. Test clients see midwife times first. Path B (not preferred): the client uses her own referral from her GP. No GTT midwife consult, and no Medicare benefit for the test done at GTT. The request is checked at the door; if it is not suitable on the day there is no draw. A client with an outside referral may switch to Path A until she pays."
+  },
+  {
+   "label": "Waitlist rules (GRACE-R22-PART-2.md section 1, locked by Anthony)",
+   "text": "Joining is free, no deposit, a tick box plus her name and email. She chooses what she wants to hear about: a test time, a midwife time, or both. When a slot opens, everyone on the matching list gets the email at the same moment. No queue and no order: the first client to book and pay gets it. The slot stays with the list for 48 hours, then goes to the public booking page. For midwife slots, clients with a booked test and no consult yet are emailed first. She pays only the GTT amount at booking. No health words in the email subject or body."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: a GP survey of at most 8 questions (question, answer options). Section B: a waitlist test plan as a table of at most 6 rows (step, who, what is measured), covering Path A and Path B separately. Section C: success measures as questions to Anthony, not as numbers.",
+  "length": "at most 70 lines in total",
+  "write_only": "the survey, the test plan table, the success-measure questions",
+  "do_not_write": "any target percentage, any sample size, any email text, any GP name or practice name"
+ },
+ "extra_checks": [
+  "Success measures are written as questions for Anthony; no figure appears that is not in the inputs.",
+  "The survey asks GPs about writing requests that a Path B client takes to GTT, and states plainly that Path B gets no Medicare benefit for the test done at GTT."
+ ]
+}

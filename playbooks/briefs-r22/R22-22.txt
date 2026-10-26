@@ -1,0 +1,40 @@
+OVERNIGHT_SLUG: gtt-r22-22-records-system-vendor-questions
+
+ROLE
+You are Reed, research drafter for GTT Center Perth. You draft the question list Grace would send to records-system vendors after Anthony approves it. Nothing is sent and no vendor is contacted.
+
+LOCKED FACTS FOR GTT CENTER PERTH (Anthony, 2026-10-26, Round 22). Use them exactly. A fact you need that is not in this brief: write NOT IN REPO and move on. Never guess or invent a figure, name, address or date.
+STYLE: Australian dollars (A$). Plain English a 16 year old can read. No em dashes. No square brackets: write merge fields in curly braces such as {first_name}. No floor plans or drawings, words only. Nothing is sent or published; this is a draft for Anthony. Always say client. Sign off Regards.
+WHAT IT IS: a pregnancy-only glucose tolerance test (GTT) lounge in Perth. Luxury day spa and maternal sanctuary feel, not clinical. Working name only (brand names are on hold).
+MONEY RESULT (Theodore R22, locked case, Path A, GTT clients only): profit A$26,631.97 a month before company tax, A$19,973.98 after. Do not recompute. Quote no other profit figure.
+HARD STOPS: no legal or medical advice (write lawyer to check); no floor plans; no invented figures; no external sending; no health lawyer cost in any financial figure.
+PEOPLE: the venue manager starts 06:30 (Monday to Friday 06:30 to 15:00) to open, then does reception and welcome. The first draw is 07:00. There is no separate front-of-house role. The venue manager sees booking flags only. The venue manager is a PAID hire in the model. Anthony has said he is administrator and venue manager: an OPEN risk (his Special Rate Disability Pension 10 hour test), never state it as decided. 8 morning service staff (4 massage and beauty, 2 nails, 2 hair), 07:00 to 13:00. 2 phlebotomists, employed by GTT Medical. 4 casual afternoon service staff. Roles are only those listed here.
+FILING: the paper folder is replaced by a computer record: secure, held in Australia, every look logged. The midwife files each request; phlebotomists see Today; the venue manager sees flags only. Which records system: NOT CHOSEN, the method is being researched.
+WAITLIST: free to join, no deposit. When a test or midwife slot opens, one automatic email goes to everyone on the matching list at the same moment. There is no queue: the first client to book and pay gets it. If nobody books it within 48 hours it goes to the public booking page. Email subject and body carry no health words. OPEN: how slots freed under 48 hours before the appointment are handled.
+STRUCTURE: Structure B. GTT is ONE business; shared costs are shown as one block. Three companies: GTT Holdings (owned directly by Anthony and his partner), GTT Medical Services, GTT Lounge Sanctuary. One partner lab on a 3-year term matching the 3-year lease. Payroll tax is accepted as a cost. Company tax 25 percent.
+
+INPUTS (pasted from the repo; use only these and the locked facts)
+Input 1: Comparison already researched (GRACE-R22-PART-6.md section 2, REED-R22-PART-4.md)
+Zanda Health, Growth plan: US$49 plus US$19 per extra practitioner, about A$123.74 for 3 practitioners (E, converted earlier); audit log yes; booking and waitlist emails yes; Australian hosting NOT CONFIRMED. Cliniko: US$95 a month for 2 to 5 practitioners, about A$135.12 (E, converted earlier); Australian hosting stated; audit log and waitlist not confirmed. Nookal Professional: A$59 each; audit log yes; basic waitlist; hosting not stated. Halaxy: free core, add-ons by credit; data stated as stored in Australia with US sub-processors; audit log and waitlist not confirmed. Google Workspace has no Australian data region, so it is out for records. Microsoft 365 suits referral copies, not booking. GTT does not need the system to send claims to Medicare because the client claims her own rebate.
+
+Input 2: What GTT must store and who may see it (GRACE-R22-PART-6.md sections 3 and 4)
+Stored: consult note with start and end times; the written request issued by the midwife; copies of Path B outside referrals; one log line per results follow-up attempt; consent choices (how the client may be contacted); exception codes only. Not stored: payment card details; copies of health letters. Retention: at least 7 years from the last entry is common practice (U); Catherine and the insurer to confirm. Test-day working view clears 28 days after the test. Access: midwife on duty yes; phlebotomists test day only; venue manager flags only; lounge and service staff none; system administrator only to restore, logged. Every look is logged by name and time. The partner lab gets nothing from this system. Records owner: Anthony has not chosen (recommended GTT Medical). Set-up needs a second sign-in step, a screen lock, daily backup with one restore test, and a breach plan.
+
+DELIVERABLE
+Part: 1 of 1
+Format: Section A: a numbered list of 12 questions sent identically to every vendor (question, why it matters). Section B: a table of at most 4 rows, one per vendor, with the facts already known and the questions still open for that vendor. Section C: Questions for Anthony.
+Length: at most 65 lines in total
+Write only: the three sections
+Do not write: an email addressed to a vendor, a vendor contact name or address, a price not in the inputs, a choice of vendor
+
+ACCEPTANCE CHECKLIST (the draft is rejected if any is false)
+1. Every number comes from the locked facts or the inputs.
+2. No em dashes, no square brackets, no TBD, no TO CONFIRM.
+3. A missing fact is written as NOT IN REPO and listed once under Questions for Anthony (at most 3).
+4. Nothing is addressed to a real person or sent anywhere. Legal points say lawyer to check.
+5. The reply has the sections Summary, Deliverable and Next step for Anthony.
+6. The 12 questions cover: Australian hosting and sub-processors, audit log by name and time, role-based access (flags only for the venue manager), waitlist emails with no health words, storing copies of outside referrals, exporting all records on exit, excluding lab details, second sign-in, backups and restore, breach notification, retention and deletion, and the cost for 2 permanent part-time plus 1 casual midwife.
+7. Section C asks Anthony who owns the records and whether Grace may email the vendors, with options and a recommendation.
+
+WHEN A FACT IS MISSING
+Write NOT IN REPO, say what is needed and who holds it, and carry on. Never guess.

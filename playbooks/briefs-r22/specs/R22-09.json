@@ -1,0 +1,57 @@
+{
+ "slug": "gtt-r22-09-architect-brief-update",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the update list for the existing architect brief, in words only. Floor plans are banned: the registered architect draws.",
+ "facts": [
+  "rooms",
+  "people",
+  "midwives",
+  "morning",
+  "late",
+  "filing"
+ ],
+ "parts": [
+  {
+   "inline_inputs": [
+    {
+     "label": "Existing architect brief, sections 1 to 4 in short (outputs/LEASING/ARCHITECT-DESIGN-BRIEF.md)",
+     "text": "Section 1: a luxury day spa and maternal sanctuary for clients; a two-hour glucose test morning inside a warm, calm spa setting, and a day spa and hair and nail studio in the afternoon. Not a hospital, a pathology centre or a clinic waiting room.\nSection 2: total internal area 257 to 290 sqm; one tenancy, ground level, step-free, street frontage.\nSection 3, required spaces: two blood collection rooms of identical size, written in the brief as 19 sqm each (the partner lab must confirm); open luxury lounge (seating for 8 or more); private refreshment counter apart from specimens; four massage and beauty bays; hair area (4 chairs, 2 backwash basins); nail area (4 stations, 4 pedicure chairs); reception and arrival lobby with a desk, two point-of-sale screens and bag storage; staff room entered without crossing the dirty zone; service area for linen and clinical waste; one accessible and one standard toilet.\nSection 4, circulation: every room opens onto a corridor or the lounge; staff reach the staff room and both collection rooms without crossing the dirty zone; waste leaves by a staff-only route; clients never meet waste or specimens; short corridors. The brief has no consult room, no secure computer points, no midwife break space and no list of what changes when the paper folder goes."
+    },
+    {
+     "label": "Round 22 changes that touch the building (GRACE-R22-PART-4.md, PART-6.md, CATHERINE-R22B-PART-6.md)",
+     "text": "The paper folder, cabinet, copier and keys are replaced by a secure computer record. Phlebotomists open Today on a tablet or computer in each collection room. The venue manager opens at 06:30, checks outside requests at the door for Path B and sees flags only. The front desk needs a locked drawer for the day list and welcome cards, a work printer (position NOT IN REPO) and a cross-cut shredder or locked shred bin; the list is shredded at the end of each test day. The midwife is on site 08:00 to 16:00 and chooses a 30 minute meal break on the day. Clients arrive at least 10 minutes before their appointment, so the arrival area must hold waiting clients for pairs every 25 minutes."
+    }
+   ],
+   "deliverable": {
+    "part": "1 of 2 (changes to the existing brief)",
+    "format": "A table of at most 8 rows of changes needed to the existing brief (section number, what it says now, what the locked facts say, new wording).",
+    "length": "at most 40 lines in total",
+    "write_only": "the table and Questions for Anthony",
+    "do_not_write": "the consult room needs and the feel lines (part 2), any drawing or room layout, dimensions or areas in square metres not in the inputs"
+   },
+   "extra_checks": [
+    "It states two collection rooms with one chair each and one consult room of the same size as a collection room.",
+    "The 19 sqm in the existing brief is listed once under Questions for Anthony, because room sizes are NOT IN REPO in the locked facts."
+   ]
+  },
+  {
+   "inline_inputs": [
+    {
+     "label": "Consult room and feel (ARCHITECT-DESIGN-BRIEF.md section 5; GRACE-R22-PART-1.md; GRACE-R22-PART-6.md)",
+     "text": "Design direction in the existing brief: warm stone, clay, soft olive, natural timber, warm white; nothing hospital white, grey or blue. Real or realistic timber, stone, linen and woven textures; cleanable surfaces finished to look like the rest. Warm dimmable light, natural light into the lounge, no fluorescent glare in client areas. Quiet rooms, acoustic ceilings, no hospital smell. Fridges under benches, sharps and waste in joinery, handwash basins styled as spa vanities. Soft signage with no pathology or collection centre sign on the street front.\nConsult room facts: one room, same size as a collection room; the midwife sees one client at a time for 20 minutes in 25 minute blocks, 08:15 to 10:30 for same-morning consults and then normal midwife bookings to 16:00; she writes the request on a computer in the room and marks request issued. Access: midwives and phlebotomists see requests, the venue manager sees flags only, lounge staff see nothing, so no screen faces the lounge or reception. Everything else about the consult room (furniture, basin, power points, privacy glass): NOT IN REPO."
+    }
+   ],
+   "deliverable": {
+    "part": "2 of 2 (consult room needs and feel)",
+    "format": "Section B: the consult room needs list as at most 10 bullets, taken only from the inputs or the locked facts. Section C: the luxury day spa and maternal sanctuary feel in 5 plain lines.",
+    "length": "at most 35 lines in total",
+    "write_only": "the two sections and Questions for Anthony",
+    "do_not_write": "the table of changes (part 1), dimensions or areas in square metres, any drawing or room layout, any clinical or hospital look"
+   },
+   "extra_checks": [
+    "Consult room needs not found in the inputs are written NOT IN REPO, not invented.",
+    "No bullet puts a screen where the lounge or reception can see it."
+   ]
+  }
+ ]
+}

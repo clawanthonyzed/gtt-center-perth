@@ -1,0 +1,37 @@
+{
+ "slug": "gtt-r22-13-booking-terms-draft",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft the plain-English booking terms the client reads and accepts before paying. They are a draft for a lawyer to check. Nothing is published.",
+ "facts": [
+  "late",
+  "changes",
+  "waitlist",
+  "checkout"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Catherine's booking terms wording (CATHERINE-R22B-PART-4.md section 4.4; all lawyer to check)",
+   "text": "Please arrive at least 10 minutes early. Blood test: you are late if you are not checked in by your appointment time; we cannot start a late first draw, because draws run to a fixed timetable, and we will rebook you under these terms. Midwife consult: up to 10 minutes late, you will be seen and the consult ends at its normal time; more than 10 minutes late, we will rebook you (OPEN: Anthony may prefer 5 to 10 minutes if the midwife can finish). These rules do not apply if you are unwell, have a pregnancy complication, are in hospital or labour, or have a serious emergency: tell us as soon as you safely can and we will rebook you free. You do not need to tell us your diagnosis. If we run late, you are never charged for it."
+  },
+  {
+   "label": "Change, refund and illness rules (GRACE-R22-PART-3.md section 3, CATHERINE-R22B-PART-4.md)",
+   "text": "Change window 48 hours, with reminders. Pregnancy complications are always free to rebook, every time, no proof. Everything else: one free rebook per booking; the second time the client pays the booking amount again first. A statement is enough as proof; a certificate with no diagnosis only on a third claim for non-pregnancy illness. Staff record a code only and never keep a health letter. A late or missed test with no exception: GTT keeps half of the lounge amount (Path A A$81.07 for Package 1 or A$106.07 for Package 2) and refunds the rest; a delivered consult stays earned; the Path B amount is OPEN. The rules are the same for every client and are shown before payment."
+  },
+  {
+   "label": "Privacy and consumer lines (GRACE-R22-PART-6.md, CATHERINE-R22B-PART-6.md, GRACE-R22-PART-7.md section 4)",
+   "text": "A copy of the client's request is kept in a secure computer record held in Australia. Only midwives and phlebotomists open it and every look is logged. Booking details are not passed to the lab. Rebates are estimates and Medicare decides. The Australian Consumer Law guarantees cannot be excluded from the terms; the wording is for the lawyer."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Ten numbered headings with 1 to 3 short lines each: 1 Your booking, 2 Price and payment, 3 Arriving and late, 4 Changing your booking, 5 If you are unwell, 6 A missed or late test, 7 The waitlist, 8 Your privacy, 9 Your consumer rights, 10 Questions. End with the line: lawyer to check.",
+  "length": "at most 60 lines in total",
+  "write_only": "the ten headings, the final line and Questions for Anthony",
+  "do_not_write": "a refund amount for Path B, a legal clause in contract wording, any fee not in the inputs, a health word"
+ },
+ "extra_checks": [
+  "Heading 3 uses the late rule sentence word for word.",
+  "Heading 6 names the Path A amounts A$81.07 and A$106.07 and says the Path B amount is OPEN.",
+  "Heading 5 says the client does not need to give a diagnosis."
+ ]
+}

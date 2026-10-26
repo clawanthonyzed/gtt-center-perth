@@ -1,0 +1,34 @@
+{
+ "slug": "gtt-r22-21-test-morning-run-sheet",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the minute-by-minute run sheet the staff follow on a test morning. Copy the times from the input table; do not calculate any time.",
+ "facts": [
+  "morning",
+  "slots",
+  "people",
+  "rooms",
+  "late"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Draw timetable for one full morning (R: draws in pairs every 25 minutes; Draw 2 at plus 60 and Draw 3 at plus 120 minutes; arrival 10 minutes before Draw 1)",
+   "text": "Pair 1: arrive 06:50, Draw 1 07:00, Draw 2 08:00, Draw 3 09:00\nPair 2: arrive 07:15, Draw 1 07:25, Draw 2 08:25, Draw 3 09:25\nPair 3: arrive 07:40, Draw 1 07:50, Draw 2 08:50, Draw 3 09:50\nPair 4: arrive 08:05, Draw 1 08:15, Draw 2 09:15, Draw 3 10:15\nPair 5: arrive 08:30, Draw 1 08:40, Draw 2 09:40, Draw 3 10:40\nPair 6: arrive 08:55, Draw 1 09:05, Draw 2 10:05, Draw 3 11:05\nPair 7: arrive 09:20, Draw 1 09:30, Draw 2 10:30, Draw 3 11:30\nPair 8: arrive 09:45, Draw 1 09:55, Draw 2 10:55, Draw 3 11:55\nPair 9: arrive 10:10, Draw 1 10:20, Draw 2 11:20, Draw 3 12:20\nTwo clients in each pair, one per collection room chair (2 collection rooms, 1 chair each, 2 phlebotomists)."
+  },
+  {
+   "label": "Other fixed times (GRACE-R22-PART-1.md, PART-4.md)",
+   "text": "06:30 venue manager opens. Before 06:45 any roster change is made in the system and the affected cards are reprinted. 08:00 the midwife is on site. Midwife blocks start 08:15, 08:40, 09:05, 09:30 and 09:55; a same-morning consult ends before that client's Draw 1 and serves pairs 5 to 9 (Draw 1 at 08:40 and later). After 10:30 the midwife takes normal bookings. Services (massage, beauty, nails, hair) happen between draws; the 8 morning service staff work 07:00 to 13:00. The morning's last Draw 3 is the end of the test morning. Doors shut by 18:00."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: a table of the 9 pairs copied exactly from the input (pair, arrive, Draw 1, Draw 2, Draw 3, same-morning consult possible: yes or no). Section B: a time-ordered list of at most 14 lines from 06:30 to 12:20 saying what each role does (venue manager, phlebotomists, service staff, midwife). Section C: 3 lines on what to do when a pair runs late.",
+  "length": "at most 60 lines in total",
+  "write_only": "the three sections and Questions for Anthony",
+  "do_not_write": "any time that is not in the inputs, a clinical instruction, a fasting hour"
+ },
+ "extra_checks": [
+  "Every time in Section A matches the input table exactly.",
+  "Pairs 1 to 4 are marked no for a same-morning consult and pairs 5 to 9 are marked yes.",
+  "Section C uses the late rule: a first draw cannot start after the appointment time."
+ ]
+}

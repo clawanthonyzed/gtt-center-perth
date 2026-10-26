@@ -1,0 +1,31 @@
+{
+ "slug": "gtt-r22-20-staff-induction-one-pager",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write a one-page induction sheet every new staff member reads on day one. It is a draft for Anthony.",
+ "facts": [
+  "people",
+  "morning",
+  "late",
+  "rooms",
+  "results",
+  "filing",
+  "midwives"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Rules every staff member follows (GRACE-R22-PART-3, 4, 6; CATHERINE-R22B-PART-6)",
+   "text": "Never ask a client for a diagnosis and never write a health word in a note or timesheet; record a code only. Never write, copy or fix a request. Never leave the day list on a desk. Lounge and service staff see no requests and no flags. The venue manager sees booking flags only. Staff first names appear on the client welcome card with each staff member's written agreement. Services never interrupt a draw. Every look at a record is logged by name and time. A missing list is a possible data breach: tell Grace the same day. If a client rings GTT about a result, take her name and number only and say: I will get her to ring you straight back. Nothing is posted on social media or sent to anyone outside GTT without Anthony's approval.\nWho to ask: the venue manager for the day; Grace (operations) or the lead midwife for anything unusual. Pay, break rules and phone numbers: NOT IN REPO."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "A one-page sheet with these headings and 2 to 4 short lines each: 1 What GTT is, 2 How a test morning runs, 3 Who does what, 4 The late rule, 5 Privacy rules, 6 What you never do, 7 If something goes wrong, 8 Your first day. Then a signature line for the staff member.",
+  "length": "at most 50 lines in total",
+  "write_only": "the eight headings, the signature line and Questions for Anthony",
+  "do_not_write": "pay, award terms, break rules, phone numbers, a clinical instruction"
+ },
+ "extra_checks": [
+  "Heading 2 states 18 clients, pairs every 25 minutes, first draw 07:00 and the venue manager starting at 06:30.",
+  "Heading 4 uses the late rule sentence word for word."
+ ]
+}

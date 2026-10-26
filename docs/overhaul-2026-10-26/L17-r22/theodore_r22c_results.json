@@ -1,0 +1,1603 @@
+{
+ "generated": "2026-10-26",
+ "engine": "theodore_r22c.py (copy of theodore_r22.py, Center of Truth writer off)",
+ "locked": {
+  "pretax": 26631.97,
+  "after_tax": 19973.98,
+  "revenue_ex_gst": 153826.04
+ },
+ "startup_planning_figure": 251198.0,
+ "working_capital_reserve_repo": [
+  85000.0,
+  110000.0
+ ],
+ "ramp_pct": {
+  "M1": 0.43,
+  "M2": 0.64,
+  "M3": 0.79,
+  "M4": 0.93,
+  "M5plus": 1.0
+ },
+ "repo_cost_rise_m1_to_m5": 900.0,
+ "timelines_main": {
+  "250000": {
+   "capital": 250000.0,
+   "opening_cash_after_startup": -1198.0,
+   "extra_owner_funding_needed": 96663.78,
+   "total_advanced": 346663.78,
+   "loan_cleared_month": 20,
+   "first_dividend_month": 21,
+   "rows": [
+    {
+     "month": 1,
+     "ramp_pct": 43,
+     "pretax": -61048.87,
+     "company_tax": 0.0,
+     "after_tax_cash": -61048.87,
+     "topup": 62246.87,
+     "repaid": 0.0,
+     "loan_balance": 312246.87,
+     "cash_held": 0.0
+    },
+    {
+     "month": 2,
+     "ramp_pct": 64,
+     "pretax": -28745.4,
+     "company_tax": 0.0,
+     "after_tax_cash": -28745.4,
+     "topup": 28745.4,
+     "repaid": 0.0,
+     "loan_balance": 340992.28,
+     "cash_held": 0.0
+    },
+    {
+     "month": 3,
+     "ramp_pct": 79,
+     "pretax": -5671.5,
+     "company_tax": 0.0,
+     "after_tax_cash": -5671.5,
+     "topup": 5671.5,
+     "repaid": 0.0,
+     "loan_balance": 346663.78,
+     "cash_held": 0.0
+    },
+    {
+     "month": 4,
+     "ramp_pct": 93,
+     "pretax": 15864.15,
+     "company_tax": 0.0,
+     "after_tax_cash": 15864.15,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 346663.78,
+     "cash_held": 15864.15
+    },
+    {
+     "month": 5,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 0.0,
+     "after_tax_cash": 26631.97,
+     "topup": 0.0,
+     "repaid": 42496.12,
+     "loan_balance": 304167.66,
+     "cash_held": 0.0
+    },
+    {
+     "month": 6,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 0.0,
+     "after_tax_cash": 26631.97,
+     "topup": 0.0,
+     "repaid": 26631.97,
+     "loan_balance": 277535.69,
+     "cash_held": 0.0
+    },
+    {
+     "month": 7,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 73.57,
+     "after_tax_cash": 26558.4,
+     "topup": 0.0,
+     "repaid": 26558.4,
+     "loan_balance": 250977.29,
+     "cash_held": 0.0
+    },
+    {
+     "month": 8,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 231003.31,
+     "cash_held": 0.0
+    },
+    {
+     "month": 9,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 211029.33,
+     "cash_held": 0.0
+    },
+    {
+     "month": 10,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 191055.36,
+     "cash_held": 0.0
+    },
+    {
+     "month": 11,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 171081.38,
+     "cash_held": 0.0
+    },
+    {
+     "month": 12,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 151107.4,
+     "cash_held": 0.0
+    },
+    {
+     "month": 13,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 131133.42,
+     "cash_held": 0.0
+    },
+    {
+     "month": 14,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 111159.45,
+     "cash_held": 0.0
+    },
+    {
+     "month": 15,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 91185.47,
+     "cash_held": 0.0
+    },
+    {
+     "month": 16,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 71211.49,
+     "cash_held": 0.0
+    },
+    {
+     "month": 17,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 51237.51,
+     "cash_held": 0.0
+    },
+    {
+     "month": 18,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 31263.54,
+     "cash_held": 0.0
+    },
+    {
+     "month": 19,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 11289.56,
+     "cash_held": 0.0
+    },
+    {
+     "month": 20,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 11289.56,
+     "loan_balance": 0.0,
+     "cash_held": 8684.42
+    },
+    {
+     "month": 21,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 28658.4
+    },
+    {
+     "month": 22,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 48632.37
+    },
+    {
+     "month": 23,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 68606.35
+    }
+   ]
+  },
+  "336000": {
+   "capital": 336000.0,
+   "opening_cash_after_startup": 84802.0,
+   "extra_owner_funding_needed": 10663.78,
+   "total_advanced": 346663.78,
+   "loan_cleared_month": 20,
+   "first_dividend_month": 21,
+   "rows": [
+    {
+     "month": 1,
+     "ramp_pct": 43,
+     "pretax": -61048.87,
+     "company_tax": 0.0,
+     "after_tax_cash": -61048.87,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 336000.0,
+     "cash_held": 23753.13
+    },
+    {
+     "month": 2,
+     "ramp_pct": 64,
+     "pretax": -28745.4,
+     "company_tax": 0.0,
+     "after_tax_cash": -28745.4,
+     "topup": 4992.28,
+     "repaid": 0.0,
+     "loan_balance": 340992.28,
+     "cash_held": 0.0
+    },
+    {
+     "month": 3,
+     "ramp_pct": 79,
+     "pretax": -5671.5,
+     "company_tax": 0.0,
+     "after_tax_cash": -5671.5,
+     "topup": 5671.5,
+     "repaid": 0.0,
+     "loan_balance": 346663.78,
+     "cash_held": 0.0
+    },
+    {
+     "month": 4,
+     "ramp_pct": 93,
+     "pretax": 15864.15,
+     "company_tax": 0.0,
+     "after_tax_cash": 15864.15,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 346663.78,
+     "cash_held": 15864.15
+    },
+    {
+     "month": 5,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 0.0,
+     "after_tax_cash": 26631.97,
+     "topup": 0.0,
+     "repaid": 42496.12,
+     "loan_balance": 304167.66,
+     "cash_held": 0.0
+    },
+    {
+     "month": 6,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 0.0,
+     "after_tax_cash": 26631.97,
+     "topup": 0.0,
+     "repaid": 26631.97,
+     "loan_balance": 277535.69,
+     "cash_held": 0.0
+    },
+    {
+     "month": 7,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 73.57,
+     "after_tax_cash": 26558.4,
+     "topup": 0.0,
+     "repaid": 26558.4,
+     "loan_balance": 250977.29,
+     "cash_held": 0.0
+    },
+    {
+     "month": 8,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 231003.31,
+     "cash_held": 0.0
+    },
+    {
+     "month": 9,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 211029.33,
+     "cash_held": 0.0
+    },
+    {
+     "month": 10,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 191055.36,
+     "cash_held": 0.0
+    },
+    {
+     "month": 11,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 171081.38,
+     "cash_held": 0.0
+    },
+    {
+     "month": 12,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 151107.4,
+     "cash_held": 0.0
+    },
+    {
+     "month": 13,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 131133.42,
+     "cash_held": 0.0
+    },
+    {
+     "month": 14,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 111159.45,
+     "cash_held": 0.0
+    },
+    {
+     "month": 15,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 91185.47,
+     "cash_held": 0.0
+    },
+    {
+     "month": 16,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 71211.49,
+     "cash_held": 0.0
+    },
+    {
+     "month": 17,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 51237.51,
+     "cash_held": 0.0
+    },
+    {
+     "month": 18,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 31263.54,
+     "cash_held": 0.0
+    },
+    {
+     "month": 19,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 11289.56,
+     "cash_held": 0.0
+    },
+    {
+     "month": 20,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 11289.56,
+     "loan_balance": 0.0,
+     "cash_held": 8684.42
+    },
+    {
+     "month": 21,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 28658.4
+    },
+    {
+     "month": 22,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 48632.37
+    },
+    {
+     "month": 23,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 68606.35
+    }
+   ]
+  }
+ },
+ "timelines_alt_repo_tool_basis": {
+  "250000": {
+   "capital": 250000.0,
+   "opening_cash_after_startup": -1198.0,
+   "extra_owner_funding_needed": 82302.31,
+   "total_advanced": 332302.31,
+   "loan_cleared_month": 19,
+   "first_dividend_month": 20,
+   "rows": [
+    {
+     "month": 1,
+     "ramp_pct": 43,
+     "pretax": -54018.14,
+     "company_tax": 0.0,
+     "after_tax_cash": -54018.14,
+     "topup": 55216.14,
+     "repaid": 0.0,
+     "loan_balance": 305216.14,
+     "cash_held": 0.0
+    },
+    {
+     "month": 2,
+     "ramp_pct": 64,
+     "pretax": -24173.36,
+     "company_tax": 0.0,
+     "after_tax_cash": -24173.36,
+     "topup": 24173.36,
+     "repaid": 0.0,
+     "loan_balance": 329389.5,
+     "cash_held": 0.0
+    },
+    {
+     "month": 3,
+     "ramp_pct": 79,
+     "pretax": -2912.81,
+     "company_tax": 0.0,
+     "after_tax_cash": -2912.81,
+     "topup": 2912.81,
+     "repaid": 0.0,
+     "loan_balance": 332302.31,
+     "cash_held": 0.0
+    },
+    {
+     "month": 4,
+     "ramp_pct": 93,
+     "pretax": 16917.04,
+     "company_tax": 0.0,
+     "after_tax_cash": 16917.04,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 332302.31,
+     "cash_held": 16917.04
+    },
+    {
+     "month": 5,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 0.0,
+     "after_tax_cash": 26631.97,
+     "topup": 0.0,
+     "repaid": 43549.01,
+     "loan_balance": 288753.3,
+     "cash_held": 0.0
+    },
+    {
+     "month": 6,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 0.0,
+     "after_tax_cash": 26631.97,
+     "topup": 0.0,
+     "repaid": 26631.97,
+     "loan_balance": 262121.33,
+     "cash_held": 0.0
+    },
+    {
+     "month": 7,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 3927.16,
+     "after_tax_cash": 22704.81,
+     "topup": 0.0,
+     "repaid": 22704.81,
+     "loan_balance": 239416.52,
+     "cash_held": 0.0
+    },
+    {
+     "month": 8,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 219442.54,
+     "cash_held": 0.0
+    },
+    {
+     "month": 9,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 199468.56,
+     "cash_held": 0.0
+    },
+    {
+     "month": 10,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 179494.59,
+     "cash_held": 0.0
+    },
+    {
+     "month": 11,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 159520.61,
+     "cash_held": 0.0
+    },
+    {
+     "month": 12,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 139546.63,
+     "cash_held": 0.0
+    },
+    {
+     "month": 13,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 119572.65,
+     "cash_held": 0.0
+    },
+    {
+     "month": 14,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 99598.68,
+     "cash_held": 0.0
+    },
+    {
+     "month": 15,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 79624.7,
+     "cash_held": 0.0
+    },
+    {
+     "month": 16,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 59650.72,
+     "cash_held": 0.0
+    },
+    {
+     "month": 17,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 39676.74,
+     "cash_held": 0.0
+    },
+    {
+     "month": 18,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 19702.77,
+     "cash_held": 0.0
+    },
+    {
+     "month": 19,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19702.77,
+     "loan_balance": 0.0,
+     "cash_held": 271.21
+    },
+    {
+     "month": 20,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 20245.19
+    },
+    {
+     "month": 21,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 40219.17
+    },
+    {
+     "month": 22,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 60193.14
+    }
+   ]
+  },
+  "336000": {
+   "capital": 336000.0,
+   "opening_cash_after_startup": 84802.0,
+   "extra_owner_funding_needed": 0.0,
+   "total_advanced": 336000.0,
+   "loan_cleared_month": 19,
+   "first_dividend_month": 20,
+   "rows": [
+    {
+     "month": 1,
+     "ramp_pct": 43,
+     "pretax": -54018.14,
+     "company_tax": 0.0,
+     "after_tax_cash": -54018.14,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 336000.0,
+     "cash_held": 30783.86
+    },
+    {
+     "month": 2,
+     "ramp_pct": 64,
+     "pretax": -24173.36,
+     "company_tax": 0.0,
+     "after_tax_cash": -24173.36,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 336000.0,
+     "cash_held": 6610.5
+    },
+    {
+     "month": 3,
+     "ramp_pct": 79,
+     "pretax": -2912.81,
+     "company_tax": 0.0,
+     "after_tax_cash": -2912.81,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 336000.0,
+     "cash_held": 3697.69
+    },
+    {
+     "month": 4,
+     "ramp_pct": 93,
+     "pretax": 16917.04,
+     "company_tax": 0.0,
+     "after_tax_cash": 16917.04,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 336000.0,
+     "cash_held": 20614.73
+    },
+    {
+     "month": 5,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 0.0,
+     "after_tax_cash": 26631.97,
+     "topup": 0.0,
+     "repaid": 47246.7,
+     "loan_balance": 288753.3,
+     "cash_held": 0.0
+    },
+    {
+     "month": 6,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 0.0,
+     "after_tax_cash": 26631.97,
+     "topup": 0.0,
+     "repaid": 26631.97,
+     "loan_balance": 262121.33,
+     "cash_held": 0.0
+    },
+    {
+     "month": 7,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 3927.16,
+     "after_tax_cash": 22704.81,
+     "topup": 0.0,
+     "repaid": 22704.81,
+     "loan_balance": 239416.52,
+     "cash_held": 0.0
+    },
+    {
+     "month": 8,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 219442.54,
+     "cash_held": 0.0
+    },
+    {
+     "month": 9,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 199468.56,
+     "cash_held": 0.0
+    },
+    {
+     "month": 10,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 179494.59,
+     "cash_held": 0.0
+    },
+    {
+     "month": 11,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 159520.61,
+     "cash_held": 0.0
+    },
+    {
+     "month": 12,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 139546.63,
+     "cash_held": 0.0
+    },
+    {
+     "month": 13,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 119572.65,
+     "cash_held": 0.0
+    },
+    {
+     "month": 14,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 99598.68,
+     "cash_held": 0.0
+    },
+    {
+     "month": 15,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 79624.7,
+     "cash_held": 0.0
+    },
+    {
+     "month": 16,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 59650.72,
+     "cash_held": 0.0
+    },
+    {
+     "month": 17,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 39676.74,
+     "cash_held": 0.0
+    },
+    {
+     "month": 18,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 19702.77,
+     "cash_held": 0.0
+    },
+    {
+     "month": 19,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19702.77,
+     "loan_balance": 0.0,
+     "cash_held": 271.21
+    },
+    {
+     "month": 20,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 20245.19
+    },
+    {
+     "month": 21,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 40219.17
+    },
+    {
+     "month": 22,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 60193.14
+    }
+   ]
+  }
+ },
+ "timelines_repay_from_month_1": {
+  "250000": {
+   "capital": 250000.0,
+   "opening_cash_after_startup": -1198.0,
+   "extra_owner_funding_needed": 96663.78,
+   "total_advanced": 346663.78,
+   "loan_cleared_month": 20,
+   "first_dividend_month": 21,
+   "rows": [
+    {
+     "month": 1,
+     "ramp_pct": 43,
+     "pretax": -61048.87,
+     "company_tax": 0.0,
+     "after_tax_cash": -61048.87,
+     "topup": 62246.87,
+     "repaid": 0.0,
+     "loan_balance": 312246.87,
+     "cash_held": 0.0
+    },
+    {
+     "month": 2,
+     "ramp_pct": 64,
+     "pretax": -28745.4,
+     "company_tax": 0.0,
+     "after_tax_cash": -28745.4,
+     "topup": 28745.4,
+     "repaid": 0.0,
+     "loan_balance": 340992.28,
+     "cash_held": 0.0
+    },
+    {
+     "month": 3,
+     "ramp_pct": 79,
+     "pretax": -5671.5,
+     "company_tax": 0.0,
+     "after_tax_cash": -5671.5,
+     "topup": 5671.5,
+     "repaid": 0.0,
+     "loan_balance": 346663.78,
+     "cash_held": 0.0
+    },
+    {
+     "month": 4,
+     "ramp_pct": 93,
+     "pretax": 15864.15,
+     "company_tax": 0.0,
+     "after_tax_cash": 15864.15,
+     "topup": 0.0,
+     "repaid": 15864.15,
+     "loan_balance": 330799.63,
+     "cash_held": 0.0
+    },
+    {
+     "month": 5,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 0.0,
+     "after_tax_cash": 26631.97,
+     "topup": 0.0,
+     "repaid": 26631.97,
+     "loan_balance": 304167.66,
+     "cash_held": 0.0
+    },
+    {
+     "month": 6,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 0.0,
+     "after_tax_cash": 26631.97,
+     "topup": 0.0,
+     "repaid": 26631.97,
+     "loan_balance": 277535.69,
+     "cash_held": 0.0
+    },
+    {
+     "month": 7,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 73.57,
+     "after_tax_cash": 26558.4,
+     "topup": 0.0,
+     "repaid": 26558.4,
+     "loan_balance": 250977.29,
+     "cash_held": 0.0
+    },
+    {
+     "month": 8,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 231003.31,
+     "cash_held": 0.0
+    },
+    {
+     "month": 9,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 211029.33,
+     "cash_held": 0.0
+    },
+    {
+     "month": 10,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 191055.36,
+     "cash_held": 0.0
+    },
+    {
+     "month": 11,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 171081.38,
+     "cash_held": 0.0
+    },
+    {
+     "month": 12,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 151107.4,
+     "cash_held": 0.0
+    },
+    {
+     "month": 13,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 131133.42,
+     "cash_held": 0.0
+    },
+    {
+     "month": 14,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 111159.45,
+     "cash_held": 0.0
+    },
+    {
+     "month": 15,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 91185.47,
+     "cash_held": 0.0
+    },
+    {
+     "month": 16,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 71211.49,
+     "cash_held": 0.0
+    },
+    {
+     "month": 17,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 51237.51,
+     "cash_held": 0.0
+    },
+    {
+     "month": 18,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 31263.54,
+     "cash_held": 0.0
+    },
+    {
+     "month": 19,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 11289.56,
+     "cash_held": 0.0
+    },
+    {
+     "month": 20,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 11289.56,
+     "loan_balance": 0.0,
+     "cash_held": 8684.42
+    },
+    {
+     "month": 21,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 28658.4
+    },
+    {
+     "month": 22,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 48632.37
+    },
+    {
+     "month": 23,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 68606.35
+    }
+   ]
+  },
+  "336000": {
+   "capital": 336000.0,
+   "opening_cash_after_startup": 84802.0,
+   "extra_owner_funding_needed": 34416.9,
+   "total_advanced": 370416.9,
+   "loan_cleared_month": 20,
+   "first_dividend_month": 21,
+   "rows": [
+    {
+     "month": 1,
+     "ramp_pct": 43,
+     "pretax": -61048.87,
+     "company_tax": 0.0,
+     "after_tax_cash": -61048.87,
+     "topup": 0.0,
+     "repaid": 23753.13,
+     "loan_balance": 312246.87,
+     "cash_held": 0.0
+    },
+    {
+     "month": 2,
+     "ramp_pct": 64,
+     "pretax": -28745.4,
+     "company_tax": 0.0,
+     "after_tax_cash": -28745.4,
+     "topup": 28745.4,
+     "repaid": 0.0,
+     "loan_balance": 340992.28,
+     "cash_held": 0.0
+    },
+    {
+     "month": 3,
+     "ramp_pct": 79,
+     "pretax": -5671.5,
+     "company_tax": 0.0,
+     "after_tax_cash": -5671.5,
+     "topup": 5671.5,
+     "repaid": 0.0,
+     "loan_balance": 346663.78,
+     "cash_held": 0.0
+    },
+    {
+     "month": 4,
+     "ramp_pct": 93,
+     "pretax": 15864.15,
+     "company_tax": 0.0,
+     "after_tax_cash": 15864.15,
+     "topup": 0.0,
+     "repaid": 15864.15,
+     "loan_balance": 330799.63,
+     "cash_held": 0.0
+    },
+    {
+     "month": 5,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 0.0,
+     "after_tax_cash": 26631.97,
+     "topup": 0.0,
+     "repaid": 26631.97,
+     "loan_balance": 304167.66,
+     "cash_held": 0.0
+    },
+    {
+     "month": 6,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 0.0,
+     "after_tax_cash": 26631.97,
+     "topup": 0.0,
+     "repaid": 26631.97,
+     "loan_balance": 277535.69,
+     "cash_held": 0.0
+    },
+    {
+     "month": 7,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 73.57,
+     "after_tax_cash": 26558.4,
+     "topup": 0.0,
+     "repaid": 26558.4,
+     "loan_balance": 250977.29,
+     "cash_held": 0.0
+    },
+    {
+     "month": 8,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 231003.31,
+     "cash_held": 0.0
+    },
+    {
+     "month": 9,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 211029.33,
+     "cash_held": 0.0
+    },
+    {
+     "month": 10,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 191055.36,
+     "cash_held": 0.0
+    },
+    {
+     "month": 11,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 171081.38,
+     "cash_held": 0.0
+    },
+    {
+     "month": 12,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 151107.4,
+     "cash_held": 0.0
+    },
+    {
+     "month": 13,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 131133.42,
+     "cash_held": 0.0
+    },
+    {
+     "month": 14,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 111159.45,
+     "cash_held": 0.0
+    },
+    {
+     "month": 15,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 91185.47,
+     "cash_held": 0.0
+    },
+    {
+     "month": 16,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 71211.49,
+     "cash_held": 0.0
+    },
+    {
+     "month": 17,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 51237.51,
+     "cash_held": 0.0
+    },
+    {
+     "month": 18,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 31263.54,
+     "cash_held": 0.0
+    },
+    {
+     "month": 19,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 19973.98,
+     "loan_balance": 11289.56,
+     "cash_held": 0.0
+    },
+    {
+     "month": 20,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 11289.56,
+     "loan_balance": 0.0,
+     "cash_held": 8684.42
+    },
+    {
+     "month": 21,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 28658.4
+    },
+    {
+     "month": 22,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 48632.37
+    },
+    {
+     "month": 23,
+     "ramp_pct": 100,
+     "pretax": 26631.97,
+     "company_tax": 6657.99,
+     "after_tax_cash": 19973.98,
+     "topup": 0.0,
+     "repaid": 0.0,
+     "loan_balance": 0.0,
+     "cash_held": 68606.35
+    }
+   ]
+  }
+ },
+ "steady_only_simplification": {
+  "250000": [
+   13,
+   0.0
+  ],
+  "336000": [
+   13,
+   0.0
+  ]
+ },
+ "not_modelled": [
+  "company tax instalment timing (PAYG instalments, tax paid in the month it arises here)",
+  "GST/BAS timing (quarterly cash, GST float)",
+  "working capital beyond the start-up list (wages paid before takings, stock, deposits, bond)",
+  "start-up cost list (only the A$251,198 planning figure is in the repo; working capital reserve A$85,000-110,000 is stale)",
+  "break-even and cash flow re-run on current prices (repo ramp is the older 43/64/79/93/100 curve)",
+  "depreciation and tax losses beyond a simple carry-forward",
+  "interest on prepaid money, standalone consults, card quotes, Package 2, retail, post-test discount"
+ ]
+}

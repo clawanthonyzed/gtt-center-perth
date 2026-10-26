@@ -1,0 +1,31 @@
+{
+ "slug": "gtt-r22-24-venue-manager-decision-guide",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the one-page decision guide the venue manager keeps at the desk for late and illness cases. It is a draft for Anthony; wording is for Catherine to check.",
+ "facts": [
+  "late",
+  "changes"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Decision table (GRACE-R22-PART-3.md section 2, CATHERINE-R22B-PART-4.md)",
+   "text": "Rules for all rows: never ask for a diagnosis, never write a health word, record only the code. Say I am sorry, then the sentence.\nBleeding, leaking fluid, labour, strong contractions, baby moving less: Please call your midwife or hospital now. Do not wait for us. We will rebook you free. In an emergency at the venue call 000. Ask only: Are you safe? Code EX-1. No proof ever.\nAdmitted to hospital, or too unwell with a pregnancy problem: We will rebook you free. You do not need to tell me details. Code EX-1, no hospital name.\nFever, gastro or other illness not related to the pregnancy: Please stay home so nobody catches it. We will rebook you free this time. Code EX-3 (suggested, E). First time only.\nFamily emergency: I am sorry. We will rebook you free. Code EX-2. One sentence only.\nCar accident or breakdown: We will rebook you. Take a reference number, copy no document. Code EX-4 (suggested, E), once.\nTraffic, overslept, forgot, work, childcare: I am sorry, we cannot start a first draw after your appointment time. Here is how rebooking works. Note: late, no exception.\nTest client arrives late with no reason: say the late rule sentence and offer the next free test time. Never squeeze the draw in.\nConsult client up to 10 minutes late: Come straight in. Your consult ends at its normal time (OPEN wording). Over 10 minutes: I am sorry, we will rebook you; the midwife may still see her.\nThird claim in one booking, or anything unusual: I will ask my manager to ring you back; count only; Grace or the lead midwife decides, not Anthony."
+  },
+  {
+   "label": "Limits (GRACE-R22-PART-3.md section 3)",
+   "text": "Pregnancy complications are always free to rebook, every time, no proof. Everything else: one free rebook per booking; the second time the client pays the booking amount again before the new time is held. A statement is enough; a certificate with no diagnosis only on a third claim for non-pregnancy illness; never keep a copy of a health letter. A late or missed test with no exception: half of the lounge amount is kept (OPEN for Path B). If GTT runs late the client is never charged for it."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "A one-page guide. Section A: the rules for all rows (3 lines). Section B: a table of 8 rows (situation, what to say, what to record, who decides) covering the situations in the inputs, combining the two lateness rows and the two consult rows. Section C: the limits in 5 lines. Section D: the late rule sentence in a box.",
+  "length": "at most 55 lines in total",
+  "write_only": "the four sections and Questions for Anthony",
+  "do_not_write": "a health word in the record column, a proof requirement for a pregnancy complication, a figure not in the inputs"
+ },
+ "extra_checks": [
+  "Every record cell holds a code or a plain non-health note, never a health word.",
+  "The guide says repeat claims go to Grace or the lead midwife, not Anthony.",
+  "Section D uses the late rule sentence word for word."
+ ]
+}

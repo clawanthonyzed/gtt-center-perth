@@ -24,7 +24,7 @@ Any task over 8,000 characters must be split into parts. A brief file is a task,
 | Split | If facts plus inputs do not fit, split the spec into `parts`. Each part is a full brief (`<slug>-p1`, `<slug>-p2`), checked on its own, queued as its own task, with a deliverable of 70 lines or fewer |
 | No overlap | Each part's "Do not write" names what the other part covers |
 | Queueing | One queue command per brief file. A spec with 2 parts is 2 tasks |
-| Counting the night | The limit of 10 GTT tasks a night counts brief files, not specs. Split specs use more of the daily free-route calls (about 50 a day), so queue splits only for the jobs that need them |
+| Counting the night | Round 22 (Anthony, 2026-10-26) queued 28 brief files from 25 jobs because about 37 free-route calls were left. A split spec is several tasks and uses several calls. Plan 1 call a task, up to 3 with rework |
 
 ## Trigger
 
@@ -39,10 +39,10 @@ Anthony or Idea Lobster names work that a free-route draft can do (text only, no
 ## Steps
 
 1. Read the Center of Truth. If a decision changed since the preamble date, update the preamble first.
-2. Write a spec file (JSON) for the task: slug, agent (the original task's agent), role, facts (topic ids), inputs (path and line range, or condensed inline text), deliverable, extra checks, and `parts` if it will not fit. Examples: playbooks/briefs-r21/specs/. Field list: playbooks/BRIEF-TEMPLATE.md.
+2. Write a spec file (JSON) for the task: slug, agent (the original task's agent), role, facts (topic ids), inputs (path and line range, or condensed inline text), deliverable, extra checks, and `parts` if it will not fit. Examples: playbooks/briefs-r22/specs/. Field list: playbooks/BRIEF-TEMPLATE.md.
 3. Build the brief: `python3 tools/build_overnight_brief.py spec.json --repo <repo> --out brief.txt`, or every spec in a folder with `--specs <dir> --outdir <dir>`. It pastes the core and the listed facts and the inputs, and refuses any brief over 8,000 characters (parts become brief-p1.txt, brief-p2.txt).
 4. Fact-check every brief file: `python3 tools/factcheck_locked_facts.py brief.txt`. Exit 0 required (it also flags the bare word for a parent).
-5. Queue it: `python3 /opt/openclaw/orchestration/queue_task.py --agent <agent> --venture "GTT Center Perth" --title "R21-<nn> <title>" --brief-file brief.txt`. One brief file, one task, one deliverable.
+5. Queue it: `python3 /opt/openclaw/orchestration/queue_task.py --agent <agent> --venture "GTT Center Perth" --title "R22-<nn> <title>" --brief-file brief.txt --priority 7`. One brief file, one task, one deliverable.
 6. The executor claims it (2 a minute), runs it on the free route and checks it with Proof-of-Done. The result is saved under second_brain/overnight/<slug>/. The database trigger turns the card into DRAFT (needs Anthony sign-off).
 7. Inspect (Idea Lobster, no rewriting): `python3 tools/factcheck_locked_facts.py draft.md` and `python3 /opt/openclaw/toolbox/formatters/proof_of_done.py draft.md`. Read the whole draft against the brief's acceptance list.
 8. Pass: link it in the report. Fail: send it back to the same agent as a rework order with the failing lines quoted (new task, same brief plus a FIX line). Two failures in a row: stop and tell Anthony what is missing.
@@ -61,7 +61,7 @@ Anthony or Idea Lobster names work that a free-route draft can do (text only, no
 
 ## Limits to plan around
 
-The free route allows about 50 calls a day (resets 08:00 AWST). Each task uses 1 call, 2 if reworked. When every free model returns 429 the work waits; the requeue cron (every 20 minutes, up to 4 tries) puts failed cards back. Queue at most 10 GTT brief files in one night; split jobs count by file. Reject llama3.2:3b drafts. Long tables get cut off: ask for 8 rows at most.
+The free route allows about 50 calls a day (resets 08:00 AWST). Each task uses 1 call, 2 if reworked. When every free model returns 429 the work waits; the requeue cron (every 20 minutes, up to 4 tries) puts failed cards back. Queue only as many brief files as the remaining calls allow (1 to 3 calls each); split jobs count by file. Round 22 runs at priority 7, ahead of the older priority 5 and 6 backlog (the executor claims by priority, highest first). Requeue note: the cron runs 02:05 to 05:45 server time; since the clocks went back on 2026-10-25 that is 09:05 to 12:45 AWST, not 08:05. Reject llama3.2:3b drafts. Long tables get cut off: ask for 8 rows at most.
 
 ## Escalation
 
@@ -75,7 +75,7 @@ Only money, accounts, legal or a fact only Anthony knows. Put each in the draft'
 | Legal | No legal advice. Catherine owns /opt/openclaw/second-brain/knowledge/legal/. Drafts say lawyer to check |
 | Floor plans | Banned for agents. Words only; the registered architect draws |
 | Billing model | Structure B only. No other billing model is discussed |
-| Figures | No invented figures. The only profit figures are Theodore R21's, copied not recomputed |
+| Figures | No invented figures. The only profit figures are Theodore R21's, copied not recomputed (Theodore R22 now: A$26,631.97 before, A$19,973.98 after) |
 | Style | No em dashes. AUD. Plain English |
 | Roles | Only the roles in the preamble. No hosts, no sonographers <!-- factcheck:ok --> |
 | Cost | Free route only. No paid model, no RunPod |

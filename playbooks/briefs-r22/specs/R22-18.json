@@ -1,0 +1,32 @@
+{
+ "slug": "gtt-r22-18-client-faq-page-text",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the questions and answers for the client FAQ page on the booking site. It is a draft for Anthony and a lawyer. No medical advice.",
+ "facts": [
+  "prices",
+  "checkout",
+  "medicare",
+  "morning",
+  "late",
+  "waitlist",
+  "changes"
+ ],
+ "inline_inputs": [
+  {
+   "label": "What the client needs to know (GRACE-R22-PART-7.md, CATHERINE-R22B-PART-5.md, CLINICAL-OPERATIONS-PLAN.md)",
+   "text": "The test: a two hour pregnancy glucose tolerance test. Draw 1 fasting, then the 75 g drink within 5 minutes, Draw 2 exactly 60 minutes after Draw 1, Draw 3 exactly 120 minutes after Draw 1. Services (massage, beauty, nails, hair) fit between the draws; she is escorted back seated; she may leave only after Draw 3; a snack is offered straight after. She stays on the premises for the whole test. No strenuous activity. Water only until the final draw. Fasting hours: NOT IN REPO (the lab sets them). Open Monday to Saturday, closed Sunday.\nWhat to bring: Path A, her Medicare card; Path B, the original referral and ID, and she can email it in or upload a photo; the original is checked at the door.\nPath B notice: GTT Center Perth is not an approved pathology collection centre, so Medicare will not pay any benefit for the glucose test if the sample is collected here on an outside request; the lab bills its own fee; she can keep her referral and still choose Path A. Rebates are estimates and Medicare decides. The lab bills the A$27.85 lab fee later; GTT never passes booking details to the lab.\nResults: Path A, the midwife phones abnormal results; normal results get a generic message. Path B, results go to her outside doctor or midwife. GTT does not take over her care. Privacy: her request is kept in a secure computer record held in Australia; only midwives and phlebotomists open it."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Twelve questions with answers of 1 to 3 short lines each: What is the test; What does it cost (both paths, rebates as about); Which path should I choose; What do I bring; Can I eat or drink before; How long does it take; What happens in the waiting time; What if I am late; What if I am unwell or need to change; What is the waitlist; How do I get my results; How is my privacy protected. End with: This page is general information, not medical advice. Ask your own doctor or midwife about your health.",
+  "length": "at most 65 lines in total",
+  "write_only": "the twelve questions, the final line and Questions for Anthony",
+  "do_not_write": "fasting hours, medical advice, a guarantee of a Medicare amount, any figure not in the inputs"
+ },
+ "extra_checks": [
+  "The cost answer gives Path A A$320 / A$370 and Path B A$300 / A$350, and any rebate is written as about.",
+  "The late answer uses the late rule sentence word for word.",
+  "The fasting answer says the hours are set by the lab and are NOT IN REPO."
+ ]
+}

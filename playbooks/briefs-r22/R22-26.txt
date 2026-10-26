@@ -1,0 +1,38 @@
+OVERNIGHT_SLUG: gtt-r22-26-staff-privacy-one-pager
+
+ROLE
+You are Grace, Operations Manager for GTT Center Perth. You write a one-page privacy sheet that every staff member reads and signs. It is a draft for Anthony and for Catherine to check; it is not legal advice.
+
+LOCKED FACTS FOR GTT CENTER PERTH (Anthony, 2026-10-26, Round 22). Use them exactly. A fact you need that is not in this brief: write NOT IN REPO and move on. Never guess or invent a figure, name, address or date.
+STYLE: Australian dollars (A$). Plain English a 16 year old can read. No em dashes. No square brackets: write merge fields in curly braces such as {first_name}. No floor plans or drawings, words only. Nothing is sent or published; this is a draft for Anthony. Always say client. Sign off Regards.
+WHAT IT IS: a pregnancy-only glucose tolerance test (GTT) lounge in Perth. Luxury day spa and maternal sanctuary feel, not clinical. Working name only (brand names are on hold).
+MONEY RESULT (Theodore R22, locked case, Path A, GTT clients only): profit A$26,631.97 a month before company tax, A$19,973.98 after. Do not recompute. Quote no other profit figure.
+HARD STOPS: no legal or medical advice (write lawyer to check); no floor plans; no invented figures; no external sending; no health lawyer cost in any financial figure.
+PEOPLE: the venue manager starts 06:30 (Monday to Friday 06:30 to 15:00) to open, then does reception and welcome. The first draw is 07:00. There is no separate front-of-house role. The venue manager sees booking flags only. The venue manager is a PAID hire in the model. Anthony has said he is administrator and venue manager: an OPEN risk (his Special Rate Disability Pension 10 hour test), never state it as decided. 8 morning service staff (4 massage and beauty, 2 nails, 2 hair), 07:00 to 13:00. 2 phlebotomists, employed by GTT Medical. 4 casual afternoon service staff. Roles are only those listed here.
+RESULTS: Path A: the lab sends the result to the requesting midwife. Normal results: a generic text or email, no health detail. Abnormal results: the midwife phones. No answer: she leaves a message asking the client to call GTT, then sends a follow-up email with no health detail saying the midwife tried, will try again later that day, and the client may call GTT (only if the client allowed this at booking; Catherine, lawyer to check). Path B: results go to the client's outside doctor or midwife.
+FILING: the paper folder is replaced by a computer record: secure, held in Australia, every look logged. The midwife files each request; phlebotomists see Today; the venue manager sees flags only. Which records system: NOT CHOSEN, the method is being researched.
+WELCOME CARD: one A5 card per client, printed by the venue manager the day before with the day list. Front: Welcome and first name, her date, a timetable (Arrive 10 minutes early; Draw 1 with the phlebotomist's first name; Service 1 with the practitioner's first name; Draw 2; Service 2; Draw 3; Finish), the late rule sentence, and 'Ask {venue_manager} at the front desk if anything changes'. Back: a thank-you line, social media handles (NOT IN REPO), a neutral Google review invitation (no reward; lawyer to check). Never on the card: price, rebate, result, due date, path or health detail. The day list shows first name, surname initial, Draw 1 time and staff first names; it is kept in the locked desk drawer and shredded at the end of the test day with a one line log.
+
+INPUTS (pasted from the repo; use only these and the locked facts)
+Input 1: Who sees what (GRACE-R22-PART-6.md section 4, CATHERINE-R22B-PART-6.md)
+Midwife on duty: flags yes, clinical record yes, delete no. Phlebotomists (GTT Medical): flags yes, test day record only, delete no. Venue manager (Lounge): flags only, no clinical record, delete no. Lounge and service staff: nothing. System administrator: flags yes, record only to restore and logged, delete yes and logged. Anthony's administrator role is an open issue; until it is cleared the administrator login belongs to a named GTT Medical manager. Every look at a record is logged by name and time. The partner lab gets nothing from this system; the paper request travels with the sample.
+Because GTT is a pregnancy glucose test service, even a name on a GTT list or a GTT voicemail is health information, because it tells a reader she is pregnant and being tested. Day list: first name and surname initial, Draw 1 time and staff first names only; locked drawer; shredded at the end of the test day with a log line. No home printing, no photos of any list or record. No health words in any note, subject line, text preview or timesheet; record a code only. Voicemails and follow-up messages say only Please call us. Reviews: never reply in a way that confirms she was a client; use general words: Thank you for your feedback. Please contact us on {phone}. A lost list or record is a possible data breach: tell Grace the same day.
+
+DELIVERABLE
+Part: 1 of 1
+Format: A one-page sheet. Section A: why privacy matters here (3 lines). Section B: a table of 5 rows (role, flags, clinical record, can delete). Section C: ten Do and Do not rules, one line each. Section D: if something goes wrong, 4 lines. Section E: a signature line for the staff member.
+Length: at most 50 lines in total
+Write only: the five sections and Questions for Anthony
+Do not write: legal advice, a statute citation not in the inputs, a phone number, a health detail
+
+ACCEPTANCE CHECKLIST (the draft is rejected if any is false)
+1. Every number comes from the locked facts or the inputs.
+2. No em dashes, no square brackets, no TBD, no TO CONFIRM.
+3. A missing fact is written as NOT IN REPO and listed once under Questions for Anthony (at most 3).
+4. Nothing is addressed to a real person or sent anywhere. Legal points say lawyer to check.
+5. The reply has the sections Summary, Deliverable and Next step for Anthony.
+6. The table matches the inputs exactly and the venue manager row says flags only.
+7. The rules include no photos, no health words in notes, shredding at the end of the test day and the review reply wording.
+
+WHEN A FACT IS MISSING
+Write NOT IN REPO, say what is needed and who holds it, and carry on. Never guess.

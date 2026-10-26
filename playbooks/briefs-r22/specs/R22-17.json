@@ -1,0 +1,31 @@
+{
+ "slug": "gtt-r22-17-day-before-print-checklist",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the one-page checklist the venue manager follows the day before each test day to print the day list and welcome cards. It is a draft for Anthony.",
+ "facts": [
+  "welcome",
+  "people",
+  "late"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Print run (GRACE-R22-PART-4.md sections 5 to 7)",
+   "text": "1 Print after the 48 hour change cutoff and again at the end of the shift for late bookings. Work printer only. 2 Print the client list (the day list) and the cards in the same order, by Draw 1 time. 3 Count: cards printed equals clients on the list; write the count on the list. 4 Check each card: first name, times and staff names match the roster. 5 Check spelling of first names against the booking. 6 Put the cards in time order in a closed folder; keep the folder in the locked front desk drawer overnight. 7 Reprint any card with an error; shred the wrong one.\nIf the roster changes: before 06:45 on the morning open the roster, change the name in the system, reprint only the affected cards and shred the old ones. After 06:45 tell the client at the door and write nothing by hand on the card; reprint at the desk before she sits. If the printer fails, say the name out loud. If a draw time moves, reprint, do not strike out, and tell the phlebotomist and the practitioners. A late client or no-show: do not reprint; follow the late rule."
+  },
+  {
+   "label": "Privacy of the list (CATHERINE-R22B-PART-6.md section 6.4)",
+   "text": "The day list shows first name and surname initial, Draw 1 time and staff first names only. Number each copy; one master plus only the copies staff need. No home printing, no photos of the list. Face down or covered at the desk; never left on the front desk or a table. At the end of the test day shred every copy and unused card (cross-cut shredder or locked shred bin, never the recycling bin) and write one log line: date, copies printed, copies shredded, initials. The counts must match. A missing list is a possible data breach: tell Grace the same day. Lounge staff use booking data only, never the clinical record."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "A printable checklist. Section A: Before you print (3 lines). Section B: a table of at most 8 rows (step, what to check, tick). Section C: On the morning, 4 lines. Section D: End of the test day, 4 lines, then the one-line log format. Section E: if something goes wrong, a table of at most 4 rows.",
+  "length": "at most 55 lines in total",
+  "write_only": "the five sections and Questions for Anthony",
+  "do_not_write": "a health detail, a path, a due date or a referral on the list or cards, a printer model, a supplier"
+ },
+ "extra_checks": [
+  "The 06:45 roster cutoff and the count-match step are both present.",
+  "The log line has date, copies printed, copies shredded and initials."
+ ]
+}

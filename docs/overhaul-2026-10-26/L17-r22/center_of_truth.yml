@@ -1,0 +1,73 @@
+generated_by: docs/overhaul-2026-10-26/L17-r22/theodore_r22.py
+date: '2026-10-26'
+currency: AUD
+paths:
+  path_a: consult package, PREFERRED
+  path_b: outside referral, NOT preferred
+prices:
+  path_a_package_1_full: 320.0
+  path_a_package_2_full: 370.0
+  path_a_client_pays_gtt_p1: 292.15
+  path_a_client_pays_gtt_p2: 342.15
+  consult_gst_free: 130.0
+  lounge_service_p1_taxable: 162.15
+  lounge_service_p2_taxable: 212.15
+  lab_paid_to_lab_not_gtt: 27.85
+  path_b_p1_all_in: 300.0
+  path_b_p2_all_in: 350.0
+  path_b_gtt_receives_p1: 272.15
+  path_b_gtt_receives_p2: 322.15
+  path_b_whole_amount_taxable: true
+  pm_average_incl_gst: 117.0
+  plan_mix_p1: 1.0
+rebate_lock:
+  consult_item: '82105'
+  consult_fee: 38.75
+  consult_rebate: 32.95
+  lab_test_item: '66548'
+  lab_test_fee: 19.9
+  lab_test_rebate: 16.95
+  collection_item: '73928'
+  collection_fee: 5.95
+  collection_rebate: 5.1
+  collection_alt_item: '73938'
+  collection_alt_fee: 7.95
+  collection_alt_rebate: 6.8
+  collection_status: unresolved, AskMBS later
+  lab_rebate: 22.05
+  total_rebate: 55.0
+  client_cost_path_a_p1: 265.0
+  client_cost_path_a_p2: 315.0
+volumes:
+  am_clients_day: 18
+  am_clients_month: 473.94
+  pm_transactions_month: 210.13
+venue_manager:
+  start: 06:30
+  hours: Mon-Fri 06:30 to 15:00
+  first_draw: 07:00
+  repo_base_loaded: 8004.48
+  extra_half_hour: 500.28
+  combined_loaded_month: 8504.76
+  open_issue: Anthony says he is administrator and venue manager; wage line and MRCA hours undecided
+midwives:
+  hours: 08:00 to 16:00
+  first_consult: 08:15
+  consult_blocks_min: 25
+  paid_h_per_shift: 7.5
+  paid_h_week_both: 45.0
+  block: fortnightly Mon-Wed / Thu-Sat
+  oncost: 1.3658
+  medicare_participating: hired as participating, or plan how they get it
+shared_costs_month:
+  venue_manager_combined_0630_to_1500: 8504.76
+  rent_insurance_overheads_supplies_net_of_gst_credits: 13025.76
+  wa_payroll_tax_group: 1344.04
+  three_company_running_cost: 908.67
+shared_costs_total: 23783.23
+headline:
+  profit_before_company_tax: 26631.97
+  company_tax: -6657.99
+  net_after_all: 19973.98
+  threshold: 20000.0
+  above_threshold: false

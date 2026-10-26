@@ -1,0 +1,31 @@
+{
+ "slug": "gtt-r22-23-path-b-notice-set",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write the final client-facing wording of the Path B Medicare notice for each place it appears. All wording is for a lawyer to check. Nothing is published or sent.",
+ "facts": [
+  "split-b",
+  "order"
+ ],
+ "inline_inputs": [
+  {
+   "label": "Catherine's exact wording and places (CATHERINE-R22B-PART-5.md sections 5.2 to 5.4; statutory words in the second sentence of the check-in notice)",
+   "text": "Where it appears: Step 1 button 2 and Path B screens B1 and B3 (before she pays); the confirmation email; a signed notice at check-in before the draw (no signature, no draw; offer Path A or the lab's own collection centre); and a slip that travels with each Path B sample to the lab. Never use these words for Path A.\nScreens B1 and B3 and the confirmation email: You have chosen to use a pathology request from your own doctor or midwife. GTT Center Perth is not an approved pathology collection centre, so Medicare will not pay any benefit for your glucose test if your sample is collected here on that request. The lab bills you its private fee. If you would like a Medicare benefit, choose the package with a GTT midwife consult (you can keep your own referral and still choose it), or take your request to one of the lab's own collection centres.\nSigned at check-in: Before we collect your sample: GTT Center Perth is not an approved collection centre. If the approved pathology practitioner were to use the specimen in rendering a pathology service, a Medicare benefit would not be payable in respect of the pathology service. Your results go to the doctor or midwife who wrote your request. Tick: I have read this and I want my sample collected here. Signed and dated.\nThe lab fee inside all in: the A$300 / A$350 price assumes the lab charges A$27.85; until the lab's Path B fee is confirmed in writing say: A$272.15 to GTT today; the lab bills its own fee, currently A$27.85. The wording of the sample slip: NOT IN REPO."
+  },
+  {
+   "label": "Emailed referral path (GRACE-R22-PART-4.md section 8)",
+   "text": "She may email her referral in or upload a photo. The mailbox is read only by GTT Medical staff, never the venue manager (address NOT IN REPO). The subject she is asked to use is her booking number only, no health words. Automatic reply: Thank you. We have received your document for booking {booking_number}. Please also bring the original to your appointment. Regards. The phlebotomist still checks it at the door; no suitable referral, no draw."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Sections: 1 Step 1 button 2 small print (2 lines). 2 Screens B1 and B3 and confirmation email text. 3 Price note above the pay button. 4 Check-in notice with tick box and signature line. 5 Front desk line when a client will not sign. 6 Automatic reply to an emailed referral. 7 The sample slip: NOT IN REPO and what Catherine must supply.",
+  "length": "at most 55 lines in total",
+  "write_only": "the seven sections and Questions for Anthony",
+  "do_not_write": "a Medicare benefit promise, the same words for Path A, an invented slip wording, a mailbox address"
+ },
+ "extra_checks": [
+  "The statutory sentence in section 4 is copied word for word from the inputs.",
+  "No text implies Path A has no Medicare benefit.",
+  "Section 3 says A$272.15 to GTT today for Package 1 and that the lab bills its own fee."
+ ]
+}
