@@ -1,0 +1,51 @@
+{
+ "slug": "gtt-r21-03-midwife-hiring-pack",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft part of a compact midwife hiring pack for Anthony to review. No contract is sent or signed.",
+ "facts": ["midwives", "slots", "results", "mealbreak", "structure"],
+ "parts": [
+  {
+   "inline_inputs": [
+    {
+     "label": "Hours and breaks (GRACE-R21-MIDWIFE-SLOTS.md and CATHERINE-R21-PART-4.md)",
+     "text": "On site 08:00 for set-up, first appointment 08:15, last finish by 16:00. A consult is 20 minutes inside a 25 minute block (5 minutes to write the request and notes). One consult room.\nMeal break: 30 minutes unpaid, taken between 12:00 and 14:00, only if she is truly free from duty and may leave the building; if she must stay available the break is paid. Two paid 10 minute tea breaks a shift.\nOn site time from 08:15 to 16:00 is 465 minutes. After the meal break and two tea breaks about 415 minutes are left, so 18 blocks of 25 minutes do not fit one shift. Anthony has not decided how to fix this (a 16:15 finish is one option)."
+    },
+    {
+     "label": "Midwife rules already decided (Catherine R16, R21, and Anthony)",
+     "text": "Each midwife needs her own Medicare participating midwife provider number for the venue; the consult item 82105 is for a participating midwife and is at least 10 minutes. A participating midwife can request pathology item 66548 (not 66542). Midwives are employed by GTT Medical Services. Award class for pay is unconfirmed. Casual midwife cost: NOT IN REPO. Midwives phone only abnormal results, in private, after checking the client's date of birth; no health detail on voicemail."
+    }
+   ],
+   "deliverable": {
+    "part": "1 of 2 (screening sheet and interview guide)",
+    "format": "Two short sections. 1) Screening sheet: a table of at most 8 rows (check, what to see, pass or fail). 2) Interview guide: at most 8 numbered questions.",
+    "length": "at most 45 lines in total",
+    "write_only": "the two sections and Questions for Anthony",
+    "do_not_write": "the position description and contract outline (part 2), pay rates, a Monday to Friday roster, a 48.6 hour week"
+   },
+   "extra_checks": [
+    "Registration checks name the Ahpra public register and the Medicare provider number; insurance minimums are NOT IN REPO.",
+    "At least one interview question asks about breaks and about being free from duty, and one about phoning an abnormal result in private."
+   ]
+  },
+  {
+   "facts": ["midwives", "slots", "results", "mealbreak", "filing", "order", "structure"],
+   "inline_inputs": [
+    {
+     "label": "Duties of the role (GRACE-R21-COMPUTER-FILING.md, CATHERINE-R21-PART-2.md and PART-4.md)",
+     "text": "Hours: 08:00 to 16:00 on site, 22.5 paid hours a week each, fortnightly block (Monday to Wednesday or Thursday to Saturday, then swap). Employer: GTT Medical Services. Consults: history, risk check, glucose test counselling, the request and written notes with start and end times. Never bill item 82105 if a consult is cut below 10 minutes. One client per consult. After the consult GTT Medical issues the client an itemised account that names item 82105 and the midwife's provider number.\nFiling: at the end of each consult the midwife writes the request in the secure computer record and marks request issued; the system files a copy to the test-day record. The midwife can see and add requests; she cannot delete. Every look at a request is logged.\nResults: phones only abnormal results; normal results go by a generic message that the result is ready. If she cannot reach the client, she tries again the same day, then a text asks her to call; every attempt is recorded."
+    }
+   ],
+   "deliverable": {
+    "part": "2 of 2 (position description and contract outline)",
+    "format": "Two short sections. 1) Position description: at most 14 lines. 2) Employment contract outline: at most 10 bullets, each ending lawyer to check.",
+    "length": "at most 45 lines in total",
+    "write_only": "the two sections and Questions for Anthony",
+    "do_not_write": "the screening sheet and interview guide (part 1), pay rates not in the inputs, full contract wording"
+   },
+   "extra_checks": [
+    "Hours are 22.5 paid hours each for the two permanent part-time midwives (45 a week), fortnightly block, on site 08:00 to 16:00.",
+    "The position description does not promise 18 blocks a day."
+   ]
+  }
+ ]
+}

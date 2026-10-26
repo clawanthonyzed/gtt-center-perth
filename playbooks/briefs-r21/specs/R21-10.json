@@ -1,0 +1,32 @@
+{
+ "slug": "gtt-r21-10-room-licence-guarantee-lease",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft plain-English term outlines for a lawyer to turn into documents. You do not draft contract wording and you give no legal advice.",
+ "facts": ["rooms", "structure", "changes", "late", "filing"],
+ "inline_inputs": [
+  {
+   "label": "Lease terms sought (outputs/LEASING/COMMERCIAL-SITE-BRIEF.md section 4, in short)",
+   "text": "Budget: maximum A$10,500 a month gross (base rent plus estimated outgoings), excluding GST; target range A$9,500 to A$10,500. Initial term 3 years, with a 3-year option to renew. Rent reviews: a fixed percentage or CPI, no ratchet (only-up) clause. Rent-free 3 to 6 months during fit-out. A landlord fit-out contribution is welcome. Permitted use wide enough for health, beauty and wellness services, pathology specimen collection (including by a third-party pathology provider), hairdressing and a small refreshment counter. The lease must allow GTT to licence or sublet one or both collection rooms to an accredited pathology provider and to change provider later without a new lease. Make-good is negotiated. Assignment and subletting need landlord consent not unreasonably withheld, with the pathology licence pre-approved. Tenant entity: NOT IN REPO."
+  },
+  {
+   "label": "Parties and purpose",
+   "text": "Licensor: GTT Lounge Sanctuary (owns the lease and the collection rooms). Licensee: GTT Medical Services (uses the two collection rooms; its midwives also use the one consult room, so ask Anthony whether the licence covers the consult room). The room fee is a flat market rent inside the group and is never linked to Medicare billing. Lease: 3 years, matching the one partner lab's 3-year term. Insurance minimums, addresses, ACNs and the licence fee: NOT IN REPO. Consumer law: the Australian Consumer Law guarantees cannot be excluded from the booking terms."
+  },
+  {
+   "label": "Round 21 points that reach the lease and the licence (CATHERINE-R21-PART-2.md, PART-3.md, PART-4.md)",
+   "text": "GTT's rooms are not an approved collection centre. A later option is that the partner lab runs its own approved collection room at GTT, which needs Services Australia approval (Grace's track). Health information may not pass freely between the related companies; the licence must not give the Lounge any right to see client requests. Booking terms (change window, late rule, refunds) are standard form terms under the consumer law, so they must be fair, shown before payment, and keep the illness and emergency exceptions; lawyer to check. Records are kept in a secure computer record held in Australia, so the lease needs no filing room or cabinet."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: room licence term outline, a table of at most 10 rows (term, plain-English position). Section B: Australian Consumer Law guarantee wording for the booking terms, at most 6 short lines. Section C: lease checklist, at most 12 numbered items. Every section ends with: lawyer to check.",
+  "length": "at most 70 lines in total",
+  "write_only": "the three sections and Questions for Anthony",
+  "do_not_write": "invented company names, ACNs, addresses, insurance amounts, licence fee, any licensor not named in the inputs, contract clauses in legal wording, any legal fee"
+ },
+ "extra_checks": [
+  "Licensor and licensee are exactly the two names in the inputs.",
+  "Every unknown amount is NOT IN REPO.",
+  "The lease checklist includes the 3-year term matching the lab term, the option to licence a collection room to an accredited pathology provider, and the maximum rent from the inputs."
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "slug": "gtt-r21-06-booking-flow-consent-text",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft the online booking steps and the plain-English consent text. Nothing is published.",
+ "parts": [
+  {
+   "facts": ["prices", "split-b", "split-a", "checkout", "order", "slots", "late"],
+   "inline_inputs": [
+    {
+     "label": "Step 1 and the two paths (GRACE-R21-BOOKING-FLOW-PART-1.md sections 1 and 3, PART-2.md section 1)",
+     "text": "Step 1 screen title: Do you have a referral? Button 1: Yes, and I will use my own referral. Small print: No GTT midwife consult. No Medicare benefit for this test. Price A$265 (Package 1) or A$315 (Package 2), lab fee included. Goes to Path A. Button 2: No, or I would like the GTT midwife to do my consult. Small print: Package with a 20 minute GTT midwife consult. Full price A$320 (Package 1) or A$370 (Package 2). About A$55 may come back from Medicare. Goes to Path B. Neither button is pre-selected. A client can switch paths until she pays.\nPath A screens: A1 Choose your package; A2 Choose your test day and time (all 9 draw pairs, 07:00 to 10:20, no midwife tags); A3 Your own referral (read this before you go on; bring the original, paper or phone; optional photo upload); A4 Your details and consents; A5 Checkout; A6 Confirmation.\nPath B screens: B1 Choose your package; B2 Choose your test day and time (she books the TEST first; pairs 08:40, 09:05, 09:30, 09:55 and 10:20 show Midwife consult on the same morning possible); B3 Book your midwife consult (up to 28 days before the test; test clients see midwife times first; one tab for the morning of the test with a fasting warning and a tick box, one tab for an earlier day); B4 Your details and consents (Medicare card details); B5 Checkout; B6 Confirmation."
+    }
+   ],
+   "deliverable": {
+    "part": "1 of 2 (booking flow)",
+    "format": "Booking flow as numbered steps: Step 1, then Path A steps A1 to A6, then Path B steps B1 to B6, one or two lines each (at most 14 lines). Then a table of 4 rows giving what the client sees at checkout for Path A Package 1, Path A Package 2, Path B Package 1 and Path B Package 2: full price, charged by GTT today, billed later by the lab.",
+    "length": "at most 45 lines in total",
+    "write_only": "the booking flow, the checkout table and Questions for Anthony",
+    "do_not_write": "the consent text (part 2), a false no-benefit sign on Path B, any statement that the lab money passes through GTT"
+   },
+   "extra_checks": [
+    "Step 1 is worded exactly: Do you have a referral?",
+    "Checkout charges only the GTT amount: A$237.15 or A$287.15 on Path A, A$292.15 or A$342.15 on Path B. The lab fee A$27.85 is paid by the client to the lab.",
+    "The Path B steps show the test booked first and the consult second, up to 28 days before the test."
+   ]
+  },
+  {
+   "facts": ["checkout", "medicare-b", "late", "changes", "filing", "results"],
+   "inline_inputs": [
+    {
+     "label": "Consent topics and wording rules (CATHERINE-R21-PART-2.md and PART-3.md, GRACE-R21-WAITLIST-AND-LATE.md; all lawyer to check)",
+     "text": "Master late sentence, word for word everywhere: Please arrive at least 10 minutes before your appointment. Late means from your appointment time onwards. We cannot fit a first blood draw in after that. At checkout it sits above the pay button with a tick box.\nPath A notice (Health Insurance Act s 23DNL), given in writing before the draw: GTT is not an approved collection centre. If the approved pathology practitioner were to use the specimen in rendering a pathology service, a Medicare benefit would not be payable in respect of the pathology service. Tick box and signature at check-in. Never use these words for Path B.\nWaitlist consent: a box the client ticks herself, never pre-ticked; she can leave the list at any time. Slot-open messages carry no words like pregnancy, diabetes or glucose in the subject line.\nIllness: tell us before your appointment if you can; first time a free rebook with no proof; a second time a short note, no diagnosis. Staff never ask what is wrong. Privacy line: a copy of her request is kept in a secure electronic record held in Australia; only midwives and phlebotomists open it; every access is logged; booking details are not passed to the lab.\nRefund: 50 percent of the lounge amount is kept if she is late or misses and is not unwell; a delivered consult stays earned. Fasting hours: NOT IN REPO (the lab sets them)."
+    }
+   ],
+   "deliverable": {
+    "part": "2 of 2 (consent text)",
+    "format": "Consent text in plain English, at most 18 short lines, covering: water only until the final draw, herbal tea and food only after the last draw unless the lab allows otherwise in writing, stand for each draw then return to the waiting area (follow the lab and governing bodies), no strenuous activity, the late rule, the Path A notice, the privacy line, the waitlist tick box, illness, and refund wording marked lawyer to check.",
+    "length": "at most 45 lines in total",
+    "write_only": "the consent text and Questions for Anthony",
+    "do_not_write": "the booking flow (part 1), a refund rule not in the inputs, any Medicare benefit claim for Path A"
+   },
+   "extra_checks": [
+    "The late rule appears word for word as in the inputs.",
+    "Rebates are written as about, subject to confirmation, and only on Path B."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "slug": "gtt-r21-08-results-line-patch",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You write a patch proposal that rewrites the old result-communication lines. You change nothing yourself.",
+ "facts": ["results", "order", "structure"],
+ "inline_inputs": [
+  {
+   "label": "The five old lines found in the repo (file and line)",
+   "text": "agents/grace.md line 19: GTT Center Perth never communicates clinical results.\nagents/ivy.md line 50: GTT procedure is in-house (phlebotomist); lab analysis is offsite (WDP/PathWest); Ivy never communicates test results.\ndocs/onboarding.md line 150: GTT Center Perth does not communicate blood test results. Results are sent by WDP/PathWest directly to the referring GP. Clients must follow up with their GP.\ndocs/pathology-partnership-brief.md line 155: GTT Center Perth never communicates results to patients. Results go WDP to GP to patient.\ndocs/consent-form.md section 1: We do NOT communicate your GTT results to you. Results are sent by the laboratory to your referring doctor."
+  },
+  {
+   "label": "The locked results pathway (Anthony R15 and R19, with the Round 21 message rule from GRACE-R21-MIDWIFE-SLOTS.md section 6)",
+   "text": "Path B: the lab sends the result to the requesting midwife. Urgent results are phoned within 1 hour. A short results consult happens within 3 business days. A referral letter is issued within 2 business days. GTT does not take over diabetes care. The midwife is employed by GTT Medical Services. The lab, not GTT, analyses the sample.\nRound 21: the midwife phones only abnormal results (in private, after checking the client's date of birth). A normal result gets a generic text or email with no health detail, for example: GTT Center Perth: your result is ready. Please check your email. Regards. How the client sees the result, the lab turnaround and who may send the message: NOT IN REPO.\nPath A: the request came from outside GTT, so who receives the result is NOT IN REPO; Catherine to confirm."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "A table with one row per old line (file, line, old text, new text, one-line reason). Then the generic ready message for text and for email in 4 lines. Then 3 lines on what the owner of each file should check.",
+  "length": "at most 50 lines in total",
+  "write_only": "the patch table, the message lines and the check lines",
+  "do_not_write": "edits to any file, any clinical advice, any new timing not in the inputs"
+ },
+ "extra_checks": [
+  "Every new line keeps the fact that the lab analyses the sample and GTT does not diagnose.",
+  "Five rows, one per old line. No row says GTT never communicates results; each says the midwife phones abnormal results and normal results get a generic ready message.",
+  "Path A results are written NOT IN REPO, not guessed."
+ ]
+}

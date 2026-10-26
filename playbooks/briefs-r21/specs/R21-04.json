@@ -1,0 +1,36 @@
+{
+ "slug": "gtt-r21-04-role-descriptions-and-weekly-roster",
+ "agent": "grace",
+ "role": "You are Grace, Operations Manager for GTT Center Perth. You draft position descriptions for the non-midwife roles and a weekly roster, using only the roles in the locked facts.",
+ "facts": ["people", "midwives", "slots", "morning", "late", "rooms", "filing", "structure", "mealbreak"],
+ "inputs": [
+  {
+   "label": "Midwife fortnight roster (Round 20)",
+   "path": "docs/overhaul-2026-10-26/L15-r20/GRACE-R20-ROSTER-BOOKING.md",
+   "start": 23,
+   "end": 29
+  }
+ ],
+ "inline_inputs": [
+  {
+   "label": "Employers and adaptive rostering (CURRENT-STATE section 000, ROSTER-R18.md)",
+   "text": "The midwives and phlebotomists are employed by GTT Medical Services. The lounge, therapists and venue manager sit in GTT Lounge Sanctuary. Senior cover for the afternoon gap and the Saturday venue manager is decided once the venue is open (no loading costed). Service staff and phlebotomists are called in to match confirmed bookings: 2 phlebotomists and 4 therapists for up to 9 clients, 6 therapists at 10, 8 from 11."
+  },
+  {
+   "label": "Round 21 duties (GRACE-R21-COMPUTER-FILING.md and GRACE-R21-BOOKING-FLOW-PART-1.md section 4)",
+   "text": "Venue manager at the door from 06:30: checks that a request is there (original, phone, or the client's photo in the record) and that the name matches the booking. She does not judge if it is medically right. She sees only the green or red flag in the secure record, never the request. Phlebotomists open Today on a tablet or computer in the collection room, tick outside request checked, and cannot edit. A missing flag means no draw until it is resolved. Phlebotomist start time: NOT IN REPO. Lounge and service staff see no request and no flags. Staff never write, copy or fix a request."
+  }
+ ],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Section A: a table of position descriptions, one row per role (role, employer company, hours, main duties in one line, pay: NOT IN REPO unless in the inputs). Roles are exactly: venue manager, massage and beauty therapist, nail technician, hair stylist, phlebotomist, casual afternoon service staff. Section B: a weekly roster table, one row per day Monday to Sunday (venue manager, therapists, phlebotomists, midwife on duty for Week 1 of the block, midwife on site from 08:00).",
+  "length": "at most 70 lines in total",
+  "write_only": "the two tables and Questions for Anthony",
+  "do_not_write": "any role not listed, any hours after 18:00, an on-call Sunday, qualification requirements not in the inputs, pay rates"
+ },
+ "extra_checks": [
+  "Sunday row says closed.",
+  "Venue manager row says starts 06:30, does reception and welcome, and sees booking flags only.",
+  "The midwife column says on site 08:00 and first appointment 08:15."
+ ]
+}
