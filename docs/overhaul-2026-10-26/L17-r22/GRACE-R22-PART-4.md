@@ -1,5 +1,7 @@
 # GRACE-R22-PART-4: Welcome card spec (words only, no drawings)
 
+> ROUND 24 NOTE: this is the Round 22 history file. It has no food and drink line and no stand-alone service line (added Round 23). The single current definition is docs/operations-manual.md section 9, "Welcome card master definition". Where this file differs, the manual wins.
+
 Author: Grace. Date: 2026-10-26 (Round 22). DRAFT for Anthony. Nothing was printed or sent. Tags: R repo, E estimate, U unverified. Review and privacy wording: Catherine A and B to confirm.
 
 ## READ-FIRST CHECK (from GTT-READ-FIRST.md, 2026-10-26)

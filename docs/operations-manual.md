@@ -1,6 +1,6 @@
 # GTT Center Perth — Operations Manual
 
-> **ROUND 23 LOCKS (2026-10-27) OVERRIDE ANYTHING BELOW THAT DISAGREES.** Source: docs/GTT-READ-FIRST.md and docs/overhaul-2026-10-26/L18-r23/GRACE-R23-OPERATIONS-LOCK-IN.md (+ PART-2). In short: the hired venue manager (not Anthony) starts 06:30, Mon to Fri 06:30 to 15:00; 07:00 is the first draw; 18 clients a day from day one, no ramp; Anthony is Owner and Director with administrator access and 0 operational hours; midwives are 2 permanent part-time + 1 casual, Mon to Sat, the midwife day is a lock and Path B clients never see a midwife; meal breaks are rostered in for all staff, never worked through, staff choose stay (fully off duty) or leave; late rule is arrive 10 minutes early, late means from the appointment time onwards, no wiggle room; a slot opening inside 48 hours goes to the waitlist AND the public page at once; abnormal results are phoned by the midwife, then voicemail, then a follow-up email with no result detail. Older figures below (12 clients, 07:00 open, tiered refunds, 10 to 15 minute arrival, "never discuss results") are history.
+> **ROUND 23 LOCKS (2026-10-27) OVERRIDE ANYTHING BELOW THAT DISAGREES.** Source: docs/GTT-READ-FIRST.md and docs/overhaul-2026-10-26/L18-r23/GRACE-R23-OPERATIONS-LOCK-IN.md (+ PART-2). In short: the hired venue manager (not Anthony) starts 06:30, Mon to Fri 06:30 to 15:00; 07:00 is the first draw; 18 clients a day from day one, no ramp; Anthony is Owner and Director with administrator access and 0 operational hours; midwives are 2 permanent part-time + 1 casual, Mon to Sat, the midwife day is a lock and Path B is not limited in any way (no GTT consult in the package, but a Path B client can book a standalone midwife appointment); phlebotomists are employed by GTT Medical (Round 24); meal breaks are rostered in for all staff, never worked through, staff choose stay (fully off duty) or leave; late rule is arrive 10 minutes early, late means from the appointment time onwards, no wiggle room; a slot opening inside 48 hours goes to the waitlist AND the public page at once; abnormal results are phoned by the midwife, then voicemail, then a follow-up email with no result detail. Older figures below (12 clients, 07:00 open, tiered refunds, 10 to 15 minute arrival, "never discuss results") are history.
 
 > **Canonical current-state numbers (package prices, client capacity, headcount, P&L, capital range) live in `docs/CURRENT-STATE.md` — every figure below defers to that file if the two ever disagree.**
 
@@ -26,7 +26,7 @@
 ### 7:15am — Receptionist Arrives
 - [ ] Receives venue handover from the Venue Manager (verbal + Fresha check)
 - [ ] Prepare lounge: herbal teas out, water available, snack station stocked (check stock levels)
-- [ ] Prepare welcome pack for each patient: referral form, GTT information sheet, QR code card (Google review)
+- [ ] Welcome cards and day list: printed the day before by the venue manager (OLD receptionist wording replaced Round 24; full card definition is in section 9 "Welcome card master definition"). Referral form and information sheet stay in the pack; the Google review invitation is on the back of the card, not a separate QR card.
 - [ ] Confirm today's 75g glucose solutions are out of fridge (need 20 min room temp before use) — coordinate with phlebotomist
 - [ ] Check Fresha: confirm all bookings have mobile number and fasting reminder was sent
 - [ ] For any patient without confirmed fasting reminder received: call immediately
@@ -146,7 +146,7 @@ Services display only for the window available after the selected GTT start time
 - LOCKED R23: clients arrive at least 10 minutes before their appointment. Late means from the appointment time onwards. No wiggle room.
 - Client sentence, word for word: "Please arrive at least 10 minutes before your appointment, because late means from your appointment time onwards and we cannot fit a first blood draw in after that."
 - A late client is NOT squeezed into the schedule (it would breach the next client's draw timing on the same chair). The venue manager decides, records a code only, and rebooks per the approved booking terms.
-- Consult-only grace (5 to 10 minutes) is OPEN: Anthony has not decided.
+- LOCKED R24: the rule is split. Blood draws have NO wiggle room (above). Consults have a 10 minute grace window. Staff steps for the venue manager: section 9 "Late rule, staff steps".
 
 ### Overbooking Rule
 Committed volume is 18 GTT clients a morning, Mon to Sat, first draw 07:00, pairs every 25 minutes to 10:30, from day one (docs/GTT-READ-FIRST.md; the 12-client text that follows is history). Old text: Maximum 12 GTT patients per day (synchronized-chair-start, 6 slots/chair — model as of 2026-07-30, corrected from the prior 10-client model) — 2 phlebotomists, 2 collection chairs (Chair A / Chair B), alternating-client assignment (Chair A: clients 1/3/5/7/9/11, Chair B: clients 2/4/6/8/10/12). See GTT Scheduling Timetables below for the verified per-client and per-staff schedule.
@@ -416,11 +416,60 @@ Draw alert: set phone timer 5 min before each draw window. Services do NOT get i
 
 ## 9. ROUND 23 LOCKED RULES (staff and venue manager)
 
-- **Midwives:** 2 permanent part-time + 1 casual, Mon to Sat, fortnight block Mon to Wed / Thu to Sat, swap. The midwife day is a lock and the wage is fixed. Path B clients never see a GTT midwife.
-- **Meal breaks:** rostered in for all staff (roster built later), never worked through. Staff choose: stay (fully off duty, not on call, free to leave) or go off site. The roster sets the time. Called back: paid for the time worked, then the full break restarts. Timesheet code MB (taken) or MB-R (called back), recorded by the venue manager. Fair Work check and award sources: L18-r23/GRACE-R23-OPERATIONS-LOCK-IN.md.
-- **Late rule:** see Late Arrival Policy above.
-- **Welcome card:** pre-purchased food and drink listed, or a note that it is available; any stand-alone service bought after her last draw shown with what it is, staff name and time; venue manager prints cards and the day list the day before.
+- **Midwives:** 2 permanent part-time + 1 casual, Mon to Sat, fortnight block Mon to Wed / Thu to Sat, swap. The midwife day is a lock and the wage is fixed. Path B is NOT limited (Round 24): a Path B client has no consult inside her package, and she can still book a standalone midwife appointment because the midwife is on site every day. Phlebotomists are employed by GTT Medical (Round 24); midwives are employed by GTT Medical Services.
+- **Meal breaks:** rostered in for all staff (roster built later), never worked through. Staff choose: stay (fully off duty, not on call, free to leave) or go off site. The roster sets the time. Called back: paid for the time worked, then the full break restarts. Timesheet code MB (taken) or MB-R (called back), recorded by the venue manager (steps below). Fair Work check and award sources: L18-r23/GRACE-R23-OPERATIONS-LOCK-IN.md, updated with clause numbers in L19-r24/GRACE-R24-BREAK-THRESHOLDS.md.
+- **Late rule (split, LOCKED Round 24):** blood draws have no wiggle room; consults have a 10 minute grace window. Steps below.
+- **Welcome card:** one master definition, see "Welcome card master definition" below. Every other file points here.
 - **Roles:** Anthony is Owner, Director and administrator with 0 operational hours. The hired venue manager runs the floor. Both hold administrator access; every administrator sign-in and change is logged.
+
+### Late rule, staff steps (LOCKED Round 24)
+
+Blood draws. Sentence on the booking page, reminders, waitlist emails and the card: "Please arrive at least 10 minutes before your appointment, because late means from your appointment time onwards and we cannot fit a first blood draw in after that." Late means from the appointment time onwards. No wiggle room.
+1. Venue manager notes the arrival time on the day list.
+2. Not on time for her draw: she is not squeezed in. The next client's draw on that chair does not move.
+3. Venue manager decides at the door using the late and illness guide: rebook per the approved booking terms, record a code only, ask for no diagnosis.
+4. Tell the phlebotomist and the practitioners at once so nobody waits for her.
+
+Consults (grace window of 10 minutes). A client up to 10 minutes late is still seen for the time left in her consult.
+1. Venue manager notes the arrival time and tells the midwife at once.
+2. Arrived 10 minutes or less after the start: show her in. The midwife sees her for the time left. The consult does not run over; the next consult starts on time.
+3. Arrived more than 10 minutes after the start: do not squeeze her in. Rebook the consult (Path A clients have up to 28 days) and record a code only.
+4. Same-morning consult: the consult must still end before her draw (booking rule). If her late arrival means it would not, her draw wins. The draw is never delayed for a consult.
+
+### Timesheet codes MB and MB-R (LOCKED Round 24)
+
+| Code | Meaning | How the venue manager records it | What it triggers |
+|---|---|---|---|
+| MB | Meal break taken in full | One code on the day's timesheet at the end of the shift | Nothing. The break is unpaid and is not time worked |
+| MB-R | Called back from the meal break | Code, the minute she was called back, the minute she finished, who called her and why (no client or health detail) | The minutes worked are PAID. The full break starts again once the job is done |
+
+Called back is a pay event, not a favour: on the Nurses Award a recalled midwife is paid overtime until the balance of the break is taken (cl 14.1(c), V). The pay rate for MB-R for the other awards is NOT IN REPO: payroll to confirm. A staff member who stays at GTT must be fully off duty or the break is paid time. The venue manager checks every timesheet for a code and reviews MB-R counts weekly (a pattern means the roster is wrong).
+
+### Break agreement for hair and beauty contracts (LOCKED Round 24)
+
+A written 30 minute meal break agreement goes into hair and beauty contracts ONLY where the employee's shift is long enough to be entitled to a break. Hair and Beauty Industry Award MA000005 cl 16.1: after 5 hours of work, one unpaid break of 45 to 60 minutes, which can be shortened to 30 minutes by agreement (V, https://awards.fairwork.gov.au/MA000005.html, read 2026-10-27). Threshold, roles and the phlebotomist and nurse awards: L19-r24/GRACE-R24-BREAK-THRESHOLDS.md.
+
+### Welcome card master definition (consolidated Round 24)
+
+This is the single definition. GTT-READ-FIRST.md and the locked facts preamble point here. If any other file differs, this section wins.
+
+| Part | Definition |
+|---|---|
+| Format and print | One A5 card per client, front and back, words only. The venue manager prints the cards and the day list the day before, after the 48 hour change cutoff, and again at the end of the shift for late bookings. Work printer only. Same order as the day list (by Draw 1 time). Count cards against the list and write the count on the list. Check each card against the roster. Closed folder, locked front desk drawer overnight. Reprint any error and shred the wrong one |
+| Front, top | Business name (a merge field; the brand is on hold), "Welcome, {first_name}", her test date, "Please keep this card with you. It is your plan for the morning." |
+| Front, timetable | Rows in time order: time, what happens, first name of the staff member. Arrive (10 minutes early); Draw 1 with {phlebotomist_first_name}; Service 1 with {practitioner_first_name} and the service; Draw 2 (60 minutes after Draw 1); Service 2 with name; Draw 3 (120 minutes after Draw 1); Finish. A midwife row only if she has a same-morning consult |
+| Food and drink | If she pre-purchased food or drink, each item is listed. If not, a line says food and drink is available and to ask {venue_manager_first_name} |
+| Stand-alone service after her last draw | If she bought one, one line: what it is, the staff member's name and the time |
+| Late sentence | The approved draw sentence above, word for word |
+| Venue manager line | "Ask {venue_manager_first_name} at the front desk if anything changes." |
+| Back | A thank-you line in plain words; "Find us on" with the social media handles (NOT IN REPO, none chosen); a neutral Google review invitation: "If you would like to tell others about your visit, you can leave a Google review. There is no reward for a review and you are free to say what you like." (lawyer to check) |
+| Never on the card | Price, rebate, result, due date, path (A or B), referral, notes or any health detail |
+| Staff names | First names only, with each staff member's written agreement in the employment contract (Catherine R22) |
+| Day list contents | First name, surname initial, Draw 1 time, staff first names. No referral, consult note, due date, path or health detail. Built from booking data only, never the clinical record |
+| Day list handling | One master plus numbered copies for staff who need them, handed over at the door. Locked drawer, face down at the desk, never left on a table. No photos, no home printing |
+| Shredding | At the end of the test day shred every copy and every unused card (cross-cut shredder or locked shred bin, never the recycling bin). Log one line: date, copies printed, copies shredded, initials. The counts must match. A missing list is a possible data breach: tell Anthony the same day (lawyer to check) |
+| Changes on the morning | Before 06:45: change the name in the system and reprint only the affected cards. After 06:45: tell the client at the door, never write by hand, reprint at the desk before she sits. Draw time moves: reprint, do not strike out. Late or no-show: do not reprint, follow the late rule |
+| Review replies | A neutral thank-you only. Never confirm she was a client |
 
 ---
 

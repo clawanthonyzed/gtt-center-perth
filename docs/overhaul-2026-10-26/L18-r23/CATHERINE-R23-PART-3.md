@@ -16,15 +16,17 @@ DRAFT, 2026-10-27. Tags as in PART-1. **Nothing here is sent. Every draft needs 
 3. The right written channels are the Department's: **AskMBS** (askmbs@health.gov.au) for what the MBS items and rules mean, and the **Pathology collection centres compliance team** (corporate.compliance@health.gov.au, V, file 15) for collection centre questions. AskMBS already has a file open: **ENQ-069430**. Adding our questions to that reference keeps everything in one thread.
 4. AskMBS may share an enquiry with Services Australia when it needs their input (V, ack email). It says AskMBS is separate from Medicare compliance. Write as a planning enquiry: no client details, no provider numbers.
 
-## 2. Best written route (recommended order)
+## 2. Best written route (order UPDATED Round 24, 2026-10-27, Anthony's HOLD rule)
 | Step | To | Why | When |
 |---|---|---|---|
-| 1 | AskMBS, quoting ENQ-069430 | Item and benefit questions (Q1 to Q4 below). Free, written, authoritative | First, after Anthony approves |
-| 2 | Pathology collection centres compliance team | The s 23DNL and "no ACC" questions (Q2, Q5) | Same day, short email |
-| 3 | Partner lab (all 4 at once, as locked) | Lab-side questions (section 4) | After step 1 is sent |
-| 4 | Services Australia | Short thank you only; no questions left for them | Optional |
+| 1 | Pathology collection centres compliance team | Generic introduction only (Draft D, CATHERINE-R24-PART-2.md), word for word as sent to Services Australia and AskMBS | First, only if Anthony's Sent items show it was not sent on 26 Oct |
+| 2 | AskMBS, quoting ENQ-069430 | Wait for a real person to reply. Only then Draft A | After a real reply (about 16 Nov 2026 or later) |
+| 3 | Compliance team, Draft B | Technical questions | Only after a real person replies to step 1 |
+| 4 | Partner labs (all 4 at once, as locked) | Lab-side questions (section 6) | Later |
+| - | Services Australia | No reply needed (Draft C retired) | Never |
 
 ## 3. Draft A: AskMBS follow-up (for approval, not sent)
+**ON HOLD by Anthony 2026-10-27: do not send until a real person replies to ENQ-069430**
 > Subject: ENQ-069430: further information for my enquiry
 >
 > Dear AskMBS,
@@ -42,6 +44,7 @@ DRAFT, 2026-10-27. Tags as in PART-1. **Nothing here is sent. Every draft needs 
 > Anthony
 
 ## 4. Draft B: Pathology collection centres compliance team (for approval, not sent)
+**ON HOLD by Anthony 2026-10-27: do not send until a real person replies to ENQ-069430** (and, for this team, not before a real reply to the generic introduction, Draft D in CATHERINE-R24-PART-2.md)
 > Subject: Planning enquiry: blood collection in a midwife clinic that is not an approved collection centre
 >
 > Dear Pathology collection centres compliance team,
@@ -56,6 +59,7 @@ DRAFT, 2026-10-27. Tags as in PART-1. **Nothing here is sent. Every draft needs 
 > Anthony
 
 ## 5. Draft C: short reply to Services Australia (optional, for approval, not sent)
+**RETIRED Round 24 (2026-10-27): Services Australia needs no reply. Do not send.**
 > Dear Rhiannon,
 >
 > Thank you for the reading list. I will take my policy questions to the Department of Health, Disability and Ageing in writing.

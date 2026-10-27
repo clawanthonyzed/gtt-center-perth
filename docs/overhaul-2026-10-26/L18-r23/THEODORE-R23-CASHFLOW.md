@@ -9,7 +9,9 @@ Theodore, 2026-10-27. Built by [theodore_r23_cashflow.py](theodore_r23_cashflow.
 - Prices: Path A A$320 / A$370, GTT charges A$292.15 / A$342.15. Path B A$300 / A$350 all in, GTT charges A$272.15 / A$322.15.  <!-- factcheck:ok -->
 - Rebates: consult A$32.95 + lab A$22.05 = A$55.00 (shown as about).
 - Midwives 08:00 to 16:00, first consult 08:15, 25 minute blocks to 10:30.
-- Late rule: clients arrive 10 minutes early; late means from the appointment time onwards.
+- Late rule: clients arrive 10 minutes early; late means from the appointment time onwards. Blood draws: no wiggle room. Consults: 10 minute grace window (R24).
+
+**STATUS (Round 24): APPROVED by Anthony 2026-10-27** (company tax, GST and working capital). The loan repayment timing and the A$50,000 cash-floor scenario below are **illustrative, not decided, deferred by Anthony**. Numbers kept, not deleted.
 
 ## Assumptions (every one tagged)
 
@@ -33,7 +35,7 @@ Theodore, 2026-10-27. Built by [theodore_r23_cashflow.py](theodore_r23_cashflow.
 | Tax held back | A$6,657.99 a month set aside, never used to repay the loan | E (prudent) |
 | GST credits on start-up spend | NOT IN REPO whether A$251,198 includes GST; not counted | E |
 
-## A$336,000 case, no cash floor (A$ month-end)
+## A$336,000 case, no cash floor (A$ month-end; Repaid, Dividend, Loan left: illustrative, deferred)
 
 | Mth | Cal | Receipts | Paid out | of which GST | of which tax | Repaid | Dividend | Loan left | Cash | Held for GST/tax |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -63,25 +65,24 @@ Theodore, 2026-10-27. Built by [theodore_r23_cashflow.py](theodore_r23_cashflow.
 | 23 | May | A$160,068.30 | A$205,373.90 | A$0.00 | A$79,895.91 | A$0.00 | A$19,973.99 | A$0.00 | A$90,498.62 | A$90,498.62 |
 | 24 | Jun | A$160,068.30 | A$125,477.99 | A$0.00 | A$0.00 | A$0.00 | A$19,973.99 | A$0.00 | A$105,114.94 | A$105,114.94 |
 
-## Headline results
+## Headline results (repayment timing and floor: illustrative, not decided, deferred by Anthony)
 
 | Case | Extra owner cash | Loan cleared | First dividend | Dividends to month 24 |
 |---|---|---|---|---|
 | A$250,000, no floor | A$1,198.00 | month 13 | month 14 | A$233,955.76 |
 | A$336,000, no floor | A$0.00 | month 13 | month 14 | A$233,955.76 |
-| A$250,000, A$50,000 floor | A$51,198.00 | month 15 | month 16 | A$183,955.76 |
-| A$336,000, A$50,000 floor | A$0.00 | month 15 | month 16 | A$183,955.76 |
+| A$250,000, A$50,000 floor (illustrative, deferred) | A$51,198.00 | month 15 | month 16 | A$183,955.76 |
+| A$336,000, A$50,000 floor (illustrative, deferred) | A$0.00 | month 15 | month 16 | A$183,955.76 |
 
 **Lowest cash month: month 0**, right after the start-up spend. With no repayments, cash only rises after that (A$336,000 case: A$675,070.70 by month 24). With repayments, cash never drops below the money held back for GST, payroll tax and company tax (lowest A$15,960.36 in month 1). That money belongs to the tax office, not to GTT.
 
 Why tax is held back: if the company paid out every spare dollar and did NOT hold back tax, the A$79,895.91 year 1 tax bill in month 23 would leave a hole, and the owners would have to put A$36,003.23 back in.
 
-**Buffer needed:** the only real gap is at month 0: A$1,198 on the A$250,000 case, none on A$336,000. Any floor you want to keep (for example A$50,000) is extra owner cash on the A$250,000 case. The funding gap above joint savings of about A$200,000 is NOT IN REPO.
+**Buffer:** the only real gap is at month 0: A$1,198 on the A$250,000 case, none on A$336,000. The A$50,000 cash floor is illustrative, not decided, deferred by Anthony.
 
 ## QUESTIONS FOR ANTHONY
 
-1. How is the gap above joint savings of about A$200,000 funded (A$51,198 for A$251,198; A$136,198 for A$336,198)? Options: (a) bank or equipment loan to the company; (b) another lender; (c) a smaller opening. Recommendation: decide with the accountant before signing a lease, then I re-run this file with the real terms.
-2. Cash floor before repaying the loan? Options: (a) none; (b) A$50,000. Recommendation: (b).
+None. The cash floor and the shareholder loan repayment schedule are deferred by Anthony (Round 24); funding above joint savings is dropped for now.
 
 Regards.
 Theodore

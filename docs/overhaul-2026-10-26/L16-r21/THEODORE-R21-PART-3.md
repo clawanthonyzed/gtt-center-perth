@@ -1,3 +1,5 @@
+> SUPERSEDED on Path B wording (Round 24, Anthony 2026-10-27): Path B is NOT limited. Ignore any cap, limit or roster-shrink wording below. See docs/GTT-READ-FIRST.md.
+
 # Theodore R21, Part 3: outside-referral route (option A) and the consult listing
 
 Date: 2026-10-26. Source: [theodore_r21.py](theodore_r21.py), [theodore_r21_results.json](theodore_r21_results.json). Tags: R repo, E estimate. Option A mix figures are an ILLUSTRATION, not a forecast. Locked case: 473.94 clients a month, Package 1.

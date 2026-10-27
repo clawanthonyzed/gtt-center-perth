@@ -1,3 +1,5 @@
+> SUPERSEDED on Path B wording (Round 24, Anthony 2026-10-27): Path B is NOT limited. Ignore any cap, limit or roster-shrink wording below. See docs/GTT-READ-FIRST.md.
+
 # Theodore R22, Part 3: Anthony as venue manager (sensitivity only), health lawyer line, questions
 
 Date: 2026-10-26. Source: [theodore_r22.py](theodore_r22.py), [theodore_r22_results.json](theodore_r22_results.json). Tags: R repo, E estimate, U unverified. General knowledge and desk research, not your personal documents. Verify before acting.

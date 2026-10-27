@@ -9,7 +9,7 @@ Author: Theodore (financial consultant), using Catherine's verified findings (CA
 - Prices: Path A A$320 / A$370, GTT charges A$292.15 / A$342.15. Path B A$300 / A$350 all in, GTT charges A$272.15 / A$322.15.  <!-- factcheck:ok -->
 - Rebates: consult A$32.95 + lab A$22.05 = A$55.00 (shown as about).
 - Midwives 08:00 to 16:00, first consult 08:15, 25 minute blocks to 10:30.
-- Late rule: clients arrive 10 minutes early; late means from the appointment time onwards.
+- Late rule: clients arrive 10 minutes early; late means from the appointment time onwards. Blood draws: no wiggle room. Consults: 10 minute grace window (R24).
 
 ## What changed since 2026-10-26
 
@@ -20,7 +20,7 @@ Author: Theodore (financial consultant), using Catherine's verified findings (CA
 ## Verdict in two lines
 
 1. The planned group (Holdings, Medical, Lounge) pays 25 percent company tax and franked dividends straight to two people. No trust is in the chain, so the proposed trust minimum tax does not reach it, on the Bill as introduced.
-2. The owners' start-up money is repaid first as a shareholder loan. With no ramp, the loan clears in **month 13** and the first dividend is **month 14**, in both the A$250,000 and A$336,000 cases (E, model).
+2. The owners' start-up money is repaid first as a shareholder loan. With no ramp, the model shows the loan clearing in **month 13** and the first dividend in **month 14**, in both the A$250,000 and A$336,000 cases (E, model). This repayment timing is **illustrative, not decided, deferred by Anthony**.
 
 ## Verified
 
@@ -47,12 +47,14 @@ Author: Theodore (financial consultant), using Catherine's verified findings (CA
 
 ## The timeline (no ramp, with tax, GST and working capital)
 
+The cash flow is APPROVED (Anthony, 2026-10-27). The loan repayment timing and the A$50,000 cash-floor row are **illustrative, not decided, deferred by Anthony**.
+
 | | A$250,000 in | A$336,000 in |
 |---|---|---|
 | Start-up spend, month 0 | A$251,198 (R) | A$251,198 |
 | Extra owner cash needed | A$1,198 at opening | A$0 |
 | Loan cleared / first dividend | Month 13 / month 14 | Month 13 / month 14 |
-| With a A$50,000 cash floor kept | Month 15 / 16; extra owner cash A$51,198 | Month 15 / 16; A$0 extra |
+| With a A$50,000 cash floor (illustrative, deferred) | Month 15 / 16; extra owner cash A$51,198 | Month 15 / 16; A$0 extra |
 | Lowest cash | Month 0, right after start-up spend | Month 0 |
 
 The company holds back GST and A$6,657.99 a month for company tax and never uses that money to repay the loan. Without that hold-back, the owners would have to put A$36,003.23 back in at month 23 (E, model).
@@ -69,16 +71,16 @@ The company holds back GST and A$6,657.99 a month for company tax and never uses
 ## What the accountant must confirm
 
 1. Loan or share capital, the loan agreement, and which company borrows.
-2. GST group and tax consolidation from year 1.
+2. GST group and tax consolidation from Year 1 (locked R24; steps in L19-r24/THEODORE-R24-PART-1.md).
 3. Franking timing for the first dividends.
 4. Tax instalment start and first-year payment date.
 5. Re-check of the Bill after 13 November 2026.
 
 ## QUESTIONS FOR ANTHONY
 
-1. How is the gap above your joint savings of about A$200,000 funded (NOT IN REPO)? Options: (a) bank or equipment loan to the company; (b) another lender, written the same way as your own loan; (c) a smaller opening. Recommendation: decide with the accountant before signing a lease.
-2. Keep a cash floor before repaying? Options: (a) none; (b) A$50,000. Recommendation: (b); it costs 2 months of repayment time.
-3. Start-up money as (a) loan, (b) shares, (c) a mix? Recommendation: (a) mostly, written before the money moves.
+1. Start-up money as (a) loan, (b) shares, (c) a mix? Recommendation: (a) mostly, written before the money moves.
+
+(Round 24: the cash floor and the loan repayment schedule are deferred by Anthony; funding above joint savings is dropped for now. Neither is asked again.)
 
 Regards.
 Theodore

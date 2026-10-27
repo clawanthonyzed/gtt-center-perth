@@ -24,6 +24,8 @@ Tags: **R** repo figure, **V** official source, **E** estimate, **Q** quote need
 
 Path B is the outside-referral route: the client keeps her own referral, there is no GTT consult and no Medicare benefit at GTT. Booking order for Path A: the client books the test, then the consult, 1 to 28 days before the test or the same morning before the draw. Checkout shows the full price but charges only the GTT amount. Medical pays Lounge a flat market room fee (inside the group, no profit effect). Plan: 100% Package 1, 100% Path A for the headline.
 
+**Path B fact line (Round 24):** Path B earns A$26.66 less per client than Path A on the fixed roster; the midwife is on site every day and can take standalone or package consults, so the amount can be earned another way. NOT A LIMIT. Path B has no cap, no restriction and no warning (Anthony, locked R24).
+
 ## 1A. REBATE LOCK (every rebate figure used for planning)
 
 | Item | MBS item | Schedule fee | Rebate (85%) | Status |
@@ -44,14 +46,14 @@ GTT's own money does not change whichever collection item applies. Do not reopen
 | Morning clients | 18 a day, Mon-Sat = 473.94 a month | R (18 a day x 26.33 trading days a month = 22 weekdays + 4.33 Saturdays, a calendar count). No ramp: full volume from month 1 (Anthony, R23) |
 | Afternoon transactions | 210.13 a month (8.70 weekday, 4.35 Saturday a day) at A$117 = A$24,585.37 | R (revenue_assumptions.yml, Model E) |
 | AM service staff | 8 (4 massage and beauty, 2 nails, 2 hair), 6 h, 07:00-13:00 | R |
-| Phlebotomists | 2 at 10-18 booked, 1 at 9 or fewer, none PM | R |
+| Phlebotomists | 2 at 10-18 booked, 1 at 9 or fewer, none PM. **Employed by GTT Medical** (locked R24). Wages A$11,754.19 a month, A$13,364.52 with super and workers comp | R |
 | PM service staff | 4 casual, 3-hour floor | R |
 | Venue manager | **Starts 06:30, Mon-Fri 06:30 to 15:00.** 07:00 is the first draw. Cost A$8,504.76 a month loaded = repo base A$8,004.48 + extra half hour A$500.28. A hired venue manager, not Anthony (Anthony is Owner and Director, 0 operational hours, locked R23) | R rate, locked time |
 | Hosts | none | Locked |
 | Midwives | 08:00 to 16:00 (8 h on site, 7.5 h paid after a 30 minute unpaid break E). First consult 08:15, 25 minute blocks 08:15 to 10:30 to match the draws, then normal midwife bookings. 2 permanent part-time, fortnightly block Mon-Wed / Thu-Sat, + 1 casual. Hired with Medicare participating status, or we plan how they get it | Locked |
 | Midwife time | 18 GTT consults x 20 min = 6.0 h a day; 7.5 h paid; 4 spare 20-minute slots a day for standalone consults (upside only) | maths |
 | Consult rooms / collection rooms | 1 / 2 (one chair each) | Locked |
-| Late rule | Late means from the appointment time onwards. A consult may allow 5 to 10 minutes if the midwife can finish in the time left (OPEN) | Locked |
+| Late rule | Clients arrive at least 10 minutes early; late means from the appointment time onwards. Blood draws: no wiggle room. Consults: a 10 minute grace window | Locked R24 |
 
 ## 3. Rates and tax
 
@@ -61,8 +63,8 @@ GTT's own money does not change whichever collection item applies. Do not reopen
 | Midwife on-cost (used) | 1.366: super 12%, workers comp 1.7%, leave loading, paid leave covered by the casual | E |
 | Midwife on-cost (sensitivity only) | 1.20 (no leave cover) | E |
 | Card fee | 1.7% + A$0.30 a transaction on all card takings, AM and PM (repo lists Tyro 1.4% / Square 1.6%, provider not chosen) | E |
-| WA payroll tax | 5.5% above the A$1m grouped threshold (tapering deduction) | E, check RevenueWA |
-| Company tax | 25% (base rate entity), one consolidated return; three companies (Holdings, Medical, Lounge), no trust; franked dividends direct to Anthony and partner (Route B) | E |
+| WA payroll tax | 5.5%; annual threshold A$1,000,000, deduction tapers by 2/13 of wages above it, nil from A$7,500,000; one threshold for the group, claimed by the designated group employer | V, wa.gov.au payroll tax employer guide (calculation and grouping pages), read 2026-10-27 |
+| Company tax | 25% (base rate entity), one consolidated return; three companies (Holdings, Medical, Lounge), no trust; franked dividends direct to Anthony and partner (Route B). GST group and tax consolidation established in Year 1 (locked R24) | E |
 
 ## 4. Monthly P&L, whole venture (Holdings + Medical + Lounge), locked case, Path A, GTT clients only
 
@@ -72,7 +74,7 @@ GTT's own money does not change whichever collection item applies. Do not reopen
 | Afternoon sales, ex GST (repo A$24,585.37 / 1.1) | A$22,350.34 | R |
 | Consult, GST-free (474 x A$130, Medical) | A$61,612.20 | E |
 | **Revenue, ex GST** | A$153,826.03 |  |
-| Repo staff (8 AM service, 2 phlebotomists, 4 PM, venue manager repo base), super, workers comp | -A$93,595.63 | R |
+| Repo staff (8 AM service, 2 phlebotomists employed by Medical, 4 PM, venue manager repo base), super, workers comp | -A$93,595.63 | R |
 | Repo running costs (rent, insurance, overheads, supplies) | -A$14,288.34 | R |
 | GST credits on costs | A$1,262.58 | R |
 | Card fees, morning (on A$292.15) | -A$2,497.66 | E |
@@ -103,6 +105,51 @@ GST passed to the ATO (not revenue): morning A$6,985.88, afternoon A$2,235.03. T
 | Shared: three-company running cost | -A$908.67 |
 | **One shared block** | **-A$23,783.23** |
 | **Profit before company tax** | **A$26,631.97** |
+
+### 4A. Company split, Round 24 (phlebotomists employed by GTT Medical)
+
+The 2 phlebotomists' wages, super and workers comp (A$13,364.52 a month, R) move from Lounge to Medical. Holdings has no sales. The shared block stays ONE block and sits with Lounge, which holds the lease and employs the venue manager. The room fee Medical pays Lounge is NOT IN REPO; it moves profit between the two companies only.
+
+| A$ a month | Medical before | Medical after | Lounge before | Lounge after | Group (unchanged) |
+|---|---|---|---|---|---|
+| Revenue, ex GST | A$61,612.20 | A$61,612.20 | A$92,213.83 | A$92,213.83 | A$153,826.03 |
+| Direct costs | A$15,952.43 | A$29,316.95 | A$87,458.40 | A$74,093.88 | A$103,410.83 |
+| Profit before shared block | A$45,659.77 | A$32,295.25 | A$4,755.43 | A$18,119.95 | A$50,415.20 |
+| Less shared-cost block (one block) | A$0.00 | A$0.00 | A$23,783.23 | A$23,783.23 | A$23,783.23 |
+| Profit before tax | A$45,659.77 | A$32,295.25 | -A$19,027.80 | -A$5,663.28 | A$26,631.97 |
+| Company tax 25% | A$11,414.94 alone | A$8,073.81 alone | A$0.00 (loss) | A$0.00 (loss) | A$6,657.99 consolidated |
+| Profit after tax | | | | | A$19,973.98 |
+
+With tax consolidation (Year 1, locked) Holdings lodges one return: 25% of A$26,631.97 = A$6,657.99, net A$19,973.98. Taxed alone, Medical would pay A$8,073.81 while the Lounge loss could not be used: consolidation lets the loss offset the profit (E). Lounge carries the 1 cent rounding.
+
+### 4B. WA payroll tax grouping (Round 24)
+
+| Item | Value | Tag |
+|---|---|---|
+| Grouped wages, all three companies, a year | A$1,254,144.89 | R (unchanged by the phlebotomist move) |
+| Threshold / taper / upper limit | A$1,000,000.00; reduced by 2/13 of wages above it; nil from A$7,500,000.00 | V wa.gov.au, 2026-10-27 |
+| Deductible amount (one, for the group) | A$960,900.79 | V formula, R wages |
+| Taxable wages after deduction | A$293,244.10 | maths |
+| Payroll tax at 5.5% | A$16,128.43 a year = A$1,344.04 a month | V rate |
+| Wage share (for choosing the designated group employer) | Medical about 24%, Lounge about 76% | E |
+
+Why grouped: Holdings owns 100% of Medical and Lounge (related bodies corporate; one set of owners has a controlling interest). Each company registers and lodges, the group's wages are added together, only the designated group employer claims the deductible amount, and every member is jointly and severally liable (V, wa.gov.au grouping page). Payroll tax grouping is separate from the GST group and from tax consolidation.
+
+### 4C. APPROVED 24-month cash flow (reference, headline lines only)
+
+Approved by Anthony 2026-10-27. Full table: [THEODORE-R23-CASHFLOW.md](overhaul-2026-10-26/L18-r23/THEODORE-R23-CASHFLOW.md) (built by theodore_r23_cashflow.py).
+
+| Line | Value | Tag |
+|---|---|---|
+| Takings a month, incl GST | A$163,046.95 | R |
+| Profit before company tax a month | A$26,631.97 | R |
+| Start-up spend, month 0 | A$251,198.00 | R |
+| GST to the ATO each quarter (net) | A$23,874.99, paid 28 Oct, 28 Feb, 28 Apr, 28 Jul | V dates |
+| Company tax set aside a month | A$6,657.99 | E |
+| Year 1 company tax | A$79,895.91, paid about month 23 | E amount, U date |
+| Lowest cash month | Month 0, right after the start-up spend | R model |
+| Loan repayment timing (loan cleared month 13, first dividend month 14) | illustrative, not decided, deferred by Anthony | E |
+| A$50,000 cash-floor scenario (loan cleared month 15, first dividend month 16) | illustrative, not decided, deferred by Anthony | E |
 
 ## 5. Per-client waterfall (Path A, Package 1, A$320 full price)
 
@@ -189,3 +236,4 @@ Run `python tools/factcheck_locked_facts.py <file>` before anything goes to Anth
 | 2026-10-26 | Round 20: consult A$130 inside packages and standalone, midwives 08:00 to 16:00, same-day consult | Theodore R20 |
 | 2026-10-26 | Round 22: Path A/B renamed, Path B A$300/A$350, rebate lock, venue manager 06:30 to 15:00 combined A$8,504.76, one shared-cost block; headline unchanged A$26,631.97 before and A$19,973.98 after company tax | Theodore R22 |
 | 2026-10-27 | Round 23: no revenue ramp (18 a day from month 1; the 22 + 4.33 day count is a calendar count, not a ramp); venue manager is a hired person, Anthony is Owner and Director; three companies, no trust. Headline unchanged | Theodore R23 |
+| 2026-10-27 | Round 24: phlebotomists employed by Medical (company split re-run), payroll tax grouping verified on wa.gov.au, 24-month cash flow APPROVED (cash floor and loan repayment illustrative, deferred), GST group and consolidation in Year 1, Path B fact line (not a limit), late rule split. Headline unchanged | Theodore R24 |

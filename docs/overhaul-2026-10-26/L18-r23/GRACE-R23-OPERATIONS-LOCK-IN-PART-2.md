@@ -22,6 +22,7 @@ Two clients at once: the first completed payment wins. The second sees "This tim
 Offer email (DRAFT, not sent). Subject: A time you asked for is free. Body: Hello {first_name}, a booking time you asked about is now free: {day_date_time}. It is not held for you and it is also open on our booking page. The first person to book it gets it. Press Book this time. If it is gone, you stay on the list. To leave the list: {leave_link}. Please arrive at least 10 minutes before your appointment, because late means from your appointment time onwards and we cannot fit a first blood draw in after that. Regards. {business_name}
 
 ## RULE 5. Welcome cards (LOCKED)
+MASTER DEFINITION (every element, restored Round 24): docs/operations-manual.md section 9, "Welcome card master definition". The table below is the Round 23 summary and was missing the thank-you line, the venue manager line, the never-on-card list and the day list rules; the manual has them.
 The venue manager prints cards and the day list the day before. Card layout:
 | Card part | Content |
 |---|---|
@@ -52,9 +53,10 @@ Both hold administrator access on the computers. Administrator access is for set
 - Not changed: [outputs/OPERATIONS/CLINICAL-OPERATIONS-PLAN.md](../../../outputs/OPERATIONS/CLINICAL-OPERATIONS-PLAN.md) and GRACE-R20-OPS-MANUAL-ADDITIONS.md (checked, no contradiction found).
 - [docs/DECISION-LOG.md](../../DECISION-LOG.md): dated Round 23 entry added.
 
-## QUESTIONS FOR ANTHONY
-1. Hair and Beauty award default break is 45 minutes. Put a written 30 minute agreement in their contracts? Recommend yes.
-2. The 07:00 to 13:00 service shift: is it 6 hours on site (5.5 paid) or 6 hours paid (6.5 on site)? Not in repo; the locked profit assumes 6 paid. Recommend 6.5 on site, 6 paid.
-3. Approve timesheet codes MB and MB-R? Recommend yes.
+## ROUND 24 ANSWERS (Anthony, 2026-10-27)
+1. Hair and Beauty 30 minute break agreement: YES, only where the shift is long enough to be entitled to a break (thresholds: L19-r24/GRACE-R24-BREAK-THRESHOLDS.md).
+2. The 07:00 to 13:00 shift length and paid hours: DEFERRED by Anthony. Do not ask again.
+3. Timesheet codes MB and MB-R: APPROVED (steps in docs/operations-manual.md section 9).
+4. Late rule split: draws no wiggle room, consults 10 minute grace window. Phlebotomists are employed by GTT Medical. Path B is not limited.
 
 Regards.

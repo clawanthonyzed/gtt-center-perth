@@ -17,7 +17,7 @@ Author: Grace. Date: 2026-10-27. DRAFT for Anthony. Nothing is sent. Part 2 hold
 | 2 permanent part-time midwives + 1 casual, Monday to Saturday | Venue manager keeps the roster | Fortnight block: Mon to Wed / Thu to Sat, swap each fortnight |
 | The midwife day is a lock. A day is never dropped for low bookings | Venue manager | Always |
 | The midwife wage is fixed each day, paid whether or not clients book | Payroll | Every pay run |
-| Path B clients never see a GTT midwife | Venue manager, booking page | At booking and at the door |
+| Path B has no consult inside its package. Path B is NOT limited (Round 24): a Path B client can book a standalone midwife appointment | Venue manager, booking page | At booking and at the door |
 | Casual covers leave and illness | Venue manager calls the casual | As soon as the gap is known |
 
 ## RULE 2. Meal breaks (LOCKED)
@@ -28,7 +28,7 @@ Author: Grace. Date: 2026-10-27. DRAFT for Anthony. Nothing is sent. Part 2 hold
 | Staff choose: stay at GTT or go off site | Each staff member | At the break |
 | The roster sets the time. Staff do not pick it on the day | Venue manager | Roster build |
 | Break length is 30 minutes (see table: Hair and Beauty needs a written agreement) | Venue manager | Contract signing |
-| Timesheet code MB = unpaid break taken. MB-R = called back (proposed codes, U) | Venue manager checks each timesheet | End of every shift |
+| Timesheet code MB = unpaid break taken. MB-R = called back from the meal break (LOCKED Round 24; steps in docs/operations-manual.md section 9) | Venue manager checks each timesheet | End of every shift |
 
 "Stay" in plain words, so the break stays a lawful unpaid break: she is fully off duty. No tasks, no answering phones or the door, no watching clients, not on call, and free to walk out at any time. A staff room seat is fine. If she is asked to do anything, it is not a break.
 
@@ -43,7 +43,9 @@ If she is called back: she stops the break, the time she works is paid (the Nurs
 | Reception, admin | Clerks MA000002 (repo hr-framework.md) | 30 to 60 min unpaid, taken within the first 5 hours. Working through: 200% pay until the break is allowed (cl 15.3, 15.4) | [MA000002](https://awards.fairwork.gov.au/MA000002.html) (V) |
 | Venue manager | Individual contract above award. Which award is the safety net: NOT IN REPO, payroll or Catherine to confirm | NOT IN REPO | repo hr-framework.md |
 
-Result: a rostered unpaid 30 minute break is lawful for midwives, phlebotomists and clerks. Hair and Beauty staff default to 45 minutes, so the 30 minute break needs a written agreement in their contract. "Stay" is only unpaid if she is fully off duty; on call is paid. Never working through the break is also the cheapest rule, because working through costs extra under these awards. General Retail and Hospitality awards were not checked because the repo does not use them for any role. The Fair Work breaks page ([fairwork.gov.au breaks](https://www.fairwork.gov.au/employment-conditions/hours-of-work-breaks-and-rosters/breaks)) says break pay comes from the award; I read it only through a search summary, not the full page (flag). Not legal advice: Catherine confirms before contracts.
+Result: a rostered unpaid 30 minute break is lawful for midwives, phlebotomists and clerks. Hair and Beauty staff default to 45 minutes, so the 30 minute break needs a written agreement in their contract, and only where the shift is long enough to be entitled to a break (Round 24: more than 5 hours worked, cl 16.1; see L19-r24/GRACE-R24-BREAK-THRESHOLDS.md). "Stay" is only unpaid if she is fully off duty; on call is paid. Never working through the break is also the cheapest rule, because working through costs extra under these awards. General Retail and Hospitality awards were not checked because the repo does not use them for any role. The Fair Work breaks page ([fairwork.gov.au breaks](https://www.fairwork.gov.au/employment-conditions/hours-of-work-breaks-and-rosters/breaks)) says break pay comes from the award; I read it only through a search summary, not the full page (flag). Not legal advice: Catherine confirms before contracts.
+
+Round 24 update: the late rule is now split. Blood draws keep "no wiggle room" below. Consults have a 10 minute grace window (a client up to 10 minutes late is seen for the time left). Staff steps: docs/operations-manual.md section 9.
 
 ## RULE 3. Late rule (LOCKED, sentence approved)
 | Rule | Who | When |

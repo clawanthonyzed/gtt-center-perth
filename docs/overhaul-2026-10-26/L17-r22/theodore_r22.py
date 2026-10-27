@@ -436,7 +436,89 @@ NOT_IN = [("Interest on prepaid money", "see THEODORE-R20.md section 5"), ("Stan
           ("Gap-filling services", "not planned"), ("Card quotes", "model uses 1.7% + A$0.30 (E) until a provider quotes"),
           ("Post-test discount (10 percent)", "repo estimate -A$1,386.27 a month at 25% take-up"), ("Health lawyer cost", "general knowledge about A$2,500 to A$8,000 fixed fee, not a quote")]
 
+# =====================  ROUND 24 (2026-10-27)  =====================
+# Anthony R24 lock: the 2 phlebotomists are employed by GTT MEDICAL, not the Lounge. Their wages, super and workers comp move
+# from Lounge to Medical in the company split. Whole-venture totals must not move (asserted). Shared costs stay ONE block.
+SAT_DAYS = pb["am_saturday_direct_labor"] / crm.AM_SATURDAY_DAILY_LABOR["scenario_table_1"]
+assert abs(SAT_DAYS - 4.33) < 0.001, SAT_DAYS                      # Table 1 (18 a day) Saturday labour, 4.33 Saturdays a month (R)
+PHLEB_SAT_DAY = 2 * 51.5625 * 6                                    # R: cost_ramp_model.py comment, 2 phlebotomists x A$51.5625/h x 6 h = A$618.75 a Saturday
+PHLEB_WAGES = f2(crm.AM_WEEKDAY_PHLEBOTOMIST_MONTHLY + PHLEB_SAT_DAY * SAT_DAYS)   # A$9,075.00 weekday + Saturday
+PHLEB_LOADED = PHLEB_WAGES * (1 + load)                            # same super + workers comp load the R21 segment split uses
+assert pb["am_weekday_phlebotomist"] == crm.AM_WEEKDAY_PHLEBOTOMIST_MONTHLY == 9075.00
+def company_split(phleb_in_medical):
+    med_direct = dict(midwife_wages=-L["midwife_wages"], midwife_fixed_consumables=-L["midwife_fixed_consumables"], card_fee_share=card_consult)
+    lng_direct = dict(am_service_staff_with_super_wc=lab_am - PHLEB_LOADED, am_card_fee_share=card_lounge, pm_staff_with_super_wc=lab_pm, pm_card_fee=card_pm)
+    (med_direct if phleb_in_medical else lng_direct)["phlebotomists_with_super_wc"] = PHLEB_LOADED
+    med = dict(revenue=L["rev_consult_gst_free"], direct=f2(sum(med_direct.values())), shared_block=0.0)
+    lng = dict(revenue=f2(L["revenue_total_ex_gst"] - L["rev_consult_gst_free"]), shared_block=SH_TOTAL)
+    med["before_shared"] = f2(med["revenue"] - med["direct"])
+    lng["before_shared"] = f2(BEFORE + SH_TOTAL - med["before_shared"])          # Lounge carries the 1 cent rounding so the companies add to the locked headline
+    assert abs(lng["before_shared"] - (L["rev_lounge_service_am_ex_gst"] + L["rev_pm_ex_gst"] - sum(lng_direct.values()))) < 0.02
+    lng["direct"] = f2(lng["revenue"] - lng["before_shared"])
+    for c in (med, lng):
+        c["profit_before_tax"] = f2(c["before_shared"] - c["shared_block"])
+        c["tax_25_if_taxed_alone"] = f2(max(0.0, c["profit_before_tax"]) * TAX)
+    tot = dict(revenue=f2(med["revenue"] + lng["revenue"]), direct=f2(med["direct"] + lng["direct"]), shared_block=SH_TOTAL)
+    tot["profit_before_tax"] = f2(med["profit_before_tax"] + lng["profit_before_tax"])
+    tot["tax_25_consolidated"] = f2(tot["profit_before_tax"] * TAX)
+    tot["after_tax_consolidated"] = f2(tot["profit_before_tax"] - tot["tax_25_consolidated"])
+    return dict(medical=med, lounge=lng, holdings=dict(revenue=0.0, direct=0.0, shared_block=0.0, profit_before_tax=0.0, note="no sales; dividends from Medical and Lounge ignored inside a consolidated group"), total=tot)
+SPLIT_BEFORE, SPLIT_AFTER = company_split(False), company_split(True)
+for s_ in (SPLIT_BEFORE, SPLIT_AFTER):                             # LOCK: the headline must not move
+    assert abs(s_["total"]["profit_before_tax"] - BEFORE) < 0.02 and abs(s_["total"]["after_tax_consolidated"] - AFTER) < 0.02, s_["total"]
+# payroll tax grouping (WA): one group, aggregate wages; the designated group employer claims the one deductible amount (V, wa.gov.au, 2026-10-27)
+W_GROUP = L["payroll_taxable_wages_year"]
+DED = max(0.0, r14.TH - (W_GROUP - r14.TH) * 2 / 13)
+assert abs(r14.ptax(W_GROUP) / 12 - (-L["payroll_tax_group"])) < 0.01
+med_w = -L["midwife_wages"] + PHLEB_LOADED; all_w = -L["repo_payroll"] - L["midwife_wages"] - L["venue_manager_0630"]
+out["R24"] = dict(phlebotomist_wages_month=PHLEB_WAGES, phlebotomist_loaded_month=f2(PHLEB_LOADED), load_super_wc=round(load, 5), saturdays_month=round(SAT_DAYS, 2),
+    split_before_phleb_in_lounge=SPLIT_BEFORE, split_after_phleb_in_medical=SPLIT_AFTER,
+    headline=dict(before_tax=BEFORE, after_tax=AFTER, unchanged=True),
+    payroll_tax=dict(grouped_wages_year=W_GROUP, threshold=r14.TH, upper=r14.UP, rate=r14.RATE, over_threshold_by=f2(W_GROUP - r14.TH), deductible_amount=f2(DED),
+                     taxable_after_deduction=f2(W_GROUP - DED), tax_year=r14.ptax(W_GROUP), tax_month=f2(r14.ptax(W_GROUP) / 12), changes_with_phleb_move=False,
+                     medical_wage_share_E=round(med_w / all_w, 4), lounge_wage_share_E=round(1 - med_w / all_w, 4)))
+CF = json.load(open(os.path.join(HERE, "..", "L18-r23", "theodore_r23_results.json"), encoding="utf-8"))   # approved 24-month cash flow (R23), read not re-run
+
 def money(x): return f"A${x:,.2f}" if x >= 0 else f"-A${-x:,.2f}"
+def split_md():
+    B, A = SPLIT_BEFORE, SPLIT_AFTER; P = out["R24"]["payroll_tax"]
+    row = lambda lab, key: f"| {lab} | {money(B['medical'][key])} | {money(A['medical'][key])} | {money(B['lounge'][key])} | {money(A['lounge'][key])} | {money(A['total'][key])} |"
+    return ["### 4A. Company split, Round 24 (phlebotomists employed by GTT Medical)", "",
+        f"The 2 phlebotomists' wages, super and workers comp ({money(PHLEB_LOADED)} a month, R) move from Lounge to Medical. Holdings has no sales. "
+        "The shared block stays ONE block and sits with Lounge, which holds the lease and employs the venue manager. The room fee Medical pays Lounge is NOT IN REPO; it moves profit between the two companies only.", "",
+        "| A$ a month | Medical before | Medical after | Lounge before | Lounge after | Group (unchanged) |", "|---|---|---|---|---|---|",
+        row("Revenue, ex GST", "revenue"), row("Direct costs", "direct"),
+        f"| Profit before shared block | {money(B['medical']['before_shared'])} | {money(A['medical']['before_shared'])} | {money(B['lounge']['before_shared'])} | {money(A['lounge']['before_shared'])} | {money(BEFORE + SH_TOTAL)} |",
+        row("Less shared-cost block (one block)", "shared_block"),
+        row("Profit before tax", "profit_before_tax"),
+        f"| Company tax 25% | {money(B['medical']['tax_25_if_taxed_alone'])} alone | {money(A['medical']['tax_25_if_taxed_alone'])} alone | A$0.00 (loss) | A$0.00 (loss) | {money(A['total']['tax_25_consolidated'])} consolidated |",
+        f"| Profit after tax | | | | | {money(A['total']['after_tax_consolidated'])} |", "",
+        f"With tax consolidation (Year 1, locked) Holdings lodges one return: 25% of {money(BEFORE)} = {money(-L['company_tax_25'])}, net {money(AFTER)}. "
+        f"Taxed alone, Medical would pay {money(A['medical']['tax_25_if_taxed_alone'])} while the Lounge loss could not be used: consolidation lets the loss offset the profit (E). Lounge carries the 1 cent rounding.", "",
+        "### 4B. WA payroll tax grouping (Round 24)", "",
+        "| Item | Value | Tag |", "|---|---|---|",
+        f"| Grouped wages, all three companies, a year | {money(P['grouped_wages_year'])} | R (unchanged by the phlebotomist move) |",
+        f"| Threshold / taper / upper limit | {money(P['threshold'])}; reduced by 2/13 of wages above it; nil from {money(P['upper'])} | V wa.gov.au, 2026-10-27 |",
+        f"| Deductible amount (one, for the group) | {money(P['deductible_amount'])} | V formula, R wages |",
+        f"| Taxable wages after deduction | {money(P['taxable_after_deduction'])} | maths |",
+        f"| Payroll tax at 5.5% | {money(P['tax_year'])} a year = {money(P['tax_month'])} a month | V rate |",
+        f"| Wage share (for choosing the designated group employer) | Medical about {P['medical_wage_share_E']*100:.0f}%, Lounge about {P['lounge_wage_share_E']*100:.0f}% | E |", "",
+        "Why grouped: Holdings owns 100% of Medical and Lounge (related bodies corporate; one set of owners has a controlling interest). Each company registers and lodges, the group's wages are added together, only the designated group employer claims the deductible amount, and every member is jointly and severally liable (V, wa.gov.au grouping page). Payroll tax grouping is separate from the GST group and from tax consolidation.", ""]
+def cf_md():
+    T = CF["T4_inputs"]; F = CF["T4"]
+    lab = "illustrative, not decided, deferred by Anthony"
+    return ["### 4C. APPROVED 24-month cash flow (reference, headline lines only)", "",
+        "Approved by Anthony 2026-10-27. Full table: [THEODORE-R23-CASHFLOW.md](overhaul-2026-10-26/L18-r23/THEODORE-R23-CASHFLOW.md) (built by theodore_r23_cashflow.py).", "",
+        "| Line | Value | Tag |", "|---|---|---|",
+        f"| Takings a month, incl GST | {money(T['takings_incl_gst'])} | R |",
+        f"| Profit before company tax a month | {money(BEFORE)} | R |",
+        f"| Start-up spend, month 0 | {money(T['startup'])} | R |",
+        f"| GST to the ATO each quarter (net) | {money(T['gst_net_quarter'])}, paid 28 Oct, 28 Feb, 28 Apr, 28 Jul | V dates |",
+        f"| Company tax set aside a month | {money(T['tax_per_month_provision'])} | E |",
+        f"| Year 1 company tax | {money(T['tax_year1'])}, paid about month 23 | E amount, U date |",
+        "| Lowest cash month | Month 0, right after the start-up spend | R model |",
+        f"| Loan repayment timing (loan cleared month {F['336000_floor0']['loan_cleared_month']}, first dividend month {F['336000_floor0']['first_dividend_month']}) | {lab} | E |",
+        f"| A$50,000 cash-floor scenario (loan cleared month {F['336000_floor50000']['loan_cleared_month']}, first dividend month {F['336000_floor50000']['first_dividend_month']}) | {lab} | E |", ""]
 def build_centre():
     yml = {"generated_by": "docs/overhaul-2026-10-26/L17-r22/theodore_r22.py", "date": "2026-10-27", "currency": "AUD",
            "paths": {"path_a": "consult package, PREFERRED", "path_b": "outside referral, NOT preferred"},
@@ -453,7 +535,22 @@ def build_centre():
            "midwives": {"hours": "08:00 to 16:00", "first_consult": "08:15", "consult_blocks_min": 25, "paid_h_per_shift": PAID_DAY, "paid_h_week_both": 45.0, "block": "fortnightly Mon-Wed / Thu-Sat",
                         "oncost": round(r15.bu_worked, 4), "medicare_participating": "hired as participating, or plan how they get it"},
            "shared_costs_month": SH_ITEMS, "shared_costs_total": SH_TOTAL,
-           "headline": {"profit_before_company_tax": BEFORE, "company_tax": L["company_tax_25"], "net_after_all": AFTER, "threshold": TARGET, "above_threshold": AFTER > TARGET}}
+           "headline": {"profit_before_company_tax": BEFORE, "company_tax": L["company_tax_25"], "net_after_all": AFTER, "threshold": TARGET, "above_threshold": AFTER > TARGET},
+           "phlebotomists": {"count": 2, "employer": "GTT Medical (locked R24, Anthony 2026-10-27)", "wages_month": PHLEB_WAGES, "loaded_month_with_super_wc": f2(PHLEB_LOADED)},
+           "path_b_fact": "Path B earns A$26.66 less per client than Path A on the fixed roster; the midwife is on site every day and can take standalone or package consults, so the amount can be earned another way. NOT A LIMIT.",
+           "company_split_month": {"before_r24_phleb_in_lounge": {k: SPLIT_BEFORE[k] for k in ("medical", "lounge", "total")},
+                                   "after_r24_phleb_in_medical": {k: SPLIT_AFTER[k] for k in ("medical", "lounge", "total")},
+                                   "holdings": "no sales", "shared_block_holder": "Lounge (holds the lease, employs the venue manager); one block, not split",
+                                   "room_fee_medical_to_lounge": "NOT IN REPO; moves profit between companies only, no group effect"},
+           "payroll_tax_grouping": {k: out["R24"]["payroll_tax"][k] for k in ("grouped_wages_year", "threshold", "upper", "rate", "deductible_amount", "taxable_after_deduction", "tax_year", "tax_month")}
+                                   | {"grouped_because": "common control: Holdings owns 100% of Medical and Lounge (related bodies corporate); one deductible amount claimed by the designated group employer",
+                                      "source": "wa.gov.au payroll tax employer guide, calculation and grouping pages, read 2026-10-27"},
+           "gst_group_and_consolidation": "both established in Year 1 (locked R24); steps in L19-r24/THEODORE-R24-PART-1.md",
+           "cash_flow_24m_APPROVED": {"file": "docs/overhaul-2026-10-26/L18-r23/THEODORE-R23-CASHFLOW.md", "takings_month_incl_gst": CF["T4_inputs"]["takings_incl_gst"],
+                                      "gst_net_quarter": CF["T4_inputs"]["gst_net_quarter"], "company_tax_year1": CF["T4_inputs"]["tax_year1"], "tax_held_back_month": CF["T4_inputs"]["tax_per_month_provision"],
+                                      "startup_month0": CF["T4_inputs"]["startup"],
+                                      "loan_repayment_timing": "illustrative, not decided, deferred by Anthony",
+                                      "cash_floor_50000_scenario": "illustrative, not decided, deferred by Anthony"}}
     with open(os.path.join(HERE, "center_of_truth.yml"), "w", encoding="ascii", errors="replace") as fh:
         yaml.safe_dump(yml, fh, sort_keys=False, allow_unicode=False, width=200)
     yaml.safe_load(open(os.path.join(HERE, "center_of_truth.yml"), encoding="ascii"))
@@ -461,7 +558,7 @@ def build_centre():
             ("Afternoon sales, ex GST (repo A$24,585.37 / 1.1)", L["rev_pm_ex_gst"], "R"),
             ("Consult, GST-free (474 x A$130, Medical)", L["rev_consult_gst_free"], "E"),
             ("**Revenue, ex GST**", L["revenue_total_ex_gst"], ""),
-            ("Repo staff (8 AM service, 2 phlebotomists, 4 PM, venue manager repo base), super, workers comp", L["repo_payroll"], "R"),
+            ("Repo staff (8 AM service, 2 phlebotomists employed by Medical, 4 PM, venue manager repo base), super, workers comp", L["repo_payroll"], "R"),
             ("Repo running costs (rent, insurance, overheads, supplies)", L["repo_operating_expenses"], "R"),
             ("GST credits on costs", L["less_gst_credits"], "R"),
             ("Card fees, morning (on A$292.15)", L["card_fees"], "E"), ("Card fees, afternoon (210.13 x A$117)", L["card_fees_pm"], "E"),
@@ -499,6 +596,7 @@ def build_centre():
           f"| Standalone private consult | {money(CONSULT_NEW)} | | GST-free | Upside only. Client gets {money(REBATE_CONSULT)} back | Locked |", "",
           "Path B is the outside-referral route: the client keeps her own referral, there is no GTT consult and no Medicare benefit at GTT. Booking order for Path A: the client books the test, then the consult, 1 to 28 days before the test or the same morning before the draw. "
           "Checkout shows the full price but charges only the GTT amount. Medical pays Lounge a flat market room fee (inside the group, no profit effect). Plan: 100% Package 1, 100% Path A for the headline.", "",
+          "**Path B fact line (Round 24):** Path B earns A$26.66 less per client than Path A on the fixed roster; the midwife is on site every day and can take standalone or package consults, so the amount can be earned another way. NOT A LIMIT. Path B has no cap, no restriction and no warning (Anthony, locked R24).", "",
           "## 1A. REBATE LOCK (every rebate figure used for planning)", "",
           "| Item | MBS item | Schedule fee | Rebate (85%) | Status |", "|---|---|---|---|---|",
           f"| Consult | 82105 | A$38.75 | {money(REBATE_CONSULT)} | Confirmed (V, health.gov.au MBS, 2026-10-26) |",
@@ -513,22 +611,22 @@ def build_centre():
           f"| Morning clients | 18 a day, Mon-Sat = {N} a month | R (18 a day x 26.33 trading days a month = 22 weekdays + 4.33 Saturdays, a calendar count). No ramp: full volume from month 1 (Anthony, R23) |",
           f"| Afternoon transactions | {PM_TX:.2f} a month (8.70 weekday, 4.35 Saturday a day) at A$117 = A$24,585.37 | R (revenue_assumptions.yml, Model E) |",
           "| AM service staff | 8 (4 massage and beauty, 2 nails, 2 hair), 6 h, 07:00-13:00 | R |",
-          "| Phlebotomists | 2 at 10-18 booked, 1 at 9 or fewer, none PM | R |",
+          f"| Phlebotomists | 2 at 10-18 booked, 1 at 9 or fewer, none PM. **Employed by GTT Medical** (locked R24). Wages {money(PHLEB_WAGES)} a month, {money(PHLEB_LOADED)} with super and workers comp | R |",
           "| PM service staff | 4 casual, 3-hour floor | R |",
           f"| Venue manager | **Starts 06:30, Mon-Fri 06:30 to 15:00.** 07:00 is the first draw. Cost {money(VM_COMBINED)} a month loaded = repo base {money(VM_BASE_LOADED)} + extra half hour {money(VM_EXTRA)}. A hired venue manager, not Anthony (Anthony is Owner and Director, 0 operational hours, locked R23) | R rate, locked time |",
           "| Hosts | none | Locked |",
           "| Midwives | 08:00 to 16:00 (8 h on site, 7.5 h paid after a 30 minute unpaid break E). First consult 08:15, 25 minute blocks 08:15 to 10:30 to match the draws, then normal midwife bookings. 2 permanent part-time, fortnightly block Mon-Wed / Thu-Sat, + 1 casual. Hired with Medicare participating status, or we plan how they get it | Locked |",
           f"| Midwife time | 18 GTT consults x 20 min = 6.0 h a day; 7.5 h paid; {SPARE_SLOTS_DAY} spare 20-minute slots a day for standalone consults (upside only) | maths |",
           "| Consult rooms / collection rooms | 1 / 2 (one chair each) | Locked |",
-          "| Late rule | Late means from the appointment time onwards. A consult may allow 5 to 10 minutes if the midwife can finish in the time left (OPEN) | Locked |", "",
+          "| Late rule | Clients arrive at least 10 minutes early; late means from the appointment time onwards. Blood draws: no wiggle room. Consults: a 10 minute grace window | Locked R24 |", "",
           "## 3. Rates and tax", "",
           "| Variable | Value | Tag |", "|---|---|---|",
           f"| Midwife rate | Nurses Award RN L2 pp4 A$41.59 weekday, 150% Saturday; blended A${r18.RATE_BLEND:.2f} | E |",
           f"| Midwife on-cost (used) | {r15.bu_worked:.3f}: super 12%, workers comp 1.7%, leave loading, paid leave covered by the casual | E |",
           "| Midwife on-cost (sensitivity only) | 1.20 (no leave cover) | E |",
           "| Card fee | 1.7% + A$0.30 a transaction on all card takings, AM and PM (repo lists Tyro 1.4% / Square 1.6%, provider not chosen) | E |",
-          "| WA payroll tax | 5.5% above the A$1m grouped threshold (tapering deduction) | E, check RevenueWA |",
-          "| Company tax | 25% (base rate entity), one consolidated return; three companies (Holdings, Medical, Lounge), no trust; franked dividends direct to Anthony and partner (Route B) | E |", "",
+          "| WA payroll tax | 5.5%; annual threshold A$1,000,000, deduction tapers by 2/13 of wages above it, nil from A$7,500,000; one threshold for the group, claimed by the designated group employer | V, wa.gov.au payroll tax employer guide (calculation and grouping pages), read 2026-10-27 |",
+          "| Company tax | 25% (base rate entity), one consolidated return; three companies (Holdings, Medical, Lounge), no trust; franked dividends direct to Anthony and partner (Route B). GST group and tax consolidation established in Year 1 (locked R24) | E |", "",
           "## 4. Monthly P&L, whole venture (Holdings + Medical + Lounge), locked case, Path A, GTT clients only", "",
           "| Line | Monthly | Tag |", "|---|---|---|"] + [f"| {k} | {money(v)} | {t} |" for k, v, t in rows] + [
           "", f"GST passed to the ATO (not revenue): morning {money(L['gst_collected_am'])}, afternoon {money(L['gst_collected_pm'])}. Target: net profit above A$20,000 a month after all of the above. "
@@ -539,7 +637,7 @@ def build_centre():
           f"| Shared: venue manager 06:30 to 15:00 (combined loaded) | -{money(VM_COMBINED)} |",
           f"| Shared: rent, insurance, overheads, supplies, after GST credits | -{money(SH_ITEMS['rent_insurance_overheads_supplies_net_of_gst_credits'])} |",
           f"| Shared: WA payroll tax, whole group | -{money(SH_ITEMS['wa_payroll_tax_group'])} |", f"| Shared: three-company running cost | -{money(SH_ITEMS['three_company_running_cost'])} |",
-          f"| **One shared block** | **-{money(SH_TOTAL)}** |", f"| **Profit before company tax** | **{money(BEFORE)}** |", "",
+          f"| **One shared block** | **-{money(SH_TOTAL)}** |", f"| **Profit before company tax** | **{money(BEFORE)}** |", ""] + split_md() + cf_md() + [
           "## 5. Per-client waterfall (Path A, Package 1, A$320 full price)", "", "| Step | A$ per client |", "|---|---|"] + [f"| {k} | {money(v)} |" for k, v in wf22] + [
           "", f"The client then gets A$55.00 back from Medicare, so her own cost is {money(P1 - REBATE)} ({money(P2 - REBATE)} on Package 2), lab fee included.", "",
           "## 6. Not in any financial", "", "| Item | Status |", "|---|---|"] + [f"| {a} | {b} |" for a, b in NOT_IN] + [
@@ -550,7 +648,8 @@ def build_centre():
           "", "## 8. Change log", "", "| Date | Change | By |", "|---|---|---|",
           "| 2026-10-26 | Round 20: consult A$130 inside packages and standalone, midwives 08:00 to 16:00, same-day consult | Theodore R20 |",
           f"| 2026-10-26 | Round 22: Path A/B renamed, Path B A$300/A$350, rebate lock, venue manager 06:30 to 15:00 combined {money(VM_COMBINED)}, one shared-cost block; headline unchanged {money(BEFORE)} before and {money(AFTER)} after company tax | Theodore R22 |",
-          "| 2026-10-27 | Round 23: no revenue ramp (18 a day from month 1; the 22 + 4.33 day count is a calendar count, not a ramp); venue manager is a hired person, Anthony is Owner and Director; three companies, no trust. Headline unchanged | Theodore R23 |", ""]
+          "| 2026-10-27 | Round 23: no revenue ramp (18 a day from month 1; the 22 + 4.33 day count is a calendar count, not a ramp); venue manager is a hired person, Anthony is Owner and Director; three companies, no trust. Headline unchanged | Theodore R23 |",
+          "| 2026-10-27 | Round 24: phlebotomists employed by Medical (company split re-run), payroll tax grouping verified on wa.gov.au, 24-month cash flow APPROVED (cash floor and loan repayment illustrative, deferred), GST group and consolidation in Year 1, Path B fact line (not a limit), late rule split. Headline unchanged | Theodore R24 |", ""]
     with open(os.path.join(REPO, "docs", "FINANCIAL-CENTER-OF-TRUTH.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(md))
 

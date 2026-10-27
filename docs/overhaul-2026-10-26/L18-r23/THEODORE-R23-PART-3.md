@@ -9,7 +9,7 @@ Theodore, financial consultant, 2026-10-27. Numbers from [theodore_r23_cashflow.
 - Prices: Path A A$320 / A$370, GTT charges A$292.15 / A$342.15. Path B A$300 / A$350 all in, GTT charges A$272.15 / A$322.15.  <!-- factcheck:ok -->
 - Rebates: consult A$32.95 + lab A$22.05 = A$55.00 (shown as about).
 - Midwives 08:00 to 16:00, first consult 08:15, 25 minute blocks to 10:30.
-- Late rule: clients arrive 10 minutes early; late means from the appointment time onwards.
+- Late rule: clients arrive 10 minutes early; late means from the appointment time onwards. Blood draws: no wiggle room. Consults: 10 minute grace window (R24).
 
 ## 1. What the ramp is
 
@@ -43,6 +43,8 @@ Both files regenerate from theodore_r22.py (I edited its writer only, re-ran it,
 
 ## 4. Loan timeline with NO ramp (flat 100 percent from month 1)
 
+**Round 24 label:** the loan repayment timing and the A$50,000 cash-floor scenario in this section are **illustrative, not decided, deferred by Anthony**. The cash flow itself (tax, GST, working capital) is APPROVED.
+
 Same method as R22C (start-up spend A$251,198 at month 0, every spare dollar after tax repays the shareholder loan, R and E), ramp set to 100 percent:
 
 | | A$250,000 put in | A$336,000 put in |
@@ -53,7 +55,7 @@ Same method as R22C (start-up spend A$251,198 at month 0, every spare dollar aft
 | **Loan cleared** | **Month 13** | **Month 13** |
 | **First dividend** | **Month 14** | **Month 14** |
 
-With tax, GST and working-capital timing added (Part 4, THEODORE-R23-CASHFLOW.md) the answer is the same: **loan cleared month 13, first dividend month 14**, or month 15 / 16 if you keep a A$50,000 cash floor. Compared with my R22C: 7 months sooner, and no A$96,663.78 top-up.
+With tax, GST and working-capital timing added (Part 4, THEODORE-R23-CASHFLOW.md) the answer is the same: **loan cleared month 13, first dividend month 14**, or month 15 / 16 with a A$50,000 cash floor (illustrative, not decided, deferred by Anthony). Compared with my R22C: 7 months sooner, and no A$96,663.78 top-up.
 
 All of this rests on your decision that the waitlist and marketing fill 18 mornings from day one. If they do not, the repo's own warning still applies: at 70 percent fill (12.6 a morning) the company loses about A$8,871.51 a month after GST (R, CASHFLOW-FORECAST.md section 3, earlier price basis).
 

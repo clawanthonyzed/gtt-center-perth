@@ -1013,5 +1013,96 @@
   "before_tax_with_payroll_saving": 35668.39,
   "after_tax_with_payroll_saving": 26751.29,
   "change_after_with_saving": 6777.31
+ },
+ "R24": {
+  "phlebotomist_wages_month": 11754.19,
+  "phlebotomist_loaded_month": 13364.52,
+  "load_super_wc": 0.137,
+  "saturdays_month": 4.33,
+  "split_before_phleb_in_lounge": {
+   "medical": {
+    "revenue": 61612.2,
+    "direct": 15952.43,
+    "shared_block": 0.0,
+    "before_shared": 45659.77,
+    "profit_before_tax": 45659.77,
+    "tax_25_if_taxed_alone": 11414.94
+   },
+   "lounge": {
+    "revenue": 92213.83,
+    "shared_block": 23783.23,
+    "before_shared": 4755.43,
+    "direct": 87458.4,
+    "profit_before_tax": -19027.8,
+    "tax_25_if_taxed_alone": 0.0
+   },
+   "holdings": {
+    "revenue": 0.0,
+    "direct": 0.0,
+    "shared_block": 0.0,
+    "profit_before_tax": 0.0,
+    "note": "no sales; dividends from Medical and Lounge ignored inside a consolidated group"
+   },
+   "total": {
+    "revenue": 153826.03,
+    "direct": 103410.83,
+    "shared_block": 23783.23,
+    "profit_before_tax": 26631.97,
+    "tax_25_consolidated": 6657.99,
+    "after_tax_consolidated": 19973.98
+   }
+  },
+  "split_after_phleb_in_medical": {
+   "medical": {
+    "revenue": 61612.2,
+    "direct": 29316.95,
+    "shared_block": 0.0,
+    "before_shared": 32295.25,
+    "profit_before_tax": 32295.25,
+    "tax_25_if_taxed_alone": 8073.81
+   },
+   "lounge": {
+    "revenue": 92213.83,
+    "shared_block": 23783.23,
+    "before_shared": 18119.95,
+    "direct": 74093.88,
+    "profit_before_tax": -5663.28,
+    "tax_25_if_taxed_alone": 0.0
+   },
+   "holdings": {
+    "revenue": 0.0,
+    "direct": 0.0,
+    "shared_block": 0.0,
+    "profit_before_tax": 0.0,
+    "note": "no sales; dividends from Medical and Lounge ignored inside a consolidated group"
+   },
+   "total": {
+    "revenue": 153826.03,
+    "direct": 103410.83,
+    "shared_block": 23783.23,
+    "profit_before_tax": 26631.97,
+    "tax_25_consolidated": 6657.99,
+    "after_tax_consolidated": 19973.98
+   }
+  },
+  "headline": {
+   "before_tax": 26631.97,
+   "after_tax": 19973.98,
+   "unchanged": true
+  },
+  "payroll_tax": {
+   "grouped_wages_year": 1254144.89,
+   "threshold": 1000000,
+   "upper": 7500000,
+   "rate": 0.055,
+   "over_threshold_by": 254144.89,
+   "deductible_amount": 960900.79,
+   "taxable_after_deduction": 293244.1,
+   "tax_year": 16128.43,
+   "tax_month": 1344.04,
+   "changes_with_phleb_move": false,
+   "medical_wage_share_E": 0.2391,
+   "lounge_wage_share_E": 0.7609
+  }
  }
 }

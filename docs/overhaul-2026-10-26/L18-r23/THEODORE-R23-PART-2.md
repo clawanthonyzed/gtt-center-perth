@@ -9,7 +9,7 @@ Theodore, financial consultant, 2026-10-27. General knowledge and repo figures, 
 - Prices: Path A A$320 / A$370, GTT charges A$292.15 / A$342.15. Path B A$300 / A$350 all in, GTT charges A$272.15 / A$322.15.  <!-- factcheck:ok -->
 - Rebates: consult A$32.95 + lab A$22.05 = A$55.00 (shown as about).
 - Midwives 08:00 to 16:00, first consult 08:15, 25 minute blocks to 10:30.
-- Late rule: clients arrive 10 minutes early; late means from the appointment time onwards.
+- Late rule: clients arrive 10 minutes early; late means from the appointment time onwards. Blood draws: no wiggle room. Consults: 10 minute grace window (R24).
 
 ## 1. Why the word "trust" came up (it is not the plan)
 
@@ -40,15 +40,15 @@ Suggested DECISION-LOG line (for Grace to record): "2026-10-27: Three companies 
 3. **Tax consolidation.** Plan: elect in year 1, Holdings lodges one return at 25 percent (R, R20). Without it, Holdings could be taxed at 30 percent if its income is only passive, and a loss in one company cannot shelter profit in another (E, R15 s5.3, R16 A3). As head company of a consolidated group, Holdings enters PAYG tax instalments automatically (V, ato.gov.au, Starting PAYG instalments, 2026-10-27).
 4. **Dividends between companies.** Ignored for tax if consolidated; if not, franked, no extra tax (U, R16 A2).
 5. **Division 7A.** Owners lending money in is outside it. Watch any money going from a company to an owner (loan, private bill, private use): it becomes a deemed dividend unless handled correctly (V, R22C memo).
-6. **Who employs whom.** Plan: Medical employs midwives and phlebotomists; Lounge employs service staff and the venue manager (R, R20). **Open:** DECISION-LOG 2026-10-20 notes that GTT employing the phlebotomists conflicts with Medicare s16A(5AB)(c) and is to be re-decided (R). Catherine's lane; see question 1.
+6. **Who employs whom.** Plan: Medical employs midwives and phlebotomists; Lounge employs service staff and the venue manager (R, R20). **Open:** DECISION-LOG 2026-10-20 notes that GTT employing the phlebotomists conflicts with Medicare s16A(5AB)(c) and is to be re-decided (R). **Round 24: Anthony locked Medical as the employer**; the s16A(5AB)(c) point stays with Catherine to confirm the compliant set-up.
 7. **Who bears shared costs.** Lounge holds the lease and pays rent and the venue manager. Medical pays Lounge a flat market room licence fee, never linked to Medicare benefits or test numbers (R, R20 s10.1; Catherine R20). **The fee amount is NOT IN REPO** for today's layout (the R15 A$960 example was for an older room plan). Inside the group it has no profit effect.
 8. **Running cost.** Two extra companies cost about A$908.67 a month (E, R15 base), already in the P&L.
 9. **Card money.** The consult belongs to Medical and the lounge part to Lounge. One checkout needs either a split payment or Lounge collecting as Medical's disclosed agent and passing it on weekly (E, R15, R16 A4). Provider not chosen.
 
 ## QUESTIONS FOR ANTHONY
 
-1. Who employs the phlebotomists? Options: (a) Medical, as in the plan; (b) the lab, if Catherine finds s16A(5AB)(c) requires it. Recommendation: Catherine decides from the law before any job ad is placed. If (b), the money effect is NOT IN REPO and I re-run it.
-2. Do the GST group and tax consolidation start from day one? Options: (a) yes, both in year 1; (b) later. Recommendation: (a), set up by the accountant when the companies are registered.
+1. ANSWERED R24 (Medical employs them). Who employs the phlebotomists? Options: (a) Medical, as in the plan; (b) the lab, if Catherine finds s16A(5AB)(c) requires it. Recommendation: Catherine decides from the law before any job ad is placed. If (b), the money effect is NOT IN REPO and I re-run it.
+2. ANSWERED R24 (both in Year 1; steps in L19-r24/THEODORE-R24-PART-1.md). Do the GST group and tax consolidation start from day one? Options: (a) yes, both in year 1; (b) later. Recommendation: (a), set up by the accountant when the companies are registered.
 
 Regards.
 Theodore

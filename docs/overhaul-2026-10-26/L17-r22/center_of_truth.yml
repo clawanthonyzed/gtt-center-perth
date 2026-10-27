@@ -72,3 +72,79 @@ headline:
   net_after_all: 19973.98
   threshold: 20000.0
   above_threshold: false
+phlebotomists:
+  count: 2
+  employer: GTT Medical (locked R24, Anthony 2026-10-27)
+  wages_month: 11754.19
+  loaded_month_with_super_wc: 13364.52
+path_b_fact: Path B earns A$26.66 less per client than Path A on the fixed roster; the midwife is on site every day and can take standalone or package consults, so the amount can be earned another way.
+  NOT A LIMIT.
+company_split_month:
+  before_r24_phleb_in_lounge:
+    medical:
+      revenue: 61612.2
+      direct: 15952.43
+      shared_block: 0.0
+      before_shared: 45659.77
+      profit_before_tax: 45659.77
+      tax_25_if_taxed_alone: 11414.94
+    lounge:
+      revenue: 92213.83
+      shared_block: 23783.23
+      before_shared: 4755.43
+      direct: 87458.4
+      profit_before_tax: -19027.8
+      tax_25_if_taxed_alone: 0.0
+    total:
+      revenue: 153826.03
+      direct: 103410.83
+      shared_block: 23783.23
+      profit_before_tax: 26631.97
+      tax_25_consolidated: 6657.99
+      after_tax_consolidated: 19973.98
+  after_r24_phleb_in_medical:
+    medical:
+      revenue: 61612.2
+      direct: 29316.95
+      shared_block: 0.0
+      before_shared: 32295.25
+      profit_before_tax: 32295.25
+      tax_25_if_taxed_alone: 8073.81
+    lounge:
+      revenue: 92213.83
+      shared_block: 23783.23
+      before_shared: 18119.95
+      direct: 74093.88
+      profit_before_tax: -5663.28
+      tax_25_if_taxed_alone: 0.0
+    total:
+      revenue: 153826.03
+      direct: 103410.83
+      shared_block: 23783.23
+      profit_before_tax: 26631.97
+      tax_25_consolidated: 6657.99
+      after_tax_consolidated: 19973.98
+  holdings: no sales
+  shared_block_holder: Lounge (holds the lease, employs the venue manager); one block, not split
+  room_fee_medical_to_lounge: NOT IN REPO; moves profit between companies only, no group effect
+payroll_tax_grouping:
+  grouped_wages_year: 1254144.89
+  threshold: 1000000
+  upper: 7500000
+  rate: 0.055
+  deductible_amount: 960900.79
+  taxable_after_deduction: 293244.1
+  tax_year: 16128.43
+  tax_month: 1344.04
+  grouped_because: 'common control: Holdings owns 100% of Medical and Lounge (related bodies corporate); one deductible amount claimed by the designated group employer'
+  source: wa.gov.au payroll tax employer guide, calculation and grouping pages, read 2026-10-27
+gst_group_and_consolidation: both established in Year 1 (locked R24); steps in L19-r24/THEODORE-R24-PART-1.md
+cash_flow_24m_APPROVED:
+  file: docs/overhaul-2026-10-26/L18-r23/THEODORE-R23-CASHFLOW.md
+  takings_month_incl_gst: 163046.95
+  gst_net_quarter: 23874.99
+  company_tax_year1: 79895.91
+  tax_held_back_month: 6657.99
+  startup_month0: 251198.0
+  loan_repayment_timing: illustrative, not decided, deferred by Anthony
+  cash_floor_50000_scenario: illustrative, not decided, deferred by Anthony

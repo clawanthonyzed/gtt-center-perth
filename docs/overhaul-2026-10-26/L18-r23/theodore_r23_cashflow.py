@@ -131,7 +131,8 @@ lines = ["# THEODORE R23: 24-month cash flow, flat 18 clients a day, tax, GST an
  "- Prices: Path A A$320 / A$370, GTT charges A$292.15 / A$342.15. Path B A$300 / A$350 all in, GTT charges A$272.15 / A$322.15.  <!-- factcheck:ok -->",
  "- Rebates: consult A$32.95 + lab A$22.05 = A$55.00 (shown as about).",
  "- Midwives 08:00 to 16:00, first consult 08:15, 25 minute blocks to 10:30.",
- "- Late rule: clients arrive 10 minutes early; late means from the appointment time onwards.", "",
+ "- Late rule: clients arrive 10 minutes early; late means from the appointment time onwards. Blood draws: no wiggle room. Consults: 10 minute grace window (R24).", "",
+ "**STATUS (Round 24): APPROVED by Anthony 2026-10-27** (company tax, GST and working capital). The loan repayment timing and the A$50,000 cash-floor scenario below are **illustrative, not decided, deferred by Anthony**. Numbers kept, not deleted.", "",
  "## Assumptions (every one tagged)", "", "| Item | Used | Tag |", "|---|---|---|",
  f"| Monthly money lines | Locked case: takings {mny(TAKINGS)} incl GST, profit {mny(BEFORE)} before tax | R |",
  "| Volume | 18 clients a day from month 1, 473.94 a month, no ramp | R (Anthony R23) |",
@@ -150,24 +151,22 @@ lines = ["# THEODORE R23: 24-month cash flow, flat 18 clients a day, tax, GST an
  "| PAYG instalments | a company enters after a tax return shows A$2m+ instalment income or A$500+ notional tax, or as head company of a consolidated group (ato.gov.au, Starting PAYG instalments, read 2026-10-27). First instalment falls after month 24 here | V rule, U date |",
  f"| Tax held back | {mny(BEFORE * TAX)} a month set aside, never used to repay the loan | E (prudent) |",
  "| GST credits on start-up spend | NOT IN REPO whether A$251,198 includes GST; not counted | E |", "",
- "## A$336,000 case, no cash floor (A$ month-end)", "",
+ "## A$336,000 case, no cash floor (A$ month-end; Repaid, Dividend, Loan left: illustrative, deferred)", "",
  "| Mth | Cal | Receipts | Paid out | of which GST | of which tax | Repaid | Dividend | Loan left | Cash | Held for GST/tax |", "|---|---|---|---|---|---|---|---|---|---|---|",
  f"| 0 | | | {mny(STARTUP)} | | | | | {mny(r[0]['loan'])} | {mny(r[0]['cash'])} | |"]
 for x in r[1:]:
     lines.append(f"| {x['m']} | {M[(x['m'] - 1) % 12]} | {mny(x['receipts'])} | {mny(x['paid_out'])} | {mny(x['gst_paid'])} | {mny(x['tax_paid'])} | {mny(x['repaid'])} | {mny(x['dividend'])} | {mny(x['loan'])} | {mny(x['cash'])} | {mny(x['held_back'])} |")
 s = lambda k: T4[k]
-lines += ["", "## Headline results", "", "| Case | Extra owner cash | Loan cleared | First dividend | Dividends to month 24 |", "|---|---|---|---|---|"]
-for k, lab in (("250000_floor0", "A$250,000, no floor"), ("336000_floor0", "A$336,000, no floor"), ("250000_floor50000", "A$250,000, A$50,000 floor"), ("336000_floor50000", "A$336,000, A$50,000 floor")):
+lines += ["", "## Headline results (repayment timing and floor: illustrative, not decided, deferred by Anthony)", "", "| Case | Extra owner cash | Loan cleared | First dividend | Dividends to month 24 |", "|---|---|---|---|---|"]
+for k, lab in (("250000_floor0", "A$250,000, no floor"), ("336000_floor0", "A$336,000, no floor"), ("250000_floor50000", "A$250,000, A$50,000 floor (illustrative, deferred)"), ("336000_floor50000", "A$336,000, A$50,000 floor (illustrative, deferred)")):
     v = s(k); lines.append(f"| {lab} | {mny(v['extra_owner_cash'])} | month {v['loan_cleared_month']} | month {v['first_dividend_month']} | {mny(v['dividends_24m'])} |")
 nr = R["T4_no_repayment_lowest"]
 lines += ["", f"**Lowest cash month: month 0**, right after the start-up spend. With no repayments, cash only rises after that (A$336,000 case: {mny(nr['336000']['cash_m24'])} by month 24). "
           f"With repayments, cash never drops below the money held back for GST, payroll tax and company tax (lowest {mny(T4['336000_floor0']['lowest_cash'])} in month 1). That money belongs to the tax office, not to GTT.", "",
           f"Why tax is held back: if the company paid out every spare dollar and did NOT hold back tax, the {mny(TAX_Y1)} year 1 tax bill in month 23 would leave a hole, and the owners would have to put {mny(R['T4_no_tax_provision_336000']['topup'])} back in.", "",
-          "**Buffer needed:** the only real gap is at month 0: A$1,198 on the A$250,000 case, none on A$336,000. Any floor you want to keep (for example A$50,000) is extra owner cash on the A$250,000 case. "
-          "The funding gap above joint savings of about A$200,000 is NOT IN REPO.", "",
+          "**Buffer:** the only real gap is at month 0: A$1,198 on the A$250,000 case, none on A$336,000. The A$50,000 cash floor is illustrative, not decided, deferred by Anthony.", "",
           "## QUESTIONS FOR ANTHONY", "",
-          "1. How is the gap above joint savings of about A$200,000 funded (A$51,198 for A$251,198; A$136,198 for A$336,198)? Options: (a) bank or equipment loan to the company; (b) another lender; (c) a smaller opening. Recommendation: decide with the accountant before signing a lease, then I re-run this file with the real terms.",
-          "2. Cash floor before repaying the loan? Options: (a) none; (b) A$50,000. Recommendation: (b).", "", "Regards.", "Theodore", ""]
+          "None. The cash floor and the shareholder loan repayment schedule are deferred by Anthony (Round 24); funding above joint savings is dropped for now.", "", "Regards.", "Theodore", ""]
 md = "\n".join(lines)
 open(os.path.join(HERE, "THEODORE-R23-CASHFLOW.md"), "w", encoding="utf-8").write(md)
 if __name__ == "__main__":

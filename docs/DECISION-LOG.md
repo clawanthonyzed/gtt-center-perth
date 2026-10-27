@@ -228,6 +228,16 @@ Headlines: Package 1 A$300 (2 x 30 min services) and Package 2 A$350 (2 services
 
 **Decision (Anthony):** Anthony is Owner and Director with administrator authority and 0 operational hours; a hired venue manager runs the floor. Midwife roster locked Mon to Sat (2 permanent part-time + 1 casual), midwife day is a lock, fixed daily wage, Path B clients never see a midwife. Meal breaks are rostered in for all staff, never worked through, staff choose stay or leave. Late rule sentence approved. A slot opening inside 48 hours goes to the waitlist and the public page at once. Welcome card and abnormal-results rules as in GTT-READ-FIRST.md. Three companies, Route B, no revenue ramp.
 
-**Operations effect:** written as locked one-line rules in docs/overhaul-2026-10-26/L18-r23/GRACE-R23-OPERATIONS-LOCK-IN.md and PART-2. docs/operations-manual.md updated (banner, opening time, cancellation and waitlist, late arrival, results line, overbooking, new section 9). Fair Work meal-break check done against MA000034, MA000005, MA000027, MA000002 (details in the lock-in file). Timesheet codes MB and MB-R and the 30 minute written agreement for Hair and Beauty staff are proposals awaiting Anthony.
+**Operations effect:** written as locked one-line rules in docs/overhaul-2026-10-26/L18-r23/GRACE-R23-OPERATIONS-LOCK-IN.md and PART-2. docs/operations-manual.md updated (banner, opening time, cancellation and waitlist, late arrival, results line, overbooking, new section 9). Fair Work meal-break check done against MA000034, MA000005, MA000027, MA000002 (details in the lock-in file). Timesheet codes MB and MB-R and the 30 minute written agreement for Hair and Beauty staff are proposals awaiting Anthony (approved in Round 24, next entry).
+
+## 2026-10-27: Round 24 operations locks and welcome card audit (Anthony, Round 24; recorded by Grace)
+
+**Decision (Anthony):** (1) Late rule split: blood draws have no wiggle room; consults have a 10 minute grace window. (2) Timesheet codes MB (meal break taken) and MB-R (called back, paid for time worked, full break restarts) approved. (3) A 30 minute break agreement goes into hair and beauty contracts only where the shift is long enough to be entitled to a break under the award. (4) Path B is not limited in any way. (5) Phlebotomists are employed by GTT Medical. The 07:00 to 13:00 shift length and paid hours stay deferred.
+
+**Welcome card audit:** every element ever specified was checked across the READ-FIRST file, the locked facts preamble, the operations manual, the Round 22 and Round 23 Grace files, Catherine R22 files and the server overnight draft. Result and restorations: docs/overhaul-2026-10-26/L19-r24/GRACE-R24-WELCOME-CARD-AUDIT.md. One master definition now sits in docs/operations-manual.md section 9; GTT-READ-FIRST.md and the preamble point to it.
+
+**Award results:** thresholds and clause numbers (MA000005 cl 16.1, MA000027 cl 15.1, MA000034 cl 14.1) in docs/overhaul-2026-10-26/L19-r24/GRACE-R24-BREAK-THRESHOLDS.md.
+
+**Not changed:** every calculator number and model output.
 
 **Not changed:** every calculator number and model output.
