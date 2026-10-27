@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R22-PART-3: Late and illness rules, venue manager decision guide
 
 Author: Grace. Date: 2026-10-26 (Round 22). DRAFT for Anthony. Nothing was sent. Tags: R repo, V verified source, E estimate, U unverified. Built from Reed R22 Parts 1 and 2 and Catherine R22B Part 4. Where Reed and Catherine differ, Catherine's privacy and law view is used.

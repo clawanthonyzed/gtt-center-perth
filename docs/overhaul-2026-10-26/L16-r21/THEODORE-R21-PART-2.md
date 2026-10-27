@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # Theodore R21, Part 2: the business in single segments
 
 Date: 2026-10-26. Source: [theodore_r21.py](theodore_r21.py), results in [theodore_r21_results.json](theodore_r21_results.json). Repo figures only, locked Round 20 case (473.94 clients a month, Package 1, ex GST). Excluded as you decided: interest, Package 2 take-up, standalone consults, card quotes, discounts. Tags: R repo, E estimate. Every cost line below is a line already in the accepted model.

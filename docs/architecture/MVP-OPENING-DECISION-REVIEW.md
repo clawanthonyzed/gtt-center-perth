@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # Founder Risk Acceptance Review — MVP Opening Decision
 
 **Phase:** Founder Risk Acceptance Review — decision review only. This document determines which MVP cost reductions from `docs/architecture/STARTUP-COST-OPTIMISATION.md` are acceptable, unacceptable, or need further validation, directly addressing `docs/VERIFICATION-TRACKER.md` item 48. **It does not modify `data/canonical/startup_costs.yml`, the funding requirement calculation, or the financial model.** Anthony still needs to sign off on the recommendation below before anything is wired into the canonical layer.

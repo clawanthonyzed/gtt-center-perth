@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R21-COMPUTER-FILING: computer filing instead of the paper folder
 
 Author: Grace. Date: 2026-10-26 (Round 21). DRAFT for Anthony. Nothing was sent. Tags: R repo, E estimate, U unverified. Privacy wording and duties: Catherine to confirm. This replaces GRACE-R20-PAPER-SAFETY-NET.md (the weekly folder) if Anthony agrees. It matches Catherine R20 section 4, which called the paper register the weakest part and recommended a scanned copy in the clinical record.

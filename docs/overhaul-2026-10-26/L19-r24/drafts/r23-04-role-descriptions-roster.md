@@ -15,11 +15,11 @@ Six role descriptions and a Monday to Saturday week 1 roster. Every role has a r
 
 ### Role descriptions
 1. Venue manager (hired, also an administrator). Opens at 06:30, Mon to Fri 06:30 to 15:00. Reception and welcome, prints the day list and A5 welcome cards the day before, checks Path B requests at the door, sees booking flags only, keeps the roster, calls the casual to cover leave and illness.
-2. Massage and beauty (4 people, 07:00 to 13:00). Gives the 30 minute services in the package, keeps the room spa-calm, follows the welcome card timetable.
-3. Nails (2 people, 07:00 to 13:00). Same service rules; works the nail station.
-4. Hair (2 people, 07:00 to 13:00). Same service rules; works the hair area.
+2. Massage and beauty (4 morning slots, from the one service pool, 07:00 to 13:00). Gives the 30 minute services in the package, keeps the room spa-calm, follows the welcome card timetable.
+3. Nails (2 morning slots, same pool, 07:00 to 13:00). Same service rules; works the nail station.
+4. Hair (2 morning slots, same pool, 07:00 to 13:00). Same service rules; works the hair area.
 5. Phlebotomist (2 people, employed by GTT Medical). Draws in pairs every 25 minutes from 07:00 to 10:30 (18 clients a morning), labels samples, packs them for the lab. Start time before 07:00: NOT IN REPO.
-6. PM casual (4 people, casual). Afternoon services. Start and finish times: NOT IN REPO.
+6. Afternoon service slots (4 slots, filled from the same pool as the morning). Afternoon services. Start and finish times: NOT IN REPO.
 Midwives (3 people, employed by GTT Medical Services): see the hiring pack.
 
 ### Week 1 roster
@@ -29,15 +29,15 @@ Midwives (3 people, employed by GTT Medical Services): see the hiring pack.
 | Midwife A (permanent part-time) | 08:00 to 16:00 | 08:00 to 16:00 | 08:00 to 16:00 | off | off | off | 30 min rostered |
 | Midwife B (permanent part-time) | off | off | off | 08:00 to 16:00 | 08:00 to 16:00 | 08:00 to 16:00 | 30 min rostered |
 | Midwife C (casual) | cover | cover | cover | cover | cover | cover | 30 min rostered |
-| 8 morning service staff | 07:00 to 13:00 | 07:00 to 13:00 | 07:00 to 13:00 | 07:00 to 13:00 | 07:00 to 13:00 | 07:00 to 13:00 | 30 min rostered |
+| Pool: 8 morning slots | 07:00 to 13:00 | 07:00 to 13:00 | 07:00 to 13:00 | 07:00 to 13:00 | 07:00 to 13:00 | 07:00 to 13:00 | 30 min rostered |
 | 2 phlebotomists | from 07:00 draw | same | same | same | same | same | 30 min rostered |
-| 4 PM casuals | NOT IN REPO | NOT IN REPO | NOT IN REPO | NOT IN REPO | NOT IN REPO | NOT IN REPO | 30 min rostered |
+| Pool: 4 afternoon slots | NOT IN REPO | NOT IN REPO | NOT IN REPO | NOT IN REPO | NOT IN REPO | NOT IN REPO | 30 min rostered |
 
 Week 2: Midwife A and B swap blocks. Midwife C covers leave and illness only.
 
 ### Meal break rules (all roles)
 - The break is rostered in. Nobody works through it. Staff choose to stay at GTT (fully off duty) or go off site. They do not choose the time.
-- Timesheet codes: MB = meal break taken. MB-R = called back from the break (paid). On call is paid time.
+- Timesheet codes: MB = meal break taken. MB-R = called back from the break (paid; never used for midwives, who are not recalled). On call is paid time. Service staff also get one paid 10 minute rest break.
 - Hair and beauty contracts: a 30 minute break agreement only where the person works enough hours to be entitled to a break under the award (lawyer to check).
 - Break times on the roster: NOT IN REPO, the venue manager builds them later.
 

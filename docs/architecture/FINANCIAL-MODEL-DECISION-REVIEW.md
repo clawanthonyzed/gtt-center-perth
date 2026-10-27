@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # Financial Model Decision Review
 
 **Phase:** Financial Model Decision Review — analytical review only. No canonical YAML, financial formula, revenue methodology, cost methodology, or scenario was modified in this phase. No new assumption was introduced. Neither Table 1 nor Table 2 is chosen as "correct." No open tracker item is resolved without new evidence.

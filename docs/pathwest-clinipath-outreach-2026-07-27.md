@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # PathWest + Clinipath Outreach — 2026-07-27
 
 **Prepared by:** Reed (Partnerships Coordinator), at Anthony's direct instruction

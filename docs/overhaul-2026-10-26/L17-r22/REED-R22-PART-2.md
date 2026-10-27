@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # REED R22 Part 2: Illness and complications list (Job 2)
 
 Reed, commercial consultant. Researched 2026-10-26. Tags: R repo, V verified (URL opened 2026-10-26), E estimate/recommendation, U unverified. Catherine to confirm the privacy and proof limits.

@@ -28,7 +28,7 @@ Plain English answers for clients to read before booking. Fasting hours and the 
 
 **8. Do I need to fast?** Fasting hours: NOT IN REPO. We will give you the lab's exact instructions when you book.
 
-**9. When should I arrive?** Please arrive at least 10 minutes before your appointment, because late means from your appointment time onwards and we cannot fit a first blood draw in after that. We have no wiggle room for draws. For a consult there is a 10 minute grace window: if you are up to 10 minutes late you are still seen for the time left.
+**9. When should I arrive?** Please arrive at least 10 minutes before your appointment, because late means from your appointment time onwards and we cannot fit a first blood draw in after that. We have no wiggle room for draws. If you are running late for your midwife consult, we will hold your appointment for up to 10 minutes after your booked time, and your consult will still finish at its booked end time.
 
 **10. What are the 3 draws?** One blood draw to start, then two more after set waits. A service sits between draws. The gaps are set by the lab: NOT IN REPO.
 

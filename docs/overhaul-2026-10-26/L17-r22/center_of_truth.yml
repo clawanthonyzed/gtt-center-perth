@@ -136,6 +136,7 @@ payroll_tax_grouping:
   taxable_after_deduction: 293244.1
   tax_year: 16128.43
   tax_month: 1344.04
+  designated_group_employer: 'GTT Lounge (approved R25): Lounge claims the payroll tax group deduction'
   grouped_because: 'common control: Holdings owns 100% of Medical and Lounge (related bodies corporate); one deductible amount claimed by the designated group employer'
   source: wa.gov.au payroll tax employer guide, calculation and grouping pages, read 2026-10-27
 gst_group_and_consolidation: both established in Year 1 (locked R24); steps in L19-r24/THEODORE-R24-PART-1.md

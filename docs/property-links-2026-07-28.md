@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Property Candidates, Verification Status Tracked
 
 > **TERMINOLOGY CORRECTED 2026-07-28 (later same day):** Anthony's direct feedback — do not call a property a "lead" until it is actually verified (real listing URL, current price, current availability, all three). Every property below is now labelled **VERIFIED** (all three confirmed) or **UNVERIFIED CANDIDATE** (found, real URL exists, but price/availability/size not yet fully confirmed) — "lead" is retired as a term in this document. Anthony is also searching in parallel — no risk of duplicated effort, more coverage from this agent is useful.

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth: Launch Readiness Tracker (DRAFT v0.4, 2026-10-11, cadence adopted)
 
 **DRAFT for Anthony's sign-off. Nothing sent.** v0.4, 2026-10-11 (financials synced to Theodore's model v0.4; T10 resolved) | AUD | ✅ done | 🟡 TO CONFIRM | 🔴 blocked | ⏸ on hold | ⚪ not started

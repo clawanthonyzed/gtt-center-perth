@@ -15,7 +15,7 @@ Sixteen short lines for the booking page. Fasting hours are NOT IN REPO because 
 1. Before your test: please fast for {fasting_hours} hours. The lab sets this. Drink only what the lab allows.
 2. Please arrive at least 10 minutes before your appointment, because late means from your appointment time onwards and we cannot fit a first blood draw in after that.
 3. We have no wiggle room for blood draws. If you are late for your test, we cannot fit it in.
-4. Your midwife consult has a 10 minute grace window. If you are up to 10 minutes late, we still see you for the time left in your consult.
+4. If you are running late for your midwife consult, we will hold your appointment for up to 10 minutes after your booked time, and your consult will still finish at its booked end time.
 5. If you are unwell, tell us as early as you can. You do not need to tell us what is wrong. We will help you rebook.
 6. You may change your booking up to 48 hours before it. We send reminders.
 7. If you bring a request from outside GTT (Path B), Medicare pays no benefit for a test done at GTT. You pay GTT in full. (Lawyer to check this notice.)

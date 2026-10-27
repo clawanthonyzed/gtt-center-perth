@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # Full Service Catalogue — A-la-Carte, AM Packages, PM Packages
 
 **Date:** 2026-08-16 | **Purpose:** A2/F1/F10/F11 combined — a complete, specific service catalogue per professional type, grounded in real Perth market research (comparable businesses, 2026-08-16), feeding marketing, pricing, staffing, booking, AM gap-fill, and PM services. Not a vague list — every category below cites at least one real, named, currently-trading Perth business and real advertised prices.

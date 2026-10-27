@@ -241,3 +241,15 @@ Headlines: Package 1 A$300 (2 x 30 min services) and Package 2 A$350 (2 services
 **Not changed:** every calculator number and model output.
 
 **Not changed:** every calculator number and model output.
+
+## 2026-10-27 Round 25 (Grace): phlebotomist shift, breaks, fasting, room sizes
+
+**Decisions (Anthony):** morning service staff and afternoon casuals are one pool on the books, rostered to either shift (8 morning slots, 4 afternoon slots unchanged). 30 minute lunch where the award gives a break, rostered adaptively. Paid 10 minute rest for service staff. Midwives are never recalled from a break (MB-R does not apply to them; MB and MB-R stay for others). Phlebotomist starts 07:00 and finishes when the last draw and paperwork are done.
+
+**Derived (Grace, Theodore cost-checked):** last Draw 3 ends 12:25, plus 30 minute close-down (E, from operations manual section 1) = 12:55, shift 5 h 55 m, inside the costed 07:00 to 13:00. The old 5 hour figure is wrong.
+
+**Files:** L20-r25/GRACE-R25-PHLEBOTOMIST.md, GRACE-R25-BREAKS-ROSTER.md (and PART-2), GRACE-R25-FASTING.md, GRACE-R25-ROOM-SIZES.md. Edits: GTT-READ-FIRST.md (People and hours), operations-manual.md section 9, L19-r24 drafts r23-04, r23-19, r23-20.
+
+**Open:** fasting wording (10 to 12 hours water only, lab confirms); services during the test vs the labs' "remain seated at the centre" rule; courier cutoff; premises about 290 to 300 m2 vs the 180 to 220 m2 search; consult room size and afternoon hours NOT IN REPO.
+
+**Not changed:** every calculator number and model output.

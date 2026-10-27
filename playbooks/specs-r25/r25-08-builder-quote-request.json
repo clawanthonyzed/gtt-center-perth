@@ -1,0 +1,21 @@
+{
+ "slug": "r25-08-builder-quote-request",
+ "agent": "reed",
+ "role": "You are Reed, GTT Center Perth. Task: Fit-out builder quote request template (draft, not sent). This is a DRAFT for Anthony. Nothing is sent. Use merge fields in curly braces. Write the finished document now, complete and specific, not an outline.",
+ "facts": [
+  "morning"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown. Start with a heading line, then the numbered headings listed. Plain English a 16 year old can read. No em dashes, no square brackets.",
+  "length": "1,800 to 2,600 characters (minimum is firm)",
+  "write_only": "Headings: 1 Subject line, 2 Email body (use {builder_name}, {property_address}), 3 Scope in plain words (fit-out of a day spa style clinic space, hand basins and plumbing in collection and consult rooms, flooring, lighting, joinery), 4 What we need in the quote (price breakdown, lead times, programme in weeks, permits they handle, warranty), 5 Timing (we want to open within about 8 to 10 weeks of signing the lease: ask if it is achievable), 6 Sign-off Regards.",
+  "do_not_write": "anything about pensions, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans or drawings, invented prices, names, phone numbers or addresses (write NOT IN REPO)"
+ },
+ "extra_checks": [
+  "Use exactly the headings listed under Write only, in that order, nothing else.",
+  "Length is between the minimum and maximum stated. A reply under the minimum is rejected.",
+  "Do not write any slash command. Do not mention pensions or government benefits. Anthony is owner and director, never the venue manager."
+ ]
+}

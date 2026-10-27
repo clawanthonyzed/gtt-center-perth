@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Financial Infrastructure Setup
 ## Pre-Launch Checklist
 ### Version 1.0 | June 2026 | Owner: Bruno (Finance Agent) + Venue Manager (new hire, not yet in place)

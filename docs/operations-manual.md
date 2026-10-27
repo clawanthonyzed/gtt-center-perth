@@ -417,6 +417,9 @@ Draw alert: set phone timer 5 min before each draw window. Services do NOT get i
 ## 9. ROUND 23 LOCKED RULES (staff and venue manager)
 
 - **Midwives:** 2 permanent part-time + 1 casual, Mon to Sat, fortnight block Mon to Wed / Thu to Sat, swap. The midwife day is a lock and the wage is fixed. Path B is NOT limited (Round 24): a Path B client has no consult inside her package, and she can still book a standalone midwife appointment because the midwife is on site every day. Phlebotomists are employed by GTT Medical (Round 24); midwives are employed by GTT Medical Services.
+- **Staff pool (Round 25):** morning service staff and afternoon casuals are ONE pool on the books, rostered to either shift. Slots per shift are unchanged: 8 morning, 4 afternoon.
+- **Rest breaks (Round 25):** every service staff member gets one paid 10 minute rest break (counts as time worked). Roster and rules: L20-r25/GRACE-R25-BREAKS-ROSTER.md.
+- **Midwives (Round 25):** never recalled from a break. MB-R does not apply to midwives; it stays for all other staff.
 - **Meal breaks:** rostered in for all staff (roster built later), never worked through. Staff choose: stay (fully off duty, not on call, free to leave) or go off site. The roster sets the time. Called back: paid for the time worked, then the full break restarts. Timesheet code MB (taken) or MB-R (called back), recorded by the venue manager (steps below). Fair Work check and award sources: L18-r23/GRACE-R23-OPERATIONS-LOCK-IN.md, updated with clause numbers in L19-r24/GRACE-R24-BREAK-THRESHOLDS.md.
 - **Late rule (split, LOCKED Round 24):** blood draws have no wiggle room; consults have a 10 minute grace window. Steps below.
 - **Welcome card:** one master definition, see "Welcome card master definition" below. Every other file points here.
@@ -443,7 +446,7 @@ Consults (grace window of 10 minutes). A client up to 10 minutes late is still s
 | MB | Meal break taken in full | One code on the day's timesheet at the end of the shift | Nothing. The break is unpaid and is not time worked |
 | MB-R | Called back from the meal break | Code, the minute she was called back, the minute she finished, who called her and why (no client or health detail) | The minutes worked are PAID. The full break starts again once the job is done |
 
-Called back is a pay event, not a favour: on the Nurses Award a recalled midwife is paid overtime until the balance of the break is taken (cl 14.1(c), V). The pay rate for MB-R for the other awards is NOT IN REPO: payroll to confirm. A staff member who stays at GTT must be fully off duty or the break is paid time. The venue manager checks every timesheet for a code and reviews MB-R counts weekly (a pattern means the roster is wrong).
+Called back is a pay event, not a favour. Midwives are never recalled (Round 25), so MB-R is for service staff, phlebotomists and the venue manager only. The pay rate for MB-R for the other awards is NOT IN REPO: payroll to confirm. A staff member who stays at GTT must be fully off duty or the break is paid time. The venue manager checks every timesheet for a code and reviews MB-R counts weekly (a pattern means the roster is wrong).
 
 ### Break agreement for hair and beauty contracts (LOCKED Round 24)
 

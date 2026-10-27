@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Deep Research Findings Report
 
 **Created:** 2026-09-25 | **Author:** Grace (Operations Manager)

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # PathWest GTT Patient Instructions — Start Time and Fasting Requirements
 
 **Date:** 2026-07-30 (superseded by a real, direct WDP reply — see the section below the PathWest sourcing)

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth: Executive Pitch Deck (DRAFT v0.6, 2026-10-17)
 
 **Status:** DRAFT for Anthony's approval. Nothing here has been sent or published.

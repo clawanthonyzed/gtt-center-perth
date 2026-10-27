@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R20-CHECKOUT-FLOW: booking screens, receipt text, fasting warning, reminders
 
 Author: Grace (Operations Manager, GTT Center Perth). Date: 2026-10-26 (Round 20). **DRAFT for Anthony. Not approved. Nothing was sent or published.** Written for a web developer. Words only, no drawings. The business name is on hold, so the text says "GTT Center Perth" (working name).

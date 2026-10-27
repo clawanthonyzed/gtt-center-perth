@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R22B PART 1: verdicts, and Anthony as venue manager (job 1, the law)
 
 Author: Catherine (Legal Consultant, GTT Center Perth). Date: 2026-10-26 (Round 22, Window 6). DRAFT for Anthony. Nothing was sent or published. Plain English legal view, not formal legal advice. **Lawyer to check** or **DVA to confirm** marks points a human must confirm.

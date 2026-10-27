@@ -1104,5 +1104,116 @@
    "medical_wage_share_E": 0.2391,
    "lounge_wage_share_E": 0.7609
   }
+ },
+ "R25": {
+  "designated_group_employer": "GTT Lounge (approved by Anthony, R25)",
+  "wages_month_loaded": {
+   "medical": {
+    "midwives": 12000.38,
+    "phlebotomists": 13364.515050948123
+   },
+   "lounge": {
+    "am_service_staff": 57781.343854058745,
+    "pm_service_staff": 14445.290483511211,
+    "venue_manager_0630_to_1500": 8504.76
+   },
+   "holdings": {}
+  },
+  "wages_month_total": {
+   "medical": 25364.9,
+   "lounge": 80731.39,
+   "holdings": 0
+  },
+  "wage_share": {
+   "medical": 0.2391,
+   "lounge": 0.7609,
+   "holdings": 0.0
+  },
+  "payroll_tax_wages_year_E": {
+   "medical": 299833.86,
+   "lounge": 954311.03,
+   "holdings": 0.0
+  },
+  "deductible_amount": 960900.79,
+  "lounge_wages_minus_deduction_E": -6589.76,
+  "payroll_tax_year_any_dge": 16128.43,
+  "moves": [
+   {
+    "label": "Locked split (phlebotomists in Medical, shared block with Lounge)",
+    "moved_month": 0.0,
+    "medical_pbt": 32295.25,
+    "lounge_pbt": -5663.28,
+    "group_pbt": 26631.97,
+    "tax_consolidated": 6657.99,
+    "tax_if_each_taxed_alone": 8073.81,
+    "group_after_tax": 19973.98,
+    "revenue_change": 0.0,
+    "gst_change": 0.0,
+    "payroll_tax_change": 0.0
+   },
+   {
+    "label": "Venue manager moved to Medical",
+    "moved_month": 8504.76,
+    "medical_pbt": 23790.49,
+    "lounge_pbt": 2841.48,
+    "group_pbt": 26631.97,
+    "tax_consolidated": 6657.99,
+    "tax_if_each_taxed_alone": 6657.99,
+    "group_after_tax": 19973.98,
+    "revenue_change": 0.0,
+    "gst_change": 0.0,
+    "payroll_tax_change": 0.0
+   },
+   {
+    "label": "Whole shared block moved to Medical",
+    "moved_month": 23783.23,
+    "medical_pbt": 8512.02,
+    "lounge_pbt": 18119.95,
+    "group_pbt": 26631.97,
+    "tax_consolidated": 6657.99,
+    "tax_if_each_taxed_alone": 6657.99,
+    "group_after_tax": 19973.98,
+    "revenue_change": 0.0,
+    "gst_change": 0.0,
+    "payroll_tax_change": 0.0
+   },
+   {
+    "label": "All service staff payroll moved to Medical",
+    "moved_month": 72226.63,
+    "medical_pbt": -39931.38,
+    "lounge_pbt": 66563.35,
+    "group_pbt": 26631.97,
+    "tax_consolidated": 6657.99,
+    "tax_if_each_taxed_alone": 16640.84,
+    "group_after_tax": 19973.98,
+    "revenue_change": 0.0,
+    "gst_change": 0.0,
+    "payroll_tax_change": 0.0
+   }
+  ],
+  "phlebotomist": {
+   "last_first_draw": "10:20",
+   "last_draw3_end": "12:25",
+   "paperwork_min": 30,
+   "derived_finish": "12:55",
+   "costed": "07:00-13:00 (6 h)",
+   "derived_hours": 5.917,
+   "slack_min": 5,
+   "matches": true,
+   "if_draw3_runs_10_min_late": {
+    "minutes_a_day_each": 5,
+    "wages_month": 163.25,
+    "loaded_month": 185.62,
+    "payroll_tax_month_E": 11.6,
+    "total_month": 197.22
+   },
+   "if_paid_to_1255_only": {
+    "minutes_a_day_each": -5,
+    "wages_month": -163.25,
+    "loaded_month": -185.62,
+    "payroll_tax_month_E": -11.6,
+    "total_month": -197.22
+   }
+  }
  }
 }

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R22B PART 5: Path B notice and receipt itemisation (job 4)
 
 DRAFT, 2026-10-26. Tags as in PART-1. Reviews [THEODORE-R22-PART-2.md](THEODORE-R22-PART-2.md) section 1 and [GRACE-R22-PART-7.md](GRACE-R22-PART-7.md).

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R21 PART 4: computer filing (job 4) and midwife meal breaks (job 5)
 
 DRAFT, 2026-10-26. Tags as in PART-1.

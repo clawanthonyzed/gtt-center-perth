@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Competitor / Analogue Database
 
 **Created:** 2026-09-25 | **Research completed by:** Grace (Operations Manager), external-research mission

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R21-BOOKING-FLOW-PART-2: Path B (package with GTT midwife consult) and the receipts
 
 Author: Grace. Date: 2026-10-26 (Round 21). DRAFT for Anthony. Nothing was sent or published. Part 1 has Step 1 and Path A. Tags as in Part 1. Quoted text is client-facing. Price and rebate wording: Catherine to confirm.

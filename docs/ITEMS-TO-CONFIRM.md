@@ -13,7 +13,7 @@ Status key: BLOCKING (the venture cannot move past it) | OPEN | IN PROGRESS | WA
 | ITC-03 | Planning use at the chosen address: health, beauty, small refreshment counter, pathology collection | Local council, planning consultant | Lease conditions, fit-out | OPEN |
 | ITC-04 | Lease permits sub-licence of a collection room to a pathology provider, and a change of provider (site brief section 4) | Leasing lawyer | Lease signing | OPEN |
 | ITC-05 | Tenant entity (trust, new company or Cudan Studio) | Accountant, solicitor | Lease, ABN, GST, insurance | OPEN |
-| ITC-06 | Venue validation of the A$251,198 startup budget (tracker 49) | Anthony, Venue Manager | Final budget | OPEN |
+| ITC-06 | Venue validation of the A$251,198 startup budget (tracker 49) | Anthony (owner) and the hired venue manager | Final budget | OPEN |
 
 ## B. Pathology partner
 

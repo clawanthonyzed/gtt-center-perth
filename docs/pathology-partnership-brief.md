@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Pathology Partnership Brief
 
 **Version:** 1.0 | **Date:** 2026-07-01 (Empire Day 71)

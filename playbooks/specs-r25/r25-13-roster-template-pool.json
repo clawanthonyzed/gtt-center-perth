@@ -1,0 +1,23 @@
+{
+ "slug": "r25-13-roster-template-pool",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Task: Weekly roster template for the unified service staff pool. This is a DRAFT for Anthony. Nothing is sent. Use merge fields in curly braces. Write the finished document now, complete and specific, not an outline.",
+ "facts": [
+  "people",
+  "mealbreak",
+  "morning"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown. Start with a heading line, then the numbered headings listed. Plain English a 16 year old can read. No em dashes, no square brackets.",
+  "length": "1,800 to 2,600 characters (minimum is firm)",
+  "write_only": "Headings: 1 How to use this template, 2 Weekly grid Monday to Saturday with columns Staff, Shift (Morning 07:00 to 13:00 or Afternoon), Lunch 30 minutes, Rest 10 minutes, Notes; give 8 morning rows and 4 afternoon rows as blank fields, 3 Rules (one pool, any person may be rostered to either shift, lunch where the award gives a break, paid 10 minute rest break, never roster a midwife recall), 4 Timesheet codes MB and MB-R.",
+  "do_not_write": "anything about pensions, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans or drawings, invented prices, names, phone numbers or addresses (write NOT IN REPO)"
+ },
+ "extra_checks": [
+  "Use exactly the headings listed under Write only, in that order, nothing else.",
+  "Length is between the minimum and maximum stated. A reply under the minimum is rejected.",
+  "Do not write any slash command. Do not mention pensions or government benefits. Anthony is owner and director, never the venue manager."
+ ]
+}

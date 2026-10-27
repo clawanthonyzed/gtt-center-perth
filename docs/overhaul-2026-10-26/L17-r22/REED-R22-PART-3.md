@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # REED R22 Part 3: What normal midwife bookings look like after 10:30 (Job 3)
 
 Reed, commercial consultant. Researched 2026-10-26. Tags: R repo, V verified (URL opened 2026-10-26), E estimate, U unverified. Standalone consults are upside only: no money is modelled here.

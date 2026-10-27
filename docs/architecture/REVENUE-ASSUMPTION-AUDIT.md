@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Revenue Assumption Audit
 
 **Purpose:** document every revenue assumption found this phase, where it lives in `data/canonical/revenue_assumptions.yml`, and — the phase's central question — whether the repo's own historical monthly revenue totals (specifically +A$63,028.75/month, Table 1's headline Net P&L) can actually be reconstructed from canonical assumptions alone. This document does not force a reconciliation where one doesn't exist.

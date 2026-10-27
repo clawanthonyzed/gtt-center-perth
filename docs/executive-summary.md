@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Executive Summary
 
 **Version:** 2.0 | **Date:** 2026-07-19 (full currency rewrite — see changelog)

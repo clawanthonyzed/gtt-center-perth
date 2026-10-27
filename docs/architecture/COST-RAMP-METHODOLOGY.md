@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # Cost Ramp Methodology — Month 1-5+
 
 **Date:** 2026-08-09 | **Type:** bounded cost-side data-model component, the counterpart to `docs/architecture/REVENUE-RAMP-METHODOLOGY.md`. **Not** the Master Financial Model, P&L, cash-flow forecast, break-even, Excel, or PDF — cost side only. No Net P&L, EBITDA, cash balance, opening funding requirement, NPV, or IRR is calculated anywhere in this document or its supporting code.

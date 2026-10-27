@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # Revenue Ramp Methodology — Month 1-5+
 
 **Date:** 2026-08-09 | **Type:** first bounded financial-model component, built on top of `docs/architecture/CANONICAL-REVENUE-METHODOLOGY.md` (adopted the same day, prior phase). **Not** the Master Financial Model, P&L, cash-flow forecast, Excel, or PDF — revenue ramp only.

@@ -29,7 +29,7 @@ Two tables for the hired venue manager. Opening from 06:30, closing at the end o
 |---|---|
 | Rostered | Every staff member has a rostered meal break. Nobody works through it. |
 | Choice | Staff stay at GTT fully off duty, or leave. On call is paid time. |
-| Timesheet | MB = meal break taken. MB-R = called back from meal break. |
+| Timesheet | MB = meal break taken. MB-R = called back from meal break (never for midwives). Service staff also have a paid 10 minute rest break. |
 
 **Closing, end of shift (15:00)**
 | Step | Action | Done |

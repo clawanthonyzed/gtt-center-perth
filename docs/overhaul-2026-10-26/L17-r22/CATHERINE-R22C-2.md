@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE-R22C-2: Health Insurance Act 1973 s 23DNG(1A) "minimum benefit amount"
 
 Author: Catherine (legal library). Date: 2026-10-26 (Round 22). Tags: V verified source, R repo, E estimate, U unverified. General knowledge from public law, not legal advice: accountant or lawyer to check.

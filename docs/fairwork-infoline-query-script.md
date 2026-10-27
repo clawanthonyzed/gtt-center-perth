@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # Fair Work Infoline Query Script — Saturday Ordinary-Hours Question (MA000027)
 
 **Compiled:** 2026-08-15 | **Status: PARTIALLY RESOLVED 2026-08-23.** The general question (does MA000027 have a clause treating Saturday hours as ordinary for pathology practices) is answered: yes, clause 13.2(b)(ii), confirmed via a direct Fair Work Ombudsman award-library fetch, see `docs/hr-framework.md` §"Saturday Ordinary-Hours Question: RESOLVED 2026-08-23, Primary-Sourced". The call below is still worth making, but for the narrower remaining question in the updated script, not the original one.

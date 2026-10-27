@@ -1,0 +1,22 @@
+{
+ "slug": "r25-09-equipment-quote-request",
+ "agent": "reed",
+ "role": "You are Reed, GTT Center Perth. Task: Equipment supplier quote request template (draft, not sent). This is a DRAFT for Anthony. Nothing is sent. Use merge fields in curly braces. Write the finished document now, complete and specific, not an outline.",
+ "facts": [
+  "morning",
+  "split-a"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown. Start with a heading line, then the numbered headings listed. Plain English a 16 year old can read. No em dashes, no square brackets.",
+  "length": "1,800 to 2,600 characters (minimum is firm)",
+  "write_only": "Headings: 1 Subject line, 2 Email body (use {supplier_name}), 3 Equipment list as a table: 2 phlebotomy chairs, 1 consult room examination couch, sharps bins, specimen storage fridge, centrifuge NOT NEEDED unless the lab says so, lounge recliners for about 18 clients, 4 Questions (price, lead time in weeks, delivery to Perth, warranty, installation), 5 Sign-off Regards.",
+  "do_not_write": "anything about pensions, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans or drawings, invented prices, names, phone numbers or addresses (write NOT IN REPO)"
+ },
+ "extra_checks": [
+  "Use exactly the headings listed under Write only, in that order, nothing else.",
+  "Length is between the minimum and maximum stated. A reply under the minimum is rejected.",
+  "Do not write any slash command. Do not mention pensions or government benefits. Anthony is owner and director, never the venue manager."
+ ]
+}

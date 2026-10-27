@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Website Specification
 ## Version 1.0 | June 2026
 ## Owner: Poppy (Marketing) | Developer required by Week 7

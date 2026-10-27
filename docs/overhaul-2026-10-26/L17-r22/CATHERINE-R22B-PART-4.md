@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R22B PART 4: illness, complications and the late rule (job 3)
 
 DRAFT, 2026-10-26. Tags as in PART-1. Reviews Reed's decision table ([REED-R22-PART-1.md](REED-R22-PART-1.md), [REED-R22-PART-2.md](REED-R22-PART-2.md)).

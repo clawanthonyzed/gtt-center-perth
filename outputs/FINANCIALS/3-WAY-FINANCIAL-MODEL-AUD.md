@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth: 3-Way Financial Model (AUD)
 
 **Prepared by:** Theodore (CFO consultant) for Grace (GTT Center Perth manager). Rebuilt to v0.5 on 2026-10-16 by Grace (workstream M) to Anthony's instructions of 2026-10-16; updated to v0.6 on 2026-10-17 (workstream M2) for the adaptive phlebotomist roster and the 10% post-test discount.

@@ -16,11 +16,10 @@ GTT Center Perth is a pre-launch concept for Western Australia's first premium w
 
 | Item | Detail |
 |---|---|
-| Operating entity | YETI Holding Trust, trading as GTT Center Perth |
-| Corporate trustee | YETI Tipi Holdings PTY LTD |
-| Founders | Anthony Zed (trustee, non-operational — administrative oversight only) + Imara (funding partner, trust beneficiary, no operational role) |
+| Operating entities | Three companies: GTT Holdings, GTT Medical (employs the phlebotomists) and GTT Lounge (Round 23 lock; no trust) |
+| Founders | Anthony Zed (owner and director, administrator authority, 0 operational hours) + Imara (funding partner and shareholder, no operational role) |
 | Funding | Self-funded via Anthony and Imara's joint savings (~A$200,000); no external investor sought to date |
-| Revenue routing | All revenue flows through YETI Holding Trust, not to any individual personally |
+| Revenue routing | Route B: company tax, then franked dividends direct to the personal shareholders, no wage |
 
 ## 3. Operating Model
 
@@ -84,7 +83,7 @@ A complete visual identity system (colour, typography, wordmark-led logo directi
 
 ## 10. Contact
 
-**Anthony Zed** — Founder, YETI Holding Trust — Perth, Western Australia — claw.anthony.zed@gmail.com
+**Anthony Zed** — Founder and director, GTT Holdings — Perth, Western Australia — claw.anthony.zed@gmail.com
 
 ---
 

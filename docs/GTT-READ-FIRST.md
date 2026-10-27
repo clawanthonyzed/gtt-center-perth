@@ -1,4 +1,4 @@
-# GTT READ FIRST: every locked decision in one place (updated 2026-10-27, Round 24)
+# GTT READ FIRST: every locked decision in one place (updated 2026-10-27, Round 25)
 
 Every agent, consultant and overnight worker reads this file AND docs/FINANCIAL-CENTER-OF-TRUTH.md before writing a word. If a source file disagrees with this file, this file wins and the source file is fixed the same day. Run `python tools/factcheck_locked_facts.py <your file>` before handing anything over.
 
@@ -23,8 +23,20 @@ Every agent, consultant and overnight worker reads this file AND docs/FINANCIAL-
 - Timesheet codes: MB = meal break taken, MB-R = called back from meal break.
 - 30 minute break agreement in hair and beauty contracts: ONLY where the employee works enough hours to be entitled to a break under the award.
 - Late rule SPLIT: no wiggle room for blood draws. Consults have a 10 minute grace window.
-- Government emails: HOLD. Send nothing to AskMBS (ENQ-069430 was an automated reply; wait for a real person). Services Australia needs no reply. The compliance team (corporate.compliance@health.gov.au) gets only the exact generic introduction email first, never technical questions first.
+- Government emails: HOLD. Send nothing to AskMBS (ENQ-069430 was an automated reply; wait for a real person). Services Australia needs no reply. The compliance team was already sent the generic introduction on 26 October (see Round 25 locks); no technical questions until a real person replies.
 - DEFERRED or DROPPED (do not ask again): funding above joint savings (examine later); 07:00 to 13:00 shift length and paid hours (review later); cash floor and shareholder loan repayment schedule (only Anthony and his partner are shareholders; decide later).
+
+## Round 25 locks (Anthony, 2026-10-27; do not raise again unless he does)
+- GOVERNMENT CONTACT RECORD (corrected): on 26 October Anthony emailed ALL FOUR with the same generic introduction: Corporate Compliance (corporate.compliance@health.gov.au), LARU (WA licensing unit), Pathology Registration (Services Australia), and AskMBS. Replies so far: Services Australia (reading list, no contact) and AskMBS (automated, ENQ-069430). Awaiting a real person from all four. Draft D is RETIRED. Send nothing more until a real person replies.
+- Consult late grace (10 minutes) is formally part of the clinical and booking terms. Blood draws: no wiggle room.
+- Lab request validity window: 8 weeks (locked).
+- Staff: morning service staff and afternoon casuals are ONE pool on the books, rostered to either shift. Stop separating them.
+- Meal and rest breaks: 30 minute lunch for hair, beauty, nails, massage and casual staff where the award gives them a break, rostered adaptively so draws and services stay covered. Service staff get a paid 10 minute rest break. Midwives are NEVER recalled from a break (MB-R does not apply to midwives).
+- Phlebotomist shift: starts 07:00 and finishes when the last blood draw and its paperwork are complete (derived from the repo scheduler; see Round 25 Grace file).
+- GTT Lounge claims the payroll tax group deduction (approved). The GST group and tax consolidation sequence is approved and locked.
+- Normal results: the client is notified by text and email. What the notice may contain and who may tell her is in the Round 25 Catherine file.
+- Cleaned up: the 23 outdated draft tasks were cancelled on the Tasks board. The free overnight pipeline keeps running and is NOT to be stopped.
+- First aid course for all staff (a GTT midwife may run it); police check requirements by staff category are in the Round 25 Catherine file.
 
 ## Prices and money (Structure B: private all-inclusive, the client claims her own rebate)
 - Path A: advertised A$320 (Package 1) and A$370 (Package 2) including the A$27.85 lab fee. GTT charges A$292.15 / A$342.15 = consult A$130.00 (GST-free) + lounge and service A$162.15 / A$212.15 (GST inside). The lab bills the client after it receives the paperwork and samples. GTT never touches the lab money and passes no booking details to the lab.
@@ -35,7 +47,7 @@ Every agent, consultant and overnight worker reads this file AND docs/FINANCIAL-
 
 ## People and hours
 - Venue manager starts 06:30 (Mon to Fri 06:30 to 15:00) to open; 07:00 is the FIRST DRAW, not the venue manager start. No hosts. Anthony is NOT the venue manager (locked Round 23). See "Founder role" below.  <!-- factcheck:ok -->
-- 8 AM service staff 07:00 to 13:00, 2 phlebotomists (employed by GTT Medical), 4 casual PM service staff. 18 clients a morning, Monday to Saturday, draws 07:00 to 10:30 in pairs every 25 minutes. Late rule below.
+- One pool of service staff on the books, rostered to either shift: 8 morning slots (07:00 to 13:00) and 4 afternoon slots, 2 phlebotomists (employed by GTT Medical; 07:00 start, planned finish 12:55, roster 07:00 to 13:00). 18 clients a morning, Monday to Saturday, draws 07:00 to 10:30 in pairs every 25 minutes. Late rule below.
 - Midwives work 08:00 to 16:00 (8 h on site, 30 minute meal break). Midwife roster is LOCKED Monday to Saturday: 2 permanent part-time (fortnightly block Mon-Wed / Thu-Sat, swap) + 1 casual. Midwife day is a lock. The midwife is paid a fixed daily wage whether or not clients book; do NOT include standalone midwife appointments in financials; capacity limits do not matter. Midwives are hired with Medicare participating status, or we plan how they get it. First consult 08:15; consults run in 25 minute blocks from 08:15 to 10:30 to match the draws; after 10:30 the midwife takes all bookings a normal midwife would take. Standalone consults are upside only.
 
 ## Booking and rules

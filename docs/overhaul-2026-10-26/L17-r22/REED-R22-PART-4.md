@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # REED R22 Part 4: Record keeping options (Job 4)
 
 Reed, commercial consultant. Researched 2026-10-26. Costs are for information only, NOT for the financial model. Tags: V verified (URL opened 2026-10-26), E estimate, U unverified.

@@ -132,8 +132,11 @@ With tax consolidation (Year 1, locked) Holdings lodges one return: 25% of A$26,
 | Taxable wages after deduction | A$293,244.10 | maths |
 | Payroll tax at 5.5% | A$16,128.43 a year = A$1,344.04 a month | V rate |
 | Wage share (for choosing the designated group employer) | Medical about 24%, Lounge about 76% | E |
+| Designated group employer | GTT Lounge (approved by Anthony, Round 25) | Locked R25 |
 
 Why grouped: Holdings owns 100% of Medical and Lounge (related bodies corporate; one set of owners has a controlling interest). Each company registers and lodges, the group's wages are added together, only the designated group employer claims the deductible amount, and every member is jointly and severally liable (V, wa.gov.au grouping page). Payroll tax grouping is separate from the GST group and from tax consolidation.
+
+**Lounge claims the payroll tax group deduction** (designated group employer, approved Round 25). The choice does not change the group's total payroll tax. Reasons: [THEODORE-R25-PART-2.md](overhaul-2026-10-26/L20-r25/THEODORE-R25-PART-2.md).
 
 ### 4C. APPROVED 24-month cash flow (reference, headline lines only)
 
@@ -237,3 +240,4 @@ Run `python tools/factcheck_locked_facts.py <file>` before anything goes to Anth
 | 2026-10-26 | Round 22: Path A/B renamed, Path B A$300/A$350, rebate lock, venue manager 06:30 to 15:00 combined A$8,504.76, one shared-cost block; headline unchanged A$26,631.97 before and A$19,973.98 after company tax | Theodore R22 |
 | 2026-10-27 | Round 23: no revenue ramp (18 a day from month 1; the 22 + 4.33 day count is a calendar count, not a ramp); venue manager is a hired person, Anthony is Owner and Director; three companies, no trust. Headline unchanged | Theodore R23 |
 | 2026-10-27 | Round 24: phlebotomists employed by Medical (company split re-run), payroll tax grouping verified on wa.gov.au, 24-month cash flow APPROVED (cash floor and loan repayment illustrative, deferred), GST group and consolidation in Year 1, Path B fact line (not a limit), late rule split. Headline unchanged | Theodore R24 |
+| 2026-10-27 | Round 25: Lounge claims the payroll tax group deduction (designated group employer). Moving costs into Medical checked: no change to group tax, GST, payroll tax or revenue. Phlebotomist 07:00 to about 12:55 fits the costed 07:00 to 13:00. Headline unchanged | Theodore R25 |

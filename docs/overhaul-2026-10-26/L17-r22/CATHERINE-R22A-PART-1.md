@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R22A PART 1: verdicts, out-of-date files, and the Medicare pricing checklist (job 1)
 
 Author: Catherine (Legal Consultant, GTT Center Perth). Date: 2026-10-26 (Round 22, Window 6). DRAFT for Anthony. Nothing was sent or published. All money in Australian dollars (A$). Plain English legal view, not formal legal advice. **Lawyer to check** marks points a health lawyer must confirm.

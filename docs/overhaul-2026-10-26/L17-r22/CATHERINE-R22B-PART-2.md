@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R22B PART 2: Anthony as venue manager (job 1, risk, options, DVA question)
 
 DRAFT, 2026-10-26. Tags as in PART-1. I set out the law and the options; Anthony decides.

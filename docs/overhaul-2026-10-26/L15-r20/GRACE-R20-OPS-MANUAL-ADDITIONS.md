@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R20-OPS-MANUAL-ADDITIONS: additions to the clinical operations plan and daily operations manual
 
 Author: Grace (Operations Manager, GTT Center Perth). Date: 2026-10-26 (Round 20). **DRAFT for Anthony.** These additions sit beside outputs/OPERATIONS/CLINICAL-OPERATIONS-PLAN.md and the daily operations manual. I did not edit the old files. Where an old line disagrees with this file, this file wins once Anthony approves it. Nothing was sent.

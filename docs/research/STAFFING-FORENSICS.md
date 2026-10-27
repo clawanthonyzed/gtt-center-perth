@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Staffing Forensics (Round 3, Priority 4, With AM Capacity/Bottleneck Cross-Check, Priority 6)
 
 **Created:** 2026-09-25 (Round 3) | **Author:** Grace (Operations Manager)

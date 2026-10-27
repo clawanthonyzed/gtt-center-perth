@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R20-SERVICES-AUSTRALIA: backup contact routes for Medicare provider numbers and pathology approvals
 
 Author: Grace (Operations Manager, GTT Center Perth). Checked 2026-10-26. **DRAFT for Anthony. Nothing was sent to anyone.** Builds on SERVICES-AUSTRALIA-R19.md.

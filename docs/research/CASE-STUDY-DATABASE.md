@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Structured Case Study Database (10 Businesses)
 
 **Created:** 2026-09-25 (Round 2, deeper pass) | **Author:** Grace (Operations Manager)

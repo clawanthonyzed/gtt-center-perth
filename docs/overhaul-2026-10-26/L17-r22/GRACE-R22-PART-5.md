@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R22-PART-5: Follow-up when a result needs a call (call, voicemail, email, SMS)
 
 Author: Grace. Date: 2026-10-26 (Round 22). DRAFT for Anthony. Nothing was sent. Tags: R repo, V verified source, E estimate, U unverified. Privacy review: Catherine R22B Part 6 (applied below). Clinical content is the midwife's judgement under the GTT clinical protocol, not mine.

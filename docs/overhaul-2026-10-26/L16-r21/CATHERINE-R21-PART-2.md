@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R21 PART 2: Medicare pricing setup (job 1) and the outside request route (job 2)
 
 DRAFT, 2026-10-26. Tags as in PART-1.

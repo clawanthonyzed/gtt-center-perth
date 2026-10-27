@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R22-PART-6: Record keeping recommendation (computer record)
 
 Author: Grace. Date: 2026-10-26 (Round 22). DRAFT for Anthony. Nothing was sent. Source: Reed R22 Part 4 (prices opened 2026-10-26; US dollars converted at the Reserve Bank rate in logs/fx_aud.json, US$1 = A$1.4223, converted not quoted). Costs are INFORMATION ONLY and are not in the financial model. Tags: R repo, V verified (Reed), E estimate, U unverified.

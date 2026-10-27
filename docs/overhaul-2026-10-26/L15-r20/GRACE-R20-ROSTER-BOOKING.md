@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R20-ROSTER-BOOKING: midwife 08:00 to 16:00 roster, same-morning consult capacity, booking rules
 
 Author: Grace (Operations Manager, GTT Center Perth). Date: 2026-10-26 (Round 20). DRAFT for Anthony. Nothing was sent. Amounts in A$. Labels: LOCKED (Anthony or the Center of Truth), MATHS (my arithmetic from locked numbers), ASSUMPTION (my guess, clearly marked), NOT IN REPO (no source, listed as a question).

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R20-PAPER-SAFETY-NET: the weekly folder with a pocket per day
 
 Author: Grace (Operations Manager, GTT Center Perth). Date: 2026-10-26 (Round 20). **DRAFT for Anthony. Nothing was sent.** This is written as an addition to the daily operations manual (see GRACE-R20-OPS-MANUAL-ADDITIONS.md). All privacy rules are marked **Catherine to confirm**. Equipment and cost not in the repo are marked NOT IN REPO.

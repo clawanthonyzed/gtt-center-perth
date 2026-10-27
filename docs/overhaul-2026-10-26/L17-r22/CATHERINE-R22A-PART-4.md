@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R22A PART 4: the midwife meal break "chosen on the day" (job 3)
 
 DRAFT, 2026-10-26. Tags as in PART-1. Replaces CATHERINE-R21-PART-4 job 5.

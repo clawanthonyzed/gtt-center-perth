@@ -28,7 +28,7 @@ One page for new staff, written for staff, not clients. Nothing is sent.
 
 **8. Your first day.** Arrive 15 minutes before your start, meet the venue manager, read this sheet, shadow a colleague for the first pair of clients, and ask questions.
 
-**Meal breaks.** Your break is rostered. You are never asked to work through it. You can stay fully off duty at GTT or leave. If you are called back, log MB-R on your timesheet. Otherwise log MB.
+**Meal breaks.** Your break is rostered. You are never asked to work through it. You can stay fully off duty at GTT or leave. If you are called back (midwives never are), log MB-R on your timesheet. Otherwise log MB. Service staff also get one paid 10 minute rest break.
 
 ## Next step for Anthony
 Approve the sheet. Lawyer to check the meal break wording against the award for each role.

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # THEODORE R20: Money after the consult rise to A$130
 
 Theodore, financial and tax consultant, GTT Center Perth. 2026-10-26.

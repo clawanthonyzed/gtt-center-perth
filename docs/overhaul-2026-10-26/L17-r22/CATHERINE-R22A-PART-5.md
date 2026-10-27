@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R22A PART 5: sources, library files added, QUESTIONS FOR ANTHONY
 
 DRAFT, 2026-10-26. Tags as in PART-1.

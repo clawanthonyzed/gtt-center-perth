@@ -1,5 +1,7 @@
 # CATHERINE R24 PART 2: three government email answers, Draft D, and the consult grace sentence
 
+> **CORRECTED Round 25 (2026-10-27): Anthony emailed all four bodies on 26 October 2026 with the same generic introduction: Corporate Compliance (corporate.compliance@health.gov.au), LARU (WA licensing unit), Pathology Registration (Services Australia) and AskMBS. Section (c) below ("No record found") was wrong: it wrongly assumed the email was not sent because his Sent items were not in the repo. Draft D is RETIRED. Send nothing more until a real person replies. Current record: docs/overhaul-2026-10-26/L20-r25/CATHERINE-R25-PART-1.md item 6.**
+
 DRAFT, 2026-10-27 (Round 24). Tags as in PART-1. **Nothing here is sent. Anthony approves the exact text of any email before he sends it himself.** Not legal advice: lawyer to check.
 
 ## READ-FIRST CHECK (docs/GTT-READ-FIRST.md, Round 24)
@@ -19,10 +21,12 @@ Drafts A and B in docs/overhaul-2026-10-26/L18-r23/CATHERINE-R23-PART-3.md now c
 - **Real versus automated:** the automated one arrived within minutes, opens "Thank you for contacting AskMBS regarding your enquiry dated 26/10/2026", gives the same two reading links to everyone and answers nothing. A real reply answers Anthony's own words, refers to MBS items, notes or the Act, comes later in the same ENQ-069430 thread, and usually asks for detail or says who handles the topic.
 
 ## (c) Has the compliance team (corporate.compliance@health.gov.au) been contacted?
+**CORRECTED Round 25: YES, emailed 26 October 2026 (with LARU, Services Australia and AskMBS). The text below is kept for history only.**
 **No record found.** I searched: the whole g20 repo (docs/, DECISION-LOG.md, every outreach and intro email file from Rounds 13 to 23, including the unified government email in L13-r18/INTRO-EMAILS-R18.md and L14-r19/INTRO-EMAILS-R19.md), the scratchpad email copies (govmail.eml, govmail_body.txt, govmail2_body.txt) and the server second-brain and orchestration logs. Every hit is a draft, a contact check or a plan ("Send ... Sent and logged" as a to-do in GRACE-R17-EXECUTION-ROADMAP.md; unticked "Step 9" in L13-r18/EXECUTION-ROADMAP-TICKLIST.md). The only proof of sending is for Services Australia (reply received) and AskMBS (ENQ-069430). No reply from the compliance team exists anywhere I can see. **Only Anthony's own Sent items can confirm**; I cannot see his mailbox. The WA Licensing and Regulation Unit (email 4 of the R19 set) is in the same position: no record.
 
 ## DRAFT D: generic introduction to the compliance team
-**DRAFT, NOT SENT, send first; technical questions only after a real reply.**
+**RETIRED Round 25 (2026-10-27): DO NOT SEND. Anthony already sent this introduction on 26 October.**
+~~DRAFT, NOT SENT, send first; technical questions only after a real reply.~~
 Copied word for word from the email Anthony sent on 26 October 2026 (govmail_body.txt). Only the greeting changes. The body never names the addressee, so no other word changes.
 
 > To: corporate.compliance@health.gov.au
@@ -38,6 +42,7 @@ Copied word for word from the email Anthony sent on 26 October 2026 (govmail_bod
 Why this team fits: its page says it handles "compliance for pathology collection centres" (file 15), and the Department's compliance page shows its work is the prohibited practices rules on rent and benefits between requesters and labs (file 23, V). If the team is not the policy owner, the email already asks to be forwarded.
 
 ## New send order (replaces CATHERINE-R23-PART-3.md section 2)
+**CORRECTED Round 25: step 1 is done (sent 26 Oct). Waiting for a real person from all four. Nothing more is sent until then.**
 1. Draft D to the compliance team, if Anthony's Sent items show it was not sent on 26 October.
 2. Wait for a real person at AskMBS (ENQ-069430). Only then Draft A.
 3. Draft B (technical questions) to the compliance team only after a real person replies to Draft D.
@@ -51,6 +56,7 @@ Client sentence for the consult (booking page, confirmation, reminders; lawyer t
 Why it is lawful and safe: it promises no refund, no fee and no Medicare outcome, so nothing can mislead under the Australian Consumer Law (general knowledge). The test keeps its own approved no-wiggle-room sentence. Check on the item: 82105 needs at least 10 minutes (R, repo checklist) and only the midwife's own time with the client counts (Handbook 3.4, V). A client 10 minutes late into a 25 minute block still has 15 minutes, so the midwife can meet the minimum if she starts at once. Same-morning consults must still end before the draw (locked).
 
 ## QUESTIONS FOR ANTHONY
+**ANSWERED Round 25: yes, all four were emailed on 26 October. Draft D retired. Do not ask again.**
 1. **Did you email corporate.compliance@health.gov.au (and the WA unit) on 26 October?** Please check your Sent items. Options: (a) not sent: approve Draft D as written and send it yourself; (b) sent: tell me the date and I retire Draft D and log it. **Recommendation: check, then (a) if not sent**, because the hold rule allows only this generic email.
 
 Regards.

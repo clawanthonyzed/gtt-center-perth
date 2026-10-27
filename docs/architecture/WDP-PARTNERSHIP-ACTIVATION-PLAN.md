@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # WDP Partnership Activation Plan
 
 Status: current as of 2026-08-24. Prepared for the hypothetical that Carole confirms WDP is happy to partner with GTT Center Perth. Treats "happy to partner" as the start of structured commercial/clinical due diligence, not a final agreement. Nothing in this document has been sent to WDP or any other party; it is preparation only, per standing instruction not to draft, send, or initiate further WDP correspondence.

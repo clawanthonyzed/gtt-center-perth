@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R21-WAITLIST-AND-LATE: change window, waitlist, illness, late rule
 
 Author: Grace. Date: 2026-10-26 (Round 21). DRAFT for Anthony. Nothing was sent. Tags: R repo, E estimate, U unverified, MATHS my arithmetic. All client wording: Catherine to confirm (consumer law and privacy). Refill rates are NOT IN REPO, so I give no percentages.

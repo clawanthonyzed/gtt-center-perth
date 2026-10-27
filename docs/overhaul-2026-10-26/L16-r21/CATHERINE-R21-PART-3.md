@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R21 PART 3: changes, waitlist, illness proof and the late rule (job 3)
 
 DRAFT, 2026-10-26. Tags as in PART-1. Builds on R20 section 3 (ACL ss 23 to 27, 29, 60 to 64, V in R20).

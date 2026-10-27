@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # THEODORE R22C PART 1: cashflow timeline, repaying the owners' start-up money first
 
 Author: Theodore (financial consultant, GTT Center Perth). Date 2026-10-26. General knowledge and the repo's own figures, not your personal documents. Verify before acting. Not tax advice; accountant to confirm. Nothing sent. Tags: R repo, E estimate, U unverified.

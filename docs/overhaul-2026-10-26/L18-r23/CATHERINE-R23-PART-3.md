@@ -1,5 +1,7 @@
 # CATHERINE R23 PART 3: what the emails tell us about the next step, and draft replies (job 2 continued)
 
+> **CORRECTED Round 25 (2026-10-27): Anthony emailed all four bodies on 26 October 2026 with the same generic introduction: Corporate Compliance (corporate.compliance@health.gov.au), LARU (WA licensing unit), Pathology Registration (Services Australia) and AskMBS. Step 1 below is DONE. Draft D (CATHERINE-R24-PART-2.md) is RETIRED. Drafts A and B stay ON HOLD until a real person replies. Send nothing more. Current record: docs/overhaul-2026-10-26/L20-r25/CATHERINE-R25-PART-1.md item 6.**
+
 DRAFT, 2026-10-27. Tags as in PART-1. **Nothing here is sent. Every draft needs Anthony's approval of the exact text.**
 
 ## READ-FIRST CHECK (docs/GTT-READ-FIRST.md, Round 23)
@@ -19,7 +21,7 @@ DRAFT, 2026-10-27. Tags as in PART-1. **Nothing here is sent. Every draft needs 
 ## 2. Best written route (order UPDATED Round 24, 2026-10-27, Anthony's HOLD rule)
 | Step | To | Why | When |
 |---|---|---|---|
-| 1 | Pathology collection centres compliance team | Generic introduction only (Draft D, CATHERINE-R24-PART-2.md), word for word as sent to Services Australia and AskMBS | First, only if Anthony's Sent items show it was not sent on 26 Oct |
+| 1 | Pathology collection centres compliance team | DONE: generic introduction sent by Anthony on 26 Oct (with LARU, Services Australia, AskMBS). Draft D RETIRED (Round 25) | Done. Wait for a real person |
 | 2 | AskMBS, quoting ENQ-069430 | Wait for a real person to reply. Only then Draft A | After a real reply (about 16 Nov 2026 or later) |
 | 3 | Compliance team, Draft B | Technical questions | Only after a real person replies to step 1 |
 | 4 | Partner labs (all 4 at once, as locked) | Lab-side questions (section 6) | Later |

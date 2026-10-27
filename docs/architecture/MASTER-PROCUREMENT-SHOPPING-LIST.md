@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # Master Procurement & Shopping List
 
 Status: current as of 2026-08-23. This is the single authoritative, itemised procurement register for physically opening GTT Center Perth: every purchasable item, its quantity and the basis for that quantity, its specification, its sourcing classification, and what still needs professional or site verification before it can be purchased. It supersedes `docs/equipment-costs.md` and `docs/architecture/FIT-OUT-EQUIPMENT-SCHEDULE.md`'s role as the primary procurement source; those documents remain as historical research trail, not the current reference.

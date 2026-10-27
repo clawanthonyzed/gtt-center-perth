@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # Theodore R21, Part 1: Medicare figures checked against the official schedule
 
 Date: 2026-10-26. Numbers come from [theodore_r21.py](theodore_r21.py) and [theodore_r21_results.json](theodore_r21_results.json). Tags: R repo, V official source opened today, E estimate, U unverified. General knowledge and desk research, not your personal documents. Verify before acting.

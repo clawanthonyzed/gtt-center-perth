@@ -1,0 +1,22 @@
+{
+ "slug": "r25-10-accountant-engagement-update",
+ "agent": "reed",
+ "role": "You are Reed, GTT Center Perth. Task: Accountant engagement email update for three companies (draft, not sent). This is a DRAFT for Anthony. Nothing is sent. Use merge fields in curly braces. Write the finished document now, complete and specific, not an outline.",
+ "facts": [
+  "structure",
+  "money-notes"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown. Start with a heading line, then the numbered headings listed. Plain English a 16 year old can read. No em dashes, no square brackets.",
+  "length": "1,800 to 2,800 characters (minimum is firm)",
+  "write_only": "Headings: 1 Subject line, 2 Email body (use {accountant_name}), 3 What we are setting up: three companies (GTT Holdings, GTT Medical Services, GTT Lounge Sanctuary), Holdings owned directly by Anthony and his partner, no trust, Route B franked dividends and no wage, 4 What we need from the accountant in order: register the companies and ABNs, register all three for GST, form the GST group (Holdings as representative member), choose tax consolidation, payroll tax group (Lounge claims the deduction), 5 Questions on fees and timing, 6 Sign-off Regards. Never quote profit figures.",
+  "do_not_write": "anything about pensions, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans or drawings, invented prices, names, phone numbers or addresses (write NOT IN REPO)"
+ },
+ "extra_checks": [
+  "Use exactly the headings listed under Write only, in that order, nothing else.",
+  "Length is between the minimum and maximum stated. A reply under the minimum is rejected.",
+  "Do not write any slash command. Do not mention pensions or government benefits. Anthony is owner and director, never the venue manager."
+ ]
+}

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R22B PART 6: privacy of results messages, welcome cards and the day list (job 5)
 
 DRAFT, 2026-10-26. Tags as in PART-1. Reviews GTT-READ-FIRST.md (abnormal results flow) and [GRACE-R22-PART-4.md](GRACE-R22-PART-4.md).

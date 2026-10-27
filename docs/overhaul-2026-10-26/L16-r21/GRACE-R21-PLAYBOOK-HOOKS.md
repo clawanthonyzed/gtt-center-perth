@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R21-PLAYBOOK-HOOKS: changes needed in playbooks/GTT-LOCKED-FACTS-PREAMBLE.md
 
 Author: Grace. Date: 2026-10-26 (Round 21). For Idea Lobster to apply before tonight's 22:00 AWST run. I did NOT edit the preamble. Line numbers are the file lines in the current preamble (the block between BEGIN and END). Tags: LOCKED = Anthony decided in Round 21; PENDING = apply only after his answer (until then write the old line plus "OPEN"). After editing, run `python3 tools/factcheck_locked_facts.py playbooks/GTT-LOCKED-FACTS-PREAMBLE.md` (no em dashes, no talk of any other billing model).

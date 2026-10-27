@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # Theodore R22, Part 2: how to itemise a Path B receipt, and one shared-cost block
 
 Date: 2026-10-26. Source: [theodore_r22.py](theodore_r22.py). Tags: R repo, E estimate, U unverified. The tax rules below are general knowledge, not checked against ATO pages today (U). **Catherine to confirm** every legal and GST point in Section 1. General knowledge and desk research, not your personal documents. Verify before acting.

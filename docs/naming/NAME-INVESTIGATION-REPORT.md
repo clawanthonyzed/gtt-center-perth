@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Brand Name Investigation Report
 
 **Status:** Investigation complete. Pre-clearance research only — not a legal opinion, not a trademark filing, not a guarantee of availability. Any name selected from this report must go to an Australian trade marks attorney for formal clearance before filing, spend, or public use.

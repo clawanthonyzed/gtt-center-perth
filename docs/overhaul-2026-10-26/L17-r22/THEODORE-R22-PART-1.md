@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 > SUPERSEDED on Path B wording (Round 24, Anthony 2026-10-27): Path B is NOT limited. Ignore any cap, limit or roster-shrink wording below. See docs/GTT-READ-FIRST.md.
 
 # Theodore R22, Part 1: Center of Truth regenerated, and Path B (outside referral) economics

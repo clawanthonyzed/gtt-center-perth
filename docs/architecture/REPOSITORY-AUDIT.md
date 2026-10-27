@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Repository Audit
 
 **Compiled:** 2026-08-08 | **Scope:** Architecture-only planning phase (see `docs/architecture/TARGET-ARCHITECTURE.md`). This audit categorises the repo as it exists today. **No file was deleted, archived, or rewritten to produce this document.** Where this audit would normally recommend archiving a file (per `rules/CLAUDE.md` companion rule 1, "archive, don't flag"), it instead flags it — see the note at the end of this file and the fuller discussion in the final report.

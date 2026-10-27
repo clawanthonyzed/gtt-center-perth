@@ -480,6 +480,57 @@ out["R24"] = dict(phlebotomist_wages_month=PHLEB_WAGES, phlebotomist_loaded_mont
 CF = json.load(open(os.path.join(HERE, "..", "L18-r23", "theodore_r23_results.json"), encoding="utf-8"))   # approved 24-month cash flow (R23), read not re-run
 
 def money(x): return f"A${x:,.2f}" if x >= 0 else f"-A${-x:,.2f}"
+
+# =====================  ROUND 25 (2026-10-27)  =====================
+# Anthony R25: Lounge claims the payroll tax group deduction (designated group employer, approved). Plus Theodore R25 checks:
+# (1) wages per company, (2) what-if moving costs into Medical (group tax, GST, payroll tax, revenue must not move), (3) phlebotomist hours.
+AM_SERVICE_LOADED = lab_am - PHLEB_LOADED
+WAGES_CO = dict(medical=dict(midwives=-L["midwife_wages"], phlebotomists=PHLEB_LOADED),
+                lounge=dict(am_service_staff=AM_SERVICE_LOADED, pm_service_staff=lab_pm, venue_manager_0630_to_1500=VM_COMBINED),
+                holdings=dict())
+WAGES_TOT = {k: f2(sum(v.values())) for k, v in WAGES_CO.items()}
+_all = sum(WAGES_TOT.values())
+assert abs(_all - all_w) < 0.05, (_all, all_w)
+WAGES_SHARE = {k: v / _all for k, v in WAGES_TOT.items()}
+WAGES_YEAR_E = {k: f2(W_GROUP * s) for k, s in WAGES_SHARE.items()}       # payroll-tax wages a year by company (E: split by loaded-cost share)
+def whatif_move(amount, label):
+    med = SPLIT_AFTER["medical"]["profit_before_tax"] - amount
+    lng = SPLIT_AFTER["lounge"]["profit_before_tax"] + amount
+    alone = f2(max(0.0, med) * TAX + max(0.0, lng) * TAX)
+    cons = f2((med + lng) * TAX)
+    assert abs(med + lng - BEFORE) < 0.02 and abs(cons - (-L["company_tax_25"])) < 0.02
+    return dict(label=label, moved_month=f2(amount), medical_pbt=f2(med), lounge_pbt=f2(lng), group_pbt=f2(med + lng),
+                tax_consolidated=cons, tax_if_each_taxed_alone=alone, group_after_tax=f2(med + lng - cons),
+                revenue_change=0.0, gst_change=0.0, payroll_tax_change=0.0)
+MOVES = [whatif_move(0.0, "Locked split (phlebotomists in Medical, shared block with Lounge)"),
+         whatif_move(VM_COMBINED, "Venue manager moved to Medical"),
+         whatif_move(SH_TOTAL, "Whole shared block moved to Medical"),
+         whatif_move(AM_SERVICE_LOADED + lab_pm, "All service staff payroll moved to Medical")]
+for m in MOVES:
+    assert abs(m["group_after_tax"] - AFTER) < 0.02, m
+# Phlebotomist finish time, derived from the repo (scenario-c-sync-timetables.md Table 1, operations-manual.md close block)
+LAST_D1 = 10 * 60 + 20                     # R: last pair first draw 10:20 (07:00 + 8 x 25)
+D3_END = LAST_D1 + 120 + 5                 # R: Table 1 Draw 3 at +120 min, 5 minutes in the chair -> 12:25
+PAPERWORK = 30                             # R: operations-manual.md "Close Operations" 30 min: dispatch specimens, clean, complete logs
+FINISH = D3_END + PAPERWORK                # 12:55
+COSTED_END = 13 * 60                       # R: cost_ramp_model.py, 07:00-13:00 = 6 h a day
+hm = lambda m: f"{m // 60:02d}:{m % 60:02d}"
+slack = COSTED_END - FINISH
+wd_rate, sat_rate = 34.375, 51.5625        # R: cost_ramp_model.py phlebotomist hourly rates (weekday, Saturday)
+def phleb_minutes_cost(mins):
+    w = 2 * mins / 60 * (wd_rate * 22 + sat_rate * SAT_DAYS)
+    loaded = w * (1 + load)
+    ptax = w * (1 + r15.SUPER) * r14.RATE * (1 + 2 / 13)   # marginal payroll tax above the threshold (taper)
+    return dict(minutes_a_day_each=mins, wages_month=f2(w), loaded_month=f2(loaded), payroll_tax_month_E=f2(ptax), total_month=f2(loaded + ptax))
+out["R25"] = dict(designated_group_employer="GTT Lounge (approved by Anthony, R25)",
+    wages_month_loaded=WAGES_CO, wages_month_total=WAGES_TOT, wage_share={k: round(v, 4) for k, v in WAGES_SHARE.items()},
+    payroll_tax_wages_year_E=WAGES_YEAR_E, deductible_amount=f2(DED), lounge_wages_minus_deduction_E=f2(WAGES_YEAR_E["lounge"] - DED),
+    payroll_tax_year_any_dge=r14.ptax(W_GROUP), moves=MOVES,
+    phlebotomist=dict(last_first_draw=hm(LAST_D1), last_draw3_end=hm(D3_END), paperwork_min=PAPERWORK, derived_finish=hm(FINISH),
+                      costed="07:00-13:00 (6 h)", derived_hours=round((FINISH - 7 * 60) / 60, 3), slack_min=slack,
+                      matches=slack >= 0, if_draw3_runs_10_min_late=phleb_minutes_cost(5), if_paid_to_1255_only=phleb_minutes_cost(-slack)))
+assert slack >= 0, "phlebotomist derived finish is later than the costed 13:00"
+
 def split_md():
     B, A = SPLIT_BEFORE, SPLIT_AFTER; P = out["R24"]["payroll_tax"]
     row = lambda lab, key: f"| {lab} | {money(B['medical'][key])} | {money(A['medical'][key])} | {money(B['lounge'][key])} | {money(A['lounge'][key])} | {money(A['total'][key])} |"
@@ -502,8 +553,10 @@ def split_md():
         f"| Deductible amount (one, for the group) | {money(P['deductible_amount'])} | V formula, R wages |",
         f"| Taxable wages after deduction | {money(P['taxable_after_deduction'])} | maths |",
         f"| Payroll tax at 5.5% | {money(P['tax_year'])} a year = {money(P['tax_month'])} a month | V rate |",
-        f"| Wage share (for choosing the designated group employer) | Medical about {P['medical_wage_share_E']*100:.0f}%, Lounge about {P['lounge_wage_share_E']*100:.0f}% | E |", "",
-        "Why grouped: Holdings owns 100% of Medical and Lounge (related bodies corporate; one set of owners has a controlling interest). Each company registers and lodges, the group's wages are added together, only the designated group employer claims the deductible amount, and every member is jointly and severally liable (V, wa.gov.au grouping page). Payroll tax grouping is separate from the GST group and from tax consolidation.", ""]
+        f"| Wage share (for choosing the designated group employer) | Medical about {P['medical_wage_share_E']*100:.0f}%, Lounge about {P['lounge_wage_share_E']*100:.0f}% | E |",
+        "| Designated group employer | GTT Lounge (approved by Anthony, Round 25) | Locked R25 |", "",
+        "Why grouped: Holdings owns 100% of Medical and Lounge (related bodies corporate; one set of owners has a controlling interest). Each company registers and lodges, the group's wages are added together, only the designated group employer claims the deductible amount, and every member is jointly and severally liable (V, wa.gov.au grouping page). Payroll tax grouping is separate from the GST group and from tax consolidation.", "",
+        "**Lounge claims the payroll tax group deduction** (designated group employer, approved Round 25). The choice does not change the group's total payroll tax. Reasons: [THEODORE-R25-PART-2.md](overhaul-2026-10-26/L20-r25/THEODORE-R25-PART-2.md).", ""]
 def cf_md():
     T = CF["T4_inputs"]; F = CF["T4"]
     lab = "illustrative, not decided, deferred by Anthony"
@@ -543,7 +596,8 @@ def build_centre():
                                    "holdings": "no sales", "shared_block_holder": "Lounge (holds the lease, employs the venue manager); one block, not split",
                                    "room_fee_medical_to_lounge": "NOT IN REPO; moves profit between companies only, no group effect"},
            "payroll_tax_grouping": {k: out["R24"]["payroll_tax"][k] for k in ("grouped_wages_year", "threshold", "upper", "rate", "deductible_amount", "taxable_after_deduction", "tax_year", "tax_month")}
-                                   | {"grouped_because": "common control: Holdings owns 100% of Medical and Lounge (related bodies corporate); one deductible amount claimed by the designated group employer",
+                                   | {"designated_group_employer": "GTT Lounge (approved R25): Lounge claims the payroll tax group deduction",
+                                      "grouped_because":"common control: Holdings owns 100% of Medical and Lounge (related bodies corporate); one deductible amount claimed by the designated group employer",
                                       "source": "wa.gov.au payroll tax employer guide, calculation and grouping pages, read 2026-10-27"},
            "gst_group_and_consolidation": "both established in Year 1 (locked R24); steps in L19-r24/THEODORE-R24-PART-1.md",
            "cash_flow_24m_APPROVED": {"file": "docs/overhaul-2026-10-26/L18-r23/THEODORE-R23-CASHFLOW.md", "takings_month_incl_gst": CF["T4_inputs"]["takings_incl_gst"],
@@ -649,7 +703,8 @@ def build_centre():
           "| 2026-10-26 | Round 20: consult A$130 inside packages and standalone, midwives 08:00 to 16:00, same-day consult | Theodore R20 |",
           f"| 2026-10-26 | Round 22: Path A/B renamed, Path B A$300/A$350, rebate lock, venue manager 06:30 to 15:00 combined {money(VM_COMBINED)}, one shared-cost block; headline unchanged {money(BEFORE)} before and {money(AFTER)} after company tax | Theodore R22 |",
           "| 2026-10-27 | Round 23: no revenue ramp (18 a day from month 1; the 22 + 4.33 day count is a calendar count, not a ramp); venue manager is a hired person, Anthony is Owner and Director; three companies, no trust. Headline unchanged | Theodore R23 |",
-          "| 2026-10-27 | Round 24: phlebotomists employed by Medical (company split re-run), payroll tax grouping verified on wa.gov.au, 24-month cash flow APPROVED (cash floor and loan repayment illustrative, deferred), GST group and consolidation in Year 1, Path B fact line (not a limit), late rule split. Headline unchanged | Theodore R24 |", ""]
+          "| 2026-10-27 | Round 24: phlebotomists employed by Medical (company split re-run), payroll tax grouping verified on wa.gov.au, 24-month cash flow APPROVED (cash floor and loan repayment illustrative, deferred), GST group and consolidation in Year 1, Path B fact line (not a limit), late rule split. Headline unchanged | Theodore R24 |",
+          "| 2026-10-27 | Round 25: Lounge claims the payroll tax group deduction (designated group employer). Moving costs into Medical checked: no change to group tax, GST, payroll tax or revenue. Phlebotomist 07:00 to about 12:55 fits the costed 07:00 to 13:00. Headline unchanged | Theodore R25 |", ""]
     with open(os.path.join(REPO, "docs", "FINANCIAL-CENTER-OF-TRUTH.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(md))
 

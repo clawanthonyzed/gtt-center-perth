@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # ROUTE B CAPITAL RETURN MEMO: the trust minimum tax Bill, the shareholder loan, and dividends
 
 Author: Theodore (financial consultant), using Catherine's verified findings (CATHERINE-R22C-3 and CATHERINE-R22C-4, 2026-10-26). Date 2026-10-26. **Not tax advice; accountant to confirm.** General knowledge, not your personal documents. Nothing sent. Tags: V verified source, R repo, E estimate, U unverified.
@@ -9,7 +11,7 @@ Author: Theodore (financial consultant), using Catherine's verified findings (CA
 - Prices: Path A A$320 / A$370 shown, GTT charges A$292.15 / A$342.15. Path B A$300 / A$350 all in, GTT charges A$272.15 / A$322.15.
 - Rebates used: consult A$32.95 + lab A$22.05 = A$55.00.
 - Midwife on site 08:00, first consult 08:15, 25 minute blocks to 10:30, then normal bookings.
-- Late rule: from the appointment time onwards; a consult may allow 5 to 10 minutes (OPEN).
+- Late rule: from the appointment time onwards; consults have a 10 minute grace window (locked Round 24).
 
 ## Verdict in two lines
 
@@ -47,7 +49,7 @@ Author: Theodore (financial consultant), using Catherine's verified findings (CA
 
 **(f) Dividends and franking.** A company can pay a dividend only out of profits and while it can pay its debts (Corporations Act solvency and "assets exceed liabilities" test, U, accountant to confirm). The franking account builds from company tax actually paid, even while the loan is repaid. In my timeline tax first falls due in month 7 and the loan clears in month 20, so credits will already have built up for the first dividend in month 21 (E, tax timing NOT MODELLED). Credits are 25/75 of a fully franked dividend at the 25 percent rate (E; the rate depends on the company's turnover and passive income tests, U).
 
-**(g) Anthony's MRCA position.** The test for his Special Rate Disability Pension is whether he can do more than 10 hours a week of remunerative work (MRCA s 199(1)(d), s 209(b), V per Catherine R22B). Repayment of the owners' own capital and dividends on shares are passive receipts, not hours of work (E, reasoned). The library has no DVA text on dividends or business ownership (gap), so DVA must confirm. This memo does not cover his venue manager role; Catherine B is analysing that.
+**(g) Founder personal position.** Closed for this venture (Round 23, docs/GTT-READ-FIRST.md). Anthony is owner and director with 0 operational hours. Nothing further is written here.
 
 ## Not verified
 

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 > **SUPERSEDED 2026-10-16 (Anthony, Permanent Cadence Law):** any widened pair cadence in this document is retired. The 25-minute pair cadence is the only cadence. See docs/CURRENT-STATE.md section 00.
 
 # GTT Center Perth — Content Brief v2 for the Imara Presentation (Financial/Factual Rebuild)

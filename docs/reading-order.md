@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Reading Order & Big-Picture Status
 
 **Last updated:** 2026-08-16 (Founder Correction Round — business-plan.md refreshed to v4.0, CURRENT-STATE.md/VERIFICATION-TRACKER.md restructured, see `docs/00_document_inventory.md`'s new "Founder Correction Round" section for the full list) | Structure below the 60-second version is otherwise unchanged from the 2026-07-20 rebuild except where individually flagged.

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R22-PART-4: Welcome card spec (words only, no drawings)
 
 > ROUND 24 NOTE: this is the Round 22 history file. It has no food and drink line and no stand-alone service line (added Round 23). The single current definition is docs/operations-manual.md section 9, "Welcome card master definition". Where this file differs, the manual wins.

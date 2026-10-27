@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 > **2026-07 UPDATE — PM REVENUE MODEL CHANGE:** PM afternoon sessions are now individual services at individual prices (NOT Package 1/2/3). PM revenue per session avg A$95 (single service) to A$165 (two services). The A$250 PM avg used in this document is STALE. Grace to update. See cash-flow.md update notice and investor-memorandum.md v2.0.
 
 # GTT Center Perth — Unit Economics

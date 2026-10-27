@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R22B PART 3: midwife Medicare participating status (job 2)
 
 DRAFT, 2026-10-26. Tags as in PART-1.

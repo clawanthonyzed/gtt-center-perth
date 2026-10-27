@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth -- Comprehensive Business Research
 
 **Version:** 3.0 (Merged) | **Date:** 2026-06-09

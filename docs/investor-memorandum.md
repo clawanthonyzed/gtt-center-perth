@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Information Memorandum
 
 > **CORRECTED 2026-08-15 — this document's own "current figure" pointers (§Key Metrics, §3) were themselves one recalculation stale.** They pointed to +A$63,028.75/month as current; the actual current canonical figure (post-superannuation, RECALCULATED 2026-08-09) is **+A$56,581.70/month (Table 1, PRIMARY)**. Fixed at the two pointer locations only — no other content rewritten. Always defer to `docs/CURRENT-STATE.md` §5 for the live figure rather than any number restated here.

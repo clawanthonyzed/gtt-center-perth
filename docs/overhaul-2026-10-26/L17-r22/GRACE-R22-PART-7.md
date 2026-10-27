@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R22-PART-7: Booking screens, Path A and Path B (new labels)
 
 Author: Grace. Date: 2026-10-26 (Round 22). DRAFT for Anthony. Nothing was published. Replaces GRACE-R21-BOOKING-FLOW-PART-1 and PART-2 (their labels were reversed). Tags: R repo, MATHS my arithmetic. Quoted text is for clients; rebate and Medicare wording: Catherine to confirm.

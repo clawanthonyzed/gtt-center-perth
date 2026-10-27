@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # Commercial Validation Framework
 
 **Phase:** Commercial Validation Phase — pure documentation/planning. This phase builds the frameworks and checklists needed to convert the model from internally-validated to externally-defensible. It resolves nothing, changes no assumption, and does not modify the financial model. Every fact below is sourced to an existing document in this repository; nothing new is invented.

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Document Inventory
 
 **Compiled:** 2026-07-19 | **Compiled by:** Grace (Operations Manager, audit pass — updated through Phase 6/7 pass, same day)

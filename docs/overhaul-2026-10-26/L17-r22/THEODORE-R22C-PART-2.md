@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # ROUTE B CAPITAL RETURN MEMO: the trust minimum tax Bill, the shareholder loan, and dividends
 
 Author: Theodore (financial consultant), using Catherine's verified findings (CATHERINE-R22C-3 and CATHERINE-R22C-4, 2026-10-26). Date 2026-10-26. **Not tax advice; accountant to confirm.** General knowledge, not your personal documents. Nothing sent. Tags: V verified source, R repo, E estimate, U unverified.

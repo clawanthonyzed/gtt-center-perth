@@ -1,0 +1,22 @@
+{
+ "slug": "r25-06-landlord-enquiry-template",
+ "agent": "reed",
+ "role": "You are Reed, GTT Center Perth. Task: Landlord or agent enquiry email template (draft, not sent). This is a DRAFT for Anthony. Nothing is sent. Use merge fields in curly braces. Write the finished document now, complete and specific, not an outline.",
+ "facts": [
+  "morning",
+  "people"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown. Start with a heading line, then the numbered headings listed. Plain English a 16 year old can read. No em dashes, no square brackets.",
+  "length": "1,800 to 2,600 characters (minimum is firm)",
+  "write_only": "Headings: 1 Subject line, 2 Email body (use {agent_name}, {property_address}), 3 What we need in the premises (client lounge for about 18 clients each morning Monday to Saturday, two small collection rooms, one consult room, reception, staff area, hand basins, accessible entry, parking nearby; room sizes: write NOT YET SET), 4 Questions for the agent (rent, outgoings, term, incentives, fit-out allowance, permitted use, signage), 5 Sign-off Regards.",
+  "do_not_write": "anything about pensions, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans or drawings, invented prices, names, phone numbers or addresses (write NOT IN REPO)"
+ },
+ "extra_checks": [
+  "Use exactly the headings listed under Write only, in that order, nothing else.",
+  "Length is between the minimum and maximum stated. A reply under the minimum is rejected.",
+  "Do not write any slash command. Do not mention pensions or government benefits. Anthony is owner and director, never the venue manager."
+ ]
+}

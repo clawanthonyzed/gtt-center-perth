@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # AM Operations Sensitivity Model — 1-18 Clients/Day
 
 **Phase:** Commercial Assumption Alignment & External Readiness, focus area 1 of 4 — investigation and optimisation only. **No financial model file was modified.** Every figure below is derived from already-canonical data (`data/canonical/staffing.yml`, `wages.yml`, `pricing.yml`, `client_assumptions.yml`, `cost_ramp.yml`) — no new operational assumption (headcount, cadence, or schedule) was invented. Where the canonical data does not extend to a given volume, that gap is stated explicitly, not filled with an invented figure.

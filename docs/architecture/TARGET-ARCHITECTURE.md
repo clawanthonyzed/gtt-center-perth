@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Target Architecture
 
 **Purpose:** Propose the future repository architecture that separates SOURCE MATERIAL → CANONICAL DATA → BUSINESS MODELS → DOCUMENT/REPORT OUTPUTS, so that a generated document can never become a source of truth. This document is a **proposal**, not an implementation — no directories described below are created by this phase (see `docs/architecture/REPOSITORY-AUDIT.md` for what exists today, and the final report's "Recommended next implementation step" for how this would actually get built).

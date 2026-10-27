@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Verification Tracker
 
 **Created:** 2026-07-29 | **Merges and replaces:** `05_open_questions_for_founder.md`, `regulatory-accreditation-tracker.md`, `04_roadmap_next_steps.md` (all three archived to `docs/archive/` this session — do not recreate duplicates of their content).

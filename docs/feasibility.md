@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Feasibility Study
 ## YETI Holding Trust | GTT Center Perth
 ### Version 1.0 | June 2026

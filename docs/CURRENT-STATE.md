@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Current State (Canonical Numbers)
 
 **Created:** 2026-07-29 | **Purpose:** The single canonical file for today's actual figures — package prices, client capacity, headcount, monthly net P&L, and startup capital range. Every other document in this repo defers to this file for these figures; they no longer independently restate them as sources of truth.

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GTT Center Perth — Canonical Data Proof of Concept
 
 **Purpose:** document the first real implementation slice of the architecture designed in `docs/architecture/` — SOURCE DOCUMENTS → CANONICAL YAML → VALIDATOR. This is a proof of concept: it proves the pattern works end-to-end on a bounded slice, not a completed migration.

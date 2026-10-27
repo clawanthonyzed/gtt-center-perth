@@ -1,0 +1,22 @@
+{
+ "slug": "r25-11-first-aid-quote-request",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Task: First aid course quote request template (draft, not sent). This is a DRAFT for Anthony. Nothing is sent. Use merge fields in curly braces. Write the finished document now, complete and specific, not an outline.",
+ "facts": [
+  "people",
+  "midwives"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown. Start with a heading line, then the numbered headings listed. Plain English a 16 year old can read. No em dashes, no square brackets.",
+  "length": "1,500 to 2,200 characters (minimum is firm)",
+  "write_only": "Headings: 1 Subject line, 2 Email body (use {provider_name}), 3 What we need (a nationally recognised first aid and CPR course delivered on site for about 15 staff before opening; a GTT midwife may help with practical demonstrations but the certificate comes from the registered training organisation), 4 Questions (price per person, group price, session length, certificate, refresher period), 5 Sign-off Regards.",
+  "do_not_write": "anything about pensions, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans or drawings, invented prices, names, phone numbers or addresses (write NOT IN REPO)"
+ },
+ "extra_checks": [
+  "Use exactly the headings listed under Write only, in that order, nothing else.",
+  "Length is between the minimum and maximum stated. A reply under the minimum is rejected.",
+  "Do not write any slash command. Do not mention pensions or government benefits. Anthony is owner and director, never the venue manager."
+ ]
+}

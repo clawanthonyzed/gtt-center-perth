@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE R22A PART 3: legal library jobs 2(c) health advertising, 2(d) exclusive dealing, 2(e) WA privacy
 
 DRAFT, 2026-10-26. Tags as in PART-1.

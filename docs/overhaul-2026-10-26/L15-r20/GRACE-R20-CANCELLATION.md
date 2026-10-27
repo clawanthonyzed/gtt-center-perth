@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # GRACE-R20-CANCELLATION: cancellation, late and no-show rules (draft for the booking terms)
 
 Author: Grace (Operations Manager, GTT Center Perth). Date: 2026-10-26 (Round 20). **DRAFT for Anthony. I do not decide. Catherine to confirm the legal wording before any of this goes on a booking page.** Nothing was sent.

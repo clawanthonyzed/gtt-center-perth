@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # REED R22 Part 1: Late and grace rules (Job 1)
 
 Reed, commercial consultant. Researched 2026-10-26. Tags: R repo, V verified (URL opened on 2026-10-26), E estimate, U unverified.

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE-R22C-4: "Chalmers 2026 Discretionary Trust Minimum Tax Bill" and its Explanatory Memorandum
 
 Author: Catherine (legal library). Date: 2026-10-26 (Round 22). Tags: V verified source, R repo, E estimate, U unverified. This is general knowledge, not your personal documents: verify before acting. Accountant or lawyer to check.

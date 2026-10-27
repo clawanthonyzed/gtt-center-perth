@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # CATHERINE-R22C-1: NPAAC Requirements for Medical Pathology Services (Third Edition 2018)
 
 Author: Catherine (legal library). Date: 2026-10-26 (Round 22). Tags: V verified source, R repo, E estimate, U unverified. General knowledge from public documents, not legal advice: accountant or lawyer to check.

@@ -1,3 +1,5 @@
+> SUPERSEDED where it disagrees with docs/GTT-READ-FIRST.md (Round 25 integrity banner, 2026-10-27). Read that file first.
+
 # Anthony's directive 2026-10-17: Medicare, GST split, entity and DVA, floor plan v2, brand names, rostering and discount
 
 **Standing rule (Anthony):** "Do not accept dead ends. Find practical, compliant workarounds. Every question below must be answered by Idea Lobster and the consultants using verified Australian facts, the repository groundwork, and official regulatory sources."
