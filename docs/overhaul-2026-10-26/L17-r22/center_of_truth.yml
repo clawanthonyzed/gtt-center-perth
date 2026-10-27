@@ -1,5 +1,5 @@
 generated_by: docs/overhaul-2026-10-26/L17-r22/theodore_r22.py
-date: '2026-10-26'
+date: '2026-10-27'
 currency: AUD
 paths:
   path_a: consult package, PREFERRED
@@ -40,6 +40,7 @@ rebate_lock:
   client_cost_path_a_p2: 315.0
 volumes:
   am_clients_day: 18
+  ramp: none, 18 a day from month 1 (R23)
   am_clients_month: 473.94
   pm_transactions_month: 210.13
 venue_manager:
@@ -49,7 +50,7 @@ venue_manager:
   repo_base_loaded: 8004.48
   extra_half_hour: 500.28
   combined_loaded_month: 8504.76
-  open_issue: Anthony says he is administrator and venue manager; wage line and MRCA hours undecided
+  who: a hired venue manager; Anthony is Owner and Director with 0 operational hours (locked R23)
 midwives:
   hours: 08:00 to 16:00
   first_consult: 08:15

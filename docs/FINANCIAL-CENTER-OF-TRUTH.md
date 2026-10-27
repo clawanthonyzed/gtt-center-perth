@@ -41,12 +41,12 @@ GTT's own money does not change whichever collection item applies. Do not reopen
 
 | Variable | Value | Source |
 |---|---|---|
-| Morning clients | 18 a day, Mon-Sat = 473.94 a month | R (revenue_ramp.yml, 22 + 4.33 days) |
+| Morning clients | 18 a day, Mon-Sat = 473.94 a month | R (18 a day x 26.33 trading days a month = 22 weekdays + 4.33 Saturdays, a calendar count). No ramp: full volume from month 1 (Anthony, R23) |
 | Afternoon transactions | 210.13 a month (8.70 weekday, 4.35 Saturday a day) at A$117 = A$24,585.37 | R (revenue_assumptions.yml, Model E) |
 | AM service staff | 8 (4 massage and beauty, 2 nails, 2 hair), 6 h, 07:00-13:00 | R |
 | Phlebotomists | 2 at 10-18 booked, 1 at 9 or fewer, none PM | R |
 | PM service staff | 4 casual, 3-hour floor | R |
-| Venue manager | **Starts 06:30, Mon-Fri 06:30 to 15:00.** 07:00 is the first draw. Cost A$8,504.76 a month loaded = repo base A$8,004.48 + extra half hour A$500.28. Anthony says he is administrator and venue manager (OPEN) | R rate, locked time |
+| Venue manager | **Starts 06:30, Mon-Fri 06:30 to 15:00.** 07:00 is the first draw. Cost A$8,504.76 a month loaded = repo base A$8,004.48 + extra half hour A$500.28. A hired venue manager, not Anthony (Anthony is Owner and Director, 0 operational hours, locked R23) | R rate, locked time |
 | Hosts | none | Locked |
 | Midwives | 08:00 to 16:00 (8 h on site, 7.5 h paid after a 30 minute unpaid break E). First consult 08:15, 25 minute blocks 08:15 to 10:30 to match the draws, then normal midwife bookings. 2 permanent part-time, fortnightly block Mon-Wed / Thu-Sat, + 1 casual. Hired with Medicare participating status, or we plan how they get it | Locked |
 | Midwife time | 18 GTT consults x 20 min = 6.0 h a day; 7.5 h paid; 4 spare 20-minute slots a day for standalone consults (upside only) | maths |
@@ -62,7 +62,7 @@ GTT's own money does not change whichever collection item applies. Do not reopen
 | Midwife on-cost (sensitivity only) | 1.20 (no leave cover) | E |
 | Card fee | 1.7% + A$0.30 a transaction on all card takings, AM and PM (repo lists Tyro 1.4% / Square 1.6%, provider not chosen) | E |
 | WA payroll tax | 5.5% above the A$1m grouped threshold (tapering deduction) | E, check RevenueWA |
-| Company tax | 25% (base rate entity), one consolidated return; franked dividends direct to Anthony and partner (Route B) | E |
+| Company tax | 25% (base rate entity), one consolidated return; three companies (Holdings, Medical, Lounge), no trust; franked dividends direct to Anthony and partner (Route B) | E |
 
 ## 4. Monthly P&L, whole venture (Holdings + Medical + Lounge), locked case, Path A, GTT clients only
 
@@ -188,3 +188,4 @@ Run `python tools/factcheck_locked_facts.py <file>` before anything goes to Anth
 |---|---|---|
 | 2026-10-26 | Round 20: consult A$130 inside packages and standalone, midwives 08:00 to 16:00, same-day consult | Theodore R20 |
 | 2026-10-26 | Round 22: Path A/B renamed, Path B A$300/A$350, rebate lock, venue manager 06:30 to 15:00 combined A$8,504.76, one shared-cost block; headline unchanged A$26,631.97 before and A$19,973.98 after company tax | Theodore R22 |
+| 2026-10-27 | Round 23: no revenue ramp (18 a day from month 1; the 22 + 4.33 day count is a calendar count, not a ramp); venue manager is a hired person, Anthony is Owner and Director; three companies, no trust. Headline unchanged | Theodore R23 |

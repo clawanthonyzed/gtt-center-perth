@@ -223,3 +223,11 @@ Headlines: Package 1 A$300 (2 x 30 min services) and Package 2 A$350 (2 services
 **Consequences (details in docs/overhaul-2026-10-19/L14-r19/WORKFLOW-LOCKED-R19.md):** the 09:00 midwife start no longer clashes with the 07:00 draws; consult demand is 108 a week x 20 minutes = 36.0 hours against 45 paid hours (80 percent) and one consult room; the booking engine must block same-day consult and test and enforce the 1 to 28 day gap.
 
 **Not changed:** every calculator number and model output. Also written into docs/CURRENT-STATE.md (section 000, item 25) and outputs/OPERATIONS/CLINICAL-OPERATIONS-PLAN.md (section 13, item 25).
+
+## 2026-10-27: Round 23 operations lock-in (Anthony, Round 23; recorded by Grace)
+
+**Decision (Anthony):** Anthony is Owner and Director with administrator authority and 0 operational hours; a hired venue manager runs the floor. Midwife roster locked Mon to Sat (2 permanent part-time + 1 casual), midwife day is a lock, fixed daily wage, Path B clients never see a midwife. Meal breaks are rostered in for all staff, never worked through, staff choose stay or leave. Late rule sentence approved. A slot opening inside 48 hours goes to the waitlist and the public page at once. Welcome card and abnormal-results rules as in GTT-READ-FIRST.md. Three companies, Route B, no revenue ramp.
+
+**Operations effect:** written as locked one-line rules in docs/overhaul-2026-10-26/L18-r23/GRACE-R23-OPERATIONS-LOCK-IN.md and PART-2. docs/operations-manual.md updated (banner, opening time, cancellation and waitlist, late arrival, results line, overbooking, new section 9). Fair Work meal-break check done against MA000034, MA000005, MA000027, MA000002 (details in the lock-in file). Timesheet codes MB and MB-R and the 30 minute written agreement for Hair and Beauty staff are proposals awaiting Anthony.
+
+**Not changed:** every calculator number and model output.

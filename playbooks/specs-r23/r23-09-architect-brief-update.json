@@ -1,0 +1,26 @@
+{
+ "slug": "r23-09-architect-brief-update",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Architect brief text changes. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "Table of changes to the architect brief, 4,500 characters max, text only, no floor plans. Locked: 2 collection rooms (one chair each), 1 consult room, secure computer points, locked drawer and shredder at the front desk, luxury day spa feel not clinical. NEW: a staff meal break space where staff can be fully off duty (they choose stay or leave), plus a quiet midwife break area. Mark room sizes NOT IN REPO, architect to give.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

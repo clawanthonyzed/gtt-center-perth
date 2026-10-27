@@ -1,0 +1,26 @@
+{
+ "slug": "r23-24-venue-manager-decision-guide",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Venue manager late and illness guide. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "One page guide, 2,500 characters max, with a full situation table of at least 6 rows: late, missed, illness, pregnancy complication, hospital or labour, second rebook. Columns: situation, what to say, what to record (code only), who decides (the venue manager, never Grace). Late sentence word for word; no grace for the test. Pregnancy complications rebook free every time; others one free rebook. Refund amounts NOT IN REPO, lawyer to check.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

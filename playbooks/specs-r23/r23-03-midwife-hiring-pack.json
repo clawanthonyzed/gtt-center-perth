@@ -1,0 +1,26 @@
+{
+ "slug": "r23-03-midwife-hiring-pack",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Midwife screening sheet, interview guide and position description. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "One document, 5,000 characters max: screening table, 8 interview questions, position description, contract outline. Roster: 2 permanent part-time (fortnight block Mon-Wed / Thu-Sat, swap) + 1 casual, Mon-Sat, 08:00 to 16:00, fixed daily wage. Meal break is ROSTERED, never worked through; the midwife chooses stay (fully off duty) or leave, never the break time. Award is Nurses MA000034. Mark pay rates NOT IN REPO, lawyer to check.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

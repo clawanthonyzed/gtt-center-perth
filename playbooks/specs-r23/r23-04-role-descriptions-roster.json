@@ -1,0 +1,26 @@
+{
+ "slug": "r23-04-role-descriptions-roster",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Role descriptions and week 1 roster. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "Six role descriptions (venue manager, massage and beauty, nails, hair, phlebotomist, PM casual) plus a Mon-Sat roster table, 4,000 characters max. Venue manager is HIRED (not Anthony), Mon-Fri 06:30 to 15:00; first draw 07:00. Midwives 2 permanent part-time + 1 casual Mon-Sat 08:00 to 16:00. Add a meal break column: rostered 30 minutes for every role, never worked through. Unknown start times or Saturday cover: write NOT IN REPO, do not invent.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

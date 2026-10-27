@@ -1,0 +1,26 @@
+{
+ "slug": "r23-15-appointment-reminders",
+ "agent": "ivy",
+ "role": "You are Ivy, GTT Center Perth. Write the draft named: Appointment reminder set. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "Six reminder messages (Path A and Path B 48 hour email, evening-before text under 300 characters, missed test follow-up) plus merge field table, 3,500 characters max. Path A consult is usually 1 to 28 days BEFORE the test on a different day; mention a same-morning consult only as an option. Late sentence word for word. Fasting hours NOT IN REPO. 48 hour change window, illness rebook with no diagnosis asked. No health detail in texts.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

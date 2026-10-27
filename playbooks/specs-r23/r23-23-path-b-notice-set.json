@@ -1,0 +1,26 @@
+{
+ "slug": "r23-23-path-b-notice-set",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Path B Medicare notice set. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "Final client wording for Path B, 2,500 characters max. Items: Step 1 button small print, booking screen notice, price note (Path B A$300 / A$350 all in, GTT charges A$272.15 / A$322.15, lab fee A$27.85 billed by the lab), check-in notice with tick box and signature line, front desk line when she will not sign (no draw), auto reply to an emailed referral. Say plainly: no Medicare benefit at GTT; the package with the GTT midwife consult has one. Lawyer to check.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

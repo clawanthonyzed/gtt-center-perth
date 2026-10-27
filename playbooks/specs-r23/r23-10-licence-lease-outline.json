@@ -1,0 +1,26 @@
+{
+ "slug": "r23-10-licence-lease-outline",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Room licence, consumer law wording and lease checklist. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "Plain English room licence term outline, Australian Consumer Law wording for booking terms, and a 12 point lease checklist, 4,000 characters max. Three companies: Holdings, Medical, Lounge, Route B. Leave no placeholders: where fee, tenant entity or insurance amount are unknown write NOT IN REPO, never curly brace fields. Rent cap from ITEMS-TO-CONFIRM.md. Every legal point marked lawyer to check.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

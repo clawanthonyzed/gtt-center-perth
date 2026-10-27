@@ -1,0 +1,26 @@
+{
+ "slug": "r23-19-opening-closing-checklists",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Opening and closing checklists. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "Venue manager opening and closing checklist tables, 3,000 characters max. Opening from 06:30 (alarm, roster against cards, computer flags, locked drawer, Path B request check, Medicare notice signed). Meal breaks are rostered, never worked through; log MB or MB-R on the timesheet. Close at the end of the venue manager shift (15:00), shred log, lock drawer. Waitlist check: a slot inside 48 hours goes to the list AND public at once.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

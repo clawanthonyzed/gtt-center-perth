@@ -1,0 +1,26 @@
+{
+ "slug": "r23-21-test-morning-run-sheet",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Test morning run sheet. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "One run sheet table for the venue manager, 3,500 characters max: time, who, action, from 06:30 to 10:30 draws, with midwife consults from 08:15. 18 clients, pairs every 25 minutes from 07:00 (nine pairs to 10:20), Draw 2 and 3 on lab timing, welcome cards, meal breaks rostered. Lab timing and fasting hours NOT IN REPO, partner lab to confirm. Late sentence word for word.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

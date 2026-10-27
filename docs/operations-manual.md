@@ -1,5 +1,7 @@
 # GTT Center Perth — Operations Manual
 
+> **ROUND 23 LOCKS (2026-10-27) OVERRIDE ANYTHING BELOW THAT DISAGREES.** Source: docs/GTT-READ-FIRST.md and docs/overhaul-2026-10-26/L18-r23/GRACE-R23-OPERATIONS-LOCK-IN.md (+ PART-2). In short: the hired venue manager (not Anthony) starts 06:30, Mon to Fri 06:30 to 15:00; 07:00 is the first draw; 18 clients a day from day one, no ramp; Anthony is Owner and Director with administrator access and 0 operational hours; midwives are 2 permanent part-time + 1 casual, Mon to Sat, the midwife day is a lock and Path B clients never see a midwife; meal breaks are rostered in for all staff, never worked through, staff choose stay (fully off duty) or leave; late rule is arrive 10 minutes early, late means from the appointment time onwards, no wiggle room; a slot opening inside 48 hours goes to the waitlist AND the public page at once; abnormal results are phoned by the midwife, then voicemail, then a follow-up email with no result detail. Older figures below (12 clients, 07:00 open, tiered refunds, 10 to 15 minute arrival, "never discuss results") are history.
+
 > **Canonical current-state numbers (package prices, client capacity, headcount, P&L, capital range) live in `docs/CURRENT-STATE.md` — every figure below defers to that file if the two ever disagree.**
 
 > **2026-07-14 SUPERSEDED — PM MODEL CORRECTED.** References below to a single "PM Service Therapist" delivering "PM Spa Packages" (Package 1/2/3 pricing) are superseded. The confirmed PM model is: **4 dedicated casual hires** (1 massage, 1 hair, 1 nail, 1 beauty), cross-shift qualified with AM staff, delivering **individual standalone services** (not packages) at ~A$95/session average, staffed on actual hours worked — not a blanket shift. Corrected Month 5+ steady state: Total Revenue A$86,020/month, Total Fixed Costs A$79,357/month, **Net P&L +A$6,663/month** — profitable from Month 4 (+A$4,924/month). See `pm-staffing-roster.md` for the full roster, weekly template, and recalculated P&L — this is now the canonical PM reference, superseding this document's PM figures/structure below.
@@ -13,7 +15,7 @@
 
 ## 1. DAILY OPERATIONS CADENCE
 
-### 7:00am — Venue Manager Opens
+### 6:30am, Venue Manager Opens (Round 23: first draw is 07:00)
 - [ ] Disarm alarm, unlock venue
 - [ ] Check Fresha dashboard: today's bookings, any cancellations overnight, waitlist notifications
 - [ ] Review any emails/calls from previous evening
@@ -132,21 +134,22 @@ Services display only for the window available after the selected GTT start time
 ### Payment Policy (CONFLICT-09 RESOLVED 2026-07-20 — was previously described as an A$30 deposit)
 - **Full package price collected at time of booking** — no deposit-only option (confirmed by Anthony, matches `onboarding.md`'s draft patient-facing copy)
 - Fresha Pay (card online) at time of booking — no separate EFTPOS balance payment needed at the venue
-- Cancellation/refund credit per the tiered policy below, not a simple deposit-refund mechanism
+- Change and refund rules follow the 48 hour change window and the approved booking terms (see Cancellation Workflow below); the old tiered credit is retired
 
 ### Cancellation Workflow
 1. Cancellation comes in via Fresha/phone
-2. Receptionist checks timing against the tiered policy: ≥48hrs → full credit, reschedule free; 24-48hrs → 50% credit; <24hrs/same-day → no credit, full amount retained (see `onboarding.md` Cancellation & Rescheduling Policy for the full tiered detail)
-3. No-show → full amount already collected at booking, retained
-4. Waitlist: if cancellation occurs, immediately notify first person on waitlist (Fresha automated + personal call)
+2. Venue manager checks timing against the 48 hour change window (reminders are sent). Refund amounts follow the booking terms Anthony approves (draft, not final). Pregnancy complications and emergencies rebook free, record a code only, ask no diagnosis
+3. Missed or late test with no exception: follow the approved booking terms; do not squeeze the client in
+4. Waitlist (LOCKED R23): a slot that opens INSIDE 48 hours is offered to the waitlist AND made public on the booking page at the same moment; first to book and pay gets it. A slot opening outside 48 hours goes to the list first, then the booking page after 48 hours. Two clients at once: first completed payment wins, the other stays on the list and is told the slot is taken. Full steps and email: L18-r23/GRACE-R23-OPERATIONS-LOCK-IN-PART-2.md
 
 ### Late Arrival Policy
-- Patients must arrive 10-15 min before their GTT slot (X) for fasting/Medicare check-in and Draw 1
-- **>10 minutes late:** GTT slot forfeited, full amount already paid at booking is retained (same as a same-day cancellation/no-show). Patient is rebooked for the next available slot — NOT squeezed into the existing schedule (would breach the next client's draw-timing tolerances on the same chair)
-- Receptionist calls any patient who has not arrived by 5 minutes before X to confirm status before the 10-minute cutoff
+- LOCKED R23: clients arrive at least 10 minutes before their appointment. Late means from the appointment time onwards. No wiggle room.
+- Client sentence, word for word: "Please arrive at least 10 minutes before your appointment, because late means from your appointment time onwards and we cannot fit a first blood draw in after that."
+- A late client is NOT squeezed into the schedule (it would breach the next client's draw timing on the same chair). The venue manager decides, records a code only, and rebooks per the approved booking terms.
+- Consult-only grace (5 to 10 minutes) is OPEN: Anthony has not decided.
 
 ### Overbooking Rule
-Maximum 12 GTT patients per day (synchronized-chair-start, 6 slots/chair — current committed model as of 2026-07-30, corrected from the prior 10-client model) — 2 phlebotomists, 2 collection chairs (Chair A / Chair B), alternating-client assignment (Chair A: clients 1/3/5/7/9/11, Chair B: clients 2/4/6/8/10/12). See GTT Scheduling Timetables below for the verified per-client and per-staff schedule.
+Committed volume is 18 GTT clients a morning, Mon to Sat, first draw 07:00, pairs every 25 minutes to 10:30, from day one (docs/GTT-READ-FIRST.md; the 12-client text that follows is history). Old text: Maximum 12 GTT patients per day (synchronized-chair-start, 6 slots/chair — model as of 2026-07-30, corrected from the prior 10-client model) — 2 phlebotomists, 2 collection chairs (Chair A / Chair B), alternating-client assignment (Chair A: clients 1/3/5/7/9/11, Chair B: clients 2/4/6/8/10/12). See GTT Scheduling Timetables below for the verified per-client and per-staff schedule.
 Never accept an 11th booking without confirming chair/staff cover via the Scenario D growth model (see below) — Scenario D (15 clients/day, 3rd phlebotomist/chair) is a documented but not-yet-committed growth path, not an active option.
 
 ---
@@ -162,7 +165,7 @@ Never accept an 11th booking without confirming chair/staff cover via the Scenar
 ### External — Patients
 - Fresha automated: confirmation email, 48hr SMS, 24hr SMS, day-of SMS, post-visit email
 - Receptionist: personal call for no-shows to reschedule, personal call for fasting failures
-- Never discuss GTT results with patients — direct to their referring doctor only
+- Results (LOCKED R23): front-desk and service staff never discuss results. Path A: the midwife phones abnormal results; no answer means a voicemail asking her to call GTT, then a follow-up email saying the midwife has tried to make contact regarding results (no result detail anywhere). Normal results get a generic text or email. Path B: results go to the client's outside practitioner. The midwife logs every attempt (date, time, channel, outcome, midwife name).
 
 ### External — Referral Partners (midwives, OBs)
 - Poppy (Marketing agent): manages all referral partner communications
@@ -411,7 +414,19 @@ Draw alert: set phone timer 5 min before each draw window. Services do NOT get i
 
 ---
 
+## 9. ROUND 23 LOCKED RULES (staff and venue manager)
+
+- **Midwives:** 2 permanent part-time + 1 casual, Mon to Sat, fortnight block Mon to Wed / Thu to Sat, swap. The midwife day is a lock and the wage is fixed. Path B clients never see a GTT midwife.
+- **Meal breaks:** rostered in for all staff (roster built later), never worked through. Staff choose: stay (fully off duty, not on call, free to leave) or go off site. The roster sets the time. Called back: paid for the time worked, then the full break restarts. Timesheet code MB (taken) or MB-R (called back), recorded by the venue manager. Fair Work check and award sources: L18-r23/GRACE-R23-OPERATIONS-LOCK-IN.md.
+- **Late rule:** see Late Arrival Policy above.
+- **Welcome card:** pre-purchased food and drink listed, or a note that it is available; any stand-alone service bought after her last draw shown with what it is, staff name and time; venue manager prints cards and the day list the day before.
+- **Roles:** Anthony is Owner, Director and administrator with 0 operational hours. The hired venue manager runs the floor. Both hold administrator access; every administrator sign-in and change is logged.
+
+---
+
 ## Changelog
+
+**2026-10-27 (Round 23 locks)** — Grace added the lock banner, section 9, and replaced the opening time, cancellation and waitlist, late arrival, results line and overbooking text so nothing contradicts GTT-READ-FIRST.md. Older text in the changelog below is history.
 
 **2026-07-19** — Founder decision (confirmed 2026-07-18): replaced all operational/on-site references to "Imara" with "Venue Manager" (new hire, not yet in place). Imara is Anthony's partner/funder, not an on-site operator — ownership/trust structure unaffected, see `financial-model.md`/`research.md`.
 

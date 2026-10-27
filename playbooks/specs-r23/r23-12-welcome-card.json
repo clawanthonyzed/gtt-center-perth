@@ -1,0 +1,26 @@
+{
+ "slug": "r23-12-welcome-card",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Welcome card final copy. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "A5 welcome card front and back as a table, 3,000 characters max, no floor plans. Needs: timetable (arrive 10 minutes early, draws, services, with staff first names and times), pre-purchased food and drink listed or a note that it is available, any stand-alone service bought after her last draw (what, staff name, time), social handles, Google review request with no reward, the approved late sentence. Venue manager is hired; Anthony is never named. Merge field table.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

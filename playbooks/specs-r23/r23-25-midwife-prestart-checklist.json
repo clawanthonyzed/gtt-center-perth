@@ -1,0 +1,26 @@
+{
+ "slug": "r23-25-midwife-prestart-checklist",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Midwife pre-start checklist and consult note. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "Midwife pre-start checklist table (Ahpra register, indemnity insurance, Medicare provider number for the GTT address via HPOS, CPR, police check, participating status), consult note layout (item 82105) and client account layout, 3,000 characters max. Who checks: the venue manager and Catherine, never Grace. Roster: 2 permanent part-time + 1 casual, Mon-Sat. Insurance minimums NOT IN REPO. Add a first-week set-up list.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

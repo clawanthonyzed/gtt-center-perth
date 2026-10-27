@@ -1,0 +1,26 @@
+{
+ "slug": "r23-26-staff-privacy-one-pager",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Staff privacy one-pager. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "One page of rules for staff, 2,500 characters max, real content: what is private (pregnancy test details, results, request copies), who may open the computer record (midwives and phlebotomists only; venue manager sees flags only; service staff see nothing), every look is logged including administrator access, no photos, no talk in the lounge, results never discussed at the desk, shred the day list, what to do after a mistake.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

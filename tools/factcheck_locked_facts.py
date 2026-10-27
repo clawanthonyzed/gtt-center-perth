@@ -41,6 +41,14 @@ EXTRA = [
     (r"\bbulk[- ]?bill", "no bulk billing talk (Structure B: private all-inclusive, mother claims the rebate)"),
     (r"\b82110\b(?![^.\n]{0,60}40)", "item 82110 is the 40-minute consult; GTT uses 82105 (20 minutes)"),
     (r"\bsonographer", "no sonographers in the GTT roster"),
+    # Round 23: Anthony is owner/director, NOT venue manager; DVA closed; no ramp; breaks rostered.
+    (r"Anthony[^.\n|]{0,40}\b(?:is|as|acts as|will be|be)\b[^.\n|]{0,20}venue manager|venue manager[^.\n|]{0,15}\(Anthony\)",
+     "Anthony is OWNER/DIRECTOR with administrator authority, 0 operational hours; a hired venue manager runs the floor"),
+    (r"\b(?:DVA|SRDP|MRCA)\b", "DVA / SRDP / MRCA is CLOSED for GTT (Round 23); do not raise it"),
+    (r"\b(?:43|64|79|93)\s*/\s*(?:64|79|93|100)|revenue ramp[- ]?up|ramp[- ]?up (?:of|to) 100",
+     "no revenue ramp: 18 clients a day from day one (Round 23)"),
+    (r"(?:midwife|staff)\s+(?:chooses|can choose|choose)\s+(?:the |her )?(?:meal )?break\s+on the day|choose[s]? (?:the )?break on the day",
+     "meal breaks are rostered, never worked through; staff choose stay or leave (Round 23)"),
     (r"\b21:00\b|\b2100\b|\b9 ?pm\b", "services finish and doors shut by 18:00; no 21:00 close"),
 ]
 

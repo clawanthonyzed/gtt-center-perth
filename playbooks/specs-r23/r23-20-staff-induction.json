@@ -1,0 +1,26 @@
+{
+ "slug": "r23-20-staff-induction",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Staff induction one-pager. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "One page induction sheet, 2,500 characters max, real content under each of 8 headings: what GTT is, how a test morning runs (07:00 first draw, pairs every 25 minutes), who does what, the late rule (sentence word for word), privacy rules, what you never do, if something goes wrong, your first day. Add meal breaks: rostered, never worked through, stay fully off duty or leave. Audience is staff, not clients. No placeholders.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

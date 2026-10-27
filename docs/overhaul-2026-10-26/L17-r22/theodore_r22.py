@@ -438,7 +438,7 @@ NOT_IN = [("Interest on prepaid money", "see THEODORE-R20.md section 5"), ("Stan
 
 def money(x): return f"A${x:,.2f}" if x >= 0 else f"-A${-x:,.2f}"
 def build_centre():
-    yml = {"generated_by": "docs/overhaul-2026-10-26/L17-r22/theodore_r22.py", "date": "2026-10-26", "currency": "AUD",
+    yml = {"generated_by": "docs/overhaul-2026-10-26/L17-r22/theodore_r22.py", "date": "2026-10-27", "currency": "AUD",
            "paths": {"path_a": "consult package, PREFERRED", "path_b": "outside referral, NOT preferred"},
            "prices": {"path_a_package_1_full": P1, "path_a_package_2_full": P2, "path_a_client_pays_gtt_p1": R1["gtt_receives_incl_gst"], "path_a_client_pays_gtt_p2": R2["gtt_receives_incl_gst"],
                       "consult_gst_free": CONSULT_NEW, "lounge_service_p1_taxable": LOUNGE_P1, "lounge_service_p2_taxable": LOUNGE_P2, "lab_paid_to_lab_not_gtt": LAB,
@@ -447,9 +447,9 @@ def build_centre():
            "rebate_lock": {"consult_item": "82105", "consult_fee": 38.75, "consult_rebate": REBATE_CONSULT, "lab_test_item": "66548", "lab_test_fee": 19.90, "lab_test_rebate": REBATE_TEST,
                            "collection_item": "73928", "collection_fee": 5.95, "collection_rebate": REBATE_COLL, "collection_alt_item": "73938", "collection_alt_fee": 7.95, "collection_alt_rebate": 6.80,
                            "collection_status": "unresolved, AskMBS later", "lab_rebate": LAB_REBATE, "total_rebate": REBATE, "client_cost_path_a_p1": f2(P1 - REBATE), "client_cost_path_a_p2": f2(P2 - REBATE)},
-           "volumes": {"am_clients_day": 18, "am_clients_month": N, "pm_transactions_month": round(PM_TX, 2)},
+           "volumes": {"am_clients_day": 18, "ramp": "none, 18 a day from month 1 (R23)", "am_clients_month": N, "pm_transactions_month": round(PM_TX, 2)},
            "venue_manager": {"start": "06:30", "hours": "Mon-Fri 06:30 to 15:00", "first_draw": "07:00", "repo_base_loaded": VM_BASE_LOADED, "extra_half_hour": VM_EXTRA, "combined_loaded_month": VM_COMBINED,
-                             "open_issue": "Anthony says he is administrator and venue manager; wage line and MRCA hours undecided"},
+                             "who": "a hired venue manager; Anthony is Owner and Director with 0 operational hours (locked R23)"},
            "midwives": {"hours": "08:00 to 16:00", "first_consult": "08:15", "consult_blocks_min": 25, "paid_h_per_shift": PAID_DAY, "paid_h_week_both": 45.0, "block": "fortnightly Mon-Wed / Thu-Sat",
                         "oncost": round(r15.bu_worked, 4), "medicare_participating": "hired as participating, or plan how they get it"},
            "shared_costs_month": SH_ITEMS, "shared_costs_total": SH_TOTAL,
@@ -510,12 +510,12 @@ def build_centre():
           "GTT's own money does not change whichever collection item applies. Do not reopen this.", "",
           "## 2. Volumes, staffing and hours (checked against the repo by the script)", "",
           "| Variable | Value | Source |", "|---|---|---|",
-          f"| Morning clients | 18 a day, Mon-Sat = {N} a month | R (revenue_ramp.yml, 22 + 4.33 days) |",
+          f"| Morning clients | 18 a day, Mon-Sat = {N} a month | R (18 a day x 26.33 trading days a month = 22 weekdays + 4.33 Saturdays, a calendar count). No ramp: full volume from month 1 (Anthony, R23) |",
           f"| Afternoon transactions | {PM_TX:.2f} a month (8.70 weekday, 4.35 Saturday a day) at A$117 = A$24,585.37 | R (revenue_assumptions.yml, Model E) |",
           "| AM service staff | 8 (4 massage and beauty, 2 nails, 2 hair), 6 h, 07:00-13:00 | R |",
           "| Phlebotomists | 2 at 10-18 booked, 1 at 9 or fewer, none PM | R |",
           "| PM service staff | 4 casual, 3-hour floor | R |",
-          f"| Venue manager | **Starts 06:30, Mon-Fri 06:30 to 15:00.** 07:00 is the first draw. Cost {money(VM_COMBINED)} a month loaded = repo base {money(VM_BASE_LOADED)} + extra half hour {money(VM_EXTRA)}. Anthony says he is administrator and venue manager (OPEN) | R rate, locked time |",
+          f"| Venue manager | **Starts 06:30, Mon-Fri 06:30 to 15:00.** 07:00 is the first draw. Cost {money(VM_COMBINED)} a month loaded = repo base {money(VM_BASE_LOADED)} + extra half hour {money(VM_EXTRA)}. A hired venue manager, not Anthony (Anthony is Owner and Director, 0 operational hours, locked R23) | R rate, locked time |",
           "| Hosts | none | Locked |",
           "| Midwives | 08:00 to 16:00 (8 h on site, 7.5 h paid after a 30 minute unpaid break E). First consult 08:15, 25 minute blocks 08:15 to 10:30 to match the draws, then normal midwife bookings. 2 permanent part-time, fortnightly block Mon-Wed / Thu-Sat, + 1 casual. Hired with Medicare participating status, or we plan how they get it | Locked |",
           f"| Midwife time | 18 GTT consults x 20 min = 6.0 h a day; 7.5 h paid; {SPARE_SLOTS_DAY} spare 20-minute slots a day for standalone consults (upside only) | maths |",
@@ -528,7 +528,7 @@ def build_centre():
           "| Midwife on-cost (sensitivity only) | 1.20 (no leave cover) | E |",
           "| Card fee | 1.7% + A$0.30 a transaction on all card takings, AM and PM (repo lists Tyro 1.4% / Square 1.6%, provider not chosen) | E |",
           "| WA payroll tax | 5.5% above the A$1m grouped threshold (tapering deduction) | E, check RevenueWA |",
-          "| Company tax | 25% (base rate entity), one consolidated return; franked dividends direct to Anthony and partner (Route B) | E |", "",
+          "| Company tax | 25% (base rate entity), one consolidated return; three companies (Holdings, Medical, Lounge), no trust; franked dividends direct to Anthony and partner (Route B) | E |", "",
           "## 4. Monthly P&L, whole venture (Holdings + Medical + Lounge), locked case, Path A, GTT clients only", "",
           "| Line | Monthly | Tag |", "|---|---|---|"] + [f"| {k} | {money(v)} | {t} |" for k, v, t in rows] + [
           "", f"GST passed to the ATO (not revenue): morning {money(L['gst_collected_am'])}, afternoon {money(L['gst_collected_pm'])}. Target: net profit above A$20,000 a month after all of the above. "
@@ -549,7 +549,8 @@ def build_centre():
           "| Banned | Correct |", "|---|---|"] + [f"| {b} | {w} |" for b, w in BANNED22] + [
           "", "## 8. Change log", "", "| Date | Change | By |", "|---|---|---|",
           "| 2026-10-26 | Round 20: consult A$130 inside packages and standalone, midwives 08:00 to 16:00, same-day consult | Theodore R20 |",
-          f"| 2026-10-26 | Round 22: Path A/B renamed, Path B A$300/A$350, rebate lock, venue manager 06:30 to 15:00 combined {money(VM_COMBINED)}, one shared-cost block; headline unchanged {money(BEFORE)} before and {money(AFTER)} after company tax | Theodore R22 |", ""]
+          f"| 2026-10-26 | Round 22: Path A/B renamed, Path B A$300/A$350, rebate lock, venue manager 06:30 to 15:00 combined {money(VM_COMBINED)}, one shared-cost block; headline unchanged {money(BEFORE)} before and {money(AFTER)} after company tax | Theodore R22 |",
+          "| 2026-10-27 | Round 23: no revenue ramp (18 a day from month 1; the 22 + 4.33 day count is a calendar count, not a ramp); venue manager is a hired person, Anthony is Owner and Director; three companies, no trust. Headline unchanged | Theodore R23 |", ""]
     with open(os.path.join(REPO, "docs", "FINANCIAL-CENTER-OF-TRUTH.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(md))
 

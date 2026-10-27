@@ -1,0 +1,26 @@
+{
+ "slug": "r23-13-booking-terms",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Booking terms. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "Plain English booking terms, 10 numbered headings, 3,500 characters max. Path A advertised A$320 / A$370, GTT charges A$292.15 / A$342.15, client cost after about A$55 rebates A$265 / A$315; Path B A$300 / A$350, GTT charges A$272.15 / A$322.15. Late sentence word for word, no grace for the test. 48 hour change window, waitlist rule (inside 48 hours list AND public at once), illness rule with a code only, privacy. Mark refunds and contact details NOT IN REPO, lawyer to check.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

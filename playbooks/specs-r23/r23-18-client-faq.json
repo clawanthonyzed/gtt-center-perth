@@ -1,0 +1,26 @@
+{
+ "slug": "r23-18-client-faq",
+ "agent": "ivy",
+ "role": "You are Ivy, GTT Center Perth. Write the draft named: Client FAQ for the booking page. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "Client FAQ of 14 questions with short plain English answers, 4,500 characters max. Cover: Path A and Path B, prices (A$320 / A$370 and A$300 / A$350, lab fee A$27.85 paid to the lab), about A$55 Medicare back on Path A, fasting (hours NOT IN REPO), arriving 10 minutes early (late sentence word for word), the 3 draws, illness, waitlist, results contact, privacy. Say client, never a bare word for a parent. Do not discuss billing models.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

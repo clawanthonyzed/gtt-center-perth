@@ -1,0 +1,26 @@
+{
+ "slug": "r23-08-results-line-patch",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Results wording patch table. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "Patch table (file, line, old text, new text, reason) for 5 files that say GTT never communicates results, 3,500 characters max. Path A: midwife phones abnormal results; no answer means a voicemail asking her to call GTT, then a follow-up email saying the midwife has tried to make contact regarding results, no result detail. Normal results: generic text or email saying a message is ready, no log in or portal. Path B: results go to the outside practitioner, no GTT call.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "slug": "r23-22-records-vendor-questions",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Records system vendor questions. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "List of 15 questions to ask computer record vendors, 3,000 characters max, plus a scoring table. Needs: Australian hosting, logs every look including administrator access, role levels (midwife and phlebotomist open requests, venue manager sees flags only, service staff see nothing), tablet use in collection rooms, no paper folder, backups, export, price. Two administrators: Anthony (owner, 0 operational hours) and the hired venue manager.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

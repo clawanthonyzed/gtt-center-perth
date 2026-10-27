@@ -1,0 +1,26 @@
+{
+ "slug": "r23-06-consent-text",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Booking consent text. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "At most 18 short plain English lines of consent text for the booking page, 3,000 characters max. Include fasting (hours NOT IN REPO, lab sets), the approved late sentence word for word: Please arrive at least 10 minutes before your appointment, because late means from your appointment time onwards and we cannot fit a first blood draw in after that. No grace for the test. Path B Medicare notice, how the midwife may contact her about results (tick boxes), computer record held in Australia, waitlist tick box, illness rule.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "slug": "r23-02-gp-survey-waitlist-plan",
+ "agent": "reed",
+ "role": "You are Reed, GTT Center Perth. Write the draft named: GP survey and waitlist test plan. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "Produce a 7 question GP survey (answer options in brackets) and a waitlist test plan table, about 2,500 characters. Path A = package with GTT midwife consult (preferred), Path B = outside referral (not preferred, no Medicare benefit at GTT). Waitlist rule: a slot opening inside 48 hours is offered to the list AND made public at the same moment, first to book and pay wins; outside 48 hours the list goes first. Add 4 success measures. Mark gaps NOT IN REPO. Sign off Regards.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

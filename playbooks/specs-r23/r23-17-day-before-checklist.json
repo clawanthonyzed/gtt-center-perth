@@ -1,0 +1,26 @@
+{
+ "slug": "r23-17-day-before-checklist",
+ "agent": "grace",
+ "role": "You are Grace, GTT Center Perth. Write the draft named: Venue manager day-before print checklist. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "One page checklist, 2,000 characters max, as clean tables. Sections: before you print (3 lines), print run steps (client list and cards in Draw 1 order, count equals clients, names and staff match the roster), the morning (4 lines, venue manager in at 06:30), end of day (4 lines), and a log table (date, printed, shredded, initials). Welcome card includes the food and drink note and stand-alone service line. Locked drawer, cross-cut shredder.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}

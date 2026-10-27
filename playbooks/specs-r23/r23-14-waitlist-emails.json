@@ -1,0 +1,26 @@
+{
+ "slug": "r23-14-waitlist-emails",
+ "agent": "ivy",
+ "role": "You are Ivy, GTT Center Perth. Write the draft named: Waitlist email set. Read the locked facts below first.",
+ "facts": [
+  "prices",
+  "split-a",
+  "split-b",
+  "people",
+  "midwives",
+  "late",
+  "waitlist",
+  "results",
+  "welcome",
+  "mealbreak",
+  "structure"
+ ],
+ "inputs": [],
+ "deliverable": {
+  "part": "1 of 1",
+  "format": "Markdown, plain English, sections Summary, Deliverable, Next step for Anthony",
+  "length": "as stated in the job",
+  "write_only": "Five waitlist messages with subject, preview and body plus merge field table, 3,500 characters max, no health words in any subject. Messages: joined, a time is free, slot taken (screen and email), left the list, footer. Add one variant: a slot inside 48 hours which is ALSO open on the public booking page, first to book and pay gets it. Include the approved late sentence in the free-time email. Sign off Regards.",
+  "do_not_write": "any pension or government-benefit content, Anthony in any floor role, a break time chosen on the day, a growth ramp, floor plans, or any figure not in the facts"
+ }
+}
